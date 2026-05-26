@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#9B2335">
+  <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
+  <title>Italiano Autentico</title>
+  <link rel="stylesheet" href="css/italia.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lato', sans-serif; background: #F5EDD8; color: #2C2C2C; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* ── Header ── */
+    .app-header { background: linear-gradient(135deg, #9B2335 0%, #6B1525 100%); color: #F5EDD8; padding: 1rem 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+    .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .app-logo { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.5rem; }
+    .stats-bar { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .stat-item { background: rgba(255,255,255,0.15); padding: 0.25rem 0.6rem; border-radius: 20px; font-size: 0.8rem; white-space: nowrap; }
+    .xp-bar-container { margin-top: 0.5rem; background: rgba(255,255,255,0.2); border-radius: 10px; height: 6px; overflow: hidden; }
+    .xp-bar-fill { height: 100%; background: linear-gradient(90deg, #D4A843, #F5EDD8); border-radius: 10px; transition: width 0.6s ease; width: 0%; }
+
+    /* ── Nav ── */
+    .nav-tabs { background: #2C2C2C; display: flex; border-bottom: 3px solid #9B2335; overflow-x: auto; }
+    .nav-tab { flex: 1; min-width: 80px; padding: 0.75rem 0.4rem; background: none; border: none; color: #aaa; cursor: pointer; font-family: 'Lato', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
+    .nav-tab:hover { color: #F5EDD8; background: rgba(255,255,255,0.05); }
+    .nav-tab.ativa { color: #D4A843; border-bottom-color: #D4A843; background: rgba(212,168,67,0.08); }
+
+    /* ── Main container ── */
+    .app-container { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 1.5rem 1rem; }
+    .section { display: none; }
+    .section.active { display: block; }
+    .section-titulo { font-family: 'Cinzel', serif; font-size: 1.35rem; color: #9B2335; margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid #D4A843; padding-bottom: 0.5rem; }
+
+    /* ── Templos Grid ── */
+    .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+    .templo-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; }
+    .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .templo-card.bloqueado { opacity: 0.6; }
+    .templo-header { padding: 1.1rem 1rem; color: #FFF8F0; min-height: 90px; display: flex; flex-direction: column; justify-content: space-between; }
+    .templo-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.1em; }
+    .templo-nome { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+    .templo-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+    .templo-cidade { font-size: 0.78rem; opacity: 0.85; }
+    .nivel-badge { display: inline-block; padding: 0.1rem 0.45rem; background: rgba(255,255,255,0.25); border-radius: 10px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; }
+    .templo-body { padding: 0.85rem; background: white; }
+    .progresso-bar-container { background: #eee; border-radius: 10px; height: 5px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
+    .progresso-bar-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.5s ease; }
+    .progresso-label { font-size: 0.73rem; color: #777; margin-bottom: 0.65rem; }
+    .templo-actions { display: flex; gap: 0.45rem; }
+    .btn-estudar { padding: 0.4rem 0.8rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.78rem; font-weight: 700; transition: all 0.2s; background: #9B2335; color: #FFF8F0; flex: 1; }
+    .btn-estudar:hover { background: #7a1c2a; }
+    .btn-quiz-templo { padding: 0.4rem 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.78rem; font-weight: 700; transition: all 0.2s; background: #D4A843; color: #2C2C2C; }
+    .btn-quiz-templo:hover { background: #b8923a; }
+    .lock-info { text-align: center; color: #999; font-size: 0.78rem; padding: 0.3rem 0 0; }
+
+    /* ── Flashcard ── */
+    .flashcard-arena { max-width: 520px; margin: 0 auto; }
+    .card-selecao-templo { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.75rem; font-weight: 700; color: #666; font-size: 0.9rem; }
+    .card-selecao-templo select { padding: 0.3rem 0.5rem; border: 2px solid #9B2335; border-radius: 6px; font-size: 0.88rem; background: white; cursor: pointer; }
+    .card-info { text-align: center; color: #888; font-size: 0.82rem; margin-bottom: 0.6rem; min-height: 1.2em; }
+    .flashcard { perspective: 1000px; cursor: pointer; margin: 0 auto 0.9rem; width: 100%; max-width: 480px; height: 220px; }
+    .card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1); }
+    .flashcard.virado .card-inner { transform: rotateY(180deg); }
+    .card-frente, .card-verso { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.4rem; box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .card-frente { background: linear-gradient(135deg, #9B2335, #6B1525); color: #FFF8F0; }
+    .card-verso { background: linear-gradient(135deg, #F5EDD8, #EDD9A3); color: #2C2C2C; transform: rotateY(180deg); }
+    .palavra-italiana { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 600; text-align: center; margin-bottom: 0.4rem; line-height: 1.2; }
+    .card-dica { font-size: 0.78rem; opacity: 0.7; font-style: italic; }
+    .card-categoria { font-size: 0.72rem; background: rgba(255,255,255,0.2); padding: 0.18rem 0.55rem; border-radius: 10px; margin-top: 0.5rem; }
+    .traducao { font-size: 1.4rem; font-weight: 700; color: #9B2335; text-align: center; margin-bottom: 0.45rem; }
+    .exemplo-frase { font-style: italic; font-size: 0.87rem; color: #555; text-align: center; }
+    .ipa { font-size: 0.82rem; color: #888; font-family: monospace; margin-top: 0.35rem; }
+    .btn-audio { display: block; margin: 0 auto 0.75rem; background: transparent; border: 2px solid #9B2335; color: #9B2335; padding: 0.38rem 1.1rem; border-radius: 20px; cursor: pointer; font-size: 0.83rem; font-weight: 700; transition: all 0.2s; }
+    .btn-audio:hover { background: #9B2335; color: #FFF8F0; }
+    /* Flipped card must not intercept button clicks below it (3D stacking context issue) */
+    .flashcard.virado { pointer-events: none; }
+    /* ── FSRS 4-button rating bar ── */
+    .card-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.45rem; margin-top: 0.5rem; position: relative; z-index: 10; pointer-events: auto; }
+    .btn-rating { display: flex; flex-direction: column; align-items: center; gap: 0.18rem; padding: 0.5rem 0.3rem; border: none; border-radius: 10px; cursor: pointer; font-weight: 700; transition: all 0.18s; line-height: 1.2; }
+    .btn-rating .btn-label { font-size: 0.82rem; }
+    .btn-rating .btn-intervalo { font-size: 0.68rem; opacity: 0.82; font-weight: 400; }
+    .btn-again { background: #C0392B; color: #FFF8F0; }
+    .btn-again:hover { background: #a93226; transform: translateY(-1px); }
+    .btn-hard  { background: #E67E22; color: white; }
+    .btn-hard:hover  { background: #ca6f1e; transform: translateY(-1px); }
+    .btn-good  { background: #27AE60; color: white; }
+    .btn-good:hover  { background: #219a52; transform: translateY(-1px); }
+    .btn-easy  { background: #2980B9; color: white; }
+    .btn-easy:hover  { background: #2471a3; transform: translateY(-1px); }
+    .btn-secondario { padding: 0.55rem 1.1rem; border: none; border-radius: 8px; cursor: pointer; font-size: 0.88rem; font-weight: 700; transition: all 0.2s; background: #7F8C8D; color: white; }
+    .btn-secondario:hover { background: #6c7a7b; }
+    .empty-state { text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 1rem; }
+    .ornamento-italiano { font-family: 'Playfair Display', serif; font-size: 2rem; color: #9B2335; font-style: italic; margin-bottom: 0.5rem; }
+    .em-revisao { color: #888; font-size: 0.88rem; margin: 0.5rem 0 1rem; }
+    .btn-primario { background: #9B2335; color: #FFF8F0; border: none; padding: 0.6rem 1.4rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 700; transition: background 0.2s; }
+    .btn-primario:hover { background: #7a1c2a; }
+
+    /* ── Quiz ── */
+    .quiz-templo-selector { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.7rem; margin-bottom: 1.5rem; }
+    .quiz-templo-btn { padding: 0.65rem 0.9rem; border: 2px solid #9B2335; border-radius: 8px; background: white; color: #9B2335; cursor: pointer; font-weight: 700; font-size: 0.82rem; transition: all 0.2s; text-align: center; line-height: 1.3; }
+    .quiz-templo-btn:hover { background: #9B2335; color: #FFF8F0; }
+    .quiz-templo-btn.bloqueado { border-color: #ccc; color: #aaa; cursor: not-allowed; background: #f5f5f5; }
+    .quiz-container { background: white; border-radius: 12px; padding: 1.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .quiz-progresso { margin-bottom: 1rem; }
+    .quiz-progresso span { font-size: 0.82rem; color: #888; display: block; margin-bottom: 0.35rem; }
+    .quiz-barra-progresso { background: #eee; border-radius: 10px; height: 7px; overflow: hidden; }
+    #quiz-barra-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.4s ease; }
+    .pergunta-container { margin-bottom: 1.1rem; }
+    .quiz-tipo-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: #F5EDD8; color: #9B2335; padding: 0.18rem 0.55rem; border-radius: 10px; margin-bottom: 0.45rem; }
+    .quiz-pergunta { font-size: 1.1rem; font-weight: 700; color: #2C2C2C; line-height: 1.4; }
+    .opcoes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+    .opcao-btn { padding: 0.65rem 0.5rem; border: 2px solid #ddd; border-radius: 8px; background: white; cursor: pointer; font-size: 0.88rem; transition: all 0.2s; text-align: center; line-height: 1.3; }
+    .opcao-btn:hover:not(:disabled) { border-color: #9B2335; background: #fdf5f5; }
+    .opcao-btn.correta { border-color: #27AE60 !important; background: #d5f5e3; color: #1a7a40; font-weight: 700; }
+    .opcao-btn.errada { border-color: #C0392B !important; background: #fde8e6; color: #922b21; font-weight: 700; }
+    .explicacao-container { margin-top: 1rem; padding: 0.8rem; background: #F5EDD8; border-radius: 8px; border-left: 4px solid #D4A843; }
+    #quiz-explicacao { font-size: 0.88rem; color: #444; line-height: 1.5; margin-bottom: 0.7rem; }
+    .quiz-resultado { background: white; border-radius: 12px; padding: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .resultado-titulo { font-family: 'Cinzel', serif; font-size: 1.4rem; color: #9B2335; margin-bottom: 1rem; }
+    .resultado-score { font-size: 3rem; font-weight: 700; color: #2C2C2C; line-height: 1; margin-bottom: 0.3rem; }
+    .resultado-xp { font-size: 1.1rem; color: #D4A843; font-weight: 700; margin: 0.5rem 0; }
+    .resultado-msg { font-style: italic; color: #666; margin: 0.8rem 0 1.2rem; }
+
+    /* ── Vocab ── */
+    .vocab-filtros { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .vocab-search { flex: 1; min-width: 180px; padding: 0.48rem 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
+    .vocab-search:focus { border-color: #9B2335; }
+    .vocab-filtros select { padding: 0.48rem 0.65rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.83rem; background: white; cursor: pointer; }
+    .vocab-stats { font-size: 0.82rem; color: #888; margin-bottom: 0.7rem; }
+    .vocab-list { display: flex; flex-direction: column; gap: 0.35rem; }
+    .vocab-item { display: flex; align-items: center; gap: 0.6rem; background: white; padding: 0.55rem 0.85rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); flex-wrap: wrap; }
+    .vocab-it { font-family: 'Cinzel', serif; font-weight: 600; color: #9B2335; min-width: 120px; font-size: 0.92rem; }
+    .vocab-seta { color: #D4A843; font-weight: 700; }
+    .vocab-pt { color: #2C2C2C; flex: 1; min-width: 110px; font-size: 0.88rem; }
+    .vocab-cat-badge { font-size: 0.68rem; background: #F5EDD8; color: #9B2335; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
+    .vocab-nivel-badge { font-size: 0.68rem; background: #2C2C2C; color: white; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
+    .vocab-sm2-badge { font-size: 0.78rem; }
+
+    /* ── Toast ── */
+    .toast-container { position: fixed; top: 1rem; right: 1rem; z-index: 9999; display: flex; flex-direction: column; gap: 0.45rem; pointer-events: none; }
+    .toast { background: #2C2C2C; color: white; padding: 0.65rem 1.1rem; border-radius: 10px; font-size: 0.88rem; font-weight: 700; box-shadow: 0 4px 16px rgba(0,0,0,0.25); animation: toastIn 0.3s ease; pointer-events: auto; max-width: 270px; }
+    .toast.successo { background: #27AE60; }
+    .toast.alerta { background: #D4A843; color: #2C2C2C; }
+    .toast.erro { background: #C0392B; color: #FFF8F0; }
+    @keyframes toastIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateX(40px); } }
+    .toast.saindo { animation: toastOut 0.3s ease forwards; }
+
+    /* ── Footer ── */
+    .app-footer { background: #2C2C2C; color: #777; text-align: center; padding: 0.75rem; font-size: 0.78rem; margin-top: auto; }
+    .app-footer em { color: #D4A843; }
+
+    /* ── Responsive ── */
+    @media (max-width: 500px) {
+      .opcoes-grid { grid-template-columns: 1fr; }
+      .templos-grid { grid-template-columns: 1fr; }
+      .palavra-italiana { font-size: 1.6rem; }
+      .stats-bar { gap: 0.3rem; }
+      .stat-item { font-size: 0.72rem; padding: 0.2rem 0.45rem; }
+    }
+
+    /* ── Heatmap (Italian themed) ── */
+    .heatmap-container { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow-x: auto; margin-top: 1.5rem; }
+    .heatmap-titolo { font-family: 'Cinzel', serif; font-size: 1.1rem; color: #9B2335; margin-bottom: 0.8rem; text-align: center; }
+    .heatmap-stats { font-size: 0.82rem; color: #888; margin-bottom: 0.8rem; text-align: center; }
+    /* ── Heatmap — <table> com colspan para labels centrados por mês ── */
+    #heatmap { overflow-x: auto; }
+    .hm-table { border-collapse: separate; border-spacing: 2px; margin: 0 auto; }
+    /* Day label column */
+    .hm-day-label { font-size: 0.6rem; color: #888; text-align: right; padding-right: 5px; white-space: nowrap; vertical-align: middle; }
+    /* Day cells */
+    .hm-cell { width: 13px; height: 13px; border-radius: 2px; background: #F5EDD8; cursor: pointer; transition: transform 0.12s; }
+    .hm-cell-empty { background: transparent !important; cursor: default; pointer-events: none; }
+    .hm-cell:not(.hm-cell-empty):hover { transform: scale(1.5); outline: 2px solid #9B2335; z-index: 5; position: relative; }
+    .hm-cell.l0 { background: #F5EDD8; }
+    .hm-cell.l1 { background: #EBD8B5; }
+    .hm-cell.l2 { background: #D4A843; }
+    .hm-cell.l3 { background: #9B2335; }
+    .hm-cell.l4 { background: #5C0E1A; }
+    .hm-cell.today { outline: 2px solid #D4A843; outline-offset: -1px; }
+    /* Thin vertical separator between months */
+    .hm-sep-col { width: 1px; padding: 0 3px; background: transparent; }
+    .hm-sep-col::after { content:''; display:block; width:1px; height:100%; background: #D4B896; margin: 0 auto; }
+    /* Month label row — centered via colspan */
+    .hm-month-label { text-align: center; font-size: 0.65rem; color: #888; font-weight: 700; padding-top: 5px; white-space: nowrap; letter-spacing: 0.03em; }
+    .heatmap-legend { display: flex; align-items: center; gap: 4px; justify-content: center; margin-top: 1rem; font-size: 0.75rem; color: #888; }
+    .heatmap-footer { text-align: center; font-size: 0.78rem; color: #aaa; margin-top: 0.5rem; }
+
+    /* ══════════════════════════════════════════════════════
+       GRAMMATICA — Design Premium
+       ══════════════════════════════════════════════════════ */
+    #grammatica-container { max-width: 860px; margin: 0 auto; }
+
+    /* ── Seletor — lezioni como cards individuais ── */
+    .gram-seletor-titulo { font-family: 'Cinzel', serif; font-size: 1rem; color: #9B2335; margin-bottom: 1.4rem; text-align: center; letter-spacing: 0.06em; }
+    /* Banner do nível (A1, A2...) */
+    .gram-nivel-banner { border-radius: 14px; padding: 1.1rem 1.4rem; margin-bottom: 1.3rem; color: #FFF8F0; }
+    .gram-nivel-badge-txt { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.82; }
+    .gram-nivel-nome { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
+    .gram-nivel-info { font-size: 0.73rem; opacity: 0.88; margin-bottom: 0.45rem; }
+    .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
+    .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
+    /* Grid de lezioni */
+    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; }
+    /* Card de cada lezione */
+    .gram-lez-card { background: white; border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'Lato', sans-serif; }
+    .gram-lez-card:hover { transform: translateY(-2px); box-shadow: 0 5px 18px rgba(155,35,53,0.14); border-left-color: #6B1525; border-left-width: 5px; }
+    .gram-lez-card.feita { border-left-color: #27AE60; background: #f3fbf5; border-color: #c8e6d0; border-left-color: #27AE60; }
+    .gram-lez-card.feita:hover { box-shadow: 0 5px 18px rgba(39,174,96,0.14); border-left-color: #1e8449; }
+    .gram-lez-icon { font-size: 1rem; flex-shrink: 0; line-height: 1; }
+    .gram-lez-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
+    .gram-lez-num-label { font-size: 0.6rem; color: #9B2335; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.3; }
+    .gram-lez-card.feita .gram-lez-num-label { color: #27AE60; }
+    .gram-lez-titulo { font-size: 0.82rem; color: #2C2C2C; font-weight: 600; line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .gram-lez-meta { font-size: 0.65rem; color: #bbb; margin-top: 0.15rem; }
+    .gram-lez-arrow { color: #d4c4a8; font-size: 1.1rem; flex-shrink: 0; transition: color 0.15s; }
+    .gram-lez-card:hover .gram-lez-arrow { color: #9B2335; }
+    .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
+    /* Módulos bloqueados — linha inferior compacta */
+    .gram-locked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.5rem; }
+    .gram-locked-pill { background: #f0f0f0; border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'Lato', sans-serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
+    .gram-locked-pill-icon { font-size: 1rem; }
+    .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
+    .gram-locked-pill-id { font-family: 'Cinzel', serif; font-size: 0.6rem; color: #999; letter-spacing: 0.15em; text-transform: uppercase; }
+    .gram-locked-pill-nome { font-size: 0.78rem; color: #888; font-weight: 600; }
+    .gram-locked-pill-req { font-size: 0.65rem; color: #bbb; }
+    .gram-locked-pill:hover { opacity: 1; border-color: #9B2335; box-shadow: 0 3px 12px rgba(155,35,53,0.12); }
+    .gram-locked-pill-arrow { color: #ccc; font-size: 1.1rem; margin-left: auto; flex-shrink: 0; transition: color 0.15s; }
+    .gram-locked-pill:hover .gram-locked-pill-arrow { color: #9B2335; }
+
+    /* ── Modal Admin ── */
+    .gram-admin-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); backdrop-filter: blur(3px); z-index: 9999; display: flex; align-items: center; justify-content: center; animation: gramFadeIn 0.18s ease; }
+    .gram-admin-overlay.gram-admin-saindo { animation: gramFadeOut 0.2s ease forwards; }
+    .gram-admin-box { background: #fff; border-radius: 18px; padding: 2rem 2rem 1.7rem; width: min(360px, 90vw); box-shadow: 0 20px 60px rgba(0,0,0,0.22); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; animation: gramSlideUp 0.22s ease; }
+    .gram-admin-icon { font-size: 2.2rem; margin-bottom: 0.2rem; }
+    .gram-admin-titulo { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: #2C2C2C; letter-spacing: 0.04em; }
+    .gram-admin-subtit { font-size: 0.8rem; color: #9B2335; font-weight: 600; margin-bottom: 0.6rem; }
+    .gram-admin-input { width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; font-family: 'Lato', sans-serif; outline: none; text-align: center; letter-spacing: 0.25em; color: #2C2C2C; transition: border-color 0.18s; box-sizing: border-box; }
+    .gram-admin-input:focus { border-color: #9B2335; }
+    .gram-admin-erro { color: #c0392b; font-size: 0.78rem; font-weight: 600; margin-top: 0.1rem; }
+    .gram-admin-btns { display: flex; gap: 0.75rem; margin-top: 0.8rem; width: 100%; }
+    .gram-admin-btn-cancel { flex: 1; background: none; border: 1.5px solid #ddd; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: #888; cursor: pointer; font-weight: 600; transition: all 0.16s; }
+    .gram-admin-btn-cancel:hover { border-color: #bbb; color: #555; }
+    .gram-admin-btn-ok { flex: 2; background: #9B2335; border: none; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: #FFF8F0; cursor: pointer; font-weight: 700; transition: background 0.16s; }
+    .gram-admin-btn-ok:hover { background: #6B1525; }
+    @keyframes gramFadeIn { from { opacity: 0 } to { opacity: 1 } }
+    @keyframes gramFadeOut { from { opacity: 1 } to { opacity: 0 } }
+    @keyframes gramSlideUp { from { transform: translateY(18px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+    @keyframes gramShake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
+    .gram-admin-shake { animation: gramShake 0.45s ease; }
+
+    /* Responsive */
+    @media (max-width: 640px) { .gram-lezioni-grid { grid-template-columns: repeat(2, 1fr); } .gram-locked-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 390px) { .gram-lezioni-grid { grid-template-columns: 1fr; } .gram-locked-row { grid-template-columns: 1fr; } }
+
+    /* ── Lição ── */
+    .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.3rem; }
+    .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
+    .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: #9B2335; border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
+    .gram-lesson-breadcrumb { font-size: 0.75rem; color: #bbb; }
+    .gram-lesson-breadcrumb span { color: #9B2335; font-weight: 700; }
+    .gram-lesson-header { text-align: center; padding: 0.25rem 0; }
+    .gram-lesson-eyebrow { font-family: 'Cinzel', serif; font-size: 0.68rem; color: #D4A843; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .gram-lesson-title { font-family: 'Cinzel', serif; font-size: 1.6rem; color: #9B2335; line-height: 1.2; }
+    .gram-lesson-subtitle { font-size: 0.88rem; color: #999; margin-top: 0.35rem; font-style: italic; }
+
+    /* ── Cards ── */
+    .gram-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 18px rgba(0,0,0,0.07); }
+    .gram-card-header { display: flex; align-items: center; gap: 0.5rem; padding: 0.9rem 1.3rem; border-bottom: 1px solid #f0e8d8; font-family: 'Cinzel', serif; font-size: 0.82rem; color: #9B2335; font-weight: 700; background: #fdfaf4; letter-spacing: 0.04em; }
+
+    /* ── Teoria — Dyslexia-Friendly ── */
+    .gram-teoria-corpo { padding: 1.5rem 1.6rem; font-size: 1.02rem; line-height: 2.1; color: #1e1e1e; letter-spacing: 0.013em; }
+    .gram-teoria-corpo p { margin-bottom: 1.1rem; }
+    .gram-teoria-corpo strong { color: #9B2335; font-weight: 800; }
+    .gram-teoria-corpo em { color: #5a3d0e; font-style: italic; font-weight: 600; }
+    /* Títulos de seção */
+    .gram-teoria-corpo h3 { font-family: 'Cinzel', serif; font-size: 1.18rem; color: #9B2335; border-bottom: 2.5px solid #9B2335; padding-bottom: 0.4rem; margin: 0.3rem 0 1.1rem; letter-spacing: 0.04em; }
+    .gram-teoria-corpo h4 { font-size: 0.8rem; font-weight: 800; color: #2C2C2C; background: linear-gradient(90deg, #F5EDD8 60%, transparent); border-left: 4px solid #D4A843; padding: 0.45rem 0.9rem; margin: 1.4rem 0 0.7rem; border-radius: 0 8px 8px 0; letter-spacing: 0.05em; text-transform: uppercase; }
+    /* Listas */
+    .gram-teoria-corpo ul { padding-left: 1.4rem; margin: 0.3rem 0 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .gram-teoria-corpo li { line-height: 2.0; padding-left: 0.15rem; }
+    .gram-teoria-corpo li::marker { color: #9B2335; font-size: 1.15em; }
+    /* Caixas de regra (Regola / Attenzione / Nota) */
+    .gram-regola { background: linear-gradient(135deg, #FEFAE8, #FFF8F0); border: 1.5px solid #D4A843; border-left: 5px solid #D4A843; border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem 0.9rem 1.1rem; margin: 0.5rem 0 1.1rem; font-size: 1rem; line-height: 2.0; }
+    .gram-regola strong { color: #7a5500; }
+    /* Caixa de atenção */
+    .gram-attenzione { background: linear-gradient(135deg, #FFF0F0, #FFF8F0); border: 1.5px solid #9B2335; border-left: 5px solid #9B2335; border-radius: 0 10px 10px 0; padding: 0.9rem 1.1rem; margin: 0.5rem 0 1.1rem; font-size: 1rem; line-height: 2.0; }
+    .gram-attenzione strong { color: #9B2335; }
+    /* Caixa de diálogo */
+    .gram-dialogo-box { background: #fdfaf4; border: 1px solid #e8ddd0; border-radius: 12px; padding: 1rem 1.3rem; margin: 0.5rem 0 1.1rem; font-size: 0.96rem; line-height: 2.1; }
+    .gram-dialogo-box strong { color: #6B1525; font-weight: 800; }
+    .gram-table { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 1rem 0; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 8px rgba(0,0,0,0.09); }
+    .gram-table th { background: #9B2335; color: #FFF8F0; padding: 0.65rem 0.95rem; font-weight: 700; text-align: left; font-size: 0.83rem; letter-spacing: 0.03em; }
+    .gram-table th em, .gram-table th strong { color: #FFF8F0 !important; font-style: normal; }
+    .gram-genere em, .gram-genere strong { color: #FFF8F0 !important; font-style: normal; }
+    .gram-table td { border: 1px solid #ede5d5; padding: 0.55rem 0.95rem; line-height: 1.85; }
+    .gram-table tr:nth-child(even) td { background: #fdf8f0; }
+    .gram-table tr:hover td { background: #f7f0e3; transition: background 0.15s; }
+    /* ── Rich tables (rowspan / colspan) ── */
+    .gram-table-rich td, .gram-table-rich th { border: 1px solid #d8ccbc; padding: 0.6rem 0.85rem; vertical-align: middle; }
+    .gram-table-rich td { vertical-align: top; line-height: 1.9; }
+    .gram-genere { background: #6B1525 !important; color: #FFF8F0 !important; font-weight: 700; text-align: center; vertical-align: middle !important; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .gram-art { background: #f5edd8 !important; color: #9B2335; font-weight: 700; text-align: center; font-size: 1.05rem; font-style: italic; vertical-align: middle !important; min-width: 3rem; }
+    .gram-table-rich tr:nth-child(even) td { background: transparent; }
+    .gram-table-rich tr:hover td { background: #fdf5e8; transition: background 0.15s; }
+
+    /* ── Esempi ── */
+    .gram-esempi-lista { padding: 1rem 1.3rem; display: flex; flex-direction: column; gap: 0.7rem; }
+    .gram-esempio { border-left: 3px solid #D4A843; padding: 0.6rem 0.95rem; background: #fdfaf4; border-radius: 0 10px 10px 0; }
+    .gram-esempio-it { font-style: italic; color: #9B2335; font-size: 0.93rem; cursor: pointer; display: flex; align-items: center; gap: 0.45rem; }
+    .gram-esempio-it:hover { opacity: 0.78; }
+    .gram-esempio-pt { font-size: 0.82rem; color: #777; margin-top: 0.22rem; padding-left: 1.5rem; }
+
+    /* ── Exercício ── */
+    .gram-ex-header { padding: 1.1rem 1.3rem 0; }
+    .gram-ex-progress-label { font-size: 0.72rem; color: #bbb; margin-bottom: 0.4rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .gram-ex-progress-bar { background: #f0e8d8; border-radius: 10px; height: 5px; overflow: hidden; }
+    .gram-ex-progress-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.45s ease; }
+    .gram-ex-question { padding: 1.1rem 1.3rem 1rem; font-size: 1rem; font-weight: 600; color: #1a1a1a; line-height: 1.6; border-bottom: 1px solid #f0e8d8; }
+    .gram-ex-question strong { color: #9B2335; }
+
+    /* Múltipla escolha */
+    .gram-options { padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .gram-option { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #e8ddd0; border-radius: 12px; background: white; cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: #2C2C2C; transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'Lato', sans-serif; }
+    .gram-option:hover:not(:disabled) { border-color: #9B2335; background: #fdf5f5; color: #9B2335; }
+    .gram-option-correct { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.9rem; line-height: 1.45; color: #1a6b3c; font-weight: 700; font-family: 'Lato', sans-serif; }
+    .gram-option-wrong { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.9rem; line-height: 1.45; color: #7b241c; font-weight: 700; font-family: 'Lato', sans-serif; }
+    .gram-option-disabled { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.9rem; line-height: 1.45; color: #bbb; font-family: 'Lato', sans-serif; }
+
+    /* Blur-reveal */
+    .gram-revelar-area { padding: 1.1rem 1.3rem; }
+    .gram-revelar-hint { font-size: 0.76rem; color: #bbb; margin-bottom: 0.7rem; text-align: center; font-style: italic; }
+    .gram-risposta-container { font-size: 1.05rem; color: #2C2C2C; line-height: 1.75; margin-bottom: 0.85rem; padding: 0.9rem 1.1rem; background: #fdfaf4; border-radius: 10px; border: 1.5px dashed #d4c4a8; min-height: 3rem; }
+    .gram-word-blur { filter: blur(7px); opacity: 0.5; cursor: pointer; transition: filter 0.3s ease, opacity 0.3s ease; display: inline-block; user-select: none; border-radius: 3px; padding: 0 1px; }
+    .gram-word-blur:hover { filter: blur(3px); opacity: 0.75; }
+    .gram-word-blur.revealed { filter: blur(0); opacity: 1; cursor: default; }
+    .gram-revelar-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .gram-btn-rivela-tutto { background: none; border: 1.5px solid #9B2335; color: #9B2335; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-rivela-tutto:hover { background: #9B2335; color: #FFF8F0; }
+    .gram-btn-nascondi { display: none; background: none; border: 1.5px solid #ccc; color: #999; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-nascondi:hover { background: #f4f4f4; }
+
+    /* Feedback */
+    .gram-ex-feedback { padding: 0 1.3rem; }
+    .gram-feedback-correct { background: #eafaf1; border-left: 4px solid #27AE60; color: #1a5c35; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
+    .gram-feedback-wrong { background: #fde8e6; border-left: 4px solid #C0392B; color: #7b241c; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
+    .gram-feedback-info { background: #fef9ec; border-left: 4px solid #D4A843; color: #7a5800; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
+
+    /* Ações */
+    .gram-ex-actions { padding: 0.75rem 1.3rem 1.3rem; display: flex; gap: 0.65rem; justify-content: flex-end; }
+    .gram-btn-next { padding: 0.68rem 1.6rem; background: #9B2335; color: #FFF8F0; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-next:hover { background: #7a1c2a; }
+    .gram-btn-acertei { padding: 0.68rem 1.25rem; background: #27AE60; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-acertei:hover { background: #1e8449; }
+    .gram-btn-errei { padding: 0.68rem 1.25rem; background: white; color: #C0392B; border: 2px solid #C0392B; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-errei:hover { background: #fde8e6; }
+
+    /* Resultado */
+    .gram-resultado { text-align: center; padding: 2.5rem 1.5rem; }
+    .gram-res-emoji { font-size: 3rem; margin-bottom: 0.6rem; }
+    .gram-res-title { font-family: 'Cinzel', serif; font-size: 1.3rem; color: #9B2335; margin-bottom: 1rem; }
+    .gram-res-score { font-size: 4.5rem; font-weight: 700; color: #2C2C2C; line-height: 1; }
+    .gram-res-score span { font-size: 1.6rem; color: #bbb; }
+    .gram-res-pct { font-size: 0.92rem; color: #999; margin: 0.4rem 0; }
+    .gram-res-xp { font-size: 1.1rem; color: #D4A843; font-weight: 700; margin: 0.7rem 0; }
+    .gram-res-msg { font-style: italic; color: #777; margin: 0.8rem 0 1.8rem; font-size: 0.95rem; }
+    .gram-res-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    .gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-secondary:hover { background: #ede0c4; border-color: #9B2335; color: #9B2335; }
+
+    /* Misc */
+    .gram-empty { text-align: center; color: #bbb; padding: 3rem 1rem; font-style: italic; }
+    @media (max-width: 640px) {
+      .gram-lesson-title { font-size: 1.25rem; }
+      .gram-moduli-grid { grid-template-columns: 1fr; }
+      .gram-lesson-nav { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+      .gram-ex-actions { justify-content: center; }
+      .gram-res-score { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-top">
+      <div class="app-logo">🇮🇹 Italiano Autentico</div>
+      <div class="stats-bar" id="stats-bar">
+        <span class="stat-item" id="stat-nivel">Livello 1</span>
+        <span class="stat-item" id="stat-xp">XP: 0/500</span>
+        <span class="stat-item" id="stat-templi">Templi: 1/10</span>
+        <span class="stat-item" id="stat-parole">Parole: 0</span>
+        <span class="stat-item" id="stat-streak">🔥 0 dias</span>
+      </div>
+    </div>
+    <div class="xp-bar-container">
+      <div class="xp-bar-fill" id="xp-bar-fill"></div>
+    </div>
+  </header>
+
+  <nav class="nav-tabs">
+    <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')">🏛️ Templi</button>
+    <button class="nav-tab" data-section="flashcard" onclick="App.navegar('flashcard')">🃏 Flashcard</button>
+    <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ Quiz</button>
+    <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 Vocabolario</button>
+    <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 Grammatica</button>
+  </nav>
+
+  <main class="app-container">
+
+    <!-- SECTION: Templi -->
+    <section id="sec-templi" class="section active">
+      <h2 class="section-titulo">I Dieci Templi dell'Italiano</h2>
+      <div class="templos-grid" id="templos-grid">
+        <p style="color:#888;font-style:italic;padding:1rem;">Caricamento in corso...</p>
+      </div>
+
+      <!-- Heatmap di attività -->
+      <div class="heatmap-container">
+        <h3 class="heatmap-titolo">🔥 La Tua Attività — Ultimi 6 Mesi</h3>
+        <div class="heatmap-stats" id="heatmap-stats"></div>
+        <div id="heatmap"></div>
+        <div class="heatmap-legend">
+          <span>Meno</span>
+          <span class="hm-cell l0"></span>
+          <span class="hm-cell l1"></span>
+          <span class="hm-cell l2"></span>
+          <span class="hm-cell l3"></span>
+          <span class="hm-cell l4"></span>
+          <span>Più</span>
+        </div>
+        <div class="heatmap-footer" id="heatmap-footer"></div>
+      </div>
+    </section>
+
+    <!-- SECTION: Flashcard -->
+    <section id="sec-flashcard" class="section">
+      <div class="flashcard-arena">
+        <div class="card-selecao-templo">
+          <label for="flashcard-templo-select">Studiando:</label>
+          <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
+            <option value="">-- Seleziona tempio --</option>
+          </select>
+        </div>
+        <div class="card-info" id="card-info"></div>
+        <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
+          <div class="card-inner">
+            <div class="card-frente">
+              <div class="palavra-italiana" id="card-italiano">Seleziona un Tempio</div>
+              <div class="card-dica">Clique para revelar</div>
+              <div class="card-categoria" id="card-categoria"></div>
+            </div>
+            <div class="card-verso">
+              <div class="traducao" id="card-traducao"></div>
+              <div class="exemplo-frase" id="card-exemplo"></div>
+              <div class="ipa" id="card-ipa"></div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
+        <div class="card-actions" id="card-actions" style="display:none">
+          <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
+            <span class="btn-label">❌ Esqueci</span>
+            <span class="btn-intervalo">—</span>
+          </button>
+          <button id="btn-hard" class="btn-rating btn-hard" onclick="Flashcards.avaliar(2)">
+            <span class="btn-label">⚡ Difícil</span>
+            <span class="btn-intervalo">—</span>
+          </button>
+          <button id="btn-good" class="btn-rating btn-good" onclick="Flashcards.avaliar(3)">
+            <span class="btn-label">✅ Bom</span>
+            <span class="btn-intervalo">—</span>
+          </button>
+          <button id="btn-easy" class="btn-rating btn-easy" onclick="Flashcards.avaliar(4)">
+            <span class="btn-label">⭐ Fácil</span>
+            <span class="btn-intervalo">—</span>
+          </button>
+        </div>
+        <div class="empty-state" id="flashcard-vazio" style="display:none">
+          <p class="ornamento-italiano">Bravissimo!</p>
+          <p>Tutte le carte studiate oggi.</p>
+          <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
+          <button class="btn-primario" onclick="Flashcards.praticaTodas()">Praticar todas novamente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Quiz -->
+    <section id="sec-quiz" class="section">
+      <h2 class="section-titulo">Verifica le tue Conoscenze</h2>
+      <div class="quiz-templo-selector" id="quiz-templo-selector"></div>
+      <div class="quiz-container" id="quiz-container" style="display:none">
+        <div class="quiz-progresso">
+          <span id="quiz-num-pergunta">Pergunta 1 de 10</span>
+          <div class="quiz-barra-progresso"><div id="quiz-barra-fill" style="width:10%"></div></div>
+        </div>
+        <div class="pergunta-container">
+          <p class="quiz-tipo-badge" id="quiz-tipo">Vocabolario</p>
+          <p class="quiz-pergunta" id="quiz-pergunta"></p>
+        </div>
+        <div class="opcoes-grid" id="opcoes-grid"></div>
+        <div class="explicacao-container" id="explicacao-container" style="display:none">
+          <p id="quiz-explicacao"></p>
+          <button class="btn-primario" onclick="Quiz.proximaPergunta()">Continuar →</button>
+        </div>
+      </div>
+      <div class="quiz-resultado" id="quiz-resultado" style="display:none">
+        <p class="resultado-titulo">Risultato del Quiz</p>
+        <div class="resultado-score" id="resultado-score">0/10</div>
+        <div class="resultado-xp" id="resultado-xp">+0 XP</div>
+        <p class="resultado-msg" id="resultado-msg"></p>
+        <button class="btn-primario" onclick="Quiz.voltarSelector()">← Voltar aos Templi</button>
+      </div>
+    </section>
+
+    <!-- SECTION: Grammatica -->
+    <section id="sec-grammatica" class="section">
+      <h2 class="section-titulo">Grammatica Italiana</h2>
+      <div id="grammatica-container">
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento grammatica...</p>
+      </div>
+    </section>
+
+    <!-- SECTION: Vocabolario -->
+    <section id="sec-vocabolario" class="section">
+      <h2 class="section-titulo">Il Vocabolario</h2>
+      <div class="vocab-filtros">
+        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." oninput="Vocab.buscar(this.value)">
+        <select id="vocab-templo-filtro" onchange="Vocab.filtrarTemplo(this.value)">
+          <option value="">Tutti i templi</option>
+        </select>
+        <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
+          <option value="">Tutte le categorie</option>
+        </select>
+      </div>
+      <div class="vocab-stats" id="vocab-stats"></div>
+      <div class="vocab-list" id="vocab-list">
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:1rem;">Caricamento vocabolario...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Italiano Autentico • <em>Impara l'italiano con amore</em></p>
+  </footer>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts (load order matters) -->
+  <script src="js/core.js?v=2"></script>
+  <script src="js/progression.js?v=2"></script>
+  <script src="js/flashcards.js?v=2"></script>
+  <script src="js/quiz.js?v=2"></script>
+  <script src="js/vocab.js?v=2"></script>
+  <script src="js/heatmap.js?v=2"></script>
+  <script src="js/grammar.js?v=2"></script>
+  <!-- Service Worker — habilitar em produção
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
+  -->
+</body>
+</html>

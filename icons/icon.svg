@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9B2335"/>
+      <stop offset="100%" style="stop-color:#7A1C2A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C87A"/>
+      <stop offset="100%" style="stop-color:#C9A84C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
+
+  <!-- Roman arch - left pillar -->
+  <rect x="148" y="240" width="52" height="188" rx="4" fill="url(#gold)"/>
+  <!-- Roman arch - right pillar -->
+  <rect x="312" y="240" width="52" height="188" rx="4" fill="url(#gold)"/>
+
+  <!-- Roman arch - base lintel -->
+  <rect x="140" y="420" width="232" height="20" rx="4" fill="#C9A84C"/>
+
+  <!-- Roman arch - the arch (semicircle top as thick stroke) -->
+  <path d="M 148 292 A 108 108 0 0 1 364 292" fill="none" stroke="url(#gold)" stroke-width="44" stroke-linecap="round"/>
+
+  <!-- Keystone at arch apex -->
+  <polygon points="256,74 240,118 272,118" fill="#E8C87A"/>
+
+  <!-- Decorative column capitals (top of pillars) -->
+  <rect x="136" y="226" width="80" height="18" rx="3" fill="#E8C87A"/>
+  <rect x="296" y="226" width="80" height="18" rx="3" fill="#E8C87A"/>
+
+  <!-- Column bases -->
+  <rect x="136" y="418" width="80" height="14" rx="3" fill="#E8C87A"/>
+  <rect x="296" y="418" width="80" height="14" rx="3" fill="#E8C87A"/>
+
+  <!-- Stars row at bottom -->
+  <circle cx="146" cy="470" r="10" fill="#E8C87A" opacity="0.9"/>
+  <circle cx="196" cy="470" r="10" fill="#E8C87A" opacity="0.9"/>
+  <circle cx="256" cy="470" r="12" fill="#F0D278"/>
+  <circle cx="316" cy="470" r="10" fill="#E8C87A" opacity="0.9"/>
+  <circle cx="366" cy="470" r="10" fill="#E8C87A" opacity="0.9"/>
+
+  <!-- "IT" text inside arch -->
+  <text x="256" y="380" font-family="Georgia, serif" font-size="88" font-weight="bold"
+        fill="#F5EDD8" text-anchor="middle" dominant-baseline="middle" letter-spacing="6">IT</text>
+
+  <!-- Subtle inner arch line -->
+  <path d="M 172 292 A 84 84 0 0 1 340 292" fill="none" stroke="#F5EDD8" stroke-width="3" stroke-dasharray="8,8" opacity="0.4"/>
+</svg>

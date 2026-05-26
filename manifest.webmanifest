@@ -1,0 +1,27 @@
+{
+  "name": "Italiano Autentico",
+  "short_name": "Italiano",
+  "description": "Apprendi l'italiano con autenticità — Flashcard, Quiz e Vocabolario",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5EDD8",
+  "theme_color": "#9B2335",
+  "lang": "it",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+/* =============================================================================
+   Italian Learning App - Styles Completo
+   Tema: Venetian Gold / Parchment
+   ============================================================================= */
+
+/* --- CORE --- */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #f9f4e6 0%, #fefbea 50%, #fefae0 100%);
+  color: #2c1810;
+}
+
+/* --- TEMA VENETIAN GOLD / PARCHMENT --- */
+.bg-parchment { background-color: #f3eacb; border-radius: 4px; }
+.bg-gold { background-color: #d4af37; color: white; }
+.bg-venetian-red { background-color: #8b0000; color: white; }
+
+/* --- BOTÕES --- */
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.btn-primary { background: #8b0000; color: white; }
+.btn-secondary { background: #555; color: white; }
+.btn-success { background: #1e8449; color: white; }
+.btn-warning { background: #f7941d; color: white; }
+.btn-danger { background: #dc3545; color: white; }
+.btn-secondary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* --- XP BAR (Visual) --- */
+.xp-bar-container {
+  width: 100%;
+  height: 24px;
+  background: #e8e0d5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.xp-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #d4af37 0%, #f5c46d 100%);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.xp-bar::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #ffd700 0%, #b8860b 100%);
+}
+
+/* --- GRID VOCABULÁRIO --- */
+.grid-vocabulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 16px 8px;
+}
+
+.palavra-card {
+  background: #f3eacb;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.palavra-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.palavra-card span.it { display: block; font-weight: bold; font-size: 1.1em; color: #2c1810; }
+.palavra-card span.pt { display: block; font-size: 0.9em; color: #666; margin-top: 4px; }
+
+/* --- GRID REVIEWS (SM-2) --- */
+.grid-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.review-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.review-card.success-anim { animation: successPulse 0.5s ease; }
+.review-card.warning-anim { animation: warningPulse 0.5s ease; }
+.review-card.danger-anim { animation: dangerPulse 0.5s ease; }
+
+/* --- QUIZ --- */
+.quiz-header, .quiz-item { padding: 12px; background: #fff; margin-bottom: 8px; border-radius: 4px; }
+.quiz-input { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #ccc; border-radius: 4px; }
+.quiz-dica { display: block; font-size: 0.8em; color: #666; margin-top: 4px; }
+/* ─── HEATMAP (CALOR) ─── */
+.heatmap-container { background: #f3eacb; padding: 20px 16px 16px; border-radius: 8px; text-align: center; }
+
+.heatmap-titolo { margin: 0 0 6px; font-size: 16px; color: #3a2a10; }
+
+.heatmap-stats { font-size: 13px; color: #7a6040; margin-bottom: 14px; }
+
+/* ─── LAYOUT PRINCIPAL ─── */
+.heatmap-wrapper { display: flex; gap: 0; align-items: flex-start; justify-content: center; }
+
+/* Coluna de labels de dia (Seg, Qua, Sex) */
+.heatmap-day-labels { display: flex; flex-direction: column; gap: 3px; padding-top: 18px; flex-shrink: 0; width: 28px; }
+
+.heatmap-day-label { height: 13px; font-size: 10px; color: #9a8060; display: flex; align-items: center; justify-content: flex-end; padding-right: 4px; line-height: 1; }
+
+/* Coluna direita: meses + grid */
+.heatmap-right { display: flex; flex-direction: column; gap: 4px; }
+
+/* Labels de mês posicionadas absolutamente sobre o grid */
+.heatmap-month-labels { position: relative; height: 14px; flex-shrink: 0; }
+
+.heatmap-month-label { position: absolute; font-size: 10px; color: #9a8060; white-space: nowrap; line-height: 1; top: 0; }
+
+/* ─── GRID: flex de colunas (1 coluna = 1 semana) ─── */
+.heatmap { display: flex; flex-direction: row; gap: 3px; }
+
+.hm-week { display: flex; flex-direction: column; gap: 3px; }
+
+/* ─── CÉLULAS ─── */
+.hm-cell { width: 13px; height: 13px; border-radius: 2px; cursor: pointer; flex-shrink: 0; }
+
+/* Níveis de intensidade */
+.hm-cell.l0 { background-color: #e8dfc8; }
+.hm-cell.l1 { background-color: #d4b896; }
+.hm-cell.l2 { background-color: #b8732a; }
+.hm-cell.l3 { background-color: #8b3a1a; }
+.hm-cell.l4 { background-color: #5c1a0a; }
+.hm-cell.hoje { outline: 1.5px solid #3a2a10; outline-offset: 1px; }
+
+/* ─── LEGENDA ─── */
+.heatmap-legend { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 12px; font-size: 11px; color: #9a8060; }
+
+.heatmap-legend .hm-cell { cursor: default; width: 11px; height: 11px; }
+
+/* ─── FOOTER ─── */
+.heatmap-footer { font-size: 12px; color: #9a8060; margin-top: 8px; font-style: italic; }
+
+/* ─── TOOLTIP (via JS, position:fixed) ─── */
+.hm-tooltip { position: fixed; background: rgba(30, 15, 5, 0.88); color: #f3eacb; padding: 5px 10px; border-radius: 4px; font-size: 12px; z-index: 9999; pointer-events: none; display: none; white-space: nowrap; }
+
+/* --- TEMPLI GRID --- */
+.templi-grid { display: grid; gap: 16px; padding: 16px; }
+.templo-card { background: #fff; border: 2px solid #d4af37; border-radius: 8px; padding: 12px; text-align: center; }
+.templo-card.bloqeado { opacity: 0.6; filter: grayscale(1); cursor: not-allowed; }
+.templo-header h4 { margin: 0; font-size: 1.1em; }
+.status-active { background: #1e8449; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; }
+.status-pending { background: #6c757d; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; }
+
+/* --- MODAL (Templo) --- */
+.modal-content { background: white; border-radius: 8px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin: 24px auto; max-width: 90%; max-height: 90vh; overflow-y: auto; }
+.modal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; padding: 16px 8px; }
+
+/* --- FLASHCARDS --- */
+.flashcards-header { margin-bottom: 12px; background: #f3eacb; padding: 12px; border-radius: 4px; display: flex; align-items: center; justify-content: space-between; }
+.empty-state, .error-msg { padding: 16px; text-align: center; color: #666; background: #f9f9f9; border-radius: 4px; margin-top: 12px; }
+
+/* --- QUIZ RESULTADO --- */
+.quiz-resultado { text-align: center; padding: 24px; background: #f3eacb; border-radius: 8px; }
+.xp-ganho { color: #2c1810; font-weight: bold; margin-top: 12px; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .templi-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; padding: 12px; }
+  .grid-vocabulario, .grid-reviews { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+}
+
+/* --- ANIMAÇÕES (SM-2 feedback) --- */
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes warningPulse {
+  0% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  100% { transform: translateX(-3px); }
+}
+
+@keyframes dangerPulse {
+  0% { background-color: #8b0000; color: white; }
+  50% { background-color: #dc3545; color: white; }
+  100% { background-color: #f7941d; color: white; }
+}
