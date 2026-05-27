@@ -180,26 +180,30 @@
     .heatmap-container { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow-x: auto; margin-top: 1.5rem; }
     .heatmap-titolo { font-family: 'Cinzel', serif; font-size: 1.1rem; color: #9B2335; margin-bottom: 0.8rem; text-align: center; }
     .heatmap-stats { font-size: 0.82rem; color: #888; margin-bottom: 0.8rem; text-align: center; }
-    /* ── Heatmap — <table> com colspan para labels centrados por mês ── */
-    #heatmap { overflow-x: auto; }
-    .hm-table { border-collapse: separate; border-spacing: 2px; margin: 0 auto; }
-    /* Day label column */
-    .hm-day-label { font-size: 0.6rem; color: #888; text-align: right; padding-right: 5px; white-space: nowrap; vertical-align: middle; }
+    /* ── Heatmap — Monthly Activity Blocks ── */
+    #heatmap { width: 100%; }
+    .hm-nav-row { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; width: 100%; margin-top: 0.5rem; }
+    .hm-nav-btn { background: #9B2335; border: none; color: white; width: 28px; height: 28px; border-radius: 50%; font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; font-size: 0.9rem; box-shadow: 0 2px 6px rgba(155,35,53,0.2); }
+    .hm-nav-btn:hover:not(:disabled) { background: #7a1c2a; transform: scale(1.1); }
+    .hm-nav-btn:disabled { background: #ede5d5; color: #ccc; cursor: not-allowed; box-shadow: none; }
+    .hm-months-row { display: flex; gap: 0.85rem; flex: 1; overflow-x: auto; padding-bottom: 0.4rem; }
+    .hm-month-block { flex: 1; min-width: 105px; background: #fdfaf4; border: 1.5px solid #ede5d5; border-radius: 10px; padding: 0.6rem 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; transition: border-color 0.2s; }
+    .hm-month-block.hm-center-month { border-color: #9B2335; background: #fffcf8; box-shadow: 0 4px 12px rgba(155,35,53,0.06); }
+    .hm-month-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+    .hm-month-name { font-size: 0.65rem; font-weight: 800; color: #9B2335; text-align: center; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.2rem; }
+    
     /* Day cells */
-    .hm-cell { width: 13px; height: 13px; border-radius: 2px; background: #F5EDD8; cursor: pointer; transition: transform 0.12s; }
+    .hm-cell { width: 100%; aspect-ratio: 1; border-radius: 2.5px; background: #F5EDD8; cursor: pointer; transition: transform 0.12s; }
     .hm-cell-empty { background: transparent !important; cursor: default; pointer-events: none; }
-    .hm-cell:not(.hm-cell-empty):hover { transform: scale(1.5); outline: 2px solid #9B2335; z-index: 5; position: relative; }
+    .hm-cell-future { background: #fdfdfd !important; opacity: 0.25; border-radius: 2px; pointer-events: none; border: 0.5px dashed #ede5d5; }
+    .hm-cell:not(.hm-cell-empty):not(.hm-cell-future):hover { transform: scale(1.4); outline: 2px solid #9B2335; z-index: 5; position: relative; }
     .hm-cell.l0 { background: #F5EDD8; }
     .hm-cell.l1 { background: #EBD8B5; }
     .hm-cell.l2 { background: #D4A843; }
     .hm-cell.l3 { background: #9B2335; }
     .hm-cell.l4 { background: #5C0E1A; }
     .hm-cell.today { outline: 2px solid #D4A843; outline-offset: -1px; }
-    /* Thin vertical separator between months */
-    .hm-sep-col { width: 1px; padding: 0 3px; background: transparent; }
-    .hm-sep-col::after { content:''; display:block; width:1px; height:100%; background: #D4B896; margin: 0 auto; }
-    /* Month label row — centered via colspan */
-    .hm-month-label { text-align: center; font-size: 0.65rem; color: #888; font-weight: 700; padding-top: 5px; white-space: nowrap; letter-spacing: 0.03em; }
+
     .heatmap-legend { display: flex; align-items: center; gap: 4px; justify-content: center; margin-top: 1rem; font-size: 0.75rem; color: #888; }
     .heatmap-footer { text-align: center; font-size: 0.78rem; color: #aaa; margin-top: 0.5rem; }
 
@@ -402,9 +406,22 @@
     .gram-ex-tipo-revelar { background: #e9f7ef; color: #145a32; border: 1px solid #a9dfbf; }
     /* ── Animação de acerto (glow verde) ── */
     @keyframes gramAcertoGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(39,174,96,0); } 50% { box-shadow: 0 0 0 10px rgba(39,174,96,0.28); } }
+    /* ── Camadas Pedagógicas (NMA) ── */
+    .gram-camadas { padding: 1.5rem 1.6rem; display: flex; flex-direction: column; gap: 1.8rem; background: white; }
+    .gram-camada-bloco { background: #ffffff; border: 1.5px solid #ede5d5; border-radius: 12px; padding: 1.3rem 1.4rem; position: relative; margin-top: 0.4rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+    .gram-camada-label { position: absolute; top: -0.65rem; left: 1.1rem; background: #9B2335; color: white; padding: 0.18rem 0.65rem; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 4px; box-shadow: 0 2px 5px rgba(155,35,53,0.25); z-index: 2; }
+    .gram-alerta { background: #fffdf6; border: 1.5px solid #f9ebd0; border-radius: 10px; padding: 0.85rem 1.1rem; font-size: 0.94rem; color: #7e5109; line-height: 1.6; font-weight: 700; margin-bottom: -0.5rem; }
+    .gram-inventario { padding-left: 1.3rem; margin: 0.3rem 0 0; display: flex; flex-direction: column; gap: 0.55rem; color: #2C2C2C; }
+    .gram-inventario li { line-height: 1.9; font-size: 0.94rem; }
+    .gram-inventario li::marker { color: #9B2335; font-weight: 700; font-size: 1.1em; }
+    .gram-tecnica-corpo { font-size: 0.94rem; line-height: 1.85; color: #2C2C2C; }
+    .gram-tecnica-corpo strong { color: #9B2335; font-weight: 800; }
+    .gram-ponte-corpo { font-size: 0.94rem; line-height: 1.85; color: #2C2C2C; }
+    .gram-ponte-corpo strong { color: #9B2335; font-weight: 800; }
+
     /* ── Camada Definição ── */
-    .gram-definicao-row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: stretch; padding: 0.75rem; }
-    .gram-def-card { flex: 1; min-width: 160px; border-radius: 10px; overflow: hidden; border: 1px solid #ede5d5; display: flex; flex-direction: column; }
+    .gram-definicao-row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: stretch; padding: 0.4rem 0 0; }
+    .gram-def-card { flex: 1; min-width: 160px; border-radius: 10px; overflow: hidden; border: 1px solid #ede5d5; display: flex; flex-direction: column; background: #ffffff; }
     .gram-def-label { padding: 0.35rem 0.75rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
     .gram-def-corpo { flex: 1; padding: 0.75rem 0.85rem; font-size: 0.9rem; color: #1e1e1e; line-height: 1.85; letter-spacing: 0.015em; }
     .gram-def-fenomeno .gram-def-label { background: #e8f4fd; color: #1a5276; }

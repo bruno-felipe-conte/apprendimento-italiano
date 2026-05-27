@@ -54,161 +54,100 @@ const Calor = {
   renderizar() {
     const container = document.getElementById('heatmap');
     const statsEl = document.getElementById('heatmap-stats');
-    const footerEl = document.getElementById('heatmap-footer');
     if (!container) return;
 
-    // Read diary
     let diario = {};
-    try {
-      diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
-    } catch (e) {}
+    try { diario = JSON.parse(localStorage.getItem('it_diario') || '{}'); } catch (e) {}
 
-    // 6 months ago from today
-    const end = new Date();
-    const start = new Date();
-    start.setMonth(start.getMonth() - 6);
-    // Align start to Monday
-    start.setDate(start.getDate() - start.getDay() + 1);
+    const today = new Date();
+    const todayStr = [
+      today.getFullYear(),
+      String(today.getMonth() + 1).padStart(2, '0'),
+      String(today.getDate()).padStart(2, '0')
+    ].join('-');
 
-    const todayStr = end.toISOString().split('T')[0];
-
-    // Compute max for color scaling — compare as ISO strings (avoids timezone issue)
-    const startStr = start.toISOString().split('T')[0];
-    const endStr   = end.toISOString().split('T')[0];
-    let maxVal = 1;
-    for (const key in diario) {
-      if (key >= startStr && key <= endStr && diario[key] > maxVal) {
-        maxVal = diario[key];
-      }
-    }
-
-    // Build weeks
-    const weeks = [];
-    let curWeek = [];
-    const d = new Date(start);
-    // No null padding needed — start is already aligned to Monday
-
-    let totalAtividades = 0;
-    let diasAtivos = 0;
-    let streak = 0;
-    let curStreak = 0;
-
-    // Count backwards for streak
-    const td = new Date();
-    while (td >= start) {
-      const k = td.toISOString().split('T')[0];
-      const v = diario[k] || 0;
-      if (v > 0) { curStreak++; if (curStreak > streak) streak = curStreak; }
-      else curStreak = 0;
-      td.setDate(td.getDate() - 1);
-    }
-
-    // Build grid
-    while (d <= end) {
-      const key = d.toISOString().split('T')[0];
-      const value = diario[key] || 0;
-      totalAtividades += value;
-      if (value > 0) diasAtivos++;
-
-      let level = 0;
-      if (value > 0) {
-        const ratio = value / maxVal;
-        if (ratio <= 0.25) level = 1;
-        else if (ratio <= 0.5) level = 2;
-        else if (ratio <= 0.75) level = 3;
-        else level = 4;
-      }
-
-      curWeek.push({
-        date: key,
-        value,
-        level,
-        isToday: key === todayStr
-      });
-
-      // Sunday ends the week (Monday-start weeks)
-      if (d.getDay() === 0) {
-        weeks.push(curWeek);
-        curWeek = [];
-      }
-      d.setDate(d.getDate() + 1);
-    }
-    if (curWeek.length > 0) weeks.push(curWeek);
-
-    // Day labels — all 7 days, Monday-start
-    const dayLabels = ['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+    // Center month = current - offset; show [center-3, center-2, center-1, center, center+1, center+2]
     const MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const centerDate = new Date(today.getFullYear(), today.getMonth() - this.offset, 1);
+    const months = [];
+    for (let i = -3; i <= 2; i++) {
+      const d = new Date(centerDate.getFullYear(), centerDate.getMonth() + i, 1);
+      months.push({ year: d.getFullYear(), month: d.getMonth() });
+    }
 
-    // ── Group weeks by month ────────────────────────────────
-    // Parse month from "YYYY-MM-DD" string directly (avoids UTC/timezone bug
-    // where new Date("YYYY-MM-DD").getMonth() can return the previous month
-    // in negative-UTC-offset timezones like UTC-3).
-    const dateMonth = str => parseInt(str.slice(5, 7), 10) - 1; // 0-indexed
+    // Max value for color scaling
+    let maxVal = 1;
+    for (const k in diario) if (diario[k] > maxVal) maxVal = diario[k];
 
-    const monthGroups = []; // [{month, startWi, count}]
-    let prevMonth = -1;
-    for (let wi = 0; wi < weeks.length; wi++) {
-      const firstDay = weeks[wi].find(x => x);
-      const m = firstDay ? dateMonth(firstDay.date) : prevMonth;
-      if (m !== prevMonth) {
-        monthGroups.push({ month: m, startWi: wi, count: 0 });
-        prevMonth = m;
+    // Stats
+    let totalAtividades = 0, diasAtivos = 0, streak = 0;
+    // Streak: count backwards from today
+    const td2 = new Date(today);
+    let cs = 0;
+    for (let i = 0; i < 365; i++) {
+      const k = [td2.getFullYear(), String(td2.getMonth()+1).padStart(2,'0'), String(td2.getDate()).padStart(2,'0')].join('-');
+      if ((diario[k] || 0) > 0) { cs++; streak = cs; td2.setDate(td2.getDate() - 1); }
+      else if (i === 0) { td2.setDate(td2.getDate() - 1); }
+      else break;
+    }
+    // Totals for the 6-month window
+    for (const { year, month } of months) {
+      const days = new Date(year, month + 1, 0).getDate();
+      for (let day = 1; day <= days; day++) {
+        const k = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        if (k > todayStr) break;
+        const v = diario[k] || 0;
+        totalAtividades += v;
+        if (v > 0) diasAtivos++;
       }
-      monthGroups[monthGroups.length - 1].count++;
     }
 
-    // ── Build flat column list: week cols interleaved with sep cols ──
-    // Each separator is a 1-cell-wide column with a thin vertical line
-    const cols = []; // {type:'week', wi} | {type:'sep'}
-    for (let gi = 0; gi < monthGroups.length; gi++) {
-      if (gi > 0) cols.push({ type: 'sep' });
-      const g = monthGroups[gi];
-      for (let i = 0; i < g.count; i++) cols.push({ type: 'week', wi: g.startWi + i });
-    }
+    // ── Render month blocks ────────────────────────────────
+    const canGoRight = this.offset > 0;
+    let html = `<div class="hm-nav-row">`;
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(-1)" title="Mês anterior">&lt;</button>`;
+    html += `<div class="hm-months-row">`;
 
-    // ── Render as <table> so colspan works for centered month labels ──
-    let html = '<table class="hm-table"><tbody>';
+    for (const { year, month } of months) {
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const firstDow = (new Date(year, month, 1).getDay() + 6) % 7;
+      const isCenterMonth = year === centerDate.getFullYear() && month === centerDate.getMonth();
 
-    // 7 day rows — sep columns use rowspan=7 so only emitted in first row
-    for (let di = 0; di < 7; di++) {
-      html += '<tr>';
-      html += `<td class="hm-day-label">${dayLabels[di]}</td>`;
-      for (const col of cols) {
-        if (col.type === 'sep') {
-          // Only emit on first day row; rowspan covers the rest
-          if (di === 0) html += '<td class="hm-sep-col" rowspan="7"></td>';
-        } else {
-          const week = weeks[col.wi];
-          if (di < week.length && week[di]) {
-            const c = week[di];
-            html += `<td class="hm-cell l${c.level}${c.isToday ? ' today' : ''}" onclick="App.notificar('${c.date}: ${c.value} atividades','alerta')" title="${c.date}: ${c.value} cards/quiz"></td>`;
-          } else {
-            html += '<td class="hm-cell hm-cell-empty"></td>';
-          }
+      html += `<div class="hm-month-block${isCenterMonth ? ' hm-center-month' : ''}">`;
+      html += '<div class="hm-month-grid">';
+
+      for (let e = 0; e < firstDow; e++) {
+        html += '<div class="hm-cell hm-cell-empty"></div>';
+      }
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const k = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        if (k > todayStr) {
+          html += '<div class="hm-cell hm-cell-future"></div>';
+          continue;
         }
+        const value = diario[k] || 0;
+        let level = 0;
+        if (value > 0) {
+          const r = value / maxVal;
+          level = r <= 0.25 ? 1 : r <= 0.5 ? 2 : r <= 0.75 ? 3 : 4;
+        }
+        const isToday = k === todayStr;
+        html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${k}: ${value} atividades" onclick="App.notificar('${k}: ${value} atividades','alerta')"></div>`;
       }
-      html += '</tr>';
+
+      html += '</div>'; // hm-month-grid
+      html += `<div class="hm-month-name">${MESES[month]} ${year}</div>`;
+      html += '</div>'; // hm-month-block
     }
 
-    // Month label row — centered over each month's weeks via colspan
-    html += '<tr>';
-    html += '<td></td>'; // spacer for day-label column
-    for (let gi = 0; gi < monthGroups.length; gi++) {
-      if (gi > 0) html += '<td></td>'; // sep column (already spanned above — just placeholder)
-      const g = monthGroups[gi];
-      html += `<td colspan="${g.count}" class="hm-month-label">${MESES[g.month]}</td>`;
-    }
-    html += '</tr>';
-
-    html += '</tbody></table>';
-
+    html += '</div>'; // hm-months-row
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(1)" ${canGoRight ? '' : 'disabled'} title="Próximo mês">&gt;</button>`;
+    html += '</div>'; // hm-nav-row
     container.innerHTML = html;
 
     if (statsEl) {
-      statsEl.innerHTML = `<strong>${totalAtividades}</strong> atividades em <strong>${diasAtivos}</strong> dias • Maior sequência: <strong>${streak}</strong> dias 🔥`;
-    }
-    if (footerEl) {
-      footerEl.textContent = 'Um pouco todo dia constrói o hábito. Forza! 🇮🇹';
+      statsEl.innerHTML = `<strong>${totalAtividades}</strong> atividades em <strong>${diasAtivos}</strong> dias • 🔥 Sequência: <strong>${streak}</strong> dias`;
     }
   }
 };
