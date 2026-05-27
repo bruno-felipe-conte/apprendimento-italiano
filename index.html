@@ -480,15 +480,332 @@
     .gram-prc-conclusao { display: flex; align-items: baseline; gap: 0.55rem; padding: 0.65rem 0.85rem; background: #f0f9f4; border-top: 1px solid #c8e6c9; font-size: 0.9rem; line-height: 1.7; font-weight: 700; }
     /* ── Coda ── */
     .gram-coda { background: #2c2c2c; color: #F5EDD8; padding: 0.85rem 1.1rem; border-radius: 8px; font-size: 0.9rem; font-style: normal; line-height: 1.85; letter-spacing: 0.02em; }
+    /* ── Theme Toggle Button ── */
+    .theme-toggle-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #FFF8F0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 0;
+    }
+    .theme-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.28);
+      transform: rotate(30deg) scale(1.08);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+    }
+
+    /* ══════════════════════════════════════════════════════
+       DARK MODE THEME — Nero Classico Warm Atmosphere
+       ══════════════════════════════════════════════════════ */
+    body.dark-mode {
+      background: #14110F;
+      color: #E6DFD3;
+    }
+    body.dark-mode .nav-tabs {
+      background: #1C1816;
+      border-bottom-color: #7B1B29;
+    }
+    body.dark-mode .nav-tab:hover:not(.ativa) {
+      background: #251F1C;
+    }
+    body.dark-mode .nav-tab.ativa {
+      background: #7B1B29;
+    }
+    
+    /* Templos grid */
+    body.dark-mode .templo-card {
+      background: #1C1816;
+      border-color: #2D2723;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    body.dark-mode .templo-body {
+      background: #1C1816;
+    }
+    body.dark-mode .templo-nome {
+      color: #E6DFD3;
+    }
+    body.dark-mode .templo-meta {
+      color: #999;
+    }
+    body.dark-mode .card-selecao-templo select {
+      background: #25201D;
+      color: #E6DFD3;
+      border-color: #7B1B29;
+    }
+    
+    /* Heatmap in Dark Mode */
+    body.dark-mode .heatmap-container {
+      background: #1C1816;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+    body.dark-mode .heatmap-titolo {
+      color: #E6DFD3;
+    }
+    body.dark-mode .hm-month-block {
+      background: #25201D;
+      border-color: #2D2723;
+    }
+    body.dark-mode .hm-month-block.hm-center-month {
+      border-color: #9B2335;
+      background: #2D2421;
+    }
+    body.dark-mode .hm-month-name {
+      color: #D4A843;
+    }
+    body.dark-mode .hm-cell {
+      background: #2C2622;
+    }
+    body.dark-mode .hm-cell.l0 { background: #2C2622; }
+    body.dark-mode .hm-cell.l1 { background: #503E2F; }
+    body.dark-mode .hm-cell.l2 { background: #966B20; }
+    body.dark-mode .hm-cell.l3 { background: #9B2335; }
+    body.dark-mode .hm-cell.l4 { background: #D9384B; }
+    body.dark-mode .hm-cell-future {
+      background: #1A1715 !important;
+      opacity: 0.15;
+      border-color: #2D2723;
+    }
+    body.dark-mode .hm-nav-btn {
+      background: #7B1B29;
+    }
+    body.dark-mode .hm-nav-btn:hover:not(:disabled) {
+      background: #9B2335;
+    }
+    body.dark-mode .hm-nav-btn:disabled {
+      background: #25201D;
+      color: #444;
+    }
+    
+    /* Vocabulary & Quiz in Dark Mode */
+    body.dark-mode .vocab-item {
+      background: #1C1816;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    body.dark-mode .vocab-termo {
+      color: #fff;
+    }
+    body.dark-mode .vocab-def {
+      color: #ccc;
+    }
+    body.dark-mode .vocab-filtros select {
+      background: #25201D;
+      color: #E6DFD3;
+      border-color: #2D2723;
+    }
+    body.dark-mode .quiz-container,
+    body.dark-mode .quiz-resultado {
+      background: #1C1816;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+    body.dark-mode .quiz-pergunta {
+      color: #E6DFD3;
+    }
+    body.dark-mode .opcao-btn {
+      background: #25201D;
+      color: #E6DFD3;
+      border-color: #2D2723;
+    }
+    body.dark-mode .opcao-btn:hover:not(:disabled) {
+      background: #7B1B29;
+      border-color: #7B1B29;
+      color: white;
+    }
+    
+    /* Grammar Section in Dark Mode */
+    body.dark-mode .gram-lez-card {
+      background: #1C1816;
+      border-color: #2D2723;
+      border-left-color: #9B2335;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+    body.dark-mode .gram-lez-card:hover {
+      box-shadow: 0 6px 20px rgba(155,35,53,0.22);
+      border-left-color: #D4A843;
+    }
+    body.dark-mode .gram-lez-card.feita {
+      background: #16241C;
+      border-color: #1A2D21;
+      border-left-color: #27AE60;
+    }
+    body.dark-mode .gram-lez-card.feita:hover {
+      box-shadow: 0 6px 20px rgba(39,174,96,0.2);
+    }
+    body.dark-mode .gram-lez-titulo {
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-lez-arrow {
+      color: #555;
+    }
+    body.dark-mode .gram-locked-pill {
+      background: #161311;
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-locked-pill-nome {
+      color: #777;
+    }
+    body.dark-mode .gram-card {
+      background: #1C1816;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    body.dark-mode .gram-card-header {
+      background: #25201D;
+      border-bottom-color: #2D2723;
+      color: #D4A843;
+    }
+    
+    /* Layer Blocks in Dark Mode */
+    body.dark-mode .gram-camadas {
+      background: #1C1816;
+    }
+    body.dark-mode .gram-camada-bloco {
+      background: #161311;
+      border-color: #2D2723;
+      box-shadow: none;
+    }
+    body.dark-mode .gram-camada-label {
+      background: #7B1B29;
+      color: #FFF8F0;
+    }
+    body.dark-mode .gram-alerta {
+      background: #241A14;
+      border-color: #382415;
+      color: #E5B84E;
+    }
+    body.dark-mode .gram-inventario {
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-tecnica-corpo,
+    body.dark-mode .gram-ponte-corpo {
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-def-card {
+      background: #1C1816;
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-def-corpo {
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-def-fenomeno .gram-def-label { background: #1C2D3D; color: #73B1E6; }
+    body.dark-mode .gram-def-causa    .gram-def-label { background: #352518; color: #E5A85A; }
+    body.dark-mode .gram-def-conceito .gram-def-label { background: #1B3525; color: #73E69B; }
+    body.dark-mode .gram-prc-row {
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-prc-oracao {
+      background: #25201D;
+      color: #FF8F9E;
+    }
+    body.dark-mode .gram-prc-pq {
+      color: #ccc;
+      border-top-color: #2C2622;
+    }
+    body.dark-mode .gram-prc-conclusao {
+      background: #192B20;
+      border-top-color: #1E3827;
+      color: #73E69B;
+    }
+    body.dark-mode .gram-coda {
+      background: #161311;
+      color: #E6DFD3;
+      border: 1px solid #2D2723;
+    }
+    
+    /* Exercises in Dark Mode */
+    body.dark-mode .gram-ex-question {
+      color: #E6DFD3;
+      border-bottom-color: #2D2723;
+    }
+    body.dark-mode .gram-option {
+      background: #25201D;
+      color: #E6DFD3;
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-option:hover:not(:disabled) {
+      border-color: #D4A843;
+      background: #2D2421;
+      color: #D4A843;
+    }
+    body.dark-mode .gram-option-disabled {
+      background: #1A1715;
+      border-color: #25201D;
+      color: #555;
+    }
+    body.dark-mode .gram-word-blur {
+      background: rgba(212, 168, 67, 0.08);
+      color: #D4A843;
+      border-color: rgba(212, 168, 67, 0.25);
+    }
+    body.dark-mode .gram-word-blur:hover {
+      background: rgba(212, 168, 67, 0.15);
+      border-color: #D4A843;
+    }
+    body.dark-mode .gram-word-blur.revealed {
+      background: rgba(39, 174, 96, 0.08);
+      color: #73E69B;
+      border-color: rgba(39, 174, 96, 0.3);
+    }
+    body.dark-mode .gram-btn-rivela-tutto {
+      background: #7B1B29;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    body.dark-mode .gram-btn-rivela-tutto:hover {
+      background: #9B2335;
+    }
+    body.dark-mode .gram-risposta-container {
+      background: #1C1816;
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-btn-next {
+      background: #7B1B29;
+    }
+    body.dark-mode .gram-btn-next:hover {
+      background: #9B2335;
+    }
+    body.dark-mode .gram-btn-errei {
+      background: #1C1816;
+      color: #E74C3C;
+      border-color: #E74C3C;
+    }
+    body.dark-mode .dark-mode .gram-btn-errei:hover {
+      background: #2D1B1B;
+    }
+    body.dark-mode .gram-resultado {
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-res-score {
+      color: #E6DFD3;
+    }
+
     /* ── Mobile: cards de definição em coluna ── */
     @media (max-width: 520px) { .gram-def-card { min-width: calc(100% - 1.5rem); } .gram-definicao-row { padding: 0.5rem; gap: 0.4rem; } }
   </style>
 </head>
 <body>
+  <script>
+    (function() {
+      const tema = localStorage.getItem('it_tema');
+      if (tema === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    })();
+  </script>
 
   <header class="app-header">
     <div class="header-top">
-      <div class="app-logo">🇮🇹 Italiano Autentico</div>
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <div class="app-logo">🇮🇹 Italiano Autentico</div>
+        <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
+      </div>
       <div class="stats-bar" id="stats-bar">
         <span class="stat-item" id="stat-nivel">Livello 1</span>
         <span class="stat-item" id="stat-xp">XP: 0/500</span>
@@ -662,6 +979,30 @@
   <script src="js/vocab.js?v=2"></script>
   <script src="js/heatmap.js?v=2"></script>
   <script src="js/grammar.js?v=2"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (!toggleBtn) return;
+
+      const updateIcon = () => {
+        const isDark = document.body.classList.contains('dark-mode');
+        toggleBtn.textContent = isDark ? '🌙' : '☀️';
+      };
+
+      updateIcon();
+
+      toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('it_tema', isDark ? 'dark' : 'light');
+        updateIcon();
+
+        if (typeof Calor !== 'undefined' && typeof Calor.renderizar === 'function') {
+          Calor.renderizar();
+        }
+      });
+    });
+  </script>
   <!-- Service Worker — habilitar em produção
   <script>
     if ('serviceWorker' in navigator) {
