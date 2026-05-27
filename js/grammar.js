@@ -268,7 +268,7 @@ const Grammatica = {
     html += '</div>';
 
     // Tipo de exercício
-    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completar' : '🔘 Múltipla escolha';
+    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completa' : '🔘 Scelta multipla';
     const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : 'gram-ex-tipo-escolha';
     html += `<div class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</div>`;
 
