@@ -261,16 +261,13 @@ const Grammatica = {
 
     let html = '<div class="gram-card">';
 
-    // Progresso
-    html += '<div class="gram-ex-header">';
-    html += `<div class="gram-ex-progress-label">Esercizio ${this.exIndex + 1} / ${total}</div>`;
-    html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
-    html += '</div>';
-
-    // Tipo de exercício
+    // Progresso + tipo badge na mesma linha
     const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completa' : '🔘 Scelta multipla';
     const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : 'gram-ex-tipo-escolha';
-    html += `<div class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</div>`;
+    html += '<div class="gram-ex-header">';
+    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Esercizio ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
+    html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
+    html += '</div>';
 
     // Pergunta
     html += `<div class="gram-ex-question">${qHtml}</div>`;
@@ -593,7 +590,8 @@ const Grammatica = {
     if (!texto) return '';
     return String(texto)
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-      .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
   },
 
   // ─────────────────────────────────────────────────────────

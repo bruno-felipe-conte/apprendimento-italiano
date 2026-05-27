@@ -5,6 +5,16 @@
 // ============================================================
 
 const Calor = {
+  // ── Navigation state ────────────────────────────────────
+  offset: 0, // months to shift left from current month (0 = today's month is center)
+
+  navegar(delta) {
+    this.offset -= delta;
+    if (this.offset < 0) this.offset = 0;
+    if (this.offset > 12) this.offset = 12;
+    this.renderizar();
+  },
+
   // ── Log activity (called from flashcards/quiz) ──────────
   registrar(quantidade = 1) {
     const hoje = new Date().toISOString().split('T')[0];
@@ -66,11 +76,11 @@ const Calor = {
       String(today.getDate()).padStart(2, '0')
     ].join('-');
 
-    // Center month = current - offset; show [center-3, center-2, center-1, center, center+1, center+2]
+    // Center month = current - offset; show 5 months: [center-2, center-1, center, center+1, center+2]
     const MESES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
     const centerDate = new Date(today.getFullYear(), today.getMonth() - this.offset, 1);
     const months = [];
-    for (let i = -3; i <= 2; i++) {
+    for (let i = -2; i <= 2; i++) {
       const d = new Date(centerDate.getFullYear(), centerDate.getMonth() + i, 1);
       months.push({ year: d.getFullYear(), month: d.getMonth() });
     }
