@@ -547,42 +547,50 @@
     body.dark-mode .heatmap-container {
       background: #1C1816;
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      border: 1px solid #2D2723;
     }
     body.dark-mode .heatmap-titolo {
       color: #E6DFD3;
     }
     body.dark-mode .hm-month-block {
-      background: #25201D;
+      background: #161311;
       border-color: #2D2723;
     }
     body.dark-mode .hm-month-block.hm-center-month {
-      border-color: #9B2335;
-      background: #2D2421;
+      border-color: #D4A843;
+      background: #1C1816;
+      box-shadow: 0 4px 15px rgba(212,168,67,0.06);
     }
     body.dark-mode .hm-month-name {
       color: #D4A843;
+      font-weight: 800;
     }
     body.dark-mode .hm-cell {
-      background: #2C2622;
+      background: #231E1B;
     }
-    body.dark-mode .hm-cell.l0 { background: #2C2622; }
-    body.dark-mode .hm-cell.l1 { background: #503E2F; }
-    body.dark-mode .hm-cell.l2 { background: #966B20; }
-    body.dark-mode .hm-cell.l3 { background: #9B2335; }
-    body.dark-mode .hm-cell.l4 { background: #D9384B; }
+    body.dark-mode .hm-cell.l0 { background: #231E1B; }
+    body.dark-mode .hm-cell.l1 { background: #4C1C24; }
+    body.dark-mode .hm-cell.l2 { background: #821D2C; }
+    body.dark-mode .hm-cell.l3 { background: #C02E43; }
+    body.dark-mode .hm-cell.l4 { background: #FF4D6D; box-shadow: 0 0 8px rgba(255,77,109,0.55); }
     body.dark-mode .hm-cell-future {
-      background: #1A1715 !important;
-      opacity: 0.15;
-      border-color: #2D2723;
+      background: #13100E !important;
+      opacity: 0.12;
+      border: 0.5px dashed #2D2723;
+    }
+    body.dark-mode .hm-cell.today {
+      outline: 2px solid #D4A843;
+      outline-offset: -1px;
     }
     body.dark-mode .hm-nav-btn {
       background: #7B1B29;
     }
     body.dark-mode .hm-nav-btn:hover:not(:disabled) {
       background: #9B2335;
+      transform: scale(1.1);
     }
     body.dark-mode .hm-nav-btn:disabled {
-      background: #25201D;
+      background: #161311;
       color: #444;
     }
     
