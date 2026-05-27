@@ -553,45 +553,47 @@
       color: #E6DFD3;
     }
     body.dark-mode .hm-month-block {
-      background: #161311;
-      border-color: #2D2723;
+      background: transparent;
+      border: none;
+      opacity: 0.65;
     }
-    body.dark-mode .hm-month-block.hm-center-month {
-      border-color: #D4A843;
-      background: #1C1816;
-      box-shadow: 0 4px 15px rgba(212,168,67,0.06);
+    body.dark-mode .hm-center-month {
+      opacity: 1;
+      background: rgba(212, 168, 67, 0.05);
+      border: 1px dashed rgba(212, 168, 67, 0.35);
+      border-radius: 6px;
+      padding: 2px 4px;
     }
     body.dark-mode .hm-month-name {
       color: #D4A843;
       font-weight: 800;
     }
     body.dark-mode .hm-cell {
-      background: #231E1B;
+      background: #352E29;
     }
-    body.dark-mode .hm-cell.l0 { background: #231E1B; }
-    body.dark-mode .hm-cell.l1 { background: #4C1C24; }
-    body.dark-mode .hm-cell.l2 { background: #821D2C; }
-    body.dark-mode .hm-cell.l3 { background: #C02E43; }
-    body.dark-mode .hm-cell.l4 { background: #FF4D6D; box-shadow: 0 0 8px rgba(255,77,109,0.55); }
+    body.dark-mode .hm-cell.l0 { background: #352E29; }
+    body.dark-mode .hm-cell.l1 { background: #6B1D2A; }
+    body.dark-mode .hm-cell.l2 { background: #9B2335; }
+    body.dark-mode .hm-cell.l3 { background: #D9384B; }
+    body.dark-mode .hm-cell.l4 { background: #FF4D6D; box-shadow: 0 0 8px rgba(255,77,109,0.7); }
     body.dark-mode .hm-cell-future {
-      background: #13100E !important;
-      opacity: 0.12;
-      border: 0.5px dashed #2D2723;
+      background: rgba(255, 255, 255, 0.06) !important;
+      opacity: 0.35 !important;
     }
     body.dark-mode .hm-cell.today {
       outline: 2px solid #D4A843;
       outline-offset: -1px;
     }
     body.dark-mode .hm-nav-btn {
-      background: #7B1B29;
+      color: #D4A843;
     }
     body.dark-mode .hm-nav-btn:hover:not(:disabled) {
-      background: #9B2335;
-      transform: scale(1.1);
+      color: #FFF8F0;
+      transform: scale(1.2);
     }
     body.dark-mode .hm-nav-btn:disabled {
-      background: #161311;
-      color: #444;
+      color: #3D3530;
+      background: transparent;
     }
     
     /* Vocabulary & Quiz in Dark Mode */
