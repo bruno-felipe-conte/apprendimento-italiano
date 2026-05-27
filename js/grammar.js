@@ -39,6 +39,15 @@ const Grammatica = {
     c.innerHTML = this._htmlSeletor();
   },
 
+  // Voltar ao seletor (com confirmação se exercício em andamento)
+  voltarSeletor() {
+    const total = this.unidadeAtual?.exercicios?.length || 0;
+    if (this.unidadeAtual && this.exIndex > 0 && this.exIndex < total) {
+      if (!confirm('Vuoi tornare? Il progresso di questa lezione andrà perso.')) return;
+    }
+    this.renderizarSeletor();
+  },
+
   // ─────────────────────────────────────────────────────────
   // Seletor de módulos e lições
   // ─────────────────────────────────────────────────────────
@@ -212,7 +221,7 @@ const Grammatica = {
 
     // Nav
     html += '<div class="gram-lesson-nav">';
-    html += `<button class="gram-btn-back" onclick="Grammatica.renderizarSeletor()">‹ Tutti i moduli</button>`;
+    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>`;
     html += `<div class="gram-lesson-breadcrumb"><span>${mod.id}</span> › <span>${u.num}</span></div>`;
     html += '</div>';
 
@@ -223,32 +232,15 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
-    // Card: Grammatica (teoria)
-    html += '<div class="gram-card gram-teoria-card">';
-    html += '<div class="gram-card-header"><span>📖</span> Grammatica</div>';
-    html += `<div class="gram-teoria-corpo">${this._formatarTeoria(u.teoria)}</div>`;
-    html += '</div>';
-
-    // Card: Esempi
-    if (u.exemplos && u.exemplos.length) {
-      html += '<div class="gram-card">';
-      html += '<div class="gram-card-header"><span>✍️</span> Esempi</div>';
-      html += '<div class="gram-esempi-lista">';
-      for (const ex of u.exemplos) {
-        const it = typeof ex === 'string' ? ex : (ex.it || '');
-        const pt = typeof ex === 'string' ? '' : (ex.pt || '');
-        const safe = it.replace(/'/g, "\\'");
-        html += '<div class="gram-esempio">';
-        html += `<div class="gram-esempio-it" onclick="App.pronunciar('${safe}')">🔊 ${it}</div>`;
-        if (pt) html += `<div class="gram-esempio-pt">${pt}</div>`;
-        html += '</div>';
-      }
-      html += '</div></div>';
-    }
-
-    // Área de exercícios
+    // ✏️ Exercícios — topo da lição
     html += '<div id="gram-ex-area">';
     html += this._htmlExercicio();
+    html += '</div>';
+
+    // 📖 Teoria estruturada em camadas (NMA)
+    html += '<div class="gram-card gram-teoria-card">';
+    html += '<div class="gram-card-header"><span>📖</span> Grammatica</div>';
+    html += this._htmlCamadas(u);
     html += '</div>';
 
     html += '</div>'; // lesson-layout
@@ -275,8 +267,18 @@ const Grammatica = {
     html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
     html += '</div>';
 
+    // Tipo de exercício
+    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completar' : '🔘 Múltipla escolha';
+    const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : 'gram-ex-tipo-escolha';
+    html += `<div class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</div>`;
+
     // Pergunta
     html += `<div class="gram-ex-question">${qHtml}</div>`;
+
+    // Explicação enxuta (visível antes da interação)
+    if (ex.explicacao) {
+      html += `<div class="gram-ex-dica">${this._formatarPergunta(ex.explicacao)}</div>`;
+    }
 
     // Corpo do exercício
     if (ex.tipo === 'escolha') {
@@ -434,10 +436,19 @@ const Grammatica = {
     this.respondida = false;
     const area = document.getElementById('gram-ex-area');
     if (!area) return;
-    area.innerHTML = this.exIndex >= this.unidadeAtual.exercicios.length
-      ? this._htmlResultado()
-      : this._htmlExercicio();
-    area.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Animação de saída
+    area.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+    area.style.opacity = '0';
+    area.style.transform = 'translateY(8px)';
+    setTimeout(() => {
+      area.innerHTML = this.exIndex >= this.unidadeAtual.exercicios.length
+        ? this._htmlResultado()
+        : this._htmlExercicio();
+      // Animação de entrada
+      area.style.opacity = '1';
+      area.style.transform = 'translateY(0)';
+      area.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 160);
   },
 
   // ─────────────────────────────────────────────────────────
@@ -486,7 +497,7 @@ const Grammatica = {
         <div class="gram-res-actions">
           <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Ripeti</button>
           ${proxBtn}
-          <button class="gram-btn-secondary" onclick="Grammatica.renderizarSeletor()">‹ Tutti i moduli</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>
         </div>
       </div>`;
   },
@@ -583,5 +594,105 @@ const Grammatica = {
     return String(texto)
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // Método NMA: orquestra as camadas pedagógicas
+  // Se a unidade tiver os novos campos, renderiza as camadas.
+  // Caso contrário, faz fallback para `teoria` + `exemplos` legados.
+  // ─────────────────────────────────────────────────────────
+  _htmlCamadas(u) {
+    const hasNovos = u.alerta || u.inventario || u.definicao || u.tecnica || u.exemplos_prc || u.ponte || u.coda;
+    if (!hasNovos) {
+      // Fallback legado
+      let h = `<div class="gram-teoria-corpo">${this._formatarTeoria(u.teoria)}</div>`;
+      if (u.exemplos && u.exemplos.length) {
+        h += '<div class="gram-esempi-lista">';
+        for (const ex of u.exemplos) {
+          const it = typeof ex === 'string' ? ex : (ex.it || '');
+          const pt = typeof ex === 'string' ? '' : (ex.pt || '');
+          const safe = it.replace(/'/g, "\\'");
+          h += `<div class="gram-esempio"><div class="gram-esempio-it" onclick="App.pronunciar('${safe}')">🔊 ${it}</div>`;
+          if (pt) h += `<div class="gram-esempio-pt">${pt}</div>`;
+          h += '</div>';
+        }
+        h += '</div>';
+      }
+      return h;
+    }
+
+    let h = '<div class="gram-camadas">';
+    h += this._htmlAlerta(u);
+    h += this._htmlInventario(u);
+    h += this._htmlDefinicao(u);
+    h += this._htmlTecnica(u);
+    h += this._htmlExemplosPRC(u);
+    h += this._htmlPonte(u);
+    h += this._htmlCoda(u);
+    h += '</div>';
+    return h;
+  },
+
+  // Camada 2 — Alerta motivacional
+  _htmlAlerta(u) {
+    if (!u.alerta) return '';
+    return `<div class="gram-alerta">⚡ ${this._formatarPergunta(u.alerta)}</div>`;
+  },
+
+  // Camada 3 — Inventário estrutural numerado
+  _htmlInventario(u) {
+    if (!u.inventario || !u.inventario.length) return '';
+    const items = u.inventario.map(i => `<li>${this._formatarPergunta(i)}</li>`).join('');
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">Struttura</div><ol class="gram-inventario">${items}</ol></div>`;
+  },
+
+  // Camada 4 — Definição indutiva (Fenômeno → Causa → Conceito)
+  _htmlDefinicao(u) {
+    if (!u.definicao) return '';
+    const d = u.definicao;
+    if (!d.fenomeno && !d.causa && !d.conceito) return '';
+    return `<div class="gram-camada-bloco">
+      <div class="gram-camada-label">Definizione</div>
+      <div class="gram-definicao-row">
+        ${d.fenomeno ? `<div class="gram-def-card gram-def-fenomeno"><div class="gram-def-label">Fenomeno</div><div class="gram-def-corpo">${this._formatarPergunta(d.fenomeno)}</div></div>` : ''}
+        ${d.causa    ? `<div class="gram-def-card gram-def-causa"><div class="gram-def-label">Causa</div><div class="gram-def-corpo">${this._formatarPergunta(d.causa)}</div></div>` : ''}
+        ${d.conceito ? `<div class="gram-def-card gram-def-conceito"><div class="gram-def-label">Concetto</div><div class="gram-def-corpo">${this._formatarPergunta(d.conceito)}</div></div>` : ''}
+      </div>
+    </div>`;
+  },
+
+  // Camada 5 — Técnica com algoritmo verbal
+  _htmlTecnica(u) {
+    if (!u.tecnica) return '';
+    const ft = this._formatarTeoria(u.tecnica);
+    return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">Tecnica pratica</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
+  },
+
+  // Camada 6 — Exemplos P→R→C
+  _htmlExemplosPRC(u) {
+    if (!u.exemplos_prc || !u.exemplos_prc.length) return '';
+    let rows = '';
+    for (const e of u.exemplos_prc) {
+      const safe = (e.oracao || '').replace(/'/g, "\\'");
+      rows += `<div class="gram-prc-row">
+        <div class="gram-prc-oracao" onclick="App.pronunciar('${safe}')">🔊 <em>${e.oracao || ''}</em></div>
+        <div class="gram-prc-pq"><span class="gram-prc-tag">P</span>${this._formatarPergunta(e.pergunta || '')}</div>
+        <div class="gram-prc-pq"><span class="gram-prc-tag">R</span>${this._formatarPergunta(e.resposta || '')}</div>
+        <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">C</span><strong>${this._formatarPergunta(e.conclusao || '')}</strong></div>
+      </div>`;
+    }
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">Esempi (P→R→C)</div><div class="gram-prc-lista">${rows}</div></div>`;
+  },
+
+  // Camada 7 — Ponte teórica (port → italiano)
+  _htmlPonte(u) {
+    if (!u.ponte) return '';
+    return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">Ponte 🇧🇷 → 🇮🇹</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
+  },
+
+  // Camada 9 — Coda comportamental
+  _htmlCoda(u) {
+    if (!u.coda) return '';
+    return `<div class="gram-coda">📌 ${this._formatarPergunta(u.coda)}</div>`;
   }
 };

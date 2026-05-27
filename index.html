@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="css/italia.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Lato', sans-serif; background: #F5EDD8; color: #2C2C2C; min-height: 100vh; display: flex; flex-direction: column; }
+    body { font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; background: #F5EDD8; color: #2C2C2C; min-height: 100vh; display: flex; flex-direction: column; }
 
     /* ── Header ── */
     .app-header { background: linear-gradient(135deg, #9B2335 0%, #6B1525 100%); color: #F5EDD8; padding: 0.75rem 1.5rem 0.6rem; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
@@ -271,16 +271,16 @@
     @media (max-width: 390px) { .gram-lezioni-grid { grid-template-columns: 1fr; } .gram-locked-row { grid-template-columns: 1fr; } }
 
     /* ── Lição ── */
-    .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.3rem; }
+    .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }
     .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
     .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: #9B2335; border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
     .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
     .gram-lesson-breadcrumb { font-size: 0.75rem; color: #bbb; }
     .gram-lesson-breadcrumb span { color: #9B2335; font-weight: 700; }
     .gram-lesson-header { text-align: center; padding: 0.25rem 0; }
-    .gram-lesson-eyebrow { font-family: 'Cinzel', serif; font-size: 0.68rem; color: #D4A843; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .gram-lesson-eyebrow { font-family: 'Cinzel', serif; font-size: 0.78rem; color: #D4A843; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .gram-lesson-title { font-family: 'Cinzel', serif; font-size: 1.6rem; color: #9B2335; line-height: 1.2; }
-    .gram-lesson-subtitle { font-size: 0.88rem; color: #999; margin-top: 0.35rem; font-style: italic; }
+    .gram-lesson-subtitle { font-size: 0.88rem; color: #888; margin-top: 0.35rem; font-style: normal; font-weight: 400; letter-spacing: 0.02em; }
 
     /* ── Cards ── */
     .gram-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 18px rgba(0,0,0,0.07); }
@@ -325,29 +325,29 @@
     /* ── Esempi ── */
     .gram-esempi-lista { padding: 1rem 1.3rem; display: flex; flex-direction: column; gap: 0.7rem; }
     .gram-esempio { border-left: 3px solid #D4A843; padding: 0.6rem 0.95rem; background: #fdfaf4; border-radius: 0 10px 10px 0; }
-    .gram-esempio-it { font-style: italic; color: #9B2335; font-size: 0.93rem; cursor: pointer; display: flex; align-items: center; gap: 0.45rem; }
+    .gram-exemplo-it { font-style: normal; font-weight: 600; color: #9B2335; font-size: 0.93rem; cursor: pointer; display: flex; align-items: center; gap: 0.45rem; }
     .gram-esempio-it:hover { opacity: 0.78; }
     .gram-esempio-pt { font-size: 0.82rem; color: #777; margin-top: 0.22rem; padding-left: 1.5rem; }
 
     /* ── Exercício ── */
     .gram-ex-header { padding: 1.1rem 1.3rem 0; }
-    .gram-ex-progress-label { font-size: 0.72rem; color: #bbb; margin-bottom: 0.4rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
-    .gram-ex-progress-bar { background: #f0e8d8; border-radius: 10px; height: 5px; overflow: hidden; }
+    .gram-ex-progress-label { font-size: 0.82rem; color: #9B2335; margin-bottom: 0.55rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
+    .gram-ex-progress-bar { background: #f0e8d8; border-radius: 10px; height: 8px; overflow: hidden; }
     .gram-ex-progress-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.45s ease; }
-    .gram-ex-question { padding: 1.1rem 1.3rem 1rem; font-size: 1rem; font-weight: 600; color: #1a1a1a; line-height: 1.6; border-bottom: 1px solid #f0e8d8; }
+    .gram-ex-question { padding: 1.3rem 1.5rem 1.1rem; font-size: 1.08rem; font-weight: 700; color: #1a1a1a; line-height: 1.75; border-bottom: 1px solid #f0e8d8; letter-spacing: 0.01em; }
     .gram-ex-question strong { color: #9B2335; }
 
     /* Múltipla escolha */
     .gram-options { padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; }
-    .gram-option { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #e8ddd0; border-radius: 12px; background: white; cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: #2C2C2C; transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'Lato', sans-serif; }
+    .gram-option { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #e8ddd0; border-radius: 12px; background: white; cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: #2C2C2C; transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'Lato', sans-serif; }
     .gram-option:hover:not(:disabled) { border-color: #9B2335; background: #fdf5f5; color: #9B2335; }
-    .gram-option-correct { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.9rem; line-height: 1.45; color: #1a6b3c; font-weight: 700; font-family: 'Lato', sans-serif; }
-    .gram-option-wrong { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.9rem; line-height: 1.45; color: #7b241c; font-weight: 700; font-family: 'Lato', sans-serif; }
-    .gram-option-disabled { display: block; width: 100%; text-align: left; padding: 0.9rem 1.15rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.9rem; line-height: 1.45; color: #bbb; font-family: 'Lato', sans-serif; }
+    .gram-option-correct { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.96rem; line-height: 1.65; color: #1a6b3c; font-weight: 700; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; animation: gramAcertoGlow 0.8s ease; }
+    .gram-option-wrong { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.96rem; line-height: 1.65; color: #7b241c; font-weight: 700; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; }
+    .gram-option-disabled { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.96rem; line-height: 1.65; color: #bbb; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; }
 
     /* Blur-reveal */
     .gram-revelar-area { padding: 1.1rem 1.3rem; }
-    .gram-revelar-hint { font-size: 0.76rem; color: #bbb; margin-bottom: 0.7rem; text-align: center; font-style: italic; }
+    .gram-revelar-hint { font-size: 0.85rem; color: #999; margin-bottom: 0.9rem; text-align: center; font-style: normal; }
     .gram-risposta-container { font-size: 1.05rem; color: #2C2C2C; line-height: 1.75; margin-bottom: 0.85rem; padding: 0.9rem 1.1rem; background: #fdfaf4; border-radius: 10px; border: 1.5px dashed #d4c4a8; min-height: 3rem; }
     .gram-word-blur { filter: blur(7px); opacity: 0.5; cursor: pointer; transition: filter 0.3s ease, opacity 0.3s ease; display: inline-block; user-select: none; border-radius: 3px; padding: 0 1px; }
     .gram-word-blur:hover { filter: blur(3px); opacity: 0.75; }
@@ -381,7 +381,7 @@
     .gram-res-score span { font-size: 1.6rem; color: #bbb; }
     .gram-res-pct { font-size: 0.92rem; color: #999; margin: 0.4rem 0; }
     .gram-res-xp { font-size: 1.1rem; color: #D4A843; font-weight: 700; margin: 0.7rem 0; }
-    .gram-res-msg { font-style: italic; color: #777; margin: 0.8rem 0 1.8rem; font-size: 0.95rem; }
+    .gram-res-msg { font-style: normal; color: #666; margin: 0.8rem 0 1.8rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.01em; }
     .gram-res-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
     .gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
     .gram-btn-secondary:hover { background: #ede0c4; border-color: #9B2335; color: #9B2335; }
@@ -395,6 +395,34 @@
       .gram-ex-actions { justify-content: center; }
       .gram-res-score { font-size: 3.5rem; }
     }
+
+    /* ── Badge de tipo de exercício ── */
+    .gram-ex-tipo-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; border-radius: 20px; padding: 0.22rem 0.7rem; margin: 0.7rem 1.5rem 0; }
+    .gram-ex-tipo-escolha { background: #e8f4fd; color: #1a5276; border: 1px solid #aed6f1; }
+    .gram-ex-tipo-revelar { background: #e9f7ef; color: #145a32; border: 1px solid #a9dfbf; }
+    /* ── Animação de acerto (glow verde) ── */
+    @keyframes gramAcertoGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(39,174,96,0); } 50% { box-shadow: 0 0 0 10px rgba(39,174,96,0.28); } }
+    /* ── Camada Definição ── */
+    .gram-definicao-row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: stretch; padding: 0.75rem; }
+    .gram-def-card { flex: 1; min-width: 160px; border-radius: 10px; overflow: hidden; border: 1px solid #ede5d5; display: flex; flex-direction: column; }
+    .gram-def-label { padding: 0.35rem 0.75rem; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+    .gram-def-corpo { flex: 1; padding: 0.75rem 0.85rem; font-size: 0.9rem; color: #1e1e1e; line-height: 1.85; letter-spacing: 0.015em; }
+    .gram-def-fenomeno .gram-def-label { background: #e8f4fd; color: #1a5276; }
+    .gram-def-causa    .gram-def-label { background: #fdebd0; color: #784212; }
+    .gram-def-conceito .gram-def-label { background: #e9f7ef; color: #145a32; }
+    /* ── Camada P→R→C ── */
+    .gram-prc-lista { padding: 0.6rem 1rem 1rem; display: flex; flex-direction: column; gap: 1.2rem; }
+    .gram-prc-row { border: 1px solid #ede5d5; border-radius: 6px; overflow: hidden; transition: box-shadow 0.18s, border-color 0.18s; }
+    .gram-prc-row:hover { box-shadow: 0 0 0 2px #D4A843; border-color: #D4A843; }
+    .gram-prc-oracao { background: #f9f4ee; padding: 0.7rem 0.85rem; font-size: 0.95rem; color: #5C0E1A; cursor: pointer; line-height: 1.6; letter-spacing: 0.02em; }
+    .gram-prc-tag { display: inline-block; background: #9B2335; color: white; border-radius: 4px; font-size: 0.72rem; font-weight: 800; padding: 0.15rem 0.45rem; flex-shrink: 0; min-width: 1.4rem; text-align: center; }
+    .gram-prc-tag-c { background: #27AE60; }
+    .gram-prc-pq { display: flex; align-items: baseline; gap: 0.55rem; padding: 0.6rem 0.85rem; font-size: 0.88rem; color: #2c2c2c; border-top: 1px solid #f0e8d8; line-height: 1.7; }
+    .gram-prc-conclusao { display: flex; align-items: baseline; gap: 0.55rem; padding: 0.65rem 0.85rem; background: #f0f9f4; border-top: 1px solid #c8e6c9; font-size: 0.9rem; line-height: 1.7; font-weight: 700; }
+    /* ── Coda ── */
+    .gram-coda { background: #2c2c2c; color: #F5EDD8; padding: 0.85rem 1.1rem; border-radius: 8px; font-size: 0.9rem; font-style: normal; line-height: 1.85; letter-spacing: 0.02em; }
+    /* ── Mobile: cards de definição em coluna ── */
+    @media (max-width: 520px) { .gram-def-card { min-width: calc(100% - 1.5rem); } .gram-definicao-row { padding: 0.5rem; gap: 0.4rem; } }
   </style>
 </head>
 <body>
