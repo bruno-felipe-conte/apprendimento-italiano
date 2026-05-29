@@ -32,6 +32,7 @@
       color: #F5EDD8;
     }
     #stat-streak { background: rgba(212,168,67,0.25); border-color: rgba(212,168,67,0.5); color: #F5EDD8; }
+    .stat-item.secondary { font-size: 0.68rem; font-weight: 500; opacity: 0.6; background: rgba(0,0,0,0.12); border-color: rgba(255,255,255,0.1); }
     #stat-nivel  { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
     .xp-bar-container { margin-top: 0.45rem; background: rgba(0,0,0,0.25); border-radius: 999px; height: 5px; overflow: hidden; }
     .xp-bar-fill { height: 100%; background: linear-gradient(90deg, #D4A843, #F5C842); border-radius: 999px; transition: width 0.6s ease; width: 0%; box-shadow: 0 0 6px rgba(212,168,67,0.5); }
@@ -73,7 +74,9 @@
     /* ── Flashcard ── */
     .flashcard-arena { max-width: 520px; margin: 0 auto; }
     .card-selecao-templo { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding: 0.55rem 0.9rem; background: rgba(155,35,53,0.06); border: 1px solid rgba(155,35,53,0.18); border-radius: 10px; }
-    .card-selecao-templo label { font-family: 'Cinzel', serif; font-size: 0.72rem; font-weight: 700; color: #9B2335; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+    .card-selecao-templo label { font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600; color: #9B2335; letter-spacing: 0.03em; white-space: nowrap; }
+    .selector-helper { font-size: 0.73rem; color: #b0a090; text-align: center; margin: -0.4rem 0 0.7rem; }
+    body.dark-mode .selector-helper { color: #5a5048; }
     .card-selecao-templo select { flex: 1; padding: 0.48rem 2.2rem 0.48rem 0.8rem; border: 1.5px solid rgba(155,35,53,0.45); border-radius: 8px; font-family: 'Atkinson Hyperlegible', Lato, sans-serif; font-size: 0.9rem; font-weight: 600; color: #2a1a1a; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%239B2335' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.7rem center; -webkit-appearance: none; appearance: none; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; }
     .card-selecao-templo select:focus { outline: none; border-color: #9B2335; box-shadow: 0 0 0 3px rgba(155,35,53,0.12); }
     .card-info { text-align: right; color: #aaa; font-size: 0.75rem; letter-spacing: 0.04em; margin-bottom: 0.4rem; min-height: 1em; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 0.2rem !important; border-radius: 0 !important; font-variant-numeric: tabular-nums; }
@@ -861,8 +864,8 @@
       <div class="stats-bar" id="stats-bar">
         <span class="stat-item" id="stat-nivel">Livello 1</span>
         <span class="stat-item" id="stat-xp">XP: 0/500</span>
-        <span class="stat-item" id="stat-templi">Templi: 1/10</span>
-        <span class="stat-item" id="stat-parole">Parole: 0</span>
+        <span class="stat-item secondary" id="stat-templi">Templi: 1/10</span>
+        <span class="stat-item secondary" id="stat-parole">Parole: 0</span>
         <span class="stat-item" id="stat-streak">🔥 0 dias</span>
       </div>
     </div>
@@ -917,12 +920,13 @@
             <option value="">-- Seleziona tempio --</option>
           </select>
         </div>
+        <p class="selector-helper" id="selector-helper">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
         <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
           <div class="card-inner">
             <div class="card-frente">
-              <div class="palavra-italiana" id="card-italiano">Seleziona un Tempio</div>
-              <div class="card-dica">Clique para revelar</div>
+              <div class="palavra-italiana" id="card-italiano">Selecione um Tempio</div>
+              <div class="card-dica" id="card-dica">↑ use o seletor acima</div>
               <div class="card-categoria" id="card-categoria"></div>
             </div>
             <div class="card-verso">
@@ -953,7 +957,7 @@
         </div>
         <div class="empty-state" id="flashcard-vazio" style="display:none">
           <p class="ornamento-italiano">Bravissimo!</p>
-          <p>Tutte le carte studiate oggi.</p>
+          <p>Todas as cartas estudadas hoje.</p>
           <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
           <button class="btn-primario" onclick="Flashcards.praticaTodas()">Praticar todas novamente</button>
         </div>

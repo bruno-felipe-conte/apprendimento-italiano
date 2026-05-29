@@ -243,10 +243,14 @@ const Flashcards = {
     const actions = document.getElementById('card-actions');
     if (actions) actions.style.display = 'none';
 
-    const elIt  = document.getElementById('card-italiano');
-    const elCat = document.getElementById('card-categoria');
-    if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
-    if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+    const elIt   = document.getElementById('card-italiano');
+    const elCat  = document.getElementById('card-categoria');
+    const elDica = document.getElementById('card-dica');
+    const elHelp = document.getElementById('selector-helper');
+    if (elIt)   elIt.textContent   = this.cartaAtual.italiano || '—';
+    if (elCat)  elCat.textContent  = this.cartaAtual.categoria || '';
+    if (elDica) elDica.textContent = 'Clique para revelar';
+    if (elHelp) elHelp.style.display = 'none';
 
     const elTrad = document.getElementById('card-traducao');
     const elEx   = document.getElementById('card-exemplo');
