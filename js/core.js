@@ -227,6 +227,8 @@ const App = {
       card.className = `templo-card${desbloqueado ? '' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
 
       if (desbloqueado) {
+        card.style.cursor = 'pointer';
+        card.onclick = () => this.estudarTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}">
             <div class="templo-num">Tempio ${i}</div>
@@ -241,10 +243,6 @@ const App = {
             <div class="progresso-label">${dominadas}/${totalPalavras} parole dominate</div>
             <div class="progresso-bar-container">
               <div class="progresso-bar-fill" style="width:${progPercent}%"></div>
-            </div>
-            <div class="templo-actions">
-              <button class="btn-estudar" onclick="App.estudarTemplo(${i})">📚 Estudar</button>
-              <button class="btn-quiz-templo" onclick="App.quizTemplo(${i})">❓ Quiz</button>
             </div>
           </div>
         `;

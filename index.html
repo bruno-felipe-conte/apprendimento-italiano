@@ -64,11 +64,8 @@
     .progresso-bar-container { background: #eee; border-radius: 10px; height: 5px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
     .progresso-bar-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.5s ease; }
     .progresso-label { font-size: 0.73rem; color: #777; margin-bottom: 0.65rem; }
-    .templo-actions { display: flex; gap: 0.45rem; }
-    .btn-estudar { padding: 0.4rem 0.8rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.78rem; font-weight: 700; transition: all 0.2s; background: #9B2335; color: #FFF8F0; flex: 1; }
-    .btn-estudar:hover { background: #7a1c2a; }
-    .btn-quiz-templo { padding: 0.4rem 0.75rem; border: none; border-radius: 6px; cursor: pointer; font-size: 0.78rem; font-weight: 700; transition: all 0.2s; background: #D4A843; color: #2C2C2C; }
-    .btn-quiz-templo:hover { background: #b8923a; }
+    .templo-card:not(.bloqueado) { transition: transform 0.15s, box-shadow 0.15s; }
+    .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
     .lock-info { text-align: center; color: #999; font-size: 0.78rem; padding: 0.3rem 0 0; }
 
     /* ── Flashcard ── */
