@@ -28,6 +28,21 @@ const App = {
     'linear-gradient(135deg, #B7950B, #9A7D0A)',   // 10 Siena
   ],
 
+  // Temple names (index = templo number)
+  TEMPLO_NOMES: [
+    null,
+    'Le Fondamenta',       // 1 Roma
+    'Il Cuore',            // 2 Venezia
+    'Il Viaggio',          // 3 Firenze
+    'Il Gusto',            // 4 Napoli
+    'Il Tempo',            // 5 Milano
+    'La Grammatica',       // 6 Bologna
+    'La Conversazione',    // 7 Torino
+    'La Cultura',          // 8 Palermo
+    'Il Lavoro',           // 9 Bari
+    'La Letteratura',      // 10 Siena
+  ],
+
   // XP needed to UNLOCK each temple (minimum level)
   TEMPLO_NIVEL_MINIMO: { 1:1, 2:3, 3:6, 4:10, 5:15, 6:21, 7:28, 8:36, 9:45, 10:55 },
 
@@ -191,7 +206,7 @@ const App = {
       const cor = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
 
       // If data not loaded but temple is unlocked, show placeholder
-      const nome = (data && data.nome) ? data.nome : `Tempio ${i}`;
+      const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
       const cidade = data ? data.cidade : '—';
       const nivel = data ? data.nivel : '—';
       const totalPalavras = data && data.palavras ? data.palavras.length : 0;

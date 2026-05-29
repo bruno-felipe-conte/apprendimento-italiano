@@ -436,7 +436,8 @@ const Flashcards = {
       if (!data) return;
       const opt        = document.createElement('option');
       opt.value        = num;
-      opt.textContent  = `${num}. ${data.nome} (${data.cidade})`;
+      const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
+      opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
       sel.appendChild(opt);
     });
     if (anterior && sel.querySelector(`option[value="${anterior}"]`)) {
