@@ -166,8 +166,13 @@ const Flashcards = {
   indiceAtual:      0,
   virada:           false,
   praticandoTodas:  false,
-  modoReverso:      false,
-  sessaoStats:      null,
+  modoReverso:       false,
+  modoContexto:      false,
+  modoEscuta:        false,
+  sessaoStats:       null,
+  _swipeInitialized: false,
+  _swipeStartX:      0,
+  _swipeStartY:      0,
 
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
@@ -183,6 +188,7 @@ const Flashcards = {
     this.temploAtual     = templo;
     this.praticandoTodas = false;
     this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
     this.carregarCartas();
     this.indiceAtual = 0;
     this.virada      = false;
@@ -254,21 +260,41 @@ const Flashcards = {
     const elEx   = document.getElementById('card-exemplo');
     const elIpa  = document.getElementById('card-ipa');
     if (elHelp) elHelp.style.display = 'none';
-    if (elDica) elDica.textContent = 'Clique para revelar';
 
-    // Apply/remove reverse mode class for CSS theming
+    // Apply mode classes to card for CSS theming
     const cardEl2 = document.getElementById('flashcard');
-    if (cardEl2) cardEl2.classList.toggle('modo-reverso', this.modoReverso);
+    if (cardEl2) {
+      cardEl2.classList.toggle('modo-reverso',  this.modoReverso  && !this.modoContexto && !this.modoEscuta);
+      cardEl2.classList.toggle('modo-contexto', this.modoContexto);
+      cardEl2.classList.toggle('modo-escuta',   this.modoEscuta);
+    }
 
-    if (this.modoReverso) {
-      // PT → IT: front shows Portuguese, back reveals Italian + IPA
+    if (this.modoEscuta) {
+      // 👂 Listening: hide word, auto-play TTS
+      if (elIt)  elIt.textContent  = '🎧';
+      if (elCat) elCat.textContent = '';
+      if (elDica) elDica.textContent = 'Escute e adivinhe...';
+      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+      setTimeout(() => { if (this.modoEscuta && this.cartaAtual) this.pronunciar(); }, 350);
+    } else if (this.modoContexto) {
+      // 📖 Context: show example sentence with blank
+      const ex = this.cartaAtual.exemplo || '';
+      const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
+      if (elIt) elIt.textContent = mascarada || `${this.cartaAtual.italiano} → ?`;
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elDica) elDica.textContent = 'Que palavra falta?';
+      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+    } else if (this.modoReverso) {
+      // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elDica) elDica.textContent = 'Clique para revelar';
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else {
-      // IT → PT (normal): front shows Italian, back reveals Portuguese
+      // Normal: IT front, PT back
       if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elDica) elDica.textContent = 'Clique para revelar';
       if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
     }
 
@@ -380,9 +406,10 @@ const Flashcards = {
       App.estado.flashcardData[carta.id] = updated;
       App.salvarFlashcards();
 
-      // XP: Again=0, Hard=5, Good=10, Easy=15
+      // XP: Again=0, Hard=5, Good=10, Easy=15; +5 bonus in context/listen modes
       const xpMap = [0, 0, 5, 10, 15];
-      const xpGanho = xpMap[rating] || 0;
+      const xpBonus = (this.modoContexto || this.modoEscuta) ? 5 : 0;
+      const xpGanho = (xpMap[rating] || 0) + xpBonus;
       if (xpGanho > 0 && App.estado.progresso) {
         App.estado.progresso.xp += xpGanho;
         App.salvarProgresso();
@@ -564,12 +591,125 @@ const Flashcards = {
     this.mostrarCarta();
   },
 
-  // ── Toggle reverse mode (PT → IT) ─────────────────────────
+  // ── Mode toggles (mutually exclusive) ────────────────────
+  _limparModos() {
+    this.modoReverso  = false;
+    this.modoContexto = false;
+    this.modoEscuta   = false;
+    ['btn-reverso','btn-contexto','btn-escuta'].forEach(id => {
+      const b = document.getElementById(id);
+      if (b) b.classList.remove('ativo');
+    });
+  },
+
   toggleReverso() {
-    this.modoReverso = !this.modoReverso;
+    const novoValor = !this.modoReverso;
+    this._limparModos();
+    this.modoReverso = novoValor;
     const btn = document.getElementById('btn-reverso');
     if (btn) btn.classList.toggle('ativo', this.modoReverso);
     if (this.cartaAtual) this.mostrarCarta();
+  },
+
+  toggleContexto() {
+    const novoValor = !this.modoContexto;
+    this._limparModos();
+    this.modoContexto = novoValor;
+    const btn = document.getElementById('btn-contexto');
+    if (btn) btn.classList.toggle('ativo', this.modoContexto);
+    if (this.cartaAtual) this.mostrarCarta();
+  },
+
+  toggleEscuta() {
+    const novoValor = !this.modoEscuta;
+    this._limparModos();
+    this.modoEscuta = novoValor;
+    const btn = document.getElementById('btn-escuta');
+    if (btn) btn.classList.toggle('ativo', this.modoEscuta);
+    if (this.cartaAtual) this.mostrarCarta();
+  },
+
+  // ── Mask Italian word in example sentence ─────────────────
+  _mascarar(italiano, exemplo) {
+    if (!italiano || !exemplo) return exemplo || '';
+    const escaped = italiano.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const result = exemplo.replace(new RegExp(escaped, 'gi'), '___');
+    // Fallback: try first 5 chars if exact word not found
+    if (result === exemplo && italiano.length > 4) {
+      const short = italiano.slice(0, 5).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return exemplo.replace(new RegExp(short, 'gi'), '___');
+    }
+    return result;
+  },
+
+  // ── Swipe-to-rate (touch devices) ─────────────────────────
+  _iniciarSwipe() {
+    const arena = document.querySelector('.flashcard-arena');
+    if (!arena) return;
+
+    arena.addEventListener('touchstart', (e) => {
+      const t = e.touches[0];
+      this._swipeStartX = t.clientX;
+      this._swipeStartY = t.clientY;
+    }, { passive: true });
+
+    arena.addEventListener('touchmove', (e) => {
+      if (!this.virada || !this.cartaAtual) return;
+      const dx = e.touches[0].clientX - this._swipeStartX;
+      const inner = document.querySelector('#flashcard .card-inner');
+      if (inner) {
+        const tilt = Math.max(-7, Math.min(7, dx * 0.04));
+        const slide = dx * 0.12;
+        inner.style.transform = `rotateY(180deg) rotate(${tilt}deg) translateX(${-slide}px)`;
+      }
+      this._mostrarSwipeHint(dx);
+    }, { passive: true });
+
+    arena.addEventListener('touchend', (e) => {
+      const t = e.changedTouches[0];
+      const dx = t.clientX - this._swipeStartX;
+      const dy = t.clientY - this._swipeStartY;
+
+      // Reset tilt
+      const inner = document.querySelector('#flashcard .card-inner');
+      if (inner) inner.style.transform = '';
+      this._esconderSwipeHints();
+
+      const absDx = Math.abs(dx), absDy = Math.abs(dy);
+
+      if (!this.virada) {
+        // Swipe down → pronunciar
+        if (absDy > 55 && dy > 0 && absDy > absDx * 1.5) this.pronunciar();
+        return;
+      }
+      // Rating swipes — require minimum 55px
+      if (absDx < 55) return;
+      if      (dx < -110) this.avaliar(1); // strong left → Again
+      else if (dx <  -55) this.avaliar(2); // mild left  → Hard
+      else if (dx >  110) this.avaliar(4); // strong right → Easy
+      else if (dx >   55) this.avaliar(3); // mild right  → Good
+    }, { passive: true });
+  },
+
+  _mostrarSwipeHint(dx) {
+    const left  = document.getElementById('swipe-hint-left');
+    const right = document.getElementById('swipe-hint-right');
+    const absDx = Math.abs(dx);
+    const opacity = Math.min(0.95, absDx / 70);
+    if (dx < 0) {
+      if (left)  { left.style.opacity  = opacity; left.textContent  = dx < -110 ? '❌ Again' : '⚡ Hard'; }
+      if (right) right.style.opacity = 0;
+    } else {
+      if (right) { right.style.opacity = opacity; right.textContent = dx > 110 ? '⭐ Easy' : '✅ Good'; }
+      if (left)  left.style.opacity  = 0;
+    }
+  },
+
+  _esconderSwipeHints() {
+    ['swipe-hint-left','swipe-hint-right'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.opacity = 0;
+    });
   },
 
   // ── Practice all cards regardless of schedule ─────────────

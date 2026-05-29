@@ -149,19 +149,30 @@
     .ornamento-italiano { font-family: 'Playfair Display', serif; font-size: 2rem; color: #9B2335; font-style: italic; margin-bottom: 0.5rem; }
     .em-revisao { color: #888; font-size: 0.88rem; margin: 0.5rem 0 1rem; }
 
-    /* ── Modo Reverso toggle ── */
+    /* ── Mode toggle buttons ── */
     .btn-modo-toggle { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid rgba(155,35,53,0.35); background: transparent; color: #9B2335; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.18s; }
     .btn-modo-toggle:hover { background: rgba(155,35,53,0.08); border-color: #9B2335; }
     .btn-modo-toggle.ativo { background: #9B2335; color: #fff; border-color: #9B2335; }
     body.dark-mode .btn-modo-toggle { border-color: rgba(196,48,74,0.4); color: #C4304A; }
     body.dark-mode .btn-modo-toggle.ativo { background: #C4304A; color: #fff; border-color: #C4304A; }
-    /* Reverse mode — card front turns warm sand instead of red */
+    /* Reverse mode — warm brown front, red back */
     .flashcard.modo-reverso .card-frente { background: linear-gradient(135deg, #7a5c2e, #5c3d1a); }
     .flashcard.modo-reverso .card-frente .palavra-italiana { color: #F5EDD8 !important; }
     .flashcard.modo-reverso .card-verso { background: linear-gradient(135deg, #9B2335, #6B1525); color: #FFF8F0; }
     .flashcard.modo-reverso .card-verso .traducao { color: #F5EDD8; }
     .flashcard.modo-reverso .card-verso .exemplo-frase { color: rgba(255,248,240,0.8); }
     .flashcard.modo-reverso .card-verso .ipa { color: rgba(255,248,240,0.65); }
+    /* Context mode — ink-blue front */
+    .flashcard.modo-contexto .card-frente { background: linear-gradient(135deg, #1a3a5c, #0d2440); }
+    .flashcard.modo-contexto .card-frente .palavra-italiana { font-size: 1.1rem !important; font-style: italic; font-family: 'Playfair Display', serif !important; line-height: 1.45; letter-spacing: 0; }
+    .flashcard.modo-contexto .card-frente .card-dica { color: rgba(212,168,67,0.9); font-weight: 600; font-style: normal; }
+    /* Listen mode — deep teal/purple front */
+    .flashcard.modo-escuta .card-frente { background: linear-gradient(135deg, #2d1b4e, #1a0d30); }
+    .flashcard.modo-escuta .card-frente .palavra-italiana { font-size: 3rem !important; letter-spacing: 0; }
+    /* Swipe hint overlays */
+    .swipe-hint { position: absolute; top: 50%; transform: translateY(-50%); font-size: 0.82rem; font-weight: 800; background: rgba(0,0,0,0.55); color: white; padding: 0.35rem 0.7rem; border-radius: 8px; opacity: 0; transition: opacity 0.1s; pointer-events: none; z-index: 20; white-space: nowrap; }
+    #swipe-hint-left  { left: 8px; }
+    #swipe-hint-right { right: 8px; }
 
     /* ── Session summary ── */
     #flashcard-resumo { margin-top: 1rem; }
@@ -1081,11 +1092,15 @@
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
             <option value="">-- Seleziona tempio --</option>
           </select>
-          <button id="btn-reverso" class="btn-modo-toggle" onclick="Flashcards.toggleReverso()" title="Alternar IT→PT / PT→IT">🔄</button>
+          <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT">🔄</button>
+          <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna">📖</button>
+          <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio">🎧</button>
         </div>
         <p class="selector-helper" id="selector-helper">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
         <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
+          <div id="swipe-hint-left"  class="swipe-hint"></div>
+          <div id="swipe-hint-right" class="swipe-hint"></div>
           <div class="card-inner">
             <div class="card-frente">
               <div class="palavra-italiana" id="card-italiano">Selecione um Tempio</div>
