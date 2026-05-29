@@ -246,7 +246,7 @@ const Quiz = {
       btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
       btn.innerHTML = desbloqueado
         ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
-        : `🔒 Tempio ${i}<br><small>Nível ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+        : `🔒 ${i}. ${nome}<br><small>Nível ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
 
       if (desbloqueado) {
         btn.onclick = () => this.iniciar(i);
