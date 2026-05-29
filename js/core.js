@@ -46,6 +46,34 @@ const App = {
   // XP needed to UNLOCK each temple (minimum level)
   TEMPLO_NIVEL_MINIMO: { 1:1, 2:3, 3:6, 4:10, 5:15, 6:21, 7:28, 8:36, 9:45, 10:55 },
 
+  // Secret unlock code — change to your personal password
+  UNLOCK_CODE: 'maestro',
+
+  // Italian descriptions per temple (difficulty proportional to level)
+  TEMPLO_DESC: [
+    null,
+    // 1 Roma — A1
+    'Roma è grande e bella. Qui inizi a parlare italiano. Impari "buongiorno", "grazie", "per favore" — i primi passi. Con queste parole puoi salutare, contare e presentarti. Le fondamenta di tutto.',
+    // 2 Venezia — A1→A2
+    'Venezia è unica al mondo. In questo tempio parli della famiglia e della casa: chi è tua madre, come si chiama tuo fratello, dove abiti. Impari a descrivere le persone e i luoghi della tua vita quotidiana.',
+    // 3 Firenze — A2
+    'Firenze è la culla del Rinascimento. Qui trovi tutto il vocabolario per viaggiare in Italia: la stazione, il treno, l\'albergo, le indicazioni stradali. Questo tempio ti prepara per ogni avventura in terra italiana.',
+    // 4 Napoli — A2→B1
+    'Napoli ha inventato la pizza e ha insegnato al mondo come mangiare con passione. In questo tempio entri nella cucina italiana: ingredienti, piatti tipici, abitudini a tavola. Imparare a parlare di cibo è imparare la cultura italiana.',
+    // 5 Milano — B1
+    'Milano è veloce, precisa, sempre in movimento. Questo tempio ti insegna a gestire il tempo in italiano — le ore, gli appuntamenti, le stagioni — e a descrivere la tua routine quotidiana con naturalezza e precisione.',
+    // 6 Bologna — B1→B2
+    'Bologna, sede della più antica università d\'Europa, è il luogo ideale per studiare la struttura della lingua. Qui affronti il congiuntivo, i pronomi relativi, le costruzioni implicite. Non solo regole: impari a pensare in italiano.',
+    // 7 Torino — B2
+    'Torino, città sobria e intellettuale, è dove si impara a conversare con stile. In questo tempio esplori l\'argomentazione, il dibattito e la cortesia formale. Come si difende un\'opinione? Come si negozia con eleganza? L\'italiano fluente ti aspetta.',
+    // 8 Palermo — B2
+    'Palermo porta i segni di tutte le civiltà che l\'hanno abitata: greci, arabi, normanni. Questo tempio ti apre al patrimonio culturale dell\'Italia — l\'arte, la storia, le tradizioni regionali di un popolo complesso e affascinante.',
+    // 9 Bari — B1→B2
+    'Bari, porta d\'Italia verso il Mediterraneo, è una città che lavora. Questo tempio ti fornisce il vocabolario professionale: curriculum, riunioni, negoziazioni. L\'italiano del lavoro richiede precisione e rispetto delle forme.',
+    // 10 Siena — B2
+    'Siena custodisce il volgare illustre, la lingua di Dante. Nel decimo tempio raggiungi la vetta: il linguaggio della letteratura, della filosofia e dell\'espressione artistica. Le parole non comunicano soltanto — evocano, suggeriscono, trasformano.',
+  ],
+
   // ── Initialization ─────────────────────────────────────────
   async init() {
     this.estado.progresso = this.carregarProgresso();
@@ -228,7 +256,7 @@ const App = {
 
       if (desbloqueado) {
         card.style.cursor = 'pointer';
-        card.onclick = () => this.estudarTemplo(i);
+        card.onclick = () => this.abrirModalTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}">
             <div class="templo-num">Tempio ${i}</div>
@@ -247,6 +275,8 @@ const App = {
           </div>
         `;
       } else {
+        card.style.cursor = 'pointer';
+        card.onclick = () => this.abrirModalTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
             <div class="templo-num">Tempio ${i}</div>
@@ -287,6 +317,95 @@ const App = {
     this.navegar('quiz');
     if (typeof Quiz !== 'undefined') {
       Quiz.iniciar(temploNum);
+    }
+  },
+
+  // ── Templo detail modal ────────────────────────────────────
+  abrirModalTemplo(i) {
+    const data = this.estado.templosData[i];
+    const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
+    const concluido    = this.estado.progresso.templos_concluidos.includes(i);
+    const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
+    const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
+    const cidade       = data ? data.cidade : '—';
+    const nivel        = data ? data.nivel : '—';
+    const desc         = this.TEMPLO_DESC[i] || '';
+    const nivelMinimo  = this.TEMPLO_NIVEL_MINIMO[i] || i;
+    const totalPalavras = data && data.palavras ? data.palavras.length : 0;
+
+    let dominadas = 0;
+    if (data && data.palavras) {
+      dominadas = data.palavras.filter(p => {
+        const sm = this.estado.flashcardData[p.id];
+        if (!sm) return false;
+        return (sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7);
+      }).length;
+    }
+    const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
+
+    const body = document.getElementById('templo-modal-body');
+    body.innerHTML = `
+      <div class="tm-header" style="background:${cor}${!desbloqueado ? ';filter:grayscale(0.5)' : ''}">
+        <button class="tm-close" onclick="App.fecharModalTemplo()" title="Chiudi">✕</button>
+        <div class="tm-num">Tempio ${i}</div>
+        <div class="tm-nome">${nome}</div>
+        <div class="tm-meta">
+          <span class="tm-badge">📍 ${cidade}</span>
+          <span class="tm-badge">${nivel}</span>
+          ${concluido ? '<span class="tm-badge">✅ Completo</span>' : ''}
+        </div>
+      </div>
+      <div class="tm-content">
+        ${desbloqueado ? `
+          <div class="tm-progress-wrap">
+            <div class="tm-progress-label">${dominadas} / ${totalPalavras} parole dominate · ${progPercent}%</div>
+            <div class="tm-progress-bar"><div class="tm-progress-fill" style="width:${progPercent}%"></div></div>
+          </div>
+        ` : `<div class="tm-lock-banner">🔒 Richiede Livello ${nivelMinimo}</div>`}
+        <p class="tm-desc">${desc}</p>
+        ${desbloqueado ? `
+          <div class="tm-actions">
+            <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">📚 Studia i vocaboli</button>
+            <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">❓ Fai il Quiz</button>
+          </div>
+        ` : `
+          <details class="tm-unlock-area">
+            <summary>Hai un codice di accesso?</summary>
+            <div class="tm-unlock-form">
+              <input id="tm-code-input" type="password" placeholder="Inserisci il codice..." class="tm-code-input"
+                onkeydown="if(event.key==='Enter')App.tentarDesbloquear(${i})">
+              <button onclick="App.tentarDesbloquear(${i})" class="tm-btn-unlock">Sblocca</button>
+            </div>
+          </details>
+        `}
+      </div>
+    `;
+
+    document.getElementById('templo-modal').classList.add('ativo');
+    document.body.style.overflow = 'hidden';
+  },
+
+  fecharModalTemplo() {
+    document.getElementById('templo-modal').classList.remove('ativo');
+    document.body.style.overflow = '';
+  },
+
+  tentarDesbloquear(temploNum) {
+    const input = document.getElementById('tm-code-input');
+    if (!input) return;
+    if (input.value.trim() === this.UNLOCK_CODE) {
+      const p = this.estado.progresso;
+      p.templos_desbloqueados = [1,2,3,4,5,6,7,8,9,10];
+      this.salvarProgresso();
+      this.fecharModalTemplo();
+      this.renderizarTemplos();
+      this.atualizarStats();
+      this.notificar('Tutti i templi sbloccati! 🎉', 'sucesso');
+    } else {
+      input.style.borderColor = '#C0392B';
+      input.value = '';
+      input.placeholder = 'Codice non corretto…';
+      setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'Inserisci il codice...'; }, 2000);
     }
   },
 
