@@ -293,7 +293,7 @@ const Flashcards = {
     if (novosCount   > 0) partes.push(`${novosCount} novas`);
     if (revisaoCount > 0) partes.push(`${revisaoCount} revisão`);
 
-    elInfo.textContent = `Carta ${atual} de ${total}${partes.length ? ' · ' + partes.join(', ') : ''}${rStr}`;
+    elInfo.innerHTML = `<strong>${atual}</strong> / ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}${rStr}`;
   },
 
   // ── Flip card to reveal answer ─────────────────────────────
