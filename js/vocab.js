@@ -6,7 +6,8 @@ const Vocab = {
   filtroTexto: '',
   filtroTemplo: '',
   filtroCategoria: '',
-  filtroDificeis: false,
+  filtroDificeis:   false,
+  filtroFavoritos:  false,
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -51,6 +52,12 @@ const Vocab = {
       });
     }
 
+    // Favorites filter
+    if (this.filtroFavoritos) {
+      const favIds = (App.estado.progresso || {}).favoritos || [];
+      filtrados = filtrados.filter(p => favIds.includes(p.id));
+    }
+
     // Count difficult words (for badge)
     const numDificeis = todos.filter(p => {
       const fsrs = App.estado.flashcardData[p.id];
@@ -62,6 +69,16 @@ const Vocab = {
       btnDif.innerHTML = numDificeis > 0
         ? `⚠️ Difíceis <span class="dif-count">${numDificeis}</span>`
         : `⚠️ Difíceis`;
+    }
+
+    // Favorites badge
+    const numFav = ((App.estado.progresso || {}).favoritos || []).length;
+    const btnFav = document.getElementById('vocab-btn-favoritos');
+    if (btnFav) {
+      btnFav.classList.toggle('ativo', this.filtroFavoritos);
+      btnFav.innerHTML = numFav > 0
+        ? `❤️ Favoritos <span class="dif-count">${numFav}</span>`
+        : `❤️ Favoritos`;
     }
 
     // Stats line
@@ -108,6 +125,7 @@ const Vocab = {
         ${p.categoria ? `<span class="vocab-cat-badge">${this._escapar(p.categoria)}</span>` : ''}
         ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
         ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
+        ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
       `;
 
@@ -148,18 +166,26 @@ const Vocab = {
 
   // ── Difficult words filter toggle ─────────────────────────
   toggleDificeis() {
-    this.filtroDificeis = !this.filtroDificeis;
-    // Reset other filters when activating difficult mode
+    this.filtroDificeis  = !this.filtroDificeis;
     if (this.filtroDificeis) {
-      this.filtroTexto     = '';
-      this.filtroTemplo    = '';
-      this.filtroCategoria = '';
-      const busca = document.getElementById('vocab-busca');
-      const tFil  = document.getElementById('vocab-templo-filtro');
-      const cFil  = document.getElementById('vocab-categoria-filtro');
-      if (busca) busca.value  = '';
-      if (tFil)  tFil.value   = '';
-      if (cFil)  cFil.value   = '';
+      this.filtroFavoritos = false;
+      this.filtroTexto = this.filtroTemplo = this.filtroCategoria = '';
+      ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+        const el = document.getElementById(id); if (el) el.value = '';
+      });
+    }
+    this.renderizar();
+  },
+
+  // ── Favorites filter toggle ───────────────────────────────
+  toggleFavoritos() {
+    this.filtroFavoritos = !this.filtroFavoritos;
+    if (this.filtroFavoritos) {
+      this.filtroDificeis  = false;
+      this.filtroTexto = this.filtroTemplo = this.filtroCategoria = '';
+      ['vocab-busca','vocab-templo-filtro','vocab-categoria-filtro'].forEach(id => {
+        const el = document.getElementById(id); if (el) el.value = '';
+      });
     }
     this.renderizar();
   },

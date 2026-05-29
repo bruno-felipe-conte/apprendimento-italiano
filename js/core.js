@@ -93,6 +93,8 @@ const App = {
     if (typeof Calor !== 'undefined') Calor.renderizar();
     // Init grammar module
     if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
+    // Init sound feedback
+    if (typeof SomFeedback !== 'undefined') SomFeedback.init();
     // Set up keyboard shortcuts
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
@@ -186,6 +188,7 @@ const App = {
         if (p.meta_diaria === undefined) p.meta_diaria = 100;
         if (p.xp_hoje === undefined) p.xp_hoje = 0;
         if (p.data_xp_hoje === undefined) p.data_xp_hoje = null;
+        if (!p.favoritos) p.favoritos = [];
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -202,7 +205,8 @@ const App = {
       grammatica_completadas: [],
       meta_diaria: 100,
       xp_hoje: 0,
-      data_xp_hoje: null
+      data_xp_hoje: null,
+      favoritos: []
     };
   },
 
@@ -519,6 +523,24 @@ const App = {
     if (elMetaFill)  elMetaFill.style.width   = metaPct + '%';
     if (elMetaLabel) elMetaLabel.textContent  = `🎯 Meta do dia`;
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
+  },
+
+  // ── Favoritos ─────────────────────────────────────────────
+  toggleFavorito(id) {
+    const p = this.estado.progresso;
+    if (!p) return false;
+    if (!p.favoritos) p.favoritos = [];
+    const idx = p.favoritos.indexOf(id);
+    const adicionado = idx === -1;
+    if (adicionado) p.favoritos.push(id);
+    else            p.favoritos.splice(idx, 1);
+    this.salvarProgresso();
+    return adicionado;
+  },
+
+  ehFavorito(id) {
+    const p = this.estado.progresso;
+    return !!(p && p.favoritos && p.favoritos.includes(id));
   },
 
   // ── Meta Diária settings ──────────────────────────────────

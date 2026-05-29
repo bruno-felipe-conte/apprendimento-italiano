@@ -300,6 +300,20 @@
     body.dark-mode .vocab-dif-badge { background: rgba(230,126,34,0.18); color: #d07030; }
     body.dark-mode .vocab-btn-dificeis { border-color: #c0560a; color: #d07030; }
     body.dark-mode .vocab-btn-dificeis.ativo { background: #c0560a; border-color: #c0560a; color: white; }
+    /* Favoritos */
+    .vocab-fav-badge { font-size: 0.78rem; }
+    .vocab-btn-favoritos { padding: 0.42rem 0.85rem; border: 2px solid #C0392B; border-radius: 8px; background: transparent; color: #C0392B; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-favoritos:hover { background: rgba(192,57,43,0.08); }
+    .vocab-btn-favoritos.ativo { background: #C0392B; color: white; border-color: #C0392B; }
+    body.dark-mode .vocab-btn-favoritos { border-color: #9B2335; color: #C4304A; }
+    body.dark-mode .vocab-btn-favoritos.ativo { background: #9B2335; border-color: #9B2335; color: white; }
+    /* Favorite button in flashcard */
+    .btn-favorito { background: transparent; border: none; font-size: 1.3rem; cursor: pointer; line-height: 1; padding: 0; transition: transform 0.15s; }
+    .btn-favorito:hover { transform: scale(1.25); }
+    /* Quiz morphology section */
+    .quiz-secao-titulo { grid-column: 1 / -1; text-align: center; font-family: 'Cinzel', serif; font-size: 0.82rem; font-weight: 700; color: #9B2335; letter-spacing: 0.05em; padding: 0.8rem 0 0.3rem; border-top: 1px solid rgba(155,35,53,0.15); margin-top: 0.4rem; }
+    .quiz-morf-btn { font-size: 0.78rem !important; padding: 0.55rem 0.5rem !important; }
+    body.dark-mode .quiz-secao-titulo { color: #C4304A; border-color: rgba(196,48,74,0.2); }
 
     /* ── Toast ── */
     .toast-container { position: fixed; top: 1rem; right: 1rem; z-index: 9999; display: flex; flex-direction: column; gap: 0.45rem; pointer-events: none; }
@@ -1007,6 +1021,7 @@
       <div style="display: flex; align-items: center; gap: 0.6rem;">
         <div class="app-logo">🇮🇹 Italiano Autentico</div>
         <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
+        <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
       </div>
       <div class="stats-bar" id="stats-bar">
         <span class="stat-item" id="stat-nivel">Livello 1</span>
@@ -1114,7 +1129,10 @@
             </div>
           </div>
         </div>
-        <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.7rem;margin-bottom:0.75rem;">
+          <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
+          <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito">🤍</button>
+        </div>
         <div class="card-actions" id="card-actions" style="display:none">
           <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
             <span class="btn-label">❌ Esqueci</span>
@@ -1194,7 +1212,8 @@
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
           <option value="">Tutte le categorie</option>
         </select>
-        <button id="vocab-btn-dificeis" class="vocab-btn-dificeis" onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
+        <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
+        <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
@@ -1217,6 +1236,7 @@
   </div>
 
   <!-- Scripts (load order matters) -->
+  <script src="js/audio.js?v=1"></script>
   <script src="js/core.js?v=3"></script>
   <script src="js/progression.js?v=3"></script>
   <script src="js/flashcards.js?v=3"></script>

@@ -72,6 +72,7 @@ const Progressao = {
     if (subiu) {
       this.verificarDesbloqueioTemplos();
       App.notificar(`🎉 Livello ${p.nivel}! Avanzamento!`, 'successo');
+      if (typeof SomFeedback !== 'undefined') SomFeedback.nivelUp();
     }
 
     App.salvarProgresso();

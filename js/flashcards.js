@@ -309,6 +309,9 @@ const Flashcards = {
     }
 
     this.atualizarContador();
+    // Update favorite button state
+    const btnFav = document.getElementById('btn-favorito');
+    if (btnFav) btnFav.textContent = App.ehFavorito(this.cartaAtual.id) ? '❤️' : '🤍';
 
     const vazio = document.getElementById('flashcard-vazio');
     if (vazio) vazio.style.display = 'none';
@@ -346,6 +349,7 @@ const Flashcards = {
   virar() {
     if (this.virada || !this.cartaAtual) return;
     this.virada = true;
+    if (typeof SomFeedback !== 'undefined') SomFeedback.virar();
 
     const cardEl = document.getElementById('flashcard');
     if (cardEl) cardEl.classList.add('virado');
@@ -543,6 +547,52 @@ const Flashcards = {
       </div>
     `;
     resumo.style.display = 'block';
+  },
+
+  // ── Toggle favorite for current card ─────────────────────
+  toggleFavorito() {
+    if (!this.cartaAtual) return;
+    const adicionado = App.toggleFavorito(this.cartaAtual.id);
+    const btn = document.getElementById('btn-favorito');
+    if (btn) btn.textContent = adicionado ? '❤️' : '🤍';
+    App.notificar(adicionado ? '❤️ Adicionado aos favoritos' : '🤍 Removido dos favoritos', 'alerta');
+  },
+
+  // ── Study favorite words ──────────────────────────────────
+  estudarFavoritos() {
+    const favIds = (App.estado.progresso || {}).favoritos || [];
+    if (favIds.length === 0) {
+      App.notificar('Nenhum favorito ainda. Adicione com o ❤️!', 'alerta');
+      return;
+    }
+    const favPalavras = [];
+    for (let i = 1; i <= 10; i++) {
+      const data = App.estado.templosData[i];
+      if (data && data.palavras) {
+        data.palavras.forEach(p => { if (favIds.includes(p.id)) favPalavras.push(p); });
+      }
+    }
+    if (favPalavras.length === 0) {
+      App.notificar('Palavras favoritas não encontradas nos dados.', 'erro');
+      return;
+    }
+    this.temploAtual      = null;
+    this.praticandoTodas  = false;
+    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.cartasDisponiveis = favPalavras;
+    this.indiceAtual      = 0;
+    this.virada           = false;
+    const vazio = document.getElementById('flashcard-vazio');
+    const resumo = document.getElementById('flashcard-resumo');
+    const cardEl = document.getElementById('flashcard');
+    const actions = document.getElementById('card-actions');
+    if (vazio)   vazio.style.display  = 'none';
+    if (resumo)  resumo.style.display = 'none';
+    if (cardEl)  cardEl.style.display = '';
+    if (actions) actions.style.display = 'none';
+    App.navegar('flashcard');
+    App.notificar(`❤️ ${favPalavras.length} favoritos para revisar`, 'alerta');
+    this.mostrarCarta();
   },
 
   // ── Study difficult words (erros >= 3) across all templos ─

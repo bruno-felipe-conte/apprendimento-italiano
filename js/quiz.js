@@ -159,8 +159,10 @@ const Quiz = {
       const mult = this.combo >= 5 ? 3 : this.combo >= 3 ? 2 : 1;
       const xpBase = p.xp_recompensa || 20;
       this.xpTotal += xpBase * mult;
+      if (typeof SomFeedback !== 'undefined') SomFeedback.correto();
     } else {
       this.combo = 0;
+      if (typeof SomFeedback !== 'undefined') SomFeedback.errado();
     }
     this._atualizarCombo();
 
@@ -266,6 +268,99 @@ const Quiz = {
 
       seletor.appendChild(btn);
     }
+
+    // ── Morphology section ────────────────────────────────
+    const sep = document.createElement('div');
+    sep.className = 'quiz-secao-titulo';
+    sep.textContent = '🔤 Quiz de Morfologia (Gênero & Plural)';
+    seletor.appendChild(sep);
+
+    for (let i = 1; i <= 10; i++) {
+      const desbloqueado = Progressao.temploDesbloqueado(i);
+      const data = App.estado.templosData[i];
+      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
+      const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
+
+      const btn = document.createElement('button');
+      btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
+      btn.innerHTML = `🔤 ${i}. ${nome}`;
+
+      if (desbloqueado && temMorf) {
+        btn.onclick = () => this.iniciarMorfologia(i);
+      } else {
+        btn.disabled = true;
+      }
+      seletor.appendChild(btn);
+    }
+  },
+
+  // ── Morphology quiz (gênero & plural) ────────────────────
+  iniciarMorfologia(temploNum) {
+    if (!Progressao.temploDesbloqueado(temploNum)) {
+      App.notificar('Tempio não desbloqueado!', 'erro');
+      return;
+    }
+    this.temploAtual   = temploNum;
+    this.perguntaAtual = 0;
+    this.pontuacao     = 0;
+    this.xpTotal       = 0;
+    this.respondido    = false;
+    this.combo         = 0;
+
+    this.perguntas = this._embaralhar(this._gerarMorfologia(temploNum)).slice(0, 10);
+    if (this.perguntas.length === 0) {
+      App.notificar('Dados de morfologia insuficientes para este tempio.', 'alerta');
+      return;
+    }
+    const container = document.getElementById('quiz-container');
+    const resultado = document.getElementById('quiz-resultado');
+    const seletor   = document.getElementById('quiz-templo-selector');
+    if (container) container.style.display = 'block';
+    if (resultado) resultado.style.display = 'none';
+    if (seletor)   seletor.style.display   = 'none';
+    this.mostrarPergunta();
+  },
+
+  _gerarMorfologia(temploNum) {
+    const data = App.estado.templosData[temploNum];
+    if (!data || !data.palavras || data.palavras.length < 2) return [];
+    const palavras = data.palavras;
+    const perguntas = [];
+
+    // Gender questions
+    const comGenero = palavras.filter(p => p.genero === 'm' || p.genero === 'f');
+    comGenero.forEach(p => {
+      const correto = p.genero === 'm' ? 'masculino' : 'feminino';
+      perguntas.push({
+        id: `morf_g_${p.id}`, templo: temploNum, tipo: 'morfologia',
+        nivel: data.nivel || 'A1',
+        pergunta: `Qual o gênero de "${p.italiano}"?`,
+        resposta_correta: correto,
+        alternativas: ['masculino', 'feminino'],
+        explicacao: `"${p.italiano}" é ${correto}${p.plural ? ` (plural: ${p.plural})` : ''}.`,
+        xp_recompensa: 20
+      });
+    });
+
+    // Plural questions — need at least 4 words with plural for wrong options
+    const comPlural = palavras.filter(p => p.plural && p.plural !== p.italiano);
+    const todoPlurais = comPlural.map(p => p.plural);
+    if (todoPlurais.length >= 4) {
+      comPlural.forEach(p => {
+        const erradas = this._embaralhar(todoPlurais.filter(pl => pl !== p.plural)).slice(0, 3);
+        perguntas.push({
+          id: `morf_p_${p.id}`, templo: temploNum, tipo: 'morfologia',
+          nivel: data.nivel || 'A1',
+          pergunta: `Qual o plural de "${p.italiano}"?`,
+          resposta_correta: p.plural,
+          alternativas: this._embaralhar([p.plural, ...erradas]),
+          explicacao: `O plural de "${p.italiano}" é "${p.plural}".`,
+          xp_recompensa: 20
+        });
+      });
+    }
+
+    return perguntas;
   },
 
   // ── Update combo badge display ────────────────────────────
