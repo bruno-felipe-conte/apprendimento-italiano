@@ -47,7 +47,7 @@ const App = {
   TEMPLO_NIVEL_MINIMO: { 1:1, 2:3, 3:6, 4:10, 5:15, 6:21, 7:28, 8:36, 9:45, 10:55 },
 
   // Secret unlock code — change to your personal password
-  UNLOCK_CODE: 'maestro',
+  UNLOCK_CODE: '2012',
 
   // Italian descriptions per temple (difficulty proportional to level)
   TEMPLO_DESC: [
