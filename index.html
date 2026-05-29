@@ -148,6 +148,66 @@
     .empty-state { text-align: center; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 1rem; }
     .ornamento-italiano { font-family: 'Playfair Display', serif; font-size: 2rem; color: #9B2335; font-style: italic; margin-bottom: 0.5rem; }
     .em-revisao { color: #888; font-size: 0.88rem; margin: 0.5rem 0 1rem; }
+
+    /* ── Modo Reverso toggle ── */
+    .btn-modo-toggle { flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid rgba(155,35,53,0.35); background: transparent; color: #9B2335; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.18s; }
+    .btn-modo-toggle:hover { background: rgba(155,35,53,0.08); border-color: #9B2335; }
+    .btn-modo-toggle.ativo { background: #9B2335; color: #fff; border-color: #9B2335; }
+    body.dark-mode .btn-modo-toggle { border-color: rgba(196,48,74,0.4); color: #C4304A; }
+    body.dark-mode .btn-modo-toggle.ativo { background: #C4304A; color: #fff; border-color: #C4304A; }
+    /* Reverse mode — card front turns warm sand instead of red */
+    .flashcard.modo-reverso .card-frente { background: linear-gradient(135deg, #7a5c2e, #5c3d1a); }
+    .flashcard.modo-reverso .card-frente .palavra-italiana { color: #F5EDD8 !important; }
+    .flashcard.modo-reverso .card-verso { background: linear-gradient(135deg, #9B2335, #6B1525); color: #FFF8F0; }
+    .flashcard.modo-reverso .card-verso .traducao { color: #F5EDD8; }
+    .flashcard.modo-reverso .card-verso .exemplo-frase { color: rgba(255,248,240,0.8); }
+    .flashcard.modo-reverso .card-verso .ipa { color: rgba(255,248,240,0.65); }
+
+    /* ── Session summary ── */
+    #flashcard-resumo { margin-top: 1rem; }
+    .resumo-card { background: white; border-radius: 16px; padding: 1.6rem 1.4rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); text-align: center; max-width: 480px; margin: 0 auto; }
+    .resumo-emoji { font-size: 2.4rem; line-height: 1; margin-bottom: 0.4rem; }
+    .resumo-titulo { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; color: #9B2335; margin-bottom: 1rem; }
+    .resumo-stats-grid { display: flex; justify-content: center; gap: 1.4rem; margin-bottom: 1rem; }
+    .resumo-stat { display: flex; flex-direction: column; align-items: center; }
+    .resumo-num { font-family: 'Cinzel', serif; font-size: 1.6rem; font-weight: 700; color: #2a1a1a; line-height: 1; }
+    .resumo-lab { font-size: 0.68rem; color: #999; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.1rem; }
+    .resumo-ratings { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+    .rr { display: inline-block; padding: 0.22rem 0.65rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+    .rr-again { background: rgba(192,57,43,0.12); color: #C0392B; }
+    .rr-hard  { background: rgba(230,126,34,0.12); color: #E67E22; }
+    .rr-good  { background: rgba(39,174,96,0.12);  color: #27AE60; }
+    .rr-easy  { background: rgba(41,128,185,0.12); color: #2980B9; }
+    .resumo-novas { font-size: 0.87rem; color: #27AE60; font-weight: 600; margin: 0 0 0.4rem; }
+    .resumo-proxima { font-size: 0.83rem; color: #888; margin: 0 0 1.1rem; }
+    .resumo-proxima strong { color: #9B2335; }
+    .resumo-acoes { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; }
+    body.dark-mode .resumo-card { background: #1C1816; box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+    body.dark-mode .resumo-num { color: #E6DFD3; }
+    body.dark-mode .resumo-titulo { color: #C4304A; }
+    body.dark-mode .resumo-proxima strong { color: #C4304A; }
+
+    /* ── Parola del Giorno ── */
+    #parola-del-giorno { background: linear-gradient(135deg, #9B2335 0%, #6B1525 60%, #D4A843 100%); border-radius: 16px; padding: 1.2rem 1.3rem; margin-bottom: 1.4rem; color: #FFF8F0; box-shadow: 0 6px 24px rgba(155,35,53,0.28); }
+    .pdd-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.7rem; }
+    .pdd-label { font-family: 'Cinzel', serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.07em; opacity: 0.9; text-transform: uppercase; }
+    .pdd-data { font-size: 0.7rem; opacity: 0.65; text-transform: capitalize; }
+    .pdd-body { text-align: center; margin-bottom: 0.9rem; }
+    .pdd-palavra { font-family: 'Cinzel', serif; font-size: 2.2rem; font-weight: 700; line-height: 1.1; margin-bottom: 0.2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.35); }
+    .pdd-ipa { font-family: monospace; font-size: 0.8rem; opacity: 0.7; margin-bottom: 0.35rem; }
+    .pdd-traducao { font-size: 1.05rem; font-weight: 600; opacity: 0.92; margin-bottom: 0.45rem; }
+    .pdd-cat { display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 0.15rem 0.6rem; margin-bottom: 0.5rem; }
+    .pdd-exemplo { font-size: 0.82rem; font-style: italic; opacity: 0.78; margin-top: 0.2rem; }
+    .pdd-acoes { display: flex; gap: 0.6rem; justify-content: center; }
+    .pdd-btn { background: rgba(255,255,255,0.18); border: 1.5px solid rgba(255,255,255,0.4); color: #FFF8F0; padding: 0.38rem 1rem; border-radius: 20px; cursor: pointer; font-size: 0.82rem; font-weight: 700; transition: all 0.18s; }
+    .pdd-btn:hover { background: rgba(255,255,255,0.32); border-color: rgba(255,255,255,0.7); }
+    .pdd-btn-study { background: rgba(212,168,67,0.35); border-color: rgba(212,168,67,0.6); }
+    .pdd-btn-study:hover { background: rgba(212,168,67,0.55); }
+
+    /* ── Quiz combo badge ── */
+    .quiz-combo-badge { display: none; background: linear-gradient(90deg, #E67E22, #E74C3C); color: white; font-size: 0.82rem; font-weight: 800; padding: 0.28rem 0.85rem; border-radius: 999px; letter-spacing: 0.03em; box-shadow: 0 2px 8px rgba(231,76,60,0.4); animation: comboPop 0.25s cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes comboPop { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    body.dark-mode .resumo-lab { color: #776058; }
     .btn-primario { background: #9B2335; color: #FFF8F0; border: none; padding: 0.6rem 1.4rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; font-weight: 700; transition: background 0.2s; }
     .btn-primario:hover { background: #7a1c2a; }
 
@@ -943,6 +1003,9 @@
         </div>
       </div>
 
+      <!-- Parola del Giorno -->
+      <div id="parola-del-giorno" style="display:none"></div>
+
       <h2 class="section-titulo">I Dieci Templi dell'Italiano</h2>
       <div class="templos-grid" id="templos-grid">
         <p style="color:#888;font-style:italic;padding:1rem;">Caricamento in corso...</p>
@@ -957,6 +1020,7 @@
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
             <option value="">-- Seleziona tempio --</option>
           </select>
+          <button id="btn-reverso" class="btn-modo-toggle" onclick="Flashcards.toggleReverso()" title="Alternar IT→PT / PT→IT">🔄</button>
         </div>
         <p class="selector-helper" id="selector-helper">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
@@ -999,6 +1063,7 @@
           <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
           <button class="btn-primario" onclick="Flashcards.praticaTodas()">Praticar todas novamente</button>
         </div>
+        <div id="flashcard-resumo" style="display:none"></div>
       </div>
     </section>
 
@@ -1014,6 +1079,7 @@
         <div class="pergunta-container">
           <p class="quiz-tipo-badge" id="quiz-tipo">Vocabolario</p>
           <p class="quiz-pergunta" id="quiz-pergunta"></p>
+          <span id="quiz-combo-badge" class="quiz-combo-badge" style="display:none"></span>
         </div>
         <div class="opcoes-grid" id="opcoes-grid"></div>
         <div class="explicacao-container" id="explicacao-container" style="display:none">

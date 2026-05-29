@@ -9,6 +9,7 @@ const Quiz = {
   pontuacao: 0,
   xpTotal: 0,
   respondido: false,
+  combo: 0,
 
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
@@ -22,6 +23,7 @@ const Quiz = {
     this.pontuacao = 0;
     this.xpTotal = 0;
     this.respondido = false;
+    this.combo = 0;
 
     // Try to get quiz questions for this temple from the JSON data
     let pool = App.estado.quizData.filter(q => q.templo === temploNum);
@@ -91,6 +93,7 @@ const Quiz = {
 
     const p = this.perguntas[this.perguntaAtual];
     this.respondido = false;
+    this._atualizarCombo();
 
     // Update progress bar
     const total = this.perguntas.length;
@@ -151,8 +154,15 @@ const Quiz = {
 
     if (correto) {
       this.pontuacao++;
-      this.xpTotal += (p.xp_recompensa || 20);
+      this.combo++;
+      // XP multiplier: combo 1-2 = ×1, combo 3-4 = ×2, combo 5+ = ×3
+      const mult = this.combo >= 5 ? 3 : this.combo >= 3 ? 2 : 1;
+      const xpBase = p.xp_recompensa || 20;
+      this.xpTotal += xpBase * mult;
+    } else {
+      this.combo = 0;
     }
+    this._atualizarCombo();
 
     // Show explanation
     const explicacaoContainer = document.getElementById('explicacao-container');
@@ -255,6 +265,18 @@ const Quiz = {
       }
 
       seletor.appendChild(btn);
+    }
+  },
+
+  // ── Update combo badge display ────────────────────────────
+  _atualizarCombo() {
+    const badge = document.getElementById('quiz-combo-badge');
+    if (!badge) return;
+    if (this.combo >= 3) {
+      badge.textContent = `🔥 ×${this.combo} combo`;
+      badge.style.display = 'inline-block';
+    } else {
+      badge.style.display = 'none';
     }
   },
 

@@ -221,6 +221,62 @@ const App = {
   },
 
   // ── Temple grid rendering ──────────────────────────────────
+  // ── Parola del Giorno ─────────────────────────────────────
+  renderizarParolaDia() {
+    const container = document.getElementById('parola-del-giorno');
+    if (!container) return;
+
+    // Collect all words from loaded templos
+    const vocab = [];
+    for (let i = 1; i <= 10; i++) {
+      const d = this.estado.templosData[i];
+      if (d && d.palavras) d.palavras.forEach(p => vocab.push({ ...p, _templo: i }));
+    }
+    if (vocab.length === 0) { container.style.display = 'none'; return; }
+
+    // Select deterministically by day of year (same word all day)
+    const now   = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const dayN  = Math.floor((now - start) / 86400000);
+
+    // Check localStorage cache
+    let cached = null;
+    try { cached = JSON.parse(localStorage.getItem('it_palavra_dia') || 'null'); } catch (_) {}
+    const todayStr = now.toISOString().slice(0, 10);
+    let palavra;
+    if (cached && cached.data === todayStr) {
+      palavra = vocab.find(p => p.id === cached.id) || vocab[dayN % vocab.length];
+    } else {
+      palavra = vocab[dayN % vocab.length];
+      try { localStorage.setItem('it_palavra_dia', JSON.stringify({ data: todayStr, id: palavra.id })); } catch (_) {}
+    }
+    if (!palavra) { container.style.display = 'none'; return; }
+
+    const ipa = palavra.audio_ipa
+      ? (palavra.audio_ipa.startsWith('/') ? palavra.audio_ipa : `/${palavra.audio_ipa}/`)
+      : '';
+    const data = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
+
+    container.innerHTML = `
+      <div class="pdd-header">
+        <span class="pdd-label">🇮🇹 Parola del Giorno</span>
+        <span class="pdd-data">${data}</span>
+      </div>
+      <div class="pdd-body">
+        <div class="pdd-palavra">${palavra.italiano}</div>
+        ${ipa ? `<div class="pdd-ipa">${ipa}</div>` : ''}
+        <div class="pdd-traducao">${palavra.portugues}</div>
+        ${palavra.categoria ? `<span class="pdd-cat">${palavra.categoria}</span>` : ''}
+        ${palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
+      </div>
+      <div class="pdd-acoes">
+        <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
+        <button class="pdd-btn pdd-btn-study" onclick="App.estudarTemplo(${palavra._templo})">📚 Studiare</button>
+      </div>
+    `;
+    container.style.display = 'block';
+  },
+
   renderizarTemplos() {
     const grid = document.getElementById('templos-grid');
     if (!grid) return;
@@ -298,6 +354,9 @@ const App = {
 
       grid.appendChild(card);
     }
+
+    // Render daily word
+    this.renderizarParolaDia();
   },
 
   // Navigate to flashcards for a specific temple

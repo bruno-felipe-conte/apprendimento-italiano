@@ -166,6 +166,8 @@ const Flashcards = {
   indiceAtual:      0,
   virada:           false,
   praticandoTodas:  false,
+  modoReverso:      false,
+  sessaoStats:      null,
 
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
@@ -180,6 +182,7 @@ const Flashcards = {
     }
     this.temploAtual     = templo;
     this.praticandoTodas = false;
+    this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
     this.carregarCartas();
     this.indiceAtual = 0;
     this.virada      = false;
@@ -247,15 +250,28 @@ const Flashcards = {
     const elCat  = document.getElementById('card-categoria');
     const elDica = document.getElementById('card-dica');
     const elHelp = document.getElementById('selector-helper');
-    if (elIt)   elIt.textContent   = this.cartaAtual.italiano || '—';
-    if (elCat)  elCat.textContent  = this.cartaAtual.categoria || '';
-    if (elDica) elDica.textContent = 'Clique para revelar';
-    if (elHelp) elHelp.style.display = 'none';
-
     const elTrad = document.getElementById('card-traducao');
     const elEx   = document.getElementById('card-exemplo');
     const elIpa  = document.getElementById('card-ipa');
-    if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
+    if (elHelp) elHelp.style.display = 'none';
+    if (elDica) elDica.textContent = 'Clique para revelar';
+
+    // Apply/remove reverse mode class for CSS theming
+    const cardEl2 = document.getElementById('flashcard');
+    if (cardEl2) cardEl2.classList.toggle('modo-reverso', this.modoReverso);
+
+    if (this.modoReverso) {
+      // PT → IT: front shows Portuguese, back reveals Italian + IPA
+      if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+    } else {
+      // IT → PT (normal): front shows Italian, back reveals Portuguese
+      if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
+    }
+
     if (elEx) {
       const f   = this.cartaAtual.exemplo    || '';
       const fPt = this.cartaAtual.exemplo_pt ? ` — ${this.cartaAtual.exemplo_pt}` : '';
@@ -351,18 +367,30 @@ const Flashcards = {
                  lapses: 0, reps: 0, lastReview: null, interval: 0, nextReview: null };
       }
 
+      const wasNew = !fsrs || fsrs.state === 'new';
       const updated = FSRS.review(fsrs, rating);
       App.estado.flashcardData[carta.id] = updated;
       App.salvarFlashcards();
 
       // XP: Again=0, Hard=5, Good=10, Easy=15
       const xpMap = [0, 0, 5, 10, 15];
-      if (xpMap[rating] > 0 && App.estado.progresso) {
-        App.estado.progresso.xp += xpMap[rating];
+      const xpGanho = xpMap[rating] || 0;
+      if (xpGanho > 0 && App.estado.progresso) {
+        App.estado.progresso.xp += xpGanho;
         App.salvarProgresso();
         App.atualizarStats();
       }
-      
+
+      // Track session stats
+      if (this.sessaoStats) {
+        const rNames = ['', 'again', 'hard', 'good', 'easy'];
+        this.sessaoStats[rNames[rating]]++;
+        this.sessaoStats.xp += xpGanho;
+        if (wasNew && updated.state === 'review') {
+          this.sessaoStats.novas.push(carta);
+        }
+      }
+
       // Log to heatmap diary
       if (typeof Calor !== 'undefined') Calor.registrar(1);
 
@@ -394,12 +422,100 @@ const Flashcards = {
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     const vazio   = document.getElementById('flashcard-vazio');
+    const resumo  = document.getElementById('flashcard-resumo');
     const info    = document.getElementById('card-info');
 
     if (cardEl)  cardEl.style.display  = 'none';
     if (actions) actions.style.display = 'none';
-    if (vazio)   vazio.style.display   = 'block';
     if (info)    info.textContent      = '';
+
+    const total = this.sessaoStats
+      ? (this.sessaoStats.again + this.sessaoStats.hard + this.sessaoStats.good + this.sessaoStats.easy)
+      : 0;
+
+    if (total > 0 && resumo) {
+      if (vazio) vazio.style.display = 'none';
+      this.mostrarResumo();
+    } else {
+      if (resumo) resumo.style.display = 'none';
+      if (vazio)  vazio.style.display  = 'block';
+    }
+  },
+
+  // ── Session summary screen ─────────────────────────────────
+  mostrarResumo() {
+    const resumo = document.getElementById('flashcard-resumo');
+    if (!resumo || !this.sessaoStats) return;
+    const s = this.sessaoStats;
+    const total = s.again + s.hard + s.good + s.easy;
+    const acertos = s.good + s.easy;
+    const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
+
+    let emoji = '🎉';
+    let titulo = 'Sessione completata!';
+    if (pct >= 80) { emoji = '🏆'; titulo = 'Ottimo lavoro!'; }
+    else if (pct >= 60) { emoji = '👏'; titulo = 'Muito bom!'; }
+    else if (pct < 40) { emoji = '💪'; titulo = 'Continua a praticare!'; }
+
+    // Next due card
+    let proxLabel = 'Sem agendamento';
+    if (this.temploAtual) {
+      const data = App.estado.templosData[this.temploAtual];
+      if (data && data.palavras) {
+        const agora = Date.now();
+        const proximas = data.palavras
+          .map(p => App.estado.flashcardData[p.id])
+          .filter(f => f && f.nextReview && f.nextReview > agora)
+          .map(f => f.nextReview)
+          .sort((a, b) => a - b);
+        if (proximas.length > 0) {
+          const diffMs = proximas[0] - agora;
+          const diffH  = Math.round(diffMs / 3600000);
+          const diffD  = Math.round(diffMs / 86400000);
+          proxLabel = diffD >= 1 ? `em ${diffD} dia${diffD > 1 ? 's' : ''}` : `em ${diffH}h`;
+        }
+      }
+    }
+
+    const novCount = s.novas.length;
+
+    resumo.innerHTML = `
+      <div class="resumo-card">
+        <div class="resumo-emoji">${emoji}</div>
+        <div class="resumo-titulo">${titulo}</div>
+        <div class="resumo-stats-grid">
+          <div class="resumo-stat">
+            <span class="resumo-num">${total}</span>
+            <span class="resumo-lab">cartas</span>
+          </div>
+          <div class="resumo-stat">
+            <span class="resumo-num">${pct}%</span>
+            <span class="resumo-lab">acertos</span>
+          </div>
+          ${s.xp > 0 ? `<div class="resumo-stat"><span class="resumo-num">+${s.xp}</span><span class="resumo-lab">XP</span></div>` : ''}
+        </div>
+        <div class="resumo-ratings">
+          ${s.again > 0 ? `<span class="rr rr-again">❌ ${s.again}</span>` : ''}
+          ${s.hard  > 0 ? `<span class="rr rr-hard">⚡ ${s.hard}</span>` : ''}
+          ${s.good  > 0 ? `<span class="rr rr-good">✅ ${s.good}</span>` : ''}
+          ${s.easy  > 0 ? `<span class="rr rr-easy">⭐ ${s.easy}</span>` : ''}
+        </div>
+        ${novCount > 0 ? `<p class="resumo-novas">🌱 ${novCount} palavra${novCount > 1 ? 's' : ''} nova${novCount > 1 ? 's' : ''} aprendida${novCount > 1 ? 's' : ''}!</p>` : ''}
+        <p class="resumo-proxima">⏰ Próxima revisão: <strong>${proxLabel}</strong></p>
+        <div class="resumo-acoes">
+          <button class="btn-primario" onclick="Flashcards.praticaTodas()">🔁 Praticar todas</button>
+        </div>
+      </div>
+    `;
+    resumo.style.display = 'block';
+  },
+
+  // ── Toggle reverse mode (PT → IT) ─────────────────────────
+  toggleReverso() {
+    this.modoReverso = !this.modoReverso;
+    const btn = document.getElementById('btn-reverso');
+    if (btn) btn.classList.toggle('ativo', this.modoReverso);
+    if (this.cartaAtual) this.mostrarCarta();
   },
 
   // ── Practice all cards regardless of schedule ─────────────
@@ -407,6 +523,7 @@ const Flashcards = {
     const data = App.estado.templosData[this.temploAtual];
     if (!data || !data.palavras || data.palavras.length === 0) return;
     this.praticandoTodas  = true;
+    this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
     this.cartasDisponiveis = [...data.palavras];
     this.indiceAtual      = 0;
     this.virada           = false;
