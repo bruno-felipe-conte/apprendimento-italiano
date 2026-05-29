@@ -239,7 +239,7 @@ const Quiz = {
     for (let i = 1; i <= 10; i++) {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = data ? data.nome : `Tempio ${i}`;
+      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
       const nivel = data ? data.nivel : '—';
 
       const btn = document.createElement('button');
