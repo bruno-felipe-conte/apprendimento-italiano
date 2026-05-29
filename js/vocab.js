@@ -6,6 +6,7 @@ const Vocab = {
   filtroTexto: '',
   filtroTemplo: '',
   filtroCategoria: '',
+  filtroDificeis: false,
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -42,13 +43,36 @@ const Vocab = {
       );
     }
 
+    // Difficult words filter
+    if (this.filtroDificeis) {
+      filtrados = filtrados.filter(p => {
+        const fsrs = App.estado.flashcardData[p.id];
+        return fsrs && (fsrs.erros || 0) >= 3;
+      });
+    }
+
+    // Count difficult words (for badge)
+    const numDificeis = todos.filter(p => {
+      const fsrs = App.estado.flashcardData[p.id];
+      return fsrs && (fsrs.erros || 0) >= 3;
+    }).length;
+    const btnDif = document.getElementById('vocab-btn-dificeis');
+    if (btnDif) {
+      btnDif.classList.toggle('ativo', this.filtroDificeis);
+      btnDif.innerHTML = numDificeis > 0
+        ? `⚠️ Difíceis <span class="dif-count">${numDificeis}</span>`
+        : `⚠️ Difíceis`;
+    }
+
     // Stats line
     if (statsEl) {
       const total = todos.length;
       const mostrando = Math.min(filtrados.length, 100);
-      statsEl.textContent = filtrados.length === total
-        ? `${total} palavras no total`
-        : `${mostrando} de ${filtrados.length} resultado(s) — ${total} palavras totais`;
+      statsEl.textContent = this.filtroDificeis
+        ? `${filtrados.length} palavra${filtrados.length !== 1 ? 's' : ''} difícil${filtrados.length !== 1 ? 'eis' : ''} (3+ erros)`
+        : filtrados.length === total
+          ? `${total} palavras no total`
+          : `${mostrando} de ${filtrados.length} resultado(s) — ${total} palavras totais`;
     }
 
     // Limit display to 100
@@ -64,13 +88,14 @@ const Vocab = {
       const item = document.createElement('div');
       item.className = 'vocab-item';
 
-      // Determine SM-2 status
+      // Determine FSRS status
       const sm = App.estado.flashcardData[p.id];
       let sm2Icon = '🌱'; // new
       if (sm) {
-        if (sm.repeticoes >= 3) sm2Icon = '⭐'; // mastered
+        if ((sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7)) sm2Icon = '⭐'; // mastered
         else sm2Icon = '📚'; // learning
       }
+      const erros = sm ? (sm.erros || 0) : 0;
 
       // Temple data for level badge
       const temploData = App.estado.templosData[p.templo_num];
@@ -82,6 +107,7 @@ const Vocab = {
         <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
         ${p.categoria ? `<span class="vocab-cat-badge">${this._escapar(p.categoria)}</span>` : ''}
         ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
+        ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
       `;
 
@@ -117,6 +143,24 @@ const Vocab = {
   // ── Category filter handler ───────────────────────────────
   filtrarCategoria(valor) {
     this.filtroCategoria = valor;
+    this.renderizar();
+  },
+
+  // ── Difficult words filter toggle ─────────────────────────
+  toggleDificeis() {
+    this.filtroDificeis = !this.filtroDificeis;
+    // Reset other filters when activating difficult mode
+    if (this.filtroDificeis) {
+      this.filtroTexto     = '';
+      this.filtroTemplo    = '';
+      this.filtroCategoria = '';
+      const busca = document.getElementById('vocab-busca');
+      const tFil  = document.getElementById('vocab-templo-filtro');
+      const cFil  = document.getElementById('vocab-categoria-filtro');
+      if (busca) busca.value  = '';
+      if (tFil)  tFil.value   = '';
+      if (cFil)  cFil.value   = '';
+    }
     this.renderizar();
   },
 

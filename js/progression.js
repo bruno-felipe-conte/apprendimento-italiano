@@ -46,6 +46,22 @@ const Progressao = {
   ganhar(quantidade) {
     const p = App.estado.progresso;
     if (!p) return;
+
+    // Track daily XP (reset if new day)
+    const hoje = new Date().toISOString().slice(0, 10);
+    if (p.data_xp_hoje !== hoje) {
+      p.xp_hoje = 0;
+      p.data_xp_hoje = hoje;
+    }
+    const xpAntes = p.xp_hoje || 0;
+    p.xp_hoje = xpAntes + quantidade;
+
+    // Fire "meta reached" toast exactly once per day
+    const meta = p.meta_diaria || 100;
+    if (xpAntes < meta && p.xp_hoje >= meta) {
+      setTimeout(() => App.notificar('🎯 Meta diária atingida! Ottimo!', 'successo'), 400);
+    }
+
     p.xp += quantidade;
     p.ultimo_estudo = Date.now();
 

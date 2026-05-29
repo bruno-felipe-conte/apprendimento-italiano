@@ -369,6 +369,14 @@ const Flashcards = {
 
       const wasNew = !fsrs || fsrs.state === 'new';
       const updated = FSRS.review(fsrs, rating);
+
+      // Track error count for "Parole Difficili" feature
+      // FSRS.review spreads ...card so 'erros' is preserved; we update it here
+      const errosAnteriores = updated.erros || 0;
+      if (rating === 1)      updated.erros = errosAnteriores + 1;
+      else if (rating >= 3)  updated.erros = Math.max(0, errosAnteriores - 1);
+      // rating === 2 (Hard): erros unchanged
+
       App.estado.flashcardData[carta.id] = updated;
       App.salvarFlashcards();
 
@@ -508,6 +516,52 @@ const Flashcards = {
       </div>
     `;
     resumo.style.display = 'block';
+  },
+
+  // ── Study difficult words (erros >= 3) across all templos ─
+  estudarDificeis() {
+    const dificeis = [];
+    const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
+    desbloqueados.forEach(num => {
+      const data = App.estado.templosData[num];
+      if (!data || !data.palavras) return;
+      data.palavras.forEach(p => {
+        const fsrs = App.estado.flashcardData[p.id];
+        if (fsrs && (fsrs.erros || 0) >= 3) dificeis.push(p);
+      });
+    });
+
+    if (dificeis.length === 0) {
+      App.notificar('Nenhuma palavra difícil encontrada! 🎉', 'successo');
+      return;
+    }
+
+    // Sort by most errors first
+    dificeis.sort((a, b) => {
+      const ea = (App.estado.flashcardData[a.id] || {}).erros || 0;
+      const eb = (App.estado.flashcardData[b.id] || {}).erros || 0;
+      return eb - ea;
+    });
+
+    this.temploAtual    = null;
+    this.praticandoTodas = false;
+    this.sessaoStats    = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.cartasDisponiveis = dificeis.slice(0, 20);
+    this.indiceAtual   = 0;
+    this.virada        = false;
+
+    const vazio   = document.getElementById('flashcard-vazio');
+    const resumo  = document.getElementById('flashcard-resumo');
+    const cardEl  = document.getElementById('flashcard');
+    const actions = document.getElementById('card-actions');
+    if (vazio)   vazio.style.display   = 'none';
+    if (resumo)  resumo.style.display  = 'none';
+    if (cardEl)  cardEl.style.display  = '';
+    if (actions) actions.style.display = 'none';
+
+    App.navegar('flashcard');
+    App.notificar(`📚 ${dificeis.length} palavras difíceis para revisar`, 'alerta');
+    this.mostrarCarta();
   },
 
   // ── Toggle reverse mode (PT → IT) ─────────────────────────

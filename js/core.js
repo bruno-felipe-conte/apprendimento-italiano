@@ -181,8 +181,11 @@ const App = {
       const raw = localStorage.getItem('it_progresso');
       if (raw) {
         const p = JSON.parse(raw);
-        // Backward compatibility: ensure grammatica_completadas exists
+        // Backward compatibility
         if (!p.grammatica_completadas) p.grammatica_completadas = [];
+        if (p.meta_diaria === undefined) p.meta_diaria = 100;
+        if (p.xp_hoje === undefined) p.xp_hoje = 0;
+        if (p.data_xp_hoje === undefined) p.data_xp_hoje = null;
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -196,7 +199,10 @@ const App = {
       total_palavras: 0,
       streak: 0,
       ultimo_estudo: null,
-      grammatica_completadas: []
+      grammatica_completadas: [],
+      meta_diaria: 100,
+      xp_hoje: 0,
+      data_xp_hoje: null
     };
   },
 
@@ -500,6 +506,45 @@ const App = {
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
     if (elStreak)  elStreak.textContent  = `🔥 ${s} dia${s !== 1 ? 's' : ''}`;
+
+    // Daily goal bar
+    const hoje = new Date().toISOString().slice(0, 10);
+    if (p.data_xp_hoje !== hoje) { p.xp_hoje = 0; }
+    const meta     = p.meta_diaria || 100;
+    const ganhoHj  = p.xp_hoje || 0;
+    const metaPct  = Math.min(100, Math.round((ganhoHj / meta) * 100));
+    const elMetaFill  = document.getElementById('meta-bar-fill');
+    const elMetaLabel = document.getElementById('meta-bar-label');
+    const elMetaXp    = document.getElementById('meta-bar-xp');
+    if (elMetaFill)  elMetaFill.style.width   = metaPct + '%';
+    if (elMetaLabel) elMetaLabel.textContent  = `🎯 Meta do dia`;
+    if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
+  },
+
+  // ── Meta Diária settings ──────────────────────────────────
+  abrirMetaSettings() {
+    const modal = document.getElementById('meta-settings-modal');
+    if (!modal) return;
+    // Highlight current goal
+    const meta = (this.estado.progresso || {}).meta_diaria || 100;
+    modal.querySelectorAll('.meta-op-btn').forEach(btn => {
+      btn.classList.toggle('ativo', parseInt(btn.dataset.val) === meta);
+    });
+    modal.style.display = 'flex';
+  },
+
+  fecharMetaSettings() {
+    const modal = document.getElementById('meta-settings-modal');
+    if (modal) modal.style.display = 'none';
+  },
+
+  setMeta(valor) {
+    if (!this.estado.progresso) return;
+    this.estado.progresso.meta_diaria = valor;
+    this.salvarProgresso();
+    this.atualizarStats();
+    this.fecharMetaSettings();
+    this.notificar(`Meta: ${valor} XP/dia`, 'successo');
   },
 
   // ── XP system ─────────────────────────────────────────────

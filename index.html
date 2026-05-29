@@ -251,6 +251,44 @@
     .vocab-cat-badge { font-size: 0.68rem; background: #F5EDD8; color: #9B2335; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
     .vocab-nivel-badge { font-size: 0.68rem; background: #2C2C2C; color: white; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
     .vocab-sm2-badge { font-size: 0.78rem; }
+    .vocab-dif-badge { font-size: 0.68rem; background: rgba(230,126,34,0.15); color: #c0560a; padding: 0.12rem 0.4rem; border-radius: 10px; font-weight: 700; white-space: nowrap; }
+    .vocab-btn-dificeis { padding: 0.42rem 0.85rem; border: 2px solid #E67E22; border-radius: 8px; background: transparent; color: #c0560a; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-dificeis:hover { background: rgba(230,126,34,0.1); }
+    .vocab-btn-dificeis.ativo { background: #E67E22; color: white; border-color: #E67E22; }
+    .dif-count { display: inline-flex; align-items: center; justify-content: center; background: #c0560a; color: white; border-radius: 999px; min-width: 18px; height: 18px; padding: 0 4px; font-size: 0.7rem; font-weight: 800; }
+    .vocab-btn-dificeis.ativo .dif-count { background: rgba(255,255,255,0.3); }
+
+    /* ── Daily goal bar ── */
+    .daily-goal-bar { background: rgba(155,35,53,0.06); border-bottom: 1px solid rgba(155,35,53,0.12); padding: 0.38rem 1rem; display: flex; align-items: center; gap: 0.7rem; }
+    .meta-bar-label { font-size: 0.72rem; font-weight: 700; color: #9B2335; white-space: nowrap; letter-spacing: 0.02em; }
+    .meta-bar-track { flex: 1; background: rgba(155,35,53,0.12); border-radius: 999px; height: 7px; overflow: hidden; }
+    .meta-bar-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 999px; transition: width 0.5s ease; }
+    .meta-bar-xp { font-size: 0.72rem; color: #888; white-space: nowrap; min-width: 80px; text-align: right; }
+    .meta-settings-btn { background: none; border: none; cursor: pointer; font-size: 0.85rem; opacity: 0.55; padding: 0; line-height: 1; transition: opacity 0.18s; }
+    .meta-settings-btn:hover { opacity: 1; }
+    body.dark-mode .daily-goal-bar { background: rgba(196,48,74,0.07); border-color: rgba(196,48,74,0.15); }
+    body.dark-mode .meta-bar-label { color: #C4304A; }
+    body.dark-mode .meta-bar-track { background: rgba(196,48,74,0.15); }
+    body.dark-mode .meta-bar-xp { color: #666; }
+
+    /* ── Meta settings modal ── */
+    .meta-settings-modal { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; padding: 1rem; backdrop-filter: blur(4px); }
+    .meta-modal-card { background: white; border-radius: 16px; padding: 1.4rem 1.6rem; max-width: 340px; width: 100%; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+    .meta-modal-titulo { font-family: 'Cinzel', serif; font-size: 1rem; color: #9B2335; font-weight: 700; margin-bottom: 0.4rem; }
+    .meta-modal-sub { font-size: 0.82rem; color: #888; margin-bottom: 1rem; }
+    .meta-opcoes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-bottom: 1rem; }
+    .meta-op-btn { padding: 0.55rem 0.3rem; border: 2px solid #ddd; border-radius: 10px; background: white; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: #555; transition: all 0.18s; }
+    .meta-op-btn:hover { border-color: #9B2335; color: #9B2335; }
+    .meta-op-btn.ativo { background: #9B2335; border-color: #9B2335; color: white; }
+    body.dark-mode .meta-modal-card { background: #1C1816; }
+    body.dark-mode .meta-modal-titulo { color: #C4304A; }
+    body.dark-mode .meta-modal-sub { color: #666; }
+    body.dark-mode .meta-op-btn { background: #25201D; border-color: #3D3530; color: #C9BBA8; }
+    body.dark-mode .meta-op-btn.ativo { background: #C4304A; border-color: #C4304A; color: white; }
+    body.dark-mode .vocab-item { background: #1C1816; }
+    body.dark-mode .vocab-dif-badge { background: rgba(230,126,34,0.18); color: #d07030; }
+    body.dark-mode .vocab-btn-dificeis { border-color: #c0560a; color: #d07030; }
+    body.dark-mode .vocab-btn-dificeis.ativo { background: #c0560a; border-color: #c0560a; color: white; }
 
     /* ── Toast ── */
     .toast-container { position: fixed; top: 1rem; right: 1rem; z-index: 9999; display: flex; flex-direction: column; gap: 0.45rem; pointer-events: none; }
@@ -980,6 +1018,29 @@
     <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 Grammatica</button>
   </nav>
 
+  <!-- Daily goal bar -->
+  <div class="daily-goal-bar" id="daily-goal-bar">
+    <span class="meta-bar-label" id="meta-bar-label">🎯 Meta do dia</span>
+    <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
+    <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
+    <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️</button>
+  </div>
+
+  <!-- Meta settings modal -->
+  <div class="meta-settings-modal" id="meta-settings-modal" onclick="if(event.target===this)App.fecharMetaSettings()">
+    <div class="meta-modal-card">
+      <p class="meta-modal-titulo">Meta Diária de XP</p>
+      <p class="meta-modal-sub">Quantos XP quer ganhar por dia?</p>
+      <div class="meta-opcoes">
+        <button class="meta-op-btn" data-val="50"  onclick="App.setMeta(50)">50<br><small>XP</small></button>
+        <button class="meta-op-btn" data-val="100" onclick="App.setMeta(100)">100<br><small>XP</small></button>
+        <button class="meta-op-btn" data-val="200" onclick="App.setMeta(200)">200<br><small>XP</small></button>
+        <button class="meta-op-btn" data-val="500" onclick="App.setMeta(500)">500<br><small>XP</small></button>
+      </div>
+      <button class="btn-primario" onclick="App.fecharMetaSettings()">Fechar</button>
+    </div>
+  </div>
+
   <main class="app-container">
 
     <!-- SECTION: Templi -->
@@ -1061,7 +1122,10 @@
           <p class="ornamento-italiano">Bravissimo!</p>
           <p>Todas as cartas estudadas hoje.</p>
           <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
-          <button class="btn-primario" onclick="Flashcards.praticaTodas()">Praticar todas novamente</button>
+          <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
+            <button class="btn-primario" onclick="Flashcards.praticaTodas()">🔁 Praticar todas</button>
+            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" title="Palavras com 3+ erros">⚠️ Estudar difíceis</button>
+          </div>
         </div>
         <div id="flashcard-resumo" style="display:none"></div>
       </div>
@@ -1115,6 +1179,7 @@
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
           <option value="">Tutte le categorie</option>
         </select>
+        <button id="vocab-btn-dificeis" class="vocab-btn-dificeis" onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
