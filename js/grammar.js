@@ -232,6 +232,9 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
+    // 📋 Tabela visual de referência (colapsável, acima dos exercícios)
+    html += this._htmlTabelaVisual(u);
+
     // ✏️ Exercícios — topo da lição
     html += '<div id="gram-ex-area">';
     html += this._htmlExercicio();
@@ -262,10 +265,10 @@ const Grammatica = {
     let html = '<div class="gram-card">';
 
     // Progresso + tipo badge na mesma linha
-    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completa' : ex.tipo === 'digitar' ? '⌨️ Digitar' : '🔘 Scelta multipla';
+    const tipoLabel = ex.tipo === 'revelar' ? '👁️ Descubra' : ex.tipo === 'digitar' ? '⌨️ Escreva' : '🔘 Escolha';
     const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : ex.tipo === 'digitar' ? 'gram-ex-tipo-digitar' : 'gram-ex-tipo-escolha';
     html += '<div class="gram-ex-header">';
-    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Esercizio ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
+    html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Exercício ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
     html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
     html += '</div>';
 
@@ -292,10 +295,10 @@ const Grammatica = {
     // Ações (ocultas até responder)
     html += '<div class="gram-ex-actions" id="gram-actions" style="display:none">';
     if (ex.tipo === 'revelar') {
-      html += '<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ Sbagliato</button>';
-      html += '<button class="gram-btn-acertei" onclick="Grammatica.marcarAcerto()">✅ Ho indovinato</button>';
+      html += '<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ Errei</button>';
+      html += '<button class="gram-btn-acertei" onclick="Grammatica.marcarAcerto()">✅ Acertei</button>';
     } else {
-      html += '<button class="gram-btn-next" onclick="Grammatica.proximoExercicio()">Prossimo →</button>';
+      html += '<button class="gram-btn-next" onclick="Grammatica.proximoExercicio()">Próximo →</button>';
     }
     html += '</div>';
 
@@ -322,10 +325,10 @@ const Grammatica = {
         ${dica}
         <div class="gram-digitar-row">
           <input class="gram-input-digitacao" id="gram-input-digitacao"
-                 type="text" placeholder="Scrivi la risposta..."
+                 type="text" placeholder="Digite sua resposta..."
                  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                  onkeydown="if(event.key==='Enter')Grammatica.responderDigitar()">
-          <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">✔ Verificare</button>
+          <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">✔ Verificar</button>
         </div>
       </div>`;
   },
@@ -340,11 +343,11 @@ const Grammatica = {
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
-    html += '<div class="gram-revelar-hint">👆 Clicca sulle parole per rivelarle, oppure usa i pulsanti</div>';
+    html += '<div class="gram-revelar-hint">👆 Clique nas palavras para revelar, ou clique em "Ver resposta"</div>';
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
-    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Rivela tutto</button>';
-    html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Nascondi</button>';
+    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Ver resposta</button>';
+    html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Ocultar</button>';
     html += '</div>';
     html += '</div>';
     return html;
@@ -389,7 +392,7 @@ const Grammatica = {
     const ex = this.unidadeAtual.exercicios[this.exIndex];
     const fb = document.getElementById('gram-feedback');
     if (fb && ex.explicacao) {
-      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>Spiegazione:</strong> ${ex.explicacao}</div>`;
+      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>Por que?</strong> ${ex.explicacao}</div>`;
     }
     const actions = document.getElementById('gram-actions');
     if (actions) actions.style.display = 'flex';
@@ -682,17 +685,26 @@ const Grammatica = {
     return h;
   },
 
+  // ── Tabela visual de referência (colapsável, acima dos exercícios) ──
+  _htmlTabelaVisual(u) {
+    if (!u.tabela_visual) return '';
+    return `<details class="gram-tabela-visual">
+      <summary>📋 Ver tabela de consulta (use durante os exercícios)</summary>
+      <div class="gram-tabela-conteudo">${u.tabela_visual}</div>
+    </details>`;
+  },
+
   // Camada 2 — Alerta motivacional
   _htmlAlerta(u) {
     if (!u.alerta) return '';
-    return `<div class="gram-alerta">⚡ ${this._formatarPergunta(u.alerta)}</div>`;
+    return `<div class="gram-alerta">💬 ${this._formatarPergunta(u.alerta)}</div>`;
   },
 
   // Camada 3 — Inventário estrutural numerado
   _htmlInventario(u) {
     if (!u.inventario || !u.inventario.length) return '';
     const items = u.inventario.map(i => `<li>${this._formatarPergunta(i)}</li>`).join('');
-    return `<div class="gram-camada-bloco"><div class="gram-camada-label">Struttura</div><ol class="gram-inventario">${items}</ol></div>`;
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">✅ O que você vai aprender</div><ol class="gram-inventario">${items}</ol></div>`;
   },
 
   // Camada 4 — Definição indutiva (Fenômeno → Causa → Conceito)
@@ -701,11 +713,11 @@ const Grammatica = {
     const d = u.definicao;
     if (!d.fenomeno && !d.causa && !d.conceito) return '';
     return `<div class="gram-camada-bloco">
-      <div class="gram-camada-label">Definizione</div>
+      <div class="gram-camada-label">🔍 Observe e entenda</div>
       <div class="gram-definicao-row">
-        ${d.fenomeno ? `<div class="gram-def-card gram-def-fenomeno"><div class="gram-def-label">Fenomeno</div><div class="gram-def-corpo">${this._formatarPergunta(d.fenomeno)}</div></div>` : ''}
-        ${d.causa    ? `<div class="gram-def-card gram-def-causa"><div class="gram-def-label">Causa</div><div class="gram-def-corpo">${this._formatarPergunta(d.causa)}</div></div>` : ''}
-        ${d.conceito ? `<div class="gram-def-card gram-def-conceito"><div class="gram-def-label">Concetto</div><div class="gram-def-corpo">${this._formatarPergunta(d.conceito)}</div></div>` : ''}
+        ${d.fenomeno ? `<div class="gram-def-card gram-def-fenomeno"><div class="gram-def-label">Veja</div><div class="gram-def-corpo">${this._formatarPergunta(d.fenomeno)}</div></div>` : ''}
+        ${d.causa    ? `<div class="gram-def-card gram-def-causa"><div class="gram-def-label">Pense</div><div class="gram-def-corpo">${this._formatarPergunta(d.causa)}</div></div>` : ''}
+        ${d.conceito ? `<div class="gram-def-card gram-def-conceito"><div class="gram-def-label">Entenda</div><div class="gram-def-corpo">${this._formatarPergunta(d.conceito)}</div></div>` : ''}
       </div>
     </div>`;
   },
@@ -714,7 +726,7 @@ const Grammatica = {
   _htmlTecnica(u) {
     if (!u.tecnica) return '';
     const ft = this._formatarTeoria(u.tecnica);
-    return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">Tecnica pratica</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
+    return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">📌 Como usar na prática</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
   },
 
   // Camada 6 — Exemplos P→R→C
@@ -730,18 +742,18 @@ const Grammatica = {
         <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">C</span><strong>${this._formatarPergunta(e.conclusao || '')}</strong></div>
       </div>`;
     }
-    return `<div class="gram-camada-bloco"><div class="gram-camada-label">Esempi (P→R→C)</div><div class="gram-prc-lista">${rows}</div></div>`;
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">🗣️ Veja os exemplos (clique 🔊 para ouvir)</div><div class="gram-prc-lista">${rows}</div></div>`;
   },
 
   // Camada 7 — Ponte teórica (port → italiano)
   _htmlPonte(u) {
     if (!u.ponte) return '';
-    return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">Ponte 🇧🇷 → 🇮🇹</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
+    return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">🇧🇷 Em português é assim… em italiano é assim:</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
   },
 
   // Camada 9 — Coda comportamental
   _htmlCoda(u) {
     if (!u.coda) return '';
-    return `<div class="gram-coda">📌 ${this._formatarPergunta(u.coda)}</div>`;
+    return `<div class="gram-coda">💡 ${this._formatarPergunta(u.coda)}</div>`;
   }
 };

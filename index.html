@@ -449,6 +449,26 @@
 
     /* ── Lição ── */
     .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }
+    /* ── Tabela visual de referência (colapsável) ── */
+    .gram-tabela-visual { border: 2px solid #D4A843; border-radius: 12px; margin-bottom: 1.1rem; background: #FFFDF5; overflow: hidden; }
+    .gram-tabela-visual summary { padding: 0.75rem 1.1rem; font-weight: 700; cursor: pointer; color: #9B2335; font-size: 0.9rem; user-select: none; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .gram-tabela-visual summary::-webkit-details-marker { display: none; }
+    .gram-tabela-visual[open] summary::before { content: '▼ '; font-size: 0.7rem; }
+    .gram-tabela-visual:not([open]) summary::before { content: '▶ '; font-size: 0.7rem; }
+    .gram-tabela-conteudo { padding: 0.85rem 1.1rem 1rem; border-top: 1px solid #f0e0b0; }
+    .gram-tabela-conteudo table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .gram-tabela-conteudo th { background: #9B2335; color: white; padding: 0.45rem 0.6rem; text-align: left; font-weight: 700; }
+    .gram-tabela-conteudo td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #e8e0cc; vertical-align: top; line-height: 1.5; }
+    .gram-tabela-conteudo tr:last-child td { border-bottom: none; }
+    .gram-tabela-conteudo .tab-azul  td:first-child { border-left: 4px solid #3498DB; }
+    .gram-tabela-conteudo .tab-amarelo td:first-child { border-left: 4px solid #F39C12; }
+    .gram-tabela-conteudo .tab-rosa  td:first-child { border-left: 4px solid #E91E8C; }
+    .gram-tabela-conteudo .tab-verde td:first-child { border-left: 4px solid #27AE60; }
+    .gram-tabela-conteudo .tab-cinza td:first-child { border-left: 4px solid #888; }
+    body.dark-mode .gram-tabela-visual { background: #1e1a16; border-color: #8a6a20; }
+    body.dark-mode .gram-tabela-visual summary { color: #D4A843; }
+    body.dark-mode .gram-tabela-conteudo { border-top-color: #3a2e1a; }
+    body.dark-mode .gram-tabela-conteudo td { border-bottom-color: #2a2420; color: #E6DFD3; }
     .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
     .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: #9B2335; border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
     .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
@@ -1394,7 +1414,7 @@
   <script src="js/quiz.js?v=3"></script>
   <script src="js/vocab.js?v=3"></script>
   <script src="js/heatmap.js?v=3"></script>
-  <script src="js/grammar.js?v=3"></script>
+  <script src="js/grammar.js?v=4"></script>
   <script src="js/profilo.js?v=1"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
