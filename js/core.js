@@ -96,6 +96,14 @@ const App = {
     if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
     // Init sound feedback
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();
+    // Pre-load speech synthesis voices so the first pronunciar() call is instant
+    if ('speechSynthesis' in window) {
+      speechSynthesis.getVoices(); // trigger async load
+      speechSynthesis.onvoiceschanged = () => {
+        this._getVozItaliana(); // cache Italian voice on first load
+        speechSynthesis.onvoiceschanged = null;
+      };
+    }
     // Set up keyboard shortcuts
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
@@ -634,16 +642,45 @@ const App = {
   },
 
   // ── Text-to-speech ─────────────────────────────────────────
+  // ── Cached Italian voice ──────────────────────────────────
+  _vozItaliana: null,
+
+  _getVozItaliana() {
+    if (this._vozItaliana) return this._vozItaliana;
+    const vozes = speechSynthesis.getVoices();
+    if (!vozes.length) return null;
+    // Priority: exact it-IT → any it-* → null
+    this._vozItaliana =
+      vozes.find(v => v.lang === 'it-IT') ||
+      vozes.find(v => v.lang.startsWith('it')) ||
+      null;
+    return this._vozItaliana;
+  },
+
   pronunciar(texto) {
     if (!texto) return;
     if (!('speechSynthesis' in window)) return;
-    // Cancel any ongoing speech
     speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(texto);
-    u.lang = 'it-IT';
-    u.rate = 0.9;
-    u.pitch = 1;
-    speechSynthesis.speak(u);
+
+    const falar = () => {
+      const u  = new SpeechSynthesisUtterance(texto);
+      u.lang   = 'it-IT';
+      u.rate   = 0.9;
+      u.pitch  = 1;
+      const voz = this._getVozItaliana();
+      if (voz) u.voice = voz;
+      speechSynthesis.speak(u);
+    };
+
+    // Voices may not be loaded yet on first call — wait for them
+    if (speechSynthesis.getVoices().length > 0) {
+      falar();
+    } else {
+      speechSynthesis.onvoiceschanged = () => {
+        speechSynthesis.onvoiceschanged = null;
+        falar();
+      };
+    }
   }
 };
 
