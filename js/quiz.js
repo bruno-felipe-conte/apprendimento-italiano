@@ -216,6 +216,12 @@ const Quiz = {
       Progressao.ganhar(this.xpTotal);
     }
 
+    // Check achievements
+    if (typeof Conquistas !== 'undefined') {
+      if (pct === 100) Conquistas.ganharQuizPerfetto();
+      Conquistas.verificar();
+    }
+
     // Save to quiz history
     try {
       const historico = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]');

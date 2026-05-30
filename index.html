@@ -310,6 +310,13 @@
     /* Favorite button in flashcard */
     .btn-favorito { background: transparent; border: none; font-size: 1.3rem; cursor: pointer; line-height: 1; padding: 0; transition: transform 0.15s; }
     .btn-favorito:hover { transform: scale(1.25); }
+    /* Dica (hint) button */
+    .btn-dica { background: transparent; border: 1.5px solid rgba(212,168,67,0.4); border-radius: 8px; font-size: 1rem; cursor: pointer; line-height: 1; padding: 0.3rem 0.5rem; transition: background 0.15s, transform 0.15s, border-color 0.15s; }
+    .btn-dica:hover { background: rgba(212,168,67,0.12); transform: scale(1.1); border-color: #D4A843; }
+    .btn-dica.ativo { background: rgba(212,168,67,0.2); border-color: #D4A843; }
+    /* Penalized rating buttons (Good/Easy disabled when hint was used) */
+    .btn-rating.dica-penalizado { opacity: 0.35; pointer-events: none; position: relative; }
+    .btn-rating.dica-penalizado::after { content: '🔒'; position: absolute; top: 2px; right: 4px; font-size: 0.6rem; }
     /* Quiz morphology section */
     .quiz-secao-titulo { grid-column: 1 / -1; text-align: center; font-family: 'Cinzel', serif; font-size: 0.82rem; font-weight: 700; color: #9B2335; letter-spacing: 0.05em; padding: 0.8rem 0 0.3rem; border-top: 1px solid rgba(155,35,53,0.15); margin-top: 0.4rem; }
     .quiz-morf-btn { font-size: 0.78rem !important; padding: 0.55rem 0.5rem !important; }
@@ -608,6 +615,20 @@
     .gram-ex-tipo-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; border-radius: 20px; padding: 0.18rem 0.6rem; }
     .gram-ex-tipo-escolha { background: #e8f4fd; color: #1a5276; border: 1px solid #aed6f1; }
     .gram-ex-tipo-revelar { background: #e9f7ef; color: #145a32; border: 1px solid #a9dfbf; }
+    .gram-ex-tipo-digitar { background: #f3e8ff; color: #5b2181; border: 1px solid #d2a9f7; }
+
+    /* ── Digitação ── */
+    .gram-digitar-area { padding: 0 1.3rem 0.8rem; }
+    .gram-digitar-dica  { font-size: 0.82rem; color: #7a5800; background: #fffbf0; border-left: 3px solid #D4A843; padding: 0.4rem 0.7rem; border-radius: 0 6px 6px 0; margin-bottom: 0.7rem; }
+    .gram-digitar-row   { display: flex; gap: 0.5rem; align-items: center; }
+    .gram-input-digitacao { flex: 1; padding: 0.62rem 0.9rem; border: 2px solid #ccc; border-radius: 10px; font-size: 1rem; font-family: inherit; background: #fff; color: #2C2C2C; transition: border-color 0.2s; outline: none; }
+    .gram-input-digitacao:focus { border-color: #9B2335; box-shadow: 0 0 0 3px rgba(155,35,53,0.1); }
+    .gram-input-digitacao.digitar-correto { border-color: #27AE60; background: #eafaf1; color: #145a32; }
+    .gram-input-digitacao.digitar-errado  { border-color: #C0392B; background: #fde8e6; color: #7b241c; }
+    .gram-btn-verificar { padding: 0.62rem 1.1rem; background: #9B2335; color: #fff; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.15s, transform 0.1s; white-space: nowrap; }
+    .gram-btn-verificar:hover { background: #7a1b28; transform: translateY(-1px); }
+    .gram-btn-verificar:active { transform: translateY(0); }
+
     /* ── Animação de acerto (glow verde) ── */
     @keyframes gramAcertoGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(39,174,96,0); } 50% { box-shadow: 0 0 0 10px rgba(39,174,96,0.28); } }
     /* ── Camadas Pedagógicas (NMA) ── */
@@ -1004,6 +1025,91 @@
 
     /* ── Mobile: cards de definição em coluna ── */
     @media (max-width: 520px) { .gram-def-card { min-width: calc(100% - 1.5rem); } .gram-definicao-row { padding: 0.5rem; gap: 0.4rem; } }
+
+    /* ── Dark mode: digitação ── */
+    body.dark-mode .gram-input-digitacao { background: #25201D; color: #E6DFD3; border-color: #3D3530; }
+    body.dark-mode .gram-input-digitacao:focus { border-color: #D4A843; box-shadow: 0 0 0 3px rgba(212,168,67,0.15); }
+    body.dark-mode .gram-input-digitacao.digitar-correto { background: #192B20; color: #73E69B; border-color: #27AE60; }
+    body.dark-mode .gram-input-digitacao.digitar-errado  { background: #2D1B1B; color: #F1948A; border-color: #C0392B; }
+    body.dark-mode .gram-digitar-dica { background: #241C0A; color: #E5B84E; border-left-color: #D4A843; }
+    body.dark-mode .gram-ex-tipo-digitar { background: #2A1545; color: #D2A9F7; border-color: #5b2181; }
+
+    /* ── Conquista Modal ── */
+    .conquista-modal { display:none; position:fixed; inset:0; z-index:2100; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; padding:1rem; backdrop-filter:blur(6px); }
+    .conquista-modal.ativo { display:flex; animation:fadeIn 0.2s ease; }
+    .conquista-card { background:#fff; border-radius:22px; padding:2rem 2.2rem 1.8rem; max-width:340px; width:100%; text-align:center; box-shadow:0 28px 70px rgba(0,0,0,0.38); animation:conquistaSlide 0.35s cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes conquistaSlide { from { transform:scale(0.5) translateY(40px); opacity:0; } to { transform:scale(1) translateY(0); opacity:1; } }
+    .conquista-card-label { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:#9B2335; margin-bottom:0.6rem; }
+    .conquista-card-emoji { font-size:3.5rem; display:block; margin-bottom:0.5rem; animation:conquistaBounce 0.6s 0.35s both cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes conquistaBounce { from { transform:scale(0); } to { transform:scale(1); } }
+    .conquista-card-nome { font-family:'Cinzel',serif; font-size:1.3rem; font-weight:700; color:#2C2C2C; margin-bottom:0.35rem; }
+    .conquista-card-desc { font-size:0.87rem; color:#777; margin-bottom:1.2rem; line-height:1.5; }
+    .conquista-card-btn  { background:#9B2335; color:#fff; border:none; border-radius:10px; padding:0.65rem 1.8rem; font-weight:700; font-size:0.95rem; cursor:pointer; transition:background 0.15s; }
+    .conquista-card-btn:hover { background:#7a1b28; }
+    /* badge wall */
+    .conquista-badge { display:flex; flex-direction:column; align-items:center; gap:0.25rem; padding:0.7rem 0.5rem; border-radius:12px; background:#f8f2e8; border:1.5px solid #e0d5c0; transition:transform 0.15s; cursor:default; }
+    .conquista-badge:not(.bloqueada):hover { transform:translateY(-2px); }
+    .conquista-badge.bloqueada { opacity:0.35; filter:grayscale(1); }
+    .conquista-badge-emoji { font-size:1.7rem; }
+    .conquista-badge-nome  { font-size:0.67rem; font-weight:700; text-align:center; color:#5a3a1a; }
+    body.dark-mode .conquista-card { background:#1C1816; }
+    body.dark-mode .conquista-card-nome { color:#E6DFD3; }
+    body.dark-mode .conquista-card-desc { color:#888; }
+    body.dark-mode .conquista-badge { background:#25201D; border-color:#3D3530; }
+    body.dark-mode .conquista-badge-nome { color:#C9BBA8; }
+
+    /* ── Level-Up Modal ── */
+    .levelup-modal { display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem; overflow:hidden; }
+    .levelup-modal.ativo { display:flex; }
+    .levelup-card { background:linear-gradient(145deg,#1a0a10,#3d1020); border-radius:24px; padding:2.5rem 2rem 2rem; max-width:380px; width:100%; text-align:center; box-shadow:0 32px 80px rgba(0,0,0,0.6); position:relative; overflow:hidden; animation:lvlSlide 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes lvlSlide { from { transform:scale(0.7) translateY(60px); opacity:0; } to { transform:scale(1) translateY(0); opacity:1; } }
+    .levelup-shimmer { position:absolute; inset:0; background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,0.06) 50%,transparent 70%); animation:shimmer 2s infinite; pointer-events:none; }
+    @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(200%)} }
+    .levelup-stars { font-size:1.5rem; letter-spacing:0.2em; margin-bottom:0.7rem; animation:starFade 0.4s 0.3s both; }
+    @keyframes starFade { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:none} }
+    .levelup-label { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:#D4A843; margin-bottom:0.5rem; }
+    .levelup-num { font-family:'Cinzel',serif; font-size:4.5rem; font-weight:700; color:#fff; line-height:1; animation:levelPop 0.5s 0.15s both cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes levelPop { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+    .levelup-nome { font-family:'Cinzel',serif; font-size:1.1rem; color:#D4A843; margin:0.4rem 0 1rem; }
+    .levelup-desbloqueios { margin-bottom:1.2rem; font-size:0.85rem; color:rgba(255,255,255,0.75); line-height:1.6; min-height:1.2em; }
+    .levelup-btn { background:linear-gradient(135deg,#D4A843,#F5C842); color:#2C2C2C; border:none; border-radius:12px; padding:0.75rem 2.2rem; font-weight:800; font-size:1rem; cursor:pointer; transition:transform 0.15s, box-shadow 0.15s; box-shadow:0 4px 16px rgba(212,168,67,0.4); }
+    .levelup-btn:hover { transform:translateY(-2px); box-shadow:0 6px 22px rgba(212,168,67,0.55); }
+    /* Confetti particles */
+    .levelup-confetti { position:absolute; width:8px; height:8px; border-radius:2px; pointer-events:none; animation:confettiFall linear both; }
+    @keyframes confettiFall { 0%{transform:translateY(-20px) rotate(0deg);opacity:1} 100%{transform:translateY(500px) rotate(720deg);opacity:0} }
+
+    /* ── Profilo ── */
+    .profilo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; margin-bottom:1.5rem; }
+    .profilo-card { background:#fff; border-radius:14px; padding:1.2rem 1.4rem; box-shadow:0 2px 10px rgba(0,0,0,0.08); }
+    .profilo-card-titulo { font-family:'Cinzel',serif; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:#9B2335; margin-bottom:0.9rem; }
+    .profilo-stat-row { display:flex; justify-content:space-between; align-items:center; padding:0.35rem 0; border-bottom:1px solid #f0e8d8; font-size:0.88rem; }
+    .profilo-stat-row:last-child { border-bottom:none; }
+    .profilo-stat-label { color:#666; }
+    .profilo-stat-val { font-weight:700; color:#2C2C2C; }
+    .profilo-conquistas-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(100px,1fr)); gap:0.6rem; }
+    .relatorio-chart { display:flex; align-items:flex-end; gap:4px; height:80px; margin:0.8rem 0; }
+    .chart-bar-wrap { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
+    .chart-bar { width:100%; background:linear-gradient(180deg,#9B2335,#D4A843); border-radius:4px 4px 0 0; min-height:3px; transition:height 0.4s ease; }
+    .chart-day  { font-size:0.62rem; color:#999; text-transform:uppercase; }
+    .chart-val  { font-size:0.62rem; color:#666; }
+    .ratings-row { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.5rem; }
+    .rating-pill { display:flex; align-items:center; gap:0.3rem; background:#f5f0e8; border-radius:20px; padding:0.22rem 0.65rem; font-size:0.8rem; font-weight:700; }
+    .rating-pill.again { background:#fde8e6; color:#7b241c; }
+    .rating-pill.hard  { background:#fff3cd; color:#6b4c00; }
+    .rating-pill.good  { background:#eafaf1; color:#145a32; }
+    .rating-pill.easy  { background:#e8f4fd; color:#1a5276; }
+    body.dark-mode .profilo-card { background:#1C1816; }
+    body.dark-mode .profilo-card-titulo { color:#C4304A; }
+    body.dark-mode .profilo-stat-label { color:#999; }
+    body.dark-mode .profilo-stat-val { color:#E6DFD3; }
+    body.dark-mode .profilo-stat-row { border-bottom-color:#2D2723; }
+    body.dark-mode .rating-pill { background:#25201D; color:#C9BBA8; }
+    body.dark-mode .rating-pill.again { background:#2D1B1B; color:#F1948A; }
+    body.dark-mode .rating-pill.hard  { background:#241C0A; color:#E5B84E; }
+    body.dark-mode .rating-pill.good  { background:#192B20; color:#73E69B; }
+    body.dark-mode .rating-pill.easy  { background:#1a2d40; color:#85C1E9; }
+    body.dark-mode .chart-day { color:#555; }
+    body.dark-mode .chart-val { color:#777; }
   </style>
 </head>
 <body>
@@ -1042,6 +1148,7 @@
     <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ Quiz</button>
     <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 Vocabolario</button>
     <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 Grammatica</button>
+    <button class="nav-tab" data-section="profilo" onclick="App.navegar('profilo')">👤 Profilo</button>
   </nav>
 
   <!-- Daily goal bar -->
@@ -1131,6 +1238,7 @@
         </div>
         <div style="display:flex;align-items:center;justify-content:center;gap:0.7rem;margin-bottom:0.75rem;">
           <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
+          <button class="btn-dica" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Ver dica (nível 1)">💡</button>
           <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito">🤍</button>
         </div>
         <div class="card-actions" id="card-actions" style="display:none">
@@ -1221,6 +1329,12 @@
       </div>
     </section>
 
+    <!-- SECTION: Profilo -->
+    <section id="sec-profilo" class="section">
+      <h2 class="section-titulo">Il Mio Profilo</h2>
+      <div id="profilo-container"></div>
+    </section>
+
   </main>
 
   <footer class="app-footer">
@@ -1235,8 +1349,33 @@
     <div class="tm-card" id="templo-modal-body"></div>
   </div>
 
+  <!-- Conquista unlock modal -->
+  <div id="conquista-modal" class="conquista-modal" onclick="if(event.target===this)Conquistas.fecharModal()">
+    <div class="conquista-card">
+      <div class="conquista-card-label">🏆 Conquista desbloqueada!</div>
+      <span id="conquista-emoji" class="conquista-card-emoji">🌱</span>
+      <div id="conquista-nome" class="conquista-card-nome">Primo Passo</div>
+      <div id="conquista-desc" class="conquista-card-desc">Complete seu primeiro flashcard</div>
+      <button class="conquista-card-btn" onclick="Conquistas.fecharModal()">Continua →</button>
+    </div>
+  </div>
+
+  <!-- Level-Up modal -->
+  <div id="levelup-modal" class="levelup-modal" onclick="if(event.target===this)LevelUp.fechar()">
+    <div class="levelup-card" id="levelup-card">
+      <div class="levelup-shimmer"></div>
+      <div class="levelup-stars">✦ ✦ ✦</div>
+      <div class="levelup-label">Avanzamento di livello</div>
+      <div class="levelup-num" id="levelup-num">2</div>
+      <div class="levelup-nome" id="levelup-nome">Esploratore</div>
+      <div class="levelup-desbloqueios" id="levelup-desbloqueios"></div>
+      <button class="levelup-btn" onclick="LevelUp.fechar()">Forza! →</button>
+    </div>
+  </div>
+
   <!-- Scripts (load order matters) -->
   <script src="js/audio.js?v=1"></script>
+  <script src="js/conquistas.js?v=1"></script>
   <script src="js/core.js?v=3"></script>
   <script src="js/progression.js?v=3"></script>
   <script src="js/flashcards.js?v=3"></script>
@@ -1244,6 +1383,7 @@
   <script src="js/vocab.js?v=3"></script>
   <script src="js/heatmap.js?v=3"></script>
   <script src="js/grammar.js?v=3"></script>
+  <script src="js/profilo.js?v=1"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');

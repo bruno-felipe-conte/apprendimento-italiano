@@ -175,6 +175,9 @@ const App = {
     if (secao === 'grammatica' && typeof Grammatica !== 'undefined') {
       Grammatica.renderizarSeletor();
     }
+    if (secao === 'profilo' && typeof Profilo !== 'undefined') {
+      Profilo.renderizar();
+    }
   },
 
   // ── localStorage ───────────────────────────────────────────
@@ -188,7 +191,8 @@ const App = {
         if (p.meta_diaria === undefined) p.meta_diaria = 100;
         if (p.xp_hoje === undefined) p.xp_hoje = 0;
         if (p.data_xp_hoje === undefined) p.data_xp_hoje = null;
-        if (!p.favoritos) p.favoritos = [];
+        if (!p.favoritos)   p.favoritos   = [];
+        if (!p.conquistas)  p.conquistas  = [];
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -206,7 +210,8 @@ const App = {
       meta_diaria: 100,
       xp_hoje: 0,
       data_xp_hoje: null,
-      favoritos: []
+      favoritos:   [],
+      conquistas:  []
     };
   },
 

@@ -2,6 +2,66 @@
 // progression.js — XP levels, temple unlocks, mastery
 // ============================================================
 
+// ── Level names by milestone ───────────────────────────────
+const _LEVEL_NOMES = {
+  1:'Principiante', 2:'Curioso', 3:'Esploratore', 5:'Studioso',
+  7:'Intermedio', 10:'Avanzato', 13:'Esperto', 16:'Avanzato Plus',
+  19:'Maestro', 20:'Gran Maestro'
+};
+function _nomePorNivel(n) {
+  const keys = Object.keys(_LEVEL_NOMES).map(Number).sort((a,b)=>b-a);
+  for (const k of keys) { if (n >= k) return _LEVEL_NOMES[k]; }
+  return 'Principiante';
+}
+
+// ── Level-Up modal ─────────────────────────────────────────
+const LevelUp = {
+  mostrar(nivel) {
+    const modal = document.getElementById('levelup-modal');
+    if (!modal) return;
+    const el = id => document.getElementById(id);
+    if (el('levelup-num'))  el('levelup-num').textContent  = nivel;
+    if (el('levelup-nome')) el('levelup-nome').textContent = _nomePorNivel(nivel);
+
+    // Desbloqueios relacionados
+    const templos = Object.entries(Progressao.TEMPLO_NIVEL)
+      .filter(([,n]) => n === nivel)
+      .map(([t]) => `🏛️ Tempio ${t} desbloqueado!`);
+    if (el('levelup-desbloqueios')) {
+      el('levelup-desbloqueios').textContent = templos.join(' · ') || '';
+    }
+
+    this._gerarConfetti();
+    modal.classList.add('ativo');
+  },
+
+  fechar() {
+    const modal = document.getElementById('levelup-modal');
+    if (modal) modal.classList.remove('ativo');
+    // Clear confetti
+    const card = document.getElementById('levelup-card');
+    if (card) card.querySelectorAll('.levelup-confetti').forEach(c => c.remove());
+  },
+
+  _gerarConfetti() {
+    const card = document.getElementById('levelup-card');
+    if (!card) return;
+    const cores = ['#D4A843','#9B2335','#27AE60','#2980B9','#F5C842','#fff'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'levelup-confetti';
+      p.style.left       = Math.random() * 100 + '%';
+      p.style.top        = '-10px';
+      p.style.background = cores[Math.floor(Math.random() * cores.length)];
+      p.style.width      = (6 + Math.random() * 6) + 'px';
+      p.style.height     = (6 + Math.random() * 6) + 'px';
+      p.style.animationDuration  = (0.8 + Math.random() * 1.4) + 's';
+      p.style.animationDelay     = (Math.random() * 0.5) + 's';
+      card.appendChild(p);
+    }
+  }
+};
+
 const Progressao = {
   // Cumulative XP required to reach each level index
   // Index 0 = start of level 1 (0 XP), index 1 = start of level 2 (500 XP), etc.
@@ -71,8 +131,13 @@ const Progressao = {
     const subiu = p.nivel > nivelAnterior;
     if (subiu) {
       this.verificarDesbloqueioTemplos();
-      App.notificar(`🎉 Livello ${p.nivel}! Avanzamento!`, 'successo');
+      if (typeof LevelUp !== 'undefined') {
+        LevelUp.mostrar(p.nivel);
+      } else {
+        App.notificar(`🎉 Livello ${p.nivel}! Avanzamento!`, 'successo');
+      }
       if (typeof SomFeedback !== 'undefined') SomFeedback.nivelUp();
+      if (typeof Conquistas !== 'undefined') Conquistas.verificar();
     }
 
     App.salvarProgresso();

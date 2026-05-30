@@ -169,6 +169,8 @@ const Flashcards = {
   modoReverso:       false,
   modoContexto:      false,
   modoEscuta:        false,
+  nivelDica:         0,      // 0=none, 1=first letter, 2=more letters, 3=flipped
+  dicaUsada:         false,  // penalises Good/Easy when true
   sessaoStats:       null,
   _swipeInitialized: false,
   _swipeStartX:      0,
@@ -243,8 +245,14 @@ const Flashcards = {
       return;
     }
 
-    this.cartaAtual = this.cartasDisponiveis[this.indiceAtual];
-    this.virada     = false;
+    this.cartaAtual  = this.cartasDisponiveis[this.indiceAtual];
+    this.virada      = false;
+    this.nivelDica   = 0;
+    this.dicaUsada   = false;
+
+    // Reset dica button appearance
+    const btnDica = document.getElementById('btn-dica');
+    if (btnDica) { btnDica.classList.remove('ativo'); btnDica.title = 'Ver dica (nível 1)'; }
 
     const cardEl = document.getElementById('flashcard');
     if (cardEl) { cardEl.classList.remove('virado'); cardEl.style.display = ''; }
@@ -359,7 +367,48 @@ const Flashcards = {
     if (actions) {
       actions.style.display = 'grid';
       this._atualizarBotoesIntervalo();
+      if (this.dicaUsada) this._aplicarPenalidadeDica();
     }
+  },
+
+  // ── Progressive hints ─────────────────────────────────────
+  mostrarDica() {
+    if (this.virada || !this.cartaAtual) return;
+    this.nivelDica++;
+    this.dicaUsada = true;
+
+    // Mark dica button
+    const btnDica = document.getElementById('btn-dica');
+    if (btnDica) btnDica.classList.add('ativo');
+
+    const alvo = this.modoReverso ? this.cartaAtual.italiano : this.cartaAtual.portugues;
+    const elDica = document.getElementById('card-dica');
+
+    if (this.nivelDica === 1) {
+      // Level 1: first letter + blanks
+      const hint = alvo.charAt(0).toUpperCase() + '_'.repeat(Math.max(1, alvo.length - 1));
+      if (elDica) elDica.textContent = `💡 ${hint}`;
+      if (btnDica) btnDica.title = 'Ver dica (nível 2)';
+    } else if (this.nivelDica === 2) {
+      // Level 2: first third of letters revealed
+      const revealed = Math.max(2, Math.ceil(alvo.length / 3));
+      const hint = alvo.substring(0, revealed) + '_'.repeat(Math.max(1, alvo.length - revealed));
+      if (elDica) elDica.textContent = `💡💡 ${hint}`;
+      if (btnDica) btnDica.title = 'Ver dica (revelar)';
+    } else {
+      // Level 3: just flip the card
+      if (elDica) elDica.textContent = `💡💡💡 Revelado`;
+      this.virar();
+      // Disable Good and Easy after dica
+      this._aplicarPenalidadeDica();
+    }
+  },
+
+  _aplicarPenalidadeDica() {
+    ['btn-good', 'btn-easy'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.classList.add('dica-penalizado');
+    });
   },
 
   // ── Update button interval previews ───────────────────────
@@ -436,6 +485,9 @@ const Flashcards = {
       if (typeof Progressao !== 'undefined' && Progressao.temploConcluido(this.temploAtual)) {
         Progressao.marcarTemploConcluido(this.temploAtual);
       }
+
+      // Check achievements after each review
+      if (typeof Conquistas !== 'undefined') Conquistas.verificar();
 
       this.proxima();
     } catch (err) {

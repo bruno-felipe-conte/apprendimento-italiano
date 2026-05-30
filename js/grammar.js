@@ -262,8 +262,8 @@ const Grammatica = {
     let html = '<div class="gram-card">';
 
     // Progresso + tipo badge na mesma linha
-    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completa' : '🔘 Scelta multipla';
-    const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : 'gram-ex-tipo-escolha';
+    const tipoLabel = ex.tipo === 'revelar' ? '✍️ Completa' : ex.tipo === 'digitar' ? '⌨️ Digitar' : '🔘 Scelta multipla';
+    const tipoCls   = ex.tipo === 'revelar' ? 'gram-ex-tipo-revelar' : ex.tipo === 'digitar' ? 'gram-ex-tipo-digitar' : 'gram-ex-tipo-escolha';
     html += '<div class="gram-ex-header">';
     html += `<div class="gram-ex-header-top"><span class="gram-ex-progress-label">Esercizio ${this.exIndex + 1} / ${total}</span><span class="gram-ex-tipo-badge ${tipoCls}">${tipoLabel}</span></div>`;
     html += `<div class="gram-ex-progress-bar"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>`;
@@ -272,14 +272,16 @@ const Grammatica = {
     // Pergunta
     html += `<div class="gram-ex-question">${qHtml}</div>`;
 
-    // Explicação enxuta (visível antes da interação)
-    if (ex.explicacao) {
+    // Explicação enxuta (visível antes da interação — omitida em digitar para não revelar a resposta)
+    if (ex.explicacao && ex.tipo !== 'digitar') {
       html += `<div class="gram-ex-dica">${this._formatarPergunta(ex.explicacao)}</div>`;
     }
 
     // Corpo do exercício
     if (ex.tipo === 'escolha') {
       html += this._htmlEscolha(ex);
+    } else if (ex.tipo === 'digitar') {
+      html += this._htmlDigitar(ex);
     } else {
       html += this._htmlRivelar(ex);
     }
@@ -310,6 +312,22 @@ const Grammatica = {
     }
     html += '</div>';
     return html;
+  },
+
+  // ─── Digitação livre ───
+  _htmlDigitar(ex) {
+    const dica = ex.dica ? `<div class="gram-digitar-dica">💡 ${ex.dica}</div>` : '';
+    return `
+      <div class="gram-digitar-area" id="gram-digitar-area">
+        ${dica}
+        <div class="gram-digitar-row">
+          <input class="gram-input-digitacao" id="gram-input-digitacao"
+                 type="text" placeholder="Scrivi la risposta..."
+                 autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                 onkeydown="if(event.key==='Enter')Grammatica.responderDigitar()">
+          <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">✔ Verificare</button>
+        </div>
+      </div>`;
   },
 
   // ─── Blur-reveal ───
@@ -408,6 +426,39 @@ const Grammatica = {
       fb.innerHTML = correto
         ? `<div class="gram-feedback-correct">✅ <strong>Corretto!</strong> ${ex.explicacao}</div>`
         : `<div class="gram-feedback-wrong">❌ <strong>Sbagliato.</strong> ${ex.explicacao}</div>`;
+    }
+
+    const actions = document.getElementById('gram-actions');
+    if (actions) actions.style.display = 'flex';
+
+    if (correto) { this.acertos++; App.ganharXP(5); }
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // Responder digitação
+  // ─────────────────────────────────────────────────────────
+  responderDigitar() {
+    if (this.respondida) return;
+    const input = document.getElementById('gram-input-digitacao');
+    if (!input) return;
+
+    const ex = this.unidadeAtual.exercicios[this.exIndex];
+    const digitado = input.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const correta  = (ex.resposta || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const variantes = (ex.variantes || []).map(v =>
+      v.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    );
+    const correto = digitado === correta || variantes.includes(digitado);
+
+    this.respondida = true;
+    input.disabled = true;
+    input.classList.add(correto ? 'digitar-correto' : 'digitar-errado');
+
+    const fb = document.getElementById('gram-feedback');
+    if (fb) {
+      fb.innerHTML = correto
+        ? `<div class="gram-feedback-correct">✅ <strong>Corretto!</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>Sbagliato.</strong> La risposta era: <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
