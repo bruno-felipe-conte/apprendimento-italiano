@@ -1,6 +1,10 @@
 # 🇮🇹 Italiano Autentico
 
+**🔗 App online:** https://bruno-felipe-conte.github.io/apprendimento-italiano/
+
 PWA para aprendizado de italiano — Flashcards, Quiz, Vocabulário e Gramática estruturada pelo método do Pe. Napoleão Mendes de Almeida (NMA).
+
+> **Funciona 100% offline** após a primeira visita. Todo progresso salvo localmente no navegador. Instale como app: no Chrome/Edge clique em ⊕ na barra de endereço; no Safari iOS use Compartilhar → "Adicionar à Tela de Início".
 
 ---
 
