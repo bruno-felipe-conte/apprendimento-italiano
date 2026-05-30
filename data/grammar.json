@@ -28700,6 +28700,1652 @@
           ],
           "ponte": "**Em português:** 'Estou com dor de cabeça' — direto.\n\n**Em italiano:** *ho mal di testa* (literalmente 'tenho mal de cabeça') — estrutura diferente do português que usa 'estar com'.\n\n**Armadilha:** nunca diga *sono mal di testa* (erro comum de brasileiros). Use sempre **ho** (tenho) para dores e sintomas, não **sono** (sou/estou).",
           "coda": "Memorize pelo menos: *ho mal di testa, ho la febbre, mi fa male, ho bisogno di un medico, chiami il 118.* Em emergência, essas frases valem mais que todo o resto."
+        },
+        {
+          "id": "a2-vi",
+          "titulo": "Passato Prossimo con avere",
+          "subtitulo": "Ações completadas no passado",
+          "nivel": "A2",
+          "teoria": "**Passato Prossimo** = *ausiliare* (avere/essere) + *participio passato*\n\nCom **avere**: ho, hai, ha, abbiamo, avete, hanno + participio\n\n**Participio regolare:**\n- -are → **-ato**: mangiare → mangiato\n- -ere → **-uto**: credere → creduto\n- -ire → **-ito**: dormire → dormito\n\n**Participi irregolari comuni:**\nfare → fatto | dire → detto | leggere → letto\nscrivere → scritto | vedere → visto | prendere → preso",
+          "exemplos": [
+            "Ho mangiato una pizza.",
+            "Hai dormito bene?",
+            "Abbiamo fatto una passeggiata.",
+            "Non ho capito niente."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Com \"avere\", o participio de \"mangiare\" é:",
+              "opcoes": [
+                "mangiato",
+                "mangiuto",
+                "mangito",
+                "mangato"
+              ],
+              "resposta": 0,
+              "explicacao": "Verbos em -are formam o participio com -ato: mangiare → mangiato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Come si dice \"Eu comi uma pizza\"?",
+              "opcoes": [
+                "Ho mangiato una pizza.",
+                "Sono mangiato una pizza.",
+                "Ho mangiuto una pizza.",
+                "Avevo mangiato una pizza."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mangiare\" usa \"avere\". Io → ho. Participio: mangiato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è la forma corretta? \"Lei ___ una lettera.\"",
+              "opcoes": [
+                "ha scritto",
+                "ha scrivuto",
+                "è scritta",
+                "ha scrivo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Scrivere\" è irregolare: participio → scritto. Con lei → ha scritto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Você dormiu bem?\" em italiano:",
+              "opcoes": [
+                "Hai dormito bene?",
+                "Sei dormito bene?",
+                "Hai dormire bene?",
+                "Avevi dormito bene?"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Dormire\" usa avere. Tu → hai. Participio: dormito."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Participio de \"fare\":",
+              "opcoes": [
+                "fatto",
+                "fato",
+                "facuto",
+                "farito"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Fare\" è irregolare. Participio: fatto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Noi ___ un film ieri sera.\"",
+              "opcoes": [
+                "abbiamo visto",
+                "siamo visti",
+                "abbiamo veduto",
+                "avevamo visto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Vedere\" usa avere. Noi → abbiamo. Participio: visto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Participio de \"dire\":",
+              "opcoes": [
+                "detto",
+                "dito",
+                "dicuto",
+                "direto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Dire\" è irregolare. Participio: detto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Loro ___ tutto il giorno.\"",
+              "opcoes": [
+                "hanno lavorato",
+                "sono lavorati",
+                "hanno lavorito",
+                "avevano lavorato"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Lavorare\" usa avere. Loro → hanno. Participio: lavorato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eu li um livro ontem.\"",
+              "resposta": "Leggere: participio irregolare → letto. Con io → ho letto."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Vocês comeram em casa?\"",
+              "resposta": "Mangiare: avere, participio mangiato. Voi → avete."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completa: \"Ieri Maria ___ (scrivere) una email.\"",
+              "resposta": "ha scritto",
+              "explicacao": "Scrivere usa avere. Lei → ha. Participio: scritto.",
+              "dica": "Ausiliare + participio irregolare"
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Participio passato de \"prendere\":",
+              "resposta": "preso",
+              "explicacao": "Prendere è irregolare: participio → preso.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual frase é incorreta?",
+              "opcoes": [
+                "Sono mangiato la pasta.",
+                "Ho comprato il pane.",
+                "Hai dormito?",
+                "Abbiamo fatto la spesa."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mangiare\" usa avere, non essere. Corretto: Ho mangiato la pasta."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Ele disse uma mentira.\"",
+              "resposta": "Dire: participio irregolare → detto. Lui → ha."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ho ___ (capire) la lezione.\"",
+              "opcoes": [
+                "capito",
+                "caputo",
+                "capire",
+                "capisco"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Capire\" usa avere. Participio regolare: capito."
+            }
+          ]
+        },
+        {
+          "id": "a2-vii",
+          "titulo": "Passato Prossimo con essere",
+          "subtitulo": "Verbos de movimento e stati",
+          "nivel": "A2",
+          "teoria": "Com **essere** o participio **concorda** com il soggetto:\n\n**Verbi con essere (mnemonica VANDERTRAMP + riflessivi):**\nVenire, Andare, Nascere, Dovere (intransitivo), Entrare, Restare, Tornare, Rimanere, Arrivare, Morire, Partire\n\n| Soggetto | Forma |\n|----------|-------|\n| io (m) | sono andato |\n| io (f) | sono andata |\n| loro (m/mista) | sono andati |\n| loro (f) | sono andate |",
+          "exemplos": [
+            "Sono andato al supermercato.",
+            "Maria è arrivata tardi.",
+            "Siamo partiti ieri.",
+            "I bambini sono nati a Roma."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Andare\" usa quale ausiliare nel passato prossimo?",
+              "opcoes": [
+                "essere",
+                "avere",
+                "stare",
+                "venire"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Andare\" è un verbo di movimento → usa essere."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Maria ___ a casa.\" (tornare)",
+              "opcoes": [
+                "è tornata",
+                "ha tornato",
+                "è tornato",
+                "ha tornata"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Tornare\" usa essere. Maria = femminile singular → tornata."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Io (m) ___ a Milano.\" (andare)",
+              "opcoes": [
+                "sono andato",
+                "sono andati",
+                "ho andato",
+                "sono andata"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Andare\" + essere. Io maschile → andato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Le ragazze ___ presto.\" (partire)",
+              "opcoes": [
+                "sono partite",
+                "sono partiti",
+                "hanno partito",
+                "sono partito"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Partire\" usa essere. Le ragazze = femminile plural → partite."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Noi ___ a Venezia.\" (arrivare)",
+              "opcoes": [
+                "siamo arrivati",
+                "abbiamo arrivato",
+                "siamo arrivato",
+                "avevamo arrivato"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Arrivare\" usa essere. Noi → siamo arrivati."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi (f): \"Eu nasci em São Paulo.\"",
+              "resposta": "\"Nascere\" usa essere. Io femminile → nata."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Tu (m) ___ a lungo.\" (rimanere)",
+              "opcoes": [
+                "sei rimasto",
+                "hai rimasto",
+                "sei rimasta",
+                "eri rimasto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Rimanere\" usa essere. Tu maschile singular → rimasto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual frase é correta?",
+              "opcoes": [
+                "Sono venuta da Roma.",
+                "Ho venuto da Roma.",
+                "Sono venuto da Roma (dita da una donna).",
+                "Ho venuta da Roma."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Venire\" usa essere. Donna = venuta. Homem = venuto."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completa: \"I turisti ___ (arrivare) ieri.\"",
+              "resposta": "sono arrivati",
+              "explicacao": "\"Arrivare\" usa essere. I turisti = maschile plurale → arrivati.",
+              "dica": "Movimento + plurale maschile"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La bambina ___ alle 8.\" (svegliarsi)",
+              "opcoes": [
+                "si è svegliata",
+                "ha svegliata",
+                "è svegliata",
+                "si ha svegliata"
+              ],
+              "resposta": 0,
+              "explicacao": "Verbi riflessivi usano essere + si. Bambina = femminile → svegliata."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eles ficaram em casa.\"",
+              "resposta": "\"Rimanere\" usa essere. Loro maschile → rimasti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Quanto tempo ___ qui?\" (restare, tu)",
+              "opcoes": [
+                "sei restato/a",
+                "hai restato",
+                "eri restato/a",
+                "hai rimasto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Restare\" usa essere."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Participio passato de \"venire\":",
+              "resposta": "venuto",
+              "explicacao": "\"Venire\" è irregolare: participio → venuto.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi (misto): \"Os meninos e as meninas chegaram.\"",
+              "resposta": "Com grupos mistos, usa-se il maschile plural: arrivati."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual verbo usa AVERE (non essere)?",
+              "opcoes": [
+                "mangiare",
+                "andare",
+                "partire",
+                "arrivare"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mangiare\" è transitivo → usa avere. I verbi di movimento usano essere."
+            }
+          ]
+        },
+        {
+          "id": "a2-viii",
+          "titulo": "L'Imperfetto Indicativo",
+          "subtitulo": "Ações habituais ou contínuas no passado",
+          "nivel": "A2",
+          "teoria": "**Imperfetto** = ação habitual, stato o descrizione nel passato\n\n**Formazione** (radice + desinenza):\n| | -are | -ere | -ire |\n|--|------|------|------|\n| io | -avo | -evo | -ivo |\n| tu | -avi | -evi | -ivi |\n| lui/lei | -ava | -eva | -iva |\n| noi | -avamo | -evamo | -ivamo |\n| voi | -avate | -evate | -ivate |\n| loro | -avano | -evano | -ivano |\n\n**Irregolari:** essere → ero/eri/era/eravamo/eravate/erano",
+          "exemplos": [
+            "Da bambino, giocavo ogni giorno.",
+            "Quando ero piccola, abitavo a Milano.",
+            "Leggeva sempre prima di dormire.",
+            "Che tempo faceva ieri?"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Parlare\" all'imperfetto, io:",
+              "opcoes": [
+                "parlavo",
+                "parlevi",
+                "parlivo",
+                "parlavo"
+              ],
+              "resposta": 0,
+              "explicacao": "Imperfetto di -are: io → -avo. Parlare → parlavo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Credere\" all'imperfetto, lui:",
+              "opcoes": [
+                "credeva",
+                "credava",
+                "crediva",
+                "aveva creduto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Credere\" è -ere. Lui → -eva. Credeva."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dormire\" all'imperfetto, noi:",
+              "opcoes": [
+                "dormivamo",
+                "dormavamo",
+                "dormiamo",
+                "dormimmo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Dormire\" è -ire. Noi → -ivamo. Dormivamo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essere\" all'imperfetto, io:",
+              "opcoes": [
+                "ero",
+                "sono stato",
+                "stavo",
+                "fui"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" è irregolare all'imperfetto: io → ero."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essere\" all'imperfetto, loro:",
+              "opcoes": [
+                "erano",
+                "stavano",
+                "erano stati",
+                "eravano"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" imperfetto: loro → erano."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Quando era bambino, mangiava molta pasta.\"",
+              "resposta": "Desccrição habitual no passado → imperfetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa correttamente l'imperfetto?",
+              "opcoes": [
+                "Da piccola, andavo al mare ogni estate.",
+                "Ieri, andavo al mare.",
+                "Domani, andavo al mare.",
+                "Adesso, andavo al mare."
+              ],
+              "resposta": 0,
+              "explicacao": "L'imperfetto indica abitudine nel passato. 'Da piccola...ogni estate' → corretto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Fare\" all'imperfetto, tu:",
+              "opcoes": [
+                "facevi",
+                "favi",
+                "facevi",
+                "faevi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Fare\" imperfetto: tu → facevi (radice fac- + evi)."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"abitare\" all'imperfetto, voi:",
+              "resposta": "abitavate",
+              "explicacao": "Abitare → radice abit- + -avate = abitavate.",
+              "dica": "Radice + -avate"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Che lavoro ___ (fare) tuo padre da giovane?\"",
+              "opcoes": [
+                "faceva",
+                "ha fatto",
+                "fece",
+                "faceva fare"
+              ],
+              "resposta": 0,
+              "explicacao": "Descrizione nel passato → imperfetto. Fare → faceva."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eles estudavam italiano todos os dias.\"",
+              "resposta": "Imperfetto per abitudine. Loro → -avano. Studiare → studiavano."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"essere\" all'imperfetto, noi:",
+              "resposta": "eravamo",
+              "explicacao": "Essere imperfetto: noi → eravamo.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mentre tu ___ (dormire), io lavoravo.\"",
+              "opcoes": [
+                "dormivi",
+                "hai dormito",
+                "dormi",
+                "dormiresti"
+              ],
+              "resposta": 0,
+              "explicacao": "Azione contemporanea nel passato → imperfetto. Tu → dormivi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Leggere\" all'imperfetto, loro:",
+              "opcoes": [
+                "leggevano",
+                "leggevono",
+                "leggivano",
+                "leggavano"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Leggere\" è -ere. Loro → -evano. Leggevano."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Era una bella giornata.\"",
+              "resposta": "Descrição de estado no passado → imperfetto. Era."
+            }
+          ]
+        },
+        {
+          "id": "a2-ix",
+          "titulo": "Passato Prossimo vs Imperfetto",
+          "subtitulo": "Quando usare l'uno o l'altro",
+          "nivel": "A2",
+          "teoria": "**Passato Prossimo** → azione **completa**, con limite di tempo, fatto specifico\n**Imperfetto** → azione **abituale**, continua, descrizione, sfondo\n\n| Passato Prossimo | Imperfetto |\n|---|---|\n| Ho mangiato una pizza (ieri) | Mangiavo la pizza ogni venerdì |\n| È arrivato alle 8 | Arrivava sempre in ritardo |\n| Ho visto il film | Vedeva i film il sabato |\n\n**Parole-chiave:**\n- PP: ieri, stamattina, una volta, l'anno scorso\n- IMP: sempre, ogni giorno, di solito, da bambino",
+          "exemplos": [
+            "Ieri ho mangiato la pizza. (PP — fatto specifico)",
+            "Da bambino mangiavo la pizza ogni venerdì. (IMP — abitudine)",
+            "Mentre leggevo, ha suonato il telefono. (IMP sfondo + PP interruzione)"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ieri ___ una pizza.\" (mangiare)",
+              "opcoes": [
+                "ho mangiato",
+                "mangiavo",
+                "mangiai",
+                "mangiato"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ieri\" = fatto specifico passato → passato prossimo. Ho mangiato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Da bambina, ___ la bicicletta ogni giorno.\" (usare)",
+              "opcoes": [
+                "usavo",
+                "ho usato",
+                "uso",
+                "usai"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Da bambina...ogni giorno\" = abitudine passata → imperfetto. Usavo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mentre ___ (leggere, io), è arrivato Marco.\"",
+              "opcoes": [
+                "leggevo",
+                "ho letto",
+                "leggerei",
+                "lessi"
+              ],
+              "resposta": 0,
+              "explicacao": "'Mentre' + azione di sfondo → imperfetto. Leggevo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"L'anno scorso ___ (andare) in Italia.\"",
+              "opcoes": [
+                "sono andato/a",
+                "andavo",
+                "vado",
+                "andrei"
+              ],
+              "resposta": 0,
+              "explicacao": "\"L'anno scorso\" = fatto specifico → PP. Sono andato/a."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Di solito, ___ (alzarsi) alle 7.\"",
+              "opcoes": [
+                "mi alzavo",
+                "mi sono alzato",
+                "mi alzo",
+                "mi alzerei"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Di solito\" = abitudine → imperfetto. Mi alzavo."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Scegli il tempo giusto: \"Ieri mattina ho bevuto (PP) il caffè mentre _____(leggere, io) il giornale.\"",
+              "resposta": "Sfondo = imperfetto; azione puntuale = PP."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase è SBAGLIATA?",
+              "opcoes": [
+                "Ogni giorno ho mangiato la pasta.",
+                "Ieri ho mangiato la pasta.",
+                "Di solito mangiavo la pasta.",
+                "Mangiavo la pasta ogni giorno."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ogni giorno\" richiede imperfetto (abitudine), non PP."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Scegli: \"Una volta alla settimana, (andare, noi) al cinema.\"",
+              "resposta": "andavamo",
+              "explicacao": "Una volta alla settimana = abitudine → imperfetto. Andavamo.",
+              "dica": "Imperfetto — abitudine"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Stamattina mi ___ (svegliarsi) alle 6.\"",
+              "opcoes": [
+                "sono svegliato/a",
+                "svegliavo",
+                "mi svegliavo",
+                "sveglierei"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Stamattina\" = azione specifica recente → PP. Mi sono svegliato/a."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Quando ___ (essere) piccolo, non ___ (guardare) la TV.\"",
+              "opcoes": [
+                "ero / guardavo",
+                "ho ero / ho guardavo",
+                "ero / ho guardato",
+                "fui / guardai"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Quando ero piccolo\" = descrizione + abitudine → entrambi imperfetto."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eu estava dormindo quando o telefone tocou.\"",
+              "resposta": "Sfondo (stavo dormendo = imperfetto) + interruzione (ha suonato = PP)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ieri sera ___ (vedere) un bel film.\"",
+              "opcoes": [
+                "ho visto",
+                "vedevo",
+                "vedo",
+                "avevo visto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ieri sera\" = fatto specifico → PP. Vedere: participio visto. Ho visto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale parola di tempo chiede l'imperfetto?",
+              "opcoes": [
+                "sempre",
+                "ieri",
+                "stamattina",
+                "l'anno scorso"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Sempre\" indica abitudine → imperfetto. Le altre indicano fatti specifici → PP."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Scegli: \"Da giovane, (lavorare) in un ristorante.\"",
+              "resposta": "Da giovane = periodo passato continuo → imperfetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mentre Maria ___ (cucinare), io ___ (apparecchiare) la tavola.\"",
+              "opcoes": [
+                "cucinava / apparecchiavo",
+                "ha cucinato / ho apparecchiato",
+                "cucinava / ho apparecchiato",
+                "cucinavo / apparecchiava"
+              ],
+              "resposta": 0,
+              "explicacao": "Azioni contemporanee nel passato → entrambe imperfetto."
+            }
+          ]
+        },
+        {
+          "id": "a2-x",
+          "titulo": "Il Futuro Semplice",
+          "subtitulo": "Ações e previsões futuras",
+          "nivel": "A2",
+          "teoria": "**Futuro Semplice** = azione futura, previsione, probabilità\n\n**Formazione** (infinito − e + desinenza):\n| | -are/-ere | -ire |\n|--|-----------|------|\n| io | -erò | -irò |\n| tu | -erai | -irai |\n| lui/lei | -erà | -irà |\n| noi | -eremo | -iremo |\n| voi | -erete | -irete |\n| loro | -eranno | -iranno |\n\n**Irregolari comuni:**\nessere → sarò | avere → avrò | fare → farò\nandare → andrò | venire → verrò | volere → vorrò",
+          "exemplos": [
+            "Domani andrò al mare.",
+            "L'anno prossimo studieremo il giapponese.",
+            "Sarà stanco dopo il lavoro. (probabilità)",
+            "Cosa farai questo weekend?"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Parlare\" al futuro, io:",
+              "opcoes": [
+                "parlerò",
+                "parlerà",
+                "parlarò",
+                "parlirò"
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro di -are: io → -erò. Parl- + erò = parlerò."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Partire\" al futuro, noi:",
+              "opcoes": [
+                "partiremo",
+                "parteremo",
+                "partiremo",
+                "partiamo"
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro di -ire: noi → -iremo. Partir- + emo = partiremo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essere\" al futuro, loro:",
+              "opcoes": [
+                "saranno",
+                "sarebbero",
+                "sono stati",
+                "saranno stati"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" è irregolare. Futuro: loro → saranno."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Andare\" al futuro, tu:",
+              "opcoes": [
+                "andrai",
+                "anderai",
+                "andirai",
+                "vai"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Andare\" è irregolare. Tu → andrai."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Amanhã faremos uma festa.\"",
+              "resposta": "Fare: irregolare. Noi → faremo. Domani = futuro."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Cosa ___ (fare) questo weekend?\"",
+              "opcoes": [
+                "farai",
+                "facevi",
+                "fai",
+                "avresti fatto"
+              ],
+              "resposta": 0,
+              "explicacao": "Fare irregolare al futuro. Tu → farai."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"venire\" al futuro, io:",
+              "resposta": "verrò",
+              "explicacao": "Venire è irregolare: io verrò (dopppia r).",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avere\" al futuro, lei:",
+              "opcoes": [
+                "avrà",
+                "averà",
+                "avrebbe",
+                "aveva"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Avere\" è irregolare. Futuro: lui/lei → avrà."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase esprime una probabilità?",
+              "opcoes": [
+                "Sarà a casa — non risponde al telefono.",
+                "Sarà a casa domani.",
+                "Domani sarò a casa.",
+                "Lui sarebbe a casa."
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro per probabilità nel presente: \"Sarà a casa\" = probabilmente è a casa."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"No próximo ano, viajaremos pela Itália.\"",
+              "resposta": "Viaggiare futuro: noi viaggeremo (gg mantido)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Volere\" al futuro, voi:",
+              "opcoes": [
+                "vorrete",
+                "volereste",
+                "volete",
+                "vorreste"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Volere\" è irregolare. Voi → vorrete."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"essere\" al futuro, noi:",
+              "resposta": "saremo",
+              "explicacao": "Essere futuro: noi → saremo.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se piove, ___ (restare) a casa.\"",
+              "opcoes": [
+                "resterò",
+                "rimarrò",
+                "rimango",
+                "resterei"
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro per condizione reale: \"se + presente → futuro\". Restare → resterò."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Potere\" al futuro, loro:",
+              "opcoes": [
+                "potranno",
+                "possono",
+                "potranno",
+                "poterebbero"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Potere\" è irregolare. Loro → potranno."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Ele terá 30 anos no próximo mês.\"",
+              "resposta": "Avere irregolare al futuro. Lui → avrà."
+            }
+          ]
+        },
+        {
+          "id": "a2-xi",
+          "titulo": "Comparativi e Superlativi",
+          "subtitulo": "Comparar qualidades e graus",
+          "nivel": "A2",
+          "teoria": "**Comparativo di maggioranza:** più + aggettivo + di/che\n**Comparativo di minoranza:** meno + aggettivo + di/che\n**Comparativo di uguaglianza:** (così/tanto)... come/quanto\n\n**Quando usare \"di\" vs \"che\":**\n- \"di\" + pronome/nome semplice: Marco è più alto **di** me.\n- \"che\" + aggettivo/verbo/preposizione: È più bello **che** intelligente.\n\n**Superlativo relativo:** il/la più + aggettivo\n**Superlativo assoluto:** aggettivo + -issimo/a/i/e\n\n**Irregolari:** buono → migliore / ottimo | cattivo → peggiore / pessimo\ngrande → maggiore | piccolo → minore",
+          "exemplos": [
+            "Roma è più grande di Firenze.",
+            "Questo libro è meno interessante di quello.",
+            "Maria è (tanto) brava quanto Sofia.",
+            "È il film più bello che ho visto.",
+            "Questa pizza è buonissima!"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Roma è ___ Firenze.\" (grande)",
+              "opcoes": [
+                "più grande di",
+                "più grande che",
+                "grande di più",
+                "grande quanto"
+              ],
+              "resposta": 0,
+              "explicacao": "Comparativo di maggioranza tra due nomi: più + aggettivo + di."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Superlativo assoluto di \"bello\":",
+              "opcoes": [
+                "bellissimo",
+                "il più bello",
+                "belissimo",
+                "bello molto"
+              ],
+              "resposta": 0,
+              "explicacao": "Superlativo assoluto: aggettivo + -issimo. Bello → bell- + issimo = bellissimo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È ___ (buono) della pizza che ho mangiato ieri.\"",
+              "opcoes": [
+                "migliore",
+                "più buona",
+                "ottima",
+                "buonissima"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Buono\" ha comparativo irregolare: migliore."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Questo film è ___ quello.\" (interessante, -)",
+              "opcoes": [
+                "meno interessante di",
+                "meno interessante che",
+                "più interessante di",
+                "tanto interessante come"
+              ],
+              "resposta": 0,
+              "explicacao": "Comparativo di minoranza: meno + adj + di + termine."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Ela é tão inteligente quanto Marco.\"",
+              "resposta": "Comparativo di uguaglianza: tanto... quanto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Parigi è ___ bella ___ romantica.\" (ugualmente)",
+              "opcoes": [
+                "tanto / quanto",
+                "più / di",
+                "tanto / come",
+                "così / di"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Tanto bella quanto romantica\" — uguaglianza tra due aggettivi."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Superlativo assoluto di \"cattivo\":",
+              "resposta": "cattivissimo",
+              "explicacao": "Cattivo → cattivissimo. Irregolare: pessimo.",
+              "dica": "Regolare: -issimo",
+              "variantes": "pessimo"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È più facile ___ difficile.\" (che/di?)",
+              "opcoes": [
+                "che",
+                "di",
+                "quanto",
+                "così"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Che\" si usa tra due aggettivi/verbi/avverbi. \"Più facile che difficile\"."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Superlativo relativo: \"È ___ ristorante della città.\"",
+              "opcoes": [
+                "il migliore",
+                "il più buono",
+                "il buonissimo",
+                "il meglio"
+              ],
+              "resposta": 0,
+              "explicacao": "Superlativo relativo di \"buono\" → il migliore."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Este exercício é mais difícil que o anterior.\"",
+              "resposta": "Comparativo di maggioranza: più... di/del."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Grande\" ha quale comparativo irregolare?",
+              "opcoes": [
+                "maggiore",
+                "più grande",
+                "grandissimo",
+                "massimo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Grande\" → comparativo irregolare: maggiore."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Questa torta è ___!\" (buono — superlativo assoluto)",
+              "opcoes": [
+                "buonissima",
+                "la più buona",
+                "ottimissima",
+                "buona assai"
+              ],
+              "resposta": 0,
+              "explicacao": "Superlativo assoluto regolare: buon- + -issima = buonissima."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Comparativo irregolare di \"piccolo\":",
+              "resposta": "minore",
+              "explicacao": "Piccolo → minore (anche: più piccolo per dimensione fisica).",
+              "dica": "Per età, importanza",
+              "variantes": "più piccolo"
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Você é o melhor aluno da turma.\"",
+              "resposta": "Superlativo relativo di buono → il migliore."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Questo caffè è ___ (cattivo) di quello di ieri.\"",
+              "opcoes": [
+                "peggiore",
+                "più cattivo",
+                "pessimo",
+                "molto cattivo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Cattivo\" ha comparativo irregolare: peggiore."
+            }
+          ]
+        },
+        {
+          "id": "a2-xii",
+          "titulo": "I Pronomi Diretti",
+          "subtitulo": "lo, la, li, le — substituindo il complemento",
+          "nivel": "A2",
+          "teoria": "**Pronomi diretti** sostituiscono il complemento oggetto diretto:\n\n| Persona | Singolare | Plurale |\n|---------|-----------|---------|\n| 1ª | mi (me) | ci (nos) |\n| 2ª | ti (te) | vi (vós) |\n| 3ª m | lo (o) | li (os) |\n| 3ª f | la (a) | le (as) |\n\n**Posizione:** prima del verbo coniugato, o attaccato all'infinito/gerundio.\n**Con il PP:** il participio concorda con il pronome diretto: Ho *visto* Maria → L'ho *vista*.",
+          "exemplos": [
+            "Mangio la pizza → La mangio.",
+            "Conosco Marco → Lo conosco.",
+            "Ho incontrato le ragazze → Le ho incontrate.",
+            "Vuoi vedere il film? → Vuoi vederlo?"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Conosco Marco.\" Con pronome:",
+              "opcoes": [
+                "Lo conosco.",
+                "La conosco.",
+                "Li conosco.",
+                "Gli conosco."
+              ],
+              "resposta": 0,
+              "explicacao": "Marco = maschile singolare → lo. Lo conosco."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mangio la mela.\" Con pronome:",
+              "opcoes": [
+                "La mangio.",
+                "Lo mangio.",
+                "Le mangio.",
+                "Li mangio."
+              ],
+              "resposta": 0,
+              "explicacao": "La mela = femminile singolare → la. La mangio."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Vedo i ragazzi.\" Con pronome:",
+              "opcoes": [
+                "Li vedo.",
+                "Le vedo.",
+                "Lo vedo.",
+                "Gli vedo."
+              ],
+              "resposta": 0,
+              "explicacao": "I ragazzi = maschile plurale → li. Li vedo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Chiamo le amiche.\" Con pronome:",
+              "opcoes": [
+                "Le chiamo.",
+                "Li chiamo.",
+                "La chiamo.",
+                "Gli chiamo."
+              ],
+              "resposta": 0,
+              "explicacao": "Le amiche = femminile plurale → le. Le chiamo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ho mangiato la pizza.\" Con pronome:",
+              "opcoes": [
+                "L'ho mangiata.",
+                "L'ho mangiato.",
+                "La ho mangiata.",
+                "La ho mangiato."
+              ],
+              "resposta": 0,
+              "explicacao": "La pizza = la. Con PP, il participio concorda: mangiata (f). L'ho mangiata."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Compro i libri ogni settimana.\"",
+              "resposta": "I libri = maschile plurale → li."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Hai visto Maria?\" Risposta affermativa:",
+              "opcoes": [
+                "Sì, l'ho vista.",
+                "Sì, la ho vista.",
+                "Sì, lo ho visto.",
+                "Sì, l'ho visto."
+              ],
+              "resposta": 0,
+              "explicacao": "Maria = la. Con PP femminile: vista. L'ho vista (elisione con ho)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Dove va il pronome con l'infinito?",
+              "opcoes": [
+                "Si attacca: voglio vederlo",
+                "Va prima: lo voglio vedere",
+                "Entrambi sono corretti.",
+                "Non si usa con l'infinito."
+              ],
+              "resposta": 2,
+              "explicacao": "Con l'infinito, il pronome può stare attaccato O prima del verbo modale."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Sostituisci: \"Leggo il giornale ogni mattina.\"",
+              "resposta": "Lo leggo ogni mattina.",
+              "explicacao": "Il giornale = maschile singolare → lo.",
+              "dica": "Il giornale = m. sing. → lo"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Hai chiamato tua sorella?\" Risposta negativa:",
+              "opcoes": [
+                "No, non l'ho chiamata.",
+                "No, non la ho chiamata.",
+                "No, non lo ho chiamato.",
+                "No, non l'ho chiamato."
+              ],
+              "resposta": 0,
+              "explicacao": "Sorella = la. PP femminile: chiamata. Non l'ho chiamata."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Aspetto gli amici al bar.\"",
+              "resposta": "Gli amici = maschile plurale → li."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Vuoi mangiare la torta?\" Con pronome:",
+              "opcoes": [
+                "Vuoi mangiarla? / La vuoi mangiare?",
+                "Vuoi la mangiare?",
+                "Vuoi mangiarle?",
+                "Vuoi lo mangiare?"
+              ],
+              "resposta": 0,
+              "explicacao": "La torta = la. Con infinito: mangiarla / la vuoi mangiare."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Sostituisci \"le ragazze\": \"Invito ___ alla festa.\"",
+              "resposta": "le invito",
+              "explicacao": "Le ragazze = femminile plurale → le.",
+              "dica": "Femminile plurale → le"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ci\" come pronome diretto significa:",
+              "opcoes": [
+                "noi (oggetto)",
+                "a noi",
+                "con noi",
+                "ci sono"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ci\" come pronome diretto = noi come complemento. Es: Mi vede → vede me. Ci vede → vede noi."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Ho perso i miei occhiali.\"",
+              "resposta": "I miei occhiali = maschile plurale → li. PP concorda: persi."
+            }
+          ]
+        },
+        {
+          "id": "a2-xiii",
+          "titulo": "I Pronomi Indiretti",
+          "subtitulo": "mi, ti, gli, le, ci, vi, loro",
+          "nivel": "A2",
+          "teoria": "**Pronomi indiretti** sostituiscono il complemento di termine (a qualcuno):\n\n| Persona | Forma |\n|---------|-------|\n| a me | mi |\n| a te | ti |\n| a lui | gli |\n| a lei | le |\n| a noi | ci |\n| a voi | vi |\n| a loro | gli (moderno) / loro |\n\n**Verbi comuni con indiretto:** dare, dire, scrivere, telefonare, mandare, chiedere, rispondere, piacere, sembrare",
+          "exemplos": [
+            "Scrivo a Maria → Le scrivo.",
+            "Telefono a Marco → Gli telefono.",
+            "Mi piace la musica.",
+            "Ci ha mandato un messaggio."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Scrivo a Maria.\" Con pronome:",
+              "opcoes": [
+                "Le scrivo.",
+                "Gli scrivo.",
+                "La scrivo.",
+                "Lo scrivo."
+              ],
+              "resposta": 0,
+              "explicacao": "A Maria = a lei → le. Le scrivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Telefono a Marco.\" Con pronome:",
+              "opcoes": [
+                "Gli telefono.",
+                "Le telefono.",
+                "Lo telefono.",
+                "La telefono."
+              ],
+              "resposta": 0,
+              "explicacao": "A Marco = a lui → gli. Gli telefono."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mando un messaggio a te.\" Con pronome:",
+              "opcoes": [
+                "Ti mando un messaggio.",
+                "Ti lo mando.",
+                "Gli mando un messaggio.",
+                "Le mando un messaggio."
+              ],
+              "resposta": 0,
+              "explicacao": "A te → ti. Ti mando un messaggio."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Piace\" si usa con quale pronome indiretto?",
+              "opcoes": [
+                "mi/ti/gli/le/ci/vi/gli",
+                "lo/la/li/le",
+                "me/te/lui/lei",
+                "si"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Piacere\" richiede il pronome indiretto: mi piace, ti piace, gli piace..."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Dico la verità a voi.\"",
+              "resposta": "A voi → vi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"A noi\" diventa quale pronome?",
+              "opcoes": [
+                "ci",
+                "vi",
+                "gli",
+                "le"
+              ],
+              "resposta": 0,
+              "explicacao": "\"A noi\" = ci come pronome indiretto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ha risposto a me e a te.\"",
+              "opcoes": [
+                "Ci ha risposto.",
+                "Vi ha risposto.",
+                "Gli ha risposto.",
+                "Le ha risposto."
+              ],
+              "resposta": 0,
+              "explicacao": "A me e a te = a noi → ci."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Sostituisci \"a Marco\": \"Dò il libro ___ Marco.\"",
+              "resposta": "gli do il libro",
+              "explicacao": "A Marco = a lui → gli.",
+              "dica": "A lui → gli"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mi piace\" significa:",
+              "opcoes": [
+                "Eu gosto (lit: para mim agrada)",
+                "Eu gosto de mim",
+                "Ele me gosta",
+                "Gosto dela"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mi piace\" = \"a me piace\" = eu gosto. Estrutura invertida."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Scrivo una lettera a mia madre.\"",
+              "resposta": "A mia madre = a lei → le."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Differenza tra \"lo\" e \"gli\":",
+              "opcoes": [
+                "lo = complemento diretto; gli = complemento indiretto",
+                "sono intercambiabili",
+                "lo = indiretto; gli = diretto",
+                "dipende dal verbo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Lo\" sostituisce il C.O. diretto. \"Gli\" sostituisce il C. di termine (a lui)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Gli ho detto tutto.\" Significa:",
+              "opcoes": [
+                "Ho detto tutto a lui.",
+                "L'ho detto tutto.",
+                "Ho detto di tutto.",
+                "Gli ho parlato."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Gli\" = a lui. Ho detto tutto a lui."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Sostituisci \"a loro\": \"Mando un regalo ___ loro.\"",
+              "resposta": "gli mando un regalo",
+              "explicacao": "A loro → gli (moderno). Gli mando un regalo.",
+              "dica": "Moderno: gli per a loro"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Non ti ho chiamato.\" Significa:",
+              "opcoes": [
+                "Não liguei para você.",
+                "Não me ligou.",
+                "Não o chamei.",
+                "Não me chamou."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ti\" = complemento indiretto = a te = para você. Non ti ho chiamato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Sostituisci: \"Chiedo un favore a voi.\"",
+              "resposta": "A voi → vi."
+            }
+          ]
+        },
+        {
+          "id": "a2-xiv",
+          "titulo": "I Verbi Riflessivi",
+          "subtitulo": "alzarsi, lavarsi, vestirsi e altri",
+          "nivel": "A2",
+          "teoria": "**Verbi riflessivi** = azione che ricade sul soggetto stesso.\n\n**Pronomi riflessivi:** mi, ti, si, ci, vi, si\n\n**Presente:**\n| | alzarsi |\n|--|---------|\n| io | mi alzo |\n| tu | ti alzi |\n| lui/lei | si alza |\n| noi | ci alziamo |\n| voi | vi alzate |\n| loro | si alzano |\n\n**Al PP:** usano sempre **essere**. Il participio concorda col soggetto.\n→ Mi sono alzato/a. | Si sono alzati/e.",
+          "exemplos": [
+            "Mi sveglio alle 7.",
+            "Lei si trucca ogni mattina.",
+            "Ci siamo divertiti molto!",
+            "Come ti chiami?"
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Io ___ alle 7.\" (alzarsi)",
+              "opcoes": [
+                "mi alzo",
+                "si alzo",
+                "mi alzi",
+                "ti alzo"
+              ],
+              "resposta": 0,
+              "explicacao": "Riflessivo di \"alzarsi\": io → mi alzo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Lei ___ prima di uscire.\" (truccarsi)",
+              "opcoes": [
+                "si trucca",
+                "si trucco",
+                "ti trucca",
+                "la trucca"
+              ],
+              "resposta": 0,
+              "explicacao": "Riflessivo: lui/lei → si + verbo. Si trucca."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Come ___ ?\" (chiamarsi, tu)",
+              "opcoes": [
+                "ti chiami",
+                "si chiami",
+                "ti chiama",
+                "vi chiami"
+              ],
+              "resposta": 0,
+              "explicacao": "Riflessivo: tu → ti chiami."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Coniuga: \"Noi ci divertiamo molto.\"",
+              "resposta": "Noi → ci. Il soggetto \"noi\" è spesso omesso."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Loro ___ prima di andare a letto.\" (lavarsi)",
+              "opcoes": [
+                "si lavano",
+                "si lavono",
+                "li lavano",
+                "si lavono"
+              ],
+              "resposta": 0,
+              "explicacao": "Riflessivo: loro → si lavano."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Al PP, \"io (m) mi sono ___.\"",
+              "opcoes": [
+                "alzato",
+                "alzata",
+                "alzati",
+                "alzate"
+              ],
+              "resposta": 0,
+              "explicacao": "PP riflessivo usa essere. Io maschile → alzato."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"vestirsi\" alla 3ª sing.: \"Marco ___ in fretta.\"",
+              "resposta": "si veste",
+              "explicacao": "Riflessivo: lui/lei → si + veste. Si veste.",
+              "dica": "Riflessivo: si + veste"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Vi siete divertiti?\" significa:",
+              "opcoes": [
+                "Você(s) se divertiram?",
+                "Vocês se divertiram (masc.)?",
+                "Nos divertimos?",
+                "Eles se divertiram?"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Vi\" = 2ª plurale (voi). Vi siete = vós (plural) no PP. Maschile: divertiti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mi sono ___ alle 8.\" (svegliarsi, f)",
+              "opcoes": [
+                "svegliata",
+                "svegliato",
+                "svegliata",
+                "svegliate"
+              ],
+              "resposta": 0,
+              "explicacao": "Femminile singolare → svegliata. Mi sono svegliata."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eles se casaram em junho.\"",
+              "resposta": "Sposarsi: riflessivo. PP con essere. Maschile plurale → sposati."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual verbo NON è riflessivo?",
+              "opcoes": [
+                "chiamare (qualcuno)",
+                "chiamarsi",
+                "lavarsi",
+                "vestirsi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Chiamare\" (transitivo) ≠ \"chiamarsi\" (riflessivo). \"Chiamo Maria\" vs \"Mi chiamo Marco\"."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"sedersi\" alla 1ª sing. al presente:",
+              "resposta": "mi siedo",
+              "explicacao": "Sedersi: io mi siedo (irregolare).",
+              "dica": "Riflessivo irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ci siamo incontrati al bar.\" Soggetto:",
+              "opcoes": [
+                "noi (m o misto)",
+                "voi",
+                "loro",
+                "io e te"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ci\" = noi. Siamo = PP essere. Incontrati = maschile/misto."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Coniuga all'imperativo (tu): \"si alzare\"",
+              "resposta": "Imperativo tu riflessivo: alzati (pronome si diventa ti)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Loro ___ presto ogni mattina.\" (svegliarsi)",
+              "opcoes": [
+                "si svegliano",
+                "si svegliamo",
+                "vi svegliano",
+                "si svegliano loro"
+              ],
+              "resposta": 0,
+              "explicacao": "Loro → si svegliano. La forma è la stessa del singolare ma il verbo è plurale."
+            }
+          ]
+        },
+        {
+          "id": "a2-xv",
+          "titulo": "Pronomi Combinati (intro)",
+          "subtitulo": "me lo, te la, glielo...",
+          "nivel": "A2",
+          "teoria": "Quando c'è un **pronome indiretto + diretto**, si combinano:\n\n| Indiretto | + lo | + la | + li | + le |\n|-----------|------|------|------|------|\n| mi → | me lo | me la | me li | me le |\n| ti → | te lo | te la | te li | te le |\n| gli/le → | glielo | gliela | glieli | gliele |\n| ci → | ce lo | ce la | ce li | ce le |\n| vi → | ve lo | ve la | ve li | ve le |\n| gli (loro) → | glielo | gliela | glieli | gliele |\n\n**Ordine:** indiretto + diretto + verbo",
+          "exemplos": [
+            "Dammi il libro → Dammelo.",
+            "Le ho dato la chiave → Gliel'ho data.",
+            "Ti mando il messaggio → Te lo mando."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ti do il libro.\" Con combinato:",
+              "opcoes": [
+                "Te lo do.",
+                "Me lo do.",
+                "Glielo do.",
+                "Ti lo do."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ti\" + \"lo\" (il libro) → \"te lo\". Te lo do."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Le porto la borsa.\" Con combinato:",
+              "opcoes": [
+                "Gliela porto.",
+                "Le la porto.",
+                "Glielo porto.",
+                "La le porto."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Le\" + \"la\" (la borsa) → \"gliela\". Gliela porto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mi manda il messaggio.\" Con combinato:",
+              "opcoes": [
+                "Me lo manda.",
+                "Mi lo manda.",
+                "Ce lo manda.",
+                "Te lo manda."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mi\" + \"lo\" (il messaggio) → \"me lo\". Me lo manda."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Gli do i soldi.\" Con combinato:",
+              "opcoes": [
+                "Glieli do.",
+                "Glielo do.",
+                "Li gli do.",
+                "Gli li do."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Gli\" + \"li\" (i soldi, m.pl.) → \"glieli\". Glieli do."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Vi porto le pizze.\"",
+              "resposta": "Vi + le → ve le."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ci dai le informazioni?\" Con combinato:",
+              "opcoes": [
+                "Ce le dai?",
+                "Vi le dai?",
+                "Ce li dai?",
+                "Gliele dai?"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Ci\" + \"le\" (le informazioni, f.pl.) → \"ce le\". Ce le dai?"
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Combina: \"ti\" + \"la\":",
+              "resposta": "te la",
+              "explicacao": "Ti + la = te la. (Mi → me, ti → te, ci → ce, vi → ve)",
+              "dica": "Indiretto mi/ti/ci/vi cambiano vocale"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Gli ho portato la torta.\" Con combinato:",
+              "opcoes": [
+                "Gliel'ho portata.",
+                "Gli la ho portata.",
+                "Gliela ho portata.",
+                "L'ho portata."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Gli\" + \"la\" → \"gliela\". Con PP, participio concorda (la torta → portata). Gliel'ho portata."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Me lo\" si forma da:",
+              "opcoes": [
+                "mi + lo",
+                "me + lo",
+                "mi + la",
+                "me + li"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Mi\" (indiretto 1ª sing.) + \"lo\" (diretto m.sing.) → \"me lo\"."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Gli spiego il problema.\"",
+              "resposta": "Gli + lo (il problema) = glielo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è la forma combinata di \"vi + le\"?",
+              "opcoes": [
+                "ve le",
+                "vi le",
+                "ve li",
+                "gli le"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Vi\" + \"le\" → \"ve le\". (Vi diventa ve prima del pronome diretto)."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Combina: \"gli\" + \"li\":",
+              "resposta": "glieli",
+              "explicacao": "Irregolare: gli + li = glieli.",
+              "dica": "Gli + li = glieli"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Me la dai?\" Espandita:",
+              "opcoes": [
+                "Mi dai la (cosa)?",
+                "Mi dai lo (cosa)?",
+                "Ti do la (cosa)?",
+                "Gli dai la (cosa)?"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Me la dai\" = mi dai + la (cosa femminile)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Ti mando le foto.\"",
+              "resposta": "Ti + le → te le."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Glielo\" può riferirsi a:",
+              "opcoes": [
+                "a lui/a lei/a loro + lo",
+                "a lui + lo (solo)",
+                "a lei + lo (solo)",
+                "a loro + lo (solo)"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Gli\" è usato per lui, lei e loro al moderno. Glielo può riferirsi a tutti e tre."
+            }
+          ]
         }
       ],
       "nivel_minimo": 5,
@@ -29651,6 +31297,1155 @@
           ],
           "ponte": "**Em português:** 'No Brasil se fala português com sotaques muito diferentes do Norte ao Sul.'\n\n**Em italiano:** *In Italia si parla con accenti molto diversi da Nord a Sud* — paralelo quase perfeito.\n\n**Diferença importante:** os dialetos italianos têm uma autonomia linguística muito maior que as variações regionais do português brasileiro — o napoletano e o veneziano são essencialmente línguas diferentes do italiano, não apenas sotaques.",
           "coda": "Ouça músicas, podcasts e vídeos de diferentes regiões da Itália. O ouvido se acostuma com a variação regional muito antes do que você pensa."
+        },
+        {
+          "id": "b1-vi",
+          "titulo": "Il Congiuntivo Presente",
+          "subtitulo": "Opinioni, dubbi e emozioni",
+          "nivel": "B1",
+          "teoria": "**Congiuntivo presente** = soggettività, dubbio, emozione, volontà.\n\n**Quando usarlo** (dopo):\n- Penso che, Credo che, Spero che\n- Voglio che, Preferisco che\n- È importante che, È necessario che\n- Benché, sebbene, affinché, prima che\n\n**Formazione:**\n| | -are | -ere | -ire |\n|--|------|------|------|\n| io/tu/lui | -i | -a | -a / -isca |\n| noi | -iamo | -iamo | -iamo |\n| voi | -iate | -iate | -iate |\n| loro | -ino | -ano | -ano / -iscano |",
+          "exemplos": [
+            "Penso che lui abbia ragione.",
+            "Voglio che tu studi di più.",
+            "È importante che parliamo.",
+            "Benché sia stanco, continuo a lavorare."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Penso che lei ___ (avere) ragione.\"",
+              "opcoes": [
+                "abbia",
+                "ha",
+                "avrà",
+                "aveva"
+              ],
+              "resposta": 0,
+              "explicacao": "Dopo \"penso che\" → congiuntivo. Avere: lui/lei → abbia."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Voglio che tu ___ (venire).\"",
+              "opcoes": [
+                "venga",
+                "viene",
+                "verrà",
+                "veniva"
+              ],
+              "resposta": 0,
+              "explicacao": "Dopo \"voglio che\" → congiuntivo. Venire: tu → venga."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Congiuntivo di \"essere\", io/tu/lui/lei:",
+              "opcoes": [
+                "sia",
+                "è",
+                "era",
+                "sarebbe"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" congiuntivo: io/tu/lui/lei → sia."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È necessario che voi ___ (parlare).\"",
+              "opcoes": [
+                "parliate",
+                "parlate",
+                "parlino",
+                "parlerete"
+              ],
+              "resposta": 0,
+              "explicacao": "Voi → congiuntivo -iate. Parlare → parliate."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Spero che Marco ___ (arrivare) in tempo.\"",
+              "resposta": "Sperare che → congiuntivo. Lui → arrivi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Benché ___ (essere) tardi, rimango.\"",
+              "opcoes": [
+                "sia",
+                "è",
+                "fosse",
+                "sarà"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Benché\" → congiuntivo presente. Essere → sia."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"fare\" al congiuntivo, io:",
+              "resposta": "faccia",
+              "explicacao": "Fare congiuntivo: io faccia (irregolare).",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Penso che loro ___ (capire).\"",
+              "opcoes": [
+                "capiscano",
+                "capiscono",
+                "capiranno",
+                "capissero"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Capire\" (-ire isc): loro → capiscano al congiuntivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Prima che lui ___ (partire), parliamo.\"",
+              "opcoes": [
+                "parta",
+                "parte",
+                "partirà",
+                "partiva"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Prima che\" → congiuntivo. Partire: lui → parta."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"È importante che noi ___ (studiare).\"",
+              "resposta": "Noi → congiuntivo. Studiare: noi → studiamo (uguale al presente!)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avere\" al congiuntivo, loro:",
+              "opcoes": [
+                "abbiano",
+                "avranno",
+                "hanno",
+                "avessero"
+              ],
+              "resposta": 0,
+              "explicacao": "Avere congiuntivo: loro → abbiano."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Congiuntivo di \"sapere\", tu:",
+              "resposta": "sappia",
+              "explicacao": "Sapere congiuntivo: tu sappia.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Affinché tu ___ (capire), spiego ancora.\"",
+              "opcoes": [
+                "capisca",
+                "capisci",
+                "capirai",
+                "capivi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Affinché\" → congiuntivo. Capire (isc): tu → capisca."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Sebbene ___ (fare) freddo, escono.\"",
+              "resposta": "Sebbene → congiuntivo. Fare: lui → faccia."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dubito che ___ (essere, loro) a casa.\"",
+              "opcoes": [
+                "siano",
+                "sono",
+                "saranno",
+                "fossero"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Dubitare che\" → congiuntivo. Essere: loro → siano."
+            }
+          ]
+        },
+        {
+          "id": "b1-vii",
+          "titulo": "Il Condizionale Presente",
+          "subtitulo": "Ipotesi, desideri, richieste cortesi",
+          "nivel": "B1",
+          "teoria": "**Condizionale presente** = ipotesi, desiderio, richiesta gentile, consiglio.\n\n**Formazione** (stessa radice del futuro + desinenze):\n| | Desinenza |\n|--|-----------|\n| io | -ei |\n| tu | -esti |\n| lui/lei | -ebbe |\n| noi | -emmo |\n| voi | -este |\n| loro | -ebbero |\n\n**Irregolari** (stessa radice del futuro):\nessere → sarei | avere → avrei | andare → andrei\nfare → farei | venire → verrei | volere → vorrei",
+          "exemplos": [
+            "Vorrei un caffè, per favore.",
+            "Potresti aiutarmi?",
+            "Al posto tuo, studierei di più.",
+            "Con più tempo, farei un viaggio."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Volere\" al condizionale, io:",
+              "opcoes": [
+                "vorrei",
+                "voglio",
+                "vorrò",
+                "volevo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Vorrei\" = condizionale di volere. Irregolare (radice vorr- + ei)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Potere\" al condizionale, tu:",
+              "opcoes": [
+                "potresti",
+                "puoi",
+                "potrài",
+                "potessi"
+              ],
+              "resposta": 0,
+              "explicacao": "Potere condizionale: tu → potresti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essere\" al condizionale, lui:",
+              "opcoes": [
+                "sarebbe",
+                "è",
+                "sarà",
+                "fosse"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" condizionale: lui/lei → sarebbe."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Al posto tuo, io ___ (studiare) di più.\"",
+              "opcoes": [
+                "studierei",
+                "studio",
+                "studierò",
+                "studiavo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Al posto tuo\" + condizionale. Studiare: io → studierei."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi cortesemente: \"Posso avere il conto?\"",
+              "resposta": "Condizionale per cortesia: potrei, vorrei."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"fare\" al condizionale, noi:",
+              "resposta": "faremmo",
+              "explicacao": "Fare condizionale: noi faremmo.",
+              "dica": "Irregolare: far- + emmo"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Con più soldi, ___ (comprare, noi) una casa.\"",
+              "opcoes": [
+                "compreremmo",
+                "compremo",
+                "compreremo",
+                "compriamo"
+              ],
+              "resposta": 0,
+              "explicacao": "Condizionale noi: compr- + eremmo = compreremmo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avere\" al condizionale, loro:",
+              "opcoes": [
+                "avrebbero",
+                "hanno",
+                "avranno",
+                "avessero"
+              ],
+              "resposta": 0,
+              "explicacao": "Avere condizionale: loro → avrebbero."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Come si chiede cortesemente?",
+              "opcoes": [
+                "Potresti aprire la finestra?",
+                "Puoi aprire la finestra?",
+                "Apri la finestra!",
+                "Aprirai la finestra?"
+              ],
+              "resposta": 0,
+              "explicacao": "Il condizionale \"potresti\" è più gentile del presente \"puoi\"."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eu gostaria de aprender o piano.\"",
+              "resposta": "Volere condizionale = vorrei. Seguito da infinito."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Venire\" al condizionale, voi:",
+              "opcoes": [
+                "verreste",
+                "venite",
+                "verrete",
+                "veniste"
+              ],
+              "resposta": 0,
+              "explicacao": "Venire condizionale: voi → verreste."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"andare\" al condizionale, io:",
+              "resposta": "andrei",
+              "explicacao": "Andare condizionale: io andrei.",
+              "dica": "Irregolare: andr- + ei"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mi ___ (dare, tu) una mano?\"",
+              "opcoes": [
+                "daresti",
+                "dai",
+                "darai",
+                "davi"
+              ],
+              "resposta": 0,
+              "explicacao": "Condizionale per richiesta cortese. Dare: tu → daresti."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eles viriam, mas são ocupados.\"",
+              "resposta": "Venire condizionale: loro → verrebbero."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Sapere\" al condizionale, lei:",
+              "opcoes": [
+                "saprebbe",
+                "sa",
+                "saprà",
+                "sapesse"
+              ],
+              "resposta": 0,
+              "explicacao": "Sapere condizionale: lui/lei → saprebbe."
+            }
+          ]
+        },
+        {
+          "id": "b1-viii",
+          "titulo": "I Pronomi Relativi",
+          "subtitulo": "che, cui, il quale",
+          "nivel": "B1",
+          "teoria": "**Pronomi relativi** collegano due frasi riferendosi allo stesso elemento.\n\n**Che** (soggetto o complemento diretto):\n→ Il ragazzo **che** studia. / Il libro **che** leggo.\n\n**Cui** (dopo preposizione):\n→ La città **in cui** vivo. / L'amico **con cui** parlo.\n\n**Il quale/la quale/i quali/le quali** (formale, con preposizione):\n→ La signora **alla quale** ho scritto.\n\n**Chi** = colui che (chi studia vince):\n→ **Chi** non risica, non rosica.",
+          "exemplos": [
+            "La pizza che ho mangiato era buonissima.",
+            "Il ragazzo con cui studio si chiama Marco.",
+            "Questo è il motivo per cui sono qui.",
+            "Chi studia ottiene buoni risultati."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il libro ___ ho comprato è interessante.\"",
+              "opcoes": [
+                "che",
+                "cui",
+                "quale",
+                "chi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Che\" sostituisce il complemento diretto (ho comprato il libro). → che."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La città ___ vivo si chiama Roma.\"",
+              "opcoes": [
+                "in cui",
+                "che",
+                "chi",
+                "il quale"
+              ],
+              "resposta": 0,
+              "explicacao": "\"In cui\" = preposizione + cui. Vivo in Roma → la città in cui vivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"L'amico ___ parlo si chiama Luca.\"",
+              "opcoes": [
+                "con cui",
+                "che",
+                "con quale",
+                "cui"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Parlo con Luca\" → con cui. L'amico con cui parlo."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"La ragazza ___ ho visto è bella.\"",
+              "resposta": "Complemento diretto (ho visto la ragazza) → \"che\"."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il motivo ___ sono qui è importante.\"",
+              "opcoes": [
+                "per cui",
+                "che",
+                "per il quale",
+                "per chi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Per cui\" = per + cui. \"Per\" richiede \"cui\" non \"che\"."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ non studia, non impara.\"",
+              "opcoes": [
+                "Chi",
+                "Che",
+                "Cui",
+                "Il quale"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Chi\" = colui/colei che. Senso generico. Chi non studia, non impara."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Inserisci il pronome: \"La professoressa ___ insegna è brava.\"",
+              "resposta": "che",
+              "explicacao": "La professoressa + che + verbo. Soggetto → \"che\".",
+              "dica": "Soggetto della relativa → che"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il collega con ___ lavoro è simpatico.\"",
+              "opcoes": [
+                "cui",
+                "che",
+                "il quale",
+                "chi"
+              ],
+              "resposta": 0,
+              "explicacao": "Con = preposizione → cui. Con cui lavoro."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La casa in ___ abito è grande.\"",
+              "opcoes": [
+                "cui",
+                "che",
+                "quale",
+                "chi"
+              ],
+              "resposta": 0,
+              "explicacao": "In = preposizione → cui. In cui abito."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Gli amici ___ ho invitato sono arrivati.\"",
+              "resposta": "Complemento diretto → che. Ho invitato gli amici → che."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La signora ___ ho parlato è la direttrice.\"",
+              "opcoes": [
+                "con cui / con la quale",
+                "che",
+                "di cui",
+                "la quale"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Parlo con la signora\" → con cui / con la quale (formale)."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Scegli: \"Il paese ___ vengo si chiama Napoli.\"",
+              "resposta": "da cui",
+              "explicacao": "Da Napoli vengo → da cui. Il paese da cui vengo.",
+              "dica": "Da + cui"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il libro di ___ ti ho parlato...\"",
+              "opcoes": [
+                "cui",
+                "che",
+                "chi",
+                "il quale"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Di\" + pronome relativo → di cui. (Ti ho parlato del libro → di cui)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"___ arriva primo vince il premio.\"",
+              "resposta": "Chi = colui che. Senso indefinito/generico."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La ragione ___ me ne vado è personale.\"",
+              "opcoes": [
+                "per cui",
+                "che",
+                "per la quale",
+                "per chi"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Per cui\" = la ragione per la quale. Può usarsi anche \"per la quale\" (formale)."
+            }
+          ]
+        },
+        {
+          "id": "b1-ix",
+          "titulo": "La Forma Passiva",
+          "subtitulo": "essere/venire + participio passato",
+          "nivel": "B1",
+          "teoria": "**Passivo** = l'azione È SUBITA dal soggetto.\n\n**Formazione:** essere/venire + participio passato (concorda col soggetto)\n\n| Tempo | Attivo | Passivo |\n|-------|--------|---------|\n| Presente | Mangiano la pizza | La pizza è/viene mangiata |\n| Passato | Hanno scritto il libro | Il libro è stato scritto |\n| Futuro | Scriveranno la lettera | La lettera sarà scritta |\n\n**Agente:** introdotto da \"da\":\n→ Il pane è fatto **dalla** nonna.\n\n**\"Venire\"** sostituisce essere al presente/imperfetto (non al PP).",
+          "exemplos": [
+            "La torta è/viene preparata dalla mamma.",
+            "Il documento è stato firmato dal direttore.",
+            "Questa casa sarà venduta presto.",
+            "La legge viene rispettata da tutti."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Trasforma in passivo: \"Lo chef prepara la cena.\"",
+              "opcoes": [
+                "La cena è/viene preparata dallo chef.",
+                "La cena ha preparato dallo chef.",
+                "La cena prepara dallo chef.",
+                "La cena viene preparato dallo chef."
+              ],
+              "resposta": 0,
+              "explicacao": "La cena (f) = soggetto passivo. Essere + preparata (f). Agente: dallo chef."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il participio nel passivo concorda con:",
+              "opcoes": [
+                "il soggetto grammaticale",
+                "il verbo essere",
+                "il complemento di agente",
+                "il tempo verbale"
+              ],
+              "resposta": 0,
+              "explicacao": "Nel passivo, il participio concorda con il soggetto (chi subisce l'azione)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il libro ___ (scrivere, presente pass.) da Calvino.\"",
+              "opcoes": [
+                "è/viene scritto",
+                "è scritto da",
+                "viene scrivuto",
+                "è scrittura"
+              ],
+              "resposta": 0,
+              "explicacao": "Presente passivo: è/viene + scritto (m.sing.). Concordanza: il libro → scritto."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Hanno costruito il ponte nel 1900.\"",
+              "resposta": "Passato passivo: essere al PP + participio. Il ponte (m) → costruito."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"La lettera sarà ___ domani.\" (spedire)",
+              "opcoes": [
+                "spedita",
+                "spedito",
+                "spediti",
+                "spedata"
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro passivo: sarà + participio. La lettera (f) → spedita."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale ausiliare NON si usa nel passivo al PP?",
+              "opcoes": [
+                "venire",
+                "essere",
+                "stare (in alcuni casi)",
+                "andare"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Venire\" non si usa al passato prossimo. Al PP si usa solo \"essere stato\"."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Trasforma: \"Tutti rispettano la legge.\" → Passivo",
+              "resposta": "La legge è/viene rispettata da tutti.",
+              "explicacao": "La legge (f) → rispettata. Agente: da tutti.",
+              "dica": "Soggetto nuovo = la legge (f); agente = da tutti"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"I libri ___ (leggere, presente passivo) dagli studenti.\"",
+              "opcoes": [
+                "vengono letti",
+                "sono letti",
+                "vengono letto",
+                "sono leto"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Venire\" al presente passivo. I libri (m.pl.) → letti. Vengono letti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Da\" nel passivo introduce:",
+              "opcoes": [
+                "l'agente (chi fa l'azione)",
+                "il tempo",
+                "il luogo",
+                "il fine"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Da\" nel passivo introduce l'agente: \"scritto da Dante\" → Dante è l'agente."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Il governo approverà la legge.\"",
+              "resposta": "Futuro passivo: sarà + approvata (f). Agente: dal governo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Le case erano ___ (costruire, imperf. passivo) velocemente.\"",
+              "opcoes": [
+                "costruite",
+                "costruiti",
+                "costruito",
+                "costruendo"
+              ],
+              "resposta": 0,
+              "explicacao": "Imperfetto passivo: erano + costruite (f.pl.). Le case → costruite."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Trasforma: \"Gli studenti capiscono il problema.\" → Passivo",
+              "resposta": "Il problema è/viene capito dagli studenti.",
+              "explicacao": "Il problema (m.sing.) → capito. Agente: dagli studenti.",
+              "dica": "Il problema (m) → capito; agente: dagli studenti"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Si mangia bene in Italia.\" È una forma:",
+              "opcoes": [
+                "passiva impersonale con \"si\"",
+                "attiva",
+                "riflessiva",
+                "imperativa"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Si + verbo attivo\" può avere valore passivo impersonale: si mangia = viene mangiato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Michelangelo ha dipinto la Cappella Sistina.\"",
+              "resposta": "PP passivo: essere al PP + dipinta (f). Agente: da Michelangelo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il progetto ___ (completare, futuro passivo) entro maggio.\"",
+              "opcoes": [
+                "sarà completato",
+                "viene completato",
+                "è completato",
+                "verrà completato"
+              ],
+              "resposta": 2,
+              "explicacao": "Futuro passivo: sarà / verrà + completato (m). Entrambi sono corretti."
+            }
+          ]
+        },
+        {
+          "id": "b1-x",
+          "titulo": "Il Gerundio",
+          "subtitulo": "Stare + gerundio, azioni simultanee",
+          "nivel": "B1",
+          "teoria": "**Gerundio:**\n- Presente: -are → -ando | -ere/-ire → -endo\n- Irregolari: fare → facendo | dire → dicendo | bere → bevendo\n\n**Usi principali:**\n1. **Stare + gerundio** = azione in corso (progressivo)\n   → Sto studiando. Stavo mangiando.\n2. **Azione simultanea:** Camminando, penso. (mentre cammino)\n3. **Mezzo/modo:** Studiando ogni giorno, si impara.\n4. **Causa:** Essendo stanco, ho dormito.",
+          "exemplos": [
+            "Sto leggendo un libro.",
+            "Stava piovendo quando sono uscito.",
+            "Studiando, ho capito tutto.",
+            "Essendo in ritardo, ho corso."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Gerundio di \"mangiare\":",
+              "opcoes": [
+                "mangiando",
+                "mangiante",
+                "mangiato",
+                "mangiare"
+              ],
+              "resposta": 0,
+              "explicacao": "Gerundio di -are: mangi- + ando = mangiando."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Sto ___ (leggere) un romanzo.\"",
+              "opcoes": [
+                "leggendo",
+                "letto",
+                "leggere",
+                "leggo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Stare + gerundio\" per azione in corso. Leggere → leggendo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Gerundio di \"fare\":",
+              "opcoes": [
+                "facendo",
+                "fando",
+                "faccendo",
+                "facente"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Fare\" è irregolare. Gerundio: facendo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Stava ___ (dormire) quando ho chiamato.\"",
+              "opcoes": [
+                "dormendo",
+                "dormito",
+                "dormire",
+                "dormiente"
+              ],
+              "resposta": 0,
+              "explicacao": "Imperfetto progressivo: stava + dormendo."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Mentre studiava, ascoltava musica.\"",
+              "resposta": "Gerundio sostituisce \"mentre\" + imperfetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Gerundio di \"dire\":",
+              "opcoes": [
+                "dicendo",
+                "dendo",
+                "dicente",
+                "direndo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Dire\" è irregolare. Gerundio: dicendo."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga il progressivo: \"Loro ___ (mangiare) adesso.\"",
+              "resposta": "stanno mangiando",
+              "explicacao": "Stare: loro → stanno. Gerundio: mangiando. Stanno mangiando.",
+              "dica": "Stare (pl.) + gerundio"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (Camminare), ho incontrato un amico.\"",
+              "opcoes": [
+                "Camminando",
+                "Camminato",
+                "Camminare",
+                "Cammino"
+              ],
+              "resposta": 0,
+              "explicacao": "Gerundio in apertura = azione simultanea. Camminare → camminando."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Gerundio di \"bere\":",
+              "opcoes": [
+                "bevendo",
+                "berendo",
+                "bevuto",
+                "berendo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Bere\" è irregolare. Gerundio: bevendo."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"___ (essere) stanca, sono andata a letto presto.\"",
+              "resposta": "Gerundio di essere = essendo. Causa."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Stai ___ (scrivere) una lettera?\"",
+              "opcoes": [
+                "scrivendo",
+                "scritto",
+                "scrivere",
+                "scriva"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Stare + gerundio\". Scrivere → scrivendo."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Forma il progressivo passato: \"Io ___ (lavorare) quando hai chiamato.\"",
+              "resposta": "stavo lavorando",
+              "explicacao": "Imperfetto progressivo: stavo (io) + lavorando.",
+              "dica": "Stavo + gerundio"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essendo in ritardo, ___ (correre).\"",
+              "opcoes": [
+                "ho corso",
+                "correndo",
+                "corsi",
+                "corro"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essendo\" = causa. La frase principale usa il PP: ho corso."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma in progressivo: \"Leggo adesso.\"",
+              "resposta": "Stare (io) → sto. Leggere → leggendo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (Studiare) ogni giorno, si imparano molte cose.\"",
+              "opcoes": [
+                "Studiando",
+                "Studiato",
+                "Studiare",
+                "Studio"
+              ],
+              "resposta": 0,
+              "explicacao": "Gerundio = mezzo/condizione. Studiare → studiando."
+            }
+          ]
+        },
+        {
+          "id": "b1-xi",
+          "titulo": "Il Congiuntivo Imperfetto",
+          "subtitulo": "Periodo ipotetico e frasi al passato",
+          "nivel": "B1",
+          "teoria": "**Congiuntivo imperfetto** dopo \"se\" (tipo 2), \"come se\", e frasi al passato.\n\n**Formazione:**\n| | -are | -ere | -ire |\n|--|------|------|------|\n| io/tu | -assi | -essi | -issi |\n| lui/lei | -asse | -esse | -isse |\n| noi | -assimo | -essimo | -issimo |\n| voi | -aste | -este | -iste |\n| loro | -assero | -essero | -issero |\n\n**Essere:** fossi, fossi, fosse, fossimo, foste, fossero\n\n**Periodo ipotetico (tipo 2):** Se + congiuntivo imp. → condizionale presente",
+          "exemplos": [
+            "Se avessi più tempo, studierei di più.",
+            "Vorrei che tu venissi con me.",
+            "Parlava come se fosse un professore.",
+            "Pensavo che lui partisse domani."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (avere) i soldi, comprerei una moto.\"",
+              "opcoes": [
+                "avessi",
+                "ho",
+                "avrò",
+                "abbia"
+              ],
+              "resposta": 0,
+              "explicacao": "Periodo ipotetico tipo 2: se + congiuntivo imperfetto. Avere: io → avessi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Essere\" al congiuntivo imperfetto, io:",
+              "opcoes": [
+                "fossi",
+                "ero",
+                "sia",
+                "fosse"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Essere\" congiuntivo imperfetto: io → fossi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (potere) volare, andrei ovunque.\"",
+              "opcoes": [
+                "potessi",
+                "posso",
+                "potrei",
+                "possa"
+              ],
+              "resposta": 0,
+              "explicacao": "Se + congiuntivo imp. Potere: io → potessi."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Vorrei che lui ___ (venire) alla festa.\"",
+              "resposta": "Vorrire che → congiuntivo. Venire imperfetto: lui → venisse."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Parlava come se ___ (essere) stanco.\"",
+              "opcoes": [
+                "fosse",
+                "è",
+                "sia",
+                "sarà"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Come se\" → congiuntivo imperfetto. Essere: lui → fosse."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Coniuga \"andare\" al cong. imperfetto, tu:",
+              "resposta": "andassi",
+              "explicacao": "Andare congiuntivo imperfetto: tu → andassi.",
+              "dica": "Radice + -assi"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (sapere, tu) la verità, cosa faresti?\"",
+              "opcoes": [
+                "sapessi",
+                "sai",
+                "saprai",
+                "sappia"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 2. Sapere: tu → sapessi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Pensavo che lei ___ (partire) oggi.\"",
+              "opcoes": [
+                "partisse",
+                "parte",
+                "partirà",
+                "parta"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Pensavo che\" (passato) → congiuntivo imperfetto. Lei → partisse."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Se ___ (essere) in Italia, mangerei la pizza vera.\"",
+              "resposta": "Tipo 2. Essere: io → fossi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Magari ___ (avere) più coraggio!\"",
+              "opcoes": [
+                "avessi",
+                "abbia",
+                "ho",
+                "avrò"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Magari\" esprime desiderio irreale → congiuntivo imperfetto. Io → avessi."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Congiuntivo imperfetto di \"fare\", loro:",
+              "resposta": "facessero",
+              "explicacao": "Fare congiuntivo imperfetto: loro → facessero.",
+              "dica": "Radice fac- + -essero"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (essere) ricco, viaggerei tutto l'anno.\"",
+              "opcoes": [
+                "fossi",
+                "sia",
+                "ero",
+                "sarò"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 2. Essere: io → fossi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Credevo che voi ___ (volere) venire.\"",
+              "opcoes": [
+                "voleste",
+                "volete",
+                "vorreste",
+                "vogliate"
+              ],
+              "resposta": 0,
+              "explicacao": "Credevo che (passato) → congiuntivo imperfetto. Voi → voleste."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Come se non ___ (capire, lei) niente!\"",
+              "resposta": "Come se → congiuntivo imperfetto. Lei → capisse."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Dove si usa il congiuntivo imperfetto invece di quello presente?",
+              "opcoes": [
+                "Quando la frase principale è al passato",
+                "Sempre",
+                "Con \"penso che\"",
+                "Con frasi al futuro"
+              ],
+              "resposta": 0,
+              "explicacao": "Consecutio temporum: frase principale al passato → congiuntivo imperfetto nella frase dipendente."
+            }
+          ]
+        },
+        {
+          "id": "b1-xii",
+          "titulo": "I Modali al Passato",
+          "subtitulo": "dovere, potere, volere al PP",
+          "nivel": "B1",
+          "teoria": "**Modali al passato prossimo:**\n\n**Con avere:** se il verbo successivo usa avere\n→ Ho dovuto lavorare. | Ho potuto venire.\n\n**Con essere:** se il verbo successivo usa essere\n→ Sono dovuto/a andare. | Sono potuto/a partire.\n\n**Significati:**\n- **Ho dovuto:** ero obbligato (e l'ho fatto)\n- **Avrei dovuto:** ero obbligato (ma non l'ho fatto) — condizionale passato\n- **Ho potuto:** ho avuto la possibilità (e l'ho fatto)\n- **Non ho potuto:** non ho avuto la possibilità",
+          "exemplos": [
+            "Ho dovuto lavorare tutto il giorno.",
+            "Sono dovuta andare dal medico.",
+            "Avrebbe potuto chiamare! (ma non ha chiamato)",
+            "Non ho voluto mangiare la carne."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ieri ___ (dovere) lavorare fino a tardi.\" (io)",
+              "opcoes": [
+                "ho dovuto",
+                "sono dovuto",
+                "dovevo",
+                "dovrò"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Lavorare\" usa avere → modale usa avere. Ho dovuto lavorare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Maria ___ (dovere) andare dal medico.\"",
+              "opcoes": [
+                "è dovuta andare",
+                "ha dovuto andare",
+                "era dovuta",
+                "è dovuta"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Andare\" usa essere → modale usa essere. È dovuta (f) andare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (potere, noi) finalmente partire!\"",
+              "opcoes": [
+                "Siamo potuti partire",
+                "Abbiamo potuto partire",
+                "Eravamo potuti",
+                "Siamo potuti"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Partire\" usa essere. Modali → siamo potuti (m/misto) partire."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Lui ___ (volere, neg.) mangiare la verdura.\"",
+              "resposta": "Mangiare usa avere → ha voluto. Non ha voluto mangiare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avrebbe dovuto chiamare\" significa:",
+              "opcoes": [
+                "Era obbligato ma non l'ha fatto.",
+                "Ha chiamato.",
+                "Dovrà chiamare.",
+                "Stava chiamando."
+              ],
+              "resposta": 0,
+              "explicacao": "Condizionale passato del modale = obbligo non adempiuto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (potere, tu) venire ieri?\"",
+              "opcoes": [
+                "Hai potuto venire?",
+                "Sei potuto venire?",
+                "Potevi venire?",
+                "Potresti venire?"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Venire\" usa essere, ma il modale con venire può usare anche avere nella prassi. Formalmente: sei potuto venire. Colloquialmente: hai potuto venire."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completa: \"Non ___ (volere, lei) uscire ieri.\"",
+              "resposta": "ha voluto",
+              "explicacao": "Non ha voluto uscire (colloquiale). Non è voluta uscire (formale).",
+              "dica": "Uscire usa essere, ma colloquialmente avere è accettato",
+              "variantes": "è voluta"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ho voluto\" indica:",
+              "opcoes": [
+                "Ho fatto la cosa liberamente / per scelta",
+                "Ero obbligato",
+                "Non ho potuto",
+                "Sarò obbligato"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Volere al PP\" = ho scelto di farlo. \"Non ho voluto\" = ho rifiutato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Traduzi: \"Eu tive que estudar a noite toda.\"",
+              "resposta": "Dovere + studiare (avere) → ho dovuto studiare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avrei potuto farlo, ma ___ (non fare).\"",
+              "opcoes": [
+                "non l'ho fatto",
+                "non faccio",
+                "non farei",
+                "non facevo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Avrei potuto\" = c'era possibilità ma non ho sfruttato. Implica che non l'ho fatto."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completa: \"I bambini ___ (dovere) andare a letto presto.\"",
+              "resposta": "sono dovuti andare",
+              "explicacao": "Andare usa essere → modali: sono dovuti (m.pl.) andare.",
+              "dica": "Andare = essere → sono dovuti"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Non ho potuto dormire\" significa:",
+              "opcoes": [
+                "Non sono riuscito a dormire.",
+                "Non volevo dormire.",
+                "Non dovevo dormire.",
+                "Dormivo male."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Non ho potuto dormire\" = impossibilità. Non c'era la possibilità di dormire."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"___ (volere, voi) venire, ma eravate occupati.\"",
+              "resposta": "Condizionale passato = desiderio non realizzato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avrebbe dovuto studiare\" implica:",
+              "opcoes": [
+                "Non ha studiato (e avrebbe dovuto).",
+                "Ha studiato.",
+                "Studia adesso.",
+                "Studierà domani."
+              ],
+              "resposta": 0,
+              "explicacao": "Condizionale passato di \"dovere\" = rimprovero / obbligo non rispettato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quando si usa \"essere\" con i modali al PP?",
+              "opcoes": [
+                "Quando il verbo all'infinito usa essere",
+                "Sempre",
+                "Mai",
+                "Con solo \"andare\" e \"venire\""
+              ],
+              "resposta": 0,
+              "explicacao": "La scelta di essere/avere dipende dal verbo che segue il modale."
+            }
+          ]
         }
       ],
       "nivel_minimo": 10,
@@ -30579,6 +33374,827 @@
           ],
           "ponte": "**Em português:** 'Fellini soube transformar memórias pessoais em imagens universais.'\n\n**Em italiano:** *Fellini ha saputo trasformare i ricordi personali in immagini universali* — paralelo.\n\n**Diferença:** *sapere* em italiano pode significar 'saber' (conhecimento), 'saber fazer' (habilidade) ou 'ter conseguido' (numa narrativa). O contexto determina qual sentido está ativo.",
           "coda": "Assista a pelo menos um filme do neorealismo italiano — *Ladri di biciclette*, *Roma città aperta*, ou *Umberto D.* — com legendas em italiano. É o exercício de escuta mais completo que existe para o B2."
+        },
+        {
+          "id": "b2-vi",
+          "titulo": "Congiuntivo Passato e Trapassato",
+          "subtitulo": "Azioni passate nella frase subordinata",
+          "nivel": "B2",
+          "teoria": "**Congiuntivo passato** = azione precedente rispetto alla principale al presente.\nFormazione: congiuntivo di essere/avere + participio passato.\n→ Penso che **abbia mangiato**. | Spero che **sia partita**.\n\n**Congiuntivo trapassato** = azione precedente rispetto alla principale al passato.\nFormazione: congiuntivo imperfetto di essere/avere + participio passato.\n→ Pensavo che **avesse mangiato**. | Credevo che **fosse partita**.\n\n**Consecutio Temporum:**\n| Principale | Congiuntivo |\n|---|---|\n| presente (penso) | presente / passato |\n| passato (pensavo) | imperfetto / trapassato |",
+          "exemplos": [
+            "Penso che lui abbia già mangiato.",
+            "È probabile che lei sia partita ieri.",
+            "Credevo che tu avessi capito.",
+            "Pensavo che fossero rimasti a casa."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Penso che lui ___ già (mangiare).\"",
+              "opcoes": [
+                "abbia mangiato",
+                "ha mangiato",
+                "abbia mangiare",
+                "avesse mangiato"
+              ],
+              "resposta": 0,
+              "explicacao": "Principale al presente → cong. passato. Avere + mangiato. Lui → abbia mangiato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È probabile che lei ___ (partire).\"",
+              "opcoes": [
+                "sia partita",
+                "è partita",
+                "fosse partita",
+                "abbia partito"
+              ],
+              "resposta": 0,
+              "explicacao": "Partire usa essere. Cong. passato: sia + partita (f)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Credevo che tu ___ (capire).\"",
+              "opcoes": [
+                "avessi capito",
+                "abbia capito",
+                "hai capito",
+                "capissi"
+              ],
+              "resposta": 0,
+              "explicacao": "Principale al passato → cong. trapassato. Avere + capito. Tu → avessi capito."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Pensavo che loro ___ (andare) via.\"",
+              "resposta": "Andare usa essere. Trapassato: fossero + andati (m.pl.)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Spero che ___ (essere) un buon viaggio.\"",
+              "opcoes": [
+                "sia stato",
+                "fosse stato",
+                "è stato",
+                "sia"
+              ],
+              "resposta": 0,
+              "explicacao": "Sperare + passato. Essere: congiuntivo passato → sia stato."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Congiuntivo trapassato di \"fare\", lei:",
+              "resposta": "avesse fatto",
+              "explicacao": "Trapassato: avesse (lei) + fatto.",
+              "dica": "Avesse (cong. imp.) + fatto"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Non credo che lui ___ (dire) la verità.\"",
+              "opcoes": [
+                "abbia detto",
+                "ha detto",
+                "avesse detto",
+                "dice"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Non credo che\" + presente → cong. passato. Dire: avere + detto. Lui → abbia detto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Pensavo che voi ___ (venire) prima.\"",
+              "opcoes": [
+                "foste venuti",
+                "siate venuti",
+                "aveste venuto",
+                "siete venuti"
+              ],
+              "resposta": 0,
+              "explicacao": "Venire usa essere. Trapassato: foste + venuti (voi)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Sembra che qualcuno ___ (entrare) di notte.\"",
+              "resposta": "Sembrare + cong. passato. Entrare usa essere → sia entrato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dubitavo che lei ___ (finire) in tempo.\"",
+              "opcoes": [
+                "avesse finito",
+                "abbia finito",
+                "ha finito",
+                "finisse"
+              ],
+              "resposta": 0,
+              "explicacao": "Dubitavo (passato) → trapassato. Finire + avere: avesse finito."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Cong. trapassato di \"essere\", loro:",
+              "resposta": "fossero stati",
+              "explicacao": "Essere: trapassato → fossero stati.",
+              "dica": "Fossero (essere, cong. imp.) + stati"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È strano che non ci ___ (scrivere, loro).\"",
+              "opcoes": [
+                "abbiano scritto",
+                "avessero scritto",
+                "hanno scritto",
+                "scrivano"
+              ],
+              "resposta": 0,
+              "explicacao": "Cong. passato (principale al presente). Scrivere + avere: abbiano scritto."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa: \"Credevo che Mario ___ (uscire) prima di me.\"",
+              "resposta": "Uscire usa essere. Trapassato: fosse + uscito."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mi dispiace che tu ___ (sentire) male ieri.\"",
+              "opcoes": [
+                "ti sia sentito/a male",
+                "ti sentivi male",
+                "ti abbia sentito male",
+                "ti sentissi male"
+              ],
+              "resposta": 0,
+              "explicacao": "Dispiacere + cong. passato. Sentirsi (riflessivo + essere): ti sia sentito/a male."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale sequenza è corretta?",
+              "opcoes": [
+                "Pensavo (passato) → cong. trapassato",
+                "Penso (presente) → cong. trapassato",
+                "Pensavo (passato) → cong. passato",
+                "Penso (presente) → cong. imperfetto"
+              ],
+              "resposta": 0,
+              "explicacao": "Consecutio: passato → trapassato; presente → passato."
+            }
+          ]
+        },
+        {
+          "id": "b2-vii",
+          "titulo": "Il Periodo Ipotetico",
+          "subtitulo": "Tipo 1, 2 e 3: reale, possibile, impossibile",
+          "nivel": "B2",
+          "teoria": "**Tre tipi di periodo ipotetico:**\n\n| Tipo | Condizione | Conseguenza |\n|------|-----------|-------------|\n| 1 (reale) | se + presente | presente / futuro |\n| 2 (possibile) | se + cong. imperfetto | condizionale presente |\n| 3 (impossibile) | se + cong. trapassato | condizionale passato |\n\n**Tipo 1:** Se ho tempo, vengo / verrò.\n**Tipo 2:** Se avessi tempo, verrei.\n**Tipo 3:** Se avessi avuto tempo, sarei venuto/a.\n**Misto (2+3):** Se fossi partito prima, adesso non sarei qui.",
+          "exemplos": [
+            "Tipo 1: Se piove, resto a casa.",
+            "Tipo 2: Se potessi volare, andrei ovunque.",
+            "Tipo 3: Se avessi studiato, avrei superato l'esame.",
+            "Misto: Se avessi mangiato, adesso non avrei fame."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (avere) tempo, vengo.\" (Tipo 1)",
+              "opcoes": [
+                "ho",
+                "avessi",
+                "avrei",
+                "abbia"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 1 (reale): se + presente. Ho."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (potere) volare, andrei ovunque.\" (Tipo 2)",
+              "opcoes": [
+                "potessi",
+                "posso",
+                "potrò",
+                "abbia potuto"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 2 (possibile): se + cong. imperfetto. Potere: io → potessi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (studiare) di più, ___ superato l'esame.\" (Tipo 3)",
+              "opcoes": [
+                "avessi studiato / avrei",
+                "ho studiato / ho",
+                "studiassi / supererei",
+                "studiavo / supererei"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 3 (impossibile): se + cong. trapassato → condizionale passato. Avessi studiato / avrei superato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa (Tipo 2): \"Se ___ (essere) ricco, comprerei una villa.\"",
+              "resposta": "Se + cong. imperfetto. Essere: io → fossi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se avessi avuto i soldi, ___ (comprare) la casa.\" (Tipo 3)",
+              "opcoes": [
+                "avrei comprato",
+                "comprerei",
+                "compravo",
+                "comprassi"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 3. Conseguenza: condizionale passato. Comprare → avrei comprato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa il periodo ipotetico misto?",
+              "opcoes": [
+                "Se fossi partito ieri, adesso sarei già a Roma.",
+                "Se parto, vengo.",
+                "Se partissi, verrei.",
+                "Se fossi partito, sarei venuto."
+              ],
+              "resposta": 0,
+              "explicacao": "Misto: condizione nel passato (fossi partito) + conseguenza nel presente (sarei già a Roma)."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completa (Tipo 1): \"Se ___ (fare) bel tempo, andiamo al mare.\"",
+              "resposta": "fa",
+              "explicacao": "Tipo 1: se + presente indicativo. Fare: fa.",
+              "dica": "Presente → presente"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se avessimo saputo, ___ (venire, noi).\" (Tipo 3)",
+              "opcoes": [
+                "saremmo venuti",
+                "veremmo",
+                "siamo venuti",
+                "verremmo"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 3. Venire usa essere. Condizionale passato: saremmo + venuti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se ___ (lavorare) di più, guadagneresti di più.\" (Tipo 1 o 2?)",
+              "opcoes": [
+                "Tipo 2 (possibile)",
+                "Tipo 1 (reale)",
+                "Tipo 3 (impossibile)",
+                "Tipo misto"
+              ],
+              "resposta": 0,
+              "explicacao": "Cong. imperfetto (lavorassi) → Tipo 2."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Completa (Tipo 3): \"Se Maria ___ (arrivare) prima, avremmo parlato.\"",
+              "resposta": "Arrivare usa essere. Cong. trapassato: fosse + arrivata (f)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se studiassi ogni giorno, ___ in italiano.\"",
+              "opcoes": [
+                "parleresti bene / parleresti bene",
+                "avrei parlato",
+                "hai parlato",
+                "parli"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 2. Consequenza: condizionale presente."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Costruisci il Tipo 3: \"se + lui + avere + tempo\"",
+              "resposta": "se avesse avuto tempo",
+              "explicacao": "Avere + cong. imp. + avuto = avesse avuto.",
+              "dica": "Cong. trapassato di avere"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se avessi dormito di più, adesso ___ stanco.\" (misto)",
+              "opcoes": [
+                "non sarei",
+                "non sono",
+                "non fosse",
+                "non saresti"
+              ],
+              "resposta": 0,
+              "explicacao": "Misto: condizione passata (avessi dormito) + conseguenza presente (non sarei stanco adesso)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Tipo 2: \"Se ___ (volere, tu) imparare, dovresti studiare.\"",
+              "resposta": "Se + cong. imperfetto. Volere: tu → volessi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il condizionale passato è formato da:",
+              "opcoes": [
+                "condizionale presente di essere/avere + participio",
+                "congiuntivo imperfetto + participio",
+                "futuro + participio",
+                "imperfetto + participio"
+              ],
+              "resposta": 0,
+              "explicacao": "Condizionale passato: avrei/sarei (condizionale pres.) + participio passato."
+            }
+          ]
+        },
+        {
+          "id": "b2-viii",
+          "titulo": "Il Discorso Indiretto",
+          "subtitulo": "Riportare le parole di qualcuno",
+          "nivel": "B2",
+          "teoria": "**Discorso diretto → indiretto:**\n\n**Trasformazioni principali:**\n| Diretto | Indiretto |\n|---------|-----------|\n| presente | imperfetto |\n| futuro | condizionale presente |\n| PP | trapassato prossimo |\n| imperativo | che + congiuntivo / di + infinito |\n\n**Pronomi e avverbi:**\n- io → lui/lei | qui → lì | oggi → quel giorno | domani → il giorno dopo\n\n**Verbi introduttori:** dire, spiegare, chiedere, rispondere, affermare, negare",
+          "exemplos": [
+            "\"Studio italiano.\" → Ha detto che studiava italiano.",
+            "\"Verrò domani.\" → Ha detto che sarebbe venuto il giorno dopo.",
+            "\"Studia!\" → Gli ha detto di studiare.",
+            "\"Hai mangiato?\" → Mi ha chiesto se avevo mangiato."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Mangio la pizza.\" → Ha detto che ___",
+              "opcoes": [
+                "mangiava la pizza.",
+                "mangia la pizza.",
+                "avrebbe mangiato la pizza.",
+                "abbia mangiato la pizza."
+              ],
+              "resposta": 0,
+              "explicacao": "Discorso indiretto: presente → imperfetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Verrò domani.\" → Ha detto che ___",
+              "opcoes": [
+                "sarebbe venuto il giorno dopo.",
+                "verrà il giorno dopo.",
+                "è venuto il giorno dopo.",
+                "venisse il giorno dopo."
+              ],
+              "resposta": 0,
+              "explicacao": "Futuro → condizionale presente. Domani → il giorno dopo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ho già mangiato.\" → Ha detto che ___",
+              "opcoes": [
+                "aveva già mangiato.",
+                "ha già mangiato.",
+                "avesse già mangiato.",
+                "mangiai."
+              ],
+              "resposta": 0,
+              "explicacao": "PP → trapassato prossimo. Aveva mangiato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Vieni qui!\" → Gli ha detto ___",
+              "resposta": "Imperativo → di + infinito. Qui → lì."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Sono stanco.\" → Ha detto che ___",
+              "opcoes": [
+                "era stanco.",
+                "è stanco.",
+                "fosse stanco.",
+                "sia stanco."
+              ],
+              "resposta": 0,
+              "explicacao": "Presente essere → imperfetto: era stanco."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Studia di più!\" → Gli ha detto ___",
+              "opcoes": [
+                "di studiare di più.",
+                "che studiasse di più.",
+                "di studio di più.",
+                "che studia di più."
+              ],
+              "resposta": 0,
+              "explicacao": "Imperativo → di + infinito (stessa persona). Di studiare."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Trasforma: \"Abito a Roma.\" → Mi ha detto che ___",
+              "resposta": "abitava a Roma.",
+              "explicacao": "Abito → abitavo (imperfetto). Io → lui/lei.",
+              "dica": "Presente → imperfetto"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Hai fame?\" → Mi ha chiesto ___",
+              "opcoes": [
+                "se avevo fame.",
+                "che avevo fame.",
+                "se ho fame.",
+                "di avere fame."
+              ],
+              "resposta": 0,
+              "explicacao": "Domanda → se + imperfetto (al passato). Se avevo fame."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Non so niente.\" → Ha detto che ___",
+              "opcoes": [
+                "non sapeva niente.",
+                "non sa niente.",
+                "non sapesse niente.",
+                "non sappia niente."
+              ],
+              "resposta": 0,
+              "explicacao": "So (presente) → sapeva (imperfetto)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Partirò la settimana prossima.\" → Ha detto che ___",
+              "resposta": "Futuro → condizionale. Prossima → successiva."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Telefona a Marco!\" → Gli ha detto ___",
+              "opcoes": [
+                "di telefonare a Marco.",
+                "che telefonasse a Marco.",
+                "di telefonerà a Marco.",
+                "che telefona a Marco."
+              ],
+              "resposta": 0,
+              "explicacao": "Imperativo → di + infinito. Di telefonare."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Trasforma: \"Siamo arrivati ieri.\" → Ha detto che ___",
+              "resposta": "erano arrivati il giorno prima.",
+              "explicacao": "Essere arrivati → erano arrivati. Ieri → il giorno prima.",
+              "dica": "PP → trapassato; ieri → il giorno prima"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dove sei?\" → Mi ha chiesto ___",
+              "opcoes": [
+                "dove fossi. / dove ero.",
+                "dove sono.",
+                "se ero là.",
+                "che ero lì."
+              ],
+              "resposta": 0,
+              "explicacao": "Domanda indiretta + imperfetto. Dove fossi (cong.) o dove ero (ind.)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma: \"Non ho capito niente.\" → Ha detto che ___",
+              "resposta": "PP → trapassato prossimo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Puoi aiutarmi?\" → Mi ha chiesto ___",
+              "opcoes": [
+                "se potevo aiutarlo/a.",
+                "di aiutarlo/a.",
+                "se posso aiutarlo/a.",
+                "che potessi aiutarlo/a."
+              ],
+              "resposta": 0,
+              "explicacao": "Domanda con modale → se + condiz. o imperfetto. Se potevo aiutarlo."
+            }
+          ]
+        },
+        {
+          "id": "b2-ix",
+          "titulo": "Connettivi e Strutture Avanzate",
+          "subtitulo": "Coesione testuale e registro formale",
+          "nivel": "B2",
+          "teoria": "**Connettivi causali:** perché, poiché, dato che, siccome, visto che\n**Connettivi concessivi:** benché/sebbene/nonostante + congiuntivo; pur + gerundio\n**Connettivi finali:** affinché, perché (+ cong.), in modo che\n**Connettivi temporali:** non appena, una volta che, dopo che, prima che\n**Connettivi avversativi:** tuttavia, eppure, ciononostante, d'altra parte\n**Connettivi consecutivi:** quindi, pertanto, di conseguenza, dunque",
+          "exemplos": [
+            "Poiché era tardi, siamo andati a casa.",
+            "Benché fosse stanco, ha continuato a lavorare.",
+            "Studio affinché tu possa essere orgoglioso di me.",
+            "Non appena arriverà, ti chiamerò.",
+            "Ha piovuto; tuttavia, siamo usciti lo stesso."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (causa) era tardi, siamo partiti.\" Quale connettivo?",
+              "opcoes": [
+                "Poiché / Siccome / Dato che",
+                "Benché",
+                "Affinché",
+                "Tuttavia"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Poiché\", \"siccome\", \"dato che\" introducono una causa. \"Era tardi\" = causa della partenza."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ (concessione) fosse stanco, ha lavorato.\"",
+              "opcoes": [
+                "Benché/Sebbene",
+                "Perché",
+                "Quindi",
+                "Dunque"
+              ],
+              "resposta": 0,
+              "explicacao": "Connettivo concessivo + congiuntivo: benché/sebbene fosse stanco."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Studio ___ tu possa essere orgoglioso.\"",
+              "opcoes": [
+                "affinché",
+                "perché (indicativo)",
+                "siccome",
+                "tuttavia"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Affinché\" introduce uno scopo/fine + congiuntivo."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Scegli il connettivo giusto: \"___ è arrivato, abbiamo iniziato la riunione.\"",
+              "resposta": "Connettivo temporale di immediata successione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ha mangiato troppo; ___, si è sentito male.\"",
+              "opcoes": [
+                "di conseguenza / pertanto",
+                "tuttavia",
+                "benché",
+                "affinché"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Di conseguenza/pertanto\" introduce una conseguenza."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Pur ___ (studiare), non supera gli esami.\"",
+              "opcoes": [
+                "studiando",
+                "studii",
+                "studiasse",
+                "studio"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Pur + gerundio\" = concessione. Pur studiando = anche se studia."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Scegli: \"Non è venuto; ___, l'aspettavamo.\"",
+              "resposta": "eppure / tuttavia / ciononostante",
+              "explicacao": "Connettivi avversativi: eppure, tuttavia, ciononostante.",
+              "dica": "Avversativo"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Parla italiano ___ (come se, ipotetico) fosse italiano.\"",
+              "opcoes": [
+                "come se",
+                "benché",
+                "affinché",
+                "siccome"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Come se\" + congiuntivo introduce un confronto ipotetico."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ aver studiato, non ricordo niente.\" (nonostante)",
+              "opcoes": [
+                "Nonostante",
+                "Benché",
+                "Poiché",
+                "Siccome"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Nonostante\" può essere seguito da infinito (stesso soggetto): nonostante aver studiato."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Collega con un connettivo: \"Era malata. Ha lavorato lo stesso.\"",
+              "resposta": "Concessione (benché+cong.) o avversativo (tuttavia)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ arriverai, chiamami.\" (temporale di anteriorità)",
+              "opcoes": [
+                "Non appena",
+                "Dopo che",
+                "Prima che",
+                "Quando"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Non appena\" = immediatamente dopo. Temporale di immediata successione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È partito ___ avvisarci.\" (senza che)",
+              "opcoes": [
+                "senza",
+                "senza che",
+                "prima di",
+                "affinché"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Senza\" + infinito (stesso soggetto). È partito senza avvisarci."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Connettivo di conclusione/sintesi:",
+              "resposta": "in conclusione / dunque / quindi",
+              "explicacao": "Dunque, quindi, in conclusione, pertanto = risultato/conclusione.",
+              "dica": "Connettivi conclusivi"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ le difficoltà, ha portato a termine il progetto.\"",
+              "opcoes": [
+                "Nonostante",
+                "Poiché",
+                "Affinché",
+                "Dunque"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Nonostante\" + sostantivo = concessione (senza congiuntivo)."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Riscrivi: \"Visto che non ho soldi, non posso andare al cinema.\"",
+              "resposta": "Sinonimi di \"visto che\" (causali)."
+            }
+          ]
+        },
+        {
+          "id": "b2-x",
+          "titulo": "Stile Formale e Letterario",
+          "subtitulo": "Registro scritto, passato remoto, inversioni",
+          "nivel": "B2",
+          "teoria": "**Passato Remoto** (vs PP): usato nel Sud Italia, testi storici e letterari.\n→ Dante nacque nel 1265. | Mio nonno conobbe mia nonna nel 1950 (registro formale).\n\n**Infinito sostantivato:** il mangiare, il bere, il sapere (nominalizzazione).\n**Costruzioni impersonali formali:** si afferma, si ritiene, si è dimostrato.\n**Inversione soggetto-verbo:** \"Ha detto lui\" → énfasi.\n**Nominalizzazioni formali:** realizzazione, comprensione, elaborazione.\n**Forme participiali:** trattandosi di, tenuto conto di, fermo restando che.",
+          "exemplos": [
+            "Si è dimostrato che il progetto è fattibile.",
+            "Tenuto conto delle circostanze, la decisione appare giusta.",
+            "Il sapere è potere.",
+            "Trattandosi di una questione urgente, agiremo subito."
+          ],
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dante ___ (nascere) nel 1265.\" (letterario)",
+              "opcoes": [
+                "nacque",
+                "è nato",
+                "era nato",
+                "nasce"
+              ],
+              "resposta": 0,
+              "explicacao": "Passato remoto per fatti storici lontani: nascere → nacque."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ ritenuto opportuno rimandare la riunione.\" (impersonale formale)",
+              "opcoes": [
+                "Si è",
+                "È stato",
+                "Si è stato",
+                "Si"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Si è ritenuto\" = costruzione impersonale passiva formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ di una questione urgente, agiremo subito.\"",
+              "opcoes": [
+                "Trattandosi",
+                "Siccome si tratta",
+                "Sebbene trattando",
+                "Trattando si"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Trattandosi di\" = forma participiale assoluta formale. = Dato che si tratta di."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Nominalizza: \"capire bene un testo\"",
+              "resposta": "Nominalizzazione formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ conto delle difficoltà, il risultato è soddisfacente.\"",
+              "opcoes": [
+                "Tenuto",
+                "Tenendo",
+                "Avendo tenuto",
+                "Tenuta"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Tenuto conto di\" = locuzione formale assoluta. Invariabile."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Il sapere ___ potere.\" (proverbio/registro elevato)",
+              "opcoes": [
+                "è",
+                "fa",
+                "dà",
+                "ha"
+              ],
+              "resposta": 0,
+              "explicacao": "Infinito sostantivato come soggetto: \"il sapere\" = la conoscenza. È potere."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Passato remoto di \"fare\", lui (storico):",
+              "resposta": "fece",
+              "explicacao": "Fare passato remoto: lui → fece.",
+              "dica": "Irregolare"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Si è dimostrato che\" = ?",
+              "opcoes": [
+                "È stato provato/dimostrato (impersonale).",
+                "Ha dimostrato.",
+                "Mi ha dimostrato.",
+                "Si dimostra (presente)."
+              ],
+              "resposta": 0,
+              "explicacao": "\"Si è dimostrato\" = costruzione impersonale formale al PP."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"___ restando le condizioni attuali, il piano è valido.\"",
+              "opcoes": [
+                "Fermo",
+                "Restando fermo",
+                "Fermo rimanendo",
+                "Rimasto fermo"
+              ],
+              "resposta": 0,
+              "explicacao": "\"Fermo restando (che)\" = locuzione formale = \"sempre che/a condizione che\"."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Trasforma in stile formale: \"Pensando ai risultati, possiamo essere soddisfatti.\"",
+              "resposta": "Stile formale: nominalizz., participio assoluto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Passato remoto di \"essere\", loro:",
+              "opcoes": [
+                "furono",
+                "erano",
+                "sono stati",
+                "sarebbero"
+              ],
+              "resposta": 0,
+              "explicacao": "Essere passato remoto: loro → furono."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ha detto lui\" (con inversione) enfatizza:",
+              "opcoes": [
+                "chi ha parlato (lui, non altri)",
+                "quando ha parlato",
+                "cosa ha detto",
+                "come ha parlato"
+              ],
+              "resposta": 0,
+              "explicacao": "L'inversione soggetto-verbo in italiano è usata per enfatizzare il soggetto."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Forma impersonale formale di \"si ritiene\":",
+              "resposta": "si ritiene che + congiuntivo",
+              "explicacao": "Si ritiene che + cong.: \"Si ritiene che il progetto sia fattibile.\"",
+              "dica": "Impersonale formale + congiuntivo"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"L'___ del problema richiede tempo.\" (elaborare → nominalizz.)",
+              "opcoes": [
+                "elaborazione",
+                "elaborato",
+                "elaborare",
+                "elaborazione"
+              ],
+              "resposta": 0,
+              "explicacao": "Nominalizzazione: elaborare → l'elaborazione. Registro formale/burocratico."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Passato remoto di \"nascere\", io (formale):",
+              "resposta": "Irregolare: nasc- → nacqui"
+            }
+          ]
         }
       ],
       "nivel_minimo": 15,

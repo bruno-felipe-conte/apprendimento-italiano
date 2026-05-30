@@ -1,0 +1,234 @@
+{
+  "verbos": [
+    {
+      "infinitivo": "essere",
+      "traducao": "ser / estar",
+      "auxiliar": "essere",
+      "participio": "stato",
+      "tempos": {
+        "Presente": { "io":"sono","tu":"sei","lui/lei":"è","noi":"siamo","voi":"siete","loro":"sono" },
+        "Imperfetto": { "io":"ero","tu":"eri","lui/lei":"era","noi":"eravamo","voi":"eravate","loro":"erano" },
+        "Futuro": { "io":"sarò","tu":"sarai","lui/lei":"sarà","noi":"saremo","voi":"sarete","loro":"saranno" },
+        "Congiuntivo presente": { "io":"sia","tu":"sia","lui/lei":"sia","noi":"siamo","voi":"siate","loro":"siano" }
+      }
+    },
+    {
+      "infinitivo": "avere",
+      "traducao": "ter",
+      "auxiliar": "avere",
+      "participio": "avuto",
+      "tempos": {
+        "Presente": { "io":"ho","tu":"hai","lui/lei":"ha","noi":"abbiamo","voi":"avete","loro":"hanno" },
+        "Imperfetto": { "io":"avevo","tu":"avevi","lui/lei":"aveva","noi":"avevamo","voi":"avevate","loro":"avevano" },
+        "Futuro": { "io":"avrò","tu":"avrai","lui/lei":"avrà","noi":"avremo","voi":"avrete","loro":"avranno" },
+        "Congiuntivo presente": { "io":"abbia","tu":"abbia","lui/lei":"abbia","noi":"abbiamo","voi":"abbiate","loro":"abbiano" }
+      }
+    },
+    {
+      "infinitivo": "andare",
+      "traducao": "ir",
+      "auxiliar": "essere",
+      "participio": "andato",
+      "tempos": {
+        "Presente": { "io":"vado","tu":"vai","lui/lei":"va","noi":"andiamo","voi":"andate","loro":"vanno" },
+        "Imperfetto": { "io":"andavo","tu":"andavi","lui/lei":"andava","noi":"andavamo","voi":"andavate","loro":"andavano" },
+        "Futuro": { "io":"andrò","tu":"andrai","lui/lei":"andrà","noi":"andremo","voi":"andrete","loro":"andranno" }
+      }
+    },
+    {
+      "infinitivo": "fare",
+      "traducao": "fazer",
+      "auxiliar": "avere",
+      "participio": "fatto",
+      "tempos": {
+        "Presente": { "io":"faccio","tu":"fai","lui/lei":"fa","noi":"facciamo","voi":"fate","loro":"fanno" },
+        "Imperfetto": { "io":"facevo","tu":"facevi","lui/lei":"faceva","noi":"facevamo","voi":"facevate","loro":"facevano" },
+        "Futuro": { "io":"farò","tu":"farai","lui/lei":"farà","noi":"faremo","voi":"farete","loro":"faranno" }
+      }
+    },
+    {
+      "infinitivo": "dire",
+      "traducao": "dizer",
+      "auxiliar": "avere",
+      "participio": "detto",
+      "tempos": {
+        "Presente": { "io":"dico","tu":"dici","lui/lei":"dice","noi":"diciamo","voi":"dite","loro":"dicono" },
+        "Imperfetto": { "io":"dicevo","tu":"dicevi","lui/lei":"diceva","noi":"dicevamo","voi":"dicevate","loro":"dicevano" },
+        "Futuro": { "io":"dirò","tu":"dirai","lui/lei":"dirà","noi":"diremo","voi":"direte","loro":"diranno" }
+      }
+    },
+    {
+      "infinitivo": "volere",
+      "traducao": "querer",
+      "auxiliar": "avere",
+      "participio": "voluto",
+      "tempos": {
+        "Presente": { "io":"voglio","tu":"vuoi","lui/lei":"vuole","noi":"vogliamo","voi":"volete","loro":"vogliono" },
+        "Imperfetto": { "io":"volevo","tu":"volevi","lui/lei":"voleva","noi":"volevamo","voi":"volevate","loro":"volevano" },
+        "Futuro": { "io":"vorrò","tu":"vorrai","lui/lei":"vorrà","noi":"vorremo","voi":"vorrete","loro":"vorranno" }
+      }
+    },
+    {
+      "infinitivo": "potere",
+      "traducao": "poder",
+      "auxiliar": "avere",
+      "participio": "potuto",
+      "tempos": {
+        "Presente": { "io":"posso","tu":"puoi","lui/lei":"può","noi":"possiamo","voi":"potete","loro":"possono" },
+        "Imperfetto": { "io":"potevo","tu":"potevi","lui/lei":"poteva","noi":"potevamo","voi":"potevate","loro":"potevano" },
+        "Futuro": { "io":"potrò","tu":"potrai","lui/lei":"potrà","noi":"potremo","voi":"potrete","loro":"potranno" }
+      }
+    },
+    {
+      "infinitivo": "dovere",
+      "traducao": "dever / precisar",
+      "auxiliar": "avere",
+      "participio": "dovuto",
+      "tempos": {
+        "Presente": { "io":"devo","tu":"devi","lui/lei":"deve","noi":"dobbiamo","voi":"dovete","loro":"devono" },
+        "Imperfetto": { "io":"dovevo","tu":"dovevi","lui/lei":"doveva","noi":"dovevamo","voi":"dovevate","loro":"dovevano" },
+        "Futuro": { "io":"dovrò","tu":"dovrai","lui/lei":"dovrà","noi":"dovremo","voi":"dovrete","loro":"dovranno" }
+      }
+    },
+    {
+      "infinitivo": "sapere",
+      "traducao": "saber",
+      "auxiliar": "avere",
+      "participio": "saputo",
+      "tempos": {
+        "Presente": { "io":"so","tu":"sai","lui/lei":"sa","noi":"sappiamo","voi":"sapete","loro":"sanno" },
+        "Imperfetto": { "io":"sapevo","tu":"sapevi","lui/lei":"sapeva","noi":"sapevamo","voi":"sapevate","loro":"sapevano" },
+        "Futuro": { "io":"saprò","tu":"saprai","lui/lei":"saprà","noi":"sapremo","voi":"saprete","loro":"sapranno" }
+      }
+    },
+    {
+      "infinitivo": "venire",
+      "traducao": "vir",
+      "auxiliar": "essere",
+      "participio": "venuto",
+      "tempos": {
+        "Presente": { "io":"vengo","tu":"vieni","lui/lei":"viene","noi":"veniamo","voi":"venite","loro":"vengono" },
+        "Imperfetto": { "io":"venivo","tu":"venivi","lui/lei":"veniva","noi":"venivamo","voi":"venivate","loro":"venivano" },
+        "Futuro": { "io":"verrò","tu":"verrai","lui/lei":"verrà","noi":"verremo","voi":"verrete","loro":"verranno" }
+      }
+    },
+    {
+      "infinitivo": "stare",
+      "traducao": "estar / ficar",
+      "auxiliar": "essere",
+      "participio": "stato",
+      "tempos": {
+        "Presente": { "io":"sto","tu":"stai","lui/lei":"sta","noi":"stiamo","voi":"state","loro":"stanno" },
+        "Imperfetto": { "io":"stavo","tu":"stavi","lui/lei":"stava","noi":"stavamo","voi":"stavate","loro":"stavano" },
+        "Futuro": { "io":"starò","tu":"starai","lui/lei":"starà","noi":"staremo","voi":"starete","loro":"staranno" }
+      }
+    },
+    {
+      "infinitivo": "parlare",
+      "traducao": "falar",
+      "auxiliar": "avere",
+      "participio": "parlato",
+      "tipo": "regolare -are",
+      "tempos": {
+        "Presente": { "io":"parlo","tu":"parli","lui/lei":"parla","noi":"parliamo","voi":"parlate","loro":"parlano" },
+        "Imperfetto": { "io":"parlavo","tu":"parlavi","lui/lei":"parlava","noi":"parlavamo","voi":"parlavate","loro":"parlavano" },
+        "Futuro": { "io":"parlerò","tu":"parlerai","lui/lei":"parlerà","noi":"parleremo","voi":"parlerete","loro":"parleranno" }
+      }
+    },
+    {
+      "infinitivo": "mangiare",
+      "traducao": "comer",
+      "auxiliar": "avere",
+      "participio": "mangiato",
+      "tipo": "regolare -are",
+      "tempos": {
+        "Presente": { "io":"mangio","tu":"mangi","lui/lei":"mangia","noi":"mangiamo","voi":"mangiate","loro":"mangiano" },
+        "Imperfetto": { "io":"mangiavo","tu":"mangiavi","lui/lei":"mangiava","noi":"mangiavamo","voi":"mangiavate","loro":"mangiavano" },
+        "Futuro": { "io":"mangerò","tu":"mangerai","lui/lei":"mangerà","noi":"mangeremo","voi":"mangerete","loro":"mangeranno" }
+      }
+    },
+    {
+      "infinitivo": "leggere",
+      "traducao": "ler",
+      "auxiliar": "avere",
+      "participio": "letto",
+      "tipo": "regolare -ere",
+      "tempos": {
+        "Presente": { "io":"leggo","tu":"leggi","lui/lei":"legge","noi":"leggiamo","voi":"leggete","loro":"leggono" },
+        "Imperfetto": { "io":"leggevo","tu":"leggevi","lui/lei":"leggeva","noi":"leggevamo","voi":"leggevate","loro":"leggevano" },
+        "Futuro": { "io":"leggerò","tu":"leggerai","lui/lei":"leggerà","noi":"leggeremo","voi":"leggerete","loro":"leggeranno" }
+      }
+    },
+    {
+      "infinitivo": "scrivere",
+      "traducao": "escrever",
+      "auxiliar": "avere",
+      "participio": "scritto",
+      "tipo": "regolare -ere",
+      "tempos": {
+        "Presente": { "io":"scrivo","tu":"scrivi","lui/lei":"scrive","noi":"scriviamo","voi":"scrivete","loro":"scrivono" },
+        "Imperfetto": { "io":"scrivevo","tu":"scrivevi","lui/lei":"scriveva","noi":"scrivevamo","voi":"scrivevate","loro":"scrivevano" },
+        "Futuro": { "io":"scriverò","tu":"scriverai","lui/lei":"scriverà","noi":"scriveremo","voi":"scriverete","loro":"scriveranno" }
+      }
+    },
+    {
+      "infinitivo": "partire",
+      "traducao": "partir",
+      "auxiliar": "essere",
+      "participio": "partito",
+      "tipo": "regolare -ire",
+      "tempos": {
+        "Presente": { "io":"parto","tu":"parti","lui/lei":"parte","noi":"partiamo","voi":"partite","loro":"partono" },
+        "Imperfetto": { "io":"partivo","tu":"partivi","lui/lei":"partiva","noi":"partivamo","voi":"partivate","loro":"partivano" },
+        "Futuro": { "io":"partirò","tu":"partirai","lui/lei":"partirà","noi":"partiremo","voi":"partirete","loro":"partiranno" }
+      }
+    },
+    {
+      "infinitivo": "finire",
+      "traducao": "terminar",
+      "auxiliar": "avere",
+      "participio": "finito",
+      "tipo": "regolare -ire (isc)",
+      "tempos": {
+        "Presente": { "io":"finisco","tu":"finisci","lui/lei":"finisce","noi":"finiamo","voi":"finite","loro":"finiscono" },
+        "Imperfetto": { "io":"finivo","tu":"finivi","lui/lei":"finiva","noi":"finivamo","voi":"finivate","loro":"finivano" },
+        "Futuro": { "io":"finirò","tu":"finirai","lui/lei":"finirà","noi":"finiremo","voi":"finirete","loro":"finiranno" }
+      }
+    },
+    {
+      "infinitivo": "capire",
+      "traducao": "entender",
+      "auxiliar": "avere",
+      "participio": "capito",
+      "tipo": "regolare -ire (isc)",
+      "tempos": {
+        "Presente": { "io":"capisco","tu":"capisci","lui/lei":"capisce","noi":"capiamo","voi":"capite","loro":"capiscono" },
+        "Imperfetto": { "io":"capivo","tu":"capivi","lui/lei":"capiva","noi":"capivamo","voi":"capivate","loro":"capivano" },
+        "Futuro": { "io":"capirò","tu":"capirai","lui/lei":"capirà","noi":"capiremo","voi":"capirete","loro":"capiranno" }
+      }
+    },
+    {
+      "infinitivo": "sentire",
+      "traducao": "sentir / ouvir",
+      "auxiliar": "avere",
+      "participio": "sentito",
+      "tipo": "regolare -ire",
+      "tempos": {
+        "Presente": { "io":"sento","tu":"senti","lui/lei":"sente","noi":"sentiamo","voi":"sentite","loro":"sentono" },
+        "Imperfetto": { "io":"sentivo","tu":"sentivi","lui/lei":"sentiva","noi":"sentivamo","voi":"sentivate","loro":"sentivano" },
+        "Futuro": { "io":"sentirò","tu":"sentirai","lui/lei":"sentirà","noi":"sentiremo","voi":"sentirete","loro":"sentiranno" }
+      }
+    },
+    {
+      "infinitivo": "vedere",
+      "traducao": "ver",
+      "auxiliar": "avere",
+      "participio": "visto",
+      "tempos": {
+        "Presente": { "io":"vedo","tu":"vedi","lui/lei":"vede","noi":"vediamo","voi":"vedete","loro":"vedono" },
+        "Imperfetto": { "io":"vedevo","tu":"vedevi","lui/lei":"vedeva","noi":"vedevamo","voi":"vedevate","loro":"vedevano" },
+        "Futuro": { "io":"vedrò","tu":"vedrai","lui/lei":"vedrà","noi":"vedremo","voi":"vedrete","loro":"vedranno" }
+      }
+    }
+  ]
+}

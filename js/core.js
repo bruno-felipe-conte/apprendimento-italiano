@@ -6,11 +6,12 @@ const App = {
   // ── State ──────────────────────────────────────────────────
   estado: {
     secaoAtiva: 'templi',
-    templosData: {},    // { 1: { templo, nome, cidade, nivel, palavras: [] }, ... }
-    quizData: [],       // flat array of all quiz questions
-    vocabCache: [],     // flat array of all words (with templo_num attached)
-    progresso: null,    // persisted in localStorage
-    flashcardData: {}   // persisted in localStorage
+    templosData: {},       // { 1: { templo, nome, cidade, nivel, palavras: [] }, ... }
+    quizData: [],          // flat array of all quiz questions
+    vocabCache: [],        // flat array of all words (with templo_num attached)
+    conjugacoesData: [],   // verb conjugation data
+    progresso: null,       // persisted in localStorage
+    flashcardData: {}      // persisted in localStorage
   },
 
   // Temple gradient palettes (one per temple index 1-10)
@@ -137,6 +138,16 @@ const App = {
           this.estado.quizData = data.perguntas || [];
         })
         .catch(() => { this.estado.quizData = []; })
+    );
+
+    // Load verb conjugations
+    promises.push(
+      fetch('data/conjugacoes.json')
+        .then(r => r.ok ? r.json() : { verbos: [] })
+        .then(data => {
+          this.estado.conjugacoesData = data.verbos || [];
+        })
+        .catch(() => { this.estado.conjugacoesData = []; })
     );
 
     await Promise.all(promises);

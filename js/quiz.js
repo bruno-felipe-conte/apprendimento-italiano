@@ -281,6 +281,7 @@ const Quiz = {
     sep.textContent = '🔤 Quiz de Morfologia (Gênero & Plural)';
     seletor.appendChild(sep);
 
+
     for (let i = 1; i <= 10; i++) {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
@@ -297,6 +298,30 @@ const Quiz = {
         btn.disabled = true;
       }
       seletor.appendChild(btn);
+    }
+
+    // ── Conjugação section ────────────────────────────────
+    const sepVerbi = document.createElement('div');
+    sepVerbi.className = 'quiz-secao-titulo';
+    sepVerbi.textContent = '🇮🇹 Quiz de Conjugação Verbal';
+    seletor.appendChild(sepVerbi);
+
+    const verbosDisponiveis = (App.estado.conjugacoesData || []);
+    if (verbosDisponiveis.length === 0) {
+      const msg = document.createElement('p');
+      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+      msg.textContent = 'Dados de conjugação não carregados.';
+      seletor.appendChild(msg);
+    } else {
+      const tempos = ['Presente', 'Imperfetto', 'Futuro'];
+      tempos.forEach(tempo => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-templo-btn quiz-verbi-btn';
+        const emoji = tempo === 'Presente' ? '⏱️' : tempo === 'Imperfetto' ? '⏪' : '⏩';
+        btn.innerHTML = `${emoji} ${tempo}`;
+        btn.onclick = () => this.iniciarConjugacao(tempo);
+        seletor.appendChild(btn);
+      });
     }
   },
 
@@ -365,6 +390,76 @@ const Quiz = {
         });
       });
     }
+
+    return perguntas;
+  },
+
+  // ── Conjugação quiz ───────────────────────────────────────
+  iniciarConjugacao(tempo) {
+    this.temploAtual   = 0; // special: 0 = conjugação
+    this.perguntaAtual = 0;
+    this.pontuacao     = 0;
+    this.xpTotal       = 0;
+    this.respondido    = false;
+    this.combo         = 0;
+
+    this.perguntas = this._embaralhar(this._gerarConjugacao(tempo)).slice(0, 10);
+    if (this.perguntas.length === 0) {
+      App.notificar('Dados de conjugação insuficientes.', 'alerta');
+      return;
+    }
+    const container = document.getElementById('quiz-container');
+    const resultado = document.getElementById('quiz-resultado');
+    const seletor   = document.getElementById('quiz-templo-selector');
+    if (container) container.style.display = 'block';
+    if (resultado) resultado.style.display = 'none';
+    if (seletor)   seletor.style.display   = 'none';
+    this.mostrarPergunta();
+  },
+
+  _gerarConjugacao(tempo) {
+    const verbos = App.estado.conjugacoesData || [];
+    const perguntas = [];
+    const pronomes = ['io','tu','lui/lei','noi','voi','loro'];
+
+    // Collect all forms for this tense (for distractors)
+    const todasFormas = [];
+    verbos.forEach(v => {
+      const t = v.tempos && v.tempos[tempo];
+      if (t) pronomes.forEach(pr => { if (t[pr]) todasFormas.push(t[pr]); });
+    });
+
+    verbos.forEach(v => {
+      const t = v.tempos && v.tempos[tempo];
+      if (!t) return;
+
+      pronomes.forEach(pr => {
+        const correta = t[pr];
+        if (!correta) return;
+
+        // Use other forms of THIS verb as primary distractors, fill from all verbs
+        const erradasVerbo = pronomes
+          .filter(p => p !== pr && t[p] && t[p] !== correta)
+          .map(p => t[p]);
+        const erradasGlobal = todasFormas.filter(f => f !== correta);
+        const pool = this._embaralhar([...new Set([...erradasVerbo, ...erradasGlobal])]);
+        const erradas = pool.slice(0, 3);
+        if (erradas.length < 3) return; // skip if not enough distractors
+
+        const pronomeLabel = pr === 'lui/lei' ? 'lui / lei' : pr;
+        perguntas.push({
+          id: `conj_${v.infinitivo}_${tempo}_${pr}`,
+          templo: 0,
+          tipo: 'conjugação',
+          nivel: 'A1',
+          pergunta: `"${v.infinitivo}" (${v.traducao}) — ${pronomeLabel} — ${tempo}`,
+          resposta_correta: correta,
+          alternativas: this._embaralhar([correta, ...erradas]),
+          explicacao: `${pronomeLabel} ${v.infinitivo} (${tempo}): "${correta}"`,
+          xp_recompensa: 20
+        });
+      });
+    });
 
     return perguntas;
   },
