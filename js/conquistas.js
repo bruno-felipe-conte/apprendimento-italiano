@@ -36,7 +36,9 @@ const Conquistas = {
       emoji: '✅',
       nome: 'Quiz Perfetto',
       descricao: '10/10 acertos em um quiz',
-      verificar() { return false; } // triggered via ganharQuizPerfetto()
+      // Normally triggered via ganharQuizPerfetto(); falls back to flag
+      // check so the achievement survives a save that lost conquistas[].
+      verificar(p) { return !!(p.quiz_perfetto_ganha); }
     },
     {
       id: 'primo_tempio',
@@ -54,7 +56,10 @@ const Conquistas = {
         let total = 0;
         for (const k in fd) {
           const sm = fd[k];
-          if ((sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7)) total++;
+          // Require at least 1 rep so a single Easy rating can't prematurely
+          // count the word as mastered just because FSRS gave high stability.
+          const reps = sm.reps || sm.repeticoes || 0;
+          if (reps >= 3 || (reps >= 1 && sm.stability > 7)) total++;
         }
         return total >= 50;
       }
@@ -90,12 +95,16 @@ const Conquistas = {
       if (p.conquistas.includes(c.id)) return;
       try {
         if (c.verificar(p, fd)) this._desbloquear(c.id);
-      } catch (e) { /* ignore */ }
+      } catch (e) { console.warn('[Conquistas] erro ao verificar', c.id, e); }
     });
   },
 
   // ── Trigger quiz-perfetto manually ────────────────────────
   ganharQuizPerfetto() {
+    // Persist a flag so verificar() can recover the achievement
+    // even if conquistas[] was somehow reset (e.g. corrupted save).
+    const p = App.estado.progresso;
+    if (p) p.quiz_perfetto_ganha = true;
     this._desbloquear('quiz_perfetto');
   },
 

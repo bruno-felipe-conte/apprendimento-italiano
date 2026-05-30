@@ -742,16 +742,37 @@ const Flashcards = {
   },
 
   // ── Mask Italian word in example sentence ─────────────────
+  // Handles: accented chars, short words (≤4 chars), inflected forms.
   _mascarar(italiano, exemplo) {
     if (!italiano || !exemplo) return exemplo || '';
-    const escaped = italiano.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const result = exemplo.replace(new RegExp(escaped, 'gi'), '___');
-    // Fallback: try first 5 chars if exact word not found
-    if (result === exemplo && italiano.length > 4) {
-      const short = italiano.slice(0, 5).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      return exemplo.replace(new RegExp(short, 'gi'), '___');
+
+    const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    // 1. Exact case-insensitive match (handles most cases)
+    const r1 = exemplo.replace(new RegExp(escape(italiano), 'gi'), '___');
+    if (r1 !== exemplo) return r1;
+
+    // 2. Diacritic-insensitive: strip combining marks, find position, replace in original
+    const stripped = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const exStripped = stripped(exemplo);
+    const itStripped = stripped(italiano);
+    const idx = exStripped.toLowerCase().indexOf(itStripped.toLowerCase());
+    if (idx !== -1) {
+      return exemplo.slice(0, idx) + '___' + exemplo.slice(idx + italiano.length);
     }
-    return result;
+
+    // 3. Prefix match on first 4 chars (covers inflected forms, e.g. "caffè" → "caff")
+    if (italiano.length >= 3) {
+      const prefix = escape(stripped(italiano).slice(0, Math.min(4, italiano.length)));
+      const r3 = exStripped.replace(new RegExp(prefix + '\\S*', 'gi'), '___');
+      if (r3 !== exStripped) {
+        // Apply the same replacement to the original text
+        return exemplo.replace(new RegExp(escape(italiano.slice(0, Math.min(4, italiano.length))) + '\\S*', 'gi'), '___');
+      }
+    }
+
+    // 4. No match found — show placeholder so the answer is never accidentally revealed
+    return `___ (${italiano.length} lettre)`;
   },
 
   // ── Swipe-to-rate (touch devices) ─────────────────────────

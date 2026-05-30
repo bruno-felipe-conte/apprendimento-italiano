@@ -119,11 +119,15 @@ const Progressao = {
     // Fire "meta reached" toast exactly once per day
     const meta = p.meta_diaria || 100;
     if (xpAntes < meta && p.xp_hoje >= meta) {
-      setTimeout(() => App.notificar('🎯 Meta diária atingida! Ottimo!', 'successo'), 400);
+      setTimeout(() => App.notificar('🎯 Meta diária atingida! Ottimo!', 'sucesso'), 400);
     }
 
     p.xp += quantidade;
     p.ultimo_estudo = Date.now();
+
+    // Record XP in the daily diary so profilo.js can build accurate weekly stats.
+    // Cards count stays 0 here — Calor.registrar(1) is called separately per card.
+    if (typeof Calor !== 'undefined') Calor.registrar(0, quantidade);
 
     const nivelAnterior = p.nivel;
     this.verificarNivelUp();
@@ -149,15 +153,16 @@ const Progressao = {
     const p = App.estado.progresso;
     if (!p) return;
 
-    // Keep leveling while XP exceeds the next threshold
-    let continuar = true;
-    while (continuar) {
+    // Keep leveling while XP exceeds the next threshold.
+    // Guard against infinite loop if p.nivel is corrupted.
+    let guard = 0;
+    while (guard++ < 100) {
       const xpProximo = this.xpParaNivel(p.nivel + 1);
       if (p.xp >= xpProximo) {
         p.nivel++;
         p.xp_proximo_nivel = this.xpParaNivel(p.nivel + 1);
       } else {
-        continuar = false;
+        break;
       }
     }
   },

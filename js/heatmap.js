@@ -15,14 +15,22 @@ const Calor = {
     this.renderizar();
   },
 
-  // ── Log activity (called from flashcards/quiz) ──────────
-  registrar(quantidade = 1) {
+  // ── Read a diário entry (handles legacy number format) ──
+  _lerEntrada(entry) {
+    if (!entry) return { cards: 0, xp: 0 };
+    if (typeof entry === 'number') return { cards: entry, xp: 0 };
+    return { cards: entry.cards || 0, xp: entry.xp || 0 };
+  },
+
+  // ── Log activity (called from flashcards/quiz/progression) ─
+  registrar(quantidade = 1, xp = 0) {
     const hoje = new Date().toISOString().split('T')[0];
     let diario = {};
     try {
       diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
     } catch (e) {}
-    diario[hoje] = (diario[hoje] || 0) + quantidade;
+    const anterior = this._lerEntrada(diario[hoje]);
+    diario[hoje] = { cards: anterior.cards + quantidade, xp: anterior.xp + xp };
     try {
       localStorage.setItem('it_diario', JSON.stringify(diario));
     } catch (e) {}
@@ -47,7 +55,7 @@ const Calor = {
     let streak = 0;
     for (let i = 0; i < 365; i++) {
       const key = d.toISOString().split('T')[0];
-      if ((diario[key] || 0) > 0) {
+      if (this._lerEntrada(diario[key]).cards > 0) {
         streak++;
         d.setDate(d.getDate() - 1);
       } else if (i === 0) {
@@ -85,9 +93,12 @@ const Calor = {
       months.push({ year: d.getFullYear(), month: d.getMonth() });
     }
 
-    // Max value for color scaling
+    // Max value for color scaling (use cards count)
     let maxVal = 1;
-    for (const k in diario) if (diario[k] > maxVal) maxVal = diario[k];
+    for (const k in diario) {
+      const c = this._lerEntrada(diario[k]).cards;
+      if (c > maxVal) maxVal = c;
+    }
 
     // Stats
     let totalAtividades = 0, diasAtivos = 0, streak = 0;
@@ -96,7 +107,7 @@ const Calor = {
     let cs = 0;
     for (let i = 0; i < 365; i++) {
       const k = [td2.getFullYear(), String(td2.getMonth()+1).padStart(2,'0'), String(td2.getDate()).padStart(2,'0')].join('-');
-      if ((diario[k] || 0) > 0) { cs++; streak = cs; td2.setDate(td2.getDate() - 1); }
+      if (this._lerEntrada(diario[k]).cards > 0) { cs++; streak = cs; td2.setDate(td2.getDate() - 1); }
       else if (i === 0) { td2.setDate(td2.getDate() - 1); }
       else break;
     }
@@ -106,7 +117,7 @@ const Calor = {
       for (let day = 1; day <= days; day++) {
         const k = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         if (k > todayStr) break;
-        const v = diario[k] || 0;
+        const v = this._lerEntrada(diario[k]).cards;
         totalAtividades += v;
         if (v > 0) diasAtivos++;
       }
@@ -136,7 +147,7 @@ const Calor = {
           html += '<div class="hm-cell hm-cell-future"></div>';
           continue;
         }
-        const value = diario[k] || 0;
+        const value = this._lerEntrada(diario[k]).cards;
         let level = 0;
         if (value > 0) {
           const r = value / maxVal;

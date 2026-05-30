@@ -34,8 +34,10 @@ const Profilo = {
     // ~8s per card average
     tempoEstimadoMin = Math.round(totalRevisoes * 8 / 60);
 
-    const dataInicio = p.ultimo_estudo
-      ? new Date(p.data_inicio || Date.now()).toLocaleDateString('pt-BR')
+    // Use stored data_inicio; fall back to ultimo_estudo (approximate).
+    // Never fall back to Date.now() — that would show today for old saves.
+    const dataInicio = (p.data_inicio || p.ultimo_estudo)
+      ? new Date(p.data_inicio || p.ultimo_estudo).toLocaleDateString('pt-BR')
       : '—';
 
     // Sort categories by usage
@@ -121,20 +123,25 @@ const Profilo = {
       const d = new Date(hoje);
       d.setDate(d.getDate() - i);
       const key = d.toISOString().slice(0, 10);
-      const entry = diario[key] || { cards: 0, sessoes: 0 };
-      const cards = entry.cards || entry.atividades || 0;
-      const sessoes = entry.sessoes || (cards > 0 ? 1 : 0);
-      dias.push({ dia: d.toLocaleDateString('pt-BR', { weekday:'short' }).slice(0,3), cards, sessoes });
+      // _lerEntrada handles both legacy number format and new {cards,xp} format
+      const entry = (typeof Calor !== 'undefined')
+        ? Calor._lerEntrada(diario[key])
+        : { cards: (typeof diario[key] === 'number' ? diario[key] : (diario[key] || {}).cards || 0), xp: (diario[key] || {}).xp || 0 };
+      const cards   = entry.cards;
+      const xpDia   = entry.xp;
+      const sessoes = cards > 0 ? 1 : 0;
+      dias.push({ dia: d.toLocaleDateString('pt-BR', { weekday:'short' }).slice(0,3), cards, xp: xpDia, sessoes });
       totalCards   += cards;
       totalSessoes += sessoes;
+      totalXP      += xpDia;
       if (cards > 0) giorniAttivi++;
     }
 
-    // Estimate weekly XP from quiz history too
+    // Add quiz XP from it_quiz_historico (not stored in diário)
     try {
       const hist = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]');
       const semanaAtras = Date.now() - 7 * 86400000;
-      totalXP = hist.filter(h => h.data >= semanaAtras).reduce((s, h) => s + (h.xp_ganho || 0), 0);
+      totalXP += hist.filter(h => h.data >= semanaAtras).reduce((s, h) => s + (h.xp_ganho || 0), 0);
     } catch(e) {}
 
     return { dias, totalCards, totalSessoes, totalXP, giorniAttivi };

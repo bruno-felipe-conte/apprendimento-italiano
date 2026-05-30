@@ -594,7 +594,7 @@ const App = {
     this.salvarProgresso();
     this.atualizarStats();
     this.fecharMetaSettings();
-    this.notificar(`Meta: ${valor} XP/dia`, 'successo');
+    this.notificar(`Meta: ${valor} XP/dia`, 'sucesso');
   },
 
   // ── XP system ─────────────────────────────────────────────
