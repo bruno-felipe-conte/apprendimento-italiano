@@ -170,6 +170,7 @@ const Progressao = {
     let novoDesbloqueio = false;
     for (const [temploNum, nivelNecessario] of Object.entries(this.TEMPLO_NIVEL)) {
       const num = parseInt(temploNum, 10);
+      if (!p.templos_desbloqueados) p.templos_desbloqueados = [1];
       if (p.nivel >= nivelNecessario && !p.templos_desbloqueados.includes(num)) {
         p.templos_desbloqueados.push(num);
         p.templos_desbloqueados.sort((a, b) => a - b);

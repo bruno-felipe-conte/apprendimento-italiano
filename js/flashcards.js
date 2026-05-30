@@ -381,7 +381,11 @@ const Flashcards = {
     const btnDica = document.getElementById('btn-dica');
     if (btnDica) btnDica.classList.add('ativo');
 
-    const alvo = this.modoReverso ? this.cartaAtual.italiano : this.cartaAtual.portugues;
+    // In reverse mode the target word is Italian; in context mode the user
+    // must guess the Italian word (fill the blank); in normal mode it's Portuguese.
+    const alvo = (this.modoReverso || this.modoContexto)
+      ? this.cartaAtual.italiano
+      : this.cartaAtual.portugues;
     const elDica = document.getElementById('card-dica');
 
     if (this.nivelDica === 1) {
@@ -396,11 +400,11 @@ const Flashcards = {
       if (elDica) elDica.textContent = `💡💡 ${hint}`;
       if (btnDica) btnDica.title = 'Ver dica (revelar)';
     } else {
-      // Level 3: just flip the card
+      // Level 3: just flip the card.
+      // virar() will call _aplicarPenalidadeDica() because dicaUsada===true,
+      // so we must NOT call it again here to avoid double application.
       if (elDica) elDica.textContent = `💡💡💡 Revelado`;
       this.virar();
-      // Disable Good and Easy after dica
-      this._aplicarPenalidadeDica();
     }
   },
 
@@ -463,10 +467,16 @@ const Flashcards = {
       const xpMap = [0, 0, 5, 10, 15];
       const xpBonus = (this.modoContexto || this.modoEscuta) ? 5 : 0;
       const xpGanho = (xpMap[rating] || 0) + xpBonus;
-      if (xpGanho > 0 && App.estado.progresso) {
-        App.estado.progresso.xp += xpGanho;
-        App.salvarProgresso();
-        App.atualizarStats();
+      if (xpGanho > 0) {
+        // Route through Progressao.ganhar() so xp_hoje, level-up and
+        // temple-unlock checks all fire correctly from flashcard reviews.
+        if (typeof Progressao !== 'undefined') {
+          Progressao.ganhar(xpGanho);
+        } else {
+          App.estado.progresso.xp += xpGanho;
+          App.salvarProgresso();
+          App.atualizarStats();
+        }
       }
 
       // Track session stats

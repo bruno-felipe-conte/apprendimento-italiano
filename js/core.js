@@ -527,9 +527,13 @@ const App = {
     const s = p.streak || 0;
     if (elStreak)  elStreak.textContent  = `🔥 ${s} dia${s !== 1 ? 's' : ''}`;
 
-    // Daily goal bar
+    // Daily goal bar — reset xp_hoje when the date rolls over
     const hoje = new Date().toISOString().slice(0, 10);
-    if (p.data_xp_hoje !== hoje) { p.xp_hoje = 0; }
+    if (p.data_xp_hoje !== hoje) {
+      p.xp_hoje = 0;
+      p.data_xp_hoje = hoje;
+      this.salvarProgresso(); // persist the reset so next page-load sees 0
+    }
     const meta     = p.meta_diaria || 100;
     const ganhoHj  = p.xp_hoje || 0;
     const metaPct  = Math.min(100, Math.round((ganhoHj / meta) * 100));

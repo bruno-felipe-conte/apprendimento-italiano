@@ -508,7 +508,7 @@ const Grammatica = {
     const pct     = total > 0 ? Math.round((acertos / total) * 100) : 0;
     const bonus   = 50;
 
-    const completadas = App.estado.progresso.grammatica_completadas || [];
+    const completadas = (App.estado.progresso || {}).grammatica_completadas || [];
     const jaFeita     = completadas.includes(this.unidadeAtual.id);
     if (!jaFeita) {
       completadas.push(this.unidadeAtual.id);

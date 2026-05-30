@@ -223,7 +223,7 @@ const Vocab = {
 
     // Collect unique categories from vocab cache
     const categorias = new Set();
-    App.estado.vocabCache.forEach(p => {
+    (App.estado.vocabCache || []).forEach(p => {
       if (p.categoria) categorias.add(p.categoria);
     });
 

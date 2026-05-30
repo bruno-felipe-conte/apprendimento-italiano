@@ -5,7 +5,9 @@
 
 const SomFeedback = {
   ativo: false,
-  _ctx: null,
+  // NOTE: backing store for the AudioContext is this.__ctx (double underscore).
+  // _ctx is a method (lazy getter) defined below — do NOT add a _ctx: null
+  // property here as it would be silently overwritten by the method definition.
 
   init() {
     this.ativo = localStorage.getItem('it_som') === '1';
