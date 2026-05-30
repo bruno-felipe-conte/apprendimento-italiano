@@ -6,6 +6,19 @@ PWA para aprendizado de italiano — Flashcards, Quiz, Vocabulário e Gramática
 
 > **Funciona 100% offline** após a primeira visita. Todo progresso salvo localmente no navegador. Instale como app: no Chrome/Edge clique em ⊕ na barra de endereço; no Safari iOS use Compartilhar → "Adicionar à Tela de Início".
 
+## Branches
+
+| Branch | Propósito |
+|---|---|
+| `master` | Desenvolvimento — todos os commits vão aqui |
+| `gh-pages` | Produção — GitHub Pages serve deste branch |
+
+**Para publicar uma versão:**
+```bash
+git push origin master:gh-pages
+```
+Execute este comando apenas quando a versão estiver pronta para os usuários.
+
 ---
 
 ## ✨ Funcionalidades
