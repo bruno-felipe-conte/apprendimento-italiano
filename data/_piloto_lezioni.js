@@ -18,36 +18,30 @@ const lez1 = {
   nivel:    'A1',
 
   // ── Tabela visual (cola durante os exercícios) ──────────
-  tabela_visual: `
-<p style="margin-bottom:0.6rem;font-size:0.85rem;color:#666;">Consulte esta tabela enquanto faz os exercícios. Não precisa decorar agora!</p>
-<table>
-  <thead><tr><th>Artigo</th><th>Quando usar</th><th>Exemplos</th></tr></thead>
-  <tbody>
-    <tr class="tab-azul">
-      <td><strong>IL / UN</strong></td>
-      <td>Palavra <strong>masculina</strong> que começa por letra normal<br>(b, c, d, f, g, l, m, n, p, r, t, v...)</td>
-      <td>il <strong>gatto</strong> (gato) · il <strong>libro</strong> (livro)<br>un <strong>caffè</strong> · un <strong>piano</strong></td>
-    </tr>
-    <tr class="tab-amarelo">
-      <td><strong>LO / UNO</strong></td>
-      <td>Palavra <strong>masculina</strong> que começa por:<br><strong>ST, SP, SC, SN, Z, GN, PS</strong></td>
-      <td>lo <strong>zaino</strong> (mochila) · lo <strong>studente</strong><br>uno <strong>zaino</strong> · uno <strong>studente</strong></td>
-    </tr>
-    <tr class="tab-rosa">
-      <td><strong>LA / UNA</strong></td>
-      <td>Palavra <strong>feminina</strong> que começa por consoante</td>
-      <td>la <strong>pizza</strong> · la <strong>casa</strong> · la <strong>musica</strong><br>una <strong>pizza</strong> · una <strong>mamma</strong></td>
-    </tr>
-    <tr class="tab-verde">
-      <td><strong>L' / UN'</strong></td>
-      <td>Qualquer palavra (masc. ou fem.) que começa por <strong>vogal</strong><br>(a, e, i, o, u)</td>
-      <td>l'<strong>amico</strong> (amigo) · l'<strong>università</strong><br>un'<strong>amica</strong> (amiga) · un'<strong>ora</strong> (hora)</td>
-    </tr>
-  </tbody>
-</table>
-<p style="margin-top:0.7rem;font-size:0.82rem;color:#777;">
-  <strong>Plural:</strong> IL → I (i libri) · LO → GLI (gli zaini) · LA → LE (le pizze) · L' → GLI ou LE
-</p>`,
+  tabela_visual: `<p class="tabela-intro">Use durante os exercícios — não precisa decorar agora!</p>
+<div class="artigo-cards">
+  <div class="artigo-card ac-azul">
+    <div class="ac-titulo">🔵 IL &nbsp;·&nbsp; UN</div>
+    <div class="ac-regra">Masculino · letra normal<br><small>(b, c, d, f, g, l, m, n, p, r, t, v...)</small></div>
+    <div class="ac-exemplos">il <strong>gatto</strong> (gato) · il <strong>libro</strong> (livro)<br>un <strong>caffè</strong> · un <strong>piano</strong></div>
+  </div>
+  <div class="artigo-card ac-amarelo">
+    <div class="ac-titulo">🟡 LO &nbsp;·&nbsp; UNO</div>
+    <div class="ac-regra">Masculino · começa por:<br><strong>ST, SP, SC, SN, Z, GN, PS</strong></div>
+    <div class="ac-exemplos">lo <strong>zaino</strong> (mochila) · lo <strong>studente</strong><br>uno <strong>zaino</strong> · uno <strong>studente</strong></div>
+  </div>
+  <div class="artigo-card ac-rosa">
+    <div class="ac-titulo">🔴 LA &nbsp;·&nbsp; UNA</div>
+    <div class="ac-regra">Feminino · qualquer consoante</div>
+    <div class="ac-exemplos">la <strong>pizza</strong> · la <strong>casa</strong> · la <strong>musica</strong><br>una <strong>pizza</strong> · una <strong>mamma</strong></div>
+  </div>
+  <div class="artigo-card ac-verde">
+    <div class="ac-titulo">🟢 L' &nbsp;·&nbsp; UN'</div>
+    <div class="ac-regra">Masc. ou fem. · começa por <strong>vogal</strong><br><small>(a, e, i, o, u)</small></div>
+    <div class="ac-exemplos">l'<strong>amico</strong> (amigo) · l'<strong>università</strong><br>un'<strong>amica</strong> (amiga) · un'<strong>ora</strong> (hora)</div>
+  </div>
+</div>
+<div class="tabela-plural">📌 <strong>Plural:</strong> IL → <strong>I</strong> &nbsp;·&nbsp; LO → <strong>GLI</strong> &nbsp;·&nbsp; LA → <strong>LE</strong> &nbsp;·&nbsp; L' → <strong>GLI</strong> (masc.) ou <strong>LE</strong> (fem.)</div>`,
 
   // ── NMA em linguagem de conversa ───────────────────────
   alerta: 'Quando você chega na Itália e pede "un caffè", está certo. Mas se pedir "uno caffè" — todo italiano sorri. Um artigo errado é o primeiro sinal de quem não sabe o idioma.',
@@ -254,42 +248,43 @@ const lez2 = {
   nivel:    'A1',
 
   // ── Tabela visual (cola durante os exercícios) ──────────
-  tabela_visual: `
-<p style="margin-bottom:0.6rem;font-size:0.85rem;color:#666;">Use esta tabela durante os exercícios. Em italiano, a terminação da palavra já diz quem fez a ação!</p>
-<table>
-  <thead>
-    <tr><th>Grupo</th><th>eu (io)</th><th>você (tu)</th><th>ele/ela</th><th>nós (noi)</th><th>vocês (voi)</th><th>eles (loro)</th></tr>
-  </thead>
-  <tbody>
-    <tr class="tab-azul">
-      <td><strong>-ARE</strong><br><small>falar, comer,<br>morar, estudar</small></td>
-      <td>parl<strong>o</strong></td><td>parl<strong>i</strong></td><td>parl<strong>a</strong></td>
-      <td>parl<strong>iamo</strong></td><td>parl<strong>ate</strong></td><td>parl<strong>ano</strong></td>
-    </tr>
-    <tr class="tab-verde">
-      <td><strong>-ERE</strong><br><small>ler, escrever,<br>viver, pegar</small></td>
-      <td>legg<strong>o</strong></td><td>legg<strong>i</strong></td><td>legg<strong>e</strong></td>
-      <td>legg<strong>iamo</strong></td><td>legg<strong>ete</strong></td><td>legg<strong>ono</strong></td>
-    </tr>
-    <tr class="tab-rosa">
-      <td><strong>-IRE</strong><br><small>dormir, partir,<br>terminar, entender</small></td>
-      <td>dorm<strong>o</strong></td><td>dorm<strong>i</strong></td><td>dorm<strong>e</strong></td>
-      <td>dorm<strong>iamo</strong></td><td>dorm<strong>ite</strong></td><td>dorm<strong>ono</strong></td>
-    </tr>
-    <tr class="tab-cinza">
-      <td><strong>Irregulares</strong><br><small>decorar separado!</small></td>
-      <td colspan="6" style="font-size:0.8rem;">
-        essere: sono/sei/<strong>è</strong>/siamo/siete/sono &nbsp;|&nbsp;
-        avere: ho/hai/ha/abbiamo/avete/hanno &nbsp;|&nbsp;
-        fare: faccio/fai/fa/facciamo/fate/fanno &nbsp;|&nbsp;
-        andare: vado/vai/va/andiamo/andate/vanno
-      </td>
-    </tr>
-  </tbody>
-</table>
-<p style="margin-top:0.6rem;font-size:0.82rem;color:#777;">
-  <strong>Como usar:</strong> Tire a terminação (-ARE, -ERE, -IRE) e adicione a desinência certa. Ex: parl<em>are</em> → parl + <strong>o</strong> = parlo (eu falo)
-</p>`,
+  tabela_visual: `<p class="tabela-intro">Use durante os exercícios — a terminação do verbo já diz quem faz a ação!</p>
+<div class="artigo-cards">
+  <div class="artigo-card ac-azul">
+    <div class="ac-titulo">🔵 -ARE</div>
+    <div class="ac-regra">falar, comer, morar, estudar...<br><small>parlare · mangiare · abitare · studiare</small></div>
+    <div class="ac-exemplos">
+      eu → parl<strong>o</strong> · você → parl<strong>i</strong> · ele/ela → parl<strong>a</strong><br>
+      nós → parl<strong>iamo</strong> · vocês → parl<strong>ate</strong> · eles → parl<strong>ano</strong>
+    </div>
+  </div>
+  <div class="artigo-card ac-verde">
+    <div class="ac-titulo">🟢 -ERE</div>
+    <div class="ac-regra">ler, escrever, viver, pegar...<br><small>leggere · scrivere · vivere · prendere</small></div>
+    <div class="ac-exemplos">
+      eu → legg<strong>o</strong> · você → legg<strong>i</strong> · ele/ela → legg<strong>e</strong><br>
+      nós → legg<strong>iamo</strong> · vocês → legg<strong>ete</strong> · eles → legg<strong>ono</strong>
+    </div>
+  </div>
+  <div class="artigo-card ac-rosa">
+    <div class="ac-titulo">🔴 -IRE</div>
+    <div class="ac-regra">dormir, partir, entender...<br><small>dormire · partire · capire · finire</small></div>
+    <div class="ac-exemplos">
+      eu → dorm<strong>o</strong> · você → dorm<strong>i</strong> · ele/ela → dorm<strong>e</strong><br>
+      nós → dorm<strong>iamo</strong> · vocês → dorm<strong>ite</strong> · eles → dorm<strong>ono</strong>
+    </div>
+  </div>
+  <div class="artigo-card ac-cinza">
+    <div class="ac-titulo">⚠️ Irregulares — decorar à parte!</div>
+    <div class="ac-exemplos">
+      <strong>essere</strong> (ser/estar): sono · sei · <strong>è</strong> · siamo · siete · sono<br>
+      <strong>avere</strong> (ter): ho · hai · ha · abbiamo · avete · hanno<br>
+      <strong>fare</strong> (fazer): faccio · fai · fa · facciamo · fate · fanno<br>
+      <strong>andare</strong> (ir): vado · vai · va · andiamo · andate · vanno
+    </div>
+  </div>
+</div>
+<div class="tabela-plural">📌 <strong>Como usar:</strong> Tire -ARE/-ERE/-IRE e adicione a terminação certa. Ex: parl<em>are</em> → parl + <strong>o</strong> = <strong>parlo</strong> (eu falo)</div>`,
 
   // ── NMA em linguagem de conversa ───────────────────────
   alerta: 'Em italiano, "Parlo" já significa "Eu falo" — sem precisar falar "eu". A terminação da palavra (-o, -i, -a...) já conta quem faz a ação. Por isso os italianos falam mais rápido!',

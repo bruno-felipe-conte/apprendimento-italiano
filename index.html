@@ -450,25 +450,44 @@
     /* ── Lição ── */
     .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }
     /* ── Tabela visual de referência (colapsável) ── */
-    .gram-tabela-visual { border: 2px solid #D4A843; border-radius: 12px; margin-bottom: 1.1rem; background: #FFFDF5; overflow: hidden; }
-    .gram-tabela-visual summary { padding: 0.75rem 1.1rem; font-weight: 700; cursor: pointer; color: #9B2335; font-size: 0.9rem; user-select: none; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .gram-tabela-visual { border: 2px solid #D4A843; border-radius: 14px; margin-bottom: 1.1rem; background: #FFFDF5; overflow: hidden; }
+    .gram-tabela-visual summary { padding: 0.8rem 1.2rem; font-weight: 700; cursor: pointer; color: #9B2335; font-size: 0.92rem; user-select: none; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
     .gram-tabela-visual summary::-webkit-details-marker { display: none; }
-    .gram-tabela-visual[open] summary::before { content: '▼ '; font-size: 0.7rem; }
-    .gram-tabela-visual:not([open]) summary::before { content: '▶ '; font-size: 0.7rem; }
-    .gram-tabela-conteudo { padding: 0.85rem 1.1rem 1rem; border-top: 1px solid #f0e0b0; }
-    .gram-tabela-conteudo table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-    .gram-tabela-conteudo th { background: #9B2335; color: white; padding: 0.45rem 0.6rem; text-align: left; font-weight: 700; }
-    .gram-tabela-conteudo td { padding: 0.45rem 0.6rem; border-bottom: 1px solid #e8e0cc; vertical-align: top; line-height: 1.5; }
-    .gram-tabela-conteudo tr:last-child td { border-bottom: none; }
-    .gram-tabela-conteudo .tab-azul  td:first-child { border-left: 4px solid #3498DB; }
-    .gram-tabela-conteudo .tab-amarelo td:first-child { border-left: 4px solid #F39C12; }
-    .gram-tabela-conteudo .tab-rosa  td:first-child { border-left: 4px solid #E91E8C; }
-    .gram-tabela-conteudo .tab-verde td:first-child { border-left: 4px solid #27AE60; }
-    .gram-tabela-conteudo .tab-cinza td:first-child { border-left: 4px solid #888; }
+    .gram-tabela-visual[open] summary::before { content: '▼ '; font-size: 0.65rem; opacity: 0.7; }
+    .gram-tabela-visual:not([open]) summary::before { content: '▶ '; font-size: 0.65rem; opacity: 0.7; }
+    .gram-tabela-conteudo { padding: 0.85rem 1rem 1rem; border-top: 1px solid #f0e0b0; }
+    .gram-tabela-conteudo .tabela-intro { font-size: 0.82rem; color: #888; margin-bottom: 0.8rem; }
+    /* Cards coloridos por artigo */
+    .artigo-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
+    @media (max-width: 520px) { .artigo-cards { grid-template-columns: 1fr; } }
+    .artigo-card { border-radius: 10px; padding: 0.75rem 0.9rem; border-left: 5px solid transparent; }
+    .artigo-card .ac-titulo { font-size: 1.05rem; font-weight: 900; margin-bottom: 0.3rem; letter-spacing: 0.04em; }
+    .artigo-card .ac-regra { font-size: 0.8rem; line-height: 1.45; margin-bottom: 0.35rem; }
+    .artigo-card .ac-regra strong { font-size: 0.85rem; }
+    .artigo-card .ac-exemplos { font-size: 0.8rem; font-style: italic; opacity: 0.85; line-height: 1.5; }
+    .ac-azul   { background: #EAF4FC; border-left-color: #2980B9; }
+    .ac-azul   .ac-titulo { color: #1A5276; }
+    .ac-amarelo{ background: #FEF9E7; border-left-color: #D4A843; }
+    .ac-amarelo .ac-titulo { color: #7D6608; }
+    .ac-rosa   { background: #FEF0F8; border-left-color: #C0197B; }
+    .ac-rosa   .ac-titulo { color: #7B1158; }
+    .ac-verde  { background: #EAFAF1; border-left-color: #1E8449; }
+    .ac-verde  .ac-titulo { color: #145A32; }
+    .ac-cinza  { background: #F4F6F7; border-left-color: #7F8C8D; grid-column: 1 / -1; }
+    .ac-cinza  .ac-titulo { color: #424949; }
+    .tabela-plural { margin-top: 0.7rem; font-size: 0.82rem; color: #666; padding: 0.5rem 0.8rem; background: rgba(155,35,53,0.05); border-radius: 8px; }
     body.dark-mode .gram-tabela-visual { background: #1e1a16; border-color: #8a6a20; }
     body.dark-mode .gram-tabela-visual summary { color: #D4A843; }
     body.dark-mode .gram-tabela-conteudo { border-top-color: #3a2e1a; }
-    body.dark-mode .gram-tabela-conteudo td { border-bottom-color: #2a2420; color: #E6DFD3; }
+    body.dark-mode .ac-azul    { background: #0d1f2d; }
+    body.dark-mode .ac-amarelo { background: #1f1a08; }
+    body.dark-mode .ac-rosa    { background: #1f0a14; }
+    body.dark-mode .ac-verde   { background: #0a1f12; }
+    body.dark-mode .ac-cinza   { background: #1a1d1e; }
+    body.dark-mode .artigo-card .ac-titulo { opacity: 0.95; }
+    body.dark-mode .artigo-card .ac-regra  { color: #C8BFB0; }
+    body.dark-mode .artigo-card .ac-exemplos { color: #A89F92; }
+    body.dark-mode .tabela-plural { color: #A89F92; background: rgba(212,168,67,0.07); }
     .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
     .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: #9B2335; border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
     .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
@@ -1414,7 +1433,7 @@
   <script src="js/quiz.js?v=3"></script>
   <script src="js/vocab.js?v=3"></script>
   <script src="js/heatmap.js?v=3"></script>
-  <script src="js/grammar.js?v=4"></script>
+  <script src="js/grammar.js?v=5"></script>
   <script src="js/profilo.js?v=1"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

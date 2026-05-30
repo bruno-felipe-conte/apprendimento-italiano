@@ -232,18 +232,18 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
-    // 📋 Tabela visual de referência (colapsável, acima dos exercícios)
-    html += this._htmlTabelaVisual(u);
-
-    // ✏️ Exercícios — topo da lição
-    html += '<div id="gram-ex-area">';
-    html += this._htmlExercicio();
+    // 📖 Teoria estruturada em camadas (NMA) — vem ANTES dos exercícios
+    html += '<div class="gram-card gram-teoria-card">';
+    html += '<div class="gram-card-header"><span>📖</span> Conteúdo da lição</div>';
+    html += this._htmlCamadas(u);
     html += '</div>';
 
-    // 📖 Teoria estruturada em camadas (NMA)
-    html += '<div class="gram-card gram-teoria-card">';
-    html += '<div class="gram-card-header"><span>📖</span> Grammatica</div>';
-    html += this._htmlCamadas(u);
+    // 📋 Tabela de consulta rápida — entre teoria e exercícios
+    html += this._htmlTabelaVisual(u);
+
+    // ✏️ Exercícios — após o conteúdo
+    html += '<div id="gram-ex-area">';
+    html += this._htmlExercicio();
     html += '</div>';
 
     html += '</div>'; // lesson-layout
