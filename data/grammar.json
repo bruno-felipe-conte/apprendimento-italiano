@@ -10,1980 +10,415 @@
           "id": "a1-lez1",
           "num": "Lezione I",
           "titulo": "Nome, Articolo e Aggettivo",
-          "subtitulo": "Strutture elementari",
-          "teoria": "**A. La formazione del nome maschile e femminile**\n\n| | singolare | plurale |\n|-|-----------|---------|\n| *maschile* | quaderno | quaderni |\n| *femminile* | lavagna | lavagne |\n\n| | singolare | plurale |\n|-|-----------|---------|\n| *maschile* | giornale | giornali |\n| *femminile* | lezione | lezioni |\n\n**Regola:** Nomi in **-o** → plurale **-i** (m.). Nomi in **-a** → plurale **-e** (f.). Nomi in **-e** → plurale **-i** (m. e f.).\n\n**B. La formazione dell'articolo determinativo**\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th></th><th colspan=\"2\">singolare</th><th colspan=\"2\">plurale</th></tr></thead>\n<tbody>\n<tr><th rowspan=\"3\" class=\"gram-genere\">maschile</th><td class=\"gram-art\">il</td><td>libro<br>gatto<br>cane</td><td class=\"gram-art\">i</td><td>libri<br>gatti<br>cani</td></tr>\n<tr><td class=\"gram-art\">lo</td><td>zaino<br>spagnolo<br>studente</td><td class=\"gram-art\">gli</td><td>zaini<br>spagnoli<br>studenti</td></tr>\n<tr><td class=\"gram-art\">l'</td><td>ufficio<br>esame<br>orologio</td><td class=\"gram-art\">gli</td><td>uffici<br>esami<br>orologi</td></tr>\n<tr><th rowspan=\"2\" class=\"gram-genere\">femminile</th><td class=\"gram-art\">la</td><td>studentessa<br>ragazza<br>chiave</td><td class=\"gram-art\">le</td><td>studentesse<br>ragazze<br>chiavi</td></tr>\n<tr><td class=\"gram-art\">l'</td><td>ora<br>idea<br>opera</td><td class=\"gram-art\">le</td><td>ore<br>idee<br>opere</td></tr>\n</tbody></table>\n\n**C. La formazione dell'aggettivo**\n\n**a. Aggettivi variabili nel genere e nel numero:**\n\n| | singolare | plurale |\n|-|-----------|---------|\n| *maschile* | tavolo / cappotto / fiore **rosso** | tavoli / cappotti / fiori **rossi** |\n| *femminile* | casa / borsa / luce **rossa** | case / borse / luci **rosse** |\n\n**b. Aggettivi variabili solamente nel numero:**\n\n| | singolare | plurale |\n|-|-----------|---------|\n| *maschile* | tavolo / televisore **grande** | tavoli / televisori **grandi** |\n| *femminile* | borsa / chiave **grande** | borse / chiavi **grandi** |\n\n**c. Aggettivi invariabili:**\n\n| | singolare / plurale |\n|-|---------------------|\n| *maschile e femminile* | libro / libri / gonna / gonne **blu** |\n\n**D. La coniugazione del verbo ESSERE**\n\n| persona | forma |\n|---------|-------|\n| io | **sono** |\n| tu | **sei** |\n| lui / lei / Lei | **è** |\n| noi | **siamo** |\n| voi | **siete** |\n| loro | **sono** |\n\n**Uso informale:** Io sono Michela, e *tu chi sei*? — Io sono Claudia.\n**Uso formale:** Io sono il professor Brandini, e *Lei chi è*? — Io sono il signor Urbani.\n\n**Chi è...? Che cosa è...?**\nChi è questo? → Questo è Leonardo. / Chi sono questi? → Questi sono Carlo e Paolo.\nChe cosa è quello? → Quello è il duomo. / Che cosa sono quelle? → Quelle sono due biciclette.\n\n**E. La formazione dell'articolo indeterminativo**\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th></th><th>articolo</th><th>esempi</th><th>quando si usa</th></tr></thead>\n<tbody>\n<tr><th rowspan=\"2\" class=\"gram-genere\">maschile</th><td class=\"gram-art\">un</td><td>un libro<br>un orologio</td><td>davanti a consonante o vocale</td></tr>\n<tr><td class=\"gram-art\">uno</td><td>uno specchio<br>uno zaino</td><td>davanti a s+cons., z, gn, ps</td></tr>\n<tr><th rowspan=\"2\" class=\"gram-genere\">femminile</th><td class=\"gram-art\">una</td><td>una matita<br>una casa</td><td>davanti a consonante</td></tr>\n<tr><td class=\"gram-art\">un'</td><td>un'immagine<br>un'albicocca</td><td>davanti a vocale</td></tr>\n</tbody></table>\n\n**Plurale partitivo:** dei libri / degli orologi / degli specchi / delle matite / delle case / delle immagini.\n\n**C'è / Ci sono:**\nSul tavolo **c'è** un libro. (singolare)\nSul tavolo **ci sono** dei libri. (plurale)",
-          "exemplos": [
-            {
-              "it": "Il quaderno è nuovo; i quaderni sono nuovi.",
-              "pt": "O caderno é novo; os cadernos são novos."
-            },
-            {
-              "it": "Lo studente studia molto; gli studenti studiano molto.",
-              "pt": "O estudante estuda muito; os estudantes estudam muito."
-            },
-            {
-              "it": "La lezione è interessante; le lezioni sono interessanti.",
-              "pt": "A lição é interessante; as lições são interessantes."
-            },
-            {
-              "it": "C'è un libro sul tavolo. Ci sono dei libri sul tavolo.",
-              "pt": "Há um livro na mesa. Há livros na mesa."
-            },
-            {
-              "it": "Io sono Marco. Tu sei Maria. Lei è la professoressa.",
-              "pt": "Eu sou Marco. Você é Maria. Ela é a professora."
-            }
-          ],
+          "subtitulo": "Il cuore del nome italiano",
           "exercicios": [
             {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1** — Volgere al plurale (nomi in **-o** e **-a**):\nsedia / finestra / foglio / penna / registro / tavolo / cassetto / sigaretta / borsa / corso / documento",
-              "resposta": "sedie / finestre / fogli / penne / registri / tavoli / cassetti / sigarette / borse / corsi / documenti",
-              "explicacao": "Femminili in **-a** → **-e** (sedia→sedie, borsa→borse). Maschili in **-o** → **-i** (tavolo→tavoli, corso→corsi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2** — Volgere al plurale (nomi in **-e**):\nmadre / padre / chiave / signore / luce / stazione / pane / fiore / bicchiere / frase / ponte",
-              "resposta": "madri / padri / chiavi / signori / luci / stazioni / pani / fiori / bicchieri / frasi / ponti",
-              "explicacao": "Tutti i nomi in **-e** (maschili e femminili) fanno il plurale in **-i**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3** — Mettere l'articolo determinativo e volgere al plurale:\npadre / stazione / cassetta / bottiglia / albero / luce / signore / scarpa / esercizio / giornale / uscita / indirizzo / amico / cane",
-              "resposta": "il padre → i padri\nla stazione → le stazioni\nla cassetta → le cassette\nla bottiglia → le bottiglie\nl'albero → gli alberi\nla luce → le luci\nil signore → i signori\nla scarpa → le scarpe\nl'esercizio → gli esercizi\nil giornale → i giornali\nl'uscita → le uscite\nl'indirizzo → gli indirizzi\nl'amico → gli amici\nil cane → i cani",
-              "explicacao": "Parole che iniziano con vocale → l' / gli o l' / le. Amico→amici (accento sulla terzultima: plurale in -ci). Signore→signori (maschile in -e → -i)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4** — Volgere al plurale:\ncorso difficile / madre gentile / treno veloce / parete rosa / lingua facile / soffitto viola / sedia verde / stazione grande / padre cortese / studente giapponese",
-              "resposta": "corsi difficili / madri gentili / treni veloci / pareti rosa / lingue facili / soffitti viola / sedie verdi / stazioni grandi / padri cortesi / studenti giapponesi",
-              "explicacao": "Aggettivi in **-e** → **-i** (difficile→difficili, gentile→gentili, veloce→veloci). Aggettivi di colore invariabili: **rosa** e **viola** non cambiano mai."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Mettere l'articolo determinativo e indeterminativo, poi volgere al plurale.\n\n**Gruppo 1:** soffitto / pavimento / muro / tetto / libro / foglio / medico / disco / popolo / museo / quadro / piano / coltello / gatto / tappeto",
-              "resposta": "il soffitto / un soffitto → i soffitti / dei soffitti\nil pavimento / un pavimento → i pavimenti / dei pavimenti\nil muro / un muro → i muri / dei muri\nil tetto / un tetto → i tetti / dei tetti\nil libro / un libro → i libri / dei libri\nil foglio / un foglio → i fogli / dei fogli\nil medico / un medico → i medici / dei medici\nil disco / un disco → i dischi / dei dischi\nil popolo / un popolo → i popoli / dei popoli\nil museo / un museo → i musei / dei musei\nil quadro / un quadro → i quadri / dei quadri\nil piano / un piano → i piani / dei piani\nil coltello / un coltello → i coltelli / dei coltelli\nil gatto / un gatto → i gatti / dei gatti\nil tappeto / un tappeto → i tappeti / dei tappeti",
-              "explicacao": "Maschili in -o → il/un, plur. -i. Eccezioni: medico→medici (acc. terzultima → -ci); disco→dischi (acc. penultima → -schi); museo→musei."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Gruppo 2:\nsale / direttore / padre / sapone / mare / bicchiere / fiore / colore / cane / inglese / fiume / prete",
-              "resposta": "il sale / un sale → i sali / dei sali\nil direttore / un direttore → i direttori / dei direttori\nil padre / un padre → i padri / dei padri\nil sapone / un sapone → i saponi / dei saponi\nil mare / un mare → i mari / dei mari\nil bicchiere / un bicchiere → i bicchieri / dei bicchieri\nil fiore / un fiore → i fiori / dei fiori\nil colore / un colore → i colori / dei colori\nil cane / un cane → i cani / dei cani\nl'inglese / un inglese → gli inglesi / degli inglesi\nil fiume / un fiume → i fiumi / dei fiumi\nil prete / un prete → i preti / dei preti",
-              "explicacao": "Maschili in **-e** → plurale in **-i**. Inglese inizia con vocale → l'inglese / gli inglesi."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Gruppo 3:\nzucchero / zero / orologio / uomo / amico / zio / errore / uccello / occhio / ordine / studente / insegnante / straniero / stadio",
-              "resposta": "lo zucchero / uno zucchero → gli zuccheri / degli zuccheri\nlo zero / uno zero → gli zeri / degli zeri\nl'orologio / un orologio → gli orologi / degli orologi\nl'uomo / un uomo → gli uomini / degli uomini\nl'amico / un amico → gli amici / degli amici\nlo zio / uno zio → gli zii / degli zii\nl'errore / un errore → gli errori / degli errori\nl'uccello / un uccello → gli uccelli / degli uccelli\nl'occhio / un occhio → gli occhi / degli occhi\nl'ordine / un ordine → gli ordini / degli ordini\nlo studente / uno studente → gli studenti / degli studenti\nl'insegnante / un insegnante → gli insegnanti / degli insegnanti\nlo straniero / uno straniero → gli stranieri / degli stranieri\nlo stadio / uno stadio → gli stadi / degli stadi",
-              "explicacao": "Inizia con z, s+cons. → lo/uno. Inizia con vocale → l'/un. Uomo ha plurale irregolare: **uomini**. Zio→zii (raddoppia la i)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Gruppo 4:\nsedia / casa / coperta / spazzola / borsa / finestra / lettera / fabbrica / scuola / cintura / maglietta / gonna / trattoria / mela / fragola",
-              "resposta": "la sedia / una sedia → le sedie / delle sedie\nla casa / una casa → le case / delle case\nla coperta / una coperta → le coperte / delle coperte\nla spazzola / una spazzola → le spazzole / delle spazzole\nla borsa / una borsa → le borse / delle borse\nla finestra / una finestra → le finestre / delle finestre\nla lettera / una lettera → le lettere / delle lettere\nla fabbrica / una fabbrica → le fabbriche / delle fabbriche\nla scuola / una scuola → le scuole / delle scuole\nla cintura / una cintura → le cinture / delle cinture\nla maglietta / una maglietta → le magliette / delle magliette\nla gonna / una gonna → le gonne / delle gonne\nla trattoria / una trattoria → le trattorie / delle trattorie\nla mela / una mela → le mele / delle mele\nla fragola / una fragola → le fragole / delle fragole",
-              "explicacao": "Femminili in **-a** → **-e**. Fabbrica→fabbriche (mant. suono duro con h: -ca→-che)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Gruppo 5:\nchiave / madre / traduzione / spiegazione / cornice / luce / matita / arte / estate / immagine / nave / morte / fronte",
-              "resposta": "la chiave / una chiave → le chiavi / delle chiavi\nla madre / una madre → le madri / delle madri\nla traduzione / una traduzione → le traduzioni / delle traduzioni\nla spiegazione / una spiegazione → le spiegazioni / delle spiegazioni\nla cornice / una cornice → le cornici / delle cornici\nla luce / una luce → le luci / delle luci\nla matita / una matita → le matite / delle matite\nl'arte / un'arte → le arti / delle arti\nl'estate / un'estate → le estati / delle estati\nl'immagine / un'immagine → le immagini / delle immagini\nla nave / una nave → le navi / delle navi\nla morte / una morte → le morti / delle morti\nla fronte / una fronte → le fronti / delle fronti",
-              "explicacao": "Femminili in **-e** → **-i** (chiave→chiavi, luce→luci). Inizia con vocale → l'/un' (l'arte, l'estate). Cornice→cornici (-ce→-ci, suono dolce)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6** — Mettere l'articolo determinativo e indeterminativo, poi volgere al plurale:\norologio / cappotto / foglio / scarpa / bottiglia / luce / fiammifero / cassetta / piatto / tappo / tazza / albero / pero / pianta / zio / armadio / tovaglia / asciugamano / elefante / piede / quadro / tenda / vestito / giornale / libro / parco / amico / straniero / padre / madre / nemico / naso / bocca / dente / lingua / specchio / vino / birra / palla / nonna / studentessa / telefono",
-              "resposta": "l'orologio / un orologio → gli orologi / degli orologi\nil cappotto / un cappotto → i cappotti / dei cappotti\nil foglio / un foglio → i fogli / dei fogli\nla scarpa / una scarpa → le scarpe / delle scarpe\nla bottiglia / una bottiglia → le bottiglie / delle bottiglie\nla luce / una luce → le luci / delle luci\nil fiammifero / un fiammifero → i fiammiferi / dei fiammiferi\nla cassetta / una cassetta → le cassette / delle cassette\nil piatto / un piatto → i piatti / dei piatti\nil tappo / un tappo → i tappi / dei tappi\nla tazza / una tazza → le tazze / delle tazze\nl'albero / un albero → gli alberi / degli alberi\nil pero / un pero → i peri / dei peri\nla pianta / una pianta → le piante / delle piante\nlo zio / uno zio → gli zii / degli zii\nl'armadio / un armadio → gli armadi / degli armadi\nla tovaglia / una tovaglia → le tovaglie / delle tovaglie\nl'asciugamano / un asciugamano → gli asciugamani / degli asciugamani\nl'elefante / un elefante → gli elefanti / degli elefanti\nil piede / un piede → i piedi / dei piedi\nil quadro / un quadro → i quadri / dei quadri\nla tenda / una tenda → le tende / delle tende\nil vestito / un vestito → i vestiti / dei vestiti\nil giornale / un giornale → i giornali / dei giornali\nil libro / un libro → i libri / dei libri\nil parco / un parco → i parchi / dei parchi\nl'amico / un amico → gli amici / degli amici\nlo straniero / uno straniero → gli stranieri / degli stranieri\nil padre / un padre → i padri / dei padri\nla madre / una madre → le madri / delle madri\nil nemico / un nemico → i nemici / dei nemici\nil naso / un naso → i nasi / dei nasi\nla bocca / una bocca → le bocche / delle bocche\nil dente / un dente → i denti / dei denti\nla lingua / una lingua → le lingue / delle lingue\nlo specchio / uno specchio → gli specchi / degli specchi\nil vino / un vino → i vini / dei vini\nla birra / una birra → le birre / delle birre\nla palla / una palla → le palle / delle palle\nla nonna / una nonna → le nonne / delle nonne\nla studentessa / una studentessa → le studentesse / delle studentesse\nil telefono / un telefono → i telefoni / dei telefoni",
-              "explicacao": "Bocca→bocche (-ca→-che). Parco→parchi (-co acc. penultima → -chi). Amico, nemico→amici, nemici (-co acc. terzultima → -ci). Specchio→specchi."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7** — Volgere al plurale (attenzione ai plurali irregolari in **-co/-ca/-go/-ga**):\namico / amica / giacca / luogo / lago / austriaca / fuoco / tacco / pacco / parco / tedesca / greco / fungo / marco / barca",
-              "resposta": "amici / amiche / giacche / luoghi / laghi / austriache / fuochi / tacchi / pacchi / parchi / tedesche / greci / funghi / marchi / barche",
-              "explicacao": "**-CA/-GA → -CHE/-GHE** (amica→amiche, giacca→giacche, austriaca→austriache, tedesca→tedesche, barca→barche).\n**-CO acc. terzultima → -CI** (amico→amici, greco→greci).\n**-CO acc. penultima → -CHI** (fuoco→fuochi, tacco→tacchi, pacco→pacchi, parco→parchi, marco→marchi).\n**-GO → -GHI** (luogo→luoghi, lago→laghi, fungo→funghi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8** — Mettere l'articolo determinativo e indeterminativo e volgere al plurale:\ncasa nuova / libro vecchio / ragazza gentile / uomo interessante / bottiglia vuota / vino dolce / vetro rotto / chiave piccola / madre affettuosa / studente giovane / bicchiere pieno / insegnante simpatico / ragazza nervosa / giacca verde / pacco leggero / scatola aperta / sedia utile / penna rossa / treno veloce / esercizio facile",
-              "resposta": "la casa nuova / una casa nuova → le case nuove / delle case nuove\nil libro vecchio / un libro vecchio → i libri vecchi / dei libri vecchi\nla ragazza gentile / una ragazza gentile → le ragazze gentili / delle ragazze gentili\nl'uomo interessante / un uomo interessante → gli uomini interessanti / degli uomini interessanti\nla bottiglia vuota / una bottiglia vuota → le bottiglie vuote / delle bottiglie vuote\nil vino dolce / un vino dolce → i vini dolci / dei vini dolci\nil vetro rotto / un vetro rotto → i vetri rotti / dei vetri rotti\nla chiave piccola / una chiave piccola → le chiavi piccole / delle chiavi piccole\nla madre affettuosa / una madre affettuosa → le madri affettuose / delle madri affettuose\nlo studente giovane / uno studente giovane → gli studenti giovani / degli studenti giovani\nil bicchiere pieno / un bicchiere pieno → i bicchieri pieni / dei bicchieri pieni\nl'insegnante simpatico / un insegnante simpatico → gli insegnanti simpatici / degli insegnanti simpatici\nla ragazza nervosa / una ragazza nervosa → le ragazze nervose / delle ragazze nervose\nla giacca verde / una giacca verde → le giacche verdi / delle giacche verdi\nil pacco leggero / un pacco leggero → i pacchi leggeri / dei pacchi leggeri\nla scatola aperta / una scatola aperta → le scatole aperte / delle scatole aperte\nla sedia utile / una sedia utile → le sedie utili / delle sedie utili\nla penna rossa / una penna rossa → le penne rosse / delle penne rosse\nil treno veloce / un treno veloce → i treni veloci / dei treni veloci\nl'esercizio facile / un esercizio facile → gli esercizi facili / degli esercizi facili",
-              "explicacao": "L'aggettivo concorda con il sostantivo in genere e numero. Vecchio→vecchi, affettuosa→affettuose, simpatico→simpatici. Giacca→giacche (mant. suono duro). Pacco→pacchi."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 9** — Formare delle frasi con i seguenti sostantivi e aggettivi e volgere al plurale.\nMod.: *Il libro è difficile → I libri sono difficili.*\n\nSostantivi: giacca / camicia / stanza / ragazzo / amica / strada / uomo / vino / scarpe / quaderno / esercizio / frase / città\nAggettivi: facile / difficile / chiaro / dolce / pulito / sporco / cattivo / buono / gentile / intelligente / interessante / noioso / tranquillo / silenzioso / stretto / largo / nuovo / vecchio",
-              "resposta": "La giacca è nuova → Le giacche sono nuove.\nLa camicia è pulita → Le camicie sono pulite.\nLa stanza è silenziosa → Le stanze sono silenziose.\nIl ragazzo è simpatico → I ragazzi sono simpatici.\nL'amica è intelligente → Le amiche sono intelligenti.\nLa strada è stretta → Le strade sono strette.\nL'uomo è gentile → Gli uomini sono gentili.\nIl vino è dolce → I vini sono dolci.\nLe scarpe sono vecchie → (già plurale).\nIl quaderno è nuovo → I quaderni sono nuovi.\nL'esercizio è facile → Gli esercizi sono facili.\nLa frase è chiara → Le frasi sono chiare.\nLa città è tranquilla → Le città sono tranquille.",
-              "explicacao": "Il verbo ESSERE: è (sing.) / sono (plur.). Aggettivi e articoli concordano. Città→città (invariabile al plurale). Amica→amiche (femm. -ca→-che)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 10** — Come il precedente.\n\nSostantivi: treno / film / lezione / insegnante / ristorante / gelato / medicina / appartamento / pensione / famiglia / pranzo / turista / museo / penna / pantaloni / borsa / giardino / fiume / negozio\nAggettivi: affollato / bello / noioso / bravo / caro / economico / utile / inutile / nuovo / rumoroso / tranquillo / chiaro / simpatico / largo / aperto / pesante / leggero / verde / buono",
-              "resposta": "Il treno è affollato → I treni sono affollati.\nIl film è noioso → I film sono noiosi.\nLa lezione è utile → Le lezioni sono utili.\nL'insegnante è bravo → Gli insegnanti sono bravi.\nIl ristorante è caro → I ristoranti sono cari.\nIl gelato è buono → I gelati sono buoni.\nLa medicina è utile → Le medicine sono utili.\nL'appartamento è nuovo → Gli appartamenti sono nuovi.\nLa pensione è economica → Le pensioni sono economiche.\nLa famiglia è tranquilla → Le famiglie sono tranquille.\nIl pranzo è buono → I pranzi sono buoni.\nIl turista è simpatico → I turisti sono simpatici.\nIl museo è bello → I musei sono belli.\nLa penna è nuova → Le penne sono nuove.\nI pantaloni sono larghi → (già plurale).\nLa borsa è pesante → Le borse sono pesanti.\nIl giardino è verde → I giardini sono verdi.\nIl fiume è lungo → I fiumi sono lunghi.\nIl negozio è aperto → I negozi sono aperti.",
-              "explicacao": "Film è invariabile (i film). Bello→belli (maschile plur.). Pensione→pensioni. Lungo→lunghi (mant. suono duro)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 11** — Volgere al plurale:\nLa bistecca è cruda. / Il pesce è cotto. / Il vino è secco. / L'orologio è rotto. / L'esercizio non è difficile. / L'autobus non è puntuale. / L'amica è simpatica. / La macchina è veloce. / La segretaria è gentile. / Il turista è confuso. / La stanza è piccola. / Il mio amico non è alto. / L'albero è vecchio e malato. / L'esercizio è molto utile. / Lo studente è intelligente. / La città è caotica. / Il libro è interessante. / Il posto è libero. / La sedia è occupata. / Il tavolo è nuovo. / La lezione è finita. / Il programma televisivo è noioso. / Il concerto è interessante. / Il cibo è fresco. / Il fiore è profumato. / Il caffè è caldo. / La zuppa è fredda. / La ragazza è bella. / Il ristorante è troppo caro. / La pizza è buona.",
-              "resposta": "Le bistecche sono crude. / I pesci sono cotti. / I vini sono secchi. / Gli orologi sono rotti. / Gli esercizi non sono difficili. / Gli autobus non sono puntuali. / Le amiche sono simpatiche. / Le macchine sono veloci. / Le segretarie sono gentili. / I turisti sono confusi. / Le stanze sono piccole. / I miei amici non sono alti. / Gli alberi sono vecchi e malati. / Gli esercizi sono molto utili. / Gli studenti sono intelligenti. / Le città sono caotiche. / I libri sono interessanti. / I posti sono liberi. / Le sedie sono occupate. / I tavoli sono nuovi. / Le lezioni sono finite. / I programmi televisivi sono noiosi. / I concerti sono interessanti. / I cibi sono freschi. / I fiori sono profumati. / I caffè sono caldi. / Le zuppe sono fredde. / Le ragazze sono belle. / I ristoranti sono troppo cari. / Le pizze sono buone.",
-              "explicacao": "Secco→secchi (mant. suono duro). Autobus→autobus (invariabile). Caotico→caotici. Città→città (invariabile). Programma→programmi (maschile in -a)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 12** — Volgere al plurale.\nMod.: *Questa / quella è la mia borsa → Queste / quelle sono le mie borse.*\n\n1. Questo è il tuo libro.\n2. Questa è la sua macchina.\n3. Questa è la sua amica.\n4. Questo è il suo amico.\n5. Questa è la mia camicia.\n6. Quella è la tua casa.\n7. Quella è la nostra vecchia sedia.\n8. Questo è il nostro simpatico insegnante.\n9. Quella è la vostra nuova camera.\n10. Quello è il vostro nuovo appartamento.\n11. Questo è il loro giornale.\n12. Questa è la loro segretaria.\n13. Quello è il mio armadio.",
-              "resposta": "1. Questi sono i tuoi libri.\n2. Queste sono le sue macchine.\n3. Queste sono le sue amiche.\n4. Questi sono i suoi amici.\n5. Queste sono le mie camicie.\n6. Quelle sono le tue case.\n7. Quelle sono le nostre vecchie sedie.\n8. Questi sono i nostri simpatici insegnanti.\n9. Quelle sono le vostre nuove camere.\n10. Quelli sono i vostri nuovi appartamenti.\n11. Questi sono i loro giornali.\n12. Queste sono le loro segretarie.\n13. Quelli sono i miei armadi.",
-              "explicacao": "Dimostrativi plurali: questo→questi/queste, quello→quelli/quelle. Possessivi: mio→miei/mie, tuo→tuoi/tue, suo→suoi/sue, nostro→nostri/nostre, vostro→vostri/vostre. Loro è sempre invariabile."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 13** — Fare la domanda secondo il modello.\nMod.: *Mario è il nostro insegnante. → Chi è Mario?*\n\n1. Giovanna è la segretaria.\n2. Questi due giovani sono i nostri cugini.\n3. Erika è una studentessa straniera.\n4. Peter e Kate sono gli amici di Paolo.\n5. La signora Gentili è la nostra vicina.\n6. Quelle ragazze sono le nostre compagne di classe.\n7. La signora Falchi è la madre del vostro amico.",
-              "resposta": "1. Chi è Giovanna?\n2. Chi sono questi due giovani?\n3. Chi è Erika?\n4. Chi sono Peter e Kate?\n5. Chi è la signora Gentili?\n6. Chi sono quelle ragazze?\n7. Chi è la signora Falchi?",
-              "explicacao": "**Chi è...?** → persona singolare. **Chi sono...?** → persone al plurale. Per le cose si usa **Che cos'è...? / Che cosa sono...?**"
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 14** — Replicare secondo il modello.\nMod.: *Lui è sempre stanco. → Lei, invece, non è mai stanca.*\n\n1. Lui è sempre contento.\n2. Lui è sempre attento.\n3. Lui è sempre malato.\n4. Lui è sempre vestito male.\n5. Lui è sempre nervoso.\n6. Lui è sempre allegro.\n7. Lui è sempre calmo.\n8. Lui è sempre arrabbiato.\n9. Lui è sempre gentile.\n10. Lui è sempre elegante.",
-              "resposta": "1. Lei, invece, non è mai contenta.\n2. Lei, invece, non è mai attenta.\n3. Lei, invece, non è mai malata.\n4. Lei, invece, non è mai vestita male.\n5. Lei, invece, non è mai nervosa.\n6. Lei, invece, non è mai allegra.\n7. Lei, invece, non è mai calma.\n8. Lei, invece, non è mai arrabbiata.\n9. Lei, invece, non è mai gentile.\n10. Lei, invece, non è mai elegante.",
-              "explicacao": "**Sempre** ↔ **mai**. L'aggettivo concorda al femminile: contento→contenta, nervoso→nervosa, allegro→allegra. Aggettivi in -e (gentile, elegante) sono invariabili nel genere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 15** — Replicare secondo il modello.\nMod.: *Io ho un libro. → Anch'io ho un libro.*\n\n1. Io ho una giacca nuova.\n2. Io ho una macchina rossa.\n3. Io ho i vestiti sporchi.\n4. Io ho le scarpe pulite.\n5. Io ho un fratello.\n6. Io ho un amico francese.\n7. Io ho un gatto siamese.\n8. Io ho una casa vecchia.\n9. Io ho gli occhiali da sole.\n10. Io ho fame.",
-              "resposta": "1. Anch'io ho una giacca nuova.\n2. Anch'io ho una macchina rossa.\n3. Anch'io ho i vestiti sporchi.\n4. Anch'io ho le scarpe pulite.\n5. Anch'io ho un fratello.\n6. Anch'io ho un amico francese.\n7. Anch'io ho un gatto siamese.\n8. Anch'io ho una casa vecchia.\n9. Anch'io ho gli occhiali da sole.\n10. Anch'io ho fame.",
-              "explicacao": "**Anch'io** (= anche + io, elisione davanti a vocale) per concordare con frasi affermative. Opposto: **Neanche io** per frasi negative."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 16** — Replicare secondo il modello.\nMod.: *Io non sono tedesco. → Neanche io sono tedesco.*\n\n1. Io non sono un insegnante.\n2. Io non sono uno studente americano.\n3. Io non sono un architetto.\n4. Io non sono stanco.\n5. Io non sono arrabbiato.\n6. Io non sono distratto.\n7. Io non sono svizzero.\n8. Io non sono un meccanico.\n9. Io non sono una segretaria.\n10. Io non sono triste.",
-              "resposta": "1. Neanche io sono un insegnante.\n2. Neanche io sono uno studente americano.\n3. Neanche io sono un architetto.\n4. Neanche io sono stanco.\n5. Neanche io sono arrabbiato.\n6. Neanche io sono distratto.\n7. Neanche io sono svizzero.\n8. Neanche io sono un meccanico.\n9. Neanche io sono una segretaria.\n10. Neanche io sono triste.",
-              "explicacao": "**Neanche io** per concordare con frasi negative. **Anch'io** per affermative. 'Neanche' = nemmeno = neppure (sinonimi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 17** — Completare secondo il modello.\nMod.: *casa vecchia / bella → Questa casa vecchia è bella.*\n\n1. Ragazza francese / simpatica.\n2. Insegnante giovane / brava.\n3. Studente tedesco / intelligente.\n4. Libro nuovo / difficile.\n5. Città vecchia / interessante.\n6. Vestito nero / brutto.\n7. Strada alberata / bella.\n8. Lingua straniera / difficile.",
-              "resposta": "1. Questa ragazza francese è simpatica.\n2. Questa insegnante giovane è brava.\n3. Questo studente tedesco è intelligente.\n4. Questo libro nuovo è difficile.\n5. Questa città vecchia è interessante.\n6. Questo vestito nero è brutto.\n7. Questa strada alberata è bella.\n8. Questa lingua straniera è difficile.",
-              "explicacao": "Il dimostrativo **questo/questa** concorda con il genere del sostantivo. Femminili → questa; maschili → questo."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 18** — Rispondere secondo il modello.\nMod.: *Cosa c'è sul tavolo? (libro)*\n*a) Sul tavolo c'è un libro. b) Sul tavolo ci sono dei libri.*\n\n1. Cosa c'è nella borsa? (chiave)\n2. Cosa c'è nel cassetto? (camicia)\n3. Cosa c'è nella stanza? (sedia)\n4. Cosa c'è nella camera? (letto)\n5. Cosa c'è sul letto? (cuscino)\n6. Cosa c'è sul tavolo? (bottiglia)\n7. Cosa c'è nella valigia? (vestito)\n8. Cosa c'è in quella scatola? (regalo)\n9. Cosa c'è nel vaso di vetro? (pesce rosso)\n10. Cosa c'è nella busta? (fotografia)",
-              "resposta": "1. a) Nella borsa c'è una chiave. b) Nella borsa ci sono delle chiavi.\n2. a) Nel cassetto c'è una camicia. b) Nel cassetto ci sono delle camicie.\n3. a) Nella stanza c'è una sedia. b) Nella stanza ci sono delle sedie.\n4. a) Nella camera c'è un letto. b) Nella camera ci sono dei letti.\n5. a) Sul letto c'è un cuscino. b) Sul letto ci sono dei cuscini.\n6. a) Sul tavolo c'è una bottiglia. b) Sul tavolo ci sono delle bottiglie.\n7. a) Nella valigia c'è un vestito. b) Nella valigia ci sono dei vestiti.\n8. a) In quella scatola c'è un regalo. b) In quella scatola ci sono dei regali.\n9. a) Nel vaso di vetro c'è un pesce rosso. b) Nel vaso di vetro ci sono dei pesci rossi.\n10. a) Nella busta c'è una fotografia. b) Nella busta ci sono delle fotografie.",
-              "explicacao": "**C'è** + singolare (un/una/uno/un'). **Ci sono** + plurale (dei/delle/degli). Pesce rosso→pesci rossi (entrambe le parole al plurale)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1** — Inserire l'articolo corretto:\n___ casa / ___ città / ___ amico",
-              "resposta": "la casa / la città / l'amico",
-              "explicacao": "LA (femminile) per casa/città. L' (vocale) per amico."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2** — Inserire l'articolo:\n___ tavolo / ___ finestra / ___ giardino",
-              "resposta": "il tavolo / la finestra / il giardino",
-              "explicacao": "IL (maschile) per tavolo/giardino. LA (femminile) per finestra."
-            },
-            {
-              "tipo": "separatore",
-              "pergunta": "\n--- **EXERCÍCIOS EXTRAS — Lezione I** ---\n",
-              "resposta": "",
-              "explicacao": ""
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **psicologo** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **libro** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **libro** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 9 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie",
-              "explicacao": "Passato prossimo: **il/libro / uno/zaino / un/amica / lo/psicologo / i medici / le farmacie**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 10 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/10i",
-              "explicacao": "Passato prossimo: **i/10i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 11 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/11i",
-              "explicacao": "Passato prossimo: **i/11i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 12 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **amica** è ______.",
-              "resposta": "i/12i",
-              "explicacao": "Passato prossimo: **i/12i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 13 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/13i",
-              "explicacao": "Passato prossimo: **i/13i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 14 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/14i",
-              "explicacao": "Passato prossimo: **i/14i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 15 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "i/15i",
-              "explicacao": "Passato prossimo: **i/15i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 16 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **amica** è ______.",
-              "resposta": "i/16i",
-              "explicacao": "Passato prossimo: **i/16i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 17 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "i/17i",
-              "explicacao": "Passato prossimo: **i/17i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 18 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "i/18i",
-              "explicacao": "Passato prossimo: **i/18i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 19 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **libro** è ______.",
-              "resposta": "i/19i",
-              "explicacao": "Passato prossimo: **i/19i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 20 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **libro** è ______.",
-              "resposta": "i/20i",
-              "explicacao": "Passato prossimo: **i/20i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 21 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/21i",
-              "explicacao": "Passato prossimo: **i/21i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 22 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **amica** è ______.",
-              "resposta": "i/22i",
-              "explicacao": "Passato prossimo: **i/22i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 23 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/23i",
-              "explicacao": "Passato prossimo: **i/23i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 24 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/24i",
-              "explicacao": "Passato prossimo: **i/24i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 25 — Lezione Lezione I (Extra)**\nIl plurale di **medico/farmacia** è ______.",
-              "resposta": "i/25i",
-              "explicacao": "Passato prossimo: **i/25i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 26 — Lezione Lezione I (Extra)**\nL'articolo determinativo corretto per **zaino** è ______.",
-              "resposta": "i/26i",
-              "explicacao": "Passato prossimo: **i/26i**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
               "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 1 — Lezione Lezione I (Extra)**\nQual è l'articolo corretto per **studente**?\n",
+              "pergunta": "— Ciao Marco! Hai visto ___ film di Fellini ieri sera?",
               "opcoes": [
-                "il studente",
-                "lo studente",
-                "f'studente"
+                "il",
+                "lo",
+                "la",
+                "l'"
               ],
               "resposta": 0,
-              "explicacao": "A1 Lezione Lezione I: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
+              "explicacao": "\"film\" é masculino e começa por consoante normal (f) → il. \"Lo\" só para s+consoante, z, gn, ps. \"La\" e \"l'\" são femininos."
             },
             {
               "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 2 — Lezione Lezione I (Extra)**\nQual è l'articolo corretto per **studente**?\n",
+              "pergunta": "Mia sorella studia insieme a ___ studente americano.",
               "opcoes": [
-                "il studente",
-                "lo studente",
-                "f'studente"
-              ],
-              "resposta": 0,
-              "explicacao": "A1 Lezione Lezione I: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 3 — Lezione Lezione I (Extra)**\nQual è l'articolo corretto per **studente**?\n",
-              "opcoes": [
-                "il studente",
-                "lo studente",
-                "f'studente"
-              ],
-              "resposta": 0,
-              "explicacao": "A1 Lezione Lezione I: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 4 — Lezione Lezione I (Extra)**\nQual è l'articolo corretto per **studente**?\n",
-              "opcoes": [
-                "il studente",
-                "lo studente",
-                "f'studente"
-              ],
-              "resposta": 0,
-              "explicacao": "A1 Lezione Lezione I: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale articolo è corretto per 'libro'?",
-              "opcoes": [
-                "il libro",
-                "lo libro",
-                "la libro"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: il libro. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3** — Articolazione:\n___ ora / ___ acqua / ___ idea",
-              "resposta": "l'ora / l'acqua / l'idea",
-              "explicacao": "L' davanti a vocale per tutte e tre le parole."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta?",
-              "opcoes": [
-                "lo studente",
-                "l'studiante",
-                "la studente"
-              ],
-              "resposta": 0,
-              "explicacao": "LO si usa per sostantivi maschili che iniziano con s+consonante."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4** — Plurale dei nomi in -o:\nii medico / la farmacia / il lago",
-              "resposta": "i medici / le farmacie / i laghi",
-              "explicacao": "-co diventa -ci (medico→medici). -a diventa -e (farmacia→farmacie). -o diventa -hi (lago→laghi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Plurale dei nomi in -a:\nla poesia / la mano / la città",
-              "resposta": "le poesie / le mani / le città",
-              "explicacao": "-ia diventa -ie (poesia→poesie). -o diventa -i con accento chiuso (mano→mani). -tà mantiene il suono (città→città)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'la radio' è:",
-              "opcoes": [
-                "le radios",
-                "le radio",
-                "gli radio"
+                "un",
+                "uno",
+                "una",
+                "il"
               ],
               "resposta": 1,
-              "explicacao": "RESPOSTA: le radio. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6** — Plurale dei nomi in -e:\nla neve / la penna / la mappa",
-              "resposta": "le nevi / le penne / le mappe",
-              "explicacao": "-e diventa -i (neve→nevi). Consonante finale cambia suono: penna→penne, mappa→mappe."
+              "explicacao": "\"studente\" começa por \"st\" (s+consoante). Artigo indefinido masculino diante de s+C → uno, nunca \"un\". Compare: un libro (consoante normal) ≠ uno studente."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale plurale è corretto per 'l'amico'? A:",
+              "pergunta": "Ecco ___ zaini degli studenti universitari.",
               "opcoes": [
-                "le amici",
-                "gli amici",
-                "i amici"
+                "i",
+                "gli",
+                "le",
+                "lo"
               ],
               "resposta": 1,
-              "explicacao": "Amico diventa amici e prende gli perché femminile."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7** — Articolazione con z:\n___ zaino / ___ zoo / ___ zero",
-              "resposta": "lo zaino / lo zoo / lo zero",
-              "explicacao": "LO si usa davanti a s+consonante, z, gn, ps, x, y."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8** — Plurale di psicologo:\nil psicologo / il tecnologo / il geologo",
-              "resposta": "i psicologi / i tecnologi / i geologi",
-              "explicacao": "-ogo diventa -oghi quando persona, ma -ico semplice diventa -ici (psicologo→psicologi)."
+              "explicacao": "\"zaini\" (plural de zaino) começa por z → gli. A regra do singular (z → lo) se mantém no plural: lo zaino → gli zaini."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Il plurale di 'lo gnomo' è:",
+              "pergunta": "Ho incontrato ___ amica di Valentina al mercato.",
               "opcoes": [
-                "gli gnomi",
-                "gli gnomos",
-                "i gnomi"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: gli gnomi. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 9** — Articolazione prima di vocale:\n___ uomo / ___ ora / ___ euro",
-              "resposta": "l'uomo / l'ora / l'euro",
-              "explicacao": "L' davanti a tutte le vocali (o, u, e). Contexto gramatical Lezione I. Explicação pedagógica para o aluno sobre a regra aplicável."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale articolo è corretto per 'acqua'? A:",
-              "opcoes": [
-                "il acqua",
-                "lo acqua",
-                "l'acqua"
-              ],
-              "resposta": 2,
-              "explicacao": "RESPOSTA: l'acqua. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 10** — Articolazione indefinita:\n___ gatto / ___ casa / ___ zuppa",
-              "resposta": "un gatto / una casa / una zuppa",
-              "explicacao": "UN (maschile), UNA (femminile) per singolari."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 11** — Forma contratta:\nio sono / tu sei / lui è / noi siamo / voi siete / sono",
-              "resposta": "Io sono / Tu sei / Lui è / Noi siamo / Voi siete / Essere",
-              "explicacao": "L'essere si contrae: io→i', tu→t', lui/lei→è, noi→n', voi→v'. Io e tu non contraggono."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale verbo è corretto per 'noia'? A:",
-              "opcoes": [
-                "ho noia",
-                "mi ha noia",
-                "avevo la noia"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: ho noia. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 12** — Articolazione con numeri:\nii libro primo / la pagina prima / lo zero vigesimo",
-              "resposta": "Il libro primo / La pagina prima / Lo zero vigesimo",
-              "explicacao": "Articolo determinativo si mantiene anche davanti a numerali ordinales."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si scrive 'la musica' al plurale?",
-              "opcoes": [
-                "le musicas",
-                "le musica",
-                "le musiche"
-              ],
-              "resposta": 2,
-              "explicacao": "-a diventa -e quando la parola finisce con suono nasale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 13** — Plurale di parole straniere:\nla computer / il cinema / la televisione",
-              "resposta": "le computer / i cinema / le televisioni",
-              "explicacao": "Parole inglesi spesso invariabili o -i/-e secondo genere."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'l'arancia' è:",
-              "opcoes": [
-                "le arance",
-                "gli arance",
-                "le arancie"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le arance. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 14** — Genere maschile/femminile:\nll tavolo (maschile) / la sedia (femminile) / lo scaffale (maschile)",
-              "resposta": "Il tavolo è maschile / La sedia è femminile / Lo scaffale è maschile",
-              "explicacao": "-o/-ale indicano maschile, -a indica femminile."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'lo studente':?",
-              "opcoes": [
-                "gli studenti",
-                "le studenti",
-                "i studenti"
-              ],
-              "resposta": 2,
-              "explicacao": "RESPOSTA: i studenti. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 15** — Articolazione corretta:\n___ biblioteca / ___ Università / ___ scuola",
-              "resposta": "La biblioteca / La Università / La scuola",
-              "explicacao": "Tutte e tre sono femminili, quindi LA. Regra articoli: IL masculino consonante, LO s+cons/z/gn/ps/x/y, LA feminino vocale, L' antes VOCALIC. Esempio: libro/il, zaino/lo, amica/la, studio/lo."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'i libri' correttamente?",
-              "opcoes": [
-                "gli libri",
-                "le libri",
-                "i libri"
-              ],
-              "resposta": 2,
-              "explicacao": "Libri è maschile plurale, usa I (non gli che è per -a/-o femminile)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 16** — Plurale irregolare:\nll bambino / il ceto / la mano",
-              "resposta": "i bambini / i ceti / le mani",
-              "explicacao": "-ino diventa -ini (bambino→bambini). Ceti semplice. Mano→mani (-o→-i)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'la rosa' è:",
-              "opcoes": [
-                "le rosas",
-                "le rose",
-                "gli rossi"
+                "una",
+                "un'",
+                "la",
+                "un"
               ],
               "resposta": 1,
-              "explicacao": "RESPOSTA: le rose. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 17** — Articolazione con consonante s:\n___ sport / ___ scienza / ___ scuola",
-              "resposta": "Lo sport / La scienza / La scuola",
-              "explicacao": "LO per maschile, LA per femminile. S+consonante usa lo."
+              "explicacao": "\"amica\" é feminino (fem.) e começa por vogal (a). Art. indef. fem. + vogal → un' (com apóstrofo). \"una\" seria errado porque \"a\" é vogal: una amica → hiato feio → un'amica."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'lo psicologo':?",
+              "pergunta": "Dove sono ___ occhiali di Giorgio? Li vedo ovunque tranne qui!",
               "opcoes": [
-                "le psicologhe",
-                "gli psicologi",
-                "i psicologhi"
+                "i",
+                "gli",
+                "le",
+                "l'"
               ],
               "resposta": 1,
-              "explicacao": "RESPOSTA: gli psicologi. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
+              "explicacao": "\"occhiali\" (plural de occhiale) é masculino e começa por vogal (o) → gli. Regra: masc. plural + vogal → gli (non i). Compare: i libri (consoante) ≠ gli occhiali (vogal)."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Al ristorante, cerco ___ (art. def. masc. pl., \"gn\") gnocchi tradizionali.",
+              "resposta": "gli gnocchi",
+              "dica": "Masc. plural, começa por gn- (como \"gnocchi\")",
+              "explicacao": "gn → artigo \"gli\" (como z, s+C, ps). No singular: lo gnocco → no plural: gli gnocchi. Inclua o artigo na resposta: \"gli gnocchi\".",
+              "variantes": [
+                "gli"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Il paziente ha bisogno di ___ (art. ind. masc. sing., \"ps\") psicologo esperto.",
+              "resposta": "uno psicologo",
+              "dica": "Masc. singular indefinido, começa por ps-",
+              "explicacao": "\"psicologo\" começa por ps → artigo indefinido masc. = uno (não \"un\"). ps, gn, z, s+C → uno (sing.) / gli (pl.).",
+              "variantes": [
+                "uno"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "— Scusa, hai visto dove ho messo ___ (art. def. masc. pl., \"gu\") guanti?",
+              "resposta": "i guanti",
+              "dica": "Masc. pl., \"g\" seguida de \"u\" = consoante normal",
+              "explicacao": "\"gu\" é consoante normal (não é s+C, nem z, nem gn). Portanto: masc. pl. consoante normal → i. Não confunda com \"gli\": gli é só para vogal, z, gn, s+C, ps.",
+              "variantes": [
+                "i"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Questa è ___ (art. def. fem. sing., vogal) università più antica d'Italia.",
+              "resposta": "l'università",
+              "dica": "Feminino singular, começa por vogal",
+              "explicacao": "la + vogal → l' (apóstrofo), tanto para masc. quanto para fem. no singular. \"università\" = fem. + vogal → l'università. No plural: le università (sem apóstrofo).",
+              "variantes": [
+                "l'università",
+                "l'università"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Nel museo, ho visto ___ (art. def. masc. pl., \"s+C\") splendidi affreschi di Giotto.",
+              "resposta": "gli splendidi affreschi",
+              "dica": "Masc. pl., começa por sp- (s+p = s+consoante)",
+              "explicacao": "\"splendidi\" começa por sp- (s seguido de consoante p) → gli. Observe a cadeia: lo sguardo (sing.) → gli sguardi (pl.) / lo splendore → gli splendori.",
+              "variantes": [
+                "gli splendidi",
+                "gli"
+              ]
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 18** — Articolazione con vocale:\n___ italiano / ___ estate / ___ ospedale",
-              "resposta": "L'italiano / L'estate / L'ospedale",
-              "explicacao": "Tutte iniziano con vocale, quindi L'. Contexto gramatical Lezione I. Explicação pedagógica para o aluno sobre a regra aplicável."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'la casa' in plurale?",
-              "opcoes": [
-                "le case",
-                "gli case",
-                "i case"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le case. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
+              "pergunta": "In libreria — completa gli articoli mancanti:\n\n«— Buongiorno! Cerco ___ libro di storia italiana.\n— Certamente. ___ libri di storia sono in fondo a destra.\n— E avete anche ___ dizionario italiano-portoghese?\n— Sì! ___ dizionario che cerca è questo.»",
+              "resposta": "un · i · un · Il",
+              "explicacao": "\"un libro\" = indefinido (sto cercando uno qualsiasi, prima menzione). \"i libri\" = definido plurale (quei libri specifici sullo scaffale). \"un dizionario\" = indefinido (ne cerco uno qualsiasi). \"Il dizionario\" = definido (il preciso che ha chiesto)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 19** — Plurale di -ico:\nii fisico / la medico / lo psichiatra",
-              "resposta": "i fisici / le mediche / i psichiatri",
-              "explicacao": "-ico diventa -ici (fisico→fisici). Medico femminile → mediche."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'l'elettronica' è:",
-              "opcoes": [
-                "le elettroniche",
-                "gli elettroniche",
-                "le electronicos"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le elettroniche. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
+              "pergunta": "Descrizione di una stanza — completa:\n\n«___ tavolo è grande. Sopra ci sono ___ computer portatile e ___ penna rossa. Accanto al tavolo c'è ___ sedia comoda.»",
+              "resposta": "Il · un · una · una",
+              "explicacao": "\"Il tavolo\", \"La sedia\" → definido, perché parliamo di UNA stanza specifica (quella davanti a noi). \"un computer\", \"una penna\" → indefinido, perché non sappiamo ancora di quale oggetto specifico si tratta (prima menzione)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 20** — Articolazione corretta:\n___ problema / la soluzione / lo scenario",
-              "resposta": "Il problema / La soluzione / Lo scenario",
-              "explicacao": "Problema (maschile) = Il. Soluzione (femminile) = La. Scenario (maschile con s) = Lo."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'la carta'?",
-              "opcoes": [
-                "le carte",
-                "i carte",
-                "gli carte"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le carte. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
+              "pergunta": "In aeroporto — completa con l'articolo giusto:\n\n«— Scusi, è ___ studentessa?\n— Sì, studio all'Università di Roma. E lei?\n— Sono ___ ingegnere. Lavoro a Milano. Questo è ___ aeroporto di Malpensa?\n— No, siamo a ___ aeroporto di Fiumicino.»",
+              "resposta": "una · un · l' · l'",
+              "explicacao": "\"una studentessa\", \"un ingegnere\" = indefinido (prima presentazione, non sappiamo ancora chi sono). I due aeroporti: \"l'aeroporto\" = definido + começa por vogal → l' (sia la prima che la seconda volta)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 21** — Plurale di -uma:\nla camera / la natura / la musica",
-              "resposta": "le camere / le nature / le musiche",
-              "explicacao": "-a diventa -e (camera→camere). Natura mantiene suono (-t-). Musica → Musiche."
+              "pergunta": "Persone in piazza — completa:\n\n«Guarda: ___ ragazzo alto è Marco. È ___ studente di ingegneria. ___ ragazza vicino a lui è ___ sua amica di università.»",
+              "resposta": "il · uno · La · la",
+              "explicacao": "\"il ragazzo\" = definido (lo vediamo). \"uno studente\" = professione con art. ind.: uno (s+C). \"La ragazza\" = defin., la vediamo. \"la sua amica\" = possessivo + defin. (con i possessivi italiani il/la sono quasi sempre obbligatori)."
             },
             {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'i cani' correttamente?",
-              "opcoes": [
-                "gli cani",
-                "le cani",
-                "i cani"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: gli cani. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 22** — Articolazione con i:\n___ giardino / la piscina / lo stadio",
-              "resposta": "Il giardino / La piscina / Lo stadio",
-              "explicacao": "Tutte con articoli corrispondenti al genere."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'il sole' è:",
-              "opcoes": [
-                "li soli",
-                "i soli",
-                "le soli"
-              ],
-              "resposta": 1,
-              "explicacao": "RESPOSTA: i soli. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 23** — Plurale di -o finale:\nla foto / il voto / il polo",
-              "resposta": "le foto / i voti / i poli",
-              "explicacao": "Foto invariabile. Voto → Voti (-o→-i). Polo → Poli (-o→-i)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'lo studio':?",
-              "opcoes": [
-                "gli studi",
-                "le studi",
-                "i studii"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: gli studi. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 24** — Articolazione con consonante:\n___ ponte / la strada / il confine",
-              "resposta": "Il ponte / La strada / Il confine",
-              "explicacao": "Tutti maschili, quindi IL. Regra articoli: IL masculino consonante, LO s+cons/z/gn/ps/x/y, LA feminino vocale, L' antes VOCALIC. Esempio: libro/il, zaino/lo, amica/la, studio/lo."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'i fiori' correttamente?",
-              "opcoes": [
-                "le fiori",
-                "gli fiori",
-                "i fiori"
-              ],
-              "resposta": 2,
-              "explicacao": "RESPOSTA: i fiori. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 25** — Plurale di nomi composti:\nla mamma / il papà / lo zio",
-              "resposta": "le mamme / i papà / gli zii",
-              "explicacao": "Mamma→Mamme, Papà→Papà (invariabile), Zio→Zii."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'la banca' è:",
-              "opcoes": [
-                "le banche",
-                "gli banche",
-                "i banche"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le banche. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 26** — Articolazione con i:\n___ ufficio / la stanza / lo schermo",
-              "resposta": "L'ufficio / La stanza / Lo schermo",
-              "explicacao": "Ufficio inizia con vocale → L'. Stanza e Schermo sono maschili/femminili."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'la festa':?",
-              "opcoes": [
-                "le feste",
-                "i feste",
-                "gli feste"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: le feste. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 27** — Plurale di -io:\nla radio / il piano / lo studio",
-              "resposta": "le radios / i piani / gli studi",
-              "explicacao": "Radio invariabile. Piano → Piani (-o→-i). Studio (in alcuni casi) → Studi."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'il tempo' al plurale?",
-              "opcoes": [
-                "i tempi",
-                "le tempi",
-                "gli tempi"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: i tempi. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 28** — Articolazione con i:\n___ negozio / la piazza / lo schermo",
-              "resposta": "Il negozio / La piazza / Lo schermo",
-              "explicacao": "Negozio (maschile) = Il. Piazza (femminile) = La."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Il plurale di 'il medico' è:",
-              "opcoes": [
-                "i medici",
-                "gli medici",
-                "le mediche"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: i medici. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 29** — Plurale di -e finale:\nla legge / la pelle / la chiave",
-              "resposta": "le leggi / le pelli / le chiavi",
-              "explicacao": "-e diventa -i (legge→leggi). Pelle → Pelli (-e→-i). Chiave → Chiavi (-e→-i)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'lo zucchero':?",
-              "opcoes": [
-                "gli zuccheri",
-                "le zuccheri",
-                "i zuccheri"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: gli zuccheri. Regra de artigo/plural aplicada. Outras opções incorretas por [motivo]."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "La borsa e il zaino sono pieno.",
-                "La borsa e lo zaino sono pieni.",
-                "La borsa e lo zaino e pieni."
-              ],
-              "resposta": 1,
-              "explicacao": "Con due soggetti → verbo al plurale: SONO. Zaino inizia con z → LO zaino. Pieni: maschile plurale (accordo con il sostantivo maschile zaino)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "La porta e la finestra sono chiusi.",
-                "La porta e la finestra sono chiuso.",
-                "La porta e la finestra sono chiuse."
-              ],
-              "resposta": 2,
-              "explicacao": "Porta e finestra sono femminili → aggettivo femminile plurale: **chiuse**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Io ho un'amico italiano.",
-                "Io o un amico italiano.",
-                "Io ho un amico italiano."
-              ],
-              "resposta": 2,
-              "explicacao": "Amico è maschile → si usa **un** (non un'). Un' è solo per femminili davanti a vocale (un'amica)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Queste frasi sono facile.",
-                "Queste frasi sono facili.",
-                "Questi frasi sono facili."
-              ],
-              "resposta": 1,
-              "explicacao": "Frasi è femminile plurale → **Queste** (non questi) e **facili** (plurale)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Il ristorante è bene.",
-                "Il ristorante è buono.",
-                "Lo ristorante è bene."
-              ],
-              "resposta": 1,
-              "explicacao": "'Bene' è avverbio (parla bene). 'Buono' è aggettivo di qualità. Il ristorante è **buono**. Articolo: IL (ristorante inizia con r)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "La gente sono gentile.",
-                "La gente sono gentili.",
-                "La gente è gentile."
-              ],
-              "resposta": 2,
-              "explicacao": "'Gente' è sostantivo collettivo singolare → verbo al singolare: **è**. Aggettivo singolare: **gentile**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Lo sbaglio e non grave.",
-                "Il sbaglio non è grave.",
-                "Lo sbaglio non è grave."
-              ],
-              "resposta": 2,
-              "explicacao": "Sbaglio inizia con sb (s + consonante) → **LO**. La negazione **non** va prima del verbo: non è (non: è non)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Le citte sono sporche e rumorose.",
-                "Le città sono sporche e rumorose.",
-                "Le cità sono sporche e rumorose."
-              ],
-              "resposta": 1,
-              "explicacao": "Città è invariabile al plurale: **le città** (non citte né cità). I nomi in **-tà** non cambiano."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Io ho non soldi.",
-                "Io non ho soldi.",
-                "Io ha non soldi."
-              ],
-              "resposta": 1,
-              "explicacao": "La negazione **non** va immediatamente prima del verbo: io **non ho**. 'Ha' è la forma di lui/lei, non di io."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "I studenti sono stranieri.",
-                "Gli estudenti sono stranieri.",
-                "Gli studenti sono stranieri."
-              ],
-              "resposta": 2,
-              "explicacao": "Studenti inizia con st (s + consonante) → articolo plurale: **GLI**. 'Estudenti' non esiste in italiano."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Sono uno studente della Germania.",
-                "Sono uno studente di Germania.",
-                "Sono uno studente tedesco."
-              ],
-              "resposta": 2,
-              "explicacao": "Per indicare nazionalità si usa l'aggettivo: **tedesco**. 'Della Germania' o 'di Germania' sono forme scorrette per esprimere nazionalità."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Questa canzone è bella.",
-                "Queste canzone è bella.",
-                "Queste canzone e belle."
-              ],
-              "resposta": 0,
-              "explicacao": "Canzone è femminile singolare → **Questa** canzone **è** bella. 'Queste' è plurale e non concorda con il singolare."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Non c'è stanze grandi.",
-                "Non ci sono stanze grandi.",
-                "Non ci sono stanze grande."
-              ],
-              "resposta": 1,
-              "explicacao": "**Ci sono** con il plurale. Stanze grandi: aggettivo femminile plurale. 'C'è' è solo per il singolare."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Maria è un'amica di Cristina.",
-                "Maria è un amica di Cristina.",
-                "Maria è una amica di Cristina."
-              ],
-              "resposta": 0,
-              "explicacao": "Amica è femminile e inizia con vocale → **un'amica** (con apostrofo). 'Una amica' si elide obbligatoriamente davanti a vocale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Il orologio è fermo.",
-                "L'orologio è fermo.",
-                "Lo orologio è fermo."
-              ],
-              "resposta": 1,
-              "explicacao": "Orologio è maschile e inizia con vocale → **L'orologio** (elisione). 'Il orologio' e 'Lo orologio' sono scorretti davanti a vocale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Il zio italiano.»",
-              "resposta": "Lo zio italiano.",
-              "explicacao": "Zio inizia con z → si usa **LO** (non il). Lo zio / gli zii."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Un'orologio svizzero.»",
-              "resposta": "Un orologio svizzero.",
-              "explicacao": "Orologio è **maschile**. Un' si usa solo per femminili davanti a vocale (un'ora, un'idea). Corretto: **UN** orologio."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Le spiegazioni sono facile.»",
-              "resposta": "Le spiegazioni sono facili.",
-              "explicacao": "L'aggettivo concorda con il sostantivo: spiegazioni (femminile plurale) → **facili** (plurale)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Il autobus non è puntuale.»",
-              "resposta": "L'autobus non è puntuale.",
-              "explicacao": "Autobus inizia con vocale → **L'autobus** (elisione). 'Il' si usa solo davanti a consonante."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Il scherzo è divertente.»",
-              "resposta": "Lo scherzo è divertente.",
-              "explicacao": "Scherzo inizia con sch (s + consonante) → **LO** scherzo. Plurale: gli scherzi."
+              "tipo": "digitar",
+              "pergunta": "Traduci in italiano: \"A professora de italiano está com os alunos no laboratório.\"",
+              "resposta": "La professoressa di italiano è con gli studenti in laboratorio.",
+              "dica": "professoressa = fem. sing. consoante; studenti = masc. pl. s+C",
+              "explicacao": "\"La professoressa\" (fem. def., consoante normal → la). \"gli studenti\" (masc. pl., \"st\" = s+consoante → gli). \"in laboratorio\" sem artigo: lugar genérico com \"in\" normalmente não tem artigo.",
+              "variantes": [
+                "La professoressa di italiano è con gli studenti nel laboratorio."
+              ]
             }
           ],
-          "alerta": "Esta lição contém os três pilares de toda frase italiana: o nome com seu gênero, o artigo que o acompanha, e o adjetivo que o qualifica. Dominar estas três estruturas é a base de 80% do vocabulário cotidiano.",
+          "alerta": "Sem artigo correto, um italiano entende o que você diz — mas sabe imediatamente que você é estrangeiro. O artigo é o primeiro teste visível do seu italiano.",
           "inventario": [
-            "Nome (sostantivo): masculino (-o → -i) ou feminino (-a → -e) no plural",
-            "Nome em -e: único plural possível é -i, para ambos os gêneros",
-            "Artigo determinativo: il / lo / l' / la / i / gli / le",
-            "Artigo indeterminativo: un / uno / una / un'",
-            "Aggettivo variável em gênero e número: rosso / rossa / rossi / rosse",
-            "Aggettivo variável só no número: grande → grandi",
-            "Aggettivo invariável: blu, rosa, viola (não muda nunca)",
-            "Verbo ESSERE: io sono / tu sei / lui-lei è / noi siamo / voi siete / loro sono",
-            "C'è (há, singular) / Ci sono (há, plural)"
+            "Gênero dos nomes: masculino (il libro) e feminino (la penna)",
+            "Artigos definidos singulares: il · lo · la · l'",
+            "Artigos definidos plurais: i · gli · le",
+            "Artigos indefinidos: un · uno · una · un'",
+            "Acordo do adjetivo com o nome"
           ],
           "definicao": {
-            "fenomeno": "Na sua cidade você vê: *un libro* sobre a mesa, *la studentessa* estudando, *gli zaini* no chão. Cada coisa tem um nome — e esse nome vem sempre acompanhado de um artigo que muda conforme o gênero e o número do objeto.",
-            "causa": "O que determina qual artigo usar? Qual é o plural de *il libro*? E de *lo studente*? Por que *la chiave* vira *le chiavi* mas *il padre* vira *i padri*? Quem decide essa forma?",
-            "conceito": "O **gênero** (masculino/feminino) e a **terminação** do nome determinam o artigo e o plural. Regra central: **-o → -i** (m.), **-a → -e** (f.), **-e → -i** (m. e f.). O artigo segue o gênero e a letra inicial da palavra seguinte."
+            "fenomeno": "Il ragazzo studia. La ragazza studia. Lo studente studia.",
+            "causa": "Por que \"il\", \"la\" e \"lo\" para pessoas que fazem a mesma coisa?",
+            "conceito": "O artigo concorda em gênero (masc./fem.) e número (sing./pl.) com o nome. A escolha entre il/lo/la depende também do som inicial da palavra."
           },
-          "tecnica": "**Como descobrir o gênero e o plural de qualquer nome:**\n\n1. Olhe a terminação: **-o** → masculino → plural **-i** | **-a** → feminino → plural **-e** | **-e** → veja o dicionário → plural **-i**\n2. Para o artigo determinativo: masculino singular com vogal → **l'** | com s+consoante, z, gn → **lo** | demais → **il**\n3. Para o artigo indeterminativo: masculino com vogal → **un** (sem apóstrofe!) | com s+cons., z → **uno** | demais → **un**\n4. Para o adjetivo: concorda em gênero e número com o nome → use a mesma lógica de terminação\n5. Para c'è / ci sono: **c'è** + singular | **ci sono** + plural",
+          "tecnica": "1. Determine o gênero do nome (masc. ou fem.).\n2. Observe a letra inicial da palavra.\n3. Masc. sing.: consoante normal → il | s+consoante, z, gn, ps → lo | vogal → l'.\n4. Fem. sing.: consoante → la | vogal → l'.\n5. No plural: il→i · lo→gli · la→le · l'→i (masc.) ou le (fem.).",
           "exemplos_prc": [
             {
-              "oracao": "Lo studente studia; gli studenti studiano.",
-              "pergunta": "Que artigo usa *studente* no singular? E no plural? Por que *lo* e não *il*?",
-              "resposta": "lo (começa com st- = s + consoante) → gli no plural",
-              "conclusao": "s + consoante → lo (sg.) / gli (pl.)"
+              "oracao": "Il libro è sul tavolo.",
+              "pergunta": "Por que \"il\" e não \"lo\" ou \"la\"?",
+              "resposta": "\"libro\" é masculino e começa por consoante normal (l)",
+              "conclusao": "Masc. sing. + consoante normal → il."
             },
             {
-              "oracao": "L'ufficio è grande; gli uffici sono grandi.",
-              "pergunta": "Por que o artigo é *l'* e não *il* ou *lo*? E por que o plural é *gli*?",
-              "resposta": "ufficio começa com vogal (u) → l' no singular, gli no plural",
-              "conclusao": "vogal → l' (sg.) / gli (pl.) para masculinos"
+              "oracao": "Lo studente legge.",
+              "pergunta": "Por que \"lo\" e não \"il\"?",
+              "resposta": "\"studente\" começa por \"st\" — s seguido de consoante (t)",
+              "conclusao": "Masc. sing. + s+consoante → lo (nunca il)."
             },
             {
-              "oracao": "Una chiave, un'ora — sono articoli indeterminativi.",
-              "pergunta": "Por que *un'* tem apóstrofe e *una* não? Qual é a regra?",
-              "resposta": "un' é usado antes de palavra feminina que começa com vogal",
-              "conclusao": "feminino + vogal → un' | feminino + consoante → una"
+              "oracao": "Gli zaini sono pesanti.",
+              "pergunta": "Por que \"gli\" no plural de \"zaino\"?",
+              "resposta": "\"zaino\" começa por z → no sing. é \"lo zaino\", no plural → gli",
+              "conclusao": "lo → gli no plural. z, gn, s+C, ps → gli."
             },
             {
-              "oracao": "C'è un libro sul tavolo. Ci sono dei libri sul tavolo.",
-              "pergunta": "Quando uso *c'è* e quando uso *ci sono*?",
-              "resposta": "c'è para um único objeto (singular); ci sono para vários (plural)",
-              "conclusao": "c'è + singular | ci sono + plural"
+              "oracao": "Un'amica di Marco abita qui.",
+              "pergunta": "Por que \"un'\" e não \"una\"?",
+              "resposta": "\"amica\" é feminino e começa por vogal (a)",
+              "conclusao": "Art. indef. fem. + vogal: una → un' (con apostrofo)."
             }
           ],
-          "ponte": "**Em português:** 'o livro / os livros / a lição / as lições' — o artigo **concorda** com o nome.\n\n**Em italiano:** a mesma lógica, mas com **7 formas** de artigo determinativo (il, lo, l', la, i, gli, le) contra apenas 4 do português (o, a, os, as). A variação extra em italiano depende da **letra inicial** da palavra seguinte, não apenas do gênero.\n\n**Armadilha:** *lo* nunca existe em português — em italiano ele aparece antes de z, s+cons., gn, ps, x, y. Memorize os contextos de *lo/gli* como um bloco separado.",
-          "coda": "O aluno que decorar apenas as tabelas e não treinar com exemplos reais saberá as regras mas não conseguirá usá-las. Faça os exercícios acima antes de prosseguir."
+          "ponte": "Em português: \"o menino / a menina\" = em italiano \"il ragazzo / la ragazza\" — a lógica é a mesma. Mas cuidado com as exceções: *il problema* (não \"la\", é masc.), *la mano* (não \"il\", é fem.), *il cinema* (masc.). Outro perigo: em português \"um estudante / uma estudante\" — em italiano o artigo indefinido também muda: *uno studente* (não \"un\", por causa do \"st\").",
+          "coda": "A partir de hoje, cada palavra nova que aprender: memorize COM o artigo. Não \"gatto\" — mas \"il gatto\". Não \"università\" — mas \"l'università\". O artigo é parte do vocabulário.",
+          "nivel": "A1"
         },
         {
           "id": "a1-lez2",
           "num": "Lezione II",
           "titulo": "Il presente indicativo",
-          "subtitulo": "Verbi regolari e irregolari",
-          "teoria": "**A. Il presente indicativo dei verbi regolari**\n\n<table class=\"gram-table gram-table-rich\">\n<thead>\n<tr><th></th><th>I (-ARE)<br><em>guardare</em></th><th>II (-ERE)<br><em>vivere</em></th><th>III (-IRE)<br><em>aprire</em></th><th>III (-IRE)<br><em>finire</em></th></tr>\n</thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>guardo</td><td>vivo</td><td>apro</td><td>finisco</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>guardi</td><td>vivi</td><td>apri</td><td>finisci</td></tr>\n<tr><td class=\"gram-art\">lui / lei / Lei</td><td>guarda</td><td>vive</td><td>apre</td><td>finisce</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>guardiamo</td><td>viviamo</td><td>apriamo</td><td>finiamo</td></tr>\n<tr><td class=\"gram-art\">voi</td><td>guardate</td><td>vivete</td><td>aprite</td><td>finite</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>guardano</td><td>vivono</td><td>aprono</td><td>finiscono</td></tr>\n</tbody></table>\n\n**Regola:** Verbi in **-IRE** tipo *finire* aggiungono **-isc-** nelle forme singolari e in *loro* (finisco, finisci, finisce, finiscono). Verbi tipo *aprire* no (apro, apri, apre, aprono).\n\n**B. Verbi in -CARE e -GARE**\n\n<table class=\"gram-table gram-table-rich\">\n<thead>\n<tr><th></th><th><em>parlare</em></th><th><em>cercare</em></th><th><em>pagare</em></th></tr>\n</thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>parlo</td><td>cerco</td><td>pago</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>parli</td><td><strong>cerchi</strong></td><td><strong>paghi</strong></td></tr>\n<tr><td class=\"gram-art\">lui / lei</td><td>parla</td><td>cerca</td><td>paga</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>parliamo</td><td><strong>cerchiamo</strong></td><td><strong>paghiamo</strong></td></tr>\n<tr><td class=\"gram-art\">voi</td><td>parlate</td><td>cercate</td><td>pagate</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>parlano</td><td>cercano</td><td>pagano</td></tr>\n</tbody></table>\n\n**Regola:** Verbi in **-CARE** e **-GARE** mantengono il suono duro aggiungendo **h** davanti a **-i** (tu cerchi / noi cerchiamo; tu paghi / noi paghiamo).\n\n**C. Verbi ESSERE e AVERE**\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th>persona</th><th>ESSERE</th><th>AVERE</th></tr></thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>sono</td><td>ho</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>sei</td><td>hai</td></tr>\n<tr><td class=\"gram-art\">lui / lei / Lei</td><td>è</td><td>ha</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>siamo</td><td>abbiamo</td></tr>\n<tr><td class=\"gram-art\">voi</td><td>siete</td><td>avete</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>sono</td><td>hanno</td></tr>\n</tbody></table>\n\n**D. Verbi irregolari al presente**\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th></th><th><em>fare</em></th><th><em>sapere</em></th><th><em>bere</em></th><th><em>stare</em></th></tr></thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>faccio</td><td>so</td><td>bevo</td><td>sto</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>fai</td><td>sai</td><td>bevi</td><td>stai</td></tr>\n<tr><td class=\"gram-art\">lui / lei</td><td>fa</td><td>sa</td><td>beve</td><td>sta</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>facciamo</td><td>sappiamo</td><td>beviamo</td><td>stiamo</td></tr>\n<tr><td class=\"gram-art\">voi</td><td>fate</td><td>sapete</td><td>bevete</td><td>state</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>fanno</td><td>sanno</td><td>bevono</td><td>stanno</td></tr>\n</tbody></table>\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th></th><th><em>venire</em></th><th><em>andare</em></th><th><em>dovere</em></th><th><em>potere</em></th><th><em>volere</em></th></tr></thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>vengo</td><td>vado</td><td>devo</td><td>posso</td><td>voglio</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>vieni</td><td>vai</td><td>devi</td><td>puoi</td><td>vuoi</td></tr>\n<tr><td class=\"gram-art\">lui / lei</td><td>viene</td><td>va</td><td>deve</td><td>può</td><td>vuole</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>veniamo</td><td>andiamo</td><td>dobbiamo</td><td>possiamo</td><td>vogliamo</td></tr>\n<tr><td class=\"gram-art\">voi</td><td>venite</td><td>andate</td><td>dovete</td><td>potete</td><td>volete</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>vengono</td><td>vanno</td><td>devono</td><td>possono</td><td>vogliono</td></tr>\n</tbody></table>\n\n<table class=\"gram-table gram-table-rich\">\n<thead><tr><th></th><th><em>dire</em></th><th><em>uscire</em></th><th><em>salire</em></th><th><em>scegliere</em></th></tr></thead>\n<tbody>\n<tr><td class=\"gram-art\">io</td><td>dico</td><td>esco</td><td>salgo</td><td>scelgo</td></tr>\n<tr><td class=\"gram-art\">tu</td><td>dici</td><td>esci</td><td>sali</td><td>scegli</td></tr>\n<tr><td class=\"gram-art\">lui / lei</td><td>dice</td><td>esce</td><td>sale</td><td>sceglie</td></tr>\n<tr><td class=\"gram-art\">noi</td><td>diciamo</td><td>usciamo</td><td>saliamo</td><td>scegliamo</td></tr>\n<tr><td class=\"gram-art\">voi</td><td>dite</td><td>uscite</td><td>salite</td><td>scegliete</td></tr>\n<tr><td class=\"gram-art\">loro</td><td>dicono</td><td>escono</td><td>salgono</td><td>scelgono</td></tr>\n</tbody></table>\n\n**E. Vocabolario sistematico**\n\n**I giorni della settimana:** lunedì, martedì, mercoledì, giovedì, venerdì, sabato, domenica.\n\n**I mesi dell'anno:** gennaio, febbraio, marzo, aprile, maggio, giugno, luglio, agosto, settembre, ottobre, novembre, dicembre.\n\n**I numeri ordinali:**\n\n| | | |\n|-|-|-|\n| 1° primo/a | 2° secondo/a | 3° terzo/a |\n| 4° quarto/a | 5° quinto/a | 6° sesto/a |\n| 7° settimo/a | 8° ottavo/a | 9° nono/a |\n| 10° decimo/a | 11° undicesimo/a | 12° dodicesimo/a |\n\n**F. C'è / Ci sono — uso in contesto**\n\nChe cosa **c'è** sul tavolo? → Sul tavolo **c'è** il libro.\nDov'è il libro? → Il libro **è** sul tavolo.\n\nChi **ci sono** nella classe? → Nella classe **ci sono** gli studenti.\nDove sono gli studenti? → Gli studenti **sono** nella classe.",
-          "exemplos": [
-            {
-              "it": "Io guardo la televisione. Tu guardi un film. Lei guarda le notizie.",
-              "pt": "Eu assisto televisão. Você assiste um filme. Ela assiste as notícias."
-            },
-            {
-              "it": "Noi cerchiamo casa. Voi pagate il conto. Loro mangiano al ristorante.",
-              "pt": "Nós procuramos casa. Vocês pagam a conta. Eles comem no restaurante."
-            },
-            {
-              "it": "Io ho vent'anni. Tu hai fame? Lei ha fretta.",
-              "pt": "Eu tenho vinte anos. Você está com fome? Ela está com pressa."
-            },
-            {
-              "it": "Dove vai? Vado a casa. Cosa fai stasera? Non so ancora.",
-              "pt": "Onde você vai? Vou para casa. O que você faz esta noite? Ainda não sei."
-            },
-            {
-              "it": "Oggi è lunedì. Domani è martedì. Siamo nel mese di maggio.",
-              "pt": "Hoje é segunda-feira. Amanhã é terça-feira. Estamos no mês de maio."
-            }
-          ],
+          "subtitulo": "L'azione nel momento presente",
           "exercicios": [
             {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1** — Trasformare secondo il soggetto indicato:\n\n1. Maria accompagna i bambini a scuola. → *noi*\n2. Luisa saluta i suoi amici. → *io / tu / voi*\n3. La segretaria entra in classe. → *io / tu / noi / voi / loro*\n4. Il direttore chiama la studentessa. → *io / tu / noi / voi / loro*\n5. Incontro gli amici al bar. → *lei / noi / voi / loro*\n6. Mario studia a Roma. → *io / tu / noi / voi / loro*\n7. Tu aspetti l'autobus. → *lui / noi / voi / loro*\n8. Leggi un libro. → *voi / loro*\n9. Voi scrivete l'esercizio sul quaderno. → *lei / io / noi*\n10. Apro il negozio alle sette. → *tu / lui / noi / voi / loro*\n11. Carlo riceve molte lettere. → *io / tu / noi / voi / loro*\n12. Butto via i vestiti vecchi. → *lei / noi / tu / voi / loro*",
-              "resposta": "1. Noi accompagniamo i bambini a scuola.\n2. Io saluto i miei amici. / Tu saluti i tuoi amici. / Voi salutate i vostri amici.\n3. Io entro / tu entri / noi entriamo / voi entrate / loro entrano in classe.\n4. Io chiamo / tu chiami / noi chiamiamo / voi chiamate / loro chiamano la studentessa.\n5. Lei incontra / noi incontriamo / voi incontrate / loro incontrano gli amici al bar.\n6. Io studio / tu studi / noi studiamo / voi studiate / loro studiano a Roma.\n7. Lui aspetta / noi aspettiamo / voi aspettate / loro aspettano l'autobus.\n8. Voi leggete / loro leggono un libro.\n9. Lei scrive / io scrivo / noi scriviamo l'esercizio sul quaderno.\n10. Tu apri / lui apre / noi apriamo / voi aprite / loro aprono il negozio alle sette.\n11. Io ricevo / tu ricevi / noi riceviamo / voi ricevete / loro ricevono molte lettere.\n12. Lei butta / noi buttiamo / tu butti / voi buttate / loro buttano via i vestiti vecchi.",
-              "explicacao": "Verbi -ARE: -o/-i/-a/-iamo/-ate/-ano. Verbi -ERE: -o/-i/-e/-iamo/-ete/-ono. Verbi -IRE (tipo aprire): -o/-i/-e/-iamo/-ite/-ono. Studiare → studi (non studii)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2** — Come il precedente. Trasformare:\n\n1. Cambia la tua vecchia automobile. → *io / noi / loro*\n2. Non capisco la spiegazione dell'insegnante. → *lei / noi / loro*\n3. Loro comprano la frutta al mercato. → *io / tu / voi*\n4. Luisa copia le frasi sul quaderno. → *io / voi / noi*\n5. La professoressa corregge le frasi sbagliate. → *io / tu / voi / loro*\n6. Io desidero salutare Antonio. → *lei / noi / loro*\n7. Dimentico spesso le chiavi di casa. → *voi / tu / loro*\n8. Michele dipinge da molti anni. → *io / tu / loro*\n9. Anna divide la camera con una ragazza brasiliana. → *io / noi / loro*\n10. Noi finiamo di studiare alle cinque. → *voi / loro / tu*\n11. Io firmo un assegno. → *tu / lei / loro*\n12. Lei fissa l'appuntamento con Giorgio al bar. → *io / noi / loro*",
-              "resposta": "1. Io cambio / noi cambiamo / loro cambiano la loro vecchia automobile.\n2. Lei non capisce / noi non capiamo / loro non capiscono la spiegazione.\n3. Io compro / tu compri / voi comprate la frutta al mercato.\n4. Io copio / voi copiate / noi copiamo le frasi sul quaderno.\n5. Io correggo / tu correggi / voi correggete / loro correggono le frasi sbagliate.\n6. Lei desidera / noi desideriamo / loro desiderano salutare Antonio.\n7. Voi dimenticate / tu dimentichi / loro dimenticano spesso le chiavi di casa.\n8. Io dipingo / tu dipingi / loro dipingono da molti anni.\n9. Io divido / noi dividiamo / loro dividono la camera.\n10. Voi finite / loro finiscono / tu finisci di studiare alle cinque.\n11. Tu firmi / lei firma / loro firmano un assegno.\n12. Io fisso / noi fissiamo / loro fissano l'appuntamento con Giorgio al bar.",
-              "explicacao": "Capire (tipo -isc): capisco/capisci/capisce/capiamo/capite/capiscono. Correggere→correggo/correggi/corregge. Dipingere→dipingo/dipingi/dipinge."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3** — Trasformare:\n\n1. Guardo la televisione. → *lei / voi / noi*\n2. Lei non guida la macchina. → *io / loro / voi*\n3. Spendiamo molti soldi a Firenze. → *io / voi / loro*\n4. Parto per gli Stati Uniti. → *noi / voi / loro*\n5. Anna suona la chitarra. → *noi / io / voi*\n6. Rispondo alla tua domanda. → *noi / loro*\n7. Pietro non capisce queste parole. → *tu / noi / loro*\n8. Ogni giorno pranzo a casa. → *noi / voi / loro*\n9. Conosco molto bene sua moglie. → *noi / voi / loro*\n10. Preferisco restare a casa. → *voi / noi / loro*\n11. Regalo dei fiori a quella ragazza. → *noi / tu / loro*\n12. Preparo la cena per i miei amici. → *voi / lei*",
-              "resposta": "1. Lei guarda / voi guardate / noi guardiamo la televisione.\n2. Io non guido / loro non guidano / voi non guidate la macchina.\n3. Io spendo / voi spendete / loro spendono molti soldi a Firenze.\n4. Noi partiamo / voi partite / loro partono per gli Stati Uniti.\n5. Noi suoniamo / io suono / voi suonate la chitarra.\n6. Noi rispondiamo / loro rispondono alla tua domanda.\n7. Tu non capisci / noi non capiamo / loro non capiscono queste parole.\n8. Noi pranziamo / voi pranzate / loro pranzano a casa ogni giorno.\n9. Noi conosciamo / voi conoscete / loro conoscono molto bene sua moglie.\n10. Voi preferite / noi preferiamo / loro preferiscono restare a casa.\n11. Noi regaliamo / tu regali / loro regalano dei fiori a quella ragazza.\n12. Voi preparate / lei prepara la cena per i suoi amici.",
-              "explicacao": "Preferire (tipo -isc): preferisco/preferisci/preferisce/preferiamo/preferite/preferiscono. Conoscere→conosco/conosci/conosce. Spendere→spendo/spendi/spende."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4** — Come il precedente:\n\n1. Spiego il presente allo studente. → *tu / noi / voi*\n2. Cerco le chiavi di casa. → *tu / noi / lei*\n3. Offriamo la cena agli amici. → *voi / tu*\n4. Telefona a Paolo una volta al giorno. → *io / tu / noi / voi / loro*\n5. Spedisco la lettera per via aerea. → *tu / lei / noi / voi / loro*\n6. Pagate il conto. → *io / tu / lui / noi / loro*\n7. Dormo nove ore al giorno. → *tu / lui / noi / voi / loro*\n8. Cucino gli spaghetti. → *tu / lei / noi / voi / loro*\n9. Apro la finestra. → *tu / lei / noi / voi / loro*\n10. Rispondo al professore. → *tu / lui / noi / voi / loro*\n11. Cantiamo una canzone. → *io / tu / voi / loro*\n12. Vedo Luisa al bar. → *tu / lei / noi / voi / loro*",
-              "resposta": "1. Tu spieghi / noi spieghiamo / voi spiegate il presente allo studente.\n2. Tu cerchi / noi cerchiamo / lei cerca le chiavi di casa.\n3. Voi offrite / tu offri la cena agli amici.\n4. Io telefono / tu telefoni / noi telefoniamo / voi telefonate / loro telefonano a Paolo.\n5. Tu spedisci / lei spedisce / noi spediamo / voi spedite / loro spediscono la lettera.\n6. Io pago / tu paghi / lui paga / noi paghiamo / loro pagano il conto.\n7. Tu dormi / lui dorme / noi dormiamo / voi dormite / loro dormono nove ore al giorno.\n8. Tu cucini / lei cucina / noi cuciniamo / voi cucinate / loro cucinano gli spaghetti.\n9. Tu apri / lei apre / noi apriamo / voi aprite / loro aprono la finestra.\n10. Tu rispondi / lui risponde / noi rispondiamo / voi rispondete / loro rispondono al professore.\n11. Io canto / tu canti / voi cantate / loro cantano una canzone.\n12. Tu vedi / lei vede / noi vediamo / voi vedete / loro vedono Luisa al bar.",
-              "explicacao": "Spiegare→spieghiamo (mant. suono duro). Cercare→cerchi/cerchiamo (h davanti a -i). Pagare→paghi/paghiamo. Spedire (tipo -isc): spedisco/spedisci/spedisce/spediamo/spedite/spediscono."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Volgere al presente (coniugare il verbo tra parentesi):\n\n1. Io (andare) a scuola per imparare l'italiano.\n2. Luigi (mangiare) poco perché (non volere) ingrassare.\n3. Quale (essere) il tuo libro?\n4. Roberto e Laura (rimanere) a Firenze.\n5. Io (lavorare) in un ufficio.\n6. Lucia (uscire) con gli amici.\n7. (Noi / comprare) questo orologio per Lucia.\n8. Oggi (io / dovere) studiare i verbi irregolari.\n9. I miei fratelli (stare) molto bene.\n10. Questo bambino (dire) sempre la verità.\n11. (Noi / salire) su quest'autobus o su quell'altro?",
-              "resposta": "1. vado\n2. mangia / non vuole\n3. è\n4. rimangono\n5. lavoro\n6. esce\n7. compriamo\n8. devo\n9. stanno\n10. dice\n11. Saliamo",
-              "explicacao": "Andare→vado/vai/va/andiamo/andate/vanno. Volere→voglio/vuoi/vuole. Rimanere→rimango/rimani/rimane/rimaniamo/rimanete/rimangono. Uscire→esco/esci/esce/usciamo/uscite/escono. Stare→sto/stai/sta/stiamo/state/stanno."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6** — Come il precedente:\n\n1. Signorina, (fumare)?\n2. (Voi / volere) una tazza di tè?\n3. Anna, (noi / venire) subito!\n4. (Noi / tradurre) questa frase in italiano.\n5. Massimo e io (cercare) una casa in campagna.\n6. Professore, (io / non capire) cosa (Lei / dire).\n7. Carlo e Marisa (viaggiare) molto in estate.\n8. (Io / finire) di pranzare alle due.\n9. Chi (abitare) in questa casa?\n10. Laura (non sapere) il nostro indirizzo.\n11. Che cosa (tu / cercare)?\n12. Oggi (io / essere) contento perché (arrivare) Carlo e Marta.",
-              "resposta": "1. fuma\n2. volete\n3. veniamo\n4. traduciamo\n5. cerchiamo\n6. non capisco / dice\n7. viaggiano\n8. finisco\n9. abita\n10. non sa\n11. cerchi\n12. sono / arriva",
-              "explicacao": "Venire→vengo/vieni/viene/veniamo/venite/vengono. Tradurre→traduco/traduci/traduce/traduciamo/traducete/traducono. Cercare→cerchiamo (h). Finire (tipo -isc): finisco."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7** — Come il precedente:\n\n1. Signorina, (capire) quando (io / parlare) italiano?\n2. (Io / vivere) a Firenze da due settimane.\n3. (Tu / avere) una sigaretta, per favore?\n4. (Io / aprire) la finestra perché (fare) molto caldo.\n5. Luca e Donatella (abitare) in una casa molto grande.\n6. (Noi / leggere) questo libro in classe.\n7. (Io / frequentare) una scuola di musica.\n8. Quale vino (voi / bere) a tavola?\n9. Silvio (ascoltare) la radio mentre (lavorare).\n10. (Io / fumare) dieci sigarette al giorno.\n11. Maria (scrivere) una lettera a sua madre.\n12. Lisa (offrire) dei dolci agli ospiti.",
-              "resposta": "1. capisce / parlo\n2. vivo\n3. hai\n4. apro / fa\n5. abitano\n6. leggiamo\n7. frequento\n8. bevete\n9. ascolta / lavora\n10. fumo\n11. scrive\n12. offre",
-              "explicacao": "Capire→capisce (tipo -isc). Fare→fa (irregolare). Bere→bevo/bevi/beve/beviamo/bevete/bevono. Leggere→leggo/leggi/legge/leggiamo/leggete/leggono. Scrivere→scrivo/scrivi/scrive."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8** — Come il precedente:\n\n1. Piera (non sapere) cucinare.\n2. Stasera Aldo e Alberto (andare) al cinema.\n3. Signora, (Lei / conoscere) la galleria degli Uffizi?\n4. Maria (lavare) i piatti.\n5. Io (andare) al circo; (voi / volere) venire con me?\n6. Carla, Lei (parlare) molto bene il tedesco!\n7. Gianni, a che ora (uscire) dall'ufficio?\n8. Nella nostra biblioteca (avere) molti libri di filosofia.\n9. Gli operai di quella fabbrica (essere) in sciopero.\n10. (Noi / preparare) la cena per i nostri amici.\n11. La scuola (organizzare) ogni mese delle gite turistiche.\n12. Guido (accompagnare) gli studenti al museo.",
-              "resposta": "1. non sa\n2. vanno\n3. conosce\n4. lava\n5. vado / volete\n6. parla\n7. esci\n8. abbiamo\n9. sono\n10. prepariamo\n11. organizza\n12. accompagna",
-              "explicacao": "Sapere→so/sai/sa/sappiamo/sapete/sanno. Andare→vanno (loro). Conoscere→conosco/conosci/conosce. Uscire→esco/esci/esce/usciamo/uscite/escono."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Lavorare sul testo — «A scuola»**\n\nStephen è un ragazzo americano di New York. Ora è a Firenze e frequenta un corso di lingua italiana per stranieri. Nella sua classe ci sono dieci studenti di nazionalità differenti: tre tedeschi, due greci, due messicani, un austriaco e un ungherese. Gli studenti conoscono solo poche parole italiane, perciò fra loro parlano l'inglese o il tedesco, ma durante le lezioni cercano di usare solo la lingua italiana. Ogni settimana Stephen ha venti ore di lezione e i suoi insegnanti sono tre: uno di grammatica, uno di conversazione e uno di lessico. Il sabato e la domenica non c'è scuola, così Stephen va con i suoi compagni di classe a fare una gita in una città vicina o in campagna.\n\n**Rispondere alle domande:**\n1. Di dov'è Stephen?\n2. Dov'è ora?\n3. Che cosa fa?\n4. Quanti studenti ci sono nella sua classe?\n5. Di quali nazionalità sono?\n6. Quale lingua parlano fra loro?\n7. Perché?\n8. Che lingua cercano di usare durante le lezioni?\n9. Quante ore di lezione ci sono ogni settimana?\n10. Che cosa fa Stephen il sabato e la domenica?",
-              "resposta": "1. Stephen è di New York (americano).\n2. Ora è a Firenze.\n3. Frequenta un corso di lingua italiana per stranieri.\n4. Nella sua classe ci sono dieci studenti.\n5. Tre tedeschi, due greci, due messicani, un austriaco e un ungherese.\n6. Fra loro parlano l'inglese o il tedesco.\n7. Perché conoscono solo poche parole italiane.\n8. Durante le lezioni cercano di usare solo la lingua italiana.\n9. Ogni settimana ha venti ore di lezione.\n10. Il sabato e la domenica va con i suoi compagni di classe a fare una gita in una città vicina o in campagna.",
-              "explicacao": "Frequentare, cercare, usare, andare — tutti verbi usati in questo brano. Osservare: 'perciò' (= quindi/pertanto), 'così' (= per questo motivo), 'vicino/a' (aggettivo che concorda con il nome)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1** — Coniugazione presente di mangiare:\nIo _____ (mangiare), Tu _____ (mangiare)",
-              "resposta": "mangio, mangi",
-              "explicacao": "-ARE: Io -o, Tu -i. Io mangio, tu mangi. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2** — Essere presente:\nIo _____ (essere), Tu _____ (essere)",
-              "resposta": "sono, sei",
-              "explicacao": "ESSERE irregolare: Io sono, tu sei. Verbo irregolare — memorizzare come bloco único. Tabelar forma presente: io [forma], tu..., noi..., voi..."
-            },
-            {
-              "tipo": "separatore",
-              "pergunta": "\n--- **EXERCÍCIOS EXTRAS — Lezione II** ---\n",
-              "resposta": "",
-              "explicacao": ""
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 1 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 2 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6 — Lezione Lezione II (Extra)**\nIo _____ la pizza ogni giorno. (mangiare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 9 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 10 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 11 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 12 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 13 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 14 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 15 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 16 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 17 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 18 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 19 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 20 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 21 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 22 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 23 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 24 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 25 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 26 — Lezione Lezione II (Extra)**\nLoro _____ lezione di italiano. (fare)",
-              "resposta": "mangio / fanno",
-              "explicacao": "Passato prossimo: **mangio / fanno**. Futuro: **andrò/darà**. Imperfetto: **guardavo/giocavo**. Presente: **mangio/fanno**."
-            },
-            {
               "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 1 — Lezione Lezione II (Extra)**\nQual è la forma corretta?\n",
+              "pergunta": "— Scusi, ___ (Lei) l'autobus numero 40 per andare in centro?",
               "opcoes": [
-                "ha mangiato",
-                "ho mangiato",
-                "mangiato"
-              ],
-              "resposta": 1,
-              "explicacao": "A1 Lezione Lezione II: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 2 — Lezione Lezione II (Extra)**\nQual è la forma corretta?\n",
-              "opcoes": [
-                "ha mangiato",
-                "ho mangiato",
-                "mangiato"
-              ],
-              "resposta": 1,
-              "explicacao": "A1 Lezione Lezione II: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 3 — Lezione Lezione II (Extra)**\nQual è la forma corretta?\n",
-              "opcoes": [
-                "ha mangiato",
-                "ho mangiato",
-                "mangiato"
-              ],
-              "resposta": 1,
-              "explicacao": "A1 Lezione Lezione II: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio di verifica 4 — Lezione Lezione II (Extra)**\nQual è la forma corretta?\n",
-              "opcoes": [
-                "ha mangiato",
-                "ho mangiato",
-                "mangiato"
-              ],
-              "resposta": 1,
-              "explicacao": "A1 Lezione Lezione II: Articolo **il/studente**, plurale **libri**, preposizione **del**, futuro **andrà**, imperfetto **scriveva**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'we eat' in italiano?",
-              "opcoes": [
-                "mangiamo",
-                "mangiato",
-                "mangeremo"
+                "prende",
+                "prendi",
+                "prendete",
+                "prendiamo"
               ],
               "resposta": 0,
-              "explicacao": "RESPOSTA: mangiamo. Regra de conjugação presente aplicada. As outras opções têm erro na terminação ou pessoa."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 3** — Avere presente:\nIo _____ (avere), Lui _____ (avere)",
-              "resposta": "ho, ha",
-              "explicacao": "AVERE irregolare: Io ho, tu hai, lui ha. Verbo irregolare — memorizzare come bloco único. Tabelar forma presente: io [forma], tu..., noi..., voi..."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 4** — Coniugazione presente di amare:\nNoi _____ (amare), Voi _____ (amare)",
-              "resposta": "amiamo, amate",
-              "explicacao": "-ARE: Noi -iamo, Voi -ate. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
+              "explicacao": "\"Lei\" (formal) usa a mesma forma de lui/lei: 3ª pessoa singular. -ERE + lui/lei/Lei → -e: prend+e = prende. \"prendi\" seria para \"tu\" (informal)."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'she is'?",
+              "pergunta": "Io non ___ mai il caffè, preferisco sempre il tè verde.",
               "opcoes": [
-                "è",
-                "sei",
-                "sono"
+                "bevo",
+                "bevi",
+                "beve",
+                "beviamo"
               ],
               "resposta": 0,
-              "explicacao": "È = Lui/lei è (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 5** — Essere irregolare:\nLoro _____ (essere), Voi _____ (essere)",
-              "resposta": "sono, siete",
-              "explicacao": "ESSERE: Loro sono, voi siete. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 6** — Verbo avere irregolare:\nTu _____ (avere), Essi _____ (avere)",
-              "resposta": "hai, hanno",
-              "explicacao": "AVERE: Tu hai, essi/esse hanno. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "explicacao": "\"bere\" é irregolare. Paradigma: bevo/bevi/beve/beviamo/bevete/bevono. \"io\" → bevo. Nota: a radice \"bev-\" + desinenza -o/-i/-e/-iamo/-ete/-ono."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale verbo è corretto per 'we love'?",
+              "pergunta": "Ogni estate, noi ___ in Sicilia per due settimane.",
               "opcoes": [
-                "amiamo",
-                "amo",
-                "amoremo"
+                "andiamo",
+                "vanno",
+                "andate",
+                "vado"
               ],
               "resposta": 0,
-              "explicacao": "RESPOSTA: amiamo. Regra de conjugação presente aplicada. As outras opções têm erro na terminação ou pessoa."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 7** — Coniugazione di studiare:\nTu _____ (studiare), Lei _____ (studiare)",
-              "resposta": "studi, studia",
-              "explicacao": "-ARE: Tu -i, Lei -a. Tu studi, lei studia. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 8** — Essere irregolare:\nNoi _____ (essere), Voi _____ (essere)",
-              "resposta": "siamo, siete",
-              "explicacao": "ESSERE: Noi siamo, voi siete. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "explicacao": "\"andare\" irregolare: vado · vai · va · andiamo · andate · vanno. \"noi\" → andiamo (retorna à raiz \"and-\" para noi/voi). \"vanno\" é para loro."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Come si dice 'he has' in italiano?",
+              "pergunta": "— Marco e Sofia, ___ l'italiano da quanto tempo?",
               "opcoes": [
-                "ha",
-                "hanno",
-                "abbiamo"
+                "studiate",
+                "studiano",
+                "studiamo",
+                "studi"
               ],
               "resposta": 0,
-              "explicacao": "Ha = Lui/lei ha (avere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 9** — Verbo avere irregolare:\nIo _____ (avere), Lei _____ (avere)",
-              "resposta": "ho, ha",
-              "explicacao": "AVERE: Io ho, lui/lei ha. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 10** — Coniugazione di parlare:\nTu _____ (parlare), Loro _____ (parlare)",
-              "resposta": "parli, parlano",
-              "explicacao": "-ARE: Tu -i, Loro -ano. Tu parli, loro parlano. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
+              "explicacao": "\"Marco e Sofia\" são a 2ª pessoa plural (voi). -ARE + voi → -ate: studi+ate = studiate. \"studiano\" seria para loro (3ª pl.)."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'you are' (voi)?",
+              "pergunta": "Luca e Anna ___ in un piccolo appartamento vicino all'università.",
               "opcoes": [
-                "è",
-                "sei",
-                "siete"
-              ],
-              "resposta": 2,
-              "explicacao": "Siete = Voi siete (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 11** — Verbo essere irregolare:\nIo _____ (essere), Tu _____ (essere)",
-              "resposta": "sono, sei",
-              "explicacao": "ESSERE: Io sono, tu sei. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 12** — Verbo avere irregolare:\nTu _____ (avere), Lui _____ (avere)",
-              "resposta": "hai, ha",
-              "explicacao": "AVERE: Tu hai, lui/lei ha. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'they are' in italiano?",
-              "opcoes": [
-                "sono",
-                "sei",
-                "siete"
+                "abitano",
+                "abita",
+                "abitate",
+                "abitiamo"
               ],
               "resposta": 0,
-              "explicacao": "Sono = Loro sono (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 13** — Coniugazione di scrivere:\nLei _____ (scrivere), Io _____ (scrivere)",
-              "resposta": "scrive, scrivo",
-              "explicacao": "-IRE: Lei -e, Io -o. Lei scrive, io scrivo. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 14** — Verbo avere irregolare:\nNoi _____ (avere), Voi _____ (avere)",
-              "resposta": "abbiamo, avete",
-              "explicacao": "AVERE: Noi abbiamo, voi avete. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "explicacao": "\"Luca e Anna\" = loro (3ª pl.). -ARE + loro → -ano: abit+ano = abitano. Atenção: não é \"abita\" (3ª sing.) nem \"abitate\" (voi)."
             },
             {
               "tipo": "escolha",
-              "pergunta": "Quale verbo è corretto per 'she eats'?",
+              "pergunta": "— Tu ___ bene l'italiano! Dove hai studiato?",
               "opcoes": [
-                "mangia",
-                "mangiare",
-                "mangiato"
+                "parli",
+                "parla",
+                "parlate",
+                "parlo"
               ],
               "resposta": 0,
-              "explicacao": "RESPOSTA: mangia. Regra de conjugação presente aplicada. As outras opções têm erro na terminação ou pessoa."
+              "explicacao": "\"tu\" + -ARE → -i: parl+i = parli. \"parla\" seria lui/lei. \"parlo\" seria io. Nota: em italiano o \"tu\" costuma ser omitido — a terminação \"-i\" já identifica a 2ª pessoa singular."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Al telefono:\n— Ciao! Come ti ___ (chiamarsi)?",
+              "resposta": "chiami",
+              "dica": "Verbo riflessivo, 2ª persona sing. (-ARE)",
+              "explicacao": "\"chiamarsi\" = verbo riflessivo. tu: ti chiami. Desinência -ARE (tu → -i): chiam+i = chiami. Pronome riflessivo \"ti\" + forma normale.",
+              "variantes": [
+                "ti chiami"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Tutti i giorni io mi ___ (alzarsi) alle sette in punto.",
+              "resposta": "alzo",
+              "dica": "Parte do verbo che si coniuga; io, -ARE",
+              "explicacao": "\"alzarsi\" riflessivo: io mi alzo. La parte che coniughi è \"alzarsi\" → alzo (io -ARE → -o). Il \"mi\" è già nella frase. \"mi alzo\" = eu me levanto.",
+              "variantes": [
+                "alzo"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "La domenica mattina, noi ___ (fare) colazione insieme al bar sotto casa.",
+              "resposta": "facciamo",
+              "dica": "fare = irregolare; noi",
+              "explicacao": "\"fare\" è totalmente irregolare: faccio · fai · fa · facciamo · fate · fanno. noi → facciamo. Non segue né -ARE né -ERE né -IRE."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Ogni venerdì, tu e Giulia ___ (uscire) con gli amici del quartiere.",
+              "resposta": "uscite",
+              "dica": "uscire = irregolare; voi",
+              "explicacao": "\"uscire\" irregolare: esco · esci · esce · usciamo · uscite · escono. \"tu e Giulia\" = voi → uscite. Nota: per noi/voi, uscire ritorna alla radice \"usc-\"."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "— Quanto ___ (costare) questo libro di grammatica?",
+              "resposta": "costa",
+              "dica": "Il soggetto implicito è \"il libro\" (lui/lei); verbo regolare -ARE",
+              "explicacao": "\"costare\" regolare -ARE. lui/lei → -a: cost+a = costa. Il soggetto è implicito (\"il libro\" che stai guardando). Pro-drop: il soggetto non si ripete."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "I bambini ___ (giocare) in giardino sotto la pioggia!",
+              "resposta": "giocano",
+              "dica": "loro; attenzione alla \"c\" in -care",
+              "explicacao": "\"giocare\" (-CARE): loro → giocano (NON \"giochano\"). L'aggiunta della \"h\" accade solo davanti a \"-i\": tu giochi, noi giochiamo — per mantenere il suono /k/. Ma davanti a \"-ano\" non serve."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 15** — Verbo essere irregolare:\nTu _____ (essere), Loro _____ (essere)",
-              "resposta": "sei, sono",
-              "explicacao": "ESSERE: Tu sei, loro sono. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "pergunta": "Una giornata tipica di Marta — completa i verbi:\n\n«Marta ___ (svegliarsi) alle 7. Prima ___ (fare) la doccia, poi ___ (prepararsi) per l'università. A otto ___ (uscire) di casa e ___ (prendere) il bus. All'università ___ (studiare) fino all'una.»",
+              "resposta": "si sveglia · fa · si prepara · esce · prende · studia",
+              "explicacao": "si sveglia (riflessivo irr., 3ª sing.); fa (fare irr.); si prepara (riflessivo -ARE, 3ª sing.); esce (uscire irr.); prende (regolare -ERE); studia (regolare -ARE). Tutti alla 3ª persona singolare (lei = Marta)."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 16** — Coniugazione di finire:\nVoi _____ (finire), Io _____ (finire)",
-              "resposta": "finite, finisco",
-              "explicacao": "-IRE: Voi -ite, Io -isco. Voi finite, io finisco. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'I am' in italiano?",
-              "opcoes": [
-                "sono",
-                "sei",
-                "siete"
-              ],
-              "resposta": 0,
-              "explicacao": "Sono = Io sono (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "pergunta": "Dialogo in corridoio — completa:\n\n«— Dove ___ (tu, andare) adesso?\n— ___ (io, andare) in biblioteca. ___ (tu, venire) con me?\n— No, oggi non ___ (io, potere). Devo studiare la grammatica.\n— Ma ___ (noi, studiare) insieme! Più facile.»",
+              "resposta": "vai · Vado · Vieni · posso · studiamo",
+              "explicacao": "vai (andare irr., tu); Vado (andare irr., io); Vieni (venire irr., tu); posso (potere irr., io); studiamo (regolare -ARE, noi). I pronomi soggetto sono omessi, tranne per enfasi (\"io non posso\")."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 17** — Verbo avere irregolare:\nVoi _____ (avere), Loro _____ (avere)",
-              "resposta": "avete, hanno",
-              "explicacao": "AVERE: Voi avete, loro/esse hanno. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "pergunta": "La mia famiglia — completa i verbi:\n\n«La mia famiglia ___ (abitare) a Napoli da sempre. Mio padre ___ (lavorare) in un'azienda di import-export, mia madre ___ (insegnare) matematica al liceo. Io e mio fratello ___ (frequentare) il liceo scientifico.»",
+              "resposta": "abita · lavora · insegna · frequentiamo",
+              "explicacao": "Tutti regolari -ARE. abitare: 3ª sing. → abita; lavorare → lavora; insegnare → insegna; frequentare: noi → frequentiamo (-iamo). Nota: \"io e mio fratello\" = noi."
             },
             {
               "tipo": "revelar",
-              "pergunta": "**Esercizio 18** — Coniugazione di aprire:\nNoi _____ (aprire), Io _____ (aprire)",
-              "resposta": "apriamo, apro",
-              "explicacao": "-IRE: Noi -iamo, Io -o. Noi apriamo, io apro. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
+              "pergunta": "Cosa bevete? — completa:\n\n«— Marco, cosa ___ (bere) di solito?\n— Io ___ (bere) solo acqua minerale. E voi due?\n— Noi ___ (bere) molto caffè. Gli italiani ___ (bere) il caffè al bar ogni giorno.»",
+              "resposta": "bevi · bevo · beviamo · bevono",
+              "explicacao": "\"bere\" irregolare: bevo/bevi/beve/beviamo/bevete/bevono. La radice cambia: \"bev-\" per tutte le persone tranne bere stesso. Confronta: -ERE regolare (leggo/leggi) vs. \"bere\" (bevo/bevi)."
             },
             {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'they have'?",
-              "opcoes": [
-                "hanno",
-                "hai",
-                "ha"
-              ],
-              "resposta": 0,
-              "explicacao": "Hanno = Loro hanno (avere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
+              "tipo": "digitar",
+              "pergunta": "Completa le due forme:\n\"Di solito io ___ (studiare) italiano e tu ___ (ascoltare) musica.\"",
+              "resposta": "studio · ascolti",
+              "dica": "io + -ARE; tu + -ARE",
+              "explicacao": "\"studio\" (io -ARE → -o: studi+o). \"ascolti\" (tu -ARE → -i: ascolt+i). Dois sujeitos, duas desinências diferentes. O italiano distingue sempre io/tu pela terminação.",
+              "variantes": [
+                "studio, ascolti",
+                "studio ascolti"
+              ]
             },
             {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 19** — Verbo essere irregolare:\nLei _____ (essere), Noi _____ (essere)",
-              "resposta": "è, siamo",
-              "explicacao": "ESSERE: Lei è, noi siamo. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 20** — Coniugazione di bere:\nLoro _____ (bere), Tu _____ (bere)",
-              "resposta": "beono, bevi",
-              "explicacao": "-ERE irregolare: Loro bevono, tu bevi. Verbo irregolare — memorizzare come bloco único. Tabelar forma presente: io [forma], tu..., noi..., voi..."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'I love you' in italiano?",
-              "opcoes": [
-                "ti amo",
-                "amo te",
-                "amiamo te"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: ti amo. Regra de conjugação presente aplicada. As outras opções têm erro na terminação ou pessoa."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 21** — Verbo avere irregolare:\nEssa _____ (avere), Essi _____ (avere)",
-              "resposta": "ha, hanno",
-              "explicacao": "AVERE: Essa/ella ha, essi/e hanno. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 22** — Coniugazione di uscire:\nIo _____ (uscire), Tu _____ (uscire)",
-              "resposta": "esco, esci",
-              "explicacao": "-IRE irregolare: Io esco, tu esci. Verbo irregolare — memorizzare come bloco único. Tabelar forma presente: io [forma], tu..., noi..., voi..."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale verbo è corretto per 'he is'?",
-              "opcoes": [
-                "è",
-                "sei",
-                "sono"
-              ],
-              "resposta": 0,
-              "explicacao": "È = Lui/lei è (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 23** — Verbo essere irregolare:\nEssi _____ (essere), Esse _____ (essere)",
-              "resposta": "sono, sono",
-              "explicacao": "ESSERE: Essi/esse sono. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 24** — Coniugazione di andare:\nLoro _____ (andare), Tu _____ (andare)",
-              "resposta": "vanno, vai",
-              "explicacao": "ANDARE irregolare: Loro vanno, tu vai. Verbo irregolare — memorizzare come bloco único. Tabelar forma presente: io [forma], tu..., noi..., voi..."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'we are' in italiano?",
-              "opcoes": [
-                "siamo",
-                "siete",
-                "sono"
-              ],
-              "resposta": 0,
-              "explicacao": "Siamo = Noi siamo (essere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 25** — Verbo avere irregolare:\nIo _____ (avere), Tu _____ (avere)",
-              "resposta": "ho, hai",
-              "explicacao": "AVERE: Io ho, tu hai. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 26** — Coniugazione di leggere:\nLei _____ (leggere), Loro _____ (leggere)",
-              "resposta": "legge, leggono",
-              "explicacao": "-ERE regolare: Lei -e, Loro -ono. Lei legge, loro leggono."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Quale forma è corretta per 'you have' (tu)?",
-              "opcoes": [
-                "hai",
-                "ha",
-                "abbiamo"
-              ],
-              "resposta": 0,
-              "explicacao": "Hai = Tu hai (avere). Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 27** — Verbo essere irregolare:\nLui _____ (essere), Essa _____ (essere)",
-              "resposta": "è, è",
-              "explicacao": "ESSERE: Lui/lei è. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 28** — Coniugazione di giocare:\nIo _____ (giocare), Voi _____ (giocare)",
-              "resposta": "gioco, giocate",
-              "explicacao": "-ARE: Io -o, Voi -ate. Io gioco, voi giocate. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "Come si dice 'she loves' in italiano?",
-              "opcoes": [
-                "ama",
-                "amo",
-                "amare"
-              ],
-              "resposta": 0,
-              "explicacao": "RESPOSTA: ama. Regra de conjugação presente aplicada. As outras opções têm erro na terminação ou pessoa."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 29** — Verbo avere irregolare:\nLei _____ (avere), Loro _____ (avere)",
-              "resposta": "ha, hanno",
-              "explicacao": "AVERE: Lei ha, loro/esse hanno. Differenza: AVERE per stato fisico/emozionale (ho fame), ESSERE per identità (sono stanco). Espressioni idiomatiche con essere."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio 30** — Coniugazione di dormire:\nTu _____ (dormire), Io _____ (dormire)",
-              "resposta": "dormi, dormo",
-              "explicacao": "-IRE: Tu -i, Io -o. Tu dormi, io dormo. Verbo regolare. Presente indicativo: terminazioni -o, -i, -a, -iamo, -ate, -ano (-ire com y: studio, studi)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Io aspetto l'autobus e torna a casa.",
-                "Io aspetto l'autobus e torno a casa.",
-                "Io aspetta l'autobus e torna a casa."
-              ],
-              "resposta": 1,
-              "explicacao": "Con il soggetto 'io': aspettare → **aspetto**; tornare → **torno**. La forma 'aspetta / torna' è di lui/lei."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Noi preferisciamo un caffè.",
-                "Noi preferiamo un caffè.",
-                "Noi preferimo un caffè."
-              ],
-              "resposta": 1,
-              "explicacao": "Preferire (tipo -isc): io preferisco, tu preferisci, lui preferisce, **NOI PREFERIAMO**, voi preferite, loro preferiscono. La forma -isc NON si usa con noi e voi."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Io sono venti anni.",
-                "Io ho venti anni.",
-                "Io è venti anni."
-              ],
-              "resposta": 1,
-              "explicacao": "L'età si esprime con **AVERE**: ho venti anni, hai trent'anni, ecc. Mai con essere."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Quando partite per Milano?",
-                "Quando partete per Milano?",
-                "Quando partate per Milano?"
-              ],
-              "resposta": 0,
-              "explicacao": "Partire (tipo aprire): io parto, tu parti, lui parte, noi partiamo, **VOI PARTITE**, loro partono."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Sei grasso perché ___",
-              "opcoes": [
-                "mangii troppo.",
-                "mangi troppo.",
-                "mangia troppo."
-              ],
-              "resposta": 1,
-              "explicacao": "Mangiare → tu **mangi** (non mangii). 'Mangia' è la forma di lui/lei."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Che cosa cerchi?",
-                "Che cosa cerci?",
-                "Che cosa cerchi tu?"
-              ],
-              "resposta": 0,
-              "explicacao": "Cercare → tu **cerchi** (con h per mantenere il suono duro). 'Cerci' è errato. La risposta c) è grammaticalmente corretta ma ridondante (il tu è già nella forma verbale)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — A che ora ___?",
-              "opcoes": [
-                "cominchi?",
-                "cominci?",
-                "comincii?"
-              ],
-              "resposta": 1,
-              "explicacao": "Cominciare → tu **cominci** (il gruppo -ci già ha il suono dolce, non serve aggiungere h)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Laura e Maria ___",
-              "opcoes": [
-                "spedono una cartolina.",
-                "spediscono una cartolina.",
-                "spedano una cartolina."
-              ],
-              "resposta": 1,
-              "explicacao": "Spedire (tipo finire, con -isc): io spedisco, tu spedisci, lui spedisce, noi spediamo, voi spedite, **LORO SPEDISCONO**."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Loro ___",
-              "opcoes": [
-                "frequentino un corso d'italiano.",
-                "frequentono un corso d'italiano.",
-                "frequentano un corso d'italiano."
-              ],
-              "resposta": 2,
-              "explicacao": "Frequentare (verbo -ARE): loro **frequentano**. 'Frequentino' è il congiuntivo; 'frequentono' non esiste."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Signora, Lei ___?",
-              "opcoes": [
-                "fumi",
-                "fume",
-                "fuma"
-              ],
-              "resposta": 2,
-              "explicacao": "Fumare → lui/lei/Lei **fuma**. Con il pronome di cortesia Lei si usa la terza persona singolare."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Ciao, Mario, ___?",
-              "opcoes": [
-                "come sei",
-                "come stai?",
-                "come sta?"
-              ],
-              "resposta": 1,
-              "explicacao": "'Come **stai**?' è la forma informale (tu). 'Come **sta**?' è la forma formale (Lei). Con 'Ciao' si usa l'informale: come stai?"
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Gli zii anno una casa grande.",
-                "I zii hanno una casa grande.",
-                "Gli zii hanno una casa grande."
-              ],
-              "resposta": 2,
-              "explicacao": "Zio → zii (plurale). Inizia con z → articolo **GLI**. Avere → loro **HANNO** (non 'anno', che è l'anno del calendario)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Queste sono le nuove chiavi.",
-                "Questi sono i nuovi chiavi.",
-                "Queste sono le nuove chiave."
-              ],
-              "resposta": 0,
-              "explicacao": "Chiave è femminile → **le chiavi** (plurale in -i). **Queste** (femminile plurale). **Nuove** (femminile plurale)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "La problema è semplice.",
-                "Il problema è semplice.",
-                "Lo problema è semplice."
-              ],
-              "resposta": 1,
-              "explicacao": "Problema è maschile (come tema, poema, sistema). Inizia con pr (consonante normale) → **IL** problema."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "La dentista è bravo.",
-                "Il dentista è brava.",
-                "Il dentista è bravo."
-              ],
-              "resposta": 2,
-              "explicacao": "Dentista è maschile quando si riferisce a un uomo → **IL dentista**. L'aggettivo concorda: **bravo** (maschile)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Pagamo noi il conto.",
-                "Paghiamo noi il conto.",
-                "Pagiamo noi il conto."
-              ],
-              "resposta": 1,
-              "explicacao": "Pagare → noi **paghiamo** (h per mantenere il suono duro del g davanti a -iamo)."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Pulisco la casa.",
-                "Pulo la casa.",
-                "Pulischo la casa."
-              ],
-              "resposta": 0,
-              "explicacao": "Pulire (tipo finire, con -isc): io **PULISCO**. 'Pulo' e 'pulischo' non esistono."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizi di verifica** — Scegliere la frase corretta:",
-              "opcoes": [
-                "Volono uscire.",
-                "Vogliono uscire.",
-                "Volgono uscire."
-              ],
-              "resposta": 1,
-              "explicacao": "Volere (irregolare): io voglio, tu vuoi, lui vuole, noi vogliamo, voi volete, **LORO VOGLIONO**."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Pagiamo il conto oggi.»",
-              "resposta": "Paghiamo il conto oggi.",
-              "explicacao": "Pagare → noi **paghiamo** (con h). 'Pagiamo' non mantiene il suono duro del g."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Capiscete se parlo italiano?»",
-              "resposta": "Capite se parlo italiano?",
-              "explicacao": "Capire → voi **capite** (non 'capiscete'). La forma -isc si usa solo con io/tu/lui/loro, non con noi e voi."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Quando finischi l'università?»",
-              "resposta": "Quando finisci l'università?",
-              "explicacao": "Finire → tu **finisci** (non 'finischi'). La forma corretta per 'tu' è finisci."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Corregghi bene gli errori.»",
-              "resposta": "Correggi bene gli errori.",
-              "explicacao": "Correggere → tu **correggi** (non 'corregghi'). I verbi in -ggere fanno tu correggi, lui corregge."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Legghe un libro interessante.»",
-              "resposta": "Legge un libro interessante.",
-              "explicacao": "Leggere → lui/lei **legge** (non 'legghe'). La h non si aggiunge in questo caso."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Io prepara la cena.»",
-              "resposta": "Io preparo la cena.",
-              "explicacao": "Preparare → io **preparo**. 'Prepara' è la forma di lui/lei/Lei."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Il spagnolo è una lingua neolatina.»",
-              "resposta": "Lo spagnolo è una lingua neolatina.",
-              "explicacao": "Spagnolo inizia con sp (s + consonante) → articolo **LO**, non il."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Gl'alberi sono alti.»",
-              "resposta": "Gli alberi sono alti.",
-              "explicacao": "Davanti a vocale il plurale maschile è **GLI** (non gl'). L'elisione non si usa con gli."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«La giacca e i pantaloni sono molti eleganti.»",
-              "resposta": "La giacca e i pantaloni sono molto eleganti.",
-              "explicacao": "'**Molto**' usato come avverbio (davanti ad aggettivo) è invariabile: molto elegante / molto eleganti."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Trovare l'errore** — Correggere la frase:\n«Ho pochi amichi italiani.»",
-              "resposta": "Ho pochi amici italiani.",
-              "explicacao": "Amico → plurale **amici** (non amichi). Regola -co/-ca: amico/amici, medico/medici (3+ sillabe → senza h)."
+              "tipo": "digitar",
+              "pergunta": "Come si dice in italiano?\n\"Eles moram em Roma e estudam medicina.\"",
+              "resposta": "Abitano a Roma e studiano medicina.",
+              "dica": "loro + -ARE (dois verbos); città = sem artigo com \"a\"",
+              "explicacao": "\"abitano\" (loro -ARE → -ano); \"studiano\" (loro -ARE → -ano). \"a Roma\" sem artigo: nomes di città non prendono l'articolo con le preposizioni a/da/di/in. Il pronome \"loro\" è omesso (pro-drop).",
+              "variantes": [
+                "Loro abitano a Roma e studiano medicina.",
+                "abitano a Roma e studiano medicina."
+              ]
             }
           ],
-          "alerta": "O presente indicativo é o tempo mais usado no italiano. Sem ele, você não consegue dizer sequer 'eu falo', 'você come' ou 'eles vivem'. Domine os três grupos de conjugação agora.",
+          "alerta": "O presente italiano faz o trabalho de três tempos portugueses: \"falo\", \"estou falando\" e \"vou falar\" (agora). Um tempo. Uma forma. Dominar o presente é dominar 80% das conversas cotidianas.",
           "inventario": [
-            "Verbos em -ARE (1ª conjugação): parl-are → parlo, parli, parla, parliamo, parlate, parlano",
-            "Verbos em -ERE (2ª conjugação): scriv-ere → scrivo, scrivi, scrive, scriviamo, scrivete, scrivono",
-            "Verbos em -IRE tipo 1 (3ª conj.): dorm-ire → dormo, dormi, dorme, dormiamo, dormite, dormono",
-            "Verbos em -IRE tipo 2 com -isc-: cap-ire → capisco, capisci, capisce, capiamo, capite, capiscono",
-            "Verbos irregulares essenciais: essere, avere, andare, fare, venire, uscire, sapere, potere, volere, dovere",
-            "Uso: ação presente, hábito, futuro próximo ('domani parto')"
+            "Verbos regulares -ARE: amare, parlare, studiare",
+            "Verbos regulares -ERE: leggere, vivere, prendere",
+            "Verbos regulares -IRE: dormire, partire (e gruppo -isc-: finire, capire)",
+            "Irregolari essenziali: essere, avere, fare, andare, venire, potere, volere, dovere",
+            "Pro-drop: o sujeito pronominal é opcional"
           ],
           "definicao": {
-            "fenomeno": "Na rua, alguém diz: *Marco parla con Maria. Loro mangiano la pizza. Io non capisco!* Três frases simples, mas cada verbo tem uma terminação diferente.",
-            "causa": "Por que *parla* termina em -a e *mangiano* termina em -iano? Quem decide a terminação? É sempre a mesma lógica?",
-            "conceito": "A terminação do verbo indica **quem** faz a ação (a pessoa: io/tu/lui…) e **quando** (o tempo: presente). Cada grupo de verbos (-are/-ere/-ire) tem seu próprio conjunto de terminações. Basta aprender o padrão de cada grupo."
+            "fenomeno": "Parlo italiano. Parli italiano. Parla italiano.",
+            "causa": "Por que três formas diferentes se o verbo é o mesmo? E cadê o sujeito \"io/tu/lui\"?",
+            "conceito": "A desinência (terminação) do verbo identifica o sujeito. Por isso o italiano omite o pronome sujeito (é uma língua pro-drop): a terminação já diz quem faz a ação."
           },
-          "tecnica": "**Como conjugar qualquer verbo regular no presente:**\n\n1. Identifique o grupo: termina em **-are**, **-ere** ou **-ire**?\n2. Retire o infinitivo (-are/-ere/-ire) — resta o **radical** (parl-, scriv-, dorm-)\n3. Adicione a terminação correta conforme a pessoa:\n   - -ARE: -o / -i / -a / -iamo / -ate / -ano\n   - -ERE: -o / -i / -e / -iamo / -ete / -ono\n   - -IRE tipo 1: -o / -i / -e / -iamo / -ite / -ono\n   - -IRE tipo 2: -isco / -isci / -isce / -iamo / -ite / -iscono\n4. Para verbos irregulares (andare, fare, etc.): memorize a forma inteira",
+          "tecnica": "1. Identifique o infinitivo do verbo.\n2. Retire a terminação (-ARE, -ERE ou -IRE).\n3. Adicione a desinência correta:\n   -ARE: -o · -i · -a · -iamo · -ate · -ano\n   -ERE: -o · -i · -e · -iamo · -ete · -ono\n   -IRE: -o · -i · -e · -iamo · -ite · -ono\n   -IRE(isc): -isco · -isci · -isce · -iamo · -ite · -iscono\n4. Para irregolari: memorizar o paradigma completo (não há atalho).",
           "exemplos_prc": [
             {
-              "oracao": "Io parlo italiano, ma non capisco il dialetto.",
-              "pergunta": "Como conjugar *parlare* e *capire* na 1ª pessoa? São do mesmo grupo?",
-              "resposta": "parlare (-are) → parlo | capire tipo 2 (-ire) → capisco",
-              "conclusao": "Radical + terminação: parl+o / cap+isco"
+              "oracao": "Ogni mattina studio italiano per un'ora.",
+              "pergunta": "Como conjugar \"studiare\" para \"io\"?",
+              "resposta": "Retira -ARE → studi-, adiciona -o → studio",
+              "conclusao": "-ARE regular + io → -o. \"studiare\" → studio."
             },
             {
-              "oracao": "Loro mangiano la pizza ogni venerdì.",
-              "pergunta": "Por que *mangiare* na 3ª pessoa plural é *mangiano* e não *mangono*?",
-              "resposta": "mangiare tem radical mangi- (já com -i), então: mangi+ano = mangiano",
-              "conclusao": "Radical termina em -i → não duplicar: mangi+ano"
+              "oracao": "Marco prende il caffè al bar ogni giorno.",
+              "pergunta": "Por que \"prende\" e não \"prendono\"?",
+              "resposta": "Marco = lui/lei (3ª sing.). -ERE + lui/lei → -e",
+              "conclusao": "-ERE regular + lui/lei → -e. \"prendere\" → prende."
             },
             {
-              "oracao": "Voi uscite tardi; noi usciamo presto.",
-              "pergunta": "Como conjugar o irregular *uscire* na 2ª e 1ª pessoa plural?",
-              "resposta": "uscire irregular: esco, esci, esce, usciamo, uscite, escono",
-              "conclusao": "uscire: radical muda (esc-) nas pessoas 1-3sg e 3pl"
+              "oracao": "Noi finiamo il lavoro alle sei di sera.",
+              "pergunta": "Por que \"finiamo\" sem -isc-?",
+              "resposta": "\"finire\" usa -isc- só em io/tu/lui/loro — não em noi/voi",
+              "conclusao": "-IRE(isc) + noi → -iamo (sem -isc-). finire → finiamo."
+            },
+            {
+              "oracao": "Non so dove vai con tanta fretta!",
+              "pergunta": "Qual o paradigma completo de \"andare\"?",
+              "resposta": "vado · vai · va · andiamo · andate · vanno",
+              "conclusao": "andare é irregolare: io/tu/lui/loro têm raiz \"v-\"; noi/voi retornam a \"and-\"."
             }
           ],
-          "ponte": "**Em português:** eu falo / tu falas / ele fala — a terminação varia por pessoa.\n\n**Em italiano:** io parlo / tu parli / lui parla — mesma lógica, terminações diferentes.\n\n**Diferença:** o italiano tem **3 grupos** de conjugação (-are/-ere/-ire) com terminações distintas. O português também tem 3 grupos, mas as terminações coincidem parcialmente.\n\n**Armadilha:** *-ire tipo 2* (capire, finire, preferire) insere **-isc-** nas pessoas 1-3sg e 3pl — não existe equivalente direto em português.",
-          "coda": "Quem não treinar os verbos irregulares com frases reais vai sempre hesitar na conversa. Memorize essere, avere, andare, fare como blocos fixos."
+          "ponte": "Pro-drop: \"Parlo italiano\" = \"Eu falo italiano\" — o \"io\" é opcional. Em português falado também omitimos (\"Falo português\"), mas em italiano é a norma, não exceção. USE o pronome apenas para ênfase ou contraste: \"Io vado a Roma, tu rimani qui.\" Em português precisamos de \"eu...tu...\" sempre para clareza; em italiano a desinência já basta.\n\nCuidado com os falsos análogos: \"essere\" não é \"estar\" — é também \"ser\". \"sono stanco\" = \"estou cansado\" (não \"sou\"). E \"fare\" (fazer) é totalmente irregular: faccio · fai · fa · facciamo · fate · fanno.",
+          "coda": "Conjugue 5 verbos novos em voz alta todos os dias: io · tu · lui/lei · noi · voi · loro. São 30 formas em 2 minutos. Depois de uma semana, o presente regular se torna automático.",
+          "nivel": "A1"
         },
         {
           "id": "a1-lez3",
