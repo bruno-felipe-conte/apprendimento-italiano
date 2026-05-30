@@ -272,10 +272,10 @@ const Grammatica = {
     // Pergunta
     html += `<div class="gram-ex-question">${qHtml}</div>`;
 
-    // Explicação enxuta (visível antes da interação — omitida em digitar para não revelar a resposta)
-    if (ex.explicacao && ex.tipo !== 'digitar') {
-      html += `<div class="gram-ex-dica">${this._formatarPergunta(ex.explicacao)}</div>`;
-    }
+    // A explicação só aparece no feedback (pós-resposta) — nunca antes,
+    // pois entregaria a resposta. A dica opcional (campo dica) continua
+    // visível antes para digitar, mas fica fora deste bloco.
+    // (removida renderização pre-answer de explicacao para todos os tipos)
 
     // Corpo do exercício
     if (ex.tipo === 'escolha') {
