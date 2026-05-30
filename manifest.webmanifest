@@ -2,7 +2,8 @@
   "name": "Italiano Autentico",
   "short_name": "Italiano",
   "description": "Apprendi l'italiano con autenticità — Flashcard, Quiz e Vocabolario",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#F5EDD8",
   "theme_color": "#9B2335",
@@ -10,18 +11,36 @@
   "dir": "ltr",
   "orientation": "portrait-primary",
   "categories": ["education", "lifestyle"],
+  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "./icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon.svg",
+      "src": "./icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Flashcard",
+      "short_name": "Flashcard",
+      "description": "Iniciar sessão de flashcards",
+      "url": "./#flashcard",
+      "icons": [{ "src": "./icons/icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "description": "Fazer um quiz",
+      "url": "./#quiz",
+      "icons": [{ "src": "./icons/icon.svg", "sizes": "any" }]
     }
   ]
 }

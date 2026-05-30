@@ -1,33 +1,68 @@
 // ============================================================
-// sw.js — Service Worker for offline / PWA support
-// Cache-first for static assets; network-first for data files
+// sw.js — Service Worker  |  Cache v8  |  Offline-first PWA
+// Estratégia:
+//   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
+//   • /data/*.json   → network-first com fallback de cache
+//   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v2';
+const CACHE = 'italiano-v8';
 
+// Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
-  '/',
-  '/index.html',
-  '/css/italia.css',
-  '/js/core.js',
-  '/js/progression.js',
-  '/js/flashcards.js',
-  '/js/quiz.js',
-  '/js/vocab.js',
-  '/js/heatmap.js',
-  '/manifest.webmanifest',
-  '/icons/icon.svg',
+  './',
+  './index.html',
+  './css/italia.css',
+  './css/styles.css',
+  // JS — módulos da aplicação
+  './js/audio.js',
+  './js/conquistas.js',
+  './js/core.js',
+  './js/flashcards.js',
+  './js/grammar.js',
+  './js/heatmap.js',
+  './js/main.js',
+  './js/profilo.js',
+  './js/progression.js',
+  './js/progresso.js',
+  './js/quiz.js',
+  './js/quiz_data.js',
+  './js/quiz_service.js',
+  './js/review_service.js',
+  './js/vocab.js',
+  './js/vocabulary_service.js',
+  // Dados
+  './data/conjugacoes.json',
+  './data/grammar.json',
+  './data/quizzes.json',
+  './data/templo-1.json',
+  './data/templo-2.json',
+  './data/templo-3.json',
+  './data/templo-4.json',
+  './data/templo-5.json',
+  './data/templo-6.json',
+  './data/templo-7.json',
+  './data/templo-8.json',
+  './data/templo-9.json',
+  './data/templo-10.json',
+  // Manifesto e ícone
+  './manifest.webmanifest',
+  './icons/icon.svg',
 ];
 
-// Install: pre-cache all static assets
+// ── Install: pré-cache de tudo ────────────────────────────
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE).then(cache => cache.addAll(STATIC))
+    caches.open(CACHE).then(cache =>
+      // addAll falha se qualquer recurso não for encontrado;
+      // tentamos individualmente para não abortar por arquivos opcionais
+      Promise.allSettled(STATIC.map(url => cache.add(url)))
+    )
   );
   self.skipWaiting();
 });
 
-// Activate: delete old caches
+// ── Activate: apaga caches antigos ───────────────────────
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
@@ -37,28 +72,53 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Fetch: cache-first for static, network-first for data/
+// ── Fetch ─────────────────────────────────────────────────
 self.addEventListener('fetch', event => {
-  const url = new URL(event.request.url);
+  const req = event.request;
+  if (req.method !== 'GET') return;
 
-  // Skip non-GET and cross-origin requests
-  if (event.request.method !== 'GET' || url.origin !== self.location.origin) return;
+  const url = new URL(req.url);
 
-  if (url.pathname.startsWith('/data/')) {
-    // Network-first for vocabulary/quiz JSON (allows updates)
+  // 1. Google Fonts — stale-while-revalidate
+  //    Após a primeira visita ficam disponíveis offline
+  if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
     event.respondWith(
-      fetch(event.request)
+      caches.open(CACHE).then(cache =>
+        cache.match(req).then(cached => {
+          const network = fetch(req).then(res => {
+            cache.put(req, res.clone());
+            return res;
+          }).catch(() => cached);
+          return cached || network;
+        })
+      )
+    );
+    return;
+  }
+
+  // Ignora requisições cross-origin que não sejam fontes
+  if (url.origin !== self.location.origin) return;
+
+  // 2. /data/*.json — network-first (recebe atualizações de conteúdo)
+  //    Se offline, entrega do cache
+  if (url.pathname.includes('/data/')) {
+    event.respondWith(
+      fetch(req)
         .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(event.request, clone));
+          caches.open(CACHE).then(c => c.put(req, res.clone()));
           return res;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => caches.match(req))
     );
-  } else {
-    // Cache-first for everything else
-    event.respondWith(
-      caches.match(event.request).then(cached => cached || fetch(event.request))
-    );
+    return;
   }
+
+  // 3. Tudo o mais — cache-first
+  event.respondWith(
+    caches.match(req).then(cached => cached || fetch(req).then(res => {
+      // Cacheia recursos novos encontrados em runtime
+      if (res.ok) caches.open(CACHE).then(c => c.put(req, res.clone()));
+      return res;
+    }))
+  );
 });

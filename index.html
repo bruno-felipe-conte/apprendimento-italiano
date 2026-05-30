@@ -11,6 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
+  <!-- iOS não lê o manifest para ícone — precisa da tag específica -->
+  <link rel="apple-touch-icon" href="./icons/icon.svg">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Italiano">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; background: #F5EDD8; color: #2C2C2C; min-height: 100vh; display: flex; flex-direction: column; }
@@ -1415,12 +1420,15 @@
       });
     });
   </script>
-  <!-- Service Worker — habilitar em produção
   <script>
+    // Registra o Service Worker para suporte offline (PWA)
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {});
+      // Caminho relativo — funciona tanto na raiz quanto em subdiretório
+      navigator.serviceWorker.register('./sw.js').then(reg => {
+        // Verifica atualizações a cada vez que a aba fica em foco
+        reg.update();
+      }).catch(err => console.warn('[SW] Registro falhou:', err));
     }
   </script>
-  -->
 </body>
 </html>
