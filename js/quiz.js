@@ -170,7 +170,7 @@ const Quiz = {
     const explicacaoContainer = document.getElementById('explicacao-container');
     const explicacaoEl = document.getElementById('quiz-explicacao');
     if (explicacaoContainer) explicacaoContainer.style.display = 'block';
-    if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? '✅ Corretto!' : `❌ La risposta corretta era: ${p.resposta_correta}`);
+    if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? '✅ Correto!' : `❌ A resposta correta era: ${p.resposta_correta}`);
   },
 
   // ── Advance to next question ───────────────────────────────

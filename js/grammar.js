@@ -427,8 +427,8 @@ const Grammatica = {
     const fb = document.getElementById('gram-feedback');
     if (fb) {
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>Corretto!</strong> ${ex.explicacao}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>Sbagliato.</strong> ${ex.explicacao}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>Correto!</strong> ${ex.explicacao}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>Errado.</strong> ${ex.explicacao}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
@@ -460,8 +460,8 @@ const Grammatica = {
     const fb = document.getElementById('gram-feedback');
     if (fb) {
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>Corretto!</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>Sbagliato.</strong> La risposta era: <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>Correto!</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>Errado.</strong> A resposta era: <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
