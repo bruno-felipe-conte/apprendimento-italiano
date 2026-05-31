@@ -691,14 +691,13 @@ const App = {
   },
 
   // ── Text-to-speech ─────────────────────────────────────────
-  // ── Cached Italian voice ──────────────────────────────────
   _vozItaliana: null,
+  _audioTTS: null,   // Audio element reutilizado para o fallback Google TTS
 
   _getVozItaliana() {
     if (this._vozItaliana) return this._vozItaliana;
     const vozes = speechSynthesis.getVoices();
     if (!vozes.length) return null;
-    // Priority: exact it-IT → any it-* → null (null = browser chooses best for lang=it-IT)
     this._vozItaliana =
       vozes.find(v => v.lang === 'it-IT') ||
       vozes.find(v => v.lang.startsWith('it')) ||
@@ -706,36 +705,49 @@ const App = {
     return this._vozItaliana;
   },
 
+  // Fallback: ResponsiveVoice — voz italiana nativa (gratuito para uso educacional)
+  _pronunciarRV(texto) {
+    if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
+      responsiveVoice.cancel();
+      responsiveVoice.speak(texto, 'Italian Female', { rate: 0.9, pitch: 1 });
+    }
+  },
+
   pronunciar(texto) {
     if (!texto) return;
-    if (!('speechSynthesis' in window)) return;
-    speechSynthesis.cancel();
 
-    const falar = () => {
+    if ('speechSynthesis' in window) {
+      speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'it-IT';
       u.rate  = 0.85;
       u.pitch = 1;
-      // Set Italian voice if available; otherwise browser uses lang=it-IT
-      // with whatever engine is available (still speaks, just may have accent)
+
+      // Usa voz italiana instalada se disponível; senão o browser tenta
+      // baixar/usar uma voz cloud (funciona no Chrome Android e Edge)
       const voz = this._getVozItaliana();
       if (voz) u.voice = voz;
-      u.onerror = (e) => {
-        // 'not-allowed': autoplay policy blocked — user must interact first
-        // 'language-unavailable': no it-IT voice installed on device
-        if (e.error !== 'interrupted') console.warn('TTS:', e.error);
-      };
-      speechSynthesis.speak(u);
-    };
 
-    if (speechSynthesis.getVoices().length > 0) {
-      falar();
-    } else {
-      speechSynthesis.onvoiceschanged = () => {
-        speechSynthesis.onvoiceschanged = null;
-        falar();
+      u.onerror = (e) => {
+        // language-unavailable → nenhuma voz italiana, tenta ResponsiveVoice
+        if (e.error === 'language-unavailable' || e.error === 'synthesis-failed') {
+          this._pronunciarRV(texto);
+        }
       };
+
+      // Aguarda vozes carregarem se ainda não estiverem prontas
+      const falar = () => speechSynthesis.speak(u);
+      if (speechSynthesis.getVoices().length > 0) {
+        falar();
+      } else {
+        speechSynthesis.onvoiceschanged = () => {
+          speechSynthesis.onvoiceschanged = null;
+          falar();
+        };
+      }
+      return;
     }
+    this._pronunciarRV(texto);
   }
 };
 
