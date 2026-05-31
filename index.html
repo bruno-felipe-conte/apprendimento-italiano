@@ -1428,6 +1428,46 @@
       background: #1C1816;
     }
 
+    /* ── Tabelas inline dentro de gram-tabela-sem-details e gram-tabela-conteudo ── */
+    .gram-tabela-sem-details table,
+    .gram-tabela-conteudo table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.88rem;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    .gram-tabela-sem-details table th,
+    .gram-tabela-conteudo table th {
+      padding: 0.55rem 0.85rem;
+      font-weight: 700;
+      text-align: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .gram-tabela-sem-details table td,
+    .gram-tabela-conteudo table td {
+      padding: 0.5rem 0.8rem;
+      border: 1px solid #ddd;
+      line-height: 1.5;
+      vertical-align: middle;
+    }
+    .gram-tabela-sem-details table tr:nth-child(even) td,
+    .gram-tabela-conteudo table tr:nth-child(even) td {
+      background: rgba(155,35,53,0.04);
+    }
+    body.dark-mode .gram-tabela-sem-details table td,
+    body.dark-mode .gram-tabela-conteudo table td {
+      border-color: #2D2723;
+      color: #E6DFD3;
+    }
+    body.dark-mode .gram-tabela-sem-details table tr:nth-child(even) td,
+    body.dark-mode .gram-tabela-conteudo table tr:nth-child(even) td {
+      background: rgba(255,255,255,0.04);
+    }
+
     /* ── Fase 4: PRC Expandível ── */
     .gram-prc-expandivel {
       border: 1px solid #ede5d5;
