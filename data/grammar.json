@@ -5,7 +5,7 @@
       "nome": "A1 — Principiante",
       "nivel_minimo": 1,
       "cor": "linear-gradient(135deg, #27AE60, #145A32)",
-      "unidades": [
+      "lezioni": [
         {
           "id": "a1-lez1",
           "num": "Lezione I",
@@ -6635,62 +6635,7 @@
       "id": "A2",
       "nome": "A2 — Sopravvivenza e Imersione Reale",
       "descrizione": "Vocabolario denso per immersioni reali: viaggi, lavoro informale, relazioni interpersonali, gergo regionale essenziale.",
-      "lezioni": 30,
-      "temi_densita": [
-        "Gergo giovanile italiano (figa, roba, che bella cazzata, non ci sto),",
-        "Slang lavorativo quotidiano (faccio il lavoro → ci metto le mani, chiudo la partita → finisco l'opera),",
-        "Espressioni regionali basiche (Roma: e poi/insomma/ben trovato; Milano: che pignatta/che guaio; Napoli: che cavoli/casa d'altra gente),",
-        "Vocabolario turismo informale (albergo = hotel, ristorante = dove mangiamo, supermercato = dove compriamo, stazione = dove prendiamo il treno),",
-        "Relazioni interpersonali autentiche (come si dice scusa/compri un caffè/ci vediamo/domani/a presto),",
-        "Colloquialismi essenziali (ci fa ridere/non ci va bene/faccio una risata/mettiamoci d'accordo/siamo in disaccordo),",
-        "Vocabolario gastronomia informale (cena = pranzetto, merenda = spuntino, aperitivo = birretta e patatine, digestivo = caffè amaro),"
-      ],
-      "unite": [
-        {
-          "num": "Lezione 1",
-          "descrizione": "**GERGO_GIOVANE** — Vocabolario denso per immersione reale.",
-          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [gergo giovane] con esercizi pratici di traduzione e comprensione scritta.",
-          "exercicios": [
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #1**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #2**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #3**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #4**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #5**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #6**\n\nNon ci sto più, devo andarmene.",
-              "resposta": "Non ci sto più, devo andarmene.",
-              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
-            }
-          ]
-        }
-      ],
-      "unidades": [
+      "lezioni": [
         {
           "id": "a2-i",
           "num": "Lezione A2-I",
@@ -10466,6 +10411,60 @@
           "tabela_visual": "<p class=\"tabela-intro\">Pronomi Combinati</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Mi/Ti/Ci/Vi + Lo</div><div class=\"ac-body\">Me lo, Te lo, Ce lo, Ve lo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Gli / Le + Lo</div><div class=\"ac-body\">Glielo (Unidos em uma palavra)</div></div></div>"
         }
       ],
+      "temi_densita": [
+        "Gergo giovanile italiano (figa, roba, che bella cazzata, non ci sto),",
+        "Slang lavorativo quotidiano (faccio il lavoro → ci metto le mani, chiudo la partita → finisco l'opera),",
+        "Espressioni regionali basiche (Roma: e poi/insomma/ben trovato; Milano: che pignatta/che guaio; Napoli: che cavoli/casa d'altra gente),",
+        "Vocabolario turismo informale (albergo = hotel, ristorante = dove mangiamo, supermercato = dove compriamo, stazione = dove prendiamo il treno),",
+        "Relazioni interpersonali autentiche (come si dice scusa/compri un caffè/ci vediamo/domani/a presto),",
+        "Colloquialismi essenziali (ci fa ridere/non ci va bene/faccio una risata/mettiamoci d'accordo/siamo in disaccordo),",
+        "Vocabolario gastronomia informale (cena = pranzetto, merenda = spuntino, aperitivo = birretta e patatine, digestivo = caffè amaro),"
+      ],
+      "unite": [
+        {
+          "num": "Lezione 1",
+          "descrizione": "**GERGO_GIOVANE** — Vocabolario denso per immersione reale.",
+          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [gergo giovane] con esercizi pratici di traduzione e comprensione scritta.",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #1**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #2**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #3**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #4**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #5**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #6**\n\nNon ci sto più, devo andarmene.",
+              "resposta": "Non ci sto più, devo andarmene.",
+              "explicacao": "📚 **Contesto autentico**: Não quero ficar mais, preciso ir embora.. Questa frase è tipica del linguaggio italiano reale."
+            }
+          ]
+        }
+      ],
       "nivel_minimo": 5,
       "cor": "linear-gradient(135deg, #2980B9, #1A5276)"
     },
@@ -10473,68 +10472,7 @@
       "id": "B1",
       "nome": "B1 — Italiano Contemporaneo (XXI Secolo)",
       "descrizione": "Italiano del XXI secolo: slang lavorativo, espressioni digitali, regionalismi urbani, conversazioni reali.",
-      "lezioni": 30,
-      "temi_densita": [
-        "Business moderno italiano (si chiude la trattativa, portiamo il contratto in firma, chiudiamo il meeting),",
-        "Networking e relazioni professionali (conosco gente interessante, ho conosciuto un collega importante, passiamo a cena),",
-        "Tecnologia e digital (ho aggiornato i driver, il software è crashato, il server è down, il sistema si è bloccato),",
-        "Social media e comunicazioni digitali (la notizia è partita da Twitter, abbiamo postato su LinkedIn, abbiamo commentato il video),",
-        "Colloquialismi urbani (è una roba pazzesca/quella cosa/cosa dici che mi fai/domani mattina),",
-        "Slang tech e informatico (crashare/hangarsi/staccare la spina/avere un bug/mettiamo mano al codice),",
-        "Espressioni generazionali (la mia generazione/il boom generation i millennials lo zio, non ti capisco come fai con questo sistema)"
-      ],
-      "unite": [
-        {
-          "num": "Lezione 1",
-          "descrizione": "**BUSINESS_MODERNO** — Vocabolario denso per immersione reale.",
-          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [business moderno] con esercizi pratici di traduzione e comprensione scritta.",
-          "exercicios": [
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #1**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #2**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #3**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #4**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #5**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #6**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #7**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
-              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
-            }
-          ]
-        }
-      ],
-      "unidades": [
+      "lezioni": [
         {
           "id": "b1-i",
           "num": "Lezione B1-I",
@@ -13581,6 +13519,66 @@
           "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — I Modali al Passato</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Com Avere</div><div class=\"ac-body\">Ho dovuto mangiare (verbo princ. usa avere)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Com Essere</div><div class=\"ac-body\">Sono dovuto andare (verbo princ. usa essere)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Pronominais</div><div class=\"ac-body\">Mi sono dovuto alzare / Ho dovuto alzarmi</div></div></div>"
         }
       ],
+      "temi_densita": [
+        "Business moderno italiano (si chiude la trattativa, portiamo il contratto in firma, chiudiamo il meeting),",
+        "Networking e relazioni professionali (conosco gente interessante, ho conosciuto un collega importante, passiamo a cena),",
+        "Tecnologia e digital (ho aggiornato i driver, il software è crashato, il server è down, il sistema si è bloccato),",
+        "Social media e comunicazioni digitali (la notizia è partita da Twitter, abbiamo postato su LinkedIn, abbiamo commentato il video),",
+        "Colloquialismi urbani (è una roba pazzesca/quella cosa/cosa dici che mi fai/domani mattina),",
+        "Slang tech e informatico (crashare/hangarsi/staccare la spina/avere un bug/mettiamo mano al codice),",
+        "Espressioni generazionali (la mia generazione/il boom generation i millennials lo zio, non ti capisco come fai con questo sistema)"
+      ],
+      "unite": [
+        {
+          "num": "Lezione 1",
+          "descrizione": "**BUSINESS_MODERNO** — Vocabolario denso per immersione reale.",
+          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [business moderno] con esercizi pratici di traduzione e comprensione scritta.",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #1**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #2**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #3**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #4**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #5**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #6**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #7**\n\nL'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "resposta": "L'agenda è piena fino al prossimo mese, dobbiamo priorizzare.",
+              "explicacao": "📚 **Contesto autentico**: A agenda está cheia até o próximo mês, precisamos priorizar.. Questa frase è tipica del linguaggio italiano reale."
+            }
+          ]
+        }
+      ],
       "nivel_minimo": 10,
       "cor": "linear-gradient(135deg, #8E44AD, #5B2C6F)"
     },
@@ -13588,62 +13586,7 @@
       "id": "B2",
       "nome": "B2 — Italiano Professionale e Culturale Alto Livello",
       "descrizione": "Business italiano autentico, letteratura contemporanea, cinema, teatro, politica, arte, giornalismo moderno.",
-      "lezioni": 30,
-      "temi_densita": [
-        "Terminologia business avanzata (il bilancio mostra una perdita, il CEO ha deciso di tagliare i costi, l'assemblea è stata approvata con margine),",
-        "Letteratura contemporanea italiana (Italo Calvino Il barone rampante, Umberto Eco Il nome della rosa, Antonio Tabucchi Sostiene Pereira),",
-        "Cinema e teatro italiano (Fellini La dolce vita, Visconti Rocco e i suoi fratelli, Sorrentino La grande bellezza),",
-        "Politica e società (elezioni europee, referendum costituzionale, impeachment del premier, elezioni regionali),",
-        "Arte e spettacolo (Biennale di Venezia, Triennale Milano, Festival di Venezia, Sanremo),",
-        "Giornalismo di qualità (il quotidiano La Repubblica, il magazine Vanity Fair, la rivista L'Espresso, il programma Radio 3),",
-        "Economia e finanza (mercati finanziari, tassi di interesse, inflazione, PIL, FMI, BCE),"
-      ],
-      "unite": [
-        {
-          "num": "Lezione 1",
-          "descrizione": "**BUSINESS_ADVANCED** — Vocabolario denso per immersione reale.",
-          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [business advanced] con esercizi pratici di traduzione e comprensione scritta.",
-          "exercicios": [
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #1**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #2**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #3**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #4**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "revelar",
-              "pergunta": "**Esercizio denso #5**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            },
-            {
-              "tipo": "escolha",
-              "pergunta": "**Esercizio denso #6**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
-              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
-            }
-          ]
-        }
-      ],
-      "unidades": [
+      "lezioni": [
         {
           "id": "b2-i",
           "num": "Lezione B2-I",
@@ -16093,6 +16036,60 @@
             }
           ],
           "tabela_visual": "<p class=\"tabela-intro\">Marcadores do Estilo Literário e Elevado</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Tempo Narrativo Histórico</div><div class=\"ac-body\">Passato Remoto (Ação Principal) vs Imperfetto (Cenário)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Construções Subordinadas Sintéticas</div><div class=\"ac-body\">Gerúndio (Essendo uscito) / Infinito Passato (Dopo aver letto) / Participio Assoluto (Finito il lavoro)</div></div></div>"
+        }
+      ],
+      "temi_densita": [
+        "Terminologia business avanzata (il bilancio mostra una perdita, il CEO ha deciso di tagliare i costi, l'assemblea è stata approvata con margine),",
+        "Letteratura contemporanea italiana (Italo Calvino Il barone rampante, Umberto Eco Il nome della rosa, Antonio Tabucchi Sostiene Pereira),",
+        "Cinema e teatro italiano (Fellini La dolce vita, Visconti Rocco e i suoi fratelli, Sorrentino La grande bellezza),",
+        "Politica e società (elezioni europee, referendum costituzionale, impeachment del premier, elezioni regionali),",
+        "Arte e spettacolo (Biennale di Venezia, Triennale Milano, Festival di Venezia, Sanremo),",
+        "Giornalismo di qualità (il quotidiano La Repubblica, il magazine Vanity Fair, la rivista L'Espresso, il programma Radio 3),",
+        "Economia e finanza (mercati finanziari, tassi di interesse, inflazione, PIL, FMI, BCE),"
+      ],
+      "unite": [
+        {
+          "num": "Lezione 1",
+          "descrizione": "**BUSINESS_ADVANCED** — Vocabolario denso per immersione reale.",
+          "teoria": "**Contesto tematico**: Questa lezione approfondisce il vocabolario specifico per [business advanced] con esercizi pratici di traduzione e comprensione scritta.",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #1**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #2**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #3**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #4**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "**Esercizio denso #5**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "**Esercizio denso #6**\n\nIl bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "resposta": "Il bilancio mostra una perdita del 15% nel terzo trimestre.",
+              "explicacao": "📚 **Contesto autentico**: O balanço mostra uma perda de 15% no terceiro trimestre. (bilancio semestrale). Questa frase è tipica del linguaggio italiano reale."
+            }
+          ]
         }
       ],
       "nivel_minimo": 15,
