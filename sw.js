@@ -22,6 +22,7 @@ const STATIC = [
   './js/grammar.js',
   './js/heatmap.js',
   './js/main.js',
+  './js/onboarding.js',
   './js/profilo.js',
   './js/progression.js',
   './js/progresso.js',
