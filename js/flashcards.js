@@ -278,12 +278,17 @@ const Flashcards = {
     }
 
     if (this.modoEscuta) {
-      // 👂 Listening: hide word, auto-play TTS
+      // 👂 Listening: hide word, tap card to replay TTS
       if (elIt)  elIt.textContent  = '🎧';
       if (elCat) elCat.textContent = '';
-      if (elDica) elDica.textContent = 'Escute e adivinhe...';
+      if (elDica) elDica.textContent = 'Toque no card para ouvir novamente 🔊';
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
-      setTimeout(() => { if (this.modoEscuta && this.cartaAtual) this.pronunciar(); }, 350);
+      // Card click replays audio (user gesture — sem bloqueio mobile)
+      const cardEl3 = document.getElementById('flashcard');
+      if (cardEl3) cardEl3.onclick = (e) => {
+        if (!this.virada) { this.pronunciar(); }
+        else { this.virar(); }
+      };
     } else if (this.modoContexto) {
       // 📖 Context: show example sentence with blank
       const ex = this.cartaAtual.exemplo || '';
@@ -738,7 +743,11 @@ const Flashcards = {
     this.modoEscuta = novoValor;
     const btn = document.getElementById('btn-escuta');
     if (btn) btn.classList.toggle('ativo', this.modoEscuta);
-    if (this.cartaAtual) this.mostrarCarta();
+    if (this.cartaAtual) {
+      this.mostrarCarta();
+      // Pronunciar imediatamente dentro do gesto do usuário (evita bloqueio mobile)
+      if (this.modoEscuta) this.pronunciar();
+    }
   },
 
   // ── Mask Italian word in example sentence ─────────────────

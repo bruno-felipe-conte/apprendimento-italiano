@@ -698,7 +698,7 @@ const App = {
     if (this._vozItaliana) return this._vozItaliana;
     const vozes = speechSynthesis.getVoices();
     if (!vozes.length) return null;
-    // Priority: exact it-IT → any it-* → null
+    // Priority: exact it-IT → any it-* → null (null = browser chooses best for lang=it-IT)
     this._vozItaliana =
       vozes.find(v => v.lang === 'it-IT') ||
       vozes.find(v => v.lang.startsWith('it')) ||
@@ -712,16 +712,22 @@ const App = {
     speechSynthesis.cancel();
 
     const falar = () => {
-      const u  = new SpeechSynthesisUtterance(texto);
-      u.lang   = 'it-IT';
-      u.rate   = 0.9;
-      u.pitch  = 1;
+      const u = new SpeechSynthesisUtterance(texto);
+      u.lang  = 'it-IT';
+      u.rate  = 0.85;
+      u.pitch = 1;
+      // Set Italian voice if available; otherwise browser uses lang=it-IT
+      // with whatever engine is available (still speaks, just may have accent)
       const voz = this._getVozItaliana();
       if (voz) u.voice = voz;
+      u.onerror = (e) => {
+        // 'not-allowed': autoplay policy blocked — user must interact first
+        // 'language-unavailable': no it-IT voice installed on device
+        if (e.error !== 'interrupted') console.warn('TTS:', e.error);
+      };
       speechSynthesis.speak(u);
     };
 
-    // Voices may not be loaded yet on first call — wait for them
     if (speechSynthesis.getVoices().length > 0) {
       falar();
     } else {
