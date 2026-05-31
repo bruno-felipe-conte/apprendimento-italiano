@@ -6912,40 +6912,33 @@
           "coda": "Decorar frases prontas funciona no início, mas a fluência vem de entender por que *vorrei* soa melhor que *voglio*. Pratique o condicional além do restaurante.",
           "observacao_cards": [
             {
-              "italiano": "Vorrei un tavolo per due, per favore.",
-              "traducao": "vorrei é o condicional — mais educado e suave; voglio é direto e pode soar brusco",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "condicional vorrei = forma educada de pedir"
+              "italiano": "Vorrei un tavolo",
+              "traducao": "Eu gostaria de uma mesa",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Usa-se o condicional 'vorrei' por educação em vez de 'voglio'."
             },
             {
-              "italiano": "Prendo degli spaghetti e dell'acqua minerale.",
-              "traducao": "degli e dell' são artigos partitivos — indicam quantidade indefinida ('uns espaguetes', 'um pouco de água')",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "partitivo di+art = quantidade indefinida"
-            },
-            {
-              "italiano": "È compreso il servizio? — Sì, è già incluso.",
-              "traducao": "È compreso il servizio? — literalmente 'o serviço está incluído?'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "serviço = gorjeta em contexto de restaurante italiano"
+              "italiano": "Prendo un caffè",
+              "traducao": "Vou querer um café",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "'Prendere' é extremamente comum para fazer pedidos diretos."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Voglio un caffè",
+              "certo": "Vorrei un caffè",
+              "motivo": "Em italiano, 'voglio' (eu quero) soa imperativo e grosseiro no comércio. Use 'vorrei'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Il conto, per favore?",
+              "certo": "Il conto, per favore",
+              "motivo": "Não se costuma pedir a conta com 'posso avere' ou outras fórmulas longas. Seja direto: 'Il conto, per favore'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Al ristorante e al bar</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Pedindo no Bar e Restaurante</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Vorrei...</div><div class=\"ac-body\">Mais formal e polido. Ex: Vorrei il menù.</div></div><div class=\"ac-card\"><div class=\"ac-head\">Prendo...</div><div class=\"ac-body\">Direto mas perfeitamente aceito. Ex: Prendo la pasta.</div></div></div>"
         },
         {
           "id": "a2-ii",
@@ -7168,40 +7161,33 @@
           "coda": "Aprenda pelo menos: *Scusi, dov'è…? / sempre dritto / a destra / a sinistra / grazie mille.* Essas 6 expressões resolvem 80% das situações de orientação.",
           "observacao_cards": [
             {
-              "italiano": "Scusi, dov'è la fermata dell'autobus?",
-              "traducao": "Scusi é o imperativo formal (Lei) — usado com desconhecidos adultos; Scusa é informal (tu)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "Scusi (formal/desconhecido) ≠ Scusa (informal/amigos)"
+              "italiano": "Scusi, dov'è...",
+              "traducao": "Com licença, onde é...",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Para parar desconhecidos na rua, usa-se 'Scusi' (formal)."
             },
             {
-              "italiano": "Ci vogliono venti minuti a piedi.",
-              "traducao": "ci vogliono = 'são necessários' — o verbo concorda com 'venti minuti' (plural)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "ci vuole (singular) / ci vogliono (plural) = levar X tempo/ser necessário"
-            },
-            {
-              "italiano": "La stazione è di fronte all'albergo.",
-              "traducao": "a + l'albergo = all'albergo — preposição a + artigo l' (elide antes de vogal)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "a + il = al | a + l' = all' | a + lo = allo"
+              "italiano": "Vada dritto",
+              "traducao": "Vá em frente",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "'Vada' é o imperativo formal (Lei) do verbo andare."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Scusa, dov'è...",
+              "certo": "Scusi, dov'è...",
+              "motivo": "'Scusa' é informal (tu). Para perguntar direções na rua a desconhecidos, use sempre 'Scusi' (Lei)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Gira a destra",
+              "certo": "Giri a destra",
+              "motivo": "Mesmo motivo. 'Giri' é a forma de tratamento formal (Lei) adequada para estranhos."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Trasporti e orientamento</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Direções e Movimento</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Sempre dritto</div><div class=\"ac-body\">Sempre em frente</div></div><div class=\"ac-card\"><div class=\"ac-head\">A destra/sinistra</div><div class=\"ac-body\">Para a direita/esquerda</div></div></div>"
         },
         {
           "id": "a2-iii",
@@ -7424,40 +7410,33 @@
           "coda": "O vocabulário profissional italiano é mais formal que o cotidiano. Invista tempo nos e-mails formais — eles revelam nível de língua de forma imediata.",
           "observacao_cards": [
             {
-              "italiano": "Lavoro in questa azienda da cinque anni.",
-              "traducao": "Em italiano, da + presente indica ação iniciada no passado que AINDA continua — diferente do português 'há 5 anos que trabalho'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "da + presente = ação contínua desde o passado até hoje"
+              "italiano": "Faccio il medico",
+              "traducao": "Sou médico (lit: faço o médico)",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Com o verbo 'fare', usamos artigo definido antes da profissão."
             },
             {
-              "italiano": "Sono ingegnere / Faccio l'ingegnere.",
-              "traducao": "Com ESSERE + profissão: sem artigo. Com FARE + profissão: com artigo determinativo",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "essere + profissão (sem artigo) | fare + l'/il/la + profissão (com artigo)"
-            },
-            {
-              "italiano": "In attesa di una Sua risposta, porgo distinti saluti.",
-              "traducao": "Sua com maiúscula = pronome formal de cortesia (Lei). 'Porgo distinti saluti' = fórmula de fechamento formal (equivalente a 'atenciosamente')",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "Lei/Suo com maiúscula = máximo formalidade em e-mails"
+              "italiano": "Sono medico",
+              "traducao": "Sou médico",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Com o verbo 'essere', omitimos o artigo antes da profissão."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Sono un medico",
+              "certo": "Sono medico / Faccio il medico",
+              "motivo": "Ao contrário do português, pode-se usar 'sono + profissão' sem artigo, ou 'faccio + artigo + profissão'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Lavoro di ingegnere",
+              "certo": "Lavoro come ingegnere",
+              "motivo": "Usa-se 'come' para indicar o papel ou profissão atual."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Lavoro e vita professionale</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Profissões e Trabalho</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Fare il/la</div><div class=\"ac-body\">Ex: Faccio la segretaria</div></div><div class=\"ac-card\"><div class=\"ac-head\">Essere Ø</div><div class=\"ac-body\">Ex: Sono segretaria</div></div></div>"
         },
         {
           "id": "a2-iv",
@@ -7680,40 +7659,33 @@
           "coda": "Leia anúncios reais de imóveis italianos online — são o melhor treino para este vocabulário porque combinam vocabulário, gramática e cultura em situação autêntica.",
           "observacao_cards": [
             {
-              "italiano": "L'appartamento è al secondo piano con ascensore.",
-              "traducao": "al terzo piano / al piano terra — note que piano terra não usa número ordinal",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "piano terra (térreo) | al primo/secondo/terzo piano (1°/2°/3° andar)"
+              "italiano": "C'è un garage",
+              "traducao": "Tem uma garagem",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Usamos 'c'è' para indicar a existência de um item (singular)."
             },
             {
-              "italiano": "Ci abito da tre anni e mi trovo molto bene.",
-              "traducao": "ci = partícula de lugar que substitui 'lì/là' (lá). Sem ci: 'Abito qui da tre anni' — possível, mas ci evita a repetição",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "ci di luogo = lá/aqui (pronome locativo que evita repetição)"
-            },
-            {
-              "italiano": "Manca il riscaldamento — fa molto freddo d'inverno.",
-              "traducao": "manca enfatiza a falta como problema; non c'è é mais neutro (simplesmente não existe)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "manca = falta (com nuance de inconveniência) | non c'è = não há (neutro)"
+              "italiano": "Ci sono due bagni",
+              "traducao": "Têm dois banheiros",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Usamos 'ci sono' para itens no plural."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Ha due bagni",
+              "certo": "Ci sono due bagni",
+              "motivo": "No sentido de 'existir' ou 'haver', não se usa o verbo avere ('ha'), mas sim 'esserci' (c'è/ci sono)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Nel primo piano",
+              "certo": "Al primo piano",
+              "motivo": "Para andares de edifícios, usa-se a preposição articulada 'al'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Casa e quartiere</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Descrevendo a Casa</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">C'è / Ci sono</div><div class=\"ac-body\">Haver/Existir (Sing/Plural)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Piano</div><div class=\"ac-body\">Al primo piano (No primeiro andar)</div></div></div>"
         },
         {
           "id": "a2-v",
@@ -7936,40 +7908,33 @@
           "coda": "Memorize pelo menos: *ho mal di testa, ho la febbre, mi fa male, ho bisogno di un medico, chiami il 118.* Em emergência, essas frases valem mais que todo o resto.",
           "observacao_cards": [
             {
-              "italiano": "Ho mal di stomaco da ieri sera.",
-              "traducao": "da + referência temporal (ieri sera, stamattina, lunedì) indica desde quando a situação persiste",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "da + momento específico = desde [aquele momento] até agora"
+              "italiano": "Ho mal di testa",
+              "traducao": "Estou com dor de cabeça",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "A estrutura 'ho mal di + parte do corpo' é a mais comum para queixas."
             },
             {
-              "italiano": "Mi fanno male i denti — devo andare dal dentista.",
-              "traducao": "fare male concorda com a parte do corpo: i denti = plural → fanno",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "mi FA male il/la (singular) | mi FANNO male i/le (plural)"
-            },
-            {
-              "italiano": "Ha qualcosa senza ricetta per il raffreddore?",
-              "traducao": "senza ricetta = sem receita médica. Ha com maiúscula = forma formal Lei (você formal) — o farmacista é um desconhecido adulto",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "Ha (Lei formal) = você formal na farmácia/médico"
+              "italiano": "Mi fa male la schiena",
+              "traducao": "Minhas costas doem",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Usamos 'mi fa male' (singular) ou 'mi fanno male' (plural)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Mi duole la testa",
+              "certo": "Ho mal di testa",
+              "motivo": "Embora 'dolere' exista, na linguagem cotidiana usa-se 'avere mal di' ou 'fare male'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Sono con febbre",
+              "certo": "Ho la febbre",
+              "motivo": "Para sintomas e doenças, usa-se o verbo 'avere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Salute e farmacia</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Falando de Dores</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Ho mal di...</div><div class=\"ac-body\">Ex: mal di pancia, mal di denti</div></div><div class=\"ac-card\"><div class=\"ac-head\">Mi fa/fanno male...</div><div class=\"ac-body\">Ex: mi fa male il piede</div></div></div>"
         },
         {
           "id": "a2-vi",
@@ -8196,33 +8161,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Ho mangiato",
+              "traducao": "Eu comi",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "A maioria dos verbos transitivos (que aceitam objeto direto) usa 'avere'."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Abbiamo parlato",
+              "traducao": "Nós falamos",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Com 'avere', o particípio passado geralmente termina em -o invariável."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Io mangiato",
+              "certo": "Io ho mangiato",
+              "motivo": "Nunca se esqueça do verbo auxiliar (avere). O passado próximo exige sempre Auxiliar + Particípio."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Abbiamo mangiati",
+              "certo": "Abbiamo mangiato",
+              "motivo": "O particípio acompanhado do auxiliar 'avere' não concorda com o sujeito (fica sempre em -o)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Passato Prossimo con avere</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Passato Prossimo (Avere)</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Verbos Transitivos</div><div class=\"ac-body\">O que respondem 'o que?'. Ex: mangiare, leggere.</div></div><div class=\"ac-card\"><div class=\"ac-head\">Particípio Invariável</div><div class=\"ac-body\">Sempre termina em -o. Ex: ho visto, lei ha visto.</div></div></div>"
         },
         {
           "id": "a2-vii",
@@ -8449,33 +8414,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Sono andato/a",
+              "traducao": "Eu fui",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Verbos de movimento ou mudança de estado usam 'essere' como auxiliar."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Siamo partiti/e",
+              "traducao": "Nós partimos",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Com 'essere', o particípio passado deve concordar em gênero e número com o sujeito."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Ho andato",
+              "certo": "Sono andato",
+              "motivo": "Verbos que indicam movimento de um ponto a outro exigem 'essere'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Maria è partito",
+              "certo": "Maria è partita",
+              "motivo": "É obrigatório concordar o particípio (-o, -a, -i, -e) quando o auxiliar for 'essere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Passato Prossimo con essere</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Passato Prossimo (Essere)</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Uso de Essere</div><div class=\"ac-body\">Movimento, mudança de estado, reflexivos.</div></div><div class=\"ac-card\"><div class=\"ac-head\">Concordância</div><div class=\"ac-body\">Lui è andato / Lei è andata / Noi siamo andati</div></div></div>"
         },
         {
           "id": "a2-viii",
@@ -8702,33 +8667,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Da bambino giocavo",
+              "traducao": "Quando criança, eu brincava",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O imperfeito é usado para hábitos e ações repetitivas no passado."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Faceva caldo",
+              "traducao": "Fazia calor",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Também é usado para descrições físicas ou de estado de espírito no passado."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Ieri andavo al cinema",
+              "certo": "Ieri sono andato al cinema",
+              "motivo": "Para uma ação pontual e concluída no passado, use o Passato Prossimo, não o Imperfeito."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Ero mangiando",
+              "certo": "Stavo mangiando",
+              "motivo": "Para o passado contínuo (estava comendo), use 'stare' no imperfeito + gerúndio."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — L'Imperfetto Indicativo</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Uso do Imperfetto</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Hábitos (Passado)</div><div class=\"ac-body\">Ogni estate andavamo al mare.</div></div><div class=\"ac-card\"><div class=\"ac-head\">Descrições</div><div class=\"ac-body\">Il cielo era azzurro e faceva caldo.</div></div></div>"
         },
         {
           "id": "a2-ix",
@@ -8959,33 +8924,26 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Mentre mangiavo, ha suonato il telefono",
+              "traducao": "Enquanto eu comia, o telefone tocou",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
-            },
-            {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Imperfetto (ação de fundo) + Passato Prossimo (ação pontual que interrompe)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Mentre ho mangiato...",
+              "certo": "Mentre mangiavo...",
+              "motivo": "Após 'mentre' (enquanto), quase sempre se usa o Imperfeito, pois descreve uma ação em andamento."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Ieri pioveva e sono rimasto a casa",
+              "certo": "Correto",
+              "motivo": "Pioveva (descrição do clima de fundo) e sono rimasto (decisão pontual/resultado)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Passato Prossimo vs Imperfetto</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Passato Prossimo vs Imperfetto</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Passato Prossimo</div><div class=\"ac-body\">O que aconteceu (Evento concluído)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Imperfetto</div><div class=\"ac-body\">O que estava acontecendo (Contexto)</div></div></div>"
         },
         {
           "id": "a2-x",
@@ -9212,33 +9170,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "L'anno prossimo andrò",
+              "traducao": "Ano que vem eu irei",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O futuro simples é usado para projetos e planos distantes."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Avrà 30 anni",
+              "traducao": "Ele deve ter 30 anos",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Futuro epistemológico: usado para expressar dúvida ou suposição no presente."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Domani io farò",
+              "certo": "Domani faccio",
+              "motivo": "Para o futuro próximo, os italianos usam frequentemente o Presente do Indicativo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Mangerò, mangiarò",
+              "certo": "Mangerò",
+              "motivo": "Os verbos em -are mudam o 'a' para 'e' no radical do futuro (mangiare -> mangerò)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Futuro Semplice</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Futuro Semplice</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Ações Futuras</div><div class=\"ac-body\">Fra un mese partirò per Roma.</div></div><div class=\"ac-card\"><div class=\"ac-head\">Suposições</div><div class=\"ac-body\">Saranno le cinque. (Devem ser cinco)</div></div></div>"
         },
         {
           "id": "a2-xi",
@@ -9468,33 +9426,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Più grande di...",
+              "traducao": "Maior que...",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Usamos 'di' para comparar nomes, pronomes ou duas pessoas."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Più bello che utile",
+              "traducao": "Mais bonito do que útil",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Usamos 'che' ao comparar dois adjetivos, verbos ou quantidades."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Più buono",
+              "certo": "Migliore / Più buono",
+              "motivo": "Em italiano 'più buono' é perfeitamente aceito, mas 'migliore' é mais elegante."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Roma è più grande che Milano",
+              "certo": "Roma è più grande di Milano",
+              "motivo": "Na comparação entre dois substantivos, usa-se 'di' e não 'che'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Comparativi e Superlativi</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Comparativos</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Di</div><div class=\"ac-body\">Compara sujeitos (Marco è più alto di Luca).</div></div><div class=\"ac-card\"><div class=\"ac-head\">Che</div><div class=\"ac-body\">Compara qualidades (È più stanco che malato).</div></div></div>"
         },
         {
           "id": "a2-xii",
@@ -9721,33 +9679,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Lo vedo",
+              "traducao": "Eu o vejo",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Os pronomes diretos substituem um objeto direto."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "L'ho visto",
+              "traducao": "Eu o vi",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Com o Passato Prossimo, o pronome (lo/la) contrai-se com avere (l'ho) e o particípio concorda."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Vedo lui",
+              "certo": "Lo vedo",
+              "motivo": "Não se costuma usar 'vedo lui' a não ser para forte ênfase. Use o pronome átono antes do verbo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "L'ho vista e salutato",
+              "certo": "L'ho vista e l'ho salutata",
+              "motivo": "O particípio deve concordar com o pronome direto de 3ª pessoa."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — I Pronomi Diretti</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Pronomi Diretti</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Singulares</div><div class=\"ac-body\">mi (me), ti (te), lo (o), la (a)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Plurais</div><div class=\"ac-body\">ci (nos), vi (vos), li (os), le (as)</div></div></div>"
         },
         {
           "id": "a2-xiii",
@@ -9974,33 +9932,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Gli parlo",
+              "traducao": "Eu falo com ele",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O pronome indireto responde a 'a chi?' (a quem?). 'Gli' = a lui."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Le telefono",
+              "traducao": "Eu telefono para ela",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O verbo telefonare exige um objeto indireto (telefonare a)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Lo parlo",
+              "certo": "Gli parlo",
+              "motivo": "Falar é 'parlare a', logo exige pronome indireto (gli), não direto (lo)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Gli ho detto (para eles)",
+              "certo": "Ho detto loro / Gli ho detto",
+              "motivo": "No italiano moderno 'gli' é amplamente aceito também para o plural em vez de 'loro'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — I Pronomi Indiretti</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Pronomi Indiretti</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">3ª Pessoa Sing.</div><div class=\"ac-body\">Gli (a ele) / Le (a ela) / Le (formal)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Lugar na frase</div><div class=\"ac-body\">Sempre antes do verbo, exceto 'loro'.</div></div></div>"
         },
         {
           "id": "a2-xiv",
@@ -10227,33 +10185,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Mi sveglio",
+              "traducao": "Eu acordo",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Verbos reflexivos exigem os pronomes mi, ti, si, ci, vi, si."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Mi sono svegliato/a",
+              "traducao": "Eu acordei",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Todos os verbos reflexivos no Passato Prossimo exigem o auxiliar 'essere'!"
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Mi ho svegliato",
+              "certo": "Mi sono svegliato",
+              "motivo": "Jamais use 'avere' com verbos reflexivos."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Svegliomi",
+              "certo": "Mi sveglio",
+              "motivo": "O pronome vem antes do verbo conjugado. Só vai depois com infinitivo ou imperativo."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — I Verbi Riflessivi</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Verbos Reflexivos</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Pronomes</div><div class=\"ac-body\">mi, ti, si, ci, vi, si</div></div><div class=\"ac-card\"><div class=\"ac-head\">Passado</div><div class=\"ac-body\">Sempre auxiliar Essere + Concordância.</div></div></div>"
         },
         {
           "id": "a2-xv",
@@ -10479,33 +10437,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Me lo dai?",
+              "traducao": "Você me dá isso?",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Pronome indireto (mi) muda para 'me' com um pronome direto (lo, la...)."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Glielo porto",
+              "traducao": "Eu o levo para ele/ela",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Gli/Le indiretos unem-se a lo/la/li/le através de um 'e' (glielo)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Mi lo dai",
+              "certo": "Me lo dai",
+              "motivo": "A vogal 'i' dos pronomes mi/ti/ci/vi muda sempre para 'e' ao se juntar aos pronomes diretos."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Gli lo dico",
+              "certo": "Glielo dico",
+              "motivo": "Nunca devem ficar separados. O 'gli' forma palavra única (glielo)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Pronomi Combinati (intro)</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Pronomi Combinati</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Mi/Ti/Ci/Vi + Lo</div><div class=\"ac-body\">Me lo, Te lo, Ce lo, Ve lo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Gli / Le + Lo</div><div class=\"ac-body\">Glielo (Unidos em uma palavra)</div></div></div>"
         }
       ],
       "nivel_minimo": 5,
@@ -10798,40 +10756,40 @@
           "coda": "Siga perfis italianos nas redes sociais que você já usa — é o melhor laboratório para absorver esse vocabulário em contexto real e atualizado.",
           "observacao_cards": [
             {
-              "italiano": "Ho postato una foto e ho ricevuto molti like.",
-              "traducao": "Sim: postare → postato (reg. -are); ricevere → ricevuto (reg. -ere). Ambos com ausiliare AVERE",
-              "artigo": "⚠️",
+              "italiano": "Ho postato una foto.",
+              "traducao": "Postei uma foto.",
+              "artigo": "📌",
               "genero": "importante",
-              "motivo": "-are → -ato | -ere → -uto | -ire → -ito (participi passati regulares)"
+              "motivo": "Uso de verbo adaptado do ingles com sufixo -are."
             },
             {
-              "italiano": "Penso che i social media abbiano cambiato il modo di comunicare.",
-              "traducao": "penso che + congiuntivo — verbos de opinião (pensare, credere, sperare) requerem congiuntivo na subordinada",
+              "italiano": "I follower sono tanti.",
+              "traducao": "Os seguidores sao muitos.",
               "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "pensare/credere/sperare + che → congiuntivo presente"
+              "genero": "regra",
+              "motivo": "Emprestimos ingleses nao ganham -s de plural em italiano."
             },
             {
-              "italiano": "Se hai una buona connessione, possiamo fare una videochiamata.",
-              "traducao": "Período hipotético real (tipo 1): se + indicativo presente → indicativo presente/futuro",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "hipótese real: se + presente → presente/futuro (não congiuntivo!)"
+              "italiano": "Penso che i social siano utili.",
+              "traducao": "Acho que as redes sociais sao uteis.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "Verbos de opiniao exigem o congiuntivo na oracao subordinada."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "I likes",
+              "certo": "I like",
+              "motivo": "Palavras estrangeiras adotadas em italiano sao invariaveis no plural."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Downloadare",
+              "certo": "Scaricare",
+              "motivo": "Embora o italiano crie neologismos (chattare), prefere-se usar o termo italiano puro quando existe (scaricare em vez de downloadare) no discurso mais formal."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il mondo digitale e i social media</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Il mondo digitale e i social media</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Italianizacao</div><div class=\"ac-body\">Verbo ingles + -are (ex: chattare, postare)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Genero dos Anglicismos</div><div class=\"ac-body\">Usa a regra normal (il selfie, lo screenshot)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Plurais Ingleses</div><div class=\"ac-body\">Invariaveis (i like, i follower)</div></div></div>"
         },
         {
           "id": "b1-ii",
@@ -11054,40 +11012,40 @@
           "coda": "Encontre modelos de e-mail formal italiano online e analise a estrutura antes de escrever o seu. A fórmula é rígida — e seguir a fórmula é mais importante do que ser criativo.",
           "observacao_cards": [
             {
-              "italiano": "Potrebbe inviarmi il documento entro domani?",
-              "traducao": "potrebbe é mais educado e suave — equivale a 'poderia' em vez de 'pode?'. Em contexto formal, o condicional é preferível",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "condizionale = forma polida de pedir em contexto profissional"
+              "italiano": "Gentile Dottor Rossi",
+              "traducao": "Prezado Doutor Rossi",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Obrigatorio o uso de titulo academico e 'Gentile' em e-mails formais."
             },
             {
-              "italiano": "È necessario che tutti i partecipanti arrivino in orario.",
-              "traducao": "è necessario che + congiuntivo presente — expressões impessoais de necessidade/obrigação requerem congiuntivo",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "è necessario/importante/fondamentale che → congiuntivo"
+              "italiano": "Potrebbe inviarmi il documento?",
+              "traducao": "Poderia me enviar o documento?",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "Uso do condicional para suavizar pedidos no ambiente profissional."
             },
             {
-              "italiano": "La riunione è stata rinviata a data da destinarsi.",
-              "traducao": "è stata rinviata = passivo (essere + participio). Agente não explicitado — comum em comunicações burocráticas para despersonalizar a informação",
+              "italiano": "La riunione è stata rinviata.",
+              "traducao": "A reuniao foi adiada.",
               "artigo": "⚠️",
               "genero": "importante",
-              "motivo": "passivo sem agente = estilo burocrático italiano para despersonalizar decisões"
+              "motivo": "A voz passiva e muito comum no discurso corporativo para despersonalizar acoes."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Caro Dottor Rossi",
+              "certo": "Gentile Dottor Rossi",
+              "motivo": "'Caro' e usado apenas para pessoas com as quais voce tem intimidade. Em contexto formal, use 'Gentile'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Può darmi...",
+              "certo": "Potrebbe darmi...",
+              "motivo": "O presente indicativo ('può') soa muito direto e pouco cortes num pedido formal. Prefira o condizionale ('potrebbe')."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Ambiente di lavoro e linguaggio professionale</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Ambiente di lavoro e linguaggio professionale</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Abertura de Email</div><div class=\"ac-body\">Gentile + Titulo + Sobrenome</div></div><div class=\"ac-card\"><div class=\"ac-head\">Pedidos Polidos</div><div class=\"ac-body\">Condicional (Potrebbe...)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Encerramento</div><div class=\"ac-body\">Cordiali saluti</div></div></div>"
         },
         {
           "id": "b1-iii",
@@ -11310,40 +11268,40 @@
           "coda": "Cultura não se aprende só de livros. Assista a programas de notícias italianos, leia um jornal italiano online por 10 minutos por dia — o vocabulário cultural virá naturalmente.",
           "observacao_cards": [
             {
-              "italiano": "Nonostante la crisi economica, gli italiani non rinunciano al caffè.",
-              "traducao": "nonostante + substantivo não requer congiuntivo. Só requer congiuntivo quando seguido de che + verbo: 'nonostante che la crisi sia grave'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "nonostante + sostantivo (sem congiuntivo) | nonostante che + congiuntivo"
+              "italiano": "Nonostante sia tardi...",
+              "traducao": "Apesar de ser tarde...",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Conjuncoes concessivas exigem o modo congiuntivo."
             },
             {
-              "italiano": "Il modo di vivere degli italiani è cambiato molto negli ultimi vent'anni.",
-              "traducao": "cambiare intransitivo (sem objeto) = essere; cambiare transitivo (com objeto) = avere. 'Il modo di vivere è cambiato' — sem objeto → essere",
+              "italiano": "Il paese è cambiato.",
+              "traducao": "O pais mudou.",
               "artigo": "⚠️",
               "genero": "importante",
-              "motivo": "cambiare intransitivo = essere | cambiare transitivo = avere"
+              "motivo": "O verbo 'cambiare' exige o auxiliar 'essere' quando a mudanca afeta o proprio sujeito."
             },
             {
-              "italiano": "Da un lato la tradizione, dall'altro la modernità: questa è l'Italia di oggi.",
-              "traducao": "da un lato… dall'altro = 'por um lado… por outro' — estrutura para apresentar duas perspectivas sem tomar partido, útil em ensaios e discussões",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "da un lato… dall'altro lato = estrutura argumentativa para perspectivas opostas"
+              "italiano": "Ha cambiato lavoro.",
+              "traducao": "Ele trocou de emprego.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "'Cambiare' exige 'avere' quando significa trocar ou modificar alguma coisa (objeto direto)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Nonostante è...",
+              "certo": "Nonostante sia...",
+              "motivo": "Em portugues usamos o indicativo ou infinitivo com 'apesar de', mas em italiano exige-se o congiuntivo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Il mondo ha cambiato.",
+              "certo": "Il mondo è cambiato.",
+              "motivo": "Quando a mudanca ocorre por si so (intransitivo), deve-se usar o auxiliar 'essere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Cultura e societa italiana contemporanea</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Cultura e societa italiana</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Concessao</div><div class=\"ac-body\">Nonostante / Sebbene + Congiuntivo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Oposicao</div><div class=\"ac-body\">Da un lato... dall'altro</div></div><div class=\"ac-card\"><div class=\"ac-head\">Mudanca de Estado</div><div class=\"ac-body\">Cambiare com essere ou avere</div></div></div>"
         },
         {
           "id": "b1-iv",
@@ -11538,40 +11496,40 @@
           "coda": "Pratique escrevendo textos argumentativos curtos (10 linhas) sobre temas do cotidiano. A argumentação em italiano se aprende escrevendo — não apenas lendo.",
           "observacao_cards": [
             {
-              "italiano": "Sono convinto che il cambiamento climatico sia la sfida principale del nostro tempo.",
-              "traducao": "sono convinto che = verbo di opinione soggettiva → congiuntivo. Se fosse 'è dimostrato che', usaria indicativo (è)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "opinione soggettiva → congiuntivo | fatto oggettivo → indicativo"
+              "italiano": "Penso che sia vero.",
+              "traducao": "Acho que e verdade.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Verbos de opiniao requerem o congiuntivo para indicar subjetividade."
             },
             {
-              "italiano": "Capisco il tuo punto, però non mi convince del tutto.",
-              "traducao": "Concessão + contraposição: reconhece o argumento do outro (capisco) antes de discordar (però non mi convince). Però = 'mas/porém' — mais suave que 'ma'",
+              "italiano": "È evidente che hai ragione.",
+              "traducao": "E evidente que tens razao.",
               "artigo": "⚠️",
               "genero": "importante",
-              "motivo": "concessão + però = discordância educada que preserva o diálogo"
+              "motivo": "Expressoes de certeza e objetividade exigem o indicativo."
             },
             {
-              "italiano": "Non credo affatto che questa soluzione funzioni.",
-              "traducao": "affatto = absolutamente/de forma alguma. Com negação (non… affatto) = intensifica a negação. NÃO se usa em frases afirmativas (erro comum)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "non… affatto = intensificador de negação (≠ 'totalmente' em frases afirmativas)"
+              "italiano": "Non credo che lui venga.",
+              "traducao": "Nao acredito que ele venha.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "A negacao de uma opiniao ('non credo') tambem exige o congiuntivo."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Penso che è...",
+              "certo": "Penso che sia...",
+              "motivo": "Um dos erros mais comuns de estrangeiros (e ate nativos). Opiniao pessoal pede congiuntivo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "È ovvio che sia...",
+              "certo": "È ovvio che è...",
+              "motivo": "Certezas impessoais ('è ovvio', 'è certo') levam indicativo, pois nao deixam margem para duvida."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Esprimere opinioni e argomentare</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Expressar Opinioes</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Subjetivo</div><div class=\"ac-body\">Credo che + Congiuntivo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Objetivo</div><div class=\"ac-body\">È evidente che + Indicativo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Oposicao</div><div class=\"ac-body\">Tuttavia / Eppure</div></div></div>"
         },
         {
           "id": "b1-v",
@@ -11766,40 +11724,40 @@
           "coda": "Ouça músicas, podcasts e vídeos de diferentes regiões da Itália. O ouvido se acostuma com a variação regional muito antes do que você pensa.",
           "observacao_cards": [
             {
-              "italiano": "In Italia si parla ancora molto in dialetto, soprattutto tra le generazioni anziane.",
-              "traducao": "si + verbo 3ª pessoa = sujeito indeterminado (equivale a 'se fala', 'falam', 'as pessoas falam'). Indica ação sem agente específico",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "si + verbo (3ª sg.) = impessoal — sujeito genérico/indeterminado"
+              "italiano": "In Italia si mangia bene.",
+              "traducao": "Na Italia come-se bem.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "O 'si impersonale' e muito usado para falar de habitos culturais."
             },
             {
-              "italiano": "Il napoletano non è un italiano scorretto — è una lingua autonoma con una sua grammatica.",
-              "traducao": "Nega uma definição errada e substitui por uma correta — estratégia retórica de redefinição: 'não é X, é Y'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "non è A — è B = estrutura de redefinição/correção de equívoco"
+              "italiano": "Non ho capito bene.",
+              "traducao": "Nao entendi bem.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "Frase essencial para lidar com forte sotaque regional ou dialeto."
             },
             {
-              "italiano": "Si riconosce subito da dove viene: ha una cadenza inconfondibile.",
-              "traducao": "cadenza = melodia, ritmo da fala (entonação). accento = pronúncia específica de sons. Cadenza é mais sobre o ritmo musical da fala, accento sobre os fonemas",
+              "italiano": "È un bel casino.",
+              "traducao": "E uma bela bagunca.",
               "artigo": "⚠️",
               "genero": "importante",
-              "motivo": "cadenza = melodia/ritmo | accento = pronúncia/fonemas"
+              "motivo": "Palavra informal usada em toda a Italia que perdeu o sentido original (bordel) e hoje significa confusao."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Noi si mangia...",
+              "certo": "Noi mangiamo... ou Si mangia...",
+              "motivo": "Na Toscana usa-se 'noi si mangia', mas no italiano standard isso e gramaticalmente incorreto."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Dialetto",
+              "certo": "Italiano regionale / Dialetto",
+              "motivo": "Nao confunda 'italiano regional' (italiano com sotaque local) com 'dialeto' (uma lingua separada com sua propria gramatica e vocabulario)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — L'italiano regionale e i dialetti</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Italiano regional</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Norte</div><div class=\"ac-body\">Vogais mais fechadas, ritmo rapido</div></div><div class=\"ac-card\"><div class=\"ac-head\">Sul</div><div class=\"ac-body\">Vogais abertas, consoantes fortes</div></div><div class=\"ac-card\"><div class=\"ac-head\">Generalizacao</div><div class=\"ac-body\">Si + verbo (Si mangia bene)</div></div></div>"
         },
         {
           "id": "b1-vi",
@@ -12026,33 +11984,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Spero che tu capisca.",
+              "traducao": "Espero que entendas.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Verbos em -ere e -ire terminam em -a nas tres primeiras pessoas do singular."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "Penso che lui parli.",
+              "traducao": "Acho que ele fala.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "Verbos em -are terminam em -i nas tres primeiras pessoas do singular do congiuntivo."
+            },
+            {
+              "italiano": "È importante che andiamo.",
+              "traducao": "E importante que nos vamos.",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "A forma de 'noi' no congiuntivo presente e identica ao indicativo presente (-iamo)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Spero che lui capisce.",
+              "certo": "Spero che lui capisca.",
+              "motivo": "O verbo sperare exige o congiuntivo na oracao subordinada, nao o indicativo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Credo che parliamo",
+              "certo": "Credo che parliamo",
+              "motivo": "Neste caso a forma esta correta (identica ao indicativo), a armadilha e achar que ha uma forma diferente para 'noi' no congiuntivo presente."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Congiuntivo Presente</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Il Congiuntivo Presente</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">-ARE (parlare)</div><div class=\"ac-body\">io parli, tu parli, lui parli</div></div><div class=\"ac-card\"><div class=\"ac-head\">-ERE (leggere)</div><div class=\"ac-body\">io legga, tu legga, lui legga</div></div><div class=\"ac-card\"><div class=\"ac-head\">-IRE (partire)</div><div class=\"ac-body\">io parta, tu parta, lui parta</div></div></div>"
         },
         {
           "id": "b1-vii",
@@ -12279,33 +12244,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Io mangerei un gelato.",
+              "traducao": "Eu comeria um sorvete.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "A maioria dos verbos em -are muda o 'a' para 'e' no radical (mangiare -> mangerei)."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "Vorrei un caffè.",
+              "traducao": "Eu gostaria de um cafe.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "'Vorrei' (de volere) e a forma mais comum para pedir algo de forma educada."
+            },
+            {
+              "italiano": "Andrebbe a Roma se potesse.",
+              "traducao": "Iria a Roma se pudesse.",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "O condicional e usado na oracao principal do periodo hipotetico irreal."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Io parlarei",
+              "certo": "Io parlerei",
+              "motivo": "Diferente do portugues, os verbos em -are mudam o 'a' para 'e' no condicional italiano."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Voglio un caffè",
+              "certo": "Vorrei un caffè",
+              "motivo": "Em bares e restaurantes italianos, 'voglio' soa rude. O condicional de cortesia ('vorrei') e fundamental."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Condizionale Presente</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Il Condizionale Presente</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Radical (parlare)</div><div class=\"ac-body\">parler- (o 'a' vira 'e')</div></div><div class=\"ac-card\"><div class=\"ac-head\">Terminacoes</div><div class=\"ac-body\">-ei, -esti, -ebbe, -emmo, -este, -ebbero</div></div><div class=\"ac-card\"><div class=\"ac-head\">Verbos em -ire</div><div class=\"ac-body\">partire → partirei (nao muda vogal)</div></div></div>"
         },
         {
           "id": "b1-viii",
@@ -12532,33 +12504,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Il libro che leggo.",
+              "traducao": "O livro que eu leio.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "'Che' funciona como sujeito ou objeto direto e nao aceita preposicao."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "L'amico con cui esco.",
+              "traducao": "O amigo com quem eu saio.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "'Cui' e sempre precedido por uma preposicao (con, di, a, per, etc.)."
+            },
+            {
+              "italiano": "La ragazza il cui padre è medico.",
+              "traducao": "A garota cujo pai e medico.",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "'Cui' precedido de artigo definido equivale a 'cujo(s)/cuja(s)'. O artigo concorda com a coisa possuida."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "La persona che parlo.",
+              "certo": "La persona con cui parlo.",
+              "motivo": "Em italiano nao se pode usar 'che' com preposicao implicita. E preciso usar a preposicao + 'cui'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "L'uomo il quale libro...",
+              "certo": "L'uomo il cui libro...",
+              "motivo": "Para posse (cujo), a estrutura e sempre Artigo + cui + Substantivo possuido."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — I Pronomi Relativi</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — I Pronomi Relativi</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Suj/Obj Direto</div><div class=\"ac-body\">Che (invariavel)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Com Preposicao</div><div class=\"ac-body\">Cui (invariavel)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Posse</div><div class=\"ac-body\">Il cui / la cui / i cui / le cui</div></div></div>"
         },
         {
           "id": "b1-ix",
@@ -12785,33 +12764,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "La mela è mangiata da me.",
+              "traducao": "A maca e comida por mim.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Forma passiva basica usa o auxiliar 'essere' mais o participio passado, concordando em genero e numero."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "La casa è stata venduta.",
+              "traducao": "A casa foi vendida.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "No passato prossimo o auxiliar 'essere' fica 'è stato', resultando em uma estrutura tripla (è + stato + participio)."
+            },
+            {
+              "italiano": "La porta viene aperta.",
+              "traducao": "A porta e (esta sendo) aberta.",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "O verbo 'venire' e frequentemente usado no lugar de 'essere' nos tempos simples para enfatizar que a acao esta ocorrendo."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Il libro è statato scritto.",
+              "certo": "Il libro è stato scritto.",
+              "motivo": "Atencao a dupla forma participial: essere -> stato, scrivere -> scritto. Em portugues dizemos apenas 'foi escrito'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "La mela ha mangiata dal bambino.",
+              "certo": "La mela è (stata) mangiata dal bambino.",
+              "motivo": "A voz passiva NUNCA se forma com o auxiliar 'avere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — La Forma Passiva</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — La Forma Passiva</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Presente</div><div class=\"ac-body\">è mangiato/a/i/e (da)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Passato Prossimo</div><div class=\"ac-body\">è stato mangiato/a (da)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Auxiliar Venire</div><div class=\"ac-body\">Viene mangiato (enfatiza acao)</div></div></div>"
         },
         {
           "id": "b1-x",
@@ -13038,33 +13024,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Sto studiando l'italiano.",
+              "traducao": "Estou estudando italiano.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "A estrutura stare + gerundio e o presente continuo, usada para acoes que ocorrem no exato momento da fala."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "Passeggiando, ho visto Marco.",
+              "traducao": "Passeando, vi o Marco.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "O gerundio sozinho expressa uma acao simultanea (causal ou temporal) que partilha do mesmo sujeito da oracao principal."
+            },
+            {
+              "italiano": "Facendo / Dicendo / Bevendo",
+              "traducao": "Fazendo / Dizendo / Bebendo",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "Os verbos fare, dire e bere formam o gerundio a partir da raiz antiga (facere, dicere, bevere)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Stavo per studiando...",
+              "certo": "Stavo studiando / Stavo per studiare",
+              "motivo": "'Stare per' exige o infinito (acao prestes a acontecer), enquanto 'Stare + gerundio' e a acao ja em progresso."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Io vedendo il film, il telefono ha squillato.",
+              "certo": "Mentre vedevo il film, il telefono ha squillato.",
+              "motivo": "O gerundio absoluto (sem estar ligado ao sujeito da oracao principal) soa estranho; evite se os sujeitos forem diferentes."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Gerundio</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Il Gerundio</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">-ARE (parlare)</div><div class=\"ac-body\">parlando</div></div><div class=\"ac-card\"><div class=\"ac-head\">-ERE / -IRE</div><div class=\"ac-body\">leggendo / partendo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Stare + Gerundio</div><div class=\"ac-body\">Sto mangiando (acao em progresso)</div></div></div>"
         },
         {
           "id": "b1-xi",
@@ -13291,33 +13284,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Credevo che lui andasse a Roma.",
+              "traducao": "Eu achava que ele ia a Roma.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Se o verbo principal esta no passado (credevo) e exige congiuntivo, usa-se o congiuntivo imperfetto para a mesma epoca."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "Se avessi soldi, viaggerei.",
+              "traducao": "Se eu tivesse dinheiro, viajaria.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "E a estrutura chave do 'periodo ipotetico' da impossibilidade/hipotese no presente (Se + cong. imperfetto, condizionale presente)."
+            },
+            {
+              "italiano": "Fossi, fossi, fosse...",
+              "traducao": "Fosse, fosse, fosse...",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "O verbo 'essere' tem formas bem proprias (fossi, fosse, fossimo, foste, fossero)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Se io avrei tempo...",
+              "certo": "Se io avessi tempo...",
+              "motivo": "Erro gravissimo (o classico 'erro do condicional no lugar do congiuntivo'). Depois do 'se' hipotetico nunca se usa o condicional, apenas o congiuntivo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Pensavo che lui viene.",
+              "certo": "Pensavo che lui venisse.",
+              "motivo": "O indicativo depois de um verbo de opiniao no passado e um erro. A concordancia dos tempos verbais exige o congiuntivo imperfetto."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Congiuntivo Imperfetto</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — Congiuntivo Imperfetto</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">-ARE (parlare)</div><div class=\"ac-body\">parlassi, parlassi, parlasse, parlassimo...</div></div><div class=\"ac-card\"><div class=\"ac-head\">-ERE (credere)</div><div class=\"ac-body\">credessi, credessi, credesse, credessimo...</div></div><div class=\"ac-card\"><div class=\"ac-head\">-IRE (sentire)</div><div class=\"ac-body\">sentissi, sentissi, sentisse, sentissimo...</div></div></div>"
         },
         {
           "id": "b1-xii",
@@ -13545,33 +13545,40 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Ho voluto mangiare una pizza.",
+              "traducao": "Eu quis comer uma pizza.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O verbo modal 'volere' toma emprestado o auxiliar do verbo principal ('mangiare' exige 'avere')."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
-              "artigo": "📌",
-              "genero": "regra",
-              "motivo": "Padrão normal."
+              "italiano": "Sono dovuto partire presto.",
+              "traducao": "Eu tive que partir cedo.",
+              "artigo": "💡",
+              "genero": "dica",
+              "motivo": "Como 'partire' exige 'essere', o modal 'dovere' acompanha a regra e tambem usa 'essere'."
+            },
+            {
+              "italiano": "Non ci sono potuto andare.",
+              "traducao": "Nao pude ir (la).",
+              "artigo": "⚠️",
+              "genero": "importante",
+              "motivo": "Se houver um pronome atono (ci, mi, ti, lo) antes do verbo, o auxiliar OBRIGATORIAMENTE sera 'essere' (se o verbo pedir essere)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Ho dovuto partire.",
+              "certo": "Sono dovuto partire. / Ho dovuto partire (aceito mas menos elegante).",
+              "motivo": "A regra classica exige 'essere' quando o verbo no infinitivo exige 'essere'. Contudo, na lingua falada moderna, usar 'avere' com modais e cada vez mais tolerado."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Mi ho potuto lavare.",
+              "certo": "Mi sono potuto lavare. / Ho potuto lavarmi.",
+              "motivo": "Com verbos reflexivos, se o pronome reflexivo (mi) vem antes do auxiliar, usa-se 'essere'. Se vai anexado ao infinitivo, usa-se 'avere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — I Modali al Passato</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rapida — I Modali al Passato</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Com Avere</div><div class=\"ac-body\">Ho dovuto mangiare (verbo princ. usa avere)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Com Essere</div><div class=\"ac-body\">Sono dovuto andare (verbo princ. usa essere)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Pronominais</div><div class=\"ac-body\">Mi sono dovuto alzare / Ho dovuto alzarmi</div></div></div>"
         }
       ],
       "nivel_minimo": 10,
@@ -13847,40 +13854,33 @@
           "coda": "Leia pelo menos os primeiros 10 versos da Divina Commedia — não para entender tudo, mas para ouvir como soa o italiano que moldou uma civilização.",
           "observacao_cards": [
             {
-              "italiano": "Se Dante fosse vissuto oggi, avrebbe scritto un blog invece della Commedia.",
-              "traducao": "fosse vissuto = congiuntivo trapassato; avrebbe scritto = condizionale passato. Período hipotético irreale no passado — condição impossível de se realizar",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "hipótese irreale passada: se + cong. trapassato → condizionale passato"
+              "italiano": "Se Dante fosse vissuto oggi, avrebbe scritto un blog.",
+              "traducao": "Se Dante tivesse vivido hoje, teria escrito um blog.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Período hipotético da irrealidade no passado exige Congiuntivo Trapassato na condição e Condizionale Passato na consequência."
             },
             {
-              "italiano": "Petrarca diceva che l'amore fosse una dolce prigione.",
-              "traducao": "discorso indiretto al passato: diceva (passato) + che → congiuntivo imperfetto na subordinada. Se fosse presente: 'dice che l'amore sia'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "discorso indiretto: tempo principale passato → congiuntivo imperfetto"
-            },
-            {
-              "italiano": "La selva oscura è una metafora del peccato e della confusione spirituale.",
-              "traducao": "metafora: A = B (identidade direta, sem como). similitudine: A come B (comparação explícita com 'come')",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "metafora = A è B (sem 'come') | similitudine = A come B (com 'come')"
+              "italiano": "L'autore diceva che l'opera fosse completa.",
+              "traducao": "O autor dizia que a obra estava completa.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Discurso indireto introduzido por um verbo no passado ('diceva') exige Congiuntivo Imperfetto (ação simultânea) ou Trapassato (anterioridade)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Se avesse vissuto oggi...",
+              "certo": "Se fosse vissuto oggi...",
+              "motivo": "Vivere em tempos compostos usa o auxiliar 'essere' quando indica a existência da pessoa. 'Avere' é usado mais raramente, quando é transitivo (ex: ha vissuto una bella vita)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "La Divina Commedia ha stata scritta...",
+              "certo": "La Divina Commedia è stata scritta...",
+              "motivo": "A voz passiva sempre exige o verbo auxiliar 'essere', nunca 'avere'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — L'italiano letterario e la tradizione culturale</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Construções da Literatura Clássica Italiana</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Hipótese Passada</div><div class=\"ac-body\">se + cong. trapassato &rarr; cond. passato</div></div><div class=\"ac-card\"><div class=\"ac-head\">Discurso Indireto Passado</div><div class=\"ac-body\">verbo passato + che + cong. imperfetto/trapassato</div></div></div>"
         },
         {
           "id": "b2-ii",
@@ -14092,40 +14092,33 @@
           "coda": "Leia uma manchete italiana por dia — basta o título e o lead. Em três meses você decodificará o italiano jornalístico automaticamente.",
           "observacao_cards": [
             {
-              "italiano": "Il ministro ha dichiarato che la situazione fosse sotto controllo.",
-              "traducao": "dichiarare nel passato + che → congiuntivo. O jornalista reporta a opinião/declaração do ministro sem afirmar que é verdade — o congiuntivo marca distância da fonte",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "discorso indiretto giornalistico: cong. marca distância/não-verificação pelo jornalista"
+              "italiano": "Crollo delle borse: persi 200 miliardi.",
+              "traducao": "Queda das bolsas: perdidos 200 bilhões.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Os 'Titoli nominali' (manchetes nominais) omitem verbos como 'essere' e sujeitos óbvios para causar impacto e poupar espaço impresso."
             },
             {
-              "italiano": "Crollo dei mercati: persi 200 miliardi in un giorno.",
-              "traducao": "I mercati sono crollati: sono stati persi 200 miliardi in un giorno. O titulo omite essere e il soggetto para impacto máximo",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "titolo nominale = versão comprimida da notícia sem essere e soggetto"
-            },
-            {
-              "italiano": "Secondo fonti governative, il provvedimento verrà modificato entro la settimana.",
-              "traducao": "Secondo fonti = atribui a informação a uma fonte sem identificar — proteção jornalística. Verrà modificato = futuro passivo (verbo essere al futuro + participio)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "secondo fonti = fonte anônima | verrà + participio = futuro passivo"
+              "italiano": "Secondo fonti vicine al governo, la manovra sarebbe pronta.",
+              "traducao": "Segundo fontes próximas ao governo, a medida estaria pronta.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Condizionale di dissociazione: usado no jornalismo para noticiar informações que ainda não foram oficialmente confirmadas."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "I carabinieri hanno arrestato due persone. (Em manchetes jornalísticas)",
+              "certo": "Carabinieri: arrestati due sospetti. / Due arresti dai carabinieri.",
+              "motivo": "Em títulos jornalísticos, evita-se a voz ativa padrão, optando por frases curtas centradas em substantivos ou no particípio passado passivo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Governo è approvato la legge.",
+              "certo": "Il governo ha approvato la legge. / Approvata la legge dal governo.",
+              "motivo": "A passiva com o particípio solto na manchete pode confundir. 'Il governo ha approvato' ou a passiva 'La legge è stata approvata'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il linguaggio dei media e del giornalismo</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">O Vocabulário Jornalístico (5W + Condizionale)</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Titolo Nominale</div><div class=\"ac-body\">Omissão de auxiliares e artigos (Sostantivo + Participio)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Condizionale Jornalístico</div><div class=\"ac-body\">Uso para indicar incerteza (secondo indiscrezioni)</div></div></div>"
         },
         {
           "id": "b2-iii",
@@ -14337,40 +14330,33 @@
           "coda": "Leia pelo menos uma seção do Sole 24 Ore (jornal econômico italiano) por semana. É o melhor treino para vocabulário econômico em contexto real.",
           "observacao_cards": [
             {
-              "italiano": "Le parti si impegnano affinché vengano rispettati i termini.",
-              "traducao": "affinché + congiuntivo — conjunções de finalidade sempre requerem congiuntivo. Vengono seria indicativo (fato); vengano indica finalidade/intenção",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "affinché (finalidade) → congiuntivo presente"
+              "italiano": "L'azienda ha aumentato i prezzi.",
+              "traducao": "A empresa aumentou os preços.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "O verbo 'aumentare', quando transitivo direto (tem objeto), exige sempre o auxiliar 'avere'."
             },
             {
-              "italiano": "Qualora l'acquirente non provveda al pagamento, scatterà la penale.",
-              "traducao": "qualora = registro burocratico-legale (muito formal). Em italiano informal: 'se l'acquirente non paga, scatta la penale'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "qualora = se (apenas em contexto formal/legal/contratos)"
-            },
-            {
-              "italiano": "Il fatturato è cresciuto del 15% rispetto all'anno scorso.",
-              "traducao": "crescere intransitivo = essere. Ha cresciuto seria erro. Rispetto a = 'em comparação com / em relação a'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "crescere intransitivo = essere | rispetto a = em comparação com"
+              "italiano": "Il fatturato è aumentato del 10%.",
+              "traducao": "O faturamento aumentou 10%.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Quando 'aumentare' é intransitivo (o sujeito em si aumentou de tamanho/valor), o auxiliar é 'essere'."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Il bilancio ha cresciuto.",
+              "certo": "Il bilancio è cresciuto.",
+              "motivo": "O verbo 'crescere' em contextos financeiros e em geral é intransitivo, exigindo o auxiliar 'essere'."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Facciamo questo per che il progetto abbia successo.",
+              "certo": "Facciamo questo affinché il progetto abbia successo.",
+              "motivo": "No ambiente corporativo formal, usa-se 'affinché' ('a fim de que') no lugar do coloquial 'perché' para finalidade."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Economia e mondo degli affari</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Vocabulário de Negócios e Transições Formais</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Finalidade Formal</div><div class=\"ac-body\">affinché + congiuntivo</div></div><div class=\"ac-card\"><div class=\"ac-head\">Hipótese de Negócios</div><div class=\"ac-body\">qualora + congiuntivo</div></div></div>"
         },
         {
           "id": "b2-iv",
@@ -14582,40 +14568,33 @@
           "coda": "A política italiana é complexa, mas o vocabulário é consistente. Acompanhe o noticiário de la Repubblica ou il Corriere — os mesmos termos repetem-se e você os interiorizará naturalmente.",
           "observacao_cards": [
             {
-              "italiano": "La legge è stata promulgata dal Presidente della Repubblica.",
-              "traducao": "è stata promulgata = passivo (essere + participio). Agente: dal Presidente. Voz ativa: 'Il Presidente della Repubblica ha promulgato la legge'",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "passivo: essere + participio | dal + agente (pode ser omitido)"
+              "italiano": "Il governo ha perso la fiducia e si va alle urne.",
+              "traducao": "O governo perdeu a moção de confiança e vai-se às urnas.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "A estabilidade política usa verbos fundamentais (fiducia/sfiducia) e o destino final em caso de crise política é sempre 'alle urne' (eleições)."
             },
             {
-              "italiano": "Si teme che il governo cada prima delle elezioni.",
-              "traducao": "si teme che = verbo de medo/preocupação → congiuntivo. Também: si spera che, si teme che, si dubita che + congiuntivo",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "si teme/spera/dubita che → congiuntivo"
-            },
-            {
-              "italiano": "Il Presidente del Consiglio ha ricevuto l'incarico di formare il nuovo governo.",
-              "traducao": "Presidente della Repubblica = chefe de estado (figura mais ceremonial, eleito pelo Parlamento). Presidente del Consiglio = chefe de governo (premier/primeiro-ministro, detém poder executivo)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "Presidente della Repubblica (chefe de estado) ≠ Presidente del Consiglio (premier/chefe de governo)"
+              "italiano": "La proposta è stata promulgata dal Presidente della Repubblica.",
+              "traducao": "A proposta foi promulgada pelo Presidente da República.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "O passivo institucional impessoal ('è stato promulgato', 'verrà approvato') é o motor dos textos oficiais da política."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "La Camera delle Deputate ha votato.",
+              "certo": "La Camera dei Deputati ha votato.",
+              "motivo": "O termo oficial é 'Camera dei Deputati' (masculino genérico universal), representando a câmara baixa da Itália."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Il ministro ha detto che la legge è buona.",
+              "certo": "Il ministro ha dichiarato che la legge fosse essenziale.",
+              "motivo": "No jargão político, não se diz apenas 'dire'. Usa-se 'dichiarare' ou 'affermare' junto ao congiuntivo do discurso indireto."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Politica e istituzioni italiane</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Estrutura Política e Palavras-Chave</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Parlamento (Legislativo)</div><div class=\"ac-body\">Camera dei Deputati + Senato della Repubblica</div></div><div class=\"ac-card\"><div class=\"ac-head\">Governo (Executivo)</div><div class=\"ac-body\">Consiglio dei Ministri, liderado pelo Premier</div></div></div>"
         },
         {
           "id": "b2-v",
@@ -14821,40 +14800,33 @@
           "coda": "Assista a pelo menos um filme do neorealismo italiano — *Ladri di biciclette*, *Roma città aperta*, ou *Umberto D.* — com legendas em italiano. É o exercício de escuta mais completo que existe para o B2.",
           "observacao_cards": [
             {
-              "italiano": "Ladri di biciclette è considerato uno dei capolavori del neorealismo italiano.",
-              "traducao": "considerare + aggettivo/sostantivo: sem 'come' em italiano (diferente de 'considered as' em inglês). Uno dei = 'um dos' — superlativo relativo implícito",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "considerare + categoría: sem 'come' | uno dei/delle = um dos/uma das"
+              "italiano": "Il film è diretto da Paolo Sorrentino.",
+              "traducao": "O filme é dirigido por Paolo Sorrentino.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "Particípio irregular essencial: o particípio passado de 'dirigere' é 'diretto'."
             },
             {
-              "italiano": "Si ritiene che il neorealismo abbia rivoluzionato il linguaggio cinematografico.",
-              "traducao": "si ritiene che = verbo impessoal di opinione → congiuntivo. Abbia rivoluzionato = congiuntivo passato (ação concluída antes do momento de fala)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "si ritiene/si sostiene/si crede che → congiuntivo (anche al passato)"
-            },
-            {
-              "italiano": "Fellini ha saputo trasformare i ricordi personali in immagini universali.",
-              "traducao": "sapere + infinito = 'saber fazer algo' (competência/habilidade). Aqui: 'teve a habilidade de transformar'. Diferente de conoscere (conhecer) ou potere (poder)",
-              "artigo": "⚠️",
-              "genero": "importante",
-              "motivo": "sapere + infinito = ter a habilidade/capacidade de fazer algo"
+              "italiano": "Si potrebbe affermare che quest'opera abbia cambiato la storia del cinema.",
+              "traducao": "Poderia-se afirmar que esta obra mudou a história do cinema.",
+              "artigo": "📌",
+              "genero": "regra",
+              "motivo": "A estrutura de impessoalidade (Si + Condizionale) torna a crítica e a opinião sofisticadas ('Si potrebbe dire/affermare/sostenere')."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Il film ha stato girato a Cinecittà.",
+              "certo": "Il film è stato girato a Cinecittà.",
+              "motivo": "A ação passiva sempre toma o auxiliar 'essere' (è stato girato = foi filmado)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Secondo me, che il film è un capolavoro.",
+              "certo": "A mio avviso, il film è un capolavoro.",
+              "motivo": "Em textos críticos B2, fuja do batido 'secondo me'. Use 'A mio avviso', 'A mio parere' ou 'Dal mio punto di vista'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Cinema e arte italiana</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Vocabulário da Crítica Cinematográfica Italiana</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Autoria/Direção</div><div class=\"ac-body\">la regia è di / è diretto da / girato da</div></div><div class=\"ac-card\"><div class=\"ac-head\">Influência</div><div class=\"ac-body\">ha segnato una svolta / considerato un capolavoro / ha aperto la strada</div></div></div>"
         },
         {
           "id": "b2-vi",
@@ -15081,33 +15053,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Penso che Marco sia andato a Roma.",
+              "traducao": "Acho que o Marco foi a Roma.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Congiuntivo Passato denota uma ação passada ('sia andato') em relação a um verbo principal no presente ('Penso')."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Pensavo che Marco fosse andato a Roma.",
+              "traducao": "Eu achava que o Marco tivesse ido a Roma.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Congiuntivo Trapassato marca uma ação anterior a um verbo que já estava no passado ('Pensavo')."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Spero che lui ha capito.",
+              "certo": "Spero che lui abbia capito.",
+              "motivo": "Verbos de esperança ou opinião sempre puxam subjuntivo. Sendo ação concluída, o auxiliar (abbia) acompanha o particípio."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Speravo che lui abbia capito.",
+              "certo": "Speravo che lui avesse capito.",
+              "motivo": "Se a frase principal já está no passado (Speravo), a subordinação correta de tempo anterior precisa do Trapassato (avesse capito)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Congiuntivo Passato e Trapassato</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Tempos Compostos do Subjuntivo Italiano</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Congiuntivo Passato</div><div class=\"ac-body\">Cong. Presente (abbia/sia) + Participio Passato</div></div><div class=\"ac-card\"><div class=\"ac-head\">Congiuntivo Trapassato</div><div class=\"ac-body\">Cong. Imperfetto (avesse/fosse) + Participio Passato</div></div></div>"
         },
         {
           "id": "b2-vii",
@@ -15334,33 +15306,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Se avessi soldi, comprerei una casa.",
+              "traducao": "Se eu tivesse dinheiro, compraria uma casa.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Condição de possibilidade (2º tipo): na partícula 'se' o verbo é Congiuntivo Imperfetto. O resultado é Condizionale Presente."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Se avessi studiato, avrei passato l'esame.",
+              "traducao": "Se eu tivesse estudado, teria passado na prova.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Condição de irrealidade passada (3º tipo): usa-se o Congiuntivo Trapassato (se avessi studiato) e Condizionale Passato (avrei passato)."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Se io avrei tempo, andrei in vacanza.",
+              "certo": "Se io avessi tempo, andrei in vacanza.",
+              "motivo": "O erro de usar 'Condizionale' logo depois do 'se' é tão temido na Itália que vira meme. Após 'Se' hipotético, a estrutura exige SEMPRE Congiuntivo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Se studierei di più, passerei l'esame.",
+              "certo": "Se studiassi di più, passerei l'esame.",
+              "motivo": "Mesma regra de ouro: 'studierei' é condicional. O correto é a forma do subjuntivo imperfeito 'studiassi'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Periodo Ipotetico</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Os Tipos do Período Hipotético</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Possibilidade Atual (Tipo 2)</div><div class=\"ac-body\">Se + Congiuntivo Imperfetto &rarr; Condizionale Presente</div></div><div class=\"ac-card\"><div class=\"ac-head\">Irrealidade Passada (Tipo 3)</div><div class=\"ac-body\">Se + Congiuntivo Trapassato &rarr; Condizionale Passato</div></div></div>"
         },
         {
           "id": "b2-viii",
@@ -15587,33 +15559,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Ha detto: 'Vado a casa.' &rarr; Ha detto che andava a casa.",
+              "traducao": "Ele disse: 'Vou pra casa.' &rarr; Disse que ia para casa.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Ação simultânea: Quando a frase matriz está no passado (ha detto), o tempo 'Presente' muda para 'Imperfetto'."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Disse: 'Partirò domani.' &rarr; Disse che sarebbe partito il giorno dopo.",
+              "traducao": "Ele disse: 'Partirei amanhã.' &rarr; Ele disse que partiria no dia seguinte.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O futuro do discurso direto vira Condizionale Passato (exprime futuro no passado) no discurso indireto."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Luigi mi ha detto che (lui) va a casa.",
+              "certo": "Luigi mi ha detto che (lui) andava a casa.",
+              "motivo": "A concordância temporal italiana (consecutio temporum) é rigorosa: matriz passada força o recuo do tempo do verbo subordinado (presente &rarr; imperfetto)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Disse che lo farà domani.",
+              "certo": "Disse che lo avrebbe fatto il giorno dopo.",
+              "motivo": "Os advérbios e expressões de tempo também devem mudar de perspectiva (domani &rarr; il giorno seguente / il giorno dopo)."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Il Discorso Indiretto</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Concordância Temporal no Discurso Indireto</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Matriz no Passato + Subordinada no Presente</div><div class=\"ac-body\">Transforma-se em Imperfetto</div></div><div class=\"ac-card\"><div class=\"ac-head\">Matriz no Passato + Subordinada no Futuro</div><div class=\"ac-body\">Transforma-se em Condizionale Passato</div></div></div>"
         },
         {
           "id": "b2-ix",
@@ -15841,33 +15813,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Nonostante piova, esco lo stesso.",
+              "traducao": "Apesar de estar chovendo, saio mesmo assim.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Os conectivos de concessão pura (nonostante, sebbene, benché, malgrado) obrigatoriamente exigem verbo no Congiuntivo."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Studio l'italiano affinché io possa vivere a Roma.",
+              "traducao": "Estudo italiano a fim de poder viver em Roma.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "O conectivo de finalidade erudito 'affinché' também atrai exclusivamente o Congiuntivo."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Sebbene è stanco, lavora.",
+              "certo": "Sebbene sia stanco, lavora.",
+              "motivo": "O falante de português costuma errar pensando em 'apesar de (ser)'. Mas o 'sebbene' deve ser seguido do Congiuntivo (sebbene sia)."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Anche se sia difficile, lo faccio.",
+              "certo": "Anche se è difficile, lo faccio.",
+              "motivo": "A armadilha máxima dos exames: 'Anche se' significa 'Mesmo que' e rege o modo INDICATIVO quando retrata um fato real no presente."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Connettivi e Strutture Avanzate</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Modos Verbais com Conectivos Especiais</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Exigem Congiuntivo Sempre</div><div class=\"ac-body\">Nonostante, Sebbene, Benché, Affinché, Qualora, Purché</div></div><div class=\"ac-card\"><div class=\"ac-head\">Exigem Indicativo (para fatos reais)</div><div class=\"ac-body\">Anche se, Poiché, Dal momento che, Dato che</div></div></div>"
         },
         {
           "id": "b2-x",
@@ -16094,33 +16066,33 @@
           "coda": "Pratique todos os dias: crie 3 frases usando esta regra antes de dormir.",
           "observacao_cards": [
             {
-              "italiano": "Esempio 1",
-              "traducao": "Exemplo 1",
+              "italiano": "Dante nacque a Firenze nel 1265.",
+              "traducao": "Dante nasceu em Florença em 1265.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Passato Remoto: O tempo mestre da narração de fatos acabados que já não têm ligação psicológica com o presente."
             },
             {
-              "italiano": "Esempio 2",
-              "traducao": "Exemplo 2",
+              "italiano": "Avendo finito di studiare, uscì.",
+              "traducao": "Tendo terminado de estudar, ele saiu.",
               "artigo": "📌",
               "genero": "regra",
-              "motivo": "Padrão normal."
+              "motivo": "Uso elegante do Gerúndio Composto em textos formais italianos para substituir grandes orações subordinadas de tempo ou causa."
             }
           ],
           "armadilhas": [
             {
-              "errado": "Erro comum 1",
-              "certo": "Forma correta 1",
-              "motivo": "Em português fazemos assim, mas em italiano é diferente."
+              "errado": "Ieri andai in banca (em conversas cotidianas).",
+              "certo": "Ieri sono andato in banca.",
+              "motivo": "Para os italianos do Norte e Centro da Itália, o passato remoto na fala diária soa excessivamente erudito ou obsoleto. Para as ações do dia a dia, usa-se o passato prossimo."
             },
             {
-              "errado": "Erro comum 2",
-              "certo": "Forma correta 2",
-              "motivo": "Atenção a esta exceção."
+              "errado": "Dopo di aver fatto questo...",
+              "certo": "Dopo aver fatto questo...",
+              "motivo": "Uma falsa tradução do 'depois de'. Em italiano formal (e informal), 'Dopo' liga-se diretamente ao verbo no infinitivo composto: 'Dopo aver', 'Dopo esserci andato'."
             }
           ],
-          "tabela_visual": "<p class=\"tabela-intro\">Tabela de consulta rápida — Stile Formale e Letterario</p>\n<div class=\"artigo-cards\">\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 1</div><div class=\"ac-body\">Uso geral</div></div>\n  <div class=\"ac-card\"><div class=\"ac-head\">Regra 2</div><div class=\"ac-body\">Exceções</div></div>\n</div>"
+          "tabela_visual": "<p class=\"tabela-intro\">Marcadores do Estilo Literário e Elevado</p><div class=\"artigo-cards\"><div class=\"ac-card\"><div class=\"ac-head\">Tempo Narrativo Histórico</div><div class=\"ac-body\">Passato Remoto (Ação Principal) vs Imperfetto (Cenário)</div></div><div class=\"ac-card\"><div class=\"ac-head\">Construções Subordinadas Sintéticas</div><div class=\"ac-body\">Gerúndio (Essendo uscito) / Infinito Passato (Dopo aver letto) / Participio Assoluto (Finito il lavoro)</div></div></div>"
         }
       ],
       "nivel_minimo": 15,
