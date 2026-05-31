@@ -8,6 +8,7 @@ const Vocab = {
   filtroCategoria: '',
   filtroDificeis:   false,
   filtroFavoritos:  false,
+  blurColuna: null,   // null | 'pt' | 'it'
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -129,13 +130,31 @@ const Vocab = {
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
       `;
 
-      // Click to pronounce
+      // Click: pronounce normally; in blur mode clicking blurred cell reveals it
       item.style.cursor = 'pointer';
-      item.title = `Clique para ouvir "${p.italiano}"`;
-      item.onclick = () => App.pronunciar(p.italiano);
+      item.title = this.blurColuna ? 'Clique para revelar a palavra' : `Clique para ouvir "${p.italiano}"`;
+      if (this.blurColuna) {
+        item.onclick = (e) => {
+          const target = e.target.closest('.vocab-pt, .vocab-it');
+          const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
+                        || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
+          if (isBluCol || !target) item.classList.toggle('revelada');
+        };
+      } else {
+        item.onclick = () => App.pronunciar(p.italiano);
+      }
 
       listEl.appendChild(item);
     });
+
+    // Reapply blur class after re-render
+    if (this.blurColuna) {
+      listEl.classList.add(`blur-${this.blurColuna}`);
+      const btnPt = document.getElementById('vocab-btn-blur-pt');
+      const btnIt = document.getElementById('vocab-btn-blur-it');
+      if (btnPt) btnPt.classList.toggle('ativo', this.blurColuna === 'pt');
+      if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it');
+    }
 
     // Show "more results" hint if truncated
     if (filtrados.length > 100) {
@@ -234,6 +253,43 @@ const Vocab = {
       opt.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
       sel.appendChild(opt);
     });
+  },
+
+  // ── Blur column toggle (self-test mode) ──────────────────
+  toggleBlur(coluna) {
+    // Se já está ativo nessa coluna → desativa; senão ativa
+    this.blurColuna = this.blurColuna === coluna ? null : coluna;
+
+    const listEl = document.getElementById('vocab-list');
+    if (listEl) {
+      listEl.classList.toggle('blur-pt', this.blurColuna === 'pt');
+      listEl.classList.toggle('blur-it', this.blurColuna === 'it');
+      // Resetar itens revelados ao trocar ou desativar
+      listEl.querySelectorAll('.vocab-item.revelada').forEach(el => el.classList.remove('revelada'));
+    }
+
+    // Atualizar botões
+    const btnPt = document.getElementById('vocab-btn-blur-pt');
+    const btnIt = document.getElementById('vocab-btn-blur-it');
+    if (btnPt) btnPt.classList.toggle('ativo', this.blurColuna === 'pt');
+    if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it');
+
+    // Quando blur ativo, clicar no item revela aquela célula; clique normal pronuncia
+    if (listEl) {
+      listEl.querySelectorAll('.vocab-item').forEach(item => {
+        item.onclick = this.blurColuna
+          ? (e) => {
+              // Não propaga se clicou na célula borrada → revela
+              const target = e.target.closest('.vocab-pt, .vocab-it');
+              const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
+                            || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
+              if (isBluCol || !target) {
+                item.classList.toggle('revelada');
+              }
+            }
+          : () => App.pronunciar(item.querySelector('.vocab-it')?.textContent || '');
+      });
+    }
   },
 
   // ── Escape HTML helper ────────────────────────────────────

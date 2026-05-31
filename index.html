@@ -305,6 +305,18 @@
     body.dark-mode .vocab-dif-badge { background: rgba(230,126,34,0.18); color: #d07030; }
     body.dark-mode .vocab-btn-dificeis { border-color: #c0560a; color: #d07030; }
     body.dark-mode .vocab-btn-dificeis.ativo { background: #c0560a; border-color: #c0560a; color: white; }
+    /* Blur de coluna — modo teste */
+    .vocab-btn-blur { padding: 0.42rem 0.85rem; border: 2px solid #7B68A0; border-radius: 8px; background: transparent; color: #7B68A0; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-blur:hover { background: rgba(123,104,160,0.08); }
+    .vocab-btn-blur.ativo { background: #7B68A0; color: white; border-color: #7B68A0; }
+    /* Aplica blur na coluna selecionada */
+    #vocab-list.blur-pt .vocab-pt,
+    #vocab-list.blur-it .vocab-it { filter: blur(5px); transition: filter 0.2s; user-select: none; cursor: pointer; }
+    /* Reveal individual ao clicar */
+    #vocab-list.blur-pt .vocab-item.revelada .vocab-pt,
+    #vocab-list.blur-it .vocab-item.revelada .vocab-it { filter: none; }
+    body.dark-mode .vocab-btn-blur { border-color: #9B84C4; color: #9B84C4; }
+    body.dark-mode .vocab-btn-blur.ativo { background: #6B5490; border-color: #6B5490; color: white; }
     /* Favoritos */
     .vocab-fav-badge { font-size: 0.78rem; }
     .vocab-btn-favoritos { padding: 0.42rem 0.85rem; border: 2px solid #C0392B; border-radius: 8px; background: transparent; color: #C0392B; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
@@ -1933,6 +1945,8 @@
         </select>
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
+        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória">🙈 Ocultar PT</button>
+        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória">🙈 Ocultar IT</button>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
