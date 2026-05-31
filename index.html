@@ -1683,8 +1683,29 @@
       .gram-option { padding: 0.85rem 1.1rem; font-size: 0.9rem; }
       /* Fase 2: 1 coluna no mobile */
       .gram-observacao-grid { grid-template-columns: 1fr; padding: 0 0.9rem 1rem; }
-      .gram-flip-card { height: auto; min-height: 130px; }
-      .gram-flip-card-inner { position: relative; height: 130px; }
+      /* Mobile: substitui 3D flip por toggle simples (sem altura fixa) */
+      .gram-flip-card { height: auto; perspective: none; }
+      .gram-flip-card-inner {
+        position: static;
+        height: auto;
+        transform-style: flat;
+        transition: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .gram-flip-card.flipped .gram-flip-card-inner { transform: none; }
+      .gram-flip-card-front, .gram-flip-card-back {
+        position: static;
+        width: 100%;
+        height: auto;
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+      }
+      /* Frente visível por padrão, verso oculto */
+      .gram-flip-card-back { display: none; transform: none; }
+      .gram-flip-card.flipped .gram-flip-card-front { display: none; }
+      .gram-flip-card.flipped .gram-flip-card-back { display: flex; }
       /* Fase 5: empilha colunas de armadilhas */
       .gram-armadilhas-lista { flex-direction: column; padding: 0.9rem; gap: 0.9rem; }
       .gram-armadilha-col { flex: 1 1 100%; min-width: unset; }
