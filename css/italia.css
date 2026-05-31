@@ -373,11 +373,7 @@ input,textarea,select { font-family:inherit; }
   border-radius:var(--raio-md); padding:0.85rem 1.1rem;
   box-shadow:var(--sombra-sm); position:relative; overflow:hidden; text-align:center;
 }
-.pergunta-container::before {
-  content:''; position:absolute; top:-40px; left:20%; right:20%; height:80px;
-  background:rgba(155,35,53,.04);
-  border-radius:50% 50% 0 0 / 100% 100% 0 0; pointer-events:none;
-}
+/* ::before decoration removida — uniforme em ambos os modos */
 
 .opcoes-grid { display:grid; grid-template-columns:1fr 1fr; gap:var(--esp-sm); }
 .opcao-btn {
