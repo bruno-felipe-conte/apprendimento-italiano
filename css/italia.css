@@ -370,8 +370,8 @@ input,textarea,select { font-family:inherit; }
 
 .pergunta-container {
   background-color:var(--cor-marmore); border:1px solid var(--cor-pietra);
-  border-radius:var(--raio-md); padding:var(--esp-xl);
-  box-shadow:var(--sombra-md); position:relative; overflow:hidden; text-align:center;
+  border-radius:var(--raio-md); padding:0.85rem 1.1rem;
+  box-shadow:var(--sombra-sm); position:relative; overflow:hidden; text-align:center;
 }
 .pergunta-container::before {
   content:''; position:absolute; top:-40px; left:20%; right:20%; height:80px;
