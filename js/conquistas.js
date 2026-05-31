@@ -81,6 +81,59 @@ const Conquistas = {
       nome: 'Italiano Autentico',
       descricao: 'Atingir o Livello 10',
       verificar(p) { return (p.nivel || 1) >= 10; }
+    },
+    {
+      id: 'um_mes',
+      emoji: '🔥🔥',
+      nome: 'Un Mese',
+      descricao: '30 dias consecutivos de estudo',
+      verificar(p) { return (p.streak || 0) >= 30; }
+    },
+    {
+      id: 'maestro',
+      emoji: '🌟',
+      nome: 'Maestro',
+      descricao: 'Revisar 500 cartas nos flashcards',
+      verificar(p, fd) {
+        let total = 0;
+        for (const k in fd) total += (fd[k].reps || fd[k].repeticoes || 0);
+        return total >= 500;
+      }
+    },
+    {
+      id: 'esploratore',
+      emoji: '🗺️',
+      nome: 'Esploratore',
+      descricao: 'Desbloquear 5 templos',
+      verificar(p) { return (p.templos_desbloqueados || []).length >= 5; }
+    },
+    {
+      id: 'grammatico',
+      emoji: '📖',
+      nome: 'Grammatico',
+      descricao: 'Completar 10 lições de gramática',
+      verificar(p) { return (p.licoes_concluidas || []).length >= 10; }
+    },
+    {
+      id: 'precisione',
+      emoji: '🎯',
+      nome: 'Precisione',
+      descricao: '5 quizzes seguidos com mais de 80% de acerto',
+      verificar(p) { return (p.quiz_consecutivos_80 || 0) >= 5; }
+    },
+    {
+      id: 'notturno',
+      emoji: '🌙',
+      nome: 'Notturno',
+      descricao: 'Estudar após as 22h',
+      verificar(p) { return new Date().getHours() >= 22; }
+    },
+    {
+      id: 'mattiniero',
+      emoji: '☀️',
+      nome: 'Mattiniero',
+      descricao: 'Estudar antes das 7h da manhã',
+      verificar(p) { return new Date().getHours() < 7; }
     }
   ],
 

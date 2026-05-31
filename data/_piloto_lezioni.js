@@ -116,6 +116,19 @@ Em italiano funciona igual, mas a letra inicial da palavra também muda o artigo
 
   coda: 'Daqui em diante: aprenda cada palavra nova COM o artigo. Não diga só "gatto" — diga sempre "il gatto". O artigo FAZ PARTE da palavra.',
 
+  observacao_cards: [
+    { italiano: 'il gatto', traducao: 'o gato', artigo: 'il', genero: 'masculino', motivo: 'Masculino + letra normal (g) → IL' },
+    { italiano: 'lo zaino', traducao: 'a mochila', artigo: 'lo', genero: 'masculino', motivo: 'Masculino + Z → LO' },
+    { italiano: 'la pizza', traducao: 'a pizza', artigo: 'la', genero: 'feminino', motivo: 'Feminino + consoante → LA' },
+    { italiano: "l'amico", traducao: 'o amigo', artigo: "l'", genero: 'masculino', motivo: "Começa por vogal → L'" }
+  ],
+
+  armadilhas: [
+    { errado: 'la problema', certo: 'il problema', motivo: '"problema" é masculino em italiano' },
+    { errado: 'il mano', certo: 'la mano', motivo: '"mão" é feminino em italiano' },
+    { errado: 'un studente', certo: 'uno studente', motivo: 'ST exige UNO, não UN' }
+  ],
+
   // ── Exercícios ─────────────────────────────────────────
   exercicios: [
 
@@ -366,6 +379,19 @@ Quando usar o pronome em italiano? Só para dar ênfase:
 Um verbo para os dois!`,
 
   coda: 'Todo dia, fale em voz alta 3 verbos completos: eu falo / você fala / ele fala / nós falamos / vocês falam / eles falam. Em 5 minutos, a terminação vira automática.',
+
+  observacao_cards: [
+    { italiano: 'io parlo', traducao: 'eu falo', artigo: '-o', genero: 'io', motivo: 'Verbo -ARE no presente: termina em -O para eu.' },
+    { italiano: 'tu parli', traducao: 'você fala', artigo: '-i', genero: 'tu', motivo: 'Verbo -ARE no presente: termina em -I para você.' },
+    { italiano: 'lui parla', traducao: 'ele fala', artigo: '-a', genero: 'ele/ela', motivo: 'Verbo -ARE no presente: termina em -A para ele/ela.' },
+    { italiano: 'noi parliamo', traducao: 'nós falamos', artigo: '-iamo', genero: 'nós', motivo: 'Verbo -ARE no presente: termina em -IAMO para nós.' }
+  ],
+
+  armadilhas: [
+    { errado: 'io parlo italiano', certo: 'parlo italiano', motivo: 'Não precisa usar "io" em italiano — a terminação já diz tudo.' },
+    { errado: 'noi parliano', certo: 'noi parliamo', motivo: 'A terminação correta para nós é -iamo, não -iano.' },
+    { errado: 'voi parli', certo: 'voi parlate', motivo: 'Para "voi" (vocês) a terminação é -ate para verbos -ARE.' }
+  ],
 
   // ── Exercícios ─────────────────────────────────────────
   exercicios: [

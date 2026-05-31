@@ -232,18 +232,18 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
-    // 📖 Teoria estruturada em camadas (NMA) — vem ANTES dos exercícios
-    html += '<div class="gram-card gram-teoria-card">';
-    html += '<div class="gram-card-header"><span>📖</span> Conteúdo da lição</div>';
-    html += this._htmlCamadas(u);
-    html += '</div>';
-
-    // 📋 Tabela de consulta rápida — entre teoria e exercícios
-    html += this._htmlTabelaVisual(u);
-
-    // ✏️ Exercícios — após o conteúdo
+    // ✏️ Exercícios (MOVIDO PARA O TOPO)
     html += '<div id="gram-ex-area">';
     html += this._htmlExercicio();
+    html += '</div>';
+
+    // 📋 Tabela de consulta rápida (colapsável) para uso durante os exercícios
+    html += this._htmlTabelaVisual(u);
+
+    // 📖 Teoria estruturada (5 Fases Didáticas)
+    html += '<div class="gram-card gram-teoria-card">';
+    html += '<div class="gram-card-header"><span>📖</span> Teoria e Prática da Lição</div>';
+    html += this._htmlFases(u);
     html += '</div>';
 
     html += '</div>'; // lesson-layout
@@ -653,10 +653,27 @@ const Grammatica = {
   // Se a unidade tiver os novos campos, renderiza as camadas.
   // Caso contrário, faz fallback para `teoria` + `exemplos` legados.
   // ─────────────────────────────────────────────────────────
-  _htmlCamadas(u) {
+  _htmlFases(u) {
+    const hasNovasFases = u.observacao_cards || u.armadilhas;
+    if (!hasNovasFases) {
+      // Fallback legado / NMA padrão de 7 camadas
+      return this._htmlCamadasLegado(u);
+    }
+
+    let h = '<div class="gram-camadas">';
+    h += this._htmlFase1Ancoragem(u);
+    h += this._htmlFase2Observacao(u);
+    h += this._htmlFase3Tabela(u);
+    h += this._htmlFase4Exemplos(u);
+    h += this._htmlFase5Armadilhas(u);
+    h += this._htmlCoda(u);
+    h += '</div>';
+    return h;
+  },
+
+  _htmlCamadasLegado(u) {
     const hasNovos = u.alerta || u.inventario || u.definicao || u.tecnica || u.exemplos_prc || u.ponte || u.coda;
     if (!hasNovos) {
-      // Fallback legado
       let h = `<div class="gram-teoria-corpo">${this._formatarTeoria(u.teoria)}</div>`;
       if (u.exemplos && u.exemplos.length) {
         h += '<div class="gram-esempi-lista">';
@@ -678,14 +695,123 @@ const Grammatica = {
     h += this._htmlInventario(u);
     h += this._htmlDefinicao(u);
     h += this._htmlTecnica(u);
-    h += this._htmlExemplosPRC(u);
+    h += this._htmlExemplosPRCLegado(u);
     h += this._htmlPonte(u);
     h += this._htmlCoda(u);
     h += '</div>';
     return h;
   },
 
-  // ── Tabela visual de referência (colapsável, acima dos exercícios) ──
+  // ─── FASE 1: Ancoragem ───
+  _htmlFase1Ancoragem(u) {
+    if (!u.alerta) return '';
+    return `<div class="gram-alerta">💬 <strong>Por que isso importa?</strong><br>${this._formatarPergunta(u.alerta)}</div>`;
+  },
+
+  // ─── FASE 2: Observação (Flip Cards Clicáveis) ───
+  _htmlFase2Observacao(u) {
+    if (!u.observacao_cards || !u.observacao_cards.length) return '';
+    let cards = '';
+    for (let i = 0; i < u.observacao_cards.length; i++) {
+      const c = u.observacao_cards[i];
+      cards += `
+        <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="gram-flip-card-inner">
+            <div class="gram-flip-card-front">
+              <div class="gfc-it">${c.italiano}</div>
+              <div class="gfc-pt">${c.traducao}</div>
+              <div class="gfc-badge">${c.genero}</div>
+              <div class="gfc-click">Clique para revelar 👆</div>
+            </div>
+            <div class="gram-flip-card-back">
+              <div class="gfc-titulo-regra">O Padrão:</div>
+              <div class="gfc-regra-txt">${c.motivo}</div>
+            </div>
+          </div>
+        </div>`;
+    }
+    return `
+      <div class="gram-camada-bloco">
+        <div class="gram-camada-label">🔎 Fase 2: Observe e Descubra</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Clique nos cards abaixo para descobrir as regras e padrões de forma prática!</div>
+        <div class="gram-observacao-grid">${cards}</div>
+      </div>`;
+  },
+
+  // ─── FASE 3: Tabela Visual (Sempre Visível) ───
+  _htmlFase3Tabela(u) {
+    if (!u.tabela_visual) return '';
+    return `
+      <div class="gram-camada-bloco">
+        <div class="gram-camada-label">📋 Fase 3: Tabela de Referência Rápida</div>
+        <div class="gram-tabela-sem-details">${u.tabela_visual}</div>
+      </div>`;
+  },
+
+  // ─── FASE 4: Exemplos P/R/C (Clicáveis / Colapsáveis) ───
+  _htmlFase4Exemplos(u) {
+    if (!u.exemplos_prc || !u.exemplos_prc.length) return '';
+    let rows = '';
+    for (let i = 0; i < u.exemplos_prc.length; i++) {
+      const e = u.exemplos_prc[i];
+      const safe = (e.oracao || '').replace(/'/g, "\\'");
+      rows += `
+        <div class="gram-prc-expandivel" id="gram-prc-card-${i}">
+          <div class="gram-prc-topo" onclick="this.parentElement.classList.toggle('aberto')">
+            <span class="gram-prc-it">🔊 <em>${e.oracao || ''}</em></span>
+            <span class="gram-prc-btn-expandir">Ver detalhes ▾</span>
+          </div>
+          <div class="gram-prc-conteudo-oculto">
+            <div class="gram-prc-pq"><span class="gram-prc-tag">Pergunta</span> ${e.pergunta || ''}</div>
+            <div class="gram-prc-pq"><span class="gram-prc-tag">Resposta</span> ${e.resposta || ''}</div>
+            <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">Conclusão</span> <strong>${e.conclusao || ''}</strong></div>
+          </div>
+        </div>`;
+    }
+    return `
+      <div class="gram-camada-bloco">
+        <div class="gram-camada-label">🗣️ Fase 4: Analise os Exemplos</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Clique nos exemplos abaixo para exercitar seu raciocínio antes de ver a resposta!</div>
+        <div class="gram-prc-lista">${rows}</div>
+      </div>`;
+  },
+
+  // ─── FASE 5: Armadilhas (Lado a Lado Errado ✗ vs Certo ✓) ───
+  _htmlFase5Armadilhas(u) {
+    if (!u.armadilhas || !u.armadilhas.length) return '';
+    let cards = '';
+    for (let i = 0; i < u.armadilhas.length; i++) {
+      const a = u.armadilhas[i];
+      cards += `
+        <div class="gram-armadilha-row">
+          <div class="gram-armadilha-col gram-arm-errada">
+            <span class="gram-arm-icon">✗</span>
+            <div class="gram-arm-texto">
+              <span class="gram-arm-lbl">Errado</span>
+              <strong>${a.errado}</strong>
+            </div>
+          </div>
+          <div class="gram-armadilha-col gram-arm-certa">
+            <span class="gram-arm-icon">✓</span>
+            <div class="gram-arm-texto">
+              <span class="gram-arm-lbl">Certo</span>
+              <strong>${a.certo}</strong>
+            </div>
+          </div>
+          <div class="gram-armadilha-motivo">
+            <strong>Porquê?</strong> ${a.motivo}
+          </div>
+        </div>`;
+    }
+    return `
+      <div class="gram-camada-bloco">
+        <div class="gram-camada-label">⚠️ Fase 5: Evite Armadilhas Comuns</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Erros comuns cometidos por estudantes de português e como evitá-los:</div>
+        <div class="gram-armadilhas-lista">${cards}</div>
+      </div>`;
+  },
+
+  // ── Tabela colapsável acima dos exercícios ──
   _htmlTabelaVisual(u) {
     if (!u.tabela_visual) return '';
     return `<details class="gram-tabela-visual">
@@ -694,20 +820,18 @@ const Grammatica = {
     </details>`;
   },
 
-  // Camada 2 — Alerta motivacional
+  // ── Camadas Legadas NMA ──
   _htmlAlerta(u) {
     if (!u.alerta) return '';
     return `<div class="gram-alerta">💬 ${this._formatarPergunta(u.alerta)}</div>`;
   },
 
-  // Camada 3 — Inventário estrutural numerado
   _htmlInventario(u) {
     if (!u.inventario || !u.inventario.length) return '';
     const items = u.inventario.map(i => `<li>${this._formatarPergunta(i)}</li>`).join('');
     return `<div class="gram-camada-bloco"><div class="gram-camada-label">✅ O que você vai aprender</div><ol class="gram-inventario">${items}</ol></div>`;
   },
 
-  // Camada 4 — Definição indutiva (Fenômeno → Causa → Conceito)
   _htmlDefinicao(u) {
     if (!u.definicao) return '';
     const d = u.definicao;
@@ -722,15 +846,13 @@ const Grammatica = {
     </div>`;
   },
 
-  // Camada 5 — Técnica com algoritmo verbal
   _htmlTecnica(u) {
     if (!u.tecnica) return '';
     const ft = this._formatarTeoria(u.tecnica);
     return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">📌 Como usar na prática</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
   },
 
-  // Camada 6 — Exemplos P→R→C
-  _htmlExemplosPRC(u) {
+  _htmlExemplosPRCLegado(u) {
     if (!u.exemplos_prc || !u.exemplos_prc.length) return '';
     let rows = '';
     for (const e of u.exemplos_prc) {
@@ -745,13 +867,11 @@ const Grammatica = {
     return `<div class="gram-camada-bloco"><div class="gram-camada-label">🗣️ Veja os exemplos (clique 🔊 para ouvir)</div><div class="gram-prc-lista">${rows}</div></div>`;
   },
 
-  // Camada 7 — Ponte teórica (port → italiano)
   _htmlPonte(u) {
     if (!u.ponte) return '';
     return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">🇧🇷 Em português é assim… em italiano é assim:</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
   },
 
-  // Camada 9 — Coda comportamental
   _htmlCoda(u) {
     if (!u.coda) return '';
     return `<div class="gram-coda">💡 ${this._formatarPergunta(u.coda)}</div>`;

@@ -1161,6 +1161,510 @@
     body.dark-mode .rating-pill.easy  { background:#1a2d40; color:#85C1E9; }
     body.dark-mode .chart-day { color:#555; }
     body.dark-mode .chart-val { color:#777; }
+
+    /* ── Onboarding Modal ── */
+    .onboarding-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(20, 17, 15, 0.88);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .onb-card {
+      background: linear-gradient(135deg, #8A1C2A 0%, #4A0E18 100%);
+      color: #F5EDD8;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 480px;
+      padding: 2.2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(212, 168, 67, 0.28);
+      display: flex;
+      flex-direction: column;
+      min-height: 440px;
+      justify-content: space-between;
+      position: relative;
+    }
+    .onb-slides {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .onb-slide {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .onb-slide.active {
+      display: block;
+    }
+    .onb-emoji {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    }
+    .onb-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #D4A843;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .onb-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: center;
+      color: #E6DFD3;
+    }
+    .onb-features-list, .onb-steps-list {
+      text-align: left;
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+      color: #E6DFD3;
+      font-size: 0.88rem;
+    }
+    .onb-features-list li, .onb-steps-list li {
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+    .onb-features-list li strong {
+      color: #D4A843;
+    }
+    .onb-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.2rem;
+    }
+    .onb-dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .onb-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .onb-dot.active {
+      background: #D4A843;
+      transform: scale(1.2);
+    }
+    .onb-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .onb-btn {
+      border: none;
+      padding: 0.55rem 1.2rem;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.88rem;
+    }
+    .onb-btn.btn-primary {
+      background: #D4A843;
+      color: #14110F;
+    }
+    .onb-btn.btn-primary:hover {
+      background: #F5C842;
+      transform: translateY(-1px);
+    }
+    .onb-btn.btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #F5EDD8;
+    }
+    .onb-btn.btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ── Card Continuar ── */
+    .card-continuar {
+      background: linear-gradient(135deg, #FAF4E8 0%, #F3E6CB 100%);
+      border: 1.5px solid #D4A843;
+      border-radius: 16px;
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(212, 168, 67, 0.15);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-continuar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 168, 67, 0.28);
+      border-color: #9B2335;
+    }
+    .cc-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9B2335;
+      margin-bottom: 0.25rem;
+    }
+    .cc-info {
+      font-size: 0.95rem;
+      color: #2C2C2C;
+    }
+    .cc-info strong {
+      color: #9B2335;
+    }
+    .cc-cta {
+      font-weight: 800;
+      color: #9B2335;
+      font-size: 0.92rem;
+      transition: transform 0.2s;
+    }
+    .card-continuar:hover .cc-cta {
+      transform: translateX(4px);
+    }
+    body.dark-mode .card-continuar {
+      background: linear-gradient(135deg, #25201D 0%, #1C1816 100%);
+      border-color: rgba(212, 168, 67, 0.35);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+    body.dark-mode .card-continuar:hover {
+      border-color: #D4A843;
+    }
+    body.dark-mode .cc-info {
+      color: #E6DFD3;
+    }
+    body.dark-mode .cc-info strong {
+      color: #D4A843;
+    }
+    /* ── Fase 2: Flip Cards (Observação) ── */
+    .gram-observacao-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding: 0 1.25rem 1.25rem;
+    }
+    .gram-flip-card {
+      background-color: transparent;
+      height: 160px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .gram-flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .gram-flip-card.flipped .gram-flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .gram-flip-card-front, .gram-flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.1rem;
+      border: 1.5px solid #ede5d5;
+    }
+    .gram-flip-card-front {
+      background-color: #ffffff;
+      color: #2c2c2c;
+    }
+    .gram-flip-card-back {
+      background-color: #9B2335;
+      color: #FFF8F0;
+      transform: rotateY(180deg);
+      justify-content: center;
+      border-color: #9B2335;
+    }
+    .gfc-it {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #9B2335;
+    }
+    .gfc-pt {
+      font-size: 0.88rem;
+      color: #666;
+    }
+    .gfc-badge {
+      display: inline-block;
+      align-self: center;
+      background: #f5ece0;
+      color: #9B2335;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    .gfc-click {
+      font-size: 0.68rem;
+      color: #bbb;
+    }
+    .gfc-titulo-regra {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #D4A843;
+      margin-bottom: 0.4rem;
+    }
+    .gfc-regra-txt {
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    body.dark-mode .gram-flip-card-front {
+      background-color: #1C1816;
+      border-color: #2D2723;
+      color: #E6DFD3;
+    }
+    body.dark-mode .gfc-it {
+      color: #D4A843;
+    }
+    body.dark-mode .gfc-pt {
+      color: #aaa;
+    }
+    body.dark-mode .gfc-badge {
+      background: #25201D;
+      color: #D4A843;
+    }
+
+    /* ── Fase 3: Tabela Sem Details ── */
+    .gram-tabela-sem-details {
+      padding: 1.25rem;
+      background: #ffffff;
+    }
+    body.dark-mode .gram-tabela-sem-details {
+      background: #1C1816;
+    }
+
+    /* ── Fase 4: PRC Expandível ── */
+    .gram-prc-expandivel {
+      border: 1px solid #ede5d5;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 0.75rem;
+      transition: all 0.2s;
+    }
+    .gram-prc-topo {
+      background: #f9f4ee;
+      padding: 0.85rem 1.1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .gram-prc-it {
+      font-size: 1rem;
+      color: #9B2335;
+      font-weight: 700;
+    }
+    .gram-prc-btn-expandir {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #D4A843;
+      text-transform: uppercase;
+    }
+    .gram-prc-conteudo-oculto {
+      display: none;
+      border-top: 1px solid #ede5d5;
+      background: #ffffff;
+    }
+    .gram-prc-expandivel.aberto .gram-prc-conteudo-oculto {
+      display: block;
+    }
+    .gram-prc-expandivel.aberto .gram-prc-btn-expandir {
+      content: "Ocultar ▲";
+    }
+    body.dark-mode .gram-prc-expandivel {
+      border-color: #2D2723;
+    }
+    body.dark-mode .gram-prc-topo {
+      background: #25201D;
+    }
+    body.dark-mode .gram-prc-it {
+      color: #FF8F9E;
+    }
+    body.dark-mode .gram-prc-conteudo-oculto {
+      background: #1C1816;
+      border-top-color: #2D2723;
+    }
+
+    /* ── Fase 5: Armadilhas Lado a Lado ── */
+    .gram-armadilhas-lista {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .gram-armadilha-row {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1.5px solid #f2ede4;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .gram-armadilha-col {
+      flex: 1;
+      min-width: 150px;
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .gram-arm-errada {
+      background: #fdeee9;
+      border-right: 1px solid #f2ede4;
+    }
+    .gram-arm-certa {
+      background: #ebf7ee;
+    }
+    .gram-arm-icon {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+    .gram-arm-errada .gram-arm-icon {
+      color: #C0392B;
+    }
+    .gram-arm-certa .gram-arm-icon {
+      color: #27AE60;
+    }
+    .gram-arm-texto {
+      display: flex;
+      flex-direction: column;
+    }
+    .gram-arm-lbl {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #777;
+    }
+    .gram-arm-texto strong {
+      font-size: 1.05rem;
+    }
+    .gram-arm-errada .gram-arm-texto strong {
+      color: #C0392B;
+      text-decoration: line-through;
+    }
+    .gram-arm-certa .gram-arm-texto strong {
+      color: #27AE60;
+    }
+    .gram-armadilha-motivo {
+      width: 100%;
+      background: #FAF8F5;
+      padding: 0.75rem 1.1rem;
+      border-top: 1px solid #f2ede4;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #444;
+    }
+    body.dark-mode .gram-armadilha-row {
+      border-color: #2D2723;
+      background: #1C1816;
+    }
+    body.dark-mode .gram-arm-errada {
+      background: #2D1B1B;
+      border-right-color: #2D2723;
+    }
+    body.dark-mode .gram-arm-certa {
+      background: #192B20;
+    }
+    body.dark-mode .gram-armadilha-motivo {
+      background: #1E1A17;
+      border-top-color: #2D2723;
+      color: #ccc;
+    }
+
+    /* ── Bottom Navigation & Mobile Responsiveness ── */
+    .bottom-nav {
+      display: none;
+    }
+    @media (max-width: 640px) {
+      .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2000;
+        background: #1C1816;
+        border-top: 2px solid #9B2335;
+        padding: 0.4rem 0 0.6rem;
+        justify-content: space-around;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+      }
+      .nav-tabs {
+        display: none !important;
+      }
+      .bottom-nav button {
+        background: none;
+        border: none;
+        color: #A69E94;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        flex: 1;
+      }
+      .bottom-nav button span {
+        font-size: 0.62rem;
+      }
+      .bottom-nav button:hover, .bottom-nav button:active {
+        color: #D4A843;
+      }
+      .bottom-nav button.ativa {
+        color: #D4A843;
+      }
+      /* Spacer for bottom nav so content is not cut off */
+      .app-footer {
+        margin-bottom: 70px;
+      }
+      
+      /* Responsiveness tweaks */
+      .flashcard {
+        height: 300px !important;
+      }
+      .gram-lesson-layout {
+        padding: 0.5rem 0.2rem !important;
+      }
+      .artigo-cards {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    @media (min-width: 480px) and (max-width: 900px) {
+      .artigo-cards {
+        grid-template-columns: 1fr 1fr !important;
+      }
+    }
+    @media (min-width: 900px) {
+      .artigo-cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1229,6 +1733,7 @@
 
     <!-- SECTION: Templi -->
     <section id="sec-templi" class="section active">
+      <div id="continuar-container"></div>
 
       <!-- Heatmap di attività — topo da página -->
       <div class="heatmap-container">
@@ -1424,9 +1929,69 @@
     </div>
   </div>
 
+  <!-- Onboarding modal -->
+  <div id="onboarding-modal" class="onboarding-modal" style="display:none;">
+    <div class="onb-card">
+      <div class="onb-slides">
+        <!-- Slide 1 -->
+        <div class="onb-slide active">
+          <div class="onb-emoji">🇮🇹</div>
+          <h3>Benvenuto!</h3>
+          <p>Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="onb-slide">
+          <div class="onb-emoji">🗺️</div>
+          <h3>Estrutura do App</h3>
+          <ul class="onb-features-list">
+            <li>🏛️ <strong>Templos:</strong> Onde você acompanha seu progresso em cada cidade da Itália.</li>
+            <li>🃏 <strong>Flashcards:</strong> Memorize palavras com o algoritmo inteligente FSRS-4.5.</li>
+            <li>❓ <strong>Quiz:</strong> Teste seu conhecimento e ganhe muito XP.</li>
+            <li>📖 <strong>Vocabulário:</strong> Consulte a tradução, pronúncia IPA e exemplos das palavras.</li>
+            <li>📚 <strong>Gramática:</strong> Domine regras em 6 fases didáticas super auto-explicativas!</li>
+          </ul>
+        </div>
+        <!-- Slide 3 -->
+        <div class="onb-slide">
+          <div class="onb-emoji">🚀</div>
+          <h3>Por onde começar?</h3>
+          <p>É muito fácil começar sua jornada:</p>
+          <ol class="onb-steps-list">
+            <li>Acesse a aba <strong>TEMPLOS</strong></li>
+            <li>Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong></li>
+            <li>Estude usando os <strong>FLASHCARDS</strong></li>
+            <li>Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!</li>
+          </ol>
+        </div>
+      </div>
+      
+      <div class="onb-footer">
+        <div class="onb-dots">
+          <span class="onb-dot active" onclick="Onboarding.irParaSlide(0)"></span>
+          <span class="onb-dot" onclick="Onboarding.irParaSlide(1)"></span>
+          <span class="onb-dot" onclick="Onboarding.irParaSlide(2)"></span>
+        </div>
+        <div class="onb-buttons">
+          <button id="onb-btn-prev" class="onb-btn btn-secondary" onclick="Onboarding.anteriorSlide()" style="visibility: hidden;">Voltar</button>
+          <button id="onb-btn-next" class="onb-btn btn-primary" onclick="Onboarding.proximoSlide()">Avanti →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom navigation for mobile -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-tab-btn" data-section="templi" onclick="App.navegar('templi')">🏛️<span>Início</span></button>
+    <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')">🃏<span>Flashcard</span></button>
+    <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')">❓<span>Quiz</span></button>
+    <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')">📚<span>Gramática</span></button>
+    <button class="nav-tab-btn" data-section="profilo" onclick="App.navegar('profilo')">👤<span>Perfil</span></button>
+  </nav>
+
   <!-- Scripts (load order matters) -->
   <script src="js/audio.js?v=1"></script>
   <script src="js/conquistas.js?v=1"></script>
+  <script src="js/onboarding.js?v=2"></script>
   <script src="js/core.js?v=3"></script>
   <script src="js/progression.js?v=3"></script>
   <script src="js/flashcards.js?v=3"></script>

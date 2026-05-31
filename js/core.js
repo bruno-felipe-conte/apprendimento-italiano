@@ -104,6 +104,11 @@ const App = {
         speechSynthesis.onvoiceschanged = null;
       };
     }
+    // Init onboarding
+    if (typeof Onboarding !== 'undefined' && Onboarding.deveExibir()) {
+      Onboarding.mostrar();
+    }
+
     // Set up keyboard shortcuts
     document.addEventListener('keydown', (e) => {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
@@ -176,10 +181,21 @@ const App = {
       btn.classList.toggle('ativa', btn.dataset.section === secao);
     });
 
+    // Update bottom nav buttons
+    document.querySelectorAll('#bottom-nav button').forEach(btn => {
+      btn.classList.toggle('ativa', btn.dataset.section === secao);
+    });
+
     // Show/hide sections
     document.querySelectorAll('.section').forEach(sec => {
       sec.classList.toggle('active', sec.id === `sec-${secao}`);
     });
+
+    // Persist last section visited
+    if (this.estado.progresso) {
+      this.estado.progresso.ultima_secao = secao;
+      this.salvarProgresso();
+    }
 
     // Lazy-render on first visit
     if (secao === 'vocabolario' && typeof Vocab !== 'undefined') {
@@ -311,7 +327,40 @@ const App = {
     container.style.display = 'block';
   },
 
+  renderizarCardContinuar() {
+    const p = this.estado.progresso;
+    if (!p || !p.ultimo_estudo) return ''; // primeiro acesso
+
+    const diffHoras = (Date.now() - p.ultimo_estudo) / 3600000;
+    const quando = diffHoras < 0.1 ? 'agora mesmo'
+                 : diffHoras < 1 ? 'há poucos minutos'
+                 : diffHoras < 24 ? `há ${Math.round(diffHoras)}h`
+                 : `há ${Math.round(diffHoras/24)} dia(s)`;
+
+    const ultimaSecao = p.ultima_secao || 'flashcard';
+    let secaoNome = 'Flashcard';
+    if (ultimaSecao === 'templi') secaoNome = 'Início';
+    if (ultimaSecao === 'quiz') secaoNome = 'Quiz';
+    if (ultimaSecao === 'vocabolario') secaoNome = 'Vocabulário';
+    if (ultimaSecao === 'grammatica') secaoNome = 'Gramática';
+    if (ultimaSecao === 'profilo') secaoNome = 'Perfil';
+
+    return `<div class="card-continuar" onclick="App.navegar('${ultimaSecao}')">
+      <div>
+        <div class="cc-label">Continuar de onde parou</div>
+        <div class="cc-info">Última sessão: <strong>${quando}</strong> (${secaoNome})</div>
+      </div>
+      <div class="cc-cta">→ Retomar</div>
+    </div>`;
+  },
+
   renderizarTemplos() {
+    // Render card continuar
+    const contContainer = document.getElementById('continuar-container');
+    if (contContainer) {
+      contContainer.innerHTML = this.renderizarCardContinuar();
+    }
+
     const grid = document.getElementById('templos-grid');
     if (!grid) return;
     grid.innerHTML = '';
@@ -346,7 +395,7 @@ const App = {
 
       if (desbloqueado) {
         card.style.cursor = 'pointer';
-        card.onclick = () => this.abrirModalTemplo(i);
+        card.onclick = () => this.estudarTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}">
             <div class="templo-num">Tempio ${i}</div>
@@ -365,8 +414,8 @@ const App = {
           </div>
         `;
       } else {
-        card.style.cursor = 'pointer';
-        card.onclick = () => this.abrirModalTemplo(i);
+        card.style.cursor = 'default';
+        card.onclick = null;
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
             <div class="templo-num">Tempio ${i}</div>
