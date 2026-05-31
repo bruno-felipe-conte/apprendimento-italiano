@@ -414,8 +414,8 @@ const App = {
           </div>
         `;
       } else {
-        card.style.cursor = 'default';
-        card.onclick = null;
+        card.style.cursor = 'pointer';
+        card.onclick = () => this.pedirSenhaTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
             <div class="templo-num">Tempio ${i}</div>
@@ -426,11 +426,10 @@ const App = {
             </div>
           </div>
           <div class="templo-body">
-            <div class="lock-info">Requer Livello ${nivelMinimo}</div>
+            <div class="lock-info">Requer Livello ${nivelMinimo} · Toque para inserir código</div>
             <div class="progresso-bar-container">
               <div class="progresso-bar-fill" style="width:0%"></div>
             </div>
-            <div class="progresso-label" style="text-align:center;color:#bbb;">Bloqueado</div>
           </div>
         `;
       }
@@ -530,6 +529,26 @@ const App = {
   fecharModalTemplo() {
     document.getElementById('templo-modal').classList.remove('ativo');
     document.body.style.overflow = '';
+  },
+
+  pedirSenhaTemplo(temploNum) {
+    const nome = this.TEMPLO_NOMES[temploNum] || `Tempio ${temploNum}`;
+    const codigo = prompt(`🔒 Tempio ${temploNum} — ${nome}\n\nInsira o código de acesso:`);
+    if (codigo === null) return; // cancelou
+    if (codigo.trim() === this.UNLOCK_CODE) {
+      const p = this.estado.progresso;
+      if (!p.templos_desbloqueados.includes(temploNum)) {
+        p.templos_desbloqueados.push(temploNum);
+        p.templos_desbloqueados.sort((a, b) => a - b);
+      }
+      this.salvarProgresso();
+      this.renderizarTemplos();
+      this.atualizarStats();
+      if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
+      this.notificar(`🏛️ Tempio ${temploNum} sbloccato!`, 'sucesso');
+    } else {
+      this.notificar('Codice non corretto.', 'erro');
+    }
   },
 
   tentarDesbloquear(temploNum) {
