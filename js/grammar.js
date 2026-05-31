@@ -62,11 +62,11 @@ const Grammatica = {
 
     for (const mod of this.dados.moduli) {
       const bloqueado = nivel < mod.nivel_minimo && !this._adminMods.has(mod.id);
-      const totalUnid = mod.unidades.length;
+      const totalUnid = mod.lezioni.length;
       if (bloqueado || totalUnid === 0) continue; // skip locked/empty modules
 
-      const totalEx   = mod.unidades.reduce((s, u) => s + u.exercicios.length, 0);
-      const completas = mod.unidades.filter(u => completadas.includes(u.id)).length;
+      const totalEx   = mod.lezioni.reduce((s, u) => s + u.exercicios.length, 0);
+      const completas = mod.lezioni.filter(u => completadas.includes(u.id)).length;
       const pct       = totalUnid > 0 ? Math.round((completas / totalUnid) * 100) : 0;
 
       // Module banner
@@ -80,7 +80,7 @@ const Grammatica = {
 
       // Grid of lezione cards
       html += '<div class="gram-lezioni-grid">';
-      for (const u of mod.unidades) {
+      for (const u of mod.lezioni) {
         const feita = completadas.includes(u.id);
         const nEx = u.exercicios.length;
         html += `<button class="gram-lez-card${feita ? ' feita' : ''}" onclick="Grammatica.abrirUnidade('${mod.id}','${u.id}')">`;
@@ -97,7 +97,7 @@ const Grammatica = {
     }
 
     // Locked modules (compact pills — clicáveis para admin)
-    const bloqueados = this.dados.moduli.filter(m => nivel < m.nivel_minimo && !this._adminMods.has(m.id) && m.unidades.length > 0);
+    const bloqueados = this.dados.moduli.filter(m => nivel < m.nivel_minimo && !this._adminMods.has(m.id) && m.lezioni.length > 0);
     if (bloqueados.length > 0) {
       html += '<div class="gram-locked-row">';
       for (const mod of bloqueados) {
@@ -195,7 +195,7 @@ const Grammatica = {
   abrirUnidade(moduloId, unidadeId) {
     const mod  = this.dados.moduli.find(m => m.id === moduloId);
     if (!mod) return;
-    const unid = mod.unidades.find(u => u.id === unidadeId);
+    const unid = mod.lezioni.find(u => u.id === unidadeId);
     if (!unid) return;
 
     this.moduloAtual  = mod;
@@ -232,13 +232,13 @@ const Grammatica = {
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
+    // 📋 Tabela de consulta rápida (colapsável) para uso durante os exercícios
+    html += this._htmlTabelaVisual(u);
+
     // ✏️ Exercícios (MOVIDO PARA O TOPO)
     html += '<div id="gram-ex-area">';
     html += this._htmlExercicio();
     html += '</div>';
-
-    // 📋 Tabela de consulta rápida (colapsável) para uso durante os exercícios
-    html += this._htmlTabelaVisual(u);
 
     // 📖 Teoria estruturada (5 Fases Didáticas)
     html += '<div class="gram-card gram-teoria-card">';
@@ -529,7 +529,7 @@ const Grammatica = {
     else if (pct >= 60)   { emoji = '💪'; msg = 'Bene! Continua così!'; }
 
     // Próxima lição
-    const unids = this.moduloAtual.unidades;
+    const unids = this.moduloAtual.lezioni;
     const idx   = unids.findIndex(u => u.id === this.unidadeAtual.id);
     let proxBtn = '';
     if (idx >= 0 && idx < unids.length - 1) {
