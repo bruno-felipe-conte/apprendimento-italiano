@@ -1,0 +1,98 @@
+ID: b1-i
+TITULO: Il mondo digitale e i social media
+TECNICA: **Como italianizar e usar vocabulário digital:**
+
+1. Verbos estrangeiros → adicionar **-are**: post → *postare* | chat → *chattare* | like → *likare*
+2. Artigo de anglicismos: use a fonética inicial → *il selfie* (s+vogal → il, não lo)
+   → exceto: *lo screenshot* (s+consonante → lo!)
+3. Congiuntivo com opinião: **penso/credo/spero che** + congiuntivo presente
+   → *penso che i social siano utili* | *spero che funzioni*
+4. Preferência formal: *scaricare* > downloadare | *condividere* > shareare | *pubblicare* > postare
+5. Plurais de anglicismos: invariáveis → *i selfie, i like, gli screenshot* (não *i likes*)
+----------------------------------------
+ID: b1-ii
+TITULO: Ambiente di lavoro e linguaggio professionale
+TECNICA: **Como escrever e-mails profissionais em italiano:**
+
+1. Abertura: **Egregio/Gentile** + título + cognome → *Gentile Dott.ssa Rossi,*
+2. Referência: *In riferimento a* + substantivo | *A seguito di* + evento
+3. Pedido educado: **condizionale** → *potrebbe inviarmi / le dispiacerebbe*
+4. Pedido formal com congiuntivo: *è necessario che* + congiuntivo → *che arrivi entro lunedì*
+5. Fechamento: *Resto a disposizione per qualsiasi chiarimento* + saudação
+   Saudações: *Cordiali saluti* (neutro) | *Distinti saluti* (mais formal) | *Saluti* (informal)
+----------------------------------------
+ID: b1-iii
+TITULO: Cultura e societa italiana contemporanea
+TECNICA: **Como falar sobre cultura e sociedade italiana:**
+
+1. Concessão: **nonostante/benché/sebbene** + congiuntivo → *nonostante sia difficile, …*
+2. Causa com gerundio: **gerundio** no início → *essendo giovane, ha più opportunità*
+3. CAMBIARE ambiproprio: *è cambiato* (mudou sozinho) | *ha cambiato* (mudou algo)
+   → *il paese è cambiato* (o país mudou) | *ha cambiato lavoro* (trocou de emprego)
+4. Para dados/estatísticas: *secondo i dati* | *il X% degli italiani* | *in media*
+5. Opinião com sfumatura: *da un lato… dall'altro* (por um lado… por outro)
+----------------------------------------
+ID: b1-iv
+TITULO: Esprimere opinioni e argomentare
+TECNICA: **Como expressar e defender opinião em italiano:**
+
+1. Opinião subjetiva: **credo/penso/sono convinto che** + congiuntivo
+2. Fato objetivo: **è certo/è dimostrato/è evidente che** + indicativo
+3. Dúvida: **dubito che / non credo che** + congiuntivo
+4. Concessão elegante: *hai ragione sul fatto che…, tuttavia…*
+5. Contraposição: **d'altra parte / eppure / tuttavia / nonostante ciò**
+6. Reforço: *e non solo… ma anche* | *oltre a ciò* | *a maggior ragione*
+----------------------------------------
+ID: b1-v
+TITULO: L'italiano regionale e i dialetti
+TECNICA: **Como reconhecer e lidar com variantes regionais:**
+
+1. Reconhecer sotaque: Norte = vogais fechadas, ritmo rápido | Sul = vogais abertas, ritmo mais lento
+2. Si impersonale para generalizar: *in Sicilia si mangia benissimo* | *a Milano si lavora molto*
+3. Quando não entender: *Scusi, non ho capito. Può ripetere più lentamente?*
+   ou: *Parla italiano standard? Non capisco bene il dialetto.*
+4. Expressões regionais comuns no italiano: *casino* (confusão/bagunça) | *ammazzare* (matar, mas também interjeição)
+5. Para pesquisa: cada região tem portal online com glossário dialetal — útil para turismo
+----------------------------------------
+ID: b1-vi
+TITULO: Il Congiuntivo Presente
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-vii
+TITULO: Il Condizionale Presente
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-viii
+TITULO: I Pronomi Relativi
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-ix
+TITULO: La Forma Passiva
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-x
+TITULO: Il Gerundio
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-xi
+TITULO: Il Congiuntivo Imperfetto
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: b1-xii
+TITULO: I Modali al Passato
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------

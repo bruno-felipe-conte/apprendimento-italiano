@@ -1,0 +1,114 @@
+ID: a2-i
+TITULO: Al ristorante e al bar
+TECNICA: **Como pedir no ristorante / bar:**
+
+1. Para pedir educadamente: **vorrei** + artigo + produto → *Vorrei un caffè / Vorrei la pasta al pomodoro*
+2. Alternativa informal: **prendo** + artigo → *Prendo una pizza margherita*
+3. Articolo partitivo: *di + il/lo/la/i/gli/le* → del/dello/della/dei/degli/delle
+   → masculino singular com vowel: **dell'** | masculino -o: **del** | feminino -a: **della**
+4. Pedir a conta: *Il conto, per favore* — nunca *'voglio il conto'* (brusco)
+5. Expressão de aprovação: *Buonissimo! / È molto buono* — sempre bem recebido
+----------------------------------------
+ID: a2-ii
+TITULO: Trasporti e orientamento
+TECNICA: **Como dar e entender direções:**
+
+1. Pedir: *Scusi* (formal) / *Senti* (informal) + *dov'è…?* ou *come si arriva a…?*
+2. Direções básicas: **dritto** (em frente) | **a destra** (direita) | **a sinistra** (esquerda) | **giri** (vire)
+3. Referências: *al semaforo* (no semáforo) | *all'angolo* (na esquina) | *dopo la chiesa* (depois da igreja)
+4. Tempo a pé: *ci vogliono X minuti a piedi* — literalmente 'são precisos X minutos a pé'
+5. Bilhete: *Un biglietto per [destino], per favore* | *andata e ritorno* = ida e volta
+----------------------------------------
+ID: a2-iii
+TITULO: Lavoro e vita professionale
+TECNICA: **Como falar sobre trabalho e experiência:**
+
+1. Duração contínua: **da + presente** → *studio italiano da sei mesi* (há 6 meses, ainda estudo)
+2. Duração passada/concluída: **per + passato prossimo** → *ho lavorato lì per due anni*
+3. Profissione: *faccio il/la + profissão* ou *sono + profissão* (sem artigo)
+   → *faccio il medico* / *sono medico* — ambas corretas
+4. Email formal: início com *In riferimento a* / *Le scrivo per* + infinito
+5. Colloquio: *Ho esperienza in + área* | *So usare + ferramenta* | *Parlo + idioma*
+----------------------------------------
+ID: a2-iv
+TITULO: Casa e quartiere
+TECNICA: **Como descrever e perguntar sobre moradia:**
+
+1. Existência: **c'è** + singular | **ci sono** + plural → *c'è il garage? / ci sono due bagni?*
+2. Falta: **manca** + singular | **mancano** + plural → *manca il riscaldamento*
+3. Localização no edifício: **al + piano ordinale** → *al primo piano / al terzo piano*
+   → Atenção: *piano terra* = térreo (sem artigo)
+4. Aluguel: *in affitto* (alugado) | *di proprietà* (próprio) | *cerco casa in affitto*
+5. Descrever: **è** + adjetivo → *è luminoso, è grande, è rumoroso*
+----------------------------------------
+ID: a2-v
+TITULO: Salute e farmacia
+TECNICA: **Como descrever sintomas e pedir ajuda:**
+
+1. Dor fixa: **ho mal di** + parte → *ho mal di testa / gola / schiena / stomaco*
+2. Dor variável: **mi fa male** + singular | **mi fanno male** + plural
+   → *mi fa male il ginocchio* | *mi fanno male le gambe*
+3. Temperatura: **ho la febbre** (tenho febre) | **ho 38 di febbre** (tenho 38 de febre)
+4. Pedir remédio: **ha qualcosa per** + il/la + sintoma → *ha qualcosa per il mal di testa?*
+5. Urgência: *chiami il 118* (chame o 118) | *ho bisogno di un medico subito*
+----------------------------------------
+ID: a2-vi
+TITULO: Passato Prossimo con avere
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-vii
+TITULO: Passato Prossimo con essere
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-viii
+TITULO: L'Imperfetto Indicativo
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-ix
+TITULO: Passato Prossimo vs Imperfetto
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-x
+TITULO: Il Futuro Semplice
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-xi
+TITULO: Comparativi e Superlativi
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-xii
+TITULO: I Pronomi Diretti
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-xiii
+TITULO: I Pronomi Indiretti
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-xiv
+TITULO: I Verbi Riflessivi
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
+ID: a2-xv
+TITULO: Pronomi Combinati (intro)
+TECNICA: 1. Observe o contexto.
+2. Aplique a regra geral.
+3. Verifique as exceções.
+----------------------------------------
