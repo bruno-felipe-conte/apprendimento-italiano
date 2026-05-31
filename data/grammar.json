@@ -543,7 +543,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Completare con le preposizioni:\n\n1. Anna abita ___ via Torino.\n2. Conosco tuo padre ___ molti anni.\n3. Questo bicchiere non è ___ vetro, ma ___ cristallo.\n4. Vado ___ Mantova ___ Laura.\n5. ___ Carlo e Anna ci sono molti problemi.\n6. Il professore parla ___ Leonardo Sciascia.\n7. ___ dove vieni? Sono ___ Francoforte.\n8. ___ chi sono queste foto? Sono ___ Pietro.\n9. Andiamo ___ cena ___ mio zio.\n10. ___ che ora aprono i negozi?\n11. Torno ___ casa ___ piedi.\n12. ___ questa casa ci sono quattro stanze.\n13. ___ chi esci la sera?\n14. ___ gli amici.\n15. ___ quella collina c'è la casa di Andrea.\n16. ___ tre ore arriva il padre di Giacomo.\n17. Il giovane ___ la giacca chiara è mio fratello.\n18. Sono ___ Firenze ___ studiare l'italiano.\n19. ___ noi va bene.\n20. Resto in questa città ___ tre mesi.",
               "resposta": "1. in via Torino\n2. da molti anni\n3. di vetro / di cristallo\n4. a Mantova / con Laura\n5. Tra Carlo e Anna\n6. di Leonardo Sciascia\n7. Da dove vieni? / di Francoforte\n8. Di chi sono? / di Pietro\n9. a cena / da mio zio\n10. A che ora\n11. a casa / a piedi\n12. In questa casa\n13. Con chi\n14. Con gli amici\n15. Su quella collina\n16. Fra/Tra tre ore\n17. con la giacca chiara\n18. a Firenze / per studiare\n19. Per noi\n20. per tre mesi",
               "explicacao": "Di: possesso/materia. A: città/ora. Da: durata/persona. In: luogo interno. Con: compagnia. Su: sopra. Per: scopo/durata. Fra/Tra: tempo futuro.",
@@ -556,7 +556,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Completare con le preposizioni:\n\n**a) Dove tieni i tuoi soldi?**\n___ banca. / ___ tasca ___ cappotto. / Nella Banca Toscana. / ___ tasche ___ pantaloni. / ___ casa. / ___ borsa ___ pelle. / ___ cassetto.\n\n**b) Dove tieni la tua macchina?**\n___ garage. / ___ strada. / ___ garage ___ via del Corso. / ___ fronte a casa.\n\n**c) A chi scrivi?**\n___ miei amici. / ___ studenti della mia classe. / ___ avvocato.\n\n**d) Da chi vai stasera?**\n___ Giovanna. / ___ amico di mia sorella. / ___ professore.\n\n**e) Di chi sono questi libri?**\nSono ___ mie amiche tedesche. / ___ segretaria. / ___ mio medico. / ___ miei amici. / ___ meccanico. / ___ Carla.",
               "resposta": "a) In banca. / In tasca del cappotto. / Nelle tasche dei pantaloni. / In casa. / Nella borsa di pelle. / Nel cassetto.\n\nb) Nel garage. / Per strada. / Nel garage in via del Corso. / Di fronte a casa.\n\nc) Ai miei amici. / Agli studenti della mia classe. / All'avvocato.\n\nd) Da Giovanna. / Da un amico di mia sorella. / Dal professore.\n\ne) Sono delle mie amiche tedesche. / Della segretaria. / Del mio medico. / Dei miei amici. / Del meccanico. / Di Carla.",
               "explicacao": "di+il=del, di+lo=dello, di+la=della, di+l'=dell', di+i=dei, di+gli=degli, di+le=delle. a+il=al, a+gli=agli, a+le=alle. da+il=dal, da+il professore=dal professore.",
@@ -569,7 +569,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Come il precedente:\n\n**a) Mando / Do:**\nMando i libri ___ mio amico. / Mando il regalo ___ amici di Pietro. / Mando la lettera ___ mie sorelle. / Do il diploma ___ studenti. / Do il diploma ___ ragazza di Sandro. / Mando il pacco ___ miei genitori. / Do il diploma ___ studentesse.\n\n**b) Ricevo:**\nRicevo i fiori ___ miei amici. / Ricevo i fiori ___ amici di Andrea. / Ricevo la lettera ___ studenti tedeschi. / Ricevo un regalo ___ amico di mia sorella. / Ricevo una telefonata ___ ragazza francese. / Ricevo una telefonata ___ insegnante. / Ricevo una telefonata ___ direttore. / Ricevo una telefonata ___ studentesse.\n\n**c) Metto / Tengo:**\nMetto i documenti ___ cassetto ___ scrivania. / Metto le chiavi ___ tasca. / Tengo i vestiti ___ armadio ___ camera da letto. / Metto i libri ___ libreria. / Metto la giacca ___ armadio ___ ingresso. / Metto l'assegno ___ portafoglio.\n\n**d) Luoghi:**\nGli uccelli vivono ___ alberi. / I gatti vivono ___ tetti. / La neve cade ___ montagne. / Lascio i libri ___ tavolo.\n\n**e) Di chi è?**\nIl libro è ___ direttrice. / La macchina è parcheggiata ___ ponte. / La borsa è ___ studentessa inglese. / L'ombrello è ___ insegnante di matematica. / Le valigie sono ___ studenti. / I bagagli sono ___ turisti.",
               "resposta": "a) al mio amico / agli amici di Pietro / alle mie sorelle / agli studenti / alla ragazza di Sandro / ai miei genitori / alle studentesse\n\nb) dai miei amici / dagli amici di Andrea / dagli studenti tedeschi / dall'amico di mia sorella / dalla ragazza francese / dall'insegnante / dal direttore / dalle studentesse\n\nc) nel cassetto della scrivania / in tasca / nell'armadio della camera da letto / nella libreria / nell'armadio dell'ingresso / nel portafoglio\n\nd) sugli alberi / sui tetti / sulle montagne / sul tavolo\n\ne) della direttrice / sotto il ponte / della studentessa inglese / dell'insegnante di matematica / degli studenti / dei turisti",
               "explicacao": "a/da/su/di/in + articolo formano contrazioni. Ricevere DA qualcuno. Mandare/dare A qualcuno. Su+gli=sugli, su+i=sui, su+le=sulle. Di+degli=degli.",
@@ -582,7 +582,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Completare con le preposizioni:\nMod.: *Il cappello nero è ___ direttore. → del direttore.*\n\n1. Quella ragazza ___ gonna rossa è la sorella ___ Pietro.\n2. Preferisco le persone ___ gli occhi scuri e ___ i capelli chiari.\n3. ___ inverno fa freddo ___ Firenze.\n4. ___ l'autobus sale molta gente.\n5. Sei venuto ___ macchina o ___ piedi?\n6. È bella la tua sciarpa ___ lana ___ righe bianche e rosse.\n7. Vado ___ montagna e porto gli scarponi ___ sci.\n8. Vado spesso ___ mare ___ estate.\n9. ___ primavera vado ___ campagna ___ bicicletta.\n10. ___ due giorni torna Claudio ___ vacanze.\n11. ___ notte i gatti miagolano ___ letti e ___ alberi.\n12. Abitiamo ___ questa casa ___ tre mesi.",
               "resposta": "1. con la gonna rossa / di Pietro\n2. con gli occhi scuri / con i capelli chiari\n3. D'/In inverno / a Firenze\n4. Sull'autobus (su+l')\n5. in macchina / a piedi\n6. di lana / con le righe\n7. in montagna / da sci\n8. al mare / in estate\n9. In primavera / in campagna / in bicicletta\n10. Fra/Tra due giorni / dalle vacanze\n11. Di notte / sui letti / sugli alberi\n12. in questa casa / da tre mesi",
               "explicacao": "Con: descrizione fisica. Di: materia/possesso. In: nazione/stagione/mezzo. A: città. Da sci: scopo (occhiali da sole, scarponi da sci). Dai vacanze: partenza.",
@@ -595,7 +595,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Conversazione — «In montagna»**\n\nPaolo: Ehi, Giovanni, abbiamo due giorni di vacanza, tu che programmi hai?\nGiovanni: Penso di andare in montagna, all'Abetone, sulle Montagne Pistoiesi. Ho voglia di respirare un po' di aria fresca, di prendere il sole e di fare una bella camminata.\nPaolo: Vai da solo o con qualche amico?\nGiovanni: Vado con Giulia e suo fratello Carlo. Se non hai niente da fare, perché non vieni anche tu con noi?\nPaolo: Volentieri, grazie. Ma senti, andiamo con la macchina o con il pullman?\nGiovanni: Con la macchina. È più comodo; così possiamo partire e tornare quando vogliamo.\nPaolo: Hai proprio ragione, ma a che ora partiamo? Spero non troppo presto.\nGiovanni: No, no. Domani mattina voglio dormire fino alle nove. Alle dieci dobbiamo essere da Giulia. Partiamo da lì e poi passiamo a prendere Carlo.\n\n**Rispondere:**\n1. Dove vuole andare Giovanni?\n2. Con chi va?\n3. Come decidono di andare?\n4. A che ora devono essere da Giulia?\n5. Dove abita Giulia?",
               "resposta": "1. Giovanni vuole andare in montagna, all'Abetone, sulle Montagne Pistoiesi.\n2. Va con Giulia e suo fratello Carlo (e con Paolo).\n3. Decidono di andare con la macchina perché è più comodo.\n4. Alle dieci devono essere da Giulia.\n5. Giulia abita vicino a piazza Giuseppe Verdi, in via del Campanile al numero tre, secondo piano.",
               "explicacao": "Preposizioni chiave: IN montagna (regione/zona). ALL'Abetone (luogo specifico con articolo). DA Giulia (presso la casa di). CON la macchina (mezzo). FINO ALLE nove (limite di tempo).",
@@ -758,7 +758,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sul dialogo 'Una gita' (risposte complete):",
               "pergunta": "1. Perché Paolo non è andato in campagna con Mario?\n2. Che cosa ha fatto la mattina Mario?\n3. Dove ha mangiato a pranzo?\n4. Com'è Laura?\n5. Quando è andato in campagna Mario?\n6. È andato da solo?\n7. A che ora sono tornati in città?\n8. Quando sono partiti Anna e Paolo?\n9. A che ora sono arrivati a Siena?\n10. Che cosa hanno visitato?\n11. Come hanno passato il pomeriggio?\n12. Quanto tempo sono rimasti a Pienza?",
               "resposta": "1. Perché è andato con Anna a fare una gita a Siena.\n2. Ha fatto le solite cose: è andato al mercato, ha studiato, ha pulito la casa.\n3. In una piccola trattoria.\n4. È molto simpatica / è carina.\n5. Nel pomeriggio verso le tre.\n6. No, è andato con Gigi.\n7. All'ora di cena.\n8. La mattina molto presto.\n9. Verso le nove.\n10. Il Palazzo Pubblico con la torre del Mangia, il duomo e belle chiese.\n11. Sono andati a Pienza.\n12. Circa due ore.",
@@ -772,7 +772,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1a — Volgere al passato prossimo (la segretaria):",
               "pergunta": "1. La segretaria arriva a scuola alle otto.\n2. Apre la porta dell'ufficio.\n3. Scrive a macchina una lettera.\n4. Risponde al telefono.\n5. Dà le informazioni agli studenti.\n6. Suona la campanella per l'inizio delle lezioni.\n7. Fa le fotocopie.\n8. Indica la classe a un nuovo studente.",
               "resposta": "1. La segretaria è arrivata a scuola alle otto.\n2. Ha aperto la porta dell'ufficio.\n3. Ha scritto a macchina una lettera.\n4. Ha risposto al telefono.\n5. Ha dato le informazioni agli studenti.\n6. Ha suonato la campanella per l'inizio delle lezioni.\n7. Ha fatto le fotocopie.\n8. Ha indicato la classe a un nuovo studente.",
@@ -786,7 +786,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1b — Volgere al passato prossimo (il direttore):",
               "pergunta": "1. Il direttore arriva presto a scuola.\n2. Legge gli appunti sul tavolo.\n3. Firma alcune lettere.\n4. Consegna i diplomi agli studenti.\n5. Telefona all'ambasciata.\n6. Riceve una nuova studentessa nel suo ufficio.\n7. Saluta gli studenti.\n8. Presenta l'insegnante alla classe.",
               "resposta": "1. Il direttore è arrivato presto a scuola.\n2. Ha letto gli appunti sul tavolo.\n3. Ha firmato alcune lettere.\n4. Ha consegnato i diplomi agli studenti.\n5. Ha telefonato all'ambasciata.\n6. Ha ricevuto una nuova studentessa nel suo ufficio.\n7. Ha salutato gli studenti.\n8. Ha presentato l'insegnante alla classe.",
@@ -800,7 +800,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1c — Volgere al passato prossimo (l'insegnante):",
               "pergunta": "1. L'insegnante arriva a scuola alle nove.\n2. Entra in classe.\n3. Fa l'appello.\n4. Spiega una nuova lezione.\n5. Scrive delle frasi alla lavagna.\n6. Ripete la spiegazione.\n7. Risponde alle domande degli studenti.\n8. Aiuta una studentessa.\n9. Corregge le frasi sbagliate.\n10. Assegna i compiti per il giorno dopo.",
               "resposta": "1. L'insegnante è arrivata a scuola alle nove.\n2. È entrata in classe.\n3. Ha fatto l'appello.\n4. Ha spiegato una nuova lezione.\n5. Ha scritto delle frasi alla lavagna.\n6. Ha ripetuto la spiegazione.\n7. Ha risposto alle domande degli studenti.\n8. Ha aiutato una studentessa.\n9. Ha corretto le frasi sbagliate.\n10. Ha assegnato i compiti per il giorno dopo.",
@@ -814,7 +814,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1d — Volgere al passato prossimo (Peter):",
               "pergunta": "1. Peter arriva a scuola alle otto e mezza.\n2. Controlla la posta.\n3. Chiede un'informazione alla segretaria.\n4. Va al bar.\n5. Beve un cappuccino.\n6. Fuma una sigaretta.\n7. Legge un giornale italiano.\n8. Parla con un insegnante.\n9. Entra in classe.\n10. Saluta i suoi compagni.\n11. Mette i libri e i quaderni sul tavolo.\n12. Si siede vicino alla cattedra.",
               "resposta": "1. Peter è arrivato a scuola alle otto e mezza.\n2. Ha controllato la posta.\n3. Ha chiesto un'informazione alla segretaria.\n4. È andato al bar.\n5. Ha bevuto un cappuccino.\n6. Ha fumato una sigaretta.\n7. Ha letto un giornale italiano.\n8. Ha parlato con un insegnante.\n9. È entrato in classe.\n10. Ha salutato i suoi compagni.\n11. Ha messo i libri e i quaderni sul tavolo.\n12. Si è seduto vicino alla cattedra.",
@@ -988,7 +988,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sul dialogo 'Un invito':",
               "pergunta": "1. Quando è il compleanno di Guido?\n2. Che cosa vuole organizzare Mario?\n3. Dove?\n4. Chi invita?\n5. Perché Laura ha paura di non poterci andare?\n6. Con chi ci può andare?\n7. Perché telefona alla sorella di Mario?\n8. Quante persone ci sono alla festa?",
               "resposta": "1. Dopodomani.\n2. Una festa.\n3. Nella casa di campagna di suo fratello.\n4. Laura e molti altri amici.\n5. Perché la sua macchina è rotta, è dal meccanico.\n6. Con la sorella di Mario e il suo ragazzo.\n7. Per fissare un appuntamento per il viaggio.\n8. Sessanta, forse anche di più.",
@@ -1002,7 +1002,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1 — Completare con la particella 'ci':",
               "pergunta": "1. Vai a scuola? Sì, ___\n2. Siete stati a Venezia? No, non ___\n3. Venite da Carlo? Sì, ___\n4. Da quanto tempo abiti in questa casa? ___ da un anno.\n5. Signora, vive in questa città? Sì, ___ da molti anni.\n6. Con chi vai a teatro? ___ con Anna.\n7. Quando sei andata a Parigi? ___ il mese scorso.\n8. Perché vai a Roma? ___ per vedere la Cappella Sistina.\n9. Vieni al cinema con noi? No, non ___\n10. Quando vieni a Pisa? ___ sabato prossimo.\n11. Paolo, quanti giorni rimani a Firenze? ___ una settimana.\n12. Sei stato a Londra? Sì, ___",
               "resposta": "1. Sì, ci vado.\n2. No, non ci siamo stati.\n3. Sì, ci veniamo.\n4. Ci abito da un anno.\n5. Sì, ci vivo da molti anni.\n6. Ci vado con Anna.\n7. Ci sono andata il mese scorso.\n8. Ci vado per vedere la Cappella Sistina.\n9. No, non ci vengo.\n10. Ci vengo sabato prossimo.\n11. Ci rimango una settimana.\n12. Sì, ci sono stato.",
@@ -1016,7 +1016,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 2 — Come il precedente (completare con 'ci'):",
               "pergunta": "1. Come vai a casa? Di solito ___ con l'autobus.\n2. Noi andiamo a vedere il Duomo, perché non ___ anche tu?\n3. Chi resta con Luca? ___ noi.\n4. Siete andati in campagna? Sì, ___\n5. Venite anche voi alla gita? No, ___\n6. Abiti volentieri da quella famiglia? Sì, ___ volentieri.\n7. Quando ritorna in America? ___ fra tre mesi.\n8. Chi viene con te al circo? ___ Paolo e Marta.\n9. Con chi vai al mare quest'anno? ___ con i miei zii.\n10. Chi porti a Pisa con te? ___ mia figlia.\n11. Da quanto tempo non abiti più là? Non ___ da quasi due anni.\n12. A che ora sono andati al ristorante? ___ alle due.",
               "resposta": "1. Di solito ci vado con l'autobus.\n2. Perché non ci vieni anche tu?\n3. Ci restiamo noi.\n4. Sì, ci siamo andati.\n5. No, non ci veniamo.\n6. Sì, ci sto volentieri.\n7. Ci torno fra tre mesi.\n8. Ci vengono Paolo e Marta.\n9. Ci vado con i miei zii.\n10. Ci porto mia figlia.\n11. Non ci abito da quasi due anni.\n12. Ci sono andati alle due.",
@@ -1030,7 +1030,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 3 — Completare con la particella 'ci':",
               "pergunta": "1. Posso andare a ballare con Giulio? Sì, ___\n2. Agli Uffizi ___ sono dei quadri meravigliosi.\n3. Quando torni a casa? ___ alle tre.\n4. Franca non è venuta con noi a vedere questo film perché è già stata ieri con Vincenzo.\n5. Vuoi rimanere da me ancora un giorno? Sì, ___ con piacere.\n6. Quando vai in ospedale? ___ domani.\n7. È mai stata a Venezia? No, ___ mai.\n8. Roma è una città caotica, ___ è molto traffico.\n9. Chi abita qui? Non ___ nessuno.\n10. Cosa c'è in quella bottiglia? Non ___ è niente.\n11. Come tornate in Inghilterra? ___ in treno.\n12. Quando puoi andare dal medico? ___ mercoledì.",
               "resposta": "1. Sì, ci puoi andare.\n2. Agli Uffizi ci sono dei quadri meravigliosi.\n3. Ci torno alle tre.\n4. Ci è già stata ieri con Vincenzo. (risposta)\n5. Sì, ci rimango con piacere.\n6. Ci vado domani.\n7. No, non ci sono mai stata.\n8. Ci è molto traffico.\n9. Non ci abita nessuno.\n10. Non ci è niente.\n11. Ci torniamo in treno.\n12. Ci posso andare mercoledì.",
@@ -1044,7 +1044,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 4 — Come il precedente (completare con 'ci'):",
               "pergunta": "1. A che ora sei andato in ufficio? ___ alle nove.\n2. In quel negozio ___ sono dei bei vestiti.\n3. Vai in piscina domani? ___ solo se non piove.\n4. Perché non porti anche Nino con te? Perché non vuole venir ___\n5. Vado al supermercato. ___ con Marco?\n6. Ritorni a Francoforte? Sì, ___ presto.\n7. Venite al ristorante? No, non ___\n8. Vuoi già andare a letto? Sì, ___ subito.\n9. Signorina, torna volentieri in Italia? Sì, ___ sempre con molto piacere.\n10. Quanto tempo rimanete a Pisa? ___ una settimana.\n11. Roma è bella, voglio andar ___ con Anna.\n12. Come siete andati a San Gimignano? ___ con la macchina.",
               "resposta": "1. Ci sono andato alle nove.\n2. Ci sono dei bei vestiti.\n3. Ci vado solo se non piove.\n4. Perché non vuole venirci.\n5. Ci vieni con Marco?\n6. Sì, ci ritorno presto.\n7. No, non ci veniamo.\n8. Sì, ci vado subito.\n9. Sì, ci torno sempre con molto piacere.\n10. Ci rimaniamo una settimana.\n11. Voglio andarci con Anna.\n12. Ci siamo andati con la macchina.",
@@ -1212,7 +1212,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sul testo 'Una vacanza nell'Italia meridionale':",
               "pergunta": "1. Fra quanto tempo finiranno i corsi all'università?\n2. Quanti giorni di vacanza avrà Paolo?\n3. E poi che cosa farà?\n4. Cosa hanno deciso di fare lui e la sua ragazza?\n5. Come ci andranno?\n6. Perché?\n7. Quale sarà la loro prima tappa?\n8. Quanto tempo ci rimarranno?\n9. Dove andranno dopo?\n10. Dove alloggeranno?\n11. Che cosa andranno a vedere?\n12. Che cosa faranno infine?",
               "resposta": "1. Fra qualche settimana.\n2. Circa venti giorni.\n3. Lavorerà come cameriere in un hotel per tutta la stagione estiva.\n4. Di fare un viaggio nell'Italia meridionale.\n5. In macchina.\n6. Per essere liberi di fermarsi dove vorranno.\n7. Napoli.\n8. Una settimana.\n9. A Capri.\n10. Ospiti di una loro amica napoletana.\n11. I giardini, la villa di Tiberio, la villa di Malaparte, la Grotta Azzurra.\n12. Andranno nel Lazio, sul lago di Bolsena.",
@@ -1226,7 +1226,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1 — Volgere al futuro semplice:",
               "pergunta": "1. (Io studiare) in questa scuola per imparare l'italiano.\n2. Luca (andare) a Napoli domani.\n3. Domani Marta (partire) e (tornare) nel suo Paese.\n4. (Io arrivare) alle due.\n5. (Io finire) di studiare e poi (andare) al cinema.\n6. So che domani Luigi (uscire) con Claudio.\n7. Questa sera (noi venire) a trovarti.\n8. Domani il professore (spiegare) una nuova lezione.\n9. Domenica sera (tu andare) in discoteca?\n10. Sabato prossimo (lei pagare) la bolletta della luce.",
               "resposta": "1. Studierò in questa scuola per imparare l'italiano.\n2. Luca andrà a Napoli domani.\n3. Domani Marta partirà e tornerà nel suo Paese.\n4. Arriverò alle due.\n5. Finirò di studiare e poi andrò al cinema.\n6. So che domani Luigi uscirà con Claudio.\n7. Questa sera verremo a trovarti.\n8. Domani il professore spiegherà una nuova lezione.\n9. Domenica sera andrai in discoteca?\n10. Sabato prossimo lei pagherà la bolletta della luce.",
@@ -1240,7 +1240,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 2 — Volgere al futuro semplice:",
               "pergunta": "1. Per me domani (essere) una giornata faticosa.\n2. Domenica (noi andare) in montagna.\n3. (Io finire) il corso e poi (partire) per Berlino.\n4. Penso che domani (io rispondere) bene alle domande del professore.\n5. Spero che il bambino (dormire) bene questa notte.\n6. Mi ha detto che (partire) molto presto.\n7. Carla (non potere) venire al cinema con noi.\n8. Andrea (dovere) lavorare molto se (volere) guadagnare bene.\n9. (Io finire) i compiti e poi (andare) in piscina.\n10. (Voi rimanere) qui o (andare) in montagna per Natale?",
               "resposta": "1. Per me domani sarà una giornata faticosa.\n2. Domenica andremo in montagna.\n3. Finirò il corso e poi partirò per Berlino.\n4. Penso che domani risponderò bene alle domande del professore.\n5. Spero che il bambino dormirà bene questa notte.\n6. Mi ha detto che partirà molto presto.\n7. Carla non potrà venire al cinema con noi.\n8. Andrea dovrà lavorare molto se vorrà guadagnare bene.\n9. Finirò i compiti e poi andrò in piscina.\n10. Rimarrete qui o andrete in montagna per Natale?",
@@ -1254,7 +1254,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 3 — Volgere al futuro semplice:",
               "pergunta": "1. Che cosa (tu fare) quando (essere) a Roma?\n2. (Io finire) di leggere il giornale e poi (preparare) la cena.\n3. (Tu vedere) che tutto (andare) bene.\n4. Se voi (non studiare), (non essere) promossi.\n5. (Noi parlare) a Gianni del tuo lavoro.\n6. Stasera (noi venire) alla tua festa.\n7. Anna (telefonare) a Giorgio.\n8. Che cosa (tu fare) da grande?\n9. Da grande (io scrivere) molti libri.\n10. Quando (voi essere) a Londra, (pensare) ancora a me?",
               "resposta": "1. Che cosa farai quando sarai a Roma?\n2. Finirò di leggere il giornale e poi preparerò la cena.\n3. Vedrai che tutto andrà bene.\n4. Se non studierete, non sarete promossi.\n5. Parleremo a Gianni del tuo lavoro.\n6. Stasera verremo alla tua festa.\n7. Anna telefonerà a Giorgio.\n8. Che cosa farai da grande?\n9. Da grande scriverò molti libri.\n10. Quando sarete a Londra, penserete ancora a me?",
@@ -1268,7 +1268,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 4 — Volgere al futuro semplice:",
               "pergunta": "1. (Tu cantare) una canzone per me?\n2. Laura (volere) un altro caffè.\n3. (Loro telefonare) alle cinque del pomeriggio.\n4. (Io pagare) l'affitto quando (prendere) lo stipendio.\n5. Alla festa (noi conoscere) tuo marito.\n6. Questo pomeriggio Andrea (andare) dal barbiere.\n7. Quando (tu smettere) di fumare?\n8. Appena (io tornare) a casa, (fare) la doccia.\n9. Noi (mandare) i nostri bambini alla scuola pubblica.\n10. (Io non vedere) mai più quella persona.",
               "resposta": "1. Canterai una canzone per me?\n2. Laura vorrà un altro caffè.\n3. Telefoneranno alle cinque del pomeriggio.\n4. Pagherò l'affitto quando prenderò lo stipendio.\n5. Alla festa conosceremo tuo marito.\n6. Questo pomeriggio Andrea andrà dal barbiere.\n7. Quando smetterai di fumare?\n8. Appena tornerò a casa, farò la doccia.\n9. Noi manderemo i nostri bambini alla scuola pubblica.\n10. Non vedrò mai più quella persona.",
@@ -1441,7 +1441,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sulla lettera di Laura:",
               "pergunta": "1. Come sono le giornate di Laura?\n2. Come trascorre la mattina e il pomeriggio?\n3. Che cosa fa la sera?\n4. Perché il marito è contento del suo nuovo lavoro?\n5. Che cosa farà sua figlia Giulia?\n6. Dov'è Francesco?\n7. Chi è Chicco?\n8. Com'è?\n9. Che cosa spera Laura?",
               "resposta": "1. Sono molto intense, ha sempre tante cose da fare.\n2. La mattina lavora a scuola; il pomeriggio è dedicato alla famiglia e alla casa.\n3. Va a letto presto, ma qualche volta esce con il marito.\n4. Perché i colleghi sono simpatici e il direttore è gentile e capace.\n5. Comincerà ad andare a scuola.\n6. È in campagna con i suoi nonni.\n7. Il gatto della famiglia.\n8. È dispettoso.\n9. Spera di avere presto notizie da Daniela.",
@@ -1455,7 +1455,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1 — Completare con il possessivo adatto:",
               "pergunta": "1. Lisa ha una bella casa, ma ___ camera da letto è piccola.\n2. Signore, quello rosso è ___ libro di grammatica.\n3. Ragazze, ___ chiavi sono sul tavolo del salotto.\n4. Io ho una macchina: ___ macchina è rossa.\n5. Ieri sono andato con ___ sorella a fare una passeggiata.\n6. Barbara ha dimenticato ___ matite sul tavolo.\n7. I miei genitori hanno molti amici: ___ amici sono simpatici.\n8. Lucia, sono queste ___ sigarette?\n9. Noi abbiamo uno zio: ___ zio si chiama Tom e vive in America.\n10. Di chi sono questi libri? Sono ___, professore? No, non sono ___, ma di Mario.",
               "resposta": "1. la sua\n2. il Suo\n3. le vostre\n4. la mia\n5. mia\n6. le sue\n7. i loro\n8. le tue\n9. nostro\n10. Suoi / miei",
@@ -1469,7 +1469,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 2 — Come il precedente (possessivi):",
               "pergunta": "1. Paolo, devo mettere lo zucchero nel ___ caffè?\n2. Abbiamo mandato a scuola ___ bambini.\n3. Ragazzi, il professore ha corretto ___ frasi?\n4. Ho incontrato Luigi con ___ moglie.\n5. I bambini hanno chiuso a chiave ___ stanza.\n6. Abbiamo incontrato ___ zio.\n7. Dove ho messo ___ scarpe?\n8. Abbiamo speso tutti ___ soldi.\n9. Laura, hai comprato il latte per ___ sorella?\n10. Abbiamo perso ___ cane! È forse grigio ___ cane?",
               "resposta": "1. tuo\n2. i nostri\n3. le vostre\n4. sua\n5. la loro\n6. nostro\n7. le mie\n8. i nostri\n9. tua\n10. il nostro / il tuo",
@@ -1483,7 +1483,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 3 — Completare con il possessivo adatto:",
               "pergunta": "1. Professore, sono ___ queste riviste?\n2. Non potete venire da noi se non conoscete ___ indirizzo.\n3. Mentre Luisa e Grazia discutono, noi ascoltiamo ___ discorsi.\n4. Sono andato al cinema con ___ madre e ___ fratelli.\n5. Leggete bene ___ appunti.\n6. Paola e Caterina leggono ___ oroscopo.\n7. Signore, è ___ questo giornale?\n8. Gianni, sono ___ questi libri?\n9. ___ casa è molto bella, signora.\n10. Ho regalato tutti ___ giocattoli a quel bambino.",
               "resposta": "1. Sue\n2. il nostro\n3. i loro\n4. mia / i miei\n5. i vostri\n6. il loro\n7. il Suo\n8. i tuoi\n9. La Sua\n10. i miei",
@@ -1497,7 +1497,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 4 — Come il precedente (possessivi):",
               "pergunta": "1. Tutti hanno ___ problemi.\n2. Qual è ___ scuola, Guido?\n3. Rinaldo è arrivato con ___ macchina nuova.\n4. Signorina, ___ vestito è veramente bello.\n5. Luigi, Franca, avete dimenticato ___ quaderni!\n6. Elena, ___ camicia è molto elegante.\n7. Professore, ___ lezione è interessante.\n8. Tutti hanno ___ idee.\n9. Laura, hai deciso di tornare a casa ___?\n10. Laura e Carlo abitano nella ___ nuova casa da pochi mesi.",
               "resposta": "1. i loro\n2. la tua\n3. la sua\n4. il Suo\n5. i vostri\n6. la tua\n7. la Sua\n8. le loro\n9. tua (a casa tua)\n10. la loro",
@@ -1667,7 +1667,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sul dialogo 'In un negozio di abbigliamento':",
               "pergunta": "1. Che cosa vuole comprare Giovanna?\n2. Come la vuole?\n3. Perché preferisce il cotone?\n4. Che cosa fa Giovanna?\n5. Come sono i modelli di quest'anno?\n6. Che cosa vuole comprare Anna?\n7. Come lo vuole?\n8. Quale prova?\n9. Com'è il prezzo del vestito?",
               "resposta": "1. Una camicetta.\n2. Semplice, fresca, di colore chiaro (rosa).\n3. Perché il lino è troppo delicato.\n4. La prova e la compra.\n5. Più aderenti dello scorso anno.\n6. Un vestito sportivo adatto a tutte le occasioni.\n7. Abbastanza lungo e scuro.\n8. Quello a fantasia.\n9. È buono / conveniente.",
@@ -1681,7 +1681,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1 — Sostituire il complemento oggetto con il pronome e volgere al passato:\nMod.: Studio il francese. → Lo studio. → L'ho studiato.",
               "pergunta": "1. Il medico visita Giulio.\n2. Il professore corregge gli esercizi.\n3. Lo studente ripassa la lezione.\n4. Anna prepara il tè.\n5. Porto le caramelle ai bambini.\n6. Paolo conosce i miei fratelli.\n7. Il turista fotografa i monumenti.\n8. La mamma fa la torta di mele.\n9. Prepariamo la cena.\n10. Laura compra le carote.\n11. Il professore spiega i pronomi.\n12. Bevo il vino.",
               "resposta": "1. Lo visita. → L'ha visitato.\n2. Li corregge. → Li ha corretti.\n3. La ripassa. → L'ha ripassata.\n4. Lo prepara. → L'ha preparato.\n5. Le porto. → Le ho portate.\n6. Li conosce. → Li ha conosciuti.\n7. Li fotografa. → Li ha fotografati.\n8. La fa. → L'ha fatta.\n9. La prepariamo. → L'abbiamo preparata.\n10. Le compra. → Le ha comprate.\n11. Li spiega. → Li ha spiegati.\n12. Lo bevo. → L'ho bevuto.",
@@ -1695,7 +1695,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 2 — Rispondere alle domande con un pronome diretto:",
               "pergunta": "1. Hai spedito le lettere?\n2. Hai ricevuto sue notizie?\n3. Hai scelto il regalo per la tua amica?\n4. Avete fissato l'incontro con il sindaco?\n5. Sai guidare la macchina?\n6. Chi guida la moto?\n7. Hai preso tu i miei occhiali?\n8. Chi ha preparato la cena?\n9. Avete dato l'esame di storia?\n10. Avete salutato i vostri amici?",
               "resposta": "1. Sì, le ho spedite.\n2. Sì, le ho ricevute.\n3. Sì, l'ho scelto.\n4. Sì, l'abbiamo fissato.\n5. Sì, la so guidare.\n6. La guido io.\n7. No, non li ho presi.\n8. L'ho preparata io.\n9. Sì, l'abbiamo dato.\n10. Sì, li abbiamo salutati.",
@@ -1709,7 +1709,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 3 — Forma di cortesia: completare con i pronomi (La / Le / Li):",
               "pergunta": "1. Signorina, ___ posso invitare a cena?\n2. Signorina, domani mattina ___ sveglierò io.\n3. Signore, domani mattina ___ sveglierà il portiere.\n4. Signora, ___ ringrazio e arriveder ___\n5. Signorina, se Lei permette, ___ accompagno a casa.\n6. Signorina, se non ___ disturbo, mi siedo qui accanto a lei.\n7. Signor Grassini, ___ prego di chiudere quella finestra.\n8. Signora, ___ prego di accettare questo regalo.\n9. Signore, mi scusi, ma non ___ sento bene.\n10. Se Lei vuole, ___ posso aiutare io a cercare un buon hotel.\n11. Carla, se Lei permette, ___ vorrei invitare a cena.\n12. Signorina Rita, non vorrei offender ___, ma Lei sbaglia.\n13. Signore, non vorrei offender ___, ma Lei non mi ha capito.\n14. Signora, io non riesco proprio a comprender ___!\n15. Dottore, io non ___ capisco!",
               "resposta": "1. La posso invitare a cena?\n2. La sveglierò io.\n3. La sveglierà il portiere.\n4. La ringrazio e arrivederLa.\n5. La accompagno a casa.\n6. La disturbo.\n7. La prego di chiudere quella finestra.\n8. La prego di accettare questo regalo.\n9. La sento bene.\n10. La posso aiutare io.\n11. La vorrei invitare a cena.\n12. offenderLa.\n13. offenderLa.\n14. comprenderLa.\n15. La capisco.",
@@ -1723,7 +1723,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 4 — Pronomi personali diretti: rispondere con pronome:\nMod.: Mi senti? (bene) → Sì, ti sento bene.",
               "pergunta": "1. Dove mi avete visto? (al bar)\n2. Chi ti ha invitato? (un mio vecchio amico)\n3. Chi vi ha salutato? (l'insegnante di storia)\n4. A che ora ti ha svegliato? (alle sette)\n5. Dove vi ho incontrato? (a casa di Paolo)\n6. Chi ci accompagna? (mio fratello)\n7. A che ora mi passa a prendere? (verso le nove)\n8. Chi vi ha chiamato? (il direttore)",
               "resposta": "1. Vi abbiamo visto al bar.\n2. Mi ha invitato un mio vecchio amico.\n3. Ci ha salutato l'insegnante di storia.\n4. Mi ha svegliato alle sette.\n5. Vi ho incontrato a casa di Paolo.\n6. Ci accompagna mio fratello.\n7. La passo a prendere verso le nove.\n8. Ci ha chiamato il direttore.",
@@ -1893,7 +1893,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Rispondere alle domande sul testo 'Il primo soggiorno di Peter in Italia':",
               "pergunta": "1. Di dov'era Peter?\n2. Che cosa studiava?\n3. Che cosa faceva durante le vacanze estive?\n4. A che età ha fatto il suo primo soggiorno in Italia?\n5. Com'era fisicamente?\n6. In che mese è venuto in Italia?\n7. A che ora è arrivato il treno alla stazione?\n8. Che cosa ha fatto Peter quando è sceso dal treno?\n9. Che cosa guardava mentre aspettava l'autobus?\n10. Che cosa ha fatto quando è arrivato?",
               "resposta": "1. Era tedesco (di Monaco).\n2. La pittura rinascimentale italiana.\n3. Veniva in Italia e trascorreva un mese o due.\n4. A diciannove anni.\n5. Era alto, grassonello e portava i capelli lunghi.\n6. In luglio.\n7. Verso le sette di sera.\n8. Ha cercato un telefono e ha avvertito alcuni amici italiani.\n9. Le strade, le case, le persone.\n10. Ha preso l'autobus ed è sceso davanti al duomo.",
@@ -1907,7 +1907,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 1 — Volgere all'imperfetto:\nMod.: Mentre Elsa (fare) faceva i letti, Renzo (lavare) lavava il pavimento.",
               "pergunta": "1. Mentre Giovanni (preparare) ___ il caffè, Franca (stirare) ___ le camicie.\n2. Ieri sera, mentre (io leggere) ___ il giornale, mia figlia (giocare) ___ con un trenino elettrico.\n3. Stamattina, mentre (io vestirsi) ___, (pensare) ___ alle cose da fare.\n4. La scorsa settimana, mentre lei (essere) ___ in vacanza, io (lavorare) ___\n5. Mentre il dentista (cercare) ___ di estrarre il dente, Pierino (urlare) ___\n6. Mentre Luisa (passeggiare) ___ nel parco, Roberto (giocare) ___ con il cane.\n7. Mentre il professore (spiegare) ___, gli studenti (prendere) ___ appunti.\n8. Paolo (lavare) ___ i piatti mentre Luisa (sparecchiare) ___ la tavola.\n9. Mentre (io fare) ___ i compiti, (ascoltare) ___ la musica alla radio.\n10. Loro (parlare) ___ ad alta voce mentre io (cercare) ___ di concentrarmi.",
               "resposta": "1. preparava / stirava\n2. leggevo / giocava\n3. mi vestivo / pensavo\n4. era / lavoravo\n5. cercava / urlava\n6. passeggiava / giocava\n7. spiegava / prendevano\n8. lavava / sparecchiava\n9. facevo / ascoltavo\n10. parlavano / cercavo",
@@ -1921,7 +1921,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 2 — Volgere al passato prossimo:\nMod.: (Io finire) ho finito l'università e poi (cercare) ho cercato un lavoro.",
               "pergunta": "1. Luisa (preparare) ___ le valigie e poi (partire) ___\n2. (Io mangiare) ___ il gelato e subito dopo (sentirsi) ___ male.\n3. Elisa (scrivere) ___ la lettera e poi (andare) ___ a imbucarla.\n4. Noi (arrivare) ___ a casa e (accendere) ___ subito il televisore.\n5. Mio fratello (vendere) ___ la sua vecchia bici e (comprare) ___ un motorino usato.\n6. Stamattina (io uscire) ___ presto: (fare) ___ colazione al bar poi (leggere) ___ il giornale.\n7. (Io fare) ___ il bucato e poi (stirare) ___ la biancheria.\n8. Linda (finire) ___ il corso e poi (partire) ___ per le vacanze.\n9. Il direttore (firmare) ___ i diplomi e poi (consegnarli) ___ agli studenti.\n10. Prima (io andare) ___ dal medico e poi (passare) ___ dalla farmacia.",
               "resposta": "1. ha preparato / è partita\n2. ho mangiato / mi sono sentito/a\n3. ha scritto / è andata\n4. siamo arrivati / abbiamo acceso\n5. ha venduto / ha comprato\n6. sono uscito/a / ho fatto / ho letto\n7. ho fatto / ho stirato\n8. ha finito / è partita\n9. ha firmato / li ha consegnati\n10. sono andato/a / sono passato/a",
@@ -1935,7 +1935,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 3 — Passato prossimo o imperfetto?",
               "pergunta": "1. (Io vedere) ___ Anna ieri sera mentre (uscire) ___ dal cinema.\n2. (Lei essere) ___ stanca morta e per questo (andare) ___ a dormire presto.\n3. Il mio orologio (non funzionare) ___, così (dovere) ___ cambiarlo.\n4. Mia sorella (non andare) ___ a lavorare perché (stare) ___ male.\n5. (Io telefonare) ___ a Giulio perché (volere) ___ invitarlo a cena.\n6. (Io non potere) ___ avvertirti perché (non sapere) ___ il tuo numero di telefono.\n7. Carla (non mangiare) ___ nulla perché (non avere) ___ fame.\n8. Ieri sera, quando (io vederla) ___ così pallida, (capire) ___ subito che (lei stare) ___ male.\n9. (Loro chiedere) ___ a Carlo dei soldi in prestito perché (essere) ___ al verde.\n10. (Io bere) ___ tutta l'acqua perché (avere) ___ molta sete.",
               "resposta": "1. ho visto / usciva\n2. era / è andata\n3. non funzionava / ho dovuto\n4. non è andata / stava\n5. ho telefonato / volevo\n6. non ho potuto / non sapevo\n7. non ha mangiato / non aveva\n8. l'ho vista / ho capito / stava\n9. hanno chiesto / erano\n10. ho bevuto / avevo",
@@ -1949,7 +1949,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "enunciado": "Esercizio 4 — Passato prossimo o imperfetto?",
               "pergunta": "1. Mentre lei (studiare) ___, lui (preparare) ___ la cena.\n2. Quando (io entrare) ___ in casa, mia madre (leggere) ___\n3. (Io aspettare) ___ Carlo tutto il giorno.\n4. (Noi arrivare) ___ a casa mentre tutti (essere) ___ a tavola.\n5. Mentre (io andare) ___ a lavoro, (vedere) ___ un mio vecchio amico e (invitarlo) ___ a bere qualcosa.\n6. Mentre (io essere) ___ sull'autostrada (vedere) ___ un incidente grave e (dovere) ___ fermarmi.\n7. Il meccanico (dire) ___ che la mia macchina (essere) ___ troppo vecchia e che non (essere) ___ possibile ripararla.\n8. Stamattina, quando (io uscire) ___, (fare) ___ molto freddo.\n9. (Lei avere) ___ molta fame, perciò (mangiare) ___ tutto quello che (esserci) ___ nel vassoio.\n10. Ieri (io perdere) ___ le chiavi mentre (andare) ___ al lavoro così, quando (ritornare) ___ a casa, (non potere) ___ entrare.",
               "resposta": "1. studiava / preparava\n2. sono entrato/a / leggeva\n3. ho aspettato\n4. siamo arrivati / erano\n5. andavo / ho visto / ho invitato\n6. ero / ho visto / ho dovuto\n7. ha detto / era / era\n8. sono uscito/a / faceva\n9. aveva / ha mangiato / c'era\n10. ho perso / andavo / sono ritornato/a / non ho potuto",
@@ -2123,7 +2123,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — I regali di Natale:\n1. Cosa vogliono comprare Maria e Paolo?\n2. Che cosa vedono nella vetrina del negozio?\n3. Perché Paolo preferisce la borsetta marrone?\n4. Com'è la borsetta marrone?\n5. Che cosa vuole vedere Paolo?\n6. Di che cosa è sicuro il commesso?\n7. Perché Maria suggerisce un altro regalo?\n8. Che cosa vuole vedere Maria?\n9. Dove tengono gli articoli da uomo?",
               "resposta": "1. Vogliono comprare i regali di Natale per i loro genitori.\n2. Vedono una borsetta nella vetrina.\n3. Perché starà bene con il cappotto color nocciola della mamma.\n4. È molto elegante, graziosa e la pelle è morbida.\n5. Vuole vedere una sciarpa per suo padre.\n6. È sicuro che la signora (la madre) resterà soddisfatta.\n7. Perché Paolo ha già regalato una sciarpa al padre l'anno scorso.\n8. Vuole vedere una cravatta o un paio di guanti di pelle.\n9. Li tengono al secondo piano.",
               "explicacao": "Lettura del dialogo: pronomi indiretti, verbo piacere e lessico del negozio.",
@@ -2136,7 +2136,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Completare con i pronomi indiretti:\n1. Luisa ___ ha scritto diverse volte, ma io non ___ ho ancora risposto.\n2. Hai telefonato alla segretaria? Sì, ___ ho telefonato.\n3. Quando hai risposto ai ragazzi? ___ ho risposto la settimana scorsa.\n4. Hai risposto alle ragazze? Sì, ___ ho risposto.\n5. Hai scritto al tuo ragazzo? Sì, ___ ho scritto.\n6. È una donna molto nervosa, non ___ si può dire nulla!\n7. Carla, stasera non ___ posso invitare a casa mia perché sono fuori a cena.\n8. Giovanni l'ha chiamata e ___ ha detto che può prestar___ la macchina.\n9. Quando li ho visti, ___ ho spiegato tutto.\n10. Quando le ho viste, ___ ho spiegato tutto.\n11. I tuoi amici ___ hanno chiesto una mano, ma io ___ ho detto che non posso aiutarli.\n12. Una studentessa ___ ha chiesto di spiegarle la regola un'altra volta.\n13. Roberto ha superato l'esame e suo padre ___ farà un regalo.\n14. È il compleanno di sua moglie e lui ___ regalerà un mazzo di fiori.\n15. Gli studenti non hanno capito l'uso dei pronomi e ho dovuto ripetere la spiegazione ___ .\n16. Sei un bugiardo: non ___ crederò più una parola di quello che dirai.\n17. Le ho invitate a casa e ho offerto ___ un tè e dei biscotti.\n18. Ho detto a mio figlio che non ___ posso dare in prestito la mia auto perché ___ serve.",
               "resposta": "1. le / le\n2. le\n3. Gli\n4. le\n5. gli\n6. le / ci\n7. ti\n8. le / le\n9. gli\n10. gli\n11. mi / gli\n12. mi\n13. gli\n14. le\n15. loro / gli\n16. ti\n17. loro / gli\n18. gli / mi",
               "explicacao": "Pronomi indiretti atoni: mi (a me), ti (a te), gli (a lui/loro m.), le (a lei/lei f.), ci (a noi), vi (a voi).",
@@ -2149,7 +2149,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Come il precedente:\n1. Signorina, ___ posso presentare mia moglie?\n2. Signor Farini, ___ presento mia figlia.\n3. Voglio vedere Mario perché ___ devo parlare.\n4. Ha detto alle ragazze che ___ telefonerà domani.\n5. Ha detto ai ragazzi che ___ telefonerà domani.\n6. ___ devi fare un grosso favore. ___ devi prestare cinque euro sedici centesimi.\n7. Carlo, ___ serve il tuo aiuto.\n8. Lui non sa tenere la bocca chiusa: a quest'ora ciò che ___ hai detto lo sapranno tutti.\n9. È una ragazza pettegola, se ___ dici una cosa, dopo poco la sanno tutti.\n10. Suo marito è davvero sfortunato: ieri sera ___ hanno rubato il portafoglio.\n11. Se quei ragazzi mi cercano, ___ devi dire che ritorno domani.\n12. Se quelle ragazze mi cercano, ___ devi dire che sarò in casa alle sette.\n13. Ho avvertito Carlo e ___ ho detto di venire più tardi.\n14. Ho telefonato a sua sorella e ___ ho detto di non venire.\n15. Ho cercato di far___ cambiare idea, ma non ___ hanno dato ascolto.\n16. Sono andato a casa di Mario e ho cercato di far___ cambiare idea.\n17. Ho incontrato tua moglie e ___ ho presentato mio marito.\n18. Ho incontrato il mio principale e ___ ho presentato mio marito.",
               "resposta": "1. Le\n2. Le\n3. gli\n4. gli\n5. gli\n6. Mi / Mi\n7. mi\n8. gli\n9. le / ci\n10. gli\n11. gli\n12. le\n13. gli\n14. le\n15. loro / mi / gli\n16. gli\n17. le\n18. gli",
               "explicacao": "Pronome formale Le (signorina/signor). Gli = a lui / a loro (masch. plur.). Le = a lei.",
@@ -2162,7 +2162,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Sostituire alle forme toniche dei pronomi le forme atone:\n1. Se scrivi a me, risponderò a te subito.\n2. La madre di Carla ha raccontato a noi la sua vita.\n3. Raccomando a voi di leggere questo libro.\n4. Il direttore ha consegnato a lei il diploma.\n5. Voglio dire a Lui quello che penso.\n6. La nonna regala a te un orologio.\n7. Ricordo a loro l'appuntamento.\n8. Laura vuole molto bene a noi.\n9. Restituiremo a Lei i soldi domani.\n10. Mia sorella deve portare a me delle riviste.\n11. Posso fare a te una domanda?\n12. Telefono a Lei domani.",
               "resposta": "1. Se mi scrivi, ti risponderò subito.\n2. La madre di Carla ci ha raccontato la sua vita.\n3. Vi raccomando di leggere questo libro.\n4. Il direttore le ha consegnato il diploma.\n5. Gli voglio dire quello che penso.\n6. La nonna ti regala un orologio.\n7. Gli ricordo l'appuntamento.\n8. Laura ci vuole molto bene.\n9. Le restituiremo i soldi domani.\n10. Mia sorella mi deve portare delle riviste.\n11. Posso farti una domanda?\n12. Le telefono domani.",
               "explicacao": "Tonico → atono: a me→mi, a te→ti, a lui→gli, a lei→le, a Lei→Le, a noi→ci, a voi→vi, a loro→gli/loro.",
@@ -2175,7 +2175,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Volgere al presente (Mod.: Questo libro (sembrarmi) → mi sembra interessante):\n1. I suoi figli (sembrarmi) molto educati.\n2. Quella tua amica (sembrarmi) un po' insicura.\n3. Come (sembrarti) queste scarpe? (Piacerti)?\n4. (Non occorrermi) quei documenti.\n5. (Non occorrermi) la macchina, vado a piedi.\n6. Ragazzi, (bastarvi) questo vino?\n7. Se non (bastarti) questi francobolli, puoi comprarne degli altri.\n8. Signorina, (bastarLe) questi soldi?\n9. (Servirmi) diecimila lire, me le presti?\n10. Signorina, cosa (servirLe)? (Servirmi) delle buste.\n11. Buongiorno! (Servirmi) alcuni libri, ecco la lista.\n12. (Non occorrerti) né carta né penna, ho tutto io.\n13. Questi libri (occorrerLe) subito?\n14. (Non interessarmi) vedere questo spettacolo.\n15. Non (importarmi) quello che pensate di me!\n16. (InteressarLe) questi gioielli?\n17. (Non piacerci) quello che ha detto quell'uomo.\n18. (Piacermi) molto i suoi occhi.\n19. Ho saputo che (interessarti) questo quadro.\n20. È incontentabile! Non (bastarle) mai nulla.",
               "resposta": "1. mi sembrano\n2. mi sembra\n3. ti sembrano? ti piacciono?\n4. Non mi occorrono\n5. Non mi occorre\n6. vi basta\n7. non ti bastano\n8. Le bastano\n9. Mi servono\n10. Le serve? Mi servono\n11. Mi servono\n12. Non ti occorrono\n13. Le occorrono\n14. Non mi interessa\n15. Non mi importa\n16. Le interessano\n17. Non ci piace\n18. Mi piacciono\n19. ti interessa\n20. Non le basta",
               "explicacao": "Verbi come piacere: il soggetto è la cosa, la persona è complemento indiretto. Sing. → piace/serve/basta; Plur. → piacciono/servono/bastano.",
@@ -2338,7 +2338,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Un prestito:\n1. A chi chiede il favore Giulio?\n2. Che cosa chiede a Paolo?\n3. Perché gli chiede questo favore?\n4. Chi ha la macchina da scrivere?\n5. Perché Antonia ne aveva bisogno?\n6. Perché adesso la può restituire a Paolo?\n7. Chi telefonerà ad Antonia?\n8. Perché le telefona Paolo?\n9. Com'è Paolo con gli altri?\n10. A che cosa serve l'amicizia per lui?",
               "resposta": "1. Chiede il favore a Paolo.\n2. Chiede di prestargli la macchina da scrivere.\n3. Perché la sua non funziona e deve consegnare una relazione dattiloscritta.\n4. Antonia ce l'ha (Paolo gliela ha prestata).\n5. Perché ne aveva bisogno per battere la sua tesi di laurea.\n6. Perché ha già finito la tesi.\n7. Telefonerà Paolo (quella sera).\n8. Perché deve parlarle di alcune cose e le chiederà di restituire la macchina.\n9. È sempre generoso con gli altri.\n10. L'amicizia serve anche ad aiutarsi a vicenda.",
               "explicacao": "Comprensione del dialogo. Attenzione all'uso dei pronomi combinati nel testo (gliela, gliene, ecc.).",
@@ -2351,7 +2351,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Completare con un pronome combinato:\n1. Ho scritto la lettera a Daniela e ___ ho spedit___.\n2. Ho scritto una lettera a Gino e ___ ho spedit___.\n3. Le ho comprato dei dischi e ___ ho portat___ a casa.\n4. Gli ho comprato delle cassette e ___ ho portat___ a casa.\n5. Ho saputo che Giulio ha vinto un premio, ma lui non ___ ha volut___ dire.\n6. Sapevo che era la più bella, ma non ___ ho voluto dir___.\n7. Ho spiegato quella regola a tutti e ___ ho ripetut___ molte volte.\n8. Ho spedito dei regali a tutte, ma non ___ hanno ancora consegnat___.\n9. Mi vuole molto bene, ma non si decide a dir___.\n10. A Carlo gliel'ho già detto, ma dovrò ripetr___ ancora una volta!",
               "resposta": "1. gliela / spedita\n2. gliela / spedita\n3. glieli / portati\n4. gliele / portate\n5. gliel' / voluto (non gliel'ha voluto dire)\n6. gliel' / detto (non gliel'ho voluto dire)\n7. gliel' / ripetuta (gliela ho ripetuta)\n8. gliele / consegnate\n9. dirmelo\n10. ripeterglielo",
               "explicacao": "Pronomi combinati 3ª persona: gli/le + lo/la/li/le/ne → glielo/gliela/glieli/gliele/gliene (sempre uniti).",
@@ -2364,7 +2364,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Rispondere alle domande con un pronome combinato:\n(Mod.: Chi ti ha regalato questi occhiali? → Me li ha regalati mia sorella.)\n1. Chi ti ha regalato questi occhiali?\n2. Chi vi ha spiegato queste regole?\n3. Chi ti ha mandato questa cartolina?\n4. Chi gli ha offerto la cena?\n5. Chi ti ha spiegato i pronomi?\n6. Chi ci ha portato queste rose?\n7. Chi mi ha fatto questo regalo?\n8. Chi le ha comunicato la notizia?\n9. Chi gli ha chiesto se vogliono uscire?\n10. Chi ti ha dato queste informazioni?",
               "resposta": "1. Me li ha regalati... (mia madre / un amico, ecc.)\n2. Ce le ha spiegate... (il professore)\n3. Me la ha mandata... (un amico)\n4. Gliela ha offerta... (Mario)\n5. Me li ha spiegati... (la professoressa)\n6. Ce le ha portate... (Luisa)\n7. Te lo ha fatto... (tua sorella)\n8. Gliel'ha comunicata... (il direttore)\n9. Gliel'ha chiesto... (Paolo)\n10. Me le ha date... (Carlo)",
               "explicacao": "Risposta libera con pronome combinato. Participio concorda col diretto: -o/a/i/e.",
@@ -2377,7 +2377,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Rispondere con pronome combinato:\n1. Chi vi ha spiegato queste regole?\n2. Chi mi ha preso il dizionario?\n3. Le hai raccontato quel fatto?\n4. Gli hai presentato i tuoi genitori?\n5. Quando le avete spedito l'acconto?\n6. Quando ci avete spedito il pacco?\n7. Le avete chiesto se ha preso lei la mia borsa?\n8. Gli avete chiesto se ha preso lui la mia bicicletta?\n9. Chi ti ha insegnato questo gioco?\n10. Quando ti hanno detto che c'è lo sciopero dell'autobus?",
               "resposta": "1. Ce le ha spiegate il professore.\n2. Te l'ha preso Carlo.\n3. Sì, gliel'ho raccontato.\n4. Sì, glieli ho presentati.\n5. Gliel'abbiamo spedito ieri.\n6. Ve l'abbiamo spedito lunedì.\n7. Sì, gliel'abbiamo chiesto.\n8. Sì, gliel'abbiamo chiesto.\n9. Me l'ha insegnato mio zio.\n10. Me l'hanno detto stamattina.",
               "explicacao": "Forma sempre glielo/gliela/glieli/gliele per 3ª persona (masch., femm., formale). Ce lo/ce la per 1ª plur.",
@@ -2390,7 +2390,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Rispondere alle domande con un pronome combinato:\n1. Le hai spiegato che non la puoi aiutare?\n2. Le hai reso i soldi?\n3. Gli hai restituito i libri?\n4. Le hai regalato tu la collana?\n5. Gli hai prestato tu il dizionario?\n6. Chi vi ha scritto questa cartolina?\n7. Quando ti hanno presentato i loro parenti?\n8. Hai detto a quelle ragazze che qui non si può fumare?\n9. Hai detto a quei ragazzi che qui non si può fumare?\n10. Hai letto a Carlo le tue poesie?\n11. Hai mostrato le foto a Luisa?\n12. Quando ti hanno ritirato il passaporto?",
               "resposta": "1. Sì, gliel'ho spiegato.\n2. Sì, glieli ho resi.\n3. Sì, glieli ho restituiti.\n4. Sì, gliel'ho regalata io.\n5. Sì, gliel'ho prestato io.\n6. Ce l'ha scritta Maria.\n7. Me li hanno presentati ieri.\n8. Sì, gliel'ho detto.\n9. Sì, gliel'ho detto.\n10. Sì, gliele ho lette.\n11. Sì, gliele ho mostrate.\n12. Me l'hanno ritirato la settimana scorsa.",
               "explicacao": "Combinati 3ª pers. sempre con glie-: gliel'(ho), glieli, gliele. Participio concorda con il diretto.",
@@ -2552,7 +2552,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — A letto con l'influenza:\n1. Perché Laura deve stare a letto?\n2. Come si è sentita quando si è alzata?\n3. Chi le ha portato il tè?\n4. Chi ha chiamato nel pomeriggio?\n5. Cosa ha fatto Carla quando ha sentito di Laura?\n6. Come si è sentita Laura la sera?",
               "resposta": "1. Ha l'influenza.\n2. Si è sentita stanca e pallida, con il naso rosso.\n3. Sua madre le ha portato una tazza di tè.\n4. Ha chiamato la sua amica Carla.\n5. Si è messa a ridere e le ha detto che si sarebbe rimessa presto.\n6. Si è sentita meglio e ha potuto mangiare qualcosa.",
               "explicacao": "Comprensione del testo con verbi riflessivi: si è svegliata, si è alzata, si è sentita, si è addormentata.",
@@ -2565,7 +2565,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Coniugare al presente indicativo:\n1. io / alzarsi\n2. tu / svegliarsi\n3. lui / lavarsi\n4. noi / sedersi\n5. voi / vestirsi\n6. loro / addormentarsi\n7. lei / pettinarsi\n8. io / divertirsi\n9. tu / annoiarsi\n10. loro / innamorarsi",
               "resposta": "1. mi alzo\n2. ti svegli\n3. si lava\n4. ci sediamo\n5. vi vestite\n6. si addormentano\n7. si pettina\n8. mi diverto\n9. ti annoi\n10. si innamorano",
               "explicacao": "I verbi riflessivi si coniugano con pronomi riflessivi: mi, ti, si, ci, vi, si + forma verbale corrispondente.",
@@ -2578,7 +2578,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Volgere al passato prossimo:\n1. Mi alzo alle sette.\n2. Ti svegli presto.\n3. Laura si veste in fretta.\n4. Ci laviamo le mani.\n5. Vi sedete a tavola.\n6. I bambini si addormentano subito.\n7. Mi annoio durante la conferenza.\n8. Tu ti arrabbi facilmente.\n9. Carla si sposa a giugno.\n10. Noi ci divertiamo alla festa.",
               "resposta": "1. Mi sono alzato/a alle sette.\n2. Ti sei svegliato/a presto.\n3. Laura si è vestita in fretta.\n4. Ci siamo lavati/e le mani.\n5. Vi siete seduti/e a tavola.\n6. I bambini si sono addormentati subito.\n7. Mi sono annoiato/a durante la conferenza.\n8. Tu ti sei arrabbiato/a facilmente.\n9. Carla si è sposata a giugno.\n10. Noi ci siamo divertiti/e alla festa.",
               "explicacao": "Passato prossimo riflessivo: sempre con ESSERE. Participio concorda col soggetto (es: laura → vestita, i bambini → addormentati).",
@@ -2591,7 +2591,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Descrivere la routine di Maria usando i verbi: svegliarsi / alzarsi / lavarsi i denti / farsi la doccia / vestirsi / truccarsi / uscire di casa / arrivare in ufficio / sedersi alla scrivania / cominciare a lavorare",
               "resposta": "Ogni mattina Maria si sveglia alle sette. Si alza dopo qualche minuto, va in bagno e si lava i denti. Poi si fa la doccia e si veste. Prima di uscire si trucca velocemente. Esce di casa alle otto meno un quarto e arriva in ufficio alle otto e venti. Si siede alla sua scrivania e comincia a lavorare.",
               "explicacao": "Uso dei verbi riflessivi in sequenza narrativa. Il soggetto (Maria) resta stabile, i pronomi riflessivi si concordano: si sveglia, si alza, si lava, si fa, si veste, si trucca, si siede.",
@@ -2604,7 +2604,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Riscrivere usando il verbo riflessivo reciproco:\n1. Marco ama Luisa e Luisa ama Marco.\n2. Paolo telefona a Gianni e Gianni telefona a Paolo.\n3. Carlo scrive a Lucia e Lucia scrive a Carlo.\n4. Anna conosce Roberto e Roberto conosce Anna.\n5. Ieri Franco ha salutato Maria e Maria ha salutato Franco.",
               "resposta": "1. Marco e Luisa si amano.\n2. Paolo e Gianni si telefonano.\n3. Carlo e Lucia si scrivono.\n4. Anna e Roberto si conoscono.\n5. Ieri Franco e Maria si sono salutati.",
               "explicacao": "Verbo riflessivo reciproco: soggetto sempre plurale, si esprime azione svolta a vicenda tra due o più persone.",
@@ -2766,7 +2766,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Una scampagnata:\n1. Cosa avrebbe voluto fare Giorgio la domenica?\n2. A chi ha telefonato per primo?\n3. Perché Luisa non poteva partire subito?\n4. A che ora hanno deciso di partire?\n5. Chi altro è venuto con loro?\n6. Perché non sono rimasti a cena?",
               "resposta": "1. Avrebbe voluto andare in campagna con i suoi amici.\n2. Ha telefonato a Luisa per prima.\n3. Perché avrebbe dovuto finire di studiare prima.\n4. Avrebbero potuto partire verso mezzogiorno.\n5. Sono venuti anche Carlo e Marina.\n6. Perché Marina aveva detto che avrebbe dovuto essere a casa entro le otto.",
               "explicacao": "Uso del condizionale composto nel discorso indiretto passato: avrebbe voluto, avrebbe dovuto, sarebbero potuti.",
@@ -2779,7 +2779,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Coniugare al condizionale semplice:\n1. io / parlare\n2. tu / prendere\n3. lui / partire\n4. noi / essere\n5. voi / avere\n6. loro / andare\n7. io / venire\n8. tu / fare\n9. lei / dovere\n10. loro / volere\n11. noi / potere\n12. io / sapere",
               "resposta": "1. parlerei\n2. prenderesti\n3. partirebbe\n4. saremmo\n5. avreste\n6. andrebbero\n7. verrei\n8. faresti\n9. dovrebbe\n10. vorrebbero\n11. potremmo\n12. saprei",
               "explicacao": "Condizionale = tema futuro + -ei/-esti/-ebbe/-emmo/-este/-ebbero. Irregolari: sar-, avr-, andr-, verr-, far-, dovr-, potr-, vorr-, sapr-.",
@@ -2792,7 +2792,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Trasformare in forma cortese usando il condizionale:\n1. Voglio un bicchiere d'acqua.\n2. Puoi aiutarmi?\n3. Mi dai il sale, per favore?\n4. Vuoi venire con me?\n5. Devo parlare con il direttore.\n6. Sai dov'è la stazione?\n7. Posso entrare?\n8. Vuoi prendere un caffè?",
               "resposta": "1. Vorrei un bicchiere d'acqua.\n2. Potresti aiutarmi?\n3. Mi daresti il sale, per favore?\n4. Vorresti venire con me?\n5. Dovrei parlare con il direttore.\n6. Sapresti dov'è la stazione?\n7. Potrei entrare?\n8. Vorresti prendere un caffè?",
               "explicacao": "Il condizionale ammorbidisce le richieste, le rende più cortesi. Particolarmente usato con volere→vorrei, potere→potrei/potresti, dovere→dovrei.",
@@ -2805,7 +2805,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Completare con il condizionale semplice:\n1. Se avessi più tempo, (studiare) ___ il pianoforte.\n2. Se potessi, (andare) ___ a vivere in Italia.\n3. Se fossi ricco, (comprare) ___ una villa al mare.\n4. Se non piovesse, (uscire) ___ a fare una passeggiata.\n5. Cosa (fare) ___ tu al mio posto?\n6. (Venire) ___ volentieri, ma ho un impegno.\n7. (Preferire) ___ restare a casa stasera.\n8. Con più soldi, (potere) ___ viaggiare di più.",
               "resposta": "1. studierei\n2. andrei\n3. comprerei\n4. uscirei\n5. faresti\n6. Verrei\n7. Preferirei\n8. potrei",
               "explicacao": "Il condizionale esprime azioni ipotetiche o desiderate. Con SE + congiuntivo imperfetto (ipotetico) o come espressione di desiderio/preferenza.",
@@ -2818,7 +2818,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Trasformare al discorso indiretto (futuro→condizionale):\n1. Marco ha detto: \"Verrò domani.\"\n2. Luisa ha promesso: \"Studierò per l'esame.\"\n3. Il professore ha annunciato: \"Faremo una gita.\"\n4. Paolo ha detto: \"Partirò la settimana prossima.\"\n5. I ragazzi hanno detto: \"Finiremo presto.\"\n6. Maria ha detto: \"Sarò puntuale.\"",
               "resposta": "1. Marco ha detto che sarebbe venuto il giorno dopo.\n2. Luisa ha promesso che avrebbe studiato per l'esame.\n3. Il professore ha annunciato che avrebbero fatto una gita.\n4. Paolo ha detto che sarebbe partito la settimana dopo.\n5. I ragazzi hanno detto che avrebbero finito presto.\n6. Maria ha detto che sarebbe stata puntuale.",
               "explicacao": "Discorso indiretto: futuro semplice → condizionale composto (avrei/sarei + participio). Il futuro del passato è sempre condizionale composto.",
@@ -2981,7 +2981,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Una lettura interessante:\n1. Cosa stava leggendo Giulia?\n2. Chi le aveva prestato il libro?\n3. Dove si svolgeva la storia?\n4. Chi era il protagonista?\n5. Di cosa si innamorava il protagonista?\n6. Come ha risposto Giulia alla madre?",
               "resposta": "1. Stava leggendo un romanzo molto interessante.\n2. Un'amica le aveva prestato il libro.\n3. La storia si svolgeva a Firenze nel Rinascimento.\n4. Il protagonista si chiamava Leonardo, un pittore dal talento straordinario.\n5. Si innamorava di una donna incontrata per strada.\n6. Le ha detto che era il libro più bello che avesse mai letto.",
               "explicacao": "Il testo usa vari pronomi relativi: che, cui, il cui. Attenzione all'uso di ciascuno.",
@@ -2994,7 +2994,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Unire le frasi con CHE:\n1. Ho comprato un libro. Il libro è molto interessante.\n2. Ho incontrato una ragazza. La ragazza abita vicino a me.\n3. Conosco uno studente. Lo studente parla cinque lingue.\n4. Abbiamo visitato un museo. Il museo era chiuso ieri.\n5. Ho letto un articolo. L'articolo parlava dell'ambiente.\n6. Ho visto un film. Il film mi ha fatto piangere.",
               "resposta": "1. Ho comprato un libro che è molto interessante.\n2. Ho incontrato una ragazza che abita vicino a me.\n3. Conosco uno studente che parla cinque lingue.\n4. Abbiamo visitato un museo che era chiuso ieri.\n5. Ho letto un articolo che parlava dell'ambiente.\n6. Ho visto un film che mi ha fatto piangere.",
               "explicacao": "CHE invariabile: soggetto (un museo che era) o complemento diretto (un libro che leggo). Non cambia con genere/numero.",
@@ -3007,7 +3007,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Unire le frasi con la preposizione + CUI:\n1. Ho comprato un libro. Ti ho parlato di questo libro.\n2. Ho incontrato una ragazza. Esco spesso con questa ragazza.\n3. Abito in una città. In questa città ci sono molti musei.\n4. Ho uno zio. Mi fido molto di questo zio.\n5. Lavoro in un'azienda. Sono soddisfatto di questa azienda.\n6. Ho preso un treno. Con questo treno sono arrivato in ritardo.",
               "resposta": "1. Ho comprato un libro di cui ti ho parlato.\n2. Ho incontrato una ragazza con cui esco spesso.\n3. Abito in una città in cui ci sono molti musei.\n4. Ho uno zio di cui mi fido molto.\n5. Lavoro in un'azienda di cui sono soddisfatto.\n6. Ho preso un treno con cui sono arrivato in ritardo.",
               "explicacao": "CUI dopo preposizione: di cui, con cui, in cui, per cui, su cui, a cui. La preposizione si conserva prima di cui.",
@@ -3020,7 +3020,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Trasformare usando IL CUI / LA CUI / I CUI / LE CUI:\n1. Ho letto un libro. Il titolo del libro è famoso.\n2. Conosco un professore. Le lezioni del professore sono molto interessanti.\n3. Abbiamo incontrato una signora. Il marito della signora è medico.\n4. Lavoro con un ragazzo. I genitori del ragazzo vivono in Sicilia.\n5. Ho visto un film. Il regista del film è molto noto.",
               "resposta": "1. Ho letto un libro il cui titolo è famoso.\n2. Conosco un professore le cui lezioni sono molto interessanti.\n3. Abbiamo incontrato una signora il cui marito è medico.\n4. Lavoro con un ragazzo i cui genitori vivono in Sicilia.\n5. Ho visto un film il cui regista è molto noto.",
               "explicacao": "Il/la/i/le + cui + nome: l'articolo concorda col nome che segue (il/la/i/le), non con l'antecedente.",
@@ -3033,7 +3033,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Formare la domanda con il pronome interrogativo corretto:\n1. (chi) ___ hai telefonato?\n2. (cosa) ___ stai mangiando?\n3. (quale) ___ libro preferisci?\n4. (quanto) ___ costa questa giacca?\n5. (quante) ___ persone erano alla festa?\n6. (chi) ___ è quella signora?\n7. (cosa) ___ significa questa parola?\n8. (quale) ___ di questi colori ti piace di più?",
               "resposta": "1. Chi hai telefonato? / A chi hai telefonato?\n2. Che cosa stai mangiando? / Cosa stai mangiando?\n3. Quale libro preferisci?\n4. Quanto costa questa giacca?\n5. Quante persone erano alla festa?\n6. Chi è quella signora?\n7. Che cosa significa questa parola? / Cosa significa?\n8. Quale di questi colori ti piace di più?",
               "explicacao": "Chi (persone), che cosa/cosa (cose), quale/i (scelta), quanto/a/i/e (quantità).",
@@ -3195,7 +3195,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Un'amica vanitosa:\n1. Com'è descritta Carla rispetto alle altre amiche?\n2. Come trascorre il suo tempo?\n3. Quanto tempo ci voleva per aspettarla?\n4. Cosa pensava del tempo?\n5. Qual è la qualità positiva di Carla?\n6. Come sono descritti il suo appartamento e la sua vita?",
               "resposta": "1. È la più vanitosa di tutte.\n2. Si veste meglio di chiunque e trascorre più tempo davanti allo specchio che a studiare.\n3. Ci voleva sempre più di un'ora.\n4. Pensava che il tempo fosse meno importante della bellezza.\n5. È la persona più generosa che conosca, sempre pronta ad aiutare.\n6. L'appartamento è il più ordinato che si possa immaginare; la vita è quanto di meno organizzato.",
               "explicacao": "Uso dei gradi dell'aggettivo nel testo: la più vanitosa, meglio di, più... che, meno importante, il più ordinato.",
@@ -3208,7 +3208,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Formare il comparativo di maggioranza con DI o CHE:\n1. Roma / grande / Milano.\n2. Marco / simpatico / intelligente. (due qualità)\n3. L'oro / caro / l'argento.\n4. Studio / volentieri / obbligo. (con verbi)\n5. Questo film / interessante / quello.\n6. C'è più gente / in città / in campagna.",
               "resposta": "1. Roma è più grande di Milano.\n2. Marco è più simpatico che intelligente.\n3. L'oro è più caro dell'argento.\n4. Studio più volentieri che con obbligo.\n5. Questo film è più interessante di quello.\n6. C'è più gente in città che in campagna.",
               "explicacao": "PIÙ... DI: confronto tra due persone/cose diverse. PIÙ... CHE: confronto tra due qualità dello stesso soggetto, o verbi, o con preposizioni.",
@@ -3221,7 +3221,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Formare il superlativo assoluto:\n1. bello\n2. grande\n3. difficile\n4. lungo\n5. ricco\n6. antico\n7. simpatico\n8. stanco\n9. buono (usa ottimo)\n10. cattivo (usa pessimo)",
               "resposta": "1. bellissimo/a\n2. grandissimo/a\n3. difficilissimo/a\n4. lunghissimo/a\n5. ricchissimo/a\n6. antichissimo/a\n7. simpaticissimo/a\n8. stanchissimo/a\n9. ottimo/a\n10. pessimo/a",
               "explicacao": "Superlativo assoluto: -issimo/a/i/e. Attenzione ai cambiamenti ortografici: -co→-chissimo, -go→-ghissimo, -co→-cissimo (simpatico→simpaticissimo per conservare il suono).",
@@ -3234,7 +3234,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Usare il comparativo irregolare (migliore/peggiore/maggiore/minore):\n1. Questo ristorante è ___ (buono) di quello che pensavo.\n2. I risultati di quest'anno sono ___ (cattivo) di quelli dell'anno scorso.\n3. La parte ___ (grande) del lavoro è già fatta.\n4. La sorella ___ (piccolo) di Marco ha dieci anni.\n5. Questa soluzione è ___ (buono) delle altre.\n6. Il rendimento è ___ (cattivo) del previsto.",
               "resposta": "1. migliore\n2. peggiori\n3. maggiore\n4. minore\n5. la migliore\n6. peggiore",
               "explicacao": "Comparativi irregolari: buono→migliore, cattivo→peggiore, grande→maggiore, piccolo→minore. Non cambiano con genere, ma concordano col numero: migliore/migliori.",
@@ -3247,7 +3247,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Formare il superlativo relativo:\n1. Firenze è una città bella (d'Italia).\n2. Questo è un film interessante (che ho visto).\n3. Mario è uno studente bravo (della classe).\n4. Luglio è un mese caldo (dell'anno).\n5. Queste sono delle scarpe care (del negozio).",
               "resposta": "1. Firenze è la città più bella d'Italia.\n2. Questo è il film più interessante che ho visto.\n3. Mario è lo studente più bravo della classe.\n4. Luglio è il mese più caldo dell'anno.\n5. Queste sono le scarpe più care del negozio.",
               "explicacao": "Superlativo relativo: articolo + più/meno + aggettivo + di/che. L'articolo concorda con il nome: la città, il film, lo studente, le scarpe.",
@@ -3410,7 +3410,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Giorgio e il suo lavoro:\n1. Dove nacque Giorgio?\n2. Dove si laureò e in cosa?\n3. Quando si sposò e con chi?\n4. Quanti figli ebbero?\n5. Cosa decise di fare nel 1990?\n6. Come andò la sua azienda?",
               "resposta": "1. Nacque a Firenze.\n2. Si laureò a Bologna in economia.\n3. Si sposò nel 1972 con Maria Bianchi.\n4. Ebbero due figli.\n5. Decise di mettersi in proprio e aprì la sua azienda.\n6. Le cose andarono bene e l'azienda crebbe rapidamente.",
               "explicacao": "Il testo usa il passato remoto per narrare eventi biografici lontani: nacque, studiò, si laureò, tornò, trovò, lavorò, divenne, sposò, ebbero.",
@@ -3423,7 +3423,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Coniugare al passato remoto (verbi regolari):\n1. io / parlare\n2. tu / credere\n3. lui / partire\n4. noi / lavorare\n5. voi / vendere\n6. loro / finire\n7. lei / aspettare\n8. io / rispondere\n9. tu / sentire\n10. noi / camminare",
               "resposta": "1. parlai\n2. credesti\n3. partì\n4. lavorammo\n5. vendeste\n6. finirono\n7. aspettò\n8. risposi (irregolare) / risposi\n9. sentisti\n10. camminammo",
               "explicacao": "-ARE: -ai/-asti/-ò/-ammo/-aste/-arono. -ERE: -ei(-etti)/-esti/-é(-ette)/-emmo/-este/-erono(-ettero). -IRE: -ii/-isti/-ì/-immo/-iste/-irono.",
@@ -3436,7 +3436,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Coniugare al passato remoto (verbi irregolari):\n1. io / essere\n2. tu / avere\n3. lui / fare\n4. noi / dire\n5. voi / venire\n6. loro / volere\n7. lei / nascere\n8. io / mettere\n9. tu / prendere\n10. lui / sapere\n11. noi / vivere\n12. loro / scrivere",
               "resposta": "1. fui\n2. avesti\n3. fece\n4. dicemmo\n5. veniste\n6. vollero\n7. nacque\n8. misi\n9. prendesti\n10. seppe\n11. vivemmo\n12. scrissero",
               "explicacao": "Irregolari: schema 1-3-3 per molti verbi (io/lui-lei/loro irregolari, tu/noi/voi regolari). Es: scrissi/scrivesti/scrisse/scrivemmo/scriveste/scrissero.",
@@ -3449,7 +3449,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Volgere al passato remoto:\n1. Marco va a Roma.\n2. Luisa studia medicina all'università.\n3. I miei nonni vivono in campagna.\n4. Il professore dice che l'esame è difficile.\n5. Napoleone nasce in Corsica.\n6. Dante scrive la Divina Commedia.\n7. I Romani costruiscono strade in tutta Europa.\n8. Colombo arriva in America nel 1492.",
               "resposta": "1. Marco andò a Roma.\n2. Luisa studiò medicina all'università.\n3. I miei nonni vissero in campagna.\n4. Il professore disse che l'esame era difficile.\n5. Napoleone nacque in Corsica.\n6. Dante scrisse la Divina Commedia.\n7. I Romani costruirono strade in tutta Europa.\n8. Colombo arrivò in America nel 1492.",
               "explicacao": "Passato remoto per fatti storici e narrazione. Andare→andò. Vivere→visse. Dire→disse. Nascere→nacque. Scrivere→scrisse. Costruire→costruì (regolare).",
@@ -3462,7 +3462,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Scegliere passato prossimo o passato remoto:\n1. Stamattina (io bere) ___ due caffè.\n2. Garibaldi (nascere) ___ nel 1807.\n3. Ieri (noi andare) ___ al cinema.\n4. Nel Medioevo la gente (vivere) ___ molto meno di oggi.\n5. La settimana scorsa (tu finire) ___ il corso.\n6. Leonardo da Vinci (dipingere) ___ la Gioconda.",
               "resposta": "1. ho bevuto (recente)\n2. nacque (storico, lontano)\n3. siamo andati (ieri, recente)\n4. visse/viveva (lontano nel tempo)\n5. hai finito (recente)\n6. dipinse (storico, lontano)",
               "explicacao": "Pass. prossimo: azione recente, con legame al presente. Pass. remoto: azione lontana, senza legame al presente. Dipingere→dipinse (irregolare: dipinsi/dipingesti/dipinse...).",
@@ -3625,7 +3625,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Un furto nella villa:\n1. Quando arrivarono i carabinieri, dov'era il ladro?\n2. Cosa aveva fatto il ladro?\n3. Chi aveva chiamato la polizia e perché?\n4. Dove era il conte quando avvenne il furto?\n5. Come era entrato il ladro nella villa?",
               "resposta": "1. Il ladro era già scappato.\n2. Aveva aperto la cassaforte, aveva preso i gioielli e i soldi.\n3. La domestica aveva chiamato la polizia perché aveva sentito un rumore strano.\n4. Il conte era partito quella mattina per un viaggio di lavoro.\n5. Era entrato dalla finestra del piano terra, che qualcuno aveva lasciato aperta per sbaglio.",
               "explicacao": "Uso del trapassato per indicare azioni avvenute prima dell'arrivo dei carabinieri: era scappato, aveva aperto, aveva preso, aveva chiamato, aveva sentito.",
@@ -3638,7 +3638,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Formare il trapassato prossimo:\n1. io / mangiare\n2. tu / partire\n3. lei / alzarsi\n4. noi / studiare\n5. voi / venire\n6. loro / dimenticare\n7. lui / finire\n8. io / svegliarsi\n9. tu / leggere\n10. noi / arrivare",
               "resposta": "1. avevo mangiato\n2. eri partito/a\n3. si era alzata\n4. avevamo studiato\n5. eravate venuti/e\n6. avevano dimenticato\n7. aveva finito\n8. mi ero svegliato/a\n9. avevi letto\n10. eravamo arrivati/e",
               "explicacao": "Trapassato = imperfetto di avere/essere + participio passato. Con ESSERE: participio concorda col soggetto. Con AVERE: participio invariabile (salvo con pronomi diretti precedenti).",
@@ -3651,7 +3651,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Completare con il trapassato prossimo:\n1. Quando sono arrivato alla stazione, il treno ___ (partire) già.\n2. Marco non è venuto alla festa perché ___ (dimenticare) il nostro invito.\n3. Ero stanco perché ___ (lavorare) tutto il giorno.\n4. Luisa non sapeva nulla perché nessuno le ___ (dire) la verità.\n5. Quando la polizia è arrivata, i ladri ___ (scappare) già.\n6. Ho comprato un ombrello perché la mattina ___ (vedere) le nuvole.\n7. Non ho mangiato a cena perché ___ (fare) uno spuntino tardi.\n8. Quando è tornata a casa, i figli ___ (addormentarsi) già.",
               "resposta": "1. era già partito\n2. aveva dimenticato\n3. avevo lavorato\n4. aveva detto\n5. erano già scappati\n6. avevo visto\n7. avevo fatto\n8. si erano già addormentati",
               "explicacao": "Il trapassato indica l'azione avvenuta PRIMA dell'altra azione passata. Schema: trapassato (prima) + passato prossimo/remoto/imperfetto (dopo).",
@@ -3664,7 +3664,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Unire le due frasi usando il trapassato prossimo:\n1. Prima ho telefonato a Luisa. Poi sono uscito. (Quando sono uscito...)\n2. Prima Marco è arrivato. Poi io sono partito. (Quando sono partito...)\n3. Prima abbiamo mangiato. Poi siamo andati al cinema. (Quando siamo andati al cinema...)\n4. Prima ha piovuto. Poi è uscito il sole. (Quando è uscito il sole...)\n5. Prima mi sono alzato. Poi ho fatto la doccia. (Quando ho fatto la doccia...)",
               "resposta": "1. Quando sono uscito, avevo già telefonato a Luisa.\n2. Quando sono partito, Marco era già arrivato.\n3. Quando siamo andati al cinema, avevamo già mangiato.\n4. Quando è uscito il sole, aveva già piovuto.\n5. Quando ho fatto la doccia, mi ero già alzato.",
               "explicacao": "La sequenza temporale: l'azione anteriore va al trapassato, quella posteriore al passato prossimo. 'Già' rafforza l'anteriorità.",
@@ -3677,7 +3677,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Spiegare la situazione usando il trapassato:\n1. Laura era triste. (litigare con il fidanzato)\n2. Marco era stanco. (lavorare tutta la notte)\n3. I bambini non avevano fame. (mangiare poco fa)\n4. L'insegnante era arrabbiata. (nessuno fare i compiti)\n5. Carla non poteva guidare. (dimenticare la patente a casa)",
               "resposta": "1. Laura era triste perché aveva litigato con il fidanzato.\n2. Marco era stanco perché aveva lavorato tutta la notte.\n3. I bambini non avevano fame perché avevano mangiato poco fa.\n4. L'insegnante era arrabbiata perché nessuno aveva fatto i compiti.\n5. Carla non poteva guidare perché aveva dimenticato la patente a casa.",
               "explicacao": "Il trapassato spiega la causa di uno stato o situazione passata: lo stato (imperfetto) è la conseguenza dell'azione anteriore (trapassato).",
@@ -3839,7 +3839,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Domande sul testo** — Una passeggiata sfortunata:\n1. Dove voleva andare Maria?\n2. Cosa le è successo durante la passeggiata?\n3. Chi l'ha aiutata?\n4. Dove l'ha accompagnata il signore?\n5. Come è tornata a casa?\n6. Cosa ha imparato da questa esperienza?",
               "resposta": "1. Voleva andare nel parco a fare una passeggiata.\n2. Ha inciampato in una buca nel marciapiede ed è caduta, facendosi male a un ginocchio.\n3. Un signore anziano che passava di lì si è fermato ad aiutarla.\n4. L'ha accompagnata fino alla farmacia più vicina.\n5. È tornata a casa in autobus.\n6. Da quella giornata in poi guarda sempre dove mette i piedi.",
               "explicacao": "Lessico e preposizioni: nel parco, a causa di, di lì, con preoccupazione, fino alla farmacia, in autobus.",
@@ -3852,7 +3852,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 1** — Completare con la preposizione corretta (semplice o articolata):\n1. Abito ___ Milano ___ tre anni.\n2. Vado ___ medico ogni sei mesi.\n3. Il libro è ___ tavolo.\n4. Parto ___ Roma domani mattina.\n5. Ho paura ___ volare.\n6. Viene ___ Francia; è francese.\n7. Scrivo ___ penna, non ___ computer.\n8. Torno a casa ___ un'ora.\n9. Vive ___ campagna, ___ una piccola casa.\n10. Lavora ___ ospedale come infermiere.",
               "resposta": "1. a / da\n2. dal\n3. sul\n4. per\n5. di\n6. dalla\n7. con la / col\n8. tra / fra\n9. in / in\n10. in",
               "explicacao": "A/IN = luogo stato. DA = provenienza o 'presso'. PER = destinazione. DI = dopo paura, voglia, ecc. CON = mezzo/strumento. TRA/FRA = tempo futuro.",
@@ -3865,7 +3865,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 2** — Scegliere A o IN:\n1. Vivo ___ Italia / ___ Roma.\n2. Vado ___ scuola / ___ università.\n3. Sono ___ casa / ___ ufficio.\n4. Studio ___ biblioteca / ___ camera mia.\n5. Lavoro ___ ospedale / ___ banca.\n6. Vado ___ mercato / ___ supermercato.\n7. Andiamo ___ montagna / ___ mare.\n8. Stanno ___ albergo / ___ pensione.",
               "resposta": "1. in Italia / a Roma (paese/continente→IN; città→A)\n2. a scuola / all'università\n3. a casa / in ufficio\n4. in biblioteca / nella mia camera\n5. in ospedale / in banca\n6. al mercato / al supermercato\n7. in montagna / al mare\n8. in albergo / in pensione",
               "explicacao": "A + città; IN + paese/continente/regione. A casa, a scuola (senza articolo). In ufficio, in banca, in ospedale (senza articolo). Al mercato, al supermercato (con articolo).",
@@ -3878,7 +3878,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 3** — Completare con DA:\n1. Studio italiano ___ sei mesi.\n2. Tremava ___ freddo.\n3. Vengo ___ Milano.\n4. Vado ___ dottore.\n5. Questi sono occhiali ___ sole.\n6. È una tazza ___ tè.\n7. Ho aspettato ___ stamattina.\n8. La stazione è ___ qui a due chilometri.",
               "resposta": "1. da\n2. dal\n3. da\n4. dal\n5. da\n6. da\n7. da\n8. da",
               "explicacao": "DA: tempo (da quando fino ad ora), causa (tremava dal), provenienza, presso (dal dottore), caratteristica (occhiali da sole, tazza da tè), distanza.",
@@ -3891,7 +3891,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "**Esercizio 4** — Completare con le espressioni preposizionali:\n1. Di solito mi alzo ___ (di/a) sette.\n2. Per fortuna non è successo niente ___ (di/a) grave.\n3. Torno ___ (tra/in) poco, aspettami!\n4. Ha sbagliato ___ (per/di) caso, non apposta.\n5. L'esame è andato ___ (al/di) contrario delle mie aspettative.\n6. Ho aspettato ___ (per/da) un'ora intera.\n7. ___ (A/Di) proposito, hai chiamato Marco?\n8. Lavoro ___ (da/in) casa oggi.",
               "resposta": "1. alle\n2. di\n3. tra\n4. per\n5. al\n6. per\n7. A\n8. da",
               "explicacao": "Espressioni fisse: alle sette (orario), di grave (partitivo), tra poco (tempo futuro), per caso (avverbio), al contrario (espressione), per un'ora (durata), a proposito (avverbio), da casa (luogo da cui si lavora).",
@@ -4055,7 +4055,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Completa con il congiuntivo presente di ESSERE o AVERE:\n1. Penso che lui ___ (essere) a casa.\n2. Credo che lei ___ (avere) fame.\n3. Spero che loro ___ (essere) pronti.\n4. È possibile che Marco ___ (avere) ragione.\n5. Suppongo che tu ___ (essere) stanco.",
               "resposta": "1. sia | 2. abbia | 3. siano | 4. abbia | 5. sia",
               "resposta_correta": "1. sia | 2. abbia | 3. siano | 4. abbia | 5. sia",
@@ -4068,7 +4068,7 @@
               "explicacao": "A forma correta é: 1. sia | 2. abbia | 3. siano | 4. abbia | 5. sia"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Trasforma al passato (imperfetto → congiuntivo imperfetto):\n1. Penso che venga. → Pensavo che ___.\n2. Credo che abbia fame. → Credevo che ___.\n3. Spero che partano. → Speravo che ___.\n4. È necessario che studi. → Era necessario che ___.",
               "resposta": "1. venisse | 2. avesse fame | 3. partissero | 4. studiasse",
               "resposta_correta": "1. venisse | 2. avesse fame | 3. partissero | 4. studiasse",
@@ -4081,7 +4081,7 @@
               "explicacao": "A forma correta é: 1. venisse | 2. avesse fame | 3. partissero | 4. studiasse"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Scegli il tempo corretto del congiuntivo:\n1. Penso che ieri Paolo ___ (andare) al cinema.\n2. Credevo che stamattina lei ___ (uscire) presto.\n3. Spero che domani tu ___ (potere) venire.\n4. Pensavo che il treno ___ (partire) già.",
               "resposta": "1. sia andato | 2. fosse uscita | 3. possa | 4. fosse già partito",
               "resposta_correta": "1. sia andato | 2. fosse uscita | 3. possa | 4. fosse già partito",
@@ -4094,7 +4094,7 @@
               "explicacao": "A forma correta é: 1. sia andato | 2. fosse uscita | 3. possa | 4. fosse già partito"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Completa con il verbo corretto al congiuntivo presente:\n1. È importante che voi ___ (arrivare) in orario.\n2. Bisogna che noi ___ (parlare) con il direttore.\n3. È possibile che loro ___ (venire) domani.\n4. Voglio che tu ___ (studiare) di più.\n5. Preferisco che lui ___ (sapere) la verità.",
               "resposta": "1. arriviate | 2. parliamo | 3. vengano | 4. studi | 5. sappia",
               "resposta_correta": "1. arriviate | 2. parliamo | 3. vengano | 4. studi | 5. sappia",
@@ -4107,7 +4107,7 @@
               "explicacao": "A forma correta é: 1. arriviate | 2. parliamo | 3. vengano | 4. studi | 5. sappia"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Completa con il congiuntivo imperfetto:\n1. Volevo che tu ___ (venire) alla festa.\n2. Era necessario che loro ___ (partire) subito.\n3. Pensavo che lui ___ (avere) più esperienza.\n4. Speravo che voi ___ (capire) la situazione.\n5. Credevo che lei ___ (essere) più simpatica.",
               "resposta": "1. venissi | 2. partissero | 3. avesse | 4. capiste | 5. fosse",
               "resposta_correta": "1. venissi | 2. partissero | 3. avesse | 4. capiste | 5. fosse",
@@ -4270,7 +4270,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Tipo 1 (realtà). Completa con l'indicativo:\n1. Se ___ (fare) bello domani, andiamo al mare.\n2. Se Mario ___ (avere) fame, mangia qualcosa.\n3. Se voi ___ (arrivare) tardi, aspettiamo.\n4. Se lei ___ (studiare) ogni giorno, imparerà presto.",
               "resposta": "1. fa | 2. ha | 3. arrivate | 4. studia",
               "resposta_correta": "1. fa | 2. ha | 3. arrivate | 4. studia",
@@ -4283,7 +4283,7 @@
               "explicacao": "A forma correta é: 1. fa | 2. ha | 3. arrivate | 4. studia"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Tipo 2 (possibilità). Completa con congiuntivo imperfetto + condizionale presente:\n1. Se ___ (avere) più soldi, ___ (comprare) una casa grande.\n2. Se ___ (sapere) la risposta, te la ___ (dire).\n3. Se lui ___ (venire) alla festa, ___ (divertirsi).\n4. Se voi ___ (lavorare) meno, ___ (stare) meglio.",
               "resposta": "1. avessi / comprerei | 2. sapessi / direi | 3. venisse / si divertirebbe | 4. lavoraste / stareste",
               "resposta_correta": "1. avessi / comprerei | 2. sapessi / direi | 3. venisse / si divertirebbe | 4. lavoraste / stareste",
@@ -4296,7 +4296,7 @@
               "explicacao": "A forma correta é: 1. avessi / comprerei | 2. sapessi / direi | 3. venisse / si divertirebbe | 4. lavoraste / stareste"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Tipo 3 (impossibilità). Completa con congiuntivo trapassato + condizionale passato:\n1. Se ___ (partire) prima, ___ (arrivare) in orario.\n2. Se lei ___ (studiare) di più, ___ (superare) l'esame.\n3. Se loro ___ (prenotare) in anticipo, ___ (trovare) un posto.\n4. Se tu ___ (venire), ci ___ (divertire) insieme.",
               "resposta": "1. fossi partito / sarei arrivato | 2. avesse studiato / avrebbe superato | 3. avessero prenotato / avrebbero trovato | 4. fossi venuto / ci saremmo divertiti",
               "resposta_correta": "1. fossi partito / sarei arrivato | 2. avesse studiato / avrebbe superato | 3. avessero prenotato / avrebbero trovato | 4. fossi venuto / ci saremmo divertiti",
@@ -4309,7 +4309,7 @@
               "explicacao": "A forma correta é: 1. fossi partito / sarei arrivato | 2. avesse studiato / avrebbe superato | 3. avessero prenotato / avrebbero trovato | 4. fossi venuto / ci saremmo divertiti"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Identifica il tipo (1/2/3) e completa:\n1. Se ___ (potere — tipo 2) partire, verrei subito.\n2. Se ___ (piovere — tipo 1) domani, rimango a casa.\n3. Se ___ (sapere — tipo 3) la verità, non l'avrei detto.\n4. Se ___ (essere — tipo 2) in vacanza, leggerei molto.",
               "resposta": "1. potessi | 2. piove | 3. avessi saputo | 4. fossi",
               "resposta_correta": "1. potessi | 2. piove | 3. avessi saputo | 4. fossi",
@@ -4322,7 +4322,7 @@
               "explicacao": "A forma correta é: 1. potessi | 2. piove | 3. avessi saputo | 4. fossi"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Trasforma: tipo 1 → tipo 2:\n1. Se ho tempo, vengo. → Se ___, ___.\n2. Se fa bello, usciamo. → Se ___, ___.\n3. Se parli italiano, capisci. → Se ___, ___.",
               "resposta": "1. avessi tempo, verrei | 2. facesse bello, usciremmo | 3. parlassi italiano, capiresti",
               "resposta_correta": "1. avessi tempo, verrei | 2. facesse bello, usciremmo | 3. parlassi italiano, capiresti",
@@ -4485,7 +4485,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Forma il gerundio presente:\n1. lavorare → ___\n2. scrivere → ___\n3. dormire → ___\n4. fare → ___\n5. essere → ___\n6. bere → ___",
               "resposta": "1. lavorando | 2. scrivendo | 3. dormendo | 4. facendo | 5. essendo | 6. bevendo",
               "resposta_correta": "1. lavorando | 2. scrivendo | 3. dormendo | 4. facendo | 5. essendo | 6. bevendo",
@@ -4498,7 +4498,7 @@
               "explicacao": "A forma correta é: 1. lavorando | 2. scrivendo | 3. dormendo | 4. facendo | 5. essendo | 6. bevendo"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Forma il gerundio passato:\n1. andare → ___\n2. leggere → ___\n3. partire → ___\n4. fare → ___\n5. vedere → ___",
               "resposta": "1. essendo andato | 2. avendo letto | 3. essendo partito | 4. avendo fatto | 5. avendo visto",
               "resposta_correta": "1. essendo andato | 2. avendo letto | 3. essendo partito | 4. avendo fatto | 5. avendo visto",
@@ -4511,7 +4511,7 @@
               "explicacao": "A forma correta é: 1. essendo andato | 2. avendo letto | 3. essendo partito | 4. avendo fatto | 5. avendo visto"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Sostituisci con il gerundio:\n1. Mentre studiava, ascoltava musica. → ___\n2. Poiché era tardi, è andato a casa. → ___\n3. Anche se era stanco, ha continuato. → ___\n4. Dopo che ho mangiato, sono uscito. → ___",
               "resposta": "1. Studiando, ascoltava musica | 2. Essendo tardi, è andato a casa | 3. Pur essendo stanco, ha continuato | 4. Avendo mangiato, sono uscito",
               "resposta_correta": "1. Studiando, ascoltava musica | 2. Essendo tardi, è andato a casa | 3. Pur essendo stanco, ha continuato | 4. Avendo mangiato, sono uscito",
@@ -4524,7 +4524,7 @@
               "explicacao": "A forma correta é: 1. Studiando, ascoltava musica | 2. Essendo tardi, è andato a casa | 3. Pur essendo stanco, ha continuato | 4. Avendo mangiato, sono uscito"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Completa con STARE + gerundio:\n1. Marco ___ (leggere) un libro adesso.\n2. Noi ___ (mangiare) quando hai chiamato.\n3. Loro ___ (lavorare) tutto il giorno.\n4. Io ___ (scrivere) una mail in questo momento.",
               "resposta": "1. sta leggendo | 2. stavamo mangiando | 3. stanno lavorando | 4. sto scrivendo",
               "resposta_correta": "1. sta leggendo | 2. stavamo mangiando | 3. stanno lavorando | 4. sto scrivendo",
@@ -4537,7 +4537,7 @@
               "explicacao": "A forma correta é: 1. sta leggendo | 2. stavamo mangiando | 3. stanno lavorando | 4. sto scrivendo"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Trasforma usando il participio passato come aggettivo:\n1. La finestra che è stata rotta → la finestra ___\n2. Il libro che è stato aperto → il libro ___\n3. Le lettere che sono state scritte → le lettere ___\n4. Il lavoro che è stato fatto → il lavoro ___",
               "resposta": "1. rotta | 2. aperto | 3. scritte | 4. fatto",
               "resposta_correta": "1. rotta | 2. aperto | 3. scritte | 4. fatto",
@@ -4701,7 +4701,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Trasforma alla forma passiva:\n1. Marco scrive la lettera. → ___\n2. La maestra corregge i compiti. → ___\n3. Tutti amano questa canzone. → ___\n4. Il cuoco prepara la cena. → ___",
               "resposta": "1. La lettera è scritta da Marco | 2. I compiti sono corretti dalla maestra | 3. Questa canzone è amata da tutti | 4. La cena è preparata dal cuoco",
               "resposta_correta": "1. La lettera è scritta da Marco | 2. I compiti sono corretti dalla maestra | 3. Questa canzone è amata da tutti | 4. La cena è preparata dal cuoco",
@@ -4714,7 +4714,7 @@
               "explicacao": "A forma correta é: 1. La lettera è scritta da Marco | 2. I compiti sono corretti dalla maestra | 3. Questa canzone è amata da tutti | 4. La cena è preparata dal cuoco"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Trasforma alla passiva (passato prossimo):\n1. Il professore ha spiegato la lezione. → ___\n2. Maria ha comprato il vestito. → ___\n3. I ragazzi hanno aperto le finestre. → ___\n4. La polizia ha arrestato il ladro. → ___",
               "resposta": "1. La lezione è stata spiegata dal professore | 2. Il vestito è stato comprato da Maria | 3. Le finestre sono state aperte dai ragazzi | 4. Il ladro è stato arrestato dalla polizia",
               "resposta_correta": "1. La lezione è stata spiegata dal professore | 2. Il vestito è stato comprato da Maria | 3. Le finestre sono state aperte dai ragazzi | 4. Il ladro è stato arrestato dalla polizia",
@@ -4727,7 +4727,7 @@
               "explicacao": "A forma correta é: 1. La lezione è stata spiegata dal professore | 2. Il vestito è stato comprato da Maria | 3. Le finestre sono state aperte dai ragazzi | 4. Il ladro è stato arrestato dalla polizia"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Usa VENIRE per indicare azioni abituali:\n1. La porta è chiusa ogni sera. → La porta ___ ogni sera.\n2. I compiti sono corretti dal professore. → I compiti ___ dal professore.\n3. Le lettere sono spedite il lunedì. → Le lettere ___ il lunedì.",
               "resposta": "1. viene chiusa | 2. vengono corretti | 3. vengono spedite",
               "resposta_correta": "1. viene chiusa | 2. vengono corretti | 3. vengono spedite",
@@ -4740,7 +4740,7 @@
               "explicacao": "A forma correta é: 1. viene chiusa | 2. vengono corretti | 3. vengono spedite"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Usa ANDARE (obbligo):\n1. Questo modulo deve essere compilato. → Questo modulo ___.\n2. Le regole devono essere rispettate. → Le regole ___.\n3. Il rapporto deve essere consegnato domani. → Il rapporto ___.",
               "resposta": "1. va compilato | 2. vanno rispettate | 3. va consegnato domani",
               "resposta_correta": "1. va compilato | 2. vanno rispettate | 3. va consegnato domani",
@@ -4753,7 +4753,7 @@
               "explicacao": "A forma correta é: 1. va compilato | 2. vanno rispettate | 3. va consegnato domani"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — SI passivante. Trasforma:\n1. Le persone parlano italiano qui. → ___\n2. Le persone vendono appartamenti in questa zona. → ___\n3. Le persone mangiano bene in questo ristorante. → ___\n4. Le persone aprono i negozi alle nove. → ___",
               "resposta": "1. Si parla italiano qui | 2. Si vendono appartamenti in questa zona | 3. Si mangia bene in questo ristorante | 4. Si aprono i negozi alle nove",
               "resposta_correta": "1. Si parla italiano qui | 2. Si vendono appartamenti in questa zona | 3. Si mangia bene in questo ristorante | 4. Si aprono i negozi alle nove",
@@ -4918,7 +4918,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Coniuga POTERE al presente:\nio ___, tu ___, lui ___, noi ___, voi ___, loro ___",
               "resposta": "posso, puoi, può, possiamo, potete, possono",
               "resposta_correta": "posso, puoi, può, possiamo, potete, possono",
@@ -4931,7 +4931,7 @@
               "explicacao": "A forma correta é: posso, puoi, può, possiamo, potete, possono"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Coniuga DOVERE e VOLERE al presente:\nDOVERE: io ___, tu ___, lui ___, noi ___, voi ___, loro ___\nVOLERE: io ___, tu ___, lui ___, noi ___, voi ___, loro ___",
               "resposta": "DOVERE: devo, devi, deve, dobbiamo, dovete, devono\nVOLERE: voglio, vuoi, vuole, vogliamo, volete, vogliono",
               "resposta_correta": "DOVERE: devo, devi, deve, dobbiamo, dovete, devono\nVOLERE: voglio, vuoi, vuole, vogliamo, volete, vogliono",
@@ -4944,7 +4944,7 @@
               "explicacao": "A forma correta é: DOVERE: devo, devi, deve, dobbiamo, dovete, devono\nVOLERE: voglio, vuoi, vuole, vogliamo, volete, vogliono"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Scegli l'ausiliare corretto al passato prossimo:\n1. Non ___ (potere) dormire. (mangiare → AVERE)\n2. ___ (dovere) partire presto. (partire → ESSERE)\n3. Non ___ (volere) uscire. (uscire → ESSERE)\n4. ___ (sapere) rispondere. (rispondere → AVERE)",
               "resposta": "1. ho potuto | 2. sono dovuto/a | 3. non sono voluto/a | 4. ho saputo",
               "resposta_correta": "1. ho potuto | 2. sono dovuto/a | 3. non sono voluto/a | 4. ho saputo",
@@ -4957,7 +4957,7 @@
               "explicacao": "A forma correta é: 1. ho potuto | 2. sono dovuto/a | 3. non sono voluto/a | 4. ho saputo"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Completa con il modale giusto (potere/dovere/volere/sapere):\n1. ___ nuotare molto bene. (capacità)\n2. ___ studiare per l'esame. (obbligo)\n3. ___ un caffè, per favore. (desiderio cortese — condizionale)\n4. ___ uscire stasera? (permesso)",
               "resposta": "1. So | 2. Devo | 3. Vorrei | 4. Posso",
               "resposta_correta": "1. So | 2. Devo | 3. Vorrei | 4. Posso",
@@ -4970,7 +4970,7 @@
               "explicacao": "A forma correta é: 1. So | 2. Devo | 3. Vorrei | 4. Posso"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Trasforma al condizionale presente:\n1. devo → ___\n2. posso → ___\n3. voglio → ___\n4. devi → ___\n5. può → ___",
               "resposta": "1. dovrei | 2. potrei | 3. vorrei | 4. dovresti | 5. potrebbe",
               "resposta_correta": "1. dovrei | 2. potrei | 3. vorrei | 4. dovresti | 5. potrebbe",
@@ -5134,7 +5134,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Sostituisci con i pronomi combinati:\n1. Do il libro a te. → ___\n2. Mando la lettera a lui. → ___\n3. Racconto la storia a voi. → ___\n4. Porto i fiori a lei. → ___",
               "resposta": "1. Te lo do | 2. Gliela mando | 3. Ve la racconto | 4. Gliele porto",
               "resposta_correta": "1. Te lo do | 2. Gliela mando | 3. Ve la racconto | 4. Gliele porto",
@@ -5147,7 +5147,7 @@
               "explicacao": "A forma correta é: 1. Te lo do | 2. Gliela mando | 3. Ve la racconto | 4. Gliele porto"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Pronomi combinati con passato prossimo (accordo del participio):\n1. Ho dato la lettera a Marco. → ___\n2. Ho comprato i libri a te. → ___\n3. Ho portato le rose a lei. → ___\n4. Ho mandato il pacco a voi. → ___",
               "resposta": "1. Gliela ho data / Gliel'ho data | 2. Te li ho comprati | 3. Gliele ho portate | 4. Ve lo ho mandato / Ve l'ho mandato",
               "resposta_correta": "1. Gliela ho data / Gliel'ho data | 2. Te li ho comprati | 3. Gliele ho portate | 4. Ve lo ho mandato / Ve l'ho mandato",
@@ -5160,7 +5160,7 @@
               "explicacao": "A forma correta é: 1. Gliela ho data / Gliel'ho data | 2. Te li ho comprati | 3. Gliele ho portate | 4. Ve lo ho mandato / Ve l'ho mandato"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Rispondi usando i pronomi combinati:\n1. Hai spiegato la grammatica agli studenti? Sì, ___.\n2. Hai portato i documenti a me? No, ___.\n3. Hai dato la ricetta a tua sorella? Sì, ___.\n4. Hai comprato i biglietti per noi? Sì, ___.",
               "resposta": "1. Sì, gliela ho spiegata | 2. No, non te li ho portati | 3. Sì, gliela ho data | 4. Sì, ve li ho comprati",
               "resposta_correta": "1. Sì, gliela ho spiegata | 2. No, non te li ho portati | 3. Sì, gliela ho data | 4. Sì, ve li ho comprati",
@@ -5173,7 +5173,7 @@
               "explicacao": "A forma correta é: 1. Sì, gliela ho spiegata | 2. No, non te li ho portati | 3. Sì, gliela ho data | 4. Sì, ve li ho comprati"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — NE combinato. Completa:\n1. Hai parlato del viaggio a Marco? Sì, ___ ho parlato.\n2. Hai bisogno di aiuto? Sì, ___ ho bisogno.\n3. Quante paste hai comprato? ___ ho comprate tre.\n4. Hai detto a lei del problema? Sì, ___ ho detto.",
               "resposta": "1. gliene | 2. ne | 3. ne | 4. gliene",
               "resposta_correta": "1. gliene | 2. ne | 3. ne | 4. gliene",
@@ -5186,7 +5186,7 @@
               "explicacao": "A forma correta é: 1. gliene | 2. ne | 3. ne | 4. gliene"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Pronomi con i verbi modali (due posizioni):\n1. Devo dire la verità a te. → ___ (prima del modale) / ___ (attaccato all'infinito)\n2. Voglio portare i fiori a lei. → ___ / ___\n3. Puoi mandare il messaggio a noi? → ___ / ___",
               "resposta": "1. Te la devo dire / Devo dirtela | 2. Glieli voglio portare / Voglio portarglieli | 3. Ce lo puoi mandare? / Puoi mandarcelo?",
               "resposta_correta": "1. Te la devo dire / Devo dirtela | 2. Glieli voglio portare / Voglio portarglieli | 3. Ce lo puoi mandare? / Puoi mandarcelo?",
@@ -5349,7 +5349,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Trasforma al discorso indiretto (verbo al passato):\n1. «Sono stanco.» → Ha detto che ___.\n2. «Ho mangiato.» → Ha detto che ___.\n3. «Verrò domani.» → Ha detto che ___.\n4. «Lavoro molto.» → Ha detto che ___.",
               "resposta": "1. era stanco | 2. aveva mangiato | 3. sarebbe venuto il giorno dopo | 4. lavorava molto",
               "resposta_correta": "1. era stanco | 2. aveva mangiato | 3. sarebbe venuto il giorno dopo | 4. lavorava molto",
@@ -5362,7 +5362,7 @@
               "explicacao": "A forma correta é: 1. era stanco | 2. aveva mangiato | 3. sarebbe venuto il giorno dopo | 4. lavorava molto"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Trasforma imperativo al discorso indiretto:\n1. «Studia!» → Mi ha detto ___.\n2. «Vieni subito!» → Mi ha ordinato ___.\n3. «Non uscire!» → Mi ha detto ___.\n4. «Aspetta qui!» → Mi ha chiesto ___.",
               "resposta": "1. di studiare | 2. di venire subito | 3. di non uscire | 4. di aspettare lì",
               "resposta_correta": "1. di studiare | 2. di venire subito | 3. di non uscire | 4. di aspettare lì",
@@ -5375,7 +5375,7 @@
               "explicacao": "A forma correta é: 1. di studiare | 2. di venire subito | 3. di non uscire | 4. di aspettare lì"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Domande indirette con SE:\n1. «Sei pronto?» → Mi ha chiesto ___.\n2. «Hai finito?» → Ha domandato ___.\n3. «Vieni alla festa?» → Mi ha chiesto ___.\n4. «Parli italiano?» → Ha voluto sapere ___.",
               "resposta": "1. se ero pronto | 2. se avevo finito | 3. se venivo alla festa | 4. se parlavo italiano",
               "resposta_correta": "1. se ero pronto | 2. se avevo finito | 3. se venivo alla festa | 4. se parlavo italiano",
@@ -5388,7 +5388,7 @@
               "explicacao": "A forma correta é: 1. se ero pronto | 2. se avevo finito | 3. se venivo alla festa | 4. se parlavo italiano"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Domande indirette con parola interrogativa:\n1. «Dove vai?» → Mi ha chiesto ___.\n2. «Quando arrivi?» → Ha domandato ___.\n3. «Come stai?» → Mi ha chiesto ___.\n4. «Perché sei in ritardo?» → Ha voluto sapere ___.",
               "resposta": "1. dove andassi | 2. quando arrivassi | 3. come stavo | 4. perché ero in ritardo",
               "resposta_correta": "1. dove andassi | 2. quando arrivassi | 3. come stavo | 4. perché ero in ritardo",
@@ -5401,7 +5401,7 @@
               "explicacao": "A forma correta é: 1. dove andassi | 2. quando arrivassi | 3. come stavo | 4. perché ero in ritardo"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Cambia le espressioni di tempo:\n1. «Vengo oggi.» → Ha detto che veniva ___.\n2. «L'ho visto ieri.» → Ha detto che l'aveva visto ___.\n3. «Partirò domani.» → Ha detto che sarebbe partito ___.\n4. «Lavoro qui.» → Ha detto che lavorava ___.",
               "resposta": "1. quel giorno | 2. il giorno prima | 3. il giorno dopo / l'indomani | 4. lì",
               "resposta_correta": "1. quel giorno | 2. il giorno prima | 3. il giorno dopo / l'indomani | 4. lì",
@@ -5565,7 +5565,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Scrivi in lettere:\n1. 15 → ___\n2. 23 → ___\n3. 38 → ___\n4. 56 → ___\n5. 100 → ___\n6. 1.000 → ___",
               "resposta": "1. quindici | 2. ventitré | 3. trentotto | 4. cinquantasei | 5. cento | 6. mille",
               "resposta_correta": "1. quindici | 2. ventitré | 3. trentotto | 4. cinquantasei | 5. cento | 6. mille",
@@ -5578,7 +5578,7 @@
               "explicacao": "A forma correta é: 1. quindici | 2. ventitré | 3. trentotto | 4. cinquantasei | 5. cento | 6. mille"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Scrivi l'ordinale (maschile):\n1. 1° → ___\n2. 3° → ___\n3. 5° → ___\n4. 8° → ___\n5. 12° → ___\n6. 20° → ___",
               "resposta": "1. primo | 2. terzo | 3. quinto | 4. ottavo | 5. dodicesimo | 6. ventesimo",
               "resposta_correta": "1. primo | 2. terzo | 3. quinto | 4. ottavo | 5. dodicesimo | 6. ventesimo",
@@ -5591,7 +5591,7 @@
               "explicacao": "A forma correta é: 1. primo | 2. terzo | 3. quinto | 4. ottavo | 5. dodicesimo | 6. ventesimo"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Che ore sono? Scrivi in parole:\n1. 1:00 → ___\n2. 3:15 → ___\n3. 7:30 → ___\n4. 9:45 → ___\n5. 12:00 → ___\n6. 24:00 → ___",
               "resposta": "1. È l'una | 2. Sono le tre e un quarto | 3. Sono le sette e mezza | 4. Sono le dieci meno un quarto | 5. È mezzogiorno | 6. È mezzanotte",
               "resposta_correta": "1. È l'una | 2. Sono le tre e un quarto | 3. Sono le sette e mezza | 4. Sono le dieci meno un quarto | 5. È mezzogiorno | 6. È mezzanotte",
@@ -5604,7 +5604,7 @@
               "explicacao": "A forma correta é: 1. È l'una | 2. Sono le tre e un quarto | 3. Sono le sette e mezza | 4. Sono le dieci meno un quarto | 5. È mezzogiorno | 6. È mezzanotte"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Scrivi la data in parole:\n1. 01/01 → ___\n2. 14/02 → ___\n3. 25/04 → ___\n4. 08/03 → ___\n5. 31/12 → ___",
               "resposta": "1. il primo gennaio | 2. il quattordici febbraio | 3. il venticinque aprile | 4. l'otto marzo | 5. il trentuno dicembre",
               "resposta_correta": "1. il primo gennaio | 2. il quattordici febbraio | 3. il venticinque aprile | 4. l'otto marzo | 5. il trentuno dicembre",
@@ -5617,7 +5617,7 @@
               "explicacao": "A forma correta é: 1. il primo gennaio | 2. il quattordici febbraio | 3. il venticinque aprile | 4. l'otto marzo | 5. il trentuno dicembre"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — DA, PER, FA o TRA/FRA:\n1. Studio italiano ___ due anni. (azione ancora in corso)\n2. Ho lavorato ___ sei ore ieri.\n3. Sono arrivato tre giorni ___.\n4. Partiremo ___ una settimana.",
               "resposta": "1. da | 2. per | 3. fa | 4. tra / fra",
               "resposta_correta": "1. da | 2. per | 3. fa | 4. tra / fra",
@@ -5781,7 +5781,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Scegli tra TUTTO, OGNI, QUALCHE, ALCUNI:\n1. ___ studente deve studiare. (ogni singolo)\n2. ___ libri sono interessanti. (non tutti, una parte)\n3. Ho ___ amico a Roma. (idea vaga, plurale)\n4. ___ la classe ha capito. (la classe intera)",
               "resposta": "1. Ogni | 2. Alcuni | 3. qualche | 4. Tutta",
               "resposta_correta": "1. Ogni | 2. Alcuni | 3. qualche | 4. Tutta",
@@ -5794,7 +5794,7 @@
               "explicacao": "A forma correta é: 1. Ogni | 2. Alcuni | 3. qualche | 4. Tutta"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Completa con NESSUNO/NIENTE:\n1. ___ ha risposto al telefono.\n2. Non ho fatto ___ oggi.\n3. Non c'è ___ in casa.\n4. Ho cercato ma non ho trovato ___.",
               "resposta": "1. Nessuno | 2. niente/nulla | 3. nessuno | 4. niente/nulla",
               "resposta_correta": "1. Nessuno | 2. niente/nulla | 3. nessuno | 4. niente/nulla",
@@ -5807,7 +5807,7 @@
               "explicacao": "A forma correta é: 1. Nessuno | 2. niente/nulla | 3. nessuno | 4. niente/nulla"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — QUALCOSA/NIENTE + DI + aggettivo. Completa:\n1. Ho visto ___ di molto bello in TV.\n2. Non c'è ___ di nuovo sotto il sole.\n3. Hai ___ di importante da dirmi?\n4. Non ho letto ___ di interessante ultimamente.",
               "resposta": "1. qualcosa | 2. niente/nulla | 3. qualcosa | 4. niente/nulla",
               "resposta_correta": "1. qualcosa | 2. niente/nulla | 3. qualcosa | 4. niente/nulla",
@@ -5820,7 +5820,7 @@
               "explicacao": "A forma correta é: 1. qualcosa | 2. niente/nulla | 3. qualcosa | 4. niente/nulla"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — TUTTO concordato. Completa:\n1. ___ (tutto + il) giorno ho lavorato.\n2. ___ (tutto + le) ragazze erano presenti.\n3. ___ (tutto + i) bambini giocavano nel parco.\n4. ___ (tutto + la) notte non ho dormito.",
               "resposta": "1. Tutto il | 2. Tutte le | 3. Tutti i | 4. Tutta la",
               "resposta_correta": "1. Tutto il | 2. Tutte le | 3. Tutti i | 4. Tutta la",
@@ -5833,7 +5833,7 @@
               "explicacao": "A forma correta é: 1. Tutto il | 2. Tutte le | 3. Tutti i | 4. Tutta la"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Doppia negazione. Trasforma:\n1. Nessuno è arrivato. → Non è arrivato ___.\n2. Niente mi piace qui. → Non mi piace ___.\n3. Nessuna risposta è giusta. → Non è giusta ___ risposta.",
               "resposta": "1. nessuno | 2. niente/nulla | 3. nessuna",
               "resposta_correta": "1. nessuno | 2. niente/nulla | 3. nessuna",
@@ -5997,7 +5997,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Causali. Unisci le frasi con PERCHÉ, SICCOME o DATO CHE:\n1. Era stanco. È andato a letto presto. → ___\n2. Non ha studiato. Non ha superato l'esame. → ___\n3. Ha piovuto. Siamo rimasti in casa. → ___",
               "resposta": "1. Siccome/Dato che era stanco, è andato a letto presto | 2. Non ha superato l'esame perché non ha studiato | 3. Siamo rimasti in casa perché/dato che ha piovuto",
               "resposta_correta": "1. Siccome/Dato che era stanco, è andato a letto presto | 2. Non ha superato l'esame perché non ha studiato | 3. Siamo rimasti in casa perché/dato che ha piovuto",
@@ -6010,7 +6010,7 @@
               "explicacao": "A forma correta é: 1. Siccome/Dato che era stanco, è andato a letto presto | 2. Non ha superato l'esame perché non ha studiato | 3. Siamo rimasti in casa perché/dato che ha piovuto"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Temporali. Completa con QUANDO, MENTRE, APPENA o PRIMA CHE:\n1. ___ arrivo, ti chiamo.\n2. ___ studiavo, ascoltavo musica.\n3. ___ finisco, esco.\n4. ___ parta, devo salutarla.",
               "resposta": "1. Quando | 2. Mentre | 3. Appena | 4. Prima che",
               "resposta_correta": "1. Quando | 2. Mentre | 3. Appena | 4. Prima che",
@@ -6023,7 +6023,7 @@
               "explicacao": "A forma correta é: 1. Quando | 2. Mentre | 3. Appena | 4. Prima che"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Finali. Completa con AFFINCHÉ + congiuntivo o PER + infinito:\n1. Studio molto ___ imparare. (stesso soggetto)\n2. Parlo lentamente ___ tu possa capire. (soggetti diversi)\n3. Ho comprato un libro ___ leggere in vacanza. (stesso soggetto)\n4. Le ho spiegato tutto ___ lei capisse. (soggetti diversi)",
               "resposta": "1. per | 2. affinché | 3. per | 4. affinché / in modo che",
               "resposta_correta": "1. per | 2. affinché | 3. per | 4. affinché / in modo che",
@@ -6036,7 +6036,7 @@
               "explicacao": "A forma correta é: 1. per | 2. affinché | 3. per | 4. affinché / in modo che"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Concessive. Completa con BENCHÉ, SEBBENE o NONOSTANTE + congiuntivo:\n1. ___ fosse tardi, abbiamo continuato.\n2. ___ la fatica, ha finito il lavoro.\n3. ___ non parli bene, si fa capire.\n4. ___ avesse poco tempo, ha aiutato tutti.",
               "resposta": "1. Benché/Sebbene | 2. Nonostante | 3. Benché/Sebbene | 4. Benché/Sebbene",
               "resposta_correta": "1. Benché/Sebbene | 2. Nonostante | 3. Benché/Sebbene | 4. Benché/Sebbene",
@@ -6049,7 +6049,7 @@
               "explicacao": "A forma correta é: 1. Benché/Sebbene | 2. Nonostante | 3. Benché/Sebbene | 4. Benché/Sebbene"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Coordinanti. Scegli la congiunzione giusta:\n1. Vuoi tè ___ caffè? (scelta)\n2. Era stanco ___ ha continuato. (opposizione)\n3. Non ho mangiato ___ bevuto niente. (negazione doppia)\n4. Era tardi, ___ siamo andati a casa. (conclusione)",
               "resposta": "1. o/oppure | 2. ma/però | 3. né | 4. quindi/dunque/perciò",
               "resposta_correta": "1. o/oppure | 2. ma/però | 3. né | 4. quindi/dunque/perciò",
@@ -6213,7 +6213,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 1 — Forma l'avverbio in -MENTE:\n1. lento → ___\n2. facile → ___\n3. felice → ___\n4. regolare → ___\n5. rapido → ___\n6. tranquillo → ___",
               "resposta": "1. lentamente | 2. facilmente | 3. felicemente | 4. regolarmente | 5. rapidamente | 6. tranquillamente",
               "resposta_correta": "1. lentamente | 2. facilmente | 3. felicemente | 4. regolarmente | 5. rapidamente | 6. tranquillamente",
@@ -6226,7 +6226,7 @@
               "explicacao": "A forma correta é: 1. lentamente | 2. facilmente | 3. felicemente | 4. regolarmente | 5. rapidamente | 6. tranquillamente"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 2 — Avverbi di tempo. Scegli quello giusto:\n1. Ho ___ (già/ancora) mangiato. Non ho fame.\n2. Non ho ___ (già/ancora) finito. Aspetta.\n3. Arriva ___ (sempre/mai) tardi — è una sua abitudine.\n4. Non vado ___ (sempre/mai) al cinema — lo odio.",
               "resposta": "1. già | 2. ancora | 3. sempre | 4. mai",
               "resposta_correta": "1. già | 2. ancora | 3. sempre | 4. mai",
@@ -6239,7 +6239,7 @@
               "explicacao": "A forma correta é: 1. già | 2. ancora | 3. sempre | 4. mai"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 3 — Posizione degli avverbi nei tempi composti:\n1. Ho mangiato già. → ___\n2. Sono uscito mai. → ___\n3. Hai capito già? → ___\n4. Avevo dormito bene. → ___",
               "resposta": "1. Ho già mangiato | 2. Non sono mai uscito | 3. Hai già capito? | 4. Avevo dormito bene (avverbio di modo → può restare dopo)",
               "resposta_correta": "1. Ho già mangiato | 2. Non sono mai uscito | 3. Hai già capito? | 4. Avevo dormito bene (avverbio di modo → può restare dopo)",
@@ -6252,7 +6252,7 @@
               "explicacao": "A forma correta é: 1. Ho già mangiato | 2. Non sono mai uscito | 3. Hai già capito? | 4. Avevo dormito bene (avverbio di modo → può restare dopo)"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 4 — Avverbi di luogo. Completa:\n1. Vieni ___! (qui/qua = vicino a me)\n2. Il libro è ___ sul tavolo. (posizione lontana)\n3. I bambini giocano ___. (all'esterno)\n4. Ho cercato le chiavi ___. (in ogni posto)",
               "resposta": "1. qui / qua | 2. lì / là | 3. fuori | 4. dappertutto / ovunque",
               "resposta_correta": "1. qui / qua | 2. lì / là | 3. fuori | 4. dappertutto / ovunque",
@@ -6265,7 +6265,7 @@
               "explicacao": "A forma correta é: 1. qui / qua | 2. lì / là | 3. fuori | 4. dappertutto / ovunque"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esercizio 5 — Avverbi di quantità (invariabili). Correggi se necessario:\n1. È molto bella quella ragazza.\n2. Ha mangiato troppa velocemente.\n3. Parla abbastanza bene.\n4. Ho pochi da fare oggi.",
               "resposta": "1. SÌ, corretto | 2. troppo velocemente | 3. SÌ, corretto | 4. poco da fare",
               "resposta_correta": "1. SÌ, corretto | 2. troppo velocemente | 3. SÌ, corretto | 4. poco da fare",
@@ -6429,7 +6429,7 @@
           ],
           "exercicios": [
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Ripasso 1 — Tempi verbali. Scegli il tempo corretto e spiega perché:\n1. Ieri ___ (andare) al cinema con Marco.\n2. Quando ero piccolo, ___ (giocare) in strada ogni giorno.\n3. Dante ___ (nascere) a Firenze nel 1265.\n4. Domani ___ (partire) per Milano.",
               "resposta": "1. sono andato (passato prossimo) | 2. giocavo (imperfetto: abitudine) | 3. nacque (passato remoto: fatto storico) | 4. partirò (futuro)",
               "resposta_correta": "1. sono andato (passato prossimo) | 2. giocavo (imperfetto: abitudine) | 3. nacque (passato remoto: fatto storico) | 4. partirò (futuro)",
@@ -6442,7 +6442,7 @@
               "explicacao": "A forma correta é: 1. sono andato (passato prossimo) | 2. giocavo (imperfetto: abitudine) | 3. nacque (passato remoto: fatto storico) | 4. partirò (futuro)"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Ripasso 2 — Congiuntivo. Completa:\n1. Penso che lui ___ (essere) a casa.\n2. Credevo che lei ___ (venire) alla festa.\n3. È necessario che voi ___ (studiare).\n4. Speravo che loro ___ (finire) in tempo.",
               "resposta": "1. sia | 2. venisse | 3. studiate | 4. avessero finito / finissero",
               "resposta_correta": "1. sia | 2. venisse | 3. studiate | 4. avessero finito / finissero",
@@ -6455,7 +6455,7 @@
               "explicacao": "A forma correta é: 1. sia | 2. venisse | 3. studiate | 4. avessero finito / finissero"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Ripasso 3 — Periodo ipotetico. Completa:\n1. Se ___ (avere) tempo, vengo da te. (tipo 1)\n2. Se ___ (sapere) la risposta, te la direi. (tipo 2)\n3. Se ___ (studiare) di più, avresti capito. (tipo 3)",
               "resposta": "1. ho | 2. sapessi | 3. avessi studiato",
               "resposta_correta": "1. ho | 2. sapessi | 3. avessi studiato",
@@ -6468,7 +6468,7 @@
               "explicacao": "A forma correta é: 1. ho | 2. sapessi | 3. avessi studiato"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Ripasso 4 — Discorso indiretto. Trasforma:\n1. «Sono stanco.» → Ha detto che ___.\n2. «Vengo domani.» → Ha detto che ___.\n3. «Hai fame?» → Mi ha chiesto ___.\n4. «Studia!» → Mi ha detto ___.",
               "resposta": "1. era stanco | 2. sarebbe venuto il giorno dopo | 3. se avevo fame | 4. di studiare",
               "resposta_correta": "1. era stanco | 2. sarebbe venuto il giorno dopo | 3. se avevo fame | 4. di studiare",
@@ -6481,7 +6481,7 @@
               "explicacao": "A forma correta é: 1. era stanco | 2. sarebbe venuto il giorno dopo | 3. se avevo fame | 4. di studiare"
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Ripasso 5 — Pronomi combinati. Sostituisci:\n1. Ho dato il libro a lui. → ___\n2. Spiego la lezione a voi. → ___\n3. Ho portato i fiori a lei. → ___\n4. Mando il messaggio a te. → ___",
               "resposta": "1. Glielo ho dato | 2. Ve la spiego | 3. Gliele ho portate | 4. Te lo mando",
               "resposta_correta": "1. Glielo ho dato | 2. Ve la spiego | 3. Gliele ho portate | 4. Te lo mando",
@@ -6687,7 +6687,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Traduci in italiano:\n1. 'A table for four, please.'\n2. 'What do you recommend today?'\n3. 'Is service included?'",
               "resposta": "1. Un tavolo per quattro, per favore. / 2. Cosa consiglia oggi? / 3. È compreso il servizio?",
               "explicacao": "Tavolo per + numero. CONSIGLIARE = to recommend (lei-form: consiglia). COMPRESO = included (past participle of comprendere). Il servizio = the service charge (usually 10-15% in Italian restaurants).",
@@ -6718,7 +6718,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa il dialogo al ristorante:\nCameriere: 'Buonasera! Avete prenotato?'\nTu: '___ (no, non abbiamo prenotato, c'è posto per tre?)'\nCameriere: 'Sì, da questa parte. Ecco il menù.'\nTu: '___ (vorremmo ordinare)'",
               "resposta": "No, non abbiamo prenotato. C'è un tavolo per tre? / Siamo pronti per ordinare. / Potremmo ordinare?",
               "explicacao": "PRENOTARE = to book/reserve. C'È POSTO = there is space/a table. SIAMO PRONTI = we are ready. POTREMMO (condizionale) = could we — very polite.",
@@ -6918,7 +6918,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Traduci le indicazioni stradali:\n1. 'Go straight ahead'\n2. 'Turn right'\n3. 'Turn left'\n4. 'It's on the left/right'\n5. 'At the traffic light'",
               "resposta": "1. Vada/vai dritto / sempre dritto / 2. Giri/gira a destra / 3. Giri/gira a sinistra / 4. È a sinistra/destra / 5. Al semaforo",
               "explicacao": "VADA (lei formale) / VAI (tu informale) = go. GIRI (lei) / GIRA (tu) = turn. DRITTO = straight. A DESTRA = right. A SINISTRA = left. AL SEMAFORO = at the traffic light. ALL'INCROCIO = at the intersection.",
@@ -6949,7 +6949,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Alla biglietteria del treno:\nTu: 'Un biglietto per Roma, per favore.'\nImpiegato: 'Andata sola o andata e ritorno?'\nTu: '___ (andata e ritorno, seconda classe)'\nImpiegato: 'Per quando?'\nTu: '___ (domani mattina, il prima possibile)'",
               "resposta": "Andata e ritorno, seconda classe, per favore. / Per domani mattina, il prima possibile. / C'è qualcosa prima delle 9?",
               "explicacao": "ANDATA SOLA = one way. ANDATA E RITORNO = return ticket. PRIMA CLASSE / SECONDA CLASSE = first/second class. IL PRIMA POSSIBILE = as soon as possible. Il treno italiano (Trenitalia, Italo) offre tariffe diverse: Base, Economy, Super Economy.",
@@ -7167,7 +7167,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Costruisci frasi per un CV:\n1. 'I have 3 years of experience in marketing.' → ___\n2. 'I speak Italian, English and Spanish.' → ___\n3. 'I graduated in 2020.' → ___",
               "resposta": "1. Ho tre anni di esperienza nel marketing. / 2. Parlo italiano, inglese e spagnolo. / 3. Mi sono laureato/a nel 2020.",
               "explicacao": "HO ... ANNI DI ESPERIENZA = I have ... years of experience. NEL/NELLA = in the (settore). MI SONO LAUREATO/A = I graduated (from university). MI SONO DIPLOMATO/A = I graduated (from high school). SONO SPECIALIZZATO/A IN = I specialize in.",
@@ -7198,7 +7198,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario del lavoro — traduci:\n1. salary = ___\n2. boss/manager = ___\n3. colleague = ___\n4. meeting = ___\n5. deadline = ___",
               "resposta": "1. Stipendio / salario / 2. Capo / responsabile / direttore / 3. Collega / 4. Riunione / meeting / 5. Scadenza / deadline",
               "explicacao": "STIPENDIO = monthly salary (impiegati). SALARIO = hourly/daily wage. CAPO = boss (informale). RESPONSABILE = manager/supervisor (formale). COLLEGA (pl. COLLEGHI) = colleague. RIUNIONE = meeting (più formale). SCADENZA = deadline.",
@@ -7416,7 +7416,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario della casa — traduci:\n1. living room = ___\n2. bedroom = ___\n3. bathroom = ___\n4. kitchen = ___\n5. balcony = ___",
               "resposta": "1. Soggiorno / salotto / sala / 2. Camera da letto / camera / 3. Bagno / 4. Cucina / 5. Balcone / terrazzo",
               "explicacao": "SOGGIORNO = living room (formale). SALOTTO = sitting room/lounge. SALA = room/hall. CAMERA DA LETTO = bedroom (CAMERA = bedroom o room in general). BAGNO = bathroom. CUCINA = kitchen. BALCONE = balcony (small). TERRAZZO = terrace (larger).",
@@ -7447,7 +7447,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "All'agenzia immobiliare chiedi:\n1. 'Is the apartment on the top floor?' → ___\n2. 'How many square metres is it?' → ___\n3. 'Are bills included?' → ___",
               "resposta": "1. L'appartamento è all'ultimo piano? / 2. Quanti metri quadri è? / Qual è la metratura? / 3. Le bollette sono incluse? / Le spese sono comprese nell'affitto?",
               "explicacao": "ULTIMO PIANO = top floor. PRIMO PIANO = first floor (in Italy, ground floor = piano terra). METRI QUADRI (m²) = square metres. METRATURA = square footage/area. BOLLETTE = utility bills (luce, gas, acqua). SPESE CONDOMINIALI = condo fees.",
@@ -7665,7 +7665,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Dal medico, descrivi i sintomi:\n1. 'I have had a fever of 39 since yesterday.'\n2. 'I have a cough and sore throat.'\n3. 'I feel very tired and weak.'",
               "resposta": "1. Ho la febbre a 39 da ieri. / 2. Ho la tosse e mal di gola. / 3. Mi sento molto stanco/a e debole. / Mi sento spossato/a.",
               "explicacao": "HO LA FEBBRE A 39 = I have a fever of 39°C. DA IERI = since yesterday. LA TOSSE = cough. MAL DI GOLA = sore throat. MI SENTO = I feel. STANCO/A = tired. DEBOLE = weak. SPOSSATO/A = exhausted. IL RAFFREDDORE = cold (illness).",
@@ -7696,7 +7696,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "In farmacia — cosa si dice:\n1. 'Do you have something for a headache?'\n2. 'I have a prescription for antibiotics.'\n3. 'What is the dosage?'",
               "resposta": "1. Ha qualcosa per il mal di testa? / Cosa mi consiglia per il mal di testa? / 2. Ho una ricetta per gli antibiotici. / 3. Qual è il dosaggio? / Come si prende?",
               "explicacao": "HA QUALCOSA PER = do you have something for. RICETTA = prescription (medica). SENZA RICETTA = over-the-counter. DOSAGGIO = dosage. COME SI PRENDE = how do you take it. COMPRESSE = tablets. SCIROPPO = syrup. GOCCE = drops. SUPPOSTE = suppositories.",
@@ -8980,7 +8980,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Traduzi: \"Amanhã faremos uma festa.\"",
               "resposta": "Fare: irregolare. Noi → faremo. Domani = futuro.",
               "resposta_correta": "Fare: irregolare. Noi → faremo. Domani = futuro.",
@@ -9234,7 +9234,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Traduzi: \"Ela é tão inteligente quanto Marco.\"",
               "resposta": "Comparativo di uguaglianza: tanto... quanto.",
               "resposta_correta": "Comparativo di uguaglianza: tanto... quanto.",
@@ -9742,7 +9742,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Sostituisci: \"Dico la verità a voi.\"",
               "resposta": "A voi → vi.",
               "resposta_correta": "A voi → vi.",
@@ -9976,7 +9976,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Coniuga: \"Noi ci divertiamo molto.\"",
               "resposta": "Noi → ci. Il soggetto \"noi\" è spesso omesso.",
               "resposta_correta": "Noi → ci. Il soggetto \"noi\" è spesso omesso.",
@@ -10247,7 +10247,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Trasforma: \"Vi porto le pizze.\"",
               "resposta": "Vi + le → ve le.",
               "resposta_correta": "Vi + le → ve le.",
@@ -10506,7 +10506,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario dei social media — traduci:\n1. to post = ___\n2. follower = ___\n3. to tag someone = ___\n4. story = ___\n5. to go viral = ___",
               "resposta": "1. Postare / pubblicare / 2. Follower / seguace / chi ti segue / 3. Taggare qualcuno / 4. Storia / story / 5. Diventare virale",
               "explicacao": "POSTARE = to post (verbo italiano da 'post'). FOLLOWER = seguace/seguaci, ma si dice quasi sempre follower. TAGGARE = to tag. STORIA = story (Instagram/WhatsApp). DIVENTARE VIRALE = to go viral. CONDIVIDERE = to share. COMMENTARE = to comment.",
@@ -10537,7 +10537,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Descrivere la propria presenza online:\n1. 'I have 2000 followers on Instagram.' → ___\n2. 'I post every day.' → ___\n3. 'My profile is private.' → ___",
               "resposta": "1. Ho 2000 follower su Instagram. / 2. Posto/Pubblico ogni giorno. / 3. Il mio profilo e privato.",
               "explicacao": "HO ... FOLLOWER = I have ... followers (follower invariabile al plurale in italiano). OGNI GIORNO / QUOTIDIANAMENTE = every day. PRIVATO/PUBBLICO = private/public. OGNI TANTO = occasionally. DI TANTO IN TANTO = from time to time.",
@@ -10762,7 +10762,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Formule per email aziendali:\n1. Per chiedere informazioni: '___'\n2. Per inviare un allegato: '___'\n3. Per fissare un appuntamento: '___'\n4. Per concludere: '___'",
               "resposta": "1. La contatto per richiedere informazioni riguardo a... / Mi permetto di contattarla per... / 2. In allegato Le invio... / Le trasmetto in allegato... / 3. Le scrivo per fissare un appuntamento / vorrei accordarci per una call / 4. Rimango a disposizione per qualsiasi chiarimento. Cordiali saluti,",
               "explicacao": "CONTATTARE = to contact. IN ALLEGATO = attached. LE INVIO = I send you (lei formale). FISSARE UN APPUNTAMENTO = to schedule a meeting. ACCORDARSI = to arrange. RIMANGO A DISPOSIZIONE = I remain available. CORDIALI SALUTI = Kind regards.",
@@ -10793,7 +10793,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario aziendale italiano/anglicismi:\n1. brainstorming = ___\n2. feedback = ___\n3. deadline = ___\n4. deliverable = ___\n5. stakeholder = ___",
               "resposta": "1. Brainstorming = sessione creativa per generare idee / 2. Feedback = riscontro, parere, commento / 3. Deadline = scadenza, termine / 4. Deliverable = prodotto/risultato da consegnare / 5. Stakeholder = parte interessata, portatore di interesse",
               "explicacao": "Questi anglicismi sono ormai standard nel linguaggio aziendale italiano. L'Accademia della Crusca li tollera nel contesto professionale. SCADENZA = deadline (parola italiana equivalente). RISCONTRO = feedback. TERMINE = deadline. I puristi preferiscono i termini italiani, ma in azienda si usa spesso l'inglese.",
@@ -11018,7 +11018,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Fenomeni sociali italiani — spiega:\n1. Il bamboccione = ___\n2. La fuga dei cervelli = ___\n3. Il precariato = ___",
               "resposta": "1. Bamboccione = giovane adulto che vive ancora con i genitori (slang, spesso peggiorativo) / 2. Fuga dei cervelli = brain drain, emigrazione di giovani talenti verso l'estero / 3. Precariato = situazione lavorativa instabile, contratti a tempo determinato, mancanza di sicurezza",
               "explicacao": "BAMBOCCIONE (da bambino + -one) = grown-up still living at home. FUGA DEI CERVELLI (brain drain) = un problema serio in Italia, specialmente per medici e ricercatori. PRECARIATO = precarious employment — molto diffuso tra i giovani italiani (under 35).",
@@ -11049,7 +11049,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Il divario Nord-Sud italiano — descrivi i contrasti:\n1. Economia: Nord ___ / Sud ___\n2. Occupazione: Nord ___ / Sud ___\n3. Infrastrutture: Nord ___ / Sud ___",
               "resposta": "1. Nord: economia piu sviluppata, industria forte / Sud: economia piu debole, dipendenza da turismo e agricoltura / 2. Nord: tasso di disoccupazione basso / Sud: disoccupazione piu alta, specialmente giovanile / 3. Nord: infrastrutture moderne / Sud: infrastrutture piu carenti",
               "explicacao": "IL DIVARIO NORD-SUD (il Mezzogiorno) = una delle questioni sociali piu complesse d'Italia. Il PIL pro capite al Nord e significativamente piu alto. La CASSA DEL MEZZOGIORNO (1950-1984) fu un tentativo di industrializzare il Sud. Il problema persiste nonostante decenni di politiche.",
@@ -11274,7 +11274,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Esprimere gradazione di certezza:\n1. Certezza: '___'\n2. Alta probabilita: '___'\n3. Possibilita: '___'\n4. Dubbio: '___'",
               "resposta": "1. Sono certo/a che... / E indubbiamente... / Senza dubbio... / 2. E molto probabile che... / Quasi certamente... / 3. E possibile che... / Forse... / Potrebbe essere... / 4. Non sono sicuro/a che... / Ho qualche dubbio sul fatto che...",
               "explicacao": "SONO CERTO CHE + indicativo (certezza). SONO CERTO CHE + congiuntivo (dubbio formale). E PROBABILE CHE + congiuntivo. E POSSIBILE CHE + congiuntivo. FORSE + indicativo o congiuntivo. HON SONO SICURO/A CHE + congiuntivo. La gradazione e importante per comunicare con precisione.",
@@ -11305,7 +11305,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Trasforma le frasi usando il linguaggio argomentativo:\n1. 'Penso che sia sbagliato.' → piu formale: '___'\n2. 'Non mi piace.' → piu argomentato: '___'\n3. 'Hai ragione.' → con riserva: '___'",
               "resposta": "1. A mio avviso, / Sono dell'opinione che / Ritengo che sia sbagliato. / 2. Non sono convinto/a dell'efficacia di questa soluzione / Non condivido questo approccio per le seguenti ragioni... / 3. In parte condivido la tua posizione, tuttavia...",
               "explicacao": "A MIO AVVISO = in my opinion (formale). SONO DELL'OPINIONE = I am of the opinion. CONDIVIDERE = to share (un punto di vista). IN PARTE = in part/partly. TUTTAVIA = however. Il registro argomentativo usa strutture piu elaborate della conversazione quotidiana.",
@@ -11502,7 +11502,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Parole di origine dialettale nell'italiano standard:\n1. 'Lazzarone' viene dal napoletano e significa ___\n2. 'Barista' (da bar) e entrato nell'italiano da ___\n3. 'Tramezzino' e stato inventato a ___",
               "resposta": "1. Lazzarone = sfaccendato, vagabondo (dal napoletano 'lazzaro') / 2. Barista = parola italiana moderna (dal 1930 circa) diffusa a livello internazionale / 3. Tramezzino = inventato a Torino nel 1925 (dal verbo 'tramezzare')",
               "explicacao": "L'italiano ha assorbito molti termini regionali. LAZZARONE (napoletano) = scoundrel. TRAMEZZINO = triangle sandwich (Torino). PASSEGGIATA (diffusa da toscana). SPRITZ (veneto). GRAPPA (lombardo-veneto). Ogni regione ha contribuito al lessico italiano.",
@@ -11533,7 +11533,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Differenze lessicali regionali in italiano — abbina:\nMilano / Torino vs Roma / Napoli:\n1. 'Semaforo' → Milano / Roma = ___\n2. 'Panino imbottito' → Milano = 'panino' / Roma = ___\n3. 'Autobus' → Milano / Roma = ___",
               "resposta": "1. Semaforo (standard) — usato ovunque, ma a Milano anche 'cipolla' (colloq.) / 2. Roma: 'tramezzino' per il sandwich triangolare, 'panino' per baguette imbottita / 3. Autobus ovunque, ma a Roma anche 'corriera' o 'bus' in slang",
               "explicacao": "Le VARIETA REGIONALI creano piccole differenze lessicali anche nella stessa lingua standard. A Milano: PANETTONE, RISOTTO, COTOLETTA. A Roma: CACIO, GRICIA, CARBONARA. A Napoli: CAFE (per caffe), SCIUEQUA (acqua). Il cibo e spesso il terreno piu marcato delle varieta regionali.",
@@ -11787,7 +11787,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa: \"Spero che Marco ___ (arrivare) in tempo.\"",
               "resposta": "Sperare che → congiuntivo. Lui → arrivi.",
               "resposta_correta": "Sperare che → congiuntivo. Lui → arrivi.",
@@ -12047,7 +12047,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Traduzi cortesemente: \"Posso avere il conto?\"",
               "resposta": "Condizionale per cortesia: potrei, vorrei.",
               "resposta_correta": "Condizionale per cortesia: potrei, vorrei.",
@@ -12288,7 +12288,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa: \"La ragazza ___ ho visto è bella.\"",
               "resposta": "Complemento diretto (ho visto la ragazza) → \"che\".",
               "resposta_correta": "Complemento diretto (ho visto la ragazza) → \"che\".",
@@ -12548,7 +12548,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Trasforma: \"Hanno costruito il ponte nel 1900.\"",
               "resposta": "Passato passivo: essere al PP + participio. Il ponte (m) → costruito.",
               "resposta_correta": "Passato passivo: essere al PP + participio. Il ponte (m) → costruito.",
@@ -12827,7 +12827,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Trasforma: \"Mentre studiava, ascoltava musica.\"",
               "resposta": "Gerundio sostituisce \"mentre\" + imperfetto.",
               "resposta_correta": "Gerundio sostituisce \"mentre\" + imperfetto.",
@@ -13068,7 +13068,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa: \"Vorrei che lui ___ (venire) alla festa.\"",
               "resposta": "Vorrire che → congiuntivo. Venire imperfetto: lui → venisse.",
               "resposta_correta": "Vorrire che → congiuntivo. Venire imperfetto: lui → venisse.",
@@ -13328,7 +13328,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa: \"Lui ___ (volere, neg.) mangiare la verdura.\"",
               "resposta": "Mangiare usa avere → ha voluto. Non ha voluto mangiare.",
               "resposta_correta": "Mangiare usa avere → ha voluto. Non ha voluto mangiare.",
@@ -13620,7 +13620,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Identifica le figure retoriche:\n1. 'Silenzio assordante' = ___\n2. 'Era forte come un toro' = ___\n3. 'Aspetto da un'eternita' = ___\n4. 'La vita e un viaggio' = ___",
               "resposta": "1. Ossimoro (silenzio + assordante = contraddizione) / 2. Similitudine (forte COME un toro) / 3. Iperbole (esagerazione) / 4. Metafora (vita = viaggio, senza come)",
               "explicacao": "OSSIMORO = accostamento di termini contraddittori. SIMILITUDINE = paragone con COME/QUALE. IPERBOLE = esagerazione. METAFORA = paragone implicito senza 'come'. METONIMIA = parte per il tutto o causa per effetto ('leggere Dante' = leggere le opere di Dante). Figure fondamentali per l'analisi testuale.",
@@ -13651,7 +13651,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "La poesia di Leopardi — analizza L'Infinito (1819):\n'Sempre caro mi fu quest'ermo colle...'\n1. Tema principale: ___\n2. Figura retorica nel titolo: ___\n3. Contrasto centrale: ___",
               "resposta": "1. Tema: il contrasto tra infinito spaziale/temporale e limiti fisici dell'uomo (la siepe che nasconde l'orizzonte) / 2. Il titolo 'L'Infinito' e una metonimia/astrazione / 3. Contrasto tra finito (la siepe, il colle) e infinito (l'immaginazione, l'eterno)",
               "explicacao": "LEOPARDI (1798-1837) = massimo poeta dell'Ottocento italiano. L'INFINITO: breve idillio (15 endecasillabi). ERMO COLLE = isolated hill. LA SIEPE che impedisce la vista = simbolo dei limiti umani. L'immaginazione supera il limite fisico. NAUFRAGIO = l'immergersi nell'infinito.",
@@ -13858,7 +13858,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Linguaggio giornalistico — trasforma le frasi:\n1. Frase comune: 'I carabinieri hanno arrestato tre persone.' → Titolo: ___\n2. Frase comune: 'La borsa ha perso il 2%.' → Titolo: ___",
               "resposta": "1. TRE ARRESTI DEI CARABINIERI / CARABINIERI: TRE FERMATI / BLITZ DEI CC, TRE IN MANETTE / 2. BORSA IN PICCHIATA: MENO 2% / CROLLO IN BORSA / PIAZZA AFFARI PERDE DUE PUNTI",
               "explicacao": "Titolo giornalistico: NOMINALIZZAZIONE (sostantivi invece di verbi), ELISIONE degli articoli, PRESENTE o PARTICIPIO PASSATO. 'IN MANETTE' = handcuffed (idioma). 'PIAZZA AFFARI' = Milano Stock Exchange (metafora). 'IN PICCHIATA' = falling sharply. Linguaggio vivace e compatto.",
@@ -13889,7 +13889,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario giornalistico italiano — spiega:\n1. 'Lo scoop' = ___\n2. 'Il retroscena' = ___\n3. 'La velina' = ___\n4. 'Il corsivo' = ___",
               "resposta": "1. Scoop = notizia esclusiva (anglicismo) / 2. Retroscena = behind-the-scenes information, cosa succede dietro le quinte / 3. Velina = nota informativa inviata ai giornali (oggi: comunicato stampa; storicamente: nota del governo fascista) / 4. Corsivo = editoriale di commento (o il carattere tipografico italics)",
               "explicacao": "SCOOP = exclusive news story. RETROSCENA = background story. VELINA (dal tipo di carta): nell'era fascista = note di censura ai giornali; oggi = press release informale. CORSIVO = columnist piece (giornale) o italic font (tipografia). REDAZIONE = newsroom. CAPOSERVIZIO = section editor.",
@@ -14096,7 +14096,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Vocabolario economico — traduci:\n1. inflation = ___\n2. interest rate = ___\n3. budget deficit = ___\n4. trade balance = ___\n5. unemployment rate = ___",
               "resposta": "1. Inflazione / 2. Tasso di interesse / 3. Deficit di bilancio / disavanzo / 4. Bilancia commerciale / saldo commerciale / 5. Tasso di disoccupazione",
               "explicacao": "INFLAZIONE = inflation. TASSO DI INTERESSE = interest rate. DEFICIT = disavanzo (spesa > entrate). AVANZO = surplus (entrate > spesa). BILANCIA COMMERCIALE = differenza tra esportazioni e importazioni. TASSO DI DISOCCUPAZIONE = percentage of workforce unemployed. PIL, INFLAZIONE, TASSO = i tre principali indicatori macroeconomici.",
@@ -14127,7 +14127,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "PMI e grande impresa — spiega:\n1. PMI = ___\n2. Multinazionale = ___\n3. Start-up = ___\n4. Holding = ___",
               "resposta": "1. PMI = Piccole e Medie Imprese (piccola: <50 dipendenti; media: 50-250 dipendenti) / 2. Multinazionale = impresa con operazioni in piu paesi / 3. Start-up = nuova impresa innovativa in fase di crescita / 4. Holding = societa che controlla altre societa attraverso partecipazioni azionarie",
               "explicacao": "Le PMI sono il 95% delle imprese italiane e impiegano il 70% dei lavoratori. Distretti industriali (Prato, Carpi, Montebelluna) = cluster di PMI specializzate. GRANDE IMPRESA = >250 dipendenti (es. Fiat/Stellantis, Enel, ENI). START-UP INNOVATIVA = categoria legale italiana (agevolazioni fiscali).",
@@ -14334,7 +14334,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Le istituzioni italiane — funzioni:\n1. Presidente della Repubblica = ___\n2. Presidente del Consiglio = ___\n3. Corte Costituzionale = ___\n4. Quirinale = ___",
               "resposta": "1. Presidente della Repubblica = capo dello Stato, eletto dal Parlamento per 7 anni, funzione di garanzia e rappresentanza / 2. Presidente del Consiglio = capo del governo (Premier), guida il Consiglio dei Ministri / 3. Corte Costituzionale = controlla la costituzionalita delle leggi / 4. Quirinale = sede del Presidente della Repubblica (per metonimia = il Presidente stesso)",
               "explicacao": "La PRESIDENZA DELLA REPUBBLICA e una funzione di garanzia, non di governo attivo (diverso da USA o Francia). Il QUIRINALE (palazzo reale sul colle Quirinale a Roma) = residenza del Presidente. PALAZZO CHIGI = sede del governo (per metonimia = il governo). MONTECITORIO = Camera. PALAZZO MADAMA = Senato.",
@@ -14365,7 +14365,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Il linguaggio parlamentare — spiega:\n1. Decreto-legge = ___\n2. Disegno di legge (DDL) = ___\n3. Emendamento = ___\n4. Promulgare = ___",
               "resposta": "1. Decreto-legge = atto del governo con forza di legge immediata, da convertire in legge entro 60 giorni / 2. Disegno di legge = proposta di legge presentata dal governo al Parlamento / 3. Emendamento = modifica proposta a un testo di legge / 4. Promulgare = il Presidente della Repubblica firma e rende esecutiva la legge",
               "explicacao": "DECRETO-LEGGE (DL) = emergency government decree (immediate force). DECRETO LEGISLATIVO = delegated legislation. LEGGE DI BILANCIO = budget law (approvata ogni anno in autunno). PROMULGAZIONE = presidential signing. ITER PARLAMENTARE = parliamentary process. VOTO DI FIDUCIA = vote of confidence.",
@@ -14572,7 +14572,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Grandi film del cinema italiano — abbina regista e opera:\n1. Ladri di biciclette (1948) = ___\n2. La dolce vita (1960) = ___\n3. Il buono, il brutto, il cattivo (1966) = ___\n4. La grande bellezza (2013) = ___",
               "resposta": "1. Vittorio De Sica / 2. Federico Fellini / 3. Sergio Leone / 4. Paolo Sorrentino",
               "explicacao": "DE SICA = padre del Neorealismo (Sciuscia, Umberto D). FELLINI (8 ½, Amarcord) = cinema onirico e autobiografico. SERGIO LEONE = Spaghetti Western (C'era una volta il West). SORRENTINO (Oscar 2014 per La grande bellezza). Anche: VISCONTI (Il Gattopardo), BERTOLUCCI (Ultimo tango a Parigi), PASOLINI (Accattone).",
@@ -14603,7 +14603,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Il Festival di Venezia — spiega:\n1. Quando si tiene: ___\n2. Premio principale: ___\n3. Perche e importante: ___",
               "resposta": "1. Settembre, Lido di Venezia (solitamente late agosto/settembre, circa 10 giorni) / 2. Leone d'Oro = massimo riconoscimento per il miglior film / 3. E il piu antico festival cinematografico del mondo (dal 1932), apre la stagione dei premi e seleziona film da tutto il mondo",
               "explicacao": "MOSTRA INTERNAZIONALE D'ARTE CINEMATOGRAFICA DI VENEZIA = ufficialmente 'Mostra del Cinema di Venezia'. LEONE D'ORO = Golden Lion (massimo premio). LEONE D'ARGENTO = Silver Lion. COPPA VOLPI = miglior attore/attrice. Il festival e organizzato dalla Biennale di Venezia. Anticipatrice degli Oscar: molti vincitori di Venezia poi vincono l'Oscar.",
@@ -14842,7 +14842,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa: \"Pensavo che loro ___ (andare) via.\"",
               "resposta": "Andare usa essere. Trapassato: fossero + andati (m.pl.).",
               "resposta_correta": "Andare usa essere. Trapassato: fossero + andati (m.pl.).",
@@ -15095,7 +15095,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Completa (Tipo 2): \"Se ___ (essere) ricco, comprerei una villa.\"",
               "resposta": "Se + cong. imperfetto. Essere: io → fossi.",
               "resposta_correta": "Se + cong. imperfetto. Essere: io → fossi.",
@@ -15348,7 +15348,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Trasforma: \"Vieni qui!\" → Gli ha detto ___",
               "resposta": "Imperativo → di + infinito. Qui → lì.",
               "resposta_correta": "Imperativo → di + infinito. Qui → lì.",
@@ -15602,7 +15602,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Scegli il connettivo giusto: \"___ è arrivato, abbiamo iniziato la riunione.\"",
               "resposta": "Connettivo temporale di immediata successione.",
               "resposta_correta": "Connettivo temporale di immediata successione.",
@@ -15855,7 +15855,7 @@
               ]
             },
             {
-              "tipo": "escolha",
+              "tipo": "revelar",
               "pergunta": "Nominalizza: \"capire bene un testo\"",
               "resposta": "Nominalizzazione formale.",
               "resposta_correta": "Nominalizzazione formale.",
