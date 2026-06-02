@@ -4960,5 +4960,805 @@
     "categoria": "elettronica",
     "difficolta": "facile",
     "xp_base": 6
+  },
+  {
+    "id": 64791,
+    "italiano": "olio extravergine",
+    "trad_port": "azeite extra virgem",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 95807,
+    "italiano": "pasticciotto",
+    "trad_port": "pastelinho",
+    "categoria": "doce",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 80796,
+    "italiano": "ricetta",
+    "trad_port": "receita",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 41873,
+    "italiano": "pera",
+    "trad_port": "pera",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 36026,
+    "italiano": "formaggio",
+    "trad_port": "queijo",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 50725,
+    "italiano": "peperoncino",
+    "trad_port": "pimenta",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95984,
+    "italiano": "arancia",
+    "trad_port": "laranja",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 38315,
+    "italiano": "pollo",
+    "trad_port": "frango",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67869,
+    "italiano": "aglio",
+    "trad_port": "alho",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 46815,
+    "italiano": "cotolette",
+    "trad_port": "cotilletos",
+    "categoria": "carne",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 35017,
+    "italiano": "aperitivo",
+    "trad_port": "apetite",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42173,
+    "italiano": "basilico",
+    "trad_port": "manjericão",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 80159,
+    "italiano": "equilibrio nutrizionale",
+    "trad_port": "equilíbrio nutricional",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 49219,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 77178,
+    "italiano": "rosmarino",
+    "trad_port": "alecrim",
+    "categoria": "erva",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 61598,
+    "italiano": "prezzemolo",
+    "trad_port": "salsão",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 89762,
+    "italiano": "friggerre",
+    "trad_port": "fritar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 74195,
+    "italiano": "cappuccino",
+    "trad_port": "capuchino",
+    "categoria": "bebida",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 83094,
+    "italiano": "dolce",
+    "trad_port": "doce",
+    "categoria": "confeitaria",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 90065,
+    "italiano": "grana",
+    "trad_port": "grana padano",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 32777,
+    "italiano": "caffellatte",
+    "trad_port": "café com leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 65084,
+    "italiano": "zuccheri naturali",
+    "trad_port": "açúcares naturais",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29849,
+    "italiano": "ricotta",
+    "trad_port": "riquitá",
+    "categoria": "queijo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 57408,
+    "italiano": "erbe aromatiche",
+    "trad_port": "ervas aromáticas",
+    "categoria": "condimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 84298,
+    "italiano": "fibre",
+    "trad_port": "fibras",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 43403,
+    "italiano": "mela",
+    "trad_port": "maçã",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 76238,
+    "italiano": "tè",
+    "trad_port": "chá",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 39490,
+    "italiano": "panna",
+    "trad_port": "creme",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 63822,
+    "italiano": "gelato",
+    "trad_port": "sorvete",
+    "categoria": "sobra",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75269,
+    "italiano": "cucina italiana",
+    "trad_port": "cozinha italiana",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 82691,
+    "italiano": "vino bianco",
+    "trad_port": "vinho branco",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 34493,
+    "italiano": "aceto",
+    "trad_port": "vinagre",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 85475,
+    "italiano": "birra",
+    "trad_port": "cerveja",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 39610,
+    "italiano": "sale",
+    "trad_port": "sal",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 25964,
+    "italiano": "pane",
+    "trad_port": "pão",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 67221,
+    "italiano": "infornare",
+    "trad_port": "assar no forno",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 22207,
+    "italiano": "bollire",
+    "trad_port": "fervura",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 45001,
+    "italiano": "polpo",
+    "trad_port": "polvo",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 86622,
+    "italiano": "mozzarella",
+    "trad_port": "mozzarela",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 39953,
+    "italiano": "frutti di mare",
+    "trad_port": "peixes e frutos do mar",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 85652,
+    "italiano": "zucchero",
+    "trad_port": "açúcar",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 34526,
+    "italiano": "banano",
+    "trad_port": "banana",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42111,
+    "italiano": "carboidrati",
+    "trad_port": "carboidratos",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 35044,
+    "italiano": "vitamina",
+    "trad_port": "vitamina",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 32677,
+    "italiano": "riso",
+    "trad_port": "arroz",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 70708,
+    "italiano": "pecorino",
+    "trad_port": "pecorino",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 41134,
+    "italiano": "lasagne",
+    "trad_port": "lasanha",
+    "categoria": "prato",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 52500,
+    "italiano": "latte",
+    "trad_port": "leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13869,
+    "italiano": "minerali",
+    "trad_port": "minerais",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 56804,
+    "italiano": "stufare",
+    "trad_port": "refogar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 35861,
+    "italiano": "curcuma",
+    "trad_port": "cúrcuma",
+    "categoria": "condimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 76488,
+    "italiano": "fragola",
+    "trad_port": "morango",
+    "categoria": "fruta",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47624,
+    "italiano": "salmone",
+    "trad_port": "salmon",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69792,
+    "italiano": "saltare",
+    "trad_port": "saltear",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 46579,
+    "italiano": "vino rosso",
+    "trad_port": "vinho tinto",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 10283,
+    "italiano": "friggere",
+    "trad_port": "fritar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 63683,
+    "italiano": "pane di segale",
+    "trad_port": "pão de centeio",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 18728,
+    "italiano": "maiale",
+    "trad_port": "porco",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 88977,
+    "italiano": "antiossidante",
+    "trad_port": "antioxido",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 40202,
+    "italiano": "mescolare",
+    "trad_port": "misturar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 23256,
+    "italiano": "tonno",
+    "trad_port": "atum",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 95297,
+    "italiano": "omeostasi",
+    "trad_port": "homeostase",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 72632,
+    "italiano": "succo di frutta",
+    "trad_port": "suco de fruta",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70817,
+    "italiano": "cantuccini",
+    "trad_port": "cantucci",
+    "categoria": "docinho",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21344,
+    "italiano": "tiramisù",
+    "trad_port": "tiremisu",
+    "categoria": "doce",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 59733,
+    "italiano": "polpette",
+    "trad_port": "bolas de carne",
+    "categoria": "prato",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 51274,
+    "italiano": "cuocere",
+    "trad_port": "cozinhar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 10413,
+    "italiano": "timo",
+    "trad_port": "timó",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 55623,
+    "italiano": "anguria",
+    "trad_port": "melancia",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 73372,
+    "italiano": "scolare",
+    "trad_port": "escorrer",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41441,
+    "italiano": "minestrone",
+    "trad_port": "minestrone",
+    "categoria": "sopa",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 44189,
+    "italiano": "proteine",
+    "trad_port": "proteinas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 42674,
+    "italiano": "pizza margherita",
+    "trad_port": "pizza maraghrinha",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60756,
+    "italiano": "kiwi",
+    "trad_port": "quiwi",
+    "categoria": "fruta",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 10703,
+    "italiano": "limone",
+    "trad_port": "limão",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 94794,
+    "italiano": "mirtilli",
+    "trad_port": "mirtilos",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 75360,
+    "italiano": "olio",
+    "trad_port": "azeite",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29982,
+    "italiano": "ciambella",
+    "trad_port": "rosca",
+    "categoria": "confeitaria",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 97400,
+    "italiano": "maggiorana",
+    "trad_port": "orégano",
+    "categoria": "erva",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 74711,
+    "italiano": "cantucci",
+    "trad_port": "cantucci",
+    "categoria": "queijo/cookie",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 43037,
+    "italiano": "basilico fresco",
+    "trad_port": "manjericão fresco",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 44824,
+    "italiano": "gorgonzola",
+    "trad_port": "gorgonzola",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 30921,
+    "italiano": "salvia",
+    "trad_port": "sálvia",
+    "categoria": "ervas",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 63283,
+    "italiano": "parmigiano",
+    "trad_port": "parmesão",
+    "categoria": "queijo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 47080,
+    "italiano": "caffè",
+    "trad_port": "café",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 66575,
+    "italiano": "seppia",
+    "trad_port": "lula",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 98445,
+    "italiano": "preparazione",
+    "trad_port": "preparaçao",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 15379,
+    "italiano": "carne",
+    "trad_port": "carne",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91678,
+    "italiano": "taleggio",
+    "trad_port": "taleggio",
+    "categoria": "queijo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19022,
+    "italiano": "cocomo",
+    "trad_port": "abacaxi",
+    "categoria": "fruta",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 28062,
+    "italiano": "manzo",
+    "trad_port": "boi",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 30406,
+    "italiano": "pasta",
+    "trad_port": "massa",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 89573,
+    "italiano": "ingredienti",
+    "trad_port": "ingredientes",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 28521,
+    "italiano": "pomodoro",
+    "trad_port": "tomate",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 22437,
+    "italiano": "focaccia",
+    "trad_port": "focazza",
+    "categoria": "padaria",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 23187,
+    "italiano": "grassi sani",
+    "trad_port": "gorduras sãas",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 31900,
+    "italiano": "grigliare",
+    "trad_port": "assar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75937,
+    "italiano": "pesce",
+    "trad_port": "peixe",
+    "categoria": "alimento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73464,
+    "italiano": "caffellatte",
+    "trad_port": "café com leite",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47714,
+    "italiano": "provolone",
+    "trad_port": "provola",
+    "categoria": "queijo",
+    "difficolta": "medio",
+    "xp_base": 7
   }
 ]
