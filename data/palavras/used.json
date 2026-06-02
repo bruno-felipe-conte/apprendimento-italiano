@@ -5760,5 +5760,805 @@
     "categoria": "queijo",
     "difficolta": "medio",
     "xp_base": 7
+  },
+  {
+    "id": 65165,
+    "italiano": "mi dispiace",
+    "trad_port": "lamento",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 33437,
+    "italiano": "fratello",
+    "trad_port": "irmão",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 75226,
+    "italiano": "qualificazioni",
+    "trad_port": "classificação",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 32299,
+    "italiano": "ho dimenticato",
+    "trad_port": "esqueci",
+    "categoria": "passado",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 17226,
+    "italiano": "kilobyte",
+    "trad_port": "quilobytes",
+    "categoria": "unidade",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 45052,
+    "italiano": "titolare",
+    "trad_port": "titular",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73068,
+    "italiano": "sì certo",
+    "trad_port": "sim claro",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25228,
+    "italiano": "nessuno lo sapeva",
+    "trad_port": "ninguém sabia",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 62469,
+    "italiano": "non lo so",
+    "trad_port": "eu não sei",
+    "categoria": "negativo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93143,
+    "italiano": "affine",
+    "trad_port": "afim",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 25766,
+    "italiano": "capoclanella",
+    "trad_port": "líder",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 92492,
+    "italiano": "medaglia",
+    "trad_port": "medalha",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 70497,
+    "italiano": "se ne va di qui",
+    "trad_port": "ele sai daqui",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 39506,
+    "italiano": "record",
+    "trad_port": "recorde",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29647,
+    "italiano": "buona fortuna",
+    "trad_port": "boa sorte",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 13957,
+    "italiano": "armonia",
+    "trad_port": "harmonia",
+    "categoria": "musica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 30679,
+    "italiano": "papà",
+    "trad_port": "pai",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29447,
+    "italiano": "si è fermato",
+    "trad_port": "ele parou",
+    "categoria": "passado",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 29733,
+    "italiano": "tempo migliore",
+    "trad_port": "melhor tempo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25668,
+    "italiano": "improvvisare",
+    "trad_port": "improvisar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 23727,
+    "italiano": "pixel",
+    "trad_port": "píxeis",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41399,
+    "italiano": "zio",
+    "trad_port": "tio",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 14976,
+    "italiano": "finale",
+    "trad_port": "final",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 11759,
+    "italiano": "vendita",
+    "trad_port": "venda",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62190,
+    "italiano": "quante volte",
+    "trad_port": "quantas vezes",
+    "categoria": "expressao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 92149,
+    "italiano": "rappresentazione",
+    "trad_port": "representação",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 64863,
+    "italiano": "4K",
+    "trad_port": "4K",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 69991,
+    "italiano": "scusi",
+    "trad_port": "desculpe",
+    "categoria": "perdão",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 63593,
+    "italiano": "suonare",
+    "trad_port": "tocar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81148,
+    "italiano": "hai ragione",
+    "trad_port": "você tem razão",
+    "categoria": "afirmação",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90109,
+    "italiano": "sinfonia",
+    "trad_port": "sinfonia",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19326,
+    "italiano": "piano di lavoro",
+    "trad_port": "plano de trabalho",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 14447,
+    "italiano": "squadra",
+    "trad_port": "time",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 70682,
+    "italiano": "torneio",
+    "trad_port": "torneio",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81059,
+    "italiano": "strategia",
+    "trad_port": "estratégia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 90039,
+    "italiano": "perché non lo dici",
+    "trad_port": "por que você não diz",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 46880,
+    "italiano": "lasciami in pace",
+    "trad_port": "deixa-me em paz",
+    "categoria": "imperativo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 14810,
+    "italiano": "obiettivi",
+    "trad_port": "objetivos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 94218,
+    "italiano": "streaming",
+    "trad_port": "streaming",
+    "categoria": "servico",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 93379,
+    "italiano": "stagione",
+    "trad_port": "temporada",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 88849,
+    "italiano": "competizioni",
+    "trad_port": "competições",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 71501,
+    "italiano": "e se fosse",
+    "trad_port": "e se fosse",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 17167,
+    "italiano": "all'ordine!",
+    "trad_port": "em ordem!",
+    "categoria": "imperativo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 65830,
+    "italiano": "orchestra",
+    "trad_port": "orquestra",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 97829,
+    "italiano": "quando torni?",
+    "trad_port": "quando volta?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47380,
+    "italiano": "cantare",
+    "trad_port": "cantar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 80725,
+    "italiano": "tesserato",
+    "trad_port": "registrado",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 45681,
+    "italiano": "scusat",
+    "trad_port": "desculpem",
+    "categoria": "plural",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 24052,
+    "italiano": "allenatore",
+    "trad_port": "treinador",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 45219,
+    "italiano": "mi sembra strano",
+    "trad_port": "me parece estranho",
+    "categoria": "opinião",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 65814,
+    "italiano": "melodia",
+    "trad_port": "melodia",
+    "categoria": "musica",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 62718,
+    "italiano": "stanco della vita",
+    "trad_port": "cansado da vida",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 17832,
+    "italiano": "nonno",
+    "trad_port": "avô",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 64846,
+    "italiano": "non c'è problema",
+    "trad_port": "não há problema",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 30883,
+    "italiano": "campione",
+    "trad_port": "campeão",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 35776,
+    "italiano": "budget annuale",
+    "trad_port": "orçamento anual",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90620,
+    "italiano": "beato chi",
+    "trad_port": "feliz aquele que",
+    "categoria": "frase latina",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 31118,
+    "italiano": "marketing",
+    "trad_port": "marketing",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 65014,
+    "italiano": "come va?",
+    "trad_port": "vai bem?",
+    "categoria": "frase",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 63624,
+    "italiano": "mi fa venire fame",
+    "trad_port": "dá fome",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 94742,
+    "italiano": "a presto",
+    "trad_port": "até mais",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30940,
+    "italiano": "megabyte",
+    "trad_port": "megabytes",
+    "categoria": "unidade",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 46391,
+    "italiano": "complimenti",
+    "trad_port": "parabéns",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 14599,
+    "italiano": "per favore",
+    "trad_port": "por favor",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 40854,
+    "italiano": "gara ufficiale",
+    "trad_port": "corrida oficial",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73822,
+    "italiano": "non importa",
+    "trad_port": "não importa",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 33145,
+    "italiano": "mamma",
+    "trad_port": "mamãe",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 41023,
+    "italiano": "ciao",
+    "trad_port": "oi",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 44427,
+    "italiano": "terabyte",
+    "trad_port": "terabytes",
+    "categoria": "unidade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 81010,
+    "italiano": "prego",
+    "trad_port": "de nada",
+    "categoria": "politeza",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 51805,
+    "italiano": "semifinali",
+    "trad_port": "semifinais",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 70423,
+    "italiano": "nipoti",
+    "trad_port": "netos",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 73006,
+    "italiano": "cosa c'è di nuovo",
+    "trad_port": "o que há de novo",
+    "categoria": "frase",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 10930,
+    "italiano": "cognato",
+    "trad_port": "cunhado",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 61150,
+    "italiano": "cugino",
+    "trad_port": "primo/primas",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69317,
+    "italiano": "screen resolution",
+    "trad_port": "resolução de tela",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 74962,
+    "italiano": "progetto",
+    "trad_port": "projeto",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 20976,
+    "italiano": "comporre",
+    "trad_port": "compor",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 79727,
+    "italiano": "gigabyte",
+    "trad_port": "gigabytes",
+    "categoria": "unidade",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 67087,
+    "italiano": "concerto",
+    "trad_port": "conserto",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 79175,
+    "italiano": "tanti auguri",
+    "trad_port": "muitas felicidades",
+    "categoria": "expressao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 17040,
+    "italiano": "riserve",
+    "trad_port": "reservas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 23117,
+    "italiano": "podio",
+    "trad_port": "pódio",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 71014,
+    "italiano": "full HD",
+    "trad_port": "full HD",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 43939,
+    "italiano": "record personale",
+    "trad_port": "recorde pessoal",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 22877,
+    "italiano": "aziendale",
+    "trad_port": "empresarial",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77012,
+    "italiano": "arrivederci",
+    "trad_port": "até logo",
+    "categoria": "saluto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59767,
+    "italiano": "mi ha fatto arrabbiare",
+    "trad_port": "deixou-me irritado",
+    "categoria": "passado",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 67486,
+    "italiano": "non mi riguarda",
+    "trad_port": "não me diz respeito",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 21564,
+    "italiano": "8K",
+    "trad_port": "8K",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 29357,
+    "italiano": "buongiorno",
+    "trad_port": "bom dia",
+    "categoria": "saluto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 78574,
+    "italiano": "come stai?",
+    "trad_port": "como está?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 41660,
+    "italiano": "partita",
+    "trad_port": "partida/jogo",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 30045,
+    "italiano": "investimenti",
+    "trad_port": "investimentos",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 34421,
+    "italiano": "dove vai?",
+    "trad_port": "para onde vai?",
+    "categoria": "frase",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 72213,
+    "italiano": "vorrei una birra",
+    "trad_port": "quero uma cerveja",
+    "categoria": "expressao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 58134,
+    "italiano": "sorella",
+    "trad_port": "irmã",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 20139,
+    "italiano": "non mi sento bene",
+    "trad_port": "não estou bem",
+    "categoria": "frase",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84461,
+    "italiano": "grazie",
+    "trad_port": "obrigado",
+    "categoria": "politeza",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 47973,
+    "italiano": "rendita",
+    "trad_port": "rendimento",
+    "categoria": "financeiro",
+    "difficolta": "dificele",
+    "xp_base": 8
   }
 ]
