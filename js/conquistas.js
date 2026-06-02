@@ -112,7 +112,7 @@ const Conquistas = {
       emoji: '📖',
       nome: 'Grammatico',
       descricao: 'Completar 10 lições de gramática',
-      verificar(p) { return (p.licoes_concluidas || []).length >= 10; }
+      verificar(p) { return (p.grammatica_completadas || []).length >= 10; }
     },
     {
       id: 'precisione',
@@ -126,14 +126,14 @@ const Conquistas = {
       emoji: '🌙',
       nome: 'Notturno',
       descricao: 'Estudar após as 22h',
-      verificar(p) { return new Date().getHours() >= 22; }
+      verificar(p) { return (p.ultimo_estudo_hora || -1) >= 22; }
     },
     {
       id: 'mattiniero',
       emoji: '☀️',
       nome: 'Mattiniero',
       descricao: 'Estudar antes das 7h da manhã',
-      verificar(p) { return new Date().getHours() < 7; }
+      verificar(p) { const h = p.ultimo_estudo_hora; return h !== undefined && h >= 0 && h < 7; }
     }
   ],
 

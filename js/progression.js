@@ -124,6 +124,7 @@ const Progressao = {
 
     p.xp += quantidade;
     p.ultimo_estudo = Date.now();
+    p.ultimo_estudo_hora = new Date().getHours();
 
     // Record XP in the daily diary so profilo.js can build accurate weekly stats.
     // Cards count stays 0 here — Calor.registrar(1) is called separately per card.

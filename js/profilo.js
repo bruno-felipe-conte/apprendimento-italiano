@@ -100,6 +100,16 @@ const Profilo = {
           <div class="profilo-conquistas-grid" id="profilo-conquistas"></div>
         </div>
 
+        <div class="profilo-card" style="margin-top:1.5rem">
+          <div class="profilo-card-title">⚙️ Gestione Dati</div>
+          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.</p>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="btn-secondario" onclick="Profilo.exportarDados()">⬇️ Exportar Backup</button>
+            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">⬆️ Importar Backup</button>
+            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">⚠️ Azzera Tutto</button>
+          </div>
+        </div>
+
       </div>`;
 
     // Render conquistas badges
@@ -160,6 +170,61 @@ const Profilo = {
         </div>`;
     }).join('');
     return `<div class="relatorio-chart">${bars}</div>`;
+  },
+
+  // ── Exportar backup ───────────────────────────────────────
+  exportarDados() {
+    const backup = {
+      versao: 1,
+      data: new Date().toISOString(),
+      progresso:   JSON.parse(localStorage.getItem('it_progresso')   || 'null'),
+      flashcards:  JSON.parse(localStorage.getItem('it_flashcards')  || '{}'),
+      diario:      JSON.parse(localStorage.getItem('it_diario')      || '{}'),
+      onboarding:  localStorage.getItem('it_onboarding_done'),
+      tema:        localStorage.getItem('it_tema'),
+    };
+    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `italiano_backup_${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    App.notificar('✅ Backup exportado com sucesso!', 'sucesso');
+  },
+
+  // ── Importar backup ───────────────────────────────────────
+  importarDados(event) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const backup = JSON.parse(e.target.result);
+        if (!backup.versao || !backup.progresso) throw new Error('Formato inválido');
+        if (!confirm('Isso vai substituir todo o seu progresso atual. Confirmar?')) return;
+        if (backup.progresso)  localStorage.setItem('it_progresso',      JSON.stringify(backup.progresso));
+        if (backup.flashcards) localStorage.setItem('it_flashcards',     JSON.stringify(backup.flashcards));
+        if (backup.diario)     localStorage.setItem('it_diario',         JSON.stringify(backup.diario));
+        if (backup.onboarding) localStorage.setItem('it_onboarding_done', backup.onboarding);
+        if (backup.tema)       localStorage.setItem('it_tema',            backup.tema);
+        App.notificar('✅ Backup importado! Recarregando...', 'sucesso');
+        setTimeout(() => location.reload(), 1200);
+      } catch(err) {
+        App.notificar('❌ Arquivo inválido: ' + err.message, 'erro');
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = ''; // reset input
+  },
+
+  // ── Reset total de progresso ──────────────────────────────
+  resetProgresso() {
+    if (!confirm('⚠️ Isso apagará TODO o seu progresso — XP, flashcards, conquistas e streak. Tem certeza?')) return;
+    if (!confirm('Esta ação é IRREVERSÍVEL. Deseja mesmo começar do zero?')) return;
+    ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia'].forEach(k => localStorage.removeItem(k));
+    App.notificar('Progresso resetado. Recarregando...', 'alerta');
+    setTimeout(() => location.reload(), 1200);
   },
 
   // ── Helper: stat row ──────────────────────────────────────

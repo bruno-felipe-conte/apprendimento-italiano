@@ -254,21 +254,22 @@
     .resultado-msg { font-style: italic; color: #666; margin: 0.8rem 0 1.2rem; }
 
     /* ── Vocab ── */
-    .vocab-filtros { display: flex; gap: 0.65rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
-    .vocab-search { flex: 1; min-width: 180px; padding: 0.48rem 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
+    .vocab-filtros { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .vocab-search { flex: 1; min-width: 130px; padding: 0.48rem 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
     .vocab-search:focus { border-color: #9B2335; }
-    .vocab-filtros select { padding: 0.48rem 0.65rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.83rem; background: white; cursor: pointer; }
+    .vocab-filtros select { padding: 0.48rem 0.65rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.83rem; background: white; cursor: pointer; flex: 1; min-width: 110px; }
+    .vocab-filtros-row2 { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
     .vocab-stats { font-size: 0.82rem; color: #888; margin-bottom: 0.7rem; }
     .vocab-list { display: flex; flex-direction: column; gap: 0.35rem; }
     .vocab-item { display: flex; align-items: center; gap: 0.6rem; background: white; padding: 0.55rem 0.85rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); flex-wrap: wrap; }
-    .vocab-it { font-family: 'Cinzel', serif; font-weight: 600; color: #9B2335; min-width: 120px; font-size: 0.92rem; }
+    .vocab-it { font-family: 'Cinzel', serif; font-weight: 600; color: #9B2335; min-width: 110px; font-size: 0.92rem; }
     .vocab-seta { color: #D4A843; font-weight: 700; }
-    .vocab-pt { color: #2C2C2C; flex: 1; min-width: 110px; font-size: 0.88rem; }
+    .vocab-pt { color: #2C2C2C; flex: 1; min-width: 100px; font-size: 0.88rem; }
     .vocab-cat-badge { font-size: 0.68rem; background: #F5EDD8; color: #9B2335; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
     .vocab-nivel-badge { font-size: 0.68rem; background: #2C2C2C; color: white; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
     .vocab-sm2-badge { font-size: 0.78rem; }
     .vocab-dif-badge { font-size: 0.68rem; background: rgba(230,126,34,0.15); color: #c0560a; padding: 0.12rem 0.4rem; border-radius: 10px; font-weight: 700; white-space: nowrap; }
-    .vocab-btn-dificeis { padding: 0.42rem 0.85rem; border: 2px solid #E67E22; border-radius: 8px; background: transparent; color: #c0560a; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-dificeis { padding: 0.38rem 0.7rem; border: 2px solid #E67E22; border-radius: 8px; background: transparent; color: #c0560a; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; flex: 1; justify-content: center; }
     .vocab-btn-dificeis:hover { background: rgba(230,126,34,0.1); }
     .vocab-btn-dificeis.ativo { background: #E67E22; color: white; border-color: #E67E22; }
     .dif-count { display: inline-flex; align-items: center; justify-content: center; background: #c0560a; color: white; border-radius: 999px; min-width: 18px; height: 18px; padding: 0 4px; font-size: 0.7rem; font-weight: 800; }
@@ -306,7 +307,7 @@
     body.dark-mode .vocab-btn-dificeis { border-color: #c0560a; color: #d07030; }
     body.dark-mode .vocab-btn-dificeis.ativo { background: #c0560a; border-color: #c0560a; color: white; }
     /* Blur de coluna — modo teste */
-    .vocab-btn-blur { padding: 0.42rem 0.85rem; border: 2px solid #7B68A0; border-radius: 8px; background: transparent; color: #7B68A0; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-blur { padding: 0.38rem 0.7rem; border: 2px solid #7B68A0; border-radius: 8px; background: transparent; color: #7B68A0; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; flex: 1; justify-content: center; }
     .vocab-btn-blur:hover { background: rgba(123,104,160,0.08); }
     .vocab-btn-blur.ativo { background: #7B68A0; color: white; border-color: #7B68A0; }
     /* Aplica blur na coluna selecionada */
@@ -319,7 +320,7 @@
     body.dark-mode .vocab-btn-blur.ativo { background: #6B5490; border-color: #6B5490; color: white; }
     /* Favoritos */
     .vocab-fav-badge { font-size: 0.78rem; }
-    .vocab-btn-favoritos { padding: 0.42rem 0.85rem; border: 2px solid #C0392B; border-radius: 8px; background: transparent; color: #C0392B; font-size: 0.83rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+    .vocab-btn-favoritos { padding: 0.38rem 0.7rem; border: 2px solid #C0392B; border-radius: 8px; background: transparent; color: #C0392B; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; flex: 1; justify-content: center; }
     .vocab-btn-favoritos:hover { background: rgba(192,57,43,0.08); }
     .vocab-btn-favoritos.ativo { background: #C0392B; color: white; border-color: #C0392B; }
     body.dark-mode .vocab-btn-favoritos { border-color: #9B2335; color: #C4304A; }
@@ -362,6 +363,13 @@
       .palavra-italiana { font-size: 1.6rem; }
       .stats-bar { gap: 0.3rem; }
       .stat-item { font-size: 0.72rem; padding: 0.2rem 0.45rem; }
+      /* Vocab mobile */
+      .vocab-search { min-width: 100%; }
+      .vocab-filtros select { min-width: 46%; }
+      .vocab-filtros-row2 { width: 100%; }
+      .vocab-it { min-width: 90px; font-size: 0.85rem; }
+      .vocab-pt { min-width: 80px; font-size: 0.82rem; }
+      .vocab-item { padding: 0.45rem 0.65rem; gap: 0.4rem; }
     }
 
     /* ── Heatmap compacto ── */
@@ -1649,7 +1657,7 @@
         flex: 1;
       }
       .bottom-nav button span {
-        font-size: 0.62rem;
+        font-size: 0.58rem;
       }
       .bottom-nav button:hover, .bottom-nav button:active {
         color: #D4A843;
@@ -1888,7 +1896,8 @@
           <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
           <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
             <button class="btn-primario" onclick="Flashcards.praticaTodas()">🔁 Praticar todas</button>
-            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" title="Palavras com 3+ erros">⚠️ Estudar difíceis</button>
+            <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" title="Revisar favoritos">❤️ Favoritos</button>
+            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" title="Palavras com 3+ erros">⚠️ Difíceis</button>
           </div>
         </div>
         <div id="flashcard-resumo" style="display:none"></div>
@@ -1943,6 +1952,8 @@
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
           <option value="">Tutte le categorie</option>
         </select>
+      </div>
+      <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
         <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória">🙈 Ocultar PT</button>
@@ -2053,6 +2064,7 @@
     <button class="nav-tab-btn" data-section="templi" onclick="App.navegar('templi')">🏛️<span>Início</span></button>
     <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')">🃏<span>Flashcard</span></button>
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')">❓<span>Quiz</span></button>
+    <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖<span>Vocab</span></button>
     <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')">📚<span>Gramática</span></button>
     <button class="nav-tab-btn" data-section="profilo" onclick="App.navegar('profilo')">👤<span>Perfil</span></button>
   </nav>
@@ -2105,5 +2117,6 @@
       }).catch(err => console.warn('[SW] Registro falhou:', err));
     }
   </script>
+    <input type="file" id="backup-input" accept=".json" style="display:none" onchange="Profilo.importarDados(event)">
 </body>
 </html>

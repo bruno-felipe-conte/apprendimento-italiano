@@ -52,6 +52,41 @@ const Quiz = {
     this.mostrarPergunta();
   },
 
+  // ── Start mixed quiz (all unlocked temples) ────────────────
+  iniciarMisto() {
+    this.temploAtual = 'misto';
+    this.perguntaAtual = 0;
+    this.pontuacao = 0;
+    this.xpTotal = 0;
+    this.respondido = false;
+    this.combo = 0;
+
+    let pool = [];
+    const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
+    
+    desbloqueados.forEach(temploNum => {
+      let tPool = App.estado.quizData.filter(q => q.templo === temploNum);
+      if (tPool.length === 0) tPool = this._gerarPerguntas(temploNum);
+      pool = pool.concat(tPool);
+    });
+
+    this.perguntas = this._embaralhar(pool).slice(0, 10);
+
+    if (this.perguntas.length === 0) {
+      App.notificar('Nenhuma pergunta disponível para os templos desbloqueados.', 'alerta');
+      return;
+    }
+
+    const container = document.getElementById('quiz-container');
+    const resultado = document.getElementById('quiz-resultado');
+    const seletor = document.getElementById('quiz-templo-selector');
+    if (container) container.style.display = 'block';
+    if (resultado) resultado.style.display = 'none';
+    if (seletor) seletor.style.display = 'none';
+
+    this.mostrarPergunta();
+  },
+
   // ── Generate vocab questions if no JSON quiz data ──────────
   _gerarPerguntas(temploNum) {
     const data = App.estado.templosData[temploNum];
@@ -218,6 +253,12 @@ const Quiz = {
 
     // Check achievements
     if (typeof Conquistas !== 'undefined') {
+      const p = App.estado.progresso;
+      if (p) {
+        if (pct >= 80) p.quiz_consecutivos_80 = (p.quiz_consecutivos_80 || 0) + 1;
+        else p.quiz_consecutivos_80 = 0;
+        App.salvarProgresso();
+      }
       if (pct === 100) Conquistas.ganharQuizPerfetto();
       Conquistas.verificar();
     }
@@ -253,6 +294,18 @@ const Quiz = {
     if (!seletor) return;
     seletor.innerHTML = '';
     seletor.style.display = 'grid';
+
+    // ── Misto Button ───────────────────────────────────────
+    if (Progressao.temploDesbloqueado(1)) {
+      const btnMisto = document.createElement('button');
+      btnMisto.className = 'quiz-templo-btn';
+      btnMisto.innerHTML = '🌍 Quiz Generale<br><small>Tutti i templi misti</small>';
+      btnMisto.style.gridColumn = '1 / -1'; // span full width
+      btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
+      btnMisto.style.color = 'white';
+      btnMisto.onclick = () => this.iniciarMisto();
+      seletor.appendChild(btnMisto);
+    }
 
     for (let i = 1; i <= 10; i++) {
       const desbloqueado = Progressao.temploDesbloqueado(i);

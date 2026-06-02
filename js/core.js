@@ -228,6 +228,7 @@ const App = {
         if (p.data_xp_hoje === undefined) p.data_xp_hoje = null;
         if (!p.favoritos)   p.favoritos   = [];
         if (!p.conquistas)  p.conquistas  = [];
+        if (!p.data_inicio) p.data_inicio = p.ultimo_estudo || Date.now();
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -246,7 +247,8 @@ const App = {
       xp_hoje: 0,
       data_xp_hoje: null,
       favoritos:   [],
-      conquistas:  []
+      conquistas:  [],
+      data_inicio: Date.now()
     };
   },
 
@@ -307,6 +309,9 @@ const App = {
       : '';
     const data = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
 
+    const isFav = this.estado.progresso && this.estado.progresso.favoritos && this.estado.progresso.favoritos.includes(palavra.id);
+    const favEmoji = isFav ? '❤️' : '🤍';
+
     container.innerHTML = `
       <div class="pdd-header">
         <span class="pdd-label">🇮🇹 Parola del Giorno</span>
@@ -322,6 +327,9 @@ const App = {
       <div class="pdd-acoes">
         <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
         <button class="pdd-btn pdd-btn-study" onclick="App.estudarTemplo(${palavra._templo})">📚 Studiare</button>
+        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = App.estado.progresso.favoritos.includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
+          ${favEmoji} Fav
+        </button>
       </div>
     `;
     container.style.display = 'block';

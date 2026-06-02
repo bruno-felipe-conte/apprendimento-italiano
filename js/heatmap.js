@@ -55,7 +55,8 @@ const Calor = {
     let streak = 0;
     for (let i = 0; i < 365; i++) {
       const key = d.toISOString().split('T')[0];
-      if (this._lerEntrada(diario[key]).cards > 0) {
+      const entry = this._lerEntrada(diario[key]);
+      if (entry.cards > 0 || entry.xp > 0) {
         streak++;
         d.setDate(d.getDate() - 1);
       } else if (i === 0) {
@@ -107,7 +108,8 @@ const Calor = {
     let cs = 0;
     for (let i = 0; i < 365; i++) {
       const k = [td2.getFullYear(), String(td2.getMonth()+1).padStart(2,'0'), String(td2.getDate()).padStart(2,'0')].join('-');
-      if (this._lerEntrada(diario[k]).cards > 0) { cs++; streak = cs; td2.setDate(td2.getDate() - 1); }
+      const entry = this._lerEntrada(diario[k]);
+      if (entry.cards > 0 || entry.xp > 0) { cs++; streak = cs; td2.setDate(td2.getDate() - 1); }
       else if (i === 0) { td2.setDate(td2.getDate() - 1); }
       else break;
     }
@@ -117,9 +119,9 @@ const Calor = {
       for (let day = 1; day <= days; day++) {
         const k = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
         if (k > todayStr) break;
-        const v = this._lerEntrada(diario[k]).cards;
-        totalAtividades += v;
-        if (v > 0) diasAtivos++;
+        const entry = this._lerEntrada(diario[k]);
+        totalAtividades += entry.cards;
+        if (entry.cards > 0 || entry.xp > 0) diasAtivos++;
       }
     }
 
