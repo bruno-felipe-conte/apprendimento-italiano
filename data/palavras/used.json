@@ -1,0 +1,724 @@
+[
+  {
+    "id": 73256,
+    "italiano": "area",
+    "trad_port": "area",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 52899,
+    "italiano": "circolo",
+    "trad_port": "circulo",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 47665,
+    "italiano": "pittore",
+    "trad_port": "pintor",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 57791,
+    "italiano": "museu",
+    "trad_port": "museu",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60768,
+    "italiano": "piazza",
+    "trad_port": "praca",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 66112,
+    "italiano": "rettangolo",
+    "trad_port": "retangulo",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 74063,
+    "italiano": "monumento",
+    "trad_port": "monumento",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 60578,
+    "italiano": "calligrafia",
+    "trad_port": "caligrafia",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 82343,
+    "italiano": "spazio",
+    "trad_port": "espaco",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  [
+    "liberta",
+    "liberdade",
+    "substantivo"
+  ],
+  {
+    "id": 72199,
+    "italiano": "leggenda",
+    "trad_port": "lenda",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 69288,
+    "italiano": "museu",
+    "trad_port": "museu",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 11446,
+    "italiano": "contratto",
+    "trad_port": "contrato",
+    "categoria": "juridico",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 10696,
+    "italiano": "elissoide",
+    "trad_port": "elipsoide",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  [
+    "politica",
+    "politica",
+    "substantivo"
+  ],
+  {
+    "id": 20924,
+    "italiano": "segretario",
+    "trad_port": "secretario",
+    "categoria": "cargo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 20943,
+    "italiano": "massa",
+    "trad_port": "massa",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 86034,
+    "italiano": "linguistica",
+    "trad_port": "linguistica",
+    "categoria": "estudo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 12493,
+    "italiano": "architettura",
+    "trad_port": "arquitetura",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 34306,
+    "italiano": "dipendente",
+    "trad_port": "funcionario",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 66711,
+    "italiano": "calligrafia",
+    "trad_port": "caligrafia",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  [
+    "societa",
+    "sociedade",
+    "substantivo"
+  ],
+  {
+    "id": 51095,
+    "italiano": "autostrada",
+    "trad_port": "autopista",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 88418,
+    "italiano": "musica",
+    "trad_port": "musica",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 83081,
+    "italiano": "poesia",
+    "trad_port": "poesia",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 41373,
+    "italiano": "gestione",
+    "trad_port": "gestao",
+    "categoria": "gestao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86239,
+    "italiano": "tradizione",
+    "trad_port": "tradio",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  [
+    "quartiere",
+    "bairro",
+    "lugar"
+  ],
+  {
+    "id": 50511,
+    "italiano": "tratta",
+    "trad_port": "trecho",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 30914,
+    "italiano": "storia",
+    "trad_port": "historia",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 92279,
+    "italiano": "linguistica",
+    "trad_port": "linguistica",
+    "categoria": "estudo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 43432,
+    "italiano": "biblioteca",
+    "trad_port": "biblioteca",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  [
+    "guerra",
+    "guerra",
+    "substantivo"
+  ],
+  {
+    "id": 56462,
+    "italiano": "misura",
+    "trad_port": "medida",
+    "categoria": "quantidade",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 67622,
+    "italiano": "storia",
+    "trad_port": "historia",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 59092,
+    "italiano": "viaggio",
+    "trad_port": "jornada",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 39604,
+    "italiano": "strada",
+    "trad_port": "estrada",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 41310,
+    "italiano": "quadrato",
+    "trad_port": "quadado",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 30437,
+    "italiano": "poesia",
+    "trad_port": "poesia",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 59133,
+    "italiano": "monumento",
+    "trad_port": "monumento",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86632,
+    "italiano": "impiegato",
+    "trad_port": "empregado",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 98059,
+    "italiano": "piazza",
+    "trad_port": "praca",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 39104,
+    "italiano": "piramide",
+    "trad_port": "piramides",
+    "categoria": "forma",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  [
+    "economia",
+    "economia",
+    "substantivo"
+  ],
+  {
+    "id": 39971,
+    "italiano": "numero",
+    "trad_port": "numero",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 79528,
+    "italiano": "comodita",
+    "trad_port": "conforto",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 21695,
+    "italiano": "perimetro",
+    "trad_port": "perimetro",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 76489,
+    "italiano": "pittore",
+    "trad_port": "pintor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 38362,
+    "italiano": "romanzo",
+    "trad_port": "romance",
+    "categoria": "literatura",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  [
+    "democrazia",
+    "democracia",
+    "substantivo"
+  ],
+  {
+    "id": 18386,
+    "italiano": "architettura",
+    "trad_port": "arquitetura",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 72911,
+    "italiano": "peso",
+    "trad_port": "peso",
+    "categoria": "quantidade",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 36794,
+    "italiano": "percursso",
+    "trad_port": "percurso",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 48741,
+    "italiano": "cilindro",
+    "trad_port": "cilindro",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69085,
+    "italiano": "scultura",
+    "trad_port": "escultura",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 21710,
+    "italiano": "triangolo",
+    "trad_port": "triangulo",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90293,
+    "italiano": "biblioteca",
+    "trad_port": "biblioteca",
+    "categoria": "cultura",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 12389,
+    "italiano": "cono",
+    "trad_port": "cono",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 95686,
+    "italiano": "energico",
+    "trad_port": "energético",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41503,
+    "italiano": "amministratore",
+    "trad_port": "administrador",
+    "categoria": "cargo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 89258,
+    "italiano": "sicurezza",
+    "trad_port": "seguranga",
+    "categoria": "estado",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 84393,
+    "italiano": "disponibilita",
+    "trad_port": "disponibilidade",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 56708,
+    "italiano": "prosa",
+    "trad_port": "prosas",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 85837,
+    "italiano": "felice",
+    "trad_port": "feliz",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 63733,
+    "italiano": "contabile",
+    "trad_port": "contador",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 78157,
+    "italiano": "capo",
+    "trad_port": "chefe",
+    "categoria": "cargo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 39956,
+    "italiano": "budget",
+    "trad_port": "orcamento",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90598,
+    "italiano": "affidabilita",
+    "trad_port": "confiabilidade",
+    "categoria": "qualidade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 61565,
+    "italiano": "contento",
+    "trad_port": "satisfeito",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 74349,
+    "italiano": "musica",
+    "trad_port": "musica",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 51468,
+    "italiano": "disteso",
+    "trad_port": "relaxado",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 35632,
+    "italiano": "scultura",
+    "trad_port": "escultura",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 44294,
+    "italiano": "teatro",
+    "trad_port": "teatro",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77221,
+    "italiano": "tunnel",
+    "trad_port": "tuneis",
+    "categoria": "estrutura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80425,
+    "italiano": "cubo",
+    "trad_port": "cubo",
+    "categoria": "forma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 47248,
+    "italiano": "salute",
+    "trad_port": "saude",
+    "categoria": "bemestar",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 24951,
+    "italiano": "tranquillo",
+    "trad_port": "tranquilo",
+    "categoria": "estado",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 37338,
+    "italiano": "calmo",
+    "trad_port": "calmo",
+    "categoria": "estado",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 34593,
+    "italiano": "leggenda",
+    "trad_port": "lenda",
+    "categoria": "cultura",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 38687,
+    "italiano": "ponte",
+    "trad_port": "ponte",
+    "categoria": "estrutura",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 53006,
+    "italiano": "imprenditore",
+    "trad_port": "empreendedor",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 48921,
+    "italiano": "dimensione",
+    "trad_port": "dimensao",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 46621,
+    "italiano": "volume",
+    "trad_port": "volume",
+    "categoria": "dimensao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13438,
+    "italiano": "puntuale",
+    "trad_port": "pontual",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  [
+    "capitale",
+    "capital",
+    "substantivo"
+  ],
+  [
+    "citta",
+    "cidade",
+    "lugar"
+  ],
+  {
+    "id": 92041,
+    "italiano": "sfera",
+    "trad_port": "esfera",
+    "categoria": "forma",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 52849,
+    "italiano": "teatro",
+    "trad_port": "teatro",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 37058,
+    "italiano": "prosa",
+    "trad_port": "prosas",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 21670,
+    "italiano": "superficie",
+    "trad_port": "superficie",
+    "categoria": "geometria",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 41904,
+    "italiano": "benessere",
+    "trad_port": "bem estar",
+    "categoria": "bemestar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 55195,
+    "italiano": "romanzo",
+    "trad_port": "romance",
+    "categoria": "literatura",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  [
+    "popolo",
+    "povo",
+    "substantivo"
+  ],
+  {
+    "id": 69469,
+    "italiano": "tradizione",
+    "trad_port": "tradio",
+    "categoria": "cultura",
+    "difficolta": "dificele",
+    "xp_base": 10
+  }
+]
