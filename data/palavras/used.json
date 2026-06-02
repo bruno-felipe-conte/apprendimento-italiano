@@ -720,5 +720,565 @@
     "categoria": "cultura",
     "difficolta": "dificele",
     "xp_base": 10
+  },
+  {
+    "id": 53208,
+    "italiano": "famiglia",
+    "trad_port": "familia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 76762,
+    "italiano": "cugino",
+    "trad_port": "primo",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 67341,
+    "italiano": "ieri",
+    "trad_port": "ontem",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 84552,
+    "italiano": "sentire",
+    "trad_port": "sentir",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 19995,
+    "italiano": "tristezza",
+    "trad_port": "tristeza",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76626,
+    "italiano": "ascoltare",
+    "trad_port": "ouvir",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 60786,
+    "italiano": "internet",
+    "trad_port": "internet",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 87280,
+    "italiano": "indaginare",
+    "trad_port": "investigar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 74022,
+    "italiano": "telefono",
+    "trad_port": "telefone",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 71263,
+    "italiano": "ansia",
+    "trad_port": "ansiedade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 94858,
+    "italiano": "metropoli",
+    "trad_port": "metrópole",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91468,
+    "italiano": "giovedì",
+    "trad_port": "quinta-feira",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 16031,
+    "italiano": "felicità",
+    "trad_port": "felicidade",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 20307,
+    "italiano": "carne",
+    "trad_port": "carne",
+    "categoria": "alimento",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 21469,
+    "italiano": "probar",
+    "trad_port": "provar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 51597,
+    "italiano": "computer",
+    "trad_port": "computador",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 85586,
+    "italiano": "figlio",
+    "trad_port": "filho",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 94345,
+    "italiano": "desiderio",
+    "trad_port": "desejo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 19852,
+    "italiano": "stazione",
+    "trad_port": "estação",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 53294,
+    "italiano": "gioia",
+    "trad_port": "alegria",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 28212,
+    "italiano": "mouse",
+    "trad_port": "mouse",
+    "categoria": "dispositivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67631,
+    "italiano": "viaggio",
+    "trad_port": "jornada",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 74965,
+    "italiano": "passeggiate",
+    "trad_port": "passeios",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 73456,
+    "italiano": "stasera",
+    "trad_port": "hoje a noite",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 97922,
+    "italiano": "dati",
+    "trad_port": "dados",
+    "categoria": "informatica",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 73986,
+    "italiano": "hotel",
+    "trad_port": "hotéis",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 57870,
+    "italiano": "nonna",
+    "trad_port": "avó",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 89324,
+    "italiano": "fratello",
+    "trad_port": "irmão",
+    "categoria": "parente",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 28420,
+    "italiano": "verdura",
+    "trad_port": "vegetal",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 32344,
+    "italiano": "nonno",
+    "trad_port": "avô",
+    "categoria": "parente",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 91176,
+    "italiano": "pesce",
+    "trad_port": "peixe",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 47235,
+    "italiano": "udire",
+    "trad_port": "ouvir",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 86954,
+    "italiano": "aeroporto",
+    "trad_port": "aeroporto",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 87820,
+    "italiano": "gustare",
+    "trad_port": "provar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 12708,
+    "italiano": "wifi",
+    "trad_port": "wifi",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 17317,
+    "italiano": "vedere",
+    "trad_port": "ver",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 40853,
+    "italiano": "lunedì",
+    "trad_port": "segunda-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 61877,
+    "italiano": "cibi",
+    "trad_port": "comidas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 51942,
+    "italiano": "programmi",
+    "trad_port": "programas",
+    "categoria": "software",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75115,
+    "italiano": "zio",
+    "trad_port": "tio",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 89726,
+    "italiano": "cammino",
+    "trad_port": "caminho",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 97657,
+    "italiano": "schermo",
+    "trad_port": "tela",
+    "categoria": "parte",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 44825,
+    "italiano": "pizza",
+    "trad_port": "pizza",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25804,
+    "italiano": "toccare",
+    "trad_port": "tocar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 52154,
+    "italiano": "rabbia",
+    "trad_port": "raiva",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75957,
+    "italiano": "oggi",
+    "trad_port": "hoje",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 54055,
+    "italiano": "sabato",
+    "trad_port": "sábado",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 52368,
+    "italiano": "tours",
+    "trad_port": "turismo",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 40663,
+    "italiano": "speranza",
+    "trad_port": "esperança",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 38273,
+    "italiano": "genitore",
+    "trad_port": "genitor",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76502,
+    "italiano": "frutta",
+    "trad_port": "fruta",
+    "categoria": "alimento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 64476,
+    "italiano": "nipote",
+    "trad_port": "neto",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 76097,
+    "italiano": "pericolo",
+    "trad_port": "perigo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 28118,
+    "italiano": "calma",
+    "trad_port": "calma",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55035,
+    "italiano": "martedì",
+    "trad_port": "terça-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 60946,
+    "italiano": "password",
+    "trad_port": "senha",
+    "categoria": "seguranca",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 24097,
+    "italiano": "paura",
+    "trad_port": "medo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 92141,
+    "italiano": "spavento",
+    "trad_port": "medo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 32544,
+    "italiano": "mercoledì",
+    "trad_port": "quarta-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 28531,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "bebida",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 76976,
+    "italiano": "latte",
+    "trad_port": "leite",
+    "categoria": "bebida",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 87233,
+    "italiano": "caffè",
+    "trad_port": "café",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 84797,
+    "italiano": "annusare",
+    "trad_port": "cheirar",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 53463,
+    "italiano": "guardare",
+    "trad_port": "olhar",
+    "categoria": "verbo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 86464,
+    "italiano": "domani",
+    "trad_port": "amanha",
+    "categoria": "tempo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 18831,
+    "italiano": "vino",
+    "trad_port": "vinho",
+    "categoria": "bebida",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 65168,
+    "italiano": "venerdì",
+    "trad_port": "sexta-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 81376,
+    "italiano": "sorella",
+    "trad_port": "irma",
+    "categoria": "parente",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 12110,
+    "italiano": "tastiera",
+    "trad_port": "teclado",
+    "categoria": "parte",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 80578,
+    "italiano": "noleggio",
+    "trad_port": "aluguel",
+    "categoria": "servico",
+    "difficolta": "medio",
+    "xp_base": 7
   }
 ]
