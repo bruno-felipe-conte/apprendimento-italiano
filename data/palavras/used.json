@@ -1280,5 +1280,565 @@
     "categoria": "servico",
     "difficolta": "medio",
     "xp_base": 7
+  },
+  {
+    "id": 19327,
+    "italiano": "calcio",
+    "trad_port": "futebol",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 79150,
+    "italiano": "benessere",
+    "trad_port": "bem-estar",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 88579,
+    "italiano": "corsa",
+    "trad_port": "corrida",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 22735,
+    "italiano": "cerimonia",
+    "trad_port": "cerimônia",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80325,
+    "italiano": "basketball",
+    "trad_port": "basquete",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39443,
+    "italiano": "ambiente",
+    "trad_port": "ambiente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 44062,
+    "italiano": "televisione",
+    "trad_port": "televisão",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 99736,
+    "italiano": "ginnastica",
+    "trad_port": "ginástica",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 28502,
+    "italiano": "festa",
+    "trad_port": "festas",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 86845,
+    "italiano": "notte",
+    "trad_port": "noite",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 86803,
+    "italiano": "serie TV",
+    "trad_port": "séries de TV",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 59226,
+    "italiano": "periferia",
+    "trad_port": "periferia",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 99155,
+    "italiano": "ballata",
+    "trad_port": "balada",
+    "categoria": "música",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 44753,
+    "italiano": "malattia",
+    "trad_port": "doença",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 48555,
+    "italiano": "natura",
+    "trad_port": "natureza",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 89155,
+    "italiano": "tempo",
+    "trad_port": "clima",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 39083,
+    "italiano": "rugby",
+    "trad_port": "rugby",
+    "categoria": "esporte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70226,
+    "italiano": "medico",
+    "trad_port": "médico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 78786,
+    "italiano": "biodiversita",
+    "trad_port": "biodiversidade",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 37279,
+    "italiano": "recita",
+    "trad_port": "representação",
+    "categoria": "teatro",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 70976,
+    "italiano": "musica pop",
+    "trad_port": "música pop",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29171,
+    "italiano": "giocatori",
+    "trad_port": "jogadores",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 18789,
+    "italiano": "equilibrio",
+    "trad_port": "equilíbrio",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 10370,
+    "italiano": "ospedale",
+    "trad_port": "hospital",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 72142,
+    "italiano": "tennis",
+    "trad_port": "tenis",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 68729,
+    "italiano": "rock",
+    "trad_port": "rock",
+    "categoria": "genero musica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 18319,
+    "italiano": "salute",
+    "trad_port": "saúde",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 75862,
+    "italiano": "fuoco",
+    "trad_port": "fogo",
+    "categoria": "elemento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 55803,
+    "italiano": "radionone",
+    "trad_port": "rádio",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 64312,
+    "italiano": "piazza",
+    "trad_port": "praça",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 11974,
+    "italiano": "crepuscolo",
+    "trad_port": "crépusculo",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 89307,
+    "italiano": "tradizione",
+    "trad_port": "tradição",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 49373,
+    "italiano": "zona",
+    "trad_port": "zona",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 80459,
+    "italiano": "sagre",
+    "trad_port": "festas populares",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 29801,
+    "italiano": "mercato",
+    "trad_port": "mercado",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 53998,
+    "italiano": "cura",
+    "trad_port": "cura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 32149,
+    "italiano": "fiera",
+    "trad_port": "feira",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 39186,
+    "italiano": "quartiere",
+    "trad_port": "bairro",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 32906,
+    "italiano": "ombra",
+    "trad_port": "sombra",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 98993,
+    "italiano": "mondo",
+    "trad_port": "mundo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 27867,
+    "italiano": "acqua",
+    "trad_port": "água",
+    "categoria": "elemento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 16889,
+    "italiano": "fauna",
+    "trad_port": "fauna",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 35206,
+    "italiano": "terra",
+    "trad_port": "terra",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 20569,
+    "italiano": "vicolo",
+    "trad_port": "rua estreita",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 92671,
+    "italiano": "luce",
+    "trad_port": "luz",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 63611,
+    "italiano": "parco",
+    "trad_port": "parque",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 49090,
+    "italiano": "centro",
+    "trad_port": "centro",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 43016,
+    "italiano": "spettacoli",
+    "trad_port": "espetáculos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 50305,
+    "italiano": "cielo",
+    "trad_port": "céu",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 15425,
+    "italiano": "farmacia",
+    "trad_port": "farmácia",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 24382,
+    "italiano": "flora",
+    "trad_port": "flora",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 42971,
+    "italiano": "ciclismo",
+    "trad_port": "ciclismo",
+    "categoria": "esporte",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 64407,
+    "italiano": "ecosistema",
+    "trad_port": "ecossistema",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 62115,
+    "italiano": "muscoli",
+    "trad_port": "músculos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 90260,
+    "italiano": "marea",
+    "trad_port": "marés",
+    "categoria": "fenomeno",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 33074,
+    "italiano": "rituale",
+    "trad_port": "rito",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 74791,
+    "italiano": "atleti",
+    "trad_port": "atletas",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 12671,
+    "italiano": "sole",
+    "trad_port": "sol",
+    "categoria": "astro",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 81659,
+    "italiano": "concerti",
+    "trad_port": "consertos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29083,
+    "italiano": "infermiera",
+    "trad_port": "enfermeira",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39973,
+    "italiano": "canto",
+    "trad_port": "canção",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 84071,
+    "italiano": "jazz",
+    "trad_port": "jazz",
+    "categoria": "genero musica",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 37582,
+    "italiano": "città",
+    "trad_port": "cidade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 26074,
+    "italiano": "nuoto",
+    "trad_port": "natação",
+    "categoria": "esporte",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 81823,
+    "italiano": "film",
+    "trad_port": "filmes",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 42290,
+    "italiano": "vento",
+    "trad_port": "vento",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 93890,
+    "italiano": "aria",
+    "trad_port": "ar",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 17566,
+    "italiano": "alba",
+    "trad_port": "amanhecer",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 75928,
+    "italiano": "ripresto",
+    "trad_port": "recuperação",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 27916,
+    "italiano": "viale",
+    "trad_port": " avenida",
+    "categoria": "lugar",
+    "difficolta": "dificele",
+    "xp_base": 10
   }
 ]
