@@ -2400,5 +2400,645 @@
     "categoria": "profissao",
     "difficolta": "dificele",
     "xp_base": 9
+  },
+  {
+    "id": 92512,
+    "italiano": "anno",
+    "trad_port": "ano",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 34376,
+    "italiano": "popolare",
+    "trad_port": "popular",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62636,
+    "italiano": "momento",
+    "trad_port": "momento",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91542,
+    "italiano": "inverno",
+    "trad_port": "inverno",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 89344,
+    "italiano": "luce",
+    "trad_port": "luz",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 10304,
+    "italiano": "periodo",
+    "trad_port": "período",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 58259,
+    "italiano": "sicurezza",
+    "trad_port": "segurança",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 75496,
+    "italiano": "celebrare",
+    "trad_port": "celebrar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 68500,
+    "italiano": "autunno",
+    "trad_port": "outono",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 27599,
+    "italiano": "vento",
+    "trad_port": "vento",
+    "categoria": "elemento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 57897,
+    "italiano": "fredda",
+    "trad_port": "fria",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 20568,
+    "italiano": "barometrico",
+    "trad_port": "bárometro",
+    "categoria": "instrumento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93042,
+    "italiano": "tradizionale",
+    "trad_port": "tradicional",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 16636,
+    "italiano": "sabato",
+    "trad_port": "sábado",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 15205,
+    "italiano": "mese",
+    "trad_port": "mês",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 66314,
+    "italiano": "clima",
+    "trad_port": "clima",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 34194,
+    "italiano": "occasione",
+    "trad_port": "ocasião",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 86857,
+    "italiano": "mostro",
+    "trad_port": "exposição",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 55705,
+    "italiano": "sole",
+    "trad_port": "sol",
+    "categoria": "astro",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 82562,
+    "italiano": "giornata internazionale",
+    "trad_port": "dia internacional",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77795,
+    "italiano": "contemporaneo",
+    "trad_port": "contemporâneo",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 18396,
+    "italiano": "antico",
+    "trad_port": "antigo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 62556,
+    "italiano": "martedì",
+    "trad_port": "terça-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 96923,
+    "italiano": "santificazioni",
+    "trad_port": "santificações",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 89711,
+    "italiano": "storico",
+    "trad_port": "histórico",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 45455,
+    "italiano": "equinozio",
+    "trad_port": "equinócio",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41950,
+    "italiano": "giovedì",
+    "trad_port": "quinta-feira",
+    "categoria": "dia",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59136,
+    "italiano": "neve",
+    "trad_port": "neve",
+    "categoria": "fenomeno",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 54962,
+    "italiano": "festa di compleanno",
+    "trad_port": "aniversário de nascença",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 53178,
+    "italiano": "ciclo",
+    "trad_port": "ciclo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 27878,
+    "italiano": "mercoledì",
+    "trad_port": "quarta-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 48138,
+    "italiano": "celebrazioni",
+    "trad_port": "celebrações",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 22100,
+    "italiano": "primavera",
+    "trad_port": "primavera",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 31693,
+    "italiano": "luna",
+    "trad_port": "lua",
+    "categoria": "astro",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 51804,
+    "italiano": "previsioni",
+    "trad_port": "previsões",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 50812,
+    "italiano": "venerdì",
+    "trad_port": "sexta-feira",
+    "categoria": "dia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 45915,
+    "italiano": "estate",
+    "trad_port": "verão",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 41663,
+    "italiano": "caldi",
+    "trad_port": "quente",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 96374,
+    "italiano": "tradizione locale",
+    "trad_port": "tradição local",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 72510,
+    "italiano": "eredita",
+    "trad_port": "herança",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 29207,
+    "italiano": "pioggia",
+    "trad_port": "chuva",
+    "categoria": "fenomeno",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 77790,
+    "italiano": "appuntamento",
+    "trad_port": "citação",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 77766,
+    "italiano": "stagione",
+    "trad_port": "estação",
+    "categoria": "tempo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 13288,
+    "italiano": "meteo",
+    "trad_port": "meteorologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 14498,
+    "italiano": "freddi",
+    "trad_port": "frio",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 67064,
+    "italiano": "temporale",
+    "trad_port": "tempestade",
+    "categoria": "fenomeno",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 98867,
+    "italiano": "capodanno",
+    "trad_port": "aniversário do novo ano",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 12783,
+    "italiano": "umidita",
+    "trad_port": "humidade",
+    "categoria": "conceito",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 21564,
+    "italiano": "folklore",
+    "trad_port": "folclore",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 78501,
+    "italiano": "temperatura",
+    "trad_port": "temperatura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 93878,
+    "italiano": "ombra",
+    "trad_port": "sombra",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 86195,
+    "italiano": "nuvole",
+    "trad_port": "nubens",
+    "categoria": "atmosfera",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 81810,
+    "italiano": "protezioni",
+    "trad_port": "proteções",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 77049,
+    "italiano": "ricorrenze",
+    "trad_port": "aniversários",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 60838,
+    "italiano": "primavera",
+    "trad_port": "primavera",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 79945,
+    "italiano": "allerte",
+    "trad_port": "alertas",
+    "categoria": "noticia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56209,
+    "italiano": "festival",
+    "trad_port": "festas",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 40002,
+    "italiano": "solstizio",
+    "trad_port": "solstício",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 22835,
+    "italiano": "meteo",
+    "trad_port": "meteorologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 17964,
+    "italiano": "inverno",
+    "trad_port": "inverno",
+    "categoria": "tempo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 10932,
+    "italiano": "domenica",
+    "trad_port": "domingo",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 24129,
+    "italiano": "giorno",
+    "trad_port": "dia",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 97368,
+    "italiano": "pressione",
+    "trad_port": "pressão",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 45827,
+    "italiano": "patrimonio",
+    "trad_port": "patrimônio",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 99286,
+    "italiano": "moderno",
+    "trad_port": "moderno",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 27339,
+    "italiano": "confenza",
+    "trad_port": "conferência",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 90781,
+    "italiano": "lunedì",
+    "trad_port": "segunda-feira",
+    "categoria": "dia",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 29244,
+    "italiano": "incontri",
+    "trad_port": "encontros",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 53668,
+    "italiano": "ghiaccio",
+    "trad_port": "gelo",
+    "categoria": "fenomeno",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 27950,
+    "italiano": "riunione",
+    "trad_port": "reunião",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 10897,
+    "italiano": "avvisi",
+    "trad_port": "avisos",
+    "categoria": "noticia",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 42230,
+    "italiano": "pasqua",
+    "trad_port": "páscoa",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 36132,
+    "italiano": "natale",
+    "trad_port": "natal",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93726,
+    "italiano": "tiepido",
+    "trad_port": "morno",
+    "categoria": "adj",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 11992,
+    "italiano": "festivita",
+    "trad_port": "festividades",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 65722,
+    "italiano": "cerimonie",
+    "trad_port": "cerimônias",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 46863,
+    "italiano": "caldo",
+    "trad_port": "quente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 92943,
+    "italiano": "anniversario",
+    "trad_port": "aniversário",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 46839,
+    "italiano": "classico",
+    "trad_port": "clássico",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 46575,
+    "italiano": "concerto",
+    "trad_port": "conserto",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
   }
 ]
