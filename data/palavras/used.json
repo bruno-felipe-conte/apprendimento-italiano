@@ -4320,5 +4320,645 @@
     "categoria": "substantivo",
     "difficolta": "facile",
     "xp_base": 6
+  },
+  {
+    "id": 26421,
+    "italiano": "vetrina",
+    "trad_port": "vitrine",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 15722,
+    "italiano": "cuffie",
+    "trad_port": "fone",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 90325,
+    "italiano": "chiavi",
+    "trad_port": "chaves",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 87470,
+    "italiano": "bicchiere",
+    "trad_port": "copo",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 38679,
+    "italiano": "candelabro",
+    "trad_port": "candelabro",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 50541,
+    "italiano": "bicchiere",
+    "trad_port": "copo",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84159,
+    "italiano": "sacco",
+    "trad_port": "saco",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 10072,
+    "italiano": "divano",
+    "trad_port": "sofá",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 71723,
+    "italiano": "microonde",
+    "trad_port": "microondas",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 60034,
+    "italiano": "frigo",
+    "trad_port": "geladeira",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 13867,
+    "italiano": "secchielli",
+    "trad_port": "balde",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 99954,
+    "italiano": "specchio",
+    "trad_port": "espelho",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 32001,
+    "italiano": "giocatori",
+    "trad_port": "jogadores",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 69738,
+    "italiano": "friggitore",
+    "trad_port": "fritadeira",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 44677,
+    "italiano": "piano",
+    "trad_port": "forno",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 38622,
+    "italiano": "lettore DVD",
+    "trad_port": "leitor de DVD",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 49652,
+    "italiano": "bollitore",
+    "trad_port": "bujão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 14575,
+    "italiano": "forchettini",
+    "trad_port": "garfo",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 22797,
+    "italiano": "cassetto",
+    "trad_port": "gaveta",
+    "categoria": "partes",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 70967,
+    "italiano": "fornello",
+    "trad_port": "fogão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 17739,
+    "italiano": "cassettiere",
+    "trad_port": "baú",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 31062,
+    "italiano": "pentolini",
+    "trad_port": "caçulhas",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 25800,
+    "italiano": "supporti",
+    "trad_port": "suportes",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 73929,
+    "italiano": "tavolo",
+    "trad_port": "mesa",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 62732,
+    "italiano": "spazzola",
+    "trad_port": "pincel",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12591,
+    "italiano": "tostapane",
+    "trad_port": "torradeira",
+    "categoria": "elettronica",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 91454,
+    "italiano": "cornici",
+    "trad_port": "caixas de molduras",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 73598,
+    "italiano": "cestino",
+    "trad_port": "cesto",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 93022,
+    "italiano": "teglia",
+    "trad_port": "forma de bolo",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 83957,
+    "italiano": "scrivania",
+    "trad_port": "escritório de trabalho",
+    "categoria": "móvel",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 97178,
+    "italiano": "videogame",
+    "trad_port": "videogames",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 13196,
+    "italiano": "controller",
+    "trad_port": "controlador",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 52577,
+    "italiano": "stoviglie",
+    "trad_port": "louças",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 55148,
+    "italiano": "quadrato",
+    "trad_port": "quadros",
+    "categoria": "decoração",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 81444,
+    "italiano": "tappeto",
+    "trad_port": "tapete",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 62446,
+    "italiano": "pentola",
+    "trad_port": "panela",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 99384,
+    "italiano": "fotografie",
+    "trad_port": "fotos",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 94545,
+    "italiano": "teglie forno",
+    "trad_port": "formas para forno",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 16166,
+    "italiano": "sedia da cucina",
+    "trad_port": "cadeira de cozinha",
+    "categoria": "móvel",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 57481,
+    "italiano": "armadio",
+    "trad_port": "guarda-roupas",
+    "categoria": "mobiliario",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84649,
+    "italiano": "consolle",
+    "trad_port": "console",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 54205,
+    "italiano": "tumbler",
+    "trad_port": "tumbler",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 15070,
+    "italiano": "vase",
+    "trad_port": "vaso",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 52244,
+    "italiano": "stendino",
+    "trad_port": "cabide",
+    "categoria": "objetos",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 41877,
+    "italiano": "televisore",
+    "trad_port": "televisão",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 15389,
+    "italiano": "saponi",
+    "trad_port": "sabões",
+    "categoria": "produto",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 30873,
+    "italiano": "vestiario",
+    "trad_port": "guarda-roupa",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 95016,
+    "italiano": "maniglia",
+    "trad_port": "alças",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 99313,
+    "italiano": "sottosopra",
+    "trad_port": "debaixo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55952,
+    "italiano": "towel",
+    "trad_port": "toalha",
+    "categoria": "objetos",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 25811,
+    "italiano": "poltrona",
+    "trad_port": "poltrona",
+    "categoria": "mobiliario",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 11986,
+    "italiano": "cassetta",
+    "trad_port": "caixa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 77759,
+    "italiano": "guscio",
+    "trad_port": "casco",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 83611,
+    "italiano": "capo",
+    "trad_port": "capa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 94148,
+    "italiano": "lavastoviglie",
+    "trad_port": "máquina de louças",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 27055,
+    "italiano": "scatola",
+    "trad_port": "caixa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 78136,
+    "italiano": "auricolari",
+    "trad_port": "fones de ouvido",
+    "categoria": "acessorios",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 22432,
+    "italiano": "decorazione",
+    "trad_port": "decoração",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 43305,
+    "italiano": "tiroli",
+    "trad_port": "panelas",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84321,
+    "italiano": "bustacartoline",
+    "trad_port": "buste para cartas",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 26114,
+    "italiano": "vasetto",
+    "trad_port": "vasinho",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 36890,
+    "italiano": "caffettiera",
+    "trad_port": "cafeteira",
+    "categoria": "elettronica",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 21658,
+    "italiano": "serrature",
+    "trad_port": "trancas",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 69223,
+    "italiano": "spazzolino",
+    "trad_port": "escova de dente",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 40795,
+    "italiano": "piatto",
+    "trad_port": "prato",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 63439,
+    "italiano": "cinturino",
+    "trad_port": "cinto",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 24449,
+    "italiano": "coltello",
+    "trad_port": "facas",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 66550,
+    "italiano": "aspirapolvere",
+    "trad_port": "aspirador de pó",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 70247,
+    "italiano": "fascia",
+    "trad_port": "faixa",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 94452,
+    "italiano": "cuscino",
+    "trad_port": "almofada",
+    "categoria": "mobiliario",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 59639,
+    "italiano": "statua",
+    "trad_port": "estátua",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 98504,
+    "italiano": "detersivo",
+    "trad_port": "detergente",
+    "categoria": "produto",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 88681,
+    "italiano": "bacchetta",
+    "trad_port": "varinha",
+    "categoria": "objeto",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56629,
+    "italiano": "tovaglia",
+    "trad_port": "toalha de mesa",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 47698,
+    "italiano": "sacchettine",
+    "trad_port": "sachês",
+    "categoria": "objeto",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 55391,
+    "italiano": "portaoggetti",
+    "trad_port": "porte objetos",
+    "categoria": "móvel",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 92040,
+    "italiano": "scaffale",
+    "trad_port": "estante",
+    "categoria": "mobiliario",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 41413,
+    "italiano": "posata",
+    "trad_port": "talher",
+    "categoria": "objeto",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 91381,
+    "italiano": "lampada",
+    "trad_port": "lâmpada",
+    "categoria": "objetos",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 16081,
+    "italiano": "forno",
+    "trad_port": "forno",
+    "categoria": "elettronica",
+    "difficolta": "facile",
+    "xp_base": 6
   }
 ]
