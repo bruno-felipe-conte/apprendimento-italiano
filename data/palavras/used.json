@@ -3680,5 +3680,645 @@
     "categoria": "profissao",
     "difficolta": "dificele",
     "xp_base": 9
+  },
+  {
+    "id": 73592,
+    "italiano": "medico",
+    "trad_port": "médico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 68890,
+    "italiano": "canto polifonico",
+    "trad_port": "canto polifônico",
+    "categoria": "arte",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 28622,
+    "italiano": "canzone popolare",
+    "trad_port": "canção popular",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 75546,
+    "italiano": "strumenti musicali",
+    "trad_port": "instrumentos musicais",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 28424,
+    "italiano": "cavalli",
+    "trad_port": "cavalos",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 48659,
+    "italiano": "pizzo",
+    "trad_port": "renda",
+    "categoria": "arte",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 90402,
+    "italiano": "agricolture",
+    "trad_port": "agricultura",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59577,
+    "italiano": "pollini",
+    "trad_port": "pássaros",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 82464,
+    "italiano": "trattoria",
+    "trad_port": "boteco",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 65763,
+    "italiano": "gatto",
+    "trad_port": "gato",
+    "categoria": "animal",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 22262,
+    "italiano": "pigeone",
+    "trad_port": "pombos",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 35142,
+    "italiano": "montagna",
+    "trad_port": "montanha",
+    "categoria": "geografia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 88322,
+    "italiano": "trattore",
+    "trad_port": "tratores",
+    "categoria": "machina",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 15442,
+    "italiano": "dentista",
+    "trad_port": "dentista",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 58225,
+    "italiano": "semina",
+    "trad_port": "semente",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63422,
+    "italiano": "albero",
+    "trad_port": "árvore",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 80185,
+    "italiano": "legno",
+    "trad_port": "madeira",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 40821,
+    "italiano": "mietitura",
+    "trad_port": "safra de grãos",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 24013,
+    "italiano": "feste religiose",
+    "trad_port": "festas religiosas",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 39714,
+    "italiano": "fisioterapista",
+    "trad_port": "fisioterapeuta",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 11903,
+    "italiano": "mare",
+    "trad_port": "mar",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 62229,
+    "italiano": "uccello",
+    "trad_port": "ave",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 95173,
+    "italiano": "cascina",
+    "trad_port": "chácara",
+    "categoria": "lugar",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 39701,
+    "italiano": "penitenza",
+    "trad_port": "punição",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 75851,
+    "italiano": "muratura",
+    "trad_port": "alvenaria",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 79900,
+    "italiano": "oro",
+    "trad_port": "ouro",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 20874,
+    "italiano": "coltivazione",
+    "trad_port": "cultivo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 56372,
+    "italiano": "tradizioni popolari",
+    "trad_port": "tradições populares",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 77186,
+    "italiano": "foresta",
+    "trad_port": "floresta",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 66198,
+    "italiano": "tessuto",
+    "trad_port": "tecido",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 47357,
+    "italiano": "raccolta",
+    "trad_port": "safra",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 21304,
+    "italiano": "cane",
+    "trad_port": "cachorro",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 80172,
+    "italiano": "inferniera",
+    "trad_port": "enfermeira",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 13470,
+    "italiano": "composizione",
+    "trad_port": "composição",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 40006,
+    "italiano": "psicologo",
+    "trad_port": "psicólogo",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 80158,
+    "italiano": "concerti acustici",
+    "trad_port": "consertos acústicos",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 40861,
+    "italiano": "festival folk",
+    "trad_port": "festival de música folclórica",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 22064,
+    "italiano": "argento",
+    "trad_port": "prata",
+    "categoria": "material",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 53905,
+    "italiano": "gesso",
+    "trad_port": "gesso",
+    "categoria": "material",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 31158,
+    "italiano": "sostenibile",
+    "trad_port": "sustentável",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 47376,
+    "italiano": "vetro",
+    "trad_port": "vidro",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 30166,
+    "italiano": "santuari",
+    "trad_port": "santuários",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 52431,
+    "italiano": "leggende",
+    "trad_port": "lendas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63205,
+    "italiano": "musica folk",
+    "trad_port": "música folk",
+    "categoria": "genero",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 29574,
+    "italiano": "nutrizionista",
+    "trad_port": "nutricionista",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 55303,
+    "italiano": "ceramica",
+    "trad_port": "cerâmica",
+    "categoria": "arte",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 85593,
+    "italiano": "vendemmia",
+    "trad_port": "safra de uvas",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 29293,
+    "italiano": "irrigazione",
+    "trad_port": "irrigação",
+    "categoria": "atividade",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 87566,
+    "italiano": "coniglio",
+    "trad_port": "coelho",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 50983,
+    "italiano": "annunci",
+    "trad_port": "declarações",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 54077,
+    "italiano": "biodinamico",
+    "trad_port": "biológico",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 61189,
+    "italiano": "farmacista",
+    "trad_port": "farmacêutico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 49972,
+    "italiano": "pediatra",
+    "trad_port": "pediatria",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 24265,
+    "italiano": "culti",
+    "trad_port": "cultos",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 28106,
+    "italiano": "concime",
+    "trad_port": "adubo",
+    "categoria": "material",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 16755,
+    "italiano": "oliveto",
+    "trad_port": "oliveiral",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 57940,
+    "italiano": "folclore",
+    "trad_port": "folclore",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 11964,
+    "italiano": "ceramiche",
+    "trad_port": "cerâmicas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 22639,
+    "italiano": "rettili",
+    "trad_port": "répteis",
+    "categoria": "animal",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 26925,
+    "italiano": "voto",
+    "trad_port": "votos",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 13769,
+    "italiano": "chirurgo",
+    "trad_port": "cirurgião",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 59822,
+    "italiano": "mitologia",
+    "trad_port": "mitologia",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 29891,
+    "italiano": "aratro",
+    "trad_port": "arado",
+    "categoria": "instrumento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 89153,
+    "italiano": "valle",
+    "trad_port": "vale",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 62151,
+    "italiano": "tartaruga",
+    "trad_port": "tartaruga",
+    "categoria": "animal",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 66959,
+    "italiano": "vigna",
+    "trad_port": "vinha",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 96040,
+    "italiano": "palude",
+    "trad_port": "pântano",
+    "categoria": "geografia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 62294,
+    "italiano": "improvvisazione",
+    "trad_port": "improviso",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80732,
+    "italiano": "processioni",
+    "trad_port": "procissões",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 63131,
+    "italiano": "galline",
+    "trad_port": "galinhas",
+    "categoria": "animal",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 75382,
+    "italiano": "fiore",
+    "trad_port": "flor",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 84707,
+    "italiano": "fattoria",
+    "trad_port": "fazenda",
+    "categoria": "lugar",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 92197,
+    "italiano": "piazza village",
+    "trad_port": "praça da aldeia",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 45753,
+    "italiano": "ottico",
+    "trad_port": "óptico",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 20970,
+    "italiano": "fiume",
+    "trad_port": "rio",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 35754,
+    "italiano": "melodia",
+    "trad_port": "melodia",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 34891,
+    "italiano": "deserto",
+    "trad_port": "deserto",
+    "categoria": "geografia",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 83097,
+    "italiano": "stagioni",
+    "trad_port": "estações",
+    "categoria": "tempo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 40294,
+    "italiano": "ritmo",
+    "trad_port": "ritmo",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 17353,
+    "italiano": "erba",
+    "trad_port": "grama",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
   }
 ]
