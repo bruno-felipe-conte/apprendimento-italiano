@@ -3040,5 +3040,645 @@
     "categoria": "evento",
     "difficolta": "medio",
     "xp_base": 7
+  },
+  {
+    "id": 60998,
+    "italiano": "apprendimento",
+    "trad_port": "aprendizagem",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 36715,
+    "italiano": "venture capital",
+    "trad_port": "capital de risco",
+    "categoria": "financeiro",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 88627,
+    "italiano": "trasparenza",
+    "trad_port": "transparência",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 77262,
+    "italiano": "reale",
+    "trad_port": "real",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 10182,
+    "italiano": "cybersecurity",
+    "trad_port": "segurança cibernética",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 76339,
+    "italiano": "target",
+    "trad_port": "público-alvo",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 26891,
+    "italiano": "conneti",
+    "trad_port": "conectados",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 80452,
+    "italiano": "tutorial",
+    "trad_port": "tutorial",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 62356,
+    "italiano": "prospettiva",
+    "trad_port": "perspectiva",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 68058,
+    "italiano": "social awareness",
+    "trad_port": "consciência social",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 82797,
+    "italiano": "influencer",
+    "trad_port": "influenciador",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 27896,
+    "italiano": "pionierismo",
+    "trad_port": "pioneirismo",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 15408,
+    "italiano": "business plan",
+    "trad_port": "plano de negócios",
+    "categoria": "documento",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 89817,
+    "italiano": "instagram",
+    "trad_port": "instagram",
+    "categoria": "plataforma",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 85551,
+    "italiano": "opportunita",
+    "trad_port": "oportunidades",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 81574,
+    "italiano": "startup",
+    "trad_port": "startups",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 16429,
+    "italiano": "email",
+    "trad_port": "e-mail",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12503,
+    "italiano": "skill",
+    "trad_port": "habilidades",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 18790,
+    "italiano": "generazione",
+    "trad_port": "geração",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 26210,
+    "italiano": "commenti",
+    "trad_port": "comentários",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 25908,
+    "italiano": "social media",
+    "trad_port": "mídia social",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 84238,
+    "italiano": "rischi",
+    "trad_port": "riscos",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91175,
+    "italiano": "software",
+    "trad_port": "software",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 98055,
+    "italiano": "produzione",
+    "trad_port": "produção",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 77584,
+    "italiano": "like",
+    "trad_port": "curtir",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 30898,
+    "italiano": "cloud",
+    "trad_port": "nuvem",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 30216,
+    "italiano": "innovazione",
+    "trad_port": "inovação",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 72536,
+    "italiano": "intelligenza artificiale",
+    "trad_port": "inteligência artificial",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 64266,
+    "italiano": "certificazione",
+    "trad_port": "certificação",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 52599,
+    "italiano": "esplorazione",
+    "trad_port": "exploração",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 42724,
+    "italiano": "vendita",
+    "trad_port": "vendas",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 25448,
+    "italiano": "share",
+    "trad_port": "compartilhar",
+    "categoria": "verbo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 17082,
+    "italiano": "chat",
+    "trad_port": "chat",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 89592,
+    "italiano": "twitter",
+    "trad_port": "twitter",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 12837,
+    "italiano": "internet",
+    "trad_port": "internet",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 93165,
+    "italiano": "dati personali",
+    "trad_port": "dados pessoais",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 77119,
+    "italiano": "reazione",
+    "trad_port": "reação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 91031,
+    "italiano": "crittografia",
+    "trad_port": "criptografia",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 64399,
+    "italiano": "blockchain",
+    "trad_port": "blockchain",
+    "categoria": "tecnologia",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 34848,
+    "italiano": "corsi",
+    "trad_port": "cursos",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 33122,
+    "italiano": "corsi intensivi",
+    "trad_port": "cursos intensivos",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 53759,
+    "italiano": "snapchat",
+    "trad_port": "snapchat",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 73631,
+    "italiano": "mercato",
+    "trad_port": "mercado",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 12622,
+    "italiano": "messaggi",
+    "trad_port": "mensagens",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 80717,
+    "italiano": "automazione",
+    "trad_port": "automação",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 59706,
+    "italiano": "tiktok",
+    "trad_port": "tiktok",
+    "categoria": "plataforma",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 30101,
+    "italiano": "robotica",
+    "trad_port": "robótica",
+    "categoria": "tecnologia",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 96620,
+    "italiano": "sviluppo",
+    "trad_port": "desenvolvimento",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 97984,
+    "italiano": "millennials",
+    "trad_port": "milennials",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 87565,
+    "italiano": "cursi online",
+    "trad_port": "cursos online",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 48113,
+    "italiano": "content creator",
+    "trad_port": "criador de conteúdo",
+    "categoria": "profissao",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 61019,
+    "italiano": "futurista",
+    "trad_port": "futurista",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 84793,
+    "italiano": "facebook",
+    "trad_port": "facebook",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 70505,
+    "italiano": "virtuale",
+    "trad_port": "virtual",
+    "categoria": "adj",
+    "difficolta": "medio",
+    "xp_base": 6
+  },
+  {
+    "id": 66952,
+    "italiano": "youtube",
+    "trad_port": "youtube",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 58075,
+    "italiano": "consenso informato",
+    "trad_port": "consentimento informado",
+    "categoria": "documento",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 40287,
+    "italiano": "collaborazione",
+    "trad_port": "colaboração",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 10
+  },
+  {
+    "id": 73113,
+    "italiano": "engagement",
+    "trad_port": "engajamento",
+    "categoria": "conceito",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 54904,
+    "italiano": "formazione",
+    "trad_port": "formação",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 45218,
+    "italiano": "cambia",
+    "trad_port": "mudar",
+    "categoria": "substantivo",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 96466,
+    "italiano": "cliente",
+    "trad_port": "cliente",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 11148,
+    "italiano": "data",
+    "trad_port": "dados",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 62032,
+    "italiano": "improvvisazione",
+    "trad_port": "improviso",
+    "categoria": "evento",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 65571,
+    "italiano": "fatturato",
+    "trad_port": "faturamento",
+    "categoria": "financeiro",
+    "difficolta": "facile",
+    "xp_base": 5
+  },
+  {
+    "id": 96894,
+    "italiano": "distribuzione",
+    "trad_port": "distribuição",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 59042,
+    "italiano": "webinar",
+    "trad_port": "webinar",
+    "categoria": "evento",
+    "difficolta": "dificele",
+    "xp_base": 9
+  },
+  {
+    "id": 22774,
+    "italiano": "programmatori",
+    "trad_port": "programador",
+    "categoria": "profissao",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 71067,
+    "italiano": "digital native",
+    "trad_port": "nativo digital",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 70686,
+    "italiano": "creativita",
+    "trad_port": "criatividade",
+    "categoria": "conceito",
+    "difficolta": "medio",
+    "xp_base": 9
+  },
+  {
+    "id": 54852,
+    "italiano": "attivismo",
+    "trad_port": "ativismo",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 64655,
+    "italiano": "videoconferenza",
+    "trad_port": "videoconferência",
+    "categoria": "evento",
+    "difficolta": "facile",
+    "xp_base": 7
+  },
+  {
+    "id": 33861,
+    "italiano": "privacy",
+    "trad_port": "privacidade",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 57996,
+    "italiano": "competenze",
+    "trad_port": "competências",
+    "categoria": "substantivo",
+    "difficolta": "dificele",
+    "xp_base": 8
+  },
+  {
+    "id": 78569,
+    "italiano": "hardware",
+    "trad_port": "hardware",
+    "categoria": "tecnologia",
+    "difficolta": "facile",
+    "xp_base": 6
+  },
+  {
+    "id": 51335,
+    "italiano": "linkedin",
+    "trad_port": "linkedin",
+    "categoria": "plataforma",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 12285,
+    "italiano": "digiatale",
+    "trad_port": "digital",
+    "categoria": "adj",
+    "difficolta": "dificele",
+    "xp_base": 10
+  },
+  {
+    "id": 28811,
+    "italiano": "sistemi",
+    "trad_port": "sistemas",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 8
+  },
+  {
+    "id": 35166,
+    "italiano": "community",
+    "trad_port": "comunidade",
+    "categoria": "substantivo",
+    "difficolta": "medio",
+    "xp_base": 7
+  },
+  {
+    "id": 25432,
+    "italiano": "retweet",
+    "trad_port": "retweet",
+    "categoria": "verbo",
+    "difficolta": "medio",
+    "xp_base": 5
+  },
+  {
+    "id": 41939,
+    "italiano": "imprenditori",
+    "trad_port": "empreendedores",
+    "categoria": "profissao",
+    "difficolta": "dificele",
+    "xp_base": 9
   }
 ]
