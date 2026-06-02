@@ -101,7 +101,7 @@ const Profilo = {
         </div>
 
         <div class="profilo-card" style="margin-top:1.5rem">
-          <div class="profilo-card-title">⚙️ Gestione Dati</div>
+          <div class="profilo-card-titulo">⚙️ Gestione Dati</div>
           <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.</p>
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
             <button class="btn-secondario" onclick="Profilo.exportarDados()">⬇️ Exportar Backup</button>
