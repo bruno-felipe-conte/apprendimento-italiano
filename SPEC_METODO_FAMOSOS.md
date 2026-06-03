@@ -946,8 +946,8 @@ if (btnGravar) {
 
 Após implementar, testar:
 
-- [ ] Home: card "Meta com Prazo" aparece; clicar abre modal; definir meta; verificar cálculo de XP/dia
-- [ ] Navegar para "Dialoghi": lista de diálogos aparece; clicar abre modo leitura com áudio; modo prática funciona com múltipla escolha; XP é concedido
-- [ ] Navegar para "Canzoni": lista de músicas; clicar abre exercício de lacuna; digitar palavra; verificar; resultado mostra XP
-- [ ] Flashcard: botão "🎤 Imitar" aparece (Chrome); clicar inicia gravação; falar a palavra italiana; feedback aparece
+- [x] Home: card "Meta com Prazo" aparece; clicar abre modal; definir meta; verificar cálculo de XP/dia
+- [x] Navegar para "Dialoghi": lista de diálogos aparece; clicar abre modo leitura com áudio; modo prática funciona com múltipla escolha; XP é concedido
+- [x] Navegar para "Canzoni": lista de músicas; clicar abre exercício de lacuna; digitar palavra; verificar; resultado mostra XP
+- [x] Flashcard: botão "🎤 Imitar" aparece (Chrome); clicar inicia gravação; falar a palavra italiana; feedback aparece
 - [ ] GitHub Pages: `git push origin master && git push origin master:gh-pages --force`

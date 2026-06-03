@@ -1,0 +1,54 @@
+{
+  "canzoni": [
+    {
+      "id": "canz_001",
+      "titulo": "Lasciatemi Cantare",
+      "artista": "Toto Cutugno",
+      "icone": "🎸",
+      "nivel": "A1",
+      "youtube_id": "8P2g8m2oD_4",
+      "trechos": [
+        {
+          "tempo_inicio": 0,
+          "tempo_fim": 15,
+          "letra": "Lasciatemi cantare\ncon la [chitarra] in mano",
+          "gaps": ["chitarra"],
+          "opcoes": ["chitarra", "valigia", "macchina", "bella"]
+        },
+        {
+          "tempo_inicio": 15,
+          "tempo_fim": 30,
+          "letra": "lasciatemi cantare\nsono un [italiano]",
+          "gaps": ["italiano"],
+          "opcoes": ["italiano", "ragazzo", "uomo", "cantante"]
+        }
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "canz_002",
+      "titulo": "Volare",
+      "artista": "Domenico Modugno",
+      "icone": "☁️",
+      "nivel": "A2",
+      "youtube_id": "t4IjJav7xbg",
+      "trechos": [
+        {
+          "tempo_inicio": 45,
+          "tempo_fim": 60,
+          "letra": "Penso che un sogno così non ritorni mai più\nMi dipingevo le [mani] e la faccia di blu",
+          "gaps": ["mani"],
+          "opcoes": ["mani", "ali", "scarpe", "nuvole"]
+        },
+        {
+          "tempo_inicio": 60,
+          "tempo_fim": 75,
+          "letra": "Poi d'improvviso venivo dal [vento] rapito\nE incominciavo a volare nel cielo infinito",
+          "gaps": ["vento"],
+          "opcoes": ["vento", "sole", "cielo", "mondo"]
+        }
+      ],
+      "xp_recompensa": 60
+    }
+  ]
+}

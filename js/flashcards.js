@@ -172,6 +172,8 @@ const Flashcards = {
   nivelDica:         0,      // 0=none, 1=first letter, 2=more letters, 3=flipped
   dicaUsada:         false,  // penalises Good/Easy when true
   sessaoStats:       null,
+  gravando:          false,
+  _recognition:      null,
   _swipeInitialized: false,
   _swipeStartX:      0,
   _swipeStartY:      0,
@@ -206,6 +208,13 @@ const Flashcards = {
       this.mostrarVazio();
     } else {
       this.mostrarCarta();
+    }
+    
+    // Check speech API support
+    const btnGravar = document.getElementById('btn-gravar');
+    if (btnGravar) {
+      const suporta = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+      btnGravar.style.display = suporta ? '' : 'none';
     }
   },
 
@@ -901,4 +910,65 @@ const Flashcards = {
       sel.value = anterior;
     }
   },
+
+  // ── Speech Recognition (Modo Imitação) ──────────────────────
+  _iniciarReconhecimento() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) return null;
+    const r = new SR();
+    r.lang = 'it-IT';
+    r.continuous = false;
+    r.interimResults = false;
+    return r;
+  },
+
+  toggleGravar() {
+    if (!this.cartaAtual) return;
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { App.notificar('Seu browser não suporta reconhecimento de voz.', 'alerta'); return; }
+    
+    if (this.gravando) {
+      if (this._recognition) this._recognition.stop();
+      this.gravando = false;
+      return;
+    }
+    
+    this.gravando = true;
+    const btnGravar = document.getElementById('btn-gravar');
+    if (btnGravar) { btnGravar.textContent = '⏹ Parar'; btnGravar.style.background = '#C0392B'; btnGravar.style.color = '#fff'; }
+    
+    this._recognition = this._iniciarReconhecimento();
+    if (!this._recognition) return;
+    
+    this._recognition.onresult = (e) => {
+      const texto = e.results[0][0].transcript.toLowerCase();
+      const alvo = (this.cartaAtual.italiano || '').toLowerCase();
+      
+      const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
+      const alvoNormalize = alvo.replace(/[.,!?;:]/g, '').trim();
+      
+      const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
+      this._mostrarFeedbackPronuncia(texto, reconheceu);
+    };
+    this._recognition.onerror = () => { App.notificar('Não consegui ouvir. Tente novamente.', 'alerta'); };
+    this._recognition.onend = () => {
+      this.gravando = false;
+      if (btnGravar) { btnGravar.textContent = '🎤 Imitar'; btnGravar.style.background = ''; btnGravar.style.color = ''; }
+    };
+    this._recognition.start();
+  },
+
+  _mostrarFeedbackPronuncia(texto, reconheceu) {
+    const fb = document.getElementById('imitacao-feedback');
+    if (!fb) return;
+    if (reconheceu) {
+      fb.innerHTML = `<span style="color:#27AE60">✅ Perfetto! Ouvimos: "${texto}"</span>`;
+      if (typeof Progressao !== 'undefined') Progressao.ganhar(3);
+      else if (typeof App !== 'undefined') App.ganharXP(3);
+    } else {
+      fb.innerHTML = `<span style="color:#E67E22">🔄 Ouvimos: "${texto}" — tente de novo!</span>`;
+    }
+    fb.style.display = 'block';
+    setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);
+  }
 };

@@ -1331,6 +1331,19 @@
     body.dark-mode .cc-info strong {
       color: #D4A843;
     }
+    
+    /* ── Meta Prazo ── */
+    .card-meta-prazo { background: white; border-radius: 12px; padding: 0.9rem 1.1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1rem; cursor: pointer; border-left: 4px solid #9B2335; transition: box-shadow 0.2s; }
+    .card-meta-prazo:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.13); }
+    .card-meta-vazia { display: flex; align-items: center; gap: 0.6rem; color: #aaa; font-size: 0.88rem; border-left-color: #ddd; }
+    .meta-prazo-titulo { font-weight: 700; font-size: 0.9rem; color: #2C2C2C; margin-bottom: 0.3rem; }
+    .meta-prazo-info { font-size: 0.83rem; display: flex; gap: 0.5rem; margin-bottom: 0.2rem; }
+    .meta-prazo-previsao { font-size: 0.78rem; color: #888; font-style: italic; }
+    body.dark-mode .card-meta-prazo { background: #1C1816; box-shadow: 0 4px 15px rgba(0,0,0,0.25); border-left-color: #C4304A; }
+    body.dark-mode .card-meta-prazo:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
+    body.dark-mode .card-meta-vazia { border-left-color: #3D3530; color: #777; }
+    body.dark-mode .meta-prazo-titulo { color: #E6DFD3; }
+
     /* ── Fase 2: Flip Cards (Observação) ── */
     .gram-observacao-grid {
       display: grid;
@@ -1739,7 +1752,61 @@
       .gram-teoria-corpo table, .gram-table { font-size: 0.82rem; }
       .gram-table th, .gram-table td { padding: 0.4rem 0.6rem; }
       .gram-lezioni-grid { grid-template-columns: 1fr 1fr; }
-    }
+    }    /* ── Dialoghi ── */
+    .dialogo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .dialogo-card { background: white; border-radius: 12px; padding: 1.2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; border: 2px solid transparent; }
+    .dialogo-card:hover { transform: translateY(-3px); border-color: #D4A843; }
+    .dialogo-icone { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .dialogo-titulo { font-family: 'Cinzel', serif; font-weight: 700; color: #9B2335; font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .dialogo-nivel { display: inline-block; background: #eee; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 700; color: #555; }
+    .dialogo-conversa { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    .dialogo-turno { display: flex; flex-direction: column; max-width: 80%; }
+    .dialogo-turno.personaggio { align-self: flex-start; }
+    .dialogo-turno.utente { align-self: flex-end; }
+    .dialogo-bubble { padding: 0.8rem 1rem; border-radius: 16px; position: relative; font-size: 0.95rem; line-height: 1.4; }
+    .dialogo-turno.personaggio .dialogo-bubble { background: #f0f0f0; color: #333; border-bottom-left-radius: 4px; }
+    .dialogo-turno.utente .dialogo-bubble { background: #9B2335; color: white; border-bottom-right-radius: 4px; }
+    .dialogo-nome { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.2rem; opacity: 0.7; }
+    .dialogo-turno.utente .dialogo-nome { text-align: right; }
+    .dialogo-traducao { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-top: 0.3rem; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 0.3rem; }
+    .dialogo-turno.utente .dialogo-traducao { border-top-color: rgba(255,255,255,0.2); }
+    .dialogo-audio-btn { background: none; border: none; cursor: pointer; font-size: 1rem; margin-left: 0.3rem; transition: transform 0.2s; }
+    .dialogo-audio-btn:hover { transform: scale(1.2); }
+    .dialogo-opcoes { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; }
+    .dialogo-opcao { padding: 0.8rem 1rem; background: white; border: 2px solid #ddd; border-radius: 8px; cursor: pointer; text-align: left; font-size: 0.9rem; transition: all 0.2s; }
+    .dialogo-opcao:hover:not(:disabled) { border-color: #D4A843; background: #fffcf5; }
+    .dialogo-opcao.correta { background: #ebf7ee; border-color: #27AE60; color: #27AE60; font-weight: 700; }
+    .dialogo-opcao.errada { background: #fdeee9; border-color: #C0392B; color: #C0392B; text-decoration: line-through; }
+    .dialogo-pratica-frase { text-align: center; font-weight: 700; color: #9B2335; margin-bottom: 0.5rem; }
+    
+    body.dark-mode .dialogo-card { background: #1C1816; }
+    body.dark-mode .dialogo-titulo { color: #E6DFD3; }
+    body.dark-mode .dialogo-nivel { background: #333; color: #aaa; }
+    body.dark-mode .dialogo-conversa { background: #1C1816; }
+    body.dark-mode .dialogo-turno.personaggio .dialogo-bubble { background: #2D2723; color: #E6DFD3; }
+    body.dark-mode .dialogo-opcao { background: #2D2723; border-color: #3D3530; color: #E6DFD3; }
+    body.dark-mode .dialogo-opcao:hover:not(:disabled) { border-color: #D4A843; background: #3D3530; }
+    body.dark-mode .dialogo-opcao.correta { background: #192B20; border-color: #27AE60; color: #73E69B; }
+    body.dark-mode .dialogo-opcao.errada { background: #2D1B1B; border-color: #C0392B; color: #F1948A; }
+    body.dark-mode .dialogo-pratica-frase { color: #D4A843; }
+    /* ── Canzoni ── */
+    .canzone-letra { font-size: 1.1rem; line-height: 1.8; text-align: center; color: #2C2C2C; margin-bottom: 1rem; }
+    .canzone-gap { display: inline-block; min-width: 80px; text-align: center; border-bottom: 2px solid #9B2335; padding: 0 0.5rem; font-weight: 700; color: #9B2335; }
+    .canzone-gap.correta { color: #27AE60; border-color: #27AE60; }
+    .canzone-gap.errada { color: #C0392B; border-color: #C0392B; }
+    body.dark-mode .canzone-letra { color: #E6DFD3; }
+    body.dark-mode .canzone-gap { color: #D4A843; border-color: #D4A843; }
+    body.dark-mode .canzone-gap.correta { color: #73E69B; border-color: #27AE60; }
+    body.dark-mode .canzone-gap.errada { color: #F1948A; border-color: #C0392B; }
+
+    /* ── Imitazione ── */
+    .mic-button { font-size: 3.5rem; width: 100px; height: 100px; border-radius: 50%; border: none; background: white; box-shadow: 0 8px 25px rgba(0,0,0,0.15); cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); outline: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+    .mic-button:hover { transform: scale(1.1); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+    .mic-button.recording { background: #E74C3C; animation: pulseMic 1.5s infinite; color: white; }
+    @keyframes pulseMic { 0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(231, 76, 60, 0); } 100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); } }
+    body.dark-mode .mic-button { background: #25201D; box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+    body.dark-mode .mic-button.recording { background: #C0392B; }
+
   </style>
 </head>
 <body>
@@ -1774,6 +1841,9 @@
 
   <nav class="nav-tabs">
     <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')">🏛️ Templi</button>
+    <button class="nav-tab" data-section="dialoghi" onclick="App.navegar('dialoghi')">💬 Dialoghi</button>
+    <button class="nav-tab" data-section="canzoni" onclick="App.navegar('canzoni')">🎵 Canzoni</button>
+    <button class="nav-tab" data-section="imitazione" onclick="App.navegar('imitazione')">🗣️ Imitazione</button>
     <button class="nav-tab" data-section="flashcard" onclick="App.navegar('flashcard')">🃏 Flashcard</button>
     <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ Quiz</button>
     <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 Vocabolario</button>
@@ -1809,6 +1879,7 @@
     <!-- SECTION: Templi -->
     <section id="sec-templi" class="section active">
       <div id="continuar-container"></div>
+      <div id="meta-prazo-container"></div>
 
       <!-- Heatmap di attività — topo da página -->
       <div class="heatmap-container">
@@ -1835,6 +1906,24 @@
       <div class="templos-grid" id="templos-grid">
         <p style="color:#888;font-style:italic;padding:1rem;">Caricamento in corso...</p>
       </div>
+    </section>
+
+    <!-- SECTION: Dialoghi -->
+    <section id="sec-dialoghi" class="section">
+      <h2 class="section-titulo">Modo Diálogo</h2>
+      <div id="dialoghi-container"></div>
+    </section>
+
+    <!-- SECTION: Canzoni -->
+    <section id="sec-canzoni" class="section">
+      <h2 class="section-titulo">Modo Canzone</h2>
+      <div id="canzoni-container"></div>
+    </section>
+
+    <!-- SECTION: Imitazione -->
+    <section id="sec-imitazione" class="section">
+      <h2 class="section-titulo">Modo Imitazione</h2>
+      <div id="imitazione-container"></div>
     </section>
 
     <!-- SECTION: Flashcard -->
@@ -1869,9 +1958,11 @@
         </div>
         <div style="display:flex;align-items:center;justify-content:center;gap:0.7rem;margin-bottom:0.75rem;">
           <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
+          <button class="btn-audio" onclick="Flashcards.toggleGravar()" id="btn-gravar">🎤 Imitar</button>
           <button class="btn-dica" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Ver dica (nível 1)">💡</button>
           <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito">🤍</button>
         </div>
+        <div id="imitacao-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.3rem;"></div>
         <div class="card-actions" id="card-actions" style="display:none">
           <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
             <span class="btn-label">❌ Esqueci</span>
@@ -2062,6 +2153,9 @@
   <!-- Bottom navigation for mobile -->
   <nav class="bottom-nav" id="bottom-nav">
     <button class="nav-tab-btn" data-section="templi" onclick="App.navegar('templi')">🏛️<span>Início</span></button>
+    <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')">💬<span>Diálogos</span></button>
+    <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')">🎵<span>Canzoni</span></button>
+    <button class="nav-tab-btn" data-section="imitazione" onclick="App.navegar('imitazione')">🗣️<span>Imitação</span></button>
     <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')">🃏<span>Flashcard</span></button>
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')">❓<span>Quiz</span></button>
     <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖<span>Vocab</span></button>
@@ -2083,6 +2177,9 @@
   <script src="js/heatmap.js?v=3"></script>
   <script src="js/grammar.js?v=5"></script>
   <script src="js/profilo.js?v=1"></script>
+  <script src="js/dialoghi.js?v=1"></script>
+  <script src="js/canzoni.js?v=1"></script>
+  <script src="js/imitazione.js?v=1"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -2117,6 +2214,26 @@
       }).catch(err => console.warn('[SW] Registro falhou:', err));
     }
   </script>
-    <input type="file" id="backup-input" accept=".json" style="display:none" onchange="Profilo.importarDados(event)">
+  <div id="modal-meta-prazo" class="modal" style="display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem;">
+    <div class="modal-conteudo" style="background:#fff; border-radius:18px; padding:2rem; max-width:400px; width:100%; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,0.2);">
+      <h3 style="font-family:'Cinzel',serif;color:#9B2335;margin-bottom:1rem;font-size:1.3rem;">🎯 Minha Meta</h3>
+      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;">Quero atingir o nível:</label>
+      <select id="meta-nivel-alvo" style="width:100%;margin-bottom:1rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
+        <option value="5">Nível 5 — Principiante (A1)</option>
+        <option value="10">Nível 10 — Intermediário (A2)</option>
+        <option value="15">Nível 15 — Avançado (B1)</option>
+        <option value="20">Nível 20 — Maestro (B2)</option>
+      </select>
+      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;">Até a data:</label>
+      <input type="date" id="meta-data-alvo" style="width:100%;margin-bottom:1.5rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
+      <div style="display:flex;gap:0.5rem;">
+        <button class="btn-primario" style="flex:1" onclick="App.confirmarMetaPrazo()">Definir Meta</button>
+        <button class="btn-secondario" style="flex:1" onclick="App.fecharModalMetaPrazo()">Cancelar</button>
+      </div>
+      <button onclick="Progressao.removerMetaPrazo();App.fecharModalMetaPrazo();App.renderizarTemplos();" style="width:100%;margin-top:1rem;background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.85rem;font-weight:700;">Remover meta atual</button>
+    </div>
+  </div>
+
+  <input type="file" id="backup-input" accept=".json" style="display:none" onchange="Profilo.importarDados(event)">
 </body>
 </html>

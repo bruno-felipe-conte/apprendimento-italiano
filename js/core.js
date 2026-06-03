@@ -198,6 +198,15 @@ const App = {
     }
 
     // Lazy-render on first visit
+    if (secao === 'dialoghi' && typeof Dialoghi !== 'undefined') {
+      Dialoghi.renderizarSeletor();
+    }
+    if (secao === 'canzoni' && typeof Canzoni !== 'undefined') {
+      Canzoni.renderizarSeletor();
+    }
+    if (secao === 'imitazione' && typeof Imitazione !== 'undefined') {
+      Imitazione.renderizar();
+    }
     if (secao === 'vocabolario' && typeof Vocab !== 'undefined') {
       Vocab.renderizar();
     }
@@ -229,6 +238,7 @@ const App = {
         if (!p.favoritos)   p.favoritos   = [];
         if (!p.conquistas)  p.conquistas  = [];
         if (!p.data_inicio) p.data_inicio = p.ultimo_estudo || Date.now();
+        if (p.meta_prazo === undefined) p.meta_prazo = null;
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -248,7 +258,8 @@ const App = {
       data_xp_hoje: null,
       favoritos:   [],
       conquistas:  [],
-      data_inicio: Date.now()
+      data_inicio: Date.now(),
+      meta_prazo: null
     };
   },
 
@@ -362,11 +373,41 @@ const App = {
     </div>`;
   },
 
+  _renderizarMetaPrazo() {
+    const p = this.estado.progresso;
+    if (!p || !p.meta_prazo) {
+      return `<div class="card-meta-prazo card-meta-vazia" onclick="App.abrirModalMetaPrazo()">
+        <span>🎯</span>
+        <span>Definir uma meta com prazo</span>
+        <span class="cc-cta">→</span>
+      </div>`;
+    }
+    const dados = Progressao.calcularMetaPrazo();
+    if (!dados) return '';
+    const cor = dados.atingeNoPrazo ? '#27AE60' : '#E74C3C';
+    const emoji = dados.atingeNoPrazo ? '✅' : '⚠️';
+    return `<div class="card-meta-prazo" onclick="App.abrirModalMetaPrazo()">
+      <div class="meta-prazo-titulo">${emoji} Meta: Nível ${dados.nivel_alvo} até ${new Date(dados.data_alvo).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}</div>
+      <div class="meta-prazo-info">
+        <span style="color:${cor}">${dados.xpPorDia} XP/dia necessários</span>
+        <span>·</span>
+        <span>${dados.diasRestantes} dias restantes</span>
+      </div>
+      <div class="meta-prazo-previsao">No ritmo atual: ${dados.dataPrevisao}</div>
+    </div>`;
+  },
+
   renderizarTemplos() {
     // Render card continuar
     const contContainer = document.getElementById('continuar-container');
     if (contContainer) {
       contContainer.innerHTML = this.renderizarCardContinuar();
+    }
+
+    // Render meta com prazo
+    const metaContainer = document.getElementById('meta-prazo-container');
+    if (metaContainer) {
+      metaContainer.innerHTML = this._renderizarMetaPrazo();
     }
 
     const grid = document.getElementById('templos-grid');
@@ -671,6 +712,39 @@ const App = {
     this.atualizarStats();
     this.fecharMetaSettings();
     this.notificar(`Meta: ${valor} XP/dia`, 'sucesso');
+  },
+
+  // ── Meta Prazo Modal ────────────────────────────────────────
+  abrirModalMetaPrazo() {
+    const modal = document.getElementById('modal-meta-prazo');
+    if (!modal) return;
+    const p = this.estado.progresso;
+    if (p && p.meta_prazo) {
+      document.getElementById('meta-nivel-alvo').value = p.meta_prazo.nivel_alvo;
+      document.getElementById('meta-data-alvo').value = p.meta_prazo.data_alvo;
+    }
+    modal.style.display = 'flex';
+  },
+
+  fecharModalMetaPrazo() {
+    const modal = document.getElementById('modal-meta-prazo');
+    if (modal) modal.style.display = 'none';
+  },
+
+  confirmarMetaPrazo() {
+    const nivelAlvo = parseInt(document.getElementById('meta-nivel-alvo').value);
+    const dataAlvo = document.getElementById('meta-data-alvo').value;
+    if (!nivelAlvo || !dataAlvo) return;
+    
+    // Validar se data é no futuro
+    if (new Date(dataAlvo).getTime() <= Date.now()) {
+      this.notificar('A data limite deve ser no futuro.', 'erro');
+      return;
+    }
+    
+    Progressao.definirMetaPrazo(nivelAlvo, dataAlvo);
+    this.fecharModalMetaPrazo();
+    this.renderizarTemplos();
   },
 
   // ── XP system ─────────────────────────────────────────────

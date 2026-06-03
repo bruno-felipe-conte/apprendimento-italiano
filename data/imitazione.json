@@ -1,0 +1,49 @@
+{
+  "imitazione": [
+    {
+      "id": "imit_001",
+      "frase": "Buongiorno, come stai?",
+      "traducao": "Bom dia, como você está?",
+      "dica_fonetica": "bwon-JÒR-no, KO-me stài?",
+      "audio_ipa": "/bwɔnˈdʒorno, ˈkome ˈstai/",
+      "nivel": "A1",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imit_002",
+      "frase": "Vorrei un caffè per favore.",
+      "traducao": "Gostaria de um café, por favor.",
+      "dica_fonetica": "vor-RÈI un kaf-FÈ per fa-VÓ-re",
+      "audio_ipa": "/vorˈrɛi un kafˈfɛ per faˈvore/",
+      "nivel": "A1",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imit_003",
+      "frase": "Dov'è la stazione ferroviaria?",
+      "traducao": "Onde fica a estação de trem?",
+      "dica_fonetica": "do-VÈ la sta-TSIÓ-ne fer-ro-VIA-ria",
+      "audio_ipa": "/doˈvɛ la statˈtsjone ferroˈvjarja/",
+      "nivel": "A2",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imit_004",
+      "frase": "Scusa, non parlo molto bene l'italiano.",
+      "traducao": "Desculpe, não falo italiano muito bem.",
+      "dica_fonetica": "SKU-za, non PÀR-lo MÓL-to BÈ-ne li-ta-LIÀ-no",
+      "audio_ipa": "/ˈskuza, non ˈparlo ˈmolto ˈbɛne litaˈljano/",
+      "nivel": "A2",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imit_005",
+      "frase": "Che bella giornata oggi!",
+      "traducao": "Que dia lindo hoje!",
+      "dica_fonetica": "ke BÈL-la jor-NÀ-ta ÒJ-ji",
+      "audio_ipa": "/ke ˈbɛlla dʒorˈnata ˈɔddʒi/",
+      "nivel": "B1",
+      "xp_recompensa": 40
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "dialogi": [
+    {
+      "id": "dial_001",
+      "titulo": "Al Ristorante",
+      "icone": "🍽️",
+      "nivel": "A1",
+      "contexto": "Você entra em um restaurante italiano para jantar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Cameriere",
+          "frase": "Buonasera! Avete prenotato?",
+          "traducao": "Boa noite! Vocês têm reserva?",
+          "audio_ipa": "/bwɔnaˈseːra"
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "No, non abbiamo prenotato. C'è un tavolo per due?",
+          "traducao": "Não, não temos reserva. Tem mesa para dois?",
+          "audio_ipa": "",
+          "alternativas": [
+            "No, non abbiamo prenotato. C'è un tavolo per due?",
+            "Sì, abbiamo prenotato. Il nome è Rossi.",
+            "Voglio un tavolo, per favore.",
+            "Non capisco, scusi."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Cameriere",
+          "frase": "Certo! Seguitemi, prego.",
+          "traducao": "Claro! Sigam-me, por favor.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Grazie mille.",
+          "traducao": "Muito obrigado.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 5,
+          "personaggio": "Cameriere",
+          "frase": "Ecco il menù. Volete qualcosa da bere?",
+          "traducao": "Aqui está o cardápio. Querem algo para beber?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Un'acqua minerale naturale e un bicchiere di vino rosso.",
+          "traducao": "Uma água mineral sem gás e uma taça de vinho tinto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Un'acqua minerale naturale e un bicchiere di vino rosso.",
+            "Solo acqua, grazie.",
+            "Una birra grande, per favore.",
+            "Non ho sete, grazie."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": ["prenotare", "tavolo", "menù", "cameriere", "conto"],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_002",
+      "titulo": "In Farmacia",
+      "icone": "💊",
+      "nivel": "A2",
+      "contexto": "Você está com dor de cabeça e vai à farmácia.",
+      "turni": [
+        {"id":1,"personaggio":"Farmacista","frase":"Buongiorno, posso aiutarla?","traducao":"Bom dia, posso ajudá-lo?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Sì, ho mal di testa. Ha qualcosa per il dolore?","traducao":"Sim, estou com dor de cabeça. Tem algo para a dor?","audio_ipa":"","alternativas":["Sì, ho mal di testa. Ha qualcosa per il dolore?","Ho la febbre alta.","Cerco un farmaco per la tosse.","Non sto bene, ho bisogno di aiuto."],"resposta_correta":0},
+        {"id":3,"personaggio":"Farmacista","frase":"Certo. Ha allergie a qualche farmaco?","traducao":"Claro. Você tem alergia a algum remédio?","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"No, non ho allergie. Grazie.","traducao":"Não, não tenho alergias. Obrigado.","audio_ipa":"","alternativas":["No, non ho allergie. Grazie.","Sì, sono allergico alla penicillina.","Non lo so.","Ho allergie molte."],"resposta_correta":0},
+        {"id":5,"personaggio":"Farmacista","frase":"Prenda due compresse ogni otto ore dopo i pasti.","traducao":"Tome dois comprimidos a cada oito horas após as refeições.","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Capito. Quanto costano?","traducao":"Entendi. Quanto custam?","audio_ipa":"","alternativas":["Capito. Quanto costano?","Va bene, arrivederci.","Non capisco.","Posso pagare con carta?"],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["mal di testa","farmaco","allergia","compressa","pasto"],
+      "xp_recompensa":50
+    },
+    {
+      "id": "dial_003",
+      "titulo": "All'Aeroporto",
+      "icone": "✈️",
+      "nivel": "A2",
+      "contexto": "Você está no aeroporto e precisa fazer o check-in.",
+      "turni": [
+        {"id":1,"personaggio":"Addetta","frase":"Buongiorno! Posso vedere il suo passaporto e il biglietto?","traducao":"Bom dia! Posso ver seu passaporte e bilhete?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Ecco il passaporto e il mio biglietto elettronico.","traducao":"Aqui está o passaporte e meu bilhete eletrônico.","audio_ipa":"","alternativas":["Ecco il passaporto e il mio biglietto elettronico.","Non ho il passaporto con me.","Aspetti un momento.","Ho perso il biglietto."],"resposta_correta":0},
+        {"id":3,"personaggio":"Addetta","frase":"Ha bagagli da imbarcare?","traducao":"Tem bagagens para despachar?","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"Sì, una valigia grande e uno zaino come bagaglio a mano.","traducao":"Sim, uma mala grande e uma mochila como bagagem de mão.","audio_ipa":"","alternativas":["Sì, una valigia grande e uno zaino come bagaglio a mano.","No, solo bagaglio a mano.","Ho tre valigie.","Non lo so."],"resposta_correta":0},
+        {"id":5,"personaggio":"Addetta","frase":"Vuole il posto al finestrino o al corridoio?","traducao":"Quer assento na janela ou no corredor?","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Al finestrino, se possibile.","traducao":"Na janela, se possível.","audio_ipa":"","alternativas":["Al finestrino, se possibile.","Non importa.","Al corridoio, grazie.","Dove vuole lei."],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["passaporto","biglietto","valigia","bagaglio","finestrino","corridoio"],
+      "xp_recompensa":50
+    },
+    {
+      "id": "dial_004",
+      "titulo": "Dal Medico",
+      "icone": "🏥",
+      "nivel": "B1",
+      "contexto": "Você não está se sentindo bem e vai ao médico.",
+      "turni": [
+        {"id":1,"personaggio":"Medico","frase":"Buongiorno. Come si sente oggi?","traducao":"Bom dia. Como se sente hoje?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Non mi sento bene. Ho febbre alta e mal di gola da tre giorni.","traducao":"Não me sinto bem. Tenho febre alta e dor de garganta há três dias.","audio_ipa":"","alternativas":["Non mi sento bene. Ho febbre alta e mal di gola da tre giorni.","Sto benissimo, grazie.","Ho solo un po' di tosse.","Non so descrivere i sintomi."],"resposta_correta":0},
+        {"id":3,"personaggio":"Medico","frase":"Apra la bocca e dica 'aaah'. Ha anche mal di testa?","traducao":"Abra a boca e diga 'aaah'. Também tem dor de cabeça?","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"Sì, soprattutto al mattino. E mi sento molto stanco.","traducao":"Sim, principalmente de manhã. E me sinto muito cansado.","audio_ipa":"","alternativas":["Sì, soprattutto al mattino. E mi sento molto stanco.","No, nessun mal di testa.","Solo un pochino.","Non ricordo."],"resposta_correta":0},
+        {"id":5,"personaggio":"Medico","frase":"Sembra un'influenza. Le prescrivo un antibiotico e del riposo.","traducao":"Parece uma gripe. Vou prescrever um antibiótico e repouso.","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Grazie dottore. Per quanto tempo devo prendere l'antibiotico?","traducao":"Obrigado doutor. Por quanto tempo devo tomar o antibiótico?","audio_ipa":"","alternativas":["Grazie dottore. Per quanto tempo devo prendere l'antibiotico?","Va bene, arrivederci.","Non prendo medicine.","Quanto costa la visita?"],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["febbre","mal di gola","sintomi","antibiotico","riposo","ricetta"],
+      "xp_recompensa":60
+    },
+    {
+      "id": "dial_005",
+      "titulo": "In Banca",
+      "icone": "🏦",
+      "nivel": "B1",
+      "contexto": "Você precisa abrir uma conta bancária na Itália.",
+      "turni": [
+        {"id":1,"personaggio":"Impiegato","frase":"Buongiorno, come posso aiutarla?","traducao":"Bom dia, como posso ajudá-lo?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Vorrei aprire un conto corrente. Quali documenti servono?","traducao":"Gostaria de abrir uma conta corrente. Quais documentos são necessários?","audio_ipa":"","alternativas":["Vorrei aprire un conto corrente. Quali documenti servono?","Voglio fare un prelievo.","Ho perso la carta di credito.","Devo fare un bonifico."],"resposta_correta":0},
+        {"id":3,"personaggio":"Impiegato","frase":"Servono il passaporto, il codice fiscale e una prova di residenza.","traducao":"São necessários passaporte, código fiscal e comprovante de residência.","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"Ho tutti i documenti con me. Posso procedere subito?","traducao":"Tenho todos os documentos comigo. Posso proceder agora?","audio_ipa":"","alternativas":["Ho tutti i documenti con me. Posso procedere subito?","Non ho il codice fiscale.","Torno domani con i documenti.","Qual è la vostra commissione?"],"resposta_correta":0},
+        {"id":5,"personaggio":"Impiegato","frase":"Certamente. La carta di debito arriverà entro una settimana.","traducao":"Certamente. O cartão de débito chegará em uma semana.","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Perfetto. Offrite anche il servizio di internet banking?","traducao":"Perfeito. Vocês também oferecem serviço de internet banking?","audio_ipa":"","alternativas":["Perfetto. Offrite anche il servizio di internet banking?","Quanto tempo ci vuole?","Non mi interessa.","Va bene, grazie."],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["conto corrente","codice fiscale","residenza","carta di debito","bonifico"],
+      "xp_recompensa":60
+    },
+    {
+      "id": "dial_006",
+      "titulo": "Al Mercato",
+      "icone": "🛒",
+      "nivel": "A1",
+      "contexto": "Você está num mercado de rua comprando frutas e legumes.",
+      "turni": [
+        {"id":1,"personaggio":"Venditore","frase":"Prego! Cosa desidera?","traducao":"Pois não! O que deseja?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Vorrei un chilo di pomodori e mezzo chilo di peperoni.","traducao":"Gostaria de um quilo de tomates e meio quilo de pimentões.","audio_ipa":"","alternativas":["Vorrei un chilo di pomodori e mezzo chilo di peperoni.","Solo mele, grazie.","Quanto costano le mele?","Non so ancora cosa voglio."],"resposta_correta":0},
+        {"id":3,"personaggio":"Venditore","frase":"Eccoli! Vuole altro? Abbiamo delle belle mele oggi.","traducao":"Aqui estão! Quer mais alguma coisa? Temos maçãs bonitas hoje.","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"Sì, mi dia anche un kilo di mele. Quanto viene in tutto?","traducao":"Sim, me dê também um quilo de maçãs. Quanto fica no total?","audio_ipa":"","alternativas":["Sì, mi dia anche un kilo di mele. Quanto viene in tutto?","No grazie, basta così.","Sono fresche le mele?","Non mi piacciono le mele."],"resposta_correta":0},
+        {"id":5,"personaggio":"Venditore","frase":"Cinque euro e cinquanta in tutto.","traducao":"Cinco euros e cinquenta no total.","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Ecco sei euro. Tenga il resto.","traducao":"Aqui estão seis euros. Fique com o troco.","audio_ipa":"","alternativas":["Ecco sei euro. Tenga il resto.","Ho solo banconote grandi.","Posso pagare con carta?","Ho solo cinque euro."],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["chilo","pomodori","peperoni","mele","resto","banconota"],
+      "xp_recompensa":40
+    },
+    {
+      "id": "dial_007",
+      "titulo": "In Hotel",
+      "icone": "🏨",
+      "nivel": "A2",
+      "contexto": "Você chega a um hotel italiano para fazer check-in.",
+      "turni": [
+        {"id":1,"personaggio":"Receptionist","frase":"Benvenuto! Ha una prenotazione?","traducao":"Bem-vindo! Tem uma reserva?","audio_ipa":""},
+        {"id":2,"personaggio":"Tu","frase":"Sì, ho prenotato una camera doppia per tre notti. Il nome è Silva.","traducao":"Sim, reservei um quarto duplo por três noites. O nome é Silva.","audio_ipa":"","alternativas":["Sì, ho prenotato una camera doppia per tre notti. Il nome è Silva.","No, non ho prenotato.","Voglio una camera singola.","Ho prenotato online ieri."],"resposta_correta":0},
+        {"id":3,"personaggio":"Receptionist","frase":"Perfetto. La camera è al secondo piano. La colazione è inclusa.","traducao":"Perfeito. O quarto é no segundo andar. O café da manhã está incluído.","audio_ipa":""},
+        {"id":4,"personaggio":"Tu","frase":"Ottimo. C'è il parcheggio gratuito?","traducao":"Ótimo. Tem estacionamento gratuito?","audio_ipa":"","alternativas":["Ottimo. C'è il parcheggio gratuito?","A che ora è la colazione?","Posso avere una camera diversa?","Il Wi-Fi funziona?"],"resposta_correta":0},
+        {"id":5,"personaggio":"Receptionist","frase":"Sì, il parcheggio è gratuito per gli ospiti. Ecco la chiave.","traducao":"Sim, o estacionamento é gratuito para os hóspedes. Aqui está a chave.","audio_ipa":""},
+        {"id":6,"personaggio":"Tu","frase":"Grazie. A che ora è il check-out domani?","traducao":"Obrigado. A que horas é o check-out amanhã?","audio_ipa":"","alternativas":["Grazie. A che ora è il check-out domani?","Posso avere un'altra chiave?","Il wi-fi qual è la password?","Dov'è l'ascensore?"],"resposta_correta":0}
+      ],
+      "vocabulario_chave":["prenotazione","camera doppia","colazione","parcheggio","chiave","check-out"],
+      "xp_recompensa":50
+    },
+    {
+      "id": "dial_008",
+      "titulo": "Chiedere Indicazioni",
+      "icone": "🗺️",
+      "nivel": "A1",
+      "contexto": "Você está perdido e pede indicações para um passante.",
+      "turni": [
+        {"id":1,"personaggio":"Tu","frase":"Scusi, sa dov'è il Colosseo?","traducao":"Com licença, sabe onde fica o Coliseu?","audio_ipa":"","alternativas":["Scusi, sa dov'è il Colosseo?","Mi sono perso.","Dove sono?","Mi aiuti per favore."],"resposta_correta":0},
+        {"id":2,"personaggio":"Passante","frase":"Certo! Vada dritto per duecento metri, poi giri a destra.","traducao":"Claro! Vá reto por duzentos metros, depois vire à direita.","audio_ipa":""},
+        {"id":3,"personaggio":"Tu","frase":"Grazie. È lontano da qui a piedi?","traducao":"Obrigado. É longe daqui a pé?","audio_ipa":"","alternativas":["Grazie. È lontano da qui a piedi?","Non capisco, scusi.","Posso prendere il bus?","Devo girare a sinistra?"],"resposta_correta":0},
+        {"id":4,"personaggio":"Passante","frase":"No, sono circa dieci minuti a piedi.","traducao":"Não, são aproximadamente dez minutos a pé.","audio_ipa":""},
+        {"id":5,"personaggio":"Tu","frase":"Perfetto, grazie mille!","traducao":"Perfeito, muito obrigado!","audio_ipa":"","alternativas":["Perfetto, grazie mille!","Non importa.","Arrivederci.","Capisco."],"resposta_correta":0},
+        {"id":6,"personaggio":"Passante","frase":"Prego! Buona visita!","traducao":"De nada! Boa visita!","audio_ipa":""}
+      ],
+      "vocabulario_chave":["scusi","dritto","girare","destra","sinistra","lontano","vicino"],
+      "xp_recompensa":40
+    }
+  ]
+}

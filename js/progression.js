@@ -243,5 +243,54 @@ const Progressao = {
       App.notificar(`🏆 Tempio ${temploNum} completato!`, 'successo');
       App.renderizarTemplos();
     }
+  },
+
+  // Calcular meta com prazo
+  calcularMetaPrazo() {
+    const p = App.estado.progresso;
+    if (!p || !p.meta_prazo) return null;
+    
+    const meta = p.meta_prazo;
+    const hoje = Date.now();
+    const dataAlvo = new Date(meta.data_alvo).getTime();
+    const diasRestantes = Math.ceil((dataAlvo - hoje) / 86400000);
+    
+    // XP necessário para o nível alvo
+    const XP_POR_NIVEL = [0,500,1200,2100,3200,4500,6000,7700,9600,11700,14000,16500,19200,22100,25200,28500,32000,35700,39600,43700,48000];
+    const xpAlvo = XP_POR_NIVEL[meta.nivel_alvo] || 48000;
+    const xpFaltante = Math.max(0, xpAlvo - p.xp);
+    const xpPorDia = diasRestantes > 0 ? Math.ceil(xpFaltante / diasRestantes) : xpFaltante;
+    
+    // Velocidade atual (média últimos 7 dias)
+    const diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
+    const hoje7 = new Date(); 
+    let xpSemana = 0;
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(hoje7); d.setDate(d.getDate() - i);
+      const k = d.toISOString().slice(0,10);
+      const entry = diario[k];
+      if (entry) xpSemana += (typeof entry === 'object' ? entry.xp : 0);
+    }
+    const xpMedioDia = Math.round(xpSemana / 7);
+    
+    // Previsão: quantos dias faltam se continuar assim
+    const diasNecessarios = xpMedioDia > 0 ? Math.ceil(xpFaltante / xpMedioDia) : 9999;
+    const dataPrevisao = new Date(hoje + diasNecessarios * 86400000).toLocaleDateString('pt-BR');
+    const atingeNoPrazo = diasNecessarios <= diasRestantes;
+    
+    return { diasRestantes, xpFaltante, xpPorDia, xpMedioDia, dataPrevisao, atingeNoPrazo, nivel_alvo: meta.nivel_alvo, data_alvo: meta.data_alvo };
+  },
+
+  definirMetaPrazo(nivelAlvo, dataAlvo) {
+    const p = App.estado.progresso;
+    p.meta_prazo = { nivel_alvo: nivelAlvo, data_alvo: dataAlvo, xp_na_criacao: p.xp, criado_em: Date.now() };
+    App.salvarProgresso();
+    App.notificar('🎯 Meta definida! Boa sorte!', 'sucesso');
+  },
+
+  removerMetaPrazo() {
+    App.estado.progresso.meta_prazo = null;
+    App.salvarProgresso();
   }
 };
+
