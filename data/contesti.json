@@ -1,0 +1,1804 @@
+{
+  "contesti": [
+    {
+      "id": "ctx_001",
+      "titulo": "La Mafia",
+      "origem": "O Padrinho (Il Padrino)",
+      "tipo": "Filme",
+      "nivel": "A1",
+      "descricao": "Cena de máfia clássica.",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio con famiglia."
+        },
+        {
+          "italiano": "onore",
+          "portugues": "Trad de onore",
+          "exemplo": "Esempio con onore."
+        },
+        {
+          "italiano": "rispetto",
+          "portugues": "Trad de rispetto",
+          "exemplo": "Esempio con rispetto."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio con tradimento."
+        },
+        {
+          "italiano": "offerta",
+          "portugues": "Trad de offerta",
+          "exemplo": "Esempio con offerta."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_002",
+      "titulo": "La Dolce Vita",
+      "origem": "La Dolce Vita",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Paparazzi em Roma.",
+      "vocabulario": [
+        {
+          "italiano": "fontana",
+          "portugues": "Trad de fontana",
+          "exemplo": "Esempio con fontana."
+        },
+        {
+          "italiano": "notte",
+          "portugues": "Trad de notte",
+          "exemplo": "Esempio con notte."
+        },
+        {
+          "italiano": "scandalo",
+          "portugues": "Trad de scandalo",
+          "exemplo": "Esempio con scandalo."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio con bacio."
+        },
+        {
+          "italiano": "fotografo",
+          "portugues": "Trad de fotografo",
+          "exemplo": "Esempio con fotografo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_003",
+      "titulo": "Il Gladiatore",
+      "origem": "O Gladiador",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Luta no Coliseu.",
+      "vocabulario": [
+        {
+          "italiano": "arena",
+          "portugues": "Trad de arena",
+          "exemplo": "Esempio con arena."
+        },
+        {
+          "italiano": "spada",
+          "portugues": "Trad de spada",
+          "exemplo": "Esempio con spada."
+        },
+        {
+          "italiano": "imperatore",
+          "portugues": "Trad de imperatore",
+          "exemplo": "Esempio con imperatore."
+        },
+        {
+          "italiano": "sangue",
+          "portugues": "Trad de sangue",
+          "exemplo": "Esempio con sangue."
+        },
+        {
+          "italiano": "libertà",
+          "portugues": "Trad de libertà",
+          "exemplo": "Esempio con libertà."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_004",
+      "titulo": "Gomorra",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Crime organizado em Nápoles.",
+      "vocabulario": [
+        {
+          "italiano": "camorra",
+          "portugues": "Trad de camorra",
+          "exemplo": "Esempio con camorra."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio con droga."
+        },
+        {
+          "italiano": "quartiere",
+          "portugues": "Trad de quartiere",
+          "exemplo": "Esempio con quartiere."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio con soldi."
+        },
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio con clan."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_005",
+      "titulo": "La Casa de Papel",
+      "origem": "La Casa di Carta",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Assalto ao banco.",
+      "vocabulario": [
+        {
+          "italiano": "rapina",
+          "portugues": "Trad de rapina",
+          "exemplo": "Esempio con rapina."
+        },
+        {
+          "italiano": "ostaggio",
+          "portugues": "Trad de ostaggio",
+          "exemplo": "Esempio con ostaggio."
+        },
+        {
+          "italiano": "maschera",
+          "portugues": "Trad de maschera",
+          "exemplo": "Esempio con maschera."
+        },
+        {
+          "italiano": "piano",
+          "portugues": "Trad de piano",
+          "exemplo": "Esempio con piano."
+        },
+        {
+          "italiano": "polizia",
+          "portugues": "Trad de polizia",
+          "exemplo": "Esempio con polizia."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_006",
+      "titulo": "Stranger Things",
+      "origem": "Stranger Things",
+      "tipo": "Série",
+      "nivel": "A2",
+      "descricao": "Monstros nos anos 80.",
+      "vocabulario": [
+        {
+          "italiano": "mostro",
+          "portugues": "Trad de mostro",
+          "exemplo": "Esempio con mostro."
+        },
+        {
+          "italiano": "bicicletta",
+          "portugues": "Trad de bicicletta",
+          "exemplo": "Esempio con bicicletta."
+        },
+        {
+          "italiano": "sottosopra",
+          "portugues": "Trad de sottosopra",
+          "exemplo": "Esempio con sottosopra."
+        },
+        {
+          "italiano": "dimensione",
+          "portugues": "Trad de dimensione",
+          "exemplo": "Esempio con dimensione."
+        },
+        {
+          "italiano": "amici",
+          "portugues": "Trad de amici",
+          "exemplo": "Esempio con amici."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_007",
+      "titulo": "Harry Potter",
+      "origem": "Harry Potter",
+      "tipo": "Filme",
+      "nivel": "A1",
+      "descricao": "Magia em Hogwarts.",
+      "vocabulario": [
+        {
+          "italiano": "magia",
+          "portugues": "Trad de magia",
+          "exemplo": "Esempio con magia."
+        },
+        {
+          "italiano": "bacchetta",
+          "portugues": "Trad de bacchetta",
+          "exemplo": "Esempio con bacchetta."
+        },
+        {
+          "italiano": "incantesimo",
+          "portugues": "Trad de incantesimo",
+          "exemplo": "Esempio con incantesimo."
+        },
+        {
+          "italiano": "strega",
+          "portugues": "Trad de strega",
+          "exemplo": "Esempio con strega."
+        },
+        {
+          "italiano": "cicatrice",
+          "portugues": "Trad de cicatrice",
+          "exemplo": "Esempio con cicatrice."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_008",
+      "titulo": "Il Trono di Spade",
+      "origem": "Game of Thrones",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Inverno está chegando.",
+      "vocabulario": [
+        {
+          "italiano": "inverno",
+          "portugues": "Trad de inverno",
+          "exemplo": "Esempio con inverno."
+        },
+        {
+          "italiano": "trono",
+          "portugues": "Trad de trono",
+          "exemplo": "Esempio con trono."
+        },
+        {
+          "italiano": "drago",
+          "portugues": "Trad de drago",
+          "exemplo": "Esempio con drago."
+        },
+        {
+          "italiano": "re",
+          "portugues": "Trad de re",
+          "exemplo": "Esempio con re."
+        },
+        {
+          "italiano": "battaglia",
+          "portugues": "Trad de battaglia",
+          "exemplo": "Esempio con battaglia."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_009",
+      "titulo": "Breaking Bad",
+      "origem": "Breaking Bad",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Química e crime.",
+      "vocabulario": [
+        {
+          "italiano": "chimica",
+          "portugues": "Trad de chimica",
+          "exemplo": "Esempio con chimica."
+        },
+        {
+          "italiano": "laboratorio",
+          "portugues": "Trad de laboratorio",
+          "exemplo": "Esempio con laboratorio."
+        },
+        {
+          "italiano": "cancro",
+          "portugues": "Trad de cancro",
+          "exemplo": "Esempio con cancro."
+        },
+        {
+          "italiano": "denaro",
+          "portugues": "Trad de denaro",
+          "exemplo": "Esempio con denaro."
+        },
+        {
+          "italiano": "pericolo",
+          "portugues": "Trad de pericolo",
+          "exemplo": "Esempio con pericolo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_010",
+      "titulo": "Amici Miei",
+      "origem": "Meus Caros Amigos",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Pegadinhas na Toscana.",
+      "vocabulario": [
+        {
+          "italiano": "scherzo",
+          "portugues": "Trad de scherzo",
+          "exemplo": "Esempio con scherzo."
+        },
+        {
+          "italiano": "zingarata",
+          "portugues": "Trad de zingarata",
+          "exemplo": "Esempio con zingarata."
+        },
+        {
+          "italiano": "amicizia",
+          "portugues": "Trad de amicizia",
+          "exemplo": "Esempio con amicizia."
+        },
+        {
+          "italiano": "risata",
+          "portugues": "Trad de risata",
+          "exemplo": "Esempio con risata."
+        },
+        {
+          "italiano": "treno",
+          "portugues": "Trad de treno",
+          "exemplo": "Esempio con treno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_011",
+      "titulo": "Nuovo Cinema Paradiso",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Magia do cinema na Sicília.",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio con pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio con bacio."
+        },
+        {
+          "italiano": "proiezionista",
+          "portugues": "Trad de proiezionista",
+          "exemplo": "Esempio con proiezionista."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio con piazza."
+        },
+        {
+          "italiano": "ricordo",
+          "portugues": "Trad de ricordo",
+          "exemplo": "Esempio con ricordo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_012",
+      "titulo": "Il Postino",
+      "origem": "O Carteiro e o Poeta",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Poesia e amor.",
+      "vocabulario": [
+        {
+          "italiano": "poesia",
+          "portugues": "Trad de poesia",
+          "exemplo": "Esempio con poesia."
+        },
+        {
+          "italiano": "lettera",
+          "portugues": "Trad de lettera",
+          "exemplo": "Esempio con lettera."
+        },
+        {
+          "italiano": "isola",
+          "portugues": "Trad de isola",
+          "exemplo": "Esempio con isola."
+        },
+        {
+          "italiano": "metafora",
+          "portugues": "Trad de metafora",
+          "exemplo": "Esempio con metafora."
+        },
+        {
+          "italiano": "amore",
+          "portugues": "Trad de amore",
+          "exemplo": "Esempio con amore."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_013",
+      "titulo": "La Vita è Bella",
+      "origem": "A Vida é Bela",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Esperança no campo.",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio con gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio con carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio con principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio con premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio con sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_014",
+      "titulo": "L'Amica Geniale",
+      "origem": "My Brilliant Friend",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Crescendo em Nápoles.",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio con scuola."
+        },
+        {
+          "italiano": "quartiere",
+          "portugues": "Trad de quartiere",
+          "exemplo": "Esempio con quartiere."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio con scarpe."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio con invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio con matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_015",
+      "titulo": "Suburra",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Corrupção em Roma.",
+      "vocabulario": [
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio con politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio con chiesa."
+        },
+        {
+          "italiano": "mafia",
+          "portugues": "Trad de mafia",
+          "exemplo": "Esempio con mafia."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio con potere."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio con segreto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_016",
+      "titulo": "Mare Fuori",
+      "origem": "Mare Fuori",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Jovens na prisão.",
+      "vocabulario": [
+        {
+          "italiano": "carcere",
+          "portugues": "Trad de carcere",
+          "exemplo": "Esempio con carcere."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio con mare."
+        },
+        {
+          "italiano": "libertà",
+          "portugues": "Trad de libertà",
+          "exemplo": "Esempio con libertà."
+        },
+        {
+          "italiano": "speranza",
+          "portugues": "Trad de speranza",
+          "exemplo": "Esempio con speranza."
+        },
+        {
+          "italiano": "rabbia",
+          "portugues": "Trad de rabbia",
+          "exemplo": "Esempio con rabbia."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_017",
+      "titulo": "Tre Uomini e una Gamba",
+      "origem": "Aldo, Giovanni e Giacomo",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Viagem cômica.",
+      "vocabulario": [
+        {
+          "italiano": "gamba",
+          "portugues": "Trad de gamba",
+          "exemplo": "Esempio con gamba."
+        },
+        {
+          "italiano": "viaggio",
+          "portugues": "Trad de viaggio",
+          "exemplo": "Esempio con viaggio."
+        },
+        {
+          "italiano": "ospedale",
+          "portugues": "Trad de ospedale",
+          "exemplo": "Esempio con ospedale."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio con matrimonio."
+        },
+        {
+          "italiano": "scherzo",
+          "portugues": "Trad de scherzo",
+          "exemplo": "Esempio con scherzo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_018",
+      "titulo": "La Grande Bellezza",
+      "origem": "A Grande Beleza",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "Festa mundana.",
+      "vocabulario": [
+        {
+          "italiano": "festa",
+          "portugues": "Trad de festa",
+          "exemplo": "Esempio con festa."
+        },
+        {
+          "italiano": "mondanità",
+          "portugues": "Trad de mondanità",
+          "exemplo": "Esempio con mondanità."
+        },
+        {
+          "italiano": "bellezza",
+          "portugues": "Trad de bellezza",
+          "exemplo": "Esempio con bellezza."
+        },
+        {
+          "italiano": "scrittore",
+          "portugues": "Trad de scrittore",
+          "exemplo": "Esempio con scrittore."
+        },
+        {
+          "italiano": "vuoto",
+          "portugues": "Trad de vuoto",
+          "exemplo": "Esempio con vuoto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_019",
+      "titulo": "Che Bella Giornata",
+      "origem": "Checco Zalone",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Comédia no terrorismo.",
+      "vocabulario": [
+        {
+          "italiano": "duomo",
+          "portugues": "Trad de duomo",
+          "exemplo": "Esempio con duomo."
+        },
+        {
+          "italiano": "sicurezza",
+          "portugues": "Trad de sicurezza",
+          "exemplo": "Esempio con sicurezza."
+        },
+        {
+          "italiano": "innamorato",
+          "portugues": "Trad de innamorato",
+          "exemplo": "Esempio con innamorato."
+        },
+        {
+          "italiano": "terrone",
+          "portugues": "Trad de terrone",
+          "exemplo": "Esempio con terrone."
+        },
+        {
+          "italiano": "raccomandazione",
+          "portugues": "Trad de raccomandazione",
+          "exemplo": "Esempio con raccomandazione."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_020",
+      "titulo": "Guerre Stellari",
+      "origem": "Star Wars",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Que a força esteja com você.",
+      "vocabulario": [
+        {
+          "italiano": "forza",
+          "portugues": "Trad de forza",
+          "exemplo": "Esempio con forza."
+        },
+        {
+          "italiano": "jedi",
+          "portugues": "Trad de jedi",
+          "exemplo": "Esempio con jedi."
+        },
+        {
+          "italiano": "spazio",
+          "portugues": "Trad de spazio",
+          "exemplo": "Esempio con spazio."
+        },
+        {
+          "italiano": "spada laser",
+          "portugues": "Trad de spada laser",
+          "exemplo": "Esempio con spada laser."
+        },
+        {
+          "italiano": "lato oscuro",
+          "portugues": "Trad de lato oscuro",
+          "exemplo": "Esempio con lato oscuro."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_021",
+      "titulo": "Il Signore degli Anelli",
+      "origem": "O Senhor dos Anéis",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Jornada do anel.",
+      "vocabulario": [
+        {
+          "italiano": "anello",
+          "portugues": "Trad de anello",
+          "exemplo": "Esempio con anello."
+        },
+        {
+          "italiano": "elfo",
+          "portugues": "Trad de elfo",
+          "exemplo": "Esempio con elfo."
+        },
+        {
+          "italiano": "nano",
+          "portugues": "Trad de nano",
+          "exemplo": "Esempio con nano."
+        },
+        {
+          "italiano": "vulcano",
+          "portugues": "Trad de vulcano",
+          "exemplo": "Esempio con vulcano."
+        },
+        {
+          "italiano": "compagnia",
+          "portugues": "Trad de compagnia",
+          "exemplo": "Esempio con compagnia."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_022",
+      "titulo": "Matrix",
+      "origem": "Matrix",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "A pílula vermelha.",
+      "vocabulario": [
+        {
+          "italiano": "pillola",
+          "portugues": "Trad de pillola",
+          "exemplo": "Esempio con pillola."
+        },
+        {
+          "italiano": "realtà",
+          "portugues": "Trad de realtà",
+          "exemplo": "Esempio con realtà."
+        },
+        {
+          "italiano": "illusione",
+          "portugues": "Trad de illusione",
+          "exemplo": "Esempio con illusione."
+        },
+        {
+          "italiano": "macchina",
+          "portugues": "Trad de macchina",
+          "exemplo": "Esempio con macchina."
+        },
+        {
+          "italiano": "eletto",
+          "portugues": "Trad de eletto",
+          "exemplo": "Esempio con eletto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_023",
+      "titulo": "Jurassic Park",
+      "origem": "Jurassic Park",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Dinossauros fogem.",
+      "vocabulario": [
+        {
+          "italiano": "dinosauro",
+          "portugues": "Trad de dinosauro",
+          "exemplo": "Esempio con dinosauro."
+        },
+        {
+          "italiano": "recinto",
+          "portugues": "Trad de recinto",
+          "exemplo": "Esempio con recinto."
+        },
+        {
+          "italiano": "ambra",
+          "portugues": "Trad de ambra",
+          "exemplo": "Esempio con ambra."
+        },
+        {
+          "italiano": "zanzara",
+          "portugues": "Trad de zanzara",
+          "exemplo": "Esempio con zanzara."
+        },
+        {
+          "italiano": "isola",
+          "portugues": "Trad de isola",
+          "exemplo": "Esempio con isola."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_024",
+      "titulo": "Titanic",
+      "origem": "Titanic",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Naufrágio.",
+      "vocabulario": [
+        {
+          "italiano": "nave",
+          "portugues": "Trad de nave",
+          "exemplo": "Esempio con nave."
+        },
+        {
+          "italiano": "ghiaccio",
+          "portugues": "Trad de ghiaccio",
+          "exemplo": "Esempio con ghiaccio."
+        },
+        {
+          "italiano": "affondare",
+          "portugues": "Trad de affondare",
+          "exemplo": "Esempio con affondare."
+        },
+        {
+          "italiano": "cuore",
+          "portugues": "Trad de cuore",
+          "exemplo": "Esempio con cuore."
+        },
+        {
+          "italiano": "collana",
+          "portugues": "Trad de collana",
+          "exemplo": "Esempio con collana."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_025",
+      "titulo": "Ritorno al Futuro",
+      "origem": "De Volta Para o Futuro",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Viagem no tempo.",
+      "vocabulario": [
+        {
+          "italiano": "tempo",
+          "portugues": "Trad de tempo",
+          "exemplo": "Esempio con tempo."
+        },
+        {
+          "italiano": "macchina",
+          "portugues": "Trad de macchina",
+          "exemplo": "Esempio con macchina."
+        },
+        {
+          "italiano": "futuro",
+          "portugues": "Trad de futuro",
+          "exemplo": "Esempio con futuro."
+        },
+        {
+          "italiano": "passato",
+          "portugues": "Trad de passato",
+          "exemplo": "Esempio con passato."
+        },
+        {
+          "italiano": "fulmine",
+          "portugues": "Trad de fulmine",
+          "exemplo": "Esempio con fulmine."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_026",
+      "titulo": "Avengers",
+      "origem": "Vingatori",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Heróis unidos.",
+      "vocabulario": [
+        {
+          "italiano": "scudo",
+          "portugues": "Trad de scudo",
+          "exemplo": "Esempio con scudo."
+        },
+        {
+          "italiano": "martello",
+          "portugues": "Trad de martello",
+          "exemplo": "Esempio con martello."
+        },
+        {
+          "italiano": "armatura",
+          "portugues": "Trad de armatura",
+          "exemplo": "Esempio con armatura."
+        },
+        {
+          "italiano": "alieno",
+          "portugues": "Trad de alieno",
+          "exemplo": "Esempio con alieno."
+        },
+        {
+          "italiano": "squadra",
+          "portugues": "Trad de squadra",
+          "exemplo": "Esempio con squadra."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_027",
+      "titulo": "Spider-Man",
+      "origem": "Homem-Aranha",
+      "tipo": "Filme",
+      "nivel": "A1",
+      "descricao": "Grandes poderes.",
+      "vocabulario": [
+        {
+          "italiano": "ragno",
+          "portugues": "Trad de ragno",
+          "exemplo": "Esempio con ragno."
+        },
+        {
+          "italiano": "ragnatela",
+          "portugues": "Trad de ragnatela",
+          "exemplo": "Esempio con ragnatela."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio con potere."
+        },
+        {
+          "italiano": "responsabilità",
+          "portugues": "Trad de responsabilità",
+          "exemplo": "Esempio con responsabilità."
+        },
+        {
+          "italiano": "maschera",
+          "portugues": "Trad de maschera",
+          "exemplo": "Esempio con maschera."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_028",
+      "titulo": "Batman",
+      "origem": "Batman",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cavaleiro das Trevas.",
+      "vocabulario": [
+        {
+          "italiano": "pipistrello",
+          "portugues": "Trad de pipistrello",
+          "exemplo": "Esempio con pipistrello."
+        },
+        {
+          "italiano": "oscurità",
+          "portugues": "Trad de oscurità",
+          "exemplo": "Esempio con oscurità."
+        },
+        {
+          "italiano": "cavaliere",
+          "portugues": "Trad de cavaliere",
+          "exemplo": "Esempio con cavaliere."
+        },
+        {
+          "italiano": "giustizia",
+          "portugues": "Trad de giustizia",
+          "exemplo": "Esempio con giustizia."
+        },
+        {
+          "italiano": "paura",
+          "portugues": "Trad de paura",
+          "exemplo": "Esempio con paura."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_029",
+      "titulo": "Il Re Leone",
+      "origem": "O Rei Leão",
+      "tipo": "Animação",
+      "nivel": "A1",
+      "descricao": "Ciclo da vida.",
+      "vocabulario": [
+        {
+          "italiano": "leone",
+          "portugues": "Trad de leone",
+          "exemplo": "Esempio con leone."
+        },
+        {
+          "italiano": "cerchio",
+          "portugues": "Trad de cerchio",
+          "exemplo": "Esempio con cerchio."
+        },
+        {
+          "italiano": "re",
+          "portugues": "Trad de re",
+          "exemplo": "Esempio con re."
+        },
+        {
+          "italiano": "zio",
+          "portugues": "Trad de zio",
+          "exemplo": "Esempio con zio."
+        },
+        {
+          "italiano": "savana",
+          "portugues": "Trad de savana",
+          "exemplo": "Esempio con savana."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_030",
+      "titulo": "Alla Ricerca di Nemo",
+      "origem": "Procurando Nemo",
+      "tipo": "Animação",
+      "nivel": "A1",
+      "descricao": "Oceano.",
+      "vocabulario": [
+        {
+          "italiano": "pesce",
+          "portugues": "Trad de pesce",
+          "exemplo": "Esempio con pesce."
+        },
+        {
+          "italiano": "oceano",
+          "portugues": "Trad de oceano",
+          "exemplo": "Esempio con oceano."
+        },
+        {
+          "italiano": "corrente",
+          "portugues": "Trad de corrente",
+          "exemplo": "Esempio con corrente."
+        },
+        {
+          "italiano": "memoria",
+          "portugues": "Trad de memoria",
+          "exemplo": "Esempio con memoria."
+        },
+        {
+          "italiano": "figlio",
+          "portugues": "Trad de figlio",
+          "exemplo": "Esempio con figlio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_031",
+      "titulo": "Toy Story",
+      "origem": "Toy Story",
+      "tipo": "Animação",
+      "nivel": "A1",
+      "descricao": "Brinquedos vivos.",
+      "vocabulario": [
+        {
+          "italiano": "giocattolo",
+          "portugues": "Trad de giocattolo",
+          "exemplo": "Esempio con giocattolo."
+        },
+        {
+          "italiano": "sceriffo",
+          "portugues": "Trad de sceriffo",
+          "exemplo": "Esempio con sceriffo."
+        },
+        {
+          "italiano": "spaziale",
+          "portugues": "Trad de spaziale",
+          "exemplo": "Esempio con spaziale."
+        },
+        {
+          "italiano": "infinito",
+          "portugues": "Trad de infinito",
+          "exemplo": "Esempio con infinito."
+        },
+        {
+          "italiano": "oltre",
+          "portugues": "Trad de oltre",
+          "exemplo": "Esempio con oltre."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_032",
+      "titulo": "Shrek",
+      "origem": "Shrek",
+      "tipo": "Animação",
+      "nivel": "A2",
+      "descricao": "Ogro no pântano.",
+      "vocabulario": [
+        {
+          "italiano": "orco",
+          "portugues": "Trad de orco",
+          "exemplo": "Esempio con orco."
+        },
+        {
+          "italiano": "palude",
+          "portugues": "Trad de palude",
+          "exemplo": "Esempio con palude."
+        },
+        {
+          "italiano": "asino",
+          "portugues": "Trad de asino",
+          "exemplo": "Esempio con asino."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio con principessa."
+        },
+        {
+          "italiano": "drago",
+          "portugues": "Trad de drago",
+          "exemplo": "Esempio con drago."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_033",
+      "titulo": "I Simpson",
+      "origem": "Os Simpsons",
+      "tipo": "Série",
+      "nivel": "A1",
+      "descricao": "Família amarela.",
+      "vocabulario": [
+        {
+          "italiano": "ciambella",
+          "portugues": "Trad de ciambella",
+          "exemplo": "Esempio con ciambella."
+        },
+        {
+          "italiano": "centrale",
+          "portugues": "Trad de centrale",
+          "exemplo": "Esempio con centrale."
+        },
+        {
+          "italiano": "bar",
+          "portugues": "Trad de bar",
+          "exemplo": "Esempio con bar."
+        },
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio con scuola."
+        },
+        {
+          "italiano": "divano",
+          "portugues": "Trad de divano",
+          "exemplo": "Esempio con divano."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_034",
+      "titulo": "Friends",
+      "origem": "Friends",
+      "tipo": "Série",
+      "nivel": "A2",
+      "descricao": "Amigos no café.",
+      "vocabulario": [
+        {
+          "italiano": "caffetteria",
+          "portugues": "Trad de caffetteria",
+          "exemplo": "Esempio con caffetteria."
+        },
+        {
+          "italiano": "divorzio",
+          "portugues": "Trad de divorzio",
+          "exemplo": "Esempio con divorzio."
+        },
+        {
+          "italiano": "dinosauro",
+          "portugues": "Trad de dinosauro",
+          "exemplo": "Esempio con dinosauro."
+        },
+        {
+          "italiano": "coinquilino",
+          "portugues": "Trad de coinquilino",
+          "exemplo": "Esempio con coinquilino."
+        },
+        {
+          "italiano": "pausa",
+          "portugues": "Trad de pausa",
+          "exemplo": "Esempio con pausa."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_035",
+      "titulo": "The Office",
+      "origem": "The Office",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Rotina no escritório.",
+      "vocabulario": [
+        {
+          "italiano": "ufficio",
+          "portugues": "Trad de ufficio",
+          "exemplo": "Esempio con ufficio."
+        },
+        {
+          "italiano": "carta",
+          "portugues": "Trad de carta",
+          "exemplo": "Esempio con carta."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio con capo."
+        },
+        {
+          "italiano": "scherzo",
+          "portugues": "Trad de scherzo",
+          "exemplo": "Esempio con scherzo."
+        },
+        {
+          "italiano": "telecamera",
+          "portugues": "Trad de telecamera",
+          "exemplo": "Esempio con telecamera."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_036",
+      "titulo": "Lost",
+      "origem": "Lost",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Ilha misteriosa.",
+      "vocabulario": [
+        {
+          "italiano": "volo",
+          "portugues": "Trad de volo",
+          "exemplo": "Esempio con volo."
+        },
+        {
+          "italiano": "sopravvissuti",
+          "portugues": "Trad de sopravvissuti",
+          "exemplo": "Esempio con sopravvissuti."
+        },
+        {
+          "italiano": "fumo",
+          "portugues": "Trad de fumo",
+          "exemplo": "Esempio con fumo."
+        },
+        {
+          "italiano": "isola",
+          "portugues": "Trad de isola",
+          "exemplo": "Esempio con isola."
+        },
+        {
+          "italiano": "mistero",
+          "portugues": "Trad de mistero",
+          "exemplo": "Esempio con mistero."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_037",
+      "titulo": "Sherlock",
+      "origem": "Sherlock",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Detetive brilhante.",
+      "vocabulario": [
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio con indagine."
+        },
+        {
+          "italiano": "deduzione",
+          "portugues": "Trad de deduzione",
+          "exemplo": "Esempio con deduzione."
+        },
+        {
+          "italiano": "assassino",
+          "portugues": "Trad de assassino",
+          "exemplo": "Esempio con assassino."
+        },
+        {
+          "italiano": "pipa",
+          "portugues": "Trad de pipa",
+          "exemplo": "Esempio con pipa."
+        },
+        {
+          "italiano": "violino",
+          "portugues": "Trad de violino",
+          "exemplo": "Esempio con violino."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_038",
+      "titulo": "Doctor Who",
+      "origem": "Doctor Who",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Viagem no tempo.",
+      "vocabulario": [
+        {
+          "italiano": "dottore",
+          "portugues": "Trad de dottore",
+          "exemplo": "Esempio con dottore."
+        },
+        {
+          "italiano": "cabina",
+          "portugues": "Trad de cabina",
+          "exemplo": "Esempio con cabina."
+        },
+        {
+          "italiano": "alieno",
+          "portugues": "Trad de alieno",
+          "exemplo": "Esempio con alieno."
+        },
+        {
+          "italiano": "universo",
+          "portugues": "Trad de universo",
+          "exemplo": "Esempio con universo."
+        },
+        {
+          "italiano": "tempo",
+          "portugues": "Trad de tempo",
+          "exemplo": "Esempio con tempo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_039",
+      "titulo": "Black Mirror",
+      "origem": "Black Mirror",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Distopia tecnológica.",
+      "vocabulario": [
+        {
+          "italiano": "schermo",
+          "portugues": "Trad de schermo",
+          "exemplo": "Esempio con schermo."
+        },
+        {
+          "italiano": "tecnologia",
+          "portugues": "Trad de tecnologia",
+          "exemplo": "Esempio con tecnologia."
+        },
+        {
+          "italiano": "futuro",
+          "portugues": "Trad de futuro",
+          "exemplo": "Esempio con futuro."
+        },
+        {
+          "italiano": "angoscia",
+          "portugues": "Trad de angoscia",
+          "exemplo": "Esempio con angoscia."
+        },
+        {
+          "italiano": "social",
+          "portugues": "Trad de social",
+          "exemplo": "Esempio con social."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_040",
+      "titulo": "Squid Game",
+      "origem": "Squid Game",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Jogos mortais.",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio con gioco."
+        },
+        {
+          "italiano": "debiti",
+          "portugues": "Trad de debiti",
+          "exemplo": "Esempio con debiti."
+        },
+        {
+          "italiano": "sopravvivenza",
+          "portugues": "Trad de sopravvivenza",
+          "exemplo": "Esempio con sopravvivenza."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio con premio."
+        },
+        {
+          "italiano": "guardia",
+          "portugues": "Trad de guardia",
+          "exemplo": "Esempio con guardia."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_041",
+      "titulo": "Narcos",
+      "origem": "Narcos",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Cartel.",
+      "vocabulario": [
+        {
+          "italiano": "cartello",
+          "portugues": "Trad de cartello",
+          "exemplo": "Esempio con cartello."
+        },
+        {
+          "italiano": "polizia",
+          "portugues": "Trad de polizia",
+          "exemplo": "Esempio con polizia."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio con droga."
+        },
+        {
+          "italiano": "plata",
+          "portugues": "Trad de plata",
+          "exemplo": "Esempio con plata."
+        },
+        {
+          "italiano": "plomo",
+          "portugues": "Trad de plomo",
+          "exemplo": "Esempio con plomo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_042",
+      "titulo": "Peaky Blinders",
+      "origem": "Peaky Blinders",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Gangue de Birmingham.",
+      "vocabulario": [
+        {
+          "italiano": "lametta",
+          "portugues": "Trad de lametta",
+          "exemplo": "Esempio con lametta."
+        },
+        {
+          "italiano": "scommessa",
+          "portugues": "Trad de scommessa",
+          "exemplo": "Esempio con scommessa."
+        },
+        {
+          "italiano": "fratelli",
+          "portugues": "Trad de fratelli",
+          "exemplo": "Esempio con fratelli."
+        },
+        {
+          "italiano": "fumo",
+          "portugues": "Trad de fumo",
+          "exemplo": "Esempio con fumo."
+        },
+        {
+          "italiano": "whisky",
+          "portugues": "Trad de whisky",
+          "exemplo": "Esempio con whisky."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_043",
+      "titulo": "The Crown",
+      "origem": "The Crown",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Realeza britânica.",
+      "vocabulario": [
+        {
+          "italiano": "regina",
+          "portugues": "Trad de regina",
+          "exemplo": "Esempio con regina."
+        },
+        {
+          "italiano": "corona",
+          "portugues": "Trad de corona",
+          "exemplo": "Esempio con corona."
+        },
+        {
+          "italiano": "governo",
+          "portugues": "Trad de governo",
+          "exemplo": "Esempio con governo."
+        },
+        {
+          "italiano": "scandalo",
+          "portugues": "Trad de scandalo",
+          "exemplo": "Esempio con scandalo."
+        },
+        {
+          "italiano": "palazzo",
+          "portugues": "Trad de palazzo",
+          "exemplo": "Esempio con palazzo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_044",
+      "titulo": "Bridgerton",
+      "origem": "Bridgerton",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Fofoca na corte.",
+      "vocabulario": [
+        {
+          "italiano": "ballo",
+          "portugues": "Trad de ballo",
+          "exemplo": "Esempio con ballo."
+        },
+        {
+          "italiano": "duca",
+          "portugues": "Trad de duca",
+          "exemplo": "Esempio con duca."
+        },
+        {
+          "italiano": "gossip",
+          "portugues": "Trad de gossip",
+          "exemplo": "Esempio con gossip."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio con matrimonio."
+        },
+        {
+          "italiano": "diamante",
+          "portugues": "Trad de diamante",
+          "exemplo": "Esempio con diamante."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_045",
+      "titulo": "Lupin",
+      "origem": "Lupin",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Ladrão cavalheiro.",
+      "vocabulario": [
+        {
+          "italiano": "ladro",
+          "portugues": "Trad de ladro",
+          "exemplo": "Esempio con ladro."
+        },
+        {
+          "italiano": "collana",
+          "portugues": "Trad de collana",
+          "exemplo": "Esempio con collana."
+        },
+        {
+          "italiano": "vendetta",
+          "portugues": "Trad de vendetta",
+          "exemplo": "Esempio con vendetta."
+        },
+        {
+          "italiano": "trucco",
+          "portugues": "Trad de trucco",
+          "exemplo": "Esempio con trucco."
+        },
+        {
+          "italiano": "prigione",
+          "portugues": "Trad de prigione",
+          "exemplo": "Esempio con prigione."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_046",
+      "titulo": "La Casa nella Prateria",
+      "origem": "Little House",
+      "tipo": "Série",
+      "nivel": "A2",
+      "descricao": "Vida no campo.",
+      "vocabulario": [
+        {
+          "italiano": "prateria",
+          "portugues": "Trad de prateria",
+          "exemplo": "Esempio con prateria."
+        },
+        {
+          "italiano": "carro",
+          "portugues": "Trad de carro",
+          "exemplo": "Esempio con carro."
+        },
+        {
+          "italiano": "pionieri",
+          "portugues": "Trad de pionieri",
+          "exemplo": "Esempio con pionieri."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio con famiglia."
+        },
+        {
+          "italiano": "raccolto",
+          "portugues": "Trad de raccolto",
+          "exemplo": "Esempio con raccolto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_047",
+      "titulo": "X-Files",
+      "origem": "X-Files",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Verdade está lá fora.",
+      "vocabulario": [
+        {
+          "italiano": "alieno",
+          "portugues": "Trad de alieno",
+          "exemplo": "Esempio con alieno."
+        },
+        {
+          "italiano": "complotto",
+          "portugues": "Trad de complotto",
+          "exemplo": "Esempio con complotto."
+        },
+        {
+          "italiano": "agente",
+          "portugues": "Trad de agente",
+          "exemplo": "Esempio con agente."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio con verità."
+        },
+        {
+          "italiano": "paranormale",
+          "portugues": "Trad de paranormale",
+          "exemplo": "Esempio con paranormale."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_048",
+      "titulo": "Twin Peaks",
+      "origem": "Twin Peaks",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Quem matou Laura?",
+      "vocabulario": [
+        {
+          "italiano": "caffè",
+          "portugues": "Trad de caffè",
+          "exemplo": "Esempio con caffè."
+        },
+        {
+          "italiano": "torta",
+          "portugues": "Trad de torta",
+          "exemplo": "Esempio con torta."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio con omicidio."
+        },
+        {
+          "italiano": "sogno",
+          "portugues": "Trad de sogno",
+          "exemplo": "Esempio con sogno."
+        },
+        {
+          "italiano": "mistero",
+          "portugues": "Trad de mistero",
+          "exemplo": "Esempio con mistero."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_049",
+      "titulo": "I Soprano",
+      "origem": "Os Sopranos",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Máfia em NJ.",
+      "vocabulario": [
+        {
+          "italiano": "terapia",
+          "portugues": "Trad de terapia",
+          "exemplo": "Esempio con terapia."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio con famiglia."
+        },
+        {
+          "italiano": "rifiuti",
+          "portugues": "Trad de rifiuti",
+          "exemplo": "Esempio con rifiuti."
+        },
+        {
+          "italiano": "panico",
+          "portugues": "Trad de panico",
+          "exemplo": "Esempio con panico."
+        },
+        {
+          "italiano": "affari",
+          "portugues": "Trad de affari",
+          "exemplo": "Esempio con affari."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_050",
+      "titulo": "Mad Men",
+      "origem": "Mad Men",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Publicidade nos anos 60.",
+      "vocabulario": [
+        {
+          "italiano": "pubblicità",
+          "portugues": "Trad de pubblicità",
+          "exemplo": "Esempio con pubblicità."
+        },
+        {
+          "italiano": "sigaretta",
+          "portugues": "Trad de sigaretta",
+          "exemplo": "Esempio con sigaretta."
+        },
+        {
+          "italiano": "campagna",
+          "portugues": "Trad de campagna",
+          "exemplo": "Esempio con campagna."
+        },
+        {
+          "italiano": "segretaria",
+          "portugues": "Trad de segretaria",
+          "exemplo": "Esempio con segretaria."
+        },
+        {
+          "italiano": "ambizione",
+          "portugues": "Trad de ambizione",
+          "exemplo": "Esempio con ambizione."
+        }
+      ],
+      "xp_recompensa": 20
+    }
+  ]
+}

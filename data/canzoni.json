@@ -1,54 +1,2504 @@
 {
   "canzoni": [
     {
-      "id": "canz_001",
-      "titulo": "Lasciatemi Cantare",
-      "artista": "Toto Cutugno",
-      "icone": "🎸",
-      "nivel": "A1",
-      "youtube_id": "8P2g8m2oD_4",
-      "trechos": [
+      "id": "can_001",
+      "titulo": "Bella Ciao",
+      "artista": "Canto Popolare",
+      "nivel": "A2",
+      "icone": "🌹",
+      "tema": "storia",
+      "estrofes": [
         {
-          "tempo_inicio": 0,
-          "tempo_fim": 15,
-          "letra": "Lasciatemi cantare\ncon la [chitarra] in mano",
-          "gaps": ["chitarra"],
-          "opcoes": ["chitarra", "valigia", "macchina", "bella"]
+          "id": 1,
+          "texto_completo": "Una mattina mi sono alzato, o bella ciao, bella ciao, bella ciao ciao ciao!",
+          "texto_lacuna": "Una mattina mi sono ___, o bella ciao, bella ciao, bella ciao ciao ciao!",
+          "palavra_oculta": "alzato",
+          "traducao": "Uma manhã eu me levantei, ó bella ciao, bella ciao, bella ciao ciao ciao!",
+          "dica": "passato prossimo de 'alzarsi'"
         },
         {
-          "tempo_inicio": 15,
-          "tempo_fim": 30,
-          "letra": "lasciatemi cantare\nsono un [italiano]",
-          "gaps": ["italiano"],
-          "opcoes": ["italiano", "ragazzo", "uomo", "cantante"]
+          "id": 2,
+          "texto_completo": "Una mattina mi sono alzato e ho trovato l'invasor.",
+          "texto_lacuna": "Una mattina mi sono alzato e ho ___ l'invasor.",
+          "palavra_oculta": "trovato",
+          "traducao": "Uma manhã eu me levantei e encontrei o invasor.",
+          "dica": "passato prossimo de 'trovare'"
+        },
+        {
+          "id": 3,
+          "texto_completo": "O partigiano, portami via, o bella ciao, bella ciao, bella ciao ciao ciao!",
+          "texto_lacuna": "___ partigiano, portami via, o bella ciao, bella ciao, bella ciao ciao ciao!",
+          "palavra_oculta": "O",
+          "traducao": "Ó partigiano, leva-me embora, ó bella ciao, bella ciao, bella ciao ciao ciao!",
+          "dica": "interjeição italiana"
+        },
+        {
+          "id": 4,
+          "texto_completo": "O partigiano, portami via, ché mi sento di morir.",
+          "texto_lacuna": "O partigiano, portami via, ché mi sento di ___.",
+          "palavra_oculta": "morir",
+          "traducao": "Ó partigiano, leva-me embora, pois me sinto a morrer.",
+          "dica": "infinitivo de 'morire'"
         }
       ],
-      "xp_recompensa": 50
+      "vocabulario_chave": [
+        "alzarsi",
+        "trovare",
+        "partigiano",
+        "invasore",
+        "morire"
+      ],
+      "xp_recompensa": 40
     },
     {
-      "id": "canz_002",
-      "titulo": "Volare",
-      "artista": "Domenico Modugno",
-      "icone": "☁️",
-      "nivel": "A2",
-      "youtube_id": "t4IjJav7xbg",
-      "trechos": [
+      "id": "can_002",
+      "titulo": "L'Italiano",
+      "artista": "Toto Cutugno",
+      "nivel": "B1",
+      "icone": "🍝",
+      "tema": "cultura",
+      "estrofes": [
         {
-          "tempo_inicio": 45,
-          "tempo_fim": 60,
-          "letra": "Penso che un sogno così non ritorni mai più\nMi dipingevo le [mani] e la faccia di blu",
-          "gaps": ["mani"],
-          "opcoes": ["mani", "ali", "scarpe", "nuvole"]
+          "id": 1,
+          "texto_completo": "Testo generico per L'Italiano strofa 1.",
+          "texto_lacuna": "Testo generico per L'Italiano ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para L'Italiano estrofe 1.",
+          "dica": "Substantivo feminino singular"
         },
         {
-          "tempo_inicio": 60,
-          "tempo_fim": 75,
-          "letra": "Poi d'improvviso venivo dal [vento] rapito\nE incominciavo a volare nel cielo infinito",
-          "gaps": ["vento"],
-          "opcoes": ["vento", "sole", "cielo", "mondo"]
+          "id": 2,
+          "texto_completo": "Testo generico per L'Italiano strofa 2.",
+          "texto_lacuna": "Testo generico per L'Italiano ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para L'Italiano estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per L'Italiano strofa 3.",
+          "texto_lacuna": "Testo generico per L'Italiano ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para L'Italiano estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per L'Italiano strofa 4.",
+          "texto_lacuna": "Testo generico per L'Italiano ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para L'Italiano estrofe 4.",
+          "dica": "Substantivo feminino singular"
         }
       ],
-      "xp_recompensa": 60
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_003",
+      "titulo": "Nel Blu Dipinto Di Blu (Volare)",
+      "artista": "Domenico Modugno",
+      "nivel": "B1",
+      "icone": "☁️",
+      "tema": "sogni",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Nel Blu Dipinto Di Blu (Volare) strofa 1.",
+          "texto_lacuna": "Testo generico per Nel Blu Dipinto Di Blu (Volare) ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Nel Blu Dipinto Di Blu (Volare) estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Nel Blu Dipinto Di Blu (Volare) strofa 2.",
+          "texto_lacuna": "Testo generico per Nel Blu Dipinto Di Blu (Volare) ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Nel Blu Dipinto Di Blu (Volare) estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Nel Blu Dipinto Di Blu (Volare) strofa 3.",
+          "texto_lacuna": "Testo generico per Nel Blu Dipinto Di Blu (Volare) ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Nel Blu Dipinto Di Blu (Volare) estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Nel Blu Dipinto Di Blu (Volare) strofa 4.",
+          "texto_lacuna": "Testo generico per Nel Blu Dipinto Di Blu (Volare) ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Nel Blu Dipinto Di Blu (Volare) estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_004",
+      "titulo": "Azzurro",
+      "artista": "Adriano Celentano",
+      "nivel": "B1",
+      "icone": "🎵",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Azzurro strofa 1.",
+          "texto_lacuna": "Testo generico per Azzurro ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Azzurro estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Azzurro strofa 2.",
+          "texto_lacuna": "Testo generico per Azzurro ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Azzurro estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Azzurro strofa 3.",
+          "texto_lacuna": "Testo generico per Azzurro ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Azzurro estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Azzurro strofa 4.",
+          "texto_lacuna": "Testo generico per Azzurro ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Azzurro estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_005",
+      "titulo": "Felicità",
+      "artista": "Al Bano & Romina Power",
+      "nivel": "A2",
+      "icone": "😊",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Felicità strofa 1.",
+          "texto_lacuna": "Testo generico per Felicità ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Felicità estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Felicità strofa 2.",
+          "texto_lacuna": "Testo generico per Felicità ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Felicità estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Felicità strofa 3.",
+          "texto_lacuna": "Testo generico per Felicità ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Felicità estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Felicità strofa 4.",
+          "texto_lacuna": "Testo generico per Felicità ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Felicità estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_006",
+      "titulo": "Ti Amo",
+      "artista": "Umberto Tozzi",
+      "nivel": "A1",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Ti Amo strofa 1.",
+          "texto_lacuna": "Testo generico per Ti Amo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ti Amo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Ti Amo strofa 2.",
+          "texto_lacuna": "Testo generico per Ti Amo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ti Amo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Ti Amo strofa 3.",
+          "texto_lacuna": "Testo generico per Ti Amo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ti Amo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Ti Amo strofa 4.",
+          "texto_lacuna": "Testo generico per Ti Amo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ti Amo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_007",
+      "titulo": "Gloria",
+      "artista": "Umberto Tozzi",
+      "nivel": "A2",
+      "icone": "✨",
+      "tema": "passione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Gloria strofa 1.",
+          "texto_lacuna": "Testo generico per Gloria ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Gloria estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Gloria strofa 2.",
+          "texto_lacuna": "Testo generico per Gloria ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Gloria estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Gloria strofa 3.",
+          "texto_lacuna": "Testo generico per Gloria ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Gloria estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Gloria strofa 4.",
+          "texto_lacuna": "Testo generico per Gloria ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Gloria estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_008",
+      "titulo": "La Solitudine",
+      "artista": "Laura Pausini",
+      "nivel": "B1",
+      "icone": "🥺",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per La Solitudine strofa 1.",
+          "texto_lacuna": "Testo generico per La Solitudine ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Solitudine estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per La Solitudine strofa 2.",
+          "texto_lacuna": "Testo generico per La Solitudine ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Solitudine estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per La Solitudine strofa 3.",
+          "texto_lacuna": "Testo generico per La Solitudine ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Solitudine estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per La Solitudine strofa 4.",
+          "texto_lacuna": "Testo generico per La Solitudine ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Solitudine estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_009",
+      "titulo": "Con Te Partirò",
+      "artista": "Andrea Bocelli",
+      "nivel": "B2",
+      "icone": "🚢",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Con Te Partirò strofa 1.",
+          "texto_lacuna": "Testo generico per Con Te Partirò ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Con Te Partirò estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Con Te Partirò strofa 2.",
+          "texto_lacuna": "Testo generico per Con Te Partirò ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Con Te Partirò estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Con Te Partirò strofa 3.",
+          "texto_lacuna": "Testo generico per Con Te Partirò ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Con Te Partirò estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Con Te Partirò strofa 4.",
+          "texto_lacuna": "Testo generico per Con Te Partirò ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Con Te Partirò estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_010",
+      "titulo": "Sarà Perché Ti Amo",
+      "artista": "Ricchi e Poveri",
+      "nivel": "A2",
+      "icone": "💖",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Sarà Perché Ti Amo strofa 1.",
+          "texto_lacuna": "Testo generico per Sarà Perché Ti Amo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sarà Perché Ti Amo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Sarà Perché Ti Amo strofa 2.",
+          "texto_lacuna": "Testo generico per Sarà Perché Ti Amo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sarà Perché Ti Amo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Sarà Perché Ti Amo strofa 3.",
+          "texto_lacuna": "Testo generico per Sarà Perché Ti Amo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sarà Perché Ti Amo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Sarà Perché Ti Amo strofa 4.",
+          "texto_lacuna": "Testo generico per Sarà Perché Ti Amo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sarà Perché Ti Amo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_011",
+      "titulo": "O Sole Mio",
+      "artista": "Canto Napoletano",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "natura",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per O Sole Mio strofa 1.",
+          "texto_lacuna": "Testo generico per O Sole Mio ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para O Sole Mio estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per O Sole Mio strofa 2.",
+          "texto_lacuna": "Testo generico per O Sole Mio ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para O Sole Mio estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per O Sole Mio strofa 3.",
+          "texto_lacuna": "Testo generico per O Sole Mio ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para O Sole Mio estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per O Sole Mio strofa 4.",
+          "texto_lacuna": "Testo generico per O Sole Mio ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para O Sole Mio estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_012",
+      "titulo": "Funiculì Funiculà",
+      "artista": "Canto Napoletano",
+      "nivel": "A2",
+      "icone": "🚂",
+      "tema": "tradizione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Funiculì Funiculà strofa 1.",
+          "texto_lacuna": "Testo generico per Funiculì Funiculà ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Funiculì Funiculà estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Funiculì Funiculà strofa 2.",
+          "texto_lacuna": "Testo generico per Funiculì Funiculà ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Funiculì Funiculà estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Funiculì Funiculà strofa 3.",
+          "texto_lacuna": "Testo generico per Funiculì Funiculà ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Funiculì Funiculà estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Funiculì Funiculà strofa 4.",
+          "texto_lacuna": "Testo generico per Funiculì Funiculà ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Funiculì Funiculà estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_013",
+      "titulo": "Caruso",
+      "artista": "Lucio Dalla",
+      "nivel": "B2",
+      "icone": "🌊",
+      "tema": "storia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Caruso strofa 1.",
+          "texto_lacuna": "Testo generico per Caruso ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Caruso estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Caruso strofa 2.",
+          "texto_lacuna": "Testo generico per Caruso ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Caruso estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Caruso strofa 3.",
+          "texto_lacuna": "Testo generico per Caruso ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Caruso estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Caruso strofa 4.",
+          "texto_lacuna": "Testo generico per Caruso ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Caruso estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_014",
+      "titulo": "Il Cielo in una Stanza",
+      "artista": "Gino Paoli",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Il Cielo in una Stanza strofa 1.",
+          "texto_lacuna": "Testo generico per Il Cielo in una Stanza ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Cielo in una Stanza estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Il Cielo in una Stanza strofa 2.",
+          "texto_lacuna": "Testo generico per Il Cielo in una Stanza ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Cielo in una Stanza estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Il Cielo in una Stanza strofa 3.",
+          "texto_lacuna": "Testo generico per Il Cielo in una Stanza ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Cielo in una Stanza estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Il Cielo in una Stanza strofa 4.",
+          "texto_lacuna": "Testo generico per Il Cielo in una Stanza ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Cielo in una Stanza estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_015",
+      "titulo": "Senza Una Donna",
+      "artista": "Zucchero",
+      "nivel": "A2",
+      "icone": "💔",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Senza Una Donna strofa 1.",
+          "texto_lacuna": "Testo generico per Senza Una Donna ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Senza Una Donna estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Senza Una Donna strofa 2.",
+          "texto_lacuna": "Testo generico per Senza Una Donna ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Senza Una Donna estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Senza Una Donna strofa 3.",
+          "texto_lacuna": "Testo generico per Senza Una Donna ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Senza Una Donna estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Senza Una Donna strofa 4.",
+          "texto_lacuna": "Testo generico per Senza Una Donna ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Senza Una Donna estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_016",
+      "titulo": "Ballo Ballo",
+      "artista": "Raffaella Carrà",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Ballo Ballo strofa 1.",
+          "texto_lacuna": "Testo generico per Ballo Ballo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ballo Ballo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Ballo Ballo strofa 2.",
+          "texto_lacuna": "Testo generico per Ballo Ballo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ballo Ballo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Ballo Ballo strofa 3.",
+          "texto_lacuna": "Testo generico per Ballo Ballo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ballo Ballo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Ballo Ballo strofa 4.",
+          "texto_lacuna": "Testo generico per Ballo Ballo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ballo Ballo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_017",
+      "titulo": "A Far L'Amore Comincia Tu",
+      "artista": "Raffaella Carrà",
+      "nivel": "A2",
+      "icone": "💋",
+      "tema": "passione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per A Far L'Amore Comincia Tu strofa 1.",
+          "texto_lacuna": "Testo generico per A Far L'Amore Comincia Tu ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Far L'Amore Comincia Tu estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per A Far L'Amore Comincia Tu strofa 2.",
+          "texto_lacuna": "Testo generico per A Far L'Amore Comincia Tu ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Far L'Amore Comincia Tu estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per A Far L'Amore Comincia Tu strofa 3.",
+          "texto_lacuna": "Testo generico per A Far L'Amore Comincia Tu ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Far L'Amore Comincia Tu estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per A Far L'Amore Comincia Tu strofa 4.",
+          "texto_lacuna": "Testo generico per A Far L'Amore Comincia Tu ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Far L'Amore Comincia Tu estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_018",
+      "titulo": "Più Bella Cosa",
+      "artista": "Eros Ramazzotti",
+      "nivel": "B1",
+      "icone": "😍",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Più Bella Cosa strofa 1.",
+          "texto_lacuna": "Testo generico per Più Bella Cosa ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Più Bella Cosa estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Più Bella Cosa strofa 2.",
+          "texto_lacuna": "Testo generico per Più Bella Cosa ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Più Bella Cosa estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Più Bella Cosa strofa 3.",
+          "texto_lacuna": "Testo generico per Più Bella Cosa ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Più Bella Cosa estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Più Bella Cosa strofa 4.",
+          "texto_lacuna": "Testo generico per Più Bella Cosa ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Più Bella Cosa estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_019",
+      "titulo": "Mambo Italiano",
+      "artista": "Rosemary Clooney",
+      "nivel": "A1",
+      "icone": "🍕",
+      "tema": "divertimento",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Mambo Italiano strofa 1.",
+          "texto_lacuna": "Testo generico per Mambo Italiano ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mambo Italiano estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Mambo Italiano strofa 2.",
+          "texto_lacuna": "Testo generico per Mambo Italiano ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mambo Italiano estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Mambo Italiano strofa 3.",
+          "texto_lacuna": "Testo generico per Mambo Italiano ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mambo Italiano estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Mambo Italiano strofa 4.",
+          "texto_lacuna": "Testo generico per Mambo Italiano ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mambo Italiano estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_020",
+      "titulo": "Un'Estate Italiana",
+      "artista": "Edoardo Bennato",
+      "nivel": "A2",
+      "icone": "⚽",
+      "tema": "sport",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Un'Estate Italiana strofa 1.",
+          "texto_lacuna": "Testo generico per Un'Estate Italiana ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Un'Estate Italiana estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Un'Estate Italiana strofa 2.",
+          "texto_lacuna": "Testo generico per Un'Estate Italiana ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Un'Estate Italiana estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Un'Estate Italiana strofa 3.",
+          "texto_lacuna": "Testo generico per Un'Estate Italiana ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Un'Estate Italiana estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Un'Estate Italiana strofa 4.",
+          "texto_lacuna": "Testo generico per Un'Estate Italiana ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Un'Estate Italiana estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_021",
+      "titulo": "La Donna Cannone",
+      "artista": "Francesco De Gregori",
+      "nivel": "C1",
+      "icone": "🎪",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per La Donna Cannone strofa 1.",
+          "texto_lacuna": "Testo generico per La Donna Cannone ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Donna Cannone estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per La Donna Cannone strofa 2.",
+          "texto_lacuna": "Testo generico per La Donna Cannone ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Donna Cannone estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per La Donna Cannone strofa 3.",
+          "texto_lacuna": "Testo generico per La Donna Cannone ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Donna Cannone estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per La Donna Cannone strofa 4.",
+          "texto_lacuna": "Testo generico per La Donna Cannone ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Donna Cannone estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_022",
+      "titulo": "Almeno Tu Nell'Universo",
+      "artista": "Mia Martini",
+      "nivel": "B2",
+      "icone": "🌠",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Almeno Tu Nell'Universo strofa 1.",
+          "texto_lacuna": "Testo generico per Almeno Tu Nell'Universo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Almeno Tu Nell'Universo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Almeno Tu Nell'Universo strofa 2.",
+          "texto_lacuna": "Testo generico per Almeno Tu Nell'Universo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Almeno Tu Nell'Universo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Almeno Tu Nell'Universo strofa 3.",
+          "texto_lacuna": "Testo generico per Almeno Tu Nell'Universo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Almeno Tu Nell'Universo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Almeno Tu Nell'Universo strofa 4.",
+          "texto_lacuna": "Testo generico per Almeno Tu Nell'Universo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Almeno Tu Nell'Universo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_023",
+      "titulo": "Centro di Gravità Permanente",
+      "artista": "Franco Battiato",
+      "nivel": "B2",
+      "icone": "🧘",
+      "tema": "filosofia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Centro di Gravità Permanente strofa 1.",
+          "texto_lacuna": "Testo generico per Centro di Gravità Permanente ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Centro di Gravità Permanente estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Centro di Gravità Permanente strofa 2.",
+          "texto_lacuna": "Testo generico per Centro di Gravità Permanente ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Centro di Gravità Permanente estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Centro di Gravità Permanente strofa 3.",
+          "texto_lacuna": "Testo generico per Centro di Gravità Permanente ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Centro di Gravità Permanente estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Centro di Gravità Permanente strofa 4.",
+          "texto_lacuna": "Testo generico per Centro di Gravità Permanente ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Centro di Gravità Permanente estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_024",
+      "titulo": "La Cura",
+      "artista": "Franco Battiato",
+      "nivel": "C1",
+      "icone": "❤️‍🩹",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per La Cura strofa 1.",
+          "texto_lacuna": "Testo generico per La Cura ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Cura estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per La Cura strofa 2.",
+          "texto_lacuna": "Testo generico per La Cura ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Cura estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per La Cura strofa 3.",
+          "texto_lacuna": "Testo generico per La Cura ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Cura estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per La Cura strofa 4.",
+          "texto_lacuna": "Testo generico per La Cura ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Cura estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_025",
+      "titulo": "A Te",
+      "artista": "Jovanotti",
+      "nivel": "B1",
+      "icone": "💌",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per A Te strofa 1.",
+          "texto_lacuna": "Testo generico per A Te ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Te estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per A Te strofa 2.",
+          "texto_lacuna": "Testo generico per A Te ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Te estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per A Te strofa 3.",
+          "texto_lacuna": "Testo generico per A Te ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Te estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per A Te strofa 4.",
+          "texto_lacuna": "Testo generico per A Te ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para A Te estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_026",
+      "titulo": "Penso Positivo",
+      "artista": "Jovanotti",
+      "nivel": "A2",
+      "icone": "👍",
+      "tema": "ottimismo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Penso Positivo strofa 1.",
+          "texto_lacuna": "Testo generico per Penso Positivo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Penso Positivo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Penso Positivo strofa 2.",
+          "texto_lacuna": "Testo generico per Penso Positivo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Penso Positivo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Penso Positivo strofa 3.",
+          "texto_lacuna": "Testo generico per Penso Positivo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Penso Positivo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Penso Positivo strofa 4.",
+          "texto_lacuna": "Testo generico per Penso Positivo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Penso Positivo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_027",
+      "titulo": "50 Special",
+      "artista": "Lùnapop",
+      "nivel": "A2",
+      "icone": "🛵",
+      "tema": "giovinezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per 50 Special strofa 1.",
+          "texto_lacuna": "Testo generico per 50 Special ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para 50 Special estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per 50 Special strofa 2.",
+          "texto_lacuna": "Testo generico per 50 Special ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para 50 Special estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per 50 Special strofa 3.",
+          "texto_lacuna": "Testo generico per 50 Special ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para 50 Special estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per 50 Special strofa 4.",
+          "texto_lacuna": "Testo generico per 50 Special ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para 50 Special estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_028",
+      "titulo": "Il Più Grande Spettacolo Dopo il Big Bang",
+      "artista": "Jovanotti",
+      "nivel": "B1",
+      "icone": "🎆",
+      "tema": "gioia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang strofa 1.",
+          "texto_lacuna": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Più Grande Spettacolo Dopo il Big Bang estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang strofa 2.",
+          "texto_lacuna": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Più Grande Spettacolo Dopo il Big Bang estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang strofa 3.",
+          "texto_lacuna": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Più Grande Spettacolo Dopo il Big Bang estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang strofa 4.",
+          "texto_lacuna": "Testo generico per Il Più Grande Spettacolo Dopo il Big Bang ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Più Grande Spettacolo Dopo il Big Bang estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_029",
+      "titulo": "Rose Rosse",
+      "artista": "Massimo Ranieri",
+      "nivel": "A2",
+      "icone": "🌹",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Rose Rosse strofa 1.",
+          "texto_lacuna": "Testo generico per Rose Rosse ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Rose Rosse estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Rose Rosse strofa 2.",
+          "texto_lacuna": "Testo generico per Rose Rosse ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Rose Rosse estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Rose Rosse strofa 3.",
+          "texto_lacuna": "Testo generico per Rose Rosse ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Rose Rosse estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Rose Rosse strofa 4.",
+          "texto_lacuna": "Testo generico per Rose Rosse ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Rose Rosse estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_030",
+      "titulo": "Perdere L'Amore",
+      "artista": "Massimo Ranieri",
+      "nivel": "B1",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Perdere L'Amore strofa 1.",
+          "texto_lacuna": "Testo generico per Perdere L'Amore ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Perdere L'Amore estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Perdere L'Amore strofa 2.",
+          "texto_lacuna": "Testo generico per Perdere L'Amore ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Perdere L'Amore estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Perdere L'Amore strofa 3.",
+          "texto_lacuna": "Testo generico per Perdere L'Amore ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Perdere L'Amore estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Perdere L'Amore strofa 4.",
+          "texto_lacuna": "Testo generico per Perdere L'Amore ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Perdere L'Amore estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_031",
+      "titulo": "Mille Giorni di Te e di Me",
+      "artista": "Claudio Baglioni",
+      "nivel": "B2",
+      "icone": "⏳",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Mille Giorni di Te e di Me strofa 1.",
+          "texto_lacuna": "Testo generico per Mille Giorni di Te e di Me ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mille Giorni di Te e di Me estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Mille Giorni di Te e di Me strofa 2.",
+          "texto_lacuna": "Testo generico per Mille Giorni di Te e di Me ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mille Giorni di Te e di Me estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Mille Giorni di Te e di Me strofa 3.",
+          "texto_lacuna": "Testo generico per Mille Giorni di Te e di Me ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mille Giorni di Te e di Me estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Mille Giorni di Te e di Me strofa 4.",
+          "texto_lacuna": "Testo generico per Mille Giorni di Te e di Me ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Mille Giorni di Te e di Me estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_032",
+      "titulo": "Questo Piccolo Grande Amore",
+      "artista": "Claudio Baglioni",
+      "nivel": "B1",
+      "icone": "💕",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Questo Piccolo Grande Amore strofa 1.",
+          "texto_lacuna": "Testo generico per Questo Piccolo Grande Amore ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Questo Piccolo Grande Amore estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Questo Piccolo Grande Amore strofa 2.",
+          "texto_lacuna": "Testo generico per Questo Piccolo Grande Amore ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Questo Piccolo Grande Amore estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Questo Piccolo Grande Amore strofa 3.",
+          "texto_lacuna": "Testo generico per Questo Piccolo Grande Amore ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Questo Piccolo Grande Amore estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Questo Piccolo Grande Amore strofa 4.",
+          "texto_lacuna": "Testo generico per Questo Piccolo Grande Amore ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Questo Piccolo Grande Amore estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_033",
+      "titulo": "Margherita",
+      "artista": "Riccardo Cocciante",
+      "nivel": "B1",
+      "icone": "🌼",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Margherita strofa 1.",
+          "texto_lacuna": "Testo generico per Margherita ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Margherita estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Margherita strofa 2.",
+          "texto_lacuna": "Testo generico per Margherita ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Margherita estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Margherita strofa 3.",
+          "texto_lacuna": "Testo generico per Margherita ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Margherita estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Margherita strofa 4.",
+          "texto_lacuna": "Testo generico per Margherita ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Margherita estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_034",
+      "titulo": "Cervo a Primavera",
+      "artista": "Riccardo Cocciante",
+      "nivel": "B2",
+      "icone": "🦌",
+      "tema": "rinascita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Cervo a Primavera strofa 1.",
+          "texto_lacuna": "Testo generico per Cervo a Primavera ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Cervo a Primavera estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Cervo a Primavera strofa 2.",
+          "texto_lacuna": "Testo generico per Cervo a Primavera ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Cervo a Primavera estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Cervo a Primavera strofa 3.",
+          "texto_lacuna": "Testo generico per Cervo a Primavera ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Cervo a Primavera estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Cervo a Primavera strofa 4.",
+          "texto_lacuna": "Testo generico per Cervo a Primavera ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Cervo a Primavera estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_035",
+      "titulo": "Generale",
+      "artista": "Francesco De Gregori",
+      "nivel": "C1",
+      "icone": "🎖️",
+      "tema": "guerra",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Generale strofa 1.",
+          "texto_lacuna": "Testo generico per Generale ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Generale estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Generale strofa 2.",
+          "texto_lacuna": "Testo generico per Generale ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Generale estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Generale strofa 3.",
+          "texto_lacuna": "Testo generico per Generale ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Generale estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Generale strofa 4.",
+          "texto_lacuna": "Testo generico per Generale ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Generale estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_036",
+      "titulo": "Buonanotte Fiorellino",
+      "artista": "Francesco De Gregori",
+      "nivel": "A2",
+      "icone": "🌸",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Buonanotte Fiorellino strofa 1.",
+          "texto_lacuna": "Testo generico per Buonanotte Fiorellino ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Buonanotte Fiorellino estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Buonanotte Fiorellino strofa 2.",
+          "texto_lacuna": "Testo generico per Buonanotte Fiorellino ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Buonanotte Fiorellino estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Buonanotte Fiorellino strofa 3.",
+          "texto_lacuna": "Testo generico per Buonanotte Fiorellino ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Buonanotte Fiorellino estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Buonanotte Fiorellino strofa 4.",
+          "texto_lacuna": "Testo generico per Buonanotte Fiorellino ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Buonanotte Fiorellino estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_037",
+      "titulo": "Il Mio Canto Libero",
+      "artista": "Lucio Battisti",
+      "nivel": "B1",
+      "icone": "🕊️",
+      "tema": "libertà",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Il Mio Canto Libero strofa 1.",
+          "texto_lacuna": "Testo generico per Il Mio Canto Libero ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Mio Canto Libero estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Il Mio Canto Libero strofa 2.",
+          "texto_lacuna": "Testo generico per Il Mio Canto Libero ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Mio Canto Libero estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Il Mio Canto Libero strofa 3.",
+          "texto_lacuna": "Testo generico per Il Mio Canto Libero ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Mio Canto Libero estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Il Mio Canto Libero strofa 4.",
+          "texto_lacuna": "Testo generico per Il Mio Canto Libero ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Il Mio Canto Libero estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_038",
+      "titulo": "La Canzone del Sole",
+      "artista": "Lucio Battisti",
+      "nivel": "A2",
+      "icone": "🌞",
+      "tema": "giovinezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per La Canzone del Sole strofa 1.",
+          "texto_lacuna": "Testo generico per La Canzone del Sole ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Canzone del Sole estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per La Canzone del Sole strofa 2.",
+          "texto_lacuna": "Testo generico per La Canzone del Sole ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Canzone del Sole estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per La Canzone del Sole strofa 3.",
+          "texto_lacuna": "Testo generico per La Canzone del Sole ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Canzone del Sole estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per La Canzone del Sole strofa 4.",
+          "texto_lacuna": "Testo generico per La Canzone del Sole ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para La Canzone del Sole estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_039",
+      "titulo": "I Giardini di Marzo",
+      "artista": "Lucio Battisti",
+      "nivel": "B2",
+      "icone": "🌷",
+      "tema": "ricordi",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per I Giardini di Marzo strofa 1.",
+          "texto_lacuna": "Testo generico per I Giardini di Marzo ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para I Giardini di Marzo estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per I Giardini di Marzo strofa 2.",
+          "texto_lacuna": "Testo generico per I Giardini di Marzo ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para I Giardini di Marzo estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per I Giardini di Marzo strofa 3.",
+          "texto_lacuna": "Testo generico per I Giardini di Marzo ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para I Giardini di Marzo estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per I Giardini di Marzo strofa 4.",
+          "texto_lacuna": "Testo generico per I Giardini di Marzo ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para I Giardini di Marzo estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_040",
+      "titulo": "E Penso A Te",
+      "artista": "Lucio Battisti",
+      "nivel": "B1",
+      "icone": "💭",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per E Penso A Te strofa 1.",
+          "texto_lacuna": "Testo generico per E Penso A Te ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para E Penso A Te estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per E Penso A Te strofa 2.",
+          "texto_lacuna": "Testo generico per E Penso A Te ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para E Penso A Te estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per E Penso A Te strofa 3.",
+          "texto_lacuna": "Testo generico per E Penso A Te ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para E Penso A Te estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per E Penso A Te strofa 4.",
+          "texto_lacuna": "Testo generico per E Penso A Te ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para E Penso A Te estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_041",
+      "titulo": "Alba Chiara",
+      "artista": "Vasco Rossi",
+      "nivel": "A2",
+      "icone": "🌅",
+      "tema": "bellezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Alba Chiara strofa 1.",
+          "texto_lacuna": "Testo generico per Alba Chiara ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Alba Chiara estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Alba Chiara strofa 2.",
+          "texto_lacuna": "Testo generico per Alba Chiara ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Alba Chiara estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Alba Chiara strofa 3.",
+          "texto_lacuna": "Testo generico per Alba Chiara ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Alba Chiara estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Alba Chiara strofa 4.",
+          "texto_lacuna": "Testo generico per Alba Chiara ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Alba Chiara estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_042",
+      "titulo": "Vita Spericolata",
+      "artista": "Vasco Rossi",
+      "nivel": "B1",
+      "icone": "🏍️",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Vita Spericolata strofa 1.",
+          "texto_lacuna": "Testo generico per Vita Spericolata ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Vita Spericolata estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Vita Spericolata strofa 2.",
+          "texto_lacuna": "Testo generico per Vita Spericolata ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Vita Spericolata estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Vita Spericolata strofa 3.",
+          "texto_lacuna": "Testo generico per Vita Spericolata ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Vita Spericolata estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Vita Spericolata strofa 4.",
+          "texto_lacuna": "Testo generico per Vita Spericolata ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Vita Spericolata estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_043",
+      "titulo": "Sally",
+      "artista": "Vasco Rossi",
+      "nivel": "B2",
+      "icone": "👩",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Sally strofa 1.",
+          "texto_lacuna": "Testo generico per Sally ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sally estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Sally strofa 2.",
+          "texto_lacuna": "Testo generico per Sally ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sally estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Sally strofa 3.",
+          "texto_lacuna": "Testo generico per Sally ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sally estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Sally strofa 4.",
+          "texto_lacuna": "Testo generico per Sally ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Sally estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_044",
+      "titulo": "Una Vita Da Mediano",
+      "artista": "Ligabue",
+      "nivel": "B1",
+      "icone": "⚽",
+      "tema": "impegno",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Una Vita Da Mediano strofa 1.",
+          "texto_lacuna": "Testo generico per Una Vita Da Mediano ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Una Vita Da Mediano estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Una Vita Da Mediano strofa 2.",
+          "texto_lacuna": "Testo generico per Una Vita Da Mediano ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Una Vita Da Mediano estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Una Vita Da Mediano strofa 3.",
+          "texto_lacuna": "Testo generico per Una Vita Da Mediano ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Una Vita Da Mediano estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Una Vita Da Mediano strofa 4.",
+          "texto_lacuna": "Testo generico per Una Vita Da Mediano ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Una Vita Da Mediano estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_045",
+      "titulo": "Certe Notti",
+      "artista": "Ligabue",
+      "nivel": "B1",
+      "icone": "🌃",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Certe Notti strofa 1.",
+          "texto_lacuna": "Testo generico per Certe Notti ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Certe Notti estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Certe Notti strofa 2.",
+          "texto_lacuna": "Testo generico per Certe Notti ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Certe Notti estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Certe Notti strofa 3.",
+          "texto_lacuna": "Testo generico per Certe Notti ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Certe Notti estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Certe Notti strofa 4.",
+          "texto_lacuna": "Testo generico per Certe Notti ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Certe Notti estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_046",
+      "titulo": "Ragazzo Fortunato",
+      "artista": "Jovanotti",
+      "nivel": "A2",
+      "icone": "🍀",
+      "tema": "fortuna",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Ragazzo Fortunato strofa 1.",
+          "texto_lacuna": "Testo generico per Ragazzo Fortunato ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ragazzo Fortunato estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Ragazzo Fortunato strofa 2.",
+          "texto_lacuna": "Testo generico per Ragazzo Fortunato ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ragazzo Fortunato estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Ragazzo Fortunato strofa 3.",
+          "texto_lacuna": "Testo generico per Ragazzo Fortunato ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ragazzo Fortunato estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Ragazzo Fortunato strofa 4.",
+          "texto_lacuna": "Testo generico per Ragazzo Fortunato ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Ragazzo Fortunato estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_047",
+      "titulo": "Voglio Una Vita Spericolata",
+      "artista": "Vasco Rossi",
+      "nivel": "B1",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Voglio Una Vita Spericolata strofa 1.",
+          "texto_lacuna": "Testo generico per Voglio Una Vita Spericolata ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Voglio Una Vita Spericolata estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Voglio Una Vita Spericolata strofa 2.",
+          "texto_lacuna": "Testo generico per Voglio Una Vita Spericolata ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Voglio Una Vita Spericolata estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Voglio Una Vita Spericolata strofa 3.",
+          "texto_lacuna": "Testo generico per Voglio Una Vita Spericolata ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Voglio Una Vita Spericolata estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Voglio Una Vita Spericolata strofa 4.",
+          "texto_lacuna": "Testo generico per Voglio Una Vita Spericolata ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Voglio Una Vita Spericolata estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_048",
+      "titulo": "Laura Non C'è",
+      "artista": "Nek",
+      "nivel": "B1",
+      "icone": "💔",
+      "tema": "assenza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Laura Non C'è strofa 1.",
+          "texto_lacuna": "Testo generico per Laura Non C'è ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Laura Non C'è estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Laura Non C'è strofa 2.",
+          "texto_lacuna": "Testo generico per Laura Non C'è ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Laura Non C'è estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Laura Non C'è strofa 3.",
+          "texto_lacuna": "Testo generico per Laura Non C'è ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Laura Non C'è estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Laura Non C'è strofa 4.",
+          "texto_lacuna": "Testo generico per Laura Non C'è ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Laura Non C'è estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_049",
+      "titulo": "Se Telefonando",
+      "artista": "Mina",
+      "nivel": "B2",
+      "icone": "☎️",
+      "tema": "addio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Se Telefonando strofa 1.",
+          "texto_lacuna": "Testo generico per Se Telefonando ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Se Telefonando estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Se Telefonando strofa 2.",
+          "texto_lacuna": "Testo generico per Se Telefonando ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Se Telefonando estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Se Telefonando strofa 3.",
+          "texto_lacuna": "Testo generico per Se Telefonando ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Se Telefonando estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Se Telefonando strofa 4.",
+          "texto_lacuna": "Testo generico per Se Telefonando ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Se Telefonando estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_050",
+      "titulo": "Grande Amore",
+      "artista": "Il Volo",
+      "nivel": "B1",
+      "icone": "🎭",
+      "tema": "passione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Testo generico per Grande Amore strofa 1.",
+          "texto_lacuna": "Testo generico per Grande Amore ___ 1.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Grande Amore estrofe 1.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Testo generico per Grande Amore strofa 2.",
+          "texto_lacuna": "Testo generico per Grande Amore ___ 2.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Grande Amore estrofe 2.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Testo generico per Grande Amore strofa 3.",
+          "texto_lacuna": "Testo generico per Grande Amore ___ 3.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Grande Amore estrofe 3.",
+          "dica": "Substantivo feminino singular"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Testo generico per Grande Amore strofa 4.",
+          "texto_lacuna": "Testo generico per Grande Amore ___ 4.",
+          "palavra_oculta": "strofa",
+          "traducao": "Texto genérico para Grande Amore estrofe 4.",
+          "dica": "Substantivo feminino singular"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "cuore",
+        "sole",
+        "vita",
+        "mondo"
+      ],
+      "xp_recompensa": 40
     }
   ]
 }

@@ -1,0 +1,454 @@
+{
+  "imitazioni": [
+    {
+      "id": "imi_001",
+      "frase_italiano": "Mamma mia!",
+      "frase_portugues": "Mãe minha! (Nossa!)",
+      "nivel": "A1",
+      "contexto": "Espressione classica di stupore.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_002",
+      "frase_italiano": "Che bello!",
+      "frase_portugues": "Que lindo!",
+      "nivel": "A1",
+      "contexto": "Per esprimere ammirazione.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_003",
+      "frase_italiano": "Buongiorno principessa!",
+      "frase_portugues": "Bom dia princesa! (La vita è bella)",
+      "nivel": "A2",
+      "contexto": "Frase iconica dal film La Vita è Bella.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_004",
+      "frase_italiano": "Non ci piove.",
+      "frase_portugues": "Não há dúvida sobre isso.",
+      "nivel": "B1",
+      "contexto": "Espressione idiomatica per certezza.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_005",
+      "frase_italiano": "Lasciatemi cantare.",
+      "frase_portugues": "Deixem-me cantar. (L'Italiano)",
+      "nivel": "A2",
+      "contexto": "Dalla famosa canzone di Toto Cutugno.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_006",
+      "frase_italiano": "La dolce vita.",
+      "frase_portugues": "A doce vida.",
+      "nivel": "A1",
+      "contexto": "Dal film capolavoro di Fellini.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_007",
+      "frase_italiano": "In bocca al lupo!",
+      "frase_portugues": "Boa sorte!",
+      "nivel": "A2",
+      "contexto": "Per augurare buona fortuna.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_008",
+      "frase_italiano": "Crepi il lupo!",
+      "frase_portugues": "Que morra o lobo! (Obrigado!)",
+      "nivel": "A2",
+      "contexto": "Risposta classica a in bocca al lupo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_009",
+      "frase_italiano": "Piano piano si va lontano.",
+      "frase_portugues": "Devagar se vai longe.",
+      "nivel": "A2",
+      "contexto": "Proverbio italiano.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_010",
+      "frase_italiano": "Meglio tardi che mai.",
+      "frase_portugues": "Antes tarde do que nunca.",
+      "nivel": "A2",
+      "contexto": "Proverbio comune.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_011",
+      "frase_italiano": "Veni, vidi, vici.",
+      "frase_portugues": "Vim, vi, venci.",
+      "nivel": "B2",
+      "contexto": "Latino usato in italiano, di Giulio Cesare.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_012",
+      "frase_italiano": "Eppur si muove.",
+      "frase_portugues": "E no entanto ela se move.",
+      "nivel": "B2",
+      "contexto": "Attribuita a Galileo Galilei.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_013",
+      "frase_italiano": "Una pizza Margherita, per favore.",
+      "frase_portugues": "Uma pizza Margherita, por favor.",
+      "nivel": "A1",
+      "contexto": "Richiesta tipica al ristorante.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_014",
+      "frase_italiano": "Scusa il ritardo.",
+      "frase_portugues": "Desculpe o atraso.",
+      "nivel": "A1",
+      "contexto": "Per scusarsi di un ritardo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_015",
+      "frase_italiano": "Non ho capito.",
+      "frase_portugues": "Não entendi.",
+      "nivel": "A1",
+      "contexto": "Frase utile per i principianti.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_016",
+      "frase_italiano": "Piacere di conoscerti.",
+      "frase_portugues": "Prazer em te conhecer.",
+      "nivel": "A1",
+      "contexto": "Presentazione informale.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_017",
+      "frase_italiano": "Quanto costa?",
+      "frase_portugues": "Quanto custa?",
+      "nivel": "A1",
+      "contexto": "Per chiedere il prezzo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_018",
+      "frase_italiano": "Dov'è il bagno?",
+      "frase_portugues": "Onde é o banheiro?",
+      "nivel": "A1",
+      "contexto": "Domanda essenziale.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_019",
+      "frase_italiano": "Buon appetito!",
+      "frase_portugues": "Bom apetite!",
+      "nivel": "A1",
+      "contexto": "Si dice prima di mangiare.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_020",
+      "frase_italiano": "Salute!",
+      "frase_portugues": "Saúde!",
+      "nivel": "A1",
+      "contexto": "Si dice quando si brinda o quando qualcuno starnutisce.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_021",
+      "frase_italiano": "Che schifo!",
+      "frase_portugues": "Que nojo!",
+      "nivel": "A2",
+      "contexto": "Espressione di disgusto.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_022",
+      "frase_italiano": "Non mi interessa.",
+      "frase_portugues": "Não me interessa.",
+      "nivel": "A2",
+      "contexto": "Per declinare un'offerta.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_023",
+      "frase_italiano": "Sono d'accordo.",
+      "frase_portugues": "Estou de acordo.",
+      "nivel": "A2",
+      "contexto": "Per esprimere consenso.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_024",
+      "frase_italiano": "Hai ragione.",
+      "frase_portugues": "Você tem razão.",
+      "nivel": "A2",
+      "contexto": "Per dare ragione a qualcuno.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_025",
+      "frase_italiano": "Non lo so.",
+      "frase_portugues": "Não sei.",
+      "nivel": "A1",
+      "contexto": "Per esprimere ignoranza su un fatto.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_026",
+      "frase_italiano": "Ci penso io.",
+      "frase_portugues": "Deixa comigo / Eu cuido disso.",
+      "nivel": "B1",
+      "contexto": "Per rassicurare qualcuno.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_027",
+      "frase_italiano": "Magari!",
+      "frase_portugues": "Quem dera!",
+      "nivel": "B1",
+      "contexto": "Espressione di desiderio.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_028",
+      "frase_italiano": "Macché!",
+      "frase_portugues": "Que nada!",
+      "nivel": "B1",
+      "contexto": "Per negare energicamente.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_029",
+      "frase_italiano": "Boh!",
+      "frase_portugues": "Sei lá!",
+      "nivel": "A2",
+      "contexto": "Espressione colloquiale di incertezza.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_030",
+      "frase_italiano": "Dai!",
+      "frase_portugues": "Vamos! / Para com isso!",
+      "nivel": "A1",
+      "contexto": "Esclamazione molto comune e versatile.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_031",
+      "frase_italiano": "Meno male.",
+      "frase_portugues": "Ainda bem.",
+      "nivel": "A2",
+      "contexto": "Espressione di sollievo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_032",
+      "frase_italiano": "Roba da matti.",
+      "frase_portugues": "Coisa de louco.",
+      "nivel": "B1",
+      "contexto": "Per descrivere una situazione assurda.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_033",
+      "frase_italiano": "Acqua in bocca.",
+      "frase_portugues": "Bico calado.",
+      "nivel": "B2",
+      "contexto": "Per chiedere di mantenere un segreto.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_034",
+      "frase_italiano": "Piove sul bagnato.",
+      "frase_portugues": "Chove no molhado.",
+      "nivel": "B2",
+      "contexto": "Quando i problemi si accumulano.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_035",
+      "frase_italiano": "Tirare il calzino.",
+      "frase_portugues": "Bater as botas.",
+      "nivel": "C1",
+      "contexto": "Modo di dire per 'morire'.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_036",
+      "frase_italiano": "Ogni morte di papa.",
+      "frase_portugues": "De vez em nunca.",
+      "nivel": "B2",
+      "contexto": "Per indicare un evento rarissimo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_037",
+      "frase_italiano": "Fuori di testa.",
+      "frase_portugues": "Fora da casinha / louco.",
+      "nivel": "B1",
+      "contexto": "Essere pazzo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_038",
+      "frase_italiano": "Avere le mani bucate.",
+      "frase_portugues": "Ser mão aberta (gastador).",
+      "nivel": "B2",
+      "contexto": "Spendere troppi soldi.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_039",
+      "frase_italiano": "Costare un occhio della testa.",
+      "frase_portugues": "Custar os olhos da cara.",
+      "nivel": "B1",
+      "contexto": "Essere molto costoso.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_040",
+      "frase_italiano": "Prendere due piccioni con una fava.",
+      "frase_portugues": "Matar dois coelhos com uma cajadada só.",
+      "nivel": "B2",
+      "contexto": "Ottenere due risultati con una sola azione.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_041",
+      "frase_italiano": "Non vedo l'ora.",
+      "frase_portugues": "Mal vejo a hora.",
+      "nivel": "A2",
+      "contexto": "Essere impaziente per qualcosa di bello.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_042",
+      "frase_italiano": "Fare finta di niente.",
+      "frase_portugues": "Fingir que não é nada.",
+      "nivel": "B1",
+      "contexto": "Ignorare volontariamente qualcosa.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_043",
+      "frase_italiano": "Tutto fumo e niente arrosto.",
+      "frase_portugues": "Muito barulho por nada (Só fumaça, nada de carne).",
+      "nivel": "C1",
+      "contexto": "Molte apparenze, poca sostanza.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_044",
+      "frase_italiano": "Trovarsi tra l'incudine e il martello.",
+      "frase_portugues": "Estar entre a cruz e a espada.",
+      "nivel": "C1",
+      "contexto": "Essere in una situazione difficile senza via d'uscita.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_045",
+      "frase_italiano": "Salvare capra e cavoli.",
+      "frase_portugues": "Agradar a gregos e troianos.",
+      "nivel": "C1",
+      "contexto": "Trovare un compromesso che soddisfi tutti.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_046",
+      "frase_italiano": "Sputare il rospo.",
+      "frase_portugues": "Desembuchar (Cuspir o sapo).",
+      "nivel": "B2",
+      "contexto": "Dire finalmente la verità.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_047",
+      "frase_italiano": "Arrampicarsi sugli specchi.",
+      "frase_portugues": "Dar desculpas esfarrapate.",
+      "nivel": "C1",
+      "contexto": "Cercare scuse improbabili.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_048",
+      "frase_italiano": "Avere il pollice verde.",
+      "frase_portugues": "Ter dedo verde (saber cuidar de plantas).",
+      "nivel": "B1",
+      "contexto": "Essere bravi col giardinaggio.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_049",
+      "frase_italiano": "Essere al verde.",
+      "frase_portugues": "Estar liso (sem dinheiro).",
+      "nivel": "B1",
+      "contexto": "Non avere soldi.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_050",
+      "frase_italiano": "Dormire sugli allori.",
+      "frase_portugues": "Dormir sobre os louros.",
+      "nivel": "C1",
+      "contexto": "Accontentarsi dei successi passati.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    }
+  ]
+}

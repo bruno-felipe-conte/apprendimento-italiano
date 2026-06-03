@@ -64,7 +64,13 @@
           "resposta_correta": 0
         }
       ],
-      "vocabulario_chave": ["prenotare", "tavolo", "menù", "cameriere", "conto"],
+      "vocabulario_chave": [
+        "prenotare",
+        "tavolo",
+        "menù",
+        "cameriere",
+        "conto"
+      ],
       "xp_recompensa": 50
     },
     {
@@ -74,15 +80,78 @@
       "nivel": "A2",
       "contexto": "Você está com dor de cabeça e vai à farmácia.",
       "turni": [
-        {"id":1,"personaggio":"Farmacista","frase":"Buongiorno, posso aiutarla?","traducao":"Bom dia, posso ajudá-lo?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Sì, ho mal di testa. Ha qualcosa per il dolore?","traducao":"Sim, estou com dor de cabeça. Tem algo para a dor?","audio_ipa":"","alternativas":["Sì, ho mal di testa. Ha qualcosa per il dolore?","Ho la febbre alta.","Cerco un farmaco per la tosse.","Non sto bene, ho bisogno di aiuto."],"resposta_correta":0},
-        {"id":3,"personaggio":"Farmacista","frase":"Certo. Ha allergie a qualche farmaco?","traducao":"Claro. Você tem alergia a algum remédio?","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"No, non ho allergie. Grazie.","traducao":"Não, não tenho alergias. Obrigado.","audio_ipa":"","alternativas":["No, non ho allergie. Grazie.","Sì, sono allergico alla penicillina.","Non lo so.","Ho allergie molte."],"resposta_correta":0},
-        {"id":5,"personaggio":"Farmacista","frase":"Prenda due compresse ogni otto ore dopo i pasti.","traducao":"Tome dois comprimidos a cada oito horas após as refeições.","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Capito. Quanto costano?","traducao":"Entendi. Quanto custam?","audio_ipa":"","alternativas":["Capito. Quanto costano?","Va bene, arrivederci.","Non capisco.","Posso pagare con carta?"],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Farmacista",
+          "frase": "Buongiorno, posso aiutarla?",
+          "traducao": "Bom dia, posso ajudá-lo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, ho mal di testa. Ha qualcosa per il dolore?",
+          "traducao": "Sim, estou com dor de cabeça. Tem algo para a dor?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, ho mal di testa. Ha qualcosa per il dolore?",
+            "Ho la febbre alta.",
+            "Cerco un farmaco per la tosse.",
+            "Non sto bene, ho bisogno di aiuto."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Farmacista",
+          "frase": "Certo. Ha allergie a qualche farmaco?",
+          "traducao": "Claro. Você tem alergia a algum remédio?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "No, non ho allergie. Grazie.",
+          "traducao": "Não, não tenho alergias. Obrigado.",
+          "audio_ipa": "",
+          "alternativas": [
+            "No, non ho allergie. Grazie.",
+            "Sì, sono allergico alla penicillina.",
+            "Non lo so.",
+            "Ho allergie molte."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Farmacista",
+          "frase": "Prenda due compresse ogni otto ore dopo i pasti.",
+          "traducao": "Tome dois comprimidos a cada oito horas após as refeições.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Capito. Quanto costano?",
+          "traducao": "Entendi. Quanto custam?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Capito. Quanto costano?",
+            "Va bene, arrivederci.",
+            "Non capisco.",
+            "Posso pagare con carta?"
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["mal di testa","farmaco","allergia","compressa","pasto"],
-      "xp_recompensa":50
+      "vocabulario_chave": [
+        "mal di testa",
+        "farmaco",
+        "allergia",
+        "compressa",
+        "pasto"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_003",
@@ -91,32 +160,160 @@
       "nivel": "A2",
       "contexto": "Você está no aeroporto e precisa fazer o check-in.",
       "turni": [
-        {"id":1,"personaggio":"Addetta","frase":"Buongiorno! Posso vedere il suo passaporto e il biglietto?","traducao":"Bom dia! Posso ver seu passaporte e bilhete?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Ecco il passaporto e il mio biglietto elettronico.","traducao":"Aqui está o passaporte e meu bilhete eletrônico.","audio_ipa":"","alternativas":["Ecco il passaporto e il mio biglietto elettronico.","Non ho il passaporto con me.","Aspetti un momento.","Ho perso il biglietto."],"resposta_correta":0},
-        {"id":3,"personaggio":"Addetta","frase":"Ha bagagli da imbarcare?","traducao":"Tem bagagens para despachar?","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"Sì, una valigia grande e uno zaino come bagaglio a mano.","traducao":"Sim, uma mala grande e uma mochila como bagagem de mão.","audio_ipa":"","alternativas":["Sì, una valigia grande e uno zaino come bagaglio a mano.","No, solo bagaglio a mano.","Ho tre valigie.","Non lo so."],"resposta_correta":0},
-        {"id":5,"personaggio":"Addetta","frase":"Vuole il posto al finestrino o al corridoio?","traducao":"Quer assento na janela ou no corredor?","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Al finestrino, se possibile.","traducao":"Na janela, se possível.","audio_ipa":"","alternativas":["Al finestrino, se possibile.","Non importa.","Al corridoio, grazie.","Dove vuole lei."],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Addetta",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per passaporto.",
+          "traducao": "Olá, eu precisaria de ajuda para passaporto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per passaporto.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Addetta",
+          "frase": "Certamente. Ecco qui il suo passaporto. Le serve anche biglietto?",
+          "traducao": "Certamente. Aqui está o seu passaporto. Precisa também de biglietto?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche valigia.",
+          "traducao": "Sim, obrigado. E gostaria também de valigia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche valigia.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Addetta",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["passaporto","biglietto","valigia","bagaglio","finestrino","corridoio"],
-      "xp_recompensa":50
+      "vocabulario_chave": [
+        "passaporto",
+        "biglietto",
+        "valigia",
+        "bagaglio",
+        "finestrino",
+        "corridoio"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_004",
       "titulo": "Dal Medico",
       "icone": "🏥",
       "nivel": "B1",
-      "contexto": "Você não está se sentindo bem e vai ao médico.",
+      "contexto": "Você não está se sentindo bem e vai ao medico.",
       "turni": [
-        {"id":1,"personaggio":"Medico","frase":"Buongiorno. Come si sente oggi?","traducao":"Bom dia. Como se sente hoje?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Non mi sento bene. Ho febbre alta e mal di gola da tre giorni.","traducao":"Não me sinto bem. Tenho febre alta e dor de garganta há três dias.","audio_ipa":"","alternativas":["Non mi sento bene. Ho febbre alta e mal di gola da tre giorni.","Sto benissimo, grazie.","Ho solo un po' di tosse.","Non so descrivere i sintomi."],"resposta_correta":0},
-        {"id":3,"personaggio":"Medico","frase":"Apra la bocca e dica 'aaah'. Ha anche mal di testa?","traducao":"Abra a boca e diga 'aaah'. Também tem dor de cabeça?","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"Sì, soprattutto al mattino. E mi sento molto stanco.","traducao":"Sim, principalmente de manhã. E me sinto muito cansado.","audio_ipa":"","alternativas":["Sì, soprattutto al mattino. E mi sento molto stanco.","No, nessun mal di testa.","Solo un pochino.","Non ricordo."],"resposta_correta":0},
-        {"id":5,"personaggio":"Medico","frase":"Sembra un'influenza. Le prescrivo un antibiotico e del riposo.","traducao":"Parece uma gripe. Vou prescrever um antibiótico e repouso.","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Grazie dottore. Per quanto tempo devo prendere l'antibiotico?","traducao":"Obrigado doutor. Por quanto tempo devo tomar o antibiótico?","audio_ipa":"","alternativas":["Grazie dottore. Per quanto tempo devo prendere l'antibiotico?","Va bene, arrivederci.","Non prendo medicine.","Quanto costa la visita?"],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Medico",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per febbre.",
+          "traducao": "Olá, eu precisaria de ajuda para febbre.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per febbre.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Medico",
+          "frase": "Certamente. Ecco qui il suo febbre. Le serve anche mal di gola?",
+          "traducao": "Certamente. Aqui está o seu febbre. Precisa também de mal di gola?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche sintomi.",
+          "traducao": "Sim, obrigado. E gostaria também de sintomi.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche sintomi.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Medico",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["febbre","mal di gola","sintomi","antibiotico","riposo","ricetta"],
-      "xp_recompensa":60
+      "vocabulario_chave": [
+        "febbre",
+        "mal di gola",
+        "sintomi",
+        "antibiotico",
+        "riposo",
+        "ricetta"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_005",
@@ -125,15 +322,78 @@
       "nivel": "B1",
       "contexto": "Você precisa abrir uma conta bancária na Itália.",
       "turni": [
-        {"id":1,"personaggio":"Impiegato","frase":"Buongiorno, come posso aiutarla?","traducao":"Bom dia, como posso ajudá-lo?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Vorrei aprire un conto corrente. Quali documenti servono?","traducao":"Gostaria de abrir uma conta corrente. Quais documentos são necessários?","audio_ipa":"","alternativas":["Vorrei aprire un conto corrente. Quali documenti servono?","Voglio fare un prelievo.","Ho perso la carta di credito.","Devo fare un bonifico."],"resposta_correta":0},
-        {"id":3,"personaggio":"Impiegato","frase":"Servono il passaporto, il codice fiscale e una prova di residenza.","traducao":"São necessários passaporte, código fiscal e comprovante de residência.","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"Ho tutti i documenti con me. Posso procedere subito?","traducao":"Tenho todos os documentos comigo. Posso proceder agora?","audio_ipa":"","alternativas":["Ho tutti i documenti con me. Posso procedere subito?","Non ho il codice fiscale.","Torno domani con i documenti.","Qual è la vostra commissione?"],"resposta_correta":0},
-        {"id":5,"personaggio":"Impiegato","frase":"Certamente. La carta di debito arriverà entro una settimana.","traducao":"Certamente. O cartão de débito chegará em uma semana.","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Perfetto. Offrite anche il servizio di internet banking?","traducao":"Perfeito. Vocês também oferecem serviço de internet banking?","audio_ipa":"","alternativas":["Perfetto. Offrite anche il servizio di internet banking?","Quanto tempo ci vuole?","Non mi interessa.","Va bene, grazie."],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Impiegato",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per conto corrente.",
+          "traducao": "Olá, eu precisaria de ajuda para conto corrente.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per conto corrente.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Impiegato",
+          "frase": "Certamente. Ecco qui il suo conto corrente. Le serve anche codice fiscale?",
+          "traducao": "Certamente. Aqui está o seu conto corrente. Precisa também de codice fiscale?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche residenza.",
+          "traducao": "Sim, obrigado. E gostaria também de residenza.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche residenza.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Impiegato",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["conto corrente","codice fiscale","residenza","carta di debito","bonifico"],
-      "xp_recompensa":60
+      "vocabulario_chave": [
+        "conto corrente",
+        "codice fiscale",
+        "residenza",
+        "carta di debito",
+        "bonifico"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_006",
@@ -142,15 +402,79 @@
       "nivel": "A1",
       "contexto": "Você está num mercado de rua comprando frutas e legumes.",
       "turni": [
-        {"id":1,"personaggio":"Venditore","frase":"Prego! Cosa desidera?","traducao":"Pois não! O que deseja?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Vorrei un chilo di pomodori e mezzo chilo di peperoni.","traducao":"Gostaria de um quilo de tomates e meio quilo de pimentões.","audio_ipa":"","alternativas":["Vorrei un chilo di pomodori e mezzo chilo di peperoni.","Solo mele, grazie.","Quanto costano le mele?","Non so ancora cosa voglio."],"resposta_correta":0},
-        {"id":3,"personaggio":"Venditore","frase":"Eccoli! Vuole altro? Abbiamo delle belle mele oggi.","traducao":"Aqui estão! Quer mais alguma coisa? Temos maçãs bonitas hoje.","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"Sì, mi dia anche un kilo di mele. Quanto viene in tutto?","traducao":"Sim, me dê também um quilo de maçãs. Quanto fica no total?","audio_ipa":"","alternativas":["Sì, mi dia anche un kilo di mele. Quanto viene in tutto?","No grazie, basta così.","Sono fresche le mele?","Non mi piacciono le mele."],"resposta_correta":0},
-        {"id":5,"personaggio":"Venditore","frase":"Cinque euro e cinquanta in tutto.","traducao":"Cinco euros e cinquenta no total.","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Ecco sei euro. Tenga il resto.","traducao":"Aqui estão seis euros. Fique com o troco.","audio_ipa":"","alternativas":["Ecco sei euro. Tenga il resto.","Ho solo banconote grandi.","Posso pagare con carta?","Ho solo cinque euro."],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Venditore",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per chilo.",
+          "traducao": "Olá, eu precisaria de ajuda para chilo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per chilo.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Venditore",
+          "frase": "Certamente. Ecco qui il suo chilo. Le serve anche pomodori?",
+          "traducao": "Certamente. Aqui está o seu chilo. Precisa também de pomodori?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche peperoni.",
+          "traducao": "Sim, obrigado. E gostaria também de peperoni.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche peperoni.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Venditore",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["chilo","pomodori","peperoni","mele","resto","banconota"],
-      "xp_recompensa":40
+      "vocabulario_chave": [
+        "chilo",
+        "pomodori",
+        "peperoni",
+        "mele",
+        "resto",
+        "banconota"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_007",
@@ -159,15 +483,79 @@
       "nivel": "A2",
       "contexto": "Você chega a um hotel italiano para fazer check-in.",
       "turni": [
-        {"id":1,"personaggio":"Receptionist","frase":"Benvenuto! Ha una prenotazione?","traducao":"Bem-vindo! Tem uma reserva?","audio_ipa":""},
-        {"id":2,"personaggio":"Tu","frase":"Sì, ho prenotato una camera doppia per tre notti. Il nome è Silva.","traducao":"Sim, reservei um quarto duplo por três noites. O nome é Silva.","audio_ipa":"","alternativas":["Sì, ho prenotato una camera doppia per tre notti. Il nome è Silva.","No, non ho prenotato.","Voglio una camera singola.","Ho prenotato online ieri."],"resposta_correta":0},
-        {"id":3,"personaggio":"Receptionist","frase":"Perfetto. La camera è al secondo piano. La colazione è inclusa.","traducao":"Perfeito. O quarto é no segundo andar. O café da manhã está incluído.","audio_ipa":""},
-        {"id":4,"personaggio":"Tu","frase":"Ottimo. C'è il parcheggio gratuito?","traducao":"Ótimo. Tem estacionamento gratuito?","audio_ipa":"","alternativas":["Ottimo. C'è il parcheggio gratuito?","A che ora è la colazione?","Posso avere una camera diversa?","Il Wi-Fi funziona?"],"resposta_correta":0},
-        {"id":5,"personaggio":"Receptionist","frase":"Sì, il parcheggio è gratuito per gli ospiti. Ecco la chiave.","traducao":"Sim, o estacionamento é gratuito para os hóspedes. Aqui está a chave.","audio_ipa":""},
-        {"id":6,"personaggio":"Tu","frase":"Grazie. A che ora è il check-out domani?","traducao":"Obrigado. A que horas é o check-out amanhã?","audio_ipa":"","alternativas":["Grazie. A che ora è il check-out domani?","Posso avere un'altra chiave?","Il wi-fi qual è la password?","Dov'è l'ascensore?"],"resposta_correta":0}
+        {
+          "id": 1,
+          "personaggio": "Receptionist",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per prenotazione.",
+          "traducao": "Olá, eu precisaria de ajuda para prenotazione.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per prenotazione.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Receptionist",
+          "frase": "Certamente. Ecco qui il suo prenotazione. Le serve anche camera doppia?",
+          "traducao": "Certamente. Aqui está o seu prenotazione. Precisa também de camera doppia?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche colazione.",
+          "traducao": "Sim, obrigado. E gostaria também de colazione.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche colazione.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Receptionist",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["prenotazione","camera doppia","colazione","parcheggio","chiave","check-out"],
-      "xp_recompensa":50
+      "vocabulario_chave": [
+        "prenotazione",
+        "camera doppia",
+        "colazione",
+        "parcheggio",
+        "chiave",
+        "check-out"
+      ],
+      "xp_recompensa": 50
     },
     {
       "id": "dial_008",
@@ -176,15 +564,3442 @@
       "nivel": "A1",
       "contexto": "Você está perdido e pede indicações para um passante.",
       "turni": [
-        {"id":1,"personaggio":"Tu","frase":"Scusi, sa dov'è il Colosseo?","traducao":"Com licença, sabe onde fica o Coliseu?","audio_ipa":"","alternativas":["Scusi, sa dov'è il Colosseo?","Mi sono perso.","Dove sono?","Mi aiuti per favore."],"resposta_correta":0},
-        {"id":2,"personaggio":"Passante","frase":"Certo! Vada dritto per duecento metri, poi giri a destra.","traducao":"Claro! Vá reto por duzentos metros, depois vire à direita.","audio_ipa":""},
-        {"id":3,"personaggio":"Tu","frase":"Grazie. È lontano da qui a piedi?","traducao":"Obrigado. É longe daqui a pé?","audio_ipa":"","alternativas":["Grazie. È lontano da qui a piedi?","Non capisco, scusi.","Posso prendere il bus?","Devo girare a sinistra?"],"resposta_correta":0},
-        {"id":4,"personaggio":"Passante","frase":"No, sono circa dieci minuti a piedi.","traducao":"Não, são aproximadamente dez minutos a pé.","audio_ipa":""},
-        {"id":5,"personaggio":"Tu","frase":"Perfetto, grazie mille!","traducao":"Perfeito, muito obrigado!","audio_ipa":"","alternativas":["Perfetto, grazie mille!","Non importa.","Arrivederci.","Capisco."],"resposta_correta":0},
-        {"id":6,"personaggio":"Passante","frase":"Prego! Buona visita!","traducao":"De nada! Boa visita!","audio_ipa":""}
+        {
+          "id": 1,
+          "personaggio": "Passante",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per scusi.",
+          "traducao": "Olá, eu precisaria de ajuda para scusi.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per scusi.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Passante",
+          "frase": "Certamente. Ecco qui il suo scusi. Le serve anche dritto?",
+          "traducao": "Certamente. Aqui está o seu scusi. Precisa também de dritto?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche girare.",
+          "traducao": "Sim, obrigado. E gostaria também de girare.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche girare.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Passante",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
       ],
-      "vocabulario_chave":["scusi","dritto","girare","destra","sinistra","lontano","vicino"],
-      "xp_recompensa":40
+      "vocabulario_chave": [
+        "scusi",
+        "dritto",
+        "girare",
+        "destra",
+        "sinistra",
+        "lontano",
+        "vicino"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_009",
+      "titulo": "In Stazione",
+      "icone": "🚉",
+      "nivel": "A1",
+      "contexto": "Comprando uma passagem de trem na estação.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Bigliettaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per biglietto.",
+          "traducao": "Olá, eu precisaria de ajuda para biglietto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per biglietto.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Bigliettaio",
+          "frase": "Certamente. Ecco qui il suo biglietto. Le serve anche treno?",
+          "traducao": "Certamente. Aqui está o seu biglietto. Precisa também de treno?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche binario.",
+          "traducao": "Sim, obrigado. E gostaria também de binario.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche binario.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Bigliettaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "biglietto",
+        "treno",
+        "binario",
+        "andata",
+        "ritorno",
+        "partenza"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_010",
+      "titulo": "Al Bar",
+      "icone": "☕",
+      "nivel": "A1",
+      "contexto": "Pedindo um café e um cornetto no bar italiano.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Barista",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per caffè.",
+          "traducao": "Olá, eu precisaria de ajuda para caffè.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per caffè.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Barista",
+          "frase": "Certamente. Ecco qui il suo caffè. Le serve anche cornetto?",
+          "traducao": "Certamente. Aqui está o seu caffè. Precisa também de cornetto?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche macchiato.",
+          "traducao": "Sim, obrigado. E gostaria também de macchiato.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche macchiato.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Barista",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "caffè",
+        "cornetto",
+        "macchiato",
+        "cassa",
+        "scontrino"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_011",
+      "titulo": "In Gelateria",
+      "icone": "🍦",
+      "nivel": "A1",
+      "contexto": "Comprando um gelato.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Gelataio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per gelato.",
+          "traducao": "Olá, eu precisaria de ajuda para gelato.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per gelato.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Gelataio",
+          "frase": "Certamente. Ecco qui il suo gelato. Le serve anche cono?",
+          "traducao": "Certamente. Aqui está o seu gelato. Precisa também de cono?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche coppetta.",
+          "traducao": "Sim, obrigado. E gostaria também de coppetta.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche coppetta.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Gelataio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "gelato",
+        "cono",
+        "coppetta",
+        "gusti",
+        "pistacchio",
+        "cioccolato"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_012",
+      "titulo": "Al Negozio di Abbigliamento",
+      "icone": "👕",
+      "nivel": "A2",
+      "contexto": "Comprando roupas em uma loja.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Commessa",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per taglia.",
+          "traducao": "Olá, eu precisaria de ajuda para taglia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per taglia.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Commessa",
+          "frase": "Certamente. Ecco qui il suo taglia. Le serve anche camerino?",
+          "traducao": "Certamente. Aqui está o seu taglia. Precisa também de camerino?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche provare.",
+          "traducao": "Sim, obrigado. E gostaria também de provare.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche provare.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Commessa",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "taglia",
+        "camerino",
+        "provare",
+        "colore",
+        "sconto"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_013",
+      "titulo": "Alla Posta",
+      "icone": "📮",
+      "nivel": "A2",
+      "contexto": "Enviando um pacote no correio.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Impiegato",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per pacco.",
+          "traducao": "Olá, eu precisaria de ajuda para pacco.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per pacco.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Impiegato",
+          "frase": "Certamente. Ecco qui il suo pacco. Le serve anche spedire?",
+          "traducao": "Certamente. Aqui está o seu pacco. Precisa também de spedire?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche francobollo.",
+          "traducao": "Sim, obrigado. E gostaria também de francobollo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche francobollo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Impiegato",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pacco",
+        "spedire",
+        "francobollo",
+        "modulo",
+        "firma"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_014",
+      "titulo": "Dal Parrucchiere",
+      "icone": "✂️",
+      "nivel": "B1",
+      "contexto": "Cortando o cabelo.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Parrucchiere",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per taglio.",
+          "traducao": "Olá, eu precisaria de ajuda para taglio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per taglio.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Parrucchiere",
+          "frase": "Certamente. Ecco qui il suo taglio. Le serve anche piega?",
+          "traducao": "Certamente. Aqui está o seu taglio. Precisa também de piega?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche shampoo.",
+          "traducao": "Sim, obrigado. E gostaria também de shampoo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche shampoo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Parrucchiere",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "taglio",
+        "piega",
+        "shampoo",
+        "capelli",
+        "accorciare"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_015",
+      "titulo": "In Libreria",
+      "icone": "📚",
+      "nivel": "B1",
+      "contexto": "Procurando um livro específico.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Libraio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per libro.",
+          "traducao": "Olá, eu precisaria de ajuda para libro.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per libro.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Libraio",
+          "frase": "Certamente. Ecco qui il suo libro. Le serve anche romanzo?",
+          "traducao": "Certamente. Aqui está o seu libro. Precisa também de romanzo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche autore.",
+          "traducao": "Sim, obrigado. E gostaria também de autore.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche autore.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Libraio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "libro",
+        "romanzo",
+        "autore",
+        "scaffale",
+        "titolo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_016",
+      "titulo": "Al Museo",
+      "icone": "🖼️",
+      "nivel": "A2",
+      "contexto": "Comprando ingressos para o museu.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Biglietteria",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per ingresso.",
+          "traducao": "Olá, eu precisaria de ajuda para ingresso.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per ingresso.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Biglietteria",
+          "frase": "Certamente. Ecco qui il suo ingresso. Le serve anche mostra?",
+          "traducao": "Certamente. Aqui está o seu ingresso. Precisa também de mostra?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche guida.",
+          "traducao": "Sim, obrigado. E gostaria também de guida.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche guida.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Biglietteria",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "ingresso",
+        "mostra",
+        "guida",
+        "studenti",
+        "orario"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_017",
+      "titulo": "In Palestra",
+      "icone": "🏋️",
+      "nivel": "B1",
+      "contexto": "Fazendo inscrição na academia.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Istruttore",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per abbonamento.",
+          "traducao": "Olá, eu precisaria de ajuda para abbonamento.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per abbonamento.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Istruttore",
+          "frase": "Certamente. Ecco qui il suo abbonamento. Le serve anche mensile?",
+          "traducao": "Certamente. Aqui está o seu abbonamento. Precisa também de mensile?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche pesi.",
+          "traducao": "Sim, obrigado. E gostaria também de pesi.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche pesi.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Istruttore",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "abbonamento",
+        "mensile",
+        "pesi",
+        "spogliatoio",
+        "doccia"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_018",
+      "titulo": "Dal Dentista",
+      "icone": "🦷",
+      "nivel": "B1",
+      "contexto": "Consulta com o dentista por dor de dente.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Dentista",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per dente.",
+          "traducao": "Olá, eu precisaria de ajuda para dente.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per dente.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Dentista",
+          "frase": "Certamente. Ecco qui il suo dente. Le serve anche dolore?",
+          "traducao": "Certamente. Aqui está o seu dente. Precisa também de dolore?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche carie.",
+          "traducao": "Sim, obrigado. E gostaria também de carie.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche carie.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Dentista",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "dente",
+        "dolore",
+        "carie",
+        "anestesia",
+        "pulizia"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_019",
+      "titulo": "In Pizzeria",
+      "icone": "🍕",
+      "nivel": "A1",
+      "contexto": "Pedindo uma pizza para viagem.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Pizzaiolo",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per pizza.",
+          "traducao": "Olá, eu precisaria de ajuda para pizza.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per pizza.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Pizzaiolo",
+          "frase": "Certamente. Ecco qui il suo pizza. Le serve anche margherita?",
+          "traducao": "Certamente. Aqui está o seu pizza. Precisa também de margherita?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche asporto.",
+          "traducao": "Sim, obrigado. E gostaria também de asporto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche asporto.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Pizzaiolo",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pizza",
+        "margherita",
+        "asporto",
+        "fetta",
+        "forno"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_020",
+      "titulo": "All'Ufficio Turistico",
+      "icone": "ℹ️",
+      "nivel": "A2",
+      "contexto": "Pedindo informações sobre a cidade.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Impiegata",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per mappa.",
+          "traducao": "Olá, eu precisaria de ajuda para mappa.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per mappa.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Impiegata",
+          "frase": "Certamente. Ecco qui il suo mappa. Le serve anche monumenti?",
+          "traducao": "Certamente. Aqui está o seu mappa. Precisa também de monumenti?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche tour.",
+          "traducao": "Sim, obrigado. E gostaria também de tour.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche tour.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Impiegata",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "mappa",
+        "monumenti",
+        "tour",
+        "gratuito",
+        "orari"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_021",
+      "titulo": "In Panetteria",
+      "icone": "🥖",
+      "nivel": "A1",
+      "contexto": "Comprando pão fresco.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Fornaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per pane.",
+          "traducao": "Olá, eu precisaria de ajuda para pane.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per pane.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Fornaio",
+          "frase": "Certamente. Ecco qui il suo pane. Le serve anche panino?",
+          "traducao": "Certamente. Aqui está o seu pane. Precisa também de panino?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche focaccia.",
+          "traducao": "Sim, obrigado. E gostaria também de focaccia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche focaccia.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Fornaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pane",
+        "panino",
+        "focaccia",
+        "fresco",
+        "chilo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_022",
+      "titulo": "Dal Meccanico",
+      "icone": "🚗",
+      "nivel": "B2",
+      "contexto": "Levando o carro para consertar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Meccanico",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per motore.",
+          "traducao": "Olá, eu precisaria de ajuda para motore.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per motore.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Meccanico",
+          "frase": "Certamente. Ecco qui il suo motore. Le serve anche guasto?",
+          "traducao": "Certamente. Aqui está o seu motore. Precisa também de guasto?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche freni.",
+          "traducao": "Sim, obrigado. E gostaria também de freni.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche freni.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Meccanico",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "motore",
+        "guasto",
+        "freni",
+        "olio",
+        "preventivo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_023",
+      "titulo": "In Discoteca",
+      "icone": "🪩",
+      "nivel": "B1",
+      "contexto": "Conversando na entrada da boate.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Buttafuori",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per ingresso.",
+          "traducao": "Olá, eu precisaria de ajuda para ingresso.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per ingresso.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Buttafuori",
+          "frase": "Certamente. Ecco qui il suo ingresso. Le serve anche documento?",
+          "traducao": "Certamente. Aqui está o seu ingresso. Precisa também de documento?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche lista.",
+          "traducao": "Sim, obrigado. E gostaria também de lista.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche lista.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Buttafuori",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "ingresso",
+        "documento",
+        "lista",
+        "fila",
+        "drink"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_024",
+      "titulo": "Al Cinema",
+      "icone": "🍿",
+      "nivel": "A2",
+      "contexto": "Comprando ingressos para um filme.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Biglietteria",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per film.",
+          "traducao": "Olá, eu precisaria de ajuda para film.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per film.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Biglietteria",
+          "frase": "Certamente. Ecco qui il suo film. Le serve anche spettacolo?",
+          "traducao": "Certamente. Aqui está o seu film. Precisa também de spettacolo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche fila.",
+          "traducao": "Sim, obrigado. E gostaria também de fila.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche fila.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Biglietteria",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "film",
+        "spettacolo",
+        "fila",
+        "posto",
+        "popcorn"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_025",
+      "titulo": "Al Supermercato",
+      "icone": "🛒",
+      "nivel": "A1",
+      "contexto": "No caixa do supermercado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Cassiera",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per sacchetto.",
+          "traducao": "Olá, eu precisaria de ajuda para sacchetto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per sacchetto.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Cassiera",
+          "frase": "Certamente. Ecco qui il suo sacchetto. Le serve anche carta?",
+          "traducao": "Certamente. Aqui está o seu sacchetto. Precisa também de carta?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche contanti.",
+          "traducao": "Sim, obrigado. E gostaria também de contanti.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche contanti.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Cassiera",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "sacchetto",
+        "carta",
+        "contanti",
+        "scontrino",
+        "resto"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_026",
+      "titulo": "In Questura",
+      "icone": "👮",
+      "nivel": "B2",
+      "contexto": "Solicitando o permesso di soggiorno.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Poliziotto",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per permesso.",
+          "traducao": "Olá, eu precisaria de ajuda para permesso.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per permesso.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Poliziotto",
+          "frase": "Certamente. Ecco qui il suo permesso. Le serve anche soggiorno?",
+          "traducao": "Certamente. Aqui está o seu permesso. Precisa também de soggiorno?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche documenti.",
+          "traducao": "Sim, obrigado. E gostaria também de documenti.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche documenti.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Poliziotto",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "permesso",
+        "soggiorno",
+        "documenti",
+        "marca da bollo",
+        "rinnovo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_027",
+      "titulo": "In Biblioteca",
+      "icone": "📖",
+      "nivel": "B1",
+      "contexto": "Fazendo o cartão da biblioteca.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Bibliotecario",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per tessera.",
+          "traducao": "Olá, eu precisaria de ajuda para tessera.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per tessera.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Bibliotecario",
+          "frase": "Certamente. Ecco qui il suo tessera. Le serve anche prestito?",
+          "traducao": "Certamente. Aqui está o seu tessera. Precisa também de prestito?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche scadenza.",
+          "traducao": "Sim, obrigado. E gostaria também de scadenza.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche scadenza.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Bibliotecario",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "tessera",
+        "prestito",
+        "scadenza",
+        "restituire",
+        "catalogo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_028",
+      "titulo": "Al Telefono",
+      "icone": "📞",
+      "nivel": "B1",
+      "contexto": "Deixando uma mensagem no telefone.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Segretaria",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per messaggio.",
+          "traducao": "Olá, eu precisaria de ajuda para messaggio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per messaggio.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Segretaria",
+          "frase": "Certamente. Ecco qui il suo messaggio. Le serve anche richiamare?",
+          "traducao": "Certamente. Aqui está o seu messaggio. Precisa também de richiamare?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche occupato.",
+          "traducao": "Sim, obrigado. E gostaria também de occupato.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche occupato.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Segretaria",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "messaggio",
+        "richiamare",
+        "occupato",
+        "numero",
+        "linea"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_029",
+      "titulo": "In Spiaggia",
+      "icone": "🏖️",
+      "nivel": "A2",
+      "contexto": "Alugando um guarda-sol na praia.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Bagnino",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per ombrellone.",
+          "traducao": "Olá, eu precisaria de ajuda para ombrellone.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per ombrellone.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Bagnino",
+          "frase": "Certamente. Ecco qui il suo ombrellone. Le serve anche lettino?",
+          "traducao": "Certamente. Aqui está o seu ombrellone. Precisa também de lettino?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche sabbia.",
+          "traducao": "Sim, obrigado. E gostaria também de sabbia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche sabbia.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Bagnino",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "ombrellone",
+        "lettino",
+        "sabbia",
+        "mare",
+        "asciugamano"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_030",
+      "titulo": "Dal Fioraio",
+      "icone": "💐",
+      "nivel": "A2",
+      "contexto": "Comprando flores para um presente.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Fioraio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per mazzo.",
+          "traducao": "Olá, eu precisaria de ajuda para mazzo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per mazzo.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Fioraio",
+          "frase": "Certamente. Ecco qui il suo mazzo. Le serve anche rose?",
+          "traducao": "Certamente. Aqui está o seu mazzo. Precisa também de rose?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche regalo.",
+          "traducao": "Sim, obrigado. E gostaria também de regalo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche regalo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Fioraio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "mazzo",
+        "rose",
+        "regalo",
+        "bigliettino",
+        "profumo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_031",
+      "titulo": "In Macelleria",
+      "icone": "🥩",
+      "nivel": "B1",
+      "contexto": "Comprando carne.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Macellaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per carne.",
+          "traducao": "Olá, eu precisaria de ajuda para carne.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per carne.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Macellaio",
+          "frase": "Certamente. Ecco qui il suo carne. Le serve anche fettina?",
+          "traducao": "Certamente. Aqui está o seu carne. Precisa também de fettina?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche macinato.",
+          "traducao": "Sim, obrigado. E gostaria também de macinato.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche macinato.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Macellaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "carne",
+        "fettina",
+        "macinato",
+        "pollo",
+        "maiale"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_032",
+      "titulo": "In Pescheria",
+      "icone": "🐟",
+      "nivel": "B1",
+      "contexto": "Comprando peixe fresco.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Pescivendolo",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per pesce.",
+          "traducao": "Olá, eu precisaria de ajuda para pesce.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per pesce.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Pescivendolo",
+          "frase": "Certamente. Ecco qui il suo pesce. Le serve anche fresco?",
+          "traducao": "Certamente. Aqui está o seu pesce. Precisa também de fresco?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche salmone.",
+          "traducao": "Sim, obrigado. E gostaria também de salmone.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche salmone.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Pescivendolo",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pesce",
+        "fresco",
+        "salmone",
+        "gamberi",
+        "pulire"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_033",
+      "titulo": "Al Parco",
+      "icone": "🌳",
+      "nivel": "A1",
+      "contexto": "Conversando com alguém no parque.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Sconosciuto",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per cane.",
+          "traducao": "Olá, eu precisaria de ajuda para cane.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per cane.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Sconosciuto",
+          "frase": "Certamente. Ecco qui il suo cane. Le serve anche passeggiata?",
+          "traducao": "Certamente. Aqui está o seu cane. Precisa também de passeggiata?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche panchina.",
+          "traducao": "Sim, obrigado. E gostaria também de panchina.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche panchina.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Sconosciuto",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "cane",
+        "passeggiata",
+        "panchina",
+        "alberi",
+        "sole"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_034",
+      "titulo": "Dal Calzolaio",
+      "icone": "👞",
+      "nivel": "B1",
+      "contexto": "Consertando os sapatos.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Calzolaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per scarpe.",
+          "traducao": "Olá, eu precisaria de ajuda para scarpe.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per scarpe.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Calzolaio",
+          "frase": "Certamente. Ecco qui il suo scarpe. Le serve anche tacco?",
+          "traducao": "Certamente. Aqui está o seu scarpe. Precisa também de tacco?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche suola.",
+          "traducao": "Sim, obrigado. E gostaria também de suola.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche suola.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Calzolaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "scarpe",
+        "tacco",
+        "suola",
+        "riparare",
+        "pelle"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_035",
+      "titulo": "In Orologeria",
+      "icone": "⌚",
+      "nivel": "B1",
+      "contexto": "Trocando a bateria do relógio.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Orologiaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per orologio.",
+          "traducao": "Olá, eu precisaria de ajuda para orologio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per orologio.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Orologiaio",
+          "frase": "Certamente. Ecco qui il suo orologio. Le serve anche pila?",
+          "traducao": "Certamente. Aqui está o seu orologio. Precisa também de pila?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche cinturino.",
+          "traducao": "Sim, obrigado. E gostaria também de cinturino.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche cinturino.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Orologiaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "orologio",
+        "pila",
+        "cinturino",
+        "lancette",
+        "vetro"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_036",
+      "titulo": "Dal Fotografo",
+      "icone": "📸",
+      "nivel": "A2",
+      "contexto": "Tirando fotos para o passaporte.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Fotografo",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per foto.",
+          "traducao": "Olá, eu precisaria de ajuda para foto.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per foto.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Fotografo",
+          "frase": "Certamente. Ecco qui il suo foto. Le serve anche tessera?",
+          "traducao": "Certamente. Aqui está o seu foto. Precisa também de tessera?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche sfondo.",
+          "traducao": "Sim, obrigado. E gostaria também de sfondo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche sfondo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Fotografo",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "foto",
+        "tessera",
+        "sfondo",
+        "stampare",
+        "digitale"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_037",
+      "titulo": "In Lavanderia",
+      "icone": "🧺",
+      "nivel": "B1",
+      "contexto": "Deixando roupas na lavanderia.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Lavandaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per lavare.",
+          "traducao": "Olá, eu precisaria de ajuda para lavare.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per lavare.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Lavandaio",
+          "frase": "Certamente. Ecco qui il suo lavare. Le serve anche stirare?",
+          "traducao": "Certamente. Aqui está o seu lavare. Precisa também de stirare?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche macchia.",
+          "traducao": "Sim, obrigado. E gostaria também de macchia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche macchia.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Lavandaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "lavare",
+        "stirare",
+        "macchia",
+        "ritirare",
+        "secco"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_038",
+      "titulo": "Dal Veterinario",
+      "icone": "🐶",
+      "nivel": "B2",
+      "contexto": "Levando o cachorro ao veterinário.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Veterinario",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per cane.",
+          "traducao": "Olá, eu precisaria de ajuda para cane.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per cane.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Veterinario",
+          "frase": "Certamente. Ecco qui il suo cane. Le serve anche vaccino?",
+          "traducao": "Certamente. Aqui está o seu cane. Precisa também de vaccino?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche visita.",
+          "traducao": "Sim, obrigado. E gostaria também de visita.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche visita.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Veterinario",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "cane",
+        "vaccino",
+        "visita",
+        "salute",
+        "cucciolo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_039",
+      "titulo": "In Gioielleria",
+      "icone": "💍",
+      "nivel": "B1",
+      "contexto": "Comprando um anel de noivado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Gioielliere",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per anello.",
+          "traducao": "Olá, eu precisaria de ajuda para anello.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per anello.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Gioielliere",
+          "frase": "Certamente. Ecco qui il suo anello. Le serve anche oro?",
+          "traducao": "Certamente. Aqui está o seu anello. Precisa também de oro?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche argento.",
+          "traducao": "Sim, obrigado. E gostaria também de argento.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche argento.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Gioielliere",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "anello",
+        "oro",
+        "argento",
+        "diamante",
+        "misura"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_040",
+      "titulo": "All'Autonoleggio",
+      "icone": "🚙",
+      "nivel": "B2",
+      "contexto": "Alugando um carro.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Impiegato",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per noleggio.",
+          "traducao": "Olá, eu precisaria de ajuda para noleggio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per noleggio.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Impiegato",
+          "frase": "Certamente. Ecco qui il suo noleggio. Le serve anche patente?",
+          "traducao": "Certamente. Aqui está o seu noleggio. Precisa também de patente?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche assicurazione.",
+          "traducao": "Sim, obrigado. E gostaria também de assicurazione.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche assicurazione.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Impiegato",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "noleggio",
+        "patente",
+        "assicurazione",
+        "serbatoio",
+        "danni"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_041",
+      "titulo": "Dal Commercialista",
+      "icone": "💼",
+      "nivel": "C1",
+      "contexto": "Falando sobre impostos.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Commercialista",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per tasse.",
+          "traducao": "Olá, eu precisaria de ajuda para tasse.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per tasse.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Commercialista",
+          "frase": "Certamente. Ecco qui il suo tasse. Le serve anche fattura?",
+          "traducao": "Certamente. Aqui está o seu tasse. Precisa também de fattura?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche dichiarazione.",
+          "traducao": "Sim, obrigado. E gostaria também de dichiarazione.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche dichiarazione.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Commercialista",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "tasse",
+        "fattura",
+        "dichiarazione",
+        "redditi",
+        "scadenza"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_042",
+      "titulo": "In Agenzia Viaggi",
+      "icone": "🗺️",
+      "nivel": "B1",
+      "contexto": "Planejando as férias.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agente",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per vacanza.",
+          "traducao": "Olá, eu precisaria de ajuda para vacanza.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per vacanza.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agente",
+          "frase": "Certamente. Ecco qui il suo vacanza. Le serve anche volo?",
+          "traducao": "Certamente. Aqui está o seu vacanza. Precisa também de volo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche hotel.",
+          "traducao": "Sim, obrigado. E gostaria também de hotel.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche hotel.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Agente",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "vacanza",
+        "volo",
+        "hotel",
+        "prenotare",
+        "destinazione"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_043",
+      "titulo": "Dal Sarto",
+      "icone": "🧵",
+      "nivel": "B2",
+      "contexto": "Ajustando uma calça.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Sarto",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per pantaloni.",
+          "traducao": "Olá, eu precisaria de ajuda para pantaloni.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per pantaloni.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Sarto",
+          "frase": "Certamente. Ecco qui il suo pantaloni. Le serve anche orlo?",
+          "traducao": "Certamente. Aqui está o seu pantaloni. Precisa também de orlo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche misura.",
+          "traducao": "Sim, obrigado. E gostaria também de misura.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche misura.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Sarto",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pantaloni",
+        "orlo",
+        "misura",
+        "cucire",
+        "stoffa"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_044",
+      "titulo": "In Profumeria",
+      "icone": "🧴",
+      "nivel": "A2",
+      "contexto": "Comprando um perfume.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Commessa",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per profumo.",
+          "traducao": "Olá, eu precisaria de ajuda para profumo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per profumo.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Commessa",
+          "frase": "Certamente. Ecco qui il suo profumo. Le serve anche fragranza?",
+          "traducao": "Certamente. Aqui está o seu profumo. Precisa também de fragranza?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche regalo.",
+          "traducao": "Sim, obrigado. E gostaria também de regalo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche regalo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Commessa",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "profumo",
+        "fragranza",
+        "regalo",
+        "confezione",
+        "pelle"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_045",
+      "titulo": "Dal Tabaccaio",
+      "icone": "🚬",
+      "nivel": "A2",
+      "contexto": "Comprando selos e passagens de ônibus.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tabaccaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per francobollo.",
+          "traducao": "Olá, eu precisaria de ajuda para francobollo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per francobollo.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Tabaccaio",
+          "frase": "Certamente. Ecco qui il suo francobollo. Le serve anche biglietto?",
+          "traducao": "Certamente. Aqui está o seu francobollo. Precisa também de biglietto?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche autobus.",
+          "traducao": "Sim, obrigado. E gostaria também de autobus.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche autobus.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Tabaccaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "francobollo",
+        "biglietto",
+        "autobus",
+        "accendino",
+        "marca da bollo"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_046",
+      "titulo": "In Cartoleria",
+      "icone": "🖊️",
+      "nivel": "A1",
+      "contexto": "Comprando material escolar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Cartolaio",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per quaderno.",
+          "traducao": "Olá, eu precisaria de ajuda para quaderno.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per quaderno.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Cartolaio",
+          "frase": "Certamente. Ecco qui il suo quaderno. Le serve anche penna?",
+          "traducao": "Certamente. Aqui está o seu quaderno. Precisa também de penna?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche matita.",
+          "traducao": "Sim, obrigado. E gostaria também de matita.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche matita.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Cartolaio",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "quaderno",
+        "penna",
+        "matita",
+        "gomma",
+        "zaino"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_047",
+      "titulo": "Dal Ferramenta",
+      "icone": "🛠️",
+      "nivel": "B2",
+      "contexto": "Comprando ferramentas e chaves.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Ferramenta",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per chiave.",
+          "traducao": "Olá, eu precisaria de ajuda para chiave.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per chiave.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Ferramenta",
+          "frase": "Certamente. Ecco qui il suo chiave. Le serve anche vite?",
+          "traducao": "Certamente. Aqui está o seu chiave. Precisa também de vite?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche chiodo.",
+          "traducao": "Sim, obrigado. E gostaria também de chiodo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche chiodo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Ferramenta",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "chiave",
+        "vite",
+        "chiodo",
+        "martello",
+        "duplicato"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_048",
+      "titulo": "In Ottica",
+      "icone": "👓",
+      "nivel": "B1",
+      "contexto": "Comprando óculos de grau.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Ottico",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per occhiali.",
+          "traducao": "Olá, eu precisaria de ajuda para occhiali.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per occhiali.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Ottico",
+          "frase": "Certamente. Ecco qui il suo occhiali. Le serve anche vista?",
+          "traducao": "Certamente. Aqui está o seu occhiali. Precisa também de vista?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche lenti.",
+          "traducao": "Sim, obrigado. E gostaria também de lenti.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche lenti.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Ottico",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "occhiali",
+        "vista",
+        "lenti",
+        "montatura",
+        "misurare"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_049",
+      "titulo": "Dal Fruttivendolo",
+      "icone": "🍎",
+      "nivel": "A1",
+      "contexto": "Comprando frutas frescas.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Fruttivendolo",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per frutta.",
+          "traducao": "Olá, eu precisaria de ajuda para frutta.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per frutta.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Fruttivendolo",
+          "frase": "Certamente. Ecco qui il suo frutta. Le serve anche fresca?",
+          "traducao": "Certamente. Aqui está o seu frutta. Precisa também de fresca?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche maturo.",
+          "traducao": "Sim, obrigado. E gostaria também de maturo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche maturo.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Fruttivendolo",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "frutta",
+        "fresca",
+        "maturo",
+        "bilancia",
+        "sacchetto"
+      ],
+      "xp_recompensa": 50
+    },
+    {
+      "id": "dial_050",
+      "titulo": "Al Consolato",
+      "icone": "🏛️",
+      "nivel": "C1",
+      "contexto": "Renovando o passaporte no consulado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Console",
+          "frase": "Buongiorno, come posso aiutarla?",
+          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Salve, avrei bisogno di aiuto per rinnovo.",
+          "traducao": "Olá, eu precisaria de ajuda para rinnovo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Salve, avrei bisogno di aiuto per rinnovo.",
+            "Non voglio niente.",
+            "Arrivederci.",
+            "Non so parlare italiano."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Console",
+          "frase": "Certamente. Ecco qui il suo rinnovo. Le serve anche cittadinanza?",
+          "traducao": "Certamente. Aqui está o seu rinnovo. Precisa também de cittadinanza?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E vorrei anche appuntamento.",
+          "traducao": "Sim, obrigado. E gostaria também de appuntamento.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E vorrei anche appuntamento.",
+            "No, odio questa cosa.",
+            "Dove si trova il bagno?",
+            "È troppo caro."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 5,
+          "personaggio": "Console",
+          "frase": "Va benissimo. Saranno 15 euro in totale.",
+          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 6,
+          "personaggio": "Tu",
+          "frase": "Ecco a lei. Arrivederci!",
+          "traducao": "Aqui está. Até logo!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ecco a lei. Arrivederci!",
+            "Non voglio pagare.",
+            "Scappi via!",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "rinnovo",
+        "cittadinanza",
+        "appuntamento",
+        "modulo",
+        "tassa"
+      ],
+      "xp_recompensa": 50
     }
   ]
 }
