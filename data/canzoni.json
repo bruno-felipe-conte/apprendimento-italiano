@@ -2499,6 +2499,4906 @@
         "mondo"
       ],
       "xp_recompensa": 40
+    },
+    {
+      "id": "can_051",
+      "titulo": "Canzone d'Amore (Vol. 1)",
+      "artista": "Artista Sconosciuto #1",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_052",
+      "titulo": "Estate Italiana (Vol. 1)",
+      "artista": "Cantante Estivo #1",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_053",
+      "titulo": "Notte Stellata (Vol. 1)",
+      "artista": "Gruppo Notturno #1",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_054",
+      "titulo": "Voglia di Ballare (Vol. 1)",
+      "artista": "DJ Famoso #1",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_055",
+      "titulo": "Tristezza Infinita (Vol. 1)",
+      "artista": "Cantautore #1",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_056",
+      "titulo": "Viaggio Lontano (Vol. 1)",
+      "artista": "Band Viaggiante #1",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_057",
+      "titulo": "Amicizia Vera (Vol. 1)",
+      "artista": "Amici Uniti #1",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_058",
+      "titulo": "Ribellione Giovanile (Vol. 1)",
+      "artista": "Rocker Ribelle #1",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_059",
+      "titulo": "Ricordi d'Infanzia (Vol. 1)",
+      "artista": "Cantante Nostalgico #1",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_060",
+      "titulo": "Il Senso della Vita (Vol. 1)",
+      "artista": "Filosofo Pop #1",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_061",
+      "titulo": "Canzone d'Amore (Vol. 2)",
+      "artista": "Artista Sconosciuto #2",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_062",
+      "titulo": "Estate Italiana (Vol. 2)",
+      "artista": "Cantante Estivo #2",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_063",
+      "titulo": "Notte Stellata (Vol. 2)",
+      "artista": "Gruppo Notturno #2",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_064",
+      "titulo": "Voglia di Ballare (Vol. 2)",
+      "artista": "DJ Famoso #2",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_065",
+      "titulo": "Tristezza Infinita (Vol. 2)",
+      "artista": "Cantautore #2",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_066",
+      "titulo": "Viaggio Lontano (Vol. 2)",
+      "artista": "Band Viaggiante #2",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_067",
+      "titulo": "Amicizia Vera (Vol. 2)",
+      "artista": "Amici Uniti #2",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_068",
+      "titulo": "Ribellione Giovanile (Vol. 2)",
+      "artista": "Rocker Ribelle #2",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_069",
+      "titulo": "Ricordi d'Infanzia (Vol. 2)",
+      "artista": "Cantante Nostalgico #2",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_070",
+      "titulo": "Il Senso della Vita (Vol. 2)",
+      "artista": "Filosofo Pop #2",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_071",
+      "titulo": "Canzone d'Amore (Vol. 3)",
+      "artista": "Artista Sconosciuto #3",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_072",
+      "titulo": "Estate Italiana (Vol. 3)",
+      "artista": "Cantante Estivo #3",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_073",
+      "titulo": "Notte Stellata (Vol. 3)",
+      "artista": "Gruppo Notturno #3",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_074",
+      "titulo": "Voglia di Ballare (Vol. 3)",
+      "artista": "DJ Famoso #3",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_075",
+      "titulo": "Tristezza Infinita (Vol. 3)",
+      "artista": "Cantautore #3",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_076",
+      "titulo": "Viaggio Lontano (Vol. 3)",
+      "artista": "Band Viaggiante #3",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_077",
+      "titulo": "Amicizia Vera (Vol. 3)",
+      "artista": "Amici Uniti #3",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_078",
+      "titulo": "Ribellione Giovanile (Vol. 3)",
+      "artista": "Rocker Ribelle #3",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_079",
+      "titulo": "Ricordi d'Infanzia (Vol. 3)",
+      "artista": "Cantante Nostalgico #3",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_080",
+      "titulo": "Il Senso della Vita (Vol. 3)",
+      "artista": "Filosofo Pop #3",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_081",
+      "titulo": "Canzone d'Amore (Vol. 4)",
+      "artista": "Artista Sconosciuto #4",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_082",
+      "titulo": "Estate Italiana (Vol. 4)",
+      "artista": "Cantante Estivo #4",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_083",
+      "titulo": "Notte Stellata (Vol. 4)",
+      "artista": "Gruppo Notturno #4",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_084",
+      "titulo": "Voglia di Ballare (Vol. 4)",
+      "artista": "DJ Famoso #4",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_085",
+      "titulo": "Tristezza Infinita (Vol. 4)",
+      "artista": "Cantautore #4",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_086",
+      "titulo": "Viaggio Lontano (Vol. 4)",
+      "artista": "Band Viaggiante #4",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_087",
+      "titulo": "Amicizia Vera (Vol. 4)",
+      "artista": "Amici Uniti #4",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_088",
+      "titulo": "Ribellione Giovanile (Vol. 4)",
+      "artista": "Rocker Ribelle #4",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_089",
+      "titulo": "Ricordi d'Infanzia (Vol. 4)",
+      "artista": "Cantante Nostalgico #4",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_090",
+      "titulo": "Il Senso della Vita (Vol. 4)",
+      "artista": "Filosofo Pop #4",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_091",
+      "titulo": "Canzone d'Amore (Vol. 5)",
+      "artista": "Artista Sconosciuto #5",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_092",
+      "titulo": "Estate Italiana (Vol. 5)",
+      "artista": "Cantante Estivo #5",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_093",
+      "titulo": "Notte Stellata (Vol. 5)",
+      "artista": "Gruppo Notturno #5",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_094",
+      "titulo": "Voglia di Ballare (Vol. 5)",
+      "artista": "DJ Famoso #5",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_095",
+      "titulo": "Tristezza Infinita (Vol. 5)",
+      "artista": "Cantautore #5",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_096",
+      "titulo": "Viaggio Lontano (Vol. 5)",
+      "artista": "Band Viaggiante #5",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_097",
+      "titulo": "Amicizia Vera (Vol. 5)",
+      "artista": "Amici Uniti #5",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_098",
+      "titulo": "Ribellione Giovanile (Vol. 5)",
+      "artista": "Rocker Ribelle #5",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_099",
+      "titulo": "Ricordi d'Infanzia (Vol. 5)",
+      "artista": "Cantante Nostalgico #5",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_100",
+      "titulo": "Il Senso della Vita (Vol. 5)",
+      "artista": "Filosofo Pop #5",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_101",
+      "titulo": "Canzone d'Amore (Vol. 6)",
+      "artista": "Artista Sconosciuto #6",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_102",
+      "titulo": "Estate Italiana (Vol. 6)",
+      "artista": "Cantante Estivo #6",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_103",
+      "titulo": "Notte Stellata (Vol. 6)",
+      "artista": "Gruppo Notturno #6",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_104",
+      "titulo": "Voglia di Ballare (Vol. 6)",
+      "artista": "DJ Famoso #6",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_105",
+      "titulo": "Tristezza Infinita (Vol. 6)",
+      "artista": "Cantautore #6",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_106",
+      "titulo": "Viaggio Lontano (Vol. 6)",
+      "artista": "Band Viaggiante #6",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_107",
+      "titulo": "Amicizia Vera (Vol. 6)",
+      "artista": "Amici Uniti #6",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_108",
+      "titulo": "Ribellione Giovanile (Vol. 6)",
+      "artista": "Rocker Ribelle #6",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_109",
+      "titulo": "Ricordi d'Infanzia (Vol. 6)",
+      "artista": "Cantante Nostalgico #6",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_110",
+      "titulo": "Il Senso della Vita (Vol. 6)",
+      "artista": "Filosofo Pop #6",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_111",
+      "titulo": "Canzone d'Amore (Vol. 7)",
+      "artista": "Artista Sconosciuto #7",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_112",
+      "titulo": "Estate Italiana (Vol. 7)",
+      "artista": "Cantante Estivo #7",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_113",
+      "titulo": "Notte Stellata (Vol. 7)",
+      "artista": "Gruppo Notturno #7",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_114",
+      "titulo": "Voglia di Ballare (Vol. 7)",
+      "artista": "DJ Famoso #7",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_115",
+      "titulo": "Tristezza Infinita (Vol. 7)",
+      "artista": "Cantautore #7",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_116",
+      "titulo": "Viaggio Lontano (Vol. 7)",
+      "artista": "Band Viaggiante #7",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_117",
+      "titulo": "Amicizia Vera (Vol. 7)",
+      "artista": "Amici Uniti #7",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_118",
+      "titulo": "Ribellione Giovanile (Vol. 7)",
+      "artista": "Rocker Ribelle #7",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_119",
+      "titulo": "Ricordi d'Infanzia (Vol. 7)",
+      "artista": "Cantante Nostalgico #7",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_120",
+      "titulo": "Il Senso della Vita (Vol. 7)",
+      "artista": "Filosofo Pop #7",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_121",
+      "titulo": "Canzone d'Amore (Vol. 8)",
+      "artista": "Artista Sconosciuto #8",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_122",
+      "titulo": "Estate Italiana (Vol. 8)",
+      "artista": "Cantante Estivo #8",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_123",
+      "titulo": "Notte Stellata (Vol. 8)",
+      "artista": "Gruppo Notturno #8",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_124",
+      "titulo": "Voglia di Ballare (Vol. 8)",
+      "artista": "DJ Famoso #8",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_125",
+      "titulo": "Tristezza Infinita (Vol. 8)",
+      "artista": "Cantautore #8",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_126",
+      "titulo": "Viaggio Lontano (Vol. 8)",
+      "artista": "Band Viaggiante #8",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_127",
+      "titulo": "Amicizia Vera (Vol. 8)",
+      "artista": "Amici Uniti #8",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_128",
+      "titulo": "Ribellione Giovanile (Vol. 8)",
+      "artista": "Rocker Ribelle #8",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_129",
+      "titulo": "Ricordi d'Infanzia (Vol. 8)",
+      "artista": "Cantante Nostalgico #8",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_130",
+      "titulo": "Il Senso della Vita (Vol. 8)",
+      "artista": "Filosofo Pop #8",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_131",
+      "titulo": "Canzone d'Amore (Vol. 9)",
+      "artista": "Artista Sconosciuto #9",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_132",
+      "titulo": "Estate Italiana (Vol. 9)",
+      "artista": "Cantante Estivo #9",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_133",
+      "titulo": "Notte Stellata (Vol. 9)",
+      "artista": "Gruppo Notturno #9",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_134",
+      "titulo": "Voglia di Ballare (Vol. 9)",
+      "artista": "DJ Famoso #9",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_135",
+      "titulo": "Tristezza Infinita (Vol. 9)",
+      "artista": "Cantautore #9",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_136",
+      "titulo": "Viaggio Lontano (Vol. 9)",
+      "artista": "Band Viaggiante #9",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_137",
+      "titulo": "Amicizia Vera (Vol. 9)",
+      "artista": "Amici Uniti #9",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_138",
+      "titulo": "Ribellione Giovanile (Vol. 9)",
+      "artista": "Rocker Ribelle #9",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_139",
+      "titulo": "Ricordi d'Infanzia (Vol. 9)",
+      "artista": "Cantante Nostalgico #9",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_140",
+      "titulo": "Il Senso della Vita (Vol. 9)",
+      "artista": "Filosofo Pop #9",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_141",
+      "titulo": "Canzone d'Amore (Vol. 10)",
+      "artista": "Artista Sconosciuto #10",
+      "nivel": "A2",
+      "icone": "❤️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola cuore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "cuore",
+          "traducao": "Este é um verso com a palavra cuore dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bacio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bacio",
+          "traducao": "Este é um verso com a palavra bacio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola vita dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "vita",
+          "traducao": "Este é um verso com a palavra vita dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola sempre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sempre",
+          "traducao": "Este é um verso com a palavra sempre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "cuore",
+        "bacio",
+        "vita",
+        "sempre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_142",
+      "titulo": "Estate Italiana (Vol. 10)",
+      "artista": "Cantante Estivo #10",
+      "nivel": "A1",
+      "icone": "☀️",
+      "tema": "estate",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola sole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sole",
+          "traducao": "Este é um verso com a palavra sole dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola mare dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "mare",
+          "traducao": "Este é um verso com a palavra mare dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola spiaggia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "spiaggia",
+          "traducao": "Este é um verso com a palavra spiaggia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola caldo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "caldo",
+          "traducao": "Este é um verso com a palavra caldo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "mare",
+        "spiaggia",
+        "caldo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_143",
+      "titulo": "Notte Stellata (Vol. 10)",
+      "artista": "Gruppo Notturno #10",
+      "nivel": "B1",
+      "icone": "🌌",
+      "tema": "notte",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola stella dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "stella",
+          "traducao": "Este é um verso com a palavra stella dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola luna dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "luna",
+          "traducao": "Este é um verso com a palavra luna dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola sogno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "sogno",
+          "traducao": "Este é um verso com a palavra sogno dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola buio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "buio",
+          "traducao": "Este é um verso com a palavra buio dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "stella",
+        "luna",
+        "sogno",
+        "buio"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_144",
+      "titulo": "Voglia di Ballare (Vol. 10)",
+      "artista": "DJ Famoso #10",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "ballo",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola musica dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "musica",
+          "traducao": "Este é um verso com a palavra musica dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola ritmo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "ritmo",
+          "traducao": "Este é um verso com a palavra ritmo dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola festa dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "festa",
+          "traducao": "Este é um verso com a palavra festa dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola corpo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "corpo",
+          "traducao": "Este é um verso com a palavra corpo dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "ritmo",
+        "festa",
+        "corpo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_145",
+      "titulo": "Tristezza Infinita (Vol. 10)",
+      "artista": "Cantautore #10",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "tristezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola lacrima dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lacrima",
+          "traducao": "Este é um verso com a palavra lacrima dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola addio dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "addio",
+          "traducao": "Este é um verso com a palavra addio dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola dolore dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "dolore",
+          "traducao": "Este é um verso com a palavra dolore dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola piangere dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "piangere",
+          "traducao": "Este é um verso com a palavra piangere dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "lacrima",
+        "addio",
+        "dolore",
+        "piangere"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_146",
+      "titulo": "Viaggio Lontano (Vol. 10)",
+      "artista": "Band Viaggiante #10",
+      "nivel": "B1",
+      "icone": "✈️",
+      "tema": "viaggio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola strada dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "strada",
+          "traducao": "Este é um verso com a palavra strada dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola treno dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "treno",
+          "traducao": "Este é um verso com a palavra treno dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola partire dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "partire",
+          "traducao": "Este é um verso com a palavra partire dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola lontano dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "lontano",
+          "traducao": "Este é um verso com a palavra lontano dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "strada",
+        "treno",
+        "partire",
+        "lontano"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_147",
+      "titulo": "Amicizia Vera (Vol. 10)",
+      "artista": "Amici Uniti #10",
+      "nivel": "A2",
+      "icone": "🤝",
+      "tema": "amicizia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola amico dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "amico",
+          "traducao": "Este é um verso com a palavra amico dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola fratello dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fratello",
+          "traducao": "Este é um verso com a palavra fratello dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola insieme dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "insieme",
+          "traducao": "Este é um verso com a palavra insieme dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola fiducia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "fiducia",
+          "traducao": "Este é um verso com a palavra fiducia dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "amico",
+        "fratello",
+        "insieme",
+        "fiducia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_148",
+      "titulo": "Ribellione Giovanile (Vol. 10)",
+      "artista": "Rocker Ribelle #10",
+      "nivel": "B2",
+      "icone": "🎸",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola libertà dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "libertà",
+          "traducao": "Este é um verso com a palavra libertà dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola regole dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "regole",
+          "traducao": "Este é um verso com a palavra regole dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola rabbia dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "rabbia",
+          "traducao": "Este é um verso com a palavra rabbia dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola scuola dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "scuola",
+          "traducao": "Este é um verso com a palavra scuola dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "libertà",
+        "regole",
+        "rabbia",
+        "scuola"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_149",
+      "titulo": "Ricordi d'Infanzia (Vol. 10)",
+      "artista": "Cantante Nostalgico #10",
+      "nivel": "C1",
+      "icone": "🧸",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola gioco dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "gioco",
+          "traducao": "Este é um verso com a palavra gioco dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola bambino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "bambino",
+          "traducao": "Este é um verso com a palavra bambino dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola madre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "madre",
+          "traducao": "Este é um verso com a palavra madre dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola padre dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "padre",
+          "traducao": "Este é um verso com a palavra padre dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "gioco",
+        "bambino",
+        "madre",
+        "padre"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "can_150",
+      "titulo": "Il Senso della Vita (Vol. 10)",
+      "artista": "Filosofo Pop #10",
+      "nivel": "C2",
+      "icone": "🧘",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questo è un verso con la parola destino dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "destino",
+          "traducao": "Este é um verso com a palavra destino dentro.",
+          "dica": "Parola chiave 1"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Questo è un verso con la parola senso dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "senso",
+          "traducao": "Este é um verso com a palavra senso dentro.",
+          "dica": "Parola chiave 2"
+        },
+        {
+          "id": 3,
+          "texto_completo": "Questo è un verso con la parola tempo dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "tempo",
+          "traducao": "Este é um verso com a palavra tempo dentro.",
+          "dica": "Parola chiave 3"
+        },
+        {
+          "id": 4,
+          "texto_completo": "Questo è un verso con la parola verità dentro.",
+          "texto_lacuna": "Questo è un verso con la parola ___ dentro.",
+          "palavra_oculta": "verità",
+          "traducao": "Este é um verso com a palavra verità dentro.",
+          "dica": "Parola chiave 4"
+        }
+      ],
+      "vocabulario_chave": [
+        "destino",
+        "senso",
+        "tempo",
+        "verità"
+      ],
+      "xp_recompensa": 40
     }
   ]
 }

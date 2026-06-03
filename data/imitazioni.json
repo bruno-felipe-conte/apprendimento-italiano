@@ -449,6 +449,906 @@
       "contexto": "Accontentarsi dei successi passati.",
       "audio_ipa": "",
       "xp_recompensa": 15
+    },
+    {
+      "id": "imi_051",
+      "frase_italiano": "Andiamo a comandare (Var 1)",
+      "frase_portugues": "Vamos comandar (Var 1)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_052",
+      "frase_italiano": "Mamma mia (Var 1)",
+      "frase_portugues": "Nossa (Var 1)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_053",
+      "frase_italiano": "Che figata (Var 1)",
+      "frase_portugues": "Que legal (Var 1)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_054",
+      "frase_italiano": "Sono pieno (Var 1)",
+      "frase_portugues": "Estou cheio (Var 1)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_055",
+      "frase_italiano": "Non ci credo (Var 1)",
+      "frase_portugues": "Não acredito (Var 1)",
+      "nivel": "A1",
+      "contexto": "Stupore #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_056",
+      "frase_italiano": "A presto (Var 1)",
+      "frase_portugues": "Até logo (Var 1)",
+      "nivel": "A1",
+      "contexto": "Saluto #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_057",
+      "frase_italiano": "Tutto a posto? (Var 1)",
+      "frase_portugues": "Tudo certo? (Var 1)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_058",
+      "frase_italiano": "Meno male (Var 1)",
+      "frase_portugues": "Ainda bem (Var 1)",
+      "nivel": "B1",
+      "contexto": "Sollievo #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_059",
+      "frase_italiano": "Ci penso io (Var 1)",
+      "frase_portugues": "Deixa comigo (Var 1)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_060",
+      "frase_italiano": "Magari (Var 1)",
+      "frase_portugues": "Quem dera (Var 1)",
+      "nivel": "B2",
+      "contexto": "Speranza #1",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_061",
+      "frase_italiano": "Andiamo a comandare (Var 2)",
+      "frase_portugues": "Vamos comandar (Var 2)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_062",
+      "frase_italiano": "Mamma mia (Var 2)",
+      "frase_portugues": "Nossa (Var 2)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_063",
+      "frase_italiano": "Che figata (Var 2)",
+      "frase_portugues": "Que legal (Var 2)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_064",
+      "frase_italiano": "Sono pieno (Var 2)",
+      "frase_portugues": "Estou cheio (Var 2)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_065",
+      "frase_italiano": "Non ci credo (Var 2)",
+      "frase_portugues": "Não acredito (Var 2)",
+      "nivel": "A1",
+      "contexto": "Stupore #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_066",
+      "frase_italiano": "A presto (Var 2)",
+      "frase_portugues": "Até logo (Var 2)",
+      "nivel": "A1",
+      "contexto": "Saluto #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_067",
+      "frase_italiano": "Tutto a posto? (Var 2)",
+      "frase_portugues": "Tudo certo? (Var 2)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_068",
+      "frase_italiano": "Meno male (Var 2)",
+      "frase_portugues": "Ainda bem (Var 2)",
+      "nivel": "B1",
+      "contexto": "Sollievo #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_069",
+      "frase_italiano": "Ci penso io (Var 2)",
+      "frase_portugues": "Deixa comigo (Var 2)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_070",
+      "frase_italiano": "Magari (Var 2)",
+      "frase_portugues": "Quem dera (Var 2)",
+      "nivel": "B2",
+      "contexto": "Speranza #2",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_071",
+      "frase_italiano": "Andiamo a comandare (Var 3)",
+      "frase_portugues": "Vamos comandar (Var 3)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_072",
+      "frase_italiano": "Mamma mia (Var 3)",
+      "frase_portugues": "Nossa (Var 3)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_073",
+      "frase_italiano": "Che figata (Var 3)",
+      "frase_portugues": "Que legal (Var 3)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_074",
+      "frase_italiano": "Sono pieno (Var 3)",
+      "frase_portugues": "Estou cheio (Var 3)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_075",
+      "frase_italiano": "Non ci credo (Var 3)",
+      "frase_portugues": "Não acredito (Var 3)",
+      "nivel": "A1",
+      "contexto": "Stupore #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_076",
+      "frase_italiano": "A presto (Var 3)",
+      "frase_portugues": "Até logo (Var 3)",
+      "nivel": "A1",
+      "contexto": "Saluto #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_077",
+      "frase_italiano": "Tutto a posto? (Var 3)",
+      "frase_portugues": "Tudo certo? (Var 3)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_078",
+      "frase_italiano": "Meno male (Var 3)",
+      "frase_portugues": "Ainda bem (Var 3)",
+      "nivel": "B1",
+      "contexto": "Sollievo #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_079",
+      "frase_italiano": "Ci penso io (Var 3)",
+      "frase_portugues": "Deixa comigo (Var 3)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_080",
+      "frase_italiano": "Magari (Var 3)",
+      "frase_portugues": "Quem dera (Var 3)",
+      "nivel": "B2",
+      "contexto": "Speranza #3",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_081",
+      "frase_italiano": "Andiamo a comandare (Var 4)",
+      "frase_portugues": "Vamos comandar (Var 4)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_082",
+      "frase_italiano": "Mamma mia (Var 4)",
+      "frase_portugues": "Nossa (Var 4)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_083",
+      "frase_italiano": "Che figata (Var 4)",
+      "frase_portugues": "Que legal (Var 4)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_084",
+      "frase_italiano": "Sono pieno (Var 4)",
+      "frase_portugues": "Estou cheio (Var 4)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_085",
+      "frase_italiano": "Non ci credo (Var 4)",
+      "frase_portugues": "Não acredito (Var 4)",
+      "nivel": "A1",
+      "contexto": "Stupore #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_086",
+      "frase_italiano": "A presto (Var 4)",
+      "frase_portugues": "Até logo (Var 4)",
+      "nivel": "A1",
+      "contexto": "Saluto #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_087",
+      "frase_italiano": "Tutto a posto? (Var 4)",
+      "frase_portugues": "Tudo certo? (Var 4)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_088",
+      "frase_italiano": "Meno male (Var 4)",
+      "frase_portugues": "Ainda bem (Var 4)",
+      "nivel": "B1",
+      "contexto": "Sollievo #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_089",
+      "frase_italiano": "Ci penso io (Var 4)",
+      "frase_portugues": "Deixa comigo (Var 4)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_090",
+      "frase_italiano": "Magari (Var 4)",
+      "frase_portugues": "Quem dera (Var 4)",
+      "nivel": "B2",
+      "contexto": "Speranza #4",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_091",
+      "frase_italiano": "Andiamo a comandare (Var 5)",
+      "frase_portugues": "Vamos comandar (Var 5)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_092",
+      "frase_italiano": "Mamma mia (Var 5)",
+      "frase_portugues": "Nossa (Var 5)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_093",
+      "frase_italiano": "Che figata (Var 5)",
+      "frase_portugues": "Que legal (Var 5)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_094",
+      "frase_italiano": "Sono pieno (Var 5)",
+      "frase_portugues": "Estou cheio (Var 5)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_095",
+      "frase_italiano": "Non ci credo (Var 5)",
+      "frase_portugues": "Não acredito (Var 5)",
+      "nivel": "A1",
+      "contexto": "Stupore #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_096",
+      "frase_italiano": "A presto (Var 5)",
+      "frase_portugues": "Até logo (Var 5)",
+      "nivel": "A1",
+      "contexto": "Saluto #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_097",
+      "frase_italiano": "Tutto a posto? (Var 5)",
+      "frase_portugues": "Tudo certo? (Var 5)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_098",
+      "frase_italiano": "Meno male (Var 5)",
+      "frase_portugues": "Ainda bem (Var 5)",
+      "nivel": "B1",
+      "contexto": "Sollievo #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_099",
+      "frase_italiano": "Ci penso io (Var 5)",
+      "frase_portugues": "Deixa comigo (Var 5)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_100",
+      "frase_italiano": "Magari (Var 5)",
+      "frase_portugues": "Quem dera (Var 5)",
+      "nivel": "B2",
+      "contexto": "Speranza #5",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_101",
+      "frase_italiano": "Andiamo a comandare (Var 6)",
+      "frase_portugues": "Vamos comandar (Var 6)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_102",
+      "frase_italiano": "Mamma mia (Var 6)",
+      "frase_portugues": "Nossa (Var 6)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_103",
+      "frase_italiano": "Che figata (Var 6)",
+      "frase_portugues": "Que legal (Var 6)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_104",
+      "frase_italiano": "Sono pieno (Var 6)",
+      "frase_portugues": "Estou cheio (Var 6)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_105",
+      "frase_italiano": "Non ci credo (Var 6)",
+      "frase_portugues": "Não acredito (Var 6)",
+      "nivel": "A1",
+      "contexto": "Stupore #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_106",
+      "frase_italiano": "A presto (Var 6)",
+      "frase_portugues": "Até logo (Var 6)",
+      "nivel": "A1",
+      "contexto": "Saluto #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_107",
+      "frase_italiano": "Tutto a posto? (Var 6)",
+      "frase_portugues": "Tudo certo? (Var 6)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_108",
+      "frase_italiano": "Meno male (Var 6)",
+      "frase_portugues": "Ainda bem (Var 6)",
+      "nivel": "B1",
+      "contexto": "Sollievo #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_109",
+      "frase_italiano": "Ci penso io (Var 6)",
+      "frase_portugues": "Deixa comigo (Var 6)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_110",
+      "frase_italiano": "Magari (Var 6)",
+      "frase_portugues": "Quem dera (Var 6)",
+      "nivel": "B2",
+      "contexto": "Speranza #6",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_111",
+      "frase_italiano": "Andiamo a comandare (Var 7)",
+      "frase_portugues": "Vamos comandar (Var 7)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_112",
+      "frase_italiano": "Mamma mia (Var 7)",
+      "frase_portugues": "Nossa (Var 7)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_113",
+      "frase_italiano": "Che figata (Var 7)",
+      "frase_portugues": "Que legal (Var 7)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_114",
+      "frase_italiano": "Sono pieno (Var 7)",
+      "frase_portugues": "Estou cheio (Var 7)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_115",
+      "frase_italiano": "Non ci credo (Var 7)",
+      "frase_portugues": "Não acredito (Var 7)",
+      "nivel": "A1",
+      "contexto": "Stupore #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_116",
+      "frase_italiano": "A presto (Var 7)",
+      "frase_portugues": "Até logo (Var 7)",
+      "nivel": "A1",
+      "contexto": "Saluto #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_117",
+      "frase_italiano": "Tutto a posto? (Var 7)",
+      "frase_portugues": "Tudo certo? (Var 7)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_118",
+      "frase_italiano": "Meno male (Var 7)",
+      "frase_portugues": "Ainda bem (Var 7)",
+      "nivel": "B1",
+      "contexto": "Sollievo #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_119",
+      "frase_italiano": "Ci penso io (Var 7)",
+      "frase_portugues": "Deixa comigo (Var 7)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_120",
+      "frase_italiano": "Magari (Var 7)",
+      "frase_portugues": "Quem dera (Var 7)",
+      "nivel": "B2",
+      "contexto": "Speranza #7",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_121",
+      "frase_italiano": "Andiamo a comandare (Var 8)",
+      "frase_portugues": "Vamos comandar (Var 8)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_122",
+      "frase_italiano": "Mamma mia (Var 8)",
+      "frase_portugues": "Nossa (Var 8)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_123",
+      "frase_italiano": "Che figata (Var 8)",
+      "frase_portugues": "Que legal (Var 8)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_124",
+      "frase_italiano": "Sono pieno (Var 8)",
+      "frase_portugues": "Estou cheio (Var 8)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_125",
+      "frase_italiano": "Non ci credo (Var 8)",
+      "frase_portugues": "Não acredito (Var 8)",
+      "nivel": "A1",
+      "contexto": "Stupore #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_126",
+      "frase_italiano": "A presto (Var 8)",
+      "frase_portugues": "Até logo (Var 8)",
+      "nivel": "A1",
+      "contexto": "Saluto #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_127",
+      "frase_italiano": "Tutto a posto? (Var 8)",
+      "frase_portugues": "Tudo certo? (Var 8)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_128",
+      "frase_italiano": "Meno male (Var 8)",
+      "frase_portugues": "Ainda bem (Var 8)",
+      "nivel": "B1",
+      "contexto": "Sollievo #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_129",
+      "frase_italiano": "Ci penso io (Var 8)",
+      "frase_portugues": "Deixa comigo (Var 8)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_130",
+      "frase_italiano": "Magari (Var 8)",
+      "frase_portugues": "Quem dera (Var 8)",
+      "nivel": "B2",
+      "contexto": "Speranza #8",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_131",
+      "frase_italiano": "Andiamo a comandare (Var 9)",
+      "frase_portugues": "Vamos comandar (Var 9)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_132",
+      "frase_italiano": "Mamma mia (Var 9)",
+      "frase_portugues": "Nossa (Var 9)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_133",
+      "frase_italiano": "Che figata (Var 9)",
+      "frase_portugues": "Que legal (Var 9)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_134",
+      "frase_italiano": "Sono pieno (Var 9)",
+      "frase_portugues": "Estou cheio (Var 9)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_135",
+      "frase_italiano": "Non ci credo (Var 9)",
+      "frase_portugues": "Não acredito (Var 9)",
+      "nivel": "A1",
+      "contexto": "Stupore #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_136",
+      "frase_italiano": "A presto (Var 9)",
+      "frase_portugues": "Até logo (Var 9)",
+      "nivel": "A1",
+      "contexto": "Saluto #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_137",
+      "frase_italiano": "Tutto a posto? (Var 9)",
+      "frase_portugues": "Tudo certo? (Var 9)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_138",
+      "frase_italiano": "Meno male (Var 9)",
+      "frase_portugues": "Ainda bem (Var 9)",
+      "nivel": "B1",
+      "contexto": "Sollievo #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_139",
+      "frase_italiano": "Ci penso io (Var 9)",
+      "frase_portugues": "Deixa comigo (Var 9)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_140",
+      "frase_italiano": "Magari (Var 9)",
+      "frase_portugues": "Quem dera (Var 9)",
+      "nivel": "B2",
+      "contexto": "Speranza #9",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_141",
+      "frase_italiano": "Andiamo a comandare (Var 10)",
+      "frase_portugues": "Vamos comandar (Var 10)",
+      "nivel": "A2",
+      "contexto": "Canzone pop moderna #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_142",
+      "frase_italiano": "Mamma mia (Var 10)",
+      "frase_portugues": "Nossa (Var 10)",
+      "nivel": "A1",
+      "contexto": "Espressione tipica #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_143",
+      "frase_italiano": "Che figata (Var 10)",
+      "frase_portugues": "Que legal (Var 10)",
+      "nivel": "B1",
+      "contexto": "Slang giovanile #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_144",
+      "frase_italiano": "Sono pieno (Var 10)",
+      "frase_portugues": "Estou cheio (Var 10)",
+      "nivel": "A2",
+      "contexto": "Dopo aver mangiato molto #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_145",
+      "frase_italiano": "Non ci credo (Var 10)",
+      "frase_portugues": "Não acredito (Var 10)",
+      "nivel": "A1",
+      "contexto": "Stupore #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_146",
+      "frase_italiano": "A presto (Var 10)",
+      "frase_portugues": "Até logo (Var 10)",
+      "nivel": "A1",
+      "contexto": "Saluto #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_147",
+      "frase_italiano": "Tutto a posto? (Var 10)",
+      "frase_portugues": "Tudo certo? (Var 10)",
+      "nivel": "A2",
+      "contexto": "Domanda colloquiale #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_148",
+      "frase_italiano": "Meno male (Var 10)",
+      "frase_portugues": "Ainda bem (Var 10)",
+      "nivel": "B1",
+      "contexto": "Sollievo #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_149",
+      "frase_italiano": "Ci penso io (Var 10)",
+      "frase_portugues": "Deixa comigo (Var 10)",
+      "nivel": "B1",
+      "contexto": "Prendere l'iniziativa #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_150",
+      "frase_italiano": "Magari (Var 10)",
+      "frase_portugues": "Quem dera (Var 10)",
+      "nivel": "B2",
+      "contexto": "Speranza #10",
+      "audio_ipa": "",
+      "xp_recompensa": 15
     }
   ]
 }

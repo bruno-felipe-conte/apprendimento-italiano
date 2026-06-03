@@ -1799,6 +1799,3606 @@
         }
       ],
       "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_051",
+      "titulo": "Romanzo Criminale (Parte 1)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_052",
+      "titulo": "Il Commissario Montalbano (Parte 1)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_053",
+      "titulo": "Nuovo Cinema Paradiso (Parte 1)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_054",
+      "titulo": "La Meglio Gioventù (Parte 1)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_055",
+      "titulo": "Suburra (Parte 1)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_056",
+      "titulo": "L'Amica Geniale (Parte 1)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_057",
+      "titulo": "Perfetti Sconosciuti (Parte 1)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_058",
+      "titulo": "La Vita è Bella (Parte 1)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_059",
+      "titulo": "Gomorra (Parte 1)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_060",
+      "titulo": "Boris (Parte 1)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_061",
+      "titulo": "Romanzo Criminale (Parte 2)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_062",
+      "titulo": "Il Commissario Montalbano (Parte 2)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_063",
+      "titulo": "Nuovo Cinema Paradiso (Parte 2)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_064",
+      "titulo": "La Meglio Gioventù (Parte 2)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_065",
+      "titulo": "Suburra (Parte 2)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_066",
+      "titulo": "L'Amica Geniale (Parte 2)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_067",
+      "titulo": "Perfetti Sconosciuti (Parte 2)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_068",
+      "titulo": "La Vita è Bella (Parte 2)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_069",
+      "titulo": "Gomorra (Parte 2)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_070",
+      "titulo": "Boris (Parte 2)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_071",
+      "titulo": "Romanzo Criminale (Parte 3)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_072",
+      "titulo": "Il Commissario Montalbano (Parte 3)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_073",
+      "titulo": "Nuovo Cinema Paradiso (Parte 3)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_074",
+      "titulo": "La Meglio Gioventù (Parte 3)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_075",
+      "titulo": "Suburra (Parte 3)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_076",
+      "titulo": "L'Amica Geniale (Parte 3)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_077",
+      "titulo": "Perfetti Sconosciuti (Parte 3)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_078",
+      "titulo": "La Vita è Bella (Parte 3)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_079",
+      "titulo": "Gomorra (Parte 3)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_080",
+      "titulo": "Boris (Parte 3)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_081",
+      "titulo": "Romanzo Criminale (Parte 4)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_082",
+      "titulo": "Il Commissario Montalbano (Parte 4)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_083",
+      "titulo": "Nuovo Cinema Paradiso (Parte 4)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_084",
+      "titulo": "La Meglio Gioventù (Parte 4)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_085",
+      "titulo": "Suburra (Parte 4)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_086",
+      "titulo": "L'Amica Geniale (Parte 4)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_087",
+      "titulo": "Perfetti Sconosciuti (Parte 4)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_088",
+      "titulo": "La Vita è Bella (Parte 4)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_089",
+      "titulo": "Gomorra (Parte 4)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_090",
+      "titulo": "Boris (Parte 4)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_091",
+      "titulo": "Romanzo Criminale (Parte 5)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_092",
+      "titulo": "Il Commissario Montalbano (Parte 5)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_093",
+      "titulo": "Nuovo Cinema Paradiso (Parte 5)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_094",
+      "titulo": "La Meglio Gioventù (Parte 5)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_095",
+      "titulo": "Suburra (Parte 5)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_096",
+      "titulo": "L'Amica Geniale (Parte 5)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_097",
+      "titulo": "Perfetti Sconosciuti (Parte 5)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_098",
+      "titulo": "La Vita è Bella (Parte 5)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_099",
+      "titulo": "Gomorra (Parte 5)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_100",
+      "titulo": "Boris (Parte 5)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_101",
+      "titulo": "Romanzo Criminale (Parte 6)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_102",
+      "titulo": "Il Commissario Montalbano (Parte 6)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_103",
+      "titulo": "Nuovo Cinema Paradiso (Parte 6)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_104",
+      "titulo": "La Meglio Gioventù (Parte 6)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_105",
+      "titulo": "Suburra (Parte 6)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_106",
+      "titulo": "L'Amica Geniale (Parte 6)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_107",
+      "titulo": "Perfetti Sconosciuti (Parte 6)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_108",
+      "titulo": "La Vita è Bella (Parte 6)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_109",
+      "titulo": "Gomorra (Parte 6)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_110",
+      "titulo": "Boris (Parte 6)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_111",
+      "titulo": "Romanzo Criminale (Parte 7)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_112",
+      "titulo": "Il Commissario Montalbano (Parte 7)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_113",
+      "titulo": "Nuovo Cinema Paradiso (Parte 7)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_114",
+      "titulo": "La Meglio Gioventù (Parte 7)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_115",
+      "titulo": "Suburra (Parte 7)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_116",
+      "titulo": "L'Amica Geniale (Parte 7)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_117",
+      "titulo": "Perfetti Sconosciuti (Parte 7)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_118",
+      "titulo": "La Vita è Bella (Parte 7)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_119",
+      "titulo": "Gomorra (Parte 7)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_120",
+      "titulo": "Boris (Parte 7)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_121",
+      "titulo": "Romanzo Criminale (Parte 8)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_122",
+      "titulo": "Il Commissario Montalbano (Parte 8)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_123",
+      "titulo": "Nuovo Cinema Paradiso (Parte 8)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_124",
+      "titulo": "La Meglio Gioventù (Parte 8)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_125",
+      "titulo": "Suburra (Parte 8)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_126",
+      "titulo": "L'Amica Geniale (Parte 8)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_127",
+      "titulo": "Perfetti Sconosciuti (Parte 8)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_128",
+      "titulo": "La Vita è Bella (Parte 8)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_129",
+      "titulo": "Gomorra (Parte 8)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_130",
+      "titulo": "Boris (Parte 8)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_131",
+      "titulo": "Romanzo Criminale (Parte 9)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_132",
+      "titulo": "Il Commissario Montalbano (Parte 9)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_133",
+      "titulo": "Nuovo Cinema Paradiso (Parte 9)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_134",
+      "titulo": "La Meglio Gioventù (Parte 9)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_135",
+      "titulo": "Suburra (Parte 9)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_136",
+      "titulo": "L'Amica Geniale (Parte 9)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_137",
+      "titulo": "Perfetti Sconosciuti (Parte 9)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_138",
+      "titulo": "La Vita è Bella (Parte 9)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_139",
+      "titulo": "Gomorra (Parte 9)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_140",
+      "titulo": "Boris (Parte 9)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_141",
+      "titulo": "Romanzo Criminale (Parte 10)",
+      "origem": "Romanzo Criminale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Roma negli anni 70",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "Trad de banda",
+          "exemplo": "Esempio: banda."
+        },
+        {
+          "italiano": "soldi",
+          "portugues": "Trad de soldi",
+          "exemplo": "Esempio: soldi."
+        },
+        {
+          "italiano": "capo",
+          "portugues": "Trad de capo",
+          "exemplo": "Esempio: capo."
+        },
+        {
+          "italiano": "pistola",
+          "portugues": "Trad de pistola",
+          "exemplo": "Esempio: pistola."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_142",
+      "titulo": "Il Commissario Montalbano (Parte 10)",
+      "origem": "Montalbano",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Sicilia",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "Trad de commissario",
+          "exemplo": "Esempio: commissario."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "Trad de indagine",
+          "exemplo": "Esempio: indagine."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "Trad de omicidio",
+          "exemplo": "Esempio: omicidio."
+        },
+        {
+          "italiano": "mare",
+          "portugues": "Trad de mare",
+          "exemplo": "Esempio: mare."
+        },
+        {
+          "italiano": "cibo",
+          "portugues": "Trad de cibo",
+          "exemplo": "Esempio: cibo."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_143",
+      "titulo": "Nuovo Cinema Paradiso (Parte 10)",
+      "origem": "Cinema Paradiso",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Passione per il cinema",
+      "vocabulario": [
+        {
+          "italiano": "pellicola",
+          "portugues": "Trad de pellicola",
+          "exemplo": "Esempio: pellicola."
+        },
+        {
+          "italiano": "bacio",
+          "portugues": "Trad de bacio",
+          "exemplo": "Esempio: bacio."
+        },
+        {
+          "italiano": "piazza",
+          "portugues": "Trad de piazza",
+          "exemplo": "Esempio: piazza."
+        },
+        {
+          "italiano": "prete",
+          "portugues": "Trad de prete",
+          "exemplo": "Esempio: prete."
+        },
+        {
+          "italiano": "fuoco",
+          "portugues": "Trad de fuoco",
+          "exemplo": "Esempio: fuoco."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_144",
+      "titulo": "La Meglio Gioventù (Parte 10)",
+      "origem": "La Meglio Gioventù",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Storia d'Italia",
+      "vocabulario": [
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "Trad de fratello",
+          "exemplo": "Esempio: fratello."
+        },
+        {
+          "italiano": "storia",
+          "portugues": "Trad de storia",
+          "exemplo": "Esempio: storia."
+        },
+        {
+          "italiano": "medico",
+          "portugues": "Trad de medico",
+          "exemplo": "Esempio: medico."
+        },
+        {
+          "italiano": "poliziotto",
+          "portugues": "Trad de poliziotto",
+          "exemplo": "Esempio: poliziotto."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_145",
+      "titulo": "Suburra (Parte 10)",
+      "origem": "Suburra",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Mafia a Roma",
+      "vocabulario": [
+        {
+          "italiano": "potere",
+          "portugues": "Trad de potere",
+          "exemplo": "Esempio: potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "Trad de politica",
+          "exemplo": "Esempio: politica."
+        },
+        {
+          "italiano": "chiesa",
+          "portugues": "Trad de chiesa",
+          "exemplo": "Esempio: chiesa."
+        },
+        {
+          "italiano": "famiglia",
+          "portugues": "Trad de famiglia",
+          "exemplo": "Esempio: famiglia."
+        },
+        {
+          "italiano": "terreno",
+          "portugues": "Trad de terreno",
+          "exemplo": "Esempio: terreno."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_146",
+      "titulo": "L'Amica Geniale (Parte 10)",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Napoli anni 50",
+      "vocabulario": [
+        {
+          "italiano": "scuola",
+          "portugues": "Trad de scuola",
+          "exemplo": "Esempio: scuola."
+        },
+        {
+          "italiano": "scarpe",
+          "portugues": "Trad de scarpe",
+          "exemplo": "Esempio: scarpe."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "Trad de rione",
+          "exemplo": "Esempio: rione."
+        },
+        {
+          "italiano": "invidia",
+          "portugues": "Trad de invidia",
+          "exemplo": "Esempio: invidia."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "Trad de matrimonio",
+          "exemplo": "Esempio: matrimonio."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_147",
+      "titulo": "Perfetti Sconosciuti (Parte 10)",
+      "origem": "Perfetti Sconosciuti",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Cena tra amici",
+      "vocabulario": [
+        {
+          "italiano": "cellulare",
+          "portugues": "Trad de cellulare",
+          "exemplo": "Esempio: cellulare."
+        },
+        {
+          "italiano": "segreto",
+          "portugues": "Trad de segreto",
+          "exemplo": "Esempio: segreto."
+        },
+        {
+          "italiano": "messaggio",
+          "portugues": "Trad de messaggio",
+          "exemplo": "Esempio: messaggio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "Trad de tradimento",
+          "exemplo": "Esempio: tradimento."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "Trad de verità",
+          "exemplo": "Esempio: verità."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_148",
+      "titulo": "La Vita è Bella (Parte 10)",
+      "origem": "La Vita è Bella",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Amore e speranza",
+      "vocabulario": [
+        {
+          "italiano": "gioco",
+          "portugues": "Trad de gioco",
+          "exemplo": "Esempio: gioco."
+        },
+        {
+          "italiano": "carro armato",
+          "portugues": "Trad de carro armato",
+          "exemplo": "Esempio: carro armato."
+        },
+        {
+          "italiano": "principessa",
+          "portugues": "Trad de principessa",
+          "exemplo": "Esempio: principessa."
+        },
+        {
+          "italiano": "premio",
+          "portugues": "Trad de premio",
+          "exemplo": "Esempio: premio."
+        },
+        {
+          "italiano": "sorriso",
+          "portugues": "Trad de sorriso",
+          "exemplo": "Esempio: sorriso."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_149",
+      "titulo": "Gomorra (Parte 10)",
+      "origem": "Gomorra",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Camorra a Napoli",
+      "vocabulario": [
+        {
+          "italiano": "clan",
+          "portugues": "Trad de clan",
+          "exemplo": "Esempio: clan."
+        },
+        {
+          "italiano": "boss",
+          "portugues": "Trad de boss",
+          "exemplo": "Esempio: boss."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "Trad de droga",
+          "exemplo": "Esempio: droga."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "Trad de guerra",
+          "exemplo": "Esempio: guerra."
+        },
+        {
+          "italiano": "strada",
+          "portugues": "Trad de strada",
+          "exemplo": "Esempio: strada."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_150",
+      "titulo": "Boris (Parte 10)",
+      "origem": "Boris",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Dietro le quinte di una fiction",
+      "vocabulario": [
+        {
+          "italiano": "regista",
+          "portugues": "Trad de regista",
+          "exemplo": "Esempio: regista."
+        },
+        {
+          "italiano": "attore",
+          "portugues": "Trad de attore",
+          "exemplo": "Esempio: attore."
+        },
+        {
+          "italiano": "luci",
+          "portugues": "Trad de luci",
+          "exemplo": "Esempio: luci."
+        },
+        {
+          "italiano": "scena",
+          "portugues": "Trad de scena",
+          "exemplo": "Esempio: scena."
+        },
+        {
+          "italiano": "qualità",
+          "portugues": "Trad de qualità",
+          "exemplo": "Esempio: qualità."
+        }
+      ],
+      "xp_recompensa": 20
     }
   ]
 }
