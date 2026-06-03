@@ -27,7 +27,7 @@ const Dialoghi = {
           <div class="dialogo-icone">${d.icone}</div>
           <div class="dialogo-titulo">${d.titulo}</div>
           <div class="dialogo-nivel">${d.nivel}</div>
-          <div style="font-size:0.75rem;color:#888;margin-top:0.3rem">🎁 ${d.xp_recompensa} XP</div>
+          <div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${d.xp_recompensa} XP</div>
         </div>
       `;
     }
@@ -58,8 +58,8 @@ const Dialoghi = {
       </div>
       <div style="text-align:center;margin-bottom:1rem">
         <div style="font-size:2rem">${d.icone}</div>
-        <h3 style="font-family:'Cinzel',serif;color:#9B2335;margin:0.2rem 0">${d.titulo}</h3>
-        <p style="font-size:0.85rem;color:#888;font-style:italic">${d.contexto}</p>
+        <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);margin:0.2rem 0">${d.titulo}</h3>
+        <p style="font-size:0.85rem;color:var(--cor-pietra);font-style:italic">${d.contexto}</p>
       </div>
       <div class="dialogo-conversa">
     `;
@@ -191,14 +191,14 @@ const Dialoghi = {
     c.innerHTML = `
       <div style="text-align:center;padding:2rem 1rem">
         <div style="font-size:3rem">${pct >= 80 ? '🌟' : (pct >= 50 ? '👍' : '🔄')}</div>
-        <h3 style="font-family:'Cinzel',serif;color:#9B2335;font-size:1.5rem;margin:1rem 0">Diálogo Concluído</h3>
+        <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);font-size:1.5rem;margin:1rem 0">Diálogo Concluído</h3>
         <div style="font-size:1.1rem;margin-bottom:1rem">Acertos: <strong>${this.acertos} / ${totalTu}</strong></div>
-        ${ganhouXp ? `<div style="color:#D4A843;font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">+${d.xp_recompensa} XP</div>` : ''}
+        ${ganhouXp ? `<div style="color:var(--cor-toscano);font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">+${d.xp_recompensa} XP</div>` : ''}
         
-        <div style="background:white;border-radius:12px;padding:1rem;margin-bottom:1.5rem;text-align:left;box-shadow:0 2px 10px rgba(0,0,0,0.05)">
-          <div style="font-size:0.8rem;color:#888;text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Vocabulário Chave:</div>
+        <div style="background:var(--cor-marmore);border-radius:12px;padding:1rem;margin-bottom:1.5rem;text-align:left;box-shadow:0 2px 10px rgba(0,0,0,0.05)">
+          <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Vocabulário Chave:</div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
-            ${d.vocabulario_chave.map(v => `<span style="background:#F5EDD8;color:#9B2335;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.85rem">${v}</span>`).join('')}
+            ${d.vocabulario_chave.map(v => `<span style="background:var(--cor-pergaminho);color:var(--cor-veneziano-escuro);padding:0.2rem 0.6rem;border-radius:20px;font-size:0.85rem">${v}</span>`).join('')}
           </div>
         </div>
         

@@ -23,7 +23,7 @@ const Canzoni = {
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
         <div class="dialogo-icone">${can.icone}</div>
         <div class="dialogo-titulo">${can.titulo}</div>
-        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${can.artista}</div>
+        <div style="font-size:0.75rem;color:var(--cor-pietra);margin:0.2rem 0">${can.artista}</div>
         <div class="dialogo-nivel">${can.nivel}</div>
       </div>`;
     }
@@ -50,20 +50,20 @@ const Canzoni = {
     c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Canzoni</button>
-        <span style="font-size:0.85rem;color:#888">${this.estrofeAtual+1}/${total}</span>
+        <span style="font-size:0.85rem;color:var(--cor-pietra)">${this.estrofeAtual+1}/${total}</span>
       </div>
       <div style="text-align:center;padding:1rem 0 0.5rem">
         <div style="font-size:1.5rem">${can.icone}</div>
-        <div style="font-family:'Cinzel',serif;font-weight:700;color:#9B2335">${can.titulo}</div>
-        <div style="font-size:0.8rem;color:#888">${can.artista}</div>
+        <div style="font-family:'Cinzel',serif;font-weight:700;color:var(--cor-veneziano-escuro)">${can.titulo}</div>
+        <div style="font-size:0.8rem;color:var(--cor-pietra)">${can.artista}</div>
       </div>
       <div class="gram-ex-progress-bar" style="margin:0.5rem 1rem"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>
       <div class="gram-card" style="margin:1rem">
-        <div style="font-size:1rem;line-height:1.8;padding:1rem;text-align:center;font-style:italic;color:#2C2C2C">
+        <div style="font-size:1rem;line-height:1.8;padding:1rem;text-align:center;font-style:italic;color:var(--cor-inchiostro)">
           ${est.texto_lacuna.replace('___', '<input id="canzone-input" type="text" autocomplete="off" autocorrect="off" spellcheck="false" style="border:none;border-bottom:2px solid #9B2335;font-size:1rem;font-style:italic;width:100px;text-align:center;outline:none;background:transparent" placeholder="___" onkeydown="if(event.key===\'Enter\')Canzoni.verificar()">')}
         </div>
-        <div style="text-align:center;font-size:0.82rem;color:#888;font-style:italic;padding:0 1rem 0.5rem">${est.traducao}</div>
-        <div style="text-align:center;font-size:0.78rem;color:#D4A843;padding-bottom:1rem">💡 Dica: ${est.dica}</div>
+        <div style="text-align:center;font-size:0.82rem;color:var(--cor-pietra);font-style:italic;padding:0 1rem 0.5rem">${est.traducao}</div>
+        <div style="text-align:center;font-size:0.78rem;color:var(--cor-toscano);padding-bottom:1rem">💡 Dica: ${est.dica}</div>
         <div id="canzone-feedback"></div>
         <div style="display:flex;justify-content:center;gap:0.5rem;padding:0.5rem">
           <button class="btn-primario" onclick="Canzoni.verificar()">✔ Verificar</button>
@@ -106,9 +106,9 @@ const Canzoni = {
     const c = document.getElementById('canzoni-container');
     c.innerHTML = `<div style="text-align:center;padding:2rem">
       <div style="font-size:3rem">${pct >= 80 ? '🎤' : '🎵'}</div>
-      <div style="font-family:'Cinzel',serif;font-size:1.2rem;color:#9B2335;margin:0.5rem 0">${can.titulo}</div>
+      <div style="font-family:'Cinzel',serif;font-size:1.2rem;color:var(--cor-veneziano-escuro);margin:0.5rem 0">${can.titulo}</div>
       <div style="font-size:1.5rem;font-weight:700;margin:0.5rem 0">${this.acertos}/${total} corretas</div>
-      <div style="color:#888;margin-bottom:1rem">+${can.xp_recompensa} XP</div>
+      <div style="color:var(--cor-pietra);margin-bottom:1rem">+${can.xp_recompensa} XP</div>
       <div style="display:flex;gap:0.5rem;justify-content:center">
         <button class="btn-primario" onclick="Canzoni.abrirCanzone('${can.id}')">🔄 Repetir</button>
         <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">‹ Outras músicas</button>
