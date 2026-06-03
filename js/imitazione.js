@@ -7,10 +7,10 @@ const Imitazione = {
   async carregar() {
     if (this.dados) return;
     try {
-      const r = await fetch('data/imitazione.json');
+      const r = await fetch('data/imitazioni.json');
       this.dados = await r.json();
     } catch (e) {
-      console.error('Erro ao carregar imitazione.json', e);
+      console.error('Erro ao carregar imitazioni.json', e);
     }
   },
 
@@ -80,8 +80,8 @@ const Imitazione = {
   },
 
   avaliarPronuncia(textoOuvido) {
-    const item = this.dados.imitazione[this.itemAtual];
-    const esperado = this.normalizeText(item.frase);
+    const item = this.dados.imitazioni[this.itemAtual];
+    const esperado = this.normalizeText(item.frase_italiano || item.frase);
     const recebido = this.normalizeText(textoOuvido);
 
     // Simple Jaro-Winkler or Levenshtein would be better, but we do simple string matching or token match
@@ -125,7 +125,7 @@ const Imitazione = {
 
   avancar() {
     this.itemAtual++;
-    if (this.itemAtual >= this.dados.imitazione.length) {
+    if (this.itemAtual >= this.dados.imitazioni.length) {
       this.mostrarFinal();
     } else {
       this.mostrarDesafio();
@@ -134,29 +134,29 @@ const Imitazione = {
 
   mostrarDesafio() {
     const c = document.getElementById('imitazione-container');
-    const item = this.dados.imitazione[this.itemAtual];
+    const item = this.dados.imitazioni[this.itemAtual];
 
     c.innerHTML = `
       <div style="text-align:center;margin-bottom:1.5rem">
-        <div style="font-size:0.8rem;color:#888;text-transform:uppercase;margin-bottom:0.5rem">Frase ${this.itemAtual + 1} de ${this.dados.imitazione.length}</div>
-        <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:#9B2335;margin-bottom:0.5rem">"${item.frase}"</h3>
-        <p style="font-size:1.1rem;color:#555;margin-bottom:1rem"><i>${item.traducao}</i></p>
+        <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem">Frase ${this.itemAtual + 1} de ${this.dados.imitazioni.length}</div>
+        <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
+        <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>
         
-        <div style="background:white;padding:1rem;border-radius:12px;display:inline-block;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
-          <div style="font-size:0.75rem;color:#888;font-weight:700;text-transform:uppercase;margin-bottom:0.3rem">Dica Fonética</div>
-          <div style="font-family:monospace;color:#2C2C2C;font-size:1rem">${item.dica_fonetica}</div>
-          <div style="font-family:monospace;color:#777;font-size:0.8rem;margin-top:0.3rem">${item.audio_ipa}</div>
+        <div style="background:var(--cor-marmore);padding:1rem;border-radius:12px;display:inline-block;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:1.5rem">
+          <div style="font-size:0.75rem;color:var(--cor-pietra);font-weight:700;text-transform:uppercase;margin-bottom:0.3rem">Dica Fonética</div>
+          <div style="font-family:monospace;color:var(--cor-inchiostro);font-size:1rem">${item.dica_fonetica || item.contexto}</div>
+          <div style="font-family:monospace;color:var(--cor-pietra);font-size:0.8rem;margin-top:0.3rem">${item.audio_ipa}</div>
         </div>
         <br>
-        <button class="btn-audio" onclick="App.pronunciar('${item.frase.replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">🔊 Ouvir Exemplo</button>
+        <button class="btn-audio" onclick="App.pronunciar('${(item.frase_italiano || item.frase).replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">🔊 Ouvir Exemplo</button>
       </div>
 
-      <div style="text-align:center;background:rgba(255,255,255,0.5);padding:2rem;border-radius:16px">
+      <div style="text-align:center;background:var(--cor-marmore-escuro);padding:2rem;border-radius:16px">
         <button id="btn-mic" class="mic-button" onclick="Imitazione.toggleGravacao()">🎙️</button>
-        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:#666">Clique no microfone para falar</div>
+        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:var(--cor-inchiostro-claro)">Clique no microfone para falar</div>
       </div>
 
-      <div id="imitazione-resultado" style="display:none;margin-top:1.5rem;text-align:center;background:white;padding:1.5rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
+      <div id="imitazione-resultado" style="display:none;margin-top:1.5rem;text-align:center;background:var(--cor-marmore);padding:1.5rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1)">
       </div>
     `;
   },
