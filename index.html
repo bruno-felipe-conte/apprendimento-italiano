@@ -2119,6 +2119,9 @@
         <div class="pergunta-container">
           <p class="quiz-tipo-badge" id="quiz-tipo">Vocabolario</p>
           <p class="quiz-pergunta" id="quiz-pergunta"></p>
+          <button id="btn-ouvir-quiz" class="btn-primario" style="display:none; margin: 1rem auto; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem; gap: 0.5rem; align-items: center; justify-content: center;" onclick="App.falar(document.getElementById('quiz-pergunta').dataset.italiano || '')">
+            🔊 Ouvir
+          </button>
           <span id="quiz-combo-badge" class="quiz-combo-badge" style="display:none"></span>
         </div>
         <div class="opcoes-grid" id="opcoes-grid"></div>

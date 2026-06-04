@@ -144,7 +144,22 @@ const Quiz = {
 
     // Question text
     const perguntaEl = document.getElementById('quiz-pergunta');
-    if (perguntaEl) perguntaEl.textContent = p.pergunta;
+    if (perguntaEl) {
+      perguntaEl.textContent = p.pergunta;
+      if (p.italiano) perguntaEl.dataset.italiano = p.italiano;
+      else delete perguntaEl.dataset.italiano;
+    }
+
+    const btnOuvir = document.getElementById('btn-ouvir-quiz');
+    if (btnOuvir) {
+      if (p.tipo === 'listening') {
+        btnOuvir.style.display = 'flex';
+        // Auto play audio when question appears
+        if (p.italiano) setTimeout(() => { if (typeof App !== 'undefined' && App.falar) App.falar(p.italiano); }, 400);
+      } else {
+        btnOuvir.style.display = 'none';
+      }
+    }
 
     // Hide explanation
     const explicacaoContainer = document.getElementById('explicacao-container');
@@ -353,6 +368,51 @@ const Quiz = {
       seletor.appendChild(btn);
     }
 
+    // ── Listening section ────────────────────────────────
+    const sepList = document.createElement('div');
+    sepList.className = 'quiz-secao-titulo';
+    sepList.textContent = '🎧 Quiz de Listening (Ascolto)';
+    seletor.appendChild(sepList);
+
+    for (let i = 1; i <= 10; i++) {
+      const desbloqueado = Progressao.temploDesbloqueado(i);
+      const data = App.estado.templosData[i];
+      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
+      
+      const btn = document.createElement('button');
+      btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;
+      btn.innerHTML = `🎧 ${i}. ${nome}`;
+
+      if (desbloqueado) {
+        btn.onclick = () => this.iniciarListening(i);
+      } else {
+        btn.disabled = true;
+      }
+      seletor.appendChild(btn);
+    }
+
+    // ── Gramática section ────────────────────────────────
+    const sepGram = document.createElement('div');
+    sepGram.className = 'quiz-secao-titulo';
+    sepGram.textContent = '📚 Quiz de Gramática (Grammatica)';
+    seletor.appendChild(sepGram);
+
+    const gramData = App.estado.grammarData || { moduli: [] };
+    if (gramData.moduli.length === 0) {
+      const msg = document.createElement('p');
+      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+      msg.textContent = 'Dados de gramática não carregados.';
+      seletor.appendChild(msg);
+    } else {
+      gramData.moduli.forEach(mod => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-templo-btn quiz-gram-btn';
+        btn.innerHTML = `📚 Nível ${mod.livello}`;
+        btn.onclick = () => this.iniciarGramatica(mod.livello);
+        seletor.appendChild(btn);
+      });
+    }
+
     // ── Conjugação section ────────────────────────────────
     const sepVerbi = document.createElement('div');
     sepVerbi.className = 'quiz-secao-titulo';
@@ -514,6 +574,112 @@ const Quiz = {
       });
     });
 
+    return perguntas;
+  },
+
+  // ── Listening Quiz ───────────────────────────────────────
+  iniciarListening(temploNum) {
+    if (!Progressao.temploDesbloqueado(temploNum)) return;
+    this.temploAtual = temploNum;
+    this.perguntaAtual = 0;
+    this.pontuacao = 0;
+    this.xpTotal = 0;
+    this.respondido = false;
+    this.combo = 0;
+
+    this.perguntas = this._embaralhar(this._gerarListening(temploNum)).slice(0, 10);
+    if (this.perguntas.length === 0) {
+      App.notificar('Dados insuficientes para listening.', 'alerta');
+      return;
+    }
+    
+    document.getElementById('quiz-container').style.display = 'block';
+    document.getElementById('quiz-resultado').style.display = 'none';
+    document.getElementById('quiz-templo-selector').style.display = 'none';
+    this.mostrarPergunta();
+  },
+
+  _gerarListening(temploNum) {
+    const data = App.estado.templosData[temploNum];
+    if (!data || !data.palavras || data.palavras.length < 4) return [];
+    
+    const palavras = data.palavras;
+    const perguntas = [];
+
+    palavras.forEach(p => {
+      const outras = palavras.filter(o => o.id !== p.id);
+      const erradas = this._embaralhar(outras).slice(0, 3).map(o => o.italiano);
+      const alternativas = this._embaralhar([p.italiano, ...erradas]);
+
+      perguntas.push({
+        id: `list_${p.id}`, templo: temploNum, tipo: 'listening',
+        nivel: data.nivel || 'A1',
+        italiano: p.italiano,
+        pergunta: `Qual foi a palavra dita? (${p.portugues})`,
+        resposta_correta: p.italiano,
+        alternativas: alternativas,
+        explicacao: `A palavra dita foi "${p.italiano}".`,
+        xp_recompensa: 25
+      });
+    });
+    return perguntas;
+  },
+
+  // ── Gramática Quiz ───────────────────────────────────────
+  iniciarGramatica(livello) {
+    this.temploAtual = 'gramatica_' + livello;
+    this.perguntaAtual = 0;
+    this.pontuacao = 0;
+    this.xpTotal = 0;
+    this.respondido = false;
+    this.combo = 0;
+
+    this.perguntas = this._embaralhar(this._gerarGramatica(livello)).slice(0, 10);
+    if (this.perguntas.length === 0) {
+      App.notificar('Dados insuficientes de gramática para este nível.', 'alerta');
+      return;
+    }
+    
+    document.getElementById('quiz-container').style.display = 'block';
+    document.getElementById('quiz-resultado').style.display = 'none';
+    document.getElementById('quiz-templo-selector').style.display = 'none';
+    this.mostrarPergunta();
+  },
+
+  _gerarGramatica(livello) {
+    const data = App.estado.grammarData || { moduli: [] };
+    const modulo = data.moduli.find(m => m.livello === livello);
+    if (!modulo || !modulo.lezioni) return [];
+
+    const perguntas = [];
+    
+    modulo.lezioni.forEach(lez => {
+      (lez.esempi || []).forEach(ex => {
+        if (!ex.it || !ex.pt) return;
+        
+        const palavras = ex.it.split(' ').map(w => w.replace(/[.,?!]/g, ''));
+        const candidatas = palavras.filter(w => w.length > 2);
+        if (candidatas.length === 0) return;
+        
+        const oculta = candidatas[Math.floor(Math.random() * candidatas.length)];
+        const regex = new RegExp(`\\b${oculta}\\b`, 'i');
+        const perguntaTexto = ex.it.replace(regex, '___');
+        
+        const poolErradas = ["di", "a", "da", "in", "con", "su", "per", "tra", "fra", "il", "lo", "la", "i", "gli", "le", "un", "una", "e", "sono", "ho", "hai", "ha", "abbiamo", "avete", "hanno"].filter(w => w !== oculta.toLowerCase());
+        const erradas = this._embaralhar(poolErradas).slice(0, 3);
+        
+        perguntas.push({
+          id: `gram_${Math.random().toString(36).substr(2, 9)}`,
+          tipo: 'gramática',
+          nivel: livello,
+          pergunta: `${perguntaTexto} (${ex.pt})`,
+          resposta_correta: oculta.toLowerCase(),
+          alternativas: this._embaralhar([oculta.toLowerCase(), ...erradas]),
+          explicacao: `A frase completa é: "${ex.it}"`,
+          xp_recompensa: 30
+        });
+      });
+    });
     return perguntas;
   },
 
