@@ -29,6 +29,11 @@ const Onboarding = {
     } catch (e) {}
     const modal = document.getElementById('onboarding-modal');
     if (modal) modal.style.display = 'none';
+
+    // Start tour walkthrough after onboarding is closed
+    if (typeof Tour !== 'undefined') {
+      Tour.iniciar();
+    }
   },
 
   proximoSlide() {
