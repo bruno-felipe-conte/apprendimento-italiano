@@ -60,7 +60,7 @@ const Grammatica = {
   // ─────────────────────────────────────────────────────────
   _htmlSeletor() {
     if (!this.dados || !this.dados.moduli.length)
-      return '<p class="gram-empty">Conteúdo não disponível.</p>';
+      return `<p class="gram-empty">${I18n.t('gram_conteudo_indisponivel')}</p>`;
 
     const nivel = App.estado.progresso?.nivel || 1;
     const completadas = App.estado.progresso?.grammatica_completadas || [];
@@ -332,7 +332,7 @@ const Grammatica = {
         ${dica}
         <div class="gram-digitar-row">
           <input class="gram-input-digitacao" id="gram-input-digitacao"
-                 type="text" placeholder="Digite sua resposta..."
+                 type="text" placeholder="${I18n.t('gram_placeholder_resposta')}"
                  autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
                  onkeydown="if(event.key==='Enter')Grammatica.responderDigitar()">
           <button class="gram-btn-verificar" onclick="Grammatica.responderDigitar()">✔ Verificar</button>
@@ -399,7 +399,7 @@ const Grammatica = {
     const ex = this.unidadeAtual.exercicios[this.exIndex];
     const fb = document.getElementById('gram-feedback');
     if (fb && ex.explicacao) {
-      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>Por que?</strong> ${ex.explicacao}</div>`;
+      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>${I18n.t('gram_por_que')}</strong> ${ex.explicacao}</div>`;
     }
     const actions = document.getElementById('gram-actions');
     if (actions) actions.style.display = 'flex';
@@ -434,8 +434,8 @@ const Grammatica = {
     const fb = document.getElementById('gram-feedback');
     if (fb) {
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>Correto!</strong> ${ex.explicacao}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>Errado.</strong> ${ex.explicacao}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong> ${ex.explicacao}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${ex.explicacao}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
@@ -467,8 +467,8 @@ const Grammatica = {
     const fb = document.getElementById('gram-feedback');
     if (fb) {
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>Correto!</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>Errado.</strong> A resposta era: <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${I18n.t('gram_resposta_era')} <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
@@ -712,7 +712,7 @@ const Grammatica = {
   // ─── FASE 1: Ancoragem ───
   _htmlFase1Ancoragem(u) {
     if (!u.alerta) return '';
-    return `<div class="gram-alerta">💬 <strong>Por que isso importa?</strong><br>${this._formatarPergunta(u.alerta)}</div>`;
+    return `<div class="gram-alerta">💬 <strong>${I18n.t('gram_por_que_importa')}</strong><br>${this._formatarPergunta(u.alerta)}</div>`;
   },
 
   // ─── FASE 2: Observação (Flip Cards Clicáveis) ───
@@ -794,14 +794,14 @@ const Grammatica = {
           <div class="gram-armadilha-col gram-arm-errada">
             <span class="gram-arm-icon">✗</span>
             <div class="gram-arm-texto">
-              <span class="gram-arm-lbl">Errado</span>
+              <span class="gram-arm-lbl">${I18n.t('gram_arm_errado')}</span>
               <strong>${a.errado}</strong>
             </div>
           </div>
           <div class="gram-armadilha-col gram-arm-certa">
             <span class="gram-arm-icon">✓</span>
             <div class="gram-arm-texto">
-              <span class="gram-arm-lbl">Certo</span>
+              <span class="gram-arm-lbl">${I18n.t('gram_arm_certo')}</span>
               <strong>${a.certo}</strong>
             </div>
           </div>

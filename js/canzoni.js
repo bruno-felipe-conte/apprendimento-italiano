@@ -236,7 +236,7 @@ const Canzoni = {
       this.custom.push(nova);
     }
     this._salvarCustom();
-    App.notificar(`🎵 "${titulo}" salva!`, 'sucesso');
+    App.notificar(I18n.t('can_salva').replace('{t}', titulo), 'sucesso');
     this.renderizarSeletor();
   },
 
@@ -331,11 +331,11 @@ const Canzoni = {
     c.innerHTML = `<div style="text-align:center;padding:2rem">
       <div style="font-size:3rem">${pct >= 80 ? '🎤' : '🎵'}</div>
       <div style="font-family:'Cinzel',serif;font-size:1.2rem;color:var(--cor-veneziano-escuro);margin:0.5rem 0">${can.titulo}</div>
-      <div style="font-size:1.5rem;font-weight:700;margin:0.5rem 0">${this.acertos}/${total} corretas</div>
+      <div style="font-size:1.5rem;font-weight:700;margin:0.5rem 0">${I18n.t('can_corretas').replace('{a}', this.acertos).replace('{b}', total)}</div>
       <div style="color:var(--cor-pietra);margin-bottom:1rem">+${can.xp_recompensa} XP</div>
       <div style="display:flex;gap:0.5rem;justify-content:center">
-        <button class="btn-primario" onclick="Canzoni.abrirCanzone('${can.id}')">🔄 Repetir</button>
-        <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">‹ Outras músicas</button>
+        <button class="btn-primario" onclick="Canzoni.abrirCanzone('${can.id}')">${I18n.t('can_repetir')}</button>
+        <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">${I18n.t('can_outras_musicas')}</button>
       </div>
     </div>`;
   }

@@ -651,7 +651,7 @@ const App = {
     if (elParole)  elParole.textContent  = `Parole: ${p.total_palavras}`;
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
-    if (elStreak)  elStreak.textContent  = `🔥 ${s} dia${s !== 1 ? 's' : ''}`;
+    if (elStreak)  elStreak.textContent  = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', s);
 
     // Daily goal bar — reset xp_hoje when the date rolls over
     const hoje = new Date().toISOString().slice(0, 10);

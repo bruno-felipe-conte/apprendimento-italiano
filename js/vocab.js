@@ -160,7 +160,7 @@ const Vocab = {
     if (filtrados.length > 100) {
       const more = document.createElement('p');
       more.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.8rem;font-size:0.83rem;';
-      more.textContent = `... e mais ${filtrados.length - 100} palavras. Use os filtros para refinar.`;
+      more.textContent = I18n.t('vocab_e_mais').replace('{n}', filtrados.length - 100);
       listEl.appendChild(more);
     }
   },

@@ -253,7 +253,7 @@ const Dialoghi = {
       this.custom.push(novo);
     }
     this._salvarCustom();
-    App.notificar(`💬 "${titulo}" salvo!`, 'sucesso');
+    App.notificar(I18n.t('dial_salvo').replace('{t}', titulo), 'sucesso');
     this.renderizarSeletor();
   },
 
@@ -425,19 +425,19 @@ const Dialoghi = {
     c.innerHTML = `
       <div style="text-align:center;padding:2rem 1rem">
         <div style="font-size:3rem">${pct >= 80 ? '🌟' : (pct >= 50 ? '👍' : '🔄')}</div>
-        <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);font-size:1.5rem;margin:1rem 0">Diálogo Concluído</h3>
-        <div style="font-size:1.1rem;margin-bottom:1rem">Acertos: <strong>${this.acertos} / ${totalTu}</strong></div>
+        <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);font-size:1.5rem;margin:1rem 0">${I18n.t('dial_concluido')}</h3>
+        <div style="font-size:1.1rem;margin-bottom:1rem">${I18n.t('dial_acertos').replace('{a}', this.acertos).replace('{b}', totalTu)}</div>
         ${ganhouXp ? `<div style="color:var(--cor-toscano);font-weight:700;font-size:1.2rem;margin-bottom:1.5rem">+${d.xp_recompensa} XP</div>` : ''}
-        
+
         <div style="background:var(--cor-marmore);border-radius:12px;padding:1rem;margin-bottom:1.5rem;text-align:left;box-shadow:0 2px 10px rgba(0,0,0,0.05)">
-          <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">Vocabulário Chave:</div>
+          <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;font-weight:700;margin-bottom:0.5rem">${I18n.t('dial_vocab_chave')}</div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
             ${(d.vocabulario_chave || []).map(v => `<span style="background:var(--cor-pergaminho);color:var(--cor-veneziano-escuro);padding:0.2rem 0.6rem;border-radius:20px;font-size:0.85rem">${v}</span>`).join('')}
           </div>
         </div>
         
         <div style="display:flex;gap:1rem;justify-content:center">
-          <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()">‹ Voltar</button>
+          <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()">${I18n.t('dial_voltar')}</button>
           <button class="btn-primario" onclick="Dialoghi.abrirDialogo('${d.id}', 'pratica')">Praticar Novamente 🔄</button>
         </div>
       </div>

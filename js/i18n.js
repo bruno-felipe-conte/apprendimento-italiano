@@ -263,6 +263,52 @@ const I18n = {
     'vocab_ocultar_pt': { pt: '👁 Ocultar PT', it: '👁 Nascondi PT' },
     'vocab_ocultar_it': { pt: '👁 Ocultar IT', it: '👁 Nascondi IT' },
 
+    // ── Core — streak ──
+    'streak_dia': { pt: '🔥 {n} dia', it: '🔥 {n} giorno' },
+    'streak_dias': { pt: '🔥 {n} dias', it: '🔥 {n} giorni' },
+
+    // ── Grammar — feedback ──
+    'gram_conteudo_indisponivel': { pt: 'Conteúdo não disponível.', it: 'Contenuto non disponibile.' },
+    'gram_placeholder_resposta': { pt: 'Digite sua resposta...', it: 'Scrivi la tua risposta...' },
+    'gram_por_que': { pt: 'Por que?', it: 'Perché?' },
+    'gram_correto': { pt: 'Correto!', it: 'Corretto!' },
+    'gram_errado': { pt: 'Errado.', it: 'Sbagliato.' },
+    'gram_resposta_era': { pt: 'A resposta era:', it: 'La risposta era:' },
+    'gram_por_que_importa': { pt: 'Por que isso importa?', it: 'Perché è importante?' },
+    'gram_arm_errado': { pt: 'Errado', it: 'Sbagliato' },
+    'gram_arm_certo': { pt: 'Certo', it: 'Corretto' },
+
+    // ── Quiz — gramática ──
+    'quiz_gram_nivel': { pt: '📚 Nível {n}', it: '📚 Livello {n}' },
+
+    // ── Vocab — overflow ──
+    'vocab_e_mais': { pt: '... e mais {n} palavras. Use os filtros para refinar.', it: '... e altre {n} parole. Usa i filtri per affinare.' },
+
+    // ── Imitazione — resultados ──
+    'imit_voce_disse': { pt: 'Você disse:', it: 'Hai detto:' },
+    'imit_ouvimos': { pt: 'Ouvimos:', it: 'Abbiamo sentito:' },
+    'imit_proxima_frase': { pt: 'Próxima Frase', it: 'Frase Successiva' },
+    'imit_tentar_novamente': { pt: 'Tentar Novamente', it: 'Riprova' },
+    'imit_pronunciar_melhor': { pt: 'Tente pronunciar mais claramente.', it: 'Prova a pronunciare più chiaramente.' },
+    'imit_ouvir_exemplo': { pt: 'Ouça o exemplo e tente de novo.', it: 'Ascolta l\'esempio e riprova.' },
+
+    // ── Canzoni — resultado ──
+    'can_corretas': { pt: '{a}/{b} corretas', it: '{a}/{b} corrette' },
+    'can_repetir': { pt: '🔄 Repetir', it: '🔄 Ripeti' },
+    'can_outras_musicas': { pt: '‹ Outras músicas', it: '‹ Altre canzoni' },
+    'can_salva': { pt: '🎵 "{t}" salva!', it: '🎵 "{t}" salvata!' },
+
+    // ── Dialoghi — resultado ──
+    'dial_concluido': { pt: 'Diálogo Concluído', it: 'Dialogo Completato' },
+    'dial_acertos': { pt: 'Acertos: {a} / {b}', it: 'Risposte corrette: {a} / {b}' },
+    'dial_vocab_chave': { pt: 'Vocabulário Chave:', it: 'Vocabolario Chiave:' },
+    'dial_voltar': { pt: '‹ Voltar', it: '‹ Torna' },
+    'dial_salvo': { pt: '💬 "{t}" salvo!', it: '💬 "{t}" salvato!' },
+
+    // ── Onboarding slide 2 ──
+    'ob_vocabulario': { pt: 'Vocabulário:', it: 'Vocabolario:' },
+    'ob_gramatica': { pt: 'Gramática:', it: 'Grammatica:' },
+
     // ── Tour ──
     'tour_templi_title': { pt: '🏛️ Templi (Sua Jornada)', it: '🏛️ Templi (Il Tuo Viaggio)' },
     'tour_templi_desc': { pt: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', it: 'Questo è il cuore del tuo apprendimento. Sblocca nuovi templi e raggiungi il tuo obiettivo quotidiano di esperienza.' },

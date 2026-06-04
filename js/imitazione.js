@@ -101,24 +101,24 @@ const Imitazione = {
     if (score >= 0.8) {
       resContainer.innerHTML = `
         <div style="color:#27AE60;font-size:1.5rem;margin-bottom:0.5rem">Perfetto! 🌟</div>
-        <p>Você disse: <i>"${textoOuvido}"</i></p>
+        <p>${I18n.t('imit_voce_disse')} <i>"${textoOuvido}"</i></p>
         <div style="margin-top:1rem;color:#D4A843;font-weight:700">+${item.xp_recompensa} XP</div>
-        <button class="btn-primario" style="margin-top:1rem" onclick="Imitazione.avancar()">Próxima Frase</button>
+        <button class="btn-primario" style="margin-top:1rem" onclick="Imitazione.avancar()">${I18n.t('imit_proxima_frase')}</button>
       `;
       Progressao.ganhar(item.xp_recompensa);
     } else if (score >= 0.5) {
       resContainer.innerHTML = `
         <div style="color:#E67E22;font-size:1.5rem;margin-bottom:0.5rem">Quasi! 👍</div>
-        <p>Ouvimos: <i>"${textoOuvido}"</i></p>
-        <p style="font-size:0.85rem;margin-top:0.5rem">Tente pronunciar mais claramente.</p>
-        <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">Tentar Novamente</button>
+        <p>${I18n.t('imit_ouvimos')} <i>"${textoOuvido}"</i></p>
+        <p style="font-size:0.85rem;margin-top:0.5rem">${I18n.t('imit_pronunciar_melhor')}</p>
+        <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">${I18n.t('imit_tentar_novamente')}</button>
       `;
     } else {
       resContainer.innerHTML = `
         <div style="color:#C0392B;font-size:1.5rem;margin-bottom:0.5rem">Riprova! 🔄</div>
-        <p>Ouvimos: <i>"${textoOuvido}"</i></p>
-        <p style="font-size:0.85rem;margin-top:0.5rem">Ouça o exemplo e tente de novo.</p>
-        <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">Tentar Novamente</button>
+        <p>${I18n.t('imit_ouvimos')} <i>"${textoOuvido}"</i></p>
+        <p style="font-size:0.85rem;margin-top:0.5rem">${I18n.t('imit_ouvir_exemplo')}</p>
+        <button class="btn-secondario" style="margin-top:1rem" onclick="Imitazione.mostrarDesafio()">${I18n.t('imit_tentar_novamente')}</button>
       `;
     }
   },

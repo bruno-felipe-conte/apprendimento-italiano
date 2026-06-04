@@ -332,7 +332,7 @@ const Quiz = {
       btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
       btn.innerHTML = desbloqueado
         ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
-        : `🔒 ${i}. ${nome}<br><small>Nível ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+        : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
 
       if (desbloqueado) {
         btn.onclick = () => this.iniciar(i);
@@ -407,7 +407,7 @@ const Quiz = {
       gramData.moduli.forEach(mod => {
         const btn = document.createElement('button');
         btn.className = 'quiz-templo-btn quiz-gram-btn';
-        btn.innerHTML = `📚 Nível ${mod.livello}`;
+        btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.livello);
         btn.onclick = () => this.iniciarGramatica(mod.livello);
         seletor.appendChild(btn);
       });
