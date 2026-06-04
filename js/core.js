@@ -352,25 +352,25 @@ const App = {
     if (!p || !p.ultimo_estudo) return ''; // primeiro acesso
 
     const diffHoras = (Date.now() - p.ultimo_estudo) / 3600000;
-    const quando = diffHoras < 0.1 ? 'agora mesmo'
-                 : diffHoras < 1 ? 'há poucos minutos'
-                 : diffHoras < 24 ? `há ${Math.round(diffHoras)}h`
-                 : `há ${Math.round(diffHoras/24)} dia(s)`;
+    const quando = diffHoras < 0.1 ? I18n.t('cc_agora_mesmo')
+                 : diffHoras < 1   ? I18n.t('cc_ha_minutos')
+                 : diffHoras < 24  ? I18n.t('cc_ha_horas').replace('{n}', Math.round(diffHoras))
+                 :                   I18n.t('cc_ha_dias').replace('{n}', Math.round(diffHoras/24));
 
     const ultimaSecao = p.ultima_secao || 'flashcard';
     let secaoNome = 'Flashcard';
-    if (ultimaSecao === 'templi') secaoNome = 'Início';
-    if (ultimaSecao === 'quiz') secaoNome = 'Quiz';
-    if (ultimaSecao === 'vocabolario') secaoNome = 'Vocabulário';
-    if (ultimaSecao === 'grammatica') secaoNome = 'Gramática';
-    if (ultimaSecao === 'profilo') secaoNome = 'Perfil';
+    if (ultimaSecao === 'templi')      secaoNome = I18n.t('cc_secao_inicio');
+    if (ultimaSecao === 'quiz')        secaoNome = 'Quiz';
+    if (ultimaSecao === 'vocabolario') secaoNome = I18n.t('cc_secao_vocab');
+    if (ultimaSecao === 'grammatica')  secaoNome = I18n.t('cc_secao_gram');
+    if (ultimaSecao === 'profilo')     secaoNome = I18n.t('cc_secao_perfil');
 
     return `<div class="card-continuar" onclick="App.navegar('${ultimaSecao}')">
       <div>
-        <div class="cc-label">Continuar de onde parou</div>
-        <div class="cc-info">Última sessão: <strong>${quando}</strong> (${secaoNome})</div>
+        <div class="cc-label">${I18n.t('cc_continuar_label')}</div>
+        <div class="cc-info">${I18n.t('cc_ultima_sessao')} <strong>${quando}</strong> (${secaoNome})</div>
       </div>
-      <div class="cc-cta">→ Retomar</div>
+      <div class="cc-cta">${I18n.t('cc_retomar')}</div>
     </div>`;
   },
 
@@ -379,7 +379,7 @@ const App = {
     if (!p || !p.meta_prazo) {
       return `<div class="card-meta-prazo card-meta-vazia" onclick="App.abrirModalMetaPrazo()">
         <span>🎯</span>
-        <span>Definir uma meta com prazo</span>
+        <span>${I18n.t('meta_definir_prazo')}</span>
         <span class="cc-cta">→</span>
       </div>`;
     }
@@ -390,11 +390,11 @@ const App = {
     return `<div class="card-meta-prazo" onclick="App.abrirModalMetaPrazo()">
       <div class="meta-prazo-titulo">${emoji} Meta: Nível ${dados.nivel_alvo} até ${new Date(dados.data_alvo).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}</div>
       <div class="meta-prazo-info">
-        <span style="color:${cor}">${dados.xpPorDia} XP/dia necessários</span>
+        <span style="color:${cor}">${dados.xpPorDia} ${I18n.t('meta_xp_necessarios')}</span>
         <span>·</span>
-        <span>${dados.diasRestantes} dias restantes</span>
+        <span>${I18n.t('meta_dias_restantes').replace('{n}', dados.diasRestantes)}</span>
       </div>
-      <div class="meta-prazo-previsao">No ritmo atual: ${dados.dataPrevisao}</div>
+      <div class="meta-prazo-previsao">${I18n.t('meta_no_ritmo')} ${dados.dataPrevisao}</div>
     </div>`;
   },
 
@@ -476,7 +476,7 @@ const App = {
             </div>
           </div>
           <div class="templo-body">
-            <div class="lock-info">Requer Livello ${nivelMinimo} · Toque para inserir código</div>
+            <div class="lock-info">${I18n.t('templo_requer').replace('{n}', nivelMinimo)}</div>
             <div class="progresso-bar-container">
               <div class="progresso-bar-fill" style="width:0%"></div>
             </div>
@@ -595,9 +595,9 @@ const App = {
       this.renderizarTemplos();
       this.atualizarStats();
       if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
-      this.notificar(`🏛️ Tempio ${temploNum} sbloccato!`, 'sucesso');
+      this.notificar(I18n.t('notif_templo_sbloccato').replace('{n}', temploNum), 'sucesso');
     } else {
-      this.notificar('Codice non corretto.', 'erro');
+      this.notificar('notif_codice_errato', 'erro');
     }
   },
 
@@ -611,7 +611,7 @@ const App = {
       this.fecharModalTemplo();
       this.renderizarTemplos();
       this.atualizarStats();
-      this.notificar('Tutti i templi sbloccati! 🎉', 'sucesso');
+      this.notificar('notif_tutti_sbloccati', 'sucesso');
     } else {
       input.style.borderColor = '#C0392B';
       input.value = '';
@@ -667,7 +667,7 @@ const App = {
     const elMetaLabel = document.getElementById('meta-bar-label');
     const elMetaXp    = document.getElementById('meta-bar-xp');
     if (elMetaFill)  elMetaFill.style.width   = metaPct + '%';
-    if (elMetaLabel) elMetaLabel.textContent  = `🎯 Meta do dia`;
+    if (elMetaLabel) elMetaLabel.textContent  = I18n.t('meta_do_dia_label');
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
   },
 
@@ -712,7 +712,7 @@ const App = {
     this.salvarProgresso();
     this.atualizarStats();
     this.fecharMetaSettings();
-    this.notificar(`Meta: ${valor} XP/dia`, 'sucesso');
+    this.notificar(I18n.t('notif_meta_definida').replace('{val}', valor), 'sucesso');
   },
 
   // ── Meta Prazo Modal ────────────────────────────────────────
@@ -739,7 +739,7 @@ const App = {
     
     // Validar se data é no futuro
     if (new Date(dataAlvo).getTime() <= Date.now()) {
-      this.notificar('A data limite deve ser no futuro.', 'erro');
+      this.notificar('notif_data_futura', 'erro');
       return;
     }
     

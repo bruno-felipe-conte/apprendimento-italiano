@@ -68,8 +68,8 @@ const Vocab = {
     if (btnDif) {
       btnDif.classList.toggle('ativo', this.filtroDificeis);
       btnDif.innerHTML = numDificeis > 0
-        ? `⚠️ Difíceis <span class="dif-count">${numDificeis}</span>`
-        : `⚠️ Difíceis`;
+        ? `${I18n.t('vocab_dificeis')} <span class="dif-count">${numDificeis}</span>`
+        : I18n.t('vocab_dificeis');
     }
 
     // Favorites badge
@@ -78,8 +78,8 @@ const Vocab = {
     if (btnFav) {
       btnFav.classList.toggle('ativo', this.filtroFavoritos);
       btnFav.innerHTML = numFav > 0
-        ? `❤️ Favoritos <span class="dif-count">${numFav}</span>`
-        : `❤️ Favoritos`;
+        ? `${I18n.t('vocab_favoritos')} <span class="dif-count">${numFav}</span>`
+        : I18n.t('vocab_favoritos');
     }
 
     // Stats line
@@ -87,17 +87,17 @@ const Vocab = {
       const total = todos.length;
       const mostrando = Math.min(filtrados.length, 100);
       statsEl.textContent = this.filtroDificeis
-        ? `${filtrados.length} palavra${filtrados.length !== 1 ? 's' : ''} difícil${filtrados.length !== 1 ? 'eis' : ''} (3+ erros)`
+        ? I18n.t(filtrados.length !== 1 ? 'vocab_palavras_dificeis' : 'vocab_palavra_dificil').replace('{n}', filtrados.length)
         : filtrados.length === total
-          ? `${total} palavras no total`
-          : `${mostrando} de ${filtrados.length} resultado(s) — ${total} palavras totais`;
+          ? I18n.t('vocab_palavras_total').replace('{n}', total)
+          : I18n.t('vocab_resultados').replace('{m}', mostrando).replace('{f}', filtrados.length).replace('{t}', total);
     }
 
     // Limit display to 100
     const visivel = filtrados.slice(0, 100);
 
     if (visivel.length === 0) {
-      listEl.innerHTML = '<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">Nenhuma palavra encontrada.</p>';
+      listEl.innerHTML = `<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma')}</p>`;
       return;
     }
 
@@ -132,7 +132,7 @@ const Vocab = {
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
       item.style.cursor = 'pointer';
-      item.title = this.blurColuna ? 'Clique para revelar a palavra' : `Clique para ouvir "${p.italiano}"`;
+      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.idioma === 'it' ? 'Clicca per ascoltare' : 'Clique para ouvir'} "${p.italiano}"`;
       if (this.blurColuna) {
         item.onclick = (e) => {
           const target = e.target.closest('.vocab-pt, .vocab-it');

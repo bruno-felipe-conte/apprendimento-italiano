@@ -18,7 +18,7 @@ const SomFeedback = {
     this.ativo = !this.ativo;
     localStorage.setItem('it_som', this.ativo ? '1' : '0');
     this._atualizarBotao();
-    App.notificar(this.ativo ? '🔔 Sons ativados' : '🔕 Sons desativados', 'alerta');
+    App.notificar(this.ativo ? 'notif_sons_ativados' : 'notif_sons_desativados', 'alerta');
   },
 
   _atualizarBotao() {

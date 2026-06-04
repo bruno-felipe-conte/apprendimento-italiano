@@ -156,7 +156,7 @@ const Calor = {
           level = r <= 0.25 ? 1 : r <= 0.5 ? 2 : r <= 0.75 ? 3 : 4;
         }
         const isToday = k === todayStr;
-        html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${k}: ${value} atividades" onclick="App.notificar('${k}: ${value} atividades','alerta')"></div>`;
+        html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${k}: ${value} ${I18n.t('hm_atividades_tooltip')}" onclick="App.notificar('${k}: ${value} ${I18n.t('hm_atividades_tooltip')}','alerta')"></div>`;
       }
 
       html += '</div>'; // hm-month-grid
@@ -170,7 +170,7 @@ const Calor = {
     container.innerHTML = html;
 
     if (statsEl) {
-      statsEl.innerHTML = `<strong>${totalAtividades}</strong> atividades em <strong>${diasAtivos}</strong> dias • 🔥 Sequência: <strong>${streak}</strong> dias`;
+      statsEl.innerHTML = `<strong>${totalAtividades}</strong> ${I18n.t('hm_atividades')} <strong>${diasAtivos}</strong> ${I18n.t('hm_dias')} • 🔥 ${I18n.t('hm_sequencia')} <strong>${streak}</strong> ${I18n.t('hm_dias')}`;
     }
   }
 };

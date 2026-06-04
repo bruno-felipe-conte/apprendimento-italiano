@@ -47,7 +47,7 @@ const Imitazione = {
       console.error('Erro de reconhecimento: ', event.error);
       this.isRecording = false;
       document.getElementById('btn-mic').classList.remove('recording');
-      document.getElementById('mic-status').innerText = 'Erro ao ouvir. Tente novamente.';
+      document.getElementById('mic-status').innerText = I18n.t('imit_erro_ouvir');
     };
 
     this.recognition.onend = () => {

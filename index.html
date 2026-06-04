@@ -1917,59 +1917,139 @@
     body.dark-mode .mic-button.recording { background: #C0392B; }
 
     /* ── Tour (Driver.js) Theme ── */
+    /* ── Tour Popover ── */
     .app-tour-theme.driver-popover {
-      background: var(--cor-fundo) !important;
-      border: 2px solid var(--cor-dourado) !important;
-      border-radius: 12px !important;
-      padding: 1.5rem !important;
-      color: var(--cor-inchiostro) !important;
-      font-family: var(--fonte-texto) !important;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+      background: #FFFDF8 !important;
+      border: none !important;
+      border-left: 4px solid #9B2335 !important;
+      border-radius: 16px !important;
+      padding: 1.5rem 1.6rem 1.3rem !important;
+      color: #2E1B0E !important;
+      font-family: 'Atkinson Hyperlegible', Lato, sans-serif !important;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 6px 18px rgba(0,0,0,0.25) !important;
+      max-width: 360px !important;
+      min-width: 280px !important;
     }
     .app-tour-theme .driver-popover-title {
-      font-family: var(--fonte-titulo) !important;
-      color: var(--cor-veneziano-escuro) !important;
-      font-size: 1.25rem !important;
-      margin-bottom: 0.5rem !important;
+      font-family: 'Cinzel', serif !important;
+      color: #9B2335 !important;
+      font-size: 1rem !important;
+      margin-bottom: 0.65rem !important;
       font-weight: 700 !important;
+      letter-spacing: 0.02em !important;
+      line-height: 1.3 !important;
+      padding-right: 1.5rem !important;
     }
     .app-tour-theme .driver-popover-description {
-      font-size: 0.95rem !important;
-      line-height: 1.5 !important;
-      color: var(--cor-inchiostro) !important;
+      font-size: 0.88rem !important;
+      line-height: 1.65 !important;
+      color: #3D2B1A !important;
+      margin-bottom: 0 !important;
+    }
+    .app-tour-theme .driver-popover-footer {
+      margin-top: 1.1rem !important;
+      padding-top: 0.9rem !important;
+      border-top: 1px solid #EDE5D8 !important;
+      gap: 0.5rem !important;
+      align-items: center !important;
     }
     .app-tour-theme .driver-popover-footer button {
-      background-color: var(--cor-dourado) !important;
-      color: #fff !important;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.2) !important;
+      background: #9B2335 !important;
+      color: #FFF8F0 !important;
       border: none !important;
       border-radius: 8px !important;
-      font-family: var(--fonte-texto) !important;
+      font-family: 'Atkinson Hyperlegible', Lato, sans-serif !important;
       font-weight: 700 !important;
-      padding: 0.5rem 1rem !important;
-      text-shadow: none !important;
+      font-size: 0.82rem !important;
+      padding: 0.42rem 1.1rem !important;
+      cursor: pointer !important;
+      transition: background 0.15s, transform 0.1s !important;
+      letter-spacing: 0.01em !important;
     }
     .app-tour-theme .driver-popover-footer button:hover {
-      background-color: #B8860B !important;
+      background: #7A1C28 !important;
+      transform: translateY(-1px) !important;
+    }
+    .app-tour-theme .driver-popover-footer .driver-popover-prev-btn {
+      background: transparent !important;
+      color: #9E8F7F !important;
+      border: 1.5px solid #D4C4A8 !important;
+    }
+    .app-tour-theme .driver-popover-footer .driver-popover-prev-btn:hover {
+      background: #F5EDD8 !important;
+      color: #2E1B0E !important;
     }
     .app-tour-theme .driver-popover-progress-text {
-      color: #888 !important;
-      font-size: 0.85rem !important;
+      color: #B0A090 !important;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      flex: 1 !important;
     }
-    .app-tour-theme .driver-popover-arrow {
-      border-color: var(--cor-dourado) !important;
+    .app-tour-theme .driver-popover-close-btn {
+      color: #C4B4A4 !important;
+      font-size: 1rem !important;
+      top: 0.9rem !important;
+      right: 0.9rem !important;
+      width: 1.4rem !important;
+      height: 1.4rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
     }
-    
+    .app-tour-theme .driver-popover-close-btn:hover {
+      color: #9B2335 !important;
+      background: rgba(155,35,53,0.08) !important;
+      border-radius: 4px !important;
+    }
+    .app-tour-theme .driver-popover-arrow-side-bottom::before {
+      border-top-color: #FFFDF8 !important;
+    }
+    .app-tour-theme .driver-popover-arrow-side-top::before {
+      border-bottom-color: #FFFDF8 !important;
+    }
+
+    /* Dark mode */
     body.dark-mode .app-tour-theme.driver-popover {
-      background: var(--cor-fundo-dark) !important;
-      border-color: var(--cor-toscano) !important;
-      color: var(--cor-texto-dark) !important;
+      background: #1E1912 !important;
+      border-left-color: #D4A843 !important;
+      color: #EDE5D8 !important;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.75), 0 6px 18px rgba(0,0,0,0.5) !important;
     }
     body.dark-mode .app-tour-theme .driver-popover-title {
-      color: var(--cor-toscano) !important;
+      color: #D4A843 !important;
     }
     body.dark-mode .app-tour-theme .driver-popover-description {
-      color: #E6DFD3 !important;
+      color: #C9BBA8 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer {
+      border-top-color: #2E261D !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer button {
+      background: #C4304A !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer button:hover {
+      background: #9B2335 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn {
+      background: transparent !important;
+      color: #6B5A48 !important;
+      border-color: #3D3028 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-footer .driver-popover-prev-btn:hover {
+      background: #2E261D !important;
+      color: #C9BBA8 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-progress-text {
+      color: #5A4D40 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-close-btn {
+      color: #4A3D30 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-arrow-side-bottom::before {
+      border-top-color: #1E1912 !important;
+    }
+    body.dark-mode .app-tour-theme .driver-popover-arrow-side-top::before {
+      border-bottom-color: #1E1912 !important;
     }
 
   </style>
@@ -2108,15 +2188,15 @@
           <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna">📖</button>
           <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio">🎧</button>
         </div>
-        <p class="selector-helper" id="selector-helper">Escolha um conjunto de vocabulário para estudar</p>
+        <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
         <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
           <div id="swipe-hint-left"  class="swipe-hint"></div>
           <div id="swipe-hint-right" class="swipe-hint"></div>
           <div class="card-inner">
             <div class="card-frente">
-              <div class="palavra-italiana" id="card-italiano">Selecione um Tempio</div>
-              <div class="card-dica" id="card-dica">↑ use o seletor acima</div>
+              <div class="palavra-italiana" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Tempio</div>
+              <div class="card-dica" id="card-dica" data-i18n="fc_use_seletor">↑ use o seletor acima</div>
               <div class="card-categoria" id="card-categoria"></div>
             </div>
             <div class="card-verso">
@@ -2127,38 +2207,38 @@
           </div>
         </div>
         <div style="display:flex;align-items:center;justify-content:center;gap:0.7rem;margin-bottom:0.75rem;">
-          <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio">🔊 Pronunciar</button>
-          <button class="btn-audio" onclick="Flashcards.toggleGravar()" id="btn-gravar">🎤 Imitar</button>
+          <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio" data-i18n="fc_btn_pronunciar">🔊 Pronunciar</button>
+          <button class="btn-audio" onclick="Flashcards.toggleGravar()" id="btn-gravar" data-i18n="fc_btn_imitar">🎤 Imitar</button>
           <button class="btn-dica" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Ver dica (nível 1)">💡</button>
           <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito">🤍</button>
         </div>
         <div id="imitacao-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.3rem;"></div>
         <div class="card-actions" id="card-actions" style="display:none">
           <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
-            <span class="btn-label">❌ Esqueci</span>
+            <span class="btn-label" data-i18n="fc_btn_esqueci">❌ Esqueci</span>
             <span class="btn-intervalo">—</span>
           </button>
           <button id="btn-hard" class="btn-rating btn-hard" onclick="Flashcards.avaliar(2)">
-            <span class="btn-label">⚡ Difícil</span>
+            <span class="btn-label" data-i18n="fc_btn_dificil">⚡ Difícil</span>
             <span class="btn-intervalo">—</span>
           </button>
           <button id="btn-good" class="btn-rating btn-good" onclick="Flashcards.avaliar(3)">
-            <span class="btn-label">✅ Bom</span>
+            <span class="btn-label" data-i18n="fc_btn_bom">✅ Bom</span>
             <span class="btn-intervalo">—</span>
           </button>
           <button id="btn-easy" class="btn-rating btn-easy" onclick="Flashcards.avaliar(4)">
-            <span class="btn-label">⭐ Fácil</span>
+            <span class="btn-label" data-i18n="fc_btn_facil">⭐ Fácil</span>
             <span class="btn-intervalo">—</span>
           </button>
         </div>
         <div class="empty-state" id="flashcard-vazio" style="display:none">
           <p class="ornamento-italiano">Bravissimo!</p>
-          <p>Todas as cartas estudadas hoje.</p>
-          <p class="em-revisao">Volte amanhã para as próximas revisões.</p>
+          <p data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
+          <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
           <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
-            <button class="btn-primario" onclick="Flashcards.praticaTodas()">🔁 Praticar todas</button>
-            <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" title="Revisar favoritos">❤️ Favoritos</button>
-            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" title="Palavras com 3+ erros">⚠️ Difíceis</button>
+            <button class="btn-primario" onclick="Flashcards.praticaTodas()" data-i18n="fc_btn_praticar_todas">🔁 Praticar todas</button>
+            <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" data-i18n="fc_btn_favoritos">❤️ Favoritos</button>
+            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" data-i18n="fc_btn_dificeis">⚠️ Difíceis</button>
           </div>
         </div>
         <div id="flashcard-resumo" style="display:none"></div>
@@ -2178,14 +2258,14 @@
           <p class="quiz-tipo-badge" id="quiz-tipo">Vocabolario</p>
           <p class="quiz-pergunta" id="quiz-pergunta"></p>
           <button id="btn-ouvir-quiz" class="btn-primario" style="display:none; margin: 1rem auto; padding: 0.5rem 1rem; border-radius: 20px; font-size: 1rem; gap: 0.5rem; align-items: center; justify-content: center;" onclick="App.falar(document.getElementById('quiz-pergunta').dataset.italiano || '')">
-            🔊 Ouvir
+            <span data-i18n="quiz_ouvir">🔊 Ouvir</span>
           </button>
           <span id="quiz-combo-badge" class="quiz-combo-badge" style="display:none"></span>
         </div>
         <div class="opcoes-grid" id="opcoes-grid"></div>
         <div class="explicacao-container" id="explicacao-container" style="display:none">
           <p id="quiz-explicacao"></p>
-          <button class="btn-primario" onclick="Quiz.proximaPergunta()">Continuar →</button>
+          <button class="btn-primario" onclick="Quiz.proximaPergunta()" data-i18n="quiz_continuar">Continuar →</button>
         </div>
       </div>
       <div class="quiz-resultado" id="quiz-resultado" style="display:none">
@@ -2193,7 +2273,7 @@
         <div class="resultado-score" id="resultado-score">0/10</div>
         <div class="resultado-xp" id="resultado-xp">+0 XP</div>
         <p class="resultado-msg" id="resultado-msg"></p>
-        <button class="btn-primario" onclick="Quiz.voltarSelector()">← Voltar aos Templi</button>
+        <button class="btn-primario" onclick="Quiz.voltarSelector()" data-i18n="quiz_voltar">← Voltar aos Templi</button>
       </div>
     </section>
 
@@ -2220,8 +2300,8 @@
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
-        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória">🙈 Ocultar PT</button>
-        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória">🙈 Ocultar IT</button>
+        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt">🙈 Ocultar PT</button>
+        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it">🙈 Ocultar IT</button>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
@@ -2281,7 +2361,7 @@
         <div class="onb-slide active">
           <div class="onb-emoji">🇮🇹</div>
           <h3>Benvenuto!</h3>
-          <p>Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
+          <p data-i18n="ob_descricao">Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.</p>
         </div>
         <!-- Slide 2 -->
         <div class="onb-slide">
@@ -2299,7 +2379,7 @@
         <div class="onb-slide">
           <div class="onb-emoji">🚀</div>
           <h3>Por onde começar?</h3>
-          <p>É muito fácil começar sua jornada:</p>
+          <p data-i18n="ob_como_comecar">É muito fácil começar sua jornada:</p>
           <ol class="onb-steps-list">
             <li>Acesse a aba <strong>TEMPLOS</strong></li>
             <li>Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong></li>

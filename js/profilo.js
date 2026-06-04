@@ -101,22 +101,22 @@ const Profilo = {
         </div>
 
         <div class="profilo-card" style="margin-top:1.5rem">
-          <div class="profilo-card-titulo">${typeof I18n !== 'undefined' ? I18n.t('prof_gestao_dati') : '⚙️ Gestione Dati'}</div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${typeof I18n !== 'undefined' ? I18n.t('prof_backup_desc') : 'Italiano Autentico salva i tuoi progressi localmente sul tuo dispositivo. Fai regolarmente un backup per non perdere i tuoi dati se cancelli la cronologia del browser.'}</p>
+          <div class="profilo-card-titulo">${I18n.t('prof_gestao_dati')}</div>
+          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${I18n.t('prof_backup_desc')}</p>
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button class="btn-secondario" onclick="Profilo.exportarDados()">${typeof I18n !== 'undefined' ? I18n.t('prof_exp_backup') : '⬇️ Esporta Backup'}</button>
-            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${typeof I18n !== 'undefined' ? I18n.t('prof_imp_backup') : '⬆️ Importa Backup'}</button>
-            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${typeof I18n !== 'undefined' ? I18n.t('prof_azzera') : '⚠️ Azzera Tutto'}</button>
+            <button class="btn-secondario" onclick="Profilo.exportarDados()">${I18n.t('prof_exp_backup')}</button>
+            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
+            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
           </div>
           <!-- Conteúdo Criado por Mim -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
-            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">${typeof I18n !== 'undefined' ? I18n.t('prof_conteudo_criado') : 'Contenuto Creato da Me'}</div>
+            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">${I18n.t('prof_conteudo_criado')}</div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
               <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
-                ${typeof I18n !== 'undefined' ? I18n.t('prof_exp_conteudo') : '⬇️ Esporta Canzoni e Dialoghi'}
+                ${I18n.t('prof_exp_conteudo')}
               </button>
               <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="font-size:0.82rem">
-                ${typeof I18n !== 'undefined' ? I18n.t('prof_imp_conteudo') : '⬆️ Importa Contenuto'}
+                ${I18n.t('prof_imp_conteudo')}
               </button>
             </div>
           </div>
@@ -204,7 +204,7 @@ const Profilo = {
     a.download = `italiano_backup_${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    App.notificar('✅ Backup exportado com sucesso!', 'sucesso');
+    App.notificar('notif_backup_exp', 'sucesso');
   },
 
   // ── Importar backup ───────────────────────────────────────
@@ -224,10 +224,10 @@ const Profilo = {
         if (backup.tema)       localStorage.setItem('it_tema',            backup.tema);
         if (backup.canzoni_custom)  localStorage.setItem('it_canzoni_custom',  JSON.stringify(backup.canzoni_custom));
         if (backup.dialoghi_custom) localStorage.setItem('it_dialoghi_custom', JSON.stringify(backup.dialoghi_custom));
-        App.notificar('✅ Backup importado! Recarregando...', 'sucesso');
+        App.notificar('notif_backup_imp', 'sucesso');
         setTimeout(() => location.reload(), 1200);
       } catch(err) {
-        App.notificar('❌ Arquivo inválido: ' + err.message, 'erro');
+        App.notificar(I18n.t('notif_arquivo_inv') + err.message, 'erro');
       }
     };
     reader.readAsText(file);
@@ -239,7 +239,7 @@ const Profilo = {
     if (!confirm('⚠️ Isso apagará TODO o seu progresso — XP, flashcards, conquistas e streak. Tem certeza?')) return;
     if (!confirm('Esta ação é IRREVERSÍVEL. Deseja mesmo começar do zero?')) return;
     ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia', 'it_canzoni_custom', 'it_dialoghi_custom'].forEach(k => localStorage.removeItem(k));
-    App.notificar('Progresso resetado. Recarregando...', 'alerta');
+    App.notificar('notif_prog_reset', 'alerta');
     setTimeout(() => location.reload(), 1200);
   },
 
@@ -259,7 +259,7 @@ const Profilo = {
     a.download = `italiano_conteudo_${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    App.notificar('✅ Conteúdo exportado!', 'sucesso');
+    App.notificar('notif_conteudo_exp', 'sucesso');
   },
 
   importarConteudoCustom(event) {
@@ -285,9 +285,9 @@ const Profilo = {
         localStorage.setItem('it_canzoni_custom', JSON.stringify([...canExist, ...canNovos]));
         localStorage.setItem('it_dialoghi_custom', JSON.stringify([...dialExist, ...dialNovos]));
         
-        App.notificar(`✅ ${canNovos.length} músicas e ${dialNovos.length} diálogos importados!`, 'sucesso');
+        App.notificar(`✅ ${canNovos.length} ${I18n.idioma === 'it' ? 'canzoni e' : 'músicas e'} ${dialNovos.length} ${I18n.idioma === 'it' ? 'dialoghi importati!' : 'diálogos importados!'}`, 'sucesso');
       } catch(err) {
-        App.notificar('❌ Arquivo inválido: ' + err.message, 'erro');
+        App.notificar(I18n.t('notif_arquivo_inv') + err.message, 'erro');
       }
     };
     reader.readAsText(file);

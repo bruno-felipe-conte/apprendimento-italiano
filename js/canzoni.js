@@ -198,7 +198,7 @@ const Canzoni = {
 
   _salvarFormulario(idEditar) {
     const titulo = document.getElementById('can-titulo')?.value.trim();
-    if (!titulo) { App.notificar('O título é obrigatório.', 'erro'); return; }
+    if (!titulo) { App.notificar('notif_can_titulo_obr', 'erro'); return; }
 
     // Coletar estrofes
     const estrofes = [];
@@ -213,7 +213,7 @@ const Canzoni = {
         estrofes.push({ id: i+1, ...campos });
       }
     });
-    if (estrofes.length === 0) { App.notificar('Adicione pelo menos um verso com lacuna.', 'erro'); return; }
+    if (estrofes.length === 0) { App.notificar('notif_can_sem_verso', 'erro'); return; }
 
     const nova = {
       id: idEditar || `custom_can_${Date.now()}`,
@@ -250,7 +250,7 @@ const Canzoni = {
     if (!confirm(`Excluir "${can.titulo}"?`)) return;
     this.custom = this.custom.filter(x => x.id !== id);
     this._salvarCustom();
-    App.notificar('Música excluída.', 'alerta');
+    App.notificar('notif_can_excluida', 'alerta');
     this.renderizarSeletor();
   },
 

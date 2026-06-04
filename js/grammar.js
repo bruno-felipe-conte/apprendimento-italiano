@@ -525,7 +525,7 @@ const Grammatica = {
       App.estado.progresso.grammatica_completadas = completadas;
       App.salvarProgresso();
       App.ganharXP(bonus);
-      App.notificar(`🏆 Capitolo completato! +${bonus} XP`, 'successo');
+      App.notificar(I18n.t('notif_gram_capitolo').replace('{xp}', bonus), 'sucesso');
     }
 
     if (typeof Calor !== 'undefined') Calor.registrar(total);

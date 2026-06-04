@@ -10,21 +10,21 @@ const Conquistas = {
       id: 'primeiro_passo',
       emoji: '🌱',
       nome: 'Primo Passo',
-      descricao: 'Complete seu primeiro flashcard',
+      get descricao() { return I18n.t('ach_primeiro_passo'); },
       verificar(p, fd) { return Object.keys(fd).length >= 1; }
     },
     {
       id: 'uma_semana',
       emoji: '🔥',
       nome: 'Una Settimana',
-      descricao: '7 dias consecutivos de estudo',
+      get descricao() { return I18n.t('ach_uma_semana'); },
       verificar(p) { return (p.streak || 0) >= 7; }
     },
     {
       id: 'estudioso',
       emoji: '📚',
       nome: 'Studioso',
-      descricao: 'Revisar 100 cartas nos flashcards',
+      get descricao() { return I18n.t('ach_studioso'); },
       verificar(p, fd) {
         let total = 0;
         for (const k in fd) total += (fd[k].reps || fd[k].repeticoes || 0);
@@ -35,7 +35,7 @@ const Conquistas = {
       id: 'quiz_perfetto',
       emoji: '✅',
       nome: 'Quiz Perfetto',
-      descricao: '10/10 acertos em um quiz',
+      get descricao() { return I18n.t('ach_quiz_perfetto'); },
       // Normally triggered via ganharQuizPerfetto(); falls back to flag
       // check so the achievement survives a save that lost conquistas[].
       verificar(p) { return !!(p.quiz_perfetto_ganha); }
@@ -44,14 +44,14 @@ const Conquistas = {
       id: 'primo_tempio',
       emoji: '🏛️',
       nome: 'Primo Tempio',
-      descricao: 'Completar o Tempio 1 nos flashcards',
+      get descricao() { return I18n.t('ach_primo_tempio'); },
       verificar(p) { return (p.templos_concluidos || []).includes(1); }
     },
     {
       id: 'vocabulario',
       emoji: '⭐',
       nome: 'Vocabolario Ricco',
-      descricao: 'Dominar 50 palavras (3+ revisões)',
+      get descricao() { return I18n.t('ach_vocabulario'); },
       verificar(p, fd) {
         let total = 0;
         for (const k in fd) {
@@ -68,7 +68,7 @@ const Conquistas = {
       id: 'duro',
       emoji: '💪',
       nome: 'Duro!',
-      descricao: 'Marcar "Esqueci" 50 vezes — a perseverança tem recompensa',
+      get descricao() { return I18n.t('ach_duro'); },
       verificar(p, fd) {
         let total = 0;
         for (const k in fd) total += (fd[k].erros || 0);
@@ -79,21 +79,21 @@ const Conquistas = {
       id: 'italiano_autentico',
       emoji: '🇮🇹',
       nome: 'Italiano Autentico',
-      descricao: 'Atingir o Livello 10',
+      get descricao() { return I18n.t('ach_italiano_autentico'); },
       verificar(p) { return (p.nivel || 1) >= 10; }
     },
     {
       id: 'um_mes',
       emoji: '🔥🔥',
       nome: 'Un Mese',
-      descricao: '30 dias consecutivos de estudo',
+      get descricao() { return I18n.t('ach_um_mes'); },
       verificar(p) { return (p.streak || 0) >= 30; }
     },
     {
       id: 'maestro',
       emoji: '🌟',
       nome: 'Maestro',
-      descricao: 'Revisar 500 cartas nos flashcards',
+      get descricao() { return I18n.t('ach_maestro'); },
       verificar(p, fd) {
         let total = 0;
         for (const k in fd) total += (fd[k].reps || fd[k].repeticoes || 0);
@@ -104,35 +104,35 @@ const Conquistas = {
       id: 'esploratore',
       emoji: '🗺️',
       nome: 'Esploratore',
-      descricao: 'Desbloquear 5 templos',
+      get descricao() { return I18n.t('ach_esploratore'); },
       verificar(p) { return (p.templos_desbloqueados || []).length >= 5; }
     },
     {
       id: 'grammatico',
       emoji: '📖',
       nome: 'Grammatico',
-      descricao: 'Completar 10 lições de gramática',
+      get descricao() { return I18n.t('ach_grammatico'); },
       verificar(p) { return (p.grammatica_completadas || []).length >= 10; }
     },
     {
       id: 'precisione',
       emoji: '🎯',
       nome: 'Precisione',
-      descricao: '5 quizzes seguidos com mais de 80% de acerto',
+      get descricao() { return I18n.t('ach_precisione'); },
       verificar(p) { return (p.quiz_consecutivos_80 || 0) >= 5; }
     },
     {
       id: 'notturno',
       emoji: '🌙',
       nome: 'Notturno',
-      descricao: 'Estudar após as 22h',
+      get descricao() { return I18n.t('ach_notturno'); },
       verificar(p) { return (p.ultimo_estudo_hora || -1) >= 22; }
     },
     {
       id: 'mattiniero',
       emoji: '☀️',
       nome: 'Mattiniero',
-      descricao: 'Estudar antes das 7h da manhã',
+      get descricao() { return I18n.t('ach_mattiniero'); },
       verificar(p) { const h = p.ultimo_estudo_hora; return h !== undefined && h >= 0 && h < 7; }
     }
   ],

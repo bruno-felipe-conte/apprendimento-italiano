@@ -210,7 +210,7 @@ const Dialoghi = {
 
   _salvarFormulario(idEditar) {
     const titulo = document.getElementById('dial-titulo')?.value.trim();
-    if (!titulo) { App.notificar('O título é obrigatório.', 'erro'); return; }
+    if (!titulo) { App.notificar('notif_dial_titulo_obr', 'erro'); return; }
 
     const turniEls = document.querySelectorAll('.dial-turno-form');
     const turni = [];
@@ -231,7 +231,7 @@ const Dialoghi = {
       }
     });
 
-    if (turni.length < 2) { App.notificar('Adicione pelo menos 2 turnos.', 'erro'); return; }
+    if (turni.length < 2) { App.notificar('notif_dial_sem_turnos', 'erro'); return; }
 
     const novo = {
       id: idEditar || `custom_dial_${Date.now()}`,
@@ -264,7 +264,7 @@ const Dialoghi = {
     if (!d || !confirm(`Excluir "${d.titulo}"?`)) return;
     this.custom = this.custom.filter(x => x.id !== id);
     this._salvarCustom();
-    App.notificar('Diálogo excluído.', 'alerta');
+    App.notificar('notif_dial_excluido', 'alerta');
     this.renderizarSeletor();
   },
 

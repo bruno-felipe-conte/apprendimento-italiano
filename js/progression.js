@@ -119,7 +119,7 @@ const Progressao = {
     // Fire "meta reached" toast exactly once per day
     const meta = p.meta_diaria || 100;
     if (xpAntes < meta && p.xp_hoje >= meta) {
-      setTimeout(() => App.notificar('🎯 Meta diária atingida! Ottimo!', 'sucesso'), 400);
+      setTimeout(() => App.notificar('notif_meta_atingida', 'sucesso'), 400);
     }
 
     p.xp += quantidade;
@@ -181,7 +181,7 @@ const Progressao = {
         p.templos_desbloqueados.push(num);
         p.templos_desbloqueados.sort((a, b) => a - b);
         novoDesbloqueio = true;
-        App.notificar(`🏛️ Tempio ${num} sbloccato!`, 'successo');
+        App.notificar(I18n.t('notif_templo_sbloccato').replace('{n}', num), 'sucesso');
       }
     }
 
@@ -240,7 +240,7 @@ const Progressao = {
     if (!p.templos_concluidos.includes(temploNum)) {
       p.templos_concluidos.push(temploNum);
       App.salvarProgresso();
-      App.notificar(`🏆 Tempio ${temploNum} completato!`, 'successo');
+      App.notificar(I18n.t('notif_templo_completato').replace('{n}', temploNum), 'sucesso');
       App.renderizarTemplos();
     }
   },
@@ -285,7 +285,7 @@ const Progressao = {
     const p = App.estado.progresso;
     p.meta_prazo = { nivel_alvo: nivelAlvo, data_alvo: dataAlvo, xp_na_criacao: p.xp, criado_em: Date.now() };
     App.salvarProgresso();
-    App.notificar('🎯 Meta definida! Boa sorte!', 'sucesso');
+    App.notificar('notif_meta_def_ok', 'sucesso');
   },
 
   removerMetaPrazo() {

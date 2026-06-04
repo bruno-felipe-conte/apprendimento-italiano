@@ -14,7 +14,7 @@ const Quiz = {
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
     if (!Progressao.temploDesbloqueado(temploNum)) {
-      App.notificar('Tempio não desbloqueado!', 'erro');
+      App.notificar('notif_quiz_bloqueado', 'erro');
       return;
     }
 
@@ -37,7 +37,7 @@ const Quiz = {
     this.perguntas = this._embaralhar(pool).slice(0, 10);
 
     if (this.perguntas.length === 0) {
-      App.notificar('Nenhuma pergunta disponível para este tempio.', 'alerta');
+      App.notificar('notif_quiz_sem_perguntas', 'alerta');
       return;
     }
 
@@ -73,7 +73,7 @@ const Quiz = {
     this.perguntas = this._embaralhar(pool).slice(0, 10);
 
     if (this.perguntas.length === 0) {
-      App.notificar('Nenhuma pergunta disponível para os templos desbloqueados.', 'alerta');
+      App.notificar('notif_quiz_sem_perguntas_todos', 'alerta');
       return;
     }
 
@@ -136,7 +136,7 @@ const Quiz = {
     const barFill = document.getElementById('quiz-barra-fill');
     const numLabel = document.getElementById('quiz-num-pergunta');
     if (barFill) barFill.style.width = Math.max(5, pct) + '%';
-    if (numLabel) numLabel.textContent = `Pergunta ${this.perguntaAtual + 1} de ${total}`;
+    if (numLabel) numLabel.textContent = I18n.t('quiz_pergunta_de').replace('{a}', this.perguntaAtual + 1).replace('{b}', total);
 
     // Question type badge
     const tipoBadge = document.getElementById('quiz-tipo');
@@ -220,7 +220,7 @@ const Quiz = {
     const explicacaoContainer = document.getElementById('explicacao-container');
     const explicacaoEl = document.getElementById('quiz-explicacao');
     if (explicacaoContainer) explicacaoContainer.style.display = 'block';
-    if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? '✅ Correto!' : `❌ A resposta correta era: ${p.resposta_correta}`);
+    if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? I18n.t('quiz_correto') : `${I18n.t('quiz_resposta_correta_era')} ${p.resposta_correta}`);
   },
 
   // ── Advance to next question ───────────────────────────────
@@ -258,7 +258,7 @@ const Quiz = {
     const xpEl = document.getElementById('resultado-xp');
     const msgEl = document.getElementById('resultado-msg');
     if (scoreEl) scoreEl.textContent = `${this.pontuacao}/${total}`;
-    if (xpEl) xpEl.textContent = `+${this.xpTotal} XP ganhos`;
+    if (xpEl) xpEl.textContent = I18n.t('quiz_xp_ganhos').replace('{n}', this.xpTotal);
     if (msgEl) msgEl.textContent = msg;
 
     // Give XP (without XP toast — resultado screen is enough feedback)
@@ -346,7 +346,7 @@ const Quiz = {
     // ── Morphology section ────────────────────────────────
     const sep = document.createElement('div');
     sep.className = 'quiz-secao-titulo';
-    sep.textContent = '🔤 Quiz de Morfologia (Gênero & Plural)';
+    sep.textContent = I18n.t('quiz_morf_titulo');
     seletor.appendChild(sep);
 
 
@@ -371,7 +371,7 @@ const Quiz = {
     // ── Listening section ────────────────────────────────
     const sepList = document.createElement('div');
     sepList.className = 'quiz-secao-titulo';
-    sepList.textContent = '🎧 Quiz de Listening (Ascolto)';
+    sepList.textContent = I18n.t('quiz_list_titulo');
     seletor.appendChild(sepList);
 
     for (let i = 1; i <= 10; i++) {
@@ -394,14 +394,14 @@ const Quiz = {
     // ── Gramática section ────────────────────────────────
     const sepGram = document.createElement('div');
     sepGram.className = 'quiz-secao-titulo';
-    sepGram.textContent = '📚 Quiz de Gramática (Grammatica)';
+    sepGram.textContent = I18n.t('quiz_gram_titulo');
     seletor.appendChild(sepGram);
 
     const gramData = App.estado.grammarData || { moduli: [] };
     if (gramData.moduli.length === 0) {
       const msg = document.createElement('p');
       msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = 'Dados de gramática não carregados.';
+      msg.textContent = I18n.t('quiz_gram_nao_carregado');
       seletor.appendChild(msg);
     } else {
       gramData.moduli.forEach(mod => {
@@ -416,14 +416,14 @@ const Quiz = {
     // ── Conjugação section ────────────────────────────────
     const sepVerbi = document.createElement('div');
     sepVerbi.className = 'quiz-secao-titulo';
-    sepVerbi.textContent = '🇮🇹 Quiz de Conjugação Verbal';
+    sepVerbi.textContent = I18n.t('quiz_verbi_titulo');
     seletor.appendChild(sepVerbi);
 
     const verbosDisponiveis = (App.estado.conjugacoesData || []);
     if (verbosDisponiveis.length === 0) {
       const msg = document.createElement('p');
       msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = 'Dados de conjugação não carregados.';
+      msg.textContent = I18n.t('quiz_verbi_nao_carregado');
       seletor.appendChild(msg);
     } else {
       const tempos = ['Presente', 'Imperfetto', 'Futuro'];
@@ -441,7 +441,7 @@ const Quiz = {
   // ── Morphology quiz (gênero & plural) ────────────────────
   iniciarMorfologia(temploNum) {
     if (!Progressao.temploDesbloqueado(temploNum)) {
-      App.notificar('Tempio não desbloqueado!', 'erro');
+      App.notificar('notif_quiz_bloqueado', 'erro');
       return;
     }
     this.temploAtual   = temploNum;
@@ -453,7 +453,7 @@ const Quiz = {
 
     this.perguntas = this._embaralhar(this._gerarMorfologia(temploNum)).slice(0, 10);
     if (this.perguntas.length === 0) {
-      App.notificar('Dados de morfologia insuficientes para este tempio.', 'alerta');
+      App.notificar('notif_quiz_morf_insuf', 'alerta');
       return;
     }
     const container = document.getElementById('quiz-container');
@@ -474,14 +474,15 @@ const Quiz = {
     // Gender questions
     const comGenero = palavras.filter(p => p.genero === 'm' || p.genero === 'f');
     comGenero.forEach(p => {
-      const correto = p.genero === 'm' ? 'masculino' : 'feminino';
+      const corretoPT = p.genero === 'm' ? 'masculino' : 'feminino';
+      const corretoIT = p.genero === 'm' ? I18n.t('quiz_morf_genero_masc') : I18n.t('quiz_morf_genero_fem');
       perguntas.push({
         id: `morf_g_${p.id}`, templo: temploNum, tipo: 'morfologia',
         nivel: data.nivel || 'A1',
-        pergunta: `Qual o gênero de "${p.italiano}"?`,
-        resposta_correta: correto,
-        alternativas: ['masculino', 'feminino'],
-        explicacao: `"${p.italiano}" é ${correto}${p.plural ? ` (plural: ${p.plural})` : ''}.`,
+        pergunta: I18n.t('quiz_morf_genero_pergunta').replace('{w}', p.italiano),
+        resposta_correta: corretoIT,
+        alternativas: [I18n.t('quiz_morf_genero_masc'), I18n.t('quiz_morf_genero_fem')],
+        explicacao: I18n.t('quiz_morf_genero_exp').replace('{w}', p.italiano).replace('{g}', corretoIT) + (p.plural ? ` (${I18n.idioma === 'it' ? 'plurale' : 'plural'}: ${p.plural})` : '') + '.',
         xp_recompensa: 20
       });
     });
@@ -495,10 +496,10 @@ const Quiz = {
         perguntas.push({
           id: `morf_p_${p.id}`, templo: temploNum, tipo: 'morfologia',
           nivel: data.nivel || 'A1',
-          pergunta: `Qual o plural de "${p.italiano}"?`,
+          pergunta: I18n.t('quiz_morf_plural_pergunta').replace('{w}', p.italiano),
           resposta_correta: p.plural,
           alternativas: this._embaralhar([p.plural, ...erradas]),
-          explicacao: `O plural de "${p.italiano}" é "${p.plural}".`,
+          explicacao: I18n.t('quiz_morf_plural_exp').replace('{w}', p.italiano).replace('{p}', p.plural),
           xp_recompensa: 20
         });
       });
@@ -518,7 +519,7 @@ const Quiz = {
 
     this.perguntas = this._embaralhar(this._gerarConjugacao(tempo)).slice(0, 10);
     if (this.perguntas.length === 0) {
-      App.notificar('Dados de conjugação insuficientes.', 'alerta');
+      App.notificar('notif_quiz_conj_insuf', 'alerta');
       return;
     }
     const container = document.getElementById('quiz-container');
@@ -589,7 +590,7 @@ const Quiz = {
 
     this.perguntas = this._embaralhar(this._gerarListening(temploNum)).slice(0, 10);
     if (this.perguntas.length === 0) {
-      App.notificar('Dados insuficientes para listening.', 'alerta');
+      App.notificar('notif_quiz_listen_insuf', 'alerta');
       return;
     }
     
@@ -636,7 +637,7 @@ const Quiz = {
 
     this.perguntas = this._embaralhar(this._gerarGramatica(livello)).slice(0, 10);
     if (this.perguntas.length === 0) {
-      App.notificar('Dados insuficientes de gramática para este nível.', 'alerta');
+      App.notificar('notif_quiz_gram_insuf', 'alerta');
       return;
     }
     

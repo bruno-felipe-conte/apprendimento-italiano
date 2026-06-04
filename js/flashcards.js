@@ -182,11 +182,11 @@ const Flashcards = {
   init(templo) {
     if (!templo || isNaN(templo)) return;
     if (!Progressao.temploDesbloqueado(templo)) {
-      App.notificar('Tempio não desbloqueado ainda!', 'erro');
+      App.notificar('notif_fc_bloqueado', 'erro');
       return;
     }
     if (!App.estado.templosData[templo]) {
-      App.notificar('Vocabulário deste tempio não carregado.', 'erro');
+      App.notificar('notif_fc_vocab_nao_carregado', 'erro');
       return;
     }
     this.temploAtual     = templo;
@@ -287,36 +287,30 @@ const Flashcards = {
     }
 
     if (this.modoEscuta) {
-      // 👂 Listening: hide word, tap card to replay TTS
+      // 👂 Listening: hide word on front, click card reveals it normally
       if (elIt)  elIt.textContent  = '🎧';
       if (elCat) elCat.textContent = '';
-      if (elDica) elDica.textContent = 'Toque no card para ouvir novamente 🔊';
+      if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
-      // Card click replays audio (user gesture — sem bloqueio mobile)
-      const cardEl3 = document.getElementById('flashcard');
-      if (cardEl3) cardEl3.onclick = (e) => {
-        if (!this.virada) { this.pronunciar(); }
-        else { this.virar(); }
-      };
     } else if (this.modoContexto) {
       // 📖 Context: show example sentence with blank
       const ex = this.cartaAtual.exemplo || '';
       const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
       if (elIt) elIt.textContent = mascarada || `${this.cartaAtual.italiano} → ?`;
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elDica) elDica.textContent = 'Que palavra falta?';
+      if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elDica) elDica.textContent = 'Clique para revelar';
+      if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else {
       // Normal: IT front, PT back
       if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elDica) elDica.textContent = 'Clique para revelar';
+      if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
     }
 
@@ -361,8 +355,8 @@ const Flashcards = {
     const novosCount   = this.cartasDisponiveis.filter(c => !App.estado.flashcardData[c.id] || App.estado.flashcardData[c.id].state === 'new').length;
     const revisaoCount = total - novosCount;
     const partes       = [];
-    if (novosCount   > 0) partes.push(`${novosCount} novas`);
-    if (revisaoCount > 0) partes.push(`${revisaoCount} revisão`);
+    if (novosCount   > 0) partes.push(`${novosCount} ${I18n.t('fc_novas')}`);
+    if (revisaoCount > 0) partes.push(`${revisaoCount} ${I18n.t('fc_revisao')}`);
 
     elInfo.innerHTML = `<strong>${atual}</strong> / ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}${rStr}`;
   },
@@ -516,7 +510,7 @@ const Flashcards = {
       this.proxima();
     } catch (err) {
       console.error('[FSRS] avaliar() error:', err);
-      App.notificar('Erro ao registrar resposta. Tente novamente.', 'erro');
+      App.notificar('notif_fc_erro_resposta', 'erro');
       this.proxima(); // advance anyway so user isn't stuck
     }
   },
@@ -569,11 +563,11 @@ const Flashcards = {
     let emoji = '🎉';
     let titulo = 'Sessione completata!';
     if (pct >= 80) { emoji = '🏆'; titulo = 'Ottimo lavoro!'; }
-    else if (pct >= 60) { emoji = '👏'; titulo = 'Muito bom!'; }
-    else if (pct < 40) { emoji = '💪'; titulo = 'Continua a praticare!'; }
+    else if (pct >= 60) { emoji = '👏'; titulo = I18n.t('fc_resumo_muito_bom'); }
+    else if (pct < 40) { emoji = '💪'; titulo = I18n.t('fc_resumo_continua'); }
 
     // Next due card
-    let proxLabel = 'Sem agendamento';
+    let proxLabel = I18n.t('fc_resumo_sem_agendamento');
     if (this.temploAtual) {
       const data = App.estado.templosData[this.temploAtual];
       if (data && data.palavras) {
@@ -587,7 +581,9 @@ const Flashcards = {
           const diffMs = proximas[0] - agora;
           const diffH  = Math.round(diffMs / 3600000);
           const diffD  = Math.round(diffMs / 86400000);
-          proxLabel = diffD >= 1 ? `em ${diffD} dia${diffD > 1 ? 's' : ''}` : `em ${diffH}h`;
+          proxLabel = diffD >= 1
+            ? I18n.t(diffD > 1 ? 'fc_resumo_em_dias_plural' : 'fc_resumo_em_dias').replace('{n}', diffD)
+            : I18n.t('fc_resumo_em_horas').replace('{n}', diffH);
         }
       }
     }
@@ -601,11 +597,11 @@ const Flashcards = {
         <div class="resumo-stats-grid">
           <div class="resumo-stat">
             <span class="resumo-num">${total}</span>
-            <span class="resumo-lab">cartas</span>
+            <span class="resumo-lab">${I18n.t('fc_resumo_cartas')}</span>
           </div>
           <div class="resumo-stat">
             <span class="resumo-num">${pct}%</span>
-            <span class="resumo-lab">acertos</span>
+            <span class="resumo-lab">${I18n.t('fc_resumo_acertos')}</span>
           </div>
           ${s.xp > 0 ? `<div class="resumo-stat"><span class="resumo-num">+${s.xp}</span><span class="resumo-lab">XP</span></div>` : ''}
         </div>
@@ -615,10 +611,10 @@ const Flashcards = {
           ${s.good  > 0 ? `<span class="rr rr-good">✅ ${s.good}</span>` : ''}
           ${s.easy  > 0 ? `<span class="rr rr-easy">⭐ ${s.easy}</span>` : ''}
         </div>
-        ${novCount > 0 ? `<p class="resumo-novas">🌱 ${novCount} palavra${novCount > 1 ? 's' : ''} nova${novCount > 1 ? 's' : ''} aprendida${novCount > 1 ? 's' : ''}!</p>` : ''}
-        <p class="resumo-proxima">⏰ Próxima revisão: <strong>${proxLabel}</strong></p>
+        ${novCount > 0 ? `<p class="resumo-novas">${I18n.t(novCount > 1 ? 'fc_resumo_novas_plural' : 'fc_resumo_novas').replace('{n}', novCount)}</p>` : ''}
+        <p class="resumo-proxima">${I18n.t('fc_resumo_proxima')} <strong>${proxLabel}</strong></p>
         <div class="resumo-acoes">
-          <button class="btn-primario" onclick="Flashcards.praticaTodas()">🔁 Praticar todas</button>
+          <button class="btn-primario" onclick="Flashcards.praticaTodas()">${I18n.t('fc_resumo_praticar')}</button>
         </div>
       </div>
     `;
@@ -631,14 +627,14 @@ const Flashcards = {
     const adicionado = App.toggleFavorito(this.cartaAtual.id);
     const btn = document.getElementById('btn-favorito');
     if (btn) btn.textContent = adicionado ? '❤️' : '🤍';
-    App.notificar(adicionado ? '❤️ Adicionado aos favoritos' : '🤍 Removido dos favoritos', 'alerta');
+    App.notificar(adicionado ? 'notif_fc_favorito_add' : 'notif_fc_favorito_rem', 'alerta');
   },
 
   // ── Study favorite words ──────────────────────────────────
   estudarFavoritos() {
     const favIds = (App.estado.progresso || {}).favoritos || [];
     if (favIds.length === 0) {
-      App.notificar('Nenhum favorito ainda. Adicione com o ❤️!', 'alerta');
+      App.notificar('notif_fc_sem_favoritos', 'alerta');
       return;
     }
     const favPalavras = [];
@@ -649,7 +645,7 @@ const Flashcards = {
       }
     }
     if (favPalavras.length === 0) {
-      App.notificar('Palavras favoritas não encontradas nos dados.', 'erro');
+      App.notificar('notif_fc_favoritos_nao_enc', 'erro');
       return;
     }
     this.temploAtual      = null;
@@ -667,7 +663,7 @@ const Flashcards = {
     if (cardEl)  cardEl.style.display = '';
     if (actions) actions.style.display = 'none';
     App.navegar('flashcard');
-    App.notificar(`❤️ ${favPalavras.length} favoritos para revisar`, 'alerta');
+    App.notificar(I18n.t('notif_fc_favoritos_revisar').replace('{n}', favPalavras.length), 'alerta');
     this.mostrarCarta();
   },
 
@@ -685,7 +681,7 @@ const Flashcards = {
     });
 
     if (dificeis.length === 0) {
-      App.notificar('Nenhuma palavra difícil encontrada! 🎉', 'successo');
+      App.notificar('notif_fc_sem_dificeis', 'sucesso');
       return;
     }
 
@@ -713,7 +709,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     App.navegar('flashcard');
-    App.notificar(`📚 ${dificeis.length} palavras difíceis para revisar`, 'alerta');
+    App.notificar(I18n.t('notif_fc_dificeis_revisar').replace('{n}', dificeis.length), 'alerta');
     this.mostrarCarta();
   },
 
@@ -925,7 +921,7 @@ const Flashcards = {
   toggleGravar() {
     if (!this.cartaAtual) return;
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { App.notificar('Seu browser não suporta reconhecimento de voz.', 'alerta'); return; }
+    if (!SR) { App.notificar('notif_fc_sem_voz', 'alerta'); return; }
     
     if (this.gravando) {
       if (this._recognition) this._recognition.stop();
@@ -935,7 +931,7 @@ const Flashcards = {
     
     this.gravando = true;
     const btnGravar = document.getElementById('btn-gravar');
-    if (btnGravar) { btnGravar.textContent = '⏹ Parar'; btnGravar.style.background = '#C0392B'; btnGravar.style.color = '#fff'; }
+    if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_parar'); btnGravar.style.background = '#C0392B'; btnGravar.style.color = '#fff'; }
     
     this._recognition = this._iniciarReconhecimento();
     if (!this._recognition) return;
@@ -950,10 +946,10 @@ const Flashcards = {
       const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
       this._mostrarFeedbackPronuncia(texto, reconheceu);
     };
-    this._recognition.onerror = () => { App.notificar('Não consegui ouvir. Tente novamente.', 'alerta'); };
+    this._recognition.onerror = () => { App.notificar('notif_fc_nao_ouviu', 'alerta'); };
     this._recognition.onend = () => {
       this.gravando = false;
-      if (btnGravar) { btnGravar.textContent = '🎤 Imitar'; btnGravar.style.background = ''; btnGravar.style.color = ''; }
+      if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_imitar'); btnGravar.style.background = ''; btnGravar.style.color = ''; }
     };
     this._recognition.start();
   },
