@@ -112,10 +112,7 @@
     }
 
     /* ── Nav ── */
-    .nav-tabs { background: #2C2C2C; display: flex; border-bottom: 3px solid #9B2335; overflow-x: auto; }
-    .nav-tab { flex: 1; min-width: 80px; padding: 0.75rem 0.4rem; background: none; border: none; color: #aaa; cursor: pointer; font-family: 'Lato', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.2s; border-bottom: 3px solid transparent; margin-bottom: -3px; }
-    .nav-tab:hover { color: #F5EDD8; background: rgba(255,255,255,0.05); }
-    .nav-tab.ativa { color: var(--cor-toscano); border-bottom-color: var(--cor-toscano); background: rgba(212,168,67,0.08); }
+
 
     /* ── Main container ── */
     .app-container { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 1.5rem 1rem; }
@@ -853,16 +850,7 @@
       background: #14110F;
       color: #E6DFD3;
     }
-    body.dark-mode .nav-tabs {
-      background: #1C1816;
-      border-bottom-color: #7B1B29;
-    }
-    body.dark-mode .nav-tab:hover:not(.ativa) {
-      background: #251F1C;
-    }
-    body.dark-mode .nav-tab.ativa {
-      background: #7B1B29;
-    }
+
     
     /* Templos grid */
     body.dark-mode .templo-card {
@@ -1771,11 +1759,9 @@
         font-size: 1.55rem;
         cursor: pointer;
         transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s, filter 0.2s, opacity 0.2s;
-        flex: 0 0 auto;
-        width: 18%;
-        scroll-snap-align: center;
+        flex: 1;
         padding: 0.5rem 0;
-        margin: 0 0.15rem;
+        margin: 0;
         border-radius: 12px;
         opacity: 0.55;
         filter: grayscale(0.6);

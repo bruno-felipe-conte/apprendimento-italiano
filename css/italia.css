@@ -102,7 +102,7 @@ input,textarea,select { font-family:inherit; }
 }
 .nav-tabs::-webkit-scrollbar { display:none; }
 
-.tab-btn {
+.nav-tab {
   font-family:var(--fonte-ui); font-size:.8rem; font-weight:500;
   color:var(--cor-inchiostro-claro); background-color:var(--cor-marmore-escuro);
   border:1px solid var(--cor-pietra); border-bottom:none;
@@ -112,12 +112,12 @@ input,textarea,select { font-family:inherit; }
   transition:color var(--trans-rapida),background-color var(--trans-rapida),transform var(--trans-rapida);
   position:relative;
 }
-.tab-btn:hover { color:var(--cor-veneziano); background-color:var(--cor-marmore); transform:translateY(-2px); }
-.tab-btn.active {
+.nav-tab:hover { color:var(--cor-veneziano); background-color:var(--cor-marmore); transform:translateY(-2px); }
+.nav-tab.ativa {
   color:var(--cor-veneziano); background-color:var(--cor-marmore);
   font-weight:600; border-color:var(--cor-veneziano);
 }
-.tab-btn.active::after {
+.nav-tab.ativa::after {
   content:''; position:absolute; bottom:-3px; left:0; right:0;
   height:3px;
   background:linear-gradient(90deg,var(--cor-toscano),var(--cor-veneziano),var(--cor-toscano));
