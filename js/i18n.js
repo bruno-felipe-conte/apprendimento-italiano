@@ -43,6 +43,31 @@ const I18n = {
     'cfg_sons_ligados': { pt: 'Sons: Ligados', it: 'Suoni: Attivi' },
     'cfg_sons_desligados': { pt: 'Sons: Desligados', it: 'Suoni: Disattivati' },
     
+    // ── Modal Meta de XP (Configurações) ──
+    'meta_diaria_xp': { pt: 'Meta Diária de XP', it: 'Obiettivo Quotidiano XP' },
+    'quantos_xp': { pt: 'Quantos XP quer ganhar por dia?', it: 'Quanti XP vuoi guadagnare al giorno?' },
+
+    // ── Modal Meta com Prazo ──
+    'meta_minha': { pt: '🎯 Minha Meta', it: '🎯 Il Mio Obiettivo' },
+    'meta_nivel': { pt: 'Quero atingir o nível:', it: 'Voglio raggiungere il livello:' },
+    'meta_data': { pt: 'Até a data:', it: 'Entro il:' },
+    'meta_definir': { pt: 'Definir Meta', it: 'Imposta Obiettivo' },
+    'meta_remover': { pt: 'Remover meta atual', it: 'Rimuovi obiettivo attuale' },
+    'nivel_5': { pt: 'Nível 5 — Principiante (A1)', it: 'Livello 5 — Principiante (A1)' },
+    'nivel_10': { pt: 'Nível 10 — Intermediário (A2)', it: 'Livello 10 — Intermedio (A2)' },
+    'nivel_15': { pt: 'Nível 15 — Avançado (B1)', it: 'Livello 15 — Avanzato (B1)' },
+    'nivel_20': { pt: 'Nível 20 — Maestro (B2)', it: 'Livello 20 — Maestro (B2)' },
+    
+    // ── Perfil e Gestão de Dados ──
+    'prof_gestao_dati': { pt: '⚙️ Gestão de Dados', it: '⚙️ Gestione Dati' },
+    'prof_backup_desc': { pt: 'O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.', it: 'Italiano Autentico salva i tuoi progressi localmente sul tuo dispositivo. Fai regolarmente un backup per non perdere i tuoi dati se cancelli la cronologia del browser.' },
+    'prof_exp_backup': { pt: '⬇️ Exportar Backup', it: '⬇️ Esporta Backup' },
+    'prof_imp_backup': { pt: '⬆️ Importar Backup', it: '⬆️ Importa Backup' },
+    'prof_azzera': { pt: '⚠️ Apagar Tudo', it: '⚠️ Azzera Tutto' },
+    'prof_conteudo_criado': { pt: 'Conteúdo Criado por Mim', it: 'Contenuto Creato da Me' },
+    'prof_exp_conteudo': { pt: '⬇️ Exportar Músicas e Diálogos', it: '⬇️ Esporta Canzoni e Dialoghi' },
+    'prof_imp_conteudo': { pt: '⬆️ Importar Conteúdo', it: '⬆️ Importa Contenuto' },
+    
     // ── Seção Templos ──
     'templi_titulo': { pt: 'Sua Jornada', it: 'Il Tuo Viaggio' },
     'templi_sub': { pt: 'Explore os templos e domine o vocabulário.', it: 'Esplora i templi e padroneggia il vocabolario.' },

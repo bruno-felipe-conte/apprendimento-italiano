@@ -2032,15 +2032,15 @@
   <!-- Meta settings modal -->
   <div class="meta-settings-modal" id="meta-settings-modal" onclick="if(event.target===this)App.fecharMetaSettings()">
     <div class="meta-modal-card">
-      <p class="meta-modal-titulo">Meta Diária de XP</p>
-      <p class="meta-modal-sub">Quantos XP quer ganhar por dia?</p>
+      <p class="meta-modal-titulo" data-i18n="meta_diaria_xp">Meta Diária de XP</p>
+      <p class="meta-modal-sub" data-i18n="quantos_xp">Quantos XP quer ganhar por dia?</p>
       <div class="meta-opcoes">
         <button class="meta-op-btn" data-val="50"  onclick="App.setMeta(50)">50<br><small>XP</small></button>
         <button class="meta-op-btn" data-val="100" onclick="App.setMeta(100)">100<br><small>XP</small></button>
         <button class="meta-op-btn" data-val="200" onclick="App.setMeta(200)">200<br><small>XP</small></button>
         <button class="meta-op-btn" data-val="500" onclick="App.setMeta(500)">500<br><small>XP</small></button>
       </div>
-      <button class="btn-primario" onclick="App.fecharMetaSettings()">Fechar</button>
+      <button class="btn-primario" onclick="App.fecharMetaSettings()" data-i18n="btn_fechar">Fechar</button>
     </div>
   </div>
 
@@ -2389,21 +2389,21 @@
   </script>
   <div id="modal-meta-prazo" class="modal" style="display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem;">
     <div class="modal-conteudo" style="background:#fff; border-radius:18px; padding:2rem; max-width:400px; width:100%; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,0.2);">
-      <h3 style="font-family:'Cinzel',serif;color:#9B2335;margin-bottom:1rem;font-size:1.3rem;">🎯 Minha Meta</h3>
-      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;">Quero atingir o nível:</label>
+      <h3 style="font-family:'Cinzel',serif;color:#9B2335;margin-bottom:1rem;font-size:1.3rem;" data-i18n="meta_minha">🎯 Minha Meta</h3>
+      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_nivel">Quero atingir o nível:</label>
       <select id="meta-nivel-alvo" style="width:100%;margin-bottom:1rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
-        <option value="5">Nível 5 — Principiante (A1)</option>
-        <option value="10">Nível 10 — Intermediário (A2)</option>
-        <option value="15">Nível 15 — Avançado (B1)</option>
-        <option value="20">Nível 20 — Maestro (B2)</option>
+        <option value="5" data-i18n="nivel_5">Nível 5 — Principiante (A1)</option>
+        <option value="10" data-i18n="nivel_10">Nível 10 — Intermediário (A2)</option>
+        <option value="15" data-i18n="nivel_15">Nível 15 — Avançado (B1)</option>
+        <option value="20" data-i18n="nivel_20">Nível 20 — Maestro (B2)</option>
       </select>
-      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;">Até a data:</label>
+      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_data">Até a data:</label>
       <input type="date" id="meta-data-alvo" style="width:100%;margin-bottom:1.5rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
       <div style="display:flex;gap:0.5rem;">
-        <button class="btn-primario" style="flex:1" onclick="App.confirmarMetaPrazo()">Definir Meta</button>
-        <button class="btn-secondario" style="flex:1" onclick="App.fecharModalMetaPrazo()">Cancelar</button>
+        <button class="btn-primario" style="flex:1" onclick="App.confirmarMetaPrazo()" data-i18n="meta_definir">Definir Meta</button>
+        <button class="btn-secondario" style="flex:1" onclick="App.fecharModalMetaPrazo()" data-i18n="btn_cancelar">Cancelar</button>
       </div>
-      <button onclick="Progressao.removerMetaPrazo();App.fecharModalMetaPrazo();App.renderizarTemplos();" style="width:100%;margin-top:1rem;background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.85rem;font-weight:700;">Remover meta atual</button>
+      <button onclick="Progressao.removerMetaPrazo();App.fecharModalMetaPrazo();App.renderizarTemplos();" style="width:100%;margin-top:1rem;background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.85rem;font-weight:700;" data-i18n="meta_remover">Remover meta atual</button>
     </div>
   </div>
 

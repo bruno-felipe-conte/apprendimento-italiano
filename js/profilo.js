@@ -101,22 +101,22 @@ const Profilo = {
         </div>
 
         <div class="profilo-card" style="margin-top:1.5rem">
-          <div class="profilo-card-titulo">⚙️ Gestione Dati</div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.</p>
+          <div class="profilo-card-titulo">${typeof I18n !== 'undefined' ? I18n.t('prof_gestao_dati') : '⚙️ Gestione Dati'}</div>
+          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${typeof I18n !== 'undefined' ? I18n.t('prof_backup_desc') : 'Italiano Autentico salva i tuoi progressi localmente sul tuo dispositivo. Fai regolarmente un backup per non perdere i tuoi dati se cancelli la cronologia del browser.'}</p>
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button class="btn-secondario" onclick="Profilo.exportarDados()">⬇️ Exportar Backup</button>
-            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">⬆️ Importar Backup</button>
-            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">⚠️ Azzera Tutto</button>
+            <button class="btn-secondario" onclick="Profilo.exportarDados()">${typeof I18n !== 'undefined' ? I18n.t('prof_exp_backup') : '⬇️ Esporta Backup'}</button>
+            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${typeof I18n !== 'undefined' ? I18n.t('prof_imp_backup') : '⬆️ Importa Backup'}</button>
+            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${typeof I18n !== 'undefined' ? I18n.t('prof_azzera') : '⚠️ Azzera Tutto'}</button>
           </div>
           <!-- Conteúdo Criado por Mim -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
-            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">Conteúdo Criado por Mim</div>
+            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">${typeof I18n !== 'undefined' ? I18n.t('prof_conteudo_criado') : 'Contenuto Creato da Me'}</div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
               <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
-                ⬇️ Exportar Músicas e Diálogos
+                ${typeof I18n !== 'undefined' ? I18n.t('prof_exp_conteudo') : '⬇️ Esporta Canzoni e Dialoghi'}
               </button>
               <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="font-size:0.82rem">
-                ⬆️ Importar Conteúdo
+                ${typeof I18n !== 'undefined' ? I18n.t('prof_imp_conteudo') : '⬆️ Importa Contenuto'}
               </button>
             </div>
           </div>
