@@ -5,30 +5,6 @@
   "nivel": "B1",
   "palavras": [
     {
-      "id": "t29_001",
-      "italiano": "cinema",
-      "portugues": "cinema",
-      "genero": "m",
-      "plural": "cinema",
-      "exemplo": "Andiamo al cinema stasera.",
-      "exemplo_pt": "Vamos ao cinema hoje à noite.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃinema/"
-    },
-    {
-      "id": "t29_002",
-      "italiano": "teatro",
-      "portugues": "teatro",
-      "genero": "m",
-      "plural": "teatri",
-      "exemplo": "Lo spettacolo a teatro.",
-      "exemplo_pt": "O espetáculo no teatro.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/teˈatro/"
-    },
-    {
       "id": "t29_003",
       "italiano": "film",
       "portugues": "filme",
@@ -39,30 +15,6 @@
       "categoria": "opere",
       "dificuldade": "medio",
       "audio_ipa": "/film/"
-    },
-    {
-      "id": "t29_004",
-      "italiano": "spettacolo",
-      "portugues": "espetáculo",
-      "genero": "m",
-      "plural": "spettacoli",
-      "exemplo": "Uno spettacolo teatrale.",
-      "exemplo_pt": "Um espetáculo teatral.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/spetˈtakolo/"
-    },
-    {
-      "id": "t29_005",
-      "italiano": "commedia",
-      "portugues": "comédia",
-      "genero": "f",
-      "plural": "commedie",
-      "exemplo": "Una commedia divertente.",
-      "exemplo_pt": "Uma comédia divertida.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈmɛdja/"
     },
     {
       "id": "t29_006",
@@ -185,42 +137,6 @@
       "audio_ipa": "/atˈtore/"
     },
     {
-      "id": "t29_016",
-      "italiano": "attrice",
-      "portugues": "atriz",
-      "genero": "f",
-      "plural": "attrici",
-      "exemplo": "L'attrice ha vinto l'Oscar.",
-      "exemplo_pt": "A atriz ganhou o Oscar.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/atˈtritʃe/"
-    },
-    {
-      "id": "t29_017",
-      "italiano": "regista",
-      "portugues": "diretor (cinema/teatro)",
-      "genero": "m/f",
-      "plural": "registi",
-      "exemplo": "Il regista del film.",
-      "exemplo_pt": "O diretor do filme.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/reˈdʒista/"
-    },
-    {
-      "id": "t29_018",
-      "italiano": "protagonista",
-      "portugues": "protagonista",
-      "genero": "m/f",
-      "plural": "protagonisti",
-      "exemplo": "Il protagonista della storia.",
-      "exemplo_pt": "O protagonista da história.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/protaɡoˈnista/"
-    },
-    {
       "id": "t29_019",
       "italiano": "personaggio",
       "portugues": "personagem",
@@ -293,54 +209,6 @@
       "audio_ipa": "/spettaˈtore/"
     },
     {
-      "id": "t29_025",
-      "italiano": "pubblico",
-      "portugues": "público",
-      "genero": "m",
-      "plural": "pubblici",
-      "exemplo": "Il pubblico in sala.",
-      "exemplo_pt": "O público na sala.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpubbliko/"
-    },
-    {
-      "id": "t29_026",
-      "italiano": "biglietto",
-      "portugues": "bilhete/ingresso",
-      "genero": "m",
-      "plural": "biglietti",
-      "exemplo": "Compra il biglietto.",
-      "exemplo_pt": "Compre o ingresso.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/biʎˈʎetto/"
-    },
-    {
-      "id": "t29_027",
-      "italiano": "schermo",
-      "portugues": "tela",
-      "genero": "m",
-      "plural": "schermi",
-      "exemplo": "Il grande schermo.",
-      "exemplo_pt": "A tela grande.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskermo/"
-    },
-    {
-      "id": "t29_028",
-      "italiano": "palcoscenico",
-      "portugues": "palco",
-      "genero": "m",
-      "plural": "palcoscenici",
-      "exemplo": "Salire sul palcoscenico.",
-      "exemplo_pt": "Subir no palco.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/palkoʃˈʃɛniko/"
-    },
-    {
       "id": "t29_029",
       "italiano": "sipario",
       "portugues": "cortina (teatro)",
@@ -365,18 +233,6 @@
       "audio_ipa": "/ˈsala/"
     },
     {
-      "id": "t29_031",
-      "italiano": "poltrona",
-      "portugues": "poltrona/cadeira",
-      "genero": "f",
-      "plural": "poltrone",
-      "exemplo": "Una poltrona comoda.",
-      "exemplo_pt": "Uma poltrona confortável.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/polˈtrona/"
-    },
-    {
       "id": "t29_032",
       "italiano": "fila",
       "portugues": "fila",
@@ -399,18 +255,6 @@
       "categoria": "elementi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈʃɛna/"
-    },
-    {
-      "id": "t29_034",
-      "italiano": "trama",
-      "portugues": "enredo/trama",
-      "genero": "f",
-      "plural": "trame",
-      "exemplo": "La trama è avvincente.",
-      "exemplo_pt": "O enredo é envolvente.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtrama/"
     },
     {
       "id": "t29_035",
@@ -509,18 +353,6 @@
       "audio_ipa": "/ˈprɛmjo/"
     },
     {
-      "id": "t29_043",
-      "italiano": "festival",
-      "portugues": "festival",
-      "genero": "m",
-      "plural": "festival",
-      "exemplo": "Il festival del cinema di Venezia.",
-      "exemplo_pt": "O festival de cinema de Veneza.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfɛstival/"
-    },
-    {
       "id": "t29_044",
       "italiano": "intervallo",
       "portugues": "intervalo",
@@ -543,18 +375,6 @@
       "categoria": "elementi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈatto/"
-    },
-    {
-      "id": "t29_046",
-      "italiano": "battuta",
-      "portugues": "fala (teatro)",
-      "genero": "f",
-      "plural": "battute",
-      "exemplo": "Ha dimenticato la sua battuta.",
-      "exemplo_pt": "Esqueceu a sua fala.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/batˈtuta/"
     },
     {
       "id": "t29_047",
@@ -581,30 +401,6 @@
       "audio_ipa": "/retʃiˈtare/"
     },
     {
-      "id": "t29_049",
-      "italiano": "dirigere",
-      "portugues": "dirigir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il regista dirige gli attori.",
-      "exemplo_pt": "O diretor dirige os atores.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈridʒere/"
-    },
-    {
-      "id": "t29_050",
-      "italiano": "girare",
-      "portugues": "filmar/gravar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Girare un film a Roma.",
-      "exemplo_pt": "Filmar um filme em Roma.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dʒiˈrare/"
-    },
-    {
       "id": "t29_051",
       "italiano": "interpretare",
       "portugues": "interpretar",
@@ -617,30 +413,6 @@
       "audio_ipa": "/interpreˈtare/"
     },
     {
-      "id": "t29_052",
-      "italiano": "guardare",
-      "portugues": "assistir/olhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Guardare un film sul divano.",
-      "exemplo_pt": "Assistir um filme no sofá.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡwarˈdare/"
-    },
-    {
-      "id": "t29_053",
-      "italiano": "vedere",
-      "portugues": "ver",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Andiamo a vedere uno spettacolo.",
-      "exemplo_pt": "Vamos ver um espetáculo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/veˈdere/"
-    },
-    {
       "id": "t29_054",
       "italiano": "proiettare",
       "portugues": "projetar",
@@ -651,54 +423,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/projetˈtare/"
-    },
-    {
-      "id": "t29_055",
-      "italiano": "applaudire",
-      "portugues": "aplaudir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il pubblico inizia ad applaudire.",
-      "exemplo_pt": "O público começa a aplaudir.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/applauˈdire/"
-    },
-    {
-      "id": "t29_056",
-      "italiano": "fischiare",
-      "portugues": "vaiar/assobiar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il pubblico ha fischiato.",
-      "exemplo_pt": "O público vaiou.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/fisˈkjare/"
-    },
-    {
-      "id": "t29_057",
-      "italiano": "piangere",
-      "portugues": "chorar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Piangere durante un film.",
-      "exemplo_pt": "Chorar durante um filme.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjandʒere/"
-    },
-    {
-      "id": "t29_058",
-      "italiano": "ridere",
-      "portugues": "rir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ridere a crepapelle.",
-      "exemplo_pt": "Rir às gargalhadas.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈridere/"
     },
     {
       "id": "t29_059",
@@ -723,18 +447,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/annoˈjare/"
-    },
-    {
-      "id": "t29_061",
-      "italiano": "prenotare",
-      "portugues": "reservar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Prenotare i posti al cinema.",
-      "exemplo_pt": "Reservar os lugares no cinema.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/prenoˈtare/"
     },
     {
       "id": "t29_062",
@@ -773,18 +485,6 @@
       "audio_ipa": "/dopˈpjare/"
     },
     {
-      "id": "t29_065",
-      "italiano": "scrivere",
-      "portugues": "escrever",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scrivere la sceneggiatura.",
-      "exemplo_pt": "Escrever o roteiro.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskrivere/"
-    },
-    {
       "id": "t29_066",
       "italiano": "truccare",
       "portugues": "maquiar",
@@ -807,30 +507,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/ezorˈdire/"
-    },
-    {
-      "id": "t29_068",
-      "italiano": "divertente",
-      "portugues": "divertido",
-      "genero": "m",
-      "plural": "divertenti",
-      "exemplo": "Un film molto divertente.",
-      "exemplo_pt": "Um filme muito divertido.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/diverˈtɛnte/"
-    },
-    {
-      "id": "t29_069",
-      "italiano": "noioso",
-      "portugues": "chato",
-      "genero": "m",
-      "plural": "noiosi",
-      "exemplo": "Uno spettacolo noioso.",
-      "exemplo_pt": "Um espetáculo chato.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/noˈjozo/"
     },
     {
       "id": "t29_070",
@@ -869,30 +545,6 @@
       "audio_ipa": "/avvinˈtʃɛnte/"
     },
     {
-      "id": "t29_073",
-      "italiano": "lento",
-      "portugues": "lento",
-      "genero": "m",
-      "plural": "lenti",
-      "exemplo": "Un ritmo troppo lento.",
-      "exemplo_pt": "Um ritmo muito lento.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlɛnto/"
-    },
-    {
-      "id": "t29_074",
-      "italiano": "veloce",
-      "portugues": "rápido",
-      "genero": "m",
-      "plural": "veloci",
-      "exemplo": "Azione molto veloce.",
-      "exemplo_pt": "Ação muito rápida.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/veˈlotʃe/"
-    },
-    {
       "id": "t29_075",
       "italiano": "drammatico",
       "portugues": "dramático",
@@ -915,18 +567,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkɔmiko/"
-    },
-    {
-      "id": "t29_077",
-      "italiano": "romantico",
-      "portugues": "romântico",
-      "genero": "m",
-      "plural": "romantici",
-      "exemplo": "Un film romantico.",
-      "exemplo_pt": "Um filme romântico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/roˈmantiko/"
     },
     {
       "id": "t29_078",
@@ -989,18 +629,6 @@
       "audio_ipa": "/dopˈpjato/"
     },
     {
-      "id": "t29_083",
-      "italiano": "famoso",
-      "portugues": "famoso",
-      "genero": "m",
-      "plural": "famosi",
-      "exemplo": "Un regista famoso.",
-      "exemplo_pt": "Um diretor famoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/faˈmozo/"
-    },
-    {
       "id": "t29_084",
       "italiano": "premiato",
       "portugues": "premiado",
@@ -1023,42 +651,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/indipenˈdɛnte/"
-    },
-    {
-      "id": "t29_086",
-      "italiano": "classico",
-      "portugues": "clássico",
-      "genero": "m",
-      "plural": "classici",
-      "exemplo": "Un classico del cinema.",
-      "exemplo_pt": "Um clássico do cinema.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklassiko/"
-    },
-    {
-      "id": "t29_087",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Un teatro moderno.",
-      "exemplo_pt": "Um teatro moderno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
-    },
-    {
-      "id": "t29_088",
-      "italiano": "esaurito",
-      "portugues": "esgotado",
-      "genero": "m",
-      "plural": "esauriti",
-      "exemplo": "Biglietti esauriti.",
-      "exemplo_pt": "Ingressos esgotados.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ezauˈrito/"
     },
     {
       "id": "t29_089",
@@ -1313,16 +905,388 @@
       "audio_ipa": "/kostuˈmista/"
     },
     {
-      "id": "t29_110",
-      "italiano": "maschera",
-      "portugues": "lanterneirinho (teatro)",
-      "genero": "f",
-      "plural": "maschere",
-      "exemplo": "Chiedi alla maschera in sala.",
-      "exemplo_pt": "Pergunte ao funcionário na sala.",
-      "categoria": "persone",
+      "id": "t29_r06",
+      "italiano": "colpo di scena",
+      "portugues": "reviravolta",
+      "genero": "m",
+      "plural": "colpi di scena",
+      "exemplo": "Il colpo di scena ci ha sorpresi.",
+      "exemplo_pt": "A reviravolta nos surpreendeu.",
+      "categoria": "cinema",
       "dificuldade": "medio",
-      "audio_ipa": "/ˈmaskera/"
+      "audio_ipa": "/ˈkolpo di ˈʃɛːna/"
+    },
+    {
+      "id": "t29_r07",
+      "italiano": "flashback",
+      "portugues": "flashback",
+      "genero": "m",
+      "plural": "flashback",
+      "exemplo": "Il flashback rivela il passato.",
+      "exemplo_pt": "O flashback revela o passado.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈflaʃbak/"
+    },
+    {
+      "id": "t29_r08",
+      "italiano": "dissolvenza",
+      "portugues": "fade / dissolução",
+      "genero": "f",
+      "plural": "dissolvenze",
+      "exemplo": "La dissolvenza chiude la scena.",
+      "exemplo_pt": "O fade encerra a cena.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/dissolˈvɛntsa/"
+    },
+    {
+      "id": "t29_r10",
+      "italiano": "doppiaggio",
+      "portugues": "dublagem",
+      "genero": "m",
+      "plural": "doppiaggi",
+      "exemplo": "Il doppiaggio italiano è eccellente.",
+      "exemplo_pt": "A dublagem italiana é excelente.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/dopˈpjaddʒo/"
+    },
+    {
+      "id": "t29_r11",
+      "italiano": "sottotitolo",
+      "portugues": "legenda",
+      "genero": "m",
+      "plural": "sottotitoli",
+      "exemplo": "I sottotitoli aiutano la comprensione.",
+      "exemplo_pt": "As legendas ajudam na compreensão.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/sottoˈtiːtolo/"
+    },
+    {
+      "id": "t29_r12",
+      "italiano": "anteprima",
+      "portugues": "pré-estreia",
+      "genero": "f",
+      "plural": "anteprime",
+      "exemplo": "L'anteprima è riservata alla stampa.",
+      "exemplo_pt": "A pré-estreia é reservada à imprensa.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/anteˈpriːma/"
+    },
+    {
+      "id": "t29_r20",
+      "italiano": "tournée",
+      "portugues": "tournê",
+      "genero": "f",
+      "plural": "tournée",
+      "exemplo": "La compagnia è in tournée.",
+      "exemplo_pt": "A companhia está em tournê.",
+      "categoria": "teatro",
+      "dificuldade": "medio",
+      "audio_ipa": "/turˈneː/"
+    },
+    {
+      "id": "t29_r24",
+      "italiano": "monologo",
+      "portugues": "monólogo",
+      "genero": "m",
+      "plural": "monologhi",
+      "exemplo": "Il monologo dura dieci minuti.",
+      "exemplo_pt": "O monólogo dura dez minutos.",
+      "categoria": "teatro",
+      "dificuldade": "medio",
+      "audio_ipa": "/monoˈlɔːɡo/"
+    },
+    {
+      "id": "t29_r26",
+      "italiano": "scenografia",
+      "portugues": "cenografia",
+      "genero": "f",
+      "plural": "scenografie",
+      "exemplo": "La scenografia è minimalista.",
+      "exemplo_pt": "A cenografia é minimalista.",
+      "categoria": "teatro",
+      "dificuldade": "medio",
+      "audio_ipa": "/ʃenoˈɡraːfja/"
+    },
+    {
+      "id": "t29_r27",
+      "italiano": "regia",
+      "portugues": "direção",
+      "genero": "f",
+      "plural": "regie",
+      "exemplo": "La regia è molto creativa.",
+      "exemplo_pt": "A direção é muito criativa.",
+      "categoria": "teatro",
+      "dificuldade": "medio",
+      "audio_ipa": "/reˈdʒiːa/"
+    },
+    {
+      "id": "t29_r28",
+      "italiano": "cast",
+      "portugues": "elenco",
+      "genero": "m",
+      "plural": "cast",
+      "exemplo": "Il cast è stellare.",
+      "exemplo_pt": "O elenco é estrelado.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/kast/"
+    },
+    {
+      "id": "t29_r30",
+      "italiano": "distribuzione",
+      "portugues": "distribuição",
+      "genero": "f",
+      "plural": "distribuzioni",
+      "exemplo": "La distribuzione è mondiale.",
+      "exemplo_pt": "A distribuição é mundial.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/distributˈtsjoːne/"
+    },
+    {
+      "id": "t29_p01",
+      "italiano": "cinepresa",
+      "portugues": "câmera de cinema",
+      "genero": "f",
+      "plural": "cineprese",
+      "exemplo": "La cinepresa riprende la scena.",
+      "exemplo_pt": "A câmera de cinema filma a cena.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/tʃineˈpreːza/"
+    },
+    {
+      "id": "t29_p03",
+      "italiano": "carrellata",
+      "portugues": "travelling",
+      "genero": "f",
+      "plural": "carrellate",
+      "exemplo": "La carrellata segue il personaggio.",
+      "exemplo_pt": "O travelling segue o personagem.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/karelˈlaːta/"
+    },
+    {
+      "id": "t29_p04",
+      "italiano": "zoom",
+      "portugues": "zoom",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo zoom avvicina il soggetto.",
+      "exemplo_pt": "O zoom aproxima o sujeito.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/zuːm/"
+    },
+    {
+      "id": "t29_p05",
+      "italiano": "piano americano",
+      "portugues": "plano americano",
+      "genero": "m",
+      "plural": "piani americani",
+      "exemplo": "Il piano americano taglia alle ginocchia.",
+      "exemplo_pt": "O plano americano corta nos joelhos.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpjaːno ameriˈkaːno/"
+    },
+    {
+      "id": "t29_p06",
+      "italiano": "primo piano",
+      "portugues": "close-up / primeiro plano",
+      "genero": "m",
+      "plural": "primi piani",
+      "exemplo": "Il primo piano rivela le emozioni.",
+      "exemplo_pt": "O close-up revela as emoções.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpriːmo ˈpjaːno/"
+    },
+    {
+      "id": "t29_p07",
+      "italiano": "campo lungo",
+      "portugues": "plano geral",
+      "genero": "m",
+      "plural": "campi lunghi",
+      "exemplo": "Il campo lungo mostra l'ambiente.",
+      "exemplo_pt": "O plano geral mostra o ambiente.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkampo ˈluŋɡo/"
+    },
+    {
+      "id": "t29_p08",
+      "italiano": "soggettiva",
+      "portugues": "subjetiva / ponto de vista",
+      "genero": "f",
+      "plural": "soggettive",
+      "exemplo": "La soggettiva mostra cosa vede il personaggio.",
+      "exemplo_pt": "A subjetiva mostra o que o personagem vê.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/soddʒetˈtiːva/"
+    },
+    {
+      "id": "t29_p09",
+      "italiano": "montaggio",
+      "portugues": "montagem",
+      "genero": "m",
+      "plural": "montaggi",
+      "exemplo": "Il montaggio crea il ritmo del film.",
+      "exemplo_pt": "A montagem cria o ritmo do filme.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/monˈtaddʒo/"
+    },
+    {
+      "id": "t29_p10",
+      "italiano": "storyboard",
+      "portugues": "storyboard",
+      "genero": "m",
+      "plural": "storyboard",
+      "exemplo": "Lo storyboard pianifica le riprese.",
+      "exemplo_pt": "O storyboard planeja as filmagens.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈstɔːribɔrd/"
+    },
+    {
+      "id": "t29_p12",
+      "italiano": "set cinematografico",
+      "portugues": "set cinematográfico",
+      "genero": "m",
+      "plural": "set cinematografici",
+      "exemplo": "Il set è chiuso al pubblico.",
+      "exemplo_pt": "O set está fechado ao público.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/sɛt tʃinematoˈɡraːfiko/"
+    },
+    {
+      "id": "t29_p13",
+      "italiano": "location",
+      "portugues": "locação / locação de filmagem",
+      "genero": "f",
+      "plural": "location",
+      "exemplo": "La location è perfetta per il film.",
+      "exemplo_pt": "A locação é perfeita para o filme.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/loˈkeɪʃon/"
+    },
+    {
+      "id": "t29_p17",
+      "italiano": "CGI",
+      "portugues": "CGI / efeitos digitais",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il CGI crea mondi impossibili.",
+      "exemplo_pt": "O CGI cria mundos impossíveis.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˌtʃidʒˈiː/"
+    },
+    {
+      "id": "t29_p18",
+      "italiano": "genere cinematografico",
+      "portugues": "gênero cinematográfico",
+      "genero": "m",
+      "plural": "generi cinematografici",
+      "exemplo": "Il thriller è un genere popolare.",
+      "exemplo_pt": "O thriller é um gênero popular.",
+      "categoria": "cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdʒɛnere tʃinematoˈɡraːfiko/"
+    },
+    {
+      "id": "t29_f01",
+      "italiano": "cinema neorealista",
+      "portugues": "cinema neorrealista",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il cinema neorealista è di De Sica.",
+      "exemplo_pt": "O cinema neorrealista é de De Sica.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtʃiːnema neoreˈalista/"
+    },
+    {
+      "id": "t29_f02",
+      "italiano": "western all'italiana",
+      "portugues": "faroeste italiano",
+      "genero": "m",
+      "plural": "western all'italiana",
+      "exemplo": "Il western all'italiana è di Leone.",
+      "exemplo_pt": "O faroeste italiano é de Leone.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈwɛstern alliˈtaːljana/"
+    },
+    {
+      "id": "t29_f03",
+      "italiano": "film d'autore",
+      "portugues": "filme de autor",
+      "genero": "m",
+      "plural": "film d'autore",
+      "exemplo": "Il film d'autore è personale.",
+      "exemplo_pt": "O filme de autor é pessoal.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/film dˈauˈtɔːre/"
+    },
+    {
+      "id": "t29_f04",
+      "italiano": "mockumentary",
+      "portugues": "mockumentary",
+      "genero": "m",
+      "plural": "mockumentary",
+      "exemplo": "Il mockumentary finge di essere un doc.",
+      "exemplo_pt": "O mockumentary finge ser um documentário.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔkdjuˈmentəri/"
+    },
+    {
+      "id": "t29_f05",
+      "italiano": "film muto",
+      "portugues": "filme mudo",
+      "genero": "m",
+      "plural": "film muti",
+      "exemplo": "Il film muto precede il sonoro.",
+      "exemplo_pt": "O filme mudo precede o sonoro.",
+      "categoria": "storia del cinema",
+      "dificuldade": "medio",
+      "audio_ipa": "/film ˈmuːto/"
+    },
+    {
+      "id": "t29_f06",
+      "italiano": "bianco e nero",
+      "portugues": "preto e branco",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il bianco e nero è elegante.",
+      "exemplo_pt": "O preto e branco é elegante.",
+      "categoria": "tecnica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbjanko e ˈnɛːro/"
+    },
+    {
+      "id": "t29_f07",
+      "italiano": "widescreen",
+      "portugues": "widescreen / cinemascope",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il widescreen allarga il campo visivo.",
+      "exemplo_pt": "O widescreen amplia o campo visual.",
+      "categoria": "tecnica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈwaɪdskriːn/"
     }
   ]
 }

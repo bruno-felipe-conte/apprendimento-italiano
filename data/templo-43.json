@@ -5,42 +5,6 @@
   "nivel": "B2",
   "palavras": [
     {
-      "id": "t43_001",
-      "italiano": "mito",
-      "portugues": "mito",
-      "genero": "m",
-      "plural": "miti",
-      "exemplo": "Un mito greco.",
-      "exemplo_pt": "Um mito grego.",
-      "categoria": "mitologia",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈmito/"
-    },
-    {
-      "id": "t43_002",
-      "italiano": "leggenda",
-      "portugues": "lenda",
-      "genero": "f",
-      "plural": "leggende",
-      "exemplo": "La leggenda di Re Artù.",
-      "exemplo_pt": "A lenda do Rei Arthur.",
-      "categoria": "mitologia",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ledˈdʒɛnda/"
-    },
-    {
-      "id": "t43_003",
-      "italiano": "dio",
-      "portugues": "deus",
-      "genero": "m",
-      "plural": "dei",
-      "exemplo": "Il dio del tuono.",
-      "exemplo_pt": "O deus do trovão.",
-      "categoria": "divinità",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈdio/"
-    },
-    {
       "id": "t43_004",
       "italiano": "dea",
       "portugues": "deusa",
@@ -353,30 +317,6 @@
       "audio_ipa": "/oˈrakolo/"
     },
     {
-      "id": "t43_030",
-      "italiano": "tempio",
-      "portugues": "templo",
-      "genero": "m",
-      "plural": "tempi",
-      "exemplo": "Il tempio di Apollo.",
-      "exemplo_pt": "O templo de Apolo.",
-      "categoria": "luoghi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈtɛmpjo/"
-    },
-    {
-      "id": "t43_031",
-      "italiano": "altare",
-      "portugues": "altar",
-      "genero": "m",
-      "plural": "altari",
-      "exemplo": "Un sacrificio sull'altare.",
-      "exemplo_pt": "Um sacrifício no altar.",
-      "categoria": "luoghi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/alˈtare/"
-    },
-    {
       "id": "t43_032",
       "italiano": "spada",
       "portugues": "espada",
@@ -387,18 +327,6 @@
       "categoria": "oggetti",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈspada/"
-    },
-    {
-      "id": "t43_033",
-      "italiano": "scudo",
-      "portugues": "escudo",
-      "genero": "m",
-      "plural": "scudi",
-      "exemplo": "Lo scudo magico.",
-      "exemplo_pt": "O escudo mágico.",
-      "categoria": "oggetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈskudo/"
     },
     {
       "id": "t43_034",
@@ -485,18 +413,6 @@
       "audio_ipa": "/sakriˈfitʃo/"
     },
     {
-      "id": "t43_041",
-      "italiano": "offerta",
-      "portugues": "oferenda",
-      "genero": "f",
-      "plural": "offerte",
-      "exemplo": "Un'offerta agli dei.",
-      "exemplo_pt": "Uma oferenda aos deuses.",
-      "categoria": "oggetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ofˈfɛrta/"
-    },
-    {
       "id": "t43_042",
       "italiano": "talismano",
       "portugues": "talismã",
@@ -531,18 +447,6 @@
       "categoria": "oggetti",
       "dificuldade": "difficile",
       "audio_ipa": "/teˈzɔro/"
-    },
-    {
-      "id": "t43_045",
-      "italiano": "destino",
-      "portugues": "destino",
-      "genero": "m",
-      "plural": "destini",
-      "exemplo": "Le Moire tessono il destino.",
-      "exemplo_pt": "As Moiras tecem o destino.",
-      "categoria": "concetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/desˈtino/"
     },
     {
       "id": "t43_046",
@@ -617,18 +521,6 @@
       "audio_ipa": "/kasˈtiɡo/"
     },
     {
-      "id": "t43_052",
-      "italiano": "peccato",
-      "portugues": "pecado (hybris)",
-      "genero": "m",
-      "plural": "peccati",
-      "exemplo": "L'orgoglio è un peccato.",
-      "exemplo_pt": "O orgulho é um pecado.",
-      "categoria": "concetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/pekˈkato/"
-    },
-    {
       "id": "t43_053",
       "italiano": "eroismo",
       "portugues": "heroísmo",
@@ -653,30 +545,6 @@
       "audio_ipa": "/metaˈmɔrfozi/"
     },
     {
-      "id": "t43_055",
-      "italiano": "creare",
-      "portugues": "criar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Creare l'universo.",
-      "exemplo_pt": "Criar o universo.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/kreˈare/"
-    },
-    {
-      "id": "t43_056",
-      "italiano": "distruggere",
-      "portugues": "destruir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Distruggere la città.",
-      "exemplo_pt": "Destruir a cidade.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/disˈtruddʒere/"
-    },
-    {
       "id": "t43_057",
       "italiano": "trasformare",
       "portugues": "transformar",
@@ -699,30 +567,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/inɡanˈnare/"
-    },
-    {
-      "id": "t43_059",
-      "italiano": "combattere",
-      "portugues": "combater/lutar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Combattere il drago.",
-      "exemplo_pt": "Lutar com o dragão.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/komˈbattere/"
-    },
-    {
-      "id": "t43_060",
-      "italiano": "sconfiggere",
-      "portugues": "derrotar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Sconfiggere il mostro.",
-      "exemplo_pt": "Derrotar o monstro.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/skonˈfiddʒere/"
     },
     {
       "id": "t43_061",
@@ -773,30 +617,6 @@
       "audio_ipa": "/skompaˈrire/"
     },
     {
-      "id": "t43_065",
-      "italiano": "evocare",
-      "portugues": "evocar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Evocare gli spiriti.",
-      "exemplo_pt": "Evocar os espíritos.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/evoˈkare/"
-    },
-    {
-      "id": "t43_066",
-      "italiano": "pregare",
-      "portugues": "rezar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Pregare gli dei.",
-      "exemplo_pt": "Rezar aos deuses.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/preˈɡare/"
-    },
-    {
       "id": "t43_067",
       "italiano": "maledire",
       "portugues": "amaldiçoar",
@@ -833,18 +653,6 @@
       "audio_ipa": "/inkanˈtare/"
     },
     {
-      "id": "t43_070",
-      "italiano": "risorgere",
-      "portugues": "ressuscitar/renascer",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Risorgere dalle ceneri.",
-      "exemplo_pt": "Renascer das cinzas.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/riˈzordʒere/"
-    },
-    {
       "id": "t43_071",
       "italiano": "punire",
       "portugues": "punir",
@@ -855,18 +663,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/puˈnire/"
-    },
-    {
-      "id": "t43_072",
-      "italiano": "salvare",
-      "portugues": "salvar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Salvare la principessa.",
-      "exemplo_pt": "Salvar a princesa.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/salˈvare/"
     },
     {
       "id": "t43_073",
@@ -917,30 +713,6 @@
       "audio_ipa": "/leddʒenˈdarjo/"
     },
     {
-      "id": "t43_077",
-      "italiano": "divino",
-      "portugues": "divino",
-      "genero": "m",
-      "plural": "divini",
-      "exemplo": "Il potere divino.",
-      "exemplo_pt": "O poder divino.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/diˈvino/"
-    },
-    {
-      "id": "t43_078",
-      "italiano": "sacro",
-      "portugues": "sagrado",
-      "genero": "m",
-      "plural": "sacri",
-      "exemplo": "Un bosco sacro.",
-      "exemplo_pt": "Um bosque sagrado.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈsakro/"
-    },
-    {
       "id": "t43_079",
       "italiano": "magico",
       "portugues": "mágico",
@@ -965,18 +737,6 @@
       "audio_ipa": "/soprannatuˈrale/"
     },
     {
-      "id": "t43_081",
-      "italiano": "immortale",
-      "portugues": "imortal",
-      "genero": "m",
-      "plural": "immortali",
-      "exemplo": "Gli dei sono immortali.",
-      "exemplo_pt": "Os deuses são imortais.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/immorˈtale/"
-    },
-    {
       "id": "t43_082",
       "italiano": "mortale",
       "portugues": "mortal",
@@ -987,18 +747,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/morˈtale/"
-    },
-    {
-      "id": "t43_083",
-      "italiano": "eroico",
-      "portugues": "heroico",
-      "genero": "m",
-      "plural": "eroici",
-      "exemplo": "Un gesto eroico.",
-      "exemplo_pt": "Um gesto heroico.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/eˈrɔiko/"
     },
     {
       "id": "t43_084",
@@ -1023,30 +771,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/faˈtato/"
-    },
-    {
-      "id": "t43_086",
-      "italiano": "oscuro",
-      "portugues": "escuro/sombrio",
-      "genero": "m",
-      "plural": "oscuri",
-      "exemplo": "Una selva oscura.",
-      "exemplo_pt": "Uma selva sombria.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/osˈkuro/"
-    },
-    {
-      "id": "t43_087",
-      "italiano": "luminoso",
-      "portugues": "luminoso",
-      "genero": "m",
-      "plural": "luminosi",
-      "exemplo": "Un dio luminoso.",
-      "exemplo_pt": "Um deus luminoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/lumiˈnozo/"
     },
     {
       "id": "t43_088",
@@ -1145,18 +869,6 @@
       "audio_ipa": "/ˈsatiro/"
     },
     {
-      "id": "t43_096",
-      "italiano": "arpa",
-      "portugues": "harpa",
-      "genero": "f",
-      "plural": "arpe",
-      "exemplo": "Suonare l'arpa magica.",
-      "exemplo_pt": "Tocar a harpa mágica.",
-      "categoria": "oggetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈarpa/"
-    },
-    {
       "id": "t43_097",
       "italiano": "pegaso",
       "portugues": "pégaso",
@@ -1167,18 +879,6 @@
       "categoria": "creature",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈpɛɡazo/"
-    },
-    {
-      "id": "t43_098",
-      "italiano": "unicorno",
-      "portugues": "unicórnio",
-      "genero": "m",
-      "plural": "unicorni",
-      "exemplo": "Il corno dell'unicorno.",
-      "exemplo_pt": "O chifre do unicórnio.",
-      "categoria": "creature",
-      "dificuldade": "difficile",
-      "audio_ipa": "/uniˈkɔrno/"
     },
     {
       "id": "t43_099",
@@ -1215,18 +915,6 @@
       "categoria": "creature",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈaraba feˈnitʃe/"
-    },
-    {
-      "id": "t43_102",
-      "italiano": "medusa",
-      "portugues": "medusa",
-      "genero": "f",
-      "plural": "meduse",
-      "exemplo": "Lo sguardo di Medusa.",
-      "exemplo_pt": "O olhar da Medusa.",
-      "categoria": "creature",
-      "dificuldade": "difficile",
-      "audio_ipa": "/meˈduza/"
     },
     {
       "id": "t43_103",
@@ -1289,18 +977,6 @@
       "audio_ipa": "/valˈkirja/"
     },
     {
-      "id": "t43_108",
-      "italiano": "troll",
-      "portugues": "troll (mitologia)",
-      "genero": "m",
-      "plural": "troll",
-      "exemplo": "Un troll di montagna.",
-      "exemplo_pt": "Um troll da montanha.",
-      "categoria": "creature",
-      "dificuldade": "difficile",
-      "audio_ipa": "/trɔl/"
-    },
-    {
       "id": "t43_109",
       "italiano": "goblin",
       "portugues": "goblin",
@@ -1313,16 +989,304 @@
       "audio_ipa": "/ˈɡɔblin/"
     },
     {
-      "id": "t43_110",
-      "italiano": "oracolo",
-      "portugues": "oráculo",
+      "id": "t43_r01",
+      "italiano": "mito fondativo",
+      "portugues": "mito fundador",
       "genero": "m",
-      "plural": "oracoli",
-      "exemplo": "Consultare l'oracolo.",
-      "exemplo_pt": "Consultar o oráculo.",
-      "categoria": "luoghi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/oˈrakolo/"
+      "plural": "miti fondativi",
+      "exemplo": "Il mito fondativo spiega le origini.",
+      "exemplo_pt": "O mito fundador explica as origens.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmiːto fondaˈtiːvo/"
+    },
+    {
+      "id": "t43_r02",
+      "italiano": "cosmogonia",
+      "portugues": "cosmogonia",
+      "genero": "f",
+      "plural": "cosmogonie",
+      "exemplo": "La cosmogonia descrive la creazione.",
+      "exemplo_pt": "A cosmogonia descreve a criação.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/kozmoˈɡɔːnja/"
+    },
+    {
+      "id": "t43_r03",
+      "italiano": "teogonia",
+      "portugues": "teogonia",
+      "genero": "f",
+      "plural": "teogonie",
+      "exemplo": "La Teogonia di Esiodo narra gli dei.",
+      "exemplo_pt": "A Teogonia de Hesíodo narra os deuses.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/teoˈɡɔːnja/"
+    },
+    {
+      "id": "t43_r04",
+      "italiano": "pantheon",
+      "portugues": "panteão",
+      "genero": "m",
+      "plural": "pantheon",
+      "exemplo": "Il pantheon greco aveva dodici dei.",
+      "exemplo_pt": "O panteão grego tinha doze deuses.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/panˈtɛːon/"
+    },
+    {
+      "id": "t43_r07",
+      "italiano": "eroe mitico",
+      "portugues": "herói mítico",
+      "genero": "m",
+      "plural": "eroi mitici",
+      "exemplo": "Achille è il grande eroe mitico.",
+      "exemplo_pt": "Aquiles é o grande herói mítico.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/eˈrɔːe ˈmiːtiko/"
+    },
+    {
+      "id": "t43_r13",
+      "italiano": "moira",
+      "portugues": "moira",
+      "genero": "f",
+      "plural": "moire",
+      "exemplo": "Le Moire tessevano il destino.",
+      "exemplo_pt": "As Moiras teciam o destino.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔːira/"
+    },
+    {
+      "id": "t43_r16",
+      "italiano": "eliso",
+      "portugues": "Elísio",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Gli eroi andavano all'Eliso.",
+      "exemplo_pt": "Os heróis iam para o Elísio.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/eˈliːzo/"
+    },
+    {
+      "id": "t43_r17",
+      "italiano": "totem",
+      "portugues": "totem",
+      "genero": "m",
+      "plural": "totem",
+      "exemplo": "Il totem rappresenta il clan.",
+      "exemplo_pt": "O totem representa o clã.",
+      "categoria": "antropologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɔːtem/"
+    },
+    {
+      "id": "t43_r18",
+      "italiano": "tabù",
+      "portugues": "tabu",
+      "genero": "m",
+      "plural": "tabù",
+      "exemplo": "Il tabù proibisce certi comportamenti.",
+      "exemplo_pt": "O tabu proíbe certos comportamentos.",
+      "categoria": "antropologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/taˈbu/"
+    },
+    {
+      "id": "t43_r19",
+      "italiano": "rito di passaggio",
+      "portugues": "rito de passagem",
+      "genero": "m",
+      "plural": "riti di passaggio",
+      "exemplo": "Il rito di passaggio segna la maturità.",
+      "exemplo_pt": "O rito de passagem marca a maturidade.",
+      "categoria": "antropologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈriːto di pasˈsaddʒo/"
+    },
+    {
+      "id": "t43_r20",
+      "italiano": "sciamano",
+      "portugues": "xamã",
+      "genero": "m",
+      "plural": "sciamani",
+      "exemplo": "Lo sciamano media tra mondi.",
+      "exemplo_pt": "O xamã media entre mundos.",
+      "categoria": "antropologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈʃaːmano/"
+    },
+    {
+      "id": "t43_r21",
+      "italiano": "mito di Prometeo",
+      "portugues": "mito de Prometeu",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Prometeo rubò il fuoco agli dei.",
+      "exemplo_pt": "Prometeu roubou o fogo dos deuses.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmiːto di proˈmɛːteo/"
+    },
+    {
+      "id": "t43_r22",
+      "italiano": "mito di Narciso",
+      "portugues": "mito de Narciso",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Narciso si innamorò della sua immagine.",
+      "exemplo_pt": "Narciso se apaixonou pela própria imagem.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmiːto di narˈtʃiːzo/"
+    },
+    {
+      "id": "t43_r23",
+      "italiano": "mito di Edipo",
+      "portugues": "mito de Édipo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Edipo uccise il padre senza saperlo.",
+      "exemplo_pt": "Édipo matou o pai sem saber.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmiːto di ˈɛːdipo/"
+    },
+    {
+      "id": "t43_r24",
+      "italiano": "saga nordica",
+      "portugues": "saga nórdica",
+      "genero": "f",
+      "plural": "saghe nordiche",
+      "exemplo": "La saga nordica narra i vichinghi.",
+      "exemplo_pt": "A saga nórdica narra os vikings.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsaːɡa ˈnɔrdika/"
+    },
+    {
+      "id": "t43_r25",
+      "italiano": "valhalla",
+      "portugues": "Valhalla",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il Valhalla è il paradiso dei guerrieri.",
+      "exemplo_pt": "O Valhalla é o paraíso dos guerreiros.",
+      "categoria": "mitologia nordica",
+      "dificuldade": "medio",
+      "audio_ipa": "/valˈhalla/"
+    },
+    {
+      "id": "t43_f01",
+      "italiano": "araldo",
+      "portugues": "arauto / heraldo",
+      "genero": "m",
+      "plural": "araldi",
+      "exemplo": "L'araldo annunciava le notizie.",
+      "exemplo_pt": "O arauto anunciava as notícias.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/aˈraldo/"
+    },
+    {
+      "id": "t43_f02",
+      "italiano": "blasone",
+      "portugues": "brasão / heráldica",
+      "genero": "m",
+      "plural": "blasoni",
+      "exemplo": "Il blasone identifica la famiglia nobile.",
+      "exemplo_pt": "O brasão identifica a família nobre.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/blaˈzoːne/"
+    },
+    {
+      "id": "t43_f03",
+      "italiano": "stemma familiare",
+      "portugues": "brasão familiar",
+      "genero": "m",
+      "plural": "stemmi familiari",
+      "exemplo": "Lo stemma familiare è ereditato.",
+      "exemplo_pt": "O brasão familiar é herdado.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈstɛmma famiˈljaːre/"
+    },
+    {
+      "id": "t43_f05",
+      "italiano": "Poseidone",
+      "portugues": "Posêidon",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Poseidone governa il mare.",
+      "exemplo_pt": "Posêidon governa o mar.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/pozeiˈdoːne/"
+    },
+    {
+      "id": "t43_f06",
+      "italiano": "Afrodite",
+      "portugues": "Afrodite",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Afrodite è la dea dell'amore.",
+      "exemplo_pt": "Afrodite é a deusa do amor.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/afroˈdiːte/"
+    },
+    {
+      "id": "t43_f07",
+      "italiano": "Eros",
+      "portugues": "Eros",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Eros scoccava le frecce d'amore.",
+      "exemplo_pt": "Eros disparava as flechas do amor.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɛros/"
+    },
+    {
+      "id": "t43_f08",
+      "italiano": "Artemide",
+      "portugues": "Ártemis",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Artemide è la dea della caccia.",
+      "exemplo_pt": "Ártemis é a deusa da caça.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/arˈtɛːmide/"
+    },
+    {
+      "id": "t43_f09",
+      "italiano": "Ermes",
+      "portugues": "Hermes",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Ermes è il messaggero degli dei.",
+      "exemplo_pt": "Hermes é o mensageiro dos deuses.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɛrmes/"
+    },
+    {
+      "id": "t43_g01",
+      "italiano": "mitopoiesi",
+      "portugues": "mitopoiese",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La mitopoiesi crea nuovi miti.",
+      "exemplo_pt": "A mitopoiese cria novos mitos.",
+      "categoria": "mitologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/mitopoˈjɛːzi/"
     }
   ]
 }

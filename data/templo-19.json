@@ -5,66 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t19_001",
-      "italiano": "aereo",
-      "portugues": "avião",
-      "genero": "m",
-      "plural": "aerei",
-      "exemplo": "Prendo l'aereo per Roma.",
-      "exemplo_pt": "Pego o avião para Roma.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/aˈɛreo/"
-    },
-    {
-      "id": "t19_002",
-      "italiano": "treno",
-      "portugues": "trem",
-      "genero": "m",
-      "plural": "treni",
-      "exemplo": "Il treno parte in orario.",
-      "exemplo_pt": "O trem parte no horário.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtrɛno/"
-    },
-    {
-      "id": "t19_003",
-      "italiano": "autobus",
-      "portugues": "ônibus",
-      "genero": "m",
-      "plural": "autobus",
-      "exemplo": "L'autobus è sempre pieno.",
-      "exemplo_pt": "O ônibus está sempre cheio.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈautobus/"
-    },
-    {
-      "id": "t19_004",
-      "italiano": "macchina",
-      "portugues": "carro",
-      "genero": "f",
-      "plural": "macchine",
-      "exemplo": "Ho comprato una macchina nuova.",
-      "exemplo_pt": "Comprei um carro novo.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmakkina/"
-    },
-    {
-      "id": "t19_005",
-      "italiano": "bicicletta",
-      "portugues": "bicicleta",
-      "genero": "f",
-      "plural": "biciclette",
-      "exemplo": "Vado in bicicletta al parco.",
-      "exemplo_pt": "Vou de bicicleta ao parque.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/bitʃiˈkletta/"
-    },
-    {
       "id": "t19_006",
       "italiano": "moto",
       "portugues": "moto",
@@ -173,18 +113,6 @@
       "audio_ipa": "/ˈkamjon/"
     },
     {
-      "id": "t19_015",
-      "italiano": "taxi",
-      "portugues": "táxi",
-      "genero": "m",
-      "plural": "taxi",
-      "exemplo": "Chiamo un taxi per l'hotel.",
-      "exemplo_pt": "Chamo um táxi para o hotel.",
-      "categoria": "mezzi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtaksi/"
-    },
-    {
       "id": "t19_016",
       "italiano": "scooter",
       "portugues": "scooter",
@@ -209,30 +137,6 @@
       "audio_ipa": "/funiˈvia/"
     },
     {
-      "id": "t19_018",
-      "italiano": "stazione",
-      "portugues": "estação",
-      "genero": "f",
-      "plural": "stazioni",
-      "exemplo": "La stazione ferroviaria è vicina.",
-      "exemplo_pt": "A estação ferroviária é perto.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/statˈtsjone/"
-    },
-    {
-      "id": "t19_019",
-      "italiano": "aeroporto",
-      "portugues": "aeroporto",
-      "genero": "m",
-      "plural": "aeroporti",
-      "exemplo": "L'aeroporto è fuori città.",
-      "exemplo_pt": "O aeroporto fica fora da cidade.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/aeroˈpɔrto/"
-    },
-    {
       "id": "t19_020",
       "italiano": "porto",
       "portugues": "porto",
@@ -243,18 +147,6 @@
       "categoria": "infrastrutture",
       "dificuldade": "medio",
       "audio_ipa": "/ˈpɔrto/"
-    },
-    {
-      "id": "t19_021",
-      "italiano": "fermata",
-      "portugues": "parada",
-      "genero": "f",
-      "plural": "fermate",
-      "exemplo": "Scendo alla prossima fermata.",
-      "exemplo_pt": "Desço na próxima parada.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/ferˈmata/"
     },
     {
       "id": "t19_022",
@@ -291,18 +183,6 @@
       "categoria": "infrastrutture",
       "dificuldade": "medio",
       "audio_ipa": "/ˈstrada/"
-    },
-    {
-      "id": "t19_025",
-      "italiano": "incrocio",
-      "portugues": "cruzamento",
-      "genero": "m",
-      "plural": "incroci",
-      "exemplo": "Gira a destra all'incrocio.",
-      "exemplo_pt": "Vire à direita no cruzamento.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/inˈkrotʃo/"
     },
     {
       "id": "t19_026",
@@ -365,18 +245,6 @@
       "audio_ipa": "/kaˈzɛllo/"
     },
     {
-      "id": "t19_031",
-      "italiano": "pista",
-      "portugues": "pista",
-      "genero": "f",
-      "plural": "piste",
-      "exemplo": "L'aereo è sulla pista.",
-      "exemplo_pt": "O avião está na pista.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpista/"
-    },
-    {
       "id": "t19_032",
       "italiano": "banchina",
       "portugues": "caís",
@@ -387,42 +255,6 @@
       "categoria": "infrastrutture",
       "dificuldade": "medio",
       "audio_ipa": "/banˈkina/"
-    },
-    {
-      "id": "t19_033",
-      "italiano": "biglietto",
-      "portugues": "bilhete/passagem",
-      "genero": "m",
-      "plural": "biglietti",
-      "exemplo": "Hai comprato il biglietto?",
-      "exemplo_pt": "Você comprou a passagem?",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/biʎˈʎetto/"
-    },
-    {
-      "id": "t19_034",
-      "italiano": "passaporto",
-      "portugues": "passaporte",
-      "genero": "m",
-      "plural": "passaporti",
-      "exemplo": "Mostra il passaporto.",
-      "exemplo_pt": "Mostre o passaporte.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/passaˈpɔrto/"
-    },
-    {
-      "id": "t19_035",
-      "italiano": "valigia",
-      "portugues": "mala",
-      "genero": "f",
-      "plural": "valigie",
-      "exemplo": "Ho preparato la valigia.",
-      "exemplo_pt": "Arrumei a mala.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/vaˈlidʒa/"
     },
     {
       "id": "t19_036",
@@ -485,18 +317,6 @@
       "audio_ipa": "/kointʃiˈdɛntsa/"
     },
     {
-      "id": "t19_041",
-      "italiano": "orario",
-      "portugues": "horário",
-      "genero": "m",
-      "plural": "orari",
-      "exemplo": "Consulta l'orario dei treni.",
-      "exemplo_pt": "Consulte o horário dos trens.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/oˈrarjo/"
-    },
-    {
       "id": "t19_042",
       "italiano": "passeggero",
       "portugues": "passageiro",
@@ -557,18 +377,6 @@
       "audio_ipa": "/destinatˈtsjone/"
     },
     {
-      "id": "t19_047",
-      "italiano": "mappa",
-      "portugues": "mapa",
-      "genero": "f",
-      "plural": "mappe",
-      "exemplo": "Guardo la mappa della città.",
-      "exemplo_pt": "Olho o mapa da cidade.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmappa/"
-    },
-    {
       "id": "t19_048",
       "italiano": "rotta",
       "portugues": "rota",
@@ -615,18 +423,6 @@
       "categoria": "viaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈvisto/"
-    },
-    {
-      "id": "t19_052",
-      "italiano": "turista",
-      "portugues": "turista",
-      "genero": "m",
-      "plural": "turisti",
-      "exemplo": "La città è piena di turisti.",
-      "exemplo_pt": "A cidade está cheia de turistas.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/tuˈrista/"
     },
     {
       "id": "t19_053",
@@ -785,54 +581,6 @@
       "audio_ipa": "/peˈdaddʒo/"
     },
     {
-      "id": "t19_066",
-      "italiano": "multa",
-      "portugues": "multa",
-      "genero": "f",
-      "plural": "multe",
-      "exemplo": "Ho preso una multa.",
-      "exemplo_pt": "Levei uma multa.",
-      "categoria": "veicoli",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmulta/"
-    },
-    {
-      "id": "t19_067",
-      "italiano": "viaggiare",
-      "portugues": "viajar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Amo viaggiare per il mondo.",
-      "exemplo_pt": "Amo viajar pelo mundo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/vjadˈdʒare/"
-    },
-    {
-      "id": "t19_068",
-      "italiano": "partire",
-      "portugues": "partir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Domani partiamo per Napoli.",
-      "exemplo_pt": "Amanhã partimos para Nápoles.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/parˈtire/"
-    },
-    {
-      "id": "t19_069",
-      "italiano": "arrivare",
-      "portugues": "chegar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Siamo appena arrivati.",
-      "exemplo_pt": "Acabamos de chegar.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/arriˈvare/"
-    },
-    {
       "id": "t19_070",
       "italiano": "prendere",
       "portugues": "pegar",
@@ -893,18 +641,6 @@
       "audio_ipa": "/parkedˈdʒare/"
     },
     {
-      "id": "t19_075",
-      "italiano": "prenotare",
-      "portugues": "reservar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Devo prenotare il volo.",
-      "exemplo_pt": "Preciso reservar o voo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/prenoˈtare/"
-    },
-    {
       "id": "t19_076",
       "italiano": "annullare",
       "portugues": "cancelar",
@@ -963,18 +699,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/kammiˈnare/"
-    },
-    {
-      "id": "t19_081",
-      "italiano": "attraversare",
-      "portugues": "atravessar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Attraversare la strada con cura.",
-      "exemplo_pt": "Atravessar a rua com cuidado.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/attraverˈsare/"
     },
     {
       "id": "t19_082",
@@ -1059,30 +783,6 @@
       "categoria": "altro",
       "dificuldade": "medio",
       "audio_ipa": "/ˈlɛnto/"
-    },
-    {
-      "id": "t19_089",
-      "italiano": "lontano",
-      "portugues": "longe",
-      "genero": "m",
-      "plural": "lontani",
-      "exemplo": "La stazione è lontana.",
-      "exemplo_pt": "A estação é longe.",
-      "categoria": "altro",
-      "dificuldade": "medio",
-      "audio_ipa": "/lonˈtano/"
-    },
-    {
-      "id": "t19_090",
-      "italiano": "vicino",
-      "portugues": "perto",
-      "genero": "m",
-      "plural": "vicini",
-      "exemplo": "L'aeroporto è vicino.",
-      "exemplo_pt": "O aeroporto é perto.",
-      "categoria": "altro",
-      "dificuldade": "medio",
-      "audio_ipa": "/viˈtʃino/"
     },
     {
       "id": "t19_091",
@@ -1217,30 +917,6 @@
       "audio_ipa": "/konduˈtʃɛnte/"
     },
     {
-      "id": "t19_102",
-      "italiano": "autista",
-      "portugues": "motorista",
-      "genero": "m",
-      "plural": "autisti",
-      "exemplo": "L'autista dell'autobus.",
-      "exemplo_pt": "O motorista do ônibus.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/auˈtista/"
-    },
-    {
-      "id": "t19_103",
-      "italiano": "pilota",
-      "portugues": "piloto",
-      "genero": "m",
-      "plural": "piloti",
-      "exemplo": "Il pilota guida l'aereo.",
-      "exemplo_pt": "O piloto guia o avião.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/piˈlɔta/"
-    },
-    {
       "id": "t19_104",
       "italiano": "passeggera",
       "portugues": "passageira",
@@ -1323,6 +999,294 @@
       "categoria": "viaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈstjuard/"
+    },
+    {
+      "id": "t19_r02",
+      "italiano": "motocicletta",
+      "portugues": "motocicleta",
+      "genero": "f",
+      "plural": "motociclette",
+      "exemplo": "La motocicletta è veloce.",
+      "exemplo_pt": "A motocicleta é rápida.",
+      "categoria": "mezzi",
+      "dificuldade": "medio",
+      "audio_ipa": "/motottʃiˈkletta/"
+    },
+    {
+      "id": "t19_r08",
+      "italiano": "scalo",
+      "portugues": "escala",
+      "genero": "m",
+      "plural": "scali",
+      "exemplo": "Il volo ha uno scalo a Parigi.",
+      "exemplo_pt": "O voo tem uma escala em Paris.",
+      "categoria": "viaggio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈskaːlo/"
+    },
+    {
+      "id": "t19_r10",
+      "italiano": "noleggio",
+      "portugues": "aluguel",
+      "genero": "m",
+      "plural": "noleggi",
+      "exemplo": "Il noleggio dell'auto costa poco.",
+      "exemplo_pt": "O aluguel do carro custa pouco.",
+      "categoria": "servizi",
+      "dificuldade": "medio",
+      "audio_ipa": "/noˈleddʒo/"
+    },
+    {
+      "id": "t19_r11",
+      "italiano": "tariffa",
+      "portugues": "tarifa",
+      "genero": "f",
+      "plural": "tariffe",
+      "exemplo": "La tariffa aerea è alta in agosto.",
+      "exemplo_pt": "A tarifa aérea é alta em agosto.",
+      "categoria": "costi",
+      "dificuldade": "medio",
+      "audio_ipa": "/taˈriffa/"
+    },
+    {
+      "id": "t19_r12",
+      "italiano": "imbarco",
+      "portugues": "embarque",
+      "genero": "m",
+      "plural": "imbarchi",
+      "exemplo": "Il gate di imbarco è il 12.",
+      "exemplo_pt": "O portão de embarque é o 12.",
+      "categoria": "aeroporto",
+      "dificuldade": "medio",
+      "audio_ipa": "/imˈbarko/"
+    },
+    {
+      "id": "t19_r13",
+      "italiano": "sbarco",
+      "portugues": "desembarque",
+      "genero": "m",
+      "plural": "sbarchi",
+      "exemplo": "Lo sbarco richiede tempo.",
+      "exemplo_pt": "O desembarque leva tempo.",
+      "categoria": "aeroporto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈzbarko/"
+    },
+    {
+      "id": "t19_r16",
+      "italiano": "valuta",
+      "portugues": "moeda",
+      "genero": "f",
+      "plural": "valute",
+      "exemplo": "Cambio la valuta in banca.",
+      "exemplo_pt": "Troco a moeda no banco.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/vaˈluːta/"
+    },
+    {
+      "id": "t19_r17",
+      "italiano": "cambio",
+      "portugues": "câmbio",
+      "genero": "m",
+      "plural": "cambi",
+      "exemplo": "Il cambio euro-dollaro è favorevole.",
+      "exemplo_pt": "O câmbio euro-dólar está favorável.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkambjo/"
+    },
+    {
+      "id": "t19_r19",
+      "italiano": "escursione",
+      "portugues": "excursão",
+      "genero": "f",
+      "plural": "escursioni",
+      "exemplo": "Facciamo un'escursione in barca.",
+      "exemplo_pt": "Fazemos uma excursão de barco.",
+      "categoria": "viaggio",
+      "dificuldade": "medio",
+      "audio_ipa": "/eskurˈsjoːne/"
+    },
+    {
+      "id": "t19_r21",
+      "italiano": "prenotazione",
+      "portugues": "reserva",
+      "genero": "f",
+      "plural": "prenotazioni",
+      "exemplo": "Ho fatto la prenotazione online.",
+      "exemplo_pt": "Fiz a reserva online.",
+      "categoria": "servizi",
+      "dificuldade": "medio",
+      "audio_ipa": "/prenotaˈtsjoːne/"
+    },
+    {
+      "id": "t19_r23",
+      "italiano": "pedagogo",
+      "portugues": "pedágio",
+      "genero": "m",
+      "plural": "pedaggi",
+      "exemplo": "Il pedaggio autostradale è caro.",
+      "exemplo_pt": "O pedágio da autoestrada é caro.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/peˈdaɡɡo/"
+    },
+    {
+      "id": "t19_r26",
+      "italiano": "svincolo",
+      "portugues": "entroncamento / saída",
+      "genero": "m",
+      "plural": "svincoli",
+      "exemplo": "Prendo lo svincolo per Milano.",
+      "exemplo_pt": "Pego a saída para Milão.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈzvinkolo/"
+    },
+    {
+      "id": "t19_r27",
+      "italiano": "corsia",
+      "portugues": "faixa / corredor",
+      "genero": "f",
+      "plural": "corsie",
+      "exemplo": "Mantieni la corsia di destra.",
+      "exemplo_pt": "Mantenha a faixa da direita.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/korˈsiːa/"
+    },
+    {
+      "id": "t19_r28",
+      "italiano": "senso unico",
+      "portugues": "mão única",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Questa è una strada a senso unico.",
+      "exemplo_pt": "Esta é uma rua de mão única.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsɛnso ˈuːniko/"
+    },
+    {
+      "id": "t19_r29",
+      "italiano": "rotatoria",
+      "portugues": "rotatória",
+      "genero": "f",
+      "plural": "rotatorie",
+      "exemplo": "C'è una rotatoria alla fine della via.",
+      "exemplo_pt": "Há uma rotatória no fim da rua.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/rotaˈtɔːrja/"
+    },
+    {
+      "id": "t19_r31",
+      "italiano": "tangenziale",
+      "portugues": "contorno / perimetral",
+      "genero": "f",
+      "plural": "tangenziali",
+      "exemplo": "La tangenziale evita il centro.",
+      "exemplo_pt": "O contorno evita o centro.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/tandʒenˈtsjaːle/"
+    },
+    {
+      "id": "t19_r32",
+      "italiano": "superstrada",
+      "portugues": "via expressa",
+      "genero": "f",
+      "plural": "superstrade",
+      "exemplo": "La superstrada è gratuita.",
+      "exemplo_pt": "A via expressa é gratuita.",
+      "categoria": "strada",
+      "dificuldade": "medio",
+      "audio_ipa": "/superˈstraːda/"
+    },
+    {
+      "id": "t19_r33",
+      "italiano": "navigatore",
+      "portugues": "GPS / navegador",
+      "genero": "m",
+      "plural": "navigatori",
+      "exemplo": "Il navigatore indica la strada.",
+      "exemplo_pt": "O navegador indica o caminho.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/navigaˈtoːre/"
+    },
+    {
+      "id": "t19_r34",
+      "italiano": "sorpasso",
+      "portugues": "ultrapassagem",
+      "genero": "m",
+      "plural": "sorpassi",
+      "exemplo": "Il sorpasso è vietato qui.",
+      "exemplo_pt": "A ultrapassagem é proibida aqui.",
+      "categoria": "guida",
+      "dificuldade": "medio",
+      "audio_ipa": "/sorˈpasso/"
+    },
+    {
+      "id": "t19_s01",
+      "italiano": "motoscafo",
+      "portugues": "lancha",
+      "genero": "m",
+      "plural": "motoscafi",
+      "exemplo": "Il motoscafo è veloce in laguna.",
+      "exemplo_pt": "A lancha é veloz na laguna.",
+      "categoria": "mezzi",
+      "dificuldade": "medio",
+      "audio_ipa": "/motoˈskaːfo/"
+    },
+    {
+      "id": "t19_s02",
+      "italiano": "imbarcazione",
+      "portugues": "embarcação",
+      "genero": "f",
+      "plural": "imbarcazioni",
+      "exemplo": "L'imbarcazione è piccola.",
+      "exemplo_pt": "A embarcação é pequena.",
+      "categoria": "mezzi",
+      "dificuldade": "medio",
+      "audio_ipa": "/imbarkaˈtsjoːne/"
+    },
+    {
+      "id": "t19_s03",
+      "italiano": "ferrovia",
+      "portugues": "ferrovia",
+      "genero": "f",
+      "plural": "ferrovie",
+      "exemplo": "La ferrovia attraversa la pianura.",
+      "exemplo_pt": "A ferrovia atravessa a planície.",
+      "categoria": "mezzi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ferroˈviːa/"
+    },
+    {
+      "id": "t19_s05",
+      "italiano": "carrozza",
+      "portugues": "vagão",
+      "genero": "f",
+      "plural": "carrozze",
+      "exemplo": "La carrozza ristorante è in fondo.",
+      "exemplo_pt": "O vagão restaurante fica ao fundo.",
+      "categoria": "treno",
+      "dificuldade": "medio",
+      "audio_ipa": "/karˈrɔttsa/"
+    },
+    {
+      "id": "t19_g01",
+      "italiano": "porto turistico",
+      "portugues": "porto turístico",
+      "genero": "m",
+      "plural": "porti turistici",
+      "exemplo": "Il porto turistico ha molte barche.",
+      "exemplo_pt": "O porto turístico tem muitos barcos.",
+      "categoria": "mezzi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɔrto tuˈristiko/"
     }
   ]
 }

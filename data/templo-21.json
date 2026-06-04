@@ -209,18 +209,6 @@
       "audio_ipa": "/ɡratiˈtudine/"
     },
     {
-      "id": "t21_018",
-      "italiano": "passione",
-      "portugues": "paixão",
-      "genero": "f",
-      "plural": "passioni",
-      "exemplo": "Canta con passione.",
-      "exemplo_pt": "Canta com paixão.",
-      "categoria": "positive",
-      "dificuldade": "medio",
-      "audio_ipa": "/pasˈsjone/"
-    },
-    {
       "id": "t21_019",
       "italiano": "tenerezza",
       "portugues": "ternura",
@@ -363,30 +351,6 @@
       "categoria": "negative",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkolpa/"
-    },
-    {
-      "id": "t21_031",
-      "italiano": "ansia",
-      "portugues": "ansiedade",
-      "genero": "f",
-      "plural": "ansie",
-      "exemplo": "Soffre di ansia.",
-      "exemplo_pt": "Sofre de ansiedade.",
-      "categoria": "negative",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈansja/"
-    },
-    {
-      "id": "t21_032",
-      "italiano": "stress",
-      "portugues": "estresse",
-      "genero": "m",
-      "plural": "stress",
-      "exemplo": "Lo stress da lavoro.",
-      "exemplo_pt": "O estresse do trabalho.",
-      "categoria": "negative",
-      "dificuldade": "medio",
-      "audio_ipa": "/strɛs/"
     },
     {
       "id": "t21_033",
@@ -545,42 +509,6 @@
       "audio_ipa": "/ˈpena/"
     },
     {
-      "id": "t21_046",
-      "italiano": "felice",
-      "portugues": "feliz",
-      "genero": "m",
-      "plural": "felici",
-      "exemplo": "Sono molto felice.",
-      "exemplo_pt": "Estou muito feliz.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/feˈlitʃe/"
-    },
-    {
-      "id": "t21_047",
-      "italiano": "triste",
-      "portugues": "triste",
-      "genero": "m",
-      "plural": "tristi",
-      "exemplo": "Perché sei così triste?",
-      "exemplo_pt": "Por que você está tão triste?",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtriste/"
-    },
-    {
-      "id": "t21_048",
-      "italiano": "arrabbiato",
-      "portugues": "zangado",
-      "genero": "m",
-      "plural": "arrabbiati",
-      "exemplo": "Lui è arrabbiato con me.",
-      "exemplo_pt": "Ele está zangado comigo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/arrabˈbjato/"
-    },
-    {
       "id": "t21_049",
       "italiano": "spaventato",
       "portugues": "assustado",
@@ -591,18 +519,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/spavenˈtato/"
-    },
-    {
-      "id": "t21_050",
-      "italiano": "sorpreso",
-      "portugues": "surpreso",
-      "genero": "m",
-      "plural": "sorpresi",
-      "exemplo": "Sono sorpreso dalla notizia.",
-      "exemplo_pt": "Estou surpreso com a notícia.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/sorˈprezo/"
     },
     {
       "id": "t21_051",
@@ -629,18 +545,6 @@
       "audio_ipa": "/emotsjoˈnato/"
     },
     {
-      "id": "t21_053",
-      "italiano": "preoccupato",
-      "portugues": "preocupado",
-      "genero": "m",
-      "plural": "preoccupati",
-      "exemplo": "Non essere preoccupato.",
-      "exemplo_pt": "Não fique preocupado.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/preokkuˈpato/"
-    },
-    {
       "id": "t21_054",
       "italiano": "deluso",
       "portugues": "decepcionado",
@@ -663,18 +567,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkalmo/"
-    },
-    {
-      "id": "t21_056",
-      "italiano": "nervoso",
-      "portugues": "nervoso",
-      "genero": "m",
-      "plural": "nervosi",
-      "exemplo": "Oggi mi sento nervoso.",
-      "exemplo_pt": "Hoje me sinto nervoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/nerˈvozo/"
     },
     {
       "id": "t21_057",
@@ -737,18 +629,6 @@
       "audio_ipa": "/insiˈkuro/"
     },
     {
-      "id": "t21_062",
-      "italiano": "amare",
-      "portugues": "amar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Amo la mia famiglia.",
-      "exemplo_pt": "Amo a minha família.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/aˈmare/"
-    },
-    {
       "id": "t21_063",
       "italiano": "odiare",
       "portugues": "odiar",
@@ -759,54 +639,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/oˈdjare/"
-    },
-    {
-      "id": "t21_064",
-      "italiano": "piangere",
-      "portugues": "chorar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il bambino comincia a piangere.",
-      "exemplo_pt": "O bebê começa a chorar.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjandʒere/"
-    },
-    {
-      "id": "t21_065",
-      "italiano": "ridere",
-      "portugues": "rir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Mi fai sempre ridere.",
-      "exemplo_pt": "Você me faz rir sempre.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈridere/"
-    },
-    {
-      "id": "t21_066",
-      "italiano": "sorridere",
-      "portugues": "sorrir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Sorridi alla vita.",
-      "exemplo_pt": "Sorria para a vida.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/sorˈridere/"
-    },
-    {
-      "id": "t21_067",
-      "italiano": "arrabbiarsi",
-      "portugues": "irritar-se",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non arrabbiarti per nulla.",
-      "exemplo_pt": "Não se irrite por nada.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/arrabˈbjarsi/"
     },
     {
       "id": "t21_068",
@@ -831,18 +663,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/dʒoˈire/"
-    },
-    {
-      "id": "t21_070",
-      "italiano": "sperare",
-      "portugues": "esperar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Spero che vada tutto bene.",
-      "exemplo_pt": "Espero que vá tudo bem.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/speˈrare/"
     },
     {
       "id": "t21_071",
@@ -939,18 +759,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/esˈprimere/"
-    },
-    {
-      "id": "t21_079",
-      "italiano": "sentire",
-      "portugues": "sentir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Sentire una forte emozione.",
-      "exemplo_pt": "Sentir uma forte emoção.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/senˈtire/"
     },
     {
       "id": "t21_080",
@@ -1323,6 +1131,162 @@
       "categoria": "negative",
       "dificuldade": "medio",
       "audio_ipa": "/soddʒetˈtsjone/"
+    },
+    {
+      "id": "t21_r02",
+      "italiano": "rimpianto",
+      "portugues": "arrependimento",
+      "genero": "m",
+      "plural": "rimpianti",
+      "exemplo": "Il rimpianto mi tormenta.",
+      "exemplo_pt": "O arrependimento me atormenta.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/rimˈpjanto/"
+    },
+    {
+      "id": "t21_r03",
+      "italiano": "senso di colpa",
+      "portugues": "culpa",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il senso di colpa è pesante.",
+      "exemplo_pt": "A culpa é pesada.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsɛnso di ˈkolpa/"
+    },
+    {
+      "id": "t21_r06",
+      "italiano": "risentimento",
+      "portugues": "ressentimento",
+      "genero": "m",
+      "plural": "risentimenti",
+      "exemplo": "Il risentimento è difficile da eliminare.",
+      "exemplo_pt": "O ressentimento é difícil de eliminar.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/rizenˈtimento/"
+    },
+    {
+      "id": "t21_r07",
+      "italiano": "amarezza",
+      "portugues": "amargura",
+      "genero": "f",
+      "plural": "amarezze",
+      "exemplo": "L'amarezza resta nel cuore.",
+      "exemplo_pt": "A amargura fica no coração.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/amaˈrettsa/"
+    },
+    {
+      "id": "t21_r09",
+      "italiano": "frustrazione",
+      "portugues": "frustração",
+      "genero": "f",
+      "plural": "frustrazioni",
+      "exemplo": "La frustrazione blocca la creatività.",
+      "exemplo_pt": "A frustração bloqueia a criatividade.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/frustraˈtsjoːne/"
+    },
+    {
+      "id": "t21_r14",
+      "italiano": "contentezza",
+      "portugues": "contentamento",
+      "genero": "f",
+      "plural": "contentezze",
+      "exemplo": "La contentezza è semplice e vera.",
+      "exemplo_pt": "O contentamento é simples e verdadeiro.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/kontenˈtettsa/"
+    },
+    {
+      "id": "t21_r18",
+      "italiano": "repulsione",
+      "portugues": "repulsa",
+      "genero": "f",
+      "plural": "repulsioni",
+      "exemplo": "La repulsione è immediata.",
+      "exemplo_pt": "A repulsa é imediata.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/repulˈsjoːne/"
+    },
+    {
+      "id": "t21_r21",
+      "italiano": "commozione",
+      "portugues": "comoção",
+      "genero": "f",
+      "plural": "commozioni",
+      "exemplo": "La commozione mi ha fatto piangere.",
+      "exemplo_pt": "A comoção me fez chorar.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/kommoˈtsjoːne/"
+    },
+    {
+      "id": "t21_r26",
+      "italiano": "rancoro",
+      "portugues": "rancor",
+      "genero": "m",
+      "plural": "rancori",
+      "exemplo": "Il rancoro è difficile da liberare.",
+      "exemplo_pt": "O rancor é difícil de liberar.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ranˈkɔːro/"
+    },
+    {
+      "id": "t21_r29",
+      "italiano": "eccitazione",
+      "portugues": "excitação",
+      "genero": "f",
+      "plural": "eccitazioni",
+      "exemplo": "L'eccitazione prima dello spettacolo è forte.",
+      "exemplo_pt": "A excitação antes do espetáculo é forte.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ettʃitaˈtsjoːne/"
+    },
+    {
+      "id": "t21_r31",
+      "italiano": "stupore",
+      "portugues": "espanto",
+      "genero": "m",
+      "plural": "stupori",
+      "exemplo": "Lo stupore si vede nel suo viso.",
+      "exemplo_pt": "O espanto se vê em seu rosto.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/stuˈpɔːre/"
+    },
+    {
+      "id": "t21_r34",
+      "italiano": "rassegnazione",
+      "portugues": "resignação",
+      "genero": "f",
+      "plural": "rassegnazioni",
+      "exemplo": "La rassegnazione non è sempre negativa.",
+      "exemplo_pt": "A resignação nem sempre é negativa.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/rassɛɲɲaˈtsjoːne/"
+    },
+    {
+      "id": "t21_r35",
+      "italiano": "determinazione",
+      "portugues": "determinação",
+      "genero": "f",
+      "plural": "determinazioni",
+      "exemplo": "La determinazione porta al successo.",
+      "exemplo_pt": "A determinação leva ao sucesso.",
+      "categoria": "emozioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/determtnaˈtsjoːne/"
     }
   ]
 }

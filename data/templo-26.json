@@ -5,42 +5,6 @@
   "nivel": "B2",
   "palavras": [
     {
-      "id": "t26_001",
-      "italiano": "politica",
-      "portugues": "política",
-      "genero": "f",
-      "plural": "politiche",
-      "exemplo": "La politica è complessa.",
-      "exemplo_pt": "A política é complexa.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/poˈlitika/"
-    },
-    {
-      "id": "t26_002",
-      "italiano": "società",
-      "portugues": "sociedade",
-      "genero": "f",
-      "plural": "società",
-      "exemplo": "Viviamo in una società moderna.",
-      "exemplo_pt": "Vivemos numa sociedade moderna.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/sotʃeˈta/"
-    },
-    {
-      "id": "t26_003",
-      "italiano": "governo",
-      "portugues": "governo",
-      "genero": "m",
-      "plural": "governi",
-      "exemplo": "Il governo ha approvato la legge.",
-      "exemplo_pt": "O governo aprovou a lei.",
-      "categoria": "istituzioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡoˈvɛrno/"
-    },
-    {
       "id": "t26_004",
       "italiano": "parlamento",
       "portugues": "parlamento",
@@ -233,30 +197,6 @@
       "audio_ipa": "/kostitutˈtsjone/"
     },
     {
-      "id": "t26_020",
-      "italiano": "diritto",
-      "portugues": "direito",
-      "genero": "m",
-      "plural": "diritti",
-      "exemplo": "Il diritto di voto.",
-      "exemplo_pt": "O direito de voto.",
-      "categoria": "giustizia",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈritto/"
-    },
-    {
-      "id": "t26_021",
-      "italiano": "dovere",
-      "portugues": "dever",
-      "genero": "m",
-      "plural": "doveri",
-      "exemplo": "Il dovere di pagare le tasse.",
-      "exemplo_pt": "O dever de pagar os impostos.",
-      "categoria": "giustizia",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈvere/"
-    },
-    {
       "id": "t26_022",
       "italiano": "giustizia",
       "portugues": "justiça",
@@ -269,18 +209,6 @@
       "audio_ipa": "/dʒusˈtittsja/"
     },
     {
-      "id": "t26_023",
-      "italiano": "tribunale",
-      "portugues": "tribunal/fórum",
-      "genero": "m",
-      "plural": "tribunali",
-      "exemplo": "Il processo in tribunale.",
-      "exemplo_pt": "O processo no tribunal.",
-      "categoria": "giustizia",
-      "dificuldade": "medio",
-      "audio_ipa": "/tribuˈnale/"
-    },
-    {
       "id": "t26_024",
       "italiano": "giudice",
       "portugues": "juiz",
@@ -291,18 +219,6 @@
       "categoria": "giustizia",
       "dificuldade": "medio",
       "audio_ipa": "/ˈdʒuditʃe/"
-    },
-    {
-      "id": "t26_025",
-      "italiano": "avvocato",
-      "portugues": "advogado",
-      "genero": "m",
-      "plural": "avvocati",
-      "exemplo": "L'avvocato difende l'imputato.",
-      "exemplo_pt": "O advogado defende o réu.",
-      "categoria": "giustizia",
-      "dificuldade": "medio",
-      "audio_ipa": "/avvoˈkato/"
     },
     {
       "id": "t26_026",
@@ -339,30 +255,6 @@
       "categoria": "politica",
       "dificuldade": "medio",
       "audio_ipa": "/eletˈtsjoni/"
-    },
-    {
-      "id": "t26_029",
-      "italiano": "voto",
-      "portugues": "voto",
-      "genero": "m",
-      "plural": "voti",
-      "exemplo": "Dare il proprio voto.",
-      "exemplo_pt": "Dar o próprio voto.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvoto/"
-    },
-    {
-      "id": "t26_030",
-      "italiano": "campagna",
-      "portugues": "campanha",
-      "genero": "f",
-      "plural": "campagne",
-      "exemplo": "La campagna elettorale.",
-      "exemplo_pt": "A campanha eleitoral.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/kamˈpaɲɲa/"
     },
     {
       "id": "t26_031",
@@ -485,18 +377,6 @@
       "audio_ipa": "/liberˈta/"
     },
     {
-      "id": "t26_041",
-      "italiano": "pace",
-      "portugues": "paz",
-      "genero": "f",
-      "plural": "paci",
-      "exemplo": "Vogliamo la pace.",
-      "exemplo_pt": "Queremos a paz.",
-      "categoria": "società",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpatʃe/"
-    },
-    {
       "id": "t26_042",
       "italiano": "guerra",
       "portugues": "guerra",
@@ -533,30 +413,6 @@
       "audio_ipa": "/solˈdato/"
     },
     {
-      "id": "t26_045",
-      "italiano": "pace",
-      "portugues": "paz",
-      "genero": "f",
-      "plural": "paci",
-      "exemplo": "Vivere in pace.",
-      "exemplo_pt": "Viver em paz.",
-      "categoria": "società",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpatʃe/"
-    },
-    {
-      "id": "t26_046",
-      "italiano": "accordo",
-      "portugues": "acordo",
-      "genero": "m",
-      "plural": "accordi",
-      "exemplo": "Hanno firmato un accordo.",
-      "exemplo_pt": "Assinaram um acordo.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/akˈkɔrdo/"
-    },
-    {
       "id": "t26_047",
       "italiano": "trattato",
       "portugues": "tratado",
@@ -569,30 +425,6 @@
       "audio_ipa": "/tratˈtato/"
     },
     {
-      "id": "t26_048",
-      "italiano": "sindacato",
-      "portugues": "sindicato",
-      "genero": "m",
-      "plural": "sindacati",
-      "exemplo": "Il sindacato dei lavoratori.",
-      "exemplo_pt": "O sindicato dos trabalhadores.",
-      "categoria": "società",
-      "dificuldade": "medio",
-      "audio_ipa": "/sindaˈkato/"
-    },
-    {
-      "id": "t26_049",
-      "italiano": "sciopero",
-      "portugues": "greve",
-      "genero": "m",
-      "plural": "scioperi",
-      "exemplo": "Lo sciopero dei treni.",
-      "exemplo_pt": "A greve dos trens.",
-      "categoria": "società",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈʃɔpero/"
-    },
-    {
       "id": "t26_050",
       "italiano": "manifestazione",
       "portugues": "manifestação",
@@ -603,54 +435,6 @@
       "categoria": "società",
       "dificuldade": "medio",
       "audio_ipa": "/manifestatˈtsjone/"
-    },
-    {
-      "id": "t26_051",
-      "italiano": "tassa",
-      "portugues": "imposto",
-      "genero": "f",
-      "plural": "tasse",
-      "exemplo": "Paga la tassa.",
-      "exemplo_pt": "Pague o imposto.",
-      "categoria": "economia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtassa/"
-    },
-    {
-      "id": "t26_052",
-      "italiano": "imposta",
-      "portugues": "taxa/imposto",
-      "genero": "f",
-      "plural": "imposte",
-      "exemplo": "Le imposte sono alte.",
-      "exemplo_pt": "Os impostos são altos.",
-      "categoria": "economia",
-      "dificuldade": "medio",
-      "audio_ipa": "/imˈpɔsta/"
-    },
-    {
-      "id": "t26_053",
-      "italiano": "reddito",
-      "portugues": "renda",
-      "genero": "m",
-      "plural": "redditi",
-      "exemplo": "Un reddito fisso.",
-      "exemplo_pt": "Uma renda fixa.",
-      "categoria": "economia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈrɛddito/"
-    },
-    {
-      "id": "t26_054",
-      "italiano": "disoccupazione",
-      "portugues": "desemprego",
-      "genero": "f",
-      "plural": "disoccupazioni",
-      "exemplo": "Il tasso di disoccupazione.",
-      "exemplo_pt": "A taxa de desemprego.",
-      "categoria": "società",
-      "dificuldade": "medio",
-      "audio_ipa": "/dizokkupatˈtsjone/"
     },
     {
       "id": "t26_055",
@@ -1037,30 +821,6 @@
       "audio_ipa": "/soˈtʃale/"
     },
     {
-      "id": "t26_087",
-      "italiano": "pubblico",
-      "portugues": "público",
-      "genero": "m",
-      "plural": "pubblici",
-      "exemplo": "L'interesse pubblico.",
-      "exemplo_pt": "O interesse público.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpubbliko/"
-    },
-    {
-      "id": "t26_088",
-      "italiano": "privato",
-      "portugues": "privado",
-      "genero": "m",
-      "plural": "privati",
-      "exemplo": "Un ente privato.",
-      "exemplo_pt": "Uma entidade privada.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/priˈvato/"
-    },
-    {
       "id": "t26_089",
       "italiano": "civile",
       "portugues": "civil",
@@ -1169,18 +929,6 @@
       "audio_ipa": "/korˈrotto/"
     },
     {
-      "id": "t26_098",
-      "italiano": "onesto",
-      "portugues": "honesto",
-      "genero": "m",
-      "plural": "onesti",
-      "exemplo": "Una persona onesta.",
-      "exemplo_pt": "Uma pessoa honesta.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/oˈnɛsto/"
-    },
-    {
       "id": "t26_099",
       "italiano": "ricco",
       "portugues": "rico",
@@ -1205,30 +953,6 @@
       "audio_ipa": "/ˈpɔvero/"
     },
     {
-      "id": "t26_101",
-      "italiano": "nazionale",
-      "portugues": "nacional",
-      "genero": "m",
-      "plural": "nazionali",
-      "exemplo": "L'inno nazionale.",
-      "exemplo_pt": "O hino nacional.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/natsjoˈnale/"
-    },
-    {
-      "id": "t26_102",
-      "italiano": "internazionale",
-      "portugues": "internacional",
-      "genero": "m",
-      "plural": "internazionali",
-      "exemplo": "Un trattato internazionale.",
-      "exemplo_pt": "Um tratado internacional.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/internatsjoˈnale/"
-    },
-    {
       "id": "t26_103",
       "italiano": "globale",
       "portugues": "global",
@@ -1251,42 +975,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/loˈkale/"
-    },
-    {
-      "id": "t26_105",
-      "italiano": "destra",
-      "portugues": "direita (política)",
-      "genero": "f",
-      "plural": "destre",
-      "exemplo": "Il partito di destra.",
-      "exemplo_pt": "O partido de direita.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdɛstra/"
-    },
-    {
-      "id": "t26_106",
-      "italiano": "sinistra",
-      "portugues": "esquerda (política)",
-      "genero": "f",
-      "plural": "sinistre",
-      "exemplo": "Vota a sinistra.",
-      "exemplo_pt": "Vota na esquerda.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/siˈnistra/"
-    },
-    {
-      "id": "t26_107",
-      "italiano": "centro",
-      "portugues": "centro (política)",
-      "genero": "m",
-      "plural": "centri",
-      "exemplo": "I moderati di centro.",
-      "exemplo_pt": "Os moderados de centro.",
-      "categoria": "politica",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃɛntro/"
     },
     {
       "id": "t26_108",
@@ -1323,6 +1011,282 @@
       "categoria": "politica",
       "dificuldade": "medio",
       "audio_ipa": "/radiˈkale/"
+    },
+    {
+      "id": "t26_r01",
+      "italiano": "senato",
+      "portugues": "senado",
+      "genero": "m",
+      "plural": "senati",
+      "exemplo": "Il senato approva le leggi.",
+      "exemplo_pt": "O senado aprova as leis.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/seˈnaːto/"
+    },
+    {
+      "id": "t26_r04",
+      "italiano": "premier",
+      "portugues": "primeiro-ministro",
+      "genero": "m",
+      "plural": "premier",
+      "exemplo": "Il premier ha incontrato i leader.",
+      "exemplo_pt": "O primeiro-ministro encontrou os líderes.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈprɛmjer/"
+    },
+    {
+      "id": "t26_r06",
+      "italiano": "ambasciata",
+      "portugues": "embaixada",
+      "genero": "f",
+      "plural": "ambasciate",
+      "exemplo": "L'ambasciata rilascia i visti.",
+      "exemplo_pt": "A embaixada emite os vistos.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ambaʃˈʃaːta/"
+    },
+    {
+      "id": "t26_r07",
+      "italiano": "consolato",
+      "portugues": "consulado",
+      "genero": "m",
+      "plural": "consolati",
+      "exemplo": "Il consolato aiuta i cittadini.",
+      "exemplo_pt": "O consulado ajuda os cidadãos.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/konsoˈlaːto/"
+    },
+    {
+      "id": "t26_r08",
+      "italiano": "referendum",
+      "portugues": "referendo",
+      "genero": "m",
+      "plural": "referendum",
+      "exemplo": "Il referendum decide la questione.",
+      "exemplo_pt": "O referendo decide a questão.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/refeˈrɛndum/"
+    },
+    {
+      "id": "t26_r10",
+      "italiano": "decreto",
+      "portugues": "decreto",
+      "genero": "m",
+      "plural": "decreti",
+      "exemplo": "Il decreto è in vigore da oggi.",
+      "exemplo_pt": "O decreto está em vigor a partir de hoje.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/deˈkrɛːto/"
+    },
+    {
+      "id": "t26_r11",
+      "italiano": "ordinanza",
+      "portugues": "portaria / ordinança",
+      "genero": "f",
+      "plural": "ordinanze",
+      "exemplo": "L'ordinanza vieta i fuochi.",
+      "exemplo_pt": "A portaria proíbe os fogos.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ordiˈnantsa/"
+    },
+    {
+      "id": "t26_r15",
+      "italiano": "coalizione",
+      "portugues": "coalizão",
+      "genero": "f",
+      "plural": "coalizioni",
+      "exemplo": "La coalizione è fragile.",
+      "exemplo_pt": "A coalizão é frágil.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/koalitˈtsjoːne/"
+    },
+    {
+      "id": "t26_r16",
+      "italiano": "sondaggio",
+      "portugues": "pesquisa de opinião",
+      "genero": "m",
+      "plural": "sondaggi",
+      "exemplo": "Il sondaggio dà il 52% al governo.",
+      "exemplo_pt": "A pesquisa dá 52% ao governo.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/sonˈdaddʒo/"
+    },
+    {
+      "id": "t26_r17",
+      "italiano": "campagna elettorale",
+      "portugues": "campanha eleitoral",
+      "genero": "f",
+      "plural": "campagne elettorali",
+      "exemplo": "La campagna è iniziata.",
+      "exemplo_pt": "A campanha começou.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kamˈpaɲɲa elettoˈraːle/"
+    },
+    {
+      "id": "t26_r19",
+      "italiano": "burocrazia",
+      "portugues": "burocracia",
+      "genero": "f",
+      "plural": "burocrazie",
+      "exemplo": "La burocrazia rallenta tutto.",
+      "exemplo_pt": "A burocracia atrasa tudo.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/burokraˈtsiːa/"
+    },
+    {
+      "id": "t26_r20",
+      "italiano": "trasparenza",
+      "portugues": "transparência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La trasparenza è fondamentale.",
+      "exemplo_pt": "A transparência é fundamental.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/traspaˈrɛntsa/"
+    },
+    {
+      "id": "t26_r21",
+      "italiano": "lobbying",
+      "portugues": "lobbying",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il lobbying influenza le decisioni.",
+      "exemplo_pt": "O lobbying influencia as decisões.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlɔbijiŋ/"
+    },
+    {
+      "id": "t26_r22",
+      "italiano": "ideologia",
+      "portugues": "ideologia",
+      "genero": "f",
+      "plural": "ideologie",
+      "exemplo": "L'ideologia separa i partiti.",
+      "exemplo_pt": "A ideologia separa os partidos.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ideoloˈdʒiːa/"
+    },
+    {
+      "id": "t26_r23",
+      "italiano": "populismo",
+      "portugues": "populismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il populismo cresce in Europa.",
+      "exemplo_pt": "O populismo cresce na Europa.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/popuˈlizmo/"
+    },
+    {
+      "id": "t26_r24",
+      "italiano": "sovranismo",
+      "portugues": "soberanismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il sovranismo mette la nazione prima.",
+      "exemplo_pt": "O soberanismo coloca a nação em primeiro.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/sovraniˈzmo/"
+    },
+    {
+      "id": "t26_r25",
+      "italiano": "globalizzazione",
+      "portugues": "globalização",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La globalizzazione cambia le economie.",
+      "exemplo_pt": "A globalização muda as economias.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ɡlobaliddzaˈtsjoːne/"
+    },
+    {
+      "id": "t26_r26",
+      "italiano": "sanzione",
+      "portugues": "sanção",
+      "genero": "f",
+      "plural": "sanzioni",
+      "exemplo": "Le sanzioni colpiscono l'economia.",
+      "exemplo_pt": "As sanções afetam a economia.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/sanˈtsjoːne/"
+    },
+    {
+      "id": "t26_r28",
+      "italiano": "alleanza",
+      "portugues": "aliança",
+      "genero": "f",
+      "plural": "alleanze",
+      "exemplo": "L'alleanza militare è solida.",
+      "exemplo_pt": "A aliança militar é sólida.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/alleˈantsa/"
+    },
+    {
+      "id": "t26_r29",
+      "italiano": "diplomazia",
+      "portugues": "diplomacia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La diplomazia risolve i conflitti.",
+      "exemplo_pt": "A diplomacia resolve os conflitos.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/diplomaˈtsiːa/"
+    },
+    {
+      "id": "t26_r30",
+      "italiano": "geopolitica",
+      "portugues": "geopolítica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La geopolitica è complessa.",
+      "exemplo_pt": "A geopolítica é complexa.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒeopoliˈtika/"
+    },
+    {
+      "id": "t26_f01",
+      "italiano": "sussidiarietà",
+      "portugues": "subsidiariedade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Il principio di sussidiarietà delega ai livelli inferiori.",
+      "exemplo_pt": "O princípio de subsidiariedade delega aos níveis inferiores.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/sussidjarjeˈta/"
+    },
+    {
+      "id": "t26_f02",
+      "italiano": "governance",
+      "portugues": "governance / governança",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La governance pubblica è trasparente.",
+      "exemplo_pt": "A governança pública é transparente.",
+      "categoria": "politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡɔvernans/"
     }
   ]
 }

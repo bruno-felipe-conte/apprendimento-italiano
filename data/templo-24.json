@@ -113,18 +113,6 @@
       "audio_ipa": "/ˈkuffje/"
     },
     {
-      "id": "t24_010",
-      "italiano": "batteria",
-      "portugues": "bateria",
-      "genero": "f",
-      "plural": "batterie",
-      "exemplo": "La batteria è quasi scarica.",
-      "exemplo_pt": "A bateria está quase descarregada.",
-      "categoria": "hardware",
-      "dificuldade": "medio",
-      "audio_ipa": "/batteˈria/"
-    },
-    {
       "id": "t24_011",
       "italiano": "caricabatterie",
       "portugues": "carregador",
@@ -219,30 +207,6 @@
       "categoria": "hardware",
       "dificuldade": "medio",
       "audio_ipa": "/kjaˈvetta/"
-    },
-    {
-      "id": "t24_019",
-      "italiano": "internet",
-      "portugues": "internet",
-      "genero": "m",
-      "plural": "internet",
-      "exemplo": "Navigare su internet.",
-      "exemplo_pt": "Navegar na internet.",
-      "categoria": "reti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈintɛrnɛt/"
-    },
-    {
-      "id": "t24_020",
-      "italiano": "rete",
-      "portugues": "rede",
-      "genero": "f",
-      "plural": "reti",
-      "exemplo": "La rete Wi-Fi non funziona.",
-      "exemplo_pt": "A rede Wi-Fi não funciona.",
-      "categoria": "reti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈrete/"
     },
     {
       "id": "t24_021",
@@ -341,18 +305,6 @@
       "audio_ipa": "/moˈtore di riˈtʃerka/"
     },
     {
-      "id": "t24_029",
-      "italiano": "nuvola",
-      "portugues": "nuvem (cloud)",
-      "genero": "f",
-      "plural": "nuvole",
-      "exemplo": "Salva i dati nella nuvola.",
-      "exemplo_pt": "Salve os dados na nuvem.",
-      "categoria": "reti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈnuvola/"
-    },
-    {
       "id": "t24_030",
       "italiano": "fibra ottica",
       "portugues": "fibra ótica",
@@ -449,18 +401,6 @@
       "audio_ipa": "/karˈtɛlla/"
     },
     {
-      "id": "t24_038",
-      "italiano": "finestra",
-      "portugues": "janela",
-      "genero": "f",
-      "plural": "finestre",
-      "exemplo": "Chiudi questa finestra.",
-      "exemplo_pt": "Feche esta janela.",
-      "categoria": "software",
-      "dificuldade": "medio",
-      "audio_ipa": "/fiˈnɛstra/"
-    },
-    {
       "id": "t24_039",
       "italiano": "menu",
       "portugues": "menu",
@@ -509,18 +449,6 @@
       "audio_ipa": "/addʒornaˈmento/"
     },
     {
-      "id": "t24_043",
-      "italiano": "virus",
-      "portugues": "vírus",
-      "genero": "m",
-      "plural": "virus",
-      "exemplo": "Il computer ha un virus.",
-      "exemplo_pt": "O computador tem um vírus.",
-      "categoria": "software",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvirus/"
-    },
-    {
       "id": "t24_044",
       "italiano": "antivirus",
       "portugues": "antivírus",
@@ -567,18 +495,6 @@
       "categoria": "software",
       "dificuldade": "medio",
       "audio_ipa": "/intellidˈdʒɛntsa artifiˈtʃale/"
-    },
-    {
-      "id": "t24_048",
-      "italiano": "profilo",
-      "portugues": "perfil",
-      "genero": "m",
-      "plural": "profili",
-      "exemplo": "Modifica il tuo profilo.",
-      "exemplo_pt": "Modifique o seu perfil.",
-      "categoria": "software",
-      "dificuldade": "medio",
-      "audio_ipa": "/proˈfilo/"
     },
     {
       "id": "t24_049",
@@ -677,18 +593,6 @@
       "audio_ipa": "/mi ˈpjatʃe/"
     },
     {
-      "id": "t24_057",
-      "italiano": "commento",
-      "portugues": "comentário",
-      "genero": "m",
-      "plural": "commenti",
-      "exemplo": "Lascia un commento.",
-      "exemplo_pt": "Deixe um comentário.",
-      "categoria": "social",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈmento/"
-    },
-    {
       "id": "t24_058",
       "italiano": "notifica",
       "portugues": "notificação",
@@ -735,30 +639,6 @@
       "categoria": "social",
       "dificuldade": "medio",
       "audio_ipa": "/blɔɡ/"
-    },
-    {
-      "id": "t24_062",
-      "italiano": "accendere",
-      "portugues": "ligar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Devo accendere il computer.",
-      "exemplo_pt": "Preciso ligar o computador.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/atˈtʃɛndere/"
-    },
-    {
-      "id": "t24_063",
-      "italiano": "spegnere",
-      "portugues": "desligar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ricordati di spegnere lo schermo.",
-      "exemplo_pt": "Lembre-se de desligar a tela.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspeɲɲere/"
     },
     {
       "id": "t24_064",
@@ -833,30 +713,6 @@
       "audio_ipa": "/salˈvare/"
     },
     {
-      "id": "t24_070",
-      "italiano": "cancellare",
-      "portugues": "apagar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non cancellare questo file.",
-      "exemplo_pt": "Não apague este arquivo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kantʃelˈlare/"
-    },
-    {
-      "id": "t24_071",
-      "italiano": "copiare",
-      "portugues": "copiar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Copiare e incollare il testo.",
-      "exemplo_pt": "Copiar e colar o texto.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/koˈpjare/"
-    },
-    {
       "id": "t24_072",
       "italiano": "incollare",
       "portugues": "colar",
@@ -867,18 +723,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/inkolˈlare/"
-    },
-    {
-      "id": "t24_073",
-      "italiano": "tagliare",
-      "portugues": "cortar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Tagliare la parte finale del video.",
-      "exemplo_pt": "Cortar a parte final do vídeo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/taˈʎʎare/"
     },
     {
       "id": "t24_074",
@@ -905,18 +749,6 @@
       "audio_ipa": "/didʒiˈtare/"
     },
     {
-      "id": "t24_076",
-      "italiano": "navigare",
-      "portugues": "navegar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Navigare in incognito.",
-      "exemplo_pt": "Navegar de forma anônima.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/naviˈɡare/"
-    },
-    {
       "id": "t24_077",
       "italiano": "collegare",
       "portugues": "conectar",
@@ -939,18 +771,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/kondiˈvidere/"
-    },
-    {
-      "id": "t24_079",
-      "italiano": "scorrere",
-      "portugues": "rolar (scroll)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scorrere la pagina verso il basso.",
-      "exemplo_pt": "Rolar a página para baixo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskorrere/"
     },
     {
       "id": "t24_080",
@@ -1047,18 +867,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/interatˈtivo/"
-    },
-    {
-      "id": "t24_088",
-      "italiano": "intelligente",
-      "portugues": "inteligente",
-      "genero": "m",
-      "plural": "intelligenti",
-      "exemplo": "Una casa intelligente.",
-      "exemplo_pt": "Uma casa inteligente.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/intellidˈdʒɛnte/"
     },
     {
       "id": "t24_089",
@@ -1323,6 +1131,246 @@
       "categoria": "reti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈstrimiŋ/"
+    },
+    {
+      "id": "t24_r02",
+      "italiano": "laptop",
+      "portugues": "laptop / notebook",
+      "genero": "m",
+      "plural": "laptop",
+      "exemplo": "Il laptop è portatile e leggero.",
+      "exemplo_pt": "O laptop é portátil e leve.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlaptop/"
+    },
+    {
+      "id": "t24_r03",
+      "italiano": "monitor",
+      "portugues": "monitor",
+      "genero": "m",
+      "plural": "monitor",
+      "exemplo": "Il monitor è ad alta risoluzione.",
+      "exemplo_pt": "O monitor é de alta resolução.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/moniˈtor/"
+    },
+    {
+      "id": "t24_r05",
+      "italiano": "scanner",
+      "portugues": "scanner",
+      "genero": "m",
+      "plural": "scanner",
+      "exemplo": "Lo scanner digitalizza i documenti.",
+      "exemplo_pt": "O scanner digitaliza os documentos.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈskanner/"
+    },
+    {
+      "id": "t24_r07",
+      "italiano": "cuffia",
+      "portugues": "fone de ouvido",
+      "genero": "f",
+      "plural": "cuffie",
+      "exemplo": "Uso le cuffie per studiare.",
+      "exemplo_pt": "Uso o fone para estudar.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkuffja/"
+    },
+    {
+      "id": "t24_r10",
+      "italiano": "drone",
+      "portugues": "drone",
+      "genero": "m",
+      "plural": "droni",
+      "exemplo": "Il drone riprende il paesaggio.",
+      "exemplo_pt": "O drone filma a paisagem.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdrone/"
+    },
+    {
+      "id": "t24_r11",
+      "italiano": "chip",
+      "portugues": "chip",
+      "genero": "m",
+      "plural": "chip",
+      "exemplo": "Il chip elabora miliardi di dati.",
+      "exemplo_pt": "O chip processa bilhões de dados.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/tʃip/"
+    },
+    {
+      "id": "t24_r14",
+      "italiano": "crittografia",
+      "portugues": "criptografia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La crittografia protegge i dati.",
+      "exemplo_pt": "A criptografia protege os dados.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/kritttoˈɡraːfja/"
+    },
+    {
+      "id": "t24_r15",
+      "italiano": "hacker",
+      "portugues": "hacker",
+      "genero": "m",
+      "plural": "hacker",
+      "exemplo": "L'hacker ha violato il sistema.",
+      "exemplo_pt": "O hacker invadiu o sistema.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈaker/"
+    },
+    {
+      "id": "t24_r16",
+      "italiano": "malware",
+      "portugues": "malware",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il malware ha infettato il computer.",
+      "exemplo_pt": "O malware infectou o computador.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmalwɛr/"
+    },
+    {
+      "id": "t24_r17",
+      "italiano": "firewall",
+      "portugues": "firewall",
+      "genero": "m",
+      "plural": "firewall",
+      "exemplo": "Il firewall blocca gli attacchi.",
+      "exemplo_pt": "O firewall bloqueia os ataques.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈfajrwɔl/"
+    },
+    {
+      "id": "t24_r20",
+      "italiano": "pixel",
+      "portugues": "pixel",
+      "genero": "m",
+      "plural": "pixel",
+      "exemplo": "L'immagine ha molti pixel.",
+      "exemplo_pt": "A imagem tem muitos pixels.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpiksel/"
+    },
+    {
+      "id": "t24_r21",
+      "italiano": "risoluzione",
+      "portugues": "resolução",
+      "genero": "f",
+      "plural": "risoluzioni",
+      "exemplo": "La risoluzione dello schermo è 4K.",
+      "exemplo_pt": "A resolução da tela é 4K.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/rizoˈlutsjoːne/"
+    },
+    {
+      "id": "t24_r22",
+      "italiano": "bluetooth",
+      "portugues": "bluetooth",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Connetto le cuffie via bluetooth.",
+      "exemplo_pt": "Conecto o fone via bluetooth.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbluːtuːθ/"
+    },
+    {
+      "id": "t24_r25",
+      "italiano": "realtà virtuale",
+      "portugues": "realidade virtual",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La realtà virtuale immerge l'utente.",
+      "exemplo_pt": "A realidade virtual imersiona o usuário.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/reaˈlta virˈtwaːle/"
+    },
+    {
+      "id": "t24_r26",
+      "italiano": "realtà aumentata",
+      "portugues": "realidade aumentada",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La realtà aumentata sovrappone informazioni.",
+      "exemplo_pt": "A realidade aumentada sobrepõe informações.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/reaˈlta aumentaˈta/"
+    },
+    {
+      "id": "t24_r27",
+      "italiano": "cloud",
+      "portugues": "nuvem / cloud",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I dati sono salvati nel cloud.",
+      "exemplo_pt": "Os dados são salvos na nuvem.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/klawd/"
+    },
+    {
+      "id": "t24_r28",
+      "italiano": "cybersicurezza",
+      "portugues": "cibersegurança",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La cybersicurezza è fondamentale.",
+      "exemplo_pt": "A cibersegurança é fundamental.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtʃajbersikuˈrɛttsa/"
+    },
+    {
+      "id": "t24_r30",
+      "italiano": "latenza",
+      "portugues": "latência",
+      "genero": "f",
+      "plural": "latenze",
+      "exemplo": "La latenza bassa migliora il gioco.",
+      "exemplo_pt": "A baixa latência melhora o jogo.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/laˈtɛntsa/"
+    },
+    {
+      "id": "t24_r34",
+      "italiano": "codice sorgente",
+      "portugues": "código-fonte",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il codice sorgente è aperto.",
+      "exemplo_pt": "O código-fonte é aberto.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔːditʃe sorˈdʒɛnte/"
+    },
+    {
+      "id": "t24_r35",
+      "italiano": "interfaccia",
+      "portugues": "interface",
+      "genero": "f",
+      "plural": "interfacce",
+      "exemplo": "L'interfaccia è semplice e intuitiva.",
+      "exemplo_pt": "A interface é simples e intuitiva.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/interˈfattʃa/"
     }
   ]
 }

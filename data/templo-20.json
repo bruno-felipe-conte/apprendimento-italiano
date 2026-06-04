@@ -5,66 +5,6 @@
   "nivel": "B1",
   "palavras": [
     {
-      "id": "t20_001",
-      "italiano": "testa",
-      "portugues": "cabeça",
-      "genero": "f",
-      "plural": "teste",
-      "exemplo": "Mi fa male la testa.",
-      "exemplo_pt": "Minha cabeça está doendo.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtɛsta/"
-    },
-    {
-      "id": "t20_002",
-      "italiano": "occhio",
-      "portugues": "olho",
-      "genero": "m",
-      "plural": "occhi",
-      "exemplo": "Ha un occhio azzurro e uno verde.",
-      "exemplo_pt": "Tem um olho azul e um verde.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɔkkjo/"
-    },
-    {
-      "id": "t20_003",
-      "italiano": "orecchio",
-      "portugues": "orelha",
-      "genero": "m",
-      "plural": "orecchi",
-      "exemplo": "Ho un'infezione all'orecchio.",
-      "exemplo_pt": "Tenho uma infecção na orelha.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/oˈrekkjo/"
-    },
-    {
-      "id": "t20_004",
-      "italiano": "naso",
-      "portugues": "nariz",
-      "genero": "m",
-      "plural": "nasi",
-      "exemplo": "Ha il naso chiuso.",
-      "exemplo_pt": "O nariz dele está entupido.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈnazo/"
-    },
-    {
-      "id": "t20_005",
-      "italiano": "bocca",
-      "portugues": "boca",
-      "genero": "f",
-      "plural": "bocche",
-      "exemplo": "Apri la bocca.",
-      "exemplo_pt": "Abra a boca.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbokka/"
-    },
-    {
       "id": "t20_006",
       "italiano": "labbro",
       "portugues": "lábio",
@@ -99,18 +39,6 @@
       "categoria": "testa",
       "dificuldade": "medio",
       "audio_ipa": "/ˈlinɡwa/"
-    },
-    {
-      "id": "t20_009",
-      "italiano": "capello",
-      "portugues": "cabelo",
-      "genero": "m",
-      "plural": "capelli",
-      "exemplo": "Ha i capelli lunghi.",
-      "exemplo_pt": "Ela tem cabelos longos.",
-      "categoria": "testa",
-      "dificuldade": "medio",
-      "audio_ipa": "/kaˈpello/"
     },
     {
       "id": "t20_010",
@@ -341,18 +269,6 @@
       "audio_ipa": "/ˈvita/"
     },
     {
-      "id": "t20_029",
-      "italiano": "braccio",
-      "portugues": "braço",
-      "genero": "m",
-      "plural": "braccia",
-      "exemplo": "Ha un braccio rotto.",
-      "exemplo_pt": "Tem um braço quebrado.",
-      "categoria": "superiori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbrattʃo/"
-    },
-    {
       "id": "t20_030",
       "italiano": "gomito",
       "portugues": "cotovelo",
@@ -375,18 +291,6 @@
       "categoria": "superiori",
       "dificuldade": "medio",
       "audio_ipa": "/ˈpolso/"
-    },
-    {
-      "id": "t20_032",
-      "italiano": "mano",
-      "portugues": "mão",
-      "genero": "f",
-      "plural": "mani",
-      "exemplo": "Dammi la mano.",
-      "exemplo_pt": "Me dê a mão.",
-      "categoria": "superiori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmano/"
     },
     {
       "id": "t20_033",
@@ -425,18 +329,6 @@
       "audio_ipa": "/ˈpɔllitʃe/"
     },
     {
-      "id": "t20_036",
-      "italiano": "gamba",
-      "portugues": "perna",
-      "genero": "f",
-      "plural": "gambe",
-      "exemplo": "Mi fa male la gamba.",
-      "exemplo_pt": "Minha perna dói.",
-      "categoria": "inferiori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɡamba/"
-    },
-    {
       "id": "t20_037",
       "italiano": "ginocchio",
       "portugues": "joelho",
@@ -459,18 +351,6 @@
       "categoria": "inferiori",
       "dificuldade": "medio",
       "audio_ipa": "/kaˈviʎʎa/"
-    },
-    {
-      "id": "t20_039",
-      "italiano": "piede",
-      "portugues": "pé",
-      "genero": "m",
-      "plural": "piedi",
-      "exemplo": "Ho i piedi freddi.",
-      "exemplo_pt": "Estou com os pés frios.",
-      "categoria": "inferiori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjɛde/"
     },
     {
       "id": "t20_040",
@@ -629,18 +509,6 @@
       "audio_ipa": "/ˈmuskolo/"
     },
     {
-      "id": "t20_053",
-      "italiano": "nervo",
-      "portugues": "nervo",
-      "genero": "m",
-      "plural": "nervi",
-      "exemplo": "Un nervo scoperto.",
-      "exemplo_pt": "Um nervo exposto.",
-      "categoria": "interni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈnɛrvo/"
-    },
-    {
       "id": "t20_054",
       "italiano": "pelle",
       "portugues": "pele",
@@ -725,42 +593,6 @@
       "audio_ipa": "/malatˈtia/"
     },
     {
-      "id": "t20_061",
-      "italiano": "febbre",
-      "portugues": "febre",
-      "genero": "f",
-      "plural": "febbri",
-      "exemplo": "Ho la febbre alta.",
-      "exemplo_pt": "Estou com febre alta.",
-      "categoria": "condizioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfɛbbre/"
-    },
-    {
-      "id": "t20_062",
-      "italiano": "tosse",
-      "portugues": "tosse",
-      "genero": "f",
-      "plural": "tossi",
-      "exemplo": "Una brutta tosse.",
-      "exemplo_pt": "Uma tosse forte.",
-      "categoria": "condizioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtosse/"
-    },
-    {
-      "id": "t20_063",
-      "italiano": "dolore",
-      "portugues": "dor",
-      "genero": "m",
-      "plural": "dolori",
-      "exemplo": "Provo un grande dolore.",
-      "exemplo_pt": "Sinto uma grande dor.",
-      "categoria": "condizioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈlore/"
-    },
-    {
       "id": "t20_064",
       "italiano": "ferita",
       "portugues": "ferida",
@@ -797,18 +629,6 @@
       "audio_ipa": "/reˈspiro/"
     },
     {
-      "id": "t20_067",
-      "italiano": "allergia",
-      "portugues": "alergia",
-      "genero": "f",
-      "plural": "allergie",
-      "exemplo": "Ho un'allergia ai gatti.",
-      "exemplo_pt": "Tenho alergia a gatos.",
-      "categoria": "condizioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/allerˈdʒia/"
-    },
-    {
       "id": "t20_068",
       "italiano": "sintomo",
       "portugues": "sintoma",
@@ -831,30 +651,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/respiˈrare/"
-    },
-    {
-      "id": "t20_070",
-      "italiano": "mangiare",
-      "portugues": "comer",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Mangiare la pizza.",
-      "exemplo_pt": "Comer a pizza.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/manˈdʒare/"
-    },
-    {
-      "id": "t20_071",
-      "italiano": "bere",
-      "portugues": "beber",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Bere molta acqua.",
-      "exemplo_pt": "Beber muita água.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbere/"
     },
     {
       "id": "t20_072",
@@ -881,18 +677,6 @@
       "audio_ipa": "/senˈtire/"
     },
     {
-      "id": "t20_074",
-      "italiano": "ascoltare",
-      "portugues": "escutar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ascoltare la musica.",
-      "exemplo_pt": "Escutar a música.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/askolˈtare/"
-    },
-    {
       "id": "t20_075",
       "italiano": "annusare",
       "portugues": "cheirar",
@@ -903,30 +687,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/annuˈzare/"
-    },
-    {
-      "id": "t20_076",
-      "italiano": "toccare",
-      "portugues": "tocar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non toccare il fuoco.",
-      "exemplo_pt": "Não toque no fogo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/tokˈkare/"
-    },
-    {
-      "id": "t20_077",
-      "italiano": "camminare",
-      "portugues": "caminhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Camminare per la strada.",
-      "exemplo_pt": "Caminhar pela rua.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kammiˈnare/"
     },
     {
       "id": "t20_078",
@@ -1323,6 +1083,210 @@
       "categoria": "condizioni",
       "dificuldade": "medio",
       "audio_ipa": "/metaboˈlizmo/"
+    },
+    {
+      "id": "t20_r07",
+      "italiano": "colonna vertebrale",
+      "portugues": "coluna vertebral",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La colonna vertebrale sostiene il corpo.",
+      "exemplo_pt": "A coluna vertebral sustenta o corpo.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/koˈlɔnna vertebˈraːle/"
+    },
+    {
+      "id": "t20_r09",
+      "italiano": "tendine",
+      "portugues": "tendão",
+      "genero": "m",
+      "plural": "tendini",
+      "exemplo": "Il tendine di Achille è rotto.",
+      "exemplo_pt": "O tendão de Aquiles está rompido.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɛndine/"
+    },
+    {
+      "id": "t20_r17",
+      "italiano": "pancreas",
+      "portugues": "pâncreas",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il pancreas produce insulina.",
+      "exemplo_pt": "O pâncreas produz insulina.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpankreas/"
+    },
+    {
+      "id": "t20_r18",
+      "italiano": "milza",
+      "portugues": "baço",
+      "genero": "f",
+      "plural": "milze",
+      "exemplo": "La milza filtra il sangue.",
+      "exemplo_pt": "O baço filtra o sangue.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmiltsa/"
+    },
+    {
+      "id": "t20_r19",
+      "italiano": "tiroide",
+      "portugues": "tireoide",
+      "genero": "f",
+      "plural": "tiroidi",
+      "exemplo": "La tiroide regola il metabolismo.",
+      "exemplo_pt": "A tireoide regula o metabolismo.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/tiˈrɔide/"
+    },
+    {
+      "id": "t20_r21",
+      "italiano": "cornea",
+      "portugues": "córnea",
+      "genero": "f",
+      "plural": "cornee",
+      "exemplo": "La cornea protegge l'occhio.",
+      "exemplo_pt": "A córnea protege o olho.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrnea/"
+    },
+    {
+      "id": "t20_r22",
+      "italiano": "retina",
+      "portugues": "retina",
+      "genero": "f",
+      "plural": "retine",
+      "exemplo": "La retina riceve la luce.",
+      "exemplo_pt": "A retina recebe a luz.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈrɛːtina/"
+    },
+    {
+      "id": "t20_r23",
+      "italiano": "timpano",
+      "portugues": "tímpano",
+      "genero": "m",
+      "plural": "timpani",
+      "exemplo": "Il timpano trasmette i suoni.",
+      "exemplo_pt": "O tímpano transmite os sons.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtimpano/"
+    },
+    {
+      "id": "t20_r24",
+      "italiano": "trachea",
+      "portugues": "traqueia",
+      "genero": "f",
+      "plural": "trachee",
+      "exemplo": "La trachea porta l'aria ai polmoni.",
+      "exemplo_pt": "A traqueia leva o ar aos pulmões.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/traˈkɛːa/"
+    },
+    {
+      "id": "t20_r25",
+      "italiano": "diaframma",
+      "portugues": "diafragma",
+      "genero": "m",
+      "plural": "diaframmi",
+      "exemplo": "Il diaframma aiuta la respirazione.",
+      "exemplo_pt": "O diafragma ajuda a respiração.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/djaˈframma/"
+    },
+    {
+      "id": "t20_r28",
+      "italiano": "cellula",
+      "portugues": "célula",
+      "genero": "f",
+      "plural": "cellule",
+      "exemplo": "Le cellule sono l'unità della vita.",
+      "exemplo_pt": "As células são a unidade da vida.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtʃɛllula/"
+    },
+    {
+      "id": "t20_r29",
+      "italiano": "tessuto",
+      "portugues": "tecido",
+      "genero": "m",
+      "plural": "tessuti",
+      "exemplo": "Il tessuto muscolare è elastico.",
+      "exemplo_pt": "O tecido muscular é elástico.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/tesˈsuːto/"
+    },
+    {
+      "id": "t20_r33",
+      "italiano": "articolazione",
+      "portugues": "articulação",
+      "genero": "f",
+      "plural": "articolazioni",
+      "exemplo": "L'articolazione del ginocchio è fragile.",
+      "exemplo_pt": "A articulação do joelho é frágil.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/artikolaˈtsjoːne/"
+    },
+    {
+      "id": "t20_r34",
+      "italiano": "capillare",
+      "portugues": "capilar",
+      "genero": "m",
+      "plural": "capillari",
+      "exemplo": "I capillari distribuiscono il sangue.",
+      "exemplo_pt": "Os capilares distribuem o sangue.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/kaˈpiːlaːre/"
+    },
+    {
+      "id": "t20_r35",
+      "italiano": "linfa",
+      "portugues": "linfa",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La linfa combatte le infezioni.",
+      "exemplo_pt": "A linfa combate as infecções.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlimfa/"
+    },
+    {
+      "id": "t20_f01",
+      "italiano": "palmo",
+      "portugues": "palma da mão",
+      "genero": "m",
+      "plural": "palmi",
+      "exemplo": "Il palmo è la parte interna della mano.",
+      "exemplo_pt": "A palma é a parte interna da mão.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpalmo/"
+    },
+    {
+      "id": "t20_f02",
+      "italiano": "nuca",
+      "portugues": "nuca",
+      "genero": "f",
+      "plural": "nuche",
+      "exemplo": "La nuca è la parte posteriore del collo.",
+      "exemplo_pt": "A nuca é a parte posterior do pescoço.",
+      "categoria": "corpo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈnuːka/"
     }
   ]
 }

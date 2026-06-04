@@ -29,78 +29,6 @@
       "audio_ipa": "/kulˈtura/"
     },
     {
-      "id": "t27_003",
-      "italiano": "pittura",
-      "portugues": "pintura",
-      "genero": "f",
-      "plural": "pitture",
-      "exemplo": "Amo la pittura rinascimentale.",
-      "exemplo_pt": "Amo a pintura renascentista.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/pitˈtura/"
-    },
-    {
-      "id": "t27_004",
-      "italiano": "scultura",
-      "portugues": "escultura",
-      "genero": "f",
-      "plural": "sculture",
-      "exemplo": "Una bellissima scultura in marmo.",
-      "exemplo_pt": "Uma belíssima escultura em mármore.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/skulˈtura/"
-    },
-    {
-      "id": "t27_005",
-      "italiano": "architettura",
-      "portugues": "arquitetura",
-      "genero": "f",
-      "plural": "architetture",
-      "exemplo": "L'architettura gotica.",
-      "exemplo_pt": "A arquitetura gótica.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/arkitetˈtura/"
-    },
-    {
-      "id": "t27_006",
-      "italiano": "fotografia",
-      "portugues": "fotografia",
-      "genero": "f",
-      "plural": "fotografie",
-      "exemplo": "La mostra di fotografia.",
-      "exemplo_pt": "A exposição de fotografia.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/fotoɡraˈfia/"
-    },
-    {
-      "id": "t27_007",
-      "italiano": "letteratura",
-      "portugues": "literatura",
-      "genero": "f",
-      "plural": "letterature",
-      "exemplo": "La letteratura italiana.",
-      "exemplo_pt": "A literatura italiana.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/letteraˈtura/"
-    },
-    {
-      "id": "t27_008",
-      "italiano": "poesia",
-      "portugues": "poesia",
-      "genero": "f",
-      "plural": "poesie",
-      "exemplo": "Scrivere una poesia d'amore.",
-      "exemplo_pt": "Escrever uma poesia de amor.",
-      "categoria": "arte",
-      "dificuldade": "medio",
-      "audio_ipa": "/poeˈzia/"
-    },
-    {
       "id": "t27_009",
       "italiano": "design",
       "portugues": "design",
@@ -123,30 +51,6 @@
       "categoria": "arte",
       "dificuldade": "medio",
       "audio_ipa": "/esˈtɛtika/"
-    },
-    {
-      "id": "t27_011",
-      "italiano": "opera",
-      "portugues": "obra",
-      "genero": "f",
-      "plural": "opere",
-      "exemplo": "Un'opera d'arte inestimabile.",
-      "exemplo_pt": "Uma obra de arte inestimável.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɔpera/"
-    },
-    {
-      "id": "t27_012",
-      "italiano": "quadro",
-      "portugues": "quadro",
-      "genero": "m",
-      "plural": "quadri",
-      "exemplo": "Ho comprato un quadro antico.",
-      "exemplo_pt": "Comprei um quadro antigo.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkwadro/"
     },
     {
       "id": "t27_013",
@@ -173,18 +77,6 @@
       "audio_ipa": "/ˈstatwa/"
     },
     {
-      "id": "t27_015",
-      "italiano": "affresco",
-      "portugues": "afresco",
-      "genero": "m",
-      "plural": "affreschi",
-      "exemplo": "L'affresco nella chiesa.",
-      "exemplo_pt": "O afresco na igreja.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/afˈfresko/"
-    },
-    {
       "id": "t27_016",
       "italiano": "ritratto",
       "portugues": "retrato",
@@ -209,54 +101,6 @@
       "audio_ipa": "/paeˈzaddʒo/"
     },
     {
-      "id": "t27_018",
-      "italiano": "capolavoro",
-      "portugues": "obra-prima",
-      "genero": "m",
-      "plural": "capolavori",
-      "exemplo": "La Gioconda è un capolavoro.",
-      "exemplo_pt": "A Monalisa é uma obra-prima.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/kapolaˈvoro/"
-    },
-    {
-      "id": "t27_019",
-      "italiano": "museo",
-      "portugues": "museu",
-      "genero": "m",
-      "plural": "musei",
-      "exemplo": "Andiamo al museo.",
-      "exemplo_pt": "Vamos ao museu.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/muˈzɛo/"
-    },
-    {
-      "id": "t27_020",
-      "italiano": "galleria",
-      "portugues": "galeria",
-      "genero": "f",
-      "plural": "gallerie",
-      "exemplo": "La galleria d'arte.",
-      "exemplo_pt": "A galeria de arte.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡalleˈria/"
-    },
-    {
-      "id": "t27_021",
-      "italiano": "mostra",
-      "portugues": "exposição",
-      "genero": "f",
-      "plural": "mostre",
-      "exemplo": "Visitare una mostra.",
-      "exemplo_pt": "Visitar uma exposição.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmostra/"
-    },
-    {
       "id": "t27_022",
       "italiano": "esposizione",
       "portugues": "exposição",
@@ -267,42 +111,6 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/espoziˈtsjone/"
-    },
-    {
-      "id": "t27_023",
-      "italiano": "monumento",
-      "portugues": "monumento",
-      "genero": "m",
-      "plural": "monumenti",
-      "exemplo": "Il monumento ai caduti.",
-      "exemplo_pt": "O monumento aos mortos.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/monuˈmento/"
-    },
-    {
-      "id": "t27_024",
-      "italiano": "chiesa",
-      "portugues": "igreja",
-      "genero": "f",
-      "plural": "chiese",
-      "exemplo": "Una chiesa romanica.",
-      "exemplo_pt": "Uma igreja românica.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkjɛza/"
-    },
-    {
-      "id": "t27_025",
-      "italiano": "duomo",
-      "portugues": "catedral",
-      "genero": "m",
-      "plural": "duomi",
-      "exemplo": "Il Duomo di Milano.",
-      "exemplo_pt": "A Catedral de Milão.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdwɔmo/"
     },
     {
       "id": "t27_026",
@@ -329,18 +137,6 @@
       "audio_ipa": "/arˈtista/"
     },
     {
-      "id": "t27_028",
-      "italiano": "pittore",
-      "portugues": "pintor",
-      "genero": "m",
-      "plural": "pittori",
-      "exemplo": "Il pittore mescola i colori.",
-      "exemplo_pt": "O pintor mistura as cores.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/pitˈtore/"
-    },
-    {
       "id": "t27_029",
       "italiano": "scultore",
       "portugues": "escultor",
@@ -353,18 +149,6 @@
       "audio_ipa": "/skulˈtore/"
     },
     {
-      "id": "t27_030",
-      "italiano": "architetto",
-      "portugues": "arquiteto",
-      "genero": "m",
-      "plural": "architetti",
-      "exemplo": "L'architetto progetta la casa.",
-      "exemplo_pt": "O arquiteto projeta a casa.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/arkiˈtetto/"
-    },
-    {
       "id": "t27_031",
       "italiano": "fotografo",
       "portugues": "fotógrafo",
@@ -375,30 +159,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/foˈtɔɡrafo/"
-    },
-    {
-      "id": "t27_032",
-      "italiano": "poeta",
-      "portugues": "poeta",
-      "genero": "m",
-      "plural": "poeti",
-      "exemplo": "Dante è un grande poeta.",
-      "exemplo_pt": "Dante é um grande poeta.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/poˈɛta/"
-    },
-    {
-      "id": "t27_033",
-      "italiano": "scrittore",
-      "portugues": "escritor",
-      "genero": "m",
-      "plural": "scrittori",
-      "exemplo": "Lo scrittore pubblica un libro.",
-      "exemplo_pt": "O escritor publica um livro.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/skritˈtore/"
     },
     {
       "id": "t27_034",
@@ -521,18 +281,6 @@
       "audio_ipa": "/ˈbrondzo/"
     },
     {
-      "id": "t27_044",
-      "italiano": "gesso",
-      "portugues": "gesso",
-      "genero": "m",
-      "plural": "gessi",
-      "exemplo": "Un calco in gesso.",
-      "exemplo_pt": "Um molde em gesso.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒɛsso/"
-    },
-    {
       "id": "t27_045",
       "italiano": "macchina fotografica",
       "portugues": "câmera fotográfica",
@@ -543,30 +291,6 @@
       "categoria": "strumenti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈmakkina fotoˈɡrafika/"
-    },
-    {
-      "id": "t27_046",
-      "italiano": "obiettivo",
-      "portugues": "lente (fotográfica)",
-      "genero": "m",
-      "plural": "obiettivi",
-      "exemplo": "Un obiettivo molto potente.",
-      "exemplo_pt": "Uma lente muito potente.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/objetˈtivo/"
-    },
-    {
-      "id": "t27_047",
-      "italiano": "stile",
-      "portugues": "estilo",
-      "genero": "m",
-      "plural": "stili",
-      "exemplo": "Uno stile inconfondibile.",
-      "exemplo_pt": "Um estilo inconfundível.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstile/"
     },
     {
       "id": "t27_048",
@@ -591,30 +315,6 @@
       "categoria": "stili",
       "dificuldade": "medio",
       "audio_ipa": "/antikiˈta/"
-    },
-    {
-      "id": "t27_050",
-      "italiano": "medioevo",
-      "portugues": "idade média",
-      "genero": "m",
-      "plural": "medioevi",
-      "exemplo": "Castelli del medioevo.",
-      "exemplo_pt": "Castelos da idade média.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/medjoˈɛvo/"
-    },
-    {
-      "id": "t27_051",
-      "italiano": "rinascimento",
-      "portugues": "renascimento",
-      "genero": "m",
-      "plural": "rinascimenti",
-      "exemplo": "L'arte del rinascimento.",
-      "exemplo_pt": "A arte do renascimento.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/rinaʃʃiˈmento/"
     },
     {
       "id": "t27_052",
@@ -677,18 +377,6 @@
       "audio_ipa": "/kreˈare/"
     },
     {
-      "id": "t27_057",
-      "italiano": "dipingere",
-      "portugues": "pintar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dipingere un ritratto.",
-      "exemplo_pt": "Pintar um retrato.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈpindʒere/"
-    },
-    {
       "id": "t27_058",
       "italiano": "scolpire",
       "portugues": "esculpir",
@@ -713,18 +401,6 @@
       "audio_ipa": "/prodʒetˈtare/"
     },
     {
-      "id": "t27_060",
-      "italiano": "fotografare",
-      "portugues": "fotografar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Fotografare il paesaggio.",
-      "exemplo_pt": "Fotografar a paisagem.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/fotoɡraˈfare/"
-    },
-    {
       "id": "t27_061",
       "italiano": "ispirare",
       "portugues": "inspirar",
@@ -737,18 +413,6 @@
       "audio_ipa": "/ispiˈrare/"
     },
     {
-      "id": "t27_062",
-      "italiano": "ammirare",
-      "portugues": "admirar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ammirare un capolavoro.",
-      "exemplo_pt": "Admirar uma obra-prima.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ammiˈrare/"
-    },
-    {
       "id": "t27_063",
       "italiano": "esporre",
       "portugues": "expor",
@@ -759,18 +423,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/esˈporre/"
-    },
-    {
-      "id": "t27_064",
-      "italiano": "disegnare",
-      "portugues": "desenhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Disegnare a matita.",
-      "exemplo_pt": "Desenhar a lápis.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dizeɲˈɲare/"
     },
     {
       "id": "t27_065",
@@ -809,18 +461,6 @@
       "audio_ipa": "/komˈporre/"
     },
     {
-      "id": "t27_068",
-      "italiano": "esprimere",
-      "portugues": "expressar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Esprimere un sentimento.",
-      "exemplo_pt": "Expressar um sentimento.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/esˈprimere/"
-    },
-    {
       "id": "t27_069",
       "italiano": "immaginare",
       "portugues": "imaginar",
@@ -831,18 +471,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/immadʒiˈnare/"
-    },
-    {
-      "id": "t27_070",
-      "italiano": "rappresentare",
-      "portugues": "representar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il quadro rappresenta la guerra.",
-      "exemplo_pt": "O quadro representa a guerra.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/rapprezenˈtare/"
     },
     {
       "id": "t27_071",
@@ -869,18 +497,6 @@
       "audio_ipa": "/appretˈtsare/"
     },
     {
-      "id": "t27_073",
-      "italiano": "visitare",
-      "portugues": "visitar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Visitare una mostra.",
-      "exemplo_pt": "Visitar uma exposição.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/viziˈtare/"
-    },
-    {
       "id": "t27_074",
       "italiano": "dedicare",
       "portugues": "dedicar",
@@ -905,18 +521,6 @@
       "audio_ipa": "/invenˈtare/"
     },
     {
-      "id": "t27_076",
-      "italiano": "bello",
-      "portugues": "belo/bonito",
-      "genero": "m",
-      "plural": "belli",
-      "exemplo": "Un quadro molto bello.",
-      "exemplo_pt": "Um quadro muito bonito.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbɛllo/"
-    },
-    {
       "id": "t27_077",
       "italiano": "brutto",
       "portugues": "feio",
@@ -927,30 +531,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈbrutto/"
-    },
-    {
-      "id": "t27_078",
-      "italiano": "antico",
-      "portugues": "antigo",
-      "genero": "m",
-      "plural": "antichi",
-      "exemplo": "Un vaso antico.",
-      "exemplo_pt": "Um vaso antigo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/anˈtiko/"
-    },
-    {
-      "id": "t27_079",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Arte moderna.",
-      "exemplo_pt": "Arte moderna.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
     },
     {
       "id": "t27_080",
@@ -987,18 +567,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/oridʒiˈnale/"
-    },
-    {
-      "id": "t27_083",
-      "italiano": "falso",
-      "portugues": "falso",
-      "genero": "m",
-      "plural": "falsi",
-      "exemplo": "Questo quadro è un falso.",
-      "exemplo_pt": "Este quadro é um falso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfalso/"
     },
     {
       "id": "t27_084",
@@ -1169,18 +737,6 @@
       "audio_ipa": "/akkweˈrɛllo/"
     },
     {
-      "id": "t27_098",
-      "italiano": "pennarello",
-      "portugues": "canetinha",
-      "genero": "m",
-      "plural": "pennarelli",
-      "exemplo": "Disegnare con il pennarello.",
-      "exemplo_pt": "Desenhar com a canetinha.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/pennaˈrɛllo/"
-    },
-    {
       "id": "t27_099",
       "italiano": "carboncino",
       "portugues": "carvão (desenho)",
@@ -1227,42 +783,6 @@
       "categoria": "strumenti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈtʃera/"
-    },
-    {
-      "id": "t27_103",
-      "italiano": "sfumatura",
-      "portugues": "nuance/tom",
-      "genero": "f",
-      "plural": "sfumature",
-      "exemplo": "Una sfumatura di blu.",
-      "exemplo_pt": "Uma nuance de azul.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/sfumaˈtura/"
-    },
-    {
-      "id": "t27_104",
-      "italiano": "chiaroscuro",
-      "portugues": "claro-escuro",
-      "genero": "m",
-      "plural": "chiaroscuri",
-      "exemplo": "La tecnica del chiaroscuro.",
-      "exemplo_pt": "A técnica do claro-escuro.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/kjaroˈskuro/"
-    },
-    {
-      "id": "t27_105",
-      "italiano": "prospettiva",
-      "portugues": "perspectiva",
-      "genero": "f",
-      "plural": "prospettive",
-      "exemplo": "Disegnare in prospettiva.",
-      "exemplo_pt": "Desenhar em perspectiva.",
-      "categoria": "stili",
-      "dificuldade": "medio",
-      "audio_ipa": "/prospetˈtiva/"
     },
     {
       "id": "t27_106",
@@ -1323,6 +843,450 @@
       "categoria": "stili",
       "dificuldade": "medio",
       "audio_ipa": "/surreaˈlizmo/"
+    },
+    {
+      "id": "t27_r03",
+      "italiano": "bassorilievo",
+      "portugues": "baixo-relevo",
+      "genero": "m",
+      "plural": "bassorilievi",
+      "exemplo": "Il bassorilievo decora la facciata.",
+      "exemplo_pt": "O baixo-relevo decora a fachada.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/bassoriliˈɛːvo/"
+    },
+    {
+      "id": "t27_r04",
+      "italiano": "incisione",
+      "portugues": "gravura / incisão",
+      "genero": "f",
+      "plural": "incisioni",
+      "exemplo": "L'incisione è su rame.",
+      "exemplo_pt": "A gravura é em cobre.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/intʃiˈzjoːne/"
+    },
+    {
+      "id": "t27_r06",
+      "italiano": "tempera",
+      "portugues": "têmpera",
+      "genero": "f",
+      "plural": "tempere",
+      "exemplo": "La tempera è una tecnica antica.",
+      "exemplo_pt": "A têmpera é uma técnica antiga.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɛmpera/"
+    },
+    {
+      "id": "t27_r09",
+      "italiano": "simmetria",
+      "portugues": "simetria",
+      "genero": "f",
+      "plural": "simmetrie",
+      "exemplo": "La simmetria è tipica dell'arte classica.",
+      "exemplo_pt": "A simetria é típica da arte clássica.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/simmeˈtriːa/"
+    },
+    {
+      "id": "t27_r11",
+      "italiano": "collezione",
+      "portugues": "coleção",
+      "genero": "f",
+      "plural": "collezioni",
+      "exemplo": "La collezione del museo è vastissima.",
+      "exemplo_pt": "A coleção do museu é vastíssima.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/kolletˈtsjoːne/"
+    },
+    {
+      "id": "t27_r12",
+      "italiano": "restauro",
+      "portugues": "restauro",
+      "genero": "m",
+      "plural": "restauri",
+      "exemplo": "Il restauro del dipinto è completato.",
+      "exemplo_pt": "O restauro da pintura está concluído.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/reˈstauro/"
+    },
+    {
+      "id": "t27_r14",
+      "italiano": "committente",
+      "portugues": "patrono / encomendante",
+      "genero": "m",
+      "plural": "committenti",
+      "exemplo": "Il committente ha scelto il tema.",
+      "exemplo_pt": "O encomendante escolheu o tema.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/kommitˈtɛnte/"
+    },
+    {
+      "id": "t27_r15",
+      "italiano": "bottega",
+      "portugues": "oficina / ateliê",
+      "genero": "f",
+      "plural": "botteghe",
+      "exemplo": "La bottega del pittore è nel centro.",
+      "exemplo_pt": "O ateliê do pintor fica no centro.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/botˈtɛːɡa/"
+    },
+    {
+      "id": "t27_r17",
+      "italiano": "vernissage",
+      "portugues": "vernissage",
+      "genero": "m",
+      "plural": "vernissage",
+      "exemplo": "Il vernissage è stasera alle otto.",
+      "exemplo_pt": "A vernissage é esta noite às oito.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/verniˈsaːʒ/"
+    },
+    {
+      "id": "t27_r18",
+      "italiano": "critico d'arte",
+      "portugues": "crítico de arte",
+      "genero": "m",
+      "plural": "critici d'arte",
+      "exemplo": "Il critico d'arte ha recensito la mostra.",
+      "exemplo_pt": "O crítico de arte resenheu a exposição.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkritiko ˈdarte/"
+    },
+    {
+      "id": "t27_r21",
+      "italiano": "autentica",
+      "portugues": "autenticação",
+      "genero": "f",
+      "plural": "autentiche",
+      "exemplo": "L'autentica certifica l'opera.",
+      "exemplo_pt": "A autenticação certifica a obra.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/auˈtɛntika/"
+    },
+    {
+      "id": "t27_r23",
+      "italiano": "provenance",
+      "portugues": "proveniência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La provenance dell'opera è incerta.",
+      "exemplo_pt": "A proveniência da obra é incerta.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/proˈvenans/"
+    },
+    {
+      "id": "t27_r24",
+      "italiano": "iconografia",
+      "portugues": "iconografia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'iconografia religiosa è ricca.",
+      "exemplo_pt": "A iconografia religiosa é rica.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ikonoˈɡraːfja/"
+    },
+    {
+      "id": "t27_r26",
+      "italiano": "periodo",
+      "portugues": "período",
+      "genero": "m",
+      "plural": "periodi",
+      "exemplo": "Il periodo romantico è ricco.",
+      "exemplo_pt": "O período romântico é rico.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɛːrjodo/"
+    },
+    {
+      "id": "t27_r27",
+      "italiano": "manifesto",
+      "portugues": "manifesto",
+      "genero": "m",
+      "plural": "manifesti",
+      "exemplo": "Il manifesto futurista è audace.",
+      "exemplo_pt": "O manifesto futurista é ousado.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/maniˈfɛsto/"
+    },
+    {
+      "id": "t27_r29",
+      "italiano": "figurativo",
+      "portugues": "figurativo",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Lo stile figurativo rappresenta la realtà.",
+      "exemplo_pt": "O estilo figurativo representa a realidade.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/fiɡuraˈtiːvo/"
+    },
+    {
+      "id": "t27_p01",
+      "italiano": "tecnica mista",
+      "portugues": "técnica mista",
+      "genero": "f",
+      "plural": "tecniche miste",
+      "exemplo": "La tecnica mista combina più media.",
+      "exemplo_pt": "A técnica mista combina vários meios.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɛːknka ˈmista/"
+    },
+    {
+      "id": "t27_p02",
+      "italiano": "installazione artistica",
+      "portugues": "instalação artística",
+      "genero": "f",
+      "plural": "installazioni artistiche",
+      "exemplo": "L'installazione occupa lo spazio.",
+      "exemplo_pt": "A instalação ocupa o espaço.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/installaˈttsjoːne arˈtistika/"
+    },
+    {
+      "id": "t27_p03",
+      "italiano": "arte concettuale",
+      "portugues": "arte conceitual",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'arte concettuale privilegia l'idea.",
+      "exemplo_pt": "A arte conceitual privilegia a ideia.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈarte kontʃetˈtwaːle/"
+    },
+    {
+      "id": "t27_p04",
+      "italiano": "body art",
+      "portugues": "body art",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La body art usa il corpo.",
+      "exemplo_pt": "A body art usa o corpo.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbɔdi art/"
+    },
+    {
+      "id": "t27_p05",
+      "italiano": "performance artistica",
+      "portugues": "performance artística",
+      "genero": "f",
+      "plural": "performance artistiche",
+      "exemplo": "La performance dura un'ora.",
+      "exemplo_pt": "A performance dura uma hora.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/perˈfɔrmans arˈtistika/"
+    },
+    {
+      "id": "t27_p06",
+      "italiano": "street art",
+      "portugues": "arte de rua",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La street art decora i muri.",
+      "exemplo_pt": "A arte de rua decora as paredes.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/striːt art/"
+    },
+    {
+      "id": "t27_p07",
+      "italiano": "graffiti",
+      "portugues": "grafite",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I graffiti sono arte controversa.",
+      "exemplo_pt": "Os grafites são arte controversa.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ɡrafˈfiːti/"
+    },
+    {
+      "id": "t27_p08",
+      "italiano": "fotografia artistica",
+      "portugues": "fotografia artística",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La fotografia artistica racconta storie.",
+      "exemplo_pt": "A fotografia artística conta histórias.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/fotoˈɡraːfja arˈtistika/"
+    },
+    {
+      "id": "t27_p09",
+      "italiano": "video arte",
+      "portugues": "videoarte",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La video arte usa il filmato.",
+      "exemplo_pt": "A videoarte usa a filmagem.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈvidjo ˈarte/"
+    },
+    {
+      "id": "t27_p10",
+      "italiano": "arte digitale",
+      "portugues": "arte digital",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'arte digitale nasce dal codice.",
+      "exemplo_pt": "A arte digital nasce do código.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈarte diˈdʒitaːle/"
+    },
+    {
+      "id": "t27_p11",
+      "italiano": "NFT",
+      "portugues": "NFT",
+      "genero": "m",
+      "plural": "NFT",
+      "exemplo": "L'NFT certifica l'opera digitale.",
+      "exemplo_pt": "O NFT certifica a obra digital.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˌɛneˈfeˈti/"
+    },
+    {
+      "id": "t27_p12",
+      "italiano": "design industriale",
+      "portugues": "design industrial",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il design industriale unisce forma e funzione.",
+      "exemplo_pt": "O design industrial une forma e função.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈzajn induˈstrjaːle/"
+    },
+    {
+      "id": "t27_p13",
+      "italiano": "industrial design",
+      "portugues": "design industrial",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'industrial design è applicato.",
+      "exemplo_pt": "O design industrial é aplicado.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/inˈdʌstriəl diˈzajn/"
+    },
+    {
+      "id": "t27_p14",
+      "italiano": "grafica",
+      "portugues": "design gráfico",
+      "genero": "f",
+      "plural": "grafiche",
+      "exemplo": "La grafica del manifesto è potente.",
+      "exemplo_pt": "O design gráfico do cartaz é poderoso.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡraːfika/"
+    },
+    {
+      "id": "t27_p15",
+      "italiano": "tipografia",
+      "portugues": "tipografia",
+      "genero": "f",
+      "plural": "tipografie",
+      "exemplo": "La tipografia sceglie i caratteri.",
+      "exemplo_pt": "A tipografia escolhe os tipos.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/tipoˈɡraːfja/"
+    },
+    {
+      "id": "t27_p16",
+      "italiano": "logo",
+      "portugues": "logotipo",
+      "genero": "m",
+      "plural": "logo",
+      "exemplo": "Il logo dell'azienda è riconoscibile.",
+      "exemplo_pt": "O logotipo da empresa é reconhecível.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlɔːɡo/"
+    },
+    {
+      "id": "t27_p17",
+      "italiano": "identità visiva",
+      "portugues": "identidade visual",
+      "genero": "f",
+      "plural": "identità visive",
+      "exemplo": "L'identità visiva del marchio è forte.",
+      "exemplo_pt": "A identidade visual da marca é forte.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/idenˈtiːta viˈziːva/"
+    },
+    {
+      "id": "t27_p18",
+      "italiano": "colore dominante",
+      "portugues": "cor dominante",
+      "genero": "m",
+      "plural": "colori dominanti",
+      "exemplo": "Il colore dominante è il rosso.",
+      "exemplo_pt": "A cor dominante é o vermelho.",
+      "categoria": "design",
+      "dificuldade": "medio",
+      "audio_ipa": "/koˈloːre domiˈnante/"
+    },
+    {
+      "id": "t27_p19",
+      "italiano": "composizione",
+      "portugues": "composição",
+      "genero": "f",
+      "plural": "composizioni",
+      "exemplo": "La composizione equilibra gli elementi.",
+      "exemplo_pt": "A composição equilibra os elementos.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/kompoziˈttsjoːne/"
+    },
+    {
+      "id": "t27_p20",
+      "italiano": "spazio negativo",
+      "portugues": "espaço negativo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo spazio negativo definisce la forma.",
+      "exemplo_pt": "O espaço negativo define a forma.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈspatsjo neˈɡaːtivo/"
+    },
+    {
+      "id": "t27_p21",
+      "italiano": "ritmo visivo",
+      "portugues": "ritmo visual",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il ritmo visivo guida l'occhio.",
+      "exemplo_pt": "O ritmo visual guia o olhar.",
+      "categoria": "arte",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈritmo viˈziːvo/"
     }
   ]
 }

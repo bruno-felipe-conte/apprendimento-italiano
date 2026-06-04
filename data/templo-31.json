@@ -17,18 +17,6 @@
       "audio_ipa": "/ˈʃɛntsa/"
     },
     {
-      "id": "t31_002",
-      "italiano": "ricerca",
-      "portugues": "pesquisa",
-      "genero": "f",
-      "plural": "ricerche",
-      "exemplo": "La ricerca scientifica.",
-      "exemplo_pt": "A pesquisa científica.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/riˈtʃerka/"
-    },
-    {
       "id": "t31_003",
       "italiano": "scienziato",
       "portugues": "cientista",
@@ -51,18 +39,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/ritʃerkaˈtore/"
-    },
-    {
-      "id": "t31_005",
-      "italiano": "laboratorio",
-      "portugues": "laboratório",
-      "genero": "m",
-      "plural": "laboratori",
-      "exemplo": "Un laboratorio chimico.",
-      "exemplo_pt": "Um laboratório químico.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/laboraˈtɔrjo/"
     },
     {
       "id": "t31_006",
@@ -159,18 +135,6 @@
       "categoria": "discipline",
       "dificuldade": "medio",
       "audio_ipa": "/bjoloˈdʒia/"
-    },
-    {
-      "id": "t31_014",
-      "italiano": "astronomia",
-      "portugues": "astronomia",
-      "genero": "f",
-      "plural": "astronomie",
-      "exemplo": "L'astronomia osserva le stelle.",
-      "exemplo_pt": "A astronomia observa as estrelas.",
-      "categoria": "discipline",
-      "dificuldade": "medio",
-      "audio_ipa": "/astronoˈmia/"
     },
     {
       "id": "t31_015",
@@ -281,42 +245,6 @@
       "audio_ipa": "/moˈlɛkola/"
     },
     {
-      "id": "t31_024",
-      "italiano": "cellula",
-      "portugues": "célula",
-      "genero": "f",
-      "plural": "cellule",
-      "exemplo": "Una cellula animale.",
-      "exemplo_pt": "Uma célula animal.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃɛllula/"
-    },
-    {
-      "id": "t31_025",
-      "italiano": "pianeta",
-      "portugues": "planeta",
-      "genero": "m",
-      "plural": "pianeti",
-      "exemplo": "Il pianeta Marte.",
-      "exemplo_pt": "O planeta Marte.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/pjaˈneta/"
-    },
-    {
-      "id": "t31_026",
-      "italiano": "stella",
-      "portugues": "estrela",
-      "genero": "f",
-      "plural": "stelle",
-      "exemplo": "Una stella luminosa.",
-      "exemplo_pt": "Uma estrela luminosa.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstella/"
-    },
-    {
       "id": "t31_027",
       "italiano": "galassia",
       "portugues": "galáxia",
@@ -339,18 +267,6 @@
       "categoria": "elementi",
       "dificuldade": "medio",
       "audio_ipa": "/ɡraviˈta/"
-    },
-    {
-      "id": "t31_029",
-      "italiano": "energia",
-      "portugues": "energia",
-      "genero": "f",
-      "plural": "energie",
-      "exemplo": "L'energia solare.",
-      "exemplo_pt": "A energia solar.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/enerˈdʒia/"
     },
     {
       "id": "t31_030",
@@ -399,18 +315,6 @@
       "categoria": "elementi",
       "dificuldade": "medio",
       "audio_ipa": "/temperaˈtura/"
-    },
-    {
-      "id": "t31_034",
-      "italiano": "pressione",
-      "portugues": "pressão",
-      "genero": "f",
-      "plural": "pressioni",
-      "exemplo": "La pressione atmosferica.",
-      "exemplo_pt": "A pressão atmosférica.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/presˈsjone/"
     },
     {
       "id": "t31_035",
@@ -521,42 +425,6 @@
       "audio_ipa": "/batˈtɛrjo/"
     },
     {
-      "id": "t31_044",
-      "italiano": "virus",
-      "portugues": "vírus",
-      "genero": "m",
-      "plural": "virus",
-      "exemplo": "Il virus influenzale.",
-      "exemplo_pt": "O vírus da gripe.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvirus/"
-    },
-    {
-      "id": "t31_045",
-      "italiano": "vaccino",
-      "portugues": "vacina",
-      "genero": "m",
-      "plural": "vaccini",
-      "exemplo": "Un nuovo vaccino.",
-      "exemplo_pt": "Uma nova vacina.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/vatˈtʃino/"
-    },
-    {
-      "id": "t31_046",
-      "italiano": "malattia",
-      "portugues": "doença",
-      "genero": "f",
-      "plural": "malattie",
-      "exemplo": "Curare una malattia.",
-      "exemplo_pt": "Curar uma doença.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/malatˈtia/"
-    },
-    {
       "id": "t31_047",
       "italiano": "cura",
       "portugues": "cura/tratamento",
@@ -567,30 +435,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkura/"
-    },
-    {
-      "id": "t31_048",
-      "italiano": "medicina",
-      "portugues": "remédio",
-      "genero": "f",
-      "plural": "medicine",
-      "exemplo": "Prendi la medicina.",
-      "exemplo_pt": "Tome o remédio.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/mediˈtʃina/"
-    },
-    {
-      "id": "t31_049",
-      "italiano": "genio",
-      "portugues": "gênio",
-      "genero": "m",
-      "plural": "geni",
-      "exemplo": "Un genio della matematica.",
-      "exemplo_pt": "Um gênio da matemática.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒɛnjo/"
     },
     {
       "id": "t31_050",
@@ -615,30 +459,6 @@
       "categoria": "elementi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈspɛtʃe/"
-    },
-    {
-      "id": "t31_052",
-      "italiano": "ambiente",
-      "portugues": "meio ambiente",
-      "genero": "m",
-      "plural": "ambienti",
-      "exemplo": "Proteggere l'ambiente.",
-      "exemplo_pt": "Proteger o meio ambiente.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/amˈbjɛnte/"
-    },
-    {
-      "id": "t31_053",
-      "italiano": "clima",
-      "portugues": "clima",
-      "genero": "m",
-      "plural": "climi",
-      "exemplo": "Il cambiamento del clima.",
-      "exemplo_pt": "A mudança climática.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklima/"
     },
     {
       "id": "t31_054",
@@ -737,18 +557,6 @@
       "audio_ipa": "/ˈpezo/"
     },
     {
-      "id": "t31_062",
-      "italiano": "lunghezza",
-      "portugues": "comprimento",
-      "genero": "f",
-      "plural": "lunghezze",
-      "exemplo": "La lunghezza d'onda.",
-      "exemplo_pt": "O comprimento de onda.",
-      "categoria": "elementi",
-      "dificuldade": "medio",
-      "audio_ipa": "/lunˈɡhettsa/"
-    },
-    {
       "id": "t31_063",
       "italiano": "distanza",
       "portugues": "distância",
@@ -771,42 +579,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/ritʃerˈkare/"
-    },
-    {
-      "id": "t31_065",
-      "italiano": "scoprire",
-      "portugues": "descobrir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scoprire un pianeta.",
-      "exemplo_pt": "Descobrir um planeta.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skoˈprire/"
-    },
-    {
-      "id": "t31_066",
-      "italiano": "inventare",
-      "portugues": "inventar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Inventare una macchina.",
-      "exemplo_pt": "Inventar uma máquina.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/invenˈtare/"
-    },
-    {
-      "id": "t31_067",
-      "italiano": "osservare",
-      "portugues": "observar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Osservare le stelle.",
-      "exemplo_pt": "Observar as estrelas.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/osserˈvare/"
     },
     {
       "id": "t31_068",
@@ -857,18 +629,6 @@
       "audio_ipa": "/mizuˈrare/"
     },
     {
-      "id": "t31_072",
-      "italiano": "pubblicare",
-      "portugues": "publicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Pubblicare i risultati.",
-      "exemplo_pt": "Publicar os resultados.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/pubbliˈkare/"
-    },
-    {
       "id": "t31_073",
       "italiano": "sperimentare",
       "portugues": "experimentar",
@@ -905,18 +665,6 @@
       "audio_ipa": "/brevetˈtare/"
     },
     {
-      "id": "t31_076",
-      "italiano": "guarire",
-      "portugues": "curar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Guarire dalla malattia.",
-      "exemplo_pt": "Curar-se da doença.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡwaˈrire/"
-    },
-    {
       "id": "t31_077",
       "italiano": "inquinare",
       "portugues": "poluir",
@@ -951,18 +699,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ʃenˈtifiko/"
-    },
-    {
-      "id": "t31_080",
-      "italiano": "tecnologico",
-      "portugues": "tecnológico",
-      "genero": "m",
-      "plural": "tecnologici",
-      "exemplo": "Progresso tecnologico.",
-      "exemplo_pt": "Progresso tecnológico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/teknoˈlɔdʒiko/"
     },
     {
       "id": "t31_081",
@@ -1061,42 +797,6 @@
       "audio_ipa": "/ˈvero/"
     },
     {
-      "id": "t31_089",
-      "italiano": "falso",
-      "portugues": "falso",
-      "genero": "m",
-      "plural": "falsi",
-      "exemplo": "Un mito falso.",
-      "exemplo_pt": "Um mito falso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfalso/"
-    },
-    {
-      "id": "t31_090",
-      "italiano": "naturale",
-      "portugues": "natural",
-      "genero": "m",
-      "plural": "naturali",
-      "exemplo": "Un fenomeno naturale.",
-      "exemplo_pt": "Um fenômeno natural.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/natuˈrale/"
-    },
-    {
-      "id": "t31_091",
-      "italiano": "artificiale",
-      "portugues": "artificial",
-      "genero": "m",
-      "plural": "artificiali",
-      "exemplo": "Intelligenza artificiale.",
-      "exemplo_pt": "Inteligência artificial.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/artifiˈtʃale/"
-    },
-    {
       "id": "t31_092",
       "italiano": "complesso",
       "portugues": "complexo",
@@ -1107,30 +807,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/komˈplɛsso/"
-    },
-    {
-      "id": "t31_093",
-      "italiano": "semplice",
-      "portugues": "simples",
-      "genero": "m",
-      "plural": "semplici",
-      "exemplo": "Una spiegazione semplice.",
-      "exemplo_pt": "Uma explicação simples.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsemplitʃe/"
-    },
-    {
-      "id": "t31_094",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Un laboratorio moderno.",
-      "exemplo_pt": "Um laboratório moderno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
     },
     {
       "id": "t31_095",
@@ -1301,18 +977,6 @@
       "audio_ipa": "/radjoloˈdʒia/"
     },
     {
-      "id": "t31_109",
-      "italiano": "ecografia",
-      "portugues": "ultrassom",
-      "genero": "f",
-      "plural": "ecografie",
-      "exemplo": "Fare un'ecografia.",
-      "exemplo_pt": "Fazer um ultrassom.",
-      "categoria": "discipline",
-      "dificuldade": "medio",
-      "audio_ipa": "/ekoɡraˈfia/"
-    },
-    {
       "id": "t31_110",
       "italiano": "diagnosi",
       "portugues": "diagnóstico",
@@ -1323,6 +987,402 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/diˈaɲɲozi/"
+    },
+    {
+      "id": "t31_r03",
+      "italiano": "elettrone",
+      "portugues": "elétron",
+      "genero": "m",
+      "plural": "elettroni",
+      "exemplo": "L'elettrone ha carica negativa.",
+      "exemplo_pt": "O elétron tem carga negativa.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/eletˈtroːne/"
+    },
+    {
+      "id": "t31_r04",
+      "italiano": "protone",
+      "portugues": "próton",
+      "genero": "m",
+      "plural": "protoni",
+      "exemplo": "Il protone ha carica positiva.",
+      "exemplo_pt": "O próton tem carga positiva.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/proˈtoːne/"
+    },
+    {
+      "id": "t31_r05",
+      "italiano": "neutrone",
+      "portugues": "nêutron",
+      "genero": "m",
+      "plural": "neutroni",
+      "exemplo": "Il neutrone è privo di carica.",
+      "exemplo_pt": "O nêutron não tem carga.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/neuˈtroːne/"
+    },
+    {
+      "id": "t31_r06",
+      "italiano": "reazione chimica",
+      "portugues": "reação química",
+      "genero": "f",
+      "plural": "reazioni chimiche",
+      "exemplo": "La reazione chimica libera energia.",
+      "exemplo_pt": "A reação química libera energia.",
+      "categoria": "chimica",
+      "dificuldade": "medio",
+      "audio_ipa": "/reaˈttsjoːne ˈkiːmika/"
+    },
+    {
+      "id": "t31_r07",
+      "italiano": "catalisi",
+      "portugues": "catálise",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La catalisi accelera la reazione.",
+      "exemplo_pt": "A catálise acelera a reação.",
+      "categoria": "chimica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kaˈtaːlizi/"
+    },
+    {
+      "id": "t31_r08",
+      "italiano": "osmosi",
+      "portugues": "osmose",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'osmosi regola l'equilibrio idrico.",
+      "exemplo_pt": "A osmose regula o equilíbrio hídrico.",
+      "categoria": "biologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ozˈmɔːzi/"
+    },
+    {
+      "id": "t31_r09",
+      "italiano": "entropia",
+      "portugues": "entropia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'entropia tende ad aumentare.",
+      "exemplo_pt": "A entropia tende a aumentar.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/entroˈpiːa/"
+    },
+    {
+      "id": "t31_r10",
+      "italiano": "inerzia",
+      "portugues": "inércia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'inerzia mantiene il movimento.",
+      "exemplo_pt": "A inércia mantém o movimento.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/iˈnɛrttsja/"
+    },
+    {
+      "id": "t31_r11",
+      "italiano": "fotone",
+      "portugues": "fóton",
+      "genero": "m",
+      "plural": "fotoni",
+      "exemplo": "Il fotone è la particella della luce.",
+      "exemplo_pt": "O fóton é a partícula da luz.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/foˈtoːne/"
+    },
+    {
+      "id": "t31_r12",
+      "italiano": "quark",
+      "portugues": "quark",
+      "genero": "m",
+      "plural": "quark",
+      "exemplo": "Il quark è una particella elementare.",
+      "exemplo_pt": "O quark é uma partícula elementar.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kwark/"
+    },
+    {
+      "id": "t31_r13",
+      "italiano": "plasma",
+      "portugues": "plasma",
+      "genero": "m",
+      "plural": "plasmi",
+      "exemplo": "Il plasma è il quarto stato della materia.",
+      "exemplo_pt": "O plasma é o quarto estado da matéria.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈplaːzma/"
+    },
+    {
+      "id": "t31_r14",
+      "italiano": "fusione nucleare",
+      "portugues": "fusão nuclear",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La fusione nucleare produce energia pulita.",
+      "exemplo_pt": "A fusão nuclear produz energia limpa.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/fuˈzjoːne nukleˈaːre/"
+    },
+    {
+      "id": "t31_r15",
+      "italiano": "fissione nucleare",
+      "portugues": "fissão nuclear",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La fissione nucleare è nelle centrali.",
+      "exemplo_pt": "A fissão nuclear está nas usinas.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/fisˈsjoːne nukleˈaːre/"
+    },
+    {
+      "id": "t31_r16",
+      "italiano": "radioattività",
+      "portugues": "radioatividade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La radioattività è pericolosa.",
+      "exemplo_pt": "A radioatividade é perigosa.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/radioattiviˈta/"
+    },
+    {
+      "id": "t31_r17",
+      "italiano": "isotopo",
+      "portugues": "isótopo",
+      "genero": "m",
+      "plural": "isotopi",
+      "exemplo": "L'isotopo ha lo stesso numero atomico.",
+      "exemplo_pt": "O isótopo tem o mesmo número atômico.",
+      "categoria": "chimica",
+      "dificuldade": "medio",
+      "audio_ipa": "/iˈzɔːtopo/"
+    },
+    {
+      "id": "t31_r19",
+      "italiano": "DNA",
+      "portugues": "DNA",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il DNA contiene le informazioni genetiche.",
+      "exemplo_pt": "O DNA contém as informações genéticas.",
+      "categoria": "biologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/diɛnˈna/"
+    },
+    {
+      "id": "t31_r20",
+      "italiano": "proteina",
+      "portugues": "proteína",
+      "genero": "f",
+      "plural": "proteine",
+      "exemplo": "Le proteine costruiscono i tessuti.",
+      "exemplo_pt": "As proteínas constroem os tecidos.",
+      "categoria": "biologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/prteˈiːna/"
+    },
+    {
+      "id": "t31_r21",
+      "italiano": "enzima",
+      "portugues": "enzima",
+      "genero": "m",
+      "plural": "enzimi",
+      "exemplo": "L'enzima catalizza la digestione.",
+      "exemplo_pt": "A enzima catalisa a digestão.",
+      "categoria": "biochimica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ɛnˈdziːma/"
+    },
+    {
+      "id": "t31_r22",
+      "italiano": "anticorpo",
+      "portugues": "anticorpo",
+      "genero": "m",
+      "plural": "anticorpi",
+      "exemplo": "L'anticorpo combatte l'infezione.",
+      "exemplo_pt": "O anticorpo combate a infecção.",
+      "categoria": "immunologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/antiˈkɔrpo/"
+    },
+    {
+      "id": "t31_r24",
+      "italiano": "mutazione",
+      "portugues": "mutação",
+      "genero": "f",
+      "plural": "mutazioni",
+      "exemplo": "La mutazione genetica causa malattie.",
+      "exemplo_pt": "A mutação genética causa doenças.",
+      "categoria": "genetica",
+      "dificuldade": "medio",
+      "audio_ipa": "/mutaˈttsjoːne/"
+    },
+    {
+      "id": "t31_r25",
+      "italiano": "selezione naturale",
+      "portugues": "seleção natural",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La selezione naturale guida l'evoluzione.",
+      "exemplo_pt": "A seleção natural guia a evolução.",
+      "categoria": "evoluzione",
+      "dificuldade": "medio",
+      "audio_ipa": "/seletˈttsjoːne natuˈraːle/"
+    },
+    {
+      "id": "t31_r27",
+      "italiano": "clone",
+      "portugues": "clone",
+      "genero": "m",
+      "plural": "cloni",
+      "exemplo": "Il clone è geneticamente identico.",
+      "exemplo_pt": "O clone é geneticamente idêntico.",
+      "categoria": "biologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkloːne/"
+    },
+    {
+      "id": "t31_r28",
+      "italiano": "nanotecnologia",
+      "portugues": "nanotecnologia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La nanotecnologia opera a scala atomica.",
+      "exemplo_pt": "A nanotecnologia opera em escala atômica.",
+      "categoria": "tecnologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/nanoteknoloˈdʒiːa/"
+    },
+    {
+      "id": "t31_r30",
+      "italiano": "variabile",
+      "portugues": "variável",
+      "genero": "f",
+      "plural": "variabili",
+      "exemplo": "La variabile indipendente è controllata.",
+      "exemplo_pt": "A variável independente é controlada.",
+      "categoria": "metodo",
+      "dificuldade": "medio",
+      "audio_ipa": "/varjaˈbiːle/"
+    },
+    {
+      "id": "t31_r32",
+      "italiano": "deviazione standard",
+      "portugues": "desvio padrão",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La deviazione standard misura la dispersione.",
+      "exemplo_pt": "O desvio padrão mede a dispersão.",
+      "categoria": "statistica",
+      "dificuldade": "medio",
+      "audio_ipa": "/devjaˈttsjoːne stanˈdard/"
+    },
+    {
+      "id": "t31_r33",
+      "italiano": "correlazione",
+      "portugues": "correlação",
+      "genero": "f",
+      "plural": "correlazioni",
+      "exemplo": "La correlazione non implica causalità.",
+      "exemplo_pt": "A correlação não implica causalidade.",
+      "categoria": "statistica",
+      "dificuldade": "medio",
+      "audio_ipa": "/korrelatˈttsjoːne/"
+    },
+    {
+      "id": "t31_r34",
+      "italiano": "placebo",
+      "portugues": "placebo",
+      "genero": "m",
+      "plural": "placebo",
+      "exemplo": "Il gruppo placebo non riceve il farmaco.",
+      "exemplo_pt": "O grupo placebo não recebe o medicamento.",
+      "categoria": "medicina",
+      "dificuldade": "medio",
+      "audio_ipa": "/plaˈtʃɛːbo/"
+    },
+    {
+      "id": "t31_r35",
+      "italiano": "peer review",
+      "portugues": "revisão por pares",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La peer review garantisce la qualità.",
+      "exemplo_pt": "A revisão por pares garante a qualidade.",
+      "categoria": "scienza",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpier riˈvjuː/"
+    },
+    {
+      "id": "t31_r36",
+      "italiano": "brevetto scientifico",
+      "portugues": "patente científica",
+      "genero": "m",
+      "plural": "brevetti scientifici",
+      "exemplo": "Il brevetto protegge la scoperta.",
+      "exemplo_pt": "A patente protege a descoberta.",
+      "categoria": "scienza",
+      "dificuldade": "medio",
+      "audio_ipa": "/breˈvetto ʃɛnˈtifiko/"
+    },
+    {
+      "id": "t31_r37",
+      "italiano": "paradigma",
+      "portugues": "paradigma",
+      "genero": "m",
+      "plural": "paradigmi",
+      "exemplo": "Il paradigma scientifico cambia raramente.",
+      "exemplo_pt": "O paradigma científico muda raramente.",
+      "categoria": "filosofia scienza",
+      "dificuldade": "medio",
+      "audio_ipa": "/paraˈdiɡma/"
+    },
+    {
+      "id": "t31_r38",
+      "italiano": "falsificabilità",
+      "portugues": "falsificabilidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La falsificabilità è criterio scientifico.",
+      "exemplo_pt": "A falsificabilidade é critério científico.",
+      "categoria": "filosofia scienza",
+      "dificuldade": "medio",
+      "audio_ipa": "/falsifikabiliˈta/"
+    },
+    {
+      "id": "t31_r39",
+      "italiano": "induzione scientifica",
+      "portugues": "indução científica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'induzione porta a leggi generali.",
+      "exemplo_pt": "A indução leva a leis gerais.",
+      "categoria": "metodo",
+      "dificuldade": "medio",
+      "audio_ipa": "/indutˈttsjoːne/"
+    },
+    {
+      "id": "t31_r40",
+      "italiano": "deduzione",
+      "portugues": "dedução",
+      "genero": "f",
+      "plural": "deduzioni",
+      "exemplo": "La deduzione parte da premesse generali.",
+      "exemplo_pt": "A dedução parte de premissas gerais.",
+      "categoria": "metodo",
+      "dificuldade": "medio",
+      "audio_ipa": "/dedutˈttsjoːne/"
     }
   ]
 }

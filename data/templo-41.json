@@ -17,18 +17,6 @@
       "audio_ipa": "/filozoˈfia/"
     },
     {
-      "id": "t41_002",
-      "italiano": "pensiero",
-      "portugues": "pensamento",
-      "genero": "m",
-      "plural": "pensieri",
-      "exemplo": "Il pensiero di Socrate.",
-      "exemplo_pt": "O pensamento de Sócrates.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/penˈsjɛro/"
-    },
-    {
       "id": "t41_003",
       "italiano": "idea",
       "portugues": "ideia",
@@ -39,18 +27,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/iˈdɛa/"
-    },
-    {
-      "id": "t41_004",
-      "italiano": "ragione",
-      "portugues": "razão",
-      "genero": "f",
-      "plural": "ragioni",
-      "exemplo": "La pura ragione.",
-      "exemplo_pt": "A pura razão.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/raˈdʒone/"
     },
     {
       "id": "t41_005",
@@ -77,18 +53,6 @@
       "audio_ipa": "/realˈta/"
     },
     {
-      "id": "t41_007",
-      "italiano": "essere",
-      "portugues": "ser (subst.)",
-      "genero": "m",
-      "plural": "esseri",
-      "exemplo": "L'essere e il nulla.",
-      "exemplo_pt": "O ser e o nada.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɛssere/"
-    },
-    {
       "id": "t41_008",
       "italiano": "esistenza",
       "portugues": "existência",
@@ -101,42 +65,6 @@
       "audio_ipa": "/ezisˈtɛntsa/"
     },
     {
-      "id": "t41_009",
-      "italiano": "natura",
-      "portugues": "natureza",
-      "genero": "f",
-      "plural": "nature",
-      "exemplo": "La natura umana.",
-      "exemplo_pt": "A natureza humana.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/naˈtura/"
-    },
-    {
-      "id": "t41_010",
-      "italiano": "anima",
-      "portugues": "alma",
-      "genero": "f",
-      "plural": "anime",
-      "exemplo": "L'immortalità dell'anima.",
-      "exemplo_pt": "A imortalidade da alma.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈanima/"
-    },
-    {
-      "id": "t41_011",
-      "italiano": "mente",
-      "portugues": "mente",
-      "genero": "f",
-      "plural": "menti",
-      "exemplo": "La mente e il corpo.",
-      "exemplo_pt": "A mente e o corpo.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmente/"
-    },
-    {
       "id": "t41_012",
       "italiano": "corpo",
       "portugues": "corpo",
@@ -147,30 +75,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkɔrpo/"
-    },
-    {
-      "id": "t41_013",
-      "italiano": "materia",
-      "portugues": "matéria",
-      "genero": "f",
-      "plural": "materie",
-      "exemplo": "Forma e materia.",
-      "exemplo_pt": "Forma e matéria.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈtɛrja/"
-    },
-    {
-      "id": "t41_014",
-      "italiano": "spirito",
-      "portugues": "espírito",
-      "genero": "m",
-      "plural": "spiriti",
-      "exemplo": "Lo spirito assoluto.",
-      "exemplo_pt": "O espírito absoluto.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspirito/"
     },
     {
       "id": "t41_015",
@@ -195,18 +99,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/saˈpjɛntsa/"
-    },
-    {
-      "id": "t41_017",
-      "italiano": "saggezza",
-      "portugues": "sabedoria (prática)",
-      "genero": "f",
-      "plural": "saggezze",
-      "exemplo": "La saggezza degli antichi.",
-      "exemplo_pt": "A sabedoria dos antigos.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/sadˈdʒettsa/"
     },
     {
       "id": "t41_018",
@@ -243,18 +135,6 @@
       "categoria": "discipline",
       "dificuldade": "medio",
       "audio_ipa": "/ˈlɔdʒika/"
-    },
-    {
-      "id": "t41_021",
-      "italiano": "estetica",
-      "portugues": "estética",
-      "genero": "f",
-      "plural": "estetiche",
-      "exemplo": "L'estetica del bello.",
-      "exemplo_pt": "A estética do belo.",
-      "categoria": "discipline",
-      "dificuldade": "medio",
-      "audio_ipa": "/esˈtɛtika/"
     },
     {
       "id": "t41_022",
@@ -303,54 +183,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/konˈtʃɛtto/"
-    },
-    {
-      "id": "t41_026",
-      "italiano": "teoria",
-      "portugues": "teoria",
-      "genero": "f",
-      "plural": "teorie",
-      "exemplo": "La teoria platonica.",
-      "exemplo_pt": "A teoria platônica.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/teoˈria/"
-    },
-    {
-      "id": "t41_027",
-      "italiano": "ipotesi",
-      "portugues": "hipótese",
-      "genero": "f",
-      "plural": "ipotesi",
-      "exemplo": "Un'ipotesi di lavoro.",
-      "exemplo_pt": "Uma hipótese de trabalho.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/iˈpɔtezi/"
-    },
-    {
-      "id": "t41_028",
-      "italiano": "tesi",
-      "portugues": "tese",
-      "genero": "f",
-      "plural": "tesi",
-      "exemplo": "Dimostrare la tesi.",
-      "exemplo_pt": "Demonstrar a tese.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtɛzi/"
-    },
-    {
-      "id": "t41_029",
-      "italiano": "antitesi",
-      "portugues": "antítese",
-      "genero": "f",
-      "plural": "antitesi",
-      "exemplo": "Tesi, antitesi, sintesi.",
-      "exemplo_pt": "Tese, antítese, síntese.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/anˈtitezi/"
     },
     {
       "id": "t41_030",
@@ -425,42 +257,6 @@
       "audio_ipa": "/ˈmɛddzo/"
     },
     {
-      "id": "t41_036",
-      "italiano": "spazio",
-      "portugues": "espaço",
-      "genero": "m",
-      "plural": "spazi",
-      "exemplo": "Lo spazio e il tempo.",
-      "exemplo_pt": "O espaço e o tempo.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspattsjo/"
-    },
-    {
-      "id": "t41_037",
-      "italiano": "tempo",
-      "portugues": "tempo",
-      "genero": "m",
-      "plural": "tempi",
-      "exemplo": "Il tempo fugge.",
-      "exemplo_pt": "O tempo foge.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtɛmpo/"
-    },
-    {
-      "id": "t41_038",
-      "italiano": "libertà",
-      "portugues": "liberdade",
-      "genero": "f",
-      "plural": "libertà",
-      "exemplo": "La libertà di scelta.",
-      "exemplo_pt": "A liberdade de escolha.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/liberˈta/"
-    },
-    {
       "id": "t41_039",
       "italiano": "necessità",
       "portugues": "necessidade",
@@ -509,42 +305,6 @@
       "audio_ipa": "/ˈkazo/"
     },
     {
-      "id": "t41_043",
-      "italiano": "dovere",
-      "portugues": "dever",
-      "genero": "m",
-      "plural": "doveri",
-      "exemplo": "Il senso del dovere.",
-      "exemplo_pt": "O sentido do dever.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈvere/"
-    },
-    {
-      "id": "t41_044",
-      "italiano": "diritto",
-      "portugues": "direito",
-      "genero": "m",
-      "plural": "diritti",
-      "exemplo": "Il diritto naturale.",
-      "exemplo_pt": "O direito natural.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈritto/"
-    },
-    {
-      "id": "t41_045",
-      "italiano": "giustizia",
-      "portugues": "justiça",
-      "genero": "f",
-      "plural": "giustizie",
-      "exemplo": "La virtù della giustizia.",
-      "exemplo_pt": "A virtude da justiça.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/dʒusˈtittsja/"
-    },
-    {
       "id": "t41_046",
       "italiano": "virtù",
       "portugues": "virtude",
@@ -569,18 +329,6 @@
       "audio_ipa": "/ˈvittsjo/"
     },
     {
-      "id": "t41_048",
-      "italiano": "bene",
-      "portugues": "bem (o bem)",
-      "genero": "m",
-      "plural": "beni",
-      "exemplo": "Fare il bene.",
-      "exemplo_pt": "Fazer o bem.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbɛne/"
-    },
-    {
       "id": "t41_049",
       "italiano": "male",
       "portugues": "mal (o mal)",
@@ -591,66 +339,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈmale/"
-    },
-    {
-      "id": "t41_050",
-      "italiano": "felicità",
-      "portugues": "felicidade",
-      "genero": "f",
-      "plural": "felicità",
-      "exemplo": "La ricerca della felicità.",
-      "exemplo_pt": "A busca da felicidade.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/felitʃiˈta/"
-    },
-    {
-      "id": "t41_051",
-      "italiano": "dolore",
-      "portugues": "dor",
-      "genero": "m",
-      "plural": "dolori",
-      "exemplo": "Il dolore dell'esistenza.",
-      "exemplo_pt": "A dor da existência.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈlore/"
-    },
-    {
-      "id": "t41_052",
-      "italiano": "piacere",
-      "portugues": "prazer",
-      "genero": "m",
-      "plural": "piaceri",
-      "exemplo": "Il principio di piacere.",
-      "exemplo_pt": "O princípio de prazer.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/pjaˈtʃere/"
-    },
-    {
-      "id": "t41_053",
-      "italiano": "dubbio",
-      "portugues": "dúvida",
-      "genero": "m",
-      "plural": "dubbi",
-      "exemplo": "Il dubbio metodico.",
-      "exemplo_pt": "A dúvida metódica.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdubbjo/"
-    },
-    {
-      "id": "t41_054",
-      "italiano": "certezza",
-      "portugues": "certeza",
-      "genero": "f",
-      "plural": "certezze",
-      "exemplo": "Non ho nessuna certezza.",
-      "exemplo_pt": "Não tenho nenhuma certeza.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/tʃerˈtettsa/"
     },
     {
       "id": "t41_055",
@@ -689,30 +377,6 @@
       "audio_ipa": "/ˈmito/"
     },
     {
-      "id": "t41_058",
-      "italiano": "dialogo",
-      "portugues": "diálogo",
-      "genero": "m",
-      "plural": "dialoghi",
-      "exemplo": "I dialoghi platonici.",
-      "exemplo_pt": "Os diálogos platônicos.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈaloɡo/"
-    },
-    {
-      "id": "t41_059",
-      "italiano": "critica",
-      "portugues": "crítica",
-      "genero": "f",
-      "plural": "critiche",
-      "exemplo": "La critica della ragion pura.",
-      "exemplo_pt": "A crítica da razão pura.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkritika/"
-    },
-    {
       "id": "t41_060",
       "italiano": "filosofo",
       "portugues": "filósofo",
@@ -735,18 +399,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/pensaˈtore/"
-    },
-    {
-      "id": "t41_062",
-      "italiano": "maestro",
-      "portugues": "mestre",
-      "genero": "m",
-      "plural": "maestri",
-      "exemplo": "Il maestro insegna.",
-      "exemplo_pt": "O mestre ensina.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈɛstro/"
     },
     {
       "id": "t41_063",
@@ -833,30 +485,6 @@
       "audio_ipa": "/nikiˈlizmo/"
     },
     {
-      "id": "t41_070",
-      "italiano": "pensare",
-      "portugues": "pensar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Penso, dunque sono.",
-      "exemplo_pt": "Penso, logo existo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/penˈsare/"
-    },
-    {
-      "id": "t41_071",
-      "italiano": "riflettere",
-      "portugues": "refletir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Riflettere sulla vita.",
-      "exemplo_pt": "Refletir sobre a vida.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/riˈflɛttere/"
-    },
-    {
       "id": "t41_072",
       "italiano": "ragionare",
       "portugues": "raciocinar",
@@ -879,30 +507,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/dubiˈtare/"
-    },
-    {
-      "id": "t41_074",
-      "italiano": "credere",
-      "portugues": "acreditar/crer",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Credere nella verità.",
-      "exemplo_pt": "Crer na verdade.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkredere/"
-    },
-    {
-      "id": "t41_075",
-      "italiano": "conoscere",
-      "portugues": "conhecer",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Conoscere se stessi.",
-      "exemplo_pt": "Conhecer a si mesmo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/koˈnoʃʃere/"
     },
     {
       "id": "t41_076",
@@ -929,18 +533,6 @@
       "audio_ipa": "/dʒudiˈkare/"
     },
     {
-      "id": "t41_078",
-      "italiano": "dimostrare",
-      "portugues": "demonstrar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dimostrare una teoria.",
-      "exemplo_pt": "Demonstrar uma teoria.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dimosˈtrare/"
-    },
-    {
       "id": "t41_079",
       "italiano": "dedurre",
       "portugues": "deduzir",
@@ -963,18 +555,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/inˈdurre/"
-    },
-    {
-      "id": "t41_081",
-      "italiano": "spiegare",
-      "portugues": "explicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Spiegare il fenomeno.",
-      "exemplo_pt": "Explicar o fenômeno.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/spjeˈɡare/"
     },
     {
       "id": "t41_082",
@@ -1025,18 +605,6 @@
       "audio_ipa": "/filoˈzɔfiko/"
     },
     {
-      "id": "t41_086",
-      "italiano": "astratto",
-      "portugues": "abstrato",
-      "genero": "m",
-      "plural": "astratti",
-      "exemplo": "Un concetto astratto.",
-      "exemplo_pt": "Um conceito abstrato.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/asˈtratto/"
-    },
-    {
       "id": "t41_087",
       "italiano": "concreto",
       "portugues": "concreto",
@@ -1073,18 +641,6 @@
       "audio_ipa": "/relaˈtivo/"
     },
     {
-      "id": "t41_090",
-      "italiano": "universale",
-      "portugues": "universal",
-      "genero": "m",
-      "plural": "universali",
-      "exemplo": "Una legge universale.",
-      "exemplo_pt": "Uma lei universal.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/univerˈsale/"
-    },
-    {
       "id": "t41_091",
       "italiano": "particolare",
       "portugues": "particular",
@@ -1095,18 +651,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/partikoˈlare/"
-    },
-    {
-      "id": "t41_092",
-      "italiano": "razionale",
-      "portugues": "racional",
-      "genero": "m",
-      "plural": "razionali",
-      "exemplo": "Essere razionale.",
-      "exemplo_pt": "Ser racional.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/rattsjoˈnale/"
     },
     {
       "id": "t41_093",
@@ -1121,78 +665,6 @@
       "audio_ipa": "/irrattsjoˈnale/"
     },
     {
-      "id": "t41_094",
-      "italiano": "soggettivo",
-      "portugues": "subjetivo",
-      "genero": "m",
-      "plural": "soggettivi",
-      "exemplo": "Il giudizio è soggettivo.",
-      "exemplo_pt": "O julgamento é subjetivo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/soddʒetˈtivo/"
-    },
-    {
-      "id": "t41_095",
-      "italiano": "oggettivo",
-      "portugues": "objetivo",
-      "genero": "m",
-      "plural": "oggettivi",
-      "exemplo": "Un fatto oggettivo.",
-      "exemplo_pt": "Um fato objetivo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/oddʒetˈtivo/"
-    },
-    {
-      "id": "t41_096",
-      "italiano": "empirico",
-      "portugues": "empírico",
-      "genero": "m",
-      "plural": "empirici",
-      "exemplo": "Il metodo empirico.",
-      "exemplo_pt": "O método empírico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/emˈpiriko/"
-    },
-    {
-      "id": "t41_097",
-      "italiano": "teorico",
-      "portugues": "teórico",
-      "genero": "m",
-      "plural": "teorici",
-      "exemplo": "Un modello teorico.",
-      "exemplo_pt": "Um modelo teórico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/teˈɔriko/"
-    },
-    {
-      "id": "t41_098",
-      "italiano": "pratico",
-      "portugues": "prático",
-      "genero": "m",
-      "plural": "pratici",
-      "exemplo": "La ragion pratica.",
-      "exemplo_pt": "A razão prática.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpratiko/"
-    },
-    {
-      "id": "t41_099",
-      "italiano": "morale",
-      "portugues": "moral (adj)",
-      "genero": "m",
-      "plural": "morali",
-      "exemplo": "Un obbligo morale.",
-      "exemplo_pt": "Uma obrigação moral.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈrale/"
-    },
-    {
       "id": "t41_100",
       "italiano": "etico",
       "portugues": "ético",
@@ -1203,54 +675,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈɛtiko/"
-    },
-    {
-      "id": "t41_101",
-      "italiano": "giusto",
-      "portugues": "justo",
-      "genero": "m",
-      "plural": "giusti",
-      "exemplo": "Ciò che è giusto.",
-      "exemplo_pt": "O que é justo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒusto/"
-    },
-    {
-      "id": "t41_102",
-      "italiano": "sbagliato",
-      "portugues": "errado",
-      "genero": "m",
-      "plural": "sbagliati",
-      "exemplo": "Ciò che è sbagliato.",
-      "exemplo_pt": "O que é errado.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/zbaˈʎʎato/"
-    },
-    {
-      "id": "t41_103",
-      "italiano": "vero",
-      "portugues": "verdadeiro",
-      "genero": "m",
-      "plural": "veri",
-      "exemplo": "È vero o falso?",
-      "exemplo_pt": "É verdadeiro ou falso?",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvero/"
-    },
-    {
-      "id": "t41_104",
-      "italiano": "falso",
-      "portugues": "falso",
-      "genero": "m",
-      "plural": "falsi",
-      "exemplo": "Un sillogismo falso.",
-      "exemplo_pt": "Um silogismo falso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfalso/"
     },
     {
       "id": "t41_105",
@@ -1289,18 +713,6 @@
       "audio_ipa": "/noˈumeno/"
     },
     {
-      "id": "t41_108",
-      "italiano": "fenomeno",
-      "portugues": "fenômeno (filosófico)",
-      "genero": "m",
-      "plural": "fenomeni",
-      "exemplo": "Il fenomeno osservabile.",
-      "exemplo_pt": "O fenômeno observável.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/feˈnɔmeno/"
-    },
-    {
       "id": "t41_109",
       "italiano": "solipsismo",
       "portugues": "solipsismo",
@@ -1323,6 +735,558 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/traʃʃendenˈtale/"
+    },
+    {
+      "id": "t41_r03",
+      "italiano": "libero arbitrio",
+      "portugues": "livre-arbítrio",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il libero arbitrio è dibattuto.",
+      "exemplo_pt": "O livre-arbítrio é debatido.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈliːbero arˈbiːtrjo/"
+    },
+    {
+      "id": "t41_r04",
+      "italiano": "determinismo",
+      "portugues": "determinismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il determinismo nega il libero arbitrio.",
+      "exemplo_pt": "O determinismo nega o livre-arbítrio.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/determinˈizmo/"
+    },
+    {
+      "id": "t41_r05",
+      "italiano": "relativismo",
+      "portugues": "relativismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il relativismo nega verità assolute.",
+      "exemplo_pt": "O relativismo nega verdades absolutas.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/relativˈizmo/"
+    },
+    {
+      "id": "t41_r07",
+      "italiano": "trascendenza",
+      "portugues": "transcendência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La trascendenza va oltre l'esperienza.",
+      "exemplo_pt": "A transcendência vai além da experiência.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/traʃʃenˈdɛntsa/"
+    },
+    {
+      "id": "t41_r08",
+      "italiano": "immanenza",
+      "portugues": "imanência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'immanenza resta nell'esperienza.",
+      "exemplo_pt": "A imanência permanece na experiência.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/immaˈnɛntsa/"
+    },
+    {
+      "id": "t41_r09",
+      "italiano": "dialettica",
+      "portugues": "dialética",
+      "genero": "f",
+      "plural": "dialettiche",
+      "exemplo": "La dialettica hegeliana ha tesi e antitesi.",
+      "exemplo_pt": "A dialética hegeliana tem tese e antítese.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/djaˈlɛttika/"
+    },
+    {
+      "id": "t41_r10",
+      "italiano": "ermeneutica",
+      "portugues": "hermenêutica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'ermeneutica interpreta i testi.",
+      "exemplo_pt": "A hermenêutica interpreta os textos.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ermeˈnɛuːtika/"
+    },
+    {
+      "id": "t41_r11",
+      "italiano": "fenomenologia",
+      "portugues": "fenomenologia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La fenomenologia studia i fenomeni.",
+      "exemplo_pt": "A fenomenologia estuda os fenômenos.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/fenomenoloˈdʒiːa/"
+    },
+    {
+      "id": "t41_r13",
+      "italiano": "strutturalismo",
+      "portugues": "estruturalismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo strutturalismo analizza le strutture.",
+      "exemplo_pt": "O estruturalismo analisa as estruturas.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/strutturaliˈzmo/"
+    },
+    {
+      "id": "t41_r14",
+      "italiano": "decostruzione",
+      "portugues": "desconstrução",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La decostruzione smonta i testi.",
+      "exemplo_pt": "A desconstrução desmonta os textos.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/dekostrutˈttsjoːne/"
+    },
+    {
+      "id": "t41_r15",
+      "italiano": "utilitarismo",
+      "portugues": "utilitarismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'utilitarismo massimizza la felicità.",
+      "exemplo_pt": "O utilitarismo maximiza a felicidade.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/utilitariˈzmo/"
+    },
+    {
+      "id": "t41_r16",
+      "italiano": "deontologia",
+      "portugues": "deontologia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La deontologia guarda al dovere.",
+      "exemplo_pt": "A deontologia olha para o dever.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/deontoloˈdʒiːa/"
+    },
+    {
+      "id": "t41_r17",
+      "italiano": "etica della virtù",
+      "portugues": "ética da virtude",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'etica della virtù viene da Aristotele.",
+      "exemplo_pt": "A ética da virtude vem de Aristóteles.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɛːtika della virˈtuː/"
+    },
+    {
+      "id": "t41_r18",
+      "italiano": "contrattualismo",
+      "portugues": "contratualismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il contrattualismo fonda lo stato.",
+      "exemplo_pt": "O contratualismo funda o estado.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kontrattualˈizmo/"
+    },
+    {
+      "id": "t41_r19",
+      "italiano": "bene comune",
+      "portugues": "bem comum",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il bene comune supera l'interesse privato.",
+      "exemplo_pt": "O bem comum supera o interesse privado.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbɛːne koˈmuːne/"
+    },
+    {
+      "id": "t41_r20",
+      "italiano": "giustizia distributiva",
+      "portugues": "justiça distributiva",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La giustizia distributiva divide le risorse.",
+      "exemplo_pt": "A justiça distributiva divide os recursos.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒuˈstittsja distributˈtiːva/"
+    },
+    {
+      "id": "t41_r21",
+      "italiano": "velo dell'ignoranza",
+      "portugues": "véu da ignorância",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il velo dell'ignoranza è di Rawls.",
+      "exemplo_pt": "O véu da ignorância é de Rawls.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈvɛːlo dellˌiɲɲoˈrantsa/"
+    },
+    {
+      "id": "t41_r22",
+      "italiano": "imperativo categorico",
+      "portugues": "imperativo categórico",
+      "genero": "m",
+      "plural": "imperativi categorici",
+      "exemplo": "L'imperativo categorico è di Kant.",
+      "exemplo_pt": "O imperativo categórico é de Kant.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/imperˈaːtivo kateˈɡɔːriko/"
+    },
+    {
+      "id": "t41_r23",
+      "italiano": "dualismo mente-corpo",
+      "portugues": "dualismo mente-corpo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il dualismo mente-corpo è di Cartesio.",
+      "exemplo_pt": "O dualismo mente-corpo é de Descartes.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/duaˈlizmo ˈmɛnte ˈkɔrpo/"
+    },
+    {
+      "id": "t41_r24",
+      "italiano": "monismo",
+      "portugues": "monismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il monismo vede tutto come uno.",
+      "exemplo_pt": "O monismo vê tudo como um.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/moˈnizmo/"
+    },
+    {
+      "id": "t41_r28",
+      "italiano": "scetticismo",
+      "portugues": "ceticismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo scetticismo mette in dubbio tutto.",
+      "exemplo_pt": "O ceticismo questiona tudo.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/skettiˈtʃizmo/"
+    },
+    {
+      "id": "t41_r29",
+      "italiano": "nominalismo",
+      "portugues": "nominalismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il nominalismo nega gli universali.",
+      "exemplo_pt": "O nominalismo nega os universais.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/nominaliˈzmo/"
+    },
+    {
+      "id": "t41_r30",
+      "italiano": "realismo filosofico",
+      "portugues": "realismo filosófico",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il realismo afferma l'esistenza esterna.",
+      "exemplo_pt": "O realismo afirma a existência externa.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/realiˈzmo filoˈzɔːfiko/"
+    },
+    {
+      "id": "t41_p06",
+      "italiano": "intelletto",
+      "portugues": "intelecto",
+      "genero": "m",
+      "plural": "intelletti",
+      "exemplo": "L'intelletto distingue l'uomo.",
+      "exemplo_pt": "O intelecto distingue o homem.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/intellˈetto/"
+    },
+    {
+      "id": "t41_p08",
+      "italiano": "intuizione",
+      "portugues": "intuição",
+      "genero": "f",
+      "plural": "intuizioni",
+      "exemplo": "L'intuizione precede la razionalità.",
+      "exemplo_pt": "A intuição precede a racionalidade.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/intuiˈttsjoːne/"
+    },
+    {
+      "id": "t41_p09",
+      "italiano": "critica della ragione",
+      "portugues": "crítica da razão",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Kant scrisse la Critica della Ragion Pura.",
+      "exemplo_pt": "Kant escreveu a Crítica da Razão Pura.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkritika della raˈdʒone/"
+    },
+    {
+      "id": "t41_p10",
+      "italiano": "cogito ergo sum",
+      "portugues": "penso logo existo",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il cogito di Cartesio è il punto di partenza.",
+      "exemplo_pt": "O cogito de Descartes é o ponto de partida.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔːdʒito ˈɛrɡo sum/"
+    },
+    {
+      "id": "t41_p11",
+      "italiano": "imperativo",
+      "portugues": "imperativo",
+      "genero": "m",
+      "plural": "imperativi",
+      "exemplo": "L'imperativo morale è assoluto.",
+      "exemplo_pt": "O imperativo moral é absoluto.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/imperaˈtiːvo/"
+    },
+    {
+      "id": "t41_p12",
+      "italiano": "massima",
+      "portugues": "máxima",
+      "genero": "f",
+      "plural": "massime",
+      "exemplo": "La massima deve valere universalmente.",
+      "exemplo_pt": "A máxima deve valer universalmente.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmassima/"
+    },
+    {
+      "id": "t41_p13",
+      "italiano": "dovere morale",
+      "portugues": "dever moral",
+      "genero": "m",
+      "plural": "doveri morali",
+      "exemplo": "Il dovere morale va rispettato.",
+      "exemplo_pt": "O dever moral deve ser respeitado.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/doˈvɛːre moˈraːle/"
+    },
+    {
+      "id": "t41_p14",
+      "italiano": "valore morale",
+      "portugues": "valor moral",
+      "genero": "m",
+      "plural": "valori morali",
+      "exemplo": "Il valore morale guida le azioni.",
+      "exemplo_pt": "O valor moral guia as ações.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/vaˈloːre moˈraːle/"
+    },
+    {
+      "id": "t41_p15",
+      "italiano": "dignità umana",
+      "portugues": "dignidade humana",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La dignità umana è inviolabile.",
+      "exemplo_pt": "A dignidade humana é inviolável.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/diɲˈɲiːta uˈmaːna/"
+    },
+    {
+      "id": "t41_p16",
+      "italiano": "diritti naturali",
+      "portugues": "direitos naturais",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I diritti naturali sono inalienabili.",
+      "exemplo_pt": "Os direitos naturais são inalienáveis.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritti natuˈraːli/"
+    },
+    {
+      "id": "t41_p17",
+      "italiano": "bene e male",
+      "portugues": "bem e mal",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il bene e il male sono relativi.",
+      "exemplo_pt": "O bem e o mal são relativos.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbɛːne e ˈmaːle/"
+    },
+    {
+      "id": "t41_p18",
+      "italiano": "virtù cardinali",
+      "portugues": "virtudes cardinais",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Le virtù cardinali sono quattro.",
+      "exemplo_pt": "As virtudes cardinais são quatro.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/virˈtuː kardiˈnaːli/"
+    },
+    {
+      "id": "t41_p19",
+      "italiano": "principio di utilità",
+      "portugues": "princípio de utilidade",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il principio di utilità di Bentham.",
+      "exemplo_pt": "O princípio de utilidade de Bentham.",
+      "categoria": "etica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈprintʃipjo di uˈtiːliˈta/"
+    },
+    {
+      "id": "t41_p20",
+      "italiano": "contratto sociale",
+      "portugues": "contrato social",
+      "genero": "m",
+      "plural": "contratti sociali",
+      "exemplo": "Il contratto sociale di Rousseau.",
+      "exemplo_pt": "O contrato social de Rousseau.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/konˈtratto sotˈʃaːle/"
+    },
+    {
+      "id": "t41_p21",
+      "italiano": "stato di natura",
+      "portugues": "estado de natureza",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo stato di natura è di Hobbes.",
+      "exemplo_pt": "O estado de natureza é de Hobbes.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈstaːto di naˈtuːra/"
+    },
+    {
+      "id": "t41_p22",
+      "italiano": "alienazione del lavoro",
+      "portugues": "alienação do trabalho",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'alienazione del lavoro è di Marx.",
+      "exemplo_pt": "A alienação do trabalho é de Marx.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/aljenaˈttsjoːne del laˈvoːro/"
+    },
+    {
+      "id": "t41_p23",
+      "italiano": "sovrastruttura",
+      "portugues": "superestrutura",
+      "genero": "f",
+      "plural": "sovrastrutture",
+      "exemplo": "La sovrastruttura riflette la base.",
+      "exemplo_pt": "A superestrutura reflete a base.",
+      "categoria": "filosofia politica",
+      "dificuldade": "medio",
+      "audio_ipa": "/sovrastruttˈtuːra/"
+    },
+    {
+      "id": "t41_f01",
+      "italiano": "principio di non contraddizione",
+      "portugues": "princípio de não contradição",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "A non può essere B e non-B insieme.",
+      "exemplo_pt": "A não pode ser B e não-B ao mesmo tempo.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈprintʃipjo di non kontradditsˈtsjoːne/"
+    },
+    {
+      "id": "t41_f02",
+      "italiano": "sillogismo ipotetico",
+      "portugues": "silogismo hipotético",
+      "genero": "m",
+      "plural": "sillogismi ipotetici",
+      "exemplo": "Il sillogismo ipotetico usa condizionali.",
+      "exemplo_pt": "O silogismo hipotético usa condicionais.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/silloˈdʒizmo ipoteˈtiko/"
+    },
+    {
+      "id": "t41_f03",
+      "italiano": "tertium non datur",
+      "portugues": "terceiro excluído",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il tertium non datur esclude il mezzo.",
+      "exemplo_pt": "O terceiro excluído exclui o meio.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɛrtsjum non ˈdaːtur/"
+    },
+    {
+      "id": "t41_f04",
+      "italiano": "modus ponens",
+      "portugues": "modus ponens",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il modus ponens afferma il conseguente.",
+      "exemplo_pt": "O modus ponens afirma o consequente.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔːdus ˈpɔːnens/"
+    },
+    {
+      "id": "t41_f05",
+      "italiano": "modus tollens",
+      "portugues": "modus tollens",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il modus tollens nega il conseguente.",
+      "exemplo_pt": "O modus tollens nega o consequente.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔːdus ˈtɔːllens/"
+    },
+    {
+      "id": "t41_f06",
+      "italiano": "reductio ad absurdum",
+      "portugues": "redução ao absurdo",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La reductio ad absurdum dimostra per contraddizione.",
+      "exemplo_pt": "A redução ao absurdo demonstra por contradição.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/reˈduktjo ad abˈsurdum/"
     }
   ]
 }

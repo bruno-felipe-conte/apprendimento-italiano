@@ -5,18 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t28_001",
-      "italiano": "musica",
-      "portugues": "música",
-      "genero": "f",
-      "plural": "musiche",
-      "exemplo": "Ascoltare la musica.",
-      "exemplo_pt": "Escutar a música.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmuzika/"
-    },
-    {
       "id": "t28_002",
       "italiano": "canzone",
       "portugues": "canção/música",
@@ -65,18 +53,6 @@
       "audio_ipa": "/ˈvotʃe/"
     },
     {
-      "id": "t28_006",
-      "italiano": "melodia",
-      "portugues": "melodia",
-      "genero": "f",
-      "plural": "melodie",
-      "exemplo": "Una melodia dolce.",
-      "exemplo_pt": "Uma melodia doce.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/meloˈdia/"
-    },
-    {
       "id": "t28_007",
       "italiano": "ritmo",
       "portugues": "ritmo",
@@ -111,18 +87,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈnɔta/"
-    },
-    {
-      "id": "t28_010",
-      "italiano": "accordo",
-      "portugues": "acorde",
-      "genero": "m",
-      "plural": "accordi",
-      "exemplo": "Un accordo di chitarra.",
-      "exemplo_pt": "Um acorde de violão.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/akˈkɔrdo/"
     },
     {
       "id": "t28_011",
@@ -197,18 +161,6 @@
       "audio_ipa": "/ˈklassika/"
     },
     {
-      "id": "t28_017",
-      "italiano": "opera",
-      "portugues": "ópera",
-      "genero": "f",
-      "plural": "opere",
-      "exemplo": "Andare all'opera a teatro.",
-      "exemplo_pt": "Ir à ópera no teatro.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɔpera/"
-    },
-    {
       "id": "t28_018",
       "italiano": "strumento",
       "portugues": "instrumento",
@@ -243,30 +195,6 @@
       "categoria": "strumenti",
       "dificuldade": "medio",
       "audio_ipa": "/pjanoˈfɔrte/"
-    },
-    {
-      "id": "t28_021",
-      "italiano": "tastiera",
-      "portugues": "teclado",
-      "genero": "f",
-      "plural": "tastiere",
-      "exemplo": "Una tastiera elettronica.",
-      "exemplo_pt": "Um teclado eletrônico.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/tasˈtjɛra/"
-    },
-    {
-      "id": "t28_022",
-      "italiano": "violino",
-      "portugues": "violino",
-      "genero": "m",
-      "plural": "violini",
-      "exemplo": "Il suono dolce del violino.",
-      "exemplo_pt": "O som doce do violino.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/vjoˈlino/"
     },
     {
       "id": "t28_023",
@@ -315,30 +243,6 @@
       "categoria": "strumenti",
       "dificuldade": "medio",
       "audio_ipa": "/sasˈsɔfono/"
-    },
-    {
-      "id": "t28_027",
-      "italiano": "tromba",
-      "portugues": "trompete",
-      "genero": "f",
-      "plural": "trombe",
-      "exemplo": "Suonare la tromba forte.",
-      "exemplo_pt": "Tocar o trompete forte.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtromba/"
-    },
-    {
-      "id": "t28_028",
-      "italiano": "batteria",
-      "portugues": "bateria",
-      "genero": "f",
-      "plural": "batterie",
-      "exemplo": "Suonare la batteria in un gruppo.",
-      "exemplo_pt": "Tocar bateria numa banda.",
-      "categoria": "strumenti",
-      "dificuldade": "medio",
-      "audio_ipa": "/batteˈria/"
     },
     {
       "id": "t28_029",
@@ -401,18 +305,6 @@
       "audio_ipa": "/kanˈtante/"
     },
     {
-      "id": "t28_034",
-      "italiano": "musicista",
-      "portugues": "músico",
-      "genero": "m",
-      "plural": "musicisti",
-      "exemplo": "Un bravo musicista.",
-      "exemplo_pt": "Um bom músico.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/muziˈtʃista/"
-    },
-    {
       "id": "t28_035",
       "italiano": "chitarrista",
       "portugues": "violonista/guitarrista",
@@ -459,30 +351,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/kompoziˈtore/"
-    },
-    {
-      "id": "t28_039",
-      "italiano": "direttore",
-      "portugues": "maestro/diretor",
-      "genero": "m",
-      "plural": "direttori",
-      "exemplo": "Il direttore d'orchestra.",
-      "exemplo_pt": "O maestro da orquestra.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/diretˈtore/"
-    },
-    {
-      "id": "t28_040",
-      "italiano": "pubblico",
-      "portugues": "público",
-      "genero": "m",
-      "plural": "pubblici",
-      "exemplo": "Il pubblico applaude.",
-      "exemplo_pt": "O público aplaude.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpubbliko/"
     },
     {
       "id": "t28_041",
@@ -545,30 +413,6 @@
       "audio_ipa": "/orˈkɛstra/"
     },
     {
-      "id": "t28_046",
-      "italiano": "concerto",
-      "portugues": "concerto/show",
-      "genero": "m",
-      "plural": "concerti",
-      "exemplo": "Il concerto inizia alle nove.",
-      "exemplo_pt": "O show começa às nove.",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/konˈtʃɛrto/"
-    },
-    {
-      "id": "t28_047",
-      "italiano": "spettacolo",
-      "portugues": "espetáculo/show",
-      "genero": "m",
-      "plural": "spettacoli",
-      "exemplo": "Che bello spettacolo!",
-      "exemplo_pt": "Que belo espetáculo!",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/spetˈtakolo/"
-    },
-    {
       "id": "t28_048",
       "italiano": "tour",
       "portugues": "turnê",
@@ -593,42 +437,6 @@
       "audio_ipa": "/ˈfɛstival/"
     },
     {
-      "id": "t28_050",
-      "italiano": "palco",
-      "portugues": "palco",
-      "genero": "m",
-      "plural": "palchi",
-      "exemplo": "Salire sul palco.",
-      "exemplo_pt": "Subir no palco.",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpalko/"
-    },
-    {
-      "id": "t28_051",
-      "italiano": "microfono",
-      "portugues": "microfone",
-      "genero": "m",
-      "plural": "microfoni",
-      "exemplo": "Cantare al microfono.",
-      "exemplo_pt": "Cantar no microfone.",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/miˈkrɔfono/"
-    },
-    {
-      "id": "t28_052",
-      "italiano": "cuffie",
-      "portugues": "fones",
-      "genero": "f",
-      "plural": "cuffie",
-      "exemplo": "Ascoltare in cuffia.",
-      "exemplo_pt": "Escutar no fone.",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkuffje/"
-    },
-    {
       "id": "t28_053",
       "italiano": "amplificatore",
       "portugues": "amplificador",
@@ -651,18 +459,6 @@
       "categoria": "eventi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈalbum/"
-    },
-    {
-      "id": "t28_055",
-      "italiano": "disco",
-      "portugues": "disco",
-      "genero": "m",
-      "plural": "dischi",
-      "exemplo": "Un disco d'oro.",
-      "exemplo_pt": "Um disco de ouro.",
-      "categoria": "eventi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdisko/"
     },
     {
       "id": "t28_056",
@@ -699,66 +495,6 @@
       "categoria": "eventi",
       "dificuldade": "medio",
       "audio_ipa": "/hit/"
-    },
-    {
-      "id": "t28_059",
-      "italiano": "cantare",
-      "portugues": "cantar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Cantare sotto la doccia.",
-      "exemplo_pt": "Cantar no chuveiro.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kanˈtare/"
-    },
-    {
-      "id": "t28_060",
-      "italiano": "suonare",
-      "portugues": "tocar (instrumento)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Suonare il piano.",
-      "exemplo_pt": "Tocar piano.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/swoˈnare/"
-    },
-    {
-      "id": "t28_061",
-      "italiano": "ascoltare",
-      "portugues": "escutar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ascoltare la radio.",
-      "exemplo_pt": "Escutar o rádio.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/askolˈtare/"
-    },
-    {
-      "id": "t28_062",
-      "italiano": "ballare",
-      "portugues": "dançar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ballare tutta la notte.",
-      "exemplo_pt": "Dançar a noite toda.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/balˈlare/"
-    },
-    {
-      "id": "t28_063",
-      "italiano": "comporre",
-      "portugues": "compor",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Comporre una melodia.",
-      "exemplo_pt": "Compor uma melodia.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈporre/"
     },
     {
       "id": "t28_064",
@@ -857,54 +593,6 @@
       "audio_ipa": "/diˈridʒere/"
     },
     {
-      "id": "t28_072",
-      "italiano": "urlare",
-      "portugues": "gritar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "I fan urlano di gioia.",
-      "exemplo_pt": "Os fãs gritam de alegria.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/urˈlare/"
-    },
-    {
-      "id": "t28_073",
-      "italiano": "scaricare",
-      "portugues": "baixar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scaricare la musica da internet.",
-      "exemplo_pt": "Baixar a música da internet.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skariˈkare/"
-    },
-    {
-      "id": "t28_074",
-      "italiano": "ascoltare",
-      "portugues": "escutar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ti piace ascoltare?",
-      "exemplo_pt": "Você gosta de escutar?",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/askolˈtare/"
-    },
-    {
-      "id": "t28_075",
-      "italiano": "dedicare",
-      "portugues": "dedicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dedicare una canzone.",
-      "exemplo_pt": "Dedicar uma canção.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dediˈkare/"
-    },
-    {
       "id": "t28_076",
       "italiano": "stonare",
       "portugues": "desafinar",
@@ -951,66 +639,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈfɔrte/"
-    },
-    {
-      "id": "t28_080",
-      "italiano": "piano",
-      "portugues": "baixo/suave",
-      "genero": "m",
-      "plural": "piani",
-      "exemplo": "Parla più piano.",
-      "exemplo_pt": "Fale mais baixo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjano/"
-    },
-    {
-      "id": "t28_081",
-      "italiano": "alto",
-      "portugues": "alto",
-      "genero": "m",
-      "plural": "alti",
-      "exemplo": "Il volume è alto.",
-      "exemplo_pt": "O volume está alto.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈalto/"
-    },
-    {
-      "id": "t28_082",
-      "italiano": "basso",
-      "portugues": "baixo",
-      "genero": "m",
-      "plural": "bassi",
-      "exemplo": "Metti il volume basso.",
-      "exemplo_pt": "Coloque o volume baixo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbasso/"
-    },
-    {
-      "id": "t28_083",
-      "italiano": "veloce",
-      "portugues": "rápido",
-      "genero": "m",
-      "plural": "veloci",
-      "exemplo": "Un ritmo veloce.",
-      "exemplo_pt": "Um ritmo rápido.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/veˈlotʃe/"
-    },
-    {
-      "id": "t28_084",
-      "italiano": "lento",
-      "portugues": "lento",
-      "genero": "m",
-      "plural": "lenti",
-      "exemplo": "Una ballata lenta.",
-      "exemplo_pt": "Uma balada lenta.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlɛnto/"
     },
     {
       "id": "t28_085",
@@ -1061,42 +689,6 @@
       "audio_ipa": "/redʒisˈtrato/"
     },
     {
-      "id": "t28_089",
-      "italiano": "classico",
-      "portugues": "clássico",
-      "genero": "m",
-      "plural": "classici",
-      "exemplo": "Un brano classico.",
-      "exemplo_pt": "Uma música clássica.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklassiko/"
-    },
-    {
-      "id": "t28_090",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Stile moderno.",
-      "exemplo_pt": "Estilo moderno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
-    },
-    {
-      "id": "t28_091",
-      "italiano": "popolare",
-      "portugues": "popular",
-      "genero": "m",
-      "plural": "popolari",
-      "exemplo": "Una canzone popolare.",
-      "exemplo_pt": "Uma canção popular.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/popoˈlare/"
-    },
-    {
       "id": "t28_092",
       "italiano": "tradizionale",
       "portugues": "tradicional",
@@ -1107,42 +699,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/traditsjoˈnale/"
-    },
-    {
-      "id": "t28_093",
-      "italiano": "famoso",
-      "portugues": "famoso",
-      "genero": "m",
-      "plural": "famosi",
-      "exemplo": "Un cantante famoso.",
-      "exemplo_pt": "Um cantor famoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/faˈmozo/"
-    },
-    {
-      "id": "t28_094",
-      "italiano": "sconosciuto",
-      "portugues": "desconhecido",
-      "genero": "m",
-      "plural": "sconosciuti",
-      "exemplo": "Un gruppo sconosciuto.",
-      "exemplo_pt": "Uma banda desconhecida.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skonoʃˈʃuto/"
-    },
-    {
-      "id": "t28_095",
-      "italiano": "bravo",
-      "portugues": "bom/hábil",
-      "genero": "m",
-      "plural": "bravi",
-      "exemplo": "Un chitarrista molto bravo.",
-      "exemplo_pt": "Um guitarrista muito bom.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbravo/"
     },
     {
       "id": "t28_096",
@@ -1229,42 +785,6 @@
       "audio_ipa": "/assorˈdante/"
     },
     {
-      "id": "t28_103",
-      "italiano": "dolce",
-      "portugues": "doce",
-      "genero": "m",
-      "plural": "dolci",
-      "exemplo": "Una melodia dolce.",
-      "exemplo_pt": "Uma melodia doce.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdoltʃe/"
-    },
-    {
-      "id": "t28_104",
-      "italiano": "triste",
-      "portugues": "triste",
-      "genero": "m",
-      "plural": "tristi",
-      "exemplo": "Una canzone triste.",
-      "exemplo_pt": "Uma canção triste.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtriste/"
-    },
-    {
-      "id": "t28_105",
-      "italiano": "allegro",
-      "portugues": "alegre",
-      "genero": "m",
-      "plural": "allegri",
-      "exemplo": "Un motivetto allegro.",
-      "exemplo_pt": "Um motivo alegre.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/alˈleɡro/"
-    },
-    {
       "id": "t28_106",
       "italiano": "romantico",
       "portugues": "romântico",
@@ -1289,18 +809,6 @@
       "audio_ipa": "/orekˈkjabile/"
     },
     {
-      "id": "t28_108",
-      "italiano": "noioso",
-      "portugues": "chato",
-      "genero": "m",
-      "plural": "noiosi",
-      "exemplo": "Un concerto noioso.",
-      "exemplo_pt": "Um show chato.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/noˈjozo/"
-    },
-    {
       "id": "t28_109",
       "italiano": "emozionante",
       "portugues": "emocionante",
@@ -1323,6 +831,462 @@
       "categoria": "strumenti",
       "dificuldade": "medio",
       "audio_ipa": "/sintetiddzaˈtore/"
+    },
+    {
+      "id": "t28_r02",
+      "italiano": "arpeggio",
+      "portugues": "arpejo",
+      "genero": "m",
+      "plural": "arpeggi",
+      "exemplo": "L'arpeggio è fluido e melodioso.",
+      "exemplo_pt": "O arpejo é fluido e melodioso.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/arˈpeddʒo/"
+    },
+    {
+      "id": "t28_r03",
+      "italiano": "assolo",
+      "portugues": "solo",
+      "genero": "m",
+      "plural": "assoli",
+      "exemplo": "Il chitarrista fa un assolo brillante.",
+      "exemplo_pt": "O guitarrista faz um solo brilhante.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/asˈsɔːlo/"
+    },
+    {
+      "id": "t28_r05",
+      "italiano": "ritornello",
+      "portugues": "refrão",
+      "genero": "m",
+      "plural": "ritornelli",
+      "exemplo": "Il ritornello è facile da ricordare.",
+      "exemplo_pt": "O refrão é fácil de lembrar.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ritorˈnɛllo/"
+    },
+    {
+      "id": "t28_r07",
+      "italiano": "sonata",
+      "portugues": "sonata",
+      "genero": "f",
+      "plural": "sonate",
+      "exemplo": "La sonata al chiaro di luna è romantica.",
+      "exemplo_pt": "A sonata ao luar é romântica.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/soˈnaːta/"
+    },
+    {
+      "id": "t28_r08",
+      "italiano": "opera lirica",
+      "portugues": "ópera",
+      "genero": "f",
+      "plural": "opere liriche",
+      "exemplo": "L'opera lirica è nata in Italia.",
+      "exemplo_pt": "A ópera nasceu na Itália.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔːpera ˈliːrika/"
+    },
+    {
+      "id": "t28_r09",
+      "italiano": "soprano",
+      "portugues": "soprano",
+      "genero": "m/f",
+      "plural": "soprani",
+      "exemplo": "Il soprano ha una voce potente.",
+      "exemplo_pt": "A soprano tem uma voz poderosa.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/soˈpraːno/"
+    },
+    {
+      "id": "t28_r11",
+      "italiano": "baritono",
+      "portugues": "barítono",
+      "genero": "m",
+      "plural": "baritoni",
+      "exemplo": "Il baritono ha una voce profonda.",
+      "exemplo_pt": "O barítono tem uma voz profunda.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/baˈriːtono/"
+    },
+    {
+      "id": "t28_r12",
+      "italiano": "direttore d'orchestra",
+      "portugues": "regente",
+      "genero": "m",
+      "plural": "direttori d'orchestra",
+      "exemplo": "Il direttore batte il tempo.",
+      "exemplo_pt": "O regente marca o tempo.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/diretˈtoːre dɔrˈkɛstra/"
+    },
+    {
+      "id": "t28_r14",
+      "italiano": "leggio",
+      "portugues": "estante de partituras",
+      "genero": "m",
+      "plural": "leggii",
+      "exemplo": "Lo spartito è sul leggio.",
+      "exemplo_pt": "A partitura está na estante.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈleddʒo/"
+    },
+    {
+      "id": "t28_r15",
+      "italiano": "battuta",
+      "portugues": "compasso",
+      "genero": "f",
+      "plural": "battute",
+      "exemplo": "Il brano è in quattro quarti per battuta.",
+      "exemplo_pt": "A peça tem quatro tempos por compasso.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/batˈtuːta/"
+    },
+    {
+      "id": "t28_r17",
+      "italiano": "contrappunto",
+      "portugues": "contraponto",
+      "genero": "m",
+      "plural": "contrappunti",
+      "exemplo": "Il contrappunto è tipico del barocco.",
+      "exemplo_pt": "O contraponto é típico do barroco.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kontrappˈpunto/"
+    },
+    {
+      "id": "t28_r18",
+      "italiano": "vibrato",
+      "portugues": "vibrato",
+      "genero": "m",
+      "plural": "vibrati",
+      "exemplo": "Il vibrato del violino è emozionante.",
+      "exemplo_pt": "O vibrato do violino é emocionante.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/viˈbraːto/"
+    },
+    {
+      "id": "t28_r19",
+      "italiano": "staccato",
+      "portugues": "staccato",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Le note staccato sono brevi.",
+      "exemplo_pt": "As notas staccato são breves.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/stakˈkaːto/"
+    },
+    {
+      "id": "t28_r20",
+      "italiano": "legato",
+      "portugues": "legato",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il fraseggio legato è fluido.",
+      "exemplo_pt": "O fraseado legato é fluido.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/leˈɡaːto/"
+    },
+    {
+      "id": "t28_r21",
+      "italiano": "crescendo",
+      "portugues": "crescendo",
+      "genero": "m",
+      "plural": "crescendo",
+      "exemplo": "Il crescendo finale è emozionante.",
+      "exemplo_pt": "O crescendo final é emocionante.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/kreˈʃɛndo/"
+    },
+    {
+      "id": "t28_r22",
+      "italiano": "diminuendo",
+      "portugues": "diminuendo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diminuendo porta al silenzio.",
+      "exemplo_pt": "O diminuendo leva ao silêncio.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/diminuˈɛndo/"
+    },
+    {
+      "id": "t28_r23",
+      "italiano": "fortissimo",
+      "portugues": "fortíssimo",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il fortissimo dell'orchestra è potente.",
+      "exemplo_pt": "O fortíssimo da orquestra é poderoso.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/forˈtissimo/"
+    },
+    {
+      "id": "t28_r24",
+      "italiano": "pianissimo",
+      "portugues": "pianíssimo",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il pianissimo del violino è delicato.",
+      "exemplo_pt": "O pianíssimo do violino é delicado.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/pjaˈnissimo/"
+    },
+    {
+      "id": "t28_r28",
+      "italiano": "timbro",
+      "portugues": "timbre",
+      "genero": "m",
+      "plural": "timbri",
+      "exemplo": "Il timbro del clarinetto è unico.",
+      "exemplo_pt": "O timbre do clarinete é único.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtimbro/"
+    },
+    {
+      "id": "t28_r29",
+      "italiano": "tonalità",
+      "portugues": "tonalidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La tonalità di la minore è malinconica.",
+      "exemplo_pt": "A tonalidade de lá menor é melancólica.",
+      "categoria": "musica",
+      "dificuldade": "medio",
+      "audio_ipa": "/tonaliˈta/"
+    },
+    {
+      "id": "t28_p01",
+      "italiano": "chitarra elettrica",
+      "portugues": "guitarra elétrica",
+      "genero": "f",
+      "plural": "chitarre elettriche",
+      "exemplo": "La chitarra elettrica distorce il suono.",
+      "exemplo_pt": "A guitarra elétrica distorce o som.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/kitˈtarra elettˈrika/"
+    },
+    {
+      "id": "t28_p02",
+      "italiano": "basso elettrico",
+      "portugues": "baixo elétrico",
+      "genero": "m",
+      "plural": "bassi elettrici",
+      "exemplo": "Il basso elettrico dà il groove.",
+      "exemplo_pt": "O baixo elétrico dá o groove.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbasso elettˈriko/"
+    },
+    {
+      "id": "t28_p07",
+      "italiano": "flauto traverso",
+      "portugues": "flauta transversal",
+      "genero": "m",
+      "plural": "flauti traversi",
+      "exemplo": "Il flauto traverso è di metallo.",
+      "exemplo_pt": "A flauta transversal é de metal.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈflauto traˈvɛrso/"
+    },
+    {
+      "id": "t28_p08",
+      "italiano": "oboe",
+      "portugues": "oboé",
+      "genero": "m",
+      "plural": "oboi",
+      "exemplo": "L'oboe ha un suono nasale.",
+      "exemplo_pt": "O oboé tem um som nasal.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔːboe/"
+    },
+    {
+      "id": "t28_p09",
+      "italiano": "clarinetto",
+      "portugues": "clarinete",
+      "genero": "m",
+      "plural": "clarinetti",
+      "exemplo": "Il clarinetto è nel jazz e nel classico.",
+      "exemplo_pt": "O clarinete está no jazz e no clássico.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/klariˈnetto/"
+    },
+    {
+      "id": "t28_p10",
+      "italiano": "clavicembalo",
+      "portugues": "cravo",
+      "genero": "m",
+      "plural": "clavicembali",
+      "exemplo": "Il clavicembalo precede il pianoforte.",
+      "exemplo_pt": "O cravo precede o piano.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/klaviˈtʃɛmbalo/"
+    },
+    {
+      "id": "t28_p11",
+      "italiano": "organo",
+      "portugues": "órgão",
+      "genero": "m",
+      "plural": "organi",
+      "exemplo": "L'organo risuona nella cattedrale.",
+      "exemplo_pt": "O órgão ressoa na catedral.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔrɡano/"
+    },
+    {
+      "id": "t28_p14",
+      "italiano": "tuba",
+      "portugues": "tuba",
+      "genero": "f",
+      "plural": "tube",
+      "exemplo": "La tuba suona le note più basse.",
+      "exemplo_pt": "A tuba toca as notas mais graves.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtuːba/"
+    },
+    {
+      "id": "t28_p16",
+      "italiano": "percussioni",
+      "portugues": "percussão",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Le percussioni danno l'energia.",
+      "exemplo_pt": "A percussão dá a energia.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/perkusˈsjoːni/"
+    },
+    {
+      "id": "t28_p17",
+      "italiano": "xilofono",
+      "portugues": "xilofone",
+      "genero": "m",
+      "plural": "xilofoni",
+      "exemplo": "Lo xilofono ha le lamine di legno.",
+      "exemplo_pt": "O xilofone tem as lâminas de madeira.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ksiˈlɔːfono/"
+    },
+    {
+      "id": "t28_f01",
+      "italiano": "musica da camera",
+      "portugues": "música de câmara",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La musica da camera è per piccoli ensemble.",
+      "exemplo_pt": "A música de câmara é para pequenos conjuntos.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmuːzika da ˈkaːmera/"
+    },
+    {
+      "id": "t28_f02",
+      "italiano": "musica sacra",
+      "portugues": "música sacra",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La musica sacra è per la liturgia.",
+      "exemplo_pt": "A música sacra é para a liturgia.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmuːzika ˈsaːkra/"
+    },
+    {
+      "id": "t28_f03",
+      "italiano": "musica folk",
+      "portugues": "música folk",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La musica folk preserva le tradizioni.",
+      "exemplo_pt": "A música folk preserva as tradições.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmuːzika fɔlk/"
+    },
+    {
+      "id": "t28_f04",
+      "italiano": "world music",
+      "portugues": "world music",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La world music mescola culture diverse.",
+      "exemplo_pt": "A world music mistura culturas diversas.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈwɜːld ˈmjuːzik/"
+    },
+    {
+      "id": "t28_f05",
+      "italiano": "musica elettronica",
+      "portugues": "música eletrônica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La musica elettronica usa sintetizzatori.",
+      "exemplo_pt": "A música eletrônica usa sintetizadores.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmuːzika elettˈrɔːnika/"
+    },
+    {
+      "id": "t28_f06",
+      "italiano": "hip hop",
+      "portugues": "hip hop",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il hip hop nasce dal ghetto americano.",
+      "exemplo_pt": "O hip hop nasce do gueto americano.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈhip hɔp/"
+    },
+    {
+      "id": "t28_f07",
+      "italiano": "blues",
+      "portugues": "blues",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il blues esprime dolore e speranza.",
+      "exemplo_pt": "O blues expressa dor e esperança.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bluːz/"
+    },
+    {
+      "id": "t28_f08",
+      "italiano": "reggae",
+      "portugues": "reggae",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il reggae è di Bob Marley.",
+      "exemplo_pt": "O reggae é de Bob Marley.",
+      "categoria": "generi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈrɛɡɛː/"
     }
   ]
 }

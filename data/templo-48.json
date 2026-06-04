@@ -41,42 +41,6 @@
       "audio_ipa": "/perswaˈzjone/"
     },
     {
-      "id": "t48_004",
-      "italiano": "retorica",
-      "portugues": "retórica",
-      "genero": "f",
-      "plural": "retoriche",
-      "exemplo": "Figura retorica.",
-      "exemplo_pt": "Figura retórica.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/reˈtɔrika/"
-    },
-    {
-      "id": "t48_005",
-      "italiano": "pubblico",
-      "portugues": "público/audiência",
-      "genero": "m",
-      "plural": "pubblici",
-      "exemplo": "Parlar in pubblico.",
-      "exemplo_pt": "Falar em público.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈpubbliko/"
-    },
-    {
-      "id": "t48_006",
-      "italiano": "platea",
-      "portugues": "plateia",
-      "genero": "f",
-      "plural": "platee",
-      "exemplo": "Una platea attenta.",
-      "exemplo_pt": "Uma plateia atenta.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/plaˈtɛa/"
-    },
-    {
       "id": "t48_007",
       "italiano": "auditorio",
       "portugues": "auditório",
@@ -87,66 +51,6 @@
       "categoria": "luoghi",
       "dificuldade": "difficile",
       "audio_ipa": "/audiˈtɔrjo/"
-    },
-    {
-      "id": "t48_008",
-      "italiano": "palco",
-      "portugues": "palco",
-      "genero": "m",
-      "plural": "palchi",
-      "exemplo": "Salire sul palco.",
-      "exemplo_pt": "Subir no palco.",
-      "categoria": "luoghi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈpalko/"
-    },
-    {
-      "id": "t48_009",
-      "italiano": "microfono",
-      "portugues": "microfone",
-      "genero": "m",
-      "plural": "microfoni",
-      "exemplo": "Parlare al microfono.",
-      "exemplo_pt": "Falar ao microfone.",
-      "categoria": "oggetti",
-      "dificuldade": "difficile",
-      "audio_ipa": "/miˈkrɔfono/"
-    },
-    {
-      "id": "t48_010",
-      "italiano": "voce",
-      "portugues": "voz",
-      "genero": "f",
-      "plural": "voci",
-      "exemplo": "Una voce potente.",
-      "exemplo_pt": "Uma voz potente.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈvotʃe/"
-    },
-    {
-      "id": "t48_011",
-      "italiano": "tono",
-      "portugues": "tom",
-      "genero": "m",
-      "plural": "toni",
-      "exemplo": "Un tono convincente.",
-      "exemplo_pt": "Um tom convincente.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈtɔno/"
-    },
-    {
-      "id": "t48_012",
-      "italiano": "pausa",
-      "portugues": "pausa",
-      "genero": "f",
-      "plural": "pause",
-      "exemplo": "Fare una pausa.",
-      "exemplo_pt": "Fazer uma pausa.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈpauza/"
     },
     {
       "id": "t48_013",
@@ -161,18 +65,6 @@
       "audio_ipa": "/arɡoˈmento/"
     },
     {
-      "id": "t48_014",
-      "italiano": "dibattito",
-      "portugues": "debate",
-      "genero": "m",
-      "plural": "dibattiti",
-      "exemplo": "Un dibattito acceso.",
-      "exemplo_pt": "Um debate acalorado.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/diˈbattito/"
-    },
-    {
       "id": "t48_015",
       "italiano": "conferenza",
       "portugues": "conferência/palestra",
@@ -183,30 +75,6 @@
       "categoria": "oratoria",
       "dificuldade": "difficile",
       "audio_ipa": "/konfeˈrɛntsa/"
-    },
-    {
-      "id": "t48_016",
-      "italiano": "presentazione",
-      "portugues": "apresentação",
-      "genero": "f",
-      "plural": "presentazioni",
-      "exemplo": "La presentazione del libro.",
-      "exemplo_pt": "A apresentação do livro.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/prezentatˈtsjone/"
-    },
-    {
-      "id": "t48_017",
-      "italiano": "monologo",
-      "portugues": "monólogo",
-      "genero": "m",
-      "plural": "monologhi",
-      "exemplo": "Un lungo monologo.",
-      "exemplo_pt": "Um longo monólogo.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/moˈnɔloɡo/"
     },
     {
       "id": "t48_018",
@@ -243,18 +111,6 @@
       "categoria": "oratoria",
       "dificuldade": "difficile",
       "audio_ipa": "/dʒestwaliˈta/"
-    },
-    {
-      "id": "t48_021",
-      "italiano": "sguardo",
-      "portugues": "olhar",
-      "genero": "m",
-      "plural": "sguardi",
-      "exemplo": "Mantenere lo sguardo.",
-      "exemplo_pt": "Manter o olhar.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈzɡwardo/"
     },
     {
       "id": "t48_022",
@@ -317,18 +173,6 @@
       "audio_ipa": "/ˈrɛplika/"
     },
     {
-      "id": "t48_027",
-      "italiano": "applauso",
-      "portugues": "aplauso",
-      "genero": "m",
-      "plural": "applausi",
-      "exemplo": "Un fragoroso applauso.",
-      "exemplo_pt": "Um estrondoso aplauso.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/apˈplauzo/"
-    },
-    {
       "id": "t48_028",
       "italiano": "ovazione",
       "portugues": "ovação",
@@ -341,18 +185,6 @@
       "audio_ipa": "/ovatˈtsjone/"
     },
     {
-      "id": "t48_029",
-      "italiano": "critica",
-      "portugues": "crítica",
-      "genero": "f",
-      "plural": "critiche",
-      "exemplo": "Una critica costruttiva.",
-      "exemplo_pt": "Uma crítica construtiva.",
-      "categoria": "oratoria",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈkritika/"
-    },
-    {
       "id": "t48_030",
       "italiano": "complimento",
       "portugues": "elogio",
@@ -363,18 +195,6 @@
       "categoria": "oratoria",
       "dificuldade": "difficile",
       "audio_ipa": "/kompliˈmento/"
-    },
-    {
-      "id": "t48_031",
-      "italiano": "parlare",
-      "portugues": "falar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Parlare in pubblico.",
-      "exemplo_pt": "Falar em público.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/parˈlare/"
     },
     {
       "id": "t48_032",
@@ -437,18 +257,6 @@
       "audio_ipa": "/diˈbattere/"
     },
     {
-      "id": "t48_037",
-      "italiano": "spiegare",
-      "portugues": "explicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Spiegare il concetto.",
-      "exemplo_pt": "Explicar o conceito.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/spjeˈɡare/"
-    },
-    {
       "id": "t48_038",
       "italiano": "illustrare",
       "portugues": "ilustrar/explicar",
@@ -471,30 +279,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/koinˈvɔldʒere/"
-    },
-    {
-      "id": "t48_040",
-      "italiano": "ispirare",
-      "portugues": "inspirar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ispirare le persone.",
-      "exemplo_pt": "Inspirar as pessoas.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ispiˈrare/"
-    },
-    {
-      "id": "t48_041",
-      "italiano": "emozionare",
-      "portugues": "emocionar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Emozionare la folla.",
-      "exemplo_pt": "Emocionar a multidão.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/emotsjoˈnare/"
     },
     {
       "id": "t48_042",
@@ -581,30 +365,6 @@
       "audio_ipa": "/balbetˈtare/"
     },
     {
-      "id": "t48_049",
-      "italiano": "esporre",
-      "portugues": "expor",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Esporre i fatti.",
-      "exemplo_pt": "Expor os fatos.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/esˈporre/"
-    },
-    {
-      "id": "t48_050",
-      "italiano": "dichiarare",
-      "portugues": "declarar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dichiarare guerra.",
-      "exemplo_pt": "Declarar guerra.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/dikjaˈrare/"
-    },
-    {
       "id": "t48_051",
       "italiano": "annunciare",
       "portugues": "anunciar",
@@ -615,18 +375,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/annunˈtʃare/"
-    },
-    {
-      "id": "t48_052",
-      "italiano": "sottolineare",
-      "portugues": "sublinhar/enfatizar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Vorrei sottolineare che...",
-      "exemplo_pt": "Gostaria de enfatizar que...",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/sottolineˈare/"
     },
     {
       "id": "t48_053",
@@ -665,18 +413,6 @@
       "audio_ipa": "/protesˈtare/"
     },
     {
-      "id": "t48_056",
-      "italiano": "difendere",
-      "portugues": "defender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Difendere i propri diritti.",
-      "exemplo_pt": "Defender os próprios direitos.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/diˈfɛndere/"
-    },
-    {
       "id": "t48_057",
       "italiano": "affascinare",
       "portugues": "fascinar",
@@ -687,18 +423,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/affaʃʃiˈnare/"
-    },
-    {
-      "id": "t48_058",
-      "italiano": "incantare",
-      "portugues": "encantar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Incantare con le parole.",
-      "exemplo_pt": "Encantar com as palavras.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/inkanˈtare/"
     },
     {
       "id": "t48_059",
@@ -749,18 +473,6 @@
       "audio_ipa": "/perswaˈzivo/"
     },
     {
-      "id": "t48_063",
-      "italiano": "eloquente",
-      "portugues": "eloquente",
-      "genero": "m",
-      "plural": "eloquenti",
-      "exemplo": "Un oratore eloquente.",
-      "exemplo_pt": "Um orador eloquente.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/eloˈkwɛnte/"
-    },
-    {
       "id": "t48_064",
       "italiano": "logico",
       "portugues": "lógico",
@@ -771,66 +483,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈlɔdʒiko/"
-    },
-    {
-      "id": "t48_065",
-      "italiano": "irrazionale",
-      "portugues": "irracional",
-      "genero": "m",
-      "plural": "irrazionali",
-      "exemplo": "Una paura irrazionale.",
-      "exemplo_pt": "Um medo irracional.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/irrattsjoˈnale/"
-    },
-    {
-      "id": "t48_066",
-      "italiano": "chiaro",
-      "portugues": "claro",
-      "genero": "m",
-      "plural": "chiari",
-      "exemplo": "Un concetto chiaro.",
-      "exemplo_pt": "Um conceito claro.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈkjaro/"
-    },
-    {
-      "id": "t48_067",
-      "italiano": "oscuro",
-      "portugues": "obscuro/confuso",
-      "genero": "m",
-      "plural": "oscuri",
-      "exemplo": "Un discorso oscuro.",
-      "exemplo_pt": "Um discurso obscuro.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/osˈkuro/"
-    },
-    {
-      "id": "t48_068",
-      "italiano": "noioso",
-      "portugues": "chato/entediante",
-      "genero": "m",
-      "plural": "noiosi",
-      "exemplo": "Una lezione noiosa.",
-      "exemplo_pt": "Uma aula entediante.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/noˈjozo/"
-    },
-    {
-      "id": "t48_069",
-      "italiano": "appassionato",
-      "portugues": "apaixonado/fervoroso",
-      "genero": "m",
-      "plural": "appassionati",
-      "exemplo": "Un discorso appassionato.",
-      "exemplo_pt": "Um discurso fervoroso.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/appassjoˈnato/"
     },
     {
       "id": "t48_070",
@@ -953,18 +605,6 @@
       "audio_ipa": "/sponˈtaneo/"
     },
     {
-      "id": "t48_080",
-      "italiano": "preparato",
-      "portugues": "preparado",
-      "genero": "m",
-      "plural": "preparati",
-      "exemplo": "Un discorso ben preparato.",
-      "exemplo_pt": "Um discurso bem preparado.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/prepaˈrato/"
-    },
-    {
       "id": "t48_081",
       "italiano": "improvvisato",
       "portugues": "improvisado",
@@ -989,18 +629,6 @@
       "audio_ipa": "/koinvolˈdʒɛnte/"
     },
     {
-      "id": "t48_083",
-      "italiano": "emozionante",
-      "portugues": "emocionante",
-      "genero": "m",
-      "plural": "emozionanti",
-      "exemplo": "Un momento emozionante.",
-      "exemplo_pt": "Um momento emocionante.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/emotsjoˈnante/"
-    },
-    {
       "id": "t48_084",
       "italiano": "ispiratore",
       "portugues": "inspirador",
@@ -1011,18 +639,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/ispiraˈtore/"
-    },
-    {
-      "id": "t48_085",
-      "italiano": "noioso",
-      "portugues": "chato",
-      "genero": "m",
-      "plural": "noiosi",
-      "exemplo": "Un relatore noioso.",
-      "exemplo_pt": "Un palestrante chato.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/noˈjozo/"
     },
     {
       "id": "t48_086",
@@ -1037,18 +653,6 @@
       "audio_ipa": "/peˈdante/"
     },
     {
-      "id": "t48_087",
-      "italiano": "sincero",
-      "portugues": "sincero",
-      "genero": "m",
-      "plural": "sinceri",
-      "exemplo": "Un ringraziamento sincero.",
-      "exemplo_pt": "Um agradecimento sincero.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/sinˈtʃɛro/"
-    },
-    {
       "id": "t48_088",
       "italiano": "ipocrita",
       "portugues": "hipócrita",
@@ -1059,42 +663,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/iˈpɔkrita/"
-    },
-    {
-      "id": "t48_089",
-      "italiano": "vero",
-      "portugues": "verdadeiro",
-      "genero": "m",
-      "plural": "veri",
-      "exemplo": "È la pura verità.",
-      "exemplo_pt": "É a pura verdade.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈvero/"
-    },
-    {
-      "id": "t48_090",
-      "italiano": "falso",
-      "portugues": "falso",
-      "genero": "m",
-      "plural": "falsi",
-      "exemplo": "Una falsa promessa.",
-      "exemplo_pt": "Uma falsa promessa.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈfalso/"
-    },
-    {
-      "id": "t48_091",
-      "italiano": "retorico",
-      "portugues": "retórico",
-      "genero": "m",
-      "plural": "retorici",
-      "exemplo": "Domanda retorica.",
-      "exemplo_pt": "Pergunta retórica.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/reˈtɔriko/"
     },
     {
       "id": "t48_092",
@@ -1167,18 +735,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/riˈbattere/"
-    },
-    {
-      "id": "t48_098",
-      "italiano": "esordire",
-      "portugues": "começar (discurso)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Esordire con una battuta.",
-      "exemplo_pt": "Começar com uma piada.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ezorˈdire/"
     },
     {
       "id": "t48_099",
@@ -1323,6 +879,414 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/konˈkludere/"
+    },
+    {
+      "id": "t48_r02",
+      "italiano": "argomentazione",
+      "portugues": "argumentação",
+      "genero": "f",
+      "plural": "argomentazioni",
+      "exemplo": "L'argomentazione deve essere logica.",
+      "exemplo_pt": "A argumentação deve ser lógica.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/arɡomentaˈttsjoːne/"
+    },
+    {
+      "id": "t48_r06",
+      "italiano": "confutazione",
+      "portugues": "refutação",
+      "genero": "f",
+      "plural": "confutazioni",
+      "exemplo": "La confutazione demolisce l'argomento.",
+      "exemplo_pt": "A refutação destrói o argumento.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/konfutaˈttsjoːne/"
+    },
+    {
+      "id": "t48_r07",
+      "italiano": "pathos",
+      "portugues": "pathos / apelo emocional",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il pathos commuove il pubblico.",
+      "exemplo_pt": "O pathos comove o público.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpaːθos/"
+    },
+    {
+      "id": "t48_r08",
+      "italiano": "ethos",
+      "portugues": "ethos / credibilidade",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'ethos dell'oratore è la sua credibilità.",
+      "exemplo_pt": "O ethos do orador é sua credibilidade.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɛːθos/"
+    },
+    {
+      "id": "t48_r09",
+      "italiano": "logos",
+      "portugues": "logos / lógica",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il logos usa la ragione per convincere.",
+      "exemplo_pt": "O logos usa a razão para convencer.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlɔɡos/"
+    },
+    {
+      "id": "t48_r10",
+      "italiano": "captatio benevolentiae",
+      "portugues": "captatio benevolentiae",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La captatio conquista il pubblico.",
+      "exemplo_pt": "A captatio conquista o público.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/kapˈtaːtjo bɛnevoˈlɛntjae/"
+    },
+    {
+      "id": "t48_r11",
+      "italiano": "amplificazione",
+      "portugues": "amplificação",
+      "genero": "f",
+      "plural": "amplificazioni",
+      "exemplo": "L'amplificazione esagera per effetto.",
+      "exemplo_pt": "A amplificação exagera por efeito.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/amplifikaˈttsjoːne/"
+    },
+    {
+      "id": "t48_r12",
+      "italiano": "locus communis",
+      "portugues": "lugar comum",
+      "genero": "m",
+      "plural": "loci communes",
+      "exemplo": "Il locus communis è condiviso.",
+      "exemplo_pt": "O lugar comum é compartilhado.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlɔːkus ˈkɔmmenis/"
+    },
+    {
+      "id": "t48_r13",
+      "italiano": "dispositio",
+      "portugues": "dispositio / organização",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La dispositio ordina il discorso.",
+      "exemplo_pt": "A dispositio organiza o discurso.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/dispoˈzittsjo/"
+    },
+    {
+      "id": "t48_r14",
+      "italiano": "inventio",
+      "portugues": "inventio / invenção",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'inventio trova gli argomenti.",
+      "exemplo_pt": "A inventio encontra os argumentos.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/inˈventtsjo/"
+    },
+    {
+      "id": "t48_r15",
+      "italiano": "elocutio",
+      "portugues": "elocutio / elocução",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'elocutio sceglie le parole giuste.",
+      "exemplo_pt": "A elocutio escolhe as palavras certas.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/eloˈkuttsjo/"
+    },
+    {
+      "id": "t48_r16",
+      "italiano": "pronunciatio",
+      "portugues": "pronunciatio / entrega",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La pronunciatio è il modo di parlare.",
+      "exemplo_pt": "A pronunciatio é o modo de falar.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/pronuntˈsjattsjo/"
+    },
+    {
+      "id": "t48_r18",
+      "italiano": "inganno",
+      "portugues": "engano",
+      "genero": "m",
+      "plural": "inganni",
+      "exemplo": "L'inganno non è retorica vera.",
+      "exemplo_pt": "O engano não é retórica verdadeira.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/inˈɡanno/"
+    },
+    {
+      "id": "t48_r19",
+      "italiano": "sofisma",
+      "portugues": "sofisma",
+      "genero": "m",
+      "plural": "sofismi",
+      "exemplo": "Il sofisma sembra vero ma non lo è.",
+      "exemplo_pt": "O sofisma parece verdadeiro mas não é.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/soˈfizma/"
+    },
+    {
+      "id": "t48_r20",
+      "italiano": "fallacia",
+      "portugues": "falácia",
+      "genero": "f",
+      "plural": "fallacie",
+      "exemplo": "La fallacia ad hominem attacca la persona.",
+      "exemplo_pt": "A falácia ad hominem ataca a pessoa.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/falˈlaːtʃa/"
+    },
+    {
+      "id": "t48_r21",
+      "italiano": "appello all'autorità",
+      "portugues": "apelo à autoridade",
+      "genero": "m",
+      "plural": "appelli all'autorità",
+      "exemplo": "L'appello all'autorità è una fallacia.",
+      "exemplo_pt": "O apelo à autoridade é uma falácia.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/apˈpɛllo allautoriˈta/"
+    },
+    {
+      "id": "t48_r22",
+      "italiano": "uomo di paglia",
+      "portugues": "espantalho / homem de palha",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'uomo di paglia distorce l'argomento.",
+      "exemplo_pt": "O espantalho distorce o argumento.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈwɔːmo di ˈpaʎʎa/"
+    },
+    {
+      "id": "t48_r23",
+      "italiano": "slippery slope",
+      "portugues": "rampa escorregadia",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo slippery slope è una fallacia.",
+      "exemplo_pt": "A rampa escorregadia é uma falácia.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsliːperi sloʊp/"
+    },
+    {
+      "id": "t48_r24",
+      "italiano": "false dichotomy",
+      "portugues": "falsa dicotomia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La false dichotomy semplifica troppo.",
+      "exemplo_pt": "A falsa dicotomia simplifica demais.",
+      "categoria": "logica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈfɔls daɪˈkɒtomi/"
+    },
+    {
+      "id": "t48_r25",
+      "italiano": "débat",
+      "portugues": "debate",
+      "genero": "m",
+      "plural": "débat",
+      "exemplo": "Il débat è moderato da un arbitro.",
+      "exemplo_pt": "O debate é moderado por um árbitro.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/deˈba/"
+    },
+    {
+      "id": "t48_r27",
+      "italiano": "dizione",
+      "portugues": "dicção",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La dizione chiara aiuta la comprensione.",
+      "exemplo_pt": "A dicção clara ajuda a compreensão.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ditˈttsjoːne/"
+    },
+    {
+      "id": "t48_r28",
+      "italiano": "intonazione",
+      "portugues": "entonação",
+      "genero": "f",
+      "plural": "intonazioni",
+      "exemplo": "L'intonazione varia il significato.",
+      "exemplo_pt": "A entonação varia o significado.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/intonaˈttsjoːne/"
+    },
+    {
+      "id": "t48_r29",
+      "italiano": "pausa retorica",
+      "portugues": "pausa retórica",
+      "genero": "f",
+      "plural": "pause retoriche",
+      "exemplo": "La pausa retorica crea suspense.",
+      "exemplo_pt": "A pausa retórica cria suspense.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpauza reˈtɔːrika/"
+    },
+    {
+      "id": "t48_r30",
+      "italiano": "climax oratorio",
+      "portugues": "clímax oratório",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il climax oratorio è il punto più alto.",
+      "exemplo_pt": "O clímax oratório é o ponto mais alto.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈklajmaks oraˈtɔːrjo/"
+    },
+    {
+      "id": "t48_f01",
+      "italiano": "discorso inaugurale",
+      "portugues": "discurso inaugural",
+      "genero": "m",
+      "plural": "discorsi inaugurali",
+      "exemplo": "Il discorso inaugurale è atteso.",
+      "exemplo_pt": "O discurso inaugural é aguardado.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/disˈkɔrso inaugurˈaːle/"
+    },
+    {
+      "id": "t48_f02",
+      "italiano": "arringa",
+      "portugues": "arenga / discurso",
+      "genero": "f",
+      "plural": "arringhe",
+      "exemplo": "L'arringa dell'avvocato è convincente.",
+      "exemplo_pt": "A arenga do advogado é convincente.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/arˈriŋɡa/"
+    },
+    {
+      "id": "t48_f03",
+      "italiano": "concione",
+      "portugues": "concião / discurso público",
+      "genero": "f",
+      "plural": "concioni",
+      "exemplo": "La concione radunò il popolo.",
+      "exemplo_pt": "A concião reuniu o povo.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/konˈtʃoːne/"
+    },
+    {
+      "id": "t48_f04",
+      "italiano": "oratore",
+      "portugues": "orador",
+      "genero": "m",
+      "plural": "oratori",
+      "exemplo": "L'oratore tiene il pubblico incantato.",
+      "exemplo_pt": "O orador mantém o público encantado.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/oraˈtoːre/"
+    },
+    {
+      "id": "t48_f06",
+      "italiano": "microfono aperto",
+      "portugues": "microfone aberto",
+      "genero": "m",
+      "plural": "microfoni aperti",
+      "exemplo": "Il microfono aperto è per tutti.",
+      "exemplo_pt": "O microfone aberto é para todos.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/miˈkrɔːfono aˈpɛrto/"
+    },
+    {
+      "id": "t48_f07",
+      "italiano": "dialogo socratico",
+      "portugues": "diálogo socrático",
+      "genero": "m",
+      "plural": "dialoghi socratici",
+      "exemplo": "Il dialogo socratico cerca la verità.",
+      "exemplo_pt": "O diálogo socrático busca a verdade.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdjaːloɡo sokˈraːtiko/"
+    },
+    {
+      "id": "t48_f08",
+      "italiano": "maieutica",
+      "portugues": "maiêutica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La maieutica aiuta a partorire idee.",
+      "exemplo_pt": "A maiêutica ajuda a parir ideias.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/majeˈuːtika/"
+    },
+    {
+      "id": "t48_f09",
+      "italiano": "ironia socratica",
+      "portugues": "ironia socrática",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'ironia socratica finge ignoranza.",
+      "exemplo_pt": "A ironia socrática finge ignorância.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/iˈrɔːnja sokˈraːtika/"
+    },
+    {
+      "id": "t48_f10",
+      "italiano": "confutazione retorica",
+      "portugues": "refutação retórica",
+      "genero": "f",
+      "plural": "confutazioni retoriche",
+      "exemplo": "La confutazione retorica demolisce l'avversario.",
+      "exemplo_pt": "A refutação retórica destrói o adversário.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/konfutaˈttsjoːne reˈtɔːrika/"
+    },
+    {
+      "id": "t48_g01",
+      "italiano": "perorazione",
+      "portugues": "peroração",
+      "genero": "f",
+      "plural": "perorazioni",
+      "exemplo": "La perorazione chiude il discorso.",
+      "exemplo_pt": "A peroração encerra o discurso.",
+      "categoria": "oratoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/perorˈaːtsjoːne/"
     }
   ]
 }

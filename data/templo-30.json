@@ -5,30 +5,6 @@
   "nivel": "B2",
   "palavras": [
     {
-      "id": "t30_001",
-      "italiano": "libro",
-      "portugues": "livro",
-      "genero": "m",
-      "plural": "libri",
-      "exemplo": "Leggere un buon libro.",
-      "exemplo_pt": "Ler um bom livro.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlibro/"
-    },
-    {
-      "id": "t30_002",
-      "italiano": "romanzo",
-      "portugues": "romance (livro)",
-      "genero": "m",
-      "plural": "romanzi",
-      "exemplo": "Un romanzo d'avventura.",
-      "exemplo_pt": "Um romance de aventura.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/roˈmandzo/"
-    },
-    {
       "id": "t30_003",
       "italiano": "racconto",
       "portugues": "conto",
@@ -39,18 +15,6 @@
       "categoria": "generi",
       "dificuldade": "medio",
       "audio_ipa": "/rakˈkonto/"
-    },
-    {
-      "id": "t30_004",
-      "italiano": "poesia",
-      "portugues": "poesia",
-      "genero": "f",
-      "plural": "poesie",
-      "exemplo": "Leggere una poesia.",
-      "exemplo_pt": "Ler uma poesia.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/poeˈzia/"
     },
     {
       "id": "t30_005",
@@ -87,18 +51,6 @@
       "categoria": "generi",
       "dificuldade": "medio",
       "audio_ipa": "/autobjoɡraˈfia/"
-    },
-    {
-      "id": "t30_008",
-      "italiano": "giallo",
-      "portugues": "livro de mistério/policial",
-      "genero": "m",
-      "plural": "gialli",
-      "exemplo": "Leggere un giallo appassionante.",
-      "exemplo_pt": "Ler um livro policial apaixonante.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒallo/"
     },
     {
       "id": "t30_009",
@@ -161,30 +113,6 @@
       "audio_ipa": "/auˈtore/"
     },
     {
-      "id": "t30_014",
-      "italiano": "scrittore",
-      "portugues": "escritor",
-      "genero": "m",
-      "plural": "scrittori",
-      "exemplo": "Un famoso scrittore.",
-      "exemplo_pt": "Um escritor famoso.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/skritˈtore/"
-    },
-    {
-      "id": "t30_015",
-      "italiano": "poeta",
-      "portugues": "poeta",
-      "genero": "m",
-      "plural": "poeti",
-      "exemplo": "Il poeta cerca ispirazione.",
-      "exemplo_pt": "O poeta busca inspiração.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/poˈɛta/"
-    },
-    {
       "id": "t30_016",
       "italiano": "editore",
       "portugues": "editor/editora",
@@ -207,30 +135,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/letˈtore/"
-    },
-    {
-      "id": "t30_018",
-      "italiano": "protagonista",
-      "portugues": "protagonista",
-      "genero": "m/f",
-      "plural": "protagonisti",
-      "exemplo": "Il protagonista muore alla fine.",
-      "exemplo_pt": "O protagonista morre no fim.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/protaɡoˈnista/"
-    },
-    {
-      "id": "t30_019",
-      "italiano": "pagina",
-      "portugues": "página",
-      "genero": "f",
-      "plural": "pagine",
-      "exemplo": "Gira la pagina.",
-      "exemplo_pt": "Vire a página.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpadʒina/"
     },
     {
       "id": "t30_020",
@@ -257,18 +161,6 @@
       "audio_ipa": "/koperˈtina/"
     },
     {
-      "id": "t30_022",
-      "italiano": "titolo",
-      "portugues": "título",
-      "genero": "m",
-      "plural": "titoli",
-      "exemplo": "Il titolo dell'opera.",
-      "exemplo_pt": "O título da obra.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtitolo/"
-    },
-    {
       "id": "t30_023",
       "italiano": "indice",
       "portugues": "índice",
@@ -293,54 +185,6 @@
       "audio_ipa": "/prefatˈtsjone/"
     },
     {
-      "id": "t30_025",
-      "italiano": "trama",
-      "portugues": "enredo",
-      "genero": "f",
-      "plural": "trame",
-      "exemplo": "La trama è complessa.",
-      "exemplo_pt": "O enredo é complexo.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtrama/"
-    },
-    {
-      "id": "t30_026",
-      "italiano": "biblioteca",
-      "portugues": "biblioteca",
-      "genero": "f",
-      "plural": "biblioteche",
-      "exemplo": "Studiare in biblioteca.",
-      "exemplo_pt": "Estudar na biblioteca.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/bibljoˈtɛka/"
-    },
-    {
-      "id": "t30_027",
-      "italiano": "libreria",
-      "portugues": "livraria",
-      "genero": "f",
-      "plural": "librerie",
-      "exemplo": "Comprare un libro in libreria.",
-      "exemplo_pt": "Comprar um livro na livraria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/libreˈria/"
-    },
-    {
-      "id": "t30_028",
-      "italiano": "scaffale",
-      "portugues": "prateleira",
-      "genero": "m",
-      "plural": "scaffali",
-      "exemplo": "I libri sullo scaffale.",
-      "exemplo_pt": "Os livros na prateleira.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skafˈfale/"
-    },
-    {
       "id": "t30_029",
       "italiano": "edizione",
       "portugues": "edição",
@@ -351,54 +195,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/editˈtsjone/"
-    },
-    {
-      "id": "t30_030",
-      "italiano": "pubblicazione",
-      "portugues": "publicação",
-      "genero": "f",
-      "plural": "pubblicazioni",
-      "exemplo": "Data di pubblicazione.",
-      "exemplo_pt": "Data de publicação.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/pubblikatˈtsjone/"
-    },
-    {
-      "id": "t30_031",
-      "italiano": "leggere",
-      "portugues": "ler",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Amo leggere la sera.",
-      "exemplo_pt": "Amo ler à noite.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlɛddʒere/"
-    },
-    {
-      "id": "t30_032",
-      "italiano": "scrivere",
-      "portugues": "escrever",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scrivere un libro.",
-      "exemplo_pt": "Escrever um livro.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskrivere/"
-    },
-    {
-      "id": "t30_033",
-      "italiano": "pubblicare",
-      "portugues": "publicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Pubblicare un articolo.",
-      "exemplo_pt": "Publicar um artigo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/pubbliˈkare/"
     },
     {
       "id": "t30_034",
@@ -473,18 +269,6 @@
       "audio_ipa": "/tʃiˈtare/"
     },
     {
-      "id": "t30_040",
-      "italiano": "dedicare",
-      "portugues": "dedicar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dedicare il libro alla moglie.",
-      "exemplo_pt": "Dedicar o livro à esposa.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dediˈkare/"
-    },
-    {
       "id": "t30_041",
       "italiano": "riassumere",
       "portugues": "resumir",
@@ -509,18 +293,6 @@
       "audio_ipa": "/sottolineˈare/"
     },
     {
-      "id": "t30_043",
-      "italiano": "immaginare",
-      "portugues": "imaginar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Immaginare un mondo nuovo.",
-      "exemplo_pt": "Imaginar um mundo novo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/immadʒiˈnare/"
-    },
-    {
       "id": "t30_044",
       "italiano": "appassionante",
       "portugues": "apaixonante",
@@ -531,18 +303,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/appassjoˈnante/"
-    },
-    {
-      "id": "t30_045",
-      "italiano": "noioso",
-      "portugues": "chato",
-      "genero": "m",
-      "plural": "noiosi",
-      "exemplo": "Un libro noioso.",
-      "exemplo_pt": "Um livro chato.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/noˈjozo/"
     },
     {
       "id": "t30_046",
@@ -581,42 +341,6 @@
       "audio_ipa": "/iˈnɛdito/"
     },
     {
-      "id": "t30_049",
-      "italiano": "classico",
-      "portugues": "clássico",
-      "genero": "m",
-      "plural": "classici",
-      "exemplo": "Un classico della letteratura.",
-      "exemplo_pt": "Um clássico da literatura.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklassiko/"
-    },
-    {
-      "id": "t30_050",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Letteratura moderna.",
-      "exemplo_pt": "Literatura moderna.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
-    },
-    {
-      "id": "t30_051",
-      "italiano": "contemporaneo",
-      "portugues": "contemporâneo",
-      "genero": "m",
-      "plural": "contemporanei",
-      "exemplo": "Un autore contemporaneo.",
-      "exemplo_pt": "Um autor contemporâneo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kontempoˈranɛo/"
-    },
-    {
       "id": "t30_052",
       "italiano": "epico",
       "portugues": "épico",
@@ -639,18 +363,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈliriko/"
-    },
-    {
-      "id": "t30_054",
-      "italiano": "famoso",
-      "portugues": "famoso",
-      "genero": "m",
-      "plural": "famosi",
-      "exemplo": "Uno scrittore famoso.",
-      "exemplo_pt": "Um escritor famoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/faˈmozo/"
     },
     {
       "id": "t30_055",
@@ -725,30 +437,6 @@
       "audio_ipa": "/inˈkjɔstro/"
     },
     {
-      "id": "t30_061",
-      "italiano": "penna",
-      "portugues": "caneta",
-      "genero": "f",
-      "plural": "penne",
-      "exemplo": "Prendi una penna.",
-      "exemplo_pt": "Pegue uma caneta.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpenna/"
-    },
-    {
-      "id": "t30_062",
-      "italiano": "matita",
-      "portugues": "lápis",
-      "genero": "f",
-      "plural": "matite",
-      "exemplo": "Scrivi a matita.",
-      "exemplo_pt": "Escreva a lápis.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈtita/"
-    },
-    {
       "id": "t30_063",
       "italiano": "segnalibro",
       "portugues": "marcador de página",
@@ -759,18 +447,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/seɲɲaˈlibro/"
-    },
-    {
-      "id": "t30_064",
-      "italiano": "dizionario",
-      "portugues": "dicionário",
-      "genero": "m",
-      "plural": "dizionari",
-      "exemplo": "Cerca nel dizionario.",
-      "exemplo_pt": "Procure no dicionário.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ditsjoˈnarjo/"
     },
     {
       "id": "t30_065",
@@ -833,30 +509,6 @@
       "audio_ipa": "/peˈrjɔdiko/"
     },
     {
-      "id": "t30_070",
-      "italiano": "articolo",
-      "portugues": "artigo",
-      "genero": "m",
-      "plural": "articoli",
-      "exemplo": "Un articolo interessante.",
-      "exemplo_pt": "Um artigo interessante.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/arˈtikolo/"
-    },
-    {
-      "id": "t30_071",
-      "italiano": "manoscritto",
-      "portugues": "manuscrito",
-      "genero": "m",
-      "plural": "manoscritti",
-      "exemplo": "Un antico manoscritto.",
-      "exemplo_pt": "Um antigo manuscrito.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/manosˈkritto/"
-    },
-    {
       "id": "t30_072",
       "italiano": "bozza",
       "portugues": "rascunho/esboço",
@@ -869,18 +521,6 @@
       "audio_ipa": "/ˈbɔttsa/"
     },
     {
-      "id": "t30_073",
-      "italiano": "stampa",
-      "portugues": "imprensa/impressão",
-      "genero": "f",
-      "plural": "stampe",
-      "exemplo": "Andare in stampa.",
-      "exemplo_pt": "Ir para a impressão.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstampa/"
-    },
-    {
       "id": "t30_074",
       "italiano": "tiratura",
       "portugues": "tiragem",
@@ -891,54 +531,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/tiraˈtura/"
-    },
-    {
-      "id": "t30_075",
-      "italiano": "prosa",
-      "portugues": "prosa",
-      "genero": "f",
-      "plural": "prose",
-      "exemplo": "Scrivere in prosa.",
-      "exemplo_pt": "Escrever em prosa.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈprɔza/"
-    },
-    {
-      "id": "t30_076",
-      "italiano": "verso",
-      "portugues": "verso",
-      "genero": "m",
-      "plural": "versi",
-      "exemplo": "Scrivere in versi.",
-      "exemplo_pt": "Escrever em versos.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvɛrso/"
-    },
-    {
-      "id": "t30_077",
-      "italiano": "rima",
-      "portugues": "rima",
-      "genero": "f",
-      "plural": "rime",
-      "exemplo": "Una poesia in rima.",
-      "exemplo_pt": "Uma poesia com rima.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈrima/"
-    },
-    {
-      "id": "t30_078",
-      "italiano": "sillaba",
-      "portugues": "sílaba",
-      "genero": "f",
-      "plural": "sillabe",
-      "exemplo": "Contare le sillabe.",
-      "exemplo_pt": "Contar as sílabas.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsillaba/"
     },
     {
       "id": "t30_079",
@@ -963,18 +555,6 @@
       "categoria": "generi",
       "dificuldade": "medio",
       "audio_ipa": "/paˈrɔla/"
-    },
-    {
-      "id": "t30_081",
-      "italiano": "vocabolario",
-      "portugues": "vocabulário",
-      "genero": "m",
-      "plural": "vocabolari",
-      "exemplo": "Ampliare il vocabolario.",
-      "exemplo_pt": "Ampliar o vocabulário.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/vokaboˈlarjo/"
     },
     {
       "id": "t30_082",
@@ -1037,18 +617,6 @@
       "audio_ipa": "/ispiratˈtsjone/"
     },
     {
-      "id": "t30_087",
-      "italiano": "stile",
-      "portugues": "estilo",
-      "genero": "m",
-      "plural": "stili",
-      "exemplo": "Lo stile dell'autore.",
-      "exemplo_pt": "O estilo do autor.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstile/"
-    },
-    {
       "id": "t30_088",
       "italiano": "corrente",
       "portugues": "corrente (literária)",
@@ -1071,18 +639,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/moviˈmento/"
-    },
-    {
-      "id": "t30_090",
-      "italiano": "capolavoro",
-      "portugues": "obra-prima",
-      "genero": "m",
-      "plural": "capolavori",
-      "exemplo": "Il capolavoro di Dante.",
-      "exemplo_pt": "A obra-prima de Dante.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/kapolaˈvoro/"
     },
     {
       "id": "t30_091",
@@ -1157,42 +713,6 @@
       "audio_ipa": "/diˈaloɡo/"
     },
     {
-      "id": "t30_097",
-      "italiano": "monologo",
-      "portugues": "monólogo",
-      "genero": "m",
-      "plural": "monologhi",
-      "exemplo": "Il monologo interiore.",
-      "exemplo_pt": "O monólogo interior.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈnɔloɡo/"
-    },
-    {
-      "id": "t30_098",
-      "italiano": "metafora",
-      "portugues": "metáfora",
-      "genero": "f",
-      "plural": "metafore",
-      "exemplo": "Usare una metafora.",
-      "exemplo_pt": "Usar uma metáfora.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/meˈtafora/"
-    },
-    {
-      "id": "t30_099",
-      "italiano": "ironia",
-      "portugues": "ironia",
-      "genero": "f",
-      "plural": "ironie",
-      "exemplo": "Una sottile ironia.",
-      "exemplo_pt": "Uma sutil ironia.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/iroˈnia/"
-    },
-    {
       "id": "t30_100",
       "italiano": "suspense",
       "portugues": "suspense",
@@ -1203,18 +723,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈsaspɛns/"
-    },
-    {
-      "id": "t30_101",
-      "italiano": "finale",
-      "portugues": "final",
-      "genero": "m",
-      "plural": "finali",
-      "exemplo": "Il finale a sorpresa.",
-      "exemplo_pt": "O final surpreendente.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/fiˈnale/"
     },
     {
       "id": "t30_102",
@@ -1265,30 +773,6 @@
       "audio_ipa": "/ˈsaɡa/"
     },
     {
-      "id": "t30_106",
-      "italiano": "antologia",
-      "portugues": "antologia",
-      "genero": "f",
-      "plural": "antologie",
-      "exemplo": "Un'antologia di poesie.",
-      "exemplo_pt": "Uma antologia de poesias.",
-      "categoria": "generi",
-      "dificuldade": "medio",
-      "audio_ipa": "/antoloˈdʒia/"
-    },
-    {
-      "id": "t30_107",
-      "italiano": "bibliotecario",
-      "portugues": "bibliotecário",
-      "genero": "m",
-      "plural": "bibliotecari",
-      "exemplo": "Chiedi al bibliotecario.",
-      "exemplo_pt": "Pergunte ao bibliotecário.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/bibljoteˈkarjo/"
-    },
-    {
       "id": "t30_108",
       "italiano": "rilegare",
       "portugues": "encadernar",
@@ -1323,6 +807,486 @@
       "categoria": "generi",
       "dificuldade": "medio",
       "audio_ipa": "/ledˈdʒɛnda/"
+    },
+    {
+      "id": "t30_r01",
+      "italiano": "aforisma",
+      "portugues": "aforismo",
+      "genero": "m",
+      "plural": "aforismi",
+      "exemplo": "L'aforisma di Oscar Wilde è brillante.",
+      "exemplo_pt": "O aforismo de Oscar Wilde é brilhante.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/aˈfɔːrizma/"
+    },
+    {
+      "id": "t30_r06",
+      "italiano": "sarcasmo",
+      "portugues": "sarcasmo",
+      "genero": "m",
+      "plural": "sarcasmi",
+      "exemplo": "Il sarcasmo può ferire.",
+      "exemplo_pt": "O sarcasmo pode machucar.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/sarˈkazmo/"
+    },
+    {
+      "id": "t30_r14",
+      "italiano": "climax",
+      "portugues": "clímax",
+      "genero": "m",
+      "plural": "climax",
+      "exemplo": "Il climax arriva al terzo atto.",
+      "exemplo_pt": "O clímax chega no terceiro ato.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈklajmaks/"
+    },
+    {
+      "id": "t30_r15",
+      "italiano": "digressione",
+      "portugues": "digressão",
+      "genero": "f",
+      "plural": "digressioni",
+      "exemplo": "La digressione rallenta la narrazione.",
+      "exemplo_pt": "A digressão atrasa a narrativa.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/diɡresˈsjoːne/"
+    },
+    {
+      "id": "t30_r16",
+      "italiano": "ellissi",
+      "portugues": "elipse",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'ellissi omette elementi impliciti.",
+      "exemplo_pt": "A elipse omite elementos implícitos.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/elˈlissi/"
+    },
+    {
+      "id": "t30_r18",
+      "italiano": "romanzo storico",
+      "portugues": "romance histórico",
+      "genero": "m",
+      "plural": "romanzi storici",
+      "exemplo": "Il romanzo storico ricostruisce il passato.",
+      "exemplo_pt": "O romance histórico reconstrói o passado.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/roˈmantso ˈstɔːriko/"
+    },
+    {
+      "id": "t30_r19",
+      "italiano": "distopia",
+      "portugues": "distopia",
+      "genero": "f",
+      "plural": "distopie",
+      "exemplo": "La distopia immagina futuri negativi.",
+      "exemplo_pt": "A distopia imagina futuros negativos.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/disˈtɔːpja/"
+    },
+    {
+      "id": "t30_r20",
+      "italiano": "utopia",
+      "portugues": "utopia",
+      "genero": "f",
+      "plural": "utopie",
+      "exemplo": "L'utopia descrive la società ideale.",
+      "exemplo_pt": "A utopia descreve a sociedade ideal.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/uˈtɔːpja/"
+    },
+    {
+      "id": "t30_r28",
+      "italiano": "reportage",
+      "portugues": "reportagem",
+      "genero": "m",
+      "plural": "reportage",
+      "exemplo": "Il reportage narra fatti reali.",
+      "exemplo_pt": "A reportagem narra fatos reais.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/reporˈtaːʒ/"
+    },
+    {
+      "id": "t30_p01",
+      "italiano": "critica testuale",
+      "portugues": "crítica textual",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La critica testuale analizza il manoscritto.",
+      "exemplo_pt": "A crítica textual analisa o manuscrito.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkritika tesˈtwaːle/"
+    },
+    {
+      "id": "t30_p02",
+      "italiano": "intertestualità",
+      "portugues": "intertextualidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'intertestualità collega i testi.",
+      "exemplo_pt": "A intertextualidade conecta os textos.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/intertestualiˈta/"
+    },
+    {
+      "id": "t30_p05",
+      "italiano": "analisi del testo",
+      "portugues": "análise do texto",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'analisi del testo è fondamentale.",
+      "exemplo_pt": "A análise do texto é fundamental.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/aˈnaːlizi del ˈtɛsto/"
+    },
+    {
+      "id": "t30_p06",
+      "italiano": "narratologia",
+      "portugues": "narratologia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La narratologia studia le strutture.",
+      "exemplo_pt": "A narratologia estuda as estruturas.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/narratoloˈdʒiːa/"
+    },
+    {
+      "id": "t30_p07",
+      "italiano": "focalizazione",
+      "portugues": "focalização",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La focalizazione esterna ha un narratore esterno.",
+      "exemplo_pt": "A focalização externa tem um narrador externo.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/fokaliddzaˈttsjoːne/"
+    },
+    {
+      "id": "t30_p08",
+      "italiano": "stream of consciousness",
+      "portugues": "fluxo de consciência",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo stream of consciousness è di Joyce.",
+      "exemplo_pt": "O fluxo de consciência é de Joyce.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/striːm ɔv ˈkɒnʃəsnəs/"
+    },
+    {
+      "id": "t30_p09",
+      "italiano": "voce narrante",
+      "portugues": "voz narrativa",
+      "genero": "f",
+      "plural": "voci narranti",
+      "exemplo": "La voce narrante è affidabile.",
+      "exemplo_pt": "A voz narrativa é confiável.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈvɔːtʃe narˈrante/"
+    },
+    {
+      "id": "t30_p10",
+      "italiano": "tempo narrativo",
+      "portugues": "tempo narrativo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il tempo narrativo può essere dilatato.",
+      "exemplo_pt": "O tempo narrativo pode ser dilatado.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtɛmpo narraˈtiːvo/"
+    },
+    {
+      "id": "t30_p11",
+      "italiano": "spazio narrativo",
+      "portugues": "espaço narrativo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Lo spazio narrativo crea l'atmosfera.",
+      "exemplo_pt": "O espaço narrativo cria a atmosfera.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈspatsjo narraˈtiːvo/"
+    },
+    {
+      "id": "t30_p12",
+      "italiano": "realismo magico",
+      "portugues": "realismo mágico",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il realismo magico mescola reale e fantastico.",
+      "exemplo_pt": "O realismo mágico mistura real e fantástico.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/realiˈzmo ˈmaːdʒiko/"
+    },
+    {
+      "id": "t30_p13",
+      "italiano": "postmodernismo",
+      "portugues": "pós-modernismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il postmodernismo rompe le convenzioni.",
+      "exemplo_pt": "O pós-modernismo rompe as convenções.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/postmoderˈnizmo/"
+    },
+    {
+      "id": "t30_p14",
+      "italiano": "naturalismo",
+      "portugues": "naturalismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il naturalismo descrive la realtà cruda.",
+      "exemplo_pt": "O naturalismo descreve a realidade crua.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/naturaliˈzmo/"
+    },
+    {
+      "id": "t30_p17",
+      "italiano": "classicismo",
+      "portugues": "classicismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il classicismo segue le regole antiche.",
+      "exemplo_pt": "O classicismo segue as regras antigas.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/klassiˈtʃizmo/"
+    },
+    {
+      "id": "t30_p18",
+      "italiano": "barocco letterario",
+      "portugues": "barroco literário",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il barocco è ornamentale ed elaborato.",
+      "exemplo_pt": "O barroco é ornamental e elaborado.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/baˈrɔkko letterˈaːrjo/"
+    },
+    {
+      "id": "t30_p19",
+      "italiano": "umanesimo",
+      "portugues": "humanismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'umanesimo pone l'uomo al centro.",
+      "exemplo_pt": "O humanismo coloca o homem no centro.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/umaˈnɛːzimo/"
+    },
+    {
+      "id": "t30_p20",
+      "italiano": "prosa d'arte",
+      "portugues": "prosa de arte",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La prosa d'arte è curata stilisticamente.",
+      "exemplo_pt": "A prosa de arte é cuidada estilisticamente.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈproːza ˈdarte/"
+    },
+    {
+      "id": "t30_p21",
+      "italiano": "moralità",
+      "portugues": "moralidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La moralità della favola è esplicita.",
+      "exemplo_pt": "A moralidade da fábula é explícita.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/moraliˈta/"
+    },
+    {
+      "id": "t30_p22",
+      "italiano": "allegoria morale",
+      "portugues": "alegoria moral",
+      "genero": "f",
+      "plural": "allegorie morali",
+      "exemplo": "L'allegoria morale insegna una lezione.",
+      "exemplo_pt": "A alegoria moral ensina uma lição.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/alleˈɡɔːrja moˈraːle/"
+    },
+    {
+      "id": "t30_p23",
+      "italiano": "satira politica",
+      "portugues": "sátira política",
+      "genero": "f",
+      "plural": "satire politiche",
+      "exemplo": "La satira politica critica il potere.",
+      "exemplo_pt": "A sátira política critica o poder.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsaːtira poˈliːtika/"
+    },
+    {
+      "id": "t30_p24",
+      "italiano": "pamphlet",
+      "portugues": "panfleto",
+      "genero": "m",
+      "plural": "pamphlet",
+      "exemplo": "Il pamphlet attacca l'avversario.",
+      "exemplo_pt": "O panfleto ataca o adversário.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpamflɛt/"
+    },
+    {
+      "id": "t30_p25",
+      "italiano": "aforisma letterario",
+      "portugues": "aforismo literário",
+      "genero": "m",
+      "plural": "aforismi letterari",
+      "exemplo": "L'aforisma è una verità condensata.",
+      "exemplo_pt": "O aforismo é uma verdade condensada.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/aˈfɔːrizma letterˈaːrjo/"
+    },
+    {
+      "id": "t30_p26",
+      "italiano": "epistola",
+      "portugues": "epístola",
+      "genero": "f",
+      "plural": "epistole",
+      "exemplo": "L'epistola è una lettera letteraria.",
+      "exemplo_pt": "A epístola é uma carta literária.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/eˈpistola/"
+    },
+    {
+      "id": "t30_p27",
+      "italiano": "diari",
+      "portugues": "diários",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I diari di Anna Frank sono commoventi.",
+      "exemplo_pt": "Os diários de Anne Frank são comoventes.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdjaːri/"
+    },
+    {
+      "id": "t30_p28",
+      "italiano": "memoriale",
+      "portugues": "memorial",
+      "genero": "m",
+      "plural": "memoriali",
+      "exemplo": "Il memoriale descrive i ricordi.",
+      "exemplo_pt": "O memorial descreve as memórias.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/memoˈrjaːle/"
+    },
+    {
+      "id": "t30_p29",
+      "italiano": "oralità",
+      "portugues": "oralidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'oralità precede la scrittura.",
+      "exemplo_pt": "A oralidade precede a escrita.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/oraliˈta/"
+    },
+    {
+      "id": "t30_p30",
+      "italiano": "tradizione orale",
+      "portugues": "tradição oral",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La tradizione orale tramanda i miti.",
+      "exemplo_pt": "A tradição oral transmite os mitos.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/traditˈtsjoːne oˈraːle/"
+    },
+    {
+      "id": "t30_p31",
+      "italiano": "cantastorie",
+      "portugues": "contador de histórias",
+      "genero": "m/f",
+      "plural": "cantastorie",
+      "exemplo": "Il cantastorie girava i villaggi.",
+      "exemplo_pt": "O contador de histórias percorria as aldeias.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/kantasˈtɔːrje/"
+    },
+    {
+      "id": "t30_f01",
+      "italiano": "parodia",
+      "portugues": "paródia",
+      "genero": "f",
+      "plural": "parodie",
+      "exemplo": "La parodia imita e deride.",
+      "exemplo_pt": "A paródia imita e zomba.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/paˈrɔːdja/"
+    },
+    {
+      "id": "t30_f02",
+      "italiano": "pastiche",
+      "portugues": "pastiche",
+      "genero": "m",
+      "plural": "pastiche",
+      "exemplo": "Il pastiche imita lo stile altrui.",
+      "exemplo_pt": "O pastiche imita o estilo alheio.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/pasˈtiʃ/"
+    },
+    {
+      "id": "t30_f03",
+      "italiano": "metafiction",
+      "portugues": "metaficção",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La metafiction parla di se stessa.",
+      "exemplo_pt": "A metaficção fala de si mesma.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/metaˈfikʃon/"
+    },
+    {
+      "id": "t30_f04",
+      "italiano": "scrittura creativa",
+      "portugues": "escrita criativa",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La scrittura creativa libera l'espressione.",
+      "exemplo_pt": "A escrita criativa libera a expressão.",
+      "categoria": "letteratura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈskrittura kreˈaːtiva/"
     }
   ]
 }

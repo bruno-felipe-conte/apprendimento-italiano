@@ -281,30 +281,6 @@
       "audio_ipa": "/atʃtʃesˈsɔrjo/"
     },
     {
-      "id": "t34_024",
-      "italiano": "borsa",
-      "portugues": "bolsa",
-      "genero": "f",
-      "plural": "borse",
-      "exemplo": "Una borsa di marca.",
-      "exemplo_pt": "Uma bolsa de marca.",
-      "categoria": "accessori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈborsa/"
-    },
-    {
-      "id": "t34_025",
-      "italiano": "zaino",
-      "portugues": "mochila",
-      "genero": "m",
-      "plural": "zaini",
-      "exemplo": "Uno zaino di pelle.",
-      "exemplo_pt": "Uma mochila de couro.",
-      "categoria": "accessori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdzaino/"
-    },
-    {
       "id": "t34_026",
       "italiano": "cappello",
       "portugues": "chapéu",
@@ -341,18 +317,6 @@
       "audio_ipa": "/ˈɡwanto/"
     },
     {
-      "id": "t34_029",
-      "italiano": "cintura",
-      "portugues": "cinto",
-      "genero": "f",
-      "plural": "cinture",
-      "exemplo": "Una cintura stretta.",
-      "exemplo_pt": "Um cinto apertato.",
-      "categoria": "accessori",
-      "dificuldade": "medio",
-      "audio_ipa": "/tʃinˈtura/"
-    },
-    {
       "id": "t34_030",
       "italiano": "cravatta",
       "portugues": "gravata",
@@ -375,18 +339,6 @@
       "categoria": "accessori",
       "dificuldade": "medio",
       "audio_ipa": "/papilˈlɔn/"
-    },
-    {
-      "id": "t34_032",
-      "italiano": "occhiali",
-      "portugues": "óculos",
-      "genero": "m",
-      "plural": "occhiali",
-      "exemplo": "Gli occhiali da sole.",
-      "exemplo_pt": "Os óculos de sol.",
-      "categoria": "accessori",
-      "dificuldade": "medio",
-      "audio_ipa": "/okˈkjali/"
     },
     {
       "id": "t34_033",
@@ -473,30 +425,6 @@
       "audio_ipa": "/ˈtrukko/"
     },
     {
-      "id": "t34_040",
-      "italiano": "profumo",
-      "portugues": "perfume",
-      "genero": "m",
-      "plural": "profumi",
-      "exemplo": "Un profumo dolce.",
-      "exemplo_pt": "Um perfume doce.",
-      "categoria": "accessori",
-      "dificuldade": "medio",
-      "audio_ipa": "/proˈfumo/"
-    },
-    {
-      "id": "t34_041",
-      "italiano": "stile",
-      "portugues": "estilo",
-      "genero": "m",
-      "plural": "stili",
-      "exemplo": "Ha molto stile.",
-      "exemplo_pt": "Tem muito estilo.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstile/"
-    },
-    {
       "id": "t34_042",
       "italiano": "tendenza",
       "portugues": "tendência",
@@ -519,18 +447,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/sfiˈlata/"
-    },
-    {
-      "id": "t34_044",
-      "italiano": "collezione",
-      "portugues": "coleção",
-      "genero": "f",
-      "plural": "collezioni",
-      "exemplo": "La collezione autunno.",
-      "exemplo_pt": "A coleção de outono.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/kolletˈtsjone/"
     },
     {
       "id": "t34_045",
@@ -581,30 +497,6 @@
       "audio_ipa": "/ˈsarto/"
     },
     {
-      "id": "t34_049",
-      "italiano": "negozio",
-      "portugues": "loja",
-      "genero": "m",
-      "plural": "negozi",
-      "exemplo": "Un negozio di vestiti.",
-      "exemplo_pt": "Uma loja de roupas.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/neˈɡɔttsjo/"
-    },
-    {
-      "id": "t34_050",
-      "italiano": "vetrina",
-      "portugues": "vitrine",
-      "genero": "f",
-      "plural": "vetrine",
-      "exemplo": "Guardare la vetrina.",
-      "exemplo_pt": "Olhar a vitrine.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/veˈtrina/"
-    },
-    {
       "id": "t34_051",
       "italiano": "manichino",
       "portugues": "manequim",
@@ -615,54 +507,6 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/maniˈkino/"
-    },
-    {
-      "id": "t34_052",
-      "italiano": "marca",
-      "portugues": "marca",
-      "genero": "f",
-      "plural": "marche",
-      "exemplo": "Una marca famosa.",
-      "exemplo_pt": "Uma marca famosa.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmarka/"
-    },
-    {
-      "id": "t34_053",
-      "italiano": "taglia",
-      "portugues": "tamanho (roupa)",
-      "genero": "f",
-      "plural": "taglie",
-      "exemplo": "Che taglia porti?",
-      "exemplo_pt": "Que tamanho você usa?",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtaʎʎa/"
-    },
-    {
-      "id": "t34_054",
-      "italiano": "misura",
-      "portugues": "medida",
-      "genero": "f",
-      "plural": "misure",
-      "exemplo": "Prendere la misura.",
-      "exemplo_pt": "Tirar a medida.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/miˈzura/"
-    },
-    {
-      "id": "t34_055",
-      "italiano": "tessuto",
-      "portugues": "tecido",
-      "genero": "m",
-      "plural": "tessuti",
-      "exemplo": "Un tessuto morbido.",
-      "exemplo_pt": "Um tecido macio.",
-      "categoria": "materiali",
-      "dificuldade": "medio",
-      "audio_ipa": "/tesˈsuto/"
     },
     {
       "id": "t34_056",
@@ -711,18 +555,6 @@
       "categoria": "materiali",
       "dificuldade": "medio",
       "audio_ipa": "/ˈseta/"
-    },
-    {
-      "id": "t34_060",
-      "italiano": "pelle",
-      "portugues": "couro/pele",
-      "genero": "f",
-      "plural": "pelli",
-      "exemplo": "Borsa di pelle.",
-      "exemplo_pt": "Bolsa de couro.",
-      "categoria": "materiali",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpɛlle/"
     },
     {
       "id": "t34_061",
@@ -869,18 +701,6 @@
       "audio_ipa": "/ˈtɔʎʎersi/"
     },
     {
-      "id": "t34_073",
-      "italiano": "provare",
-      "portugues": "provar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Provare un vestito.",
-      "exemplo_pt": "Provar um vestido.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/proˈvare/"
-    },
-    {
       "id": "t34_074",
       "italiano": "cambiarsi",
       "portugues": "trocar-se",
@@ -903,42 +723,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/sfiˈlare/"
-    },
-    {
-      "id": "t34_076",
-      "italiano": "disegnare",
-      "portugues": "desenhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Disegnare la collezione.",
-      "exemplo_pt": "Desenhar a coleção.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dizeɲˈɲare/"
-    },
-    {
-      "id": "t34_077",
-      "italiano": "cucire",
-      "portugues": "costurar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Cucire i bottoni.",
-      "exemplo_pt": "Costurar os botões.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kuˈtʃire/"
-    },
-    {
-      "id": "t34_078",
-      "italiano": "tagliare",
-      "portugues": "cortar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Tagliare il tessuto.",
-      "exemplo_pt": "Cortar o tecido.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/taˈʎʎare/"
     },
     {
       "id": "t34_079",
@@ -1001,66 +785,6 @@
       "audio_ipa": "/profuˈmarsi/"
     },
     {
-      "id": "t34_084",
-      "italiano": "comprare",
-      "portugues": "comprar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Comprare in saldo.",
-      "exemplo_pt": "Comprar na promoção.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈprare/"
-    },
-    {
-      "id": "t34_085",
-      "italiano": "spendere",
-      "portugues": "gastar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Spendere molti soldi.",
-      "exemplo_pt": "Gastar muito dinheiro.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspɛndere/"
-    },
-    {
-      "id": "t34_086",
-      "italiano": "risparmiare",
-      "portugues": "economizar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Risparmiare sui vestiti.",
-      "exemplo_pt": "Economizar nas roupas.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/risparˈmjare/"
-    },
-    {
-      "id": "t34_087",
-      "italiano": "lavare",
-      "portugues": "lavar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Lavare in lavatrice.",
-      "exemplo_pt": "Lavar na máquina.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/laˈvare/"
-    },
-    {
-      "id": "t34_088",
-      "italiano": "stirare",
-      "portugues": "passar (roupa)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Stirare la camicia.",
-      "exemplo_pt": "Passar a camisa.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/stiˈrare/"
-    },
-    {
       "id": "t34_089",
       "italiano": "piegare",
       "portugues": "dobrar",
@@ -1109,30 +833,6 @@
       "audio_ipa": "/sporˈtivo/"
     },
     {
-      "id": "t34_093",
-      "italiano": "classico",
-      "portugues": "clássico",
-      "genero": "m",
-      "plural": "classici",
-      "exemplo": "Un completo classico.",
-      "exemplo_pt": "Um terno clássico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklassiko/"
-    },
-    {
-      "id": "t34_094",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Un design moderno.",
-      "exemplo_pt": "Um design moderno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
-    },
-    {
       "id": "t34_095",
       "italiano": "largo",
       "portugues": "largo",
@@ -1157,18 +857,6 @@
       "audio_ipa": "/ˈstretto/"
     },
     {
-      "id": "t34_097",
-      "italiano": "lungo",
-      "portugues": "comprido/longo",
-      "genero": "m",
-      "plural": "lunghi",
-      "exemplo": "Un cappotto lungo.",
-      "exemplo_pt": "Um casaco comprido.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlunɡo/"
-    },
-    {
       "id": "t34_098",
       "italiano": "corto",
       "portugues": "curto",
@@ -1179,18 +867,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkorto/"
-    },
-    {
-      "id": "t34_099",
-      "italiano": "colorato",
-      "portugues": "colorido",
-      "genero": "m",
-      "plural": "colorati",
-      "exemplo": "Un abito colorato.",
-      "exemplo_pt": "Um vestido colorido.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/koloˈrato/"
     },
     {
       "id": "t34_100",
@@ -1277,30 +953,6 @@
       "audio_ipa": "/firˈmato/"
     },
     {
-      "id": "t34_107",
-      "italiano": "economico",
-      "portugues": "barato",
-      "genero": "m",
-      "plural": "economici",
-      "exemplo": "Un negozio economico.",
-      "exemplo_pt": "Uma loja barata.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ekoˈnɔmiko/"
-    },
-    {
-      "id": "t34_108",
-      "italiano": "caro",
-      "portugues": "caro",
-      "genero": "m",
-      "plural": "cari",
-      "exemplo": "Questo orologio è caro.",
-      "exemplo_pt": "Este relógio é caro.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkaro/"
-    },
-    {
       "id": "t34_109",
       "italiano": "abbinato",
       "portugues": "combinado",
@@ -1323,6 +975,318 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/sfilatˈtʃato/"
+    },
+    {
+      "id": "t34_r04",
+      "italiano": "modella",
+      "portugues": "modelo (feminino)",
+      "genero": "f",
+      "plural": "modelle",
+      "exemplo": "La modella posa per il fotografo.",
+      "exemplo_pt": "A modelo posa para o fotógrafo.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/moˈdɛlla/"
+    },
+    {
+      "id": "t34_r05",
+      "italiano": "haute couture",
+      "portugues": "alta costura",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'haute couture è artigianato di lusso.",
+      "exemplo_pt": "A alta costura é artesanato de luxo.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˌoːt kuˈtyːr/"
+    },
+    {
+      "id": "t34_r06",
+      "italiano": "prêt-à-porter",
+      "portugues": "prêt-à-porter / confeccionado",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il prêt-à-porter è più accessibile.",
+      "exemplo_pt": "O prêt-à-porter é mais acessível.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˌprɛtaˈpɔrte/"
+    },
+    {
+      "id": "t34_r07",
+      "italiano": "collezione stagionale",
+      "portugues": "coleção sazonal",
+      "genero": "f",
+      "plural": "collezioni stagionali",
+      "exemplo": "La collezione stagionale è appena uscita.",
+      "exemplo_pt": "A coleção sazonal acabou de sair.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/kolletˈttsjoːne stadʒoˈnaːle/"
+    },
+    {
+      "id": "t34_r09",
+      "italiano": "look",
+      "portugues": "look / visual",
+      "genero": "m",
+      "plural": "look",
+      "exemplo": "Il suo look è sempre impeccabile.",
+      "exemplo_pt": "Seu look é sempre impecável.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/luk/"
+    },
+    {
+      "id": "t34_r10",
+      "italiano": "outfit",
+      "portugues": "outfit / conjunto",
+      "genero": "m",
+      "plural": "outfit",
+      "exemplo": "L'outfit di oggi è casual elegante.",
+      "exemplo_pt": "O outfit de hoje é casual elegante.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈawtfit/"
+    },
+    {
+      "id": "t34_r16",
+      "italiano": "spilla",
+      "portugues": "broche",
+      "genero": "f",
+      "plural": "spille",
+      "exemplo": "La spilla decora il bavero.",
+      "exemplo_pt": "O broche decora a lapela.",
+      "categoria": "gioielli",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈspilla/"
+    },
+    {
+      "id": "t34_r17",
+      "italiano": "borsetta",
+      "portugues": "bolsinha",
+      "genero": "f",
+      "plural": "borsette",
+      "exemplo": "La borsetta griffata è costosa.",
+      "exemplo_pt": "A bolsinha de grife é cara.",
+      "categoria": "borse",
+      "dificuldade": "medio",
+      "audio_ipa": "/borˈsetta/"
+    },
+    {
+      "id": "t34_r19",
+      "italiano": "foulard",
+      "portugues": "lenço de pescoço",
+      "genero": "m",
+      "plural": "foulard",
+      "exemplo": "Il foulard di seta è morbido.",
+      "exemplo_pt": "O lenço de seda é macio.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/fuˈlar/"
+    },
+    {
+      "id": "t34_r21",
+      "italiano": "impermeabile",
+      "portugues": "capa de chuva / impermeável",
+      "genero": "m",
+      "plural": "impermeabili",
+      "exemplo": "L'impermeabile protegge dalla pioggia.",
+      "exemplo_pt": "A capa de chuva protege da chuva.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/impermeˈaːbile/"
+    },
+    {
+      "id": "t34_r25",
+      "italiano": "abito da sera",
+      "portugues": "vestido de noite",
+      "genero": "m",
+      "plural": "abiti da sera",
+      "exemplo": "L'abito da sera è elegantissimo.",
+      "exemplo_pt": "O vestido de noite é elegantíssimo.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈaːbito da ˈsɛːra/"
+    },
+    {
+      "id": "t34_r26",
+      "italiano": "tailleur",
+      "portugues": "tailleur / conjunto executivo",
+      "genero": "m",
+      "plural": "tailleur",
+      "exemplo": "Il tailleur grigio è professionale.",
+      "exemplo_pt": "O tailleur cinza é profissional.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/taˈjɶr/"
+    },
+    {
+      "id": "t34_r29",
+      "italiano": "tacco alto",
+      "portugues": "salto alto",
+      "genero": "m",
+      "plural": "tacchi alti",
+      "exemplo": "Le scarpe col tacco alto sono scomode.",
+      "exemplo_pt": "Os sapatos de salto alto são desconfortáveis.",
+      "categoria": "calzature",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtakko ˈalto/"
+    },
+    {
+      "id": "t34_r32",
+      "italiano": "pantofola",
+      "portugues": "pantufa / chinelo",
+      "genero": "f",
+      "plural": "pantofole",
+      "exemplo": "Le pantofole sono comode in casa.",
+      "exemplo_pt": "As pantufas são confortáveis em casa.",
+      "categoria": "calzature",
+      "dificuldade": "medio",
+      "audio_ipa": "/panˈtɔːfola/"
+    },
+    {
+      "id": "t34_r37",
+      "italiano": "cashmere",
+      "portugues": "caxemira",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il cashmere è caldo e morbidissimo.",
+      "exemplo_pt": "O caxemira é quente e maciíssimo.",
+      "categoria": "tessuti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkaʃmɛr/"
+    },
+    {
+      "id": "t34_r38",
+      "italiano": "poliestere",
+      "portugues": "poliéster",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il poliestere è economico e resistente.",
+      "exemplo_pt": "O poliéster é econômico e resistente.",
+      "categoria": "tessuti",
+      "dificuldade": "medio",
+      "audio_ipa": "/polieˈstɛːre/"
+    },
+    {
+      "id": "t34_p01",
+      "italiano": "berretto",
+      "portugues": "boné / gorro",
+      "genero": "m",
+      "plural": "berretti",
+      "exemplo": "Il berretto di lana è caldo.",
+      "exemplo_pt": "O gorro de lã é quente.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/berˈretto/"
+    },
+    {
+      "id": "t34_p03",
+      "italiano": "guanti",
+      "portugues": "luvas",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I guanti di pelle sono eleganti.",
+      "exemplo_pt": "As luvas de couro são elegantes.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡwanti/"
+    },
+    {
+      "id": "t34_p04",
+      "italiano": "calzini",
+      "portugues": "meias (pé)",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I calzini di cotone sono comodi.",
+      "exemplo_pt": "As meias de algodão são confortáveis.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/kalˈdziːni/"
+    },
+    {
+      "id": "t34_p05",
+      "italiano": "reggiseno",
+      "portugues": "sutiã",
+      "genero": "m",
+      "plural": "reggiseni",
+      "exemplo": "Il reggiseno è di pizzo.",
+      "exemplo_pt": "O sutiã é de renda.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/reddʒiˈseːno/"
+    },
+    {
+      "id": "t34_p06",
+      "italiano": "slip",
+      "portugues": "cueca / calcinha",
+      "genero": "m",
+      "plural": "slip",
+      "exemplo": "Il cotone è il tessuto migliore.",
+      "exemplo_pt": "O algodão é o melhor tecido.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/zlip/"
+    },
+    {
+      "id": "t34_p08",
+      "italiano": "kimono",
+      "portugues": "quimono",
+      "genero": "m",
+      "plural": "kimono",
+      "exemplo": "Il kimono giapponese è elegante.",
+      "exemplo_pt": "O quimono japonês é elegante.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/kiˈmɔːno/"
+    },
+    {
+      "id": "t34_p10",
+      "italiano": "canottiera",
+      "portugues": "camiseta regata",
+      "genero": "f",
+      "plural": "canottiere",
+      "exemplo": "La canottiera è fresca d'estate.",
+      "exemplo_pt": "A regata é fresca no verão.",
+      "categoria": "abbigliamento",
+      "dificuldade": "medio",
+      "audio_ipa": "/kanoˈttjɛːra/"
+    },
+    {
+      "id": "t34_f01",
+      "italiano": "pronto moda",
+      "portugues": "moda fast fashion",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il pronto moda è economico ma inquinante.",
+      "exemplo_pt": "O fast fashion é econômico mas poluente.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈprɔnto ˈmɔːda/"
+    },
+    {
+      "id": "t34_f02",
+      "italiano": "moda sostenibile",
+      "portugues": "moda sustentável",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La moda sostenibile usa materiali etici.",
+      "exemplo_pt": "A moda sustentável usa materiais éticos.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔːda sosˈteːnibile/"
+    },
+    {
+      "id": "t34_f03",
+      "italiano": "vintage",
+      "portugues": "vintage",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il capo vintage ha storia da raccontare.",
+      "exemplo_pt": "A peça vintage tem história para contar.",
+      "categoria": "moda",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈvintidʒ/"
     }
   ]
 }

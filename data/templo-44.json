@@ -5,54 +5,6 @@
   "nivel": "C1",
   "palavras": [
     {
-      "id": "t44_001",
-      "italiano": "diritto",
-      "portugues": "direito",
-      "genero": "m",
-      "plural": "diritti",
-      "exemplo": "Studiare diritto.",
-      "exemplo_pt": "Estudar direito.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/diˈritto/"
-    },
-    {
-      "id": "t44_002",
-      "italiano": "legge",
-      "portugues": "lei",
-      "genero": "f",
-      "plural": "leggi",
-      "exemplo": "La legge è uguale per tutti.",
-      "exemplo_pt": "A lei é igual para todos.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈleddʒe/"
-    },
-    {
-      "id": "t44_003",
-      "italiano": "giustizia",
-      "portugues": "justiça",
-      "genero": "f",
-      "plural": "giustizie",
-      "exemplo": "Chiedere giustizia.",
-      "exemplo_pt": "Pedir justiça.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/dʒusˈtittsja/"
-    },
-    {
-      "id": "t44_004",
-      "italiano": "tribunale",
-      "portugues": "tribunal",
-      "genero": "m",
-      "plural": "tribunali",
-      "exemplo": "Andare in tribunale.",
-      "exemplo_pt": "Ir ao tribunal.",
-      "categoria": "istituzioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/tribuˈnale/"
-    },
-    {
       "id": "t44_005",
       "italiano": "corte",
       "portugues": "corte/tribunal",
@@ -77,18 +29,6 @@
       "audio_ipa": "/proˈtʃɛsso/"
     },
     {
-      "id": "t44_007",
-      "italiano": "causa",
-      "portugues": "processo judicial/causa",
-      "genero": "f",
-      "plural": "cause",
-      "exemplo": "Vincere una causa.",
-      "exemplo_pt": "Vencer uma causa.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈkauza/"
-    },
-    {
       "id": "t44_008",
       "italiano": "sentenza",
       "portugues": "sentença",
@@ -111,42 +51,6 @@
       "categoria": "giurisprudenza",
       "dificuldade": "difficile",
       "audio_ipa": "/verˈdetto/"
-    },
-    {
-      "id": "t44_010",
-      "italiano": "appello",
-      "portugues": "apelação/recurso",
-      "genero": "m",
-      "plural": "appelli",
-      "exemplo": "Fare appello.",
-      "exemplo_pt": "Fazer apelação.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/apˈpɛllo/"
-    },
-    {
-      "id": "t44_011",
-      "italiano": "codice",
-      "portugues": "código",
-      "genero": "m",
-      "plural": "codici",
-      "exemplo": "Codice penale.",
-      "exemplo_pt": "Código penal.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈkɔditʃe/"
-    },
-    {
-      "id": "t44_012",
-      "italiano": "costituzione",
-      "portugues": "constituição",
-      "genero": "f",
-      "plural": "costituzioni",
-      "exemplo": "La costituzione italiana.",
-      "exemplo_pt": "A constituição italiana.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/kostitutˈtsjone/"
     },
     {
       "id": "t44_013",
@@ -185,18 +89,6 @@
       "audio_ipa": "/deˈlitto/"
     },
     {
-      "id": "t44_016",
-      "italiano": "furto",
-      "portugues": "furto/roubo",
-      "genero": "m",
-      "plural": "furti",
-      "exemplo": "Denunciare un furto.",
-      "exemplo_pt": "Denunciar um furto.",
-      "categoria": "crimini",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈfurto/"
-    },
-    {
       "id": "t44_017",
       "italiano": "rapina",
       "portugues": "roubo/assalto",
@@ -231,42 +123,6 @@
       "categoria": "crimini",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈfrɔde/"
-    },
-    {
-      "id": "t44_020",
-      "italiano": "truffa",
-      "portugues": "golpe/fraude",
-      "genero": "f",
-      "plural": "truffe",
-      "exemplo": "Subire una truffa.",
-      "exemplo_pt": "Sofrer um golpe.",
-      "categoria": "crimini",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈtruffa/"
-    },
-    {
-      "id": "t44_021",
-      "italiano": "corruzione",
-      "portugues": "corrupção",
-      "genero": "f",
-      "plural": "corruzioni",
-      "exemplo": "Lotta alla corruzione.",
-      "exemplo_pt": "Luta contra a corrupção.",
-      "categoria": "crimini",
-      "dificuldade": "difficile",
-      "audio_ipa": "/korrutˈtsjone/"
-    },
-    {
-      "id": "t44_022",
-      "italiano": "pena",
-      "portugues": "pena/castigo",
-      "genero": "f",
-      "plural": "pene",
-      "exemplo": "La pena di morte.",
-      "exemplo_pt": "A pena de morte.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈpena/"
     },
     {
       "id": "t44_023",
@@ -305,18 +161,6 @@
       "audio_ipa": "/ˈtʃɛlla/"
     },
     {
-      "id": "t44_026",
-      "italiano": "multa",
-      "portugues": "multa",
-      "genero": "f",
-      "plural": "multe",
-      "exemplo": "Prendere una multa.",
-      "exemplo_pt": "Levar uma multa.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈmulta/"
-    },
-    {
       "id": "t44_027",
       "italiano": "cauzione",
       "portugues": "fiança",
@@ -327,18 +171,6 @@
       "categoria": "giurisprudenza",
       "dificuldade": "difficile",
       "audio_ipa": "/kauˈtsjone/"
-    },
-    {
-      "id": "t44_028",
-      "italiano": "prova",
-      "portugues": "prova/evidência",
-      "genero": "f",
-      "plural": "prove",
-      "exemplo": "Non ci sono prove.",
-      "exemplo_pt": "Não há provas.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈprɔva/"
     },
     {
       "id": "t44_029",
@@ -425,30 +257,6 @@
       "audio_ipa": "/deˈnuntʃa/"
     },
     {
-      "id": "t44_036",
-      "italiano": "contratto",
-      "portugues": "contrato",
-      "genero": "m",
-      "plural": "contratti",
-      "exemplo": "Firmare il contratto.",
-      "exemplo_pt": "Assinar o contrato.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/konˈtratto/"
-    },
-    {
-      "id": "t44_037",
-      "italiano": "accordo",
-      "portugues": "acordo",
-      "genero": "m",
-      "plural": "accordi",
-      "exemplo": "Raggiungere un accordo.",
-      "exemplo_pt": "Chegar a um acordo.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/akˈkɔrdo/"
-    },
-    {
       "id": "t44_038",
       "italiano": "testamento",
       "portugues": "testamento",
@@ -471,66 +279,6 @@
       "categoria": "giurisprudenza",
       "dificuldade": "difficile",
       "audio_ipa": "/diˈvɔrtsjo/"
-    },
-    {
-      "id": "t44_040",
-      "italiano": "eredità",
-      "portugues": "herança",
-      "genero": "f",
-      "plural": "eredità",
-      "exemplo": "Lasciare in eredità.",
-      "exemplo_pt": "Deixar como herança.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/erediˈta/"
-    },
-    {
-      "id": "t44_041",
-      "italiano": "patrimonio",
-      "portugues": "patrimônio",
-      "genero": "m",
-      "plural": "patrimoni",
-      "exemplo": "Dichiarazione dei redditi e patrimonio.",
-      "exemplo_pt": "Declaração de renda e patrimônio.",
-      "categoria": "giurisprudenza",
-      "dificuldade": "difficile",
-      "audio_ipa": "/patriˈmɔnjo/"
-    },
-    {
-      "id": "t44_042",
-      "italiano": "giudice",
-      "portugues": "juiz",
-      "genero": "m",
-      "plural": "giudici",
-      "exemplo": "Il giudice decide.",
-      "exemplo_pt": "O juiz decide.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈdʒuditʃe/"
-    },
-    {
-      "id": "t44_043",
-      "italiano": "magistrato",
-      "portugues": "magistrado",
-      "genero": "m",
-      "plural": "magistrati",
-      "exemplo": "Il magistrato indaga.",
-      "exemplo_pt": "O magistrado investiga.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/madʒisˈtrato/"
-    },
-    {
-      "id": "t44_044",
-      "italiano": "avvocato",
-      "portugues": "advogado",
-      "genero": "m",
-      "plural": "avvocati",
-      "exemplo": "L'avvocato difensore.",
-      "exemplo_pt": "O advogado de defesa.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/avvoˈkato/"
     },
     {
       "id": "t44_045",
@@ -581,30 +329,6 @@
       "audio_ipa": "/ˈvittima/"
     },
     {
-      "id": "t44_049",
-      "italiano": "poliziotto",
-      "portugues": "policial",
-      "genero": "m",
-      "plural": "poliziotti",
-      "exemplo": "Chiamare un poliziotto.",
-      "exemplo_pt": "Chamar um policial.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/politˈtsjɔtto/"
-    },
-    {
-      "id": "t44_050",
-      "italiano": "carabiniere",
-      "portugues": "policial (carabiniere)",
-      "genero": "m",
-      "plural": "carabinieri",
-      "exemplo": "Arrestato dai carabinieri.",
-      "exemplo_pt": "Preso pelos carabinieri.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/karabiˈnjɛre/"
-    },
-    {
       "id": "t44_051",
       "italiano": "detenuto",
       "portugues": "detento/preso",
@@ -615,18 +339,6 @@
       "categoria": "persone",
       "dificuldade": "difficile",
       "audio_ipa": "/deteˈnuto/"
-    },
-    {
-      "id": "t44_052",
-      "italiano": "notaio",
-      "portugues": "tabelião/notário",
-      "genero": "m",
-      "plural": "notai",
-      "exemplo": "Andare dal notaio.",
-      "exemplo_pt": "Ir ao tabelião.",
-      "categoria": "persone",
-      "dificuldade": "difficile",
-      "audio_ipa": "/noˈtajo/"
     },
     {
       "id": "t44_053",
@@ -641,18 +353,6 @@
       "audio_ipa": "/esˈpɛrto/"
     },
     {
-      "id": "t44_054",
-      "italiano": "giudicare",
-      "portugues": "julgar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Giudicare in tribunale.",
-      "exemplo_pt": "Julgar no tribunal.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/dʒudiˈkare/"
-    },
-    {
       "id": "t44_055",
       "italiano": "accusare",
       "portugues": "acusar",
@@ -663,66 +363,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/akkuˈzare/"
-    },
-    {
-      "id": "t44_056",
-      "italiano": "difendere",
-      "portugues": "defender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Difendere l'imputato.",
-      "exemplo_pt": "Defender o réu.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/diˈfɛndere/"
-    },
-    {
-      "id": "t44_057",
-      "italiano": "condannare",
-      "portugues": "condenar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Condannare al carcere.",
-      "exemplo_pt": "Condenar à prisão.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/kondanˈnare/"
-    },
-    {
-      "id": "t44_058",
-      "italiano": "assolvere",
-      "portugues": "absolver",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Assolvere per mancanza di prove.",
-      "exemplo_pt": "Absolver por falta de provas.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/asˈsɔlvere/"
-    },
-    {
-      "id": "t44_059",
-      "italiano": "arrestare",
-      "portugues": "prender/prender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Arrestare il ladro.",
-      "exemplo_pt": "Prender o ladrão.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/arresˈtare/"
-    },
-    {
-      "id": "t44_060",
-      "italiano": "indagare",
-      "portugues": "investigar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "La polizia indaga.",
-      "exemplo_pt": "A polícia investiga.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/indaˈɡare/"
     },
     {
       "id": "t44_061",
@@ -785,18 +425,6 @@
       "audio_ipa": "/appelˈlarsi/"
     },
     {
-      "id": "t44_066",
-      "italiano": "firmare",
-      "portugues": "assinar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Firmare il contratto.",
-      "exemplo_pt": "Assinar o contrato.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/firˈmare/"
-    },
-    {
       "id": "t44_067",
       "italiano": "legalizzare",
       "portugues": "legalizar",
@@ -831,18 +459,6 @@
       "categoria": "verbi",
       "dificuldade": "difficile",
       "audio_ipa": "/vjoˈlare/"
-    },
-    {
-      "id": "t44_070",
-      "italiano": "punire",
-      "portugues": "punir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Punire severamente.",
-      "exemplo_pt": "Punir severamente.",
-      "categoria": "verbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/puˈnire/"
     },
     {
       "id": "t44_071",
@@ -881,54 +497,6 @@
       "audio_ipa": "/konsenˈtire/"
     },
     {
-      "id": "t44_074",
-      "italiano": "legale",
-      "portugues": "legal",
-      "genero": "m",
-      "plural": "legali",
-      "exemplo": "Un'azione legale.",
-      "exemplo_pt": "Uma ação legal.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/leˈɡale/"
-    },
-    {
-      "id": "t44_075",
-      "italiano": "illegale",
-      "portugues": "ilegal",
-      "genero": "m",
-      "plural": "illegali",
-      "exemplo": "Traffico illegale.",
-      "exemplo_pt": "Tráfico ilegal.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/illeˈɡale/"
-    },
-    {
-      "id": "t44_076",
-      "italiano": "giusto",
-      "portugues": "justo",
-      "genero": "m",
-      "plural": "giusti",
-      "exemplo": "Un processo giusto.",
-      "exemplo_pt": "Um processo justo.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈdʒusto/"
-    },
-    {
-      "id": "t44_077",
-      "italiano": "ingiusto",
-      "portugues": "injusto",
-      "genero": "m",
-      "plural": "ingiusti",
-      "exemplo": "Una condanna ingiusta.",
-      "exemplo_pt": "Uma condenação injusta.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/inˈdʒusto/"
-    },
-    {
       "id": "t44_078",
       "italiano": "innocente",
       "portugues": "inocente",
@@ -939,42 +507,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/innoˈtʃɛnte/"
-    },
-    {
-      "id": "t44_079",
-      "italiano": "colpevole",
-      "portugues": "culpado (adj)",
-      "genero": "m",
-      "plural": "colpevoli",
-      "exemplo": "Essere colpevole.",
-      "exemplo_pt": "Ser culpado.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/kolˈpevole/"
-    },
-    {
-      "id": "t44_080",
-      "italiano": "civile",
-      "portugues": "civil",
-      "genero": "m",
-      "plural": "civili",
-      "exemplo": "Diritto civile.",
-      "exemplo_pt": "Direito civil.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/tʃiˈvile/"
-    },
-    {
-      "id": "t44_081",
-      "italiano": "penale",
-      "portugues": "penal",
-      "genero": "m",
-      "plural": "penali",
-      "exemplo": "Diritto penale.",
-      "exemplo_pt": "Direito penal.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/peˈnale/"
     },
     {
       "id": "t44_082",
@@ -1121,18 +653,6 @@
       "audio_ipa": "/illedˈdʒittimo/"
     },
     {
-      "id": "t44_094",
-      "italiano": "severo",
-      "portugues": "severo",
-      "genero": "m",
-      "plural": "severi",
-      "exemplo": "Una pena severa.",
-      "exemplo_pt": "Uma pena severa.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/seˈvɛro/"
-    },
-    {
       "id": "t44_095",
       "italiano": "mite",
       "portugues": "brando/leve",
@@ -1167,54 +687,6 @@
       "categoria": "aggettivi",
       "dificuldade": "difficile",
       "audio_ipa": "/klandesˈtino/"
-    },
-    {
-      "id": "t44_098",
-      "italiano": "anonimo",
-      "portugues": "anônimo",
-      "genero": "m",
-      "plural": "anonimi",
-      "exemplo": "Denuncia anonima.",
-      "exemplo_pt": "Denúncia anônima.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/aˈnɔnimo/"
-    },
-    {
-      "id": "t44_099",
-      "italiano": "falso",
-      "portugues": "falso",
-      "genero": "m",
-      "plural": "falsi",
-      "exemplo": "Documento falso.",
-      "exemplo_pt": "Documento falso.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈfalso/"
-    },
-    {
-      "id": "t44_100",
-      "italiano": "autentico",
-      "portugues": "autêntico/verdadeiro",
-      "genero": "m",
-      "plural": "autentici",
-      "exemplo": "Firma autentica.",
-      "exemplo_pt": "Assinatura autêntica.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/auˈtɛntiko/"
-    },
-    {
-      "id": "t44_101",
-      "italiano": "pubblico",
-      "portugues": "público",
-      "genero": "m",
-      "plural": "pubblici",
-      "exemplo": "Atto pubblico.",
-      "exemplo_pt": "Ato público.",
-      "categoria": "aggettivi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈpubbliko/"
     },
     {
       "id": "t44_102",
@@ -1323,6 +795,498 @@
       "categoria": "giurisprudenza",
       "dificuldade": "difficile",
       "audio_ipa": "/seˈkwɛstro/"
+    },
+    {
+      "id": "t44_r01",
+      "italiano": "codice civile",
+      "portugues": "código civil",
+      "genero": "m",
+      "plural": "codici civili",
+      "exemplo": "Il codice civile regola i rapporti privati.",
+      "exemplo_pt": "O código civil regula as relações privadas.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔːditʃe ˈtʃiːvile/"
+    },
+    {
+      "id": "t44_r02",
+      "italiano": "codice penale",
+      "portugues": "código penal",
+      "genero": "m",
+      "plural": "codici penali",
+      "exemplo": "Il codice penale definisce i reati.",
+      "exemplo_pt": "O código penal define os crimes.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔːditʃe peˈnaːle/"
+    },
+    {
+      "id": "t44_r05",
+      "italiano": "difensore",
+      "portugues": "defensor",
+      "genero": "m",
+      "plural": "difensori",
+      "exemplo": "Il difensore protegge l'imputato.",
+      "exemplo_pt": "O defensor protege o réu.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/difenˈsoːre/"
+    },
+    {
+      "id": "t44_r09",
+      "italiano": "perizia",
+      "portugues": "perícia",
+      "genero": "f",
+      "plural": "perizie",
+      "exemplo": "La perizia psichiatrica è decisiva.",
+      "exemplo_pt": "A perícia psiquiátrica é decisiva.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/peˈriːtsja/"
+    },
+    {
+      "id": "t44_r10",
+      "italiano": "corpo del reato",
+      "portugues": "corpo do delito",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il corpo del reato è in evidenza.",
+      "exemplo_pt": "O corpo do delito está em evidência.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrpo del reˈaːto/"
+    },
+    {
+      "id": "t44_r12",
+      "italiano": "presunzione di innocenza",
+      "portugues": "presunção de inocência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La presunzione di innocenza è sacra.",
+      "exemplo_pt": "A presunção de inocência é sagrada.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/prezunˈttsjoːne di inoˈtʃɛntsa/"
+    },
+    {
+      "id": "t44_r13",
+      "italiano": "onere della prova",
+      "portugues": "ônus da prova",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'onere della prova spetta all'accusa.",
+      "exemplo_pt": "O ônus da prova cabe à acusação.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔːnere della ˈprɔːva/"
+    },
+    {
+      "id": "t44_r14",
+      "italiano": "rinvio a giudizio",
+      "portugues": "pronúncia / envio a julgamento",
+      "genero": "m",
+      "plural": "rinvii a giudizio",
+      "exemplo": "Il giudice ha emesso il rinvio a giudizio.",
+      "exemplo_pt": "O juiz emitiu a pronúncia.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/rinˈvio a dʒuˈdiːtsjo/"
+    },
+    {
+      "id": "t44_r15",
+      "italiano": "pena detentiva",
+      "portugues": "pena privativa de liberdade",
+      "genero": "f",
+      "plural": "pene detentive",
+      "exemplo": "La pena detentiva va scontata.",
+      "exemplo_pt": "A pena privativa de liberdade deve ser cumprida.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɛːna detɛnˈtiːva/"
+    },
+    {
+      "id": "t44_r16",
+      "italiano": "pena pecuniaria",
+      "portugues": "pena pecuniária / multa",
+      "genero": "f",
+      "plural": "pene pecuniarie",
+      "exemplo": "La pena pecuniaria è commisurata.",
+      "exemplo_pt": "A pena pecuniária é proporcional.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɛːna pekunˈjaːrja/"
+    },
+    {
+      "id": "t44_r18",
+      "italiano": "detenzione preventiva",
+      "portugues": "prisão preventiva",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La detenzione preventiva è provvisoria.",
+      "exemplo_pt": "A prisão preventiva é provisória.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/detentˈtsjoːne preventˈtiːva/"
+    },
+    {
+      "id": "t44_r19",
+      "italiano": "scarcerazione",
+      "portugues": "soltura / liberação",
+      "genero": "f",
+      "plural": "scarcerazioni",
+      "exemplo": "La scarcerazione è avvenuta ieri.",
+      "exemplo_pt": "A liberação aconteceu ontem.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/zkartʃeraˈttsjoːne/"
+    },
+    {
+      "id": "t44_r20",
+      "italiano": "giurisprudenza",
+      "portugues": "jurisprudência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La giurisprudenza guida i giudici.",
+      "exemplo_pt": "A jurisprudência guia os juízes.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒurispruˈdɛntsa/"
+    },
+    {
+      "id": "t44_r21",
+      "italiano": "diritto civile",
+      "portugues": "direito civil",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diritto civile regola i privati.",
+      "exemplo_pt": "O direito civil regula os particulares.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto ˈtʃiːvile/"
+    },
+    {
+      "id": "t44_r22",
+      "italiano": "diritto penale",
+      "portugues": "direito penal",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diritto penale punisce i reati.",
+      "exemplo_pt": "O direito penal pune os crimes.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto peˈnaːle/"
+    },
+    {
+      "id": "t44_r23",
+      "italiano": "diritto amministrativo",
+      "portugues": "direito administrativo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diritto amministrativo regola la PA.",
+      "exemplo_pt": "O direito administrativo regula a AP.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto amminiˈstraːtivo/"
+    },
+    {
+      "id": "t44_r24",
+      "italiano": "diritto internazionale",
+      "portugues": "direito internacional",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diritto internazionale regola gli stati.",
+      "exemplo_pt": "O direito internacional regula os estados.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto internatˈtsjoˈnaːle/"
+    },
+    {
+      "id": "t44_r25",
+      "italiano": "diritto europeo",
+      "portugues": "direito europeu",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il diritto europeo prevale su quello nazionale.",
+      "exemplo_pt": "O direito europeu prevalece sobre o nacional.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto euroˈpɛːo/"
+    },
+    {
+      "id": "t44_r26",
+      "italiano": "ricorso amministrativo",
+      "portugues": "recurso administrativo",
+      "genero": "m",
+      "plural": "ricorsi amministrativi",
+      "exemplo": "Il ricorso sospende il provvedimento.",
+      "exemplo_pt": "O recurso suspende o ato administrativo.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/riˈkorso amminiˈstraːtivo/"
+    },
+    {
+      "id": "t44_r27",
+      "italiano": "class action",
+      "portugues": "ação coletiva",
+      "genero": "f",
+      "plural": "class action",
+      "exemplo": "La class action tutela i consumatori.",
+      "exemplo_pt": "A ação coletiva tutela os consumidores.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈklas ˈakʃon/"
+    },
+    {
+      "id": "t44_r28",
+      "italiano": "mediazione",
+      "portugues": "mediação",
+      "genero": "f",
+      "plural": "mediazioni",
+      "exemplo": "La mediazione evita il processo.",
+      "exemplo_pt": "A mediação evita o processo.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/medjaˈttsjoːne/"
+    },
+    {
+      "id": "t44_r29",
+      "italiano": "arbitrato",
+      "portugues": "arbitragem",
+      "genero": "m",
+      "plural": "arbitrati",
+      "exemplo": "L'arbitrato è più rapido del tribunale.",
+      "exemplo_pt": "A arbitragem é mais rápida que o tribunal.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/arbiˈtraːto/"
+    },
+    {
+      "id": "t44_p01",
+      "italiano": "giurisdizione penale",
+      "portugues": "jurisdição penal",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La giurisdizione penale giudica i reati.",
+      "exemplo_pt": "A jurisdição penal julga os crimes.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒurisditˈtsjoːne peˈnaːle/"
+    },
+    {
+      "id": "t44_p02",
+      "italiano": "giurisdizione civile",
+      "portugues": "jurisdição civil",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La giurisdizione civile risolve dispute.",
+      "exemplo_pt": "A jurisdição civil resolve disputas.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒurisditˈtsjoːne ˈtʃiːvile/"
+    },
+    {
+      "id": "t44_p03",
+      "italiano": "corte di appello",
+      "portugues": "tribunal de apelação",
+      "genero": "f",
+      "plural": "corti di appello",
+      "exemplo": "La corte di appello riesamina la sentenza.",
+      "exemplo_pt": "O tribunal de apelação reexamina a sentença.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrte di apˈpɛllo/"
+    },
+    {
+      "id": "t44_p04",
+      "italiano": "corte di cassazione",
+      "portugues": "corte de cassação",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La cassazione è l'ultimo grado.",
+      "exemplo_pt": "A cassação é o último grau.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrte di kassaˈttsjoːne/"
+    },
+    {
+      "id": "t44_p05",
+      "italiano": "corte costituzionale",
+      "portugues": "corte constitucional",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La corte costituzionale tutela la Carta.",
+      "exemplo_pt": "A corte constitucional tutela a Carta.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrte kostitutˈtsjoˈnaːle/"
+    },
+    {
+      "id": "t44_p06",
+      "italiano": "TAR",
+      "portugues": "TAR (tribunal administrativo)",
+      "genero": "m",
+      "plural": "TAR",
+      "exemplo": "Il TAR giudica gli atti amministrativi.",
+      "exemplo_pt": "O TAR julga os atos administrativos.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˌtiːaˈɛrre/"
+    },
+    {
+      "id": "t44_p07",
+      "italiano": "Consiglio di Stato",
+      "portugues": "Conselho de Estado",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il Consiglio di Stato è il giudice apice.",
+      "exemplo_pt": "O Conselho de Estado é o juiz de cúpula.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/konˈsiʎʎo di ˈstaːto/"
+    },
+    {
+      "id": "t44_p08",
+      "italiano": "Corte Europea dei Diritti Umani",
+      "portugues": "Tribunal Europeu dos Direitos Humanos",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La CEDU tutela i diritti fondamentali.",
+      "exemplo_pt": "O TEDH tutela os direitos fundamentais.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrte euroˈpɛːa dei diˈritti uˈmaːni/"
+    },
+    {
+      "id": "t44_p09",
+      "italiano": "Corte di Giustizia UE",
+      "portugues": "Tribunal de Justiça da UE",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La CGUE interpreta il diritto europeo.",
+      "exemplo_pt": "O TJUE interpreta o direito europeu.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔrte di dʒusˈtiːtsja/"
+    },
+    {
+      "id": "t44_p10",
+      "italiano": "diritto penale internazionale",
+      "portugues": "direito penal internacional",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il DPI persegue i crimini di guerra.",
+      "exemplo_pt": "O DPI persegue os crimes de guerra.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/diˈritto peˈnaːle internatˈtsjoˈnaːle/"
+    },
+    {
+      "id": "t44_p11",
+      "italiano": "crimine di guerra",
+      "portugues": "crime de guerra",
+      "genero": "m",
+      "plural": "crimini di guerra",
+      "exemplo": "Il crimine di guerra viola il diritto.",
+      "exemplo_pt": "O crime de guerra viola o direito.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkriːmine di ˈɡwɛrra/"
+    },
+    {
+      "id": "t44_p12",
+      "italiano": "genocidio",
+      "portugues": "genocídio",
+      "genero": "m",
+      "plural": "genocidi",
+      "exemplo": "Il genocidio è il crimine più grave.",
+      "exemplo_pt": "O genocídio é o crime mais grave.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒenoˈtʃiːdjo/"
+    },
+    {
+      "id": "t44_p13",
+      "italiano": "crimine contro l'umanità",
+      "portugues": "crime contra a humanidade",
+      "genero": "m",
+      "plural": "crimini contro l'umanità",
+      "exemplo": "Il crimine contro l'umanità è perseguito.",
+      "exemplo_pt": "O crime contra a humanidade é perseguido.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkriːmine ˈkɔntro lumaˈniːta/"
+    },
+    {
+      "id": "t44_p14",
+      "italiano": "rifugiato",
+      "portugues": "refugiado",
+      "genero": "m",
+      "plural": "rifugiati",
+      "exemplo": "Il rifugiato ha diritto all'asilo.",
+      "exemplo_pt": "O refugiado tem direito ao asilo.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/rifuˈdʒaːto/"
+    },
+    {
+      "id": "t44_p15",
+      "italiano": "asilo politico",
+      "portugues": "asilo político",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'asilo politico protegge i perseguitati.",
+      "exemplo_pt": "O asilo político protege os perseguidos.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/aˈziːlo poˈliːtiko/"
+    },
+    {
+      "id": "t44_p17",
+      "italiano": "impunità",
+      "portugues": "impunidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'impunità mina la fiducia.",
+      "exemplo_pt": "A impunidade mina a confiança.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/impuˈniːta/"
+    },
+    {
+      "id": "t44_p19",
+      "italiano": "grazia presidenziale",
+      "portugues": "graça presidencial",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La grazia sospende la pena.",
+      "exemplo_pt": "A graça suspende a pena.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡratsja presidentsˈjaːle/"
+    },
+    {
+      "id": "t44_f01",
+      "italiano": "tutela cautelare",
+      "portugues": "tutela cautelar",
+      "genero": "f",
+      "plural": "tutele cautelari",
+      "exemplo": "La tutela cautelare è provvisoria.",
+      "exemplo_pt": "A tutela cautelar é provisória.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/tuˈtɛːla kauteˈlaːre/"
+    },
+    {
+      "id": "t44_f02",
+      "italiano": "misura cautelare",
+      "portugues": "medida cautelar",
+      "genero": "f",
+      "plural": "misure cautelari",
+      "exemplo": "La misura cautelare limita la libertà.",
+      "exemplo_pt": "A medida cautelar limita a liberdade.",
+      "categoria": "diritto",
+      "dificuldade": "medio",
+      "audio_ipa": "/miˈzuːra kauteˈlaːre/"
     }
   ]
 }

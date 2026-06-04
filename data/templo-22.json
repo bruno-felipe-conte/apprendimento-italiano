@@ -5,54 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t22_001",
-      "italiano": "primavera",
-      "portugues": "primavera",
-      "genero": "f",
-      "plural": "primavere",
-      "exemplo": "La primavera porta i fiori.",
-      "exemplo_pt": "A primavera traz as flores.",
-      "categoria": "stagioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/primaˈvɛra/"
-    },
-    {
-      "id": "t22_002",
-      "italiano": "estate",
-      "portugues": "verão",
-      "genero": "f",
-      "plural": "estati",
-      "exemplo": "In estate fa caldo.",
-      "exemplo_pt": "No verão faz calor.",
-      "categoria": "stagioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/esˈtate/"
-    },
-    {
-      "id": "t22_003",
-      "italiano": "autunno",
-      "portugues": "outono",
-      "genero": "m",
-      "plural": "autunni",
-      "exemplo": "In autunno cadono le foglie.",
-      "exemplo_pt": "No outono as folhas caem.",
-      "categoria": "stagioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/auˈtunno/"
-    },
-    {
-      "id": "t22_004",
-      "italiano": "inverno",
-      "portugues": "inverno",
-      "genero": "m",
-      "plural": "inverni",
-      "exemplo": "L'inverno è molto freddo.",
-      "exemplo_pt": "O inverno é muito frio.",
-      "categoria": "stagioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/inˈvɛrno/"
-    },
-    {
       "id": "t22_005",
       "italiano": "clima",
       "portugues": "clima",
@@ -63,18 +15,6 @@
       "categoria": "tempo",
       "dificuldade": "medio",
       "audio_ipa": "/ˈklima/"
-    },
-    {
-      "id": "t22_006",
-      "italiano": "tempo",
-      "portugues": "tempo/clima",
-      "genero": "m",
-      "plural": "tempi",
-      "exemplo": "Che tempo fa oggi?",
-      "exemplo_pt": "Como está o tempo hoje?",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtɛmpo/"
     },
     {
       "id": "t22_007",
@@ -99,42 +39,6 @@
       "categoria": "tempo",
       "dificuldade": "medio",
       "audio_ipa": "/ˈfreddo/"
-    },
-    {
-      "id": "t22_009",
-      "italiano": "pioggia",
-      "portugues": "chuva",
-      "genero": "f",
-      "plural": "piogge",
-      "exemplo": "La pioggia non smette.",
-      "exemplo_pt": "A chuva não para.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjɔddʒa/"
-    },
-    {
-      "id": "t22_010",
-      "italiano": "neve",
-      "portugues": "neve",
-      "genero": "f",
-      "plural": "nevi",
-      "exemplo": "I bambini giocano con la neve.",
-      "exemplo_pt": "As crianças brincam com a neve.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈneve/"
-    },
-    {
-      "id": "t22_011",
-      "italiano": "vento",
-      "portugues": "vento",
-      "genero": "m",
-      "plural": "venti",
-      "exemplo": "C'è un vento forte.",
-      "exemplo_pt": "Há um vento forte.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvɛnto/"
     },
     {
       "id": "t22_012",
@@ -197,18 +101,6 @@
       "audio_ipa": "/ˈnuvola/"
     },
     {
-      "id": "t22_017",
-      "italiano": "sole",
-      "portugues": "sol",
-      "genero": "m",
-      "plural": "soli",
-      "exemplo": "Il sole splende oggi.",
-      "exemplo_pt": "O sol brilha hoje.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsole/"
-    },
-    {
       "id": "t22_018",
       "italiano": "luna",
       "portugues": "lua",
@@ -233,18 +125,6 @@
       "audio_ipa": "/ˈstella/"
     },
     {
-      "id": "t22_020",
-      "italiano": "cielo",
-      "portugues": "céu",
-      "genero": "m",
-      "plural": "cieli",
-      "exemplo": "Il cielo è azzurro.",
-      "exemplo_pt": "O céu é azul.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃɛlo/"
-    },
-    {
       "id": "t22_021",
       "italiano": "natura",
       "portugues": "natureza",
@@ -257,18 +137,6 @@
       "audio_ipa": "/naˈtura/"
     },
     {
-      "id": "t22_022",
-      "italiano": "albero",
-      "portugues": "árvore",
-      "genero": "m",
-      "plural": "alberi",
-      "exemplo": "Un grande albero nel parco.",
-      "exemplo_pt": "Una grande árvore no parque.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈalbero/"
-    },
-    {
       "id": "t22_023",
       "italiano": "fiore",
       "portugues": "flor",
@@ -279,54 +147,6 @@
       "categoria": "paesaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈfjore/"
-    },
-    {
-      "id": "t22_024",
-      "italiano": "foglia",
-      "portugues": "folha",
-      "genero": "f",
-      "plural": "foglie",
-      "exemplo": "Una foglia secca.",
-      "exemplo_pt": "Uma folha seca.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfɔʎʎa/"
-    },
-    {
-      "id": "t22_025",
-      "italiano": "fiume",
-      "portugues": "rio",
-      "genero": "m",
-      "plural": "fiumi",
-      "exemplo": "Il fiume scorre veloce.",
-      "exemplo_pt": "O rio corre rápido.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfjume/"
-    },
-    {
-      "id": "t22_026",
-      "italiano": "lago",
-      "portugues": "lago",
-      "genero": "m",
-      "plural": "laghi",
-      "exemplo": "Andiamo in vacanza al lago.",
-      "exemplo_pt": "Vamos passar férias no lago.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlaɡo/"
-    },
-    {
-      "id": "t22_027",
-      "italiano": "mare",
-      "portugues": "mar",
-      "genero": "m",
-      "plural": "mari",
-      "exemplo": "Nuotare nel mare.",
-      "exemplo_pt": "Nadar no mar.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmare/"
     },
     {
       "id": "t22_028",
@@ -363,18 +183,6 @@
       "categoria": "paesaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈsabbja/"
-    },
-    {
-      "id": "t22_031",
-      "italiano": "montagna",
-      "portugues": "montanha",
-      "genero": "f",
-      "plural": "montagne",
-      "exemplo": "Scalare la montagna.",
-      "exemplo_pt": "Escalar a montanha.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/monˈtaɲɲa/"
     },
     {
       "id": "t22_032",
@@ -447,18 +255,6 @@
       "categoria": "paesaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈɛrba/"
-    },
-    {
-      "id": "t22_038",
-      "italiano": "pianta",
-      "portugues": "planta",
-      "genero": "f",
-      "plural": "piante",
-      "exemplo": "Annaffiare le piante.",
-      "exemplo_pt": "Regar as plantas.",
-      "categoria": "paesaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjanta/"
     },
     {
       "id": "t22_039",
@@ -677,18 +473,6 @@
       "audio_ipa": "/innafˈfjare/"
     },
     {
-      "id": "t22_057",
-      "italiano": "piovere",
-      "portugues": "chover",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Oggi piove molto.",
-      "exemplo_pt": "Hoje chove muito.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjɔvere/"
-    },
-    {
       "id": "t22_058",
       "italiano": "nevicare",
       "portugues": "nevar",
@@ -797,18 +581,6 @@
       "audio_ipa": "/nwoˈtare/"
     },
     {
-      "id": "t22_067",
-      "italiano": "passeggiare",
-      "portugues": "passear",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Passeggiare nel bosco.",
-      "exemplo_pt": "Passear no bosque.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/passedˈdʒare/"
-    },
-    {
       "id": "t22_068",
       "italiano": "arrampicare",
       "portugues": "escalar",
@@ -821,18 +593,6 @@
       "audio_ipa": "/arrampiˈkare/"
     },
     {
-      "id": "t22_069",
-      "italiano": "respirare",
-      "portugues": "respirar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Respirare aria pulita.",
-      "exemplo_pt": "Respirar ar limpo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/respiˈrare/"
-    },
-    {
       "id": "t22_070",
       "italiano": "godere",
       "portugues": "desfrutar",
@@ -843,30 +603,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/ɡoˈdere/"
-    },
-    {
-      "id": "t22_071",
-      "italiano": "sereno",
-      "portugues": "sereno",
-      "genero": "m",
-      "plural": "sereni",
-      "exemplo": "Il cielo oggi è sereno.",
-      "exemplo_pt": "O céu hoje está sereno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/seˈreno/"
-    },
-    {
-      "id": "t22_072",
-      "italiano": "nuvoloso",
-      "portugues": "nublado",
-      "genero": "m",
-      "plural": "nuvolosi",
-      "exemplo": "Il tempo è nuvoloso.",
-      "exemplo_pt": "O tempo está nublado.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/nuvoˈlozo/"
     },
     {
       "id": "t22_073",
@@ -1157,18 +893,6 @@
       "audio_ipa": "/proˈfumo/"
     },
     {
-      "id": "t22_097",
-      "italiano": "ombra",
-      "portugues": "sombra",
-      "genero": "f",
-      "plural": "ombre",
-      "exemplo": "Riposare all'ombra.",
-      "exemplo_pt": "Descansar na sombra.",
-      "categoria": "natura",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈombra/"
-    },
-    {
       "id": "t22_098",
       "italiano": "rifugio",
       "portugues": "refúgio",
@@ -1323,6 +1047,258 @@
       "categoria": "natura",
       "dificuldade": "medio",
       "audio_ipa": "/riˈsparmjo/"
+    },
+    {
+      "id": "t22_r03",
+      "italiano": "savana",
+      "portugues": "savana",
+      "genero": "f",
+      "plural": "savane",
+      "exemplo": "La savana africana è immensa.",
+      "exemplo_pt": "A savana africana é imensa.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/saˈvaːna/"
+    },
+    {
+      "id": "t22_r05",
+      "italiano": "oasi",
+      "portugues": "oásis",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'oasi è un rifugio nel deserto.",
+      "exemplo_pt": "O oásis é um refúgio no deserto.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔaːzi/"
+    },
+    {
+      "id": "t22_r06",
+      "italiano": "palude",
+      "portugues": "pântano",
+      "genero": "f",
+      "plural": "paludi",
+      "exemplo": "La palude è piena di zanzare.",
+      "exemplo_pt": "O pântano está cheio de mosquitos.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/paˈluːde/"
+    },
+    {
+      "id": "t22_r07",
+      "italiano": "laguna",
+      "portugues": "laguna",
+      "genero": "f",
+      "plural": "lagune",
+      "exemplo": "La laguna di Venezia è famosa.",
+      "exemplo_pt": "A laguna de Veneza é famosa.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/laˈɡuːna/"
+    },
+    {
+      "id": "t22_r10",
+      "italiano": "lava",
+      "portugues": "lava",
+      "genero": "f",
+      "plural": "lave",
+      "exemplo": "La lava scorre dal vulcano.",
+      "exemplo_pt": "A lava flui do vulcão.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈlaːva/"
+    },
+    {
+      "id": "t22_r12",
+      "italiano": "uragano",
+      "portugues": "furacão",
+      "genero": "m",
+      "plural": "uragani",
+      "exemplo": "L'uragano si avvicina alla costa.",
+      "exemplo_pt": "O furacão se aproxima da costa.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/uraˈɡaːno/"
+    },
+    {
+      "id": "t22_r13",
+      "italiano": "alluvione",
+      "portugues": "enchente / inundação",
+      "genero": "f",
+      "plural": "alluvioni",
+      "exemplo": "L'alluvione ha allagato i campi.",
+      "exemplo_pt": "A enchente alagou os campos.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/alluˈvjoːne/"
+    },
+    {
+      "id": "t22_r14",
+      "italiano": "siccità",
+      "portugues": "seca",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La siccità ha distrutto il raccolto.",
+      "exemplo_pt": "A seca destruiu a colheita.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/sittʃiˈta/"
+    },
+    {
+      "id": "t22_r15",
+      "italiano": "gelo",
+      "portugues": "gelo / geada",
+      "genero": "m",
+      "plural": "geli",
+      "exemplo": "Il gelo notturno ha bruciato le piante.",
+      "exemplo_pt": "A geada noturna queimou as plantas.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdʒɛːlo/"
+    },
+    {
+      "id": "t22_r22",
+      "italiano": "scogliera",
+      "portugues": "falésia / penhasco",
+      "genero": "f",
+      "plural": "scogliere",
+      "exemplo": "La scogliera è alta sul mare.",
+      "exemplo_pt": "A falésia é alta sobre o mar.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/skoʎˈʎɛːra/"
+    },
+    {
+      "id": "t22_r24",
+      "italiano": "duna",
+      "portugues": "duna",
+      "genero": "f",
+      "plural": "dune",
+      "exemplo": "Le dune di sabbia sono alte.",
+      "exemplo_pt": "As dunas de areia são altas.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈduːna/"
+    },
+    {
+      "id": "t22_r25",
+      "italiano": "mangrovie",
+      "portugues": "manguezal",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Le mangrovie proteggono la costa.",
+      "exemplo_pt": "O manguezal protege a costa.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/manˈɡrɔvje/"
+    },
+    {
+      "id": "t22_r26",
+      "italiano": "corallo",
+      "portugues": "coral",
+      "genero": "m",
+      "plural": "coralli",
+      "exemplo": "Il corallo è un organismo marino.",
+      "exemplo_pt": "O coral é um organismo marinho.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/koˈrallo/"
+    },
+    {
+      "id": "t22_r27",
+      "italiano": "tundra",
+      "portugues": "tundra",
+      "genero": "f",
+      "plural": "tundre",
+      "exemplo": "La tundra è gelida in inverno.",
+      "exemplo_pt": "A tundra é gelada no inverno.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtundra/"
+    },
+    {
+      "id": "t22_r28",
+      "italiano": "prateria",
+      "portugues": "pradaria",
+      "genero": "f",
+      "plural": "praterie",
+      "exemplo": "La prateria è pianeggiante e verde.",
+      "exemplo_pt": "A pradaria é plana e verde.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/praˈtɛːrja/"
+    },
+    {
+      "id": "t22_r29",
+      "italiano": "collinare",
+      "portugues": "montanhoso / de colinas",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il paesaggio collinare è pittoresco.",
+      "exemplo_pt": "A paisagem de colinas é pitoresca.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/kolliˈnaːre/"
+    },
+    {
+      "id": "t22_r31",
+      "italiano": "altopiano",
+      "portugues": "planalto",
+      "genero": "m",
+      "plural": "altopiani",
+      "exemplo": "L'altopiano è ricco di pascoli.",
+      "exemplo_pt": "O planalto é rico em pastagens.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/altoˈpjaːno/"
+    },
+    {
+      "id": "t22_r34",
+      "italiano": "estuario",
+      "portugues": "estuário",
+      "genero": "m",
+      "plural": "estuari",
+      "exemplo": "L'estuario del fiume è ricco di vita.",
+      "exemplo_pt": "O estuário do rio é rico em vida.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/esˈtuaːrjo/"
+    },
+    {
+      "id": "t22_r35",
+      "italiano": "delta",
+      "portugues": "delta",
+      "genero": "m",
+      "plural": "delta",
+      "exemplo": "Il delta del Nilo è fertile.",
+      "exemplo_pt": "O delta do Nilo é fértil.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdɛlta/"
+    },
+    {
+      "id": "t22_s01",
+      "italiano": "brughiera",
+      "portugues": "charneca / urze",
+      "genero": "f",
+      "plural": "brughiere",
+      "exemplo": "La brughiera è viola in autunno.",
+      "exemplo_pt": "A charneca é roxa no outono.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/bruˈɡjɛːra/"
+    },
+    {
+      "id": "t22_s02",
+      "italiano": "steppa",
+      "portugues": "estepe",
+      "genero": "f",
+      "plural": "steppe",
+      "exemplo": "La steppa è un paesaggio aperto.",
+      "exemplo_pt": "A estepe é uma paisagem aberta.",
+      "categoria": "natura",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsteppa/"
     }
   ]
 }

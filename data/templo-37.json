@@ -113,18 +113,6 @@
       "audio_ipa": "/proˈfɛta/"
     },
     {
-      "id": "t37_010",
-      "italiano": "papa",
-      "portugues": "papa",
-      "genero": "m",
-      "plural": "papi",
-      "exemplo": "Il Papa benedice.",
-      "exemplo_pt": "O Papa abençoa.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpapa/"
-    },
-    {
       "id": "t37_011",
       "italiano": "vescovo",
       "portugues": "bispo",
@@ -231,42 +219,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/pelleˈɡrino/"
-    },
-    {
-      "id": "t37_020",
-      "italiano": "chiesa",
-      "portugues": "igreja",
-      "genero": "f",
-      "plural": "chiese",
-      "exemplo": "Andare in chiesa.",
-      "exemplo_pt": "Ir à igreja.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkjɛza/"
-    },
-    {
-      "id": "t37_021",
-      "italiano": "cattedrale",
-      "portugues": "catedral",
-      "genero": "f",
-      "plural": "cattedrali",
-      "exemplo": "La cattedrale di Milano.",
-      "exemplo_pt": "A catedral de Milão.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/katteˈdrale/"
-    },
-    {
-      "id": "t37_022",
-      "italiano": "basilica",
-      "portugues": "basílica",
-      "genero": "f",
-      "plural": "basiliche",
-      "exemplo": "La basilica di San Pietro.",
-      "exemplo_pt": "A basílica de São Pedro.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/baˈzilika/"
     },
     {
       "id": "t37_023",
@@ -449,18 +401,6 @@
       "audio_ipa": "/roˈzarjo/"
     },
     {
-      "id": "t37_038",
-      "italiano": "candela",
-      "portugues": "vela",
-      "genero": "f",
-      "plural": "candele",
-      "exemplo": "Accendere una candela.",
-      "exemplo_pt": "Acender uma vela.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/kanˈdela/"
-    },
-    {
       "id": "t37_039",
       "italiano": "incenso",
       "portugues": "incenso",
@@ -543,42 +483,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈanima/"
-    },
-    {
-      "id": "t37_046",
-      "italiano": "paradiso",
-      "portugues": "paraíso/céu",
-      "genero": "m",
-      "plural": "paradisi",
-      "exemplo": "Andare in paradiso.",
-      "exemplo_pt": "Ir para o paraíso.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/paraˈdizo/"
-    },
-    {
-      "id": "t37_047",
-      "italiano": "inferno",
-      "portugues": "inferno",
-      "genero": "m",
-      "plural": "inferni",
-      "exemplo": "Bruciare all'inferno.",
-      "exemplo_pt": "Queimar no inferno.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/inˈfɛrno/"
-    },
-    {
-      "id": "t37_048",
-      "italiano": "purgatorio",
-      "portugues": "purgatório",
-      "genero": "m",
-      "plural": "purgatori",
-      "exemplo": "Le anime del purgatorio.",
-      "exemplo_pt": "As almas do purgatório.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/purɡaˈtɔrjo/"
     },
     {
       "id": "t37_049",
@@ -687,18 +591,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/funeˈrale/"
-    },
-    {
-      "id": "t37_058",
-      "italiano": "anima",
-      "portugues": "alma",
-      "genero": "f",
-      "plural": "anime",
-      "exemplo": "Riposi in pace l'anima sua.",
-      "exemplo_pt": "Que sua alma descanse em paz.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈanima/"
     },
     {
       "id": "t37_059",
@@ -833,18 +725,6 @@
       "audio_ipa": "/konfesˈsarsi/"
     },
     {
-      "id": "t37_070",
-      "italiano": "salvare",
-      "portugues": "salvar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Dio ci salva.",
-      "exemplo_pt": "Deus nos salva.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/salˈvare/"
-    },
-    {
       "id": "t37_071",
       "italiano": "celebrare",
       "portugues": "celebrar",
@@ -963,30 +843,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/prediˈkare/"
-    },
-    {
-      "id": "t37_081",
-      "italiano": "sperare",
-      "portugues": "esperar (ter esperança)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Sperare nella salvezza.",
-      "exemplo_pt": "Esperar na salvação.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/speˈrare/"
-    },
-    {
-      "id": "t37_082",
-      "italiano": "santo",
-      "portugues": "santo",
-      "genero": "m",
-      "plural": "santi",
-      "exemplo": "Un uomo santo.",
-      "exemplo_pt": "Um homem santo.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsanto/"
     },
     {
       "id": "t37_083",
@@ -1121,18 +977,6 @@
       "audio_ipa": "/eˈtɛrno/"
     },
     {
-      "id": "t37_094",
-      "italiano": "puro",
-      "portugues": "puro",
-      "genero": "m",
-      "plural": "puri",
-      "exemplo": "Un cuore puro.",
-      "exemplo_pt": "Um coração puro.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpuro/"
-    },
-    {
       "id": "t37_095",
       "italiano": "peccatore",
       "portugues": "pecador",
@@ -1203,18 +1047,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/proˈfano/"
-    },
-    {
-      "id": "t37_101",
-      "italiano": "ateo",
-      "portugues": "ateu (adj)",
-      "genero": "m",
-      "plural": "atei",
-      "exemplo": "Un pensiero ateo.",
-      "exemplo_pt": "Um pensamento ateu.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈatɛo/"
     },
     {
       "id": "t37_102",
@@ -1323,6 +1155,234 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/naˈvata/"
+    },
+    {
+      "id": "t37_r05",
+      "italiano": "comunione",
+      "portugues": "comunhão",
+      "genero": "f",
+      "plural": "comunioni",
+      "exemplo": "La prima comunione è un rito importante.",
+      "exemplo_pt": "A primeira comunhão é um rito importante.",
+      "categoria": "sacramenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/komuˈnjoːne/"
+    },
+    {
+      "id": "t37_r06",
+      "italiano": "cresima",
+      "portugues": "crisma / confirmação",
+      "genero": "f",
+      "plural": "cresime",
+      "exemplo": "La cresima conclude l'iniziazione.",
+      "exemplo_pt": "A crisma conclui a iniciação.",
+      "categoria": "sacramenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkrɛːzima/"
+    },
+    {
+      "id": "t37_r09",
+      "italiano": "cardinale",
+      "portugues": "cardeal",
+      "genero": "m",
+      "plural": "cardinali",
+      "exemplo": "Il cardinale partecipa al conclave.",
+      "exemplo_pt": "O cardeal participa do conclave.",
+      "categoria": "gerarchia",
+      "dificuldade": "medio",
+      "audio_ipa": "/kardiˈnaːle/"
+    },
+    {
+      "id": "t37_r10",
+      "italiano": "conclave",
+      "portugues": "conclave",
+      "genero": "m",
+      "plural": "conclavi",
+      "exemplo": "Il conclave elegge il papa.",
+      "exemplo_pt": "O conclave elege o papa.",
+      "categoria": "gerarchia",
+      "dificuldade": "medio",
+      "audio_ipa": "/konˈklaːve/"
+    },
+    {
+      "id": "t37_r11",
+      "italiano": "abbazia",
+      "portugues": "abadia",
+      "genero": "f",
+      "plural": "abbazie",
+      "exemplo": "L'abbazia benedettina è antichissima.",
+      "exemplo_pt": "A abadia beneditina é antiquíssima.",
+      "categoria": "luoghi sacri",
+      "dificuldade": "medio",
+      "audio_ipa": "/abbaˈtsiːa/"
+    },
+    {
+      "id": "t37_r14",
+      "italiano": "pellegrinaggio",
+      "portugues": "peregrinação",
+      "genero": "m",
+      "plural": "pellegrinaggi",
+      "exemplo": "Il pellegrinaggio a Santiago è lungo.",
+      "exemplo_pt": "A peregrinação a Santiago é longa.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/pelleɡriˈnaddʒo/"
+    },
+    {
+      "id": "t37_r15",
+      "italiano": "santità",
+      "portugues": "santidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La santità è la perfezione morale.",
+      "exemplo_pt": "A santidade é a perfeição moral.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/santiˈta/"
+    },
+    {
+      "id": "t37_r17",
+      "italiano": "grazia divina",
+      "portugues": "graça divina",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La grazia divina è un dono.",
+      "exemplo_pt": "A graça divina é um dom.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡrattsja diˈviːna/"
+    },
+    {
+      "id": "t37_r18",
+      "italiano": "redenzione",
+      "portugues": "redenção",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La redenzione è il cuore del cristiane.",
+      "exemplo_pt": "A redenção é o coração do cristão.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/redentˈttsjoːne/"
+    },
+    {
+      "id": "t37_r21",
+      "italiano": "misericordia",
+      "portugues": "misericórdia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La misericordia è il nome di Dio.",
+      "exemplo_pt": "A misericórdia é o nome de Deus.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/mizerikˈkordzja/"
+    },
+    {
+      "id": "t37_r27",
+      "italiano": "Buddha",
+      "portugues": "Buda",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il Buddha insegnò la via della pace.",
+      "exemplo_pt": "Buda ensinou o caminho da paz.",
+      "categoria": "buddismo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈbudda/"
+    },
+    {
+      "id": "t37_r28",
+      "italiano": "karma",
+      "portugues": "karma",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il karma determina il destino futuro.",
+      "exemplo_pt": "O karma determina o destino futuro.",
+      "categoria": "buddismo hinduismo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkarma/"
+    },
+    {
+      "id": "t37_r29",
+      "italiano": "dharma",
+      "portugues": "dharma",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il dharma è il dovere cosmico.",
+      "exemplo_pt": "O dharma é o dever cósmico.",
+      "categoria": "buddismo hinduismo",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdarma/"
+    },
+    {
+      "id": "t37_r30",
+      "italiano": "nirvana",
+      "portugues": "nirvana",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il nirvana è la liberazione dal dolore.",
+      "exemplo_pt": "O nirvana é a libertação do sofrimento.",
+      "categoria": "buddismo",
+      "dificuldade": "medio",
+      "audio_ipa": "/nirˈvaːna/"
+    },
+    {
+      "id": "t37_r31",
+      "italiano": "laicità",
+      "portugues": "laicidade",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La laicità separa chiesa e stato.",
+      "exemplo_pt": "A laicidade separa igreja e estado.",
+      "categoria": "politica religiosa",
+      "dificuldade": "medio",
+      "audio_ipa": "/laitʃiˈta/"
+    },
+    {
+      "id": "t37_r32",
+      "italiano": "ecumenismo",
+      "portugues": "ecumenismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'ecumenismo promuove il dialogo.",
+      "exemplo_pt": "O ecumenismo promove o diálogo.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/ekumeˈnizmo/"
+    },
+    {
+      "id": "t37_r33",
+      "italiano": "ateismo",
+      "portugues": "ateísmo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'ateismo nega l'esistenza di Dio.",
+      "exemplo_pt": "O ateísmo nega a existência de Deus.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ateˈizmo/"
+    },
+    {
+      "id": "t37_r34",
+      "italiano": "agnosticismo",
+      "portugues": "agnosticismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'agnosticismo sospende il giudizio.",
+      "exemplo_pt": "O agnosticismo suspende o julgamento.",
+      "categoria": "filosofia",
+      "dificuldade": "medio",
+      "audio_ipa": "/aɡnostiˈtʃizmo/"
+    },
+    {
+      "id": "t37_r35",
+      "italiano": "sincretismo",
+      "portugues": "sincretismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il sincretismo mescola varie religioni.",
+      "exemplo_pt": "O sincretismo mistura várias religiões.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/sinkretˈizmo/"
     }
   ]
 }

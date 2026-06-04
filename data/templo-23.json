@@ -65,18 +65,6 @@
       "audio_ipa": "/ˈpɛkora/"
     },
     {
-      "id": "t23_006",
-      "italiano": "maiale",
-      "portugues": "porco",
-      "genero": "m",
-      "plural": "maiali",
-      "exemplo": "Il maiale mangia molto.",
-      "exemplo_pt": "O porco come muito.",
-      "categoria": "fattoria",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈjale/"
-    },
-    {
       "id": "t23_007",
       "italiano": "gallina",
       "portugues": "galinha",
@@ -87,18 +75,6 @@
       "categoria": "fattoria",
       "dificuldade": "medio",
       "audio_ipa": "/ɡalˈlina/"
-    },
-    {
-      "id": "t23_008",
-      "italiano": "pollo",
-      "portugues": "frango",
-      "genero": "m",
-      "plural": "polli",
-      "exemplo": "Il pollo ruspante.",
-      "exemplo_pt": "O frango caipira.",
-      "categoria": "fattoria",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpollo/"
     },
     {
       "id": "t23_009",
@@ -737,18 +713,6 @@
       "audio_ipa": "/kottʃiˈnɛlla/"
     },
     {
-      "id": "t23_062",
-      "italiano": "pesce",
-      "portugues": "peixe",
-      "genero": "m",
-      "plural": "pesci",
-      "exemplo": "Il pesce nuota nell'acqua.",
-      "exemplo_pt": "O peixe nada na água.",
-      "categoria": "marini",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpeʃʃe/"
-    },
-    {
       "id": "t23_063",
       "italiano": "squalo",
       "portugues": "tubarão",
@@ -1061,18 +1025,6 @@
       "audio_ipa": "/ɡrafˈfjare/"
     },
     {
-      "id": "t23_089",
-      "italiano": "volare",
-      "portugues": "voar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "L'aquila vola nel cielo.",
-      "exemplo_pt": "A águia voa no céu.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/voˈlare/"
-    },
-    {
       "id": "t23_090",
       "italiano": "strisciare",
       "portugues": "rastejar",
@@ -1083,18 +1035,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/striʃˈʃare/"
-    },
-    {
-      "id": "t23_091",
-      "italiano": "nuotare",
-      "portugues": "nadar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il pesce nuota nel mare.",
-      "exemplo_pt": "O peixe nada no mar.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/nwoˈtare/"
     },
     {
       "id": "t23_092",
@@ -1241,30 +1181,6 @@
       "audio_ipa": "/piˈdɔkkjo/"
     },
     {
-      "id": "t23_104",
-      "italiano": "tonno",
-      "portugues": "atum",
-      "genero": "m",
-      "plural": "tonni",
-      "exemplo": "Un grande banco di tonni.",
-      "exemplo_pt": "Um grande cardume de atuns.",
-      "categoria": "marini",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtonno/"
-    },
-    {
-      "id": "t23_105",
-      "italiano": "salmone",
-      "portugues": "salmão",
-      "genero": "m",
-      "plural": "salmoni",
-      "exemplo": "Il salmone nuota controcorrente.",
-      "exemplo_pt": "O salmão nada contra a corrente.",
-      "categoria": "marini",
-      "dificuldade": "medio",
-      "audio_ipa": "/salˈmone/"
-    },
-    {
       "id": "t23_106",
       "italiano": "calamaro",
       "portugues": "lula",
@@ -1323,6 +1239,114 @@
       "categoria": "selvatici",
       "dificuldade": "medio",
       "audio_ipa": "/formiˈkjɛre/"
+    },
+    {
+      "id": "t23_r07",
+      "italiano": "aragosta",
+      "portugues": "lagosta",
+      "genero": "f",
+      "plural": "aragoste",
+      "exemplo": "L'aragosta è un crostaceo pregiato.",
+      "exemplo_pt": "A lagosta é um crustáceo valioso.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/araˈɡɔsta/"
+    },
+    {
+      "id": "t23_r17",
+      "italiano": "fenicottero",
+      "portugues": "flamingo",
+      "genero": "m",
+      "plural": "fenicotteri",
+      "exemplo": "Il fenicottero è rosa e elegante.",
+      "exemplo_pt": "O flamingo é rosado e elegante.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/feniˈkɔttero/"
+    },
+    {
+      "id": "t23_r18",
+      "italiano": "cigno",
+      "portugues": "cisne",
+      "genero": "m",
+      "plural": "cigni",
+      "exemplo": "Il cigno è elegante sul lago.",
+      "exemplo_pt": "O cisne é elegante no lago.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtʃiɲɲo/"
+    },
+    {
+      "id": "t23_r21",
+      "italiano": "koala",
+      "portugues": "coala",
+      "genero": "m",
+      "plural": "koala",
+      "exemplo": "Il koala dorme quasi tutto il giorno.",
+      "exemplo_pt": "O coala dorme quase o dia todo.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/koˈala/"
+    },
+    {
+      "id": "t23_r23",
+      "italiano": "panda",
+      "portugues": "panda",
+      "genero": "m",
+      "plural": "panda",
+      "exemplo": "Il panda gigante è in via d'estinzione.",
+      "exemplo_pt": "O panda gigante está em extinção.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpanda/"
+    },
+    {
+      "id": "t23_r28",
+      "italiano": "scimpanzé",
+      "portugues": "chimpanzé",
+      "genero": "m",
+      "plural": "scimpanzé",
+      "exemplo": "Lo scimpanzé usa gli strumenti.",
+      "exemplo_pt": "O chimpanzé usa ferramentas.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/ʃimpanˈdzɛ/"
+    },
+    {
+      "id": "t23_r29",
+      "italiano": "gorilla",
+      "portugues": "gorila",
+      "genero": "m",
+      "plural": "gorilla",
+      "exemplo": "Il gorilla è il primate più grande.",
+      "exemplo_pt": "O gorila é o maior primata.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/ɡoˈrilla/"
+    },
+    {
+      "id": "t23_r30",
+      "italiano": "orso polare",
+      "portugues": "urso polar",
+      "genero": "m",
+      "plural": "orsi polari",
+      "exemplo": "L'orso polare è in pericolo.",
+      "exemplo_pt": "O urso polar está em perigo.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔrso poˈlaːre/"
+    },
+    {
+      "id": "t23_r33",
+      "italiano": "cinghiale",
+      "portugues": "javali",
+      "genero": "m",
+      "plural": "cinghiali",
+      "exemplo": "Il cinghiale vive nel bosco.",
+      "exemplo_pt": "O javali vive na floresta.",
+      "categoria": "animali",
+      "dificuldade": "medio",
+      "audio_ipa": "/tʃiŋˈɡjaːle/"
     }
   ]
 }

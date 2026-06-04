@@ -281,18 +281,6 @@
       "audio_ipa": "/anˈdare in tilt/"
     },
     {
-      "id": "t47_024",
-      "italiano": "andare d'accordo",
-      "portugues": "dar-se bem",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Vado d'accordo con lui.",
-      "exemplo_pt": "Me dou bem com ele.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/anˈdare dakˈkɔrdo/"
-    },
-    {
       "id": "t47_025",
       "italiano": "andare su tutte le furie",
       "portugues": "ficar furioso",
@@ -653,18 +641,6 @@
       "audio_ipa": "/arrampiˈkarsi ˈsuʎʎi ˈspɛkki/"
     },
     {
-      "id": "t47_055",
-      "italiano": "cavarsela",
-      "portugues": "safar-se/arranjar-se",
-      "genero": null,
-      "plural": null,
-      "exemplo": "In inglese me la cavo.",
-      "exemplo_pt": "Em inglês eu me viro.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/kaˈvarsela/"
-    },
-    {
       "id": "t47_056",
       "italiano": "farcela",
       "portugues": "conseguir",
@@ -749,18 +725,6 @@
       "audio_ipa": "/pasˈsarsela/"
     },
     {
-      "id": "t47_063",
-      "italiano": "prendersela",
-      "portugues": "chatear-se",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non te la prendere.",
-      "exemplo_pt": "Não fique chateado.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈprɛndersela/"
-    },
-    {
       "id": "t47_064",
       "italiano": "sbrigarsela",
       "portugues": "resolver/despachar",
@@ -809,18 +773,6 @@
       "audio_ipa": "/maˈɡari/"
     },
     {
-      "id": "t47_068",
-      "italiano": "mica",
-      "portugues": "não (ênfase)/por acaso",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non sono mica scemo.",
-      "exemplo_pt": "Não sou idiota.",
-      "categoria": "avverbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈmika/"
-    },
-    {
       "id": "t47_069",
       "italiano": "macché",
       "portugues": "que nada!",
@@ -855,18 +807,6 @@
       "categoria": "espressioni",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈmeno ˈmale/"
-    },
-    {
-      "id": "t47_072",
-      "italiano": "peccato",
-      "portugues": "que pena",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Peccato che tu non venga.",
-      "exemplo_pt": "Que pena que você não vem.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/pekˈkato/"
     },
     {
       "id": "t47_073",
@@ -939,18 +879,6 @@
       "categoria": "avverbi",
       "dificuldade": "difficile",
       "audio_ipa": "/alˈlora/"
-    },
-    {
-      "id": "t47_079",
-      "italiano": "dunque",
-      "portugues": "portanto",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Penso, dunque sono.",
-      "exemplo_pt": "Penso, portanto sou.",
-      "categoria": "avverbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/ˈdunkwe/"
     },
     {
       "id": "t47_080",
@@ -1265,18 +1193,6 @@
       "audio_ipa": "/ˈɛssere ˈalla ˈmano/"
     },
     {
-      "id": "t47_106",
-      "italiano": "vuotare il sacco",
-      "portugues": "desembuchar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ora devi vuotare il sacco.",
-      "exemplo_pt": "Agora você deve desembuchar.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/vwoˈtare il ˈsakko/"
-    },
-    {
       "id": "t47_107",
       "italiano": "stare con le mani in mano",
       "portugues": "ficar de braços cruzados",
@@ -1287,18 +1203,6 @@
       "categoria": "espressioni",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈstare kon le ˈmani in ˈmano/"
-    },
-    {
-      "id": "t47_108",
-      "italiano": "arrampicarsi sugli specchi",
-      "portugues": "dar desculpas esfarrapate",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ti stai arrampicando sugli specchi.",
-      "exemplo_pt": "Você está dando desculpas esfarrapate.",
-      "categoria": "espressioni",
-      "dificuldade": "difficile",
-      "audio_ipa": "/arrampiˈkarsi ˈsuʎʎi ˈspɛkki/"
     },
     {
       "id": "t47_109",
@@ -1323,6 +1227,162 @@
       "categoria": "espressioni",
       "dificuldade": "difficile",
       "audio_ipa": "/ˈfare oˈrekkje da merˈkante/"
+    },
+    {
+      "id": "t47_r05",
+      "italiano": "metterci",
+      "portugues": "levar (tempo)",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ci metto un'ora ad arrivare.",
+      "exemplo_pt": "Levo uma hora para chegar.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/metterˈtʃi/"
+    },
+    {
+      "id": "t47_r07",
+      "italiano": "farne a meno",
+      "portugues": "dispensar / passar sem",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Non posso farne a meno del caffè.",
+      "exemplo_pt": "Não consigo dispensar o café.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/farˈne a ˈmɛːno/"
+    },
+    {
+      "id": "t47_r08",
+      "italiano": "perdere la testa",
+      "portugues": "perder a cabeça",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ha perso la testa per quella ragazza.",
+      "exemplo_pt": "Ele perdeu a cabeça por aquela garota.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɛrdere la ˈtɛsta/"
+    },
+    {
+      "id": "t47_r09",
+      "italiano": "perdere le staffe",
+      "portugues": "perder a paciência / se exaltar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ha perso le staffe e ha urlato.",
+      "exemplo_pt": "Ele perdeu a paciência e gritou.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpɛrdere le ˈstaffe/"
+    },
+    {
+      "id": "t47_r10",
+      "italiano": "girare in tondo",
+      "portugues": "andar em círculos",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Stiamo girando in tondo senza soluzioni.",
+      "exemplo_pt": "Estamos andando em círculos sem soluções.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/dʒiˈraːre in ˈtondo/"
+    },
+    {
+      "id": "t47_r11",
+      "italiano": "tirarsi su",
+      "portugues": "animar-se / se levantar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Dai, tirami su con una buona notizia.",
+      "exemplo_pt": "Vamos, me anima com uma boa notícia.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/tiˈrarsi su/"
+    },
+    {
+      "id": "t47_r12",
+      "italiano": "buttarsi giù",
+      "portugues": "se deixar abater",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Non buttertai giù per un insuccesso.",
+      "exemplo_pt": "Não se deixe abater por um fracasso.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/butˈtarsi ˈdʒuː/"
+    },
+    {
+      "id": "t47_r13",
+      "italiano": "rimettersi in piedi",
+      "portugues": "se recuperar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Si è rimesso in piedi dopo la crisi.",
+      "exemplo_pt": "Ele se recuperou após a crise.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/riˈmettersi in ˈpjɛːdi/"
+    },
+    {
+      "id": "t47_r14",
+      "italiano": "fare a pezzi",
+      "portugues": "destruir / arrasar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "La critica ha fatto a pezzi il libro.",
+      "exemplo_pt": "A crítica destruiu o livro.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈfaːre a ˈpɛttsi/"
+    },
+    {
+      "id": "t47_r15",
+      "italiano": "mandare in malora",
+      "portugues": "mandar às favas / destruir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ha mandato tutto in malora.",
+      "exemplo_pt": "Ele mandou tudo às favas.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/manˈdaːre in maˈlɔːra/"
+    },
+    {
+      "id": "t47_r16",
+      "italiano": "a cuor leggero",
+      "portugues": "de coração leve",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Parto a cuor leggero per le vacanze.",
+      "exemplo_pt": "Parto de coração leve para as férias.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/a ˈkwɔːr ledˈdʒɛːro/"
+    },
+    {
+      "id": "t47_r17",
+      "italiano": "a malincuore",
+      "portugues": "a contragosto",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ho accettato a malincuore.",
+      "exemplo_pt": "Aceitei a contragosto.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/a malinˈkwɔːre/"
+    },
+    {
+      "id": "t47_r18",
+      "italiano": "in quattro e quattr'otto",
+      "portugues": "rapidíssimo",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Ha risolto il problema in quattro e quattr'otto.",
+      "exemplo_pt": "Resolveu o problema rapidíssimo.",
+      "categoria": "espressioni",
+      "dificuldade": "medio",
+      "audio_ipa": "/in kˈkwattro e kwatˈtrɔtto/"
     }
   ]
 }

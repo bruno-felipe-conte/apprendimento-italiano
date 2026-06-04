@@ -5,42 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t25_001",
-      "italiano": "negozio",
-      "portugues": "loja",
-      "genero": "m",
-      "plural": "negozi",
-      "exemplo": "Il negozio è chiuso.",
-      "exemplo_pt": "A loja está fechada.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/neˈɡɔtsjo/"
-    },
-    {
-      "id": "t25_002",
-      "italiano": "mercato",
-      "portugues": "mercado",
-      "genero": "m",
-      "plural": "mercati",
-      "exemplo": "Compro la frutta al mercato.",
-      "exemplo_pt": "Compro a fruta no mercado.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/merˈkato/"
-    },
-    {
-      "id": "t25_003",
-      "italiano": "supermercato",
-      "portugues": "supermercato",
-      "genero": "m",
-      "plural": "supermercati",
-      "exemplo": "Andiamo al supermercato oggi.",
-      "exemplo_pt": "Vamos ao supermercado hoje.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/supermerˈkato/"
-    },
-    {
       "id": "t25_004",
       "italiano": "centro commerciale",
       "portugues": "shopping center",
@@ -65,18 +29,6 @@
       "audio_ipa": "/ˈkassa/"
     },
     {
-      "id": "t25_006",
-      "italiano": "vetrina",
-      "portugues": "vitrine",
-      "genero": "f",
-      "plural": "vetrine",
-      "exemplo": "Guardare la vetrina.",
-      "exemplo_pt": "Olhar a vitrine.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/veˈtrina/"
-    },
-    {
       "id": "t25_007",
       "italiano": "scaffale",
       "portugues": "prateleira",
@@ -87,30 +39,6 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/skafˈfale/"
-    },
-    {
-      "id": "t25_008",
-      "italiano": "corsia",
-      "portugues": "corredor (loja)",
-      "genero": "f",
-      "plural": "corsie",
-      "exemplo": "La corsia dei detersivi.",
-      "exemplo_pt": "O corredor dos detergentes.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/korˈsia/"
-    },
-    {
-      "id": "t25_009",
-      "italiano": "magazzino",
-      "portugues": "armazém",
-      "genero": "m",
-      "plural": "magazzini",
-      "exemplo": "Il prodotto è nel magazzino.",
-      "exemplo_pt": "O produto está no armazém.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/maɡadˈdzino/"
     },
     {
       "id": "t25_010",
@@ -125,90 +53,6 @@
       "audio_ipa": "/buˈtik/"
     },
     {
-      "id": "t25_011",
-      "italiano": "panetteria",
-      "portugues": "padaria",
-      "genero": "f",
-      "plural": "panetterie",
-      "exemplo": "Compra il pane in panetteria.",
-      "exemplo_pt": "Compre o pão na padaria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/panetteˈria/"
-    },
-    {
-      "id": "t25_012",
-      "italiano": "macelleria",
-      "portugues": "açougue",
-      "genero": "f",
-      "plural": "macellerie",
-      "exemplo": "Carne fresca in macelleria.",
-      "exemplo_pt": "Carne fresca no açougue.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/matʃelleˈria/"
-    },
-    {
-      "id": "t25_013",
-      "italiano": "pescheria",
-      "portugues": "peixaria",
-      "genero": "f",
-      "plural": "pescherie",
-      "exemplo": "Andiamo in pescheria.",
-      "exemplo_pt": "Vamos à peixaria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/peskeˈria/"
-    },
-    {
-      "id": "t25_014",
-      "italiano": "farmacia",
-      "portugues": "farmácia",
-      "genero": "f",
-      "plural": "farmacie",
-      "exemplo": "Compra la medicina in farmacia.",
-      "exemplo_pt": "Compre o remédio na farmácia.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/farmaˈtʃia/"
-    },
-    {
-      "id": "t25_015",
-      "italiano": "libreria",
-      "portugues": "livraria",
-      "genero": "f",
-      "plural": "librerie",
-      "exemplo": "Una libreria fornitissima.",
-      "exemplo_pt": "Uma livraria bem abastecida.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/libreˈria/"
-    },
-    {
-      "id": "t25_016",
-      "italiano": "cliente",
-      "portugues": "cliente",
-      "genero": "m/f",
-      "plural": "clienti",
-      "exemplo": "Il cliente ha sempre ragione.",
-      "exemplo_pt": "O cliente tem sempre razão.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/kliˈɛnte/"
-    },
-    {
-      "id": "t25_017",
-      "italiano": "commesso",
-      "portugues": "vendedor",
-      "genero": "m",
-      "plural": "commessi",
-      "exemplo": "Chiedi al commesso.",
-      "exemplo_pt": "Pergunte ao vendedor.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈmesso/"
-    },
-    {
       "id": "t25_018",
       "italiano": "cassiere",
       "portugues": "caixa (pessoa)",
@@ -219,18 +63,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/kasˈsjɛre/"
-    },
-    {
-      "id": "t25_019",
-      "italiano": "direttore",
-      "portugues": "diretor/gerente",
-      "genero": "m",
-      "plural": "direttori",
-      "exemplo": "Voglio parlare col direttore.",
-      "exemplo_pt": "Quero falar com o gerente.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/diretˈtore/"
     },
     {
       "id": "t25_020",
@@ -291,18 +123,6 @@
       "categoria": "denaro",
       "dificuldade": "medio",
       "audio_ipa": "/deˈnaro/"
-    },
-    {
-      "id": "t25_025",
-      "italiano": "prezzo",
-      "portugues": "preço",
-      "genero": "m",
-      "plural": "prezzi",
-      "exemplo": "Il prezzo è molto alto.",
-      "exemplo_pt": "O preço é muito alto.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈprɛttso/"
     },
     {
       "id": "t25_026",
@@ -425,54 +245,6 @@
       "audio_ipa": "/asˈseɲɲo/"
     },
     {
-      "id": "t25_036",
-      "italiano": "conto",
-      "portugues": "conta",
-      "genero": "m",
-      "plural": "conti",
-      "exemplo": "Porti il conto, per favore?",
-      "exemplo_pt": "Pode trazer a conta, por favor?",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkonto/"
-    },
-    {
-      "id": "t25_037",
-      "italiano": "bonifico",
-      "portugues": "transferência",
-      "genero": "m",
-      "plural": "bonifici",
-      "exemplo": "Fare un bonifico bancario.",
-      "exemplo_pt": "Fazer uma transferência bancária.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/boˈnifiko/"
-    },
-    {
-      "id": "t25_038",
-      "italiano": "prestito",
-      "portugues": "empréstimo",
-      "genero": "m",
-      "plural": "prestiti",
-      "exemplo": "Chiedere un prestito in banca.",
-      "exemplo_pt": "Pedir um empréstimo no banco.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈprɛstito/"
-    },
-    {
-      "id": "t25_039",
-      "italiano": "mutuo",
-      "portugues": "financiamento imobiliário",
-      "genero": "m",
-      "plural": "mutui",
-      "exemplo": "Accendere un mutuo.",
-      "exemplo_pt": "Fazer um financiamento imobiliário.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmutwo/"
-    },
-    {
       "id": "t25_040",
       "italiano": "tassa",
       "portugues": "taxa",
@@ -497,42 +269,6 @@
       "audio_ipa": "/imˈpɔsta/"
     },
     {
-      "id": "t25_042",
-      "italiano": "debito",
-      "portugues": "dívida",
-      "genero": "m",
-      "plural": "debiti",
-      "exemplo": "Avere un grosso debito.",
-      "exemplo_pt": "Ter uma grande dívida.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdebito/"
-    },
-    {
-      "id": "t25_043",
-      "italiano": "credito",
-      "portugues": "crédito",
-      "genero": "m",
-      "plural": "crediti",
-      "exemplo": "Comprare a credito.",
-      "exemplo_pt": "Comprar a crédito.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkredito/"
-    },
-    {
-      "id": "t25_044",
-      "italiano": "portafoglio",
-      "portugues": "carteira",
-      "genero": "m",
-      "plural": "portafogli",
-      "exemplo": "Ho dimenticato il portafoglio.",
-      "exemplo_pt": "Esqueci a carteira.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/portaˈfɔʎʎo/"
-    },
-    {
       "id": "t25_045",
       "italiano": "saldi",
       "portugues": "liquidação",
@@ -543,78 +279,6 @@
       "categoria": "denaro",
       "dificuldade": "medio",
       "audio_ipa": "/ˈsaldi/"
-    },
-    {
-      "id": "t25_046",
-      "italiano": "fattura",
-      "portugues": "fatura",
-      "genero": "f",
-      "plural": "fatture",
-      "exemplo": "Emettere una fattura.",
-      "exemplo_pt": "Emitir uma fatura.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/fatˈtura/"
-    },
-    {
-      "id": "t25_047",
-      "italiano": "busta paga",
-      "portugues": "contracheque",
-      "genero": "f",
-      "plural": "buste paga",
-      "exemplo": "Ricevere la busta paga.",
-      "exemplo_pt": "Receber o contracheque.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbusta ˈpaɡa/"
-    },
-    {
-      "id": "t25_048",
-      "italiano": "stipendio",
-      "portugues": "salário",
-      "genero": "m",
-      "plural": "stipendi",
-      "exemplo": "Uno stipendio molto basso.",
-      "exemplo_pt": "Um salário muito baixo.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/stiˈpɛndjo/"
-    },
-    {
-      "id": "t25_049",
-      "italiano": "salario",
-      "portugues": "salário",
-      "genero": "m",
-      "plural": "salari",
-      "exemplo": "Aumento del salario.",
-      "exemplo_pt": "Aumento do salário.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/saˈlarjo/"
-    },
-    {
-      "id": "t25_050",
-      "italiano": "bilancio",
-      "portugues": "orçamento/balanço",
-      "genero": "m",
-      "plural": "bilanci",
-      "exemplo": "Il bilancio dell'azienda.",
-      "exemplo_pt": "O balanço da empresa.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/biˈlantʃo/"
-    },
-    {
-      "id": "t25_051",
-      "italiano": "azione",
-      "portugues": "ação (financeira)",
-      "genero": "f",
-      "plural": "azioni",
-      "exemplo": "Vendere le azioni in borsa.",
-      "exemplo_pt": "Vender as ações na bolsa.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/atˈtsjone/"
     },
     {
       "id": "t25_052",
@@ -641,18 +305,6 @@
       "audio_ipa": "/proˈdotto/"
     },
     {
-      "id": "t25_054",
-      "italiano": "merce",
-      "portugues": "mercadoria",
-      "genero": "f",
-      "plural": "merci",
-      "exemplo": "Trasportare la merce.",
-      "exemplo_pt": "Transportar a mercadoria.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmɛrtʃe/"
-    },
-    {
       "id": "t25_055",
       "italiano": "articolo",
       "portugues": "artigo",
@@ -675,18 +327,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈmarka/"
-    },
-    {
-      "id": "t25_057",
-      "italiano": "qualità",
-      "portugues": "qualidade",
-      "genero": "f",
-      "plural": "qualità",
-      "exemplo": "La qualità costa.",
-      "exemplo_pt": "A qualidade custa.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/kwaliˈta/"
     },
     {
       "id": "t25_058",
@@ -713,18 +353,6 @@
       "audio_ipa": "/karˈrɛllo/"
     },
     {
-      "id": "t25_060",
-      "italiano": "cestino",
-      "portugues": "cestinha",
-      "genero": "m",
-      "plural": "cestini",
-      "exemplo": "Usa un cestino per la spesa.",
-      "exemplo_pt": "Use uma cestinha para a compra.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/tʃesˈtino/"
-    },
-    {
       "id": "t25_061",
       "italiano": "busta",
       "portugues": "sacola",
@@ -747,30 +375,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈspeza/"
-    },
-    {
-      "id": "t25_063",
-      "italiano": "spese",
-      "portugues": "despesas",
-      "genero": "f",
-      "plural": "spese",
-      "exemplo": "Avere troppe spese.",
-      "exemplo_pt": "Ter demasiadas despesas.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspeze/"
-    },
-    {
-      "id": "t25_064",
-      "italiano": "garanzia",
-      "portugues": "garantia",
-      "genero": "f",
-      "plural": "garanzie",
-      "exemplo": "Il televisore è in garanzia.",
-      "exemplo_pt": "A televisão está na garantia.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡaranˈtsia/"
     },
     {
       "id": "t25_065",
@@ -869,18 +473,6 @@
       "audio_ipa": "/restituˈire/"
     },
     {
-      "id": "t25_073",
-      "italiano": "cambiare",
-      "portugues": "trocar/mudar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Posso cambiare questa maglia?",
-      "exemplo_pt": "Posso trocar esta blusa?",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kamˈbjare/"
-    },
-    {
       "id": "t25_074",
       "italiano": "provare",
       "portugues": "provar",
@@ -903,18 +495,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/vaˈlere/"
-    },
-    {
-      "id": "t25_076",
-      "italiano": "prestare",
-      "portugues": "emprestar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Mi puoi prestare venti euro?",
-      "exemplo_pt": "Você pode me emprestar vinte euros?",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/presˈtare/"
     },
     {
       "id": "t25_077",
@@ -977,18 +557,6 @@
       "audio_ipa": "/kosˈtozo/"
     },
     {
-      "id": "t25_082",
-      "italiano": "caro",
-      "portugues": "caro",
-      "genero": "m",
-      "plural": "cari",
-      "exemplo": "Tutto è così caro oggi.",
-      "exemplo_pt": "Tudo é tão caro hoje.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkaro/"
-    },
-    {
       "id": "t25_083",
       "italiano": "economico",
       "portugues": "barato",
@@ -1023,30 +591,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ɡraˈtuito/"
-    },
-    {
-      "id": "t25_086",
-      "italiano": "caro",
-      "portugues": "prezado (formal)",
-      "genero": "m",
-      "plural": "cari",
-      "exemplo": "Caro cliente.",
-      "exemplo_pt": "Prezado cliente.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkaro/"
-    },
-    {
-      "id": "t25_087",
-      "italiano": "nuovo",
-      "portugues": "novo",
-      "genero": "m",
-      "plural": "nuovi",
-      "exemplo": "Comprato nuovo, mai usato.",
-      "exemplo_pt": "Comprado novo, nunca usado.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈnwɔvo/"
     },
     {
       "id": "t25_088",
@@ -1109,54 +653,6 @@
       "audio_ipa": "/ˈfalso/"
     },
     {
-      "id": "t25_093",
-      "italiano": "profumeria",
-      "portugues": "perfumaria",
-      "genero": "f",
-      "plural": "profumerie",
-      "exemplo": "Andiamo in profumeria a comprare un regalo.",
-      "exemplo_pt": "Vamos à perfumaria comprar um presente.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/profumeˈria/"
-    },
-    {
-      "id": "t25_094",
-      "italiano": "gioielleria",
-      "portugues": "joalheria",
-      "genero": "f",
-      "plural": "gioiellerie",
-      "exemplo": "Ha comprato l'anello in gioielleria.",
-      "exemplo_pt": "Comprou o anel na joalheria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dʒojelleˈria/"
-    },
-    {
-      "id": "t25_095",
-      "italiano": "edicola",
-      "portugues": "banca de jornal",
-      "genero": "f",
-      "plural": "edicole",
-      "exemplo": "Compro il giornale in edicola.",
-      "exemplo_pt": "Compro o jornal na banca.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/eˈdikola/"
-    },
-    {
-      "id": "t25_096",
-      "italiano": "tabaccheria",
-      "portugues": "tabacaria/banca",
-      "genero": "f",
-      "plural": "tabaccherie",
-      "exemplo": "Comprare i biglietti in tabaccheria.",
-      "exemplo_pt": "Comprar as passagens na tabacaria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/tabakkeˈria/"
-    },
-    {
       "id": "t25_097",
       "italiano": "pasticceria",
       "portugues": "confeitaria",
@@ -1181,18 +677,6 @@
       "audio_ipa": "/dʒelateˈria/"
     },
     {
-      "id": "t25_099",
-      "italiano": "cartoleria",
-      "portugues": "papelaria",
-      "genero": "f",
-      "plural": "cartolerie",
-      "exemplo": "Quaderni e penne in cartoleria.",
-      "exemplo_pt": "Cadernos e canetas na papelaria.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kartoleˈria/"
-    },
-    {
       "id": "t25_100",
       "italiano": "ferramenta",
       "portugues": "loja de ferragens",
@@ -1215,18 +699,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈspeza onˈlain/"
-    },
-    {
-      "id": "t25_102",
-      "italiano": "spedizione",
-      "portugues": "frete/envio",
-      "genero": "f",
-      "plural": "spedizioni",
-      "exemplo": "La spedizione è gratuita.",
-      "exemplo_pt": "O frete é grátis.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/speditˈtsjone/"
     },
     {
       "id": "t25_103",
@@ -1289,18 +761,6 @@
       "audio_ipa": "/ˈrezo/"
     },
     {
-      "id": "t25_108",
-      "italiano": "ricevuta",
-      "portugues": "recibo",
-      "genero": "f",
-      "plural": "ricevute",
-      "exemplo": "Ecco la sua ricevuta.",
-      "exemplo_pt": "Aqui está o seu recibo.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ritʃeˈvuta/"
-    },
-    {
       "id": "t25_109",
       "italiano": "titolare",
       "portugues": "dono (da loja)",
@@ -1323,6 +783,510 @@
       "categoria": "denaro",
       "dificuldade": "medio",
       "audio_ipa": "/ˈbadʒɛt/"
+    },
+    {
+      "id": "t25_r06",
+      "italiano": "tasso",
+      "portugues": "taxa / juros",
+      "genero": "m",
+      "plural": "tassi",
+      "exemplo": "Il tasso di interesse è basso.",
+      "exemplo_pt": "A taxa de juros está baixa.",
+      "categoria": "banca",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtasso/"
+    },
+    {
+      "id": "t25_r07",
+      "italiano": "inflazione",
+      "portugues": "inflação",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'inflazione erode il potere d'acquisto.",
+      "exemplo_pt": "A inflação corrói o poder de compra.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/inflaˈtsjoːne/"
+    },
+    {
+      "id": "t25_r08",
+      "italiano": "PIL",
+      "portugues": "PIB",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il PIL è cresciuto del due per cento.",
+      "exemplo_pt": "O PIB cresceu dois por cento.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpil/"
+    },
+    {
+      "id": "t25_r13",
+      "italiano": "ipoteca",
+      "portugues": "hipoteca",
+      "genero": "f",
+      "plural": "ipoteche",
+      "exemplo": "L'ipoteca grava sull'immobile.",
+      "exemplo_pt": "A hipoteca grava o imóvel.",
+      "categoria": "banca",
+      "dificuldade": "medio",
+      "audio_ipa": "/ipoˈtɛːka/"
+    },
+    {
+      "id": "t25_r14",
+      "italiano": "rata",
+      "portugues": "parcela",
+      "genero": "f",
+      "plural": "rate",
+      "exemplo": "Pago la rata del mutuo ogni mese.",
+      "exemplo_pt": "Pago a parcela do financiamento todo mês.",
+      "categoria": "banca",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈraːta/"
+    },
+    {
+      "id": "t25_r15",
+      "italiano": "interesse",
+      "portugues": "juros",
+      "genero": "m",
+      "plural": "interessi",
+      "exemplo": "Gli interessi sono alti quest'anno.",
+      "exemplo_pt": "Os juros estão altos este ano.",
+      "categoria": "banca",
+      "dificuldade": "medio",
+      "audio_ipa": "/inteˈrɛsse/"
+    },
+    {
+      "id": "t25_r18",
+      "italiano": "rendimento",
+      "portugues": "rendimento",
+      "genero": "m",
+      "plural": "rendimenti",
+      "exemplo": "Il rendimento del fondo è del 5%.",
+      "exemplo_pt": "O rendimento do fundo é de 5%.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/rendiˈmento/"
+    },
+    {
+      "id": "t25_r24",
+      "italiano": "acconto",
+      "portugues": "sinal / entrada",
+      "genero": "m",
+      "plural": "acconti",
+      "exemplo": "Ho versato un acconto del 30%.",
+      "exemplo_pt": "Dei um sinal de 30%.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/akˈkonto/"
+    },
+    {
+      "id": "t25_r25",
+      "italiano": "caparra",
+      "portugues": "caução / sinal",
+      "genero": "f",
+      "plural": "caparre",
+      "exemplo": "La caparra è di mille euro.",
+      "exemplo_pt": "A caução é de mil euros.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/kaˈparra/"
+    },
+    {
+      "id": "t25_r26",
+      "italiano": "commissione",
+      "portugues": "comissão",
+      "genero": "f",
+      "plural": "commissioni",
+      "exemplo": "La commissione è del 3%.",
+      "exemplo_pt": "A comissão é de 3%.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/kommisˈsjoːne/"
+    },
+    {
+      "id": "t25_r27",
+      "italiano": "provvigione",
+      "portugues": "comissão de venda",
+      "genero": "f",
+      "plural": "provvigioni",
+      "exemplo": "La provvigione del venditore è alta.",
+      "exemplo_pt": "A comissão do vendedor é alta.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/provviˈdʒoːne/"
+    },
+    {
+      "id": "t25_r28",
+      "italiano": "previdenza",
+      "portugues": "previdência",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La previdenza sociale è obbligatoria.",
+      "exemplo_pt": "A previdência social é obrigatória.",
+      "categoria": "lavoro",
+      "dificuldade": "medio",
+      "audio_ipa": "/previˈdɛntsa/"
+    },
+    {
+      "id": "t25_r30",
+      "italiano": "contributo",
+      "portugues": "contribuição",
+      "genero": "m",
+      "plural": "contributi",
+      "exemplo": "Verso i contributi ogni mese.",
+      "exemplo_pt": "Pago as contribuições todo mês.",
+      "categoria": "lavoro",
+      "dificuldade": "medio",
+      "audio_ipa": "/kontriˈbuːto/"
+    },
+    {
+      "id": "t25_r31",
+      "italiano": "fondo",
+      "portugues": "fundo",
+      "genero": "m",
+      "plural": "fondi",
+      "exemplo": "Investo in un fondo pensione.",
+      "exemplo_pt": "Invisto em um fundo de pensão.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈfondo/"
+    },
+    {
+      "id": "t25_r32",
+      "italiano": "liquidità",
+      "portugues": "liquidez",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La liquidità dell'azienda è buona.",
+      "exemplo_pt": "A liquidez da empresa é boa.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/likwiˈdita/"
+    },
+    {
+      "id": "t25_r33",
+      "italiano": "bancarotta",
+      "portugues": "falência",
+      "genero": "f",
+      "plural": "bancarotte",
+      "exemplo": "L'azienda ha dichiarato bancarotta.",
+      "exemplo_pt": "A empresa declarou falência.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/bankaˈrotta/"
+    },
+    {
+      "id": "t25_r34",
+      "italiano": "fallimento",
+      "portugues": "falência / fracasso",
+      "genero": "m",
+      "plural": "fallimenti",
+      "exemplo": "Il fallimento è stato evitato.",
+      "exemplo_pt": "A falência foi evitada.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/falliˈmento/"
+    },
+    {
+      "id": "t25_r35",
+      "italiano": "fusione",
+      "portugues": "fusão",
+      "genero": "f",
+      "plural": "fusioni",
+      "exemplo": "La fusione delle due banche è completa.",
+      "exemplo_pt": "A fusão dos dois bancos está completa.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/fuˈzjoːne/"
+    },
+    {
+      "id": "t25_s01",
+      "italiano": "monopolio",
+      "portugues": "monopólio",
+      "genero": "m",
+      "plural": "monopoli",
+      "exemplo": "Il monopolio danneggia il mercato.",
+      "exemplo_pt": "O monopólio prejudica o mercado.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/monoˈpɔːljo/"
+    },
+    {
+      "id": "t25_s02",
+      "italiano": "oligopolio",
+      "portugues": "oligopólio",
+      "genero": "m",
+      "plural": "oligopoli",
+      "exemplo": "L'oligopolio limita la concorrenza.",
+      "exemplo_pt": "O oligopólio limita a concorrência.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/oliɡoˈpɔːljo/"
+    },
+    {
+      "id": "t25_s04",
+      "italiano": "domanda",
+      "portugues": "demanda / procura",
+      "genero": "f",
+      "plural": "domande",
+      "exemplo": "La domanda di case è alta.",
+      "exemplo_pt": "A demanda por casas está alta.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/doˈmanda/"
+    },
+    {
+      "id": "t25_s06",
+      "italiano": "surplus",
+      "portugues": "superávit",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il surplus commerciale è record.",
+      "exemplo_pt": "O superávit comercial é recorde.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsurplus/"
+    },
+    {
+      "id": "t25_s07",
+      "italiano": "deficit",
+      "portugues": "déficit",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il deficit di bilancio è preoccupante.",
+      "exemplo_pt": "O déficit orçamentário é preocupante.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdɛːfiʧit/"
+    },
+    {
+      "id": "t25_s10",
+      "italiano": "ricavo",
+      "portugues": "receita / faturamento",
+      "genero": "m",
+      "plural": "ricavi",
+      "exemplo": "Il ricavo mensile è aumentato.",
+      "exemplo_pt": "O faturamento mensal aumentou.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/riˈkaːvo/"
+    },
+    {
+      "id": "t25_s11",
+      "italiano": "costo",
+      "portugues": "custo",
+      "genero": "m",
+      "plural": "costi",
+      "exemplo": "Il costo di produzione è basso.",
+      "exemplo_pt": "O custo de produção está baixo.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔsto/"
+    },
+    {
+      "id": "t25_s12",
+      "italiano": "marge",
+      "portugues": "margem",
+      "genero": "m",
+      "plural": "margini",
+      "exemplo": "Il margine di profitto è del 20%.",
+      "exemplo_pt": "A margem de lucro é de 20%.",
+      "categoria": "economia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmardʒine/"
+    },
+    {
+      "id": "t25_s13",
+      "italiano": "importazione",
+      "portugues": "importação",
+      "genero": "f",
+      "plural": "importazioni",
+      "exemplo": "L'importazione di petrolio è costosa.",
+      "exemplo_pt": "A importação de petróleo é custosa.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/importaˈtsjoːne/"
+    },
+    {
+      "id": "t25_s14",
+      "italiano": "esportazione",
+      "portugues": "exportação",
+      "genero": "f",
+      "plural": "esportazioni",
+      "exemplo": "L'esportazione di vino è in crescita.",
+      "exemplo_pt": "A exportação de vinho está crescendo.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/esportaˈtsjoːne/"
+    },
+    {
+      "id": "t25_s15",
+      "italiano": "dazio",
+      "portugues": "imposto alfandegário",
+      "genero": "m",
+      "plural": "dazi",
+      "exemplo": "Il dazio doganale è del 10%.",
+      "exemplo_pt": "O imposto alfandegário é de 10%.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdaːtsjo/"
+    },
+    {
+      "id": "t25_s16",
+      "italiano": "embargo",
+      "portugues": "embargo",
+      "genero": "m",
+      "plural": "embargo",
+      "exemplo": "L'embargo ha bloccato le esportazioni.",
+      "exemplo_pt": "O embargo bloqueou as exportações.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/emˈbarɡo/"
+    },
+    {
+      "id": "t25_s17",
+      "italiano": "franchising",
+      "portugues": "franquia",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Gestisco un franchising di successo.",
+      "exemplo_pt": "Gerencio uma franquia de sucesso.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈfrantʃajziŋ/"
+    },
+    {
+      "id": "t25_s18",
+      "italiano": "marchio",
+      "portugues": "marca",
+      "genero": "m",
+      "plural": "marchi",
+      "exemplo": "Il marchio è registrato.",
+      "exemplo_pt": "A marca está registrada.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmarkjo/"
+    },
+    {
+      "id": "t25_s19",
+      "italiano": "brevetto",
+      "portugues": "patente",
+      "genero": "m",
+      "plural": "brevetti",
+      "exemplo": "Il brevetto protegge l'invenzione.",
+      "exemplo_pt": "A patente protege a invenção.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/breˈvetto/"
+    },
+    {
+      "id": "t25_s20",
+      "italiano": "copyright",
+      "portugues": "direitos autorais",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il copyright dura settant'anni.",
+      "exemplo_pt": "Os direitos autorais duram setenta anos.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈkɔpiraɪt/"
+    },
+    {
+      "id": "t25_s21",
+      "italiano": "royalty",
+      "portugues": "royalties",
+      "genero": "f",
+      "plural": "royalty",
+      "exemplo": "Le royalty sono il 5% delle vendite.",
+      "exemplo_pt": "As royalties são 5% das vendas.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈrɔjalti/"
+    },
+    {
+      "id": "t25_s22",
+      "italiano": "appalto",
+      "portugues": "licitação / contrato",
+      "genero": "m",
+      "plural": "appalti",
+      "exemplo": "Vince l'appalto la ditta più economica.",
+      "exemplo_pt": "A empresa mais econômica ganha a licitação.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/apˈpalto/"
+    },
+    {
+      "id": "t25_s23",
+      "italiano": "gara",
+      "portugues": "licitação / competição",
+      "genero": "f",
+      "plural": "gare",
+      "exemplo": "La gara è aperta a tutte le aziende.",
+      "exemplo_pt": "A licitação está aberta a todas as empresas.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɡaːra/"
+    },
+    {
+      "id": "t25_s24",
+      "italiano": "asta",
+      "portugues": "leilão",
+      "genero": "f",
+      "plural": "aste",
+      "exemplo": "Il quadro è venduto all'asta.",
+      "exemplo_pt": "O quadro é vendido em leilão.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈasta/"
+    },
+    {
+      "id": "t25_s25",
+      "italiano": "ribasso",
+      "portugues": "baixa / desconto",
+      "genero": "m",
+      "plural": "ribassi",
+      "exemplo": "Il ribasso dei prezzi attira clienti.",
+      "exemplo_pt": "A queda nos preços atrai clientes.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/riˈbasso/"
+    },
+    {
+      "id": "t25_s26",
+      "italiano": "rincaro",
+      "portugues": "alta de preços",
+      "genero": "m",
+      "plural": "rincari",
+      "exemplo": "Il rincaro del carburante pesa.",
+      "exemplo_pt": "A alta do combustível pesa.",
+      "categoria": "commercio",
+      "dificuldade": "medio",
+      "audio_ipa": "/rinˈkaːro/"
+    },
+    {
+      "id": "t25_f01",
+      "italiano": "tasso di interesse reale",
+      "portugues": "taxa de juros real",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il tasso reale aggiusta per l'inflazione.",
+      "exemplo_pt": "A taxa real ajusta para a inflação.",
+      "categoria": "banca",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈtasso di inteˈrɛsse reˈaːle/"
+    },
+    {
+      "id": "t25_f02",
+      "italiano": "rendimento a scadenza",
+      "portugues": "rendimento ao vencimento",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il rendimento a scadenza è del 4%.",
+      "exemplo_pt": "O rendimento ao vencimento é de 4%.",
+      "categoria": "finanza",
+      "dificuldade": "medio",
+      "audio_ipa": "/rendiˈmento a skaˈdɛntsa/"
     }
   ]
 }

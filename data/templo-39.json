@@ -5,42 +5,6 @@
   "nivel": "C1",
   "palavras": [
     {
-      "id": "t39_001",
-      "italiano": "universo",
-      "portugues": "universo",
-      "genero": "m",
-      "plural": "universi",
-      "exemplo": "L'origine dell'universo.",
-      "exemplo_pt": "A origem do universo.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/uniˈvɛrso/"
-    },
-    {
-      "id": "t39_002",
-      "italiano": "spazio",
-      "portugues": "espaço",
-      "genero": "m",
-      "plural": "spazi",
-      "exemplo": "Viaggiare nello spazio.",
-      "exemplo_pt": "Viajar no espaço.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspattsjo/"
-    },
-    {
-      "id": "t39_003",
-      "italiano": "galassia",
-      "portugues": "galáxia",
-      "genero": "f",
-      "plural": "galassie",
-      "exemplo": "La galassia lontana.",
-      "exemplo_pt": "A galáxia distante.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡaˈlassja/"
-    },
-    {
       "id": "t39_004",
       "italiano": "via lattea",
       "portugues": "via láctea",
@@ -63,66 +27,6 @@
       "categoria": "spazio",
       "dificuldade": "medio",
       "audio_ipa": "/sisˈtɛma soˈlare/"
-    },
-    {
-      "id": "t39_006",
-      "italiano": "stella",
-      "portugues": "estrela",
-      "genero": "f",
-      "plural": "stelle",
-      "exemplo": "Una stella cadente.",
-      "exemplo_pt": "Uma estrela cadente.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstella/"
-    },
-    {
-      "id": "t39_007",
-      "italiano": "sole",
-      "portugues": "sol",
-      "genero": "m",
-      "plural": "soli",
-      "exemplo": "Il sole sorge.",
-      "exemplo_pt": "O sol nasce.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsole/"
-    },
-    {
-      "id": "t39_008",
-      "italiano": "luna",
-      "portugues": "lua",
-      "genero": "f",
-      "plural": "lune",
-      "exemplo": "La luna piena.",
-      "exemplo_pt": "A lua cheia.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈluna/"
-    },
-    {
-      "id": "t39_009",
-      "italiano": "pianeta",
-      "portugues": "planeta",
-      "genero": "m",
-      "plural": "pianeti",
-      "exemplo": "Il pianeta rosso.",
-      "exemplo_pt": "O planeta vermelho.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/pjaˈneta/"
-    },
-    {
-      "id": "t39_010",
-      "italiano": "terra",
-      "portugues": "terra",
-      "genero": "f",
-      "plural": "terre",
-      "exemplo": "Il pianeta Terra.",
-      "exemplo_pt": "O planeta Terra.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtɛrra/"
     },
     {
       "id": "t39_011",
@@ -159,30 +63,6 @@
       "categoria": "spazio",
       "dificuldade": "medio",
       "audio_ipa": "/saˈturno/"
-    },
-    {
-      "id": "t39_014",
-      "italiano": "orbita",
-      "portugues": "órbita",
-      "genero": "f",
-      "plural": "orbite",
-      "exemplo": "Entrare in orbita.",
-      "exemplo_pt": "Entrar em órbita.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɔrbita/"
-    },
-    {
-      "id": "t39_015",
-      "italiano": "satellite",
-      "portugues": "satélite",
-      "genero": "m",
-      "plural": "satelliti",
-      "exemplo": "Il satellite artificiale.",
-      "exemplo_pt": "O satélite artificial.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/saˈtɛllite/"
     },
     {
       "id": "t39_016",
@@ -281,54 +161,6 @@
       "audio_ipa": "/eˈklissi/"
     },
     {
-      "id": "t39_024",
-      "italiano": "gravità",
-      "portugues": "gravidade",
-      "genero": "f",
-      "plural": "gravità",
-      "exemplo": "L'assenza di gravità.",
-      "exemplo_pt": "A ausência de gravidade.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡraviˈta/"
-    },
-    {
-      "id": "t39_025",
-      "italiano": "vuoto",
-      "portugues": "vácuo",
-      "genero": "m",
-      "plural": "vuoti",
-      "exemplo": "Il vuoto cosmico.",
-      "exemplo_pt": "O vácuo cósmico.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvwɔto/"
-    },
-    {
-      "id": "t39_026",
-      "italiano": "luce",
-      "portugues": "luz",
-      "genero": "f",
-      "plural": "luci",
-      "exemplo": "L'anno luce.",
-      "exemplo_pt": "O ano-luz.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlutʃe/"
-    },
-    {
-      "id": "t39_027",
-      "italiano": "materia",
-      "portugues": "matéria",
-      "genero": "f",
-      "plural": "materie",
-      "exemplo": "La materia oscura.",
-      "exemplo_pt": "A matéria escura.",
-      "categoria": "spazio",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈtɛrja/"
-    },
-    {
       "id": "t39_028",
       "italiano": "polvere",
       "portugues": "poeira",
@@ -351,18 +183,6 @@
       "categoria": "spazio",
       "dificuldade": "medio",
       "audio_ipa": "/radjatˈtsjone/"
-    },
-    {
-      "id": "t39_030",
-      "italiano": "astronauta",
-      "portugues": "astronauta",
-      "genero": "m/f",
-      "plural": "astronauti",
-      "exemplo": "L'astronauta fluttua.",
-      "exemplo_pt": "O astronauta flutua.",
-      "categoria": "esplorazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/astroˈnauta/"
     },
     {
       "id": "t39_031",
@@ -401,18 +221,6 @@
       "audio_ipa": "/astroˈnave/"
     },
     {
-      "id": "t39_034",
-      "italiano": "razzo",
-      "portugues": "foguete",
-      "genero": "m",
-      "plural": "razzi",
-      "exemplo": "Il lancio del razzo.",
-      "exemplo_pt": "O lançamento do foguete.",
-      "categoria": "esplorazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈraddzo/"
-    },
-    {
       "id": "t39_035",
       "italiano": "missile",
       "portugues": "míssil/foguete",
@@ -449,18 +257,6 @@
       "audio_ipa": "/ˈrover/"
     },
     {
-      "id": "t39_038",
-      "italiano": "telescopio",
-      "portugues": "telescópio",
-      "genero": "m",
-      "plural": "telescopi",
-      "exemplo": "Il telescopio spaziale Hubble.",
-      "exemplo_pt": "O telescópio espacial Hubble.",
-      "categoria": "esplorazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/telesˈkɔpjo/"
-    },
-    {
       "id": "t39_039",
       "italiano": "osservatorio",
       "portugues": "observatório",
@@ -483,18 +279,6 @@
       "categoria": "esplorazione",
       "dificuldade": "medio",
       "audio_ipa": "/ˈbaze/"
-    },
-    {
-      "id": "t39_041",
-      "italiano": "stazione",
-      "portugues": "estação",
-      "genero": "f",
-      "plural": "stazioni",
-      "exemplo": "La Stazione Spaziale Internazionale.",
-      "exemplo_pt": "A Estação Espacial Internacional.",
-      "categoria": "esplorazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/statˈtsjone/"
     },
     {
       "id": "t39_042",
@@ -581,18 +365,6 @@
       "audio_ipa": "/ˈtuta/"
     },
     {
-      "id": "t39_049",
-      "italiano": "casco",
-      "portugues": "capacete",
-      "genero": "m",
-      "plural": "caschi",
-      "exemplo": "Il casco dell'astronauta.",
-      "exemplo_pt": "O capacete do astronauta.",
-      "categoria": "esplorazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkasko/"
-    },
-    {
       "id": "t39_050",
       "italiano": "alieno",
       "portugues": "alienígena",
@@ -629,18 +401,6 @@
       "audio_ipa": "/ˈufo/"
     },
     {
-      "id": "t39_053",
-      "italiano": "astronomia",
-      "portugues": "astronomia",
-      "genero": "f",
-      "plural": "astronomie",
-      "exemplo": "Studiare l'astronomia.",
-      "exemplo_pt": "Estudar a astronomia.",
-      "categoria": "scienze",
-      "dificuldade": "medio",
-      "audio_ipa": "/astronoˈmia/"
-    },
-    {
       "id": "t39_054",
       "italiano": "astrofisica",
       "portugues": "astrofísica",
@@ -665,66 +425,6 @@
       "audio_ipa": "/kozmoloˈdʒia/"
     },
     {
-      "id": "t39_056",
-      "italiano": "fisica",
-      "portugues": "física",
-      "genero": "f",
-      "plural": "fisiche",
-      "exemplo": "Le leggi della fisica.",
-      "exemplo_pt": "As leis da física.",
-      "categoria": "scienze",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfizika/"
-    },
-    {
-      "id": "t39_057",
-      "italiano": "matematica",
-      "portugues": "matemática",
-      "genero": "f",
-      "plural": "matematiche",
-      "exemplo": "Calcoli di matematica.",
-      "exemplo_pt": "Cálculos de matemática.",
-      "categoria": "scienze",
-      "dificuldade": "medio",
-      "audio_ipa": "/mateˈmatika/"
-    },
-    {
-      "id": "t39_058",
-      "italiano": "osservare",
-      "portugues": "observar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Osservare le stelle.",
-      "exemplo_pt": "Observar as estrelas.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/osserˈvare/"
-    },
-    {
-      "id": "t39_059",
-      "italiano": "scoprire",
-      "portugues": "descobrir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scoprire un nuovo pianeta.",
-      "exemplo_pt": "Descobrir um novo planeta.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skoˈprire/"
-    },
-    {
-      "id": "t39_060",
-      "italiano": "esplorare",
-      "portugues": "explorar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Esplorare lo spazio.",
-      "exemplo_pt": "Explorar o espaço.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/esploˈrare/"
-    },
-    {
       "id": "t39_061",
       "italiano": "lanciare",
       "portugues": "lançar",
@@ -735,30 +435,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/lanˈtʃare/"
-    },
-    {
-      "id": "t39_062",
-      "italiano": "decollare",
-      "portugues": "decolar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il razzo decolla alle tre.",
-      "exemplo_pt": "O foguete decola às três.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/dekolˈlare/"
-    },
-    {
-      "id": "t39_063",
-      "italiano": "atterrare",
-      "portugues": "aterrissar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Atterrare su Marte.",
-      "exemplo_pt": "Aterrissar em Marte.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/atterˈrare/"
     },
     {
       "id": "t39_064",
@@ -797,30 +473,6 @@
       "audio_ipa": "/rwoˈtare/"
     },
     {
-      "id": "t39_067",
-      "italiano": "splendere",
-      "portugues": "brilhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il sole splende.",
-      "exemplo_pt": "O sol brilha.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsplɛndere/"
-    },
-    {
-      "id": "t39_068",
-      "italiano": "brillare",
-      "portugues": "brilhar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Le stelle brillano.",
-      "exemplo_pt": "As estrelas brilham.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/brilˈlare/"
-    },
-    {
       "id": "t39_069",
       "italiano": "cadere",
       "portugues": "cair",
@@ -831,18 +483,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/kaˈdere/"
-    },
-    {
-      "id": "t39_070",
-      "italiano": "viaggiare",
-      "portugues": "viajar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Viaggiare nel tempo.",
-      "exemplo_pt": "Viajar no tempo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/vjadˈdʒare/"
     },
     {
       "id": "t39_071",
@@ -905,18 +545,6 @@
       "audio_ipa": "/stelˈlare/"
     },
     {
-      "id": "t39_076",
-      "italiano": "solare",
-      "portugues": "solar",
-      "genero": "m",
-      "plural": "solari",
-      "exemplo": "Eclissi solare.",
-      "exemplo_pt": "Eclipse solar.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/soˈlare/"
-    },
-    {
       "id": "t39_077",
       "italiano": "lunare",
       "portugues": "lunar",
@@ -953,18 +581,6 @@
       "audio_ipa": "/astroˈnɔmiko/"
     },
     {
-      "id": "t39_080",
-      "italiano": "alieno",
-      "portugues": "alienígena (adj)",
-      "genero": "m",
-      "plural": "alieni",
-      "exemplo": "Una forma di vita aliena.",
-      "exemplo_pt": "Uma forma de vida alienígena.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/aˈljɛno/"
-    },
-    {
       "id": "t39_081",
       "italiano": "infinito",
       "portugues": "infinito",
@@ -989,42 +605,6 @@
       "audio_ipa": "/imˈmɛnso/"
     },
     {
-      "id": "t39_083",
-      "italiano": "lontano",
-      "portugues": "distante/longe",
-      "genero": "m",
-      "plural": "lontani",
-      "exemplo": "Una galassia lontana.",
-      "exemplo_pt": "Uma galáxia distante.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/lonˈtano/"
-    },
-    {
-      "id": "t39_084",
-      "italiano": "vicino",
-      "portugues": "próximo/perto",
-      "genero": "m",
-      "plural": "vicini",
-      "exemplo": "La stella più vicina.",
-      "exemplo_pt": "A estrela mais próxima.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/viˈtʃino/"
-    },
-    {
-      "id": "t39_085",
-      "italiano": "luminoso",
-      "portugues": "luminoso",
-      "genero": "m",
-      "plural": "luminosi",
-      "exemplo": "Un corpo luminoso.",
-      "exemplo_pt": "Um corpo luminoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/lumiˈnozo/"
-    },
-    {
       "id": "t39_086",
       "italiano": "oscuro",
       "portugues": "escuro/obscuro",
@@ -1035,18 +615,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/osˈkuro/"
-    },
-    {
-      "id": "t39_087",
-      "italiano": "vuoto",
-      "portugues": "vazio",
-      "genero": "m",
-      "plural": "vuoti",
-      "exemplo": "Il profondo vuoto.",
-      "exemplo_pt": "O profundo vazio.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvwɔto/"
     },
     {
       "id": "t39_088",
@@ -1083,30 +651,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ledˈdʒɛro/"
-    },
-    {
-      "id": "t39_091",
-      "italiano": "caldo",
-      "portugues": "quente",
-      "genero": "m",
-      "plural": "caldi",
-      "exemplo": "Una stella caldissima.",
-      "exemplo_pt": "Uma estrela muito quente.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkaldo/"
-    },
-    {
-      "id": "t39_092",
-      "italiano": "freddo",
-      "portugues": "frio",
-      "genero": "m",
-      "plural": "freddi",
-      "exemplo": "Il freddo dello spazio.",
-      "exemplo_pt": "O frio do espaço.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfreddo/"
     },
     {
       "id": "t39_093",
@@ -1323,6 +867,426 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ɡaˈlattiko/"
+    },
+    {
+      "id": "t39_r05",
+      "italiano": "anno luce",
+      "portugues": "ano-luz",
+      "genero": "m",
+      "plural": "anni luce",
+      "exemplo": "La stella è a dieci anni luce.",
+      "exemplo_pt": "A estrela está a dez anos-luz.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈanno ˈluːtʃe/"
+    },
+    {
+      "id": "t39_r08",
+      "italiano": "rotazione",
+      "portugues": "rotação",
+      "genero": "f",
+      "plural": "rotazioni",
+      "exemplo": "La rotazione terrestre causa il giorno.",
+      "exemplo_pt": "A rotação terrestre causa o dia.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/rotaˈttsjoːne/"
+    },
+    {
+      "id": "t39_r10",
+      "italiano": "solstizio",
+      "portugues": "solstício",
+      "genero": "m",
+      "plural": "solstizi",
+      "exemplo": "Il solstizio d'estate è il 21 giugno.",
+      "exemplo_pt": "O solstício de verão é em 21 de junho.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/solˈstittsjo/"
+    },
+    {
+      "id": "t39_r11",
+      "italiano": "equinozio",
+      "portugues": "equinócio",
+      "genero": "m",
+      "plural": "equinozi",
+      "exemplo": "L'equinozio di primavera è il 21 marzo.",
+      "exemplo_pt": "O equinócio da primavera é em 21 de março.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ekwiˈnɔttsjo/"
+    },
+    {
+      "id": "t39_r14",
+      "italiano": "sonda spaziale",
+      "portugues": "sonda espacial",
+      "genero": "f",
+      "plural": "sonde spaziali",
+      "exemplo": "La sonda spaziale ha raggiunto Marte.",
+      "exemplo_pt": "A sonda espacial chegou a Marte.",
+      "categoria": "esplorazione",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsɔnda spatˈtsjaːle/"
+    },
+    {
+      "id": "t39_r17",
+      "italiano": "stazione spaziale",
+      "portugues": "estação espacial",
+      "genero": "f",
+      "plural": "stazioni spaziali",
+      "exemplo": "La stazione spaziale orbita a 400 km.",
+      "exemplo_pt": "A estação espacial orbita a 400 km.",
+      "categoria": "esplorazione",
+      "dificuldade": "medio",
+      "audio_ipa": "/staˈttsjoːne spatˈtsjaːle/"
+    },
+    {
+      "id": "t39_r19",
+      "italiano": "modulo lunare",
+      "portugues": "módulo lunar",
+      "genero": "m",
+      "plural": "moduli lunari",
+      "exemplo": "Il modulo lunare scese sulla Luna.",
+      "exemplo_pt": "O módulo lunar desceu na Lua.",
+      "categoria": "esplorazione",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈmɔːdulo luˈnaːre/"
+    },
+    {
+      "id": "t39_r20",
+      "italiano": "materia oscura",
+      "portugues": "matéria escura",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La materia oscura è invisibile.",
+      "exemplo_pt": "A matéria escura é invisível.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/maˈtɛːrja ˈoskuːra/"
+    },
+    {
+      "id": "t39_r21",
+      "italiano": "energia oscura",
+      "portugues": "energia escura",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'energia oscura accelera l'espansione.",
+      "exemplo_pt": "A energia escura acelera a expansão.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/eneˈrdʒiːa ˈoskuːra/"
+    },
+    {
+      "id": "t39_r22",
+      "italiano": "big bang",
+      "portugues": "big bang",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il Big Bang fu l'origine dell'universo.",
+      "exemplo_pt": "O Big Bang foi a origem do universo.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/biɡ baŋ/"
+    },
+    {
+      "id": "t39_r23",
+      "italiano": "espansione dell'universo",
+      "portugues": "expansão do universo",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'espansione dell'universo accelera.",
+      "exemplo_pt": "A expansão do universo está acelerando.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/espanˈzjoːne dellunˈivɛrso/"
+    },
+    {
+      "id": "t39_r24",
+      "italiano": "legge di Hubble",
+      "portugues": "lei de Hubble",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La legge di Hubble descrive l'espansione.",
+      "exemplo_pt": "A lei de Hubble descreve a expansão.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈleddʒe di ˈabəl/"
+    },
+    {
+      "id": "t39_r26",
+      "italiano": "satellite naturale",
+      "portugues": "satélite natural",
+      "genero": "m",
+      "plural": "satelliti naturali",
+      "exemplo": "La Luna è il satellite naturale della Terra.",
+      "exemplo_pt": "A Lua é o satélite natural da Terra.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/satelˈliːte natuˈraːle/"
+    },
+    {
+      "id": "t39_r29",
+      "italiano": "stella di neutroni",
+      "portugues": "estrela de nêutrons",
+      "genero": "f",
+      "plural": "stelle di neutroni",
+      "exemplo": "La stella di neutroni è densa.",
+      "exemplo_pt": "A estrela de nêutrons é densa.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈstɛlla di neuˈtroːni/"
+    },
+    {
+      "id": "t39_r30",
+      "italiano": "radiotelescopio",
+      "portugues": "radiotelescópio",
+      "genero": "m",
+      "plural": "radiotelescopi",
+      "exemplo": "Il radiotelescopio capta le onde radio.",
+      "exemplo_pt": "O radiotelescópio capta as ondas de rádio.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/radioˈtɛlesˈkɔːpjo/"
+    },
+    {
+      "id": "t39_r31",
+      "italiano": "zona abitabile",
+      "portugues": "zona habitável",
+      "genero": "f",
+      "plural": "zone abitabili",
+      "exemplo": "La zona abitabile ospita la vita.",
+      "exemplo_pt": "A zona habitável abriga a vida.",
+      "categoria": "astrobiologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈdzoːna abiˈtaːbile/"
+    },
+    {
+      "id": "t39_r32",
+      "italiano": "esopianeta",
+      "portugues": "exoplaneta",
+      "genero": "m",
+      "plural": "esopianeti",
+      "exemplo": "L'esopianeta orbita attorno a un'altra stella.",
+      "exemplo_pt": "O exoplaneta orbita ao redor de outra estrela.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ezoˈpjanɛːta/"
+    },
+    {
+      "id": "t39_r33",
+      "italiano": "vita extraterrestre",
+      "portugues": "vida extraterrestre",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La vita extraterrestre è ancora ipotetica.",
+      "exemplo_pt": "A vida extraterrestre ainda é hipotética.",
+      "categoria": "astrobiologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈviːta ɛkstrateˈrɛstre/"
+    },
+    {
+      "id": "t39_r34",
+      "italiano": "SETI",
+      "portugues": "SETI",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il SETI cerca segnali alieni.",
+      "exemplo_pt": "O SETI busca sinais alienígenas.",
+      "categoria": "astrobiologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈsɛti/"
+    },
+    {
+      "id": "t39_r35",
+      "italiano": "turismo spaziale",
+      "portugues": "turismo espacial",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il turismo spaziale è agli inizi.",
+      "exemplo_pt": "O turismo espacial está nos primórdios.",
+      "categoria": "esplorazione",
+      "dificuldade": "medio",
+      "audio_ipa": "/tuˈrizmo spatˈtsjaːle/"
+    },
+    {
+      "id": "t39_r36",
+      "italiano": "colonizzazione di Marte",
+      "portugues": "colonização de Marte",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La colonizzazione di Marte è pianificata.",
+      "exemplo_pt": "A colonização de Marte está planejada.",
+      "categoria": "esplorazione",
+      "dificuldade": "medio",
+      "audio_ipa": "/koloniddzaˈttsjoːne di ˈmaːrte/"
+    },
+    {
+      "id": "t39_r37",
+      "italiano": "telescopio James Webb",
+      "portugues": "telescópio James Webb",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il telescopio Webb osserva galassie lontane.",
+      "exemplo_pt": "O telescópio Webb observa galáxias distantes.",
+      "categoria": "strumenti",
+      "dificuldade": "medio",
+      "audio_ipa": "/telesˈkɔːpjo ˈdʒeɪmz wɛb/"
+    },
+    {
+      "id": "t39_r39",
+      "italiano": "relatività generale",
+      "portugues": "relatividade geral",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La relatività generale descrive la gravità.",
+      "exemplo_pt": "A relatividade geral descreve a gravidade.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/relativiˈta dʒeneˈraːle/"
+    },
+    {
+      "id": "t39_r40",
+      "italiano": "onda gravitazionale",
+      "portugues": "onda gravitacional",
+      "genero": "f",
+      "plural": "onde gravitazionali",
+      "exemplo": "Le onde gravitazionali rivelano i buchi neri.",
+      "exemplo_pt": "As ondas gravitacionais revelam os buracos negros.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈɔnda ɡravitaˈttsjoːnaːle/"
+    },
+    {
+      "id": "t39_p04",
+      "italiano": "magnitudine",
+      "portugues": "magnitude",
+      "genero": "f",
+      "plural": "magnitudini",
+      "exemplo": "La magnitudine misura la luminosità.",
+      "exemplo_pt": "A magnitude mede o brilho.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/maɲɲiˈtuːdine/"
+    },
+    {
+      "id": "t39_p05",
+      "italiano": "spettroscopia",
+      "portugues": "espectroscopia",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La spettroscopia analizza la luce stellare.",
+      "exemplo_pt": "A espectroscopia analisa a luz estelar.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/spettroskɔˈpiːa/"
+    },
+    {
+      "id": "t39_p06",
+      "italiano": "radiazione cosmica di fondo",
+      "portugues": "radiação cósmica de fundo",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La radiazione di fondo è eco del Big Bang.",
+      "exemplo_pt": "A radiação de fundo é eco do Big Bang.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/radjaˈttsjoːne ˈkɔzmika di ˈfondo/"
+    },
+    {
+      "id": "t39_p07",
+      "italiano": "espansione accelerata",
+      "portugues": "expansão acelerada",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'espansione accelerata dell'universo.",
+      "exemplo_pt": "A expansão acelerada do universo.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/espanˈzjoːne attʃeleˈraːta/"
+    },
+    {
+      "id": "t39_p08",
+      "italiano": "costante cosmologica",
+      "portugues": "constante cosmológica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La costante cosmologica è di Einstein.",
+      "exemplo_pt": "A constante cosmológica é de Einstein.",
+      "categoria": "cosmologia",
+      "dificuldade": "medio",
+      "audio_ipa": "/kosˈtante kozmoloˈdʒiːka/"
+    },
+    {
+      "id": "t39_p09",
+      "italiano": "effetto Doppler",
+      "portugues": "efeito Doppler",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'effetto Doppler sposta le frequenze.",
+      "exemplo_pt": "O efeito Doppler desloca as frequências.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/efˈfetto ˈdɔppler/"
+    },
+    {
+      "id": "t39_p10",
+      "italiano": "redshift",
+      "portugues": "desvio para o vermelho",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il redshift indica l'allontanamento.",
+      "exemplo_pt": "O desvio indica o afastamento.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈrɛdʃift/"
+    },
+    {
+      "id": "t39_p11",
+      "italiano": "orizzonte degli eventi",
+      "portugues": "horizonte de eventos",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'orizzonte degli eventi è il limite.",
+      "exemplo_pt": "O horizonte de eventos é o limite.",
+      "categoria": "fisica",
+      "dificuldade": "medio",
+      "audio_ipa": "/oriˈdzonte deʎʎi eˈvɛnti/"
+    },
+    {
+      "id": "t39_f01",
+      "italiano": "spettroscopia astronomica",
+      "portugues": "espectroscopia astronômica",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La spettroscopia rivela la composizione stellare.",
+      "exemplo_pt": "A espectroscopia revela a composição estelar.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/spettroskɔˈpiːa astronˈɔːmika/"
+    },
+    {
+      "id": "t39_f02",
+      "italiano": "parallasse stellare",
+      "portugues": "paralaxe estelar",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La parallasse misura le distanze stellari.",
+      "exemplo_pt": "A paralaxe mede as distâncias estelares.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/paraˈlasse stellˈaːre/"
+    },
+    {
+      "id": "t39_f03",
+      "italiano": "magnitudine apparente",
+      "portugues": "magnitude aparente",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La magnitudine apparente dipende dalla distanza.",
+      "exemplo_pt": "A magnitude aparente depende da distância.",
+      "categoria": "astronomia",
+      "dificuldade": "medio",
+      "audio_ipa": "/maɲɲiˈtuːdine apparˈɛnte/"
     }
   ]
 }

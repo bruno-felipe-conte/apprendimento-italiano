@@ -5,66 +5,6 @@
   "nivel": "B1",
   "palavras": [
     {
-      "id": "t32_001",
-      "italiano": "storia",
-      "portugues": "história",
-      "genero": "f",
-      "plural": "storie",
-      "exemplo": "La storia d'Italia è ricca.",
-      "exemplo_pt": "A história da Itália é rica.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstɔrja/"
-    },
-    {
-      "id": "t32_002",
-      "italiano": "antichità",
-      "portugues": "antiguidade",
-      "genero": "f",
-      "plural": "antichità",
-      "exemplo": "Un vaso dell'antichità.",
-      "exemplo_pt": "Um vaso da antiguidade.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/antikiˈta/"
-    },
-    {
-      "id": "t32_003",
-      "italiano": "medioevo",
-      "portugues": "idade média",
-      "genero": "m",
-      "plural": "medioevi",
-      "exemplo": "Nel buio medioevo.",
-      "exemplo_pt": "Na sombria idade média.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/medjoˈɛvo/"
-    },
-    {
-      "id": "t32_004",
-      "italiano": "rinascimento",
-      "portugues": "renascimento",
-      "genero": "m",
-      "plural": "rinascimenti",
-      "exemplo": "Il rinascimento fiorentino.",
-      "exemplo_pt": "O renascimento florentino.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/rinaʃʃiˈmento/"
-    },
-    {
-      "id": "t32_005",
-      "italiano": "risorgimento",
-      "portugues": "ressurgimento",
-      "genero": "m",
-      "plural": "risorgimenti",
-      "exemplo": "Il risorgimento italiano.",
-      "exemplo_pt": "O ressurgimento italiano.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/rizordʒiˈmento/"
-    },
-    {
       "id": "t32_006",
       "italiano": "novecento",
       "portugues": "século XX",
@@ -75,30 +15,6 @@
       "categoria": "epoche",
       "dificuldade": "medio",
       "audio_ipa": "/noveˈtʃɛnto/"
-    },
-    {
-      "id": "t32_007",
-      "italiano": "epoca",
-      "portugues": "época",
-      "genero": "f",
-      "plural": "epoche",
-      "exemplo": "In quell'epoca lontana.",
-      "exemplo_pt": "Naquela época distante.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɛpoka/"
-    },
-    {
-      "id": "t32_008",
-      "italiano": "secolo",
-      "portugues": "século",
-      "genero": "m",
-      "plural": "secoli",
-      "exemplo": "Nel ventesimo secolo.",
-      "exemplo_pt": "No século vinte.",
-      "categoria": "epoche",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsɛkolo/"
     },
     {
       "id": "t32_009",
@@ -135,18 +51,6 @@
       "categoria": "romani",
       "dificuldade": "medio",
       "audio_ipa": "/imˈpɛro/"
-    },
-    {
-      "id": "t32_012",
-      "italiano": "repubblica",
-      "portugues": "república",
-      "genero": "f",
-      "plural": "repubbliche",
-      "exemplo": "La repubblica romana.",
-      "exemplo_pt": "A república romana.",
-      "categoria": "romani",
-      "dificuldade": "medio",
-      "audio_ipa": "/reˈpubblika/"
     },
     {
       "id": "t32_013",
@@ -197,18 +101,6 @@
       "audio_ipa": "/leˈdʒone/"
     },
     {
-      "id": "t32_017",
-      "italiano": "senato",
-      "portugues": "senado",
-      "genero": "m",
-      "plural": "senati",
-      "exemplo": "Il senato romano.",
-      "exemplo_pt": "O senado romano.",
-      "categoria": "romani",
-      "dificuldade": "medio",
-      "audio_ipa": "/seˈnato/"
-    },
-    {
       "id": "t32_018",
       "italiano": "barbaro",
       "portugues": "bárbaro",
@@ -243,18 +135,6 @@
       "categoria": "romani",
       "dificuldade": "medio",
       "audio_ipa": "/roˈvina/"
-    },
-    {
-      "id": "t32_021",
-      "italiano": "castello",
-      "portugues": "castelo",
-      "genero": "m",
-      "plural": "castelli",
-      "exemplo": "Un castello medievale.",
-      "exemplo_pt": "Um castelo medieval.",
-      "categoria": "medioevo",
-      "dificuldade": "medio",
-      "audio_ipa": "/kasˈtɛllo/"
     },
     {
       "id": "t32_022",
@@ -317,18 +197,6 @@
       "audio_ipa": "/ˈpapa/"
     },
     {
-      "id": "t32_027",
-      "italiano": "chiesa",
-      "portugues": "igreja",
-      "genero": "f",
-      "plural": "chiese",
-      "exemplo": "La chiesa cattolica.",
-      "exemplo_pt": "A igreja católica.",
-      "categoria": "medioevo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkjɛza/"
-    },
-    {
       "id": "t32_028",
       "italiano": "crociata",
       "portugues": "cruzada",
@@ -375,66 +243,6 @@
       "categoria": "rinascimento",
       "dificuldade": "medio",
       "audio_ipa": "/merˈkante/"
-    },
-    {
-      "id": "t32_032",
-      "italiano": "mecenate",
-      "portugues": "mecenas",
-      "genero": "m",
-      "plural": "mecenati",
-      "exemplo": "I Medici come mecenati.",
-      "exemplo_pt": "Os Médici como mecenas.",
-      "categoria": "rinascimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/metʃeˈnate/"
-    },
-    {
-      "id": "t32_033",
-      "italiano": "scoperta",
-      "portugues": "descoberta",
-      "genero": "f",
-      "plural": "scoperte",
-      "exemplo": "La scoperta dell'America.",
-      "exemplo_pt": "A descoberta da América.",
-      "categoria": "rinascimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/skoˈpɛrta/"
-    },
-    {
-      "id": "t32_034",
-      "italiano": "invenzione",
-      "portugues": "invenção",
-      "genero": "f",
-      "plural": "invenzioni",
-      "exemplo": "L'invenzione della stampa.",
-      "exemplo_pt": "A invenção da imprensa.",
-      "categoria": "rinascimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/inventˈtsjone/"
-    },
-    {
-      "id": "t32_035",
-      "italiano": "artista",
-      "portugues": "artista",
-      "genero": "m/f",
-      "plural": "artisti",
-      "exemplo": "I grandi artisti italiani.",
-      "exemplo_pt": "Os grandes artistas italianos.",
-      "categoria": "rinascimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/arˈtista/"
-    },
-    {
-      "id": "t32_036",
-      "italiano": "genio",
-      "portugues": "gênio",
-      "genero": "m",
-      "plural": "geni",
-      "exemplo": "Il genio di Leonardo.",
-      "exemplo_pt": "O gênio de Leonardo.",
-      "categoria": "rinascimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒɛnjo/"
     },
     {
       "id": "t32_037",
@@ -497,18 +305,6 @@
       "audio_ipa": "/ˈinno/"
     },
     {
-      "id": "t32_042",
-      "italiano": "costituzione",
-      "portugues": "constituição",
-      "genero": "f",
-      "plural": "costituzioni",
-      "exemplo": "La costituzione italiana.",
-      "exemplo_pt": "A constituição italiana.",
-      "categoria": "risorgimento",
-      "dificuldade": "medio",
-      "audio_ipa": "/kostitutˈtsjone/"
-    },
-    {
       "id": "t32_043",
       "italiano": "rivoluzione",
       "portugues": "revolução",
@@ -555,30 +351,6 @@
       "categoria": "novecento",
       "dificuldade": "medio",
       "audio_ipa": "/dittaˈtore/"
-    },
-    {
-      "id": "t32_047",
-      "italiano": "guerra",
-      "portugues": "guerra",
-      "genero": "f",
-      "plural": "guerre",
-      "exemplo": "La seconda guerra mondiale.",
-      "exemplo_pt": "A segunda guerra mundial.",
-      "categoria": "novecento",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɡwɛrra/"
-    },
-    {
-      "id": "t32_048",
-      "italiano": "pace",
-      "portugues": "paz",
-      "genero": "f",
-      "plural": "paci",
-      "exemplo": "Un trattato di pace.",
-      "exemplo_pt": "Um tratado de paz.",
-      "categoria": "novecento",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpatʃe/"
     },
     {
       "id": "t32_049",
@@ -641,18 +413,6 @@
       "audio_ipa": "/ˈstradʒe/"
     },
     {
-      "id": "t32_054",
-      "italiano": "mafia",
-      "portugues": "máfia",
-      "genero": "f",
-      "plural": "mafie",
-      "exemplo": "La lotta alla mafia.",
-      "exemplo_pt": "A luta contra a máfia.",
-      "categoria": "novecento",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmafja/"
-    },
-    {
       "id": "t32_055",
       "italiano": "magistrato",
       "portugues": "magistrado",
@@ -663,18 +423,6 @@
       "categoria": "novecento",
       "dificuldade": "medio",
       "audio_ipa": "/madʒisˈtrato/"
-    },
-    {
-      "id": "t32_056",
-      "italiano": "repubblica",
-      "portugues": "república",
-      "genero": "f",
-      "plural": "repubbliche",
-      "exemplo": "La nascita della repubblica.",
-      "exemplo_pt": "O nascimento da república.",
-      "categoria": "novecento",
-      "dificuldade": "medio",
-      "audio_ipa": "/reˈpubblika/"
     },
     {
       "id": "t32_057",
@@ -713,18 +461,6 @@
       "audio_ipa": "/inˈvadere/"
     },
     {
-      "id": "t32_060",
-      "italiano": "governare",
-      "portugues": "governar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Governare l'impero.",
-      "exemplo_pt": "Governar o império.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡoverˈnare/"
-    },
-    {
       "id": "t32_061",
       "italiano": "sconfiggere",
       "portugues": "derrotar",
@@ -737,30 +473,6 @@
       "audio_ipa": "/skonˈfiddʒere/"
     },
     {
-      "id": "t32_062",
-      "italiano": "combattere",
-      "portugues": "combater",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Combattere in guerra.",
-      "exemplo_pt": "Combater na guerra.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/komˈbattere/"
-    },
-    {
-      "id": "t32_063",
-      "italiano": "difendere",
-      "portugues": "defender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Difendere la patria.",
-      "exemplo_pt": "Defender a pátria.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈfɛndere/"
-    },
-    {
       "id": "t32_064",
       "italiano": "unire",
       "portugues": "unir",
@@ -771,18 +483,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/uˈnire/"
-    },
-    {
-      "id": "t32_065",
-      "italiano": "ribellarsi",
-      "portugues": "rebelar-se",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ribellarsi al dittatore.",
-      "exemplo_pt": "Rebelar-se contra o ditador.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ribelˈlarsi/"
     },
     {
       "id": "t32_066",
@@ -845,30 +545,6 @@
       "audio_ipa": "/rikostruˈire/"
     },
     {
-      "id": "t32_071",
-      "italiano": "eleggere",
-      "portugues": "eleger",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Eleggere il presidente.",
-      "exemplo_pt": "Eleger o presidente.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/eˈlɛddʒere/"
-    },
-    {
-      "id": "t32_072",
-      "italiano": "votare",
-      "portugues": "votar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Votare al referendum.",
-      "exemplo_pt": "Votar no referendo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/voˈtare/"
-    },
-    {
       "id": "t32_073",
       "italiano": "emigrare",
       "portugues": "emigrar",
@@ -891,78 +567,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/immiˈɡrare/"
-    },
-    {
-      "id": "t32_075",
-      "italiano": "scoprire",
-      "portugues": "descobrir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Scoprire nuove terre.",
-      "exemplo_pt": "Descobrir novas terras.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/skoˈprire/"
-    },
-    {
-      "id": "t32_076",
-      "italiano": "inventare",
-      "portugues": "inventar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Inventare la radio.",
-      "exemplo_pt": "Inventar o rádio.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/invenˈtare/"
-    },
-    {
-      "id": "t32_077",
-      "italiano": "antico",
-      "portugues": "antigo",
-      "genero": "m",
-      "plural": "antichi",
-      "exemplo": "Un antico vaso romano.",
-      "exemplo_pt": "Um antigo vaso romano.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/anˈtiko/"
-    },
-    {
-      "id": "t32_078",
-      "italiano": "storico",
-      "portugues": "histórico",
-      "genero": "m",
-      "plural": "storici",
-      "exemplo": "Un evento storico.",
-      "exemplo_pt": "Um evento histórico.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstɔriko/"
-    },
-    {
-      "id": "t32_079",
-      "italiano": "moderno",
-      "portugues": "moderno",
-      "genero": "m",
-      "plural": "moderni",
-      "exemplo": "Stato moderno.",
-      "exemplo_pt": "Estado moderno.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/moˈdɛrno/"
-    },
-    {
-      "id": "t32_080",
-      "italiano": "contemporaneo",
-      "portugues": "contemporâneo",
-      "genero": "m",
-      "plural": "contemporanei",
-      "exemplo": "Storia contemporanea.",
-      "exemplo_pt": "História contemporânea.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kontempoˈranɛo/"
     },
     {
       "id": "t32_081",
@@ -1061,30 +665,6 @@
       "audio_ipa": "/paˈtʃifiko/"
     },
     {
-      "id": "t32_089",
-      "italiano": "coraggioso",
-      "portugues": "corajoso",
-      "genero": "m",
-      "plural": "coraggiosi",
-      "exemplo": "Un soldato coraggioso.",
-      "exemplo_pt": "Um soldado corajoso.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/koradˈdʒozo/"
-    },
-    {
-      "id": "t32_090",
-      "italiano": "nazionale",
-      "portugues": "nacional",
-      "genero": "m",
-      "plural": "nazionali",
-      "exemplo": "Festa nazionale.",
-      "exemplo_pt": "Feriado nacional.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/natsjoˈnale/"
-    },
-    {
       "id": "t32_091",
       "italiano": "unito",
       "portugues": "unido",
@@ -1155,18 +735,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/arˈtistiko/"
-    },
-    {
-      "id": "t32_097",
-      "italiano": "tradizionale",
-      "portugues": "tradicional",
-      "genero": "m",
-      "plural": "tradizionali",
-      "exemplo": "Festa tradizionale.",
-      "exemplo_pt": "Festa tradicional.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/traditsjoˈnale/"
     },
     {
       "id": "t32_098",
@@ -1241,18 +809,6 @@
       "audio_ipa": "/dominatˈtsjone/"
     },
     {
-      "id": "t32_104",
-      "italiano": "spedizione",
-      "portugues": "expedição",
-      "genero": "f",
-      "plural": "spedizioni",
-      "exemplo": "La spedizione dei Mille.",
-      "exemplo_pt": "A expedição dos Mil.",
-      "categoria": "medioevo",
-      "dificuldade": "medio",
-      "audio_ipa": "/speditˈtsjone/"
-    },
-    {
       "id": "t32_105",
       "italiano": "stemma",
       "portugues": "brasão",
@@ -1313,16 +869,436 @@
       "audio_ipa": "/fanteˈria/"
     },
     {
-      "id": "t32_110",
-      "italiano": "alleanza",
-      "portugues": "aliança",
-      "genero": "f",
-      "plural": "alleanze",
-      "exemplo": "Firmare un'alleanza.",
-      "exemplo_pt": "Assinar uma aliança.",
-      "categoria": "epoche",
+      "id": "t32_r01",
+      "italiano": "paleolitico",
+      "portugues": "paleolítico",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il paleolitico precede l'agricoltura.",
+      "exemplo_pt": "O paleolítico precede a agricultura.",
+      "categoria": "preistoria",
       "dificuldade": "medio",
-      "audio_ipa": "/alleˈantsa/"
+      "audio_ipa": "/paleoˈliːtiko/"
+    },
+    {
+      "id": "t32_r02",
+      "italiano": "neolitico",
+      "portugues": "neolítico",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il neolitico vede l'invenzione dell'agricoltura.",
+      "exemplo_pt": "O neolítico vê a invenção da agricultura.",
+      "categoria": "preistoria",
+      "dificuldade": "medio",
+      "audio_ipa": "/neoˈliːtiko/"
+    },
+    {
+      "id": "t32_r03",
+      "italiano": "etruschi",
+      "portugues": "etruscos",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Gli etruschi abitavano l'Etruria.",
+      "exemplo_pt": "Os etruscos habitavam a Etrúria.",
+      "categoria": "antichità",
+      "dificuldade": "medio",
+      "audio_ipa": "/eˈtruskj/"
+    },
+    {
+      "id": "t32_r04",
+      "italiano": "longobardi",
+      "portugues": "lombardos",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "I longobardi invasero l'Italia nel 568.",
+      "exemplo_pt": "Os lombardos invadiram a Itália em 568.",
+      "categoria": "medioevo",
+      "dificuldade": "medio",
+      "audio_ipa": "/lonɡoˈbardi/"
+    },
+    {
+      "id": "t32_r06",
+      "italiano": "comune medievale",
+      "portugues": "comune medieval",
+      "genero": "m",
+      "plural": "comuni medievali",
+      "exemplo": "Il comune medievale era autogovernato.",
+      "exemplo_pt": "O comune medieval era autogovernado.",
+      "categoria": "medioevo",
+      "dificuldade": "medio",
+      "audio_ipa": "/koˈmuːne medjeˈvaːle/"
+    },
+    {
+      "id": "t32_r07",
+      "italiano": "signoria",
+      "portugues": "senhoria",
+      "genero": "f",
+      "plural": "signorie",
+      "exemplo": "La signoria dei Medici dominò Firenze.",
+      "exemplo_pt": "A senhoria dos Médici dominou Florença.",
+      "categoria": "rinascimento",
+      "dificuldade": "medio",
+      "audio_ipa": "/siɲˈɲɔːrja/"
+    },
+    {
+      "id": "t32_r08",
+      "italiano": "papato",
+      "portugues": "papado",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il papato aveva potere politico.",
+      "exemplo_pt": "O papado tinha poder político.",
+      "categoria": "chiesa",
+      "dificuldade": "medio",
+      "audio_ipa": "/paˈpaːto/"
+    },
+    {
+      "id": "t32_r09",
+      "italiano": "scisma",
+      "portugues": "cisma",
+      "genero": "m",
+      "plural": "scismi",
+      "exemplo": "Lo scisma d'Occidente divise la chiesa.",
+      "exemplo_pt": "O cisma do Ocidente dividiu a igreja.",
+      "categoria": "chiesa",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈzizma/"
+    },
+    {
+      "id": "t32_r10",
+      "italiano": "riforma protestante",
+      "portugues": "reforma protestante",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La riforma protestante cambiò l'Europa.",
+      "exemplo_pt": "A reforma protestante mudou a Europa.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/riˈfɔrma proteˈstante/"
+    },
+    {
+      "id": "t32_r11",
+      "italiano": "controriforma",
+      "portugues": "contrarreforma",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La controriforma rafforzò il cattolicesimo.",
+      "exemplo_pt": "A contrarreforma fortaleceu o catolicismo.",
+      "categoria": "religione",
+      "dificuldade": "medio",
+      "audio_ipa": "/kontroˈriːforma/"
+    },
+    {
+      "id": "t32_r12",
+      "italiano": "illuminismo",
+      "portugues": "iluminismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'illuminismo promosse la ragione.",
+      "exemplo_pt": "O iluminismo promoveu a razão.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/illumiˈnizmo/"
+    },
+    {
+      "id": "t32_r14",
+      "italiano": "unità d'Italia",
+      "portugues": "unificação da Itália",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "L'unità d'Italia fu nel 1861.",
+      "exemplo_pt": "A unificação da Itália foi em 1861.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/uˈniːta dˈitaːlja/"
+    },
+    {
+      "id": "t32_r16",
+      "italiano": "resistenza partigiana",
+      "portugues": "resistência partidária",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La resistenza combatté i nazifascisti.",
+      "exemplo_pt": "A resistência combateu os nazifascistas.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/reziˈstɛntsa partiˈdʒaːna/"
+    },
+    {
+      "id": "t32_r19",
+      "italiano": "anni di piombo",
+      "portugues": "anos de chumbo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Gli anni di piombo videro terrorismo.",
+      "exemplo_pt": "Os anos de chumbo viram terrorismo.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈanni di ˈpjɔːmbo/"
+    },
+    {
+      "id": "t32_r20",
+      "italiano": "tangentopoli",
+      "portugues": "tangentópolis",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Tangentopoli svelò la corruzione politica.",
+      "exemplo_pt": "Tangentópolis revelou a corrupção política.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/tandʒenˈtɔːpoli/"
+    },
+    {
+      "id": "t32_r23",
+      "italiano": "senato romano",
+      "portugues": "senado romano",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il senato romano governava la città.",
+      "exemplo_pt": "O senado romano governava a cidade.",
+      "categoria": "antichità",
+      "dificuldade": "medio",
+      "audio_ipa": "/seˈnaːto roˈmaːno/"
+    },
+    {
+      "id": "t32_r29",
+      "italiano": "catacombe",
+      "portugues": "catacumbas",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "Le catacombe cristiane sono sotto Roma.",
+      "exemplo_pt": "As catacumbas cristãs ficam sob Roma.",
+      "categoria": "antichità",
+      "dificuldade": "medio",
+      "audio_ipa": "/kataˈkɔmbe/"
+    },
+    {
+      "id": "t32_r30",
+      "italiano": "feudalesimo",
+      "portugues": "feudalismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il feudalesimo organizzava la società.",
+      "exemplo_pt": "O feudalismo organizava a sociedade.",
+      "categoria": "medioevo",
+      "dificuldade": "medio",
+      "audio_ipa": "/feudaˈleːzimo/"
+    },
+    {
+      "id": "t32_r31",
+      "italiano": "vassallo",
+      "portugues": "vassalo",
+      "genero": "m",
+      "plural": "vassalli",
+      "exemplo": "Il vassallo serviva il suo signore.",
+      "exemplo_pt": "O vassalo servia seu senhor.",
+      "categoria": "medioevo",
+      "dificuldade": "medio",
+      "audio_ipa": "/vasˈsallo/"
+    },
+    {
+      "id": "t32_r32",
+      "italiano": "corporazione",
+      "portugues": "corporação de ofício",
+      "genero": "f",
+      "plural": "corporazioni",
+      "exemplo": "La corporazione tutelava gli artigiani.",
+      "exemplo_pt": "A corporação protegia os artesãos.",
+      "categoria": "medioevo",
+      "dificuldade": "medio",
+      "audio_ipa": "/korporaˈttsjoːne/"
+    },
+    {
+      "id": "t32_r33",
+      "italiano": "borghesia",
+      "portugues": "burguesia",
+      "genero": "f",
+      "plural": "borghesie",
+      "exemplo": "La borghesia ascese nel Rinascimento.",
+      "exemplo_pt": "A burguesia ascendeu no Renascimento.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/bordʒeˈziːa/"
+    },
+    {
+      "id": "t32_r34",
+      "italiano": "proletariato",
+      "portugues": "proletariado",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il proletariato lottò per i diritti.",
+      "exemplo_pt": "O proletariado lutou pelos direitos.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/proletarˈjaːto/"
+    },
+    {
+      "id": "t32_r35",
+      "italiano": "rivoluzione industriale",
+      "portugues": "revolução industrial",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La rivoluzione industriale cambiò il lavoro.",
+      "exemplo_pt": "A revolução industrial mudou o trabalho.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/rivolutˈttsjoːne induˈstrjaːle/"
+    },
+    {
+      "id": "t32_r36",
+      "italiano": "colonialismo",
+      "portugues": "colonialismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il colonialismo sfruttò le risorse.",
+      "exemplo_pt": "O colonialismo explorou os recursos.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/kolonjaˈlizmo/"
+    },
+    {
+      "id": "t32_r37",
+      "italiano": "nazionalismo",
+      "portugues": "nacionalismo",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "Il nazionalismo portò alle guerre.",
+      "exemplo_pt": "O nacionalismo levou às guerras.",
+      "categoria": "storia moderna",
+      "dificuldade": "medio",
+      "audio_ipa": "/natsjonaˈlizmo/"
+    },
+    {
+      "id": "t32_r38",
+      "italiano": "prima guerra mondiale",
+      "portugues": "primeira guerra mundial",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La prima guerra mondiale fu devastante.",
+      "exemplo_pt": "A primeira guerra mundial foi devastadora.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpriːma ˈɡwɛrra monˈdjaːle/"
+    },
+    {
+      "id": "t32_r39",
+      "italiano": "seconda guerra mondiale",
+      "portugues": "segunda guerra mundial",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La seconda guerra mondiale cambiò il mondo.",
+      "exemplo_pt": "A segunda guerra mundial mudou o mundo.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/seˈkonda ˈɡwɛrra monˈdjaːle/"
+    },
+    {
+      "id": "t32_r40",
+      "italiano": "olocausto",
+      "portugues": "holocausto",
+      "genero": "m",
+      "plural": null,
+      "exemplo": "L'olocausto fu il crimine peggiore.",
+      "exemplo_pt": "O holocausto foi o pior crime.",
+      "categoria": "storia contemporanea",
+      "dificuldade": "medio",
+      "audio_ipa": "/oloˈkausto/"
+    },
+    {
+      "id": "t32_p02",
+      "italiano": "flotta",
+      "portugues": "frota",
+      "genero": "f",
+      "plural": "flotte",
+      "exemplo": "La flotta navale controllava il mare.",
+      "exemplo_pt": "A frota naval controlava o mar.",
+      "categoria": "militare",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈflɔtta/"
+    },
+    {
+      "id": "t32_p03",
+      "italiano": "assedio",
+      "portugues": "cerco / sítio",
+      "genero": "m",
+      "plural": "assedi",
+      "exemplo": "L'assedio durò mesi.",
+      "exemplo_pt": "O cerco durou meses.",
+      "categoria": "militare",
+      "dificuldade": "medio",
+      "audio_ipa": "/asˈsɛːdjo/"
+    },
+    {
+      "id": "t32_p04",
+      "italiano": "trattato di pace",
+      "portugues": "tratado de paz",
+      "genero": "m",
+      "plural": "trattati di pace",
+      "exemplo": "Il trattato di pace pose fine alla guerra.",
+      "exemplo_pt": "O tratado de paz pôs fim à guerra.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/tratˈtaːto di ˈpaːtʃe/"
+    },
+    {
+      "id": "t32_p05",
+      "italiano": "patto",
+      "portugues": "pacto",
+      "genero": "m",
+      "plural": "patti",
+      "exemplo": "Il patto fu siglato nel 1939.",
+      "exemplo_pt": "O pacto foi assinado em 1939.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/ˈpatto/"
+    },
+    {
+      "id": "t32_p06",
+      "italiano": "alleato",
+      "portugues": "aliado",
+      "genero": "m",
+      "plural": "alleati",
+      "exemplo": "Gli alleati liberarono l'Italia.",
+      "exemplo_pt": "Os aliados libertaram a Itália.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/alleˈaːto/"
+    },
+    {
+      "id": "t32_p07",
+      "italiano": "occupazione",
+      "portugues": "ocupação",
+      "genero": "f",
+      "plural": "occupazioni",
+      "exemplo": "L'occupazione nazista fu brutale.",
+      "exemplo_pt": "A ocupação nazista foi brutal.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/okkapaˈttsjoːne/"
+    },
+    {
+      "id": "t32_p09",
+      "italiano": "deportazione",
+      "portugues": "deportação",
+      "genero": "f",
+      "plural": "deportazioni",
+      "exemplo": "La deportazione colpì migliaia di ebrei.",
+      "exemplo_pt": "A deportação atingiu milhares de judeus.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/deportaˈttsjoːne/"
+    },
+    {
+      "id": "t32_p10",
+      "italiano": "ricostruzione",
+      "portugues": "reconstrução",
+      "genero": "f",
+      "plural": null,
+      "exemplo": "La ricostruzione postbellica fu rapida.",
+      "exemplo_pt": "A reconstrução pós-guerra foi rápida.",
+      "categoria": "storia",
+      "dificuldade": "medio",
+      "audio_ipa": "/rikostrutˈttsjoːne/"
     }
   ]
 }
