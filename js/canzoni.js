@@ -247,7 +247,7 @@ const Canzoni = {
   excluirCanzone(id) {
     const can = this.custom.find(x => x.id === id);
     if (!can) return;
-    if (!confirm(`Excluir "${can.titulo}"?`)) return;
+    if (!confirm(I18n.t('can_excluir_confirm').replace('{t}', can.titulo))) return;
     this.custom = this.custom.filter(x => x.id !== id);
     this._salvarCustom();
     App.notificar('notif_can_excluida', 'alerta');

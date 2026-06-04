@@ -215,8 +215,8 @@ const Profilo = {
     reader.onload = (e) => {
       try {
         const backup = JSON.parse(e.target.result);
-        if (!backup.versao || !backup.progresso) throw new Error('Formato inválido');
-        if (!confirm('Isso vai substituir todo o seu progresso atual. Confirmar?')) return;
+        if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
+        if (!confirm(I18n.t('prof_confirm_importar'))) return;
         if (backup.progresso)  localStorage.setItem('it_progresso',      JSON.stringify(backup.progresso));
         if (backup.flashcards) localStorage.setItem('it_flashcards',     JSON.stringify(backup.flashcards));
         if (backup.diario)     localStorage.setItem('it_diario',         JSON.stringify(backup.diario));
@@ -236,8 +236,8 @@ const Profilo = {
 
   // ── Reset total de progresso ──────────────────────────────
   resetProgresso() {
-    if (!confirm('⚠️ Isso apagará TODO o seu progresso — XP, flashcards, conquistas e streak. Tem certeza?')) return;
-    if (!confirm('Esta ação é IRREVERSÍVEL. Deseja mesmo começar do zero?')) return;
+    if (!confirm(I18n.t('prof_confirm_apagar1'))) return;
+    if (!confirm(I18n.t('prof_confirm_apagar2'))) return;
     ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia', 'it_canzoni_custom', 'it_dialoghi_custom'].forEach(k => localStorage.removeItem(k));
     App.notificar('notif_prog_reset', 'alerta');
     setTimeout(() => location.reload(), 1200);
@@ -270,7 +270,7 @@ const Profilo = {
       try {
         const backup = JSON.parse(e.target.result);
         if (backup.tipo !== 'conteudo_custom') throw new Error('Arquivo inválido (deve ser conteúdo custom)');
-        if (!confirm(`Importar ${backup.canzoni?.length || 0} músicas e ${backup.dialoghi?.length || 0} diálogos? O conteúdo existente será mantido e mesclado.`)) return;
+        if (!confirm(I18n.t('prof_confirm_import_content').replace('{c}', backup.canzoni?.length || 0).replace('{d}', backup.dialoghi?.length || 0))) return;
         
         // Merge (não sobrescreve — adiciona os que não existem)
         const canExist = JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]');

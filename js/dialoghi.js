@@ -261,7 +261,7 @@ const Dialoghi = {
 
   excluirDialogo(id) {
     const d = this.custom.find(x => x.id === id);
-    if (!d || !confirm(`Excluir "${d.titulo}"?`)) return;
+    if (!d || !confirm(I18n.t('dial_excluir_confirm').replace('{t}', d.titulo))) return;
     this.custom = this.custom.filter(x => x.id !== id);
     this._salvarCustom();
     App.notificar('notif_dial_excluido', 'alerta');
@@ -438,7 +438,7 @@ const Dialoghi = {
         
         <div style="display:flex;gap:1rem;justify-content:center">
           <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()">${I18n.t('dial_voltar')}</button>
-          <button class="btn-primario" onclick="Dialoghi.abrirDialogo('${d.id}', 'pratica')">Praticar Novamente 🔄</button>
+          <button class="btn-primario" onclick="Dialoghi.abrirDialogo('${d.id}', 'pratica')">${I18n.t('dial_praticar_novamente')}</button>
         </div>
       </div>
     `;

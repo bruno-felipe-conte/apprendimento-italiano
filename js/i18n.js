@@ -309,6 +309,26 @@ const I18n = {
     'ob_vocabulario': { pt: 'Vocabulário:', it: 'Vocabolario:' },
     'ob_gramatica': { pt: 'Gramática:', it: 'Grammatica:' },
 
+    // ── Dialoghi ──
+    'dial_praticar_novamente': { pt: 'Praticar Novamente 🔄', it: 'Pratica di nuovo 🔄' },
+    'dial_excluir_confirm': { pt: 'Excluir "{t}"?', it: 'Eliminare "{t}"?' },
+
+    // ── Canzoni ──
+    'can_excluir_confirm': { pt: 'Excluir "{t}"?', it: 'Eliminare "{t}"?' },
+
+    // ── Perfil — confirms destrutivos ──
+    'prof_confirm_importar': { pt: 'Isso vai substituir todo o seu progresso atual. Confirmar?', it: 'Questo sostituirà tutti i tuoi progressi attuali. Confermi?' },
+    'prof_confirm_apagar1': { pt: '⚠️ Isso apagará TODO o seu progresso — XP, flashcards, conquistas e streak. Tem certeza?', it: '⚠️ Questo cancellerà TUTTI i tuoi progressi — XP, flashcard, traguardi e sequenza. Sei sicuro?' },
+    'prof_confirm_apagar2': { pt: 'Esta ação é IRREVERSÍVEL. Deseja mesmo começar do zero?', it: 'Questa azione è IRREVERSIBILE. Vuoi davvero ricominciare da zero?' },
+    'prof_confirm_import_content': { pt: 'Importar {c} músicas e {d} diálogos? O conteúdo existente será mantido e mesclado.', it: 'Importare {c} canzoni e {d} dialoghi? Il contenuto esistente sarà mantenuto e unito.' },
+    'prof_erro_formato': { pt: 'Formato inválido', it: 'Formato non valido' },
+
+    // ── Quiz — initial label ──
+    'quiz_pergunta_inicial': { pt: 'Pergunta 1 de 10', it: 'Domanda 1 di 10' },
+
+    // ── index.html — section titles ──
+    'sec_dialoghi': { pt: 'Modo Diálogo', it: 'Modo Dialogo' },
+
     // ── Tour ──
     'tour_templi_title': { pt: '🏛️ Templi (Sua Jornada)', it: '🏛️ Templi (Il Tuo Viaggio)' },
     'tour_templi_desc': { pt: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', it: 'Questo è il cuore del tuo apprendimento. Sblocca nuovi templi e raggiungi il tuo obiettivo quotidiano di esperienza.' },
