@@ -1,0 +1,875 @@
+{
+  "versao": "2.0",
+  "total_templos": 50,
+  "total_palavras": 5040,
+  "templos": [
+    {
+      "templo": 1,
+      "arquivo": "templo-1.json",
+      "nome": "Templo 1",
+      "cidade": "Roma",
+      "nivel": "A1",
+      "total_palavras": 113,
+      "cor": "#9B2335",
+      "categorias": [
+        "saudacoes",
+        "numeros",
+        "pronomes",
+        "familia",
+        "verbos_base",
+        "cores"
+      ],
+      "desbloqueado_em": 3
+    },
+    {
+      "templo": 2,
+      "arquivo": "templo-2.json",
+      "nome": "Templo 2",
+      "cidade": "Firenze",
+      "nivel": "A1→A2",
+      "total_palavras": 75,
+      "cor": "#1a3a5c",
+      "categorias": [
+        "personalidade",
+        "emocoes",
+        "sensacoes",
+        "adjetivos",
+        "verbos_emocao",
+        "verbos_mentais"
+      ],
+      "desbloqueado_em": 3
+    },
+    {
+      "templo": 3,
+      "arquivo": "templo-3.json",
+      "nome": "Templo 3",
+      "cidade": "Venezia",
+      "nivel": "A2",
+      "total_palavras": 70,
+      "cor": "#2d6a4f",
+      "categorias": [
+        "trasporti",
+        "lugares_viagem",
+        "documentos_viagem",
+        "viagem",
+        "direcoes",
+        "verbos_viagem"
+      ],
+      "desbloqueado_em": 3
+    },
+    {
+      "templo": 4,
+      "arquivo": "templo-4.json",
+      "nome": "Templo 4",
+      "cidade": "Napoli",
+      "nivel": "A2→B1",
+      "total_palavras": 70,
+      "cor": "#6b4c11",
+      "categorias": [
+        "bar_bebidas",
+        "bar_comida",
+        "cibo_italiano",
+        "cibo",
+        "frutta_verdura",
+        "frutta"
+      ],
+      "desbloqueado_em": 4
+    },
+    {
+      "templo": 5,
+      "arquivo": "templo-5.json",
+      "nome": "Templo 5",
+      "cidade": "Torino",
+      "nivel": "B1",
+      "total_palavras": 65,
+      "cor": "#5b2d8e",
+      "categorias": [
+        "stagioni",
+        "meteo",
+        "avverbi_tempo",
+        "tempo",
+        "congiunzioni_tempo",
+        "numeri_ordinali"
+      ],
+      "desbloqueado_em": 5
+    },
+    {
+      "templo": 6,
+      "arquivo": "templo-6.json",
+      "nome": "Templo 6",
+      "cidade": "Milano",
+      "nivel": "B1→B2",
+      "total_palavras": 65,
+      "cor": "#1a5276",
+      "categorias": [
+        "congiunzioni",
+        "pronomi_relativi",
+        "verbi_modali",
+        "espressioni_idiomatiche",
+        "registro_linguistico",
+        "espressioni_formali"
+      ],
+      "desbloqueado_em": 6
+    },
+    {
+      "templo": 7,
+      "arquivo": "templo-7.json",
+      "nome": "Templo 7",
+      "cidade": "Torino",
+      "nivel": "B2",
+      "total_palavras": 65,
+      "cor": "#7b3f00",
+      "categorias": [
+        "espressioni_colloquiali",
+        "atividades",
+        "occasioni",
+        "atividades_noturnas",
+        "atividades_culturais",
+        "teatro"
+      ],
+      "desbloqueado_em": 7
+    },
+    {
+      "templo": 8,
+      "arquivo": "templo-8.json",
+      "nome": "Templo 8",
+      "cidade": "Siena",
+      "nivel": "B2→C1",
+      "total_palavras": 65,
+      "cor": "#1b4f72",
+      "categorias": [
+        "storia",
+        "arte",
+        "musica",
+        "cultura",
+        "cultura_italiana",
+        "letteratura"
+      ],
+      "desbloqueado_em": 8
+    },
+    {
+      "templo": 9,
+      "arquivo": "templo-9.json",
+      "nome": "Templo 9",
+      "cidade": "Bologna",
+      "nivel": "C1",
+      "total_palavras": 65,
+      "cor": "#196f3d",
+      "categorias": [
+        "professioni_sanitarie",
+        "professioni",
+        "lavoro",
+        "luoghi_lavoro",
+        "economia",
+        "comunicazione_professionale"
+      ],
+      "desbloqueado_em": 9
+    },
+    {
+      "templo": 10,
+      "arquivo": "templo-10.json",
+      "nome": "Templo 10",
+      "cidade": "Ravenna",
+      "nivel": "C1→C2",
+      "total_palavras": 65,
+      "cor": "#784212",
+      "categorias": [
+        "autori_classici",
+        "letteratura_classica",
+        "metrica",
+        "forme_poetiche",
+        "figure_retoriche",
+        "retorica"
+      ],
+      "desbloqueado_em": 10
+    },
+    {
+      "templo": 11,
+      "arquivo": "templo-11.json",
+      "nome": "La Cucina Italiana",
+      "cidade": "Bologna",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#512e5f",
+      "categorias": [
+        "cucina"
+      ],
+      "desbloqueado_em": 11
+    },
+    {
+      "templo": 12,
+      "arquivo": "templo-12.json",
+      "nome": "Il Lavoro e le Professioni",
+      "cidade": "Milano",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#1a5276",
+      "categorias": [
+        "lavoro"
+      ],
+      "desbloqueado_em": 12
+    },
+    {
+      "templo": 13,
+      "arquivo": "templo-13.json",
+      "nome": "La Casa e la Vita Quotidiana",
+      "cidade": "Roma",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#0e6655",
+      "categorias": [
+        "casa"
+      ],
+      "desbloqueado_em": 13
+    },
+    {
+      "templo": 14,
+      "arquivo": "templo-14.json",
+      "nome": "I Colori e le Qualità Visive",
+      "cidade": "Firenze",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#6e2f1a",
+      "categorias": [
+        "colori",
+        "qualità",
+        "aspetto",
+        "verbi",
+        "ottica"
+      ],
+      "desbloqueado_em": 14
+    },
+    {
+      "templo": 15,
+      "arquivo": "templo-15.json",
+      "nome": "Lo Sport e il Tempo Libero",
+      "cidade": "Torino",
+      "nivel": "A2",
+      "total_palavras": 108,
+      "cor": "#1f618d",
+      "categorias": [
+        "sport",
+        "hobby"
+      ],
+      "desbloqueado_em": 15
+    },
+    {
+      "templo": 16,
+      "arquivo": "templo-16.json",
+      "nome": "La Salute e la Medicina",
+      "cidade": "Roma",
+      "nivel": "B1",
+      "total_palavras": 107,
+      "cor": "#117a65",
+      "categorias": [
+        "salute",
+        "sintomi",
+        "malattie",
+        "cura",
+        "strutture",
+        "nutrizione"
+      ],
+      "desbloqueado_em": 16
+    },
+    {
+      "templo": 17,
+      "arquivo": "templo-17.json",
+      "nome": "La Città e i Servizi",
+      "cidade": "Napoli",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#7d6608",
+      "categorias": [
+        "servizi",
+        "negozi",
+        "città"
+      ],
+      "desbloqueado_em": 17
+    },
+    {
+      "templo": 18,
+      "arquivo": "templo-18.json",
+      "nome": "La Scuola e l'Università",
+      "cidade": "Napoli",
+      "nivel": "A2",
+      "total_palavras": 110,
+      "cor": "#4a235a",
+      "categorias": [
+        "persone",
+        "luoghi",
+        "oggetti",
+        "concetti",
+        "verbi",
+        "altro"
+      ],
+      "desbloqueado_em": 18
+    },
+    {
+      "templo": 19,
+      "arquivo": "templo-19.json",
+      "nome": "I Trasporti e i Viaggi",
+      "cidade": "Venezia",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#1b2631",
+      "categorias": [
+        "mezzi",
+        "infrastrutture",
+        "viaggio",
+        "veicoli",
+        "verbi",
+        "altro"
+      ],
+      "desbloqueado_em": 19
+    },
+    {
+      "templo": 20,
+      "arquivo": "templo-20.json",
+      "nome": "Il Corpo Umano",
+      "cidade": "Bologna",
+      "nivel": "B1",
+      "total_palavras": 107,
+      "cor": "#7e5109",
+      "categorias": [
+        "testa",
+        "tronco",
+        "superiori",
+        "inferiori",
+        "interni",
+        "condizioni"
+      ],
+      "desbloqueado_em": 20
+    },
+    {
+      "templo": 21,
+      "arquivo": "templo-21.json",
+      "nome": "Le Emozioni e i Sentimenti",
+      "cidade": "Siena",
+      "nivel": "B1",
+      "total_palavras": 107,
+      "cor": "#0a3d62",
+      "categorias": [
+        "positive",
+        "negative",
+        "aggettivi",
+        "verbi",
+        "emozioni"
+      ],
+      "desbloqueado_em": 21
+    },
+    {
+      "templo": 22,
+      "arquivo": "templo-22.json",
+      "nome": "La Natura e le Stagioni",
+      "cidade": "Torino",
+      "nivel": "A2",
+      "total_palavras": 108,
+      "cor": "#1e8bc3",
+      "categorias": [
+        "tempo",
+        "paesaggio",
+        "verbi",
+        "aggettivi",
+        "fenomeni",
+        "natura"
+      ],
+      "desbloqueado_em": 22
+    },
+    {
+      "templo": 23,
+      "arquivo": "templo-23.json",
+      "nome": "Gli Animali",
+      "cidade": "Palermo",
+      "nivel": "A2",
+      "total_palavras": 112,
+      "cor": "#27ae60",
+      "categorias": [
+        "domestici",
+        "fattoria",
+        "uccelli",
+        "selvatici",
+        "insetti",
+        "marini"
+      ],
+      "desbloqueado_em": 23
+    },
+    {
+      "templo": 24,
+      "arquivo": "templo-24.json",
+      "nome": "La Tecnologia Moderna",
+      "cidade": "Milano",
+      "nivel": "B1",
+      "total_palavras": 114,
+      "cor": "#e74c3c",
+      "categorias": [
+        "hardware",
+        "reti",
+        "software",
+        "social",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 24
+    },
+    {
+      "templo": 25,
+      "arquivo": "templo-25.json",
+      "nome": "Il Commercio e i Soldi",
+      "cidade": "Genova",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#8e44ad",
+      "categorias": [
+        "luoghi",
+        "persone",
+        "denaro",
+        "oggetti",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 25
+    },
+    {
+      "templo": 26,
+      "arquivo": "templo-26.json",
+      "nome": "La Politica e la Società",
+      "cidade": "Roma",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#16a085",
+      "categorias": [
+        "istituzioni",
+        "concetti",
+        "persone",
+        "giustizia",
+        "politica",
+        "società"
+      ],
+      "desbloqueado_em": 26
+    },
+    {
+      "templo": 27,
+      "arquivo": "templo-27.json",
+      "nome": "La Cultura e le Arti",
+      "cidade": "Firenze",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#d35400",
+      "categorias": [
+        "arte",
+        "opere",
+        "luoghi",
+        "persone",
+        "strumenti",
+        "stili"
+      ],
+      "desbloqueado_em": 27
+    },
+    {
+      "templo": 28,
+      "arquivo": "templo-28.json",
+      "nome": "La Musica",
+      "cidade": "Milano",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#2980b9",
+      "categorias": [
+        "concetti",
+        "generi",
+        "strumenti",
+        "persone",
+        "eventi",
+        "verbi"
+      ],
+      "desbloqueado_em": 28
+    },
+    {
+      "templo": 29,
+      "arquivo": "templo-29.json",
+      "nome": "Il Cinema e il Teatro",
+      "cidade": "Venezia",
+      "nivel": "B1",
+      "total_palavras": 107,
+      "cor": "#c0392b",
+      "categorias": [
+        "opere",
+        "generi",
+        "persone",
+        "elementi",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 29
+    },
+    {
+      "templo": 30,
+      "arquivo": "templo-30.json",
+      "nome": "La Letteratura e i Libri",
+      "cidade": "Bologna",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#7f8c8d",
+      "categorias": [
+        "generi",
+        "persone",
+        "oggetti",
+        "verbi",
+        "aggettivi",
+        "concetti"
+      ],
+      "desbloqueado_em": 30
+    },
+    {
+      "templo": 31,
+      "arquivo": "templo-31.json",
+      "nome": "La Scienza e la Ricerca",
+      "cidade": "Pisa",
+      "nivel": "B2",
+      "total_palavras": 115,
+      "cor": "#2c3e50",
+      "categorias": [
+        "concetti",
+        "persone",
+        "discipline",
+        "strumenti",
+        "elementi",
+        "verbi"
+      ],
+      "desbloqueado_em": 31
+    },
+    {
+      "templo": 32,
+      "arquivo": "templo-32.json",
+      "nome": "La Storia d'Italia",
+      "cidade": "Roma",
+      "nivel": "B1",
+      "total_palavras": 108,
+      "cor": "#f39c12",
+      "categorias": [
+        "epoche",
+        "romani",
+        "medioevo",
+        "rinascimento",
+        "risorgimento",
+        "novecento"
+      ],
+      "desbloqueado_em": 32
+    },
+    {
+      "templo": 33,
+      "arquivo": "templo-33.json",
+      "nome": "Il Turismo e i Musei",
+      "cidade": "Venezia",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#27ae60",
+      "categorias": [
+        "viaggio",
+        "luoghi",
+        "oggetti",
+        "verbi",
+        "aggettivi",
+        "ospitalità"
+      ],
+      "desbloqueado_em": 33
+    },
+    {
+      "templo": 34,
+      "arquivo": "templo-34.json",
+      "nome": "La Moda e il Design",
+      "cidade": "Milano",
+      "nivel": "A2",
+      "total_palavras": 107,
+      "cor": "#8e44ad",
+      "categorias": [
+        "abbigliamento",
+        "accessori",
+        "concetti",
+        "persone",
+        "luoghi",
+        "materiali"
+      ],
+      "desbloqueado_em": 34
+    },
+    {
+      "templo": 35,
+      "arquivo": "templo-35.json",
+      "nome": "L'Ambiente e l'Ecologia",
+      "cidade": "Torino",
+      "nivel": "B1",
+      "total_palavras": 107,
+      "cor": "#e67e22",
+      "categorias": [
+        "natura",
+        "problemi",
+        "soluzioni",
+        "verbi",
+        "aggettivi",
+        "ecologia"
+      ],
+      "desbloqueado_em": 35
+    },
+    {
+      "templo": 36,
+      "arquivo": "templo-36.json",
+      "nome": "I Social Media e Internet",
+      "cidade": "Milano",
+      "nivel": "A1",
+      "total_palavras": 107,
+      "cor": "#2980b9",
+      "categorias": [
+        "tecnologia",
+        "social",
+        "verbi",
+        "aggettivi",
+        "social media",
+        "informazione"
+      ],
+      "desbloqueado_em": 36
+    },
+    {
+      "templo": 37,
+      "arquivo": "templo-37.json",
+      "nome": "La Fede e la Religione",
+      "cidade": "Roma",
+      "nivel": "B2",
+      "total_palavras": 115,
+      "cor": "#c0392b",
+      "categorias": [
+        "religione",
+        "persone",
+        "luoghi",
+        "oggetti",
+        "concetti",
+        "verbi"
+      ],
+      "desbloqueado_em": 37
+    },
+    {
+      "templo": 38,
+      "arquivo": "templo-38.json",
+      "nome": "La Psicologia e la Mente",
+      "cidade": "Bologna",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#16a085",
+      "categorias": [
+        "psicologia",
+        "emozioni",
+        "disturbi",
+        "terapie",
+        "persone",
+        "oggetti"
+      ],
+      "desbloqueado_em": 38
+    },
+    {
+      "templo": 39,
+      "arquivo": "templo-39.json",
+      "nome": "L'Astronomia e lo Spazio",
+      "cidade": "Pisa",
+      "nivel": "C1",
+      "total_palavras": 107,
+      "cor": "#d35400",
+      "categorias": [
+        "spazio",
+        "esplorazione",
+        "scienze",
+        "verbi",
+        "aggettivi",
+        "persone"
+      ],
+      "desbloqueado_em": 39
+    },
+    {
+      "templo": 40,
+      "arquivo": "templo-40.json",
+      "nome": "L'Economia e la Finanza",
+      "cidade": "Milano",
+      "nivel": "C1",
+      "total_palavras": 107,
+      "cor": "#7f8c8d",
+      "categorias": [
+        "finanza",
+        "istituzioni",
+        "denaro",
+        "persone",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 40
+    },
+    {
+      "templo": 41,
+      "arquivo": "templo-41.json",
+      "nome": "La Filosofia e il Pensiero",
+      "cidade": "Roma",
+      "nivel": "C2",
+      "total_palavras": 107,
+      "cor": "#1abc9c",
+      "categorias": [
+        "concetti",
+        "discipline",
+        "persone",
+        "correnti",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 41
+    },
+    {
+      "templo": 42,
+      "arquivo": "templo-42.json",
+      "nome": "La Letteratura Classica",
+      "cidade": "Firenze",
+      "nivel": "C1",
+      "total_palavras": 107,
+      "cor": "#e74c3c",
+      "categorias": [
+        "letteratura",
+        "elementi",
+        "azione",
+        "verbi",
+        "aggettivi",
+        "persone"
+      ],
+      "desbloqueado_em": 42
+    },
+    {
+      "templo": 43,
+      "arquivo": "templo-43.json",
+      "nome": "I Miti e le Leggende",
+      "cidade": "Siracusa",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#3498db",
+      "categorias": [
+        "divinità",
+        "creature",
+        "luoghi",
+        "oggetti",
+        "concetti",
+        "verbi"
+      ],
+      "desbloqueado_em": 43
+    },
+    {
+      "templo": 44,
+      "arquivo": "templo-44.json",
+      "nome": "Il Diritto e la Legge",
+      "cidade": "Roma",
+      "nivel": "C1",
+      "total_palavras": 107,
+      "cor": "#9b59b6",
+      "categorias": [
+        "istituzioni",
+        "giurisprudenza",
+        "crimini",
+        "persone",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 44
+    },
+    {
+      "templo": 45,
+      "arquivo": "templo-45.json",
+      "nome": "L'Ingegneria e le Costruzioni",
+      "cidade": "Milano",
+      "nivel": "C1",
+      "total_palavras": 107,
+      "cor": "#f1c40f",
+      "categorias": [
+        "disciplina",
+        "persone",
+        "luoghi",
+        "costruzioni",
+        "attrezzi",
+        "materiali"
+      ],
+      "desbloqueado_em": 45
+    },
+    {
+      "templo": 46,
+      "arquivo": "templo-46.json",
+      "nome": "I Sentimenti e le Emozioni Complesse",
+      "cidade": "Verona",
+      "nivel": "B2",
+      "total_palavras": 107,
+      "cor": "#e67e22",
+      "categorias": [
+        "emozioni",
+        "verbi",
+        "aggettivi",
+        "sentimenti"
+      ],
+      "desbloqueado_em": 46
+    },
+    {
+      "templo": 47,
+      "arquivo": "templo-47.json",
+      "nome": "I Verbi Idiomatici e i Modi di Dire",
+      "cidade": "Roma",
+      "nivel": "C2",
+      "total_palavras": 115,
+      "cor": "#1abc9c",
+      "categorias": [
+        "espressioni",
+        "avverbi"
+      ],
+      "desbloqueado_em": 47
+    },
+    {
+      "templo": 48,
+      "arquivo": "templo-48.json",
+      "nome": "L'Arte dell'Oratoria e la Persuasione",
+      "cidade": "Roma",
+      "nivel": "C2",
+      "total_palavras": 107,
+      "cor": "#e74c3c",
+      "categorias": [
+        "oratoria",
+        "luoghi",
+        "verbi",
+        "aggettivi",
+        "logica"
+      ],
+      "desbloqueado_em": 48
+    },
+    {
+      "templo": 49,
+      "arquivo": "templo-49.json",
+      "nome": "La Spiritualità Orientale e la Meditazione",
+      "cidade": "Assisi",
+      "nivel": "C2",
+      "total_palavras": 107,
+      "cor": "#3498db",
+      "categorias": [
+        "spiritualità",
+        "oggetti",
+        "persone",
+        "luoghi",
+        "verbi",
+        "aggettivi"
+      ],
+      "desbloqueado_em": 49
+    },
+    {
+      "templo": 50,
+      "arquivo": "templo-50.json",
+      "nome": "Il Viaggio della Vita",
+      "cidade": "Venezia",
+      "nivel": "C2",
+      "total_palavras": 107,
+      "cor": "#9b59b6",
+      "categorias": [
+        "fasi",
+        "concetti",
+        "verbi",
+        "aggettivi",
+        "vita"
+      ],
+      "desbloqueado_em": 50
+    }
+  ]
+}

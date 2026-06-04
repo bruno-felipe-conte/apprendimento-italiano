@@ -16234,6 +16234,2842 @@
       ],
       "nivel_minimo": 15,
       "cor": "linear-gradient(135deg, #E67E22, #784212)"
+    },
+    {
+      "id": "C1",
+      "nome": "C1 — Italiano Avanzato",
+      "nivel_minimo": 8,
+      "cor": "linear-gradient(135deg, #8E44AD, #4A235A)",
+      "lezioni": [
+        {
+          "id": "c1-i",
+          "num": "Lezione I",
+          "titulo": "Congiuntivo avanzato",
+          "subtitulo": "Usi sfumati del congiuntivo che anche i nativi sbagliano",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale forma è corretta?\n\n\"Nonostante ___ molto studiato, non ha superato l'esame.\"",
+              "opcoes": [
+                "abbia",
+                "abbia avuto",
+                "avesse",
+                "avrebbe"
+              ],
+              "resposta": 2,
+              "explicacao": "Con NONOSTANTE al passato (azione anteriore rispetto alla principale) → congiuntivo TRAPASSATO: nonostante AVESSE molto studiato. Non si usa 'abbia' per azioni passate remote."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Completare: \"Cerco qualcuno che ___ il cinese.\"\n(cerco, ma non so se esiste)",
+              "opcoes": [
+                "parla",
+                "parlasse",
+                "parli",
+                "avrebbe parlato"
+              ],
+              "resposta": 2,
+              "explicacao": "Quando si cerca qualcosa di ipotetico/non ancora trovato → congiuntivo PRESENTE: che PARLI. Se fosse passato irreale → congiuntivo imperfetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase è grammaticalmente corretta?",
+              "opcoes": [
+                "Benché sia stanco, continua a lavorare.",
+                "Benché è stanco, continua a lavorare.",
+                "Benché fosse stanco, ha continuato a lavorare.",
+                "Sia A che C sono corrette."
+              ],
+              "resposta": 3,
+              "explicacao": "Entrambe corrette! BENCHÉ + congiuntivo presente (azione simultanea alla principale presente) o congiuntivo imperfetto (azione simultanea alla principale passata). ✓ A e C."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Ho paura che lui non ___ ancora arrivato.\"\n(= Temo che non sia ancora arrivato)",
+              "opcoes": [
+                "sia",
+                "è",
+                "abbia",
+                "fosse"
+              ],
+              "resposta": 0,
+              "explicacao": "AVERE PAURA CHE → sempre congiuntivo. Passato composto → congiuntivo PASSATO: che non SIA ancora arrivato. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Congiuntivo o indicativo?\n\n\"Sembra che il progetto ___ in ritardo.\"",
+              "opcoes": [
+                "è",
+                "sia",
+                "fosse",
+                "sarà"
+              ],
+              "resposta": 1,
+              "explicacao": "SEMBRARE CHE → congiuntivo presente: SEMBRA CHE SIA. È uno dei verbi che reggono obbligatoriamente il congiuntivo nelle frasi subordinate."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Prima che tu ___, devi dirmi la verità.\"",
+              "opcoes": [
+                "parta",
+                "parti",
+                "partissi",
+                "partirai"
+              ],
+              "resposta": 0,
+              "explicacao": "PRIMA CHE → sempre congiuntivo presente: PRIMA CHE PARTA. Non si usa indicativo né condizionale dopo prima che."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale uso del congiuntivo è SBAGLIATO?",
+              "opcoes": [
+                "Spero che venga.",
+                "È necessario che lo sappia.",
+                "Voglio che vieni.",
+                "Dubito che sia vero."
+              ],
+              "resposta": 2,
+              "explicacao": "VOLERE CHE → congiuntivo: VOGLIO CHE VENGA, non 'vieni'. L'indicativo dopo volere è un errore frequente anche tra madrelingua."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Chiunque ___ questa porta, risponderò io.\"",
+              "opcoes": [
+                "bussa",
+                "bussi",
+                "bussasse",
+                "busserà"
+              ],
+              "resposta": 1,
+              "explicacao": "CHIUNQUE → sempre congiuntivo: CHIUNQUE BUSSI. È una delle pronome indefinite che reggono il congiuntivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Dovunque tu ___, ti seguirò.\"",
+              "opcoes": [
+                "vai",
+                "vada",
+                "andassi",
+                "andrai"
+              ],
+              "resposta": 1,
+              "explicacao": "DOVUNQUE → congiuntivo presente: DOVUNQUE TU VADA. Come chiunque, qualunque ecc."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Completare con la forma corretta:\n\"Non è che lei ___ ignorante, è solo distratta.\"",
+              "opcoes": [
+                "sia",
+                "è",
+                "fosse",
+                "sarà"
+              ],
+              "resposta": 0,
+              "explicacao": "NON È CHE → congiuntivo: NON È CHE LEI SIA ignorante. Struttura tipica dell'italiano parlato colto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Aspettavo che lui ___ prima delle dieci.\"",
+              "opcoes": [
+                "arrivi",
+                "è arrivato",
+                "arrivasse",
+                "sia arrivato"
+              ],
+              "resposta": 2,
+              "explicacao": "ASPETTARE CHE al passato (aspettavo) → congiuntivo IMPERFETTO: che ARRIVASSE. La consecutio temporum italiana richiede imperfetto del congiuntivo quando la principale è al passato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"È ora che tu ___ una decisione.\"",
+              "opcoes": [
+                "prendi",
+                "prenda",
+                "prendessi",
+                "prenderai"
+              ],
+              "resposta": 1,
+              "explicacao": "È ORA CHE → congiuntivo presente: che tu PRENDA. Espressioni con 'è + aggettivo + che' reggono il congiuntivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Consecutio temporum: \"Temevo che non ___ capito.\"",
+              "opcoes": [
+                "capisce",
+                "abbia capito",
+                "avesse capito",
+                "capisca"
+              ],
+              "resposta": 2,
+              "explicacao": "Principale al passato (TEMEVO) + anteriorità → congiuntivo TRAPASSATO: che non AVESSE capito. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Qualsiasi cosa tu ___, pensa prima di agire.\"",
+              "opcoes": [
+                "fai",
+                "faccia",
+                "facessi",
+                "farei"
+              ],
+              "resposta": 1,
+              "explicacao": "QUALSIASI COSA → congiuntivo presente: QUALSIASI COSA TU FACCIA. È sinonimo di 'qualunque cosa'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase esprime dubbio genuino?\n(= I'm not sure if he understood)",
+              "opcoes": [
+                "Non so se capisce.",
+                "Non so se capisca.",
+                "Non so se capirà.",
+                "Non so se abbia capito."
+              ],
+              "resposta": 3,
+              "explicacao": "Non so se + congiuntivo passato indica dubbio su un'azione già avvenuta: NON SO SE ABBIA CAPITO. Con l'indicativo si esprime meno incertezza."
+            }
+          ]
+        },
+        {
+          "id": "c1-ii",
+          "num": "Lezione II",
+          "titulo": "Periodo ipotetico impossibile",
+          "subtitulo": "Il tipo 3 e le sfumature del controfattuale",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Periodo ipotetico impossibile (passato):\n\"Se ___ studiato, ___ l'esame.\"",
+              "opcoes": [
+                "avessi / avresti passato",
+                "studiassi / passeresti",
+                "avevi studiato / passavi",
+                "studi / passi"
+              ],
+              "resposta": 0,
+              "explicacao": "Tipo 3 (irreale del passato): SE + congiuntivo TRAPASSATO → condizionale COMPOSTO: Se avessi studiato, avresti passato l'esame. Entrambi i tempi composti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Tipo 2 (irreale del presente):\n\"Se ___ più tempo, ___ a trovarti.\"",
+              "opcoes": [
+                "avrei / vengo",
+                "avessi / verrei",
+                "ho / vengo",
+                "avrò / verrò"
+              ],
+              "resposta": 1,
+              "explicacao": "Tipo 2: SE + congiuntivo IMPERFETTO → condizionale SEMPLICE: Se avessi più tempo, verrei a trovarti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se fossi stato più attento, non ___ quell'errore.\"",
+              "opcoes": [
+                "faccio",
+                "facevo",
+                "avrei fatto",
+                "avessi fatto"
+              ],
+              "resposta": 2,
+              "explicacao": "Apodosi del tipo 3 → condizionale composto: non AVREI FATTO. La protasi è già al trapassato (fossi stato)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Periodo misto (protasi passata, apodosi presente):\n\"Se l'avessi studiata bene allora, ___ fluente adesso.\"",
+              "opcoes": [
+                "sarei",
+                "fossi",
+                "sono",
+                "sarò"
+              ],
+              "resposta": 0,
+              "explicacao": "Il periodo ipotetico misto combina passato e presente: protasi tipo 3 (avessi studiato) + apodosi condizionale SEMPLICE (SAREI fluente ora)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase NON è corretta?",
+              "opcoes": [
+                "Se avessi soldi, comprerei una casa.",
+                "Se avrei soldi, comprerei una casa.",
+                "Se avessi avuto soldi, avrei comprato una casa.",
+                "Se avessi soldi, avrei comprato una casa."
+              ],
+              "resposta": 1,
+              "explicacao": "MAI il condizionale nella protasi (SE + condizionale è sbagliato). La protasi vuole sempre il congiuntivo: SE AVESSI, non 'se avrei'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Come si traduce 'I wish I had more time'?",
+              "opcoes": [
+                "Voglio avere più tempo.",
+                "Spero di avere più tempo.",
+                "Vorrei avere più tempo.",
+                "Magari avessi più tempo."
+              ],
+              "resposta": 3,
+              "explicacao": "MAGARI + congiuntivo imperfetto esprime desiderio irrealizzabile al presente: MAGARI AVESSI più tempo. È più idiomatico del condizionale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Avrei telefonato, ___ il numero.\"",
+              "opcoes": [
+                "se avessi / avuto",
+                "se avevo / saputo",
+                "se sapessi",
+                "se avessi saputo"
+              ],
+              "resposta": 3,
+              "explicacao": "La parte mancante è la protasi tipo 3: se AVESSI SAPUTO il numero, avrei telefonato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Se solo ___ prima!\" (= If only I had known earlier!)",
+              "opcoes": [
+                "sapevo",
+                "sapessi",
+                "avessi saputo",
+                "avrò saputo"
+              ],
+              "resposta": 2,
+              "explicacao": "SE SOLO + congiuntivo trapassato per rimpianti sul passato: SE SOLO AVESSI SAPUTO prima! È un'esclamazione ipotetica."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Anche se ___ ricco, non cambierei stile di vita.\"",
+              "opcoes": [
+                "fossi",
+                "sono",
+                "sarei",
+                "sarò"
+              ],
+              "resposta": 0,
+              "explicacao": "ANCHE SE + congiuntivo imperfetto per ipotesi irreale al presente: ANCHE SE FOSSI ricco. Non si usa l'indicativo qui."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale alternativa al periodo ipotetico è corretta?\n\"Con più tempo, ___ finito prima.\"",
+              "opcoes": [
+                "avrei",
+                "avevo",
+                "avrei avuto",
+                "ho"
+              ],
+              "resposta": 0,
+              "explicacao": "Con/senza + nome sostituisce la protasi: CON più tempo, AVREI finito prima. La forma con 'con' è tipica dell'italiano scritto formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"A meno che non ___ un miracolo, perderemo.\"",
+              "opcoes": [
+                "accada",
+                "accadesse",
+                "accadrà",
+                "è accaduto"
+              ],
+              "resposta": 0,
+              "explicacao": "A MENO CHE NON → congiuntivo presente: che non ACCADA. È una delle congiunzioni concessivo-condizionali che reggono il congiuntivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Stile letterario: 'Avesse studiato, sarebbe riuscito' equivale a:",
+              "opcoes": [
+                "Se studiava, riusciva.",
+                "Se avesse studiato, sarebbe riuscito.",
+                "Se studiasse, riuscirebbe.",
+                "Avendo studiato, riuscirebbe."
+              ],
+              "resposta": 1,
+              "explicacao": "L'inversione (AVESSE studiato = SE AVESSE studiato) è tipica dello stile letterario/formale. Stesso significato del periodo ipotetico tipo 3."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Fossi in te, non direi niente.\" — che tipo è?",
+              "opcoes": [
+                "Tipo 1 (reale)",
+                "Tipo 2 (irreale presente)",
+                "Tipo 3 (irreale passato)",
+                "Tipo misto"
+              ],
+              "resposta": 1,
+              "explicacao": "FOSSI IN TE = se fossi in te → tipo 2, irreale del presente. Forma tipica dell'italiano parlato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "\"Sarebbe bello se tu ___ qui.\"",
+              "opcoes": [
+                "sei",
+                "fossi",
+                "saresti",
+                "sarai"
+              ],
+              "resposta": 1,
+              "explicacao": "SAREBBE BELLO SE → congiuntivo imperfetto: se tu FOSSI qui. Il condizionale nella principale richiede il congiuntivo imperfetto nella protasi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Collocare il periodo: 'In caso di emergenza, ___ le autorità.'",
+              "opcoes": [
+                "avvisate",
+                "avvisare",
+                "avvisaste",
+                "avvisiate"
+              ],
+              "resposta": 0,
+              "explicacao": "IN CASO DI + imperativo (o infinito): AVVISATE le autorità. Forma tipica di avvisi e istruzioni."
+            }
+          ]
+        },
+        {
+          "id": "c1-iii",
+          "num": "Lezione III",
+          "titulo": "Nominalizzazione e stile formale",
+          "subtitulo": "Come trasformare verbi in sostantivi per scrivere bene",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Nominalizzazione: 'Si è deciso di rinviare la riunione' → forma nominale:",
+              "opcoes": [
+                "La decisione di rinviare la riunione è stata presa.",
+                "Rinviare la riunione è stato deciso.",
+                "La riunione è stata rinviata per decisione.",
+                "Sia A che C sono corrette."
+              ],
+              "resposta": 3,
+              "explicacao": "La nominalizzazione ('la decisione di') è tipica dello stile formale/burocratico. Entrambe A e C sono corrette e più formali dell'originale verbale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa la nominalizzazione correttamente?",
+              "opcoes": [
+                "Si procede all'esame dei documenti.",
+                "Si esamina i documenti.",
+                "Esaminiamo i documenti.",
+                "I documenti vengono esaminati."
+              ],
+              "resposta": 0,
+              "explicacao": "'Si procede ALL'ESAME dei documenti' usa la nominalizzazione (esame = azione nominale di esaminare). È tipico del linguaggio burocratico-formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Dobbiamo prendere una decisione' — versione nominalizzata:",
+              "opcoes": [
+                "La necessità di una decisione",
+                "La decisione deve essere presa.",
+                "È necessaria la presa di decisione.",
+                "Sia B che C."
+              ],
+              "resposta": 3,
+              "explicacao": "Entrambe usano la nominalizzazione: 'la decisione deve essere presa' e 'la presa di decisione'. Il linguaggio formale preferisce i sostantivi ai verbi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In italiano formale, quale alternativa è preferita?",
+              "opcoes": [
+                "Quando arriviamo, ti chiamo.",
+                "All'arrivo, ti contatterò.",
+                "Quando arrivo ti chiamo.",
+                "Arrivo e ti chiamo."
+              ],
+              "resposta": 1,
+              "explicacao": "'ALL'ARRIVO' = nominalizzazione di 'arrivare'. Lo stile formale preferisce questa struttura, tipica di testi professionali e giuridici."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'L'autorità ha approvato il progetto' → versione passiva nominalizzata:",
+              "opcoes": [
+                "Il progetto è stato approvato.",
+                "L'approvazione del progetto da parte dell'autorità",
+                "Si è approvato il progetto.",
+                "Il progetto ha trovato approvazione."
+              ],
+              "resposta": 1,
+              "explicacao": "'L'approvazione del progetto da parte dell'autorità' è la forma nominale completa. 'Da parte di' sostituisce l'agente della passiva nel linguaggio formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Suffisso che indica azione nominalizzata (come in 'approvazione'):",
+              "opcoes": [
+                "zione/sione",
+                "mento",
+                "tura",
+                "Tutti e tre"
+              ],
+              "resposta": 3,
+              "explicacao": "I suffissi -ZIONE/-SIONE (approvazione), -MENTO (raggiungimento), -TURA (apertura) creano sostantivi d'azione da verbi. Sono molto produttivi in italiano formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Partecipare al convegno' → nominalizzazione:",
+              "opcoes": [
+                "la partecipazione al convegno",
+                "il partecipare al convegno",
+                "partecipando al convegno",
+                "aver partecipato al convegno"
+              ],
+              "resposta": 0,
+              "explicacao": "'LA PARTECIPAZIONE al convegno' è la nominalizzazione standard. L'infinito sostantivato ('il partecipare') è anche corretto ma meno comune nel registro burocratico."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase ha il registro più formale?",
+              "opcoes": [
+                "Abbiamo bisogno di soldi per il progetto.",
+                "Le risorse finanziarie necessarie al progetto risultano insufficienti.",
+                "Mancano i soldi per il progetto.",
+                "Non ci sono abbastanza soldi."
+              ],
+              "resposta": 1,
+              "explicacao": "Registro formale: sostantivi astratti (risorse finanziarie), passiva (risultano), costruzioni nominali (insufficienti). Evita i verbi diretti e il lessico colloquiale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il progetto fallirà se non agiamo subito' — versione formale:",
+              "opcoes": [
+                "In assenza di interventi tempestivi, il progetto è destinato all'insuccesso.",
+                "Se non facciamo niente il progetto va male.",
+                "Bisogna agire subito o il progetto fallisce.",
+                "È necessario agire."
+              ],
+              "resposta": 0,
+              "explicacao": "Stile formale: nominalizzazione (interventi tempestivi = agire subito), costruzione impersonale (è destinato a), lessico ricercato (insuccesso = fallimento)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Participio passato con valore nominale:\n'Il responsabile del progetto ha approvato...' — 'responsabile' è:",
+              "opcoes": [
+                "aggettivo",
+                "sostantivo",
+                "participio",
+                "avverbio"
+              ],
+              "resposta": 1,
+              "explicacao": "RESPONSABILE qui funziona come SOSTANTIVO (il responsabile = la persona responsabile). In italiano molti participi e aggettivi si sostantivano: il direttore, l'accusato, il condannato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Mediante la firma del contratto si perfeziona l'accordo' — 'mediante' è:",
+              "opcoes": [
+                "preposizione formale",
+                "congiunzione",
+                "avverbio",
+                "participio"
+              ],
+              "resposta": 0,
+              "explicacao": "MEDIANTE è una preposizione tipica del registro formale/giuridico (= attraverso, tramite). Altre: ai sensi di, in ottemperanza a, a norma di."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale connettivo è tipico del registro formale?",
+              "opcoes": [
+                "però",
+                "ma",
+                "tuttavia",
+                "cioè"
+              ],
+              "resposta": 2,
+              "explicacao": "TUTTAVIA è il connettivo avversativo del registro formale (= però, ma). Altri formali: nondimeno, ciononostante, al contrario, per contro."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Si fa presente che...' è tipico di quale registro?",
+              "opcoes": [
+                "colloquiale",
+                "burocratico-amministrativo",
+                "letterario",
+                "giornalistico"
+              ],
+              "resposta": 1,
+              "explicacao": "'SI FA PRESENTE CHE' è formulaico del linguaggio burocratico-amministrativo italiano. Significa 'si comunica / si informa'. Usato in circolari, avvisi, lettere ufficiali."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Trasformare in stile formale: 'Ci scusiamo per i disagi'",
+              "opcoes": [
+                "Ci dispiace per i problemi.",
+                "Ci scusiamo tanto.",
+                "Si porgono le scuse per gli inconvenienti arrecati.",
+                "Siamo dispiaciuti."
+              ],
+              "resposta": 2,
+              "explicacao": "'Si porgono le scuse' (forma impersonale) + 'inconvenienti arrecati' (lessico formale) = registro burocratico-formale corretto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase contiene un'incorrettezza formale?",
+              "opcoes": [
+                "In allegato si trasmette la documentazione richiesta.",
+                "Distinti saluti.",
+                "Con riferimento alla vs. del 10 c.m.",
+                "Ci sentiamo presto!"
+              ],
+              "resposta": 3,
+              "explicacao": "'Ci sentiamo presto!' è colloquiale. In una lettera formale si usa: 'Resto a Sua disposizione' o 'In attesa di un Suo cortese riscontro'. Le altre tre sono formule epistolari corrette."
+            }
+          ]
+        },
+        {
+          "id": "c1-iv",
+          "num": "Lezione IV",
+          "titulo": "Connettivi avanzati e coesione testuale",
+          "subtitulo": "Legare le idee come uno scrittore",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale connettivo esprime CONCESSIONE?",
+              "opcoes": [
+                "pertanto",
+                "sebbene",
+                "inoltre",
+                "ossia"
+              ],
+              "resposta": 1,
+              "explicacao": "SEBBENE + congiuntivo esprime concessione (= nonostante, benché): 'Sebbene stanco, lavorò'. Pertanto = conseguenza, Inoltre = aggiunta, Ossia = riformulazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il progetto è ritardato; ___, dobbiamo rispettare la scadenza.'",
+              "opcoes": [
+                "ciononostante",
+                "inoltre",
+                "pertanto",
+                "ossia"
+              ],
+              "resposta": 0,
+              "explicacao": "CIONONOSTANTE = nonostante questo, comunque. È il connettivo avversativo-concessivo del registro formale. 'Pertanto' indica conseguenza."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Connettivo che introduce una CONSEGUENZA:",
+              "opcoes": [
+                "tuttavia",
+                "eppure",
+                "di conseguenza",
+                "sebbene"
+              ],
+              "resposta": 2,
+              "explicacao": "DI CONSEGUENZA = quindi, pertanto, dunque. Introduce il risultato logico di una premessa. È preferito nel registro scritto formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'In primo luogo... in secondo luogo... infine' — questi sono connettivi di:",
+              "opcoes": [
+                "concessione",
+                "enumerazione/ordine",
+                "causa",
+                "contrasto"
+              ],
+              "resposta": 1,
+              "explicacao": "Connettivi di ENUMERAZIONE: in primo luogo, in secondo luogo, in terzo luogo, infine, da ultimo. Organizzano il testo in punti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale coppia di connettivi esprime CORRELAZIONE?",
+              "opcoes": [
+                "sia... sia / non solo... ma anche",
+                "però... tuttavia",
+                "innanzitutto... infine",
+                "infatti... pertanto"
+              ],
+              "resposta": 0,
+              "explicacao": "CORRELAZIONE: SIA... SIA (tanto... quanto), NON SOLO... MA ANCHE. Collegano elementi paralleli e simmetrici nel testo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Vale a dire' è un connettivo di:",
+              "opcoes": [
+                "causa",
+                "riformulazione/spiegazione",
+                "contrasto",
+                "conclusione"
+              ],
+              "resposta": 1,
+              "explicacao": "VALE A DIRE = cioè, ossia, ovvero. Introduce una riformulazione o spiegazione di quanto detto prima. Tipico del registro esplicativo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Connettivo che introduce una CAUSA nel registro formale:",
+              "opcoes": [
+                "ma",
+                "poiché",
+                "però",
+                "tuttavia"
+              ],
+              "resposta": 1,
+              "explicacao": "POICHÉ (= perché, dato che, in quanto) introduce la causa nel registro scritto formale. Nella frase causale: 'Poiché pioveva, rimasero a casa.'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Al contrario' vs 'al contrario di' — differenza:",
+              "opcoes": [
+                "Sono sinonimi",
+                "Al contrario introduce contrasto; al contrario di introduce paragone",
+                "Al contrario è avverbio; al contrario di è congiunzione",
+                "Entrambi sono preposizioni"
+              ],
+              "resposta": 1,
+              "explicacao": "AL CONTRARIO (da solo) introduce un'idea opposta alla precedente. AL CONTRARIO DI + nome fa un paragone: 'Al contrario di Paolo, Maria studia molto.'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale connettivo introduce una SPECIFICAZIONE/ESEMPIO?",
+              "opcoes": [
+                "infatti",
+                "in particolare / ad esempio",
+                "tuttavia",
+                "pertanto"
+              ],
+              "resposta": 1,
+              "explicacao": "IN PARTICOLARE e AD ESEMPIO introducono specificazioni o esempi. INFATTI introduce una conferma/spiegazione. TUTTAVIA contrasta, PERTANTO conclude."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Laddove' in italiano formale significa:",
+              "opcoes": [
+                "dove (fisico)",
+                "nel caso in cui / quando (condizione)",
+                "entrambi",
+                "né l'uno né l'altro"
+              ],
+              "resposta": 2,
+              "explicacao": "LADDOVE ha due usi: 1) spaziale (= dove): 'Laddove c'è vita, c'è speranza'. 2) condizionale formale (= nel caso in cui): 'Laddove non fosse possibile...'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Connettivo per introdurre una RISERVA o ECCEZIONE:",
+              "opcoes": [
+                "a meno che",
+                "salvo che",
+                "tranne nel caso in cui",
+                "Tutti e tre"
+              ],
+              "resposta": 3,
+              "explicacao": "SALVO CHE, A MENO CHE, TRANNE NEL CASO IN CUI introducono tutti eccezioni o riserve. Reggono il congiuntivo: 'salvo che non piova'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Giacché' è sinonimo di:",
+              "opcoes": [
+                "benché",
+                "sebbene",
+                "poiché",
+                "affinché"
+              ],
+              "resposta": 2,
+              "explicacao": "GIACCHÉ = poiché, dato che, visto che. È un connettivo causale del registro letterario/formale. 'Giacché sei qui, aiutami.'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale sequenza di connettivi organizza meglio un testo argomentativo?",
+              "opcoes": [
+                "Primo... Poi... Dopo...",
+                "In primo luogo... Inoltre... In conclusione...",
+                "Ma... Però... Tuttavia...",
+                "E... E... E..."
+              ],
+              "resposta": 1,
+              "explicacao": "La struttura IN PRIMO LUOGO + INOLTRE + IN CONCLUSIONE è la più efficace per un testo argomentativo formale. Chiarisce l'ordine logico e segna la struttura."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Affinché' introduce:",
+              "opcoes": [
+                "una causa",
+                "uno scopo/finalità",
+                "una concessione",
+                "una conseguenza"
+              ],
+              "resposta": 1,
+              "explicacao": "AFFINCHÉ (= perché, acché) introduce la FINALITÀ: 'Studio affinché tu possa imparare'. Regge il congiuntivo. È il connettivo di scopo del registro formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Coesione lessicale: la ripetizione dello stesso termine in un testo è:",
+              "opcoes": [
+                "sempre corretta",
+                "da evitare con sinonimi e pronomi",
+                "sempre da evitare",
+                "obbligatoria"
+              ],
+              "resposta": 1,
+              "explicacao": "La buona scrittura evita la ripetizione usando SINONIMI, PRONOMI e nominalizzazioni. Tuttavia, in testi tecnici/legali la ripetizione del termine esatto può essere necessaria per precisione."
+            }
+          ]
+        },
+        {
+          "id": "c1-v",
+          "num": "Lezione V",
+          "titulo": "Linguaggio dei media e del giornalismo",
+          "subtitulo": "Capire e produrre testi giornalistici",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'titolo a effetto' nel giornalismo si chiama:",
+              "opcoes": [
+                "editoriale",
+                "headline sensazionalistica / titolone",
+                "sommario",
+                "occhiello"
+              ],
+              "resposta": 1,
+              "explicacao": "Il titolo sensazionalistico (HEADLINE o TITOLONE) punta a catturare l'attenzione. L'OCCHIELLO è il sopratitolo breve, il SOMMARIO riassume."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'piramide rovesciata' nel giornalismo significa:",
+              "opcoes": [
+                "le notizie più importanti sono alla fine",
+                "le notizie più importanti sono all'inizio",
+                "il testo ha forma triangolare",
+                "si scrive dal basso verso l'alto"
+              ],
+              "resposta": 1,
+              "explicacao": "La PIRAMIDE ROVESCIATA mette le informazioni più importanti all'inizio (chi, cosa, quando, dove, perché) e i dettagli secondari alla fine. È la struttura base del pezzo giornalistico."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine indica l'articolo di opinione del direttore?",
+              "opcoes": [
+                "reportage",
+                "editoriale",
+                "inchiesta",
+                "cronaca"
+              ],
+              "resposta": 1,
+              "explicacao": "L'EDITORIALE è l'articolo del direttore (o di un editorialista) che esprime la linea del giornale. Il REPORTAGE è un racconto approfondito, l'INCHIESTA è investigativa."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il governo ha dichiarato che...' — questa è una citazione:",
+              "opcoes": [
+                "diretta",
+                "indiretta",
+                "libera",
+                "implicita"
+              ],
+              "resposta": 1,
+              "explicacao": "Citazione INDIRETTA: il giornalista riporta il contenuto con le proprie parole, senza virgolette. La citazione DIRETTA usa le virgolette: 'Il governo ha dichiarato: \"...\"'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale formula giornalistica introduce una fonte non verificata?",
+              "opcoes": [
+                "Secondo fonti ben informate...",
+                "È confermato che...",
+                "Si sa con certezza che...",
+                "Il portavoce ha dichiarato:"
+              ],
+              "resposta": 0,
+              "explicacao": "'SECONDO FONTI BEN INFORMATE' indica che la fonte non è ufficialmente identificata. Segnala informazione non confermata. Le altre implicano certezza."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Striscia di Gaza sotto i bombardamenti' — questo titolo usa:",
+              "opcoes": [
+                "frase completa",
+                "nominalizzazione/frase nominale",
+                "interrogativa",
+                "esclamativa"
+              ],
+              "resposta": 1,
+              "explicacao": "La FRASE NOMINALE (senza verbo) è tipica dei titoli giornalistici italiani: soggetto + complemento, senza verbo esplicito. Economica e d'impatto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'lancio' in un articolo giornalistico è:",
+              "opcoes": [
+                "il titolo principale",
+                "il primo paragrafo riassuntivo",
+                "l'ultima frase",
+                "la fotografia"
+              ],
+              "resposta": 1,
+              "explicacao": "Il LANCIO (o lead, o attacco) è il primo paragrafo che risponde alle 5 W (chi, cosa, quando, dove, perché). È il cuore dell'articolo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine descrive la tendenza a enfatizzare notizie negative?",
+              "opcoes": [
+                "sensazionalismo",
+                "notiziabilità",
+                "agenda setting",
+                "negativismo giornalistico"
+              ],
+              "resposta": 3,
+              "explicacao": "Il NEGATIVISMO GIORNALISTICO (bias verso le cattive notizie) è documentato. Il SENSAZIONALISMO è l'esagerazione per effetto. L'AGENDA SETTING è l'influenza dei media sulla percezione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il ministro avrebbe dichiarato...' — il condizionale qui indica:",
+              "opcoes": [
+                "azione futura",
+                "notizia non confermata/fonte non sicura",
+                "desiderio",
+                "ipotesi"
+              ],
+              "resposta": 1,
+              "explicacao": "In italiano giornalistico, il CONDIZIONALE EPISTEMICO indica notizia non ancora verificata o riportata da fonte non ufficiale. È una convenzione tipica del giornalismo italiano."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale genere giornalistico ammette l'opinione dell'autore?",
+              "opcoes": [
+                "cronaca",
+                "reportage oggettivo",
+                "editoriale e critica",
+                "notizia flash"
+              ],
+              "resposta": 2,
+              "explicacao": "L'EDITORIALE e la CRITICA (cinema, teatro, libri) ammettono l'opinione dell'autore. La CRONACA deve essere oggettiva. Il REPORTAGE dovrebbe essere prevalentemente oggettivo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'L'Europa scossa dalla crisi del debito' — il participio 'scossa' ha funzione di:",
+              "opcoes": [
+                "verbo",
+                "aggettivo attributivo",
+                "avverbio",
+                "complemento"
+              ],
+              "resposta": 1,
+              "explicacao": "SCOSSA funziona come AGGETTIVO ATTRIBUTIVO che modifica Europa. L'uso di participi come aggettivi è frequente nel linguaggio giornalistico: un governo travolto, una città sconvolta."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il termine 'fake news' in italiano si traduce preferibilmente:",
+              "opcoes": [
+                "notizie false",
+                "disinformazione",
+                "bufala / notizia falsa",
+                "notizie inventate"
+              ],
+              "resposta": 2,
+              "explicacao": "In italiano si usano sia BUFALA (termine colloquiale) che NOTIZIA FALSA. La Treccani raccomanda 'notizia falsa' o 'disinformazione' per il fenomeno strutturale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale struttura è tipica del titolo di un'inchiesta?",
+              "opcoes": [
+                "soggetto + verbo + oggetto breve",
+                "domanda retorica",
+                "nominalizzazione lunga",
+                "citazione diretta"
+              ],
+              "resposta": 0,
+              "explicacao": "Il titolo di inchiesta preferisce soggetto + verbo + oggetto breve e preciso, diversamente dal titolo di commento che può essere più evocativo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Secondo quanto appreso da questa testata...' indica:",
+              "opcoes": [
+                "fonte esterna",
+                "fonte interna/esclusiva",
+                "fonte ufficiale",
+                "fonte anonima"
+              ],
+              "resposta": 1,
+              "explicacao": "'QUANTO APPRESO DA QUESTA TESTATA' indica che il giornale ha ottenuto la notizia in esclusiva tramite proprie fonti. Segnala una notizia in prima battuta."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine indica l'insieme di notizie che un media sceglie di coprire?",
+              "opcoes": [
+                "audience",
+                "agenda",
+                "breaking news",
+                "edizione"
+              ],
+              "resposta": 1,
+              "explicacao": "L'AGENDA (o agenda setting) è l'insieme dei temi che un media sceglie di mettere in evidenza, influenzando così l'opinione pubblica su cosa è importante."
+            }
+          ]
+        },
+        {
+          "id": "c1-vi",
+          "num": "Lezione VI",
+          "titulo": "Modi indefiniti avanzati",
+          "subtitulo": "Infinito, gerundio e participio in contesti complessi",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Participio passato con valore temporale:\n'Terminata la riunione, tutti uscirono.'",
+              "opcoes": [
+                "dopo che la riunione era terminata",
+                "mentre la riunione terminava",
+                "perché la riunione era terminata",
+                "se la riunione fosse terminata"
+              ],
+              "resposta": 0,
+              "explicacao": "Participio assoluto = proposizione temporale: TERMINATA LA RIUNIONE = dopo che la riunione era terminata. Il participio assoluto è tipico dello stile scritto formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Avendo studiato molto, ha superato l'esame.' — il gerundio è:",
+              "opcoes": [
+                "simultaneo",
+                "anteriore",
+                "posteriore",
+                "condizionale"
+              ],
+              "resposta": 1,
+              "explicacao": "AVENDO STUDIATO = gerundio composto → anteriorità: l'azione del gerundio precede quella della principale. Il gerundio semplice indica simultaneità."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Pur essendo stanco, continuò a lavorare.' — PUR + gerundio esprime:",
+              "opcoes": [
+                "causa",
+                "concessione",
+                "condizione",
+                "tempo"
+              ],
+              "resposta": 1,
+              "explicacao": "PUR + gerundio esprime CONCESSIONE (= benché, sebbene): pur essendo stanco = benché fosse stanco, nonostante fosse stanco."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Una volta firmato il contratto, il progetto inizierà.' — 'firmato' è:",
+              "opcoes": [
+                "aggettivo",
+                "gerundio",
+                "participio assoluto",
+                "infinito"
+              ],
+              "resposta": 2,
+              "explicacao": "PARTICIATO ASSOLUTO con valore temporale: UNA VOLTA FIRMATO = una volta che sarà firmato / appena firmato. Tipico del linguaggio giuridico-contrattuale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa l'infinito come soggetto?",
+              "opcoes": [
+                "Voglio partire.",
+                "Partire è il mio sogno.",
+                "Ho deciso di partire.",
+                "Mi ha fatto partire."
+              ],
+              "resposta": 1,
+              "explicacao": "PARTIRE È IL MIO SOGNO: l'infinito funziona da SOGGETTO della frase. 'Voglio partire' (completiva), 'deciso di partire' (completiva), 'fatto partire' (infinitiva con causativo)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Lo vedo correre ogni mattina.' — il gerundio dipende da:",
+              "opcoes": [
+                "verbo di percezione",
+                "verbo di volontà",
+                "preposizione",
+                "avverbio"
+              ],
+              "resposta": 0,
+              "explicacao": "Con VERBI DI PERCEZIONE (vedere, sentire, ascoltare) + gerundio o infinito: 'lo vedo correre' = 'lo vedo che corre'. Entrambe le costruzioni sono corrette."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Costruzione assoluta:\n'Parlato con il direttore, prenderemo una decisione.'",
+              "opcoes": [
+                "Quando parleremo con il direttore...",
+                "Dopo aver parlato con il direttore...",
+                "Se parleremo con il direttore...",
+                "Benché abbiamo parlato con il direttore..."
+              ],
+              "resposta": 1,
+              "explicacao": "Participio assoluto passato con valore temporale: PARLATO CON IL DIRETTORE = DOPO AVER PARLATO con il direttore. La costruzione assoluta è tipica dello stile formale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Si tratta di un problema da risolvere.' — 'da risolvere' indica:",
+              "opcoes": [
+                "necessità/obbligo",
+                "anteriorità",
+                "simultaneità",
+                "scopo"
+              ],
+              "resposta": 0,
+              "explicacao": "DA + infinito con valore di NECESSITÀ/OBBLIGO: un problema DA RISOLVERE = che deve essere risolto, che va risolto. Struttura molto frequente in italiano."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Veduta la situazione, decise di ritirarsi.' — il participio ha soggetto:",
+              "opcoes": [
+                "diverso dalla principale",
+                "uguale alla principale",
+                "implicito indefinito",
+                "il participio non ha soggetto"
+              ],
+              "resposta": 1,
+              "explicacao": "Nel PARTICIPIO ASSOLUTO il soggetto del participio deve essere lo stesso della principale (DECISE = lui; VEDUTA = lui). Diversamente è un anacoluto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale uso dell'infinito è scorretto?",
+              "opcoes": [
+                "È necessario studiare.",
+                "Senza aver studiato, non puoi capire.",
+                "Prima studiando, poi capisci.",
+                "Ho finito di studiare."
+              ],
+              "resposta": 2,
+              "explicacao": "'PRIMA STUDIANDO' è incorretto: PRIMA DI + infinito (non gerundio): 'Prima di studiare'. Il gerundio non si usa con PRIMA DI."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Stava parlando quando arrivai.' — 'stava parlando' è:",
+              "opcoes": [
+                "imperfetto progressivo",
+                "gerundio assoluto",
+                "participio progressivo",
+                "futuro anteriore"
+              ],
+              "resposta": 0,
+              "explicacao": "STAVA PARLANDO = imperfetto di STARE + gerundio → IMPERFETTO PROGRESSIVO. Indica un'azione in corso nel passato quando ne accade un'altra (imperfetto vs passato remoto)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il gerundio può avere soggetto diverso dalla principale?",
+              "opcoes": [
+                "mai",
+                "solo in costruzioni assolute letterarie",
+                "sempre",
+                "solo con 'pur'"
+              ],
+              "resposta": 1,
+              "explicacao": "Il gerundio normalmente ha lo stesso soggetto della principale. Quando ha soggetto diverso si chiama GERUNDIO ASSOLUTO, ammesso solo in costruzioni letterarie arcaiche: 'Essendo il re assente, governò la regina.'"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Non sapendo cosa fare, chiese aiuto.' — si può riscrivere come:",
+              "opcoes": [
+                "Non sapeva cosa fare, così chiese aiuto.",
+                "Poiché non sapeva cosa fare, chiese aiuto.",
+                "Benché non sapesse cosa fare, chiese aiuto.",
+                "Non sa cosa fare, chiede aiuto."
+              ],
+              "resposta": 1,
+              "explicacao": "Il gerundio causale equivale a POICHÉ / DATO CHE + indicativo: NON SAPENDO = POICHÉ NON SAPEVA. Il gerundio italiano è spesso causale o temporale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Avrebbe voluto essere ascoltato.' — questo infinito passato nella finale è:",
+              "opcoes": [
+                "soggetto",
+                "oggetto diretto",
+                "complemento predicativo",
+                "soggetto della passiva"
+              ],
+              "resposta": 1,
+              "explicacao": "ESSERE ASCOLTATO = infinito passivo, oggetto diretto di 'voluto'. Il soggetto dell'infinito coincide con quello della principale (lui avrebbe voluto = lui essere ascoltato)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Costruzione causativa: 'Lo ha fatto lavorare' significa:",
+              "opcoes": [
+                "lui ha lavorato e poi ha fatto altro",
+                "lui ha fatto sì che qualcun altro lavorasse",
+                "lui ha lavorato per fare qualcosa",
+                "lui ha smesso di lavorare"
+              ],
+              "resposta": 1,
+              "explicacao": "FARE + infinito = CAUSATIVO: 'lo ha fatto lavorare' = ha fatto sì che lui lavorasse, l'ha costretto/indotto a lavorare. È la costruzione causativa dell'italiano."
+            }
+          ]
+        },
+        {
+          "id": "c1-vii",
+          "num": "Lezione VII",
+          "titulo": "Lessico settoriale avanzato",
+          "subtitulo": "Il vocabolario del diritto, economia e politica",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "In ambito giuridico, 'pro tempore' significa:",
+              "opcoes": [
+                "per il futuro",
+                "temporaneamente in carica",
+                "in via definitiva",
+                "per il passato"
+              ],
+              "resposta": 1,
+              "explicacao": "PRO TEMPORE = per il tempo [in carica]. È usato per indicare chi svolge una funzione temporaneamente: 'presidente pro tempore', 'commissario pro tempore'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine economico indica il valore di un'azienda in borsa?",
+              "opcoes": [
+                "capitalizzazione di mercato",
+                "fatturato",
+                "utile",
+                "patrimonio netto"
+              ],
+              "resposta": 0,
+              "explicacao": "La CAPITALIZZAZIONE DI MERCATO = prezzo dell'azione × numero di azioni. Misura il valore che il mercato assegna all'azienda. Diverso dal fatturato (vendite) e dall'utile (profitto)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In economia, 'stagflazione' indica:",
+              "opcoes": [
+                "crescita elevata + bassa inflazione",
+                "stagnazione economica + alta inflazione",
+                "deflazione + disoccupazione",
+                "boom economico + inflazione"
+              ],
+              "resposta": 1,
+              "explicacao": "STAGFLAZIONE = STAGNAZIONE (crescita zero) + INFLAZIONE alta. È una combinazione economicamente pericolosa, perché le politiche anti-inflazione peggiorano la stagnazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Termine giuridico: 'nullum crimen sine lege' significa:",
+              "opcoes": [
+                "nessun crimine senza prova",
+                "nessun crimine senza legge",
+                "nessuna pena senza processo",
+                "nessuna legge senza sanzione"
+              ],
+              "resposta": 1,
+              "explicacao": "'NULLUM CRIMEN SINE LEGE' = nessun crimine senza legge (che lo preveda). È il principio di legalità penale: si può essere puniti solo per ciò che la legge espressamente proibisce."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In politica, 'bicameralismo perfetto' (come in Italia) significa:",
+              "opcoes": [
+                "solo la Camera ha potere",
+                "entrambe le camere hanno gli stessi poteri",
+                "il Senato prevale sulla Camera",
+                "il governo ha potere legislativo"
+              ],
+              "resposta": 1,
+              "explicacao": "In Italia il BICAMERALISMO PERFETTO prevede che Camera e Senato abbiano ESATTAMENTE gli stessi poteri. Una legge deve essere approvata da entrambe in forma identica."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Bail-out' in economia indica:",
+              "opcoes": [
+                "fallimento bancario",
+                "salvataggio pubblico di un'azienda/banca",
+                "fusione tra banche",
+                "apertura del capitale"
+              ],
+              "resposta": 1,
+              "explicacao": "BAIL-OUT = salvataggio dall'esterno (stato o creditori) di un'istituzione in crisi. Opposto: BAIL-IN, dove i creditori interni assorbono le perdite."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Termine legale: 'inter partes' si riferisce a:",
+              "opcoes": [
+                "accordo internazionale",
+                "accordo valido solo tra le parti",
+                "sentenza pubblica",
+                "legge vigente"
+              ],
+              "resposta": 1,
+              "explicacao": "INTER PARTES = tra le parti. Un accordo o sentenza INTER PARTES vale solo per le parti coinvolte, non per terzi (a differenza di ERGA OMNES, che vale per tutti)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In economia, cosa misura il 'tasso di disoccupazione'?",
+              "opcoes": [
+                "quanti non vogliono lavorare",
+                "la percentuale di chi cerca lavoro e non lo trova",
+                "quanti hanno perso il lavoro di recente",
+                "il numero totale di disoccupati"
+              ],
+              "resposta": 1,
+              "explicacao": "Il TASSO DI DISOCCUPAZIONE = (disoccupati / forza lavoro) × 100. Include solo chi CERCA attivamente lavoro, non chi ha smesso di cercarlo (inattivi)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine indica la capacità di un'azienda di far fronte agli impegni di breve termine?",
+              "opcoes": [
+                "redditività",
+                "solvibilità",
+                "liquidità",
+                "patrimonializzazione"
+              ],
+              "resposta": 2,
+              "explicacao": "La LIQUIDITÀ indica la disponibilità di mezzi di pagamento immediati (cash, titoli liquidabili). La SOLVIBILITÀ riguarda il lungo termine. La REDDITIVITÀ misura la profittabilità."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Habeas corpus' in diritto garantisce:",
+              "opcoes": [
+                "il diritto alla proprietà",
+                "il diritto a non essere detenuto arbitrariamente",
+                "il diritto di voto",
+                "il diritto alla difesa"
+              ],
+              "resposta": 1,
+              "explicacao": "HABEAS CORPUS (letteralmente: 'che tu abbia il corpo') è il principio che impedisce la detenzione arbitraria senza un'accusa formale e un processo. È fondamento del diritto liberale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In economia, il 'PIL' misura:",
+              "opcoes": [
+                "la ricchezza dei cittadini",
+                "il valore dei beni/servizi prodotti in un anno",
+                "le esportazioni nette",
+                "il debito pubblico"
+              ],
+              "resposta": 1,
+              "explicacao": "Il PIL (PRODOTTO INTERNO LORDO) misura il valore di mercato di tutti i beni e servizi finali prodotti in un paese in un anno. Non misura la ricchezza o il benessere."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Termine politico: 'voto di fiducia' è:",
+              "opcoes": [
+                "il voto dei cittadini al governo",
+                "il voto del parlamento per sostenere o abbattere il governo",
+                "il voto per eleggere il presidente",
+                "il voto per le leggi ordinarie"
+              ],
+              "resposta": 1,
+              "explicacao": "Il VOTO DI FIDUCIA (o sfiducia) è il voto con cui il parlamento approva o revoca il sostegno al governo. Se il governo perde la fiducia, deve dimettersi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Sussidiarietà' nel diritto UE significa:",
+              "opcoes": [
+                "le direttive prevalgono sulle leggi nazionali",
+                "le decisioni vanno prese al livello più basso possibile",
+                "gli stati hanno precedenza sulla UE",
+                "i tribunali locali prevalgono su quelli europei"
+              ],
+              "resposta": 1,
+              "explicacao": "Il PRINCIPIO DI SUSSIDIARIETÀ stabilisce che le decisioni vadano prese al livello più vicino ai cittadini (locale, poi nazionale, poi europeo). L'UE interviene solo se gli stati non possono agire efficacemente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine legale indica la revoca anticipata di una sentenza?",
+              "opcoes": [
+                "prescrizione",
+                "impugnazione",
+                "abrogazione",
+                "revoca"
+              ],
+              "resposta": 1,
+              "explicacao": "L'IMPUGNAZIONE è il ricorso contro una sentenza per ottenerne la riforma o l'annullamento. La PRESCRIZIONE estingue il reato per decorso del tempo. L'ABROGAZIONE riguarda le leggi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Ceteris paribus' in economia significa:",
+              "opcoes": [
+                "tutte le altre cose uguali",
+                "la migliore situazione possibile",
+                "il caso peggiore",
+                "indipendentemente dalle altre variabili"
+              ],
+              "resposta": 0,
+              "explicacao": "CETERIS PARIBUS = a parità di tutte le altre condizioni. È fondamentale nell'analisi economica: si isola una variabile mantenendo tutte le altre costanti."
+            }
+          ]
+        },
+        {
+          "id": "c1-viii",
+          "num": "Lezione VIII",
+          "titulo": "Metafore e linguaggio figurato",
+          "subtitulo": "L'italiano nascosto nelle espressioni idiomatiche avanzate",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "'Buttare acqua sul fuoco' significa:",
+              "opcoes": [
+                "peggiorare la situazione",
+                "calmare la situazione",
+                "lavare i piatti",
+                "spegnere l'incendio"
+              ],
+              "resposta": 1,
+              "explicacao": "'Buttare acqua sul fuoco' = PLACARE, calmare una situazione tesa. Opposto: 'buttare benzina sul fuoco' = aggravare la situazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Essere in un vicolo cieco' significa:",
+              "opcoes": [
+                "essere in una strada stretta",
+                "non avere vie d'uscita",
+                "essere persi",
+                "camminare di notte"
+              ],
+              "resposta": 1,
+              "explicacao": "'Essere in un VICOLO CIECO' = trovarsi in una situazione senza via d'uscita, senza soluzione. Vicolo cieco è letteralmente una strada senza uscita."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Fare orecchie da mercante' significa:",
+              "opcoes": [
+                "essere astuto nel commercio",
+                "fingere di non sentire / ignorare deliberatamente",
+                "avere le orecchie grandi",
+                "ascoltare troppo"
+              ],
+              "resposta": 1,
+              "explicacao": "'Fare orecchie da mercante' = fingere di non sentire, ignorare di proposito una richiesta o avvertimento."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Avere il coltello dalla parte del manico' significa:",
+              "opcoes": [
+                "essere armati",
+                "avere il vantaggio / il potere",
+                "essere in pericolo",
+                "tagliare i ponti"
+              ],
+              "resposta": 1,
+              "explicacao": "'Avere il COLTELLO DALLA PARTE DEL MANICO' = avere il controllo, il vantaggio, la posizione di forza in una trattativa o situazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Non è tutto oro quello che luccica' equivale a:",
+              "opcoes": [
+                "il denaro non porta felicità",
+                "le apparenze ingannano",
+                "la bellezza è rara",
+                "il lavoro vale più del denaro"
+              ],
+              "resposta": 1,
+              "explicacao": "'Non è tutto oro quello che luccica' (= Not all that glitters is gold) = le APPARENZE INGANNANO, non ci si deve fidare solo dell'aspetto esteriore."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Menare il can per l'aia' significa:",
+              "opcoes": [
+                "portare a passeggio il cane",
+                "perdere tempo / andare in giro senza concludere",
+                "cercare scuse",
+                "fare il lavoro sporco"
+              ],
+              "resposta": 1,
+              "explicacao": "'Menare il can per l'aia' = PERDERE TEMPO, girare attorno al problema senza risolverlo, tergiversare. L'aia è il cortile della fattoria."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Fare di tutta l'erba un fascio' significa:",
+              "opcoes": [
+                "lavorare nei campi",
+                "generalizzare, non fare distinzioni",
+                "raccogliere le prove",
+                "fare ordine"
+              ],
+              "resposta": 1,
+              "explicacao": "'Fare di tutta l'erba un fascio' = GENERALIZZARE, mettere tutto insieme senza distinzioni, non differenziare i casi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Avere la luna storta' significa:",
+              "opcoes": [
+                "essere di malumore",
+                "essere fortunati",
+                "avere problemi astronomici",
+                "non dormire bene"
+              ],
+              "resposta": 0,
+              "explicacao": "'Avere la luna storta' = essere di CATTIVO UMORE, nervosi, irritabili. La luna era associata all'umore nella cultura popolare italiana."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Stare con le mani in mano' significa:",
+              "opcoes": [
+                "non fare niente, essere ozioso",
+                "pregare",
+                "aspettare qualcuno",
+                "tenere le mani ferme"
+              ],
+              "resposta": 0,
+              "explicacao": "'Stare con le MANI IN MANO' = non fare niente, essere inattivo, oziare mentre ci sarebbe da lavorare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Perdere il filo del discorso' significa:",
+              "opcoes": [
+                "rompere la corda",
+                "dimenticare il punto principale, divagare",
+                "iniziare a parlare",
+                "concludere un discorso"
+              ],
+              "resposta": 1,
+              "explicacao": "'Perdere il FILO DEL DISCORSO' = perdere il filo conduttore, dimenticare dove si stava arrivando con il ragionamento, divagare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Andare in porto' significa:",
+              "opcoes": [
+                "arrivare al porto",
+                "riuscire, concludersi con successo",
+                "partire in nave",
+                "essere vicino al mare"
+              ],
+              "resposta": 1,
+              "explicacao": "'Andare in porto' = RIUSCIRE, concludersi positivamente: 'Il progetto è andato in porto' = il progetto è riuscito, si è concluso con successo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Cavare un ragno dal buco' significa:",
+              "opcoes": [
+                "trovare qualcosa di nascosto",
+                "ottenere qualcosa di utile/concludere qualcosa",
+                "liberare un ragno",
+                "cercare senza trovare"
+              ],
+              "resposta": 1,
+              "explicacao": "'Cavare un ragno dal buco' = riuscire a OTTENERE QUALCOSA, a concludere qualcosa di utile (spesso in contesto negativo: 'non riusciamo a cavare un ragno dal buco' = non concludiamo niente)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Essere al verde' significa:",
+              "opcoes": [
+                "amare la natura",
+                "essere senza soldi",
+                "avere invidia",
+                "essere pronti"
+              ],
+              "resposta": 1,
+              "explicacao": "'Essere AL VERDE' = essere senza soldi, essere al limite economico. L'origine è controversa ma il significato è chiaro: senza denaro."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Prendere due piccioni con una fava' significa:",
+              "opcoes": [
+                "andare a caccia",
+                "ottenere due risultati con un'azione sola",
+                "sprecare risorse",
+                "cucinare i piccioni"
+              ],
+              "resposta": 1,
+              "explicacao": "'Prendere due piccioni con una fava' = raggiungere DUE OBIETTIVI con una sola azione = 'kill two birds with one stone'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Mettere il carro davanti ai buoi' significa:",
+              "opcoes": [
+                "fare le cose nell'ordine sbagliato",
+                "lavorare troppo in fretta",
+                "essere impazienti",
+                "pianificare troppo"
+              ],
+              "resposta": 0,
+              "explicacao": "'Mettere il carro davanti ai buoi' = fare le cose NELL'ORDINE SBAGLIATO, anticipare ciò che dovrebbe venire dopo. È un consiglio di non precipitare i tempi."
+            }
+          ]
+        },
+        {
+          "id": "c1-ix",
+          "num": "Lezione IX",
+          "titulo": "Stile indiretto e concordanza avanzata",
+          "subtitulo": "La consecutio temporum e le trasposizioni complesse",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Discorso diretto: 'Domani verrò.' → discorso indiretto (narrazione al passato):",
+              "opcoes": [
+                "Ha detto che domani viene.",
+                "Ha detto che l'indomani sarebbe venuto.",
+                "Ha detto che ieri era venuto.",
+                "Ha detto che verrà domani."
+              ],
+              "resposta": 1,
+              "explicacao": "Nel discorso indiretto al passato: DOMANI → L'INDOMANI (cambio deissi); VERRÒ (futuro) → SAREBBE VENUTO (condizionale composto). La consecutio richiede la trasposizione dei tempi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Qui c'è il documento.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che qui c'era il documento.",
+                "Ha detto che lì c'era il documento.",
+                "Ha detto che qui c'è il documento.",
+                "Ha detto che lì ci sarà il documento."
+              ],
+              "resposta": 1,
+              "explicacao": "QUI → LÌ (cambio deissi spaziale). C'È (presente) → C'ERA (imperfetto). Le espressioni deittiche (qui/lì, questo/quello, io/lui, oggi/quel giorno) cambiano nel discorso indiretto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Ho già mangiato.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che ha già mangiato.",
+                "Ha detto che aveva già mangiato.",
+                "Ha detto che mangiava già.",
+                "Ha detto che avrebbe già mangiato."
+              ],
+              "resposta": 1,
+              "explicacao": "PASSATO PROSSIMO → TRAPASSATO PROSSIMO nel discorso indiretto al passato: 'ho mangiato' → AVEVA mangiato. È la trasposizione sistematica dei tempi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Venite domani!' → discorso indiretto (ordine al passato):",
+              "opcoes": [
+                "Ha detto che venissero l'indomani.",
+                "Ha detto di venire domani.",
+                "Ha ordinato che vengono.",
+                "Ha chiesto di venire."
+              ],
+              "resposta": 0,
+              "explicacao": "IMPERATIVO → CONGIUNTIVO IMPERFETTO nel discorso indiretto al passato: 'venite!' → che VENISSERO. DOMANI → L'INDOMANI. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Non so se partirò.' → discorso indiretto (al passato):",
+              "opcoes": [
+                "Ha detto che non sapeva se sarebbe partito.",
+                "Ha detto che non sa se partirà.",
+                "Ha detto che non sapeva se partiva.",
+                "Ha detto che non sapeva se partirebbe."
+              ],
+              "resposta": 0,
+              "explicacao": "FUTURO (partirò) → CONDIZIONALE COMPOSTO (sarebbe partito) nel discorso indiretto al passato. NON SO → NON SAPEVA (imperfetto). ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Sono stanco.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che è stanco.",
+                "Ha detto che era stanco.",
+                "Ha detto che sarebbe stanco.",
+                "Ha detto che fosse stanco."
+              ],
+              "resposta": 1,
+              "explicacao": "PRESENTE → IMPERFETTO nel discorso indiretto al passato: SONO → ERA stanco. È la trasposizione base della consecutio temporum."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale trasposizione è SBAGLIATA nel discorso indiretto?",
+              "opcoes": [
+                "presente → imperfetto",
+                "futuro → condizionale composto",
+                "imperativo → congiuntivo imperfetto",
+                "passato prossimo → passato prossimo"
+              ],
+              "resposta": 3,
+              "explicacao": "Il PASSATO PROSSIMO nel discorso diretto diventa TRAPASSATO PROSSIMO nel discorso indiretto al passato, non rimane passato prossimo. ✓ le altre tre sono corrette."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Studia ogni giorno' → discorso indiretto (al passato, con verbo genericamente valido):",
+              "opcoes": [
+                "Ha detto che studia ogni giorno.",
+                "Ha detto che studiava ogni giorno.",
+                "Ha detto che aveva studiato ogni giorno.",
+                "Ha detto che avrebbe studiato ogni giorno."
+              ],
+              "resposta": 1,
+              "explicacao": "Azione ABITUALE/GENERICA (non legata a un momento specifico): può restare IMPERFETTO nel discorso indiretto: studiava ogni giorno. La verità generale può restare al presente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Quando arriverò, ti chiamo.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che quando arriva, ti chiama.",
+                "Ha detto che quando sarebbe arrivato, ti avrebbe chiamato.",
+                "Ha detto che quando arrivò, ti chiamò.",
+                "Ha detto che quando arriverà, ti chiamerà."
+              ],
+              "resposta": 1,
+              "explicacao": "FUTURO + FUTURO (temporale) → CONDIZIONALE COMPOSTO + CONDIZIONALE COMPOSTO: 'quando sarebbe arrivato, ti avrebbe chiamato'. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Non avevo capito.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che non aveva capito.",
+                "Ha detto che non ha capito.",
+                "Ha detto che non capiva.",
+                "Ha detto che non avrebbe capito."
+              ],
+              "resposta": 0,
+              "explicacao": "TRAPASSATO PROSSIMO → rimane TRAPASSATO PROSSIMO nel discorso indiretto al passato. È già il tempo più arretrato disponibile. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Interrogativa indiretta: 'Dove sei stato?' → discorso indiretto (passato):",
+              "opcoes": [
+                "Mi ha chiesto dove sono stato.",
+                "Mi ha chiesto dove ero stato.",
+                "Mi ha chiesto dove fossi stato.",
+                "Mi ha chiesto dove stavo."
+              ],
+              "resposta": 1,
+              "explicacao": "Nell'INTERROGATIVA INDIRETTA al passato: 'dove sei stato' (passato prossimo) → dove ERI STATO (trapassato). Si usa l'indicativo (non il congiuntivo) nelle interrogative indirette con 'dove, quando, come, perché'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Forse è partito.' → discorso indiretto (passato):",
+              "opcoes": [
+                "Ha detto che forse era partito.",
+                "Ha detto che forse fosse partito.",
+                "Ha detto che forse è partito.",
+                "Ha detto che forse sarebbe partito."
+              ],
+              "resposta": 0,
+              "explicacao": "FORSE + PASSATO PROSSIMO → FORSE + TRAPASSATO nel discorso indiretto: che forse ERA PARTITO. L'ipoteticità è mantenuta, i tempi si traspongono normalmente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Ho detto che lo farò.' — 'lo farò' nel discorso indiretto del passato diventa:",
+              "opcoes": [
+                "lo farò",
+                "lo farei",
+                "lo avrei fatto",
+                "lo facevo"
+              ],
+              "resposta": 2,
+              "explicacao": "FARÒ (futuro) in un discorso indiretto al passato ('ho detto' → 'avevo detto') → lo AVREI FATTO (condizionale composto). La consecutio richiede questa trasposizione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa correttamente il discorso indiretto?",
+              "opcoes": [
+                "Mi ha chiesto se vengo.",
+                "Mi ha chiesto se venissi.",
+                "Mi ha chiesto se sarei venuto.",
+                "Mi ha chiesto se vengo o non vengo."
+              ],
+              "resposta": 2,
+              "explicacao": "Interrogativa indiretta al passato con se: 'MI HA CHIESTO SE SAREI VENUTO'. Il futuro del diretto diventa condizionale composto nell'indiretto al passato. ✓"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La deissi nel discorso indiretto: quale serie è CORRETTA?",
+              "opcoes": [
+                "io→lui, qui→lì, oggi→quel giorno, questo→quello",
+                "io→lui, qui→qui, oggi→oggi, questo→questo",
+                "io→tu, qui→là, oggi→ieri, questo→quello",
+                "io→lui, qui→lì, domani→l'indomani, questo→quello"
+              ],
+              "resposta": 3,
+              "explicacao": "La trasposizione deittica corretta: IO→LUI, QUI→LÌ, QUESTO→QUELLO, OGGI→QUEL GIORNO, DOMANI→L'INDOMANI, IERI→IL GIORNO PRIMA. ✓"
+            }
+          ]
+        },
+        {
+          "id": "c1-x",
+          "num": "Lezione X",
+          "titulo": "Sintassi avanzata e costruzioni marcate",
+          "subtitulo": "Topicalizzazione, dislocazione e focus",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il caffè, lo prendo sempre macchiato.' — 'il caffè' è:",
+              "opcoes": [
+                "soggetto",
+                "complemento oggetto topicalizzato",
+                "predicato",
+                "avverbio"
+              ],
+              "resposta": 1,
+              "explicacao": "'IL CAFFÈ' è il TEMA o TOPIC, messo in posizione iniziale (dislocazione a sinistra) e ripreso dal pronome 'lo'. È una costruzione tipica dell'italiano parlato che mette in rilievo il tema."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Differenza tra 'Lo conosco, Mario' e 'Mario lo conosco':",
+              "opcoes": [
+                "Sono identiche",
+                "La prima è una precisazione; la seconda è una topicalizzazione",
+                "La prima è più formale",
+                "La seconda è scorretta"
+              ],
+              "resposta": 1,
+              "explicacao": "'LO CONOSCO, MARIO' = frase normale con specificazione finale (RIGHT DISLOCATION). 'MARIO LO CONOSCO' = topicalizzazione/dislocazione a sinistra, con Mario in posizione di rilievo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Frase scissa: 'È Mario che ha vinto.' serve a:",
+              "opcoes": [
+                "correggere un'informazione precedente",
+                "mettere a fuoco (focus) su 'Mario'",
+                "indicare un'azione passata",
+                "formare il passivo"
+              ],
+              "resposta": 1,
+              "explicacao": "La FRASE SCISSA (È X CHE...) mette a FUOCO un elemento: 'È MARIO che ha vinto' contrasta implicitamente con 'non Paolo/Luigi'. Funzione informativa: presentare il focus."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Non l'ho visto ieri, il direttore.' — questa è:",
+              "opcoes": [
+                "frase scissa",
+                "dislocazione a destra",
+                "dislocazione a sinistra",
+                "frase nominale"
+              ],
+              "resposta": 1,
+              "explicacao": "DISLOCAZIONE A DESTRA: il tema (il direttore) è spostato in fondo, ripreso dal pronome 'l'. È tipica dell'italiano parlato per aggiungere chiarezza retroattivamente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase usa la dislocazione a sinistra?",
+              "opcoes": [
+                "Ho mangiato la pizza.",
+                "La pizza l'ho mangiata.",
+                "Ho mangiato, la pizza.",
+                "Mangiata la pizza, esco."
+              ],
+              "resposta": 1,
+              "explicacao": "'LA PIZZA L'HO MANGIATA' = DISLOCAZIONE A SINISTRA: la pizza (tema) è spostata all'inizio e ripresa dal clitico 'l'. Tipica dell'italiano parlato informale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'È di cui ti parlo che mi interessa, non altro.' — la struttura è:",
+              "opcoes": [
+                "relativa libera",
+                "frase scissa con relativa",
+                "frase interrogativa",
+                "periodo ipotetico"
+              ],
+              "resposta": 1,
+              "explicacao": "FRASE SCISSA COMPLESSA con relativa: 'È [X] CHE mi interessa'. La struttura scissa può incorporare vari tipi di relative e complementi."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Questo problema non riesco proprio a risolverlo.' — il clitico 'lo' è:",
+              "opcoes": [
+                "superfluo / scorretto",
+                "obbligatorio per riprendere 'questo problema'",
+                "opzionale",
+                "un errore di registro"
+              ],
+              "resposta": 1,
+              "explicacao": "Nella DISLOCAZIONE A SINISTRA, il clitico di ripresa (lo, la, li, le, gli) è OBBLIGATORIO in italiano: 'Questo problema (lo) risolvo' → il 'lo' è necessario."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale frase rappresenta il focus contrastivo?",
+              "opcoes": [
+                "Ho mangiato la pizza.",
+                "Io ho mangiato la pizza (non tu).",
+                "Ho mangiato la pizza ieri.",
+                "La pizza è buona."
+              ],
+              "resposta": 1,
+              "explicacao": "IO HO MANGIATO (non tu) = FOCUS CONTRASTIVO sul soggetto. In italiano il pronome soggetto viene espresso solo quando porta informazione contrastiva o di focus, altrimenti è omesso."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'presentativa' in italiano è costruita con:",
+              "opcoes": [
+                "c'è/ci sono",
+                "essere + participio",
+                "avere + participio",
+                "fare + infinito"
+              ],
+              "resposta": 0,
+              "explicacao": "La PRESENTATIVA usa C'È/CI SONO per introdurre nuovi referenti nel discorso: 'C'è un problema'. È la struttura base per 'presentare' informazioni nuove nell'italiano parlato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'L'ha finita, la torta, Maria.' — questa frase ha:",
+              "opcoes": [
+                "una dislocazione",
+                "due dislocazioni (sinistra e destra)",
+                "una frase scissa",
+                "una frase nominale"
+              ],
+              "resposta": 1,
+              "explicacao": "'LA TORTA' (destra) e 'MARIA' (destra): entrambe sono dislocazioni a destra. La frase ha due elementi dislocati, tipico dell'italiano parlato molto spontaneo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale variante è più formale/scritta?",
+              "opcoes": [
+                "Il libro l'ho letto.",
+                "Ho letto il libro.",
+                "Il libro lo leggevo.",
+                "Quello l'ho letto, il libro."
+              ],
+              "resposta": 1,
+              "explicacao": "'HO LETTO IL LIBRO' è la forma neutra/formale (ordine SVO canonico). Le dislocazioni sono tipiche del parlato e dello scritto informale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Ci vuole pazienza' — 'ci' è:",
+              "opcoes": [
+                "clitico locativo",
+                "soggetto impersonale",
+                "clitico di ripresa",
+                "particella aspettuale"
+              ],
+              "resposta": 1,
+              "explicacao": "CI in 'CI VUOLE/CI VOGLIONO' è un SOGGETTO IMPERSONALE che introduce necessità. Equivale a 'è necessario'. Non è locativo né di ripresa."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Mi si è rotto il telefono.' — 'mi' ha funzione di:",
+              "opcoes": [
+                "soggetto",
+                "dativo di interesse/etetico",
+                "complemento oggetto",
+                "riflessivo"
+              ],
+              "resposta": 1,
+              "explicacao": "'MI' = DATIVO ETETICO o di INTERESSE: indica che il parlante è coinvolto nell'evento (il telefono si è rotto a discapito mio). Non è il soggetto (il telefono è soggetto)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'costruzione a salita del clitico' si ha in:",
+              "opcoes": [
+                "Voglio mangiarlo.",
+                "Lo voglio mangiare.",
+                "Voglio che lo mangi.",
+                "Lo voglio che mangi."
+              ],
+              "resposta": 1,
+              "explicacao": "LA SALITA DEL CLITICO: 'LO voglio mangiare' (clitico sale al verbo modale) = 'voglio mangiarlo' (clitico resta sull'infinito). Entrambe corrette; la salita è tipica dell'italiano parlato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale tipo di frase ha il verbo in posizione finale (VSO/OVS)?",
+              "opcoes": [
+                "frase dichiarativa normale",
+                "frase interrogativa con intonazione",
+                "frase nominale ellittica",
+                "esclamativa inversa"
+              ],
+              "resposta": 1,
+              "explicacao": "Nell'INTERROGATIVA con intonazione (senza pronome interrogativo): 'Viene Mario?' ha il soggetto in posizione post-verbale. Anche nelle esclamative: 'Come canta bene Maria!'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "nome": "C2 — Padronanza della Lingua",
+      "nivel_minimo": 12,
+      "cor": "linear-gradient(135deg, #1A2530, #B8860B)",
+      "lezioni": [
+        {
+          "id": "c2-i",
+          "num": "Lezione I",
+          "titulo": "Storia della lingua italiana",
+          "subtitulo": "Dalle origini al Novecento",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "La lingua italiana moderna deriva principalmente da:",
+              "opcoes": [
+                "il latino classico di Cicerone",
+                "il volgare toscano letterario del Trecento",
+                "il dialetto romano",
+                "il latino ecclesiastico medievale"
+              ],
+              "resposta": 1,
+              "explicacao": "L'italiano standard deriva dal VOLGARE TOSCANO LETTERARIO del Trecento (Dante, Petrarca, Boccaccio). Il loro modello linguistico divenne la base della lingua letteraria italiana."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'De vulgari eloquentia' di Dante è importante perché:",
+              "opcoes": [
+                "è il primo poema in volgare",
+                "è il primo trattato teorico sul volgare italiano",
+                "stabilisce le regole della grammatica",
+                "è la prima traduzione della Bibbia"
+              ],
+              "resposta": 1,
+              "explicacao": "Il DE VULGARI ELOQUENTIA (1303-1304) di Dante è il primo trattato teorico sul volgare: analizza i dialetti italiani e propone un 'volgare illustre' come lingua comune letteraria."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'questione della lingua' nel Cinquecento contrapponeva:",
+              "opcoes": [
+                "latinos vs volgare",
+                "fiorentino trecentesco (Bembo) vs volgare cortigiano",
+                "scritto vs parlato",
+                "italiano vs dialetti"
+              ],
+              "resposta": 1,
+              "explicacao": "La QUESTIONE DELLA LINGUA nel '500 vide Pietro Bembo difendere il fiorentino trecentesco (Petrarca/Boccaccio) contro chi preferiva una lingua cortigiana più moderna o varia."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quando fu istituita la Crusca e per quale scopo?",
+              "opcoes": [
+                "1583, per codificare il fiorentino letterario",
+                "1600, per tradurre i classici",
+                "1500, per diffondere il latino",
+                "1700, per creare una lingua unificata"
+              ],
+              "resposta": 0,
+              "explicacao": "L'Accademia della Crusca fu fondata a FIRENZE nel 1583 con l'obiettivo di 'separare il fior di farina dalla crusca' = purificare la lingua italiana dai termini stranieri o dialettali."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'opera di Alessandro Manzoni è importante per la lingua perché:",
+              "opcoes": [
+                "creò nuovi dialetti regionali",
+                "rimosse tutti i termini fiorentini",
+                "contribuì alla diffusione del fiorentino come base dell'italiano",
+                "scrisse in latino classico"
+              ],
+              "resposta": 2,
+              "explicacao": "Manzoni sostenne il FIORENTINO CONTEMPORANEO (non arcaico) come base dell'italiano unitario. Riscrisse i Promessi Sposi in fiorentino vivo. La sua posizione influenzò la politica linguistica post-unitaria."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale percentuale della popolazione parlava italiano al momento dell'Unità (1861)?",
+              "opcoes": [
+                "circa 70%",
+                "circa 40%",
+                "circa 2-12%",
+                "circa 25%"
+              ],
+              "resposta": 2,
+              "explicacao": "Al momento dell'Unità d'Italia (1861), si stima che solo il 2-12% della popolazione comunicasse in italiano. La maggioranza parlava dialetti locali."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il termine 'vocabolario' nella linguistica storica indica:",
+              "opcoes": [
+                "solo le parole rare",
+                "l'insieme del lessico di una lingua",
+                "il dizionario ufficiale",
+                "le parole straniere"
+              ],
+              "resposta": 1,
+              "explicacao": "Il VOCABOLARIO (o lessico) di una lingua è l'insieme di tutte le parole che la compongono. Diverso dal DIZIONARIO (strumento che le elenca) e dal GLOSSARIO (termini specifici di un settore)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Latinismo' in italiano indica:",
+              "opcoes": [
+                "una parola latina non adattata",
+                "una parola latina adattata all'italiano",
+                "un costrutto sintattico di origine latina",
+                "tutti e tre"
+              ],
+              "resposta": 3,
+              "explicacao": "LATINISMO può indicare: 1) parola latina non adattata (iter, vice versa), 2) parola latina italianizzata (automobile ← lat. vehiculum), 3) costrutto sintattico latino (accusativo + infinito → dico lui essere bravo)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale evento storico accelerò la diffusione dell'italiano parlato nel Novecento?",
+              "opcoes": [
+                "la prima guerra mondiale",
+                "la stampa",
+                "la radio e televisione",
+                "l'emigrazione interna"
+              ],
+              "resposta": 2,
+              "explicacao": "RADIO (dal 1924) e TELEVISIONE (dal 1954) furono i principali vettori di diffusione dell'italiano parlato standard in tutto il paese, raggiungendo anche le popolazioni dialettofone."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'norma' linguistica in italiano è stabilita principalmente da:",
+              "opcoes": [
+                "l'Accademia della Crusca con potere legale",
+                "l'uso colto condiviso, codificato dalle grammatiche",
+                "il Ministero dell'Istruzione",
+                "il dizionario Zingarelli"
+              ],
+              "resposta": 1,
+              "explicacao": "In Italia non esiste un'accademia con potere normativo come l'Académie française. La NORMA linguistica emerge dall'USO COLTO CONDIVISO, descritto (non prescritto) da grammatiche e dizionari."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Forestierismo' indica:",
+              "opcoes": [
+                "parola di origine straniera adottata in italiano",
+                "dialettismo lombardo",
+                "arcaismo letterario",
+                "neologismo tecnico"
+              ],
+              "resposta": 0,
+              "explicacao": "FORESTIERISMO = parola straniera adottata nella lingua italiana: computer, film, sprint, week-end. Può essere adattata (calcio ← goal kick) o non adattata (internet)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'gergo' è:",
+              "opcoes": [
+                "la lingua standard",
+                "una varietà di lingua usata da un gruppo specifico",
+                "un dialetto meridionale",
+                "un registro formale"
+              ],
+              "resposta": 1,
+              "explicacao": "Il GERGO è una varietà linguistica usata da un GRUPPO SPECIFICO (ladri, tossicodipendenti, militari, medici) spesso con funzione di codice segreto o identitario."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine indica la tendenza a usare parole straniere non necessarie?",
+              "opcoes": [
+                "purismo",
+                "forestierofilia / anglofilia",
+                "neologismo",
+                "calco"
+              ],
+              "resposta": 1,
+              "explicacao": "FORESTIEROFILIA (o xenofilia linguistica) indica la preferenza immotivata per termini stranieri quando esiste l'equivalente italiano. Il PURISMO è la posizione contraria (difesa eccessiva della lingua)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'calco' linguistico è:",
+              "opcoes": [
+                "una parola straniera usata direttamente",
+                "una traduzione letterale di un'espressione straniera",
+                "un errore grammaticale",
+                "un neologismo tecnico"
+              ],
+              "resposta": 1,
+              "explicacao": "Il CALCO è la traduzione strutturale di un'espressione straniera: 'grattacielo' ← skyscraper, 'luna di miele' ← honeymoon, 'cartone animato' ← cartoon."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Diglossìa' indica la situazione in cui:",
+              "opcoes": [
+                "si parlano due lingue straniere",
+                "una comunità usa due varietà di lingua per funzioni diverse",
+                "si mescola dialetto e standard",
+                "si traduce costantemente tra due lingue"
+              ],
+              "resposta": 1,
+              "explicacao": "DIGLOSSIA = situazione in cui una comunità usa sistematicamente DUE VARIETÀ della stessa lingua per funzioni diverse: una varietà 'alta' (formale, scritta) e una 'bassa' (informale, parlata)."
+            }
+          ]
+        },
+        {
+          "id": "c2-ii",
+          "num": "Lezione II",
+          "titulo": "Retorica e stile letterario",
+          "subtitulo": "Le figure del linguaggio e la loro funzione",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "L'antitesi è:",
+              "opcoes": [
+                "ripetizione di suoni",
+                "accostamento di concetti opposti",
+                "omissione di parole",
+                "inversione dell'ordine normale"
+              ],
+              "resposta": 1,
+              "explicacao": "L'ANTITESI accosta concetti OPPOSTI per creare effetto contrastivo: 'Odi et amo' (Catullo), 'Vi amo amandovi e vi odio odiandovi'. Molto usata in retorica politica."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'La vita è un sogno' è un esempio di:",
+              "opcoes": [
+                "similitudine",
+                "metafora",
+                "metonimia",
+                "ossimoro"
+              ],
+              "resposta": 1,
+              "explicacao": "METAFORA: identificazione diretta tra due concetti (A è B). La similitudine usa 'come': 'la vita è COME un sogno'. La metafora è più forte perché elimina il grado di comparazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il cuore di pietra' — 'pietra' è usata per:",
+              "opcoes": [
+                "denotare la durezza fisica",
+                "connotare insensibilità emotiva attraverso metafora",
+                "descrivere l'anatomia",
+                "esprimere peso"
+              ],
+              "resposta": 1,
+              "explicacao": "'Cuore di pietra' è una METAFORA LESSICALIZZATA (ormai convenzionale): pietra = insensibilità, durezza emotiva. La connotazione ha sopraffatto la denotazione letterale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La sineddoche è:",
+              "opcoes": [
+                "parte per il tutto o tutto per la parte",
+                "similitudine estesa",
+                "ripetizione a distanza",
+                "figura sonora"
+              ],
+              "resposta": 0,
+              "explicacao": "SINEDDOCHE: USO DI UNA PARTE PER IL TUTTO (o viceversa): 'tetto' per 'casa', 'vele' per 'navi', 'la gente' per 'alcune persone'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Bevo un bicchiere' — questa è:",
+              "opcoes": [
+                "metafora",
+                "metonimia",
+                "iperbole",
+                "litote"
+              ],
+              "resposta": 1,
+              "explicacao": "METONIMIA: uso di un termine CONTIGUO per il termine atteso: 'bicchiere' (contenitore) per 'il suo contenuto' (vino/acqua). Diversa dalla sineddoche (parte/tutto)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'iperbole è:",
+              "opcoes": [
+                "un'attenuazione",
+                "una figura di ripetizione",
+                "un'esagerazione enfatica",
+                "una similitudine"
+              ],
+              "resposta": 2,
+              "explicacao": "IPERBOLE = esagerazione volontaria per effetto: 'Ti ho aspettato un'eternità', 'Muoio dal ridere', 'Ho un milione di cose da fare'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La litote è:",
+              "opcoes": [
+                "doppia negazione per affermare",
+                "esagerazione positiva",
+                "ripetizione enfatica",
+                "similitudine inversa"
+              ],
+              "resposta": 0,
+              "explicacao": "LITOTE = DOPPIA NEGAZIONE o attenuazione per affermare: 'non è stupido' = è intelligente, 'non poca gente' = molta gente. Crea sfumatura e understatement."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Il silenzio urlava' — questa è:",
+              "opcoes": [
+                "una personificazione",
+                "un ossimoro",
+                "un'anafora",
+                "una metafora"
+              ],
+              "resposta": 1,
+              "explicacao": "OSSIMORO: accostamento di due parole di significato contraddittorio in un'unica espressione: 'silenzio urlava', 'buio luminoso', 'dolce amaro'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'anafora è la ripetizione di:",
+              "opcoes": [
+                "parole alla fine di frasi successive",
+                "parole all'inizio di frasi successive",
+                "suoni simili",
+                "l'intera frase"
+              ],
+              "resposta": 1,
+              "explicacao": "ANAFORA = ripetizione della stessa parola o sintagma all'INIZIO di più frasi successive: 'Chiedo troppo? Chiedo il rispetto? Chiedo la giustizia?' (Martin Luther King: 'I have a dream...')"
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'epanadiplosi ripete la stessa parola:",
+              "opcoes": [
+                "all'inizio di frasi diverse",
+                "all'inizio e alla fine della stessa frase",
+                "in posizione mediana",
+                "due frasi dopo"
+              ],
+              "resposta": 1,
+              "explicacao": "EPANADIPLOSI (o raddoppiamento): la stessa parola apre e chiude la frase/verso: 'Rose rosse per te / Rose rosse per te' oppure 'Quel giorno fu l'ultimo di quel giorno'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La personificazione attribuisce:",
+              "opcoes": [
+                "caratteristiche umane a oggetti o astrazioni",
+                "caratteristiche animali agli uomini",
+                "caratteristiche fisiche alle emozioni",
+                "caratteristiche divine agli uomini"
+              ],
+              "resposta": 0,
+              "explicacao": "PERSONIFICAZIONE = attribuire QUALITÀ UMANE (azioni, emozioni, volontà) a oggetti, animali o astrazioni: 'La luna sorride', 'La speranza mi abbandona', 'Il vento urla'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Una selva oscura' in Dante è un esempio di:",
+              "opcoes": [
+                "metafora allegorica",
+                "similitudine",
+                "metonimia",
+                "climax"
+              ],
+              "resposta": 0,
+              "explicacao": "'NEL MEZZO DEL CAMMIN... una selva oscura' è METAFORA ALLEGORICA: la selva rappresenta lo smarrimento spirituale/morale di Dante a metà della vita. Tutta la Commedia è un'allegoria."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il chiasmo dispone gli elementi in ordine:",
+              "opcoes": [
+                "A-B-A-B",
+                "A-B-B-A",
+                "A-A-B-B",
+                "A-B-C-D"
+              ],
+              "resposta": 1,
+              "explicacao": "CHIASMO = schema A-B-B-A (inversione speculare): 'Vivi per lavorare / lavori per vivere'. Il nome viene dall'incrocio della lettera greca chi (χ)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il climax retorico è una sequenza:",
+              "opcoes": [
+                "di decrescita",
+                "di crescita",
+                "alternata",
+                "casuale"
+              ],
+              "resposta": 1,
+              "explicacao": "CLIMAX = gradazione CRESCENTE di intensità: 'Veni, vidi, vici', 'Piccolo, medio, grande, enorme, colossale'. L'ANTICLIMAZ è la sequenza decrescente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'eufemismo è:",
+              "opcoes": [
+                "una parola tecnica",
+                "un termine attenuato per realtà spiacevoli",
+                "un'iperbole negativa",
+                "una figura sonora"
+              ],
+              "resposta": 1,
+              "explicacao": "EUFEMISMO = sostituzione di un termine spiacevole o tabù con uno più accettabile: 'non vedente' per 'cieco', 'se ne è andato' per 'è morto', 'incorrere in una incorrettezza' per 'mentire'."
+            }
+          ]
+        },
+        {
+          "id": "c2-iii",
+          "num": "Lezione III",
+          "titulo": "Varietà dell'italiano",
+          "subtitulo": "Dialetti, registri e variazione sociolinguistica",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine indica la varietà di lingua legata alla provenienza geografica?",
+              "opcoes": [
+                "socioletto",
+                "tecnoletto",
+                "geolettos/dialetto",
+                "registro"
+              ],
+              "resposta": 2,
+              "explicacao": "Il DIALETTO (o varietà DIATOPICA) è legato alla provenienza GEOGRAFICA. Il SOCIOLETTO alla classe sociale, il TECNOLETTO alla professione, il REGISTRO alla situazione comunicativa."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L''italiano regionale' si distingue dal dialetto perché:",
+              "opcoes": [
+                "è uguale al dialetto",
+                "è italiano standard con tratti fonetici/lessicali regionali",
+                "è una varietà arcaica",
+                "è solo scritto"
+              ],
+              "resposta": 1,
+              "explicacao": "L'ITALIANO REGIONALE è una varietà d'italiano che mantiene caratteristiche FONETICHE, LESSICALI o PROSODICHE della regione, ma usa la grammatica dell'italiano standard. Non è un dialetto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale fenomeno indica il passaggio graduale dal dialetto all'italiano standard?",
+              "opcoes": [
+                "code switching",
+                "italianizzazione / italofonizzazione",
+                "diglossia",
+                "interferenza"
+              ],
+              "resposta": 1,
+              "explicacao": "L'ITALIANIZZAZIONE (o italofonizzazione) indica il processo storico per cui le popolazioni dialettofone sono passate progressivamente all'italiano standard come lingua quotidiana."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'code switching' è:",
+              "opcoes": [
+                "l'apprendimento di una seconda lingua",
+                "l'alternanza tra due codici linguistici in una stessa conversazione",
+                "la traduzione simultanea",
+                "l'uso di un solo registro"
+              ],
+              "resposta": 1,
+              "explicacao": "CODE SWITCHING = passaggio da una LINGUA/VARIETÀ A UN'ALTRA nella stessa conversazione o anche nella stessa frase. È frequente tra bilingui o tra parlanti che conoscono dialetto e italiano."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale caratteristica distingue i dialetti settentrionali da quelli meridionali?",
+              "opcoes": [
+                "solo la prosodia",
+                "caduta delle vocali finali al nord, conservazione al sud",
+                "il vocabolario",
+                "il numero di dialetti"
+              ],
+              "resposta": 1,
+              "explicacao": "I DIALETTI SETTENTRIONALI tendono alla CADUTA DELLE VOCALI FINALI ATONE (amig, can, liber = amico, cane, libro), mentre i dialetti meridionali le conservano e spesso le aprono."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il fenomeno dell''anacoluto' è:",
+              "opcoes": [
+                "una costruzione sintattica interrotta e ripresa diversamente",
+                "una figura sonora",
+                "un dialettismo",
+                "un arcaismo"
+              ],
+              "resposta": 0,
+              "explicacao": "L'ANACOLUTO è un cambio di costruzione sintattica: si inizia con una struttura e si continua con un'altra: 'Mia sorella, le ho dato il libro' (inizia come tema, diventa oggetto indiretto). Tipico del parlato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale varietà è caratterizzata dall'uso di forme arcaiche e latinismi?",
+              "opcoes": [
+                "neo-standard",
+                "registro formale scritto / letterario",
+                "sermo plebeius",
+                "gergo giovanile"
+              ],
+              "resposta": 1,
+              "explicacao": "Il REGISTRO FORMALE SCRITTO e il linguaggio LETTERARIO usano latinismi, arcaismi, costruzioni elaborate (periodi iperbatici, participio assoluto, infinitive latine). Il neo-standard è l'italiano parlato colto."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Neo-standard' indica:",
+              "opcoes": [
+                "una nuova norma artificiale",
+                "le forme dell'italiano parlato colto che si stanno standardizzando",
+                "un dialetto moderno",
+                "un registro molto formale"
+              ],
+              "resposta": 1,
+              "explicacao": "Il NEO-STANDARD è l'insieme di forme del parlato colto contemporaneo che, pur considerate 'sub-standard' in passato, si stanno normalizzando: 'gli' per 'loro', 'cosa' per 'che cosa', dislocazioni."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale fenomeno indica l'uso di 'gli' al posto di 'loro' (dativo plurale)?",
+              "opcoes": [
+                "errore grammaticale definitivo",
+                "forma sub-standard in ascesa nel neo-standard",
+                "arcaismo",
+                "dialettismo settentrionale"
+              ],
+              "resposta": 1,
+              "explicacao": "GLI per LORO DATIVO PLURALE ('gli ho detto' = 'ho detto loro') era considerato errore ma è ora accettato come forma del NEO-STANDARD nella grammatica descrittiva contemporanea."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Sermo plebeius' nella tradizione retorica latina indica:",
+              "opcoes": [
+                "il latino classico letterario",
+                "la varietà popolare/colloquiale del latino",
+                "il gergo dei ladri",
+                "il latino ecclesiastico"
+              ],
+              "resposta": 1,
+              "explicacao": "SERMO PLEBEIUS = il latino POPOLARE/COLLOQUIALE, contrapposto al SERMO URBANUS (colto, urbano). Dal sermo plebeius derivano le lingue romanze, non dal latino classico letterario."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale fenomeno è tipico dell'italiano parlato informale?",
+              "opcoes": [
+                "uso dell'imperativo con pronomi encliticivs",
+                "preferenza per il passato prossimo vs passato remoto al nord",
+                "entrambi",
+                "né l'uno né l'altro"
+              ],
+              "resposta": 2,
+              "explicacao": "Entrambi: 1) i PRONOMI ENCLITICI ('dimmi', 'vattene') sono normali nell'italiano parlato; 2) la preferenza PASSATO PROSSIMO (nord) vs PASSATO REMOTO (sud) è una marcata variazione regionale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il linguaggio giovanile è un esempio di:",
+              "opcoes": [
+                "gergoletto",
+                "socioletto giovanile",
+                "dialetto",
+                "tecnoletto"
+              ],
+              "resposta": 1,
+              "explicacao": "Il LINGUAGGIO GIOVANILE è un SOCIOLETTO (varietà legata a un gruppo SOCIALE, in questo caso anagrafico). Ha vocabolario proprio, spesso mutuato dall'inglese o dal gergo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Interferenza linguistica' indica:",
+              "opcoes": [
+                "influenza di una L1 sulla L2",
+                "cambio di lingua in conversazione",
+                "uso di dialetto in contesto formale",
+                "apprendimento di una lingua straniera"
+              ],
+              "resposta": 0,
+              "explicacao": "L'INTERFERENZA LINGUISTICA = l'influenza della LINGUA MADRE (L1) sulla seconda lingua (L2): errori sistematici che riflettono strutture della L1 proiettate sulla L2."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale caratteristica distingue il 'registro' dal 'dialetto'?",
+              "opcoes": [
+                "il registro è legato alla situazione, il dialetto all'origine geografica",
+                "sono sinonimi",
+                "il dialetto è solo scritto",
+                "il registro è solo orale"
+              ],
+              "resposta": 0,
+              "explicacao": "REGISTRO = varietà SITUAZIONALE (formale/informale, scritto/parlato). DIALETTO = varietà GEOGRAFICA. Uno stesso parlante usa più registri, ma solo un dialetto (o italiano regionale) come varietà nativa."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'italiano del Bel Paese è noto per avere molti prestiti da:",
+              "opcoes": [
+                "inglese moderno solo",
+                "arabo, spagnolo, francese e inglese in epoche diverse",
+                "solo dal latino",
+                "greco e latino solo"
+              ],
+              "resposta": 1,
+              "explicacao": "L'italiano ha stratificazioni di PRESTITI da: ARABO medievale (zucchero, arancio, algebra), SPAGNOLO rinascimentale (lindo, creanza), FRANCESE (bouquet, chic, brioche), INGLESE moderno (computer, smartphone, internet)."
+            }
+          ]
+        },
+        {
+          "id": "c2-iv",
+          "num": "Lezione IV",
+          "titulo": "L'italiano nell'era digitale",
+          "subtitulo": "Neologismi, anglismi e lingua della rete",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale dei seguenti è un CALCO dall'inglese, non un prestito diretto?",
+              "opcoes": [
+                "computer",
+                "mouse",
+                "navigare (in rete)",
+                "file"
+              ],
+              "resposta": 2,
+              "explicacao": "NAVIGARE in rete è un CALCO di 'surf the web': l'italiano ha tradotto la metafora, non adottato la parola inglese. Computer, mouse, file sono PRESTITI diretti."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La Treccani indica che 'influencer' in italiano si può rendere con:",
+              "opcoes": [
+                "influsore",
+                "influenzatore / influitore",
+                "influenziante",
+                "Non c'è equivalente accettato"
+              ],
+              "resposta": 1,
+              "explicacao": "La Treccani e l'Accademia della Crusca propongono INFLUENZATORE o INFLUITORE come alternativa italiana ad 'influencer', anche se il termine inglese resta dominante nell'uso."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il termine 'selfie' in italiano dell'Accademia della Crusca è:",
+              "opcoes": [
+                "selfie è già italiano",
+                "autoscatto",
+                "autofotografia",
+                "autoritratto digitale"
+              ],
+              "resposta": 1,
+              "explicacao": "L'Accademia della Crusca suggerisce AUTOSCATTO come equivalente italiano di 'selfie', recuperando un termine preesistente (autoscatto = foto scattata da se stessi con timer)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Twittare' è un esempio di:",
+              "opcoes": [
+                "prestito integrato con morfologia italiana",
+                "calco semantico",
+                "neologismo puro",
+                "arcaismo riattivato"
+              ],
+              "resposta": 0,
+              "explicacao": "TWITTARE = PRESTITO INTEGRATO: il nome proprio 'Twitter' diventa verbo con morfologia italiana (-are). Stesso processo: googlare, spoilerare, chattare, taggare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale fenomeno indica l'emergere di nuovi significati per parole già esistenti?",
+              "opcoes": [
+                "neologismo formale",
+                "slittamento semantico / estensione semantica",
+                "prestito",
+                "calco"
+              ],
+              "resposta": 1,
+              "explicacao": "SLITTAMENTO SEMANTICO (o estensione): una parola esistente acquista nuovo significato: 'navigare' (ora anche 'in rete'), 'virus' (ora anche informatico), 'cloud' (nuvola → archiviazione online)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il linguaggio delle emoji e GIF nei messaggi è studiato dalla:",
+              "opcoes": [
+                "semiotica e linguistica della comunicazione mediale",
+                "grammatica normativa",
+                "dialettologia",
+                "fonologia"
+              ],
+              "resposta": 0,
+              "explicacao": "Le EMOJI e GIF sono oggetto della SEMIOTICA (studio dei segni) e della LINGUISTICA DELLA COMUNICAZIONE MEDIALE (CMC = Computer Mediated Communication). Sono sistemi di significazione paraverbale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'LOL' (Laughing Out Loud) in italiano si usa:",
+              "opcoes": [
+                "tradotto come 'ridendo ad alta voce'",
+                "direttamente come prestito",
+                "sostituito da 'ahahahah' o 'hahaha'",
+                "Non si usa in italiano"
+              ],
+              "resposta": 2,
+              "explicacao": "Gli italiani usano AHAHAHAH, HAHAHA o AHAHAH (trascrizione onomatopeica del riso) più frequentemente di LOL, diversamente dagli anglofoni. LOL è usato ma meno dominante."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il termine 'hate speech' in italiano si traduce preferibilmente:",
+              "opcoes": [
+                "discorso d'odio",
+                "linguaggio dell'odio",
+                "entrambi sono usati",
+                "incitamento all'odio"
+              ],
+              "resposta": 3,
+              "explicacao": "Sia DISCORSO D'ODIO che LINGUAGGIO DELL'ODIO sono usati come equivalenti italiani di 'hate speech'. La traduzione varia a seconda del contesto (giuridico, giornalistico, accademico)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale caratteristica distingue la 'netiquette' dal galateo tradizionale?",
+              "opcoes": [
+                "La netiquette riguarda il comportamento online",
+                "Sono identici",
+                "La netiquette riguarda solo l'email",
+                "La netiquette è più formale"
+              ],
+              "resposta": 0,
+              "explicacao": "La NETIQUETTE (internet + etiquette) riguarda le NORME DI COMPORTAMENTO ONLINE: non scrivere in maiuscolo (urlo), non fare spam, citare le fonti, rispettare la privacy altrui ecc."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Phishing' in italiano si può rendere come:",
+              "opcoes": [
+                "pesca elettronica",
+                "adescamento informatico / truffa informatica",
+                "furto d'identità",
+                "hacking"
+              ],
+              "resposta": 1,
+              "explicacao": "ADESCAMENTO INFORMATICO o TRUFFA INFORMATICA sono le traduzioni proposte per 'phishing'. L'Accademia della Crusca e il Garante Privacy usano questi termini nei testi ufficiali."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il fenomeno per cui un termine dialettale entra nell'italiano standard si chiama:",
+              "opcoes": [
+                "prestito interno / dialettismo asceso",
+                "forestierismo",
+                "calco",
+                "neologismo tecnico"
+              ],
+              "resposta": 0,
+              "explicacao": "PRESTITO INTERNO (o dialettismo asceso): un termine dialettale viene adottato dalla lingua standard. Es: 'goloso' dal napoletano, 'ammazzare' dal romanesco, 'barista' dal milanese."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'abbreviazione 'gg' nei messaggi italiani significa:",
+              "opcoes": [
+                "grazie grazie",
+                "grandissimo",
+                "giorno/giorni",
+                "grandi giocatori"
+              ],
+              "resposta": 2,
+              "explicacao": "'GG' in italiano informale = GIORNO o GIORNI: 'a domani gg', 'fra 3 gg'. Diverso dall'inglese dove GG = 'good game'."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale termine descrive il fenomeno per cui i media digitali creano comunità linguistiche separate?",
+              "opcoes": [
+                "balcanizzazione linguistica",
+                "filtraggio",
+                "echo chamber / bolla informativa",
+                "diglossia digitale"
+              ],
+              "resposta": 2,
+              "explicacao": "ECHO CHAMBER (camera d'eco) o BOLLA INFORMATIVA: gli algoritmi mostrano contenuti allineati con le preferenze dell'utente, creando comunità che usano lo stesso linguaggio e condividono le stesse idee."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In italiano digitale, 'taggare' significa:",
+              "opcoes": [
+                "etichettare / menzionare",
+                "fotografare",
+                "postare",
+                "condividere"
+              ],
+              "resposta": 0,
+              "explicacao": "TAGGARE (da 'tag') = ETICHETTARE o MENZIONARE: 'taggami nella foto' = menzionami, 'tagga i tuoi amici'. Il verbo è integrato nella morfologia italiana (-are)."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale caratteristica dell'italiano scritto online è più tollerata rispetto allo scritto tradizionale?",
+              "opcoes": [
+                "errori ortografici gravi",
+                "uso di dialettismi e code switching",
+                "punteggiatura ridotta o assente",
+                "tutti e tre in contesti informali"
+              ],
+              "resposta": 3,
+              "explicacao": "Nella comunicazione INFORMALE online (chat, social): errori ortografici 'creativi', dialettismi, code switching e riduzione della punteggiatura sono tollerati come tratti stilistici, non errori."
+            }
+          ]
+        },
+        {
+          "id": "c2-v",
+          "num": "Lezione V",
+          "titulo": "Analisi e produzione del testo argomentativo",
+          "subtitulo": "Struttura, coerenza e stile",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "La struttura base di un testo argomentativo è:",
+              "opcoes": [
+                "narrazione → descrizione → conclusione",
+                "tesi → argomenti → confutazione → conclusione",
+                "introduzione → esempi → domande",
+                "elenco di fatti + opinione finale"
+              ],
+              "resposta": 1,
+              "explicacao": "Il testo argomentativo classico: TESI (posizione) → ARGOMENTI (prove) → CONFUTAZIONE (obiezioni e risposta) → CONCLUSIONE (sintesi). È la struttura retorica dell'argomentazione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Un 'argomento ad hominem' è:",
+              "opcoes": [
+                "un attacco logico alla tesi",
+                "un attacco alla persona, non all'argomento",
+                "un esempio personale",
+                "un argomento molto personale"
+              ],
+              "resposta": 1,
+              "explicacao": "AD HOMINEM = fallacia che attacca la PERSONA (carattere, credibilità, interessi) invece di confutare l'argomento. È una tattica scorretta nel dibattito razionale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'petizione di principio' (o circolarità) è:",
+              "opcoes": [
+                "chiedere gentilmente al pubblico",
+                "usare la conclusione come premessa",
+                "ripetere la tesi tre volte",
+                "partire da un'opinione comune"
+              ],
+              "resposta": 1,
+              "explicacao": "PETITIO PRINCIPII = usare la CONCLUSIONE COME PREMESSA: 'La Bibbia è vera perché è parola di Dio; è parola di Dio perché dice di esserlo.' L'argomento presuppone ciò che dovrebbe dimostrare."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Un 'argomento per analogia' è:",
+              "opcoes": [
+                "confrontare due situazioni simili per trasferire una conclusione",
+                "usare dati statistici",
+                "citare un'autorità",
+                "presentare un esempio estremo"
+              ],
+              "resposta": 0,
+              "explicacao": "ANALOGIA: si confrontano due situazioni simili e si trasferisce la conclusione da una all'altra. Valida se le analogie sono pertinenti; fallace se le differenze sono significative."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'forza' di un argomento dipende principalmente da:",
+              "opcoes": [
+                "la lunghezza del testo",
+                "la pertinenza, la verità delle premesse e la validità logica",
+                "il numero di esempi",
+                "l'autorità di chi parla"
+              ],
+              "resposta": 1,
+              "explicacao": "Un argomento FORTE ha: premesse VERE, collegamento VALIDO tra premesse e conclusione, PERTINENZA al tema. Lunghezza, autorità ed esempi non garantiscono la forza logica."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale tecnica di confutazione è più efficace?",
+              "opcoes": [
+                "ignorare l'obiezione",
+                "concedere un punto e ribattere su quello più importante",
+                "sminuire l'avversario",
+                "ripetere la tesi più forte"
+              ],
+              "resposta": 1,
+              "explicacao": "La confutazione più EFFICACE è la CONCESSIONE STRATEGICA: 'È vero che X, TUTTAVIA il punto cruciale è Y'. Dimostra onestà intellettuale e permette di focalizzare il dibattito."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "La 'coerenza' in un testo si realizza attraverso:",
+              "opcoes": [
+                "ripetizione di parole chiave solo",
+                "connettivi logici, pronomi e sinonimi che collegano le frasi",
+                "solo la lunghezza dei paragrafi",
+                "errori grammaticali minimi"
+              ],
+              "resposta": 1,
+              "explicacao": "La COERENZA testuale = connessione logica tra le parti. Si ottiene con: CONNETTIVI (quindi, tuttavia), PRONOMI DI RIPRESA (lui, questo), SINONIMI, ELLISSI. Non riguarda solo la grammatica."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "In un saggio formale, quale persona grammaticale è preferita?",
+              "opcoes": [
+                "prima persona singolare (io)",
+                "prima persona plurale (noi) o costruzioni impersonali",
+                "seconda persona (tu)",
+                "terza persona con 'l'autore'"
+              ],
+              "resposta": 1,
+              "explicacao": "Il saggio accademico/formale italiano preferisce: NOI ACCADEMICO ('Esaminiamo...'), COSTRUZIONI IMPERSONALI ('Si nota che...', 'È possibile osservare...'). L'IO è più raro rispetto all'inglese."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale strategia introduce efficacemente un testo argomentativo?",
+              "opcoes": [
+                "La mia opinione è che...",
+                "Secondo il dizionario...",
+                "Una domanda provocatoria o dato statistico sorprendente",
+                "Farò questa analisi in tre punti"
+              ],
+              "resposta": 0,
+              "explicacao": "L'INCIPIT con DOMANDA RETORICA o DATO SORPRENDENTE cattura l'attenzione e introduce il tema in modo coinvolgente. L'annuncio della struttura ('in tre punti') è meccanico e accademico."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Il 'non sequitur' è una fallacia in cui:",
+              "opcoes": [
+                "la conclusione non segue logicamente le premesse",
+                "si usa un esempio non pertinente",
+                "si cita un'autorità sbagliata",
+                "si contraddicono le premesse"
+              ],
+              "resposta": 0,
+              "explicacao": "NON SEQUITUR (= non segue): la CONCLUSIONE non segue logicamente dalle premesse, anche se singolarmente le premesse potrebbero essere vere. È un salto logico ingiustificato."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale struttura di paragrafo è raccomandata in saggistica?",
+              "opcoes": [
+                "opinione + prova + opinione",
+                "affermazione + sviluppo + esempio + collegamento",
+                "solo esempi",
+                "solo citazioni"
+              ],
+              "resposta": 1,
+              "explicacao": "Struttura IDEA-SVILUPPO: TOPIC SENTENCE (idea principale) → SVILUPPO (spiegazione/ragionamento) → ESEMPIO/PROVA → COLLEGAMENTO con la tesi centrale."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "L'uso eccessivo di parole vaghe come 'cosa', 'fare', 'avere' in un testo formale è:",
+              "opcoes": [
+                "accettabile",
+                "preferibile per la chiarezza",
+                "segnale di lessico povero da sostituire",
+                "corretto nel saggio"
+              ],
+              "resposta": 2,
+              "explicacao": "Le parole SEMANTICAMENTE DEBOLI (fare, cosa, avere, mettere) indicano LESSICO POVERO nel registro formale. Si sostituiscono con verbi specifici: realizzare, effettuare, acquisire, collocare ecc."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Come si indica una fonte nel testo di un saggio formale?",
+              "opcoes": [
+                "Secondo me...",
+                "Si dice che...",
+                "Come dimostra [Autore, anno]",
+                "Ho letto che..."
+              ],
+              "resposta": 2,
+              "explicacao": "La citazione accademica usa il SISTEMA AUTORE-ANNO: (Rossi, 2023) o Rossi (2023) afferma che... In italiano si usano anche le note a piè di pagina con sistema bibliografico completo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Quale conclusione è più efficace in un saggio?",
+              "opcoes": [
+                "Quindi, ho dimostrato la mia tesi.",
+                "In conclusione, ricapitoliamo.",
+                "Sintesi critica + apertura a prospettive future o domande aperte.",
+                "Fine."
+              ],
+              "resposta": 2,
+              "explicacao": "La conclusione efficace: SINTESI critica degli argomenti principali + APERTURA a nuove prospettive o domande. Non si limita a riassumere meccanicamente né a ripetere l'introduzione."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "'Slippery slope' (scivolo) come fallacia consiste nel:",
+              "opcoes": [
+                "scivolare sul pavimento",
+                "affermare che A porta inevitabilmente a Z attraverso passi intermedi non provati",
+                "citare autorità",
+                "usare emozioni al posto della logica"
+              ],
+              "resposta": 1,
+              "explicacao": "SLIPPERY SLOPE = 'se facciamo A, allora B, poi C... poi Z (catastrofe)' senza dimostrare la necessità di ogni passaggio. Fallacia comune in politica: 'se legalizziamo X, poi dovranno legalizzare Y e Z.'"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

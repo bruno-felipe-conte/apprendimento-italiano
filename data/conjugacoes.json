@@ -6,10 +6,38 @@
       "auxiliar": "essere",
       "participio": "stato",
       "tempos": {
-        "Presente": { "io":"sono","tu":"sei","lui/lei":"è","noi":"siamo","voi":"siete","loro":"sono" },
-        "Imperfetto": { "io":"ero","tu":"eri","lui/lei":"era","noi":"eravamo","voi":"eravate","loro":"erano" },
-        "Futuro": { "io":"sarò","tu":"sarai","lui/lei":"sarà","noi":"saremo","voi":"sarete","loro":"saranno" },
-        "Congiuntivo presente": { "io":"sia","tu":"sia","lui/lei":"sia","noi":"siamo","voi":"siate","loro":"siano" }
+        "Presente": {
+          "io": "sono",
+          "tu": "sei",
+          "lui/lei": "è",
+          "noi": "siamo",
+          "voi": "siete",
+          "loro": "sono"
+        },
+        "Imperfetto": {
+          "io": "ero",
+          "tu": "eri",
+          "lui/lei": "era",
+          "noi": "eravamo",
+          "voi": "eravate",
+          "loro": "erano"
+        },
+        "Futuro": {
+          "io": "sarò",
+          "tu": "sarai",
+          "lui/lei": "sarà",
+          "noi": "saremo",
+          "voi": "sarete",
+          "loro": "saranno"
+        },
+        "Congiuntivo presente": {
+          "io": "sia",
+          "tu": "sia",
+          "lui/lei": "sia",
+          "noi": "siamo",
+          "voi": "siate",
+          "loro": "siano"
+        }
       }
     },
     {
@@ -18,10 +46,38 @@
       "auxiliar": "avere",
       "participio": "avuto",
       "tempos": {
-        "Presente": { "io":"ho","tu":"hai","lui/lei":"ha","noi":"abbiamo","voi":"avete","loro":"hanno" },
-        "Imperfetto": { "io":"avevo","tu":"avevi","lui/lei":"aveva","noi":"avevamo","voi":"avevate","loro":"avevano" },
-        "Futuro": { "io":"avrò","tu":"avrai","lui/lei":"avrà","noi":"avremo","voi":"avrete","loro":"avranno" },
-        "Congiuntivo presente": { "io":"abbia","tu":"abbia","lui/lei":"abbia","noi":"abbiamo","voi":"abbiate","loro":"abbiano" }
+        "Presente": {
+          "io": "ho",
+          "tu": "hai",
+          "lui/lei": "ha",
+          "noi": "abbiamo",
+          "voi": "avete",
+          "loro": "hanno"
+        },
+        "Imperfetto": {
+          "io": "avevo",
+          "tu": "avevi",
+          "lui/lei": "aveva",
+          "noi": "avevamo",
+          "voi": "avevate",
+          "loro": "avevano"
+        },
+        "Futuro": {
+          "io": "avrò",
+          "tu": "avrai",
+          "lui/lei": "avrà",
+          "noi": "avremo",
+          "voi": "avrete",
+          "loro": "avranno"
+        },
+        "Congiuntivo presente": {
+          "io": "abbia",
+          "tu": "abbia",
+          "lui/lei": "abbia",
+          "noi": "abbiamo",
+          "voi": "abbiate",
+          "loro": "abbiano"
+        }
       }
     },
     {
@@ -30,9 +86,30 @@
       "auxiliar": "essere",
       "participio": "andato",
       "tempos": {
-        "Presente": { "io":"vado","tu":"vai","lui/lei":"va","noi":"andiamo","voi":"andate","loro":"vanno" },
-        "Imperfetto": { "io":"andavo","tu":"andavi","lui/lei":"andava","noi":"andavamo","voi":"andavate","loro":"andavano" },
-        "Futuro": { "io":"andrò","tu":"andrai","lui/lei":"andrà","noi":"andremo","voi":"andrete","loro":"andranno" }
+        "Presente": {
+          "io": "vado",
+          "tu": "vai",
+          "lui/lei": "va",
+          "noi": "andiamo",
+          "voi": "andate",
+          "loro": "vanno"
+        },
+        "Imperfetto": {
+          "io": "andavo",
+          "tu": "andavi",
+          "lui/lei": "andava",
+          "noi": "andavamo",
+          "voi": "andavate",
+          "loro": "andavano"
+        },
+        "Futuro": {
+          "io": "andrò",
+          "tu": "andrai",
+          "lui/lei": "andrà",
+          "noi": "andremo",
+          "voi": "andrete",
+          "loro": "andranno"
+        }
       }
     },
     {
@@ -41,9 +118,30 @@
       "auxiliar": "avere",
       "participio": "fatto",
       "tempos": {
-        "Presente": { "io":"faccio","tu":"fai","lui/lei":"fa","noi":"facciamo","voi":"fate","loro":"fanno" },
-        "Imperfetto": { "io":"facevo","tu":"facevi","lui/lei":"faceva","noi":"facevamo","voi":"facevate","loro":"facevano" },
-        "Futuro": { "io":"farò","tu":"farai","lui/lei":"farà","noi":"faremo","voi":"farete","loro":"faranno" }
+        "Presente": {
+          "io": "faccio",
+          "tu": "fai",
+          "lui/lei": "fa",
+          "noi": "facciamo",
+          "voi": "fate",
+          "loro": "fanno"
+        },
+        "Imperfetto": {
+          "io": "facevo",
+          "tu": "facevi",
+          "lui/lei": "faceva",
+          "noi": "facevamo",
+          "voi": "facevate",
+          "loro": "facevano"
+        },
+        "Futuro": {
+          "io": "farò",
+          "tu": "farai",
+          "lui/lei": "farà",
+          "noi": "faremo",
+          "voi": "farete",
+          "loro": "faranno"
+        }
       }
     },
     {
@@ -52,9 +150,30 @@
       "auxiliar": "avere",
       "participio": "detto",
       "tempos": {
-        "Presente": { "io":"dico","tu":"dici","lui/lei":"dice","noi":"diciamo","voi":"dite","loro":"dicono" },
-        "Imperfetto": { "io":"dicevo","tu":"dicevi","lui/lei":"diceva","noi":"dicevamo","voi":"dicevate","loro":"dicevano" },
-        "Futuro": { "io":"dirò","tu":"dirai","lui/lei":"dirà","noi":"diremo","voi":"direte","loro":"diranno" }
+        "Presente": {
+          "io": "dico",
+          "tu": "dici",
+          "lui/lei": "dice",
+          "noi": "diciamo",
+          "voi": "dite",
+          "loro": "dicono"
+        },
+        "Imperfetto": {
+          "io": "dicevo",
+          "tu": "dicevi",
+          "lui/lei": "diceva",
+          "noi": "dicevamo",
+          "voi": "dicevate",
+          "loro": "dicevano"
+        },
+        "Futuro": {
+          "io": "dirò",
+          "tu": "dirai",
+          "lui/lei": "dirà",
+          "noi": "diremo",
+          "voi": "direte",
+          "loro": "diranno"
+        }
       }
     },
     {
@@ -63,9 +182,30 @@
       "auxiliar": "avere",
       "participio": "voluto",
       "tempos": {
-        "Presente": { "io":"voglio","tu":"vuoi","lui/lei":"vuole","noi":"vogliamo","voi":"volete","loro":"vogliono" },
-        "Imperfetto": { "io":"volevo","tu":"volevi","lui/lei":"voleva","noi":"volevamo","voi":"volevate","loro":"volevano" },
-        "Futuro": { "io":"vorrò","tu":"vorrai","lui/lei":"vorrà","noi":"vorremo","voi":"vorrete","loro":"vorranno" }
+        "Presente": {
+          "io": "voglio",
+          "tu": "vuoi",
+          "lui/lei": "vuole",
+          "noi": "vogliamo",
+          "voi": "volete",
+          "loro": "vogliono"
+        },
+        "Imperfetto": {
+          "io": "volevo",
+          "tu": "volevi",
+          "lui/lei": "voleva",
+          "noi": "volevamo",
+          "voi": "volevate",
+          "loro": "volevano"
+        },
+        "Futuro": {
+          "io": "vorrò",
+          "tu": "vorrai",
+          "lui/lei": "vorrà",
+          "noi": "vorremo",
+          "voi": "vorrete",
+          "loro": "vorranno"
+        }
       }
     },
     {
@@ -74,9 +214,30 @@
       "auxiliar": "avere",
       "participio": "potuto",
       "tempos": {
-        "Presente": { "io":"posso","tu":"puoi","lui/lei":"può","noi":"possiamo","voi":"potete","loro":"possono" },
-        "Imperfetto": { "io":"potevo","tu":"potevi","lui/lei":"poteva","noi":"potevamo","voi":"potevate","loro":"potevano" },
-        "Futuro": { "io":"potrò","tu":"potrai","lui/lei":"potrà","noi":"potremo","voi":"potrete","loro":"potranno" }
+        "Presente": {
+          "io": "posso",
+          "tu": "puoi",
+          "lui/lei": "può",
+          "noi": "possiamo",
+          "voi": "potete",
+          "loro": "possono"
+        },
+        "Imperfetto": {
+          "io": "potevo",
+          "tu": "potevi",
+          "lui/lei": "poteva",
+          "noi": "potevamo",
+          "voi": "potevate",
+          "loro": "potevano"
+        },
+        "Futuro": {
+          "io": "potrò",
+          "tu": "potrai",
+          "lui/lei": "potrà",
+          "noi": "potremo",
+          "voi": "potrete",
+          "loro": "potranno"
+        }
       }
     },
     {
@@ -85,9 +246,30 @@
       "auxiliar": "avere",
       "participio": "dovuto",
       "tempos": {
-        "Presente": { "io":"devo","tu":"devi","lui/lei":"deve","noi":"dobbiamo","voi":"dovete","loro":"devono" },
-        "Imperfetto": { "io":"dovevo","tu":"dovevi","lui/lei":"doveva","noi":"dovevamo","voi":"dovevate","loro":"dovevano" },
-        "Futuro": { "io":"dovrò","tu":"dovrai","lui/lei":"dovrà","noi":"dovremo","voi":"dovrete","loro":"dovranno" }
+        "Presente": {
+          "io": "devo",
+          "tu": "devi",
+          "lui/lei": "deve",
+          "noi": "dobbiamo",
+          "voi": "dovete",
+          "loro": "devono"
+        },
+        "Imperfetto": {
+          "io": "dovevo",
+          "tu": "dovevi",
+          "lui/lei": "doveva",
+          "noi": "dovevamo",
+          "voi": "dovevate",
+          "loro": "dovevano"
+        },
+        "Futuro": {
+          "io": "dovrò",
+          "tu": "dovrai",
+          "lui/lei": "dovrà",
+          "noi": "dovremo",
+          "voi": "dovrete",
+          "loro": "dovranno"
+        }
       }
     },
     {
@@ -96,9 +278,30 @@
       "auxiliar": "avere",
       "participio": "saputo",
       "tempos": {
-        "Presente": { "io":"so","tu":"sai","lui/lei":"sa","noi":"sappiamo","voi":"sapete","loro":"sanno" },
-        "Imperfetto": { "io":"sapevo","tu":"sapevi","lui/lei":"sapeva","noi":"sapevamo","voi":"sapevate","loro":"sapevano" },
-        "Futuro": { "io":"saprò","tu":"saprai","lui/lei":"saprà","noi":"sapremo","voi":"saprete","loro":"sapranno" }
+        "Presente": {
+          "io": "so",
+          "tu": "sai",
+          "lui/lei": "sa",
+          "noi": "sappiamo",
+          "voi": "sapete",
+          "loro": "sanno"
+        },
+        "Imperfetto": {
+          "io": "sapevo",
+          "tu": "sapevi",
+          "lui/lei": "sapeva",
+          "noi": "sapevamo",
+          "voi": "sapevate",
+          "loro": "sapevano"
+        },
+        "Futuro": {
+          "io": "saprò",
+          "tu": "saprai",
+          "lui/lei": "saprà",
+          "noi": "sapremo",
+          "voi": "saprete",
+          "loro": "sapranno"
+        }
       }
     },
     {
@@ -107,9 +310,30 @@
       "auxiliar": "essere",
       "participio": "venuto",
       "tempos": {
-        "Presente": { "io":"vengo","tu":"vieni","lui/lei":"viene","noi":"veniamo","voi":"venite","loro":"vengono" },
-        "Imperfetto": { "io":"venivo","tu":"venivi","lui/lei":"veniva","noi":"venivamo","voi":"venivate","loro":"venivano" },
-        "Futuro": { "io":"verrò","tu":"verrai","lui/lei":"verrà","noi":"verremo","voi":"verrete","loro":"verranno" }
+        "Presente": {
+          "io": "vengo",
+          "tu": "vieni",
+          "lui/lei": "viene",
+          "noi": "veniamo",
+          "voi": "venite",
+          "loro": "vengono"
+        },
+        "Imperfetto": {
+          "io": "venivo",
+          "tu": "venivi",
+          "lui/lei": "veniva",
+          "noi": "venivamo",
+          "voi": "venivate",
+          "loro": "venivano"
+        },
+        "Futuro": {
+          "io": "verrò",
+          "tu": "verrai",
+          "lui/lei": "verrà",
+          "noi": "verremo",
+          "voi": "verrete",
+          "loro": "verranno"
+        }
       }
     },
     {
@@ -118,9 +342,30 @@
       "auxiliar": "essere",
       "participio": "stato",
       "tempos": {
-        "Presente": { "io":"sto","tu":"stai","lui/lei":"sta","noi":"stiamo","voi":"state","loro":"stanno" },
-        "Imperfetto": { "io":"stavo","tu":"stavi","lui/lei":"stava","noi":"stavamo","voi":"stavate","loro":"stavano" },
-        "Futuro": { "io":"starò","tu":"starai","lui/lei":"starà","noi":"staremo","voi":"starete","loro":"staranno" }
+        "Presente": {
+          "io": "sto",
+          "tu": "stai",
+          "lui/lei": "sta",
+          "noi": "stiamo",
+          "voi": "state",
+          "loro": "stanno"
+        },
+        "Imperfetto": {
+          "io": "stavo",
+          "tu": "stavi",
+          "lui/lei": "stava",
+          "noi": "stavamo",
+          "voi": "stavate",
+          "loro": "stavano"
+        },
+        "Futuro": {
+          "io": "starò",
+          "tu": "starai",
+          "lui/lei": "starà",
+          "noi": "staremo",
+          "voi": "starete",
+          "loro": "staranno"
+        }
       }
     },
     {
@@ -130,9 +375,30 @@
       "participio": "parlato",
       "tipo": "regolare -are",
       "tempos": {
-        "Presente": { "io":"parlo","tu":"parli","lui/lei":"parla","noi":"parliamo","voi":"parlate","loro":"parlano" },
-        "Imperfetto": { "io":"parlavo","tu":"parlavi","lui/lei":"parlava","noi":"parlavamo","voi":"parlavate","loro":"parlavano" },
-        "Futuro": { "io":"parlerò","tu":"parlerai","lui/lei":"parlerà","noi":"parleremo","voi":"parlerete","loro":"parleranno" }
+        "Presente": {
+          "io": "parlo",
+          "tu": "parli",
+          "lui/lei": "parla",
+          "noi": "parliamo",
+          "voi": "parlate",
+          "loro": "parlano"
+        },
+        "Imperfetto": {
+          "io": "parlavo",
+          "tu": "parlavi",
+          "lui/lei": "parlava",
+          "noi": "parlavamo",
+          "voi": "parlavate",
+          "loro": "parlavano"
+        },
+        "Futuro": {
+          "io": "parlerò",
+          "tu": "parlerai",
+          "lui/lei": "parlerà",
+          "noi": "parleremo",
+          "voi": "parlerete",
+          "loro": "parleranno"
+        }
       }
     },
     {
@@ -142,9 +408,30 @@
       "participio": "mangiato",
       "tipo": "regolare -are",
       "tempos": {
-        "Presente": { "io":"mangio","tu":"mangi","lui/lei":"mangia","noi":"mangiamo","voi":"mangiate","loro":"mangiano" },
-        "Imperfetto": { "io":"mangiavo","tu":"mangiavi","lui/lei":"mangiava","noi":"mangiavamo","voi":"mangiavate","loro":"mangiavano" },
-        "Futuro": { "io":"mangerò","tu":"mangerai","lui/lei":"mangerà","noi":"mangeremo","voi":"mangerete","loro":"mangeranno" }
+        "Presente": {
+          "io": "mangio",
+          "tu": "mangi",
+          "lui/lei": "mangia",
+          "noi": "mangiamo",
+          "voi": "mangiate",
+          "loro": "mangiano"
+        },
+        "Imperfetto": {
+          "io": "mangiavo",
+          "tu": "mangiavi",
+          "lui/lei": "mangiava",
+          "noi": "mangiavamo",
+          "voi": "mangiavate",
+          "loro": "mangiavano"
+        },
+        "Futuro": {
+          "io": "mangerò",
+          "tu": "mangerai",
+          "lui/lei": "mangerà",
+          "noi": "mangeremo",
+          "voi": "mangerete",
+          "loro": "mangeranno"
+        }
       }
     },
     {
@@ -154,9 +441,30 @@
       "participio": "letto",
       "tipo": "regolare -ere",
       "tempos": {
-        "Presente": { "io":"leggo","tu":"leggi","lui/lei":"legge","noi":"leggiamo","voi":"leggete","loro":"leggono" },
-        "Imperfetto": { "io":"leggevo","tu":"leggevi","lui/lei":"leggeva","noi":"leggevamo","voi":"leggevate","loro":"leggevano" },
-        "Futuro": { "io":"leggerò","tu":"leggerai","lui/lei":"leggerà","noi":"leggeremo","voi":"leggerete","loro":"leggeranno" }
+        "Presente": {
+          "io": "leggo",
+          "tu": "leggi",
+          "lui/lei": "legge",
+          "noi": "leggiamo",
+          "voi": "leggete",
+          "loro": "leggono"
+        },
+        "Imperfetto": {
+          "io": "leggevo",
+          "tu": "leggevi",
+          "lui/lei": "leggeva",
+          "noi": "leggevamo",
+          "voi": "leggevate",
+          "loro": "leggevano"
+        },
+        "Futuro": {
+          "io": "leggerò",
+          "tu": "leggerai",
+          "lui/lei": "leggerà",
+          "noi": "leggeremo",
+          "voi": "leggerete",
+          "loro": "leggeranno"
+        }
       }
     },
     {
@@ -166,9 +474,30 @@
       "participio": "scritto",
       "tipo": "regolare -ere",
       "tempos": {
-        "Presente": { "io":"scrivo","tu":"scrivi","lui/lei":"scrive","noi":"scriviamo","voi":"scrivete","loro":"scrivono" },
-        "Imperfetto": { "io":"scrivevo","tu":"scrivevi","lui/lei":"scriveva","noi":"scrivevamo","voi":"scrivevate","loro":"scrivevano" },
-        "Futuro": { "io":"scriverò","tu":"scriverai","lui/lei":"scriverà","noi":"scriveremo","voi":"scriverete","loro":"scriveranno" }
+        "Presente": {
+          "io": "scrivo",
+          "tu": "scrivi",
+          "lui/lei": "scrive",
+          "noi": "scriviamo",
+          "voi": "scrivete",
+          "loro": "scrivono"
+        },
+        "Imperfetto": {
+          "io": "scrivevo",
+          "tu": "scrivevi",
+          "lui/lei": "scriveva",
+          "noi": "scrivevamo",
+          "voi": "scrivevate",
+          "loro": "scrivevano"
+        },
+        "Futuro": {
+          "io": "scriverò",
+          "tu": "scriverai",
+          "lui/lei": "scriverà",
+          "noi": "scriveremo",
+          "voi": "scriverete",
+          "loro": "scriveranno"
+        }
       }
     },
     {
@@ -178,9 +507,30 @@
       "participio": "partito",
       "tipo": "regolare -ire",
       "tempos": {
-        "Presente": { "io":"parto","tu":"parti","lui/lei":"parte","noi":"partiamo","voi":"partite","loro":"partono" },
-        "Imperfetto": { "io":"partivo","tu":"partivi","lui/lei":"partiva","noi":"partivamo","voi":"partivate","loro":"partivano" },
-        "Futuro": { "io":"partirò","tu":"partirai","lui/lei":"partirà","noi":"partiremo","voi":"partirete","loro":"partiranno" }
+        "Presente": {
+          "io": "parto",
+          "tu": "parti",
+          "lui/lei": "parte",
+          "noi": "partiamo",
+          "voi": "partite",
+          "loro": "partono"
+        },
+        "Imperfetto": {
+          "io": "partivo",
+          "tu": "partivi",
+          "lui/lei": "partiva",
+          "noi": "partivamo",
+          "voi": "partivate",
+          "loro": "partivano"
+        },
+        "Futuro": {
+          "io": "partirò",
+          "tu": "partirai",
+          "lui/lei": "partirà",
+          "noi": "partiremo",
+          "voi": "partirete",
+          "loro": "partiranno"
+        }
       }
     },
     {
@@ -190,9 +540,30 @@
       "participio": "finito",
       "tipo": "regolare -ire (isc)",
       "tempos": {
-        "Presente": { "io":"finisco","tu":"finisci","lui/lei":"finisce","noi":"finiamo","voi":"finite","loro":"finiscono" },
-        "Imperfetto": { "io":"finivo","tu":"finivi","lui/lei":"finiva","noi":"finivamo","voi":"finivate","loro":"finivano" },
-        "Futuro": { "io":"finirò","tu":"finirai","lui/lei":"finirà","noi":"finiremo","voi":"finirete","loro":"finiranno" }
+        "Presente": {
+          "io": "finisco",
+          "tu": "finisci",
+          "lui/lei": "finisce",
+          "noi": "finiamo",
+          "voi": "finite",
+          "loro": "finiscono"
+        },
+        "Imperfetto": {
+          "io": "finivo",
+          "tu": "finivi",
+          "lui/lei": "finiva",
+          "noi": "finivamo",
+          "voi": "finivate",
+          "loro": "finivano"
+        },
+        "Futuro": {
+          "io": "finirò",
+          "tu": "finirai",
+          "lui/lei": "finirà",
+          "noi": "finiremo",
+          "voi": "finirete",
+          "loro": "finiranno"
+        }
       }
     },
     {
@@ -202,9 +573,30 @@
       "participio": "capito",
       "tipo": "regolare -ire (isc)",
       "tempos": {
-        "Presente": { "io":"capisco","tu":"capisci","lui/lei":"capisce","noi":"capiamo","voi":"capite","loro":"capiscono" },
-        "Imperfetto": { "io":"capivo","tu":"capivi","lui/lei":"capiva","noi":"capivamo","voi":"capivate","loro":"capivano" },
-        "Futuro": { "io":"capirò","tu":"capirai","lui/lei":"capirà","noi":"capiremo","voi":"capirete","loro":"capiranno" }
+        "Presente": {
+          "io": "capisco",
+          "tu": "capisci",
+          "lui/lei": "capisce",
+          "noi": "capiamo",
+          "voi": "capite",
+          "loro": "capiscono"
+        },
+        "Imperfetto": {
+          "io": "capivo",
+          "tu": "capivi",
+          "lui/lei": "capiva",
+          "noi": "capivamo",
+          "voi": "capivate",
+          "loro": "capivano"
+        },
+        "Futuro": {
+          "io": "capirò",
+          "tu": "capirai",
+          "lui/lei": "capirà",
+          "noi": "capiremo",
+          "voi": "capirete",
+          "loro": "capiranno"
+        }
       }
     },
     {
@@ -214,9 +606,30 @@
       "participio": "sentito",
       "tipo": "regolare -ire",
       "tempos": {
-        "Presente": { "io":"sento","tu":"senti","lui/lei":"sente","noi":"sentiamo","voi":"sentite","loro":"sentono" },
-        "Imperfetto": { "io":"sentivo","tu":"sentivi","lui/lei":"sentiva","noi":"sentivamo","voi":"sentivate","loro":"sentivano" },
-        "Futuro": { "io":"sentirò","tu":"sentirai","lui/lei":"sentirà","noi":"sentiremo","voi":"sentirete","loro":"sentiranno" }
+        "Presente": {
+          "io": "sento",
+          "tu": "senti",
+          "lui/lei": "sente",
+          "noi": "sentiamo",
+          "voi": "sentite",
+          "loro": "sentono"
+        },
+        "Imperfetto": {
+          "io": "sentivo",
+          "tu": "sentivi",
+          "lui/lei": "sentiva",
+          "noi": "sentivamo",
+          "voi": "sentivate",
+          "loro": "sentivano"
+        },
+        "Futuro": {
+          "io": "sentirò",
+          "tu": "sentirai",
+          "lui/lei": "sentirà",
+          "noi": "sentiremo",
+          "voi": "sentirete",
+          "loro": "sentiranno"
+        }
       }
     },
     {
@@ -225,9 +638,6134 @@
       "auxiliar": "avere",
       "participio": "visto",
       "tempos": {
-        "Presente": { "io":"vedo","tu":"vedi","lui/lei":"vede","noi":"vediamo","voi":"vedete","loro":"vedono" },
-        "Imperfetto": { "io":"vedevo","tu":"vedevi","lui/lei":"vedeva","noi":"vedevamo","voi":"vedevate","loro":"vedevano" },
-        "Futuro": { "io":"vedrò","tu":"vedrai","lui/lei":"vedrà","noi":"vedremo","voi":"vedrete","loro":"vedranno" }
+        "Presente": {
+          "io": "vedo",
+          "tu": "vedi",
+          "lui/lei": "vede",
+          "noi": "vediamo",
+          "voi": "vedete",
+          "loro": "vedono"
+        },
+        "Imperfetto": {
+          "io": "vedevo",
+          "tu": "vedevi",
+          "lui/lei": "vedeva",
+          "noi": "vedevamo",
+          "voi": "vedevate",
+          "loro": "vedevano"
+        },
+        "Futuro": {
+          "io": "vedrò",
+          "tu": "vedrai",
+          "lui/lei": "vedrà",
+          "noi": "vedremo",
+          "voi": "vedrete",
+          "loro": "vedranno"
+        }
+      }
+    },
+    {
+      "infinitivo": "lavorare",
+      "traducao": "trabalhar",
+      "auxiliar": "avere",
+      "participio": "lavorato",
+      "tempos": {
+        "Presente": {
+          "io": "lavoro",
+          "tu": "lavori",
+          "lui/lei": "lavora",
+          "noi": "lavoriamo",
+          "voi": "lavorate",
+          "loro": "lavorano"
+        },
+        "Imperfetto": {
+          "io": "lavoravvo",
+          "tu": "lavoravvi",
+          "lui/lei": "lavoravva",
+          "noi": "lavoravvamo",
+          "voi": "lavoravvate",
+          "loro": "lavoravvano"
+        },
+        "Futuro": {
+          "io": "lavorerò",
+          "tu": "lavorerai",
+          "lui/lei": "lavorerà",
+          "noi": "lavoreremo",
+          "voi": "lavorerete",
+          "loro": "lavoreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho lavorato",
+          "tu": "hai lavorato",
+          "lui/lei": "ha lavorato",
+          "noi": "abbiamo lavorato",
+          "voi": "avete lavorato",
+          "loro": "hanno lavorato"
+        },
+        "Congiuntivo presente": {
+          "io": "lavori",
+          "tu": "lavori",
+          "lui/lei": "lavori",
+          "noi": "lavoriamo",
+          "voi": "lavoriate",
+          "loro": "lavorino"
+        }
+      }
+    },
+    {
+      "infinitivo": "studiare",
+      "traducao": "estudar",
+      "auxiliar": "avere",
+      "participio": "studiato",
+      "tempos": {
+        "Presente": {
+          "io": "studio",
+          "tu": "studii",
+          "lui/lei": "studia",
+          "noi": "studiiamo",
+          "voi": "studiate",
+          "loro": "studiano"
+        },
+        "Imperfetto": {
+          "io": "studiavvo",
+          "tu": "studiavvi",
+          "lui/lei": "studiavva",
+          "noi": "studiavvamo",
+          "voi": "studiavvate",
+          "loro": "studiavvano"
+        },
+        "Futuro": {
+          "io": "studierò",
+          "tu": "studierai",
+          "lui/lei": "studierà",
+          "noi": "studieremo",
+          "voi": "studierete",
+          "loro": "studieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho studiato",
+          "tu": "hai studiato",
+          "lui/lei": "ha studiato",
+          "noi": "abbiamo studiato",
+          "voi": "avete studiato",
+          "loro": "hanno studiato"
+        },
+        "Congiuntivo presente": {
+          "io": "studii",
+          "tu": "studii",
+          "lui/lei": "studii",
+          "noi": "studiiamo",
+          "voi": "studiiate",
+          "loro": "studiino"
+        }
+      }
+    },
+    {
+      "infinitivo": "abitare",
+      "traducao": "morar / habitar",
+      "auxiliar": "avere",
+      "participio": "abitato",
+      "tempos": {
+        "Presente": {
+          "io": "abito",
+          "tu": "abiti",
+          "lui/lei": "abita",
+          "noi": "abitiamo",
+          "voi": "abitate",
+          "loro": "abitano"
+        },
+        "Imperfetto": {
+          "io": "abitavvo",
+          "tu": "abitavvi",
+          "lui/lei": "abitavva",
+          "noi": "abitavvamo",
+          "voi": "abitavvate",
+          "loro": "abitavvano"
+        },
+        "Futuro": {
+          "io": "abiterò",
+          "tu": "abiterai",
+          "lui/lei": "abiterà",
+          "noi": "abiteremo",
+          "voi": "abiterete",
+          "loro": "abiteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho abitato",
+          "tu": "hai abitato",
+          "lui/lei": "ha abitato",
+          "noi": "abbiamo abitato",
+          "voi": "avete abitato",
+          "loro": "hanno abitato"
+        },
+        "Congiuntivo presente": {
+          "io": "abiti",
+          "tu": "abiti",
+          "lui/lei": "abiti",
+          "noi": "abitiamo",
+          "voi": "abitiate",
+          "loro": "abitino"
+        }
+      }
+    },
+    {
+      "infinitivo": "comprare",
+      "traducao": "comprar",
+      "auxiliar": "avere",
+      "participio": "comprato",
+      "tempos": {
+        "Presente": {
+          "io": "compro",
+          "tu": "compri",
+          "lui/lei": "compra",
+          "noi": "compriamo",
+          "voi": "comprate",
+          "loro": "comprano"
+        },
+        "Imperfetto": {
+          "io": "compravvo",
+          "tu": "compravvi",
+          "lui/lei": "compravva",
+          "noi": "compravvamo",
+          "voi": "compravvate",
+          "loro": "compravvano"
+        },
+        "Futuro": {
+          "io": "comprerò",
+          "tu": "comprerai",
+          "lui/lei": "comprerà",
+          "noi": "compreremo",
+          "voi": "comprerete",
+          "loro": "compreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho comprato",
+          "tu": "hai comprato",
+          "lui/lei": "ha comprato",
+          "noi": "abbiamo comprato",
+          "voi": "avete comprato",
+          "loro": "hanno comprato"
+        },
+        "Congiuntivo presente": {
+          "io": "compri",
+          "tu": "compri",
+          "lui/lei": "compri",
+          "noi": "compriamo",
+          "voi": "compriate",
+          "loro": "comprino"
+        }
+      }
+    },
+    {
+      "infinitivo": "ascoltare",
+      "traducao": "escutar / ouvir",
+      "auxiliar": "avere",
+      "participio": "ascoltato",
+      "tempos": {
+        "Presente": {
+          "io": "ascolto",
+          "tu": "ascolti",
+          "lui/lei": "ascolta",
+          "noi": "ascoltiamo",
+          "voi": "ascoltate",
+          "loro": "ascoltano"
+        },
+        "Imperfetto": {
+          "io": "ascoltavvo",
+          "tu": "ascoltavvi",
+          "lui/lei": "ascoltavva",
+          "noi": "ascoltavvamo",
+          "voi": "ascoltavvate",
+          "loro": "ascoltavvano"
+        },
+        "Futuro": {
+          "io": "ascolterò",
+          "tu": "ascolterai",
+          "lui/lei": "ascolterà",
+          "noi": "ascolteremo",
+          "voi": "ascolterete",
+          "loro": "ascolteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho ascoltato",
+          "tu": "hai ascoltato",
+          "lui/lei": "ha ascoltato",
+          "noi": "abbiamo ascoltato",
+          "voi": "avete ascoltato",
+          "loro": "hanno ascoltato"
+        },
+        "Congiuntivo presente": {
+          "io": "ascolti",
+          "tu": "ascolti",
+          "lui/lei": "ascolti",
+          "noi": "ascoltiamo",
+          "voi": "ascoltiate",
+          "loro": "ascoltino"
+        }
+      }
+    },
+    {
+      "infinitivo": "guardare",
+      "traducao": "olhar / assistir",
+      "auxiliar": "avere",
+      "participio": "guardato",
+      "tempos": {
+        "Presente": {
+          "io": "guardo",
+          "tu": "guardi",
+          "lui/lei": "guarda",
+          "noi": "guardiamo",
+          "voi": "guardate",
+          "loro": "guardano"
+        },
+        "Imperfetto": {
+          "io": "guardavvo",
+          "tu": "guardavvi",
+          "lui/lei": "guardavva",
+          "noi": "guardavvamo",
+          "voi": "guardavvate",
+          "loro": "guardavvano"
+        },
+        "Futuro": {
+          "io": "guarderò",
+          "tu": "guarderai",
+          "lui/lei": "guarderà",
+          "noi": "guarderemo",
+          "voi": "guarderete",
+          "loro": "guarderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho guardato",
+          "tu": "hai guardato",
+          "lui/lei": "ha guardato",
+          "noi": "abbiamo guardato",
+          "voi": "avete guardato",
+          "loro": "hanno guardato"
+        },
+        "Congiuntivo presente": {
+          "io": "guardi",
+          "tu": "guardi",
+          "lui/lei": "guardi",
+          "noi": "guardiamo",
+          "voi": "guardiate",
+          "loro": "guardino"
+        }
+      }
+    },
+    {
+      "infinitivo": "chiamare",
+      "traducao": "chamar / telefonar",
+      "auxiliar": "avere",
+      "participio": "chiamato",
+      "tempos": {
+        "Presente": {
+          "io": "chiamo",
+          "tu": "chiami",
+          "lui/lei": "chiama",
+          "noi": "chiamiamo",
+          "voi": "chiamate",
+          "loro": "chiamano"
+        },
+        "Imperfetto": {
+          "io": "chiamavvo",
+          "tu": "chiamavvi",
+          "lui/lei": "chiamavva",
+          "noi": "chiamavvamo",
+          "voi": "chiamavvate",
+          "loro": "chiamavvano"
+        },
+        "Futuro": {
+          "io": "chiamerò",
+          "tu": "chiamerai",
+          "lui/lei": "chiamerà",
+          "noi": "chiameremo",
+          "voi": "chiamerete",
+          "loro": "chiameranno"
+        },
+        "Passato prossimo": {
+          "io": "ho chiamato",
+          "tu": "hai chiamato",
+          "lui/lei": "ha chiamato",
+          "noi": "abbiamo chiamato",
+          "voi": "avete chiamato",
+          "loro": "hanno chiamato"
+        },
+        "Congiuntivo presente": {
+          "io": "chiami",
+          "tu": "chiami",
+          "lui/lei": "chiami",
+          "noi": "chiamiamo",
+          "voi": "chiamiate",
+          "loro": "chiamino"
+        }
+      }
+    },
+    {
+      "infinitivo": "portare",
+      "traducao": "levar / trazer",
+      "auxiliar": "avere",
+      "participio": "portato",
+      "tempos": {
+        "Presente": {
+          "io": "porto",
+          "tu": "porti",
+          "lui/lei": "porta",
+          "noi": "portiamo",
+          "voi": "portate",
+          "loro": "portano"
+        },
+        "Imperfetto": {
+          "io": "portavvo",
+          "tu": "portavvi",
+          "lui/lei": "portavva",
+          "noi": "portavvamo",
+          "voi": "portavvate",
+          "loro": "portavvano"
+        },
+        "Futuro": {
+          "io": "porterò",
+          "tu": "porterai",
+          "lui/lei": "porterà",
+          "noi": "porteremo",
+          "voi": "porterete",
+          "loro": "porteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho portato",
+          "tu": "hai portato",
+          "lui/lei": "ha portato",
+          "noi": "abbiamo portato",
+          "voi": "avete portato",
+          "loro": "hanno portato"
+        },
+        "Congiuntivo presente": {
+          "io": "porti",
+          "tu": "porti",
+          "lui/lei": "porti",
+          "noi": "portiamo",
+          "voi": "portiate",
+          "loro": "portino"
+        }
+      }
+    },
+    {
+      "infinitivo": "trovare",
+      "traducao": "encontrar / achar",
+      "auxiliar": "avere",
+      "participio": "trovato",
+      "tempos": {
+        "Presente": {
+          "io": "trovo",
+          "tu": "trovi",
+          "lui/lei": "trova",
+          "noi": "troviamo",
+          "voi": "trovate",
+          "loro": "trovano"
+        },
+        "Imperfetto": {
+          "io": "trovavvo",
+          "tu": "trovavvi",
+          "lui/lei": "trovavva",
+          "noi": "trovavvamo",
+          "voi": "trovavvate",
+          "loro": "trovavvano"
+        },
+        "Futuro": {
+          "io": "troverò",
+          "tu": "troverai",
+          "lui/lei": "troverà",
+          "noi": "troveremo",
+          "voi": "troverete",
+          "loro": "troveranno"
+        },
+        "Passato prossimo": {
+          "io": "ho trovato",
+          "tu": "hai trovato",
+          "lui/lei": "ha trovato",
+          "noi": "abbiamo trovato",
+          "voi": "avete trovato",
+          "loro": "hanno trovato"
+        },
+        "Congiuntivo presente": {
+          "io": "trovi",
+          "tu": "trovi",
+          "lui/lei": "trovi",
+          "noi": "troviamo",
+          "voi": "troviate",
+          "loro": "trovino"
+        }
+      }
+    },
+    {
+      "infinitivo": "pensare",
+      "traducao": "pensar",
+      "auxiliar": "avere",
+      "participio": "pensato",
+      "tempos": {
+        "Presente": {
+          "io": "penso",
+          "tu": "pensi",
+          "lui/lei": "pensa",
+          "noi": "pensiamo",
+          "voi": "pensate",
+          "loro": "pensano"
+        },
+        "Imperfetto": {
+          "io": "pensavvo",
+          "tu": "pensavvi",
+          "lui/lei": "pensavva",
+          "noi": "pensavvamo",
+          "voi": "pensavvate",
+          "loro": "pensavvano"
+        },
+        "Futuro": {
+          "io": "penserò",
+          "tu": "penserai",
+          "lui/lei": "penserà",
+          "noi": "penseremo",
+          "voi": "penserete",
+          "loro": "penseranno"
+        },
+        "Passato prossimo": {
+          "io": "ho pensato",
+          "tu": "hai pensato",
+          "lui/lei": "ha pensato",
+          "noi": "abbiamo pensato",
+          "voi": "avete pensato",
+          "loro": "hanno pensato"
+        },
+        "Congiuntivo presente": {
+          "io": "pensi",
+          "tu": "pensi",
+          "lui/lei": "pensi",
+          "noi": "pensiamo",
+          "voi": "pensiate",
+          "loro": "pensino"
+        }
+      }
+    },
+    {
+      "infinitivo": "imparare",
+      "traducao": "aprender",
+      "auxiliar": "avere",
+      "participio": "imparato",
+      "tempos": {
+        "Presente": {
+          "io": "imparo",
+          "tu": "impari",
+          "lui/lei": "impara",
+          "noi": "impariamo",
+          "voi": "imparate",
+          "loro": "imparano"
+        },
+        "Imperfetto": {
+          "io": "imparavvo",
+          "tu": "imparavvi",
+          "lui/lei": "imparavva",
+          "noi": "imparavvamo",
+          "voi": "imparavvate",
+          "loro": "imparavvano"
+        },
+        "Futuro": {
+          "io": "imparerò",
+          "tu": "imparerai",
+          "lui/lei": "imparerà",
+          "noi": "impareremo",
+          "voi": "imparerete",
+          "loro": "impareranno"
+        },
+        "Passato prossimo": {
+          "io": "ho imparato",
+          "tu": "hai imparato",
+          "lui/lei": "ha imparato",
+          "noi": "abbiamo imparato",
+          "voi": "avete imparato",
+          "loro": "hanno imparato"
+        },
+        "Congiuntivo presente": {
+          "io": "impari",
+          "tu": "impari",
+          "lui/lei": "impari",
+          "noi": "impariamo",
+          "voi": "impariate",
+          "loro": "imparino"
+        }
+      }
+    },
+    {
+      "infinitivo": "camminare",
+      "traducao": "caminhar",
+      "auxiliar": "avere",
+      "participio": "camminato",
+      "tempos": {
+        "Presente": {
+          "io": "cammino",
+          "tu": "cammini",
+          "lui/lei": "cammina",
+          "noi": "camminiamo",
+          "voi": "camminate",
+          "loro": "camminano"
+        },
+        "Imperfetto": {
+          "io": "camminavvo",
+          "tu": "camminavvi",
+          "lui/lei": "camminavva",
+          "noi": "camminavvamo",
+          "voi": "camminavvate",
+          "loro": "camminavvano"
+        },
+        "Futuro": {
+          "io": "camminerò",
+          "tu": "camminerai",
+          "lui/lei": "camminerà",
+          "noi": "cammineremo",
+          "voi": "camminerete",
+          "loro": "cammineranno"
+        },
+        "Passato prossimo": {
+          "io": "ho camminato",
+          "tu": "hai camminato",
+          "lui/lei": "ha camminato",
+          "noi": "abbiamo camminato",
+          "voi": "avete camminato",
+          "loro": "hanno camminato"
+        },
+        "Congiuntivo presente": {
+          "io": "cammini",
+          "tu": "cammini",
+          "lui/lei": "cammini",
+          "noi": "camminiamo",
+          "voi": "camminiate",
+          "loro": "camminino"
+        }
+      }
+    },
+    {
+      "infinitivo": "aspettare",
+      "traducao": "esperar",
+      "auxiliar": "avere",
+      "participio": "aspettato",
+      "tempos": {
+        "Presente": {
+          "io": "aspetto",
+          "tu": "aspetti",
+          "lui/lei": "aspetta",
+          "noi": "aspettiamo",
+          "voi": "aspettate",
+          "loro": "aspettano"
+        },
+        "Imperfetto": {
+          "io": "aspettavvo",
+          "tu": "aspettavvi",
+          "lui/lei": "aspettavva",
+          "noi": "aspettavvamo",
+          "voi": "aspettavvate",
+          "loro": "aspettavvano"
+        },
+        "Futuro": {
+          "io": "aspetterò",
+          "tu": "aspetterai",
+          "lui/lei": "aspetterà",
+          "noi": "aspetteremo",
+          "voi": "aspetterete",
+          "loro": "aspetteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho aspettato",
+          "tu": "hai aspettato",
+          "lui/lei": "ha aspettato",
+          "noi": "abbiamo aspettato",
+          "voi": "avete aspettato",
+          "loro": "hanno aspettato"
+        },
+        "Congiuntivo presente": {
+          "io": "aspetti",
+          "tu": "aspetti",
+          "lui/lei": "aspetti",
+          "noi": "aspettiamo",
+          "voi": "aspettiate",
+          "loro": "aspettino"
+        }
+      }
+    },
+    {
+      "infinitivo": "pagare",
+      "traducao": "pagar",
+      "auxiliar": "avere",
+      "participio": "pagato",
+      "tempos": {
+        "Presente": {
+          "io": "pago",
+          "tu": "pagi",
+          "lui/lei": "paga",
+          "noi": "pagiamo",
+          "voi": "pagate",
+          "loro": "pagano"
+        },
+        "Imperfetto": {
+          "io": "pagavvo",
+          "tu": "pagavvi",
+          "lui/lei": "pagavva",
+          "noi": "pagavvamo",
+          "voi": "pagavvate",
+          "loro": "pagavvano"
+        },
+        "Futuro": {
+          "io": "pagerò",
+          "tu": "pagerai",
+          "lui/lei": "pagerà",
+          "noi": "pageremo",
+          "voi": "pagerete",
+          "loro": "pageranno"
+        },
+        "Passato prossimo": {
+          "io": "ho pagato",
+          "tu": "hai pagato",
+          "lui/lei": "ha pagato",
+          "noi": "abbiamo pagato",
+          "voi": "avete pagato",
+          "loro": "hanno pagato"
+        },
+        "Congiuntivo presente": {
+          "io": "pagi",
+          "tu": "pagi",
+          "lui/lei": "pagi",
+          "noi": "pagiamo",
+          "voi": "pagiate",
+          "loro": "pagino"
+        }
+      }
+    },
+    {
+      "infinitivo": "tornare",
+      "traducao": "voltar",
+      "auxiliar": "essere",
+      "participio": "tornato",
+      "tempos": {
+        "Presente": {
+          "io": "torno",
+          "tu": "torni",
+          "lui/lei": "torna",
+          "noi": "torniamo",
+          "voi": "tornate",
+          "loro": "tornano"
+        },
+        "Imperfetto": {
+          "io": "tornavvo",
+          "tu": "tornavvi",
+          "lui/lei": "tornavva",
+          "noi": "tornavvamo",
+          "voi": "tornavvate",
+          "loro": "tornavvano"
+        },
+        "Futuro": {
+          "io": "tornerò",
+          "tu": "tornerai",
+          "lui/lei": "tornerà",
+          "noi": "torneremo",
+          "voi": "tornerete",
+          "loro": "torneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tornato",
+          "tu": "hai tornato",
+          "lui/lei": "ha tornato",
+          "noi": "abbiamo tornato",
+          "voi": "avete tornato",
+          "loro": "hanno tornato"
+        },
+        "Congiuntivo presente": {
+          "io": "torni",
+          "tu": "torni",
+          "lui/lei": "torni",
+          "noi": "torniamo",
+          "voi": "torniate",
+          "loro": "tornino"
+        }
+      }
+    },
+    {
+      "infinitivo": "cercare",
+      "traducao": "procurar",
+      "auxiliar": "avere",
+      "participio": "cercato",
+      "tempos": {
+        "Presente": {
+          "io": "cerco",
+          "tu": "cerci",
+          "lui/lei": "cerca",
+          "noi": "cerciamo",
+          "voi": "cercate",
+          "loro": "cercano"
+        },
+        "Imperfetto": {
+          "io": "cercavvo",
+          "tu": "cercavvi",
+          "lui/lei": "cercavva",
+          "noi": "cercavvamo",
+          "voi": "cercavvate",
+          "loro": "cercavvano"
+        },
+        "Futuro": {
+          "io": "cercerò",
+          "tu": "cercerai",
+          "lui/lei": "cercerà",
+          "noi": "cerceremo",
+          "voi": "cercerete",
+          "loro": "cerceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho cercato",
+          "tu": "hai cercato",
+          "lui/lei": "ha cercato",
+          "noi": "abbiamo cercato",
+          "voi": "avete cercato",
+          "loro": "hanno cercato"
+        },
+        "Congiuntivo presente": {
+          "io": "cerci",
+          "tu": "cerci",
+          "lui/lei": "cerci",
+          "noi": "cerciamo",
+          "voi": "cerciate",
+          "loro": "cercino"
+        }
+      }
+    },
+    {
+      "infinitivo": "incontrare",
+      "traducao": "encontrar / se encontrar",
+      "auxiliar": "avere",
+      "participio": "incontrato",
+      "tempos": {
+        "Presente": {
+          "io": "incontro",
+          "tu": "incontri",
+          "lui/lei": "incontra",
+          "noi": "incontriamo",
+          "voi": "incontrate",
+          "loro": "incontrano"
+        },
+        "Imperfetto": {
+          "io": "incontravvo",
+          "tu": "incontravvi",
+          "lui/lei": "incontravva",
+          "noi": "incontravvamo",
+          "voi": "incontravvate",
+          "loro": "incontravvano"
+        },
+        "Futuro": {
+          "io": "incontrerò",
+          "tu": "incontrerai",
+          "lui/lei": "incontrerà",
+          "noi": "incontreremo",
+          "voi": "incontrerete",
+          "loro": "incontreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho incontrato",
+          "tu": "hai incontrato",
+          "lui/lei": "ha incontrato",
+          "noi": "abbiamo incontrato",
+          "voi": "avete incontrato",
+          "loro": "hanno incontrato"
+        },
+        "Congiuntivo presente": {
+          "io": "incontri",
+          "tu": "incontri",
+          "lui/lei": "incontri",
+          "noi": "incontriamo",
+          "voi": "incontriate",
+          "loro": "incontrino"
+        }
+      }
+    },
+    {
+      "infinitivo": "ricordare",
+      "traducao": "lembrar",
+      "auxiliar": "avere",
+      "participio": "ricordato",
+      "tempos": {
+        "Presente": {
+          "io": "ricordo",
+          "tu": "ricordi",
+          "lui/lei": "ricorda",
+          "noi": "ricordiamo",
+          "voi": "ricordate",
+          "loro": "ricordano"
+        },
+        "Imperfetto": {
+          "io": "ricordavvo",
+          "tu": "ricordavvi",
+          "lui/lei": "ricordavva",
+          "noi": "ricordavvamo",
+          "voi": "ricordavvate",
+          "loro": "ricordavvano"
+        },
+        "Futuro": {
+          "io": "ricorderò",
+          "tu": "ricorderai",
+          "lui/lei": "ricorderà",
+          "noi": "ricorderemo",
+          "voi": "ricorderete",
+          "loro": "ricorderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho ricordato",
+          "tu": "hai ricordato",
+          "lui/lei": "ha ricordato",
+          "noi": "abbiamo ricordato",
+          "voi": "avete ricordato",
+          "loro": "hanno ricordato"
+        },
+        "Congiuntivo presente": {
+          "io": "ricordi",
+          "tu": "ricordi",
+          "lui/lei": "ricordi",
+          "noi": "ricordiamo",
+          "voi": "ricordiate",
+          "loro": "ricordino"
+        }
+      }
+    },
+    {
+      "infinitivo": "dimenticare",
+      "traducao": "esquecer",
+      "auxiliar": "avere",
+      "participio": "dimenticato",
+      "tempos": {
+        "Presente": {
+          "io": "dimentico",
+          "tu": "dimentici",
+          "lui/lei": "dimentica",
+          "noi": "dimenticiamo",
+          "voi": "dimenticate",
+          "loro": "dimenticano"
+        },
+        "Imperfetto": {
+          "io": "dimenticavvo",
+          "tu": "dimenticavvi",
+          "lui/lei": "dimenticavva",
+          "noi": "dimenticavvamo",
+          "voi": "dimenticavvate",
+          "loro": "dimenticavvano"
+        },
+        "Futuro": {
+          "io": "dimenticerò",
+          "tu": "dimenticerai",
+          "lui/lei": "dimenticerà",
+          "noi": "dimenticeremo",
+          "voi": "dimenticerete",
+          "loro": "dimenticeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho dimenticato",
+          "tu": "hai dimenticato",
+          "lui/lei": "ha dimenticato",
+          "noi": "abbiamo dimenticato",
+          "voi": "avete dimenticato",
+          "loro": "hanno dimenticato"
+        },
+        "Congiuntivo presente": {
+          "io": "dimentici",
+          "tu": "dimentici",
+          "lui/lei": "dimentici",
+          "noi": "dimenticiamo",
+          "voi": "dimenticiate",
+          "loro": "dimenticino"
+        }
+      }
+    },
+    {
+      "infinitivo": "provare",
+      "traducao": "tentar / experimentar",
+      "auxiliar": "avere",
+      "participio": "provato",
+      "tempos": {
+        "Presente": {
+          "io": "provo",
+          "tu": "provi",
+          "lui/lei": "prova",
+          "noi": "proviamo",
+          "voi": "provate",
+          "loro": "provano"
+        },
+        "Imperfetto": {
+          "io": "provavvo",
+          "tu": "provavvi",
+          "lui/lei": "provavva",
+          "noi": "provavvamo",
+          "voi": "provavvate",
+          "loro": "provavvano"
+        },
+        "Futuro": {
+          "io": "proverò",
+          "tu": "proverai",
+          "lui/lei": "proverà",
+          "noi": "proveremo",
+          "voi": "proverete",
+          "loro": "proveranno"
+        },
+        "Passato prossimo": {
+          "io": "ho provato",
+          "tu": "hai provato",
+          "lui/lei": "ha provato",
+          "noi": "abbiamo provato",
+          "voi": "avete provato",
+          "loro": "hanno provato"
+        },
+        "Congiuntivo presente": {
+          "io": "provi",
+          "tu": "provi",
+          "lui/lei": "provi",
+          "noi": "proviamo",
+          "voi": "proviate",
+          "loro": "provino"
+        }
+      }
+    },
+    {
+      "infinitivo": "usare",
+      "traducao": "usar",
+      "auxiliar": "avere",
+      "participio": "usato",
+      "tempos": {
+        "Presente": {
+          "io": "uso",
+          "tu": "usi",
+          "lui/lei": "usa",
+          "noi": "usiamo",
+          "voi": "usate",
+          "loro": "usano"
+        },
+        "Imperfetto": {
+          "io": "usavvo",
+          "tu": "usavvi",
+          "lui/lei": "usavva",
+          "noi": "usavvamo",
+          "voi": "usavvate",
+          "loro": "usavvano"
+        },
+        "Futuro": {
+          "io": "userò",
+          "tu": "userai",
+          "lui/lei": "userà",
+          "noi": "useremo",
+          "voi": "userete",
+          "loro": "useranno"
+        },
+        "Passato prossimo": {
+          "io": "ho usato",
+          "tu": "hai usato",
+          "lui/lei": "ha usato",
+          "noi": "abbiamo usato",
+          "voi": "avete usato",
+          "loro": "hanno usato"
+        },
+        "Congiuntivo presente": {
+          "io": "usi",
+          "tu": "usi",
+          "lui/lei": "usi",
+          "noi": "usiamo",
+          "voi": "usiate",
+          "loro": "usino"
+        }
+      }
+    },
+    {
+      "infinitivo": "lasciare",
+      "traducao": "deixar",
+      "auxiliar": "avere",
+      "participio": "lasciato",
+      "tempos": {
+        "Presente": {
+          "io": "lascio",
+          "tu": "lascii",
+          "lui/lei": "lascia",
+          "noi": "lasciiamo",
+          "voi": "lasciate",
+          "loro": "lasciano"
+        },
+        "Imperfetto": {
+          "io": "lasciavvo",
+          "tu": "lasciavvi",
+          "lui/lei": "lasciavva",
+          "noi": "lasciavvamo",
+          "voi": "lasciavvate",
+          "loro": "lasciavvano"
+        },
+        "Futuro": {
+          "io": "lascierò",
+          "tu": "lascierai",
+          "lui/lei": "lascierà",
+          "noi": "lascieremo",
+          "voi": "lascierete",
+          "loro": "lascieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho lasciato",
+          "tu": "hai lasciato",
+          "lui/lei": "ha lasciato",
+          "noi": "abbiamo lasciato",
+          "voi": "avete lasciato",
+          "loro": "hanno lasciato"
+        },
+        "Congiuntivo presente": {
+          "io": "lascii",
+          "tu": "lascii",
+          "lui/lei": "lascii",
+          "noi": "lasciiamo",
+          "voi": "lasciiate",
+          "loro": "lasciino"
+        }
+      }
+    },
+    {
+      "infinitivo": "cominciare",
+      "traducao": "começar",
+      "auxiliar": "avere",
+      "participio": "cominciato",
+      "tempos": {
+        "Presente": {
+          "io": "comincio",
+          "tu": "comincii",
+          "lui/lei": "comincia",
+          "noi": "cominciiamo",
+          "voi": "cominciate",
+          "loro": "cominciano"
+        },
+        "Imperfetto": {
+          "io": "cominciavvo",
+          "tu": "cominciavvi",
+          "lui/lei": "cominciavva",
+          "noi": "cominciavvamo",
+          "voi": "cominciavvate",
+          "loro": "cominciavvano"
+        },
+        "Futuro": {
+          "io": "comincierò",
+          "tu": "comincierai",
+          "lui/lei": "comincierà",
+          "noi": "comincieremo",
+          "voi": "comincierete",
+          "loro": "comincieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho cominciato",
+          "tu": "hai cominciato",
+          "lui/lei": "ha cominciato",
+          "noi": "abbiamo cominciato",
+          "voi": "avete cominciato",
+          "loro": "hanno cominciato"
+        },
+        "Congiuntivo presente": {
+          "io": "comincii",
+          "tu": "comincii",
+          "lui/lei": "comincii",
+          "noi": "cominciiamo",
+          "voi": "cominciiate",
+          "loro": "cominciino"
+        }
+      }
+    },
+    {
+      "infinitivo": "passare",
+      "traducao": "passar",
+      "auxiliar": "essere",
+      "participio": "passato",
+      "tempos": {
+        "Presente": {
+          "io": "passo",
+          "tu": "passi",
+          "lui/lei": "passa",
+          "noi": "passiamo",
+          "voi": "passate",
+          "loro": "passano"
+        },
+        "Imperfetto": {
+          "io": "passavvo",
+          "tu": "passavvi",
+          "lui/lei": "passavva",
+          "noi": "passavvamo",
+          "voi": "passavvate",
+          "loro": "passavvano"
+        },
+        "Futuro": {
+          "io": "passerò",
+          "tu": "passerai",
+          "lui/lei": "passerà",
+          "noi": "passeremo",
+          "voi": "passerete",
+          "loro": "passeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho passato",
+          "tu": "hai passato",
+          "lui/lei": "ha passato",
+          "noi": "abbiamo passato",
+          "voi": "avete passato",
+          "loro": "hanno passato"
+        },
+        "Congiuntivo presente": {
+          "io": "passi",
+          "tu": "passi",
+          "lui/lei": "passi",
+          "noi": "passiamo",
+          "voi": "passiate",
+          "loro": "passino"
+        }
+      }
+    },
+    {
+      "infinitivo": "restare",
+      "traducao": "ficar / restar",
+      "auxiliar": "essere",
+      "participio": "restato",
+      "tempos": {
+        "Presente": {
+          "io": "resto",
+          "tu": "resti",
+          "lui/lei": "resta",
+          "noi": "restiamo",
+          "voi": "restate",
+          "loro": "restano"
+        },
+        "Imperfetto": {
+          "io": "restavvo",
+          "tu": "restavvi",
+          "lui/lei": "restavva",
+          "noi": "restavvamo",
+          "voi": "restavvate",
+          "loro": "restavvano"
+        },
+        "Futuro": {
+          "io": "resterò",
+          "tu": "resterai",
+          "lui/lei": "resterà",
+          "noi": "resteremo",
+          "voi": "resterete",
+          "loro": "resteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho restato",
+          "tu": "hai restato",
+          "lui/lei": "ha restato",
+          "noi": "abbiamo restato",
+          "voi": "avete restato",
+          "loro": "hanno restato"
+        },
+        "Congiuntivo presente": {
+          "io": "resti",
+          "tu": "resti",
+          "lui/lei": "resti",
+          "noi": "restiamo",
+          "voi": "restiate",
+          "loro": "restino"
+        }
+      }
+    },
+    {
+      "infinitivo": "entrare",
+      "traducao": "entrar",
+      "auxiliar": "essere",
+      "participio": "entrato",
+      "tempos": {
+        "Presente": {
+          "io": "entro",
+          "tu": "entri",
+          "lui/lei": "entra",
+          "noi": "entriamo",
+          "voi": "entrate",
+          "loro": "entrano"
+        },
+        "Imperfetto": {
+          "io": "entravvo",
+          "tu": "entravvi",
+          "lui/lei": "entravva",
+          "noi": "entravvamo",
+          "voi": "entravvate",
+          "loro": "entravvano"
+        },
+        "Futuro": {
+          "io": "entrerò",
+          "tu": "entrerai",
+          "lui/lei": "entrerà",
+          "noi": "entreremo",
+          "voi": "entrerete",
+          "loro": "entreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho entrato",
+          "tu": "hai entrato",
+          "lui/lei": "ha entrato",
+          "noi": "abbiamo entrato",
+          "voi": "avete entrato",
+          "loro": "hanno entrato"
+        },
+        "Congiuntivo presente": {
+          "io": "entri",
+          "tu": "entri",
+          "lui/lei": "entri",
+          "noi": "entriamo",
+          "voi": "entriate",
+          "loro": "entrino"
+        }
+      }
+    },
+    {
+      "infinitivo": "visitare",
+      "traducao": "visitar",
+      "auxiliar": "avere",
+      "participio": "visitato",
+      "tempos": {
+        "Presente": {
+          "io": "visito",
+          "tu": "visiti",
+          "lui/lei": "visita",
+          "noi": "visitiamo",
+          "voi": "visitate",
+          "loro": "visitano"
+        },
+        "Imperfetto": {
+          "io": "visitavvo",
+          "tu": "visitavvi",
+          "lui/lei": "visitavva",
+          "noi": "visitavvamo",
+          "voi": "visitavvate",
+          "loro": "visitavvano"
+        },
+        "Futuro": {
+          "io": "visiterò",
+          "tu": "visiterai",
+          "lui/lei": "visiterà",
+          "noi": "visiteremo",
+          "voi": "visiterete",
+          "loro": "visiteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho visitato",
+          "tu": "hai visitato",
+          "lui/lei": "ha visitato",
+          "noi": "abbiamo visitato",
+          "voi": "avete visitato",
+          "loro": "hanno visitato"
+        },
+        "Congiuntivo presente": {
+          "io": "visiti",
+          "tu": "visiti",
+          "lui/lei": "visiti",
+          "noi": "visitiamo",
+          "voi": "visitiate",
+          "loro": "visitino"
+        }
+      }
+    },
+    {
+      "infinitivo": "aiutare",
+      "traducao": "ajudar",
+      "auxiliar": "avere",
+      "participio": "aiutato",
+      "tempos": {
+        "Presente": {
+          "io": "aiuto",
+          "tu": "aiuti",
+          "lui/lei": "aiuta",
+          "noi": "aiutiamo",
+          "voi": "aiutate",
+          "loro": "aiutano"
+        },
+        "Imperfetto": {
+          "io": "aiutavvo",
+          "tu": "aiutavvi",
+          "lui/lei": "aiutavva",
+          "noi": "aiutavvamo",
+          "voi": "aiutavvate",
+          "loro": "aiutavvano"
+        },
+        "Futuro": {
+          "io": "aiuterò",
+          "tu": "aiuterai",
+          "lui/lei": "aiuterà",
+          "noi": "aiuteremo",
+          "voi": "aiuterete",
+          "loro": "aiuteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho aiutato",
+          "tu": "hai aiutato",
+          "lui/lei": "ha aiutato",
+          "noi": "abbiamo aiutato",
+          "voi": "avete aiutato",
+          "loro": "hanno aiutato"
+        },
+        "Congiuntivo presente": {
+          "io": "aiuti",
+          "tu": "aiuti",
+          "lui/lei": "aiuti",
+          "noi": "aiutiamo",
+          "voi": "aiutiate",
+          "loro": "aiutino"
+        }
+      }
+    },
+    {
+      "infinitivo": "cambiare",
+      "traducao": "mudar / trocar",
+      "auxiliar": "avere",
+      "participio": "cambiato",
+      "tempos": {
+        "Presente": {
+          "io": "cambio",
+          "tu": "cambii",
+          "lui/lei": "cambia",
+          "noi": "cambiiamo",
+          "voi": "cambiate",
+          "loro": "cambiano"
+        },
+        "Imperfetto": {
+          "io": "cambiavvo",
+          "tu": "cambiavvi",
+          "lui/lei": "cambiavva",
+          "noi": "cambiavvamo",
+          "voi": "cambiavvate",
+          "loro": "cambiavvano"
+        },
+        "Futuro": {
+          "io": "cambierò",
+          "tu": "cambierai",
+          "lui/lei": "cambierà",
+          "noi": "cambieremo",
+          "voi": "cambierete",
+          "loro": "cambieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho cambiato",
+          "tu": "hai cambiato",
+          "lui/lei": "ha cambiato",
+          "noi": "abbiamo cambiato",
+          "voi": "avete cambiato",
+          "loro": "hanno cambiato"
+        },
+        "Congiuntivo presente": {
+          "io": "cambii",
+          "tu": "cambii",
+          "lui/lei": "cambii",
+          "noi": "cambiiamo",
+          "voi": "cambiiate",
+          "loro": "cambiino"
+        }
+      }
+    },
+    {
+      "infinitivo": "giocare",
+      "traducao": "jogar / brincar",
+      "auxiliar": "avere",
+      "participio": "giocato",
+      "tempos": {
+        "Presente": {
+          "io": "gioco",
+          "tu": "gioci",
+          "lui/lei": "gioca",
+          "noi": "giociamo",
+          "voi": "giocate",
+          "loro": "giocano"
+        },
+        "Imperfetto": {
+          "io": "giocavvo",
+          "tu": "giocavvi",
+          "lui/lei": "giocavva",
+          "noi": "giocavvamo",
+          "voi": "giocavvate",
+          "loro": "giocavvano"
+        },
+        "Futuro": {
+          "io": "giocerò",
+          "tu": "giocerai",
+          "lui/lei": "giocerà",
+          "noi": "gioceremo",
+          "voi": "giocerete",
+          "loro": "gioceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho giocato",
+          "tu": "hai giocato",
+          "lui/lei": "ha giocato",
+          "noi": "abbiamo giocato",
+          "voi": "avete giocato",
+          "loro": "hanno giocato"
+        },
+        "Congiuntivo presente": {
+          "io": "gioci",
+          "tu": "gioci",
+          "lui/lei": "gioci",
+          "noi": "giociamo",
+          "voi": "giociate",
+          "loro": "giocino"
+        }
+      }
+    },
+    {
+      "infinitivo": "cantare",
+      "traducao": "cantar",
+      "auxiliar": "avere",
+      "participio": "cantato",
+      "tempos": {
+        "Presente": {
+          "io": "canto",
+          "tu": "canti",
+          "lui/lei": "canta",
+          "noi": "cantiamo",
+          "voi": "cantate",
+          "loro": "cantano"
+        },
+        "Imperfetto": {
+          "io": "cantavvo",
+          "tu": "cantavvi",
+          "lui/lei": "cantavva",
+          "noi": "cantavvamo",
+          "voi": "cantavvate",
+          "loro": "cantavvano"
+        },
+        "Futuro": {
+          "io": "canterò",
+          "tu": "canterai",
+          "lui/lei": "canterà",
+          "noi": "canteremo",
+          "voi": "canterete",
+          "loro": "canteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho cantato",
+          "tu": "hai cantato",
+          "lui/lei": "ha cantato",
+          "noi": "abbiamo cantato",
+          "voi": "avete cantato",
+          "loro": "hanno cantato"
+        },
+        "Congiuntivo presente": {
+          "io": "canti",
+          "tu": "canti",
+          "lui/lei": "canti",
+          "noi": "cantiamo",
+          "voi": "cantiate",
+          "loro": "cantino"
+        }
+      }
+    },
+    {
+      "infinitivo": "ballare",
+      "traducao": "dançar",
+      "auxiliar": "avere",
+      "participio": "ballato",
+      "tempos": {
+        "Presente": {
+          "io": "ballo",
+          "tu": "balli",
+          "lui/lei": "balla",
+          "noi": "balliamo",
+          "voi": "ballate",
+          "loro": "ballano"
+        },
+        "Imperfetto": {
+          "io": "ballavvo",
+          "tu": "ballavvi",
+          "lui/lei": "ballavva",
+          "noi": "ballavvamo",
+          "voi": "ballavvate",
+          "loro": "ballavvano"
+        },
+        "Futuro": {
+          "io": "ballerò",
+          "tu": "ballerai",
+          "lui/lei": "ballerà",
+          "noi": "balleremo",
+          "voi": "ballerete",
+          "loro": "balleranno"
+        },
+        "Passato prossimo": {
+          "io": "ho ballato",
+          "tu": "hai ballato",
+          "lui/lei": "ha ballato",
+          "noi": "abbiamo ballato",
+          "voi": "avete ballato",
+          "loro": "hanno ballato"
+        },
+        "Congiuntivo presente": {
+          "io": "balli",
+          "tu": "balli",
+          "lui/lei": "balli",
+          "noi": "balliamo",
+          "voi": "balliate",
+          "loro": "ballino"
+        }
+      }
+    },
+    {
+      "infinitivo": "guidare",
+      "traducao": "dirigir / guiar",
+      "auxiliar": "avere",
+      "participio": "guidato",
+      "tempos": {
+        "Presente": {
+          "io": "guido",
+          "tu": "guidi",
+          "lui/lei": "guida",
+          "noi": "guidiamo",
+          "voi": "guidate",
+          "loro": "guidano"
+        },
+        "Imperfetto": {
+          "io": "guidavvo",
+          "tu": "guidavvi",
+          "lui/lei": "guidavva",
+          "noi": "guidavvamo",
+          "voi": "guidavvate",
+          "loro": "guidavvano"
+        },
+        "Futuro": {
+          "io": "guiderò",
+          "tu": "guiderai",
+          "lui/lei": "guiderà",
+          "noi": "guideremo",
+          "voi": "guiderete",
+          "loro": "guideranno"
+        },
+        "Passato prossimo": {
+          "io": "ho guidato",
+          "tu": "hai guidato",
+          "lui/lei": "ha guidato",
+          "noi": "abbiamo guidato",
+          "voi": "avete guidato",
+          "loro": "hanno guidato"
+        },
+        "Congiuntivo presente": {
+          "io": "guidi",
+          "tu": "guidi",
+          "lui/lei": "guidi",
+          "noi": "guidiamo",
+          "voi": "guidiate",
+          "loro": "guidino"
+        }
+      }
+    },
+    {
+      "infinitivo": "viaggiare",
+      "traducao": "viajar",
+      "auxiliar": "avere",
+      "participio": "viaggiato",
+      "tempos": {
+        "Presente": {
+          "io": "viaggio",
+          "tu": "viaggii",
+          "lui/lei": "viaggia",
+          "noi": "viaggiiamo",
+          "voi": "viaggiate",
+          "loro": "viaggiano"
+        },
+        "Imperfetto": {
+          "io": "viaggiavvo",
+          "tu": "viaggiavvi",
+          "lui/lei": "viaggiavva",
+          "noi": "viaggiavvamo",
+          "voi": "viaggiavvate",
+          "loro": "viaggiavvano"
+        },
+        "Futuro": {
+          "io": "viaggierò",
+          "tu": "viaggierai",
+          "lui/lei": "viaggierà",
+          "noi": "viaggieremo",
+          "voi": "viaggierete",
+          "loro": "viaggieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho viaggiato",
+          "tu": "hai viaggiato",
+          "lui/lei": "ha viaggiato",
+          "noi": "abbiamo viaggiato",
+          "voi": "avete viaggiato",
+          "loro": "hanno viaggiato"
+        },
+        "Congiuntivo presente": {
+          "io": "viaggii",
+          "tu": "viaggii",
+          "lui/lei": "viaggii",
+          "noi": "viaggiiamo",
+          "voi": "viaggiiate",
+          "loro": "viaggiino"
+        }
+      }
+    },
+    {
+      "infinitivo": "preparare",
+      "traducao": "preparar",
+      "auxiliar": "avere",
+      "participio": "preparato",
+      "tempos": {
+        "Presente": {
+          "io": "preparo",
+          "tu": "prepari",
+          "lui/lei": "prepara",
+          "noi": "prepariamo",
+          "voi": "preparate",
+          "loro": "preparano"
+        },
+        "Imperfetto": {
+          "io": "preparavvo",
+          "tu": "preparavvi",
+          "lui/lei": "preparavva",
+          "noi": "preparavvamo",
+          "voi": "preparavvate",
+          "loro": "preparavvano"
+        },
+        "Futuro": {
+          "io": "preparerò",
+          "tu": "preparerai",
+          "lui/lei": "preparerà",
+          "noi": "prepareremo",
+          "voi": "preparerete",
+          "loro": "prepareranno"
+        },
+        "Passato prossimo": {
+          "io": "ho preparato",
+          "tu": "hai preparato",
+          "lui/lei": "ha preparato",
+          "noi": "abbiamo preparato",
+          "voi": "avete preparato",
+          "loro": "hanno preparato"
+        },
+        "Congiuntivo presente": {
+          "io": "prepari",
+          "tu": "prepari",
+          "lui/lei": "prepari",
+          "noi": "prepariamo",
+          "voi": "prepariate",
+          "loro": "preparino"
+        }
+      }
+    },
+    {
+      "infinitivo": "cucinare",
+      "traducao": "cozinhar",
+      "auxiliar": "avere",
+      "participio": "cucinato",
+      "tempos": {
+        "Presente": {
+          "io": "cucino",
+          "tu": "cucini",
+          "lui/lei": "cucina",
+          "noi": "cuciniamo",
+          "voi": "cucinate",
+          "loro": "cucinano"
+        },
+        "Imperfetto": {
+          "io": "cucinavvo",
+          "tu": "cucinavvi",
+          "lui/lei": "cucinavva",
+          "noi": "cucinavvamo",
+          "voi": "cucinavvate",
+          "loro": "cucinavvano"
+        },
+        "Futuro": {
+          "io": "cucinerò",
+          "tu": "cucinerai",
+          "lui/lei": "cucinerà",
+          "noi": "cucineremo",
+          "voi": "cucinerete",
+          "loro": "cucineranno"
+        },
+        "Passato prossimo": {
+          "io": "ho cucinato",
+          "tu": "hai cucinato",
+          "lui/lei": "ha cucinato",
+          "noi": "abbiamo cucinato",
+          "voi": "avete cucinato",
+          "loro": "hanno cucinato"
+        },
+        "Congiuntivo presente": {
+          "io": "cucini",
+          "tu": "cucini",
+          "lui/lei": "cucini",
+          "noi": "cuciniamo",
+          "voi": "cuciniate",
+          "loro": "cucinino"
+        }
+      }
+    },
+    {
+      "infinitivo": "sperare",
+      "traducao": "esperar / torcer",
+      "auxiliar": "avere",
+      "participio": "sperato",
+      "tempos": {
+        "Presente": {
+          "io": "spero",
+          "tu": "speri",
+          "lui/lei": "spera",
+          "noi": "speriamo",
+          "voi": "sperate",
+          "loro": "sperano"
+        },
+        "Imperfetto": {
+          "io": "speravvo",
+          "tu": "speravvi",
+          "lui/lei": "speravva",
+          "noi": "speravvamo",
+          "voi": "speravvate",
+          "loro": "speravvano"
+        },
+        "Futuro": {
+          "io": "spererò",
+          "tu": "spererai",
+          "lui/lei": "spererà",
+          "noi": "spereremo",
+          "voi": "spererete",
+          "loro": "spereranno"
+        },
+        "Passato prossimo": {
+          "io": "ho sperato",
+          "tu": "hai sperato",
+          "lui/lei": "ha sperato",
+          "noi": "abbiamo sperato",
+          "voi": "avete sperato",
+          "loro": "hanno sperato"
+        },
+        "Congiuntivo presente": {
+          "io": "speri",
+          "tu": "speri",
+          "lui/lei": "speri",
+          "noi": "speriamo",
+          "voi": "speriate",
+          "loro": "sperino"
+        }
+      }
+    },
+    {
+      "infinitivo": "spiegare",
+      "traducao": "explicar",
+      "auxiliar": "avere",
+      "participio": "spiegato",
+      "tempos": {
+        "Presente": {
+          "io": "spiego",
+          "tu": "spiegi",
+          "lui/lei": "spiega",
+          "noi": "spiegiamo",
+          "voi": "spiegate",
+          "loro": "spiegano"
+        },
+        "Imperfetto": {
+          "io": "spiegavvo",
+          "tu": "spiegavvi",
+          "lui/lei": "spiegavva",
+          "noi": "spiegavvamo",
+          "voi": "spiegavvate",
+          "loro": "spiegavvano"
+        },
+        "Futuro": {
+          "io": "spiegerò",
+          "tu": "spiegerai",
+          "lui/lei": "spiegerà",
+          "noi": "spiegeremo",
+          "voi": "spiegerete",
+          "loro": "spiegeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho spiegato",
+          "tu": "hai spiegato",
+          "lui/lei": "ha spiegato",
+          "noi": "abbiamo spiegato",
+          "voi": "avete spiegato",
+          "loro": "hanno spiegato"
+        },
+        "Congiuntivo presente": {
+          "io": "spiegi",
+          "tu": "spiegi",
+          "lui/lei": "spiegi",
+          "noi": "spiegiamo",
+          "voi": "spiegiate",
+          "loro": "spiegino"
+        }
+      }
+    },
+    {
+      "infinitivo": "domandare",
+      "traducao": "perguntar",
+      "auxiliar": "avere",
+      "participio": "domandato",
+      "tempos": {
+        "Presente": {
+          "io": "domando",
+          "tu": "domandi",
+          "lui/lei": "domanda",
+          "noi": "domandiamo",
+          "voi": "domandate",
+          "loro": "domandano"
+        },
+        "Imperfetto": {
+          "io": "domandavvo",
+          "tu": "domandavvi",
+          "lui/lei": "domandavva",
+          "noi": "domandavvamo",
+          "voi": "domandavvate",
+          "loro": "domandavvano"
+        },
+        "Futuro": {
+          "io": "domanderò",
+          "tu": "domanderai",
+          "lui/lei": "domanderà",
+          "noi": "domanderemo",
+          "voi": "domanderete",
+          "loro": "domanderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho domandato",
+          "tu": "hai domandato",
+          "lui/lei": "ha domandato",
+          "noi": "abbiamo domandato",
+          "voi": "avete domandato",
+          "loro": "hanno domandato"
+        },
+        "Congiuntivo presente": {
+          "io": "domandi",
+          "tu": "domandi",
+          "lui/lei": "domandi",
+          "noi": "domandiamo",
+          "voi": "domandiate",
+          "loro": "domandino"
+        }
+      }
+    },
+    {
+      "infinitivo": "rispettare",
+      "traducao": "respeitar",
+      "auxiliar": "avere",
+      "participio": "rispettato",
+      "tempos": {
+        "Presente": {
+          "io": "rispetto",
+          "tu": "rispetti",
+          "lui/lei": "rispetta",
+          "noi": "rispettiamo",
+          "voi": "rispettate",
+          "loro": "rispettano"
+        },
+        "Imperfetto": {
+          "io": "rispettavvo",
+          "tu": "rispettavvi",
+          "lui/lei": "rispettavva",
+          "noi": "rispettavvamo",
+          "voi": "rispettavvate",
+          "loro": "rispettavvano"
+        },
+        "Futuro": {
+          "io": "rispetterò",
+          "tu": "rispetterai",
+          "lui/lei": "rispetterà",
+          "noi": "rispetteremo",
+          "voi": "rispetterete",
+          "loro": "rispetteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho rispettato",
+          "tu": "hai rispettato",
+          "lui/lei": "ha rispettato",
+          "noi": "abbiamo rispettato",
+          "voi": "avete rispettato",
+          "loro": "hanno rispettato"
+        },
+        "Congiuntivo presente": {
+          "io": "rispetti",
+          "tu": "rispetti",
+          "lui/lei": "rispetti",
+          "noi": "rispettiamo",
+          "voi": "rispettiate",
+          "loro": "rispettino"
+        }
+      }
+    },
+    {
+      "infinitivo": "invitare",
+      "traducao": "convidar",
+      "auxiliar": "avere",
+      "participio": "invitato",
+      "tempos": {
+        "Presente": {
+          "io": "invito",
+          "tu": "inviti",
+          "lui/lei": "invita",
+          "noi": "invitiamo",
+          "voi": "invitate",
+          "loro": "invitano"
+        },
+        "Imperfetto": {
+          "io": "invitavvo",
+          "tu": "invitavvi",
+          "lui/lei": "invitavva",
+          "noi": "invitavvamo",
+          "voi": "invitavvate",
+          "loro": "invitavvano"
+        },
+        "Futuro": {
+          "io": "inviterò",
+          "tu": "inviterai",
+          "lui/lei": "inviterà",
+          "noi": "inviteremo",
+          "voi": "inviterete",
+          "loro": "inviteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho invitato",
+          "tu": "hai invitato",
+          "lui/lei": "ha invitato",
+          "noi": "abbiamo invitato",
+          "voi": "avete invitato",
+          "loro": "hanno invitato"
+        },
+        "Congiuntivo presente": {
+          "io": "inviti",
+          "tu": "inviti",
+          "lui/lei": "inviti",
+          "noi": "invitiamo",
+          "voi": "invitiate",
+          "loro": "invitino"
+        }
+      }
+    },
+    {
+      "infinitivo": "insegnare",
+      "traducao": "ensinar",
+      "auxiliar": "avere",
+      "participio": "insegnato",
+      "tempos": {
+        "Presente": {
+          "io": "insegno",
+          "tu": "insegni",
+          "lui/lei": "insegna",
+          "noi": "insegniamo",
+          "voi": "insegnate",
+          "loro": "insegnano"
+        },
+        "Imperfetto": {
+          "io": "insegnavvo",
+          "tu": "insegnavvi",
+          "lui/lei": "insegnavva",
+          "noi": "insegnavvamo",
+          "voi": "insegnavvate",
+          "loro": "insegnavvano"
+        },
+        "Futuro": {
+          "io": "insegnerò",
+          "tu": "insegnerai",
+          "lui/lei": "insegnerà",
+          "noi": "insegneremo",
+          "voi": "insegnerete",
+          "loro": "insegneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho insegnato",
+          "tu": "hai insegnato",
+          "lui/lei": "ha insegnato",
+          "noi": "abbiamo insegnato",
+          "voi": "avete insegnato",
+          "loro": "hanno insegnato"
+        },
+        "Congiuntivo presente": {
+          "io": "insegni",
+          "tu": "insegni",
+          "lui/lei": "insegni",
+          "noi": "insegniamo",
+          "voi": "insegniate",
+          "loro": "insegnino"
+        }
+      }
+    },
+    {
+      "infinitivo": "ringraziare",
+      "traducao": "agradecer",
+      "auxiliar": "avere",
+      "participio": "ringraziato",
+      "tempos": {
+        "Presente": {
+          "io": "ringrazio",
+          "tu": "ringrazii",
+          "lui/lei": "ringrazia",
+          "noi": "ringraziiamo",
+          "voi": "ringraziate",
+          "loro": "ringraziano"
+        },
+        "Imperfetto": {
+          "io": "ringraziavvo",
+          "tu": "ringraziavvi",
+          "lui/lei": "ringraziavva",
+          "noi": "ringraziavvamo",
+          "voi": "ringraziavvate",
+          "loro": "ringraziavvano"
+        },
+        "Futuro": {
+          "io": "ringrazierò",
+          "tu": "ringrazierai",
+          "lui/lei": "ringrazierà",
+          "noi": "ringrazieremo",
+          "voi": "ringrazierete",
+          "loro": "ringrazieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho ringraziato",
+          "tu": "hai ringraziato",
+          "lui/lei": "ha ringraziato",
+          "noi": "abbiamo ringraziato",
+          "voi": "avete ringraziato",
+          "loro": "hanno ringraziato"
+        },
+        "Congiuntivo presente": {
+          "io": "ringrazii",
+          "tu": "ringrazii",
+          "lui/lei": "ringrazii",
+          "noi": "ringraziiamo",
+          "voi": "ringraziiate",
+          "loro": "ringraziino"
+        }
+      }
+    },
+    {
+      "infinitivo": "salutare",
+      "traducao": "saudar / cumprimentar",
+      "auxiliar": "avere",
+      "participio": "salutato",
+      "tempos": {
+        "Presente": {
+          "io": "saluto",
+          "tu": "saluti",
+          "lui/lei": "saluta",
+          "noi": "salutiamo",
+          "voi": "salutate",
+          "loro": "salutano"
+        },
+        "Imperfetto": {
+          "io": "salutavvo",
+          "tu": "salutavvi",
+          "lui/lei": "salutavva",
+          "noi": "salutavvamo",
+          "voi": "salutavvate",
+          "loro": "salutavvano"
+        },
+        "Futuro": {
+          "io": "saluterò",
+          "tu": "saluterai",
+          "lui/lei": "saluterà",
+          "noi": "saluteremo",
+          "voi": "saluterete",
+          "loro": "saluteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho salutato",
+          "tu": "hai salutato",
+          "lui/lei": "ha salutato",
+          "noi": "abbiamo salutato",
+          "voi": "avete salutato",
+          "loro": "hanno salutato"
+        },
+        "Congiuntivo presente": {
+          "io": "saluti",
+          "tu": "saluti",
+          "lui/lei": "saluti",
+          "noi": "salutiamo",
+          "voi": "salutiate",
+          "loro": "salutino"
+        }
+      }
+    },
+    {
+      "infinitivo": "pubblicare",
+      "traducao": "publicar",
+      "auxiliar": "avere",
+      "participio": "pubblicato",
+      "tempos": {
+        "Presente": {
+          "io": "pubblico",
+          "tu": "pubblici",
+          "lui/lei": "pubblica",
+          "noi": "pubbliciamo",
+          "voi": "pubblicate",
+          "loro": "pubblicano"
+        },
+        "Imperfetto": {
+          "io": "pubblicavvo",
+          "tu": "pubblicavvi",
+          "lui/lei": "pubblicavva",
+          "noi": "pubblicavvamo",
+          "voi": "pubblicavvate",
+          "loro": "pubblicavvano"
+        },
+        "Futuro": {
+          "io": "pubblicerò",
+          "tu": "pubblicerai",
+          "lui/lei": "pubblicerà",
+          "noi": "pubbliceremo",
+          "voi": "pubblicerete",
+          "loro": "pubbliceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho pubblicato",
+          "tu": "hai pubblicato",
+          "lui/lei": "ha pubblicato",
+          "noi": "abbiamo pubblicato",
+          "voi": "avete pubblicato",
+          "loro": "hanno pubblicato"
+        },
+        "Congiuntivo presente": {
+          "io": "pubblici",
+          "tu": "pubblici",
+          "lui/lei": "pubblici",
+          "noi": "pubbliciamo",
+          "voi": "pubbliciate",
+          "loro": "pubblicino"
+        }
+      }
+    },
+    {
+      "infinitivo": "controllare",
+      "traducao": "controlar / verificar",
+      "auxiliar": "avere",
+      "participio": "controllato",
+      "tempos": {
+        "Presente": {
+          "io": "controllo",
+          "tu": "controlli",
+          "lui/lei": "controlla",
+          "noi": "controlliamo",
+          "voi": "controllate",
+          "loro": "controllano"
+        },
+        "Imperfetto": {
+          "io": "controllavvo",
+          "tu": "controllavvi",
+          "lui/lei": "controllavva",
+          "noi": "controllavvamo",
+          "voi": "controllavvate",
+          "loro": "controllavvano"
+        },
+        "Futuro": {
+          "io": "controllerò",
+          "tu": "controllerai",
+          "lui/lei": "controllerà",
+          "noi": "controlleremo",
+          "voi": "controllerete",
+          "loro": "controlleranno"
+        },
+        "Passato prossimo": {
+          "io": "ho controllato",
+          "tu": "hai controllato",
+          "lui/lei": "ha controllato",
+          "noi": "abbiamo controllato",
+          "voi": "avete controllato",
+          "loro": "hanno controllato"
+        },
+        "Congiuntivo presente": {
+          "io": "controlli",
+          "tu": "controlli",
+          "lui/lei": "controlli",
+          "noi": "controlliamo",
+          "voi": "controlliate",
+          "loro": "controllino"
+        }
+      }
+    },
+    {
+      "infinitivo": "migliorare",
+      "traducao": "melhorar",
+      "auxiliar": "avere",
+      "participio": "migliorato",
+      "tempos": {
+        "Presente": {
+          "io": "miglioro",
+          "tu": "migliori",
+          "lui/lei": "migliora",
+          "noi": "miglioriamo",
+          "voi": "migliorate",
+          "loro": "migliorano"
+        },
+        "Imperfetto": {
+          "io": "miglioravvo",
+          "tu": "miglioravvi",
+          "lui/lei": "miglioravva",
+          "noi": "miglioravvamo",
+          "voi": "miglioravvate",
+          "loro": "miglioravvano"
+        },
+        "Futuro": {
+          "io": "migliorerò",
+          "tu": "migliorerai",
+          "lui/lei": "migliorerà",
+          "noi": "miglioreremo",
+          "voi": "migliorerete",
+          "loro": "miglioreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho migliorato",
+          "tu": "hai migliorato",
+          "lui/lei": "ha migliorato",
+          "noi": "abbiamo migliorato",
+          "voi": "avete migliorato",
+          "loro": "hanno migliorato"
+        },
+        "Congiuntivo presente": {
+          "io": "migliori",
+          "tu": "migliori",
+          "lui/lei": "migliori",
+          "noi": "miglioriamo",
+          "voi": "miglioriate",
+          "loro": "migliorino"
+        }
+      }
+    },
+    {
+      "infinitivo": "aumentare",
+      "traducao": "aumentar",
+      "auxiliar": "avere",
+      "participio": "aumentato",
+      "tempos": {
+        "Presente": {
+          "io": "aumento",
+          "tu": "aumenti",
+          "lui/lei": "aumenta",
+          "noi": "aumentiamo",
+          "voi": "aumentate",
+          "loro": "aumentano"
+        },
+        "Imperfetto": {
+          "io": "aumentavvo",
+          "tu": "aumentavvi",
+          "lui/lei": "aumentavva",
+          "noi": "aumentavvamo",
+          "voi": "aumentavvate",
+          "loro": "aumentavvano"
+        },
+        "Futuro": {
+          "io": "aumenterò",
+          "tu": "aumenterai",
+          "lui/lei": "aumenterà",
+          "noi": "aumenteremo",
+          "voi": "aumenterete",
+          "loro": "aumenteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho aumentato",
+          "tu": "hai aumentato",
+          "lui/lei": "ha aumentato",
+          "noi": "abbiamo aumentato",
+          "voi": "avete aumentato",
+          "loro": "hanno aumentato"
+        },
+        "Congiuntivo presente": {
+          "io": "aumenti",
+          "tu": "aumenti",
+          "lui/lei": "aumenti",
+          "noi": "aumentiamo",
+          "voi": "aumentiate",
+          "loro": "aumentino"
+        }
+      }
+    },
+    {
+      "infinitivo": "diventare",
+      "traducao": "tornar-se / virar",
+      "auxiliar": "essere",
+      "participio": "diventato",
+      "tempos": {
+        "Presente": {
+          "io": "divento",
+          "tu": "diventi",
+          "lui/lei": "diventa",
+          "noi": "diventiamo",
+          "voi": "diventate",
+          "loro": "diventano"
+        },
+        "Imperfetto": {
+          "io": "diventavvo",
+          "tu": "diventavvi",
+          "lui/lei": "diventavva",
+          "noi": "diventavvamo",
+          "voi": "diventavvate",
+          "loro": "diventavvano"
+        },
+        "Futuro": {
+          "io": "diventerò",
+          "tu": "diventerai",
+          "lui/lei": "diventerà",
+          "noi": "diventeremo",
+          "voi": "diventerete",
+          "loro": "diventeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho diventato",
+          "tu": "hai diventato",
+          "lui/lei": "ha diventato",
+          "noi": "abbiamo diventato",
+          "voi": "avete diventato",
+          "loro": "hanno diventato"
+        },
+        "Congiuntivo presente": {
+          "io": "diventi",
+          "tu": "diventi",
+          "lui/lei": "diventi",
+          "noi": "diventiamo",
+          "voi": "diventiate",
+          "loro": "diventino"
+        }
+      }
+    },
+    {
+      "infinitivo": "arrivare",
+      "traducao": "chegar",
+      "auxiliar": "essere",
+      "participio": "arrivato",
+      "tempos": {
+        "Presente": {
+          "io": "arrivo",
+          "tu": "arrivi",
+          "lui/lei": "arriva",
+          "noi": "arriviamo",
+          "voi": "arrivate",
+          "loro": "arrivano"
+        },
+        "Imperfetto": {
+          "io": "arrivavvo",
+          "tu": "arrivavvi",
+          "lui/lei": "arrivavva",
+          "noi": "arrivavvamo",
+          "voi": "arrivavvate",
+          "loro": "arrivavvano"
+        },
+        "Futuro": {
+          "io": "arriverò",
+          "tu": "arriverai",
+          "lui/lei": "arriverà",
+          "noi": "arriveremo",
+          "voi": "arriverete",
+          "loro": "arriveranno"
+        },
+        "Passato prossimo": {
+          "io": "ho arrivato",
+          "tu": "hai arrivato",
+          "lui/lei": "ha arrivato",
+          "noi": "abbiamo arrivato",
+          "voi": "avete arrivato",
+          "loro": "hanno arrivato"
+        },
+        "Congiuntivo presente": {
+          "io": "arrivi",
+          "tu": "arrivi",
+          "lui/lei": "arrivi",
+          "noi": "arriviamo",
+          "voi": "arriviate",
+          "loro": "arrivino"
+        }
+      }
+    },
+    {
+      "infinitivo": "tornare",
+      "traducao": "voltar",
+      "auxiliar": "essere",
+      "participio": "tornato",
+      "tempos": {
+        "Presente": {
+          "io": "torno",
+          "tu": "torni",
+          "lui/lei": "torna",
+          "noi": "torniamo",
+          "voi": "tornate",
+          "loro": "tornano"
+        },
+        "Imperfetto": {
+          "io": "tornavvo",
+          "tu": "tornavvi",
+          "lui/lei": "tornavva",
+          "noi": "tornavvamo",
+          "voi": "tornavvate",
+          "loro": "tornavvano"
+        },
+        "Futuro": {
+          "io": "tornerò",
+          "tu": "tornerai",
+          "lui/lei": "tornerà",
+          "noi": "torneremo",
+          "voi": "tornerete",
+          "loro": "torneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tornato",
+          "tu": "hai tornato",
+          "lui/lei": "ha tornato",
+          "noi": "abbiamo tornato",
+          "voi": "avete tornato",
+          "loro": "hanno tornato"
+        },
+        "Congiuntivo presente": {
+          "io": "torni",
+          "tu": "torni",
+          "lui/lei": "torni",
+          "noi": "torniamo",
+          "voi": "torniate",
+          "loro": "tornino"
+        }
+      }
+    },
+    {
+      "infinitivo": "telefonare",
+      "traducao": "telefonar",
+      "auxiliar": "avere",
+      "participio": "telefonato",
+      "tempos": {
+        "Presente": {
+          "io": "telefono",
+          "tu": "telefoni",
+          "lui/lei": "telefona",
+          "noi": "telefoniamo",
+          "voi": "telefonate",
+          "loro": "telefonano"
+        },
+        "Imperfetto": {
+          "io": "telefonavvo",
+          "tu": "telefonavvi",
+          "lui/lei": "telefonavva",
+          "noi": "telefonavvamo",
+          "voi": "telefonavvate",
+          "loro": "telefonavvano"
+        },
+        "Futuro": {
+          "io": "telefonerò",
+          "tu": "telefonerai",
+          "lui/lei": "telefonerà",
+          "noi": "telefoneremo",
+          "voi": "telefonerete",
+          "loro": "telefoneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho telefonato",
+          "tu": "hai telefonato",
+          "lui/lei": "ha telefonato",
+          "noi": "abbiamo telefonato",
+          "voi": "avete telefonato",
+          "loro": "hanno telefonato"
+        },
+        "Congiuntivo presente": {
+          "io": "telefoni",
+          "tu": "telefoni",
+          "lui/lei": "telefoni",
+          "noi": "telefoniamo",
+          "voi": "telefoniate",
+          "loro": "telefonino"
+        }
+      }
+    },
+    {
+      "infinitivo": "prenotare",
+      "traducao": "reservar",
+      "auxiliar": "avere",
+      "participio": "prenotato",
+      "tempos": {
+        "Presente": {
+          "io": "prenoto",
+          "tu": "prenoti",
+          "lui/lei": "prenota",
+          "noi": "prenotiamo",
+          "voi": "prenotate",
+          "loro": "prenotano"
+        },
+        "Imperfetto": {
+          "io": "prenotavvo",
+          "tu": "prenotavvi",
+          "lui/lei": "prenotavva",
+          "noi": "prenotavvamo",
+          "voi": "prenotavvate",
+          "loro": "prenotavvano"
+        },
+        "Futuro": {
+          "io": "prenoterò",
+          "tu": "prenoterai",
+          "lui/lei": "prenoterà",
+          "noi": "prenoteremo",
+          "voi": "prenoterete",
+          "loro": "prenoteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho prenotato",
+          "tu": "hai prenotato",
+          "lui/lei": "ha prenotato",
+          "noi": "abbiamo prenotato",
+          "voi": "avete prenotato",
+          "loro": "hanno prenotato"
+        },
+        "Congiuntivo presente": {
+          "io": "prenoti",
+          "tu": "prenoti",
+          "lui/lei": "prenoti",
+          "noi": "prenotiamo",
+          "voi": "prenotiate",
+          "loro": "prenotino"
+        }
+      }
+    },
+    {
+      "infinitivo": "firmare",
+      "traducao": "assinar",
+      "auxiliar": "avere",
+      "participio": "firmato",
+      "tempos": {
+        "Presente": {
+          "io": "firmo",
+          "tu": "firmi",
+          "lui/lei": "firma",
+          "noi": "firmiamo",
+          "voi": "firmate",
+          "loro": "firmano"
+        },
+        "Imperfetto": {
+          "io": "firmavvo",
+          "tu": "firmavvi",
+          "lui/lei": "firmavva",
+          "noi": "firmavvamo",
+          "voi": "firmavvate",
+          "loro": "firmavvano"
+        },
+        "Futuro": {
+          "io": "firmerò",
+          "tu": "firmerai",
+          "lui/lei": "firmerà",
+          "noi": "firmeremo",
+          "voi": "firmerete",
+          "loro": "firmeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho firmato",
+          "tu": "hai firmato",
+          "lui/lei": "ha firmato",
+          "noi": "abbiamo firmato",
+          "voi": "avete firmato",
+          "loro": "hanno firmato"
+        },
+        "Congiuntivo presente": {
+          "io": "firmi",
+          "tu": "firmi",
+          "lui/lei": "firmi",
+          "noi": "firmiamo",
+          "voi": "firmiate",
+          "loro": "firmino"
+        }
+      }
+    },
+    {
+      "infinitivo": "registrare",
+      "traducao": "registrar / gravar",
+      "auxiliar": "avere",
+      "participio": "registrato",
+      "tempos": {
+        "Presente": {
+          "io": "registro",
+          "tu": "registri",
+          "lui/lei": "registra",
+          "noi": "registriamo",
+          "voi": "registrate",
+          "loro": "registrano"
+        },
+        "Imperfetto": {
+          "io": "registravvo",
+          "tu": "registravvi",
+          "lui/lei": "registravva",
+          "noi": "registravvamo",
+          "voi": "registravvate",
+          "loro": "registravvano"
+        },
+        "Futuro": {
+          "io": "registrerò",
+          "tu": "registrerai",
+          "lui/lei": "registrerà",
+          "noi": "registreremo",
+          "voi": "registrerete",
+          "loro": "registreranno"
+        },
+        "Passato prossimo": {
+          "io": "ho registrato",
+          "tu": "hai registrato",
+          "lui/lei": "ha registrato",
+          "noi": "abbiamo registrato",
+          "voi": "avete registrato",
+          "loro": "hanno registrato"
+        },
+        "Congiuntivo presente": {
+          "io": "registri",
+          "tu": "registri",
+          "lui/lei": "registri",
+          "noi": "registriamo",
+          "voi": "registriate",
+          "loro": "registrino"
+        }
+      }
+    },
+    {
+      "infinitivo": "installare",
+      "traducao": "instalar",
+      "auxiliar": "avere",
+      "participio": "installato",
+      "tempos": {
+        "Presente": {
+          "io": "installo",
+          "tu": "installi",
+          "lui/lei": "installa",
+          "noi": "installiamo",
+          "voi": "installate",
+          "loro": "installano"
+        },
+        "Imperfetto": {
+          "io": "installavvo",
+          "tu": "installavvi",
+          "lui/lei": "installavva",
+          "noi": "installavvamo",
+          "voi": "installavvate",
+          "loro": "installavvano"
+        },
+        "Futuro": {
+          "io": "installerò",
+          "tu": "installerai",
+          "lui/lei": "installerà",
+          "noi": "installeremo",
+          "voi": "installerete",
+          "loro": "installeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho installato",
+          "tu": "hai installato",
+          "lui/lei": "ha installato",
+          "noi": "abbiamo installato",
+          "voi": "avete installato",
+          "loro": "hanno installato"
+        },
+        "Congiuntivo presente": {
+          "io": "installi",
+          "tu": "installi",
+          "lui/lei": "installi",
+          "noi": "installiamo",
+          "voi": "installiate",
+          "loro": "installino"
+        }
+      }
+    },
+    {
+      "infinitivo": "ordinare",
+      "traducao": "pedir / ordenar",
+      "auxiliar": "avere",
+      "participio": "ordinato",
+      "tempos": {
+        "Presente": {
+          "io": "ordino",
+          "tu": "ordini",
+          "lui/lei": "ordina",
+          "noi": "ordiniamo",
+          "voi": "ordinate",
+          "loro": "ordinano"
+        },
+        "Imperfetto": {
+          "io": "ordinavvo",
+          "tu": "ordinavvi",
+          "lui/lei": "ordinavva",
+          "noi": "ordinavvamo",
+          "voi": "ordinavvate",
+          "loro": "ordinavvano"
+        },
+        "Futuro": {
+          "io": "ordinerò",
+          "tu": "ordinerai",
+          "lui/lei": "ordinerà",
+          "noi": "ordineremo",
+          "voi": "ordinerete",
+          "loro": "ordineranno"
+        },
+        "Passato prossimo": {
+          "io": "ho ordinato",
+          "tu": "hai ordinato",
+          "lui/lei": "ha ordinato",
+          "noi": "abbiamo ordinato",
+          "voi": "avete ordinato",
+          "loro": "hanno ordinato"
+        },
+        "Congiuntivo presente": {
+          "io": "ordini",
+          "tu": "ordini",
+          "lui/lei": "ordini",
+          "noi": "ordiniamo",
+          "voi": "ordiniate",
+          "loro": "ordinino"
+        }
+      }
+    },
+    {
+      "infinitivo": "accontentare",
+      "traducao": "satisfazer / contentar",
+      "auxiliar": "avere",
+      "participio": "accontentato",
+      "tempos": {
+        "Presente": {
+          "io": "accontento",
+          "tu": "accontenti",
+          "lui/lei": "accontenta",
+          "noi": "accontentiamo",
+          "voi": "accontentate",
+          "loro": "accontentano"
+        },
+        "Imperfetto": {
+          "io": "accontentavvo",
+          "tu": "accontentavvi",
+          "lui/lei": "accontentavva",
+          "noi": "accontentavvamo",
+          "voi": "accontentavvate",
+          "loro": "accontentavvano"
+        },
+        "Futuro": {
+          "io": "accontenterò",
+          "tu": "accontenterai",
+          "lui/lei": "accontenterà",
+          "noi": "accontenteremo",
+          "voi": "accontenterete",
+          "loro": "accontenteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho accontentato",
+          "tu": "hai accontentato",
+          "lui/lei": "ha accontentato",
+          "noi": "abbiamo accontentato",
+          "voi": "avete accontentato",
+          "loro": "hanno accontentato"
+        },
+        "Congiuntivo presente": {
+          "io": "accontenti",
+          "tu": "accontenti",
+          "lui/lei": "accontenti",
+          "noi": "accontentiamo",
+          "voi": "accontentiate",
+          "loro": "accontentino"
+        }
+      }
+    },
+    {
+      "infinitivo": "allontanare",
+      "traducao": "afastar",
+      "auxiliar": "essere",
+      "participio": "allontanato",
+      "tempos": {
+        "Presente": {
+          "io": "allontano",
+          "tu": "allontani",
+          "lui/lei": "allontana",
+          "noi": "allontaniamo",
+          "voi": "allontanate",
+          "loro": "allontanano"
+        },
+        "Imperfetto": {
+          "io": "allontanavvo",
+          "tu": "allontanavvi",
+          "lui/lei": "allontanavva",
+          "noi": "allontanavvamo",
+          "voi": "allontanavvate",
+          "loro": "allontanavvano"
+        },
+        "Futuro": {
+          "io": "allontanerò",
+          "tu": "allontanerai",
+          "lui/lei": "allontanerà",
+          "noi": "allontaneremo",
+          "voi": "allontanerete",
+          "loro": "allontaneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho allontanato",
+          "tu": "hai allontanato",
+          "lui/lei": "ha allontanato",
+          "noi": "abbiamo allontanato",
+          "voi": "avete allontanato",
+          "loro": "hanno allontanato"
+        },
+        "Congiuntivo presente": {
+          "io": "allontani",
+          "tu": "allontani",
+          "lui/lei": "allontani",
+          "noi": "allontaniamo",
+          "voi": "allontaniate",
+          "loro": "allontanino"
+        }
+      }
+    },
+    {
+      "infinitivo": "correre",
+      "traducao": "correr",
+      "auxiliar": "essere",
+      "participio": "corso",
+      "tempos": {
+        "Presente": {
+          "io": "corro",
+          "tu": "corri",
+          "lui/lei": "corre",
+          "noi": "corriamo",
+          "voi": "correte",
+          "loro": "corrono"
+        },
+        "Imperfetto": {
+          "io": "correvo",
+          "tu": "correvi",
+          "lui/lei": "correva",
+          "noi": "correvamo",
+          "voi": "correvate",
+          "loro": "correvano"
+        },
+        "Futuro": {
+          "io": "correrò",
+          "tu": "correrai",
+          "lui/lei": "correrà",
+          "noi": "correremo",
+          "voi": "correrete",
+          "loro": "correranno"
+        },
+        "Passato prossimo": {
+          "io": "sono corso",
+          "tu": "sei corso",
+          "lui/lei": "è corso",
+          "noi": "siamo corso",
+          "voi": "siete corso",
+          "loro": "sono corso"
+        },
+        "Congiuntivo presente": {
+          "io": "corra",
+          "tu": "corra",
+          "lui/lei": "corra",
+          "noi": "corriamo",
+          "voi": "corriate",
+          "loro": "corrano"
+        }
+      }
+    },
+    {
+      "infinitivo": "vivere",
+      "traducao": "viver",
+      "auxiliar": "essere",
+      "participio": "vissuto",
+      "tempos": {
+        "Presente": {
+          "io": "vivo",
+          "tu": "vivi",
+          "lui/lei": "vive",
+          "noi": "viviamo",
+          "voi": "vivete",
+          "loro": "vivono"
+        },
+        "Imperfetto": {
+          "io": "vivevo",
+          "tu": "vivevi",
+          "lui/lei": "viveva",
+          "noi": "vivevamo",
+          "voi": "vivevate",
+          "loro": "vivevano"
+        },
+        "Futuro": {
+          "io": "viverò",
+          "tu": "viverai",
+          "lui/lei": "viverà",
+          "noi": "viveremo",
+          "voi": "viverete",
+          "loro": "viveranno"
+        },
+        "Passato prossimo": {
+          "io": "sono vissuto",
+          "tu": "sei vissuto",
+          "lui/lei": "è vissuto",
+          "noi": "siamo vissuto",
+          "voi": "siete vissuto",
+          "loro": "sono vissuto"
+        },
+        "Congiuntivo presente": {
+          "io": "viva",
+          "tu": "viva",
+          "lui/lei": "viva",
+          "noi": "viviamo",
+          "voi": "viviate",
+          "loro": "vivano"
+        }
+      }
+    },
+    {
+      "infinitivo": "conoscere",
+      "traducao": "conhecer",
+      "auxiliar": "avere",
+      "participio": "conosciuto",
+      "tempos": {
+        "Presente": {
+          "io": "conosco",
+          "tu": "conosci",
+          "lui/lei": "conosce",
+          "noi": "conosciamo",
+          "voi": "conoscete",
+          "loro": "conoscono"
+        },
+        "Imperfetto": {
+          "io": "conoscevo",
+          "tu": "conoscevi",
+          "lui/lei": "conosceva",
+          "noi": "conoscevamo",
+          "voi": "conoscevate",
+          "loro": "conoscevano"
+        },
+        "Futuro": {
+          "io": "conoscerò",
+          "tu": "conoscerai",
+          "lui/lei": "conoscerà",
+          "noi": "conosceremo",
+          "voi": "conoscerete",
+          "loro": "conosceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho conosciuto",
+          "tu": "hai conosciuto",
+          "lui/lei": "ha conosciuto",
+          "noi": "abbiamo conosciuto",
+          "voi": "avete conosciuto",
+          "loro": "hanno conosciuto"
+        },
+        "Congiuntivo presente": {
+          "io": "conosca",
+          "tu": "conosca",
+          "lui/lei": "conosca",
+          "noi": "conosciamo",
+          "voi": "conosciate",
+          "loro": "conoscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "credere",
+      "traducao": "acreditar / crer",
+      "auxiliar": "avere",
+      "participio": "creduto",
+      "tempos": {
+        "Presente": {
+          "io": "credo",
+          "tu": "credi",
+          "lui/lei": "crede",
+          "noi": "crediamo",
+          "voi": "credete",
+          "loro": "credono"
+        },
+        "Imperfetto": {
+          "io": "credevo",
+          "tu": "credevi",
+          "lui/lei": "credeva",
+          "noi": "credevamo",
+          "voi": "credevate",
+          "loro": "credevano"
+        },
+        "Futuro": {
+          "io": "crederò",
+          "tu": "crederai",
+          "lui/lei": "crederà",
+          "noi": "crederemo",
+          "voi": "crederete",
+          "loro": "crederanno"
+        },
+        "Passato prossimo": {
+          "io": "ho creduto",
+          "tu": "hai creduto",
+          "lui/lei": "ha creduto",
+          "noi": "abbiamo creduto",
+          "voi": "avete creduto",
+          "loro": "hanno creduto"
+        },
+        "Congiuntivo presente": {
+          "io": "creda",
+          "tu": "creda",
+          "lui/lei": "creda",
+          "noi": "crediamo",
+          "voi": "crediate",
+          "loro": "credano"
+        }
+      }
+    },
+    {
+      "infinitivo": "chiedere",
+      "traducao": "pedir / perguntar",
+      "auxiliar": "avere",
+      "participio": "chiesto",
+      "tempos": {
+        "Presente": {
+          "io": "chiedo",
+          "tu": "chiedi",
+          "lui/lei": "chiede",
+          "noi": "chiediamo",
+          "voi": "chiedete",
+          "loro": "chiedono"
+        },
+        "Imperfetto": {
+          "io": "chiedevo",
+          "tu": "chiedevi",
+          "lui/lei": "chiedeva",
+          "noi": "chiedevamo",
+          "voi": "chiedevate",
+          "loro": "chiedevano"
+        },
+        "Futuro": {
+          "io": "chiederò",
+          "tu": "chiederai",
+          "lui/lei": "chiederà",
+          "noi": "chiederemo",
+          "voi": "chiederete",
+          "loro": "chiederanno"
+        },
+        "Passato prossimo": {
+          "io": "ho chiesto",
+          "tu": "hai chiesto",
+          "lui/lei": "ha chiesto",
+          "noi": "abbiamo chiesto",
+          "voi": "avete chiesto",
+          "loro": "hanno chiesto"
+        },
+        "Congiuntivo presente": {
+          "io": "chieda",
+          "tu": "chieda",
+          "lui/lei": "chieda",
+          "noi": "chiediamo",
+          "voi": "chiediate",
+          "loro": "chiedano"
+        }
+      }
+    },
+    {
+      "infinitivo": "rispondere",
+      "traducao": "responder",
+      "auxiliar": "avere",
+      "participio": "risposto",
+      "tempos": {
+        "Presente": {
+          "io": "rispondo",
+          "tu": "rispondi",
+          "lui/lei": "risponde",
+          "noi": "rispondiamo",
+          "voi": "rispondete",
+          "loro": "rispondono"
+        },
+        "Imperfetto": {
+          "io": "rispondevo",
+          "tu": "rispondevi",
+          "lui/lei": "rispondeva",
+          "noi": "rispondevamo",
+          "voi": "rispondevate",
+          "loro": "rispondevano"
+        },
+        "Futuro": {
+          "io": "risponderò",
+          "tu": "risponderai",
+          "lui/lei": "risponderà",
+          "noi": "risponderemo",
+          "voi": "risponderete",
+          "loro": "risponderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho risposto",
+          "tu": "hai risposto",
+          "lui/lei": "ha risposto",
+          "noi": "abbiamo risposto",
+          "voi": "avete risposto",
+          "loro": "hanno risposto"
+        },
+        "Congiuntivo presente": {
+          "io": "risponda",
+          "tu": "risponda",
+          "lui/lei": "risponda",
+          "noi": "rispondiamo",
+          "voi": "rispondiate",
+          "loro": "rispondano"
+        }
+      }
+    },
+    {
+      "infinitivo": "aprire",
+      "traducao": "abrir",
+      "auxiliar": "avere",
+      "participio": "aperto",
+      "tempos": {
+        "Presente": {
+          "io": "apro",
+          "tu": "apri",
+          "lui/lei": "apre",
+          "noi": "apriamo",
+          "voi": "aprete",
+          "loro": "aprono"
+        },
+        "Imperfetto": {
+          "io": "aprevo",
+          "tu": "aprevi",
+          "lui/lei": "apreva",
+          "noi": "aprevamo",
+          "voi": "aprevate",
+          "loro": "aprevano"
+        },
+        "Futuro": {
+          "io": "aprirò",
+          "tu": "aprirai",
+          "lui/lei": "aprirà",
+          "noi": "apriremo",
+          "voi": "aprirete",
+          "loro": "apriranno"
+        },
+        "Passato prossimo": {
+          "io": "ho aperto",
+          "tu": "hai aperto",
+          "lui/lei": "ha aperto",
+          "noi": "abbiamo aperto",
+          "voi": "avete aperto",
+          "loro": "hanno aperto"
+        },
+        "Congiuntivo presente": {
+          "io": "apra",
+          "tu": "apra",
+          "lui/lei": "apra",
+          "noi": "apriamo",
+          "voi": "apriate",
+          "loro": "aprano"
+        }
+      }
+    },
+    {
+      "infinitivo": "chiudere",
+      "traducao": "fechar",
+      "auxiliar": "avere",
+      "participio": "chiuso",
+      "tempos": {
+        "Presente": {
+          "io": "chiudo",
+          "tu": "chiudi",
+          "lui/lei": "chiude",
+          "noi": "chiudiamo",
+          "voi": "chiudete",
+          "loro": "chiudono"
+        },
+        "Imperfetto": {
+          "io": "chiudevo",
+          "tu": "chiudevi",
+          "lui/lei": "chiudeva",
+          "noi": "chiudevamo",
+          "voi": "chiudevate",
+          "loro": "chiudevano"
+        },
+        "Futuro": {
+          "io": "chiuderò",
+          "tu": "chiuderai",
+          "lui/lei": "chiuderà",
+          "noi": "chiuderemo",
+          "voi": "chiuderete",
+          "loro": "chiuderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho chiuso",
+          "tu": "hai chiuso",
+          "lui/lei": "ha chiuso",
+          "noi": "abbiamo chiuso",
+          "voi": "avete chiuso",
+          "loro": "hanno chiuso"
+        },
+        "Congiuntivo presente": {
+          "io": "chiuda",
+          "tu": "chiuda",
+          "lui/lei": "chiuda",
+          "noi": "chiudiamo",
+          "voi": "chiudiate",
+          "loro": "chiudano"
+        }
+      }
+    },
+    {
+      "infinitivo": "perdere",
+      "traducao": "perder",
+      "auxiliar": "avere",
+      "participio": "perso",
+      "tempos": {
+        "Presente": {
+          "io": "perdo",
+          "tu": "perdi",
+          "lui/lei": "perde",
+          "noi": "perdiamo",
+          "voi": "perdete",
+          "loro": "perdono"
+        },
+        "Imperfetto": {
+          "io": "perdevo",
+          "tu": "perdevi",
+          "lui/lei": "perdeva",
+          "noi": "perdevamo",
+          "voi": "perdevate",
+          "loro": "perdevano"
+        },
+        "Futuro": {
+          "io": "perderò",
+          "tu": "perderai",
+          "lui/lei": "perderà",
+          "noi": "perderemo",
+          "voi": "perderete",
+          "loro": "perderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho perso",
+          "tu": "hai perso",
+          "lui/lei": "ha perso",
+          "noi": "abbiamo perso",
+          "voi": "avete perso",
+          "loro": "hanno perso"
+        },
+        "Congiuntivo presente": {
+          "io": "perda",
+          "tu": "perda",
+          "lui/lei": "perda",
+          "noi": "perdiamo",
+          "voi": "perdiate",
+          "loro": "perdano"
+        }
+      }
+    },
+    {
+      "infinitivo": "vincere",
+      "traducao": "vencer",
+      "auxiliar": "avere",
+      "participio": "vinto",
+      "tempos": {
+        "Presente": {
+          "io": "vinco",
+          "tu": "vinci",
+          "lui/lei": "vince",
+          "noi": "vinciamo",
+          "voi": "vincete",
+          "loro": "vincono"
+        },
+        "Imperfetto": {
+          "io": "vincevo",
+          "tu": "vincevi",
+          "lui/lei": "vinceva",
+          "noi": "vincevamo",
+          "voi": "vincevate",
+          "loro": "vincevano"
+        },
+        "Futuro": {
+          "io": "vincerò",
+          "tu": "vincerai",
+          "lui/lei": "vincerà",
+          "noi": "vinceremo",
+          "voi": "vincerete",
+          "loro": "vinceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho vinto",
+          "tu": "hai vinto",
+          "lui/lei": "ha vinto",
+          "noi": "abbiamo vinto",
+          "voi": "avete vinto",
+          "loro": "hanno vinto"
+        },
+        "Congiuntivo presente": {
+          "io": "vinca",
+          "tu": "vinca",
+          "lui/lei": "vinca",
+          "noi": "vinciamo",
+          "voi": "vinciate",
+          "loro": "vincano"
+        }
+      }
+    },
+    {
+      "infinitivo": "spendere",
+      "traducao": "gastar",
+      "auxiliar": "avere",
+      "participio": "speso",
+      "tempos": {
+        "Presente": {
+          "io": "spendo",
+          "tu": "spendi",
+          "lui/lei": "spende",
+          "noi": "spendiamo",
+          "voi": "spendete",
+          "loro": "spendono"
+        },
+        "Imperfetto": {
+          "io": "spendevo",
+          "tu": "spendevi",
+          "lui/lei": "spendeva",
+          "noi": "spendevamo",
+          "voi": "spendevate",
+          "loro": "spendevano"
+        },
+        "Futuro": {
+          "io": "spenderò",
+          "tu": "spenderai",
+          "lui/lei": "spenderà",
+          "noi": "spenderemo",
+          "voi": "spenderete",
+          "loro": "spenderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho speso",
+          "tu": "hai speso",
+          "lui/lei": "ha speso",
+          "noi": "abbiamo speso",
+          "voi": "avete speso",
+          "loro": "hanno speso"
+        },
+        "Congiuntivo presente": {
+          "io": "spenda",
+          "tu": "spenda",
+          "lui/lei": "spenda",
+          "noi": "spendiamo",
+          "voi": "spendiate",
+          "loro": "spendano"
+        }
+      }
+    },
+    {
+      "infinitivo": "ricevere",
+      "traducao": "receber",
+      "auxiliar": "avere",
+      "participio": "ricevuto",
+      "tempos": {
+        "Presente": {
+          "io": "ricevo",
+          "tu": "ricevi",
+          "lui/lei": "riceve",
+          "noi": "riceviamo",
+          "voi": "ricevete",
+          "loro": "ricevono"
+        },
+        "Imperfetto": {
+          "io": "ricevevo",
+          "tu": "ricevevi",
+          "lui/lei": "riceveva",
+          "noi": "ricevevamo",
+          "voi": "ricevevate",
+          "loro": "ricevevano"
+        },
+        "Futuro": {
+          "io": "riceverò",
+          "tu": "riceverai",
+          "lui/lei": "riceverà",
+          "noi": "riceveremo",
+          "voi": "riceverete",
+          "loro": "riceveranno"
+        },
+        "Passato prossimo": {
+          "io": "ho ricevuto",
+          "tu": "hai ricevuto",
+          "lui/lei": "ha ricevuto",
+          "noi": "abbiamo ricevuto",
+          "voi": "avete ricevuto",
+          "loro": "hanno ricevuto"
+        },
+        "Congiuntivo presente": {
+          "io": "riceva",
+          "tu": "riceva",
+          "lui/lei": "riceva",
+          "noi": "riceviamo",
+          "voi": "riceviate",
+          "loro": "ricevano"
+        }
+      }
+    },
+    {
+      "infinitivo": "decidere",
+      "traducao": "decidir",
+      "auxiliar": "avere",
+      "participio": "deciso",
+      "tempos": {
+        "Presente": {
+          "io": "decido",
+          "tu": "decidi",
+          "lui/lei": "decide",
+          "noi": "decidiamo",
+          "voi": "decidete",
+          "loro": "decidono"
+        },
+        "Imperfetto": {
+          "io": "decidevo",
+          "tu": "decidevi",
+          "lui/lei": "decideva",
+          "noi": "decidevamo",
+          "voi": "decidevate",
+          "loro": "decidevano"
+        },
+        "Futuro": {
+          "io": "deciderò",
+          "tu": "deciderai",
+          "lui/lei": "deciderà",
+          "noi": "decideremo",
+          "voi": "deciderete",
+          "loro": "decideranno"
+        },
+        "Passato prossimo": {
+          "io": "ho deciso",
+          "tu": "hai deciso",
+          "lui/lei": "ha deciso",
+          "noi": "abbiamo deciso",
+          "voi": "avete deciso",
+          "loro": "hanno deciso"
+        },
+        "Congiuntivo presente": {
+          "io": "decida",
+          "tu": "decida",
+          "lui/lei": "decida",
+          "noi": "decidiamo",
+          "voi": "decidiate",
+          "loro": "decidano"
+        }
+      }
+    },
+    {
+      "infinitivo": "dividere",
+      "traducao": "dividir",
+      "auxiliar": "avere",
+      "participio": "diviso",
+      "tempos": {
+        "Presente": {
+          "io": "divido",
+          "tu": "dividi",
+          "lui/lei": "divide",
+          "noi": "dividiamo",
+          "voi": "dividete",
+          "loro": "dividono"
+        },
+        "Imperfetto": {
+          "io": "dividevo",
+          "tu": "dividevi",
+          "lui/lei": "divideva",
+          "noi": "dividevamo",
+          "voi": "dividevate",
+          "loro": "dividevano"
+        },
+        "Futuro": {
+          "io": "dividerò",
+          "tu": "dividerai",
+          "lui/lei": "dividerà",
+          "noi": "divideremo",
+          "voi": "dividerete",
+          "loro": "divideranno"
+        },
+        "Passato prossimo": {
+          "io": "ho diviso",
+          "tu": "hai diviso",
+          "lui/lei": "ha diviso",
+          "noi": "abbiamo diviso",
+          "voi": "avete diviso",
+          "loro": "hanno diviso"
+        },
+        "Congiuntivo presente": {
+          "io": "divida",
+          "tu": "divida",
+          "lui/lei": "divida",
+          "noi": "dividiamo",
+          "voi": "dividiate",
+          "loro": "dividano"
+        }
+      }
+    },
+    {
+      "infinitivo": "accendere",
+      "traducao": "acender",
+      "auxiliar": "avere",
+      "participio": "acceso",
+      "tempos": {
+        "Presente": {
+          "io": "accendo",
+          "tu": "accendi",
+          "lui/lei": "accende",
+          "noi": "accendiamo",
+          "voi": "accendete",
+          "loro": "accendono"
+        },
+        "Imperfetto": {
+          "io": "accendevo",
+          "tu": "accendevi",
+          "lui/lei": "accendeva",
+          "noi": "accendevamo",
+          "voi": "accendevate",
+          "loro": "accendevano"
+        },
+        "Futuro": {
+          "io": "accenderò",
+          "tu": "accenderai",
+          "lui/lei": "accenderà",
+          "noi": "accenderemo",
+          "voi": "accenderete",
+          "loro": "accenderanno"
+        },
+        "Passato prossimo": {
+          "io": "ho acceso",
+          "tu": "hai acceso",
+          "lui/lei": "ha acceso",
+          "noi": "abbiamo acceso",
+          "voi": "avete acceso",
+          "loro": "hanno acceso"
+        },
+        "Congiuntivo presente": {
+          "io": "accenda",
+          "tu": "accenda",
+          "lui/lei": "accenda",
+          "noi": "accendiamo",
+          "voi": "accendiate",
+          "loro": "accendano"
+        }
+      }
+    },
+    {
+      "infinitivo": "spegnere",
+      "traducao": "apagar",
+      "auxiliar": "avere",
+      "participio": "spento",
+      "tempos": {
+        "Presente": {
+          "io": "spegno",
+          "tu": "spegni",
+          "lui/lei": "spegne",
+          "noi": "spegniamo",
+          "voi": "spegnete",
+          "loro": "spegnono"
+        },
+        "Imperfetto": {
+          "io": "spegnevo",
+          "tu": "spegnevi",
+          "lui/lei": "spegneva",
+          "noi": "spegnevamo",
+          "voi": "spegnevate",
+          "loro": "spegnevano"
+        },
+        "Futuro": {
+          "io": "spegnerò",
+          "tu": "spegnerai",
+          "lui/lei": "spegnerà",
+          "noi": "spegneremo",
+          "voi": "spegnerete",
+          "loro": "spegneranno"
+        },
+        "Passato prossimo": {
+          "io": "ho spento",
+          "tu": "hai spento",
+          "lui/lei": "ha spento",
+          "noi": "abbiamo spento",
+          "voi": "avete spento",
+          "loro": "hanno spento"
+        },
+        "Congiuntivo presente": {
+          "io": "spegna",
+          "tu": "spegna",
+          "lui/lei": "spegna",
+          "noi": "spegniamo",
+          "voi": "spegniate",
+          "loro": "spegnano"
+        }
+      }
+    },
+    {
+      "infinitivo": "nascere",
+      "traducao": "nascer",
+      "auxiliar": "essere",
+      "participio": "nato",
+      "tempos": {
+        "Presente": {
+          "io": "nasco",
+          "tu": "nasci",
+          "lui/lei": "nasce",
+          "noi": "nasciamo",
+          "voi": "nascete",
+          "loro": "nascono"
+        },
+        "Imperfetto": {
+          "io": "nascevo",
+          "tu": "nascevi",
+          "lui/lei": "nasceva",
+          "noi": "nascevamo",
+          "voi": "nascevate",
+          "loro": "nascevano"
+        },
+        "Futuro": {
+          "io": "nascerò",
+          "tu": "nascerai",
+          "lui/lei": "nascerà",
+          "noi": "nasceremo",
+          "voi": "nascerete",
+          "loro": "nasceranno"
+        },
+        "Passato prossimo": {
+          "io": "sono nato",
+          "tu": "sei nato",
+          "lui/lei": "è nato",
+          "noi": "siamo nato",
+          "voi": "siete nato",
+          "loro": "sono nato"
+        },
+        "Congiuntivo presente": {
+          "io": "nasca",
+          "tu": "nasca",
+          "lui/lei": "nasca",
+          "noi": "nasciamo",
+          "voi": "nasciate",
+          "loro": "nascano"
+        }
+      }
+    },
+    {
+      "infinitivo": "crescere",
+      "traducao": "crescer",
+      "auxiliar": "essere",
+      "participio": "cresciuto",
+      "tempos": {
+        "Presente": {
+          "io": "cresco",
+          "tu": "cresci",
+          "lui/lei": "cresce",
+          "noi": "cresciamo",
+          "voi": "crescete",
+          "loro": "crescono"
+        },
+        "Imperfetto": {
+          "io": "crescevo",
+          "tu": "crescevi",
+          "lui/lei": "cresceva",
+          "noi": "crescevamo",
+          "voi": "crescevate",
+          "loro": "crescevano"
+        },
+        "Futuro": {
+          "io": "crescerò",
+          "tu": "crescerai",
+          "lui/lei": "crescerà",
+          "noi": "cresceremo",
+          "voi": "crescerete",
+          "loro": "cresceranno"
+        },
+        "Passato prossimo": {
+          "io": "sono cresciuto",
+          "tu": "sei cresciuto",
+          "lui/lei": "è cresciuto",
+          "noi": "siamo cresciuto",
+          "voi": "siete cresciuto",
+          "loro": "sono cresciuto"
+        },
+        "Congiuntivo presente": {
+          "io": "cresca",
+          "tu": "cresca",
+          "lui/lei": "cresca",
+          "noi": "cresciamo",
+          "voi": "cresciate",
+          "loro": "crescano"
+        }
+      }
+    },
+    {
+      "infinitivo": "cadere",
+      "traducao": "cair",
+      "auxiliar": "essere",
+      "participio": "caduto",
+      "tempos": {
+        "Presente": {
+          "io": "cado",
+          "tu": "cadi",
+          "lui/lei": "cade",
+          "noi": "cadiamo",
+          "voi": "cadete",
+          "loro": "cadono"
+        },
+        "Imperfetto": {
+          "io": "cadevo",
+          "tu": "cadevi",
+          "lui/lei": "cadeva",
+          "noi": "cadevamo",
+          "voi": "cadevate",
+          "loro": "cadevano"
+        },
+        "Futuro": {
+          "io": "caderò",
+          "tu": "caderai",
+          "lui/lei": "caderà",
+          "noi": "caderemo",
+          "voi": "caderete",
+          "loro": "caderanno"
+        },
+        "Passato prossimo": {
+          "io": "sono caduto",
+          "tu": "sei caduto",
+          "lui/lei": "è caduto",
+          "noi": "siamo caduto",
+          "voi": "siete caduto",
+          "loro": "sono caduto"
+        },
+        "Congiuntivo presente": {
+          "io": "cada",
+          "tu": "cada",
+          "lui/lei": "cada",
+          "noi": "cadiamo",
+          "voi": "cadiate",
+          "loro": "cadano"
+        }
+      }
+    },
+    {
+      "infinitivo": "sedere",
+      "traducao": "sentar",
+      "auxiliar": "essere",
+      "participio": "seduto",
+      "tempos": {
+        "Presente": {
+          "io": "sedo",
+          "tu": "sedi",
+          "lui/lei": "sede",
+          "noi": "sediamo",
+          "voi": "sedete",
+          "loro": "sedono"
+        },
+        "Imperfetto": {
+          "io": "sedevo",
+          "tu": "sedevi",
+          "lui/lei": "sedeva",
+          "noi": "sedevamo",
+          "voi": "sedevate",
+          "loro": "sedevano"
+        },
+        "Futuro": {
+          "io": "sederò",
+          "tu": "sederai",
+          "lui/lei": "sederà",
+          "noi": "sederemo",
+          "voi": "sederete",
+          "loro": "sederanno"
+        },
+        "Passato prossimo": {
+          "io": "sono seduto",
+          "tu": "sei seduto",
+          "lui/lei": "è seduto",
+          "noi": "siamo seduto",
+          "voi": "siete seduto",
+          "loro": "sono seduto"
+        },
+        "Congiuntivo presente": {
+          "io": "seda",
+          "tu": "seda",
+          "lui/lei": "seda",
+          "noi": "sediamo",
+          "voi": "sediate",
+          "loro": "sedano"
+        }
+      }
+    },
+    {
+      "infinitivo": "piangere",
+      "traducao": "chorar",
+      "auxiliar": "avere",
+      "participio": "pianto",
+      "tempos": {
+        "Presente": {
+          "io": "piango",
+          "tu": "piangi",
+          "lui/lei": "piange",
+          "noi": "piangiamo",
+          "voi": "piangete",
+          "loro": "piangono"
+        },
+        "Imperfetto": {
+          "io": "piangevo",
+          "tu": "piangevi",
+          "lui/lei": "piangeva",
+          "noi": "piangevamo",
+          "voi": "piangevate",
+          "loro": "piangevano"
+        },
+        "Futuro": {
+          "io": "piangerò",
+          "tu": "piangerai",
+          "lui/lei": "piangerà",
+          "noi": "piangeremo",
+          "voi": "piangerete",
+          "loro": "piangeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho pianto",
+          "tu": "hai pianto",
+          "lui/lei": "ha pianto",
+          "noi": "abbiamo pianto",
+          "voi": "avete pianto",
+          "loro": "hanno pianto"
+        },
+        "Congiuntivo presente": {
+          "io": "pianga",
+          "tu": "pianga",
+          "lui/lei": "pianga",
+          "noi": "piangiamo",
+          "voi": "piangiate",
+          "loro": "piangano"
+        }
+      }
+    },
+    {
+      "infinitivo": "ridere",
+      "traducao": "rir",
+      "auxiliar": "avere",
+      "participio": "riso",
+      "tempos": {
+        "Presente": {
+          "io": "rido",
+          "tu": "ridi",
+          "lui/lei": "ride",
+          "noi": "ridiamo",
+          "voi": "ridete",
+          "loro": "ridono"
+        },
+        "Imperfetto": {
+          "io": "ridevo",
+          "tu": "ridevi",
+          "lui/lei": "rideva",
+          "noi": "ridevamo",
+          "voi": "ridevate",
+          "loro": "ridevano"
+        },
+        "Futuro": {
+          "io": "riderò",
+          "tu": "riderai",
+          "lui/lei": "riderà",
+          "noi": "rideremo",
+          "voi": "riderete",
+          "loro": "rideranno"
+        },
+        "Passato prossimo": {
+          "io": "ho riso",
+          "tu": "hai riso",
+          "lui/lei": "ha riso",
+          "noi": "abbiamo riso",
+          "voi": "avete riso",
+          "loro": "hanno riso"
+        },
+        "Congiuntivo presente": {
+          "io": "rida",
+          "tu": "rida",
+          "lui/lei": "rida",
+          "noi": "ridiamo",
+          "voi": "ridiate",
+          "loro": "ridano"
+        }
+      }
+    },
+    {
+      "infinitivo": "stringere",
+      "traducao": "apertar / estreitar",
+      "auxiliar": "avere",
+      "participio": "stretto",
+      "tempos": {
+        "Presente": {
+          "io": "stringo",
+          "tu": "stringi",
+          "lui/lei": "stringe",
+          "noi": "stringiamo",
+          "voi": "stringete",
+          "loro": "stringono"
+        },
+        "Imperfetto": {
+          "io": "stringevo",
+          "tu": "stringevi",
+          "lui/lei": "stringeva",
+          "noi": "stringevamo",
+          "voi": "stringevate",
+          "loro": "stringevano"
+        },
+        "Futuro": {
+          "io": "stringerò",
+          "tu": "stringerai",
+          "lui/lei": "stringerà",
+          "noi": "stringeremo",
+          "voi": "stringerete",
+          "loro": "stringeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho stretto",
+          "tu": "hai stretto",
+          "lui/lei": "ha stretto",
+          "noi": "abbiamo stretto",
+          "voi": "avete stretto",
+          "loro": "hanno stretto"
+        },
+        "Congiuntivo presente": {
+          "io": "stringa",
+          "tu": "stringa",
+          "lui/lei": "stringa",
+          "noi": "stringiamo",
+          "voi": "stringiate",
+          "loro": "stringano"
+        }
+      }
+    },
+    {
+      "infinitivo": "scegliere",
+      "traducao": "escolher",
+      "auxiliar": "avere",
+      "participio": "scelto",
+      "tempos": {
+        "Presente": {
+          "io": "sceglio",
+          "tu": "sceglii",
+          "lui/lei": "sceglie",
+          "noi": "scegliiamo",
+          "voi": "scegliete",
+          "loro": "scegliono"
+        },
+        "Imperfetto": {
+          "io": "sceglievo",
+          "tu": "sceglievi",
+          "lui/lei": "sceglieva",
+          "noi": "sceglievamo",
+          "voi": "sceglievate",
+          "loro": "sceglievano"
+        },
+        "Futuro": {
+          "io": "sceglierò",
+          "tu": "sceglierai",
+          "lui/lei": "sceglierà",
+          "noi": "sceglieremo",
+          "voi": "sceglierete",
+          "loro": "sceglieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho scelto",
+          "tu": "hai scelto",
+          "lui/lei": "ha scelto",
+          "noi": "abbiamo scelto",
+          "voi": "avete scelto",
+          "loro": "hanno scelto"
+        },
+        "Congiuntivo presente": {
+          "io": "sceglia",
+          "tu": "sceglia",
+          "lui/lei": "sceglia",
+          "noi": "scegliiamo",
+          "voi": "scegliiate",
+          "loro": "scegliano"
+        }
+      }
+    },
+    {
+      "infinitivo": "raccogliere",
+      "traducao": "recolher / colher",
+      "auxiliar": "avere",
+      "participio": "raccolto",
+      "tempos": {
+        "Presente": {
+          "io": "raccoglio",
+          "tu": "raccoglii",
+          "lui/lei": "raccoglie",
+          "noi": "raccogliiamo",
+          "voi": "raccogliete",
+          "loro": "raccogliono"
+        },
+        "Imperfetto": {
+          "io": "raccoglievo",
+          "tu": "raccoglievi",
+          "lui/lei": "raccoglieva",
+          "noi": "raccoglievamo",
+          "voi": "raccoglievate",
+          "loro": "raccoglievano"
+        },
+        "Futuro": {
+          "io": "raccoglierò",
+          "tu": "raccoglierai",
+          "lui/lei": "raccoglierà",
+          "noi": "raccoglieremo",
+          "voi": "raccoglierete",
+          "loro": "raccoglieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho raccolto",
+          "tu": "hai raccolto",
+          "lui/lei": "ha raccolto",
+          "noi": "abbiamo raccolto",
+          "voi": "avete raccolto",
+          "loro": "hanno raccolto"
+        },
+        "Congiuntivo presente": {
+          "io": "raccoglia",
+          "tu": "raccoglia",
+          "lui/lei": "raccoglia",
+          "noi": "raccogliiamo",
+          "voi": "raccogliiate",
+          "loro": "raccogliano"
+        }
+      }
+    },
+    {
+      "infinitivo": "togliere",
+      "traducao": "tirar / remover",
+      "auxiliar": "avere",
+      "participio": "tolto",
+      "tempos": {
+        "Presente": {
+          "io": "toglio",
+          "tu": "toglii",
+          "lui/lei": "toglie",
+          "noi": "togliiamo",
+          "voi": "togliete",
+          "loro": "togliono"
+        },
+        "Imperfetto": {
+          "io": "toglievo",
+          "tu": "toglievi",
+          "lui/lei": "toglieva",
+          "noi": "toglievamo",
+          "voi": "toglievate",
+          "loro": "toglievano"
+        },
+        "Futuro": {
+          "io": "toglierò",
+          "tu": "toglierai",
+          "lui/lei": "toglierà",
+          "noi": "toglieremo",
+          "voi": "toglierete",
+          "loro": "toglieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tolto",
+          "tu": "hai tolto",
+          "lui/lei": "ha tolto",
+          "noi": "abbiamo tolto",
+          "voi": "avete tolto",
+          "loro": "hanno tolto"
+        },
+        "Congiuntivo presente": {
+          "io": "toglia",
+          "tu": "toglia",
+          "lui/lei": "toglia",
+          "noi": "togliiamo",
+          "voi": "togliiate",
+          "loro": "togliano"
+        }
+      }
+    },
+    {
+      "infinitivo": "proteggere",
+      "traducao": "proteger",
+      "auxiliar": "avere",
+      "participio": "protetto",
+      "tempos": {
+        "Presente": {
+          "io": "proteggo",
+          "tu": "proteggi",
+          "lui/lei": "protegge",
+          "noi": "proteggiamo",
+          "voi": "proteggete",
+          "loro": "proteggono"
+        },
+        "Imperfetto": {
+          "io": "proteggevo",
+          "tu": "proteggevi",
+          "lui/lei": "proteggeva",
+          "noi": "proteggevamo",
+          "voi": "proteggevate",
+          "loro": "proteggevano"
+        },
+        "Futuro": {
+          "io": "proteggerò",
+          "tu": "proteggerai",
+          "lui/lei": "proteggerà",
+          "noi": "proteggeremo",
+          "voi": "proteggerete",
+          "loro": "proteggeranno"
+        },
+        "Passato prossimo": {
+          "io": "ho protetto",
+          "tu": "hai protetto",
+          "lui/lei": "ha protetto",
+          "noi": "abbiamo protetto",
+          "voi": "avete protetto",
+          "loro": "hanno protetto"
+        },
+        "Congiuntivo presente": {
+          "io": "protegga",
+          "tu": "protegga",
+          "lui/lei": "protegga",
+          "noi": "proteggiamo",
+          "voi": "proteggiate",
+          "loro": "proteggano"
+        }
+      }
+    },
+    {
+      "infinitivo": "dipendere",
+      "traducao": "depender",
+      "auxiliar": "essere",
+      "participio": "dipeso",
+      "tempos": {
+        "Presente": {
+          "io": "dipendo",
+          "tu": "dipendi",
+          "lui/lei": "dipende",
+          "noi": "dipendiamo",
+          "voi": "dipendete",
+          "loro": "dipendono"
+        },
+        "Imperfetto": {
+          "io": "dipendevo",
+          "tu": "dipendevi",
+          "lui/lei": "dipendeva",
+          "noi": "dipendevamo",
+          "voi": "dipendevate",
+          "loro": "dipendevano"
+        },
+        "Futuro": {
+          "io": "dipenderò",
+          "tu": "dipenderai",
+          "lui/lei": "dipenderà",
+          "noi": "dipenderemo",
+          "voi": "dipenderete",
+          "loro": "dipenderanno"
+        },
+        "Passato prossimo": {
+          "io": "sono dipeso",
+          "tu": "sei dipeso",
+          "lui/lei": "è dipeso",
+          "noi": "siamo dipeso",
+          "voi": "siete dipeso",
+          "loro": "sono dipeso"
+        },
+        "Congiuntivo presente": {
+          "io": "dipenda",
+          "tu": "dipenda",
+          "lui/lei": "dipenda",
+          "noi": "dipendiamo",
+          "voi": "dipendiate",
+          "loro": "dipendano"
+        }
+      }
+    },
+    {
+      "infinitivo": "dormire",
+      "traducao": "dormir",
+      "auxiliar": "avere",
+      "participio": "dormito",
+      "tempos": {
+        "Presente": {
+          "io": "dormo",
+          "tu": "dormi",
+          "lui/lei": "dorme",
+          "noi": "dormiamo",
+          "voi": "dormite",
+          "loro": "dormono"
+        },
+        "Imperfetto": {
+          "io": "dormivo",
+          "tu": "dormivi",
+          "lui/lei": "dormiva",
+          "noi": "dormivamo",
+          "voi": "dormivate",
+          "loro": "dormivano"
+        },
+        "Futuro": {
+          "io": "dormirò",
+          "tu": "dormirai",
+          "lui/lei": "dormirà",
+          "noi": "dormiremo",
+          "voi": "dormirete",
+          "loro": "dormiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho dormito",
+          "tu": "hai dormito",
+          "lui/lei": "ha dormito",
+          "noi": "abbiamo dormito",
+          "voi": "avete dormito",
+          "loro": "hanno dormito"
+        },
+        "Congiuntivo presente": {
+          "io": "dorma",
+          "tu": "dorma",
+          "lui/lei": "dorma",
+          "noi": "dormiamo",
+          "voi": "dormiate",
+          "loro": "dormano"
+        }
+      }
+    },
+    {
+      "infinitivo": "coprire",
+      "traducao": "cobrir",
+      "auxiliar": "avere",
+      "participio": "coperto",
+      "tempos": {
+        "Presente": {
+          "io": "copro",
+          "tu": "copri",
+          "lui/lei": "copre",
+          "noi": "copriamo",
+          "voi": "coprite",
+          "loro": "coprono"
+        },
+        "Imperfetto": {
+          "io": "coprivo",
+          "tu": "coprivi",
+          "lui/lei": "copriva",
+          "noi": "coprivamo",
+          "voi": "coprivate",
+          "loro": "coprivano"
+        },
+        "Futuro": {
+          "io": "coprirò",
+          "tu": "coprirai",
+          "lui/lei": "coprirà",
+          "noi": "copriremo",
+          "voi": "coprirete",
+          "loro": "copriranno"
+        },
+        "Passato prossimo": {
+          "io": "ho coperto",
+          "tu": "hai coperto",
+          "lui/lei": "ha coperto",
+          "noi": "abbiamo coperto",
+          "voi": "avete coperto",
+          "loro": "hanno coperto"
+        },
+        "Congiuntivo presente": {
+          "io": "copra",
+          "tu": "copra",
+          "lui/lei": "copra",
+          "noi": "copriamo",
+          "voi": "copriate",
+          "loro": "coprano"
+        }
+      }
+    },
+    {
+      "infinitivo": "offrire",
+      "traducao": "oferecer",
+      "auxiliar": "avere",
+      "participio": "offerto",
+      "tempos": {
+        "Presente": {
+          "io": "offro",
+          "tu": "offri",
+          "lui/lei": "offre",
+          "noi": "offriamo",
+          "voi": "offrite",
+          "loro": "offrono"
+        },
+        "Imperfetto": {
+          "io": "offrivo",
+          "tu": "offrivi",
+          "lui/lei": "offriva",
+          "noi": "offrivamo",
+          "voi": "offrivate",
+          "loro": "offrivano"
+        },
+        "Futuro": {
+          "io": "offrirò",
+          "tu": "offrirai",
+          "lui/lei": "offrirà",
+          "noi": "offriremo",
+          "voi": "offrirete",
+          "loro": "offriranno"
+        },
+        "Passato prossimo": {
+          "io": "ho offerto",
+          "tu": "hai offerto",
+          "lui/lei": "ha offerto",
+          "noi": "abbiamo offerto",
+          "voi": "avete offerto",
+          "loro": "hanno offerto"
+        },
+        "Congiuntivo presente": {
+          "io": "offra",
+          "tu": "offra",
+          "lui/lei": "offra",
+          "noi": "offriamo",
+          "voi": "offriate",
+          "loro": "offrano"
+        }
+      }
+    },
+    {
+      "infinitivo": "aprire",
+      "traducao": "abrir",
+      "auxiliar": "avere",
+      "participio": "aperto",
+      "tempos": {
+        "Presente": {
+          "io": "apro",
+          "tu": "apri",
+          "lui/lei": "apre",
+          "noi": "apriamo",
+          "voi": "aprite",
+          "loro": "aprono"
+        },
+        "Imperfetto": {
+          "io": "aprivo",
+          "tu": "aprivi",
+          "lui/lei": "apriva",
+          "noi": "aprivamo",
+          "voi": "aprivate",
+          "loro": "aprivano"
+        },
+        "Futuro": {
+          "io": "aprirò",
+          "tu": "aprirai",
+          "lui/lei": "aprirà",
+          "noi": "apriremo",
+          "voi": "aprirete",
+          "loro": "apriranno"
+        },
+        "Passato prossimo": {
+          "io": "ho aperto",
+          "tu": "hai aperto",
+          "lui/lei": "ha aperto",
+          "noi": "abbiamo aperto",
+          "voi": "avete aperto",
+          "loro": "hanno aperto"
+        },
+        "Congiuntivo presente": {
+          "io": "apra",
+          "tu": "apra",
+          "lui/lei": "apra",
+          "noi": "apriamo",
+          "voi": "apriate",
+          "loro": "aprano"
+        }
+      }
+    },
+    {
+      "infinitivo": "soffrire",
+      "traducao": "sofrer",
+      "auxiliar": "avere",
+      "participio": "sofferto",
+      "tempos": {
+        "Presente": {
+          "io": "soffro",
+          "tu": "soffri",
+          "lui/lei": "soffre",
+          "noi": "soffriamo",
+          "voi": "soffrite",
+          "loro": "soffrono"
+        },
+        "Imperfetto": {
+          "io": "soffrivo",
+          "tu": "soffrivi",
+          "lui/lei": "soffriva",
+          "noi": "soffrivamo",
+          "voi": "soffrivate",
+          "loro": "soffrivano"
+        },
+        "Futuro": {
+          "io": "soffrirò",
+          "tu": "soffrirai",
+          "lui/lei": "soffrirà",
+          "noi": "soffriremo",
+          "voi": "soffrirete",
+          "loro": "soffriranno"
+        },
+        "Passato prossimo": {
+          "io": "ho sofferto",
+          "tu": "hai sofferto",
+          "lui/lei": "ha sofferto",
+          "noi": "abbiamo sofferto",
+          "voi": "avete sofferto",
+          "loro": "hanno sofferto"
+        },
+        "Congiuntivo presente": {
+          "io": "soffra",
+          "tu": "soffra",
+          "lui/lei": "soffra",
+          "noi": "soffriamo",
+          "voi": "soffriate",
+          "loro": "soffrano"
+        }
+      }
+    },
+    {
+      "infinitivo": "seguire",
+      "traducao": "seguir",
+      "auxiliar": "avere",
+      "participio": "seguito",
+      "tempos": {
+        "Presente": {
+          "io": "seguo",
+          "tu": "segui",
+          "lui/lei": "segue",
+          "noi": "seguiamo",
+          "voi": "seguite",
+          "loro": "seguono"
+        },
+        "Imperfetto": {
+          "io": "seguivo",
+          "tu": "seguivi",
+          "lui/lei": "seguiva",
+          "noi": "seguivamo",
+          "voi": "seguivate",
+          "loro": "seguivano"
+        },
+        "Futuro": {
+          "io": "seguirò",
+          "tu": "seguirai",
+          "lui/lei": "seguirà",
+          "noi": "seguiremo",
+          "voi": "seguirete",
+          "loro": "seguiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho seguito",
+          "tu": "hai seguito",
+          "lui/lei": "ha seguito",
+          "noi": "abbiamo seguito",
+          "voi": "avete seguito",
+          "loro": "hanno seguito"
+        },
+        "Congiuntivo presente": {
+          "io": "segua",
+          "tu": "segua",
+          "lui/lei": "segua",
+          "noi": "seguiamo",
+          "voi": "seguiate",
+          "loro": "seguano"
+        }
+      }
+    },
+    {
+      "infinitivo": "fuggire",
+      "traducao": "fugir",
+      "auxiliar": "essere",
+      "participio": "fuggito",
+      "tempos": {
+        "Presente": {
+          "io": "fuggo",
+          "tu": "fuggi",
+          "lui/lei": "fugge",
+          "noi": "fuggiamo",
+          "voi": "fuggite",
+          "loro": "fuggono"
+        },
+        "Imperfetto": {
+          "io": "fuggivo",
+          "tu": "fuggivi",
+          "lui/lei": "fuggiva",
+          "noi": "fuggivamo",
+          "voi": "fuggivate",
+          "loro": "fuggivano"
+        },
+        "Futuro": {
+          "io": "fuggirò",
+          "tu": "fuggirai",
+          "lui/lei": "fuggirà",
+          "noi": "fuggiremo",
+          "voi": "fuggirete",
+          "loro": "fuggiranno"
+        },
+        "Passato prossimo": {
+          "io": "sono fuggito",
+          "tu": "sei fuggito",
+          "lui/lei": "è fuggito",
+          "noi": "siamo fuggito",
+          "voi": "siete fuggito",
+          "loro": "sono fuggito"
+        },
+        "Congiuntivo presente": {
+          "io": "fugga",
+          "tu": "fugga",
+          "lui/lei": "fugga",
+          "noi": "fuggiamo",
+          "voi": "fuggiate",
+          "loro": "fuggano"
+        }
+      }
+    },
+    {
+      "infinitivo": "servire",
+      "traducao": "servir",
+      "auxiliar": "avere",
+      "participio": "servito",
+      "tempos": {
+        "Presente": {
+          "io": "servo",
+          "tu": "servi",
+          "lui/lei": "serve",
+          "noi": "serviamo",
+          "voi": "servite",
+          "loro": "servono"
+        },
+        "Imperfetto": {
+          "io": "servivo",
+          "tu": "servivi",
+          "lui/lei": "serviva",
+          "noi": "servivamo",
+          "voi": "servivate",
+          "loro": "servivano"
+        },
+        "Futuro": {
+          "io": "servirò",
+          "tu": "servirai",
+          "lui/lei": "servirà",
+          "noi": "serviremo",
+          "voi": "servirete",
+          "loro": "serviranno"
+        },
+        "Passato prossimo": {
+          "io": "ho servito",
+          "tu": "hai servito",
+          "lui/lei": "ha servito",
+          "noi": "abbiamo servito",
+          "voi": "avete servito",
+          "loro": "hanno servito"
+        },
+        "Congiuntivo presente": {
+          "io": "serva",
+          "tu": "serva",
+          "lui/lei": "serva",
+          "noi": "serviamo",
+          "voi": "serviate",
+          "loro": "servano"
+        }
+      }
+    },
+    {
+      "infinitivo": "mentire",
+      "traducao": "mentir",
+      "auxiliar": "avere",
+      "participio": "mentito",
+      "tempos": {
+        "Presente": {
+          "io": "mento",
+          "tu": "menti",
+          "lui/lei": "mente",
+          "noi": "mentiamo",
+          "voi": "mentite",
+          "loro": "mentono"
+        },
+        "Imperfetto": {
+          "io": "mentivo",
+          "tu": "mentivi",
+          "lui/lei": "mentiva",
+          "noi": "mentivamo",
+          "voi": "mentivate",
+          "loro": "mentivano"
+        },
+        "Futuro": {
+          "io": "mentirò",
+          "tu": "mentirai",
+          "lui/lei": "mentirà",
+          "noi": "mentiremo",
+          "voi": "mentirete",
+          "loro": "mentiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho mentito",
+          "tu": "hai mentito",
+          "lui/lei": "ha mentito",
+          "noi": "abbiamo mentito",
+          "voi": "avete mentito",
+          "loro": "hanno mentito"
+        },
+        "Congiuntivo presente": {
+          "io": "menta",
+          "tu": "menta",
+          "lui/lei": "menta",
+          "noi": "mentiamo",
+          "voi": "mentiate",
+          "loro": "mentano"
+        }
+      }
+    },
+    {
+      "infinitivo": "bollire",
+      "traducao": "ferver / cozinhar em água",
+      "auxiliar": "avere",
+      "participio": "bollito",
+      "tempos": {
+        "Presente": {
+          "io": "bollo",
+          "tu": "bolli",
+          "lui/lei": "bolle",
+          "noi": "bolliamo",
+          "voi": "bollite",
+          "loro": "bollono"
+        },
+        "Imperfetto": {
+          "io": "bollivo",
+          "tu": "bollivi",
+          "lui/lei": "bolliva",
+          "noi": "bollivamo",
+          "voi": "bollivate",
+          "loro": "bollivano"
+        },
+        "Futuro": {
+          "io": "bollirò",
+          "tu": "bollirai",
+          "lui/lei": "bollirà",
+          "noi": "bolliremo",
+          "voi": "bollirete",
+          "loro": "bolliranno"
+        },
+        "Passato prossimo": {
+          "io": "ho bollito",
+          "tu": "hai bollito",
+          "lui/lei": "ha bollito",
+          "noi": "abbiamo bollito",
+          "voi": "avete bollito",
+          "loro": "hanno bollito"
+        },
+        "Congiuntivo presente": {
+          "io": "bolla",
+          "tu": "bolla",
+          "lui/lei": "bolla",
+          "noi": "bolliamo",
+          "voi": "bolliate",
+          "loro": "bollano"
+        }
+      }
+    },
+    {
+      "infinitivo": "costruire",
+      "traducao": "construir",
+      "auxiliar": "avere",
+      "participio": "costruito",
+      "tempos": {
+        "Presente": {
+          "io": "costruisco",
+          "tu": "costruisci",
+          "lui/lei": "costruisce",
+          "noi": "costruiamo",
+          "voi": "costruite",
+          "loro": "costruiscono"
+        },
+        "Imperfetto": {
+          "io": "costruivo",
+          "tu": "costruivi",
+          "lui/lei": "costruiva",
+          "noi": "costruivamo",
+          "voi": "costruivate",
+          "loro": "costruivano"
+        },
+        "Futuro": {
+          "io": "costruirò",
+          "tu": "costruirai",
+          "lui/lei": "costruirà",
+          "noi": "costruiremo",
+          "voi": "costruirete",
+          "loro": "costruiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho costruito",
+          "tu": "hai costruito",
+          "lui/lei": "ha costruito",
+          "noi": "abbiamo costruito",
+          "voi": "avete costruito",
+          "loro": "hanno costruito"
+        },
+        "Congiuntivo presente": {
+          "io": "costruisca",
+          "tu": "costruisca",
+          "lui/lei": "costruisca",
+          "noi": "costruiamo",
+          "voi": "costruiate",
+          "loro": "costruiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "pulire",
+      "traducao": "limpar",
+      "auxiliar": "avere",
+      "participio": "pulito",
+      "tempos": {
+        "Presente": {
+          "io": "pulisco",
+          "tu": "pulisci",
+          "lui/lei": "pulisce",
+          "noi": "puliamo",
+          "voi": "pulite",
+          "loro": "puliscono"
+        },
+        "Imperfetto": {
+          "io": "pulivo",
+          "tu": "pulivi",
+          "lui/lei": "puliva",
+          "noi": "pulivamo",
+          "voi": "pulivate",
+          "loro": "pulivano"
+        },
+        "Futuro": {
+          "io": "pulirò",
+          "tu": "pulirai",
+          "lui/lei": "pulirà",
+          "noi": "puliremo",
+          "voi": "pulirete",
+          "loro": "puliranno"
+        },
+        "Passato prossimo": {
+          "io": "ho pulito",
+          "tu": "hai pulito",
+          "lui/lei": "ha pulito",
+          "noi": "abbiamo pulito",
+          "voi": "avete pulito",
+          "loro": "hanno pulito"
+        },
+        "Congiuntivo presente": {
+          "io": "pulisca",
+          "tu": "pulisca",
+          "lui/lei": "pulisca",
+          "noi": "puliamo",
+          "voi": "puliate",
+          "loro": "puliscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "guarire",
+      "traducao": "curar / se curar",
+      "auxiliar": "essere",
+      "participio": "guarito",
+      "tempos": {
+        "Presente": {
+          "io": "guarisco",
+          "tu": "guarisci",
+          "lui/lei": "guarisce",
+          "noi": "guariamo",
+          "voi": "guarite",
+          "loro": "guariscono"
+        },
+        "Imperfetto": {
+          "io": "guarivo",
+          "tu": "guarivi",
+          "lui/lei": "guariva",
+          "noi": "guarivamo",
+          "voi": "guarivate",
+          "loro": "guarivano"
+        },
+        "Futuro": {
+          "io": "guarirò",
+          "tu": "guarirai",
+          "lui/lei": "guarirà",
+          "noi": "guariremo",
+          "voi": "guarirete",
+          "loro": "guariranno"
+        },
+        "Passato prossimo": {
+          "io": "sono guarito",
+          "tu": "sei guarito",
+          "lui/lei": "è guarito",
+          "noi": "siamo guarito",
+          "voi": "siete guarito",
+          "loro": "sono guarito"
+        },
+        "Congiuntivo presente": {
+          "io": "guarisca",
+          "tu": "guarisca",
+          "lui/lei": "guarisca",
+          "noi": "guariamo",
+          "voi": "guariate",
+          "loro": "guariscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "preferire",
+      "traducao": "preferir",
+      "auxiliar": "avere",
+      "participio": "preferito",
+      "tempos": {
+        "Presente": {
+          "io": "preferisco",
+          "tu": "preferisci",
+          "lui/lei": "preferisce",
+          "noi": "preferiamo",
+          "voi": "preferite",
+          "loro": "preferiscono"
+        },
+        "Imperfetto": {
+          "io": "preferivo",
+          "tu": "preferivi",
+          "lui/lei": "preferiva",
+          "noi": "preferivamo",
+          "voi": "preferivate",
+          "loro": "preferivano"
+        },
+        "Futuro": {
+          "io": "preferirò",
+          "tu": "preferirai",
+          "lui/lei": "preferirà",
+          "noi": "preferiremo",
+          "voi": "preferirete",
+          "loro": "preferiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho preferito",
+          "tu": "hai preferito",
+          "lui/lei": "ha preferito",
+          "noi": "abbiamo preferito",
+          "voi": "avete preferito",
+          "loro": "hanno preferito"
+        },
+        "Congiuntivo presente": {
+          "io": "preferisca",
+          "tu": "preferisca",
+          "lui/lei": "preferisca",
+          "noi": "preferiamo",
+          "voi": "preferiate",
+          "loro": "preferiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "unire",
+      "traducao": "unir",
+      "auxiliar": "avere",
+      "participio": "unito",
+      "tempos": {
+        "Presente": {
+          "io": "unisco",
+          "tu": "unisci",
+          "lui/lei": "unisce",
+          "noi": "uniamo",
+          "voi": "unite",
+          "loro": "uniscono"
+        },
+        "Imperfetto": {
+          "io": "univo",
+          "tu": "univi",
+          "lui/lei": "univa",
+          "noi": "univamo",
+          "voi": "univate",
+          "loro": "univano"
+        },
+        "Futuro": {
+          "io": "unirò",
+          "tu": "unirai",
+          "lui/lei": "unirà",
+          "noi": "uniremo",
+          "voi": "unirete",
+          "loro": "uniranno"
+        },
+        "Passato prossimo": {
+          "io": "ho unito",
+          "tu": "hai unito",
+          "lui/lei": "ha unito",
+          "noi": "abbiamo unito",
+          "voi": "avete unito",
+          "loro": "hanno unito"
+        },
+        "Congiuntivo presente": {
+          "io": "unisca",
+          "tu": "unisca",
+          "lui/lei": "unisca",
+          "noi": "uniamo",
+          "voi": "uniate",
+          "loro": "uniscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "obbedire",
+      "traducao": "obedecer",
+      "auxiliar": "avere",
+      "participio": "obbedito",
+      "tempos": {
+        "Presente": {
+          "io": "obbedisco",
+          "tu": "obbedisci",
+          "lui/lei": "obbedisce",
+          "noi": "obbediamo",
+          "voi": "obbedite",
+          "loro": "obbediscono"
+        },
+        "Imperfetto": {
+          "io": "obbedivo",
+          "tu": "obbedivi",
+          "lui/lei": "obbediva",
+          "noi": "obbedivamo",
+          "voi": "obbedivate",
+          "loro": "obbedivano"
+        },
+        "Futuro": {
+          "io": "obbedirò",
+          "tu": "obbedirai",
+          "lui/lei": "obbedirà",
+          "noi": "obbediremo",
+          "voi": "obbedirete",
+          "loro": "obbediranno"
+        },
+        "Passato prossimo": {
+          "io": "ho obbedito",
+          "tu": "hai obbedito",
+          "lui/lei": "ha obbedito",
+          "noi": "abbiamo obbedito",
+          "voi": "avete obbedito",
+          "loro": "hanno obbedito"
+        },
+        "Congiuntivo presente": {
+          "io": "obbedisca",
+          "tu": "obbedisca",
+          "lui/lei": "obbedisca",
+          "noi": "obbediamo",
+          "voi": "obbediate",
+          "loro": "obbediscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "proibire",
+      "traducao": "proibir",
+      "auxiliar": "avere",
+      "participio": "proibito",
+      "tempos": {
+        "Presente": {
+          "io": "proibisco",
+          "tu": "proibisci",
+          "lui/lei": "proibisce",
+          "noi": "proibiamo",
+          "voi": "proibite",
+          "loro": "proibiscono"
+        },
+        "Imperfetto": {
+          "io": "proibivo",
+          "tu": "proibivi",
+          "lui/lei": "proibiva",
+          "noi": "proibivamo",
+          "voi": "proibivate",
+          "loro": "proibivano"
+        },
+        "Futuro": {
+          "io": "proibirò",
+          "tu": "proibirai",
+          "lui/lei": "proibirà",
+          "noi": "proibiremo",
+          "voi": "proibirete",
+          "loro": "proibiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho proibito",
+          "tu": "hai proibito",
+          "lui/lei": "ha proibito",
+          "noi": "abbiamo proibito",
+          "voi": "avete proibito",
+          "loro": "hanno proibito"
+        },
+        "Congiuntivo presente": {
+          "io": "proibisca",
+          "tu": "proibisca",
+          "lui/lei": "proibisca",
+          "noi": "proibiamo",
+          "voi": "proibiate",
+          "loro": "proibiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "stabilire",
+      "traducao": "estabelecer",
+      "auxiliar": "avere",
+      "participio": "stabilito",
+      "tempos": {
+        "Presente": {
+          "io": "stabilisco",
+          "tu": "stabilisci",
+          "lui/lei": "stabilisce",
+          "noi": "stabiliamo",
+          "voi": "stabilite",
+          "loro": "stabiliscono"
+        },
+        "Imperfetto": {
+          "io": "stabilivo",
+          "tu": "stabilivi",
+          "lui/lei": "stabiliva",
+          "noi": "stabilivamo",
+          "voi": "stabilivate",
+          "loro": "stabilivano"
+        },
+        "Futuro": {
+          "io": "stabilirò",
+          "tu": "stabilirai",
+          "lui/lei": "stabilirà",
+          "noi": "stabiliremo",
+          "voi": "stabilirete",
+          "loro": "stabiliranno"
+        },
+        "Passato prossimo": {
+          "io": "ho stabilito",
+          "tu": "hai stabilito",
+          "lui/lei": "ha stabilito",
+          "noi": "abbiamo stabilito",
+          "voi": "avete stabilito",
+          "loro": "hanno stabilito"
+        },
+        "Congiuntivo presente": {
+          "io": "stabilisca",
+          "tu": "stabilisca",
+          "lui/lei": "stabilisca",
+          "noi": "stabiliamo",
+          "voi": "stabiliate",
+          "loro": "stabiliscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "restituire",
+      "traducao": "devolver / restituir",
+      "auxiliar": "avere",
+      "participio": "restituito",
+      "tempos": {
+        "Presente": {
+          "io": "restituisco",
+          "tu": "restituisci",
+          "lui/lei": "restituisce",
+          "noi": "restituiamo",
+          "voi": "restituite",
+          "loro": "restituiscono"
+        },
+        "Imperfetto": {
+          "io": "restituivo",
+          "tu": "restituivi",
+          "lui/lei": "restituiva",
+          "noi": "restituivamo",
+          "voi": "restituivate",
+          "loro": "restituivano"
+        },
+        "Futuro": {
+          "io": "restituirò",
+          "tu": "restituirai",
+          "lui/lei": "restituirà",
+          "noi": "restituiremo",
+          "voi": "restituirete",
+          "loro": "restituiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho restituito",
+          "tu": "hai restituito",
+          "lui/lei": "ha restituito",
+          "noi": "abbiamo restituito",
+          "voi": "avete restituito",
+          "loro": "hanno restituito"
+        },
+        "Congiuntivo presente": {
+          "io": "restituisca",
+          "tu": "restituisca",
+          "lui/lei": "restituisca",
+          "noi": "restituiamo",
+          "voi": "restituiate",
+          "loro": "restituiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "contribuire",
+      "traducao": "contribuir",
+      "auxiliar": "avere",
+      "participio": "contribuito",
+      "tempos": {
+        "Presente": {
+          "io": "contribuisco",
+          "tu": "contribuisci",
+          "lui/lei": "contribuisce",
+          "noi": "contribuiamo",
+          "voi": "contribuite",
+          "loro": "contribuiscono"
+        },
+        "Imperfetto": {
+          "io": "contribuivo",
+          "tu": "contribuivi",
+          "lui/lei": "contribuiva",
+          "noi": "contribuivamo",
+          "voi": "contribuivate",
+          "loro": "contribuivano"
+        },
+        "Futuro": {
+          "io": "contribuirò",
+          "tu": "contribuirai",
+          "lui/lei": "contribuirà",
+          "noi": "contribuiremo",
+          "voi": "contribuirete",
+          "loro": "contribuiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho contribuito",
+          "tu": "hai contribuito",
+          "lui/lei": "ha contribuito",
+          "noi": "abbiamo contribuito",
+          "voi": "avete contribuito",
+          "loro": "hanno contribuito"
+        },
+        "Congiuntivo presente": {
+          "io": "contribuisca",
+          "tu": "contribuisca",
+          "lui/lei": "contribuisca",
+          "noi": "contribuiamo",
+          "voi": "contribuiate",
+          "loro": "contribuiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "distribuire",
+      "traducao": "distribuir",
+      "auxiliar": "avere",
+      "participio": "distribuito",
+      "tempos": {
+        "Presente": {
+          "io": "distribuisco",
+          "tu": "distribuisci",
+          "lui/lei": "distribuisce",
+          "noi": "distribuiamo",
+          "voi": "distribuite",
+          "loro": "distribuiscono"
+        },
+        "Imperfetto": {
+          "io": "distribuivo",
+          "tu": "distribuivi",
+          "lui/lei": "distribuiva",
+          "noi": "distribuivamo",
+          "voi": "distribuivate",
+          "loro": "distribuivano"
+        },
+        "Futuro": {
+          "io": "distribuirò",
+          "tu": "distribuirai",
+          "lui/lei": "distribuirà",
+          "noi": "distribuiremo",
+          "voi": "distribuirete",
+          "loro": "distribuiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho distribuito",
+          "tu": "hai distribuito",
+          "lui/lei": "ha distribuito",
+          "noi": "abbiamo distribuito",
+          "voi": "avete distribuito",
+          "loro": "hanno distribuito"
+        },
+        "Congiuntivo presente": {
+          "io": "distribuisca",
+          "tu": "distribuisca",
+          "lui/lei": "distribuisca",
+          "noi": "distribuiamo",
+          "voi": "distribuiate",
+          "loro": "distribuiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "gestire",
+      "traducao": "gerir / gerenciar",
+      "auxiliar": "avere",
+      "participio": "gestito",
+      "tempos": {
+        "Presente": {
+          "io": "gestisco",
+          "tu": "gestisci",
+          "lui/lei": "gestisce",
+          "noi": "gestiamo",
+          "voi": "gestite",
+          "loro": "gestiscono"
+        },
+        "Imperfetto": {
+          "io": "gestivo",
+          "tu": "gestivi",
+          "lui/lei": "gestiva",
+          "noi": "gestivamo",
+          "voi": "gestivate",
+          "loro": "gestivano"
+        },
+        "Futuro": {
+          "io": "gestirò",
+          "tu": "gestirai",
+          "lui/lei": "gestirà",
+          "noi": "gestiremo",
+          "voi": "gestirete",
+          "loro": "gestiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho gestito",
+          "tu": "hai gestito",
+          "lui/lei": "ha gestito",
+          "noi": "abbiamo gestito",
+          "voi": "avete gestito",
+          "loro": "hanno gestito"
+        },
+        "Congiuntivo presente": {
+          "io": "gestisca",
+          "tu": "gestisca",
+          "lui/lei": "gestisca",
+          "noi": "gestiamo",
+          "voi": "gestiate",
+          "loro": "gestiscano"
+        }
+      }
+    },
+    {
+      "infinitivo": "tenere",
+      "traducao": "ter / manter",
+      "auxiliar": "avere",
+      "participio": "tenuto",
+      "tempos": {
+        "Presente": {
+          "io": "tengo",
+          "tu": "tieni",
+          "lui/lei": "tiene",
+          "noi": "teniamo",
+          "voi": "tenete",
+          "loro": "tengono"
+        },
+        "Imperfetto": {
+          "io": "tenevo",
+          "tu": "tenevi",
+          "lui/lei": "teneva",
+          "noi": "tenevamo",
+          "voi": "tenevate",
+          "loro": "tenevano"
+        },
+        "Futuro": {
+          "io": "terrò",
+          "tu": "terrai",
+          "lui/lei": "terrà",
+          "noi": "terremo",
+          "voi": "terrete",
+          "loro": "terranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tenuto",
+          "tu": "hai tenuto",
+          "lui/lei": "ha tenuto",
+          "noi": "abbiamo tenuto",
+          "voi": "avete tenuto",
+          "loro": "hanno tenuto"
+        },
+        "Congiuntivo presente": {
+          "io": "tenga",
+          "tu": "tenga",
+          "lui/lei": "tenga",
+          "noi": "teniamo",
+          "voi": "teniate",
+          "loro": "tengano"
+        }
+      }
+    },
+    {
+      "infinitivo": "rimanere",
+      "traducao": "ficar / permanecer",
+      "auxiliar": "essere",
+      "participio": "rimasto",
+      "tempos": {
+        "Presente": {
+          "io": "rimango",
+          "tu": "rimani",
+          "lui/lei": "rimane",
+          "noi": "rimaniamo",
+          "voi": "rimanete",
+          "loro": "rimangono"
+        },
+        "Imperfetto": {
+          "io": "rimanevo",
+          "tu": "rimanevi",
+          "lui/lei": "rimaneva",
+          "noi": "rimanevamo",
+          "voi": "rimanevate",
+          "loro": "rimanevano"
+        },
+        "Futuro": {
+          "io": "rimarrò",
+          "tu": "rimarrai",
+          "lui/lei": "rimarrà",
+          "noi": "rimarremo",
+          "voi": "rimarrete",
+          "loro": "rimarranno"
+        },
+        "Passato prossimo": {
+          "io": "sono rimasto",
+          "tu": "sei rimasto",
+          "lui/lei": "è rimasto",
+          "noi": "siamo rimasto",
+          "voi": "siete rimasto",
+          "loro": "sono rimasto"
+        },
+        "Congiuntivo presente": {
+          "io": "rimanga",
+          "tu": "rimanga",
+          "lui/lei": "rimanga",
+          "noi": "rimaniamo",
+          "voi": "rimaniate",
+          "loro": "rimangano"
+        }
+      }
+    },
+    {
+      "infinitivo": "scegliere",
+      "traducao": "escolher",
+      "auxiliar": "avere",
+      "participio": "scelto",
+      "tempos": {
+        "Presente": {
+          "io": "scelgo",
+          "tu": "scegli",
+          "lui/lei": "sceglie",
+          "noi": "scegliamo",
+          "voi": "scegliete",
+          "loro": "scelgono"
+        },
+        "Imperfetto": {
+          "io": "sceglievo",
+          "tu": "sceglievi",
+          "lui/lei": "sceglieva",
+          "noi": "sceglievamo",
+          "voi": "sceglievate",
+          "loro": "sceglievano"
+        },
+        "Futuro": {
+          "io": "sceglierò",
+          "tu": "sceglierai",
+          "lui/lei": "sceglierà",
+          "noi": "sceglieremo",
+          "voi": "sceglierete",
+          "loro": "sceglieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho scelto",
+          "tu": "hai scelto",
+          "lui/lei": "ha scelto",
+          "noi": "abbiamo scelto",
+          "voi": "avete scelto",
+          "loro": "hanno scelto"
+        },
+        "Congiuntivo presente": {
+          "io": "scelga",
+          "tu": "scelga",
+          "lui/lei": "scelga",
+          "noi": "scegliamo",
+          "voi": "scegliate",
+          "loro": "scelgano"
+        }
+      }
+    },
+    {
+      "infinitivo": "porre",
+      "traducao": "pôr / colocar",
+      "auxiliar": "avere",
+      "participio": "posto",
+      "tempos": {
+        "Presente": {
+          "io": "pongo",
+          "tu": "poni",
+          "lui/lei": "pone",
+          "noi": "poniamo",
+          "voi": "ponete",
+          "loro": "pongono"
+        },
+        "Imperfetto": {
+          "io": "ponevo",
+          "tu": "ponevi",
+          "lui/lei": "poneva",
+          "noi": "ponevamo",
+          "voi": "ponevate",
+          "loro": "ponevano"
+        },
+        "Futuro": {
+          "io": "porrò",
+          "tu": "porrai",
+          "lui/lei": "porrà",
+          "noi": "porremo",
+          "voi": "porrete",
+          "loro": "porranno"
+        },
+        "Passato prossimo": {
+          "io": "ho posto",
+          "tu": "hai posto",
+          "lui/lei": "ha posto",
+          "noi": "abbiamo posto",
+          "voi": "avete posto",
+          "loro": "hanno posto"
+        },
+        "Congiuntivo presente": {
+          "io": "ponga",
+          "tu": "ponga",
+          "lui/lei": "ponga",
+          "noi": "poniamo",
+          "voi": "poniate",
+          "loro": "pongano"
+        }
+      }
+    },
+    {
+      "infinitivo": "tradurre",
+      "traducao": "traduzir",
+      "auxiliar": "avere",
+      "participio": "tradotto",
+      "tempos": {
+        "Presente": {
+          "io": "traduco",
+          "tu": "traduci",
+          "lui/lei": "traduce",
+          "noi": "traduciamo",
+          "voi": "traducete",
+          "loro": "traducono"
+        },
+        "Imperfetto": {
+          "io": "traducevo",
+          "tu": "traducevi",
+          "lui/lei": "traduceva",
+          "noi": "traducevamo",
+          "voi": "traducevate",
+          "loro": "traducevano"
+        },
+        "Futuro": {
+          "io": "tradurrò",
+          "tu": "tradurrai",
+          "lui/lei": "tradurrà",
+          "noi": "tradurremo",
+          "voi": "tradurrete",
+          "loro": "tradurranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tradotto",
+          "tu": "hai tradotto",
+          "lui/lei": "ha tradotto",
+          "noi": "abbiamo tradotto",
+          "voi": "avete tradotto",
+          "loro": "hanno tradotto"
+        }
+      }
+    },
+    {
+      "infinitivo": "condurre",
+      "traducao": "conduzir / levar",
+      "auxiliar": "avere",
+      "participio": "condotto",
+      "tempos": {
+        "Presente": {
+          "io": "conduco",
+          "tu": "conduci",
+          "lui/lei": "conduce",
+          "noi": "conduciamo",
+          "voi": "conducete",
+          "loro": "conducono"
+        },
+        "Imperfetto": {
+          "io": "conducevo",
+          "tu": "conducevi",
+          "lui/lei": "conduceva",
+          "noi": "conducevamo",
+          "voi": "conducevate",
+          "loro": "conducevano"
+        },
+        "Futuro": {
+          "io": "condurrò",
+          "tu": "condurrai",
+          "lui/lei": "condurrà",
+          "noi": "condurremo",
+          "voi": "condurrete",
+          "loro": "condurranno"
+        },
+        "Passato prossimo": {
+          "io": "ho condotto",
+          "tu": "hai condotto",
+          "lui/lei": "ha condotto",
+          "noi": "abbiamo condotto",
+          "voi": "avete condotto",
+          "loro": "hanno condotto"
+        }
+      }
+    },
+    {
+      "infinitivo": "sporre",
+      "traducao": "expor",
+      "auxiliar": "avere",
+      "participio": "esposto",
+      "tempos": {
+        "Presente": {
+          "io": "espongo",
+          "tu": "esponi",
+          "lui/lei": "espone",
+          "noi": "esponiamo",
+          "voi": "esponete",
+          "loro": "espongono"
+        },
+        "Imperfetto": {
+          "io": "esponevo",
+          "tu": "esponevi",
+          "lui/lei": "esponeva",
+          "noi": "esponevamo",
+          "voi": "esponevate",
+          "loro": "esponevano"
+        },
+        "Futuro": {
+          "io": "esporrò",
+          "tu": "esporrai",
+          "lui/lei": "esporrà",
+          "noi": "esporremo",
+          "voi": "esporrete",
+          "loro": "esporranno"
+        },
+        "Passato prossimo": {
+          "io": "ho esposto",
+          "tu": "hai esposto",
+          "lui/lei": "ha esposto",
+          "noi": "abbiamo esposto",
+          "voi": "avete esposto",
+          "loro": "hanno esposto"
+        }
+      }
+    },
+    {
+      "infinitivo": "trarre",
+      "traducao": "atrair / puxar",
+      "auxiliar": "avere",
+      "participio": "tratto",
+      "tempos": {
+        "Presente": {
+          "io": "traggo",
+          "tu": "trai",
+          "lui/lei": "trae",
+          "noi": "traiamo",
+          "voi": "traete",
+          "loro": "traggono"
+        },
+        "Imperfetto": {
+          "io": "traevo",
+          "tu": "traevi",
+          "lui/lei": "traeva",
+          "noi": "traevamo",
+          "voi": "traevate",
+          "loro": "traevano"
+        },
+        "Futuro": {
+          "io": "trarrò",
+          "tu": "trarrai",
+          "lui/lei": "trarrà",
+          "noi": "trarremo",
+          "voi": "trarrete",
+          "loro": "trarranno"
+        },
+        "Passato prossimo": {
+          "io": "ho tratto",
+          "tu": "hai tratto",
+          "lui/lei": "ha tratto",
+          "noi": "abbiamo tratto",
+          "voi": "avete tratto",
+          "loro": "hanno tratto"
+        }
+      }
+    },
+    {
+      "infinitivo": "valere",
+      "traducao": "valer",
+      "auxiliar": "essere",
+      "participio": "valso",
+      "tempos": {
+        "Presente": {
+          "io": "valgo",
+          "tu": "vali",
+          "lui/lei": "vale",
+          "noi": "valiamo",
+          "voi": "valete",
+          "loro": "valgono"
+        },
+        "Imperfetto": {
+          "io": "valevo",
+          "tu": "valevi",
+          "lui/lei": "valeva",
+          "noi": "valevamo",
+          "voi": "valevate",
+          "loro": "valevano"
+        },
+        "Futuro": {
+          "io": "varrò",
+          "tu": "varrai",
+          "lui/lei": "varrà",
+          "noi": "varremo",
+          "voi": "varrete",
+          "loro": "varranno"
+        },
+        "Passato prossimo": {
+          "io": "sono valso",
+          "tu": "sei valso",
+          "lui/lei": "è valso",
+          "noi": "siamo valso",
+          "voi": "siete valso",
+          "loro": "sono valso"
+        },
+        "Congiuntivo presente": {
+          "io": "valga",
+          "tu": "valga",
+          "lui/lei": "valga",
+          "noi": "valiamo",
+          "voi": "valiate",
+          "loro": "valgano"
+        }
+      }
+    },
+    {
+      "infinitivo": "cogliere",
+      "traducao": "colher / pegar",
+      "auxiliar": "avere",
+      "participio": "colto",
+      "tempos": {
+        "Presente": {
+          "io": "colgo",
+          "tu": "cogli",
+          "lui/lei": "coglie",
+          "noi": "cogliamo",
+          "voi": "cogliete",
+          "loro": "colgono"
+        },
+        "Imperfetto": {
+          "io": "coglievo",
+          "tu": "coglievi",
+          "lui/lei": "coglieva",
+          "noi": "coglievamo",
+          "voi": "coglievate",
+          "loro": "coglievano"
+        },
+        "Futuro": {
+          "io": "coglierò",
+          "tu": "coglierai",
+          "lui/lei": "coglierà",
+          "noi": "coglieremo",
+          "voi": "coglierete",
+          "loro": "coglieranno"
+        },
+        "Passato prossimo": {
+          "io": "ho colto",
+          "tu": "hai colto",
+          "lui/lei": "ha colto",
+          "noi": "abbiamo colto",
+          "voi": "avete colto",
+          "loro": "hanno colto"
+        }
+      }
+    },
+    {
+      "infinitivo": "dolere",
+      "traducao": "doer / ser doloroso",
+      "auxiliar": "essere",
+      "participio": "doluto",
+      "tempos": {
+        "Presente": {
+          "io": "dolgo",
+          "tu": "duoli",
+          "lui/lei": "duole",
+          "noi": "dogliamo",
+          "voi": "dolete",
+          "loro": "dolgono"
+        },
+        "Imperfetto": {
+          "io": "dolevo",
+          "tu": "dolevi",
+          "lui/lei": "doleva",
+          "noi": "dolevamo",
+          "voi": "dolevate",
+          "loro": "dolevano"
+        },
+        "Futuro": {
+          "io": "dorrò",
+          "tu": "dorrai",
+          "lui/lei": "dorrà",
+          "noi": "dorremo",
+          "voi": "dorrete",
+          "loro": "dorranno"
+        },
+        "Passato prossimo": {
+          "io": "sono doluto",
+          "tu": "sei doluto",
+          "lui/lei": "è doluto",
+          "noi": "siamo doluto",
+          "voi": "siete doluto",
+          "loro": "sono doluto"
+        }
+      }
+    },
+    {
+      "infinitivo": "giacere",
+      "traducao": "jazer / estar deitado",
+      "auxiliar": "essere",
+      "participio": "giaciuto",
+      "tempos": {
+        "Presente": {
+          "io": "giaccio",
+          "tu": "giaci",
+          "lui/lei": "giace",
+          "noi": "giaciamo",
+          "voi": "giacete",
+          "loro": "giacciono"
+        },
+        "Imperfetto": {
+          "io": "giacevo",
+          "tu": "giacevi",
+          "lui/lei": "giaceva",
+          "noi": "giacevamo",
+          "voi": "giacevate",
+          "loro": "giacevano"
+        },
+        "Futuro": {
+          "io": "giacerò",
+          "tu": "giacerai",
+          "lui/lei": "giacerà",
+          "noi": "giaceremo",
+          "voi": "giacerete",
+          "loro": "giaceranno"
+        },
+        "Passato prossimo": {
+          "io": "sono giaciuto",
+          "tu": "sei giaciuto",
+          "lui/lei": "è giaciuto",
+          "noi": "siamo giaciuto",
+          "voi": "siete giaciuto",
+          "loro": "sono giaciuto"
+        }
+      }
+    },
+    {
+      "infinitivo": "piacere",
+      "traducao": "gostar / agradar",
+      "auxiliar": "essere",
+      "participio": "piaciuto",
+      "tempos": {
+        "Presente": {
+          "io": "piaccio",
+          "tu": "piaci",
+          "lui/lei": "piace",
+          "noi": "piacciamo",
+          "voi": "piacete",
+          "loro": "piacciono"
+        },
+        "Imperfetto": {
+          "io": "piacevo",
+          "tu": "piacevi",
+          "lui/lei": "piaceva",
+          "noi": "piacevamo",
+          "voi": "piacevate",
+          "loro": "piacevano"
+        },
+        "Futuro": {
+          "io": "piacerò",
+          "tu": "piacerai",
+          "lui/lei": "piacerà",
+          "noi": "piaceremo",
+          "voi": "piacerete",
+          "loro": "piaceranno"
+        },
+        "Passato prossimo": {
+          "io": "sono piaciuto",
+          "tu": "sei piaciuto",
+          "lui/lei": "è piaciuto",
+          "noi": "siamo piaciuto",
+          "voi": "siete piaciuto",
+          "loro": "sono piaciuto"
+        },
+        "Congiuntivo presente": {
+          "io": "piaccia",
+          "tu": "piaccia",
+          "lui/lei": "piaccia",
+          "noi": "piacciamo",
+          "voi": "piacciate",
+          "loro": "piacciano"
+        }
+      }
+    },
+    {
+      "infinitivo": "tacere",
+      "traducao": "calar(-se) / ficar quieto",
+      "auxiliar": "avere",
+      "participio": "taciuto",
+      "tempos": {
+        "Presente": {
+          "io": "taccio",
+          "tu": "taci",
+          "lui/lei": "tace",
+          "noi": "tacciamo",
+          "voi": "tacete",
+          "loro": "tacciono"
+        },
+        "Imperfetto": {
+          "io": "tacevo",
+          "tu": "tacevi",
+          "lui/lei": "taceva",
+          "noi": "tacevamo",
+          "voi": "tacevate",
+          "loro": "tacevano"
+        },
+        "Futuro": {
+          "io": "tacerò",
+          "tu": "tacerai",
+          "lui/lei": "tacerà",
+          "noi": "taceremo",
+          "voi": "tacerete",
+          "loro": "taceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho taciuto",
+          "tu": "hai taciuto",
+          "lui/lei": "ha taciuto",
+          "noi": "abbiamo taciuto",
+          "voi": "avete taciuto",
+          "loro": "hanno taciuto"
+        }
+      }
+    },
+    {
+      "infinitivo": "nuocere",
+      "traducao": "prejudicar / nocivo",
+      "auxiliar": "avere",
+      "participio": "nociuto",
+      "tempos": {
+        "Presente": {
+          "io": "nuoccio",
+          "tu": "nuoci",
+          "lui/lei": "nuoce",
+          "noi": "nociamo",
+          "voi": "nocete",
+          "loro": "nuocciono"
+        },
+        "Imperfetto": {
+          "io": "nocevo",
+          "tu": "nocevi",
+          "lui/lei": "noceva",
+          "noi": "nocevamo",
+          "voi": "nocevate",
+          "loro": "nocevano"
+        },
+        "Futuro": {
+          "io": "nocerò",
+          "tu": "nocerai",
+          "lui/lei": "nocerà",
+          "noi": "noceremo",
+          "voi": "nocerete",
+          "loro": "noceranno"
+        },
+        "Passato prossimo": {
+          "io": "ho nociuto",
+          "tu": "hai nociuto",
+          "lui/lei": "ha nociuto",
+          "noi": "abbiamo nociuto",
+          "voi": "avete nociuto",
+          "loro": "hanno nociuto"
+        }
+      }
+    },
+    {
+      "infinitivo": "udire",
+      "traducao": "ouvir",
+      "auxiliar": "avere",
+      "participio": "udito",
+      "tempos": {
+        "Presente": {
+          "io": "odo",
+          "tu": "odi",
+          "lui/lei": "ode",
+          "noi": "udiamo",
+          "voi": "udite",
+          "loro": "odono"
+        },
+        "Imperfetto": {
+          "io": "udivo",
+          "tu": "udivi",
+          "lui/lei": "udiva",
+          "noi": "udivamo",
+          "voi": "udivate",
+          "loro": "udivano"
+        },
+        "Futuro": {
+          "io": "udirò",
+          "tu": "udirai",
+          "lui/lei": "udirà",
+          "noi": "udiremo",
+          "voi": "udirete",
+          "loro": "udiranno"
+        },
+        "Passato prossimo": {
+          "io": "ho udito",
+          "tu": "hai udito",
+          "lui/lei": "ha udito",
+          "noi": "abbiamo udito",
+          "voi": "avete udito",
+          "loro": "hanno udito"
+        },
+        "Congiuntivo presente": {
+          "io": "oda",
+          "tu": "oda",
+          "lui/lei": "oda",
+          "noi": "udiamo",
+          "voi": "udiate",
+          "loro": "odano"
+        }
+      }
+    },
+    {
+      "infinitivo": "morire",
+      "traducao": "morrer",
+      "auxiliar": "essere",
+      "participio": "morto",
+      "tempos": {
+        "Presente": {
+          "io": "muoio",
+          "tu": "muori",
+          "lui/lei": "muore",
+          "noi": "moriamo",
+          "voi": "morite",
+          "loro": "muoiono"
+        },
+        "Imperfetto": {
+          "io": "morivo",
+          "tu": "morivi",
+          "lui/lei": "moriva",
+          "noi": "morivamo",
+          "voi": "morivate",
+          "loro": "morivano"
+        },
+        "Futuro": {
+          "io": "morrò",
+          "tu": "morrai",
+          "lui/lei": "morrà",
+          "noi": "morremo",
+          "voi": "morrete",
+          "loro": "morranno"
+        },
+        "Passato prossimo": {
+          "io": "sono morto",
+          "tu": "sei morto",
+          "lui/lei": "è morto",
+          "noi": "siamo morto",
+          "voi": "siete morto",
+          "loro": "sono morto"
+        },
+        "Congiuntivo presente": {
+          "io": "muoia",
+          "tu": "muoia",
+          "lui/lei": "muoia",
+          "noi": "moriamo",
+          "voi": "moriate",
+          "loro": "muoiano"
+        }
+      }
+    },
+    {
+      "infinitivo": "salire",
+      "traducao": "subir",
+      "auxiliar": "essere",
+      "participio": "salito",
+      "tempos": {
+        "Presente": {
+          "io": "salgo",
+          "tu": "sali",
+          "lui/lei": "sale",
+          "noi": "saliamo",
+          "voi": "salite",
+          "loro": "salgono"
+        },
+        "Imperfetto": {
+          "io": "salivo",
+          "tu": "salivi",
+          "lui/lei": "saliva",
+          "noi": "salivamo",
+          "voi": "salivate",
+          "loro": "salivano"
+        },
+        "Futuro": {
+          "io": "salirò",
+          "tu": "salirai",
+          "lui/lei": "salirà",
+          "noi": "saliremo",
+          "voi": "salirete",
+          "loro": "saliranno"
+        },
+        "Passato prossimo": {
+          "io": "sono salito",
+          "tu": "sei salito",
+          "lui/lei": "è salito",
+          "noi": "siamo salito",
+          "voi": "siete salito",
+          "loro": "sono salito"
+        },
+        "Congiuntivo presente": {
+          "io": "salga",
+          "tu": "salga",
+          "lui/lei": "salga",
+          "noi": "saliamo",
+          "voi": "saliate",
+          "loro": "salgano"
+        }
+      }
+    },
+    {
+      "infinitivo": "valutare",
+      "traducao": "avaliar",
+      "auxiliar": "avere",
+      "participio": "valutato",
+      "tempos": {
+        "Presente": {
+          "io": "valuto",
+          "tu": "valuti",
+          "lui/lei": "valuta",
+          "noi": "valutiamo",
+          "voi": "valutate",
+          "loro": "valutano"
+        },
+        "Imperfetto": {
+          "io": "valutavo",
+          "tu": "valutavi",
+          "lui/lei": "valutava",
+          "noi": "valutavamo",
+          "voi": "valutavate",
+          "loro": "valutavano"
+        },
+        "Futuro": {
+          "io": "valuterò",
+          "tu": "valuterai",
+          "lui/lei": "valuterà",
+          "noi": "valuteremo",
+          "voi": "valuterete",
+          "loro": "valuteranno"
+        },
+        "Passato prossimo": {
+          "io": "ho valutato",
+          "tu": "hai valutato",
+          "lui/lei": "ha valutato",
+          "noi": "abbiamo valutato",
+          "voi": "avete valutato",
+          "loro": "hanno valutato"
+        }
+      }
+    },
+    {
+      "infinitivo": "imporre",
+      "traducao": "impor",
+      "auxiliar": "avere",
+      "participio": "imposto",
+      "tempos": {
+        "Presente": {
+          "io": "impongo",
+          "tu": "imponi",
+          "lui/lei": "impone",
+          "noi": "imponiamo",
+          "voi": "imponete",
+          "loro": "impongono"
+        },
+        "Imperfetto": {
+          "io": "imponevo",
+          "tu": "imponevi",
+          "lui/lei": "imponeva",
+          "noi": "imponevamo",
+          "voi": "imponevate",
+          "loro": "imponevano"
+        },
+        "Futuro": {
+          "io": "imporrò",
+          "tu": "imporrai",
+          "lui/lei": "imporrà",
+          "noi": "imporremo",
+          "voi": "imporrete",
+          "loro": "imporranno"
+        },
+        "Passato prossimo": {
+          "io": "ho imposto",
+          "tu": "hai imposto",
+          "lui/lei": "ha imposto",
+          "noi": "abbiamo imposto",
+          "voi": "avete imposto",
+          "loro": "hanno imposto"
+        }
       }
     }
   ]
