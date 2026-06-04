@@ -1349,6 +1349,456 @@
       "contexto": "Speranza #10",
       "audio_ipa": "",
       "xp_recompensa": 15
+    },
+    {
+      "id": "imi_151",
+      "frase_italiano": "Non c'è due senza tre.",
+      "frase_portugues": "Não há dois sem três. (As coisas acontecem em sequência)",
+      "nivel": "A2",
+      "contexto": "Proverbio usato quando qualcosa si ripete.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_152",
+      "frase_italiano": "Meglio un uovo oggi che una gallina domani.",
+      "frase_portugues": "Melhor um ovo hoje do que uma galinha amanhã. (Valoriza o certo pelo incerto)",
+      "nivel": "B1",
+      "contexto": "Proverbio sulla prudenza e sul presente.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_153",
+      "frase_italiano": "Chi dorme non piglia pesci.",
+      "frase_portugues": "Quem dorme não pega peixe. (Quem não trabalha não obtém resultados)",
+      "nivel": "B1",
+      "contexto": "Proverbio sulla diligenza.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_154",
+      "frase_italiano": "Non è tutto oro quello che luccica.",
+      "frase_portugues": "Nem tudo que reluz é ouro. (As aparências enganam)",
+      "nivel": "B1",
+      "contexto": "Proverbio sulle apparenze.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_155",
+      "frase_italiano": "Il lupo perde il pelo ma non il vizio.",
+      "frase_portugues": "O lobo perde o pelo mas não o vício. (A natureza das pessoas não muda)",
+      "nivel": "B2",
+      "contexto": "Proverbio sul carattere immutabile delle persone.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_156",
+      "frase_italiano": "Quando si dice la gatta frettolosa fa i gattini ciechi.",
+      "frase_portugues": "A pressa é inimiga da perfeição. (Fazer as coisas com calma)",
+      "nivel": "B2",
+      "contexto": "Espressione sulla fretta e i suoi svantaggi.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_157",
+      "frase_italiano": "Prendere in giro qualcuno.",
+      "frase_portugues": "Fazer graça de alguém, tirar sarro.",
+      "nivel": "A2",
+      "contexto": "Espressione idiomatica comune.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_158",
+      "frase_italiano": "Non rompere le scatole!",
+      "frase_portugues": "Não encha o saco! Não encha a paciência!",
+      "nivel": "A2",
+      "contexto": "Espressione informale di irritazione.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_159",
+      "frase_italiano": "Fare il furbo.",
+      "frase_portugues": "Tentar se safar, agir com esperteza maliciosa.",
+      "nivel": "A2",
+      "contexto": "Espressione usata per descrivere chi cerca di fregare gli altri.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_160",
+      "frase_italiano": "Avere una fifa blu.",
+      "frase_portugues": "Estar com um medo danado, ter um medo azul.",
+      "nivel": "B1",
+      "contexto": "Espressione che indica molta paura.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_161",
+      "frase_italiano": "Buttarsi a pesce.",
+      "frase_portugues": "Atirar-se de cabeça, jogar-se de corpo e alma.",
+      "nivel": "B1",
+      "contexto": "Espressione per indicare grande impegno o entusiasmo.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_162",
+      "frase_italiano": "Fare il passo più lungo della gamba.",
+      "frase_portugues": "Pular etapas, dar um passo maior que a perna.",
+      "nivel": "B2",
+      "contexto": "Espressione che invita a essere realistici.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_163",
+      "frase_italiano": "Non avere peli sulla lingua.",
+      "frase_portugues": "Não ter papas na língua, ser muito direto e sem rodeios.",
+      "nivel": "B2",
+      "contexto": "Espressione per chi parla senza diplomatica.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_164",
+      "frase_italiano": "Avere il dente avvelenato.",
+      "frase_portugues": "Guardar rancor, estar com dente de alguém.",
+      "nivel": "B2",
+      "contexto": "Espressione che indica risentimento.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_165",
+      "frase_italiano": "Essere un osso duro.",
+      "frase_portugues": "Ser um osso duro de roer, ser difícil de lidar ou vencer.",
+      "nivel": "B1",
+      "contexto": "Espressione per descrivere qualcuno di difficile.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_166",
+      "frase_italiano": "Cavarsela con poco.",
+      "frase_portugues": "Se virar com pouco, se safar com o mínimo.",
+      "nivel": "B1",
+      "contexto": "Espressione che indica adattabilità.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_167",
+      "frase_italiano": "Fare orecchie da mercante.",
+      "frase_portugues": "Fazer ouvidos moucos, fingir que não ouviu.",
+      "nivel": "B2",
+      "contexto": "Espressione per chi ignora deliberatamente.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_168",
+      "frase_italiano": "Essere al settimo cielo.",
+      "frase_portugues": "Estar no sétimo céu, estar muito feliz.",
+      "nivel": "A2",
+      "contexto": "Espressione di grande felicità.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_169",
+      "frase_italiano": "Perdere la testa.",
+      "frase_portugues": "Perder a cabeça, agir sem pensar.",
+      "nivel": "A2",
+      "contexto": "Espressione che indica perdita di controllo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_170",
+      "frase_italiano": "Avere la testa tra le nuvole.",
+      "frase_portugues": "Estar com a cabeça nas nuvens, ser distraído.",
+      "nivel": "B1",
+      "contexto": "Espressione per chi è distratto o sognatore.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_171",
+      "frase_italiano": "Tagliare la corda.",
+      "frase_portugues": "Dar o fora, escapar rapidamente.",
+      "nivel": "B1",
+      "contexto": "Espressione informale per indicare fuga rapida.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_172",
+      "frase_italiano": "Non vale un fico secco.",
+      "frase_portugues": "Não vale nada, não tem nenhum valor.",
+      "nivel": "B1",
+      "contexto": "Espressione per indicare qualcosa di nessun valore.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_173",
+      "frase_italiano": "Alzare i tacchi.",
+      "frase_portugues": "Dar o fora, ir embora rapidamente.",
+      "nivel": "B1",
+      "contexto": "Espressione informale per partire in fretta.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_174",
+      "frase_italiano": "Avere le braccine corte.",
+      "frase_portugues": "Ser pão-duro, ser sovina.",
+      "nivel": "B1",
+      "contexto": "Espressione dialettale per indicare avarizia.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_175",
+      "frase_italiano": "Rimboccarsi le maniche.",
+      "frase_portugues": "Arregaçar as mangas, trabalhar com afinco.",
+      "nivel": "B1",
+      "contexto": "Espressione che indica impegno nel lavoro.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_176",
+      "frase_italiano": "Tirare le cuoia.",
+      "frase_portugues": "Esticar as canelas, morrer. (Uso informale/irônico)",
+      "nivel": "C1",
+      "contexto": "Espressione colloquiale e ironica per la morte.",
+      "audio_ipa": "",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imi_177",
+      "frase_italiano": "Fare il diavolo a quattro.",
+      "frase_portugues": "Fazer um escândalo, armar uma bagunça.",
+      "nivel": "B2",
+      "contexto": "Espressione per chi fa molto rumore o casino.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_178",
+      "frase_italiano": "Essere nei guai fino al collo.",
+      "frase_portugues": "Estar em maus lençóis, estar encrencado até o pescoço.",
+      "nivel": "B2",
+      "contexto": "Espressione per situazioni di grande difficoltà.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_179",
+      "frase_italiano": "Andare liscio come l'olio.",
+      "frase_portugues": "Ir redondo como o azeite, correr sem problemas.",
+      "nivel": "B1",
+      "contexto": "Espressione per qualcosa che va perfettamente.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_180",
+      "frase_italiano": "Perdere il filo del discorso.",
+      "frase_portugues": "Perder o fio do raciocínio, perder o fio da meada.",
+      "nivel": "B1",
+      "contexto": "Espressione per chi perde la concentrazione nel parlare.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_181",
+      "frase_italiano": "In bocca al lupo! Crepi!",
+      "frase_portugues": "Boa sorte! (ritual completo de boa sorte em italiano)",
+      "nivel": "A2",
+      "contexto": "Formula augurale prima di un evento importante.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_182",
+      "frase_italiano": "Tanto di cappello!",
+      "frase_portugues": "Chapéu! Meu respeito! (expressão de admiração)",
+      "nivel": "B1",
+      "contexto": "Espressione di ammirazione e rispetto.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_183",
+      "frase_italiano": "Non fare il finto tonto.",
+      "frase_portugues": "Não banque o tonto, não finja que não entende.",
+      "nivel": "B1",
+      "contexto": "Espressione per chi finge di non capire.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_184",
+      "frase_italiano": "Essere al verde.",
+      "frase_portugues": "Estar sem dinheiro, estar na miséria. (Repetida mas muito importante)",
+      "nivel": "A2",
+      "contexto": "Espressione comunissima per mancanza di denaro.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_185",
+      "frase_italiano": "Mettere il carro davanti ai buoi.",
+      "frase_portugues": "Colocar o carro na frente dos bois, agir antes da hora.",
+      "nivel": "B2",
+      "contexto": "Proverbio su chi anticipa le cose.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_186",
+      "frase_italiano": "Gettare la spugna.",
+      "frase_portugues": "Jogar a toalha, desistir.",
+      "nivel": "B1",
+      "contexto": "Espressione sportiva per indicare resa.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_187",
+      "frase_italiano": "Avere il pallino di qualcosa.",
+      "frase_portugues": "Ser apaixonado por algo, ter mania de algo.",
+      "nivel": "B1",
+      "contexto": "Espressione per una passione o ossessione.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_188",
+      "frase_italiano": "Stare con il fiato sul collo.",
+      "frase_portugues": "Ficar no pescoço de alguém, pressionar constantemente.",
+      "nivel": "B2",
+      "contexto": "Espressione per chi pressiona o controlla di continuo.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_189",
+      "frase_italiano": "Fare una figuraccia.",
+      "frase_portugues": "Fazer uma figura horrível, passar vergonha.",
+      "nivel": "A2",
+      "contexto": "Espressione comune per indicare imbarazzo.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_190",
+      "frase_italiano": "Avere la luna storta.",
+      "frase_portugues": "Estar de mau humor, ter levantado com o pé esquerdo.",
+      "nivel": "B1",
+      "contexto": "Espressione per indicare cattivo umore.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_191",
+      "frase_italiano": "Non vendermi fumo.",
+      "frase_portugues": "Não me venda gato por lebre, não me enrole.",
+      "nivel": "B2",
+      "contexto": "Espressione per chi cerca di ingannare.",
+      "audio_ipa": "",
+      "xp_recompensa": 25
+    },
+    {
+      "id": "imi_192",
+      "frase_italiano": "Fare le ore piccole.",
+      "frase_portugues": "Ficar acordado até altas horas da madrugada.",
+      "nivel": "B1",
+      "contexto": "Espressione per indicare tardiva ora notturna.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_193",
+      "frase_italiano": "Avere una memoria di ferro.",
+      "frase_portugues": "Ter uma memória de ferro, não esquecer nada.",
+      "nivel": "B1",
+      "contexto": "Espressione per chi ricorda tutto.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_194",
+      "frase_italiano": "Fare il grande.",
+      "frase_portugues": "Se achar, se fazer de importante.",
+      "nivel": "A2",
+      "contexto": "Espressione per chi ostenta superiorità.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_195",
+      "frase_italiano": "Toccare ferro.",
+      "frase_portugues": "Bater na madeira para dar sorte.",
+      "nivel": "A2",
+      "contexto": "Gesto scaramantico italiano tipico.",
+      "audio_ipa": "",
+      "xp_recompensa": 15
+    },
+    {
+      "id": "imi_196",
+      "frase_italiano": "Avere le mani d'oro.",
+      "frase_portugues": "Ter mãos de ouro, ser muito habilidoso manualmente.",
+      "nivel": "B1",
+      "contexto": "Espressione per artigiani o chi lavora bene con le mani.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_197",
+      "frase_italiano": "Non stare nella pelle.",
+      "frase_portugues": "Não caber em si de alegria ou ansiedade.",
+      "nivel": "B1",
+      "contexto": "Espressione di grande eccitazione o attesa.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_198",
+      "frase_italiano": "Passare il Rubicone.",
+      "frase_portugues": "Cruzar o Rubicão, tomar uma decisão irreversível.",
+      "nivel": "C1",
+      "contexto": "Espressione colta con riferimento a Giulio Cesare.",
+      "audio_ipa": "",
+      "xp_recompensa": 30
+    },
+    {
+      "id": "imi_199",
+      "frase_italiano": "Come il cacio sui maccheroni.",
+      "frase_portugues": "Como anel no dedo, cair perfeitamente bem.",
+      "nivel": "B1",
+      "contexto": "Espressione italiana tipica per qualcosa di perfettamente adatto.",
+      "audio_ipa": "",
+      "xp_recompensa": 20
+    },
+    {
+      "id": "imi_200",
+      "frase_italiano": "Che schifo! Non si fa!",
+      "frase_portugues": "Que nojo! Isso não se faz! (expressão de reprovação forte)",
+      "nivel": "A1",
+      "contexto": "Espressione forte di disapprovazione o disgusto.",
+      "audio_ipa": "",
+      "xp_recompensa": 10
     }
   ]
 }

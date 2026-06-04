@@ -11900,6 +11900,2918 @@
         "shampoo"
       ],
       "xp_recompensa": 50
+    },
+    {
+      "id": "dial_151",
+      "titulo": "All'Università",
+      "icone": "🎓",
+      "nivel": "B1",
+      "contexto": "Você está na secretaria da universidade para se matricular.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Segretaria",
+          "frase": "Buongiorno, in cosa posso aiutarla?",
+          "traducao": "Bom dia, em que posso ajudá-lo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Buongiorno, vorrei iscrivermi al corso di italiano.",
+          "traducao": "Bom dia, eu gostaria de me inscrever no curso de italiano.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Buongiorno, vorrei iscrivermi al corso di italiano.",
+            "Scusi, dov'è la mensa?",
+            "Ho perso i miei libri.",
+            "Cerco il professore Rossi."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Segretaria",
+          "frase": "Ha già i documenti necessari? Servono il passaporto e la foto.",
+          "traducao": "Você já tem os documentos necessários? São necessários o passaporte e a foto.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, ho tutto con me. Quando iniziano le lezioni?",
+          "traducao": "Sim, tenho tudo comigo. Quando começam as aulas?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, ho tutto con me. Quando iniziano le lezioni?",
+            "Non ho capito.",
+            "Dove posso parcheggiare?",
+            "Quanto costa la mensa?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "iscriversi",
+        "documenti",
+        "lezioni",
+        "università"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "dial_152",
+      "titulo": "In Palestra",
+      "icone": "🏋️",
+      "nivel": "A2",
+      "contexto": "Você quer se inscrever numa academia.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Istruttore",
+          "frase": "Ciao! Sei nuovo qui? Posso aiutarti?",
+          "traducao": "Olá! Você é novo aqui? Posso ajudá-lo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, vorrei un abbonamento mensile, per favore.",
+          "traducao": "Sim, eu gostaria de uma mensalidade, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, vorrei un abbonamento mensile, per favore.",
+            "No grazie, solo guardo.",
+            "Dov'è lo spogliatoio?",
+            "Ho già un abbonamento."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Istruttore",
+          "frase": "Costa cinquanta euro al mese. Include tutte le attrezzature.",
+          "traducao": "Custa cinquenta euros por mês. Inclui todos os equipamentos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Perfetto! Posso iniziare da oggi?",
+          "traducao": "Perfeito! Posso começar hoje?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfetto! Posso iniziare da oggi?",
+            "È troppo caro.",
+            "Non mi piace la palestra.",
+            "Cerco qualcosa di più economico."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "abbonamento",
+        "mensile",
+        "attrezzatura",
+        "istruttore"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_153",
+      "titulo": "Dal Notaio",
+      "icone": "📜",
+      "nivel": "C1",
+      "contexto": "Você vai ao cartório assinar um contrato.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Notaio",
+          "frase": "Buongiorno, si accomodi. Ha portato tutti i documenti?",
+          "traducao": "Bom dia, sente-se. Trouxe todos os documentos?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Buongiorno, sì. Ho il contratto firmato e i documenti d'identità.",
+          "traducao": "Bom dia, sim. Tenho o contrato assinado e os documentos de identidade.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Buongiorno, sì. Ho il contratto firmato e i documenti d'identità.",
+            "Ho dimenticato tutto a casa.",
+            "Non capisco cosa devo portare.",
+            "Posso tornare domani?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Notaio",
+          "frase": "Bene. Legga attentamente prima di firmare qui.",
+          "traducao": "Bem. Leia atentamente antes de assinar aqui.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Certo. Posso avere una copia del documento firmato?",
+          "traducao": "Claro. Posso ter uma cópia do documento assinado?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Certo. Posso avere una copia del documento firmato?",
+            "Firmo senza leggere.",
+            "Quando devo pagare?",
+            "Ho già un avvocato."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "contratto",
+        "firmare",
+        "documento",
+        "notaio",
+        "copia"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "dial_154",
+      "titulo": "In Pizzeria (Ordine)",
+      "icone": "🍕",
+      "nivel": "A1",
+      "contexto": "Você está pedindo pizza para levar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Pizzaiolo",
+          "frase": "Prego, cosa desidera?",
+          "traducao": "Pois não, o que deseja?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Vorrei una pizza margherita e una marinara, per favore.",
+          "traducao": "Eu gostaria de uma pizza margherita e uma marinara, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Vorrei una pizza margherita e una marinara, per favore.",
+            "Non so cosa scegliere.",
+            "Non mangio pizza.",
+            "Solo un'acqua, grazie."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Pizzaiolo",
+          "frase": "Da portare via o da mangiare qui?",
+          "traducao": "Para viagem ou para comer aqui?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Da portare via, grazie. Quanto tempo ci vuole?",
+          "traducao": "Para viagem, obrigado. Quanto tempo leva?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Da portare via, grazie. Quanto tempo ci vuole?",
+            "Da mangiare qui va bene.",
+            "Posso aspettare qui?",
+            "Non importa."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pizza",
+        "margherita",
+        "marinara",
+        "portare via"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_155",
+      "titulo": "Al Pronto Soccorso",
+      "icone": "🏥",
+      "nivel": "B2",
+      "contexto": "Você foi ao pronto-socorro com dor.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Infermiere",
+          "frase": "Buonasera, cosa è successo?",
+          "traducao": "Boa tarde, o que aconteceu?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ho un forte dolore al petto da stamattina.",
+          "traducao": "Tenho uma forte dor no peito desde esta manhã.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho un forte dolore al petto da stamattina.",
+            "Mi sono tagliato il dito.",
+            "Ho la febbre.",
+            "Sono caduto in bici."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Infermiere",
+          "frase": "Ha difficoltà a respirare? Prendo subito il medico.",
+          "traducao": "Tem dificuldade para respirar? Chamo o médico imediatamente.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Un po' sì. Ho anche le vertigini.",
+          "traducao": "Um pouco sim. Também tenho tonturas.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Un po' sì. Ho anche le vertigini.",
+            "No, sto bene.",
+            "Aspetto qui fuori.",
+            "Non è urgente."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pronto soccorso",
+        "dolore",
+        "petto",
+        "vertigini",
+        "respirare"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "dial_156",
+      "titulo": "Alla Stazione di Polizia",
+      "icone": "👮",
+      "nivel": "B2",
+      "contexto": "Você perdeu a carteira e vai registrar o boletim de ocorrência.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agente",
+          "frase": "Buongiorno, cosa le è successo?",
+          "traducao": "Bom dia, o que aconteceu com você?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ho perso il portafoglio con i documenti e il denaro.",
+          "traducao": "Perdi a carteira com os documentos e o dinheiro.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho perso il portafoglio con i documenti e il denaro.",
+            "Mi hanno rubato la borsa.",
+            "Ho visto un incidente.",
+            "Voglio fare una denuncia."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agente",
+          "frase": "Dove lo ha perso? Ha qualche testimone?",
+          "traducao": "Onde o perdeu? Tem alguma testemunha?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Penso al supermercato. Ho bisogno di un documento per l'ambasciata.",
+          "traducao": "Acho que no supermercado. Preciso de um documento para a embaixada.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Penso al supermercato. Ho bisogno di un documento per l'ambasciata.",
+            "Non so dove l'ho perso.",
+            "Non importa, vado via.",
+            "Posso tornare dopo?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "portafoglio",
+        "denuncia",
+        "documento",
+        "ambasciata",
+        "testimone"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "dial_157",
+      "titulo": "Alla Fermata dell'Autobus",
+      "icone": "🚌",
+      "nivel": "A1",
+      "contexto": "Você precisa saber qual ônibus tomar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Passante",
+          "frase": "Buongiorno, posso aiutarla?",
+          "traducao": "Bom dia, posso ajudá-lo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. Quale autobus va al centro storico?",
+          "traducao": "Sim, obrigado. Qual ônibus vai ao centro histórico?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. Quale autobus va al centro storico?",
+            "No grazie, so già.",
+            "Dov'è la metro?",
+            "Quanto costa il taxi?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Passante",
+          "frase": "Il numero 14 passa ogni dieci minuti.",
+          "traducao": "O número 14 passa a cada dez minutos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Grazie mille! Dove devo scendere?",
+          "traducao": "Muito obrigado! Onde devo descer?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Grazie mille! Dove devo scendere?",
+            "Preferisco camminare.",
+            "Prendo il taxi.",
+            "Non capisco."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "autobus",
+        "fermata",
+        "centro storico",
+        "scendere"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_158",
+      "titulo": "In Agenzia Immobiliare",
+      "icone": "🏠",
+      "nivel": "B2",
+      "contexto": "Você procura um apartamento para alugar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agente",
+          "frase": "Buongiorno! Sta cercando casa?",
+          "traducao": "Bom dia! Está procurando casa?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, cerco un bilocale in affitto, non troppo lontano dal centro.",
+          "traducao": "Sim, procuro um dois-quartos para alugar, não muito longe do centro.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, cerco un bilocale in affitto, non troppo lontano dal centro.",
+            "Voglio comprare una villa.",
+            "Non ho soldi per l'affitto.",
+            "Cerco un garage."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agente",
+          "frase": "Ho qualcosa in zona Prati, 800 euro al mese, condominio incluso.",
+          "traducao": "Tenho algo na zona Prati, 800 euros por mês, condomínio incluído.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "È possibile vederlo oggi pomeriggio?",
+          "traducao": "É possível vê-lo hoje à tarde?",
+          "audio_ipa": "",
+          "alternativas": [
+            "È possibile vederlo oggi pomeriggio?",
+            "È troppo caro per me.",
+            "Non mi interessa.",
+            "Posso pagare meno?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "bilocale",
+        "affitto",
+        "condominio",
+        "zona",
+        "pomeriggio"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "dial_159",
+      "titulo": "Con il Vicino di Casa",
+      "icone": "🏘️",
+      "nivel": "A2",
+      "contexto": "Você está conversando com seu vizinho.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Vicino",
+          "frase": "Buongiorno! Come stai? Non ti vedo da un po'.",
+          "traducao": "Bom dia! Como vai? Não te vejo há algum tempo.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sto bene, grazie! Ero in vacanza per due settimane.",
+          "traducao": "Estou bem, obrigado! Estava de férias por duas semanas.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sto bene, grazie! Ero in vacanza per due settimane.",
+            "Non sto molto bene.",
+            "Ho lavorato tanto.",
+            "Ero malato."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Vicino",
+          "frase": "Dove sei andato? Bel posto?",
+          "traducao": "Onde você foi? Lugar bonito?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sono andato in Sicilia. Meraviglioso!",
+          "traducao": "Fui para a Sicília. Maravilhoso!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sono andato in Sicilia. Meraviglioso!",
+            "Sono rimasto a casa.",
+            "Sono andato dal medico.",
+            "Non mi ricordo."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "vicino",
+        "vacanza",
+        "settimane",
+        "meraviglioso",
+        "Sicilia"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_160",
+      "titulo": "Al Ristorante (Reclamo)",
+      "icone": "😤",
+      "nivel": "B2",
+      "contexto": "O seu pedido no restaurante chegou errado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Cameriere",
+          "frase": "Ecco la sua bistecca al sangue.",
+          "traducao": "Aqui está o seu bife mal passado.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Scusi, io avevo ordinato la bistecca ben cotta, non al sangue.",
+          "traducao": "Com licença, eu tinha pedido o bife bem passado, não mal passado.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Scusi, io avevo ordinato la bistecca ben cotta, non al sangue.",
+            "Va bene così, grazie.",
+            "Non ho fame.",
+            "Posso avere il menù di nuovo?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Cameriere",
+          "frase": "Mi scusi tanto, gliela cambio subito. Ci vuole qualche minuto.",
+          "traducao": "Me desculpe muito, troco imediatamente. Leva alguns minutos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Grazie, non si preoccupi. Succede.",
+          "traducao": "Obrigado, não se preocupe. Acontece.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Grazie, non si preoccupi. Succede.",
+            "Voglio parlare con il direttore.",
+            "Non pago il conto.",
+            "È inaccettabile!"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "bistecca",
+        "ordinare",
+        "cotto",
+        "sangue",
+        "cambiare"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "dial_161",
+      "titulo": "In Libreria (Consiglio)",
+      "icone": "📚",
+      "nivel": "B1",
+      "contexto": "Você quer um conselho de livro para aprender italiano.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Libraio",
+          "frase": "Posso consigliarle qualcosa?",
+          "traducao": "Posso recomendar algo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, cerco un romanzo in italiano non troppo difficile per il mio livello.",
+          "traducao": "Sim, procuro um romance em italiano não muito difícil para o meu nível.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, cerco un romanzo in italiano non troppo difficile per il mio livello.",
+            "Voglio un libro di grammatica.",
+            "Non mi piace leggere.",
+            "Cerco un dizionario."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Libraio",
+          "frase": "Che ne dice di Italo Calvino? Le fiabe italiane sono bellissime.",
+          "traducao": "O que acha de Italo Calvino? As fábulas italianas são lindíssimas.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ottima idea! Ne prendo una copia.",
+          "traducao": "Ótima ideia! Pego uma cópia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ottima idea! Ne prendo una copia.",
+            "Non conosco quest'autore.",
+            "Ho già letto tutto Calvino.",
+            "Preferisco i fumetti."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "romanzo",
+        "livello",
+        "consigliare",
+        "fiabe",
+        "copia"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_162",
+      "titulo": "Colloquio di Lavoro",
+      "icone": "💼",
+      "nivel": "C1",
+      "contexto": "Você está numa entrevista de emprego.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Direttore",
+          "frase": "Buongiorno, si presenti brevemente.",
+          "traducao": "Bom dia, apresente-se brevemente.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Buongiorno. Mi chiamo Marco, ho cinque anni di esperienza nel marketing digitale.",
+          "traducao": "Bom dia. Me chamo Marco, tenho cinco anos de experiência em marketing digital.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Buongiorno. Mi chiamo Marco, ho cinque anni di esperienza nel marketing digitale.",
+            "Ciao, sono stanco.",
+            "Non so cosa dire.",
+            "Ho poche esperienze."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Direttore",
+          "frase": "Perché vuole lavorare con noi?",
+          "traducao": "Por que quer trabalhar conosco?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ammiro i valori della vostra azienda e credo di poter contribuire molto.",
+          "traducao": "Admiro os valores da sua empresa e acredito poder contribuir muito.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ammiro i valori della vostra azienda e credo di poter contribuire molto.",
+            "Ho bisogno di soldi.",
+            "Non ho altre opzioni.",
+            "Mi hanno consigliato."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "colloquio",
+        "esperienza",
+        "marketing",
+        "azienda",
+        "contribuire"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "dial_163",
+      "titulo": "Al Museo (Visita Guidata)",
+      "icone": "🏛️",
+      "nivel": "B1",
+      "contexto": "Você está numa visita guiada a um museu.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Guida",
+          "frase": "Benvenuti! Questo è il museo nazionale etrusco. Seguimi, per favore.",
+          "traducao": "Bem-vindos! Este é o museu nacional etrusco. Sigam-me, por favor.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Posso fare una domanda? Da quando risalgono questi reperti?",
+          "traducao": "Posso fazer uma pergunta? De quando datam estes artefatos?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Posso fare una domanda? Da quando risalgono questi reperti?",
+            "Quando finiamo?",
+            "Dov'è il bagno?",
+            "Posso fotografare?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Guida",
+          "frase": "Questi vasi risalgono al sesto secolo avanti Cristo. Sono unici.",
+          "traducao": "Estes vasos datam do sexto século antes de Cristo. São únicos.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Incredibile! Si possono fare fotografie?",
+          "traducao": "Incrível! Podem-se tirar fotografias?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Incredibile! Si possono fare fotografie?",
+            "Non mi interessa la storia.",
+            "Posso toccarli?",
+            "Quando apre il negozio?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "museo",
+        "guida",
+        "reperti",
+        "risalire",
+        "fotografie"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "dial_164",
+      "titulo": "In Treno (Scompartimento)",
+      "icone": "🚆",
+      "nivel": "A2",
+      "contexto": "Você está no trem e precisa verificar seu assento.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Passeggero",
+          "frase": "Scusi, credo che quel posto sia il mio.",
+          "traducao": "Com licença, acho que aquele lugar é meu.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Mi scusi! Ho sbagliato scompartimento. Cerco il 7B.",
+          "traducao": "Me desculpe! Errei o compartimento. Procuro o 7B.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Mi scusi! Ho sbagliato scompartimento. Cerco il 7B.",
+            "È il mio posto, ho il biglietto.",
+            "Non capisco.",
+            "Vado nel corridoio."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Passeggero",
+          "frase": "Il 7B è due carrozze più avanti.",
+          "traducao": "O 7B é dois vagões à frente.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Grazie mille! Mi dispiace per il disturbo.",
+          "traducao": "Muito obrigado! Desculpe pelo transtorno.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Grazie mille! Mi dispiace per il disturbo.",
+            "Non mi interessa.",
+            "Ho il diritto di restare.",
+            "Il biglietto è sbagliato."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "treno",
+        "scompartimento",
+        "posto",
+        "carrozza",
+        "biglietto"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_165",
+      "titulo": "Al Mercato Rionale",
+      "icone": "🥦",
+      "nivel": "A2",
+      "contexto": "Você compra verduras no mercado de bairro.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Venditore",
+          "frase": "Buongiorno signora/signore! Cosa le do oggi?",
+          "traducao": "Bom dia senhora/senhor! O que lhe dou hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Mezzo chilo di pomodori e un chilo di zucchine, grazie.",
+          "traducao": "Meio quilo de tomates e um quilo de abobrinha, obrigado.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Mezzo chilo di pomodori e un chilo di zucchine, grazie.",
+            "Niente, grazie.",
+            "Solo mele e pere.",
+            "Quanto costano le melanzane?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Venditore",
+          "frase": "Sono freschissimi di stamattina! Tre euro in tutto.",
+          "traducao": "São fresquíssimos de hoje de manhã! Três euros no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ottimo! Metta anche due peperoni rossi.",
+          "traducao": "Ótimo! Ponha também dois pimentões vermelhos.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ottimo! Metta anche due peperoni rossi.",
+            "Va bene così.",
+            "Sono cari.",
+            "Li prendo domani."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "mercato",
+        "pomodori",
+        "zucchine",
+        "fresco",
+        "peperoni"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_166",
+      "titulo": "Prenotare un Ristorante",
+      "icone": "📞",
+      "nivel": "B1",
+      "contexto": "Você liga para reservar uma mesa.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Ristorante",
+          "frase": "Ristorante La Pergola, buonasera!",
+          "traducao": "Restaurante La Pergola, boa noite!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Buonasera, vorrei prenotare un tavolo per sabato sera, per quattro persone.",
+          "traducao": "Boa noite, gostaria de reservar uma mesa para sábado à noite, para quatro pessoas.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Buonasera, vorrei prenotare un tavolo per sabato sera, per quattro persone.",
+            "Volete ordinare?",
+            "Dov'è il vostro ristorante?",
+            "Avete una pizza buona?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Ristorante",
+          "frase": "Certo, a che ora? Abbiamo disponibilità alle 20:00 o alle 21:30.",
+          "traducao": "Claro, a que horas? Temos disponibilidade às 20h ou às 21h30.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Alle 20:00, grazie. A nome Bianchi.",
+          "traducao": "Às 20h, obrigado. Em nome de Bianchi.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Alle 20:00, grazie. A nome Bianchi.",
+            "Non importa l'ora.",
+            "Preferiamo il pranzo.",
+            "Verremo senza prenotazione."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "prenotare",
+        "tavolo",
+        "disponibilità",
+        "nome",
+        "sera"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_167",
+      "titulo": "Comprare un Biglietto del Treno",
+      "icone": "🎫",
+      "nivel": "A2",
+      "contexto": "Você está na bilheteria da estação.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Bigliettaio",
+          "frase": "Prego, desidera?",
+          "traducao": "Pois não, deseja?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Un biglietto di andata e ritorno per Roma, seconda classe.",
+          "traducao": "Uma passagem de ida e volta para Roma, segunda classe.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Un biglietto di andata e ritorno per Roma, seconda classe.",
+            "Solo andata, prima classe.",
+            "Un abbonamento settimanale.",
+            "Devo cambiare il mio biglietto."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Bigliettaio",
+          "frase": "Per quando? C'è un intercity alle 14:30.",
+          "traducao": "Para quando? Há um intercity às 14h30.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Per oggi pomeriggio. Quanto viene?",
+          "traducao": "Para hoje à tarde. Quanto fica?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Per oggi pomeriggio. Quanto viene?",
+            "Per domani mattina.",
+            "Non importa il prezzo.",
+            "Ho già il biglietto online."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "biglietto",
+        "andata",
+        "ritorno",
+        "seconda classe",
+        "intercity"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_168",
+      "titulo": "Al Consolato",
+      "icone": "🛂",
+      "nivel": "C1",
+      "contexto": "Você vai ao consulado renovar o passaporte.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Funzionario",
+          "frase": "Buongiorno, mi dica.",
+          "traducao": "Bom dia, diga-me.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Buongiorno, devo rinnovare il passaporto. È scaduto il mese scorso.",
+          "traducao": "Bom dia, preciso renovar o passaporte. Venceu no mês passado.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Buongiorno, devo rinnovare il passaporto. È scaduto il mese scorso.",
+            "Voglio chiedere la cittadinanza.",
+            "Ho perso il passaporto.",
+            "Devo fare un visto."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Funzionario",
+          "frase": "Ha le foto tessera e il modulo compilato?",
+          "traducao": "Tem as fotos 3x4 e o formulário preenchido?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ho le foto ma non ho il modulo. Posso averlo qui?",
+          "traducao": "Tenho as fotos mas não tenho o formulário. Posso pegá-lo aqui?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho le foto ma non ho il modulo. Posso averlo qui?",
+            "Ho tutto con me.",
+            "Torno domani.",
+            "Non serve il modulo."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "passaporto",
+        "rinnovare",
+        "scaduto",
+        "modulo",
+        "foto tessera"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "dial_169",
+      "titulo": "Chiedere un Favore al Collega",
+      "icone": "🤝",
+      "nivel": "B1",
+      "contexto": "Você precisa pedir um favor a um colega de trabalho.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Collega",
+          "frase": "Ciao! Come va?",
+          "traducao": "Olá! Como vai?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Bene grazie! Ti chiedo un favore: puoi coprirmi domani mattina?",
+          "traducao": "Bem obrigado! Te peço um favor: pode me cobrir amanhã de manhã?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Bene grazie! Ti chiedo un favore: puoi coprirmi domani mattina?",
+            "Ho un problema con il computer.",
+            "Sai dov'è il capo?",
+            "Quando è la riunione?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Collega",
+          "frase": "Dipende, che ore? Ho una riunione alle dieci.",
+          "traducao": "Depende, que horas? Tenho uma reunião às dez.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Dalle 8 alle 9. Te lo restituisco venerdì.",
+          "traducao": "Das 8 às 9. Te devolvo na sexta.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Dalle 8 alle 9. Te lo restituisco venerdì.",
+            "Tutto il giorno.",
+            "Non importa.",
+            "Puoi chiederlo al capo."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "favore",
+        "coprire",
+        "riunione",
+        "restituire",
+        "collega"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_170",
+      "titulo": "In Farmacia (Prescrizione)",
+      "icone": "💊",
+      "nivel": "B1",
+      "contexto": "Você vai à farmácia com uma receita médica.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Farmacista",
+          "frase": "Buongiorno, posso aiutarla?",
+          "traducao": "Bom dia, posso ajudá-lo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, ho questa ricetta del medico. Può prepararmi questi medicinali?",
+          "traducao": "Sim, tenho esta receita do médico. Pode me preparar estes medicamentos?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, ho questa ricetta del medico. Può prepararmi questi medicinali?",
+            "Cerco qualcosa per il mal di testa.",
+            "Non ho la ricetta.",
+            "Quanto costa l'aspirina?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Farmacista",
+          "frase": "Certo. L'antibiotico va preso due volte al giorno durante i pasti.",
+          "traducao": "Claro. O antibiótico deve ser tomado duas vezes por dia durante as refeições.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Capito. Per quanti giorni devo prendere il farmaco?",
+          "traducao": "Entendido. Por quantos dias devo tomar o medicamento?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Capito. Per quanti giorni devo prendere il farmaco?",
+            "Va bene così.",
+            "Ho già questo medicinale.",
+            "Non mi piacciono gli antibiotici."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "ricetta",
+        "medicinale",
+        "antibiotico",
+        "pasti",
+        "farmacista"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_171",
+      "titulo": "In Banca (Aprire un Conto)",
+      "icone": "🏦",
+      "nivel": "B2",
+      "contexto": "Você vai ao banco abrir uma conta corrente.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Impiegato",
+          "frase": "Buongiorno, la sto aspettando. Si accomodi.",
+          "traducao": "Bom dia, estava esperando por você. Sente-se.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Grazie. Vorrei aprire un conto corrente. Cosa mi serve?",
+          "traducao": "Obrigado. Gostaria de abrir uma conta corrente. O que preciso?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Grazie. Vorrei aprire un conto corrente. Cosa mi serve?",
+            "Voglio un mutuo.",
+            "Ho già un conto.",
+            "Devo cambiare dei soldi."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Impiegato",
+          "frase": "Serve il documento d'identità, il codice fiscale e un deposito iniziale.",
+          "traducao": "São necessários o documento de identidade, o código fiscal e um depósito inicial.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ho tutto. C'è una carta di debito inclusa?",
+          "traducao": "Tenho tudo. Inclui cartão de débito?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho tutto. C'è una carta di debito inclusa?",
+            "Non ho il codice fiscale.",
+            "Quanto sono le commissioni?",
+            "Preferisco i contanti."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "conto corrente",
+        "codice fiscale",
+        "deposito",
+        "carta di debito",
+        "impiegato"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "dial_172",
+      "titulo": "Parlare del Tempo Libero",
+      "icone": "🎯",
+      "nivel": "A2",
+      "contexto": "Você e um amigo falam sobre hobbies.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Amico",
+          "frase": "Cosa fai nel tempo libero?",
+          "traducao": "O que você faz no tempo livre?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Mi piace leggere e cucinare. E tu?",
+          "traducao": "Gosto de ler e cozinhar. E você?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Mi piace leggere e cucinare. E tu?",
+            "Non ho tempo libero.",
+            "Lavoro sempre.",
+            "Non so."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Amico",
+          "frase": "Io gioco a calcio il sabato e vado in palestra durante la settimana.",
+          "traducao": "Jogo futebol no sábado e vou à academia durante a semana.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Bello! Hai un campo preferito dove giochi?",
+          "traducao": "Legal! Você tem um campo favorito onde joga?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Bello! Hai un campo preferito dove giochi?",
+            "Anch'io gioco a calcio!",
+            "Preferisco il tennis.",
+            "Non mi piace lo sport."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "tempo libero",
+        "leggere",
+        "cucinare",
+        "calcio",
+        "palestra"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_173",
+      "titulo": "Al Supermercato (Cassa)",
+      "icone": "🛒",
+      "nivel": "A1",
+      "contexto": "Você está pagando no caixa do supermercado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Cassiere",
+          "frase": "Buongiorno! Ha la tessera fedeltà?",
+          "traducao": "Bom dia! Tem o cartão fidelidade?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "No, non ce l'ho ancora. Come si fa per averla?",
+          "traducao": "Não, ainda não tenho. Como se faz para tê-la?",
+          "audio_ipa": "",
+          "alternativas": [
+            "No, non ce l'ho ancora. Come si fa per averla?",
+            "Sì, eccola.",
+            "Non mi interessa.",
+            "L'ho dimenticata a casa."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Cassiere",
+          "frase": "Compila questo modulo. Fa 47 euro e 20 in tutto.",
+          "traducao": "Preencha este formulário. São 47 euros e 20 centavos no total.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Pago con la carta. Posso avere lo scontrino?",
+          "traducao": "Pago com cartão. Posso ter o recibo?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Pago con la carta. Posso avere lo scontrino?",
+            "Pago in contanti.",
+            "Ho solo banconote da cento.",
+            "Non ho abbastanza soldi."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "tessera fedeltà",
+        "scontrino",
+        "carta",
+        "modulo",
+        "cassiere"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_174",
+      "titulo": "Parlare delle Vacanze",
+      "icone": "✈️",
+      "nivel": "B1",
+      "contexto": "Você está contando para um colega sobre suas últimas férias.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Collega",
+          "frase": "Allora, com'erano le vacanze? Sei tornato abbronzato!",
+          "traducao": "Então, como foram as férias? Você voltou bronzeado!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Fantastiche! Sono stato in Sardegna per dieci giorni.",
+          "traducao": "Fantásticas! Estive na Sardenha por dez dias.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Fantastiche! Sono stato in Sardegna per dieci giorni.",
+            "Non troppo bene, ha piovuto sempre.",
+            "Non sono andato in vacanza.",
+            "Sono rimasto a casa."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Collega",
+          "frase": "Che bello! Il mare è stupendo lì. Hai visitato Cagliari?",
+          "traducao": "Que bom! O mar é lindo lá. Você visitou Cagliari?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, è una città bellissima! Ti consiglio di andarci.",
+          "traducao": "Sim, é uma cidade belíssima! Te recomendo ir lá.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, è una città bellissima! Ti consiglio di andarci.",
+            "No, ero sempre in spiaggia.",
+            "Non mi è piaciuta molto.",
+            "Non ho avuto tempo."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "vacanze",
+        "abbronzato",
+        "Sardegna",
+        "Cagliari",
+        "consigliare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_175",
+      "titulo": "Dal Parrucchiere (Taglio)",
+      "icone": "✂️",
+      "nivel": "A2",
+      "contexto": "Você vai ao cabeleireiro cortar o cabelo.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Parrucchiere",
+          "frase": "Buongiorno! Cosa facciamo oggi?",
+          "traducao": "Bom dia! O que fazemos hoje?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Un taglio corto ai lati e lasci un po' di lunghezza sopra.",
+          "traducao": "Curto nas laterais e deixe um pouco de comprimento em cima.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Un taglio corto ai lati e lasci un po' di lunghezza sopra.",
+            "Solo una spuntatina.",
+            "Voglio i capelli lunghi.",
+            "Faccia lei, mi fido."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Parrucchiere",
+          "frase": "Capito. Vuole anche lo shampoo?",
+          "traducao": "Entendido. Quer também o xampu?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie. E un po' di prodotto alla fine.",
+          "traducao": "Sim, obrigado. E um pouco de produto no final.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie. E un po' di prodotto alla fine.",
+            "No, solo il taglio.",
+            "Non ho bisogno di shampoo.",
+            "Faccio da solo."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "taglio",
+        "lati",
+        "lunghezza",
+        "shampoo",
+        "prodotto"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_176",
+      "titulo": "In Pizzeria (Discutere il Conto)",
+      "icone": "🧾",
+      "nivel": "B1",
+      "contexto": "Você acha que a conta está errada.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Scusi, penso ci sia un errore nel conto.",
+          "traducao": "Com licença, acho que há um erro na conta.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Cameriere",
+          "frase": "Mi dica, cosa c'è che non va?",
+          "traducao": "Diga-me, o que está errado?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Ho ordinato solo una birra ma ne vedo due nel conto.",
+          "traducao": "Pedi apenas uma cerveja mas vejo duas na conta.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho ordinato solo una birra ma ne vedo due nel conto.",
+            "Il prezzo della pizza è sbagliato.",
+            "Non ho ordinato il dolce.",
+            "Questo vino non era in lista."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Cameriere",
+          "frase": "Ha ragione, mi scusi! Correggo subito.",
+          "traducao": "Você tem razão, me desculpe! Corrijo imediatamente.",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "conto",
+        "errore",
+        "birra",
+        "correggere",
+        "ordinare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_177",
+      "titulo": "Fare un Reclamo (Hotel)",
+      "icone": "🏨",
+      "nivel": "B2",
+      "contexto": "Você reclama sobre problemas no seu quarto de hotel.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Buongiorno, ho un problema nella mia stanza.",
+          "traducao": "Bom dia, tenho um problema no meu quarto.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Receptionist",
+          "frase": "Mi dica, in cosa consiste il problema?",
+          "traducao": "Diga-me, em que consiste o problema?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Il riscaldamento non funziona e fa molto freddo stanotte.",
+          "traducao": "O aquecimento não funciona e está muito frio esta noite.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Il riscaldamento non funziona e fa molto freddo stanotte.",
+            "Il televisore è rotto.",
+            "Non c'è acqua calda.",
+            "La vista è brutta."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Receptionist",
+          "frase": "Le mando subito un tecnico. Vuole cambiare stanza nel frattempo?",
+          "traducao": "Mando um técnico imediatamente. Quer trocar de quarto enquanto isso?",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "riscaldamento",
+        "freddo",
+        "tecnico",
+        "stanza",
+        "reclamo"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "dial_178",
+      "titulo": "Discutere un Progetto",
+      "icone": "💡",
+      "nivel": "C1",
+      "contexto": "Você apresenta uma ideia nova no trabalho.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Volevo presentarvi una nuova idea per aumentare le vendite.",
+          "traducao": "Queria apresentar a vocês uma nova ideia para aumentar as vendas.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Collega",
+          "frase": "Interessante! Di cosa si tratta?",
+          "traducao": "Interessante! Do que se trata?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Potremmo usare i social media per raggiungere i clienti più giovani.",
+          "traducao": "Poderíamos usar as redes sociais para alcançar os clientes mais jovens.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Potremmo usare i social media per raggiungere i clienti più giovani.",
+            "Dobbiamo tagliare i costi.",
+            "Serve più pubblicità tradizionale.",
+            "Assumiamo più personale."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Collega",
+          "frase": "Buona idea! Dovremo presentarla al direttore.",
+          "traducao": "Boa ideia! Precisaremos apresentá-la ao diretor.",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "progetto",
+        "vendite",
+        "social media",
+        "clienti",
+        "presentare"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "dial_179",
+      "titulo": "Al Campeggio",
+      "icone": "⛺",
+      "nivel": "A2",
+      "contexto": "Você chega a um campismo para se instalar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Receptionist",
+          "frase": "Benvenuti! Avete la prenotazione?",
+          "traducao": "Bem-vindos! Têm reserva?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, ho prenotato online. Siamo in tre, con una tenda.",
+          "traducao": "Sim, reservei online. Somos três, com uma tenda.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, ho prenotato online. Siamo in tre, con una tenda.",
+            "No, siamo senza prenotazione.",
+            "Vogliamo una bungalow.",
+            "Siamo solo in due."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Receptionist",
+          "frase": "Benissimo! Avete il posto 42, vicino alla piscina.",
+          "traducao": "Ótimo! Vocês têm o lugar 42, perto da piscina.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Perfetto! A che ora chiude il bar del campeggio?",
+          "traducao": "Perfeito! A que horas fecha o bar do campismo?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfetto! A che ora chiude il bar del campeggio?",
+            "Dov'è il bagno?",
+            "Possiamo fare il fuoco?",
+            "Quando apre la reception?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "campeggio",
+        "tenda",
+        "prenotazione",
+        "piscina",
+        "posto"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_180",
+      "titulo": "Fare la Spesa al Mercato Bio",
+      "icone": "🥗",
+      "nivel": "B1",
+      "contexto": "Você compra produtos orgânicos no mercado.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Produttore",
+          "frase": "Buongiorno! Tutto biologico, prodotto da noi!",
+          "traducao": "Bom dia! Tudo orgânico, produzido por nós!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ottimo! Avete le uova di gallina ruspante?",
+          "traducao": "Ótimo! Têm ovos de galinha caipira?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ottimo! Avete le uova di gallina ruspante?",
+            "Cerco le verdure biologiche.",
+            "Quanto costa il miele?",
+            "Avete formaggi freschi?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Produttore",
+          "frase": "Certo! Due euro a dozzina. Sono di questa mattina.",
+          "traducao": "Claro! Dois euros a dúzia. São desta manhã.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ne prendo due dozzine. E del miele di acacia?",
+          "traducao": "Levo duas dúzias. E tem mel de acácia?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ne prendo due dozzine. E del miele di acacia?",
+            "Solo una dozzina basta.",
+            "Sono troppo care.",
+            "Le compro al supermercato."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "biologico",
+        "uova",
+        "gallina ruspante",
+        "miele",
+        "dozzina"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_181",
+      "titulo": "In Aeroporto (Check-in)",
+      "icone": "🛫",
+      "nivel": "B1",
+      "contexto": "Você está fazendo o check-in no aeroporto.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Hostess",
+          "frase": "Buongiorno, il suo documento e il biglietto, prego.",
+          "traducao": "Bom dia, seu documento e bilhete, por favor.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Eccoli. Ho anche un bagaglio da stiva.",
+          "traducao": "Aqui estão. Tenho também uma bagagem para o porão.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Eccoli. Ho anche un bagaglio da stiva.",
+            "Ho solo il bagaglio a mano.",
+            "Ho perso il biglietto.",
+            "È la prima volta che volo."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Hostess",
+          "frase": "Bene. Preferisce il finestrino o il corridoio?",
+          "traducao": "Bem. Prefere a janela ou o corredor?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Il finestrino, se possibile. Mi piace guardare fuori.",
+          "traducao": "A janela, se possível. Gosto de olhar para fora.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Il finestrino, se possibile. Mi piace guardare fuori.",
+            "Il corridoio, devo alzarmi spesso.",
+            "Non importa.",
+            "Preferisco vicino all'uscita."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "check-in",
+        "bagaglio",
+        "stiva",
+        "finestrino",
+        "corridoio"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_182",
+      "titulo": "Parlare di Sport",
+      "icone": "⚽",
+      "nivel": "A2",
+      "contexto": "Você fala de futebol com um amigo italiano.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Amico",
+          "frase": "Hai visto la partita ieri sera? Che gol!",
+          "traducao": "Você viu o jogo ontem à noite? Que gol!",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì! Un gol incredibile al novantesimo minuto!",
+          "traducao": "Sim! Um gol incrível no minuto noventa!",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì! Un gol incredibile al novantesimo minuto!",
+            "No, non ho visto.",
+            "Non seguo il calcio.",
+            "Quale partita?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Amico",
+          "frase": "La tua squadra del cuore qual è?",
+          "traducao": "Qual é o teu time do coração?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Tifo per la Juventus! E tu per chi tifi?",
+          "traducao": "Torço pela Juventus! E você, para quem torce?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Tifo per la Juventus! E tu per chi tifi?",
+            "Non ho una squadra del cuore.",
+            "Tifo per tutti.",
+            "Non capisco il calcio."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "partita",
+        "gol",
+        "squadra",
+        "tifoso",
+        "calcio"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_183",
+      "titulo": "In un Negozio di Elettronica",
+      "icone": "💻",
+      "nivel": "B1",
+      "contexto": "Você quer comprar um laptop.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Commesso",
+          "frase": "Posso aiutarla a scegliere?",
+          "traducao": "Posso ajudá-lo a escolher?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, cerco un laptop leggero per lavoro, con buona batteria.",
+          "traducao": "Sim, procuro um laptop leve para trabalho, com boa bateria.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, cerco un laptop leggero per lavoro, con buona batteria.",
+            "Voglio il più economico.",
+            "Cerco un tablet.",
+            "Non so cosa voglio."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Commesso",
+          "frase": "Questo modello ha 12 ore di autonomia e pesa solo 1,3 kg.",
+          "traducao": "Este modelo tem 12 horas de autonomia e pesa apenas 1,3 kg.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Interessante! Posso provarlo prima di comprare?",
+          "traducao": "Interessante! Posso experimentá-lo antes de comprar?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Interessante! Posso provarlo prima di comprare?",
+            "Va bene, lo compro.",
+            "È troppo caro.",
+            "Non mi piace il design."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "laptop",
+        "leggero",
+        "batteria",
+        "autonomia",
+        "provare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_184",
+      "titulo": "Chiedere la Strada (Dettagliata)",
+      "icone": "🗺️",
+      "nivel": "B1",
+      "contexto": "Você está perdido numa cidade italiana.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Scusi, mi sono perso. Cerco il Palazzo Reale.",
+          "traducao": "Com licença, me perdi. Procuro o Palazzo Reale.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Passante",
+          "frase": "Il Palazzo Reale? Allora, vada dritto per due isolati.",
+          "traducao": "O Palazzo Reale? Então, vá reto por dois quarteirões.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Dritto per due isolati. E poi?",
+          "traducao": "Reto por dois quarteirões. E depois?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Dritto per due isolati. E poi?",
+            "Grazie, ci riesco da solo.",
+            "È lontano?",
+            "Prendo il taxi."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Passante",
+          "frase": "Poi giri a sinistra al semaforo. Lo vede subito.",
+          "traducao": "Depois vire à esquerda no semáforo. Você o vê imediatamente.",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "perso",
+        "isolato",
+        "dritto",
+        "sinistra",
+        "semaforo"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_185",
+      "titulo": "In Gelateria (Scelta)",
+      "icone": "🍦",
+      "nivel": "A1",
+      "contexto": "Você está escolhendo o gelato.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Gelataio",
+          "frase": "Buonasera! Che gusti desidera?",
+          "traducao": "Boa tarde! Que sabores deseja?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Hmm... prendo cioccolato e pistacchio, per favore.",
+          "traducao": "Hmm... quero chocolate e pistache, por favor.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Hmm... prendo cioccolato e pistacchio, per favore.",
+            "Solo fragola.",
+            "Non so ancora.",
+            "Tutti i gusti!"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Gelataio",
+          "frase": "Cono o coppetta? Piccolo, medio o grande?",
+          "traducao": "Casquinha ou copinho? Pequeno, médio ou grande?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Cono medio, grazie. Quanto costa?",
+          "traducao": "Casquinha média, obrigado. Quanto custa?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Cono medio, grazie. Quanto costa?",
+            "Coppetta grande, per favore.",
+            "Il più piccolo.",
+            "Uno di ogni grandezza!"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "gelato",
+        "gusti",
+        "cioccolato",
+        "pistacchio",
+        "cono",
+        "coppetta"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_186",
+      "titulo": "Al Benzinaio",
+      "icone": "⛽",
+      "nivel": "A2",
+      "contexto": "Você para num posto de gasolina.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Benzinaio",
+          "frase": "Buongiorno! Quanta benzina?",
+          "traducao": "Bom dia! Quanta gasolina?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Il pieno, per favore. Senza piombo.",
+          "traducao": "Encha o tanque, por favor. Sem chumbo.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Il pieno, per favore. Senza piombo.",
+            "Venti euro di benzina.",
+            "Diesel, per favore.",
+            "Solo controllate l'olio."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Benzinaio",
+          "frase": "Certo! Vuole che controlli anche l'olio e le gomme?",
+          "traducao": "Claro! Quer que verifique também o óleo e os pneus?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, grazie mille. Ho fatto molti chilometri oggi.",
+          "traducao": "Sim, muito obrigado. Percorri muitos quilômetros hoje.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, grazie mille. Ho fatto molti chilometri oggi.",
+            "No, va tutto bene.",
+            "Solo la benzina.",
+            "L'ho già controllato."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "benzina",
+        "pieno",
+        "olio",
+        "gomme",
+        "chilometri"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_187",
+      "titulo": "Invitare Qualcuno a Cena",
+      "icone": "🍽️",
+      "nivel": "B1",
+      "contexto": "Você convida um amigo para jantar em sua casa.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Tu",
+          "frase": "Ti va di venire a cena da me sabato?",
+          "traducao": "Quer vir jantar na minha casa no sábado?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Amico",
+          "frase": "Con piacere! Che ora?",
+          "traducao": "Com prazer! Que horas?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 3,
+          "personaggio": "Tu",
+          "frase": "Verso le otto. Cucino la pasta al forno.",
+          "traducao": "Por volta das oito. Vou fazer massa ao forno.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Verso le otto. Cucino la pasta al forno.",
+            "Alle sette.",
+            "Ordiniamo la pizza.",
+            "Non so ancora cosa cucino."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 4,
+          "personaggio": "Amico",
+          "frase": "Ottimo! Posso portare il vino?",
+          "traducao": "Ótimo! Posso trazer o vinho?",
+          "audio_ipa": ""
+        }
+      ],
+      "vocabulario_chave": [
+        "invitare",
+        "cena",
+        "cucinare",
+        "pasta",
+        "vino"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_188",
+      "titulo": "In Questura (Carta di Soggiorno)",
+      "icone": "📋",
+      "nivel": "C1",
+      "contexto": "Você renova sua carta de residência.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Agente",
+          "frase": "Prego, ha il numero di protocollo?",
+          "traducao": "Pois não, tem o número de protocolo?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, eccolo. Devo rinnovare il permesso di soggiorno.",
+          "traducao": "Sim, aqui está. Preciso renovar o visto de residência.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, eccolo. Devo rinnovare il permesso di soggiorno.",
+            "Ho perso i documenti.",
+            "Voglio fare la cittadinanza.",
+            "È il mio primo permesso."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Agente",
+          "frase": "Ha il contratto di lavoro o la busta paga?",
+          "traducao": "Tem o contrato de trabalho ou o contracheque?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Ho la busta paga degli ultimi tre mesi.",
+          "traducao": "Tenho os contracheques dos últimos três meses.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ho la busta paga degli ultimi tre mesi.",
+            "Ho solo il contratto.",
+            "Non lavoro.",
+            "Sono studente."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "permesso di soggiorno",
+        "busta paga",
+        "contratto",
+        "rinnovare",
+        "protocollo"
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "dial_189",
+      "titulo": "Comprare un Vestito",
+      "icone": "👗",
+      "nivel": "A2",
+      "contexto": "Você está em uma loja de roupas.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Commessa",
+          "frase": "Buongiorno! Cerca qualcosa in particolare?",
+          "traducao": "Bom dia! Procura algo em particular?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, cerco un vestito elegante per un matrimonio.",
+          "traducao": "Sim, procuro um vestido elegante para um casamento.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, cerco un vestito elegante per un matrimonio.",
+            "Cerco jeans casual.",
+            "Voglio una giacca invernale.",
+            "Solo guardo, grazie."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Commessa",
+          "frase": "Che taglia porta? Ho qualcosa di bello in blu e in nero.",
+          "traducao": "Que tamanho usa? Tenho algo bonito em azul e em preto.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Porto la 42. Posso provare quello blu?",
+          "traducao": "Uso o 42. Posso experimentar o azul?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Porto la 42. Posso provare quello blu?",
+            "Non so la mia taglia.",
+            "Preferisco il nero.",
+            "Non mi piacciono né il blu né il nero."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "vestito",
+        "elegante",
+        "matrimonio",
+        "taglia",
+        "provare"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_190",
+      "titulo": "Discutere di Cucina",
+      "icone": "👨‍🍳",
+      "nivel": "B1",
+      "contexto": "Você e um amigo falam sobre gastronomia italiana.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Amico",
+          "frase": "Hai mai assaggiato la vera pizza napoletana?",
+          "traducao": "Você já experimentou a verdadeira pizza napolitana?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì! È completamente diversa dalla pizza normale. È incredibile.",
+          "traducao": "Sim! É completamente diferente da pizza comum. É incrível.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì! È completamente diversa dalla pizza normale. È incredibile.",
+            "Non mi piace la pizza.",
+            "Non l'ho mai mangiata.",
+            "È uguale a quella di qui."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Amico",
+          "frase": "Il segreto è nella farina e nella cottura nel forno a legna.",
+          "traducao": "O segredo está na farinha e no cozimento no forno a lenha.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Esatto! E la mozzarella di bufala fresca è fondamentale.",
+          "traducao": "Exato! E a mozzarella de búfala fresca é fundamental.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Esatto! E la mozzarella di bufala fresca è fondamentale.",
+            "Non capisco il segreto.",
+            "Preferisco la pizza surgelata.",
+            "Il forno elettrico va bene."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "pizza",
+        "napoletana",
+        "farina",
+        "forno a legna",
+        "mozzarella di bufala"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_191",
+      "titulo": "In un Negozietto di Souvenir",
+      "icone": "🎁",
+      "nivel": "A1",
+      "contexto": "Você compra lembranças para levar.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Negoziante",
+          "frase": "Buongiorno! Cerca un souvenir di Roma?",
+          "traducao": "Bom dia! Procura uma lembrança de Roma?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, qualcosa di tipico e non troppo costoso.",
+          "traducao": "Sim, algo típico e não muito caro.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, qualcosa di tipico e non troppo costoso.",
+            "Voglio qualcosa di lusso.",
+            "Non so cosa comprare.",
+            "Cerco una maglietta."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Negoziante",
+          "frase": "Questi magneti sono bellissimi, solo due euro ciascuno.",
+          "traducao": "Estes ímãs são lindíssimos, apenas dois euros cada.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Perfetto! Ne prendo sei. Uno per ogni membro della famiglia.",
+          "traducao": "Perfeito! Pego seis. Um para cada membro da família.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfetto! Ne prendo sei. Uno per ogni membro della famiglia.",
+            "Troppo caro.",
+            "Solo uno basta.",
+            "Non mi piacciono i magneti."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "souvenir",
+        "tipico",
+        "magneti",
+        "famiglia",
+        "membro"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_192",
+      "titulo": "Dal Medico (Visita di Routine)",
+      "icone": "🩺",
+      "nivel": "B2",
+      "contexto": "Você vai ao médico para uma consulta de rotina.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Medico",
+          "frase": "Buongiorno, si accomodi. Come si sente?",
+          "traducao": "Bom dia, sente-se. Como se sente?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Generalmente bene, ma ho spesso mal di testa la sera.",
+          "traducao": "Geralmente bem, mas frequentemente tenho dor de cabeça à noite.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Generalmente bene, ma ho spesso mal di testa la sera.",
+            "Ho un dolore al petto.",
+            "Sono sempre stanco.",
+            "Mi fa male la schiena."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Medico",
+          "frase": "Da quanto tempo? Lavora molto al computer?",
+          "traducao": "Há quanto tempo? Trabalha muito no computador?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Da circa un mese. Sì, lavoro otto ore al giorno davanti allo schermo.",
+          "traducao": "Há cerca de um mês. Sim, trabalho oito horas por dia diante da tela.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Da circa un mese. Sì, lavoro otto ore al giorno davanti allo schermo.",
+            "Da sempre.",
+            "Non lavoro al computer.",
+            "Solo la settimana scorsa."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "mal di testa",
+        "computer",
+        "schermo",
+        "visita",
+        "routine"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "dial_193",
+      "titulo": "In Piscina",
+      "icone": "🏊",
+      "nivel": "A2",
+      "contexto": "Você pergunta sobre as aulas de natação.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Istruttore",
+          "frase": "Buongiorno! È la prima volta qui?",
+          "traducao": "Bom dia! É a primeira vez aqui?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, vorrei iscrivermi ai corsi di nuoto per adulti.",
+          "traducao": "Sim, gostaria de me inscrever nas aulas de natação para adultos.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, vorrei iscrivermi ai corsi di nuoto per adulti.",
+            "Ho già nuotato da piccolo.",
+            "Vengo solo per rilassarmi.",
+            "Cerco un personal trainer."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Istruttore",
+          "frase": "Ottimo! I corsi sono il martedì e il giovedì alle 18:00.",
+          "traducao": "Ótimo! Os cursos são terça e quinta-feira às 18h.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Perfetto! Devo portare qualcosa la prima volta?",
+          "traducao": "Perfeito! Preciso trazer algo na primeira vez?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Perfetto! Devo portare qualcosa la prima volta?",
+            "Non posso quei giorni.",
+            "Posso venire solo il sabato?",
+            "Quanto costa al mese?"
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "piscina",
+        "nuoto",
+        "corso",
+        "adulti",
+        "iscriversi"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_194",
+      "titulo": "Al Telefono con un Amico",
+      "icone": "📱",
+      "nivel": "A2",
+      "contexto": "Você liga para um amigo italiano.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Amico",
+          "frase": "Pronto? Chi è?",
+          "traducao": "Alô? Quem é?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ciao Marco! Sono io, Luigi. Come stai?",
+          "traducao": "Oi Marco! Sou eu, Luigi. Como vai?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ciao Marco! Sono io, Luigi. Come stai?",
+            "Pronto, chi parla?",
+            "È in casa il signor Rossi?",
+            "Ho sbagliato numero."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Amico",
+          "frase": "Luigi! Da quanto tempo! Bene grazie. Sei a Roma?",
+          "traducao": "Luigi! Há quanto tempo! Bem obrigado. Você está em Roma?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì! Ci sei questo fine settimana? Ti invito a cena.",
+          "traducao": "Sim! Você está este fim de semana? Te convido para jantar.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì! Ci sei questo fine settimana? Ti invito a cena.",
+            "No, sono a Milano.",
+            "Ti chiamo più tardi.",
+            "Devo andare, ciao."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "telefono",
+        "pronto",
+        "fine settimana",
+        "invitare",
+        "cena"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_195",
+      "titulo": "Al Mercato dell'Artigianato",
+      "icone": "🎨",
+      "nivel": "B1",
+      "contexto": "Você visita uma feira de artesanato.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Artigiano",
+          "frase": "Buongiorno! Questi pezzi sono tutti fatti a mano.",
+          "traducao": "Bom dia! Estas peças são todas feitas à mão.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Che bello! Questo vaso in ceramica, da dove viene?",
+          "traducao": "Que lindo! Este vaso em cerâmica, de onde é?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Che bello! Questo vaso in ceramica, da dove viene?",
+            "Quanto costa?",
+            "È originale?",
+            "Accettate le carte di credito?"
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Artigiano",
+          "frase": "È di Deruta, famosa per le maioliche. Lo faccio io personalmente.",
+          "traducao": "É de Deruta, famosa pelas majólicas. Eu mesmo o faço.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Stupendo! È un pezzo unico? Posso averlo come regalo?",
+          "traducao": "Esplêndido! É uma peça única? Posso tê-lo como presente?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Stupendo! È un pezzo unico? Posso averlo come regalo?",
+            "Non mi piace molto.",
+            "È troppo fragile.",
+            "Preferisco qualcosa di più moderno."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "artigianato",
+        "ceramica",
+        "maiolica",
+        "pezzo unico",
+        "regalo"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_196",
+      "titulo": "In un Corso di Lingua",
+      "icone": "🗣️",
+      "nivel": "A2",
+      "contexto": "Você é o primeiro dia numa escola de línguas.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Insegnante",
+          "frase": "Benvenuti a tutti! Iniziamo con le presentazioni.",
+          "traducao": "Bem-vindos a todos! Começamos com as apresentações.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ciao a tutti! Mi chiamo Ana, sono brasiliana e studio italiano da sei mesi.",
+          "traducao": "Olá a todos! Me chamo Ana, sou brasileira e estudo italiano há seis meses.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ciao a tutti! Mi chiamo Ana, sono brasiliana e studio italiano da sei mesi.",
+            "Non voglio presentarmi.",
+            "Parlo già italiano perfettamente.",
+            "Sono qui per sbaglio."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Insegnante",
+          "frase": "Bravissima! Perché hai scelto di imparare l'italiano?",
+          "traducao": "Muito bem! Por que você escolheu aprender italiano?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Amo la cultura italiana e voglio vivere a Firenze un giorno.",
+          "traducao": "Amo a cultura italiana e quero morar em Florença um dia.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Amo la cultura italiana e voglio vivere a Firenze un giorno.",
+            "Per lavoro.",
+            "Non lo so.",
+            "Per caso."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "presentarsi",
+        "brasiliana",
+        "studiare",
+        "cultura",
+        "Firenze"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "dial_197",
+      "titulo": "Al Pronto Soccorso (Bambino)",
+      "icone": "🧒",
+      "nivel": "B2",
+      "contexto": "Você leva seu filho ao pronto-socorro.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Infermiere",
+          "frase": "Buonasera, cosa è successo al bambino?",
+          "traducao": "Boa tarde, o que aconteceu com a criança?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Ha la febbre alta da ieri sera, 39 e mezzo.",
+          "traducao": "Tem febre alta desde ontem à noite, 39 e meio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Ha la febbre alta da ieri sera, 39 e mezzo.",
+            "Si è fatto male cadendo.",
+            "Non mangia da due giorni.",
+            "Ha il mal di gola."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Infermiere",
+          "frase": "Ha altri sintomi? Tosse, mal di gola?",
+          "traducao": "Tem outros sintomas? Tosse, dor de garganta?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Sì, tossisce molto e si lamenta del mal di gola.",
+          "traducao": "Sim, tosse muito e reclama de dor de garganta.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, tossisce molto e si lamenta del mal di gola.",
+            "No, solo la febbre.",
+            "Vomita anche.",
+            "Ha un'eruzione cutanea."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "febbre",
+        "sintomi",
+        "tosse",
+        "mal di gola",
+        "bambino"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "dial_198",
+      "titulo": "Discutere di Film",
+      "icone": "🎬",
+      "nivel": "B1",
+      "contexto": "Você e um amigo falam sobre um filme.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Amico",
+          "frase": "Hai visto l'ultimo film di Sorrentino?",
+          "traducao": "Você viu o último filme de Sorrentino?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì! L'ho visto al cinema la settimana scorsa. Splendido.",
+          "traducao": "Sim! Assisti no cinema na semana passada. Esplêndido.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì! L'ho visto al cinema la settimana scorsa. Splendido.",
+            "No, non ho tempo per il cinema.",
+            "Non conosco Sorrentino.",
+            "Non mi piacciono i film italiani."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Amico",
+          "frase": "Cosa ti è piaciuto di più? La fotografia è magnifica.",
+          "traducao": "O que você gostou mais? A fotografia é magnífica.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Soprattutto la storia e la recitazione degli attori.",
+          "traducao": "Principalmente a história e a atuação dos atores.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Soprattutto la storia e la recitazione degli attori.",
+            "Non mi è piaciuto molto.",
+            "La fotografia è la cosa migliore.",
+            "Il finale non mi ha convinto."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "film",
+        "cinema",
+        "fotografia",
+        "recitazione",
+        "attori"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "dial_199",
+      "titulo": "Parlare del Meteo",
+      "icone": "🌤️",
+      "nivel": "A1",
+      "contexto": "Você fala sobre o tempo com um italiano.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Signore",
+          "frase": "Che bel tempo oggi, vero?",
+          "traducao": "Que bom tempo hoje, não é verdade?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Sì, finalmente! Dopo tanta pioggia, è bello rivedere il sole.",
+          "traducao": "Sim, finalmente! Depois de tanta chuva, é bom rever o sol.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Sì, finalmente! Dopo tanta pioggia, è bello rivedere il sole.",
+            "Non mi piace il caldo.",
+            "Preferisco la pioggia.",
+            "È troppo caldo oggi."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Signore",
+          "frase": "Sì, ma domani arriva un temporale, dicono.",
+          "traducao": "Sim, mas amanhã chega uma tempestade, dizem.",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Davvero? Allora ne approfitto oggi per una passeggiata.",
+          "traducao": "Sério? Então aproveito hoje para um passeio.",
+          "audio_ipa": "",
+          "alternativas": [
+            "Davvero? Allora ne approfitto oggi per una passeggiata.",
+            "Meno male.",
+            "Non importa il tempo.",
+            "Odio i temporali."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "tempo",
+        "pioggia",
+        "sole",
+        "temporale",
+        "passeggiata"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "dial_200",
+      "titulo": "In Osteria (Ordinare Vino)",
+      "icone": "🍷",
+      "nivel": "B1",
+      "contexto": "Você pede uma recomendação de vinho numa osteria.",
+      "turni": [
+        {
+          "id": 1,
+          "personaggio": "Oste",
+          "frase": "Cosa posso portarle da bere?",
+          "traducao": "O que posso trazer-lhe para beber?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 2,
+          "personaggio": "Tu",
+          "frase": "Vorrei un buon vino rosso locale. Cosa consiglia?",
+          "traducao": "Gostaria de um bom vinho tinto local. O que recomenda?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Vorrei un buon vino rosso locale. Cosa consiglia?",
+            "Una birra fredda, grazie.",
+            "Solo acqua naturale.",
+            "Non bevo alcolici."
+          ],
+          "resposta_correta": 0
+        },
+        {
+          "id": 3,
+          "personaggio": "Oste",
+          "frase": "Il Brunello di Montalcino è eccellente. O un Chianti più accessibile?",
+          "traducao": "O Brunello di Montalcino é excelente. Ou um Chianti mais acessível?",
+          "audio_ipa": ""
+        },
+        {
+          "id": 4,
+          "personaggio": "Tu",
+          "frase": "Il Chianti, grazie. Si abbina bene alla bistecca?",
+          "traducao": "O Chianti, obrigado. Combina bem com o bife?",
+          "audio_ipa": "",
+          "alternativas": [
+            "Il Chianti, grazie. Si abbina bene alla bistecca?",
+            "Il Brunello, voglio il migliore.",
+            "Prendo entrambi.",
+            "Cambio idea, preferisco il bianco."
+          ],
+          "resposta_correta": 0
+        }
+      ],
+      "vocabulario_chave": [
+        "vino",
+        "rosso",
+        "Brunello",
+        "Chianti",
+        "abbinare"
+      ],
+      "xp_recompensa": 25
     }
   ]
 }

@@ -5399,6 +5399,1806 @@
         }
       ],
       "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_151",
+      "titulo": "La Vita è Bella",
+      "origem": "La Vita è Bella (1997)",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Guido usa a imaginação para proteger o filho num campo de concentração.",
+      "vocabulario": [
+        {
+          "italiano": "immaginazione",
+          "portugues": "imaginação",
+          "exemplo": "Guido usa l'immaginazione per proteggere il figlio."
+        },
+        {
+          "italiano": "speranza",
+          "portugues": "esperança",
+          "exemplo": "La speranza ci fa andare avanti."
+        },
+        {
+          "italiano": "amore",
+          "portugues": "amor",
+          "exemplo": "Il suo amore per la famiglia è infinito."
+        },
+        {
+          "italiano": "gioco",
+          "portugues": "jogo, brincadeira",
+          "exemplo": "Per il bambino era tutto un gioco."
+        },
+        {
+          "italiano": "sopravvivere",
+          "portugues": "sobreviver",
+          "exemplo": "Riuscirono a sopravvivere grazie all'amore."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_152",
+      "titulo": "Nuovo Cinema Paradiso",
+      "origem": "Nuovo Cinema Paradiso (1988)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "A amizade entre um menino e o projecionista num cinema siciliano.",
+      "vocabulario": [
+        {
+          "italiano": "cinema",
+          "portugues": "cinema",
+          "exemplo": "Il cinema era il cuore del paese."
+        },
+        {
+          "italiano": "proiettore",
+          "portugues": "projetor",
+          "exemplo": "Alfredo gestiva il vecchio proiettore."
+        },
+        {
+          "italiano": "nostalgia",
+          "portugues": "nostalgia, saudade",
+          "exemplo": "Toto sente nostalgia per l'infanzia."
+        },
+        {
+          "italiano": "pellicola",
+          "portugues": "filme, película",
+          "exemplo": "Le pellicole prendevano fuoco facilmente."
+        },
+        {
+          "italiano": "ricordo",
+          "portugues": "lembrança, recordação",
+          "exemplo": "I ricordi dell'infanzia sono preziosi."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_153",
+      "titulo": "Gomorra",
+      "origem": "Gomorra - La Serie",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "A violência e o poder da camorra napolitana.",
+      "vocabulario": [
+        {
+          "italiano": "camorra",
+          "portugues": "camorra (máfia napolitana)",
+          "exemplo": "La camorra controlla i quartieri di Napoli."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "poder",
+          "exemplo": "Il potere corrompe chi lo detiene."
+        },
+        {
+          "italiano": "territorio",
+          "portugues": "território",
+          "exemplo": "Ogni clan difende il suo territorio."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "traição",
+          "exemplo": "Il tradimento è punito severamente."
+        },
+        {
+          "italiano": "quartiere",
+          "portugues": "bairro",
+          "exemplo": "Vivono nello stesso quartiere da sempre."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_154",
+      "titulo": "L'Amica Geniale",
+      "origem": "L'Amica Geniale",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "A amizade de Lenù e Lila no bairro pobre de Nápoles dos anos 50.",
+      "vocabulario": [
+        {
+          "italiano": "amicizia",
+          "portugues": "amizade",
+          "exemplo": "La loro amicizia dura tutta la vita."
+        },
+        {
+          "italiano": "rione",
+          "portugues": "bairro popular",
+          "exemplo": "Sono cresciute nello stesso rione povero."
+        },
+        {
+          "italiano": "geniale",
+          "portugues": "genial",
+          "exemplo": "Lila era geniale, imparava tutto in fretta."
+        },
+        {
+          "italiano": "istruzione",
+          "portugues": "instrução, educação",
+          "exemplo": "L'istruzione era l'unica via di fuga."
+        },
+        {
+          "italiano": "povertà",
+          "portugues": "pobreza",
+          "exemplo": "La povertà segnava ogni famiglia del rione."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_155",
+      "titulo": "Il Commissario Montalbano",
+      "origem": "Il Commissario Montalbano",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "O comissário Montalbano resolve crimes na Sicília comendo bem.",
+      "vocabulario": [
+        {
+          "italiano": "commissario",
+          "portugues": "comissário (de polícia)",
+          "exemplo": "Il commissario indaga con intuito."
+        },
+        {
+          "italiano": "indagare",
+          "portugues": "investigar",
+          "exemplo": "Montalbano indaga ogni caso con passione."
+        },
+        {
+          "italiano": "arancino",
+          "portugues": "arancino (bolinho de arroz siciliano)",
+          "exemplo": "Montalbano ama mangiare gli arancini."
+        },
+        {
+          "italiano": "Sicilia",
+          "portugues": "Sicília",
+          "exemplo": "La Sicilia è protagonista della serie."
+        },
+        {
+          "italiano": "colpevole",
+          "portugues": "culpado",
+          "exemplo": "Alla fine trova sempre il colpevole."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_156",
+      "titulo": "La Dolce Vita (Scena)",
+      "origem": "La Dolce Vita - Fellini (1960)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Marcello Mastroianni e a vida frívola da Roma dos anos 60.",
+      "vocabulario": [
+        {
+          "italiano": "paparazzo",
+          "portugues": "paparazzo (fotógrafo perseguidor)",
+          "exemplo": "I paparazzi seguono le star ovunque."
+        },
+        {
+          "italiano": "fontana",
+          "portugues": "fonte (chafariz)",
+          "exemplo": "La scena alla Fontana di Trevi è iconica."
+        },
+        {
+          "italiano": "frivolo",
+          "portugues": "frívolo, superficial",
+          "exemplo": "La vita mondana è frivola ma affascinante."
+        },
+        {
+          "italiano": "mondano",
+          "portugues": "mundano, social",
+          "exemplo": "Marcello vive nel mondo mondano di Roma."
+        },
+        {
+          "italiano": "decadenza",
+          "portugues": "decadência",
+          "exemplo": "Il film mostra la decadenza morale della società."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_157",
+      "titulo": "Suburra",
+      "origem": "Suburra (serie Netflix)",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Corrupção, política e crime organizado na Roma contemporânea.",
+      "vocabulario": [
+        {
+          "italiano": "corruzione",
+          "portugues": "corrupção",
+          "exemplo": "La corruzione arriva fino ai palazzi del potere."
+        },
+        {
+          "italiano": "politica",
+          "portugues": "política",
+          "exemplo": "La politica e il crimine si mescolano."
+        },
+        {
+          "italiano": "crimine",
+          "portugues": "crime",
+          "exemplo": "Il crimine organizzato controlla la città."
+        },
+        {
+          "italiano": "accordo",
+          "portugues": "acordo",
+          "exemplo": "I clan fanno accordi segreti con i politici."
+        },
+        {
+          "italiano": "omicidio",
+          "portugues": "homicídio",
+          "exemplo": "Un omicidio sconvolge gli equilibri."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_158",
+      "titulo": "Doctor Ale",
+      "origem": "Doc - Nelle Tue Mani",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "Um médico perde a memória e deve reconstruir quem era.",
+      "vocabulario": [
+        {
+          "italiano": "amnesia",
+          "portugues": "amnésia",
+          "exemplo": "L'amnesia lo costringe a ricominciare da zero."
+        },
+        {
+          "italiano": "chirurgo",
+          "portugues": "cirurgião",
+          "exemplo": "Era un chirurgo brillante prima dell'incidente."
+        },
+        {
+          "italiano": "paziente",
+          "portugues": "paciente",
+          "exemplo": "Ogni paziente ha una storia da raccontare."
+        },
+        {
+          "italiano": "diagnosi",
+          "portugues": "diagnóstico",
+          "exemplo": "La diagnosi corretta può salvare la vita."
+        },
+        {
+          "italiano": "empatia",
+          "portugues": "empatia",
+          "exemplo": "Il dottore mostra empatia verso i pazienti."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_159",
+      "titulo": "Pinocchio",
+      "origem": "Pinocchio (2019) - Matteo Garrone",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "A versão più oscura del burattino che vuole diventare un bambino vero.",
+      "vocabulario": [
+        {
+          "italiano": "burattino",
+          "portugues": "fantoche, marionete",
+          "exemplo": "Pinocchio era un burattino di legno."
+        },
+        {
+          "italiano": "bugiardo",
+          "portugues": "mentiroso",
+          "exemplo": "Il naso cresce quando è bugiardo."
+        },
+        {
+          "italiano": "naso",
+          "portugues": "nariz",
+          "exemplo": "Il naso di Pinocchio si allunga con le bugie."
+        },
+        {
+          "italiano": "grillo",
+          "portugues": "grilo",
+          "exemplo": "Il Grillo Parlante è la sua coscienza."
+        },
+        {
+          "italiano": "trasformarsi",
+          "portugues": "transformar-se",
+          "exemplo": "I bambini cattivi si trasformano in asini."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_160",
+      "titulo": "Il Gattopardo",
+      "origem": "Il Gattopardo - Visconti (1963)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "A decadência da aristocrazia siciliana durante o Risorgimento.",
+      "vocabulario": [
+        {
+          "italiano": "aristocrazia",
+          "portugues": "aristocracia",
+          "exemplo": "L'aristocrazia siciliana perde il suo potere."
+        },
+        {
+          "italiano": "risorgimento",
+          "portugues": "Risorgimento (unificação italiana)",
+          "exemplo": "Il Risorgimento cambia l'Italia."
+        },
+        {
+          "italiano": "decadenza",
+          "portugues": "decadência",
+          "exemplo": "La famiglia vive la decadenza del proprio mondo."
+        },
+        {
+          "italiano": "orgoglio",
+          "portugues": "orgulho",
+          "exemplo": "Il principe conserva il suo orgoglio fino alla fine."
+        },
+        {
+          "italiano": "tramonto",
+          "portugues": "pôr do sol; declínio",
+          "exemplo": "È il tramonto di un'era."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_161",
+      "titulo": "1992 - Mani Pulite",
+      "origem": "1992 (serie TV)",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Os anos das investigações de Mani Pulite e o crollo della Prima Repubblica.",
+      "vocabulario": [
+        {
+          "italiano": "tangente",
+          "portugues": "propina, suborno",
+          "exemplo": "I politici prendevano tangenti in segreto."
+        },
+        {
+          "italiano": "magistrato",
+          "portugues": "magistrado",
+          "exemplo": "I magistrati di Milano indagano sui politici."
+        },
+        {
+          "italiano": "corruzione",
+          "portugues": "corrupção",
+          "exemplo": "La corruzione era sistemica."
+        },
+        {
+          "italiano": "partito",
+          "portugues": "partido (político)",
+          "exemplo": "I vecchi partiti crollarono."
+        },
+        {
+          "italiano": "indagine",
+          "portugues": "investigação",
+          "exemplo": "L'indagine sconvolse l'Italia intera."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_162",
+      "titulo": "Romanzo Criminale",
+      "origem": "Romanzo Criminale - La Serie",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "A história da Banda della Magliana que dominou Roma nos anos 70-80.",
+      "vocabulario": [
+        {
+          "italiano": "banda",
+          "portugues": "bando, gangue",
+          "exemplo": "La banda controllava quartieri interi."
+        },
+        {
+          "italiano": "droga",
+          "portugues": "droga",
+          "exemplo": "Il traffico di droga era la principale fonte di guadagno."
+        },
+        {
+          "italiano": "leale",
+          "portugues": "leal",
+          "exemplo": "Tra i criminali, la lealtà era fondamentale."
+        },
+        {
+          "italiano": "vendetta",
+          "portugues": "vingança",
+          "exemplo": "La vendetta porta solo altra violenza."
+        },
+        {
+          "italiano": "latitante",
+          "portugues": "fugitivo",
+          "exemplo": "Il capo era latitante da anni."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_163",
+      "titulo": "I Medici",
+      "origem": "I Medici - Masters of Florence",
+      "tipo": "Série",
+      "nivel": "B1",
+      "descricao": "La famiglia Medici e il potere a Firenze nel Rinascimento.",
+      "vocabulario": [
+        {
+          "italiano": "rinascimento",
+          "portugues": "Renascimento",
+          "exemplo": "Il Rinascimento fiorisce a Firenze."
+        },
+        {
+          "italiano": "banchiere",
+          "portugues": "banqueiro",
+          "exemplo": "I Medici erano potenti banchieri."
+        },
+        {
+          "italiano": "arte",
+          "portugues": "arte",
+          "esempio": "Finanziavano l'arte e la cultura."
+        },
+        {
+          "italiano": "cospirazione",
+          "portugues": "conspiração",
+          "exemplo": "Una cospirazione minaccia la famiglia."
+        },
+        {
+          "italiano": "mecenate",
+          "portugues": "mecenas, patrocinador",
+          "exemplo": "Lorenzo il Magnifico era un grande mecenate."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_164",
+      "titulo": "Il Caso Mattei",
+      "origem": "Il Caso Mattei - Rosi (1972)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "A história de Enrico Mattei, o poderoso presidente da ENI.",
+      "vocabulario": [
+        {
+          "italiano": "petrolio",
+          "portugues": "petróleo",
+          "exemplo": "Mattei cercava petrolio in tutto il mondo."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "poder",
+          "exemplo": "Il suo potere faceva paura ai grandi."
+        },
+        {
+          "italiano": "complotto",
+          "portugues": "complô, conspiração",
+          "exemplo": "Molti credono a un complotto per ucciderlo."
+        },
+        {
+          "italiano": "industria",
+          "portugues": "indústria",
+          "exemplo": "Rivoluzionò l'industria energetica italiana."
+        },
+        {
+          "italiano": "incidente",
+          "portugues": "acidente",
+          "exemplo": "Morì in un misterioso incidente aereo."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_165",
+      "titulo": "Caro Diario",
+      "origem": "Caro Diario - Moretti (1993)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Nanni Moretti esplora Roma in vespa e riflette sulla vita.",
+      "vocabulario": [
+        {
+          "italiano": "diario",
+          "portugues": "diário",
+          "exemplo": "Moretti racconta la vita come un diario."
+        },
+        {
+          "italiano": "vespa",
+          "portugues": "vespa (scooter)",
+          "exemplo": "Gira Roma in vespa con grande libertà."
+        },
+        {
+          "italiano": "riflessione",
+          "portugues": "reflexão",
+          "esempio": "Il film è una riflessione sulla società."
+        },
+        {
+          "italiano": "critica",
+          "portugues": "crítica",
+          "exemplo": "Moretti fa critica sociale con ironia."
+        },
+        {
+          "italiano": "quartiere",
+          "portugues": "bairro",
+          "esempio": "Esplora i quartieri più particolari di Roma."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_166",
+      "titulo": "Tre Metri Sopra il Cielo",
+      "origem": "Tre Metri Sopra il Cielo",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Romance entre dois jovens de mundos sociais opostos.",
+      "vocabulario": [
+        {
+          "italiano": "motocicletta",
+          "portugues": "motocicleta",
+          "esempio": "Step va in giro con la sua moto."
+        },
+        {
+          "italiano": "innamorarsi",
+          "portugues": "apaixonar-se",
+          "esempio": "I due ragazzi si innamorano nonostante le differenze."
+        },
+        {
+          "italiano": "classe sociale",
+          "portugues": "classe social",
+          "esempio": "Vengono da classi sociali diverse."
+        },
+        {
+          "italiano": "ribelle",
+          "portugues": "rebelde",
+          "esempio": "Step è un ragazzo ribelle e pericoloso."
+        },
+        {
+          "italiano": "cuore",
+          "portugues": "coração",
+          "esempio": "Seguire il cuore spesso complica le cose."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_167",
+      "titulo": "Paisà",
+      "origem": "Paisà - Rossellini (1946)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Seis episódios sobre a liberação da Itália durante a Segunda Guerra.",
+      "vocabulario": [
+        {
+          "italiano": "liberazione",
+          "portugues": "libertação",
+          "exemplo": "La liberazione dell'Italia fu lenta e dolorosa."
+        },
+        {
+          "italiano": "partigiano",
+          "portugues": "partigiano, guerrilheiro",
+          "esempio": "I partigiani combattevano i nazisti."
+        },
+        {
+          "italiano": "alleato",
+          "portugues": "aliado",
+          "exemplo": "Gli alleati risalirono la penisola dal sud."
+        },
+        {
+          "italiano": "guerra",
+          "portugues": "guerra",
+          "esempio": "La guerra lasciò cicatrici profonde."
+        },
+        {
+          "italiano": "popolo",
+          "portugues": "povo",
+          "esempio": "Il popolo italiano resistette con coraggio."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_168",
+      "titulo": "Non ci Resta che Piangere",
+      "origem": "Non ci Resta che Piangere (1984)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Benigni e Troisi viaggiano nel tempo fino al 1492.",
+      "vocabulario": [
+        {
+          "italiano": "viaggio nel tempo",
+          "portugues": "viagem no tempo",
+          "esempio": "Si ritrovano nel Medioevo per caso."
+        },
+        {
+          "italiano": "Medioevo",
+          "portugues": "Idade Média",
+          "exemplo": "Il Medioevo è molto diverso dal presente."
+        },
+        {
+          "italiano": "lettera",
+          "portugues": "carta (correspondência)",
+          "esempio": "Scrivono una lettera a Savonarola."
+        },
+        {
+          "italiano": "assurdo",
+          "portugues": "absurdo",
+          "exemplo": "La situazione è assurda e comica."
+        },
+        {
+          "italiano": "commedia",
+          "portugues": "comédia",
+          "esempio": "Il film è una commedia brillante."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_169",
+      "titulo": "Il Postino",
+      "origem": "Il Postino (1994)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Um posteiro apprende la poesia da Pablo Neruda em esilio.",
+      "vocabulario": [
+        {
+          "italiano": "postino",
+          "portugues": "carteiro",
+          "exemplo": "Mario fa il postino in un piccolo paese."
+        },
+        {
+          "italiano": "poesia",
+          "portugues": "poesia",
+          "esempio": "Neruda gli insegna l'amore per la poesia."
+        },
+        {
+          "italiano": "metafora",
+          "portugues": "metáfora",
+          "esempio": "Una metafora descrive il mare dell'amore."
+        },
+        {
+          "italiano": "esilio",
+          "portugues": "exílio",
+          "esempio": "Neruda viveva in esilio sull'isola."
+        },
+        {
+          "italiano": "semplicità",
+          "portugues": "simplicidade",
+          "esempio": "La bellezza sta nella semplicità."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_170",
+      "titulo": "Cinema Paradiso (Baci)",
+      "origem": "Nuovo Cinema Paradiso - Scena dei Baci",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "A famosa cena dos beijos censurados e a montagem finale.",
+      "vocabulario": [
+        {
+          "italiano": "censura",
+          "portugues": "censura",
+          "exemplo": "Il prete censurava le scene di baci."
+        },
+        {
+          "italiano": "bobina",
+          "portugues": "bobina, carretel",
+          "exemplo": "Alfredo conservava le bobine tagliate."
+        },
+        {
+          "italiano": "proiezione",
+          "portugues": "projeção",
+          "esempio": "La proiezione all'aperto era un evento sociale."
+        },
+        {
+          "italiano": "commuoversi",
+          "portugues": "comover-se",
+          "esempio": "La scena finale fa commuovere tutti."
+        },
+        {
+          "italiano": "eredità",
+          "portugues": "herança, legado",
+          "esempio": "Il cinema era l'eredità di Alfredo."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_171",
+      "titulo": "Il Divo",
+      "origem": "Il Divo - Sorrentino (2008)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "Retrato de Giulio Andreotti, o político mais controverso da Itália.",
+      "vocabulario": [
+        {
+          "italiano": "senatore",
+          "portugues": "senador",
+          "exemplo": "Andreotti fu senatore a vita."
+        },
+        {
+          "italiano": "mafia",
+          "portugues": "máfia",
+          "exemplo": "I legami con la mafia restano oscuri."
+        },
+        {
+          "italiano": "sette volte",
+          "portugues": "sete vezes",
+          "exemplo": "Fu sette volte Presidente del Consiglio."
+        },
+        {
+          "italiano": "controverso",
+          "portugues": "controverso",
+          "esempio": "Fu il politico più controverso d'Italia."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "poder",
+          "exemplo": "Rimase al potere per decenni."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_172",
+      "titulo": "Romanzo di una Strage",
+      "origem": "Romanzo di una Strage (2012)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "A bomba na Piazza Fontana em 1969 e os anni di piombo.",
+      "vocabulario": [
+        {
+          "italiano": "strage",
+          "portugues": "massacre, chacina",
+          "exemplo": "La strage di Piazza Fontana sconvolse l'Italia."
+        },
+        {
+          "italiano": "terrorismo",
+          "portugues": "terrorismo",
+          "exemplo": "Gli anni di piombo sono pieni di terrorismo."
+        },
+        {
+          "italiano": "anarchico",
+          "portugues": "anarquista",
+          "esempio": "Gli anarchici furono accusati ingiustamente."
+        },
+        {
+          "italiano": "depistaggio",
+          "portugues": "desvio da investigação",
+          "exemplo": "Il depistaggio delle indagini fu sistematico."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "verdade",
+          "esempio": "La verità non è mai emersa completamente."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_173",
+      "titulo": "Bianca Come il Latte Rossa Come il Sangue",
+      "origem": "Bianca Come il Latte...",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Um adolescente se apaixona por uma garota do colégio.",
+      "vocabulario": [
+        {
+          "italiano": "cotta",
+          "portugues": "paixão juvenil",
+          "exemplo": "Leo ha una cotta per Beatrice."
+        },
+        {
+          "italiano": "adolescente",
+          "portugues": "adolescente",
+          "exemplo": "Gli adolescenti vivono tutto intensamente."
+        },
+        {
+          "italiano": "timido",
+          "portugues": "tímido",
+          "esempio": "Leo è troppo timido per dichiararsi."
+        },
+        {
+          "italiano": "scuola",
+          "portugues": "escola",
+          "exemplo": "Si incontrano a scuola ogni giorno."
+        },
+        {
+          "italiano": "coraggio",
+          "portugues": "coragem",
+          "esempio": "Ci vuole coraggio per dichiararsi."
+        }
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "ctx_174",
+      "titulo": "Zero Zero Zero",
+      "origem": "ZeroZeroZero (serie)",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Il traffico internazionale di cocaina visto da tre continenti.",
+      "vocabulario": [
+        {
+          "italiano": "cocaina",
+          "portugues": "cocaína",
+          "exemplo": "Il traffico di cocaina genera miliardi."
+        },
+        {
+          "italiano": "cartello",
+          "portugues": "cartel",
+          "esempio": "I cartelli messicani dominano il mercato."
+        },
+        {
+          "italiano": "trafficante",
+          "portugues": "traficante",
+          "esempio": "I trafficanti rischiano la vita."
+        },
+        {
+          "italiano": "ndrangheta",
+          "portugues": "Ndrangheta (máfia calabresa)",
+          "exemplo": "La Ndrangheta gestisce il traffico in Europa."
+        },
+        {
+          "italiano": "corriere",
+          "portugues": "correio, mula (transporte)",
+          "exemplo": "I corrieri trasportano la droga nascosta."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_175",
+      "titulo": "È Stata la Mano di Dio",
+      "origem": "È Stata la Mano di Dio - Sorrentino (2021)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Sorrentino racconta la sua adolescenza a Napoli con Maradona.",
+      "vocabulario": [
+        {
+          "italiano": "adolescenza",
+          "portugues": "adolescência",
+          "esempio": "Il film racconta la sua adolescenza napolitana."
+        },
+        {
+          "italiano": "tragedia",
+          "portugues": "tragédia",
+          "esempio": "Una tragedia segna la vita del protagonista."
+        },
+        {
+          "italiano": "calcio",
+          "portugues": "futebol",
+          "exemplo": "Il calcio è la religione di Napoli."
+        },
+        {
+          "italiano": "partire",
+          "portugues": "partir, ir embora",
+          "esempio": "Decide di partire per Roma a fare film."
+        },
+        {
+          "italiano": "destino",
+          "portugues": "destino",
+          "esempio": "Maradona cambia il destino della città."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_176",
+      "titulo": "My Brilliant Friend (Stagione 2)",
+      "origem": "L'Amica Geniale - Stagione 2",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Lenù vai all'università a Pisa mentre Lila resta nel rione.",
+      "vocabulario": [
+        {
+          "italiano": "università",
+          "portugues": "universidade",
+          "exemplo": "Elena studia a Pisa lontano dal rione."
+        },
+        {
+          "italiano": "emancipazione",
+          "portugues": "emancipação",
+          "exemplo": "L'università è la via per l'emancipazione."
+        },
+        {
+          "italiano": "matrimonio",
+          "portugues": "casamento",
+          "exemplo": "Lila sposa Stefano per uscire dalla povertà."
+        },
+        {
+          "italiano": "divergenza",
+          "portugues": "divergência",
+          "esempio": "Le loro vite divergono sempre di più."
+        },
+        {
+          "italiano": "intellettuale",
+          "portugues": "intelectual",
+          "esempio": "Elena diventa un'intellettuale."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_177",
+      "titulo": "Stromboli",
+      "origem": "Stromboli - Rossellini (1950)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Uma refugiada lituana prende a vivere su un'isola vulcanica siciliana.",
+      "vocabulario": [
+        {
+          "italiano": "vulcano",
+          "portugues": "vulcão",
+          "esempio": "Il vulcano Stromboli fa paura agli abitanti."
+        },
+        {
+          "italiano": "isola",
+          "portugues": "ilha",
+          "esempio": "L'isola è bellissima ma isolata."
+        },
+        {
+          "italiano": "rifugiata",
+          "portugues": "refugiada",
+          "esempio": "Karin è una rifugiata alla ricerca di libertà."
+        },
+        {
+          "italiano": "isolamento",
+          "portugues": "isolamento",
+          "esempio": "L'isolamento pesa molto sulla protagonista."
+        },
+        {
+          "italiano": "fuga",
+          "portugues": "fuga",
+          "esempio": "Cerca una via di fuga dalla sua nuova vita."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_178",
+      "titulo": "L'Ora Legale",
+      "origem": "L'Ora Legale (2017)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Un sindaco onesto sconvolge un paese siciliano abituato alla corruzione.",
+      "vocabulario": [
+        {
+          "italiano": "sindaco",
+          "portugues": "prefeito",
+          "esempio": "Il nuovo sindaco è incorruttibile."
+        },
+        {
+          "italiano": "onesto",
+          "portugues": "honesto",
+          "esempio": "Un politico onesto è una rarità."
+        },
+        {
+          "italiano": "abitudine",
+          "portugues": "hábito, costume",
+          "exemplo": "La corruzione era un'abitudine radicata."
+        },
+        {
+          "italiano": "favore",
+          "portugues": "favor",
+          "exemplo": "Tutti volevano un favore dal sindaco."
+        },
+        {
+          "italiano": "cambiamento",
+          "portugues": "mudança",
+          "exemplo": "Il cambiamento non piace a tutti."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_179",
+      "titulo": "Perfetti Sconosciuti",
+      "origem": "Perfetti Sconosciuti (2016)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Amigos leem as mensagens dos celulares durante um jantar, revelando segredos.",
+      "vocabulario": [
+        {
+          "italiano": "segreto",
+          "portugues": "segredo",
+          "esempio": "Ogni telefono nasconde un segreto."
+        },
+        {
+          "italiano": "tradimento",
+          "portugues": "traição",
+          "esempio": "Il tradimento viene alla luce."
+        },
+        {
+          "italiano": "cellulare",
+          "portugues": "celular",
+          "exemplo": "Il cellulare è lo specchio della nostra vita."
+        },
+        {
+          "italiano": "cena",
+          "portugues": "jantar",
+          "exemplo": "La cena tra amici diventa un dramma."
+        },
+        {
+          "italiano": "verità",
+          "portugues": "verdade",
+          "esempio": "La verità fa sempre un po' male."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_180",
+      "titulo": "Smetto Quando Voglio",
+      "origem": "Smetto Quando Voglio (2014)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Ricercatori senza lavoro producono droghe sintetiche.",
+      "vocabulario": [
+        {
+          "italiano": "ricercatore",
+          "portugues": "pesquisador",
+          "exemplo": "I ricercatori perdono i finanziamenti."
+        },
+        {
+          "italiano": "droga sintetica",
+          "portugues": "droga sintética",
+          "esempio": "Producono nuove droghe sintetiche legali."
+        },
+        {
+          "italiano": "disoccupazione",
+          "portugues": "desemprego",
+          "esempio": "La disoccupazione colpisce anche i dottori."
+        },
+        {
+          "italiano": "brillante",
+          "portugues": "brilhante",
+          "exemplo": "Sono menti brillanti in situazioni difficili."
+        },
+        {
+          "italiano": "rischio",
+          "portugues": "risco",
+          "exemplo": "Il rischio è altissimo."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_181",
+      "titulo": "Il Sorpasso",
+      "origem": "Il Sorpasso - Risi (1962)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Bruno e Roberto in un viaggio on the road nell'Italia del boom economico.",
+      "vocabulario": [
+        {
+          "italiano": "sorpasso",
+          "portugues": "ultrapassagem (no trânsito)",
+          "esempio": "Il sorpasso è una metafora della vita sfrenata."
+        },
+        {
+          "italiano": "boom economico",
+          "portugues": "boom econômico",
+          "esempio": "L'Italia degli anni 60 vive un boom economico."
+        },
+        {
+          "italiano": "spensierato",
+          "portugues": "despreocupado",
+          "exemplo": "Bruno è spensierato e avventuroso."
+        },
+        {
+          "italiano": "autostrada",
+          "portugues": "autoestrada",
+          "exemplo": "Viaggiano sull'Aurelia verso il mare."
+        },
+        {
+          "italiano": "tragedia",
+          "portugues": "tragédia",
+          "exemplo": "Il film si conclude con una tragedia."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_182",
+      "titulo": "Totò, Peppino e la Malafemmina",
+      "origem": "Totò, Peppino e la Malafemmina (1956)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "I fratelli Totò e Peppino a Milano cercano di salvare il nipote.",
+      "vocabulario": [
+        {
+          "italiano": "dialetto",
+          "portugues": "dialeto",
+          "exemplo": "Totò usa il dialetto napoletano con ironia."
+        },
+        {
+          "italiano": "nipote",
+          "portugues": "sobrinho, neto",
+          "exemplo": "Vogliono salvare il nipote da una donna."
+        },
+        {
+          "italiano": "lettera",
+          "portugues": "carta",
+          "esempio": "La lettera scritta male è iconica."
+        },
+        {
+          "italiano": "commedia",
+          "portugues": "comédia",
+          "esempio": "È una commedia classica del cinema italiano."
+        },
+        {
+          "italiano": "malafemmina",
+          "portugues": "mulher de má reputação",
+          "exemplo": "Temono la malafemmina che seduce il nipote."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_183",
+      "titulo": "Pane e Tulipani",
+      "origem": "Pane e Tulipani (2000)",
+      "tipo": "Filme",
+      "nivel": "A2",
+      "descricao": "Rosalba é esquecida pelo marido durante uma excursão e vai parar em Veneza.",
+      "vocabulario": [
+        {
+          "italiano": "dimenticare",
+          "portugues": "esquecer",
+          "exemplo": "Il marito la dimentica all'autogrill."
+        },
+        {
+          "italiano": "avventura",
+          "portugues": "aventura",
+          "esempio": "Rosalba inizia un'avventura inattesa."
+        },
+        {
+          "italiano": "Venezia",
+          "portugues": "Veneza",
+          "exemplo": "Finisce a Venezia e si innamora della città."
+        },
+        {
+          "italiano": "liberta",
+          "portugues": "liberdade",
+          "exemplo": "Scopre la libertà lontano dalla famiglia."
+        },
+        {
+          "italiano": "fiorista",
+          "portugues": "florista",
+          "exemplo": "Lavora da una fiorista veneziana."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_184",
+      "titulo": "Caos Calmo",
+      "origem": "Caos Calmo (2008)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "Pietro aspetta davanti alla scuola della figlia dopo la morte della moglie.",
+      "vocabulario": [
+        {
+          "italiano": "lutto",
+          "portugues": "luto",
+          "exemplo": "Vive il lutto aspettando fuori dalla scuola."
+        },
+        {
+          "italiano": "elaborare",
+          "portugues": "elaborar, processar",
+          "exemplo": "Non riesce ad elaborare il dolore."
+        },
+        {
+          "italiano": "dolore",
+          "portugues": "dor",
+          "exemplo": "Il dolore si manifesta in modi inaspettati."
+        },
+        {
+          "italiano": "figlia",
+          "portugues": "filha",
+          "exemplo": "La figlia è il suo unico ancoraggio."
+        },
+        {
+          "italiano": "immobilità",
+          "portugues": "imobilidade",
+          "exemplo": "La sua immobilità è una forma di lutto."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_185",
+      "titulo": "L'Ultimo Bacio",
+      "origem": "L'Ultimo Bacio - Muccino (2001)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Trinta e poucos anos enfrentam a paura dell'impegno.",
+      "vocabulario": [
+        {
+          "italiano": "impegno",
+          "portugues": "compromisso",
+          "exemplo": "La paura dell'impegno è universale."
+        },
+        {
+          "italiano": "tradire",
+          "portugues": "trair",
+          "esempio": "Carlo tradisce la ragazza incinta."
+        },
+        {
+          "italiano": "crescere",
+          "portugues": "crescer",
+          "esempio": "Crescere significa assumersi responsabilità."
+        },
+        {
+          "italiano": "responsabilità",
+          "portugues": "responsabilidade",
+          "esempio": "La paternità porta tante responsabilità."
+        },
+        {
+          "italiano": "rimpianto",
+          "portugues": "arrependimento",
+          "esempio": "Il rimpianto è peggio dell'errore stesso."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_186",
+      "titulo": "Mio Fratello è Figlio Unico",
+      "origem": "Mio Fratello è Figlio Unico (2007)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Due fratelli con ideologie opposte nell'Italia degli anni 60-70.",
+      "vocabulario": [
+        {
+          "italiano": "fascismo",
+          "portugues": "fascismo",
+          "esempio": "Accio si avvicina ai movimenti fascisti."
+        },
+        {
+          "italiano": "comunismo",
+          "portugues": "comunismo",
+          "exemplo": "Il fratello Manrico è comunista."
+        },
+        {
+          "italiano": "ideologia",
+          "portugues": "ideologia",
+          "esempio": "Le ideologie dividono la famiglia."
+        },
+        {
+          "italiano": "fratello",
+          "portugues": "irmão",
+          "exemplo": "Nonostante tutto, i fratelli si amano."
+        },
+        {
+          "italiano": "scontro",
+          "portugues": "confronto, conflito",
+          "exemplo": "Lo scontro ideologico diventa familiare."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_187",
+      "titulo": "Boris (La Serie)",
+      "origem": "Boris (serie TV)",
+      "tipo": "Série",
+      "nivel": "B2",
+      "descricao": "Satira brutalmente onesta del mundo delle fiction televisive italiane.",
+      "vocabulario": [
+        {
+          "italiano": "fiction",
+          "portugues": "ficção televisiva",
+          "exemplo": "La fiction italiana spesso è di bassa qualità."
+        },
+        {
+          "italiano": "regista",
+          "portugues": "diretor",
+          "esempio": "Il regista René è un cinico deluso."
+        },
+        {
+          "italiano": "compromesso",
+          "portugues": "compromisso, concessão",
+          "esempio": "Il mondo TV è fatto di compromessi."
+        },
+        {
+          "italiano": "sistema",
+          "portugues": "sistema",
+          "esempio": "Il sistema non cambia mai."
+        },
+        {
+          "italiano": "satira",
+          "portugues": "sátira",
+          "esempio": "Boris è la miglior satira del mondo TV."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_188",
+      "titulo": "La Banda degli Onesti",
+      "origem": "La Banda degli Onesti - Camerini (1956)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Totò e Peppino encontram acidentalmente banconote false.",
+      "vocabulario": [
+        {
+          "italiano": "banconota",
+          "portugues": "cédula, nota de dinheiro",
+          "exemplo": "Trovano banconote false per caso."
+        },
+        {
+          "italiano": "falso",
+          "portugues": "falso",
+          "esempio": "I soldi falsi sembrano veri."
+        },
+        {
+          "italiano": "onesto",
+          "portugues": "honesto",
+          "esempio": "Sono persone oneste in una situazione disonesta."
+        },
+        {
+          "italiano": "rischio",
+          "portugues": "risco",
+          "esempio": "Il rischio di essere scoperti è alto."
+        },
+        {
+          "italiano": "ironia",
+          "portugues": "ironia",
+          "exemplo": "La commedia si basa sull'ironia della situazione."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_189",
+      "titulo": "Non Essere Cattivo",
+      "origem": "Non Essere Cattivo - Caligari (2015)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Dois amigos na periferia de Roma tentam sair do mundo da droga.",
+      "vocabulario": [
+        {
+          "italiano": "periferia",
+          "portugues": "periferia",
+          "exemplo": "La periferia di Ostia è il loro mondo."
+        },
+        {
+          "italiano": "dipendenza",
+          "portugues": "dependência, vício",
+          "esempio": "La dipendenza dalla droga li distrugge."
+        },
+        {
+          "italiano": "redenzione",
+          "portugues": "redenção",
+          "exemplo": "Uno cerca la redenzione attraverso la religione."
+        },
+        {
+          "italiano": "amicizia",
+          "portugues": "amizade",
+          "exemplo": "L'amicizia resiste alle difficoltà."
+        },
+        {
+          "italiano": "disperazione",
+          "portugues": "desespero",
+          "exemplo": "La disperazione porta scelte sbagliate."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_190",
+      "titulo": "Chiamami col Tuo Nome",
+      "origem": "Call Me by Your Name - Guadagnino (2017)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Un'estate in Italia, un amore intenso tra due giovani.",
+      "vocabulario": [
+        {
+          "italiano": "estate",
+          "portugues": "verão",
+          "exemplo": "L'estate italiana è il palcoscenico dell'amore."
+        },
+        {
+          "italiano": "nostalgia",
+          "portugues": "nostalgia, saudade",
+          "esempio": "Il film è pura nostalgia."
+        },
+        {
+          "italiano": "scoperta",
+          "portugues": "descoberta",
+          "exemplo": "Elio fa la scoperta di sé stesso."
+        },
+        {
+          "italiano": "intensità",
+          "portugues": "intensidade",
+          "exemplo": "L'amore giovanile ha un'intensità unica."
+        },
+        {
+          "italiano": "campagna",
+          "portugues": "campo, zona rural",
+          "esempio": "Vivono in una bella villa in campagna."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_191",
+      "titulo": "Amici Miei",
+      "origem": "Amici Miei - Monicelli (1975)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Quattro amici fiorentini fanno scherzi e riflettono sulla vita.",
+      "vocabulario": [
+        {
+          "italiano": "scherzo",
+          "portugues": "brincadeira, pegadinha",
+          "esempio": "I quattro amici fanno scherzi crudeli."
+        },
+        {
+          "italiano": "supercazzola",
+          "portugues": "enrolação com palavras sem sentido",
+          "esempio": "La supercazzola è l'invenzione linguistica del film."
+        },
+        {
+          "italiano": "amicizia",
+          "portugues": "amizade",
+          "esempio": "L'amicizia maschile è al centro del film."
+        },
+        {
+          "italiano": "nostalgia",
+          "portugues": "nostalgia",
+          "esempio": "C'è nostalgia per una giovinezza perduta."
+        },
+        {
+          "italiano": "fiorentino",
+          "portugues": "florentino",
+          "esempio": "Il film celebra lo spirito fiorentino."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_192",
+      "titulo": "Diavolo in Corpo",
+      "origem": "Diavolo in Corpo - Bellocchio (1986)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "Uma relação proibida entre uma jovem e um estudante.",
+      "vocabulario": [
+        {
+          "italiano": "proibito",
+          "portugues": "proibido",
+          "esempio": "L'amore proibito è centrale nel film."
+        },
+        {
+          "italiano": "passione",
+          "portugues": "paixão",
+          "esempio": "La passione travolge ogni regola."
+        },
+        {
+          "italiano": "terrorismo",
+          "portugues": "terrorismo",
+          "exemplo": "Il contesto del terrorismo è sullo sfondo."
+        },
+        {
+          "italiano": "scandalo",
+          "portugues": "escândalo",
+          "esempio": "La relazione è uno scandalo nella società."
+        },
+        {
+          "italiano": "transgredire",
+          "portugues": "transgredir",
+          "esempio": "Entrambi transgrediscono le norme sociali."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_193",
+      "titulo": "Respiro",
+      "origem": "Respiro - Crialese (2002)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Uma mulher libera e selvagem in un'isola siciliana.",
+      "vocabulario": [
+        {
+          "italiano": "libertà",
+          "portugues": "liberdade",
+          "esempio": "Grazia incarna la voglia di libertà."
+        },
+        {
+          "italiano": "convenzione",
+          "portugues": "convenção, norma social",
+          "esempio": "Le convenzioni soffocano le persone diverse."
+        },
+        {
+          "italiano": "isola",
+          "portugues": "ilha",
+          "esempio": "L'isola è un mondo chiuso e conservatore."
+        },
+        {
+          "italiano": "selvaggio",
+          "portugues": "selvagem",
+          "esempio": "Il suo comportamento è considerato selvaggio."
+        },
+        {
+          "italiano": "accettazione",
+          "portugues": "aceitação",
+          "esempio": "Cerca accettazione nella sua comunità."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_194",
+      "titulo": "Il Marchese del Grillo",
+      "origem": "Il Marchese del Grillo (1981)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Sordi è um nobre romano che fa scherzi ai potenti e aiuta i poveri.",
+      "vocabulario": [
+        {
+          "italiano": "marchese",
+          "portugues": "marquês",
+          "esempio": "Il Marchese del Grillo è un nobile eccentrico."
+        },
+        {
+          "italiano": "nobile",
+          "portugues": "nobre",
+          "esempio": "I nobili vivevano con grandi privilegi."
+        },
+        {
+          "italiano": "popolano",
+          "portugues": "povo, pessoa comum",
+          "exemplo": "Onofrio, il popolano, assomiglia al marchese."
+        },
+        {
+          "italiano": "privilegio",
+          "portugues": "privilégio",
+          "exemplo": "Usa i privilegi per aiutare i poveri."
+        },
+        {
+          "italiano": "carnevale",
+          "portugues": "carnaval",
+          "esempio": "A Roma il carnevale era una festa popolare."
+        }
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "ctx_195",
+      "titulo": "La Meglio Gioventù",
+      "origem": "La Meglio Gioventù (2003)",
+      "tipo": "Filme",
+      "nivel": "C1",
+      "descricao": "Saga familiar através de 40 anos da história italiana.",
+      "vocabulario": [
+        {
+          "italiano": "saga",
+          "portugues": "saga",
+          "esempio": "Il film è una saga familiare di 6 ore."
+        },
+        {
+          "italiano": "generazione",
+          "portugues": "geração",
+          "esempio": "Segue due generazioni di una famiglia italiana."
+        },
+        {
+          "italiano": "impegno politico",
+          "portugues": "engajamento político",
+          "exemplo": "I fratelli hanno opposti impegni politici."
+        },
+        {
+          "italiano": "psichiatria",
+          "portugues": "psiquiatria",
+          "esempio": "La riforma della psichiatria è un tema del film."
+        },
+        {
+          "italiano": "speranza",
+          "portugues": "esperança",
+          "esempio": "Nonostante tutto, il film è pieno di speranza."
+        }
+      ],
+      "xp_recompensa": 40
+    },
+    {
+      "id": "ctx_196",
+      "titulo": "L'Intrepido",
+      "origem": "L'Intrepido - Amelio (2013)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Antonio lavora cento lavori diversi mentre cerca suo figlio.",
+      "vocabulario": [
+        {
+          "italiano": "precariato",
+          "portugues": "precariedade no trabalho",
+          "esempio": "Il film riflette il precariato italiano."
+        },
+        {
+          "italiano": "lavoro",
+          "portugues": "trabalho",
+          "exemplo": "Ogni giorno ha un lavoro diverso."
+        },
+        {
+          "italiano": "figlio",
+          "portugues": "filho",
+          "exemplo": "Cerca di salvare il figlio dalla droga."
+        },
+        {
+          "italiano": "tenacia",
+          "portugues": "tenacidade",
+          "exemplo": "Antonio ha una tenacia straordinaria."
+        },
+        {
+          "italiano": "crisi",
+          "portugues": "crise",
+          "exemplo": "La crisi economica colpisce tutti."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_197",
+      "titulo": "Terraferma",
+      "origem": "Terraferma - Crialese (2011)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Pescatori siciliani devono scegliere tra legge e umanità con i migranti.",
+      "vocabulario": [
+        {
+          "italiano": "migrante",
+          "portugues": "migrante",
+          "esempio": "I migranti arrivano in barca dal mare."
+        },
+        {
+          "italiano": "legge del mare",
+          "portugues": "lei do mar",
+          "exemplo": "La legge del mare obbliga a soccorrere."
+        },
+        {
+          "italiano": "accoglienza",
+          "portugues": "acolhimento, recepção",
+          "esempio": "L'accoglienza dei migranti è un dilemma."
+        },
+        {
+          "italiano": "umanità",
+          "portugues": "humanidade",
+          "exemplo": "L'umanità viene prima delle leggi."
+        },
+        {
+          "italiano": "solidarietà",
+          "portugues": "solidariedade",
+          "esempio": "La solidarietà tra i pescatori è forte."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_198",
+      "titulo": "Indivisibili",
+      "origem": "Indivisibili - De Angelis (2016)",
+      "tipo": "Filme",
+      "nivel": "B2",
+      "descricao": "Gemellas siamesas na periferia napolitana que cantam em feste.",
+      "vocabulario": [
+        {
+          "italiano": "gemelle",
+          "portugues": "gêmeas",
+          "exemplo": "Le gemelle sono unite fisicamente e spiritualmente."
+        },
+        {
+          "italiano": "siamesi",
+          "portugues": "siameses",
+          "exemplo": "Le gemelle siamesi non possono essere separate."
+        },
+        {
+          "italiano": "separazione",
+          "portugues": "separação",
+          "exemplo": "La possibile separazione le spaventa."
+        },
+        {
+          "italiano": "identità",
+          "portugues": "identidade",
+          "exemplo": "Ognuna cerca la propria identità."
+        },
+        {
+          "italiano": "sfruttamento",
+          "portugues": "exploração",
+          "exemplo": "I genitori le sfruttano economicamente."
+        }
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "ctx_199",
+      "titulo": "Tutto quello che vuoi",
+      "origem": "Tutto quello che vuoi - Piccioni (2017)",
+      "tipo": "Filme",
+      "nivel": "B1",
+      "descricao": "Un vecchio poeta e un giovane senza scopo creano un'amicizia improbabile.",
+      "vocabulario": [
+        {
+          "italiano": "poeta",
+          "portugues": "poeta",
+          "exemplo": "Giorgio è un vecchio poeta con l'Alzheimer."
+        },
+        {
+          "italiano": "amicizia intergenerazionale",
+          "portugues": "amizade intergeracional",
+          "esempio": "Un'amicizia tra giovane e vecchio sorprende."
+        },
+        {
+          "italiano": "memoria",
+          "portugues": "memória",
+          "esempio": "La memoria del vecchio si affievolisce."
+        },
+        {
+          "italiano": "scopo",
+          "portugues": "propósito",
+          "esempio": "Alessandro non ha uno scopo nella vita."
+        },
+        {
+          "italiano": "viaggio",
+          "portugues": "viagem",
+          "esempio": "Partono insieme per un viaggio nel passato."
+        }
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "ctx_200",
+      "titulo": "The Young Pope",
+      "origem": "The Young Pope - Sorrentino",
+      "tipo": "Série",
+      "nivel": "C1",
+      "descricao": "Il giovane e controverso papa americano Pio XIII scuote il Vaticano.",
+      "vocabulario": [
+        {
+          "italiano": "papa",
+          "portugues": "papa",
+          "esempio": "Pio XIII è il primo papa americano."
+        },
+        {
+          "italiano": "Vaticano",
+          "portugues": "Vaticano",
+          "exemplo": "Il Vaticano è scosso dalle sue decisioni."
+        },
+        {
+          "italiano": "fede",
+          "portugues": "fé",
+          "exemplo": "Ha una fede assoluta e misteriosa."
+        },
+        {
+          "italiano": "potere",
+          "portugues": "poder",
+          "esempio": "Usa il potere in modo imprevedibile."
+        },
+        {
+          "italiano": "dogma",
+          "portugues": "dogma",
+          "esempio": "Non esita a sfidare i dogmi tradizionali."
+        }
+      ],
+      "xp_recompensa": 40
     }
   ]
 }

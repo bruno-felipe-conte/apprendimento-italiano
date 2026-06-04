@@ -7399,6 +7399,1706 @@
         "verità"
       ],
       "xp_recompensa": 40
+    },
+    {
+      "id": "can_151",
+      "titulo": "Il Mondo",
+      "artista": "Jimmy Fontana",
+      "nivel": "A2",
+      "icone": "🌍",
+      "tema": "vita",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Il mondo è grigio, il mondo è azzurro, il mondo è tristezza e bugie.",
+          "texto_lacuna": "Il ___ è grigio, il mondo è azzurro, il mondo è tristezza e bugie.",
+          "palavra_oculta": "mondo",
+          "traducao": "O mundo é cinza, o mundo é azul, o mundo é tristeza e mentiras.",
+          "dica": "pianeta"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E il cuore ha paura di amare ma poi si innamora.",
+          "texto_lacuna": "E il cuore ha ___ di amare ma poi si innamora.",
+          "palavra_oculta": "paura",
+          "traducao": "E o coração tem medo de amar mas depois se apaixona.",
+          "dica": "timore"
+        }
+      ],
+      "vocabulario_chave": [
+        "mondo",
+        "grigio",
+        "azzurro",
+        "tristezza",
+        "cuore"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_152",
+      "titulo": "Non Ho L'Età",
+      "artista": "Gigliola Cinquetti",
+      "nivel": "A2",
+      "icone": "🌸",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Non ho l'età, per amarti, non ho l'età per vivere.",
+          "texto_lacuna": "Non ho l'___, per amarti, non ho l'età per vivere.",
+          "palavra_oculta": "età",
+          "traducao": "Não tenho a idade para te amar, não tenho a idade para viver.",
+          "dica": "anni"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Sarai il mio primo amore, il primo pensiero al mattino.",
+          "texto_lacuna": "Sarai il mio primo ___, il primo pensiero al mattino.",
+          "palavra_oculta": "amore",
+          "traducao": "Você será meu primeiro amor, o primeiro pensamento de manhã.",
+          "dica": "sentimento"
+        }
+      ],
+      "vocabulario_chave": [
+        "età",
+        "amore",
+        "primo",
+        "mattino",
+        "pensiero"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_153",
+      "titulo": "Quando Quando Quando",
+      "artista": "Tony Renis",
+      "nivel": "A1",
+      "icone": "💫",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Dimmi quando tu verrai, dimmi quando quando quando.",
+          "texto_lacuna": "Dimmi ___ tu verrai, dimmi quando quando quando.",
+          "palavra_oculta": "quando",
+          "traducao": "Me diga quando você virá, me diga quando quando quando.",
+          "dica": "interrogativo di tempo"
+        },
+        {
+          "id": 2,
+          "texto_completo": "L'anno, il giorno, l'ora in cui forse tu mi bacerai.",
+          "texto_lacuna": "L'anno, il giorno, l'___ in cui forse tu mi bacerai.",
+          "palavra_oculta": "ora",
+          "traducao": "O ano, o dia, a hora em que talvez você me beijará.",
+          "dica": "momento del giorno"
+        }
+      ],
+      "vocabulario_chave": [
+        "quando",
+        "anno",
+        "giorno",
+        "ora",
+        "baciare"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "can_154",
+      "titulo": "Io Vagabondo",
+      "artista": "Nomadi",
+      "nivel": "B1",
+      "icone": "🎸",
+      "tema": "libertà",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Io vagabondo, io sono un vagabondo, e me ne vado per le strade del mondo.",
+          "texto_lacuna": "Io ___, io sono un vagabondo, e me ne vado per le strade del mondo.",
+          "palavra_oculta": "vagabondo",
+          "traducao": "Sou vagabundo, sou um vagabundo, e vou pelas estradas do mundo.",
+          "dica": "chi ama viaggiare"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Cammino sempre senza sosta, in cerca di un posto nel sole.",
+          "texto_lacuna": "Cammino sempre senza ___, in cerca di un posto nel sole.",
+          "palavra_oculta": "sosta",
+          "traducao": "Caminho sempre sem parar, em busca de um lugar no sol.",
+          "dica": "fermata"
+        }
+      ],
+      "vocabulario_chave": [
+        "vagabondo",
+        "camminare",
+        "sosta",
+        "posto",
+        "sole"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_155",
+      "titulo": "Tanti Auguri",
+      "artista": "Raffaella Carrà",
+      "nivel": "A1",
+      "icone": "🎉",
+      "tema": "festa",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Tanti auguri a te, tanti auguri a te, tanti auguri auguri auguri tanti auguri a te.",
+          "texto_lacuna": "Tanti ___ a te, tanti auguri a te, tanti auguri auguri auguri tanti auguri a te.",
+          "palavra_oculta": "auguri",
+          "traducao": "Muitos parabéns pra você, muitos parabéns pra você.",
+          "dica": "buoni desideri"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E buon compleanno, che tu possa essere felice.",
+          "texto_lacuna": "E buon ___, che tu possa essere felice.",
+          "palavra_oculta": "compleanno",
+          "traducao": "E feliz aniversário, que você possa ser feliz.",
+          "dica": "data di nascita"
+        }
+      ],
+      "vocabulario_chave": [
+        "auguri",
+        "compleanno",
+        "felice",
+        "festa",
+        "buono"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "can_156",
+      "titulo": "Luce (Tramonti a Nord Est)",
+      "artista": "Elisa",
+      "nivel": "B1",
+      "icone": "☀️",
+      "tema": "sentimenti",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "E sei luce, luce divina, luce che illumina il cammino.",
+          "texto_lacuna": "E sei ___, luce divina, luce che illumina il cammino.",
+          "palavra_oculta": "luce",
+          "traducao": "E você é luz, luz divina, luz que ilumina o caminho.",
+          "dica": "chiarezza, opposto di buio"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Quel che è, quel che sarà, mi regala la tua serenità.",
+          "texto_lacuna": "Quel che è, quel che sarà, mi regala la tua ___.",
+          "palavra_oculta": "serenità",
+          "traducao": "O que é, o que será, me presenteia com a sua serenidade.",
+          "dica": "pace interiore"
+        }
+      ],
+      "vocabulario_chave": [
+        "luce",
+        "divina",
+        "cammino",
+        "serenità",
+        "regalare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_157",
+      "titulo": "Come Saprei",
+      "artista": "Giorgia",
+      "nivel": "B1",
+      "icone": "💜",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Come saprei amarti, come saprei tenerti per mano.",
+          "texto_lacuna": "Come ___ amarti, come saprei tenerti per mano.",
+          "palavra_oculta": "saprei",
+          "traducao": "Como eu saberia te amar, como eu saberia segurar sua mão.",
+          "dica": "condizionale di sapere"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Tra mille strade perdute io troverei la via per te.",
+          "texto_lacuna": "Tra mille strade ___ io troverei la via per te.",
+          "palavra_oculta": "perdute",
+          "traducao": "Entre mil caminhos perdidos eu encontraria o caminho para você.",
+          "dica": "aggettivo da perdere"
+        }
+      ],
+      "vocabulario_chave": [
+        "saprei",
+        "amare",
+        "mano",
+        "strada",
+        "perduto"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_158",
+      "titulo": "Nessuno Mi Può Giudicare",
+      "artista": "Caterina Caselli",
+      "nivel": "B1",
+      "icone": "✊",
+      "tema": "libertà",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Nessuno mi può giudicare, nemmeno tu che piangi sempre.",
+          "texto_lacuna": "___ mi può giudicare, nemmeno tu che piangi sempre.",
+          "palavra_oculta": "Nessuno",
+          "traducao": "Ninguém pode me julgar, nem mesmo você que chora sempre.",
+          "dica": "pronome negativo"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ho fatto quello che volevo, ho vissuto la mia vita.",
+          "texto_lacuna": "Ho fatto quello che ___, ho vissuto la mia vita.",
+          "palavra_oculta": "volevo",
+          "traducao": "Fiz o que queria, vivi a minha vida.",
+          "dica": "imperfetto di volere"
+        }
+      ],
+      "vocabulario_chave": [
+        "giudicare",
+        "nessuno",
+        "piangere",
+        "volere",
+        "vivere"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_159",
+      "titulo": "La Bambola",
+      "artista": "Patty Pravo",
+      "nivel": "A2",
+      "icone": "🪆",
+      "tema": "ribellione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "La bambola, la bambola, la mia bambola sei tu.",
+          "texto_lacuna": "La ___, la bambola, la mia bambola sei tu.",
+          "palavra_oculta": "bambola",
+          "traducao": "A boneca, a boneca, a minha boneca é você.",
+          "dica": "giocattolo femminile"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Non voglio stare sola, ho bisogno di qualcuno.",
+          "texto_lacuna": "Non voglio stare ___, ho bisogno di qualcuno.",
+          "palavra_oculta": "sola",
+          "traducao": "Não quero ficar sozinha, preciso de alguém.",
+          "dica": "senza compagnia"
+        }
+      ],
+      "vocabulario_chave": [
+        "bambola",
+        "sola",
+        "bisogno",
+        "qualcuno",
+        "volere"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_160",
+      "titulo": "Sei Nell'Anima",
+      "artista": "Gianna Nannini",
+      "nivel": "B1",
+      "icone": "🔥",
+      "tema": "passione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Sei nell'anima, sei nella mente, sei tutto quello che sento.",
+          "texto_lacuna": "Sei nell'___, sei nella mente, sei tutto quello che sento.",
+          "palavra_oculta": "anima",
+          "traducao": "Você está na alma, está na mente, é tudo o que sinto.",
+          "dica": "spirito interiore"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Dentro di me c'è solo il tuo nome che brucia.",
+          "texto_lacuna": "Dentro di me c'è solo il tuo ___ che brucia.",
+          "palavra_oculta": "nome",
+          "traducao": "Dentro de mim há apenas o seu nome que queima.",
+          "dica": "come si chiama qualcuno"
+        }
+      ],
+      "vocabulario_chave": [
+        "anima",
+        "mente",
+        "bruciare",
+        "dentro",
+        "nome"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_161",
+      "titulo": "America",
+      "artista": "Gianna Nannini",
+      "nivel": "B1",
+      "icone": "🗽",
+      "tema": "sogno",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "America, America, il sogno di un giorno arrivare.",
+          "texto_lacuna": "___, America, il sogno di un giorno arrivare.",
+          "palavra_oculta": "America",
+          "traducao": "América, América, o sonho de um dia chegar.",
+          "dica": "continente del sogno"
+        },
+        {
+          "id": 2,
+          "texto_completo": "La libertà non ha confini quando il cuore vola lontano.",
+          "texto_lacuna": "La ___ non ha confini quando il cuore vola lontano.",
+          "palavra_oculta": "libertà",
+          "traducao": "A liberdade não tem fronteiras quando o coração voa longe.",
+          "dica": "opposto di schiavitù"
+        }
+      ],
+      "vocabulario_chave": [
+        "America",
+        "sogno",
+        "libertà",
+        "confini",
+        "lontano"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_162",
+      "titulo": "Via del Campo",
+      "artista": "Fabrizio De André",
+      "nivel": "B2",
+      "icone": "🌿",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Via del campo ce n'è una ragazza, occhi grandi come un gatto selvatico.",
+          "texto_lacuna": "Via del campo ce n'è una ___, occhi grandi come un gatto selvatico.",
+          "palavra_oculta": "ragazza",
+          "traducao": "Na rua do campo há uma moça, olhos grandes como um gato selvagem.",
+          "dica": "donna giovane"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Dai diamanti non nasce niente, dal letame nascono i fiori.",
+          "texto_lacuna": "Dai diamanti non nasce niente, dal letame nascono i ___.",
+          "palavra_oculta": "fiori",
+          "traducao": "Dos diamantes não nasce nada, do esterco nascem as flores.",
+          "dica": "piante con petali colorati"
+        }
+      ],
+      "vocabulario_chave": [
+        "ragazza",
+        "diamante",
+        "letame",
+        "fiore",
+        "nascere"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_163",
+      "titulo": "La Canzone di Marinella",
+      "artista": "Fabrizio De André",
+      "nivel": "B2",
+      "icone": "🌊",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Questa di Marinella è la storia vera, che scivolò nel fiume a primavera.",
+          "texto_lacuna": "Questa di Marinella è la storia ___, che scivolò nel fiume a primavera.",
+          "palavra_oculta": "vera",
+          "traducao": "Esta de Marinella é a história verdadeira, que escorregou no rio na primavera.",
+          "dica": "reale, non finta"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ma il vento che la vide così bella, dal fiume la portò sopra una stella.",
+          "texto_lacuna": "Ma il ___ che la vide così bella, dal fiume la portò sopra una stella.",
+          "palavra_oculta": "vento",
+          "traducao": "Mas o vento que a viu tão bela, do rio a levou sobre uma estrela.",
+          "dica": "aria in movimento"
+        }
+      ],
+      "vocabulario_chave": [
+        "storia",
+        "fiume",
+        "primavera",
+        "vento",
+        "stella"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_164",
+      "titulo": "Bocca di Rosa",
+      "artista": "Fabrizio De André",
+      "nivel": "C1",
+      "icone": "🌹",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Bocca di Rosa si chiamava, metteva l'amore sopra ogni cosa.",
+          "texto_lacuna": "Bocca di Rosa si ___, metteva l'amore sopra ogni cosa.",
+          "palavra_oculta": "chiamava",
+          "traducao": "Bocca di Rosa se chamava, colocava o amor acima de tudo.",
+          "dica": "imperfetto di chiamarsi"
+        },
+        {
+          "id": 2,
+          "texto_completo": "L'amore è bello e fa sognare, ma costa caro e fa penare.",
+          "texto_lacuna": "L'amore è bello e fa ___, ma costa caro e fa penare.",
+          "palavra_oculta": "sognare",
+          "traducao": "O amor é bonito e faz sonhar, mas custa caro e faz sofrer.",
+          "dica": "infinito di sogno"
+        }
+      ],
+      "vocabulario_chave": [
+        "chiamarsi",
+        "amore",
+        "sognare",
+        "costare",
+        "penare"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "can_165",
+      "titulo": "Il Pescatore",
+      "artista": "Fabrizio De André",
+      "nivel": "B2",
+      "icone": "🎣",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "All'ombra dell'ultimo sole s'era assopito un pescatore.",
+          "texto_lacuna": "All'ombra dell'ultimo ___ s'era assopito un pescatore.",
+          "palavra_oculta": "sole",
+          "traducao": "À sombra do último sol tinha adormecido um pescador.",
+          "dica": "stella del giorno"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E alla fine prese il largo con il carico di pena.",
+          "texto_lacuna": "E alla fine prese il ___ con il carico di pena.",
+          "palavra_oculta": "largo",
+          "traducao": "E no final tomou o largo com o peso da pena.",
+          "dica": "il mare aperto"
+        }
+      ],
+      "vocabulario_chave": [
+        "sole",
+        "pescatore",
+        "ombra",
+        "largo",
+        "pena"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_166",
+      "titulo": "Napule è",
+      "artista": "Pino Daniele",
+      "nivel": "B1",
+      "icone": "🎺",
+      "tema": "città",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Napule è mille culure, Napule è mille paure.",
+          "texto_lacuna": "Napule è mille ___, Napule è mille paure.",
+          "palavra_oculta": "culure",
+          "traducao": "Nápoles é mil cores, Nápoles é mil medos.",
+          "dica": "dialetto napoletano per colori"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Napule è na carta sporca e nisciuno se ne importa.",
+          "texto_lacuna": "Napule è na carta sporca e ___ se ne importa.",
+          "palavra_oculta": "nisciuno",
+          "traducao": "Nápoles é um papel sujo e ninguém se importa.",
+          "dica": "dialetto napoletano per nessuno"
+        }
+      ],
+      "vocabulario_chave": [
+        "Napule",
+        "colori",
+        "paure",
+        "sporco",
+        "importare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_167",
+      "titulo": "Ma il Cielo è Sempre Più Blu",
+      "artista": "Rino Gaetano",
+      "nivel": "B1",
+      "icone": "🔵",
+      "tema": "società",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "C'è chi ha le scarpe rotte e chi ha il cuore matto.",
+          "texto_lacuna": "C'è chi ha le scarpe rotte e chi ha il ___ matto.",
+          "palavra_oculta": "cuore",
+          "traducao": "Há quem tem os sapatos furados e quem tem o coração louco.",
+          "dica": "organo che batte nel petto"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ma il cielo è sempre più blu, ma il cielo è sempre più blu.",
+          "texto_lacuna": "Ma il ___ è sempre più blu, ma il cielo è sempre più blu.",
+          "palavra_oculta": "cielo",
+          "traducao": "Mas o céu é sempre mais azul, mas o céu é sempre mais azul.",
+          "dica": "dove volano gli uccelli"
+        }
+      ],
+      "vocabulario_chave": [
+        "cielo",
+        "blu",
+        "scarpe",
+        "cuore",
+        "società"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_168",
+      "titulo": "Un'Emozione per Sempre",
+      "artista": "Eros Ramazzotti",
+      "nivel": "A2",
+      "icone": "💓",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Un'emozione per sempre, un'emozione che non finirà mai.",
+          "texto_lacuna": "Un'___ per sempre, un'emozione che non finirà mai.",
+          "palavra_oculta": "emozione",
+          "traducao": "Uma emoção para sempre, uma emoção que nunca terminará.",
+          "dica": "sentimento intenso"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Che resta nel cuore anche quando il tempo passa.",
+          "texto_lacuna": "Che resta nel ___ anche quando il tempo passa.",
+          "palavra_oculta": "cuore",
+          "traducao": "Que fica no coração mesmo quando o tempo passa.",
+          "dica": "organo dei sentimenti"
+        }
+      ],
+      "vocabulario_chave": [
+        "emozione",
+        "sempre",
+        "cuore",
+        "tempo",
+        "restare"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_169",
+      "titulo": "Com'è Profondo il Mare",
+      "artista": "Lucio Dalla",
+      "nivel": "B2",
+      "icone": "🌊",
+      "tema": "riflessione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Com'è profondo il mare, com'è profondo il mare.",
+          "texto_lacuna": "Com'è ___ il mare, com'è profondo il mare.",
+          "palavra_oculta": "profondo",
+          "traducao": "Como é profundo o mar, como é profundo o mar.",
+          "dica": "opposto di superficiale"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E quante lacrime contiene insieme a quelle mie.",
+          "texto_lacuna": "E quante ___ contiene insieme a quelle mie.",
+          "palavra_oculta": "lacrime",
+          "traducao": "E quantas lágrimas contém junto com as minhas.",
+          "dica": "gocce degli occhi quando piangi"
+        }
+      ],
+      "vocabulario_chave": [
+        "profondo",
+        "mare",
+        "lacrime",
+        "contenere",
+        "insieme"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_170",
+      "titulo": "Canzone",
+      "artista": "Lucio Dalla",
+      "nivel": "B1",
+      "icone": "🎶",
+      "tema": "musica",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "L'anno che verrà sarà un anno bellissimo, ti aspetto tra la neve.",
+          "texto_lacuna": "L'anno che ___ sarà un anno bellissimo, ti aspetto tra la neve.",
+          "palavra_oculta": "verrà",
+          "traducao": "O ano que virá será um ano belíssimo, te espero entre a neve.",
+          "dica": "futuro di venire"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Caro amico ti scrivo così mi distraggo un po'.",
+          "texto_lacuna": "Caro ___ ti scrivo così mi distraggo un po'.",
+          "palavra_oculta": "amico",
+          "traducao": "Caro amigo te escrevo assim me distraio um pouco.",
+          "dica": "persona cara"
+        }
+      ],
+      "vocabulario_chave": [
+        "anno",
+        "neve",
+        "amico",
+        "scrivere",
+        "distrarre"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_171",
+      "titulo": "Amarsi un Po'",
+      "artista": "Lucio Battisti",
+      "nivel": "A2",
+      "icone": "💛",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Amarsi un po', amarsi un po' si può, amarsi in fondo si può.",
+          "texto_lacuna": "___ un po', amarsi un po' si può, amarsi in fondo si può.",
+          "palavra_oculta": "Amarsi",
+          "traducao": "Amar-se um pouco, amar-se um pouco se pode, amar-se no fundo se pode.",
+          "dica": "infinito riflessivo di amare"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Senza pensare troppo a quello che sarà domani.",
+          "texto_lacuna": "Senza ___ troppo a quello che sarà domani.",
+          "palavra_oculta": "pensare",
+          "traducao": "Sem pensar demais no que será amanhã.",
+          "dica": "usare la mente"
+        }
+      ],
+      "vocabulario_chave": [
+        "amarsi",
+        "potere",
+        "domani",
+        "pensare",
+        "fondo"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_172",
+      "titulo": "Ancora Ancora Ancora",
+      "artista": "Mina",
+      "nivel": "A2",
+      "icone": "🎙️",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Ancora, ancora, ancora, ti voglio amare ancora.",
+          "texto_lacuna": "___, ancora, ancora, ti voglio amare ancora.",
+          "palavra_oculta": "Ancora",
+          "traducao": "De novo, de novo, de novo, quero te amar de novo.",
+          "dica": "di nuovo, un'altra volta"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Il nostro amore è come il vento, forte e senza confini.",
+          "texto_lacuna": "Il nostro amore è come il ___, forte e senza confini.",
+          "palavra_oculta": "vento",
+          "traducao": "Nosso amor é como o vento, forte e sem fronteiras.",
+          "dica": "aria che soffia"
+        }
+      ],
+      "vocabulario_chave": [
+        "ancora",
+        "amare",
+        "vento",
+        "forte",
+        "confini"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_173",
+      "titulo": "Parole Parole",
+      "artista": "Mina",
+      "nivel": "B1",
+      "icone": "💬",
+      "tema": "sentimenti",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Parole, parole, parole, soltanto parole, parole tra noi.",
+          "texto_lacuna": "___, parole, parole, soltanto parole, parole tra noi.",
+          "palavra_oculta": "Parole",
+          "traducao": "Palavras, palavras, palavras, somente palavras, palavras entre nós.",
+          "dica": "plurale di parola"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Io ti cerco tra le stelle e mi perdo nel vuoto.",
+          "texto_lacuna": "Io ti cerco tra le ___ e mi perdo nel vuoto.",
+          "palavra_oculta": "stelle",
+          "traducao": "Eu te procuro entre as estrelas e me perco no vazio.",
+          "dica": "punti luminosi nel cielo notturno"
+        }
+      ],
+      "vocabulario_chave": [
+        "parole",
+        "stelle",
+        "cercare",
+        "perdere",
+        "vuoto"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_174",
+      "titulo": "L'Emozione Non Ha Voce",
+      "artista": "Adriano Celentano",
+      "nivel": "B1",
+      "icone": "🤫",
+      "tema": "sentimenti",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "L'emozione non ha voce, è come il vento che non si vede.",
+          "texto_lacuna": "L'emozione non ha ___, è come il vento che non si vede.",
+          "palavra_oculta": "voce",
+          "traducao": "A emoção não tem voz, é como o vento que não se vê.",
+          "dica": "suono della gola"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ma si sente nel silenzio di due occhi che si guardano.",
+          "texto_lacuna": "Ma si sente nel ___ di due occhi che si guardano.",
+          "palavra_oculta": "silenzio",
+          "traducao": "Mas se sente no silêncio de dois olhos que se olham.",
+          "dica": "assenza di rumore"
+        }
+      ],
+      "vocabulario_chave": [
+        "emozione",
+        "voce",
+        "silenzio",
+        "occhi",
+        "sentire"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_175",
+      "titulo": "Sono Solo Canzonette",
+      "artista": "Edoardo Bennato",
+      "nivel": "B2",
+      "icone": "🎭",
+      "tema": "musica",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Sono solo canzonette, non ci creder troppo su.",
+          "texto_lacuna": "Sono solo ___, non ci creder troppo su.",
+          "palavra_oculta": "canzonette",
+          "traducao": "São apenas canciozinhas, não acredite demais nelas.",
+          "dica": "diminutivo di canzoni"
+        },
+        {
+          "id": 2,
+          "texto_completo": "È solo il rumore del vento che passa tra le foglie.",
+          "texto_lacuna": "È solo il rumore del ___ che passa tra le foglie.",
+          "palavra_oculta": "vento",
+          "traducao": "É apenas o barulho do vento que passa pelas folhas.",
+          "dica": "aria in movimento"
+        }
+      ],
+      "vocabulario_chave": [
+        "canzonette",
+        "credere",
+        "vento",
+        "foglie",
+        "rumore"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_176",
+      "titulo": "Sei Bellissima",
+      "artista": "Loredana Bertè",
+      "nivel": "A2",
+      "icone": "💃",
+      "tema": "bellezza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Sei bellissima quando sorridi, sei bellissima quando piangi.",
+          "texto_lacuna": "Sei ___ quando sorridi, sei bellissima quando piangi.",
+          "palavra_oculta": "bellissima",
+          "traducao": "Você é lindíssima quando sorri, você é lindíssima quando chora.",
+          "dica": "superlativo di bella"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Nei tuoi occhi c'è un universo che non finisce mai.",
+          "texto_lacuna": "Nei tuoi ___ c'è un universo che non finisce mai.",
+          "palavra_oculta": "occhi",
+          "traducao": "Nos seus olhos há um universo que nunca termina.",
+          "dica": "organi della vista"
+        }
+      ],
+      "vocabulario_chave": [
+        "bellissima",
+        "sorridere",
+        "piangere",
+        "occhi",
+        "universo"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_177",
+      "titulo": "Romagna Mia",
+      "artista": "Secondo Casadei",
+      "nivel": "A1",
+      "icone": "💃",
+      "tema": "tradizione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Romagna mia, Romagna soave, terra di sogni e di canzoni.",
+          "texto_lacuna": "___ mia, Romagna soave, terra di sogni e di canzoni.",
+          "palavra_oculta": "Romagna",
+          "traducao": "Romagna minha, Romagna suave, terra de sonhos e canções.",
+          "dica": "regione dell'Emilia"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Là dove nasce il sole, là dove splende la luna.",
+          "texto_lacuna": "Là dove nasce il ___, là dove splende la luna.",
+          "palavra_oculta": "sole",
+          "traducao": "Lá onde nasce o sol, lá onde brilha a lua.",
+          "dica": "stella diurna"
+        }
+      ],
+      "vocabulario_chave": [
+        "Romagna",
+        "terra",
+        "sogni",
+        "sole",
+        "luna"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "can_178",
+      "titulo": "La Donna dei Sogni",
+      "artista": "Vasco Rossi",
+      "nivel": "B1",
+      "icone": "💭",
+      "tema": "sogno",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "La donna dei sogni è quella che non arriva mai.",
+          "texto_lacuna": "La donna dei ___ è quella che non arriva mai.",
+          "palavra_oculta": "sogni",
+          "traducao": "A mulher dos sonhos é aquela que nunca chega.",
+          "dica": "plurale di sogno"
+        },
+        {
+          "id": 2,
+          "texto_completo": "L'aspetti tutta la vita e quando arriva non la riconosci.",
+          "texto_lacuna": "L'aspetti tutta la ___ e quando arriva non la riconosci.",
+          "palavra_oculta": "vita",
+          "traducao": "Esperas a vida toda e quando chega não a reconheces.",
+          "dica": "esistenza"
+        }
+      ],
+      "vocabulario_chave": [
+        "sogni",
+        "donna",
+        "vita",
+        "aspettare",
+        "riconoscere"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_179",
+      "titulo": "Come Musica",
+      "artista": "Giorgia",
+      "nivel": "B1",
+      "icone": "🎵",
+      "tema": "musica",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Come musica nell'aria, come un raggio di sole che mi scalda.",
+          "texto_lacuna": "Come ___ nell'aria, come un raggio di sole che mi scalda.",
+          "palavra_oculta": "musica",
+          "traducao": "Como música no ar, como um raio de sol que me aquece.",
+          "dica": "arte dei suoni"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Sei la melodia che porto sempre con me.",
+          "texto_lacuna": "Sei la ___ che porto sempre con me.",
+          "palavra_oculta": "melodia",
+          "traducao": "Você é a melodia que carrego sempre comigo.",
+          "dica": "sequenza di note musicali"
+        }
+      ],
+      "vocabulario_chave": [
+        "musica",
+        "sole",
+        "melodia",
+        "portare",
+        "scaldare"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_180",
+      "titulo": "Sogno e Son Desto",
+      "artista": "Massimo Ranieri",
+      "nivel": "B1",
+      "icone": "🌙",
+      "tema": "sogno",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Sogno e son desto, sto cercando te tra la gente.",
+          "texto_lacuna": "___ e son desto, sto cercando te tra la gente.",
+          "palavra_oculta": "Sogno",
+          "traducao": "Sonho e estou acordado, estou te procurando entre as pessoas.",
+          "dica": "immagine durante il sonno"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Tra mille facce cerco sempre la tua e non la trovo.",
+          "texto_lacuna": "Tra mille ___ cerco sempre la tua e non la trovo.",
+          "palavra_oculta": "facce",
+          "traducao": "Entre mil rostos procuro sempre o seu e não o encontro.",
+          "dica": "plurale di faccia"
+        }
+      ],
+      "vocabulario_chave": [
+        "sogno",
+        "desto",
+        "cercando",
+        "gente",
+        "facce"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_181",
+      "titulo": "Nessun Dorma",
+      "artista": "Giacomo Puccini",
+      "nivel": "B2",
+      "icone": "🎭",
+      "tema": "opera",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Nessun dorma! Nessun dorma! Tu pure, o Principessa.",
+          "texto_lacuna": "___ dorma! Nessun dorma! Tu pure, o Principessa.",
+          "palavra_oculta": "Nessun",
+          "traducao": "Ninguém durma! Ninguém durma! Você também, ó Princesa.",
+          "dica": "pronome negativo"
+        },
+        {
+          "id": 2,
+          "texto_completo": "All'alba vincerò! Vincerò! Vincerò!",
+          "texto_lacuna": "All'alba ___ Vincerò! Vincerò!",
+          "palavra_oculta": "vincerò!",
+          "traducao": "Na aurora vencerei! Vencerei! Vencerei!",
+          "dica": "futuro di vincere"
+        }
+      ],
+      "vocabulario_chave": [
+        "dormire",
+        "alba",
+        "vincere",
+        "principessa",
+        "opera"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_182",
+      "titulo": "O Mio Babbino Caro",
+      "artista": "Giacomo Puccini",
+      "nivel": "B1",
+      "icone": "🎼",
+      "tema": "opera",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "O mio babbino caro, mi piace, è bello, bello.",
+          "texto_lacuna": "O mio ___ caro, mi piace, è bello, bello.",
+          "palavra_oculta": "babbino",
+          "traducao": "Ó meu querido papai, eu gosto dele, é bonito, bonito.",
+          "dica": "termine affettuoso per padre"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Vò andare in Porta Rossa a comperar l'anello!",
+          "texto_lacuna": "Vò andare in Porta Rossa a ___ l'anello!",
+          "palavra_oculta": "comperar",
+          "traducao": "Quero ir à Porta Rossa comprar o anel!",
+          "dica": "forma antica di comprare"
+        }
+      ],
+      "vocabulario_chave": [
+        "babbino",
+        "piacere",
+        "anello",
+        "comprare",
+        "opera"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_183",
+      "titulo": "Una Furtiva Lagrima",
+      "artista": "Gaetano Donizetti",
+      "nivel": "B2",
+      "icone": "😢",
+      "tema": "opera",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Una furtiva lagrima negli occhi suoi spuntò.",
+          "texto_lacuna": "Una furtiva ___ negli occhi suoi spuntò.",
+          "palavra_oculta": "lagrima",
+          "traducao": "Uma furtiva lágrima nos seus olhos brotou.",
+          "dica": "goccia dagli occhi (forma poetica)"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Cielo! Si può morir, si può morir d'amor.",
+          "texto_lacuna": "Cielo! Si può ___, si può morir d'amor.",
+          "palavra_oculta": "morir",
+          "traducao": "Céus! Se pode morrer, se pode morrer de amor.",
+          "dica": "infinito di morire (forma poetica)"
+        }
+      ],
+      "vocabulario_chave": [
+        "lagrima",
+        "occhi",
+        "amore",
+        "morire",
+        "cielo"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_184",
+      "titulo": "L'Aurora",
+      "artista": "Eros Ramazzotti",
+      "nivel": "A2",
+      "icone": "🌅",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Come l'aurora che nasce dal buio, così sei tu nella mia vita.",
+          "texto_lacuna": "Come l'___ che nasce dal buio, così sei tu nella mia vita.",
+          "palavra_oculta": "aurora",
+          "traducao": "Como a aurora que nasce da escuridão, assim és tu na minha vida.",
+          "dica": "alba, inizio del giorno"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Porti la luce dove c'era il freddo e il silenzio.",
+          "texto_lacuna": "Porti la ___ dove c'era il freddo e il silenzio.",
+          "palavra_oculta": "luce",
+          "traducao": "Trazes a luz onde havia frio e silêncio.",
+          "dica": "opposto di buio"
+        }
+      ],
+      "vocabulario_chave": [
+        "aurora",
+        "buio",
+        "vita",
+        "luce",
+        "silenzio"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_185",
+      "titulo": "Inevitabile",
+      "artista": "Elisa",
+      "nivel": "B2",
+      "icone": "🌪️",
+      "tema": "sentimenti",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Era inevitabile, lo sapevo da sempre che ti avrei amato.",
+          "texto_lacuna": "Era ___, lo sapevo da sempre che ti avrei amato.",
+          "palavra_oculta": "inevitabile",
+          "traducao": "Era inevitável, eu sempre soube que te amaria.",
+          "dica": "che non si può evitare"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Come il mare che deve incontrare la riva.",
+          "texto_lacuna": "Come il ___ che deve incontrare la riva.",
+          "palavra_oculta": "mare",
+          "traducao": "Como o mar que deve encontrar a margem.",
+          "dica": "grande distesa d'acqua salata"
+        }
+      ],
+      "vocabulario_chave": [
+        "inevitabile",
+        "sapere",
+        "amare",
+        "mare",
+        "riva"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_186",
+      "titulo": "Io Canto",
+      "artista": "Laura Pausini",
+      "nivel": "A2",
+      "icone": "🎤",
+      "tema": "musica",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Io canto e il mondo gira intorno a me, io canto e mi sento libera.",
+          "texto_lacuna": "Io ___ e il mondo gira intorno a me, io canto e mi sento libera.",
+          "palavra_oculta": "canto",
+          "traducao": "Eu canto e o mundo gira ao meu redor, eu canto e me sinto livre.",
+          "dica": "prima persona di cantare"
+        },
+        {
+          "id": 2,
+          "texto_completo": "La voce è la mia arma più potente contro il dolore.",
+          "texto_lacuna": "La ___ è la mia arma più potente contro il dolore.",
+          "palavra_oculta": "voce",
+          "traducao": "A voz é minha arma mais poderosa contra a dor.",
+          "dica": "suono della gola"
+        }
+      ],
+      "vocabulario_chave": [
+        "cantare",
+        "mondo",
+        "libera",
+        "voce",
+        "dolore"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_187",
+      "titulo": "Invece No",
+      "artista": "Laura Pausini",
+      "nivel": "B1",
+      "icone": "💔",
+      "tema": "sentimenti",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Invece no, invece no, non è andata come speravo.",
+          "texto_lacuna": "___ no, invece no, non è andata come speravo.",
+          "palavra_oculta": "Invece",
+          "traducao": "Mas não, mas não, não foi como eu esperava.",
+          "dica": "congiunzione avversativa"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Pensavo che l'amore fosse eterno, invece finisce.",
+          "texto_lacuna": "Pensavo che l'amore fosse ___, invece finisce.",
+          "palavra_oculta": "eterno",
+          "traducao": "Pensava que o amor fosse eterno, mas termina.",
+          "dica": "che non finisce mai"
+        }
+      ],
+      "vocabulario_chave": [
+        "invece",
+        "sperare",
+        "amore",
+        "eterno",
+        "finire"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_188",
+      "titulo": "Benvenuto",
+      "artista": "Subsonica",
+      "nivel": "B2",
+      "icone": "🏙️",
+      "tema": "città",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Benvenuto in questo mondo che non ti aspettava.",
+          "texto_lacuna": "___ in questo mondo che non ti aspettava.",
+          "palavra_oculta": "Benvenuto",
+          "traducao": "Bem-vindo a este mundo que não te esperava.",
+          "dica": "saluto di accoglienza"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Le strade sono grigie ma il cielo è ancora blu.",
+          "texto_lacuna": "Le strade sono ___ ma il cielo è ancora blu.",
+          "palavra_oculta": "grigie",
+          "traducao": "As ruas são cinzas mas o céu ainda é azul.",
+          "dica": "aggettivo di colore neutro"
+        }
+      ],
+      "vocabulario_chave": [
+        "benvenuto",
+        "mondo",
+        "grigio",
+        "cielo",
+        "strada"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_189",
+      "titulo": "Quello Che le Donne Non Dicono",
+      "artista": "Fiorella Mannoia",
+      "nivel": "B2",
+      "icone": "🗣️",
+      "tema": "donna",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Quello che le donne non dicono, si porta nel cuore come un peso.",
+          "texto_lacuna": "Quello che le ___ non dicono, si porta nel cuore come un peso.",
+          "palavra_oculta": "donne",
+          "traducao": "O que as mulheres não dizem, se carrega no coração como um peso.",
+          "dica": "plurale di donna"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Un segreto che non vuole uscire, una verità difficile.",
+          "texto_lacuna": "Un ___ che non vuole uscire, una verità difficile.",
+          "palavra_oculta": "segreto",
+          "traducao": "Um segredo que não quer sair, uma verdade difícil.",
+          "dica": "cosa nascosta"
+        }
+      ],
+      "vocabulario_chave": [
+        "donne",
+        "cuore",
+        "segreto",
+        "verità",
+        "portare"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_190",
+      "titulo": "Caffè del Mattino",
+      "artista": "Fiorella Mannoia",
+      "nivel": "A1",
+      "icone": "☕",
+      "tema": "quotidiano",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Un caffè del mattino, un sorriso, la giornata comincia.",
+          "texto_lacuna": "Un ___ del mattino, un sorriso, la giornata comincia.",
+          "palavra_oculta": "caffè",
+          "traducao": "Um café da manhã, um sorriso, o dia começa.",
+          "dica": "bevanda nera e calda"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ogni giorno è un regalo, ogni mattino una promessa.",
+          "texto_lacuna": "Ogni giorno è un ___, ogni mattino una promessa.",
+          "palavra_oculta": "regalo",
+          "traducao": "Cada dia é um presente, cada manhã uma promessa.",
+          "dica": "dono, presente"
+        }
+      ],
+      "vocabulario_chave": [
+        "caffè",
+        "mattino",
+        "sorriso",
+        "regalo",
+        "promessa"
+      ],
+      "xp_recompensa": 15
+    },
+    {
+      "id": "can_191",
+      "titulo": "Almeno Tu",
+      "artista": "Bruno Lauzi",
+      "nivel": "B1",
+      "icone": "🌟",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Almeno tu nell'universo, sei rimasta sempre uguale a te.",
+          "texto_lacuna": "Almeno tu nell'___, sei rimasta sempre uguale a te.",
+          "palavra_oculta": "universo",
+          "traducao": "Pelo menos você no universo, permaneceu sempre igual a você.",
+          "dica": "tutto lo spazio esistente"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Un punto fermo nella mia follia d'infinito.",
+          "texto_lacuna": "Un punto ___ nella mia follia d'infinito.",
+          "palavra_oculta": "fermo",
+          "traducao": "Um ponto firme na minha loucura de infinito.",
+          "dica": "stabile, che non si muove"
+        }
+      ],
+      "vocabulario_chave": [
+        "universo",
+        "uguale",
+        "punto",
+        "fermo",
+        "follia"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_192",
+      "titulo": "Vedrai Vedrai",
+      "artista": "Luigi Tenco",
+      "nivel": "B1",
+      "icone": "🌈",
+      "tema": "speranza",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Vedrai vedrai vedrai, vedrai che cambierà.",
+          "texto_lacuna": "___ vedrai vedrai, vedrai che cambierà.",
+          "palavra_oculta": "Vedrai",
+          "traducao": "Você verá, você verá, você verá que vai mudar.",
+          "dica": "futuro di vedere"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Le cose che non vanno adesso, domani anderanno meglio.",
+          "texto_lacuna": "Le cose che non vanno adesso, domani ___ meglio.",
+          "palavra_oculta": "anderanno",
+          "traducao": "As coisas que não vão bem agora, amanhã vão melhor.",
+          "dica": "futuro di andare (plurale)"
+        }
+      ],
+      "vocabulario_chave": [
+        "vedere",
+        "cambiare",
+        "meglio",
+        "domani",
+        "speranza"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_193",
+      "titulo": "Ciao Amore Ciao",
+      "artista": "Luigi Tenco",
+      "nivel": "B2",
+      "icone": "👋",
+      "tema": "addio",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Ciao amore, ciao, ciao amore, ciao, vado via.",
+          "texto_lacuna": "Ciao ___, ciao, ciao amore, ciao, vado via.",
+          "palavra_oculta": "amore",
+          "traducao": "Adeus amor, adeus, adeus amor, adeus, vou embora.",
+          "dica": "sentimento profondo"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Resto qui a guardare il cielo che si fa grigio.",
+          "texto_lacuna": "Resto qui a guardare il ___ che si fa grigio.",
+          "palavra_oculta": "cielo",
+          "traducao": "Fico aqui a olhar o céu que fica cinzento.",
+          "dica": "spazio sopra le nuvole"
+        }
+      ],
+      "vocabulario_chave": [
+        "amore",
+        "andare",
+        "restare",
+        "cielo",
+        "grigio"
+      ],
+      "xp_recompensa": 30
+    },
+    {
+      "id": "can_194",
+      "titulo": "Il Cielo in una Stanza (Cover)",
+      "artista": "Mina",
+      "nivel": "A2",
+      "icone": "🪟",
+      "tema": "amore",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Quando sei qui con me, questa stanza non ha più pareti.",
+          "texto_lacuna": "Quando sei qui con me, questa ___ non ha più pareti.",
+          "palavra_oculta": "stanza",
+          "traducao": "Quando você está aqui comigo, este quarto não tem mais paredes.",
+          "dica": "camera, locale"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ma alberi, foreste, profumo di fiori appena nati.",
+          "texto_lacuna": "Ma alberi, foreste, profumo di ___ appena nati.",
+          "palavra_oculta": "fiori",
+          "traducao": "Mas árvores, florestas, perfume de flores recém nascidas.",
+          "dica": "piante colorate profumate"
+        }
+      ],
+      "vocabulario_chave": [
+        "stanza",
+        "pareti",
+        "alberi",
+        "foreste",
+        "fiori"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_195",
+      "titulo": "Pensieri e Parole",
+      "artista": "Lucio Battisti",
+      "nivel": "B1",
+      "icone": "💭",
+      "tema": "riflessione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Pensieri e parole, immagini e parole, musica e parole.",
+          "texto_lacuna": "___ e parole, immagini e parole, musica e parole.",
+          "palavra_oculta": "Pensieri",
+          "traducao": "Pensamentos e palavras, imagens e palavras, música e palavras.",
+          "dica": "plurale di pensiero"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Finalmente libero di dirti quello che sento dentro.",
+          "texto_lacuna": "Finalmente ___ di dirti quello che sento dentro.",
+          "palavra_oculta": "libero",
+          "traducao": "Finalmente livre de te dizer o que sinto dentro.",
+          "dica": "aggettivo contrario di prigioniero"
+        }
+      ],
+      "vocabulario_chave": [
+        "pensieri",
+        "parole",
+        "immagini",
+        "libero",
+        "sentire"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_196",
+      "titulo": "Perduto Amor",
+      "artista": "Franco Battiato",
+      "nivel": "C1",
+      "icone": "🔮",
+      "tema": "poesia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Perduto amor, dove sei adesso, in quale cielo ti trovi?",
+          "texto_lacuna": "___ amor, dove sei adesso, in quale cielo ti trovi?",
+          "palavra_oculta": "Perduto",
+          "traducao": "Amor perdido, onde estás agora, em que céu te encontras?",
+          "dica": "participio passato di perdere"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Ti cerco ancora tra i ricordi che non muoiono mai.",
+          "texto_lacuna": "Ti cerco ancora tra i ___ che non muoiono mai.",
+          "palavra_oculta": "ricordi",
+          "traducao": "Te procuro ainda entre as memórias que nunca morrem.",
+          "dica": "plurale di ricordo"
+        }
+      ],
+      "vocabulario_chave": [
+        "perduto",
+        "amore",
+        "cielo",
+        "ricordi",
+        "cercare"
+      ],
+      "xp_recompensa": 35
+    },
+    {
+      "id": "can_197",
+      "titulo": "La Luna e il Sole",
+      "artista": "Lucio Battisti",
+      "nivel": "A2",
+      "icone": "🌙",
+      "tema": "natura",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "La luna brilla nel cielo scuro, il sole dorme lontano.",
+          "texto_lacuna": "La ___ brilla nel cielo scuro, il sole dorme lontano.",
+          "palavra_oculta": "luna",
+          "traducao": "A lua brilha no céu escuro, o sol dorme longe.",
+          "dica": "satellite della Terra"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E io penso a te mentre guardo le stelle che tremano.",
+          "texto_lacuna": "E io penso a te mentre guardo le ___ che tremano.",
+          "palavra_oculta": "stelle",
+          "traducao": "E eu penso em você enquanto olho as estrelas que tremem.",
+          "dica": "punti luminosi nella notte"
+        }
+      ],
+      "vocabulario_chave": [
+        "luna",
+        "sole",
+        "stelle",
+        "cielo",
+        "tremano"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_198",
+      "titulo": "Profumo di Donna",
+      "artista": "Armando Trovajoli",
+      "nivel": "B1",
+      "icone": "🌺",
+      "tema": "cinema",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Nel profumo di donna c'è tutto un mondo di dolcezza.",
+          "texto_lacuna": "Nel ___ di donna c'è tutto un mondo di dolcezza.",
+          "palavra_oculta": "profumo",
+          "traducao": "No perfume de mulher há todo um mundo de doçura.",
+          "dica": "odore gradevole"
+        },
+        {
+          "id": 2,
+          "texto_completo": "Un sorriso, uno sguardo, e il cuore si risveglia.",
+          "texto_lacuna": "Un sorriso, uno ___, e il cuore si risveglia.",
+          "palavra_oculta": "sguardo",
+          "traducao": "Um sorriso, um olhar, e o coração se desperta.",
+          "dica": "il guardare qualcuno"
+        }
+      ],
+      "vocabulario_chave": [
+        "profumo",
+        "donna",
+        "dolcezza",
+        "sorriso",
+        "sguardo"
+      ],
+      "xp_recompensa": 25
+    },
+    {
+      "id": "can_199",
+      "titulo": "Come Prima",
+      "artista": "Tony Dallara",
+      "nivel": "A2",
+      "icone": "🕰️",
+      "tema": "nostalgia",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Come prima, più di prima, t'amerò per sempre.",
+          "texto_lacuna": "Come ___, più di prima, t'amerò per sempre.",
+          "palavra_oculta": "prima",
+          "traducao": "Como antes, mais do que antes, te amarei para sempre.",
+          "dica": "avverbio di tempo, il passato"
+        },
+        {
+          "id": 2,
+          "texto_completo": "La mia vita senza te è un'alba senza sole.",
+          "texto_lacuna": "La mia ___ senza te è un'alba senza sole.",
+          "palavra_oculta": "vita",
+          "traducao": "Minha vida sem você é uma aurora sem sol.",
+          "dica": "esistenza"
+        }
+      ],
+      "vocabulario_chave": [
+        "prima",
+        "sempre",
+        "vita",
+        "alba",
+        "sole"
+      ],
+      "xp_recompensa": 20
+    },
+    {
+      "id": "can_200",
+      "titulo": "Canto delle Lavandaie del Vomero",
+      "artista": "Canto Napoletano",
+      "nivel": "A2",
+      "icone": "🌊",
+      "tema": "tradizione",
+      "estrofes": [
+        {
+          "id": 1,
+          "texto_completo": "Scetate, bambenella, ca ll'aria è doce e bella.",
+          "texto_lacuna": "Scetate, bambenella, ca ll'aria è ___ e bella.",
+          "palavra_oculta": "doce",
+          "traducao": "Acorda, menininha, que o ar está doce e bonito.",
+          "dica": "in dialetto napoletano: dolce"
+        },
+        {
+          "id": 2,
+          "texto_completo": "E il sole già s'affaccia e ti chiama col suo raggio.",
+          "texto_lacuna": "E il ___ già s'affaccia e ti chiama col suo raggio.",
+          "palavra_oculta": "sole",
+          "traducao": "E o sol já aparece e te chama com seu raio.",
+          "dica": "stella del sistema solare"
+        }
+      ],
+      "vocabulario_chave": [
+        "aria",
+        "bella",
+        "sole",
+        "raggio",
+        "svegliare"
+      ],
+      "xp_recompensa": 20
     }
   ]
 }
