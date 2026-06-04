@@ -79,6 +79,7 @@ const App = {
   async init() {
     this.estado.progresso = this.carregarProgresso();
     this.estado.flashcardData = this.carregarFlashcards();
+    if (typeof I18n !== 'undefined') I18n.inicializar();
     await this.carregarDados();
     this.atualizarStats();
     this.renderizarTemplos();
@@ -776,6 +777,10 @@ const App = {
   notificar(mensagem, tipo = 'info') {
     const container = document.getElementById('toast-container');
     if (!container) return;
+
+    if (typeof I18n !== 'undefined' && I18n.dict[mensagem]) {
+      mensagem = I18n.t(mensagem);
+    }
 
     const toast = document.createElement('div');
     toast.className = `toast ${tipo}`;
