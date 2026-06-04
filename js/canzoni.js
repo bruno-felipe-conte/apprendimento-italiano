@@ -1,39 +1,263 @@
 const Canzoni = {
-  dados: null,
+  dados: null,        // built-in (data/canzoni.json)
+  custom: [],         // criados pelo usuário (localStorage)
   canzonAtual: null,
   estrofeAtual: 0,
   acertos: 0,
-  
+  modoEdicao: false,  // true quando está criando/editando
+
+  // ── Carregar built-in + custom ─────────────────────────────
   async carregar() {
-    if (this.dados) return;
-    try {
-      const r = await fetch('data/canzoni.json');
-      this.dados = await r.json();
-    } catch (e) {
-      console.error('Erro ao carregar canzoni.json', e);
+    // 1. Carrega built-in
+    if (!this.dados) {
+      try {
+        const r = await fetch('data/canzoni.json');
+        if (r.ok) this.dados = await r.json();
+        else this.dados = { canzoni: [] };
+      } catch { this.dados = { canzoni: [] }; }
     }
+    // 2. Carrega custom do localStorage
+    try {
+      this.custom = JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]');
+    } catch { this.custom = []; }
   },
-  
+
+  // ── Retorna TODAS as músicas (built-in + custom) ───────────
+  todasCanzoni() {
+    const builtin = (this.dados?.canzoni || []);
+    return [...builtin, ...this.custom];
+  },
+
+  // ── Salvar custom no localStorage ─────────────────────────
+  _salvarCustom() {
+    localStorage.setItem('it_canzoni_custom', JSON.stringify(this.custom));
+  },
+
+  // ── Renderizar seletor com built-in + custom + botão criar ─
   async renderizarSeletor() {
     await this.carregar();
     const c = document.getElementById('canzoni-container');
-    if (!c || !this.dados) return;
-    let html = '<div class="dialogo-grid">';
-    for (const can of this.dados.canzoni) {
+    if (!c) return;
+
+    const todas = this.todasCanzoni();
+
+    let html = `
+      <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
+        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()">➕ Adicionar Música</button>
+      </div>
+      <div class="dialogo-grid">`;
+
+    for (const can of todas) {
+      const badgeCustom = can.custom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
-        <div class="dialogo-icone">${can.icone}</div>
-        <div class="dialogo-titulo">${can.titulo}</div>
-        <div style="font-size:0.75rem;color:var(--cor-pietra);margin:0.2rem 0">${can.artista}</div>
-        <div class="dialogo-nivel">${can.nivel}</div>
+        <div class="dialogo-icone">${can.icone || '🎵'}</div>
+        <div class="dialogo-titulo">${can.titulo}${badgeCustom}</div>
+        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${can.artista || ''}</div>
+        <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
+          <span class="dialogo-nivel">${can.nivel}</span>
+          ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>
+          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>` : ''}
+        </div>
       </div>`;
     }
+
+    if (todas.length === 0) {
+      html += '<p style="text-align:center;color:#aaa;grid-column:1/-1;">Nenhuma música ainda. Adicione a sua!</p>';
+    }
+
     html += '</div>';
     c.innerHTML = html;
   },
-  
+
+  // ── Formulário de CRIAÇÃO ──────────────────────────────────
+  abrirFormularioCriar(idEditar = null) {
+    const c = document.getElementById('canzoni-container');
+    if (!c) return;
+    this.modoEdicao = true;
+
+    const existente = idEditar ? this.custom.find(x => x.id === idEditar) : null;
+    const titulo = existente?.titulo || '';
+    const artista = existente?.artista || '';
+    const nivel = existente?.nivel || 'A2';
+    const icone = existente?.icone || '🎵';
+    const estrofes = existente?.estrofes || [{ id: 1, texto_completo: '', texto_lacuna: '', palavra_oculta: '', traducao: '', dica: '' }];
+
+    let estrofesHtml = '';
+    estrofes.forEach((est, i) => {
+      estrofesHtml += Canzoni._htmlEstrofeForm(est, i);
+    });
+
+    c.innerHTML = `
+      <div class="gram-lesson-nav">
+        <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Cancelar</button>
+        <span style="font-size:0.9rem;font-weight:700">${idEditar ? 'Editar Música' : 'Nova Música'}</span>
+      </div>
+
+      <div class="gram-card" style="margin-top:1rem;padding:1.2rem">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem">
+          <div>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título *</label>
+            <input id="can-titulo" type="text" value="${titulo}" placeholder="Ex: Bella Ciao"
+              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+          </div>
+          <div>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Artista</label>
+            <input id="can-artista" type="text" value="${artista}" placeholder="Ex: Tradicional"
+              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.2rem">
+          <div>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Nível</label>
+            <select id="can-nivel" style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
+              ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
+            </select>
+          </div>
+          <div>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Ícone (emoji)</label>
+            <input id="can-icone" type="text" value="${icone}" maxlength="4"
+              style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:1.2rem;text-align:center">
+          </div>
+        </div>
+
+        <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
+          📝 Estrofes (versos com lacunas)
+        </div>
+
+        <div id="can-estrofes">${estrofesHtml}</div>
+
+        <button onclick="Canzoni._adicionarEstrofe()" class="btn-secondario" style="width:100%;margin:0.8rem 0">
+          ➕ Adicionar verso
+        </button>
+
+        <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;color:#6B4C1A">
+          💡 <strong>Como criar a lacuna:</strong> Escreva o texto completo no campo "Texto completo".
+          No "Texto com lacuna", substitua a palavra que quer ocultar por <code>___</code> (três underscores).
+          Informe a palavra oculta no campo "Palavra oculta".
+        </div>
+
+        <div style="display:flex;gap:0.5rem">
+          <button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar || ''}')">
+            💾 Salvar Música
+          </button>
+          <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
+        </div>
+      </div>`;
+  },
+
+  _htmlEstrofeForm(est, i) {
+    return `
+      <div class="can-estrofe-form" id="can-est-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid #ede5d5">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem">
+          <span style="font-weight:700;font-size:0.82rem;color:#9B2335">Verso ${i + 1}</span>
+          <button onclick="Canzoni._removerEstrofe(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️ Remover</button>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem">
+          <input type="text" placeholder="Texto completo (ex: Cerco l'estate tutto l'anno)" data-campo="texto_completo" data-idx="${i}"
+            value="${est.texto_completo || ''}"
+            style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+          <input type="text" placeholder="Texto com lacuna (ex: Cerco l'___ tutto l'anno)" data-campo="texto_lacuna" data-idx="${i}"
+            value="${est.texto_lacuna || ''}"
+            style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+            <input type="text" placeholder="Palavra oculta (ex: estate)" data-campo="palavra_oculta" data-idx="${i}"
+              value="${est.palavra_oculta || ''}"
+              style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+            <input type="text" placeholder="Dica (ex: stagione calda)" data-campo="dica" data-idx="${i}"
+              value="${est.dica || ''}"
+              style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+          </div>
+          <input type="text" placeholder="Tradução em português" data-campo="traducao" data-idx="${i}"
+            value="${est.traducao || ''}"
+            style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+        </div>
+      </div>`;
+  },
+
+  _adicionarEstrofe() {
+    const container = document.getElementById('can-estrofes');
+    if (!container) return;
+    const i = container.querySelectorAll('.can-estrofe-form').length;
+    const div = document.createElement('div');
+    div.innerHTML = this._htmlEstrofeForm({ id: i+1, texto_completo:'', texto_lacuna:'', palavra_oculta:'', traducao:'', dica:'' }, i);
+    container.appendChild(div.firstElementChild);
+  },
+
+  _removerEstrofe(i) {
+    const el = document.getElementById(`can-est-${i}`);
+    if (el) el.remove();
+    // Re-numerar
+    document.querySelectorAll('.can-estrofe-form').forEach((el, idx) => {
+      el.id = `can-est-${idx}`;
+      el.querySelector('span').textContent = `Verso ${idx + 1}`;
+      el.querySelectorAll('[data-idx]').forEach(inp => inp.dataset.idx = idx);
+      el.querySelector('button[onclick]').setAttribute('onclick', `Canzoni._removerEstrofe(${idx})`);
+    });
+  },
+
+  _salvarFormulario(idEditar) {
+    const titulo = document.getElementById('can-titulo')?.value.trim();
+    if (!titulo) { App.notificar('O título é obrigatório.', 'erro'); return; }
+
+    // Coletar estrofes
+    const estrofes = [];
+    document.querySelectorAll('.can-estrofe-form').forEach((el, i) => {
+      const campos = {};
+      el.querySelectorAll('[data-campo]').forEach(inp => { campos[inp.dataset.campo] = inp.value.trim(); });
+      if (campos.texto_completo && campos.palavra_oculta) {
+        // Auto-gerar texto_lacuna se não preenchido
+        if (!campos.texto_lacuna && campos.palavra_oculta) {
+          campos.texto_lacuna = campos.texto_completo.replace(campos.palavra_oculta, '___');
+        }
+        estrofes.push({ id: i+1, ...campos });
+      }
+    });
+    if (estrofes.length === 0) { App.notificar('Adicione pelo menos um verso com lacuna.', 'erro'); return; }
+
+    const nova = {
+      id: idEditar || `custom_can_${Date.now()}`,
+      titulo,
+      artista: document.getElementById('can-artista')?.value.trim() || '',
+      nivel: document.getElementById('can-nivel')?.value || 'A2',
+      icone: document.getElementById('can-icone')?.value.trim() || '🎵',
+      tema: 'custom',
+      criado_em: Date.now(),
+      custom: true,
+      estrofes,
+      vocabulario_chave: estrofes.map(e => e.palavra_oculta).filter(Boolean),
+      xp_recompensa: Math.min(10 + estrofes.length * 5, 60)
+    };
+
+    if (idEditar) {
+      const idx = this.custom.findIndex(x => x.id === idEditar);
+      if (idx >= 0) this.custom[idx] = nova; else this.custom.push(nova);
+    } else {
+      this.custom.push(nova);
+    }
+    this._salvarCustom();
+    App.notificar(`🎵 "${titulo}" salva!`, 'sucesso');
+    this.renderizarSeletor();
+  },
+
+  editarCanzone(id) {
+    this.abrirFormularioCriar(id);
+  },
+
+  excluirCanzone(id) {
+    const can = this.custom.find(x => x.id === id);
+    if (!can) return;
+    if (!confirm(`Excluir "${can.titulo}"?`)) return;
+    this.custom = this.custom.filter(x => x.id !== id);
+    this._salvarCustom();
+    App.notificar('Música excluída.', 'alerta');
+    this.renderizarSeletor();
+  },
+
+  // ── MÉTODOS DE JOGO ──────────────────────────────────────────
   async abrirCanzone(id) {
     await this.carregar();
-    this.canzonAtual = this.dados.canzoni.find(c => c.id === id);
+    this.canzonAtual = this.todasCanzoni().find(c => c.id === id);
     this.estrofeAtual = 0;
     this.acertos = 0;
     this.renderizarEstrofe();
