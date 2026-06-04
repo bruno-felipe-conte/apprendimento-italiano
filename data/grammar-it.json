@@ -1,0 +1,258 @@
+{
+  "moduli": [
+    {
+      "id": "A1",
+      "nome": "A1 — Principiante",
+      "nivel_minimo": 1,
+      "cor": "linear-gradient(135deg, #27AE60, #145A32)",
+      "lezioni": [
+        {
+          "id": "a1-lez1",
+          "num": "Lezione I",
+          "titulo": "Nome, Articolo e Aggettivo",
+          "subtitulo": "L’articolo – il pezzo che cambia tutto",
+          "exercicios": [
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è l'articolo giusto? \n\n\"Questo è ___ libro di italiana.\" \n(= Questo è un libro italiano.)",
+              "opcoes": [
+                "un",
+                "uno",
+                "una",
+                "il"
+              ],
+              "resposta": 0,
+              "explicacao": "LIBRO inizia con L (lettera normale) ed è maschile → usa UN. \"Uno\" è solo per ST, Z, SP... \"Una\" è solo per femmine. ✓ un libro."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è l'articolo giusto? \n\n\"Sul tavolo c'è ___ penna rossa.\" \n(= C'è una penna rossa sul tavolo.)",
+              "opcoes": [
+                "un",
+                "uno",
+                "una",
+                "il"
+              ],
+              "resposta": 2,
+              "explicacao": "PENNA (penna) è femminile e inizia con P (consonante) → usare UNA. \"Un/uno\" è solo per uomini. ✓ solo un centesimo."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è l'articolo giusto? \n\n\"Marco è ___ studente universitario.\" \n(= Marco è uno studente universitario.)",
+              "opcoes": [
+                "un",
+                "uno",
+                "una",
+                "il"
+              ],
+              "resposta": 1,
+              "explicacao": "STUDENTE inizia con ST → necessariamente UNO, mai \"un\". Regola: ST, SP, SC, SN, Z, GN, PS → sempre UNO. ✓ uno studente."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è l'articolo giusto? \n\n\"___ la pizza napoletana è famosa in tutto il mondo.\" \n(= La pizza napoletana è famosa nel mondo.)",
+              "opcoes": [
+                "Il",
+                "Lo",
+                "La",
+                "L'"
+              ],
+              "resposta": 2,
+              "explicacao": "PIZZA è femminile (come \"a pizza\" in portoghese) e inizia con P → LA. Articolo DEFINITO perché parliamo di pizza in generale. ✓ La pizza."
+            },
+            {
+              "tipo": "escolha",
+              "pergunta": "Qual è l'articolo giusto? \n\n\"Dove sono ___ occhiali di Sofia?\" \n(= Dove sono gli occhiali di Sofia?\nocchiali = occhiali)",
+              "opcoes": [
+                "i",
+                "gli",
+                "le",
+                "l'"
+              ],
+              "resposta": 1,
+              "explicacao": "OCCHIALI inizia con O (vocale!) ed è maschile plurale → GLI. Regola: maschile plurale + vocale = GLI. Confrontare: i libri (L = consonante) ≠ gli occhiali (O = vocale). ✓ gli occhiali."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completare con l'articolo DEFINITO:\n\n\"In Italia, ___ la pizza è deliziosa!\" \n(= In Italia la pizza è deliziosa!)",
+              "resposta": "la pizza",
+              "dica": "PIZZA = feminino, começa por P (consoante) — consulte a tabela!",
+              "explicacao": "PIZZA è femminile + inizia con P → LA. \"La pizza\" ✓. Suggerimento: pensa in portoghese \"A pizza\" → in italiano \"La pizza\". Stessa logica!",
+              "variantes": [
+                "la"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completare con l'articolo NON DEFINITO:\n\n\"Ho ___ zaino rosso.\" \n(= Ho uno zaino rosso.\nzaino = zaino, rosso = rosso)",
+              "resposta": "uno zaino",
+              "dica": "ZAINO começa por Z — veja a linha amarela na tabela!",
+              "explicacao": "ZAINO inizia con Z → necessariamente UNO (mai \"un\"). Regola gialla: Z, ST, SP... → sempre UNO. ✓ Ho uno zaino.",
+              "variantes": [
+                "uno"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completare con l'articolo PLURALE DEFINITO:\n\n\"In classe ci sono ___ studenti.\" \n(= Ci sono studenti in classe.)",
+              "resposta": "gli studenti",
+              "dica": "STUDENTI começa por ST — veja a linha amarela!",
+              "explicacao": "STUDENTI (plurale di studente) inizia con ST → GLI. Linea gialla al plurale: LO diventa GLI. ✓ gli studenti.",
+              "variantes": [
+                "gli"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completare con l'articolo NON DEFINITO:\n\n\"Ho ___ amica italiana. Si chiama Giulia.\" \n(= Ho un'amica italiana. Si chiama Giulia.)",
+              "resposta": "un'amica",
+              "dica": "AMICA começa por A (vogal!) e é feminino — veja a linha verde!",
+              "explicacao": "AMICA inizia con A (vocale) ed è femminile → UN' (con apostrofo). Linea verde: qualsiasi vocale = L' o UN'. ✓ un'amica.",
+              "variantes": [
+                "un'amica",
+                "un' amica"
+              ]
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Completare con l'articolo PLURALE DEFINITO:\n\n\"Sul tavolo ci sono ___ libri di Marco.\" \n(= Sul tavolo ci sono i libri di Marco.)",
+              "resposta": "i libri",
+              "dica": "LIBRI (= livros) começa por L (letra normal) — linha azul no plural!",
+              "explicacao": "LIBRI inizia con L (consonante normale) ed è maschile plurale → I. Linea blu al plurale: IL diventa I. ✓ i libri.",
+              "variantes": [
+                "i"
+              ]
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "In classe: completa gli articoli. Provare prima di rivelare! \n\n«In classe c'è ___ grande tavolo. \nSul tavolo c'è ___ libro e ___ penna. \n___ il libro è rosso, ___ la penna è blu.» \n\n(tavolo=tavolo · libro=libro · penna=penna · rosso=rosso · blu=blu)",
+              "resposta": "un · un · una · Il · la",
+              "explicacao": "\"un tavolo, un libro, una penna\" = prima menzione → articolo INDEFINITO. \"Il libro, la penna\" = seconda menzione, sappiamo già quale → Articolo DEFINITO. Modello: prima volta = UN/UNA, poi = IL/LA."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "Presentare qualcuno: completa gli articoli:\n\n«La domanda è ___ il mio amico Marco. \nLei è una ___ studentessa di medicina. \n___ la sua università è Roma.” \n\n(domanda=questo · amico=amico · medicina=medicina · università=università)",
+              "resposta": "il · uno · La",
+              "explicacao": "\"il mio amico\" = possessivo maschile → IL. \"uno studente\" = ST → UNO. \"La sua università\" = possessivo femminile → LA. In italiano, con i possessivi (mio, tuo, nostro) l'articolo è quasi sempre obbligatorio!"
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "La famiglia — completa gli articoli:\n\n«Sofia ah ___ mamma e ___ papà. \n___ mamma si chiama Anna, ___ papà si chiama Luca. \nHa anche ___ fratello.» \n\n(ha=ha · mamma=madre · papà=padre · fratello=fratello)",
+              "resposta": "una · un · La · il · un",
+              "explicacao": "\"una mamma, un papà, un fratello\" = prima menzione → NON DEFINITO. \"La mamma, il papà\" = seconda menzione → DEFINITO. Questo è lo schema più comune: prima volta = non definito, poi = definito."
+            },
+            {
+              "tipo": "revelar",
+              "pergunta": "In Italia – completa gli articoli:\n\n«Roma è ___ città bellissima. \n___ Il Colosseo è famoso in tutto il mondo. \nE ___ il gelato italiano è il migliore del mondo!» \n\n(città=città · bellissima=bella · famosa=famosa · gelato=gelato · migliore=migliore)",
+              "resposta": "una · Il · il",
+              "explicacao": "\"una città\" = indefinita (una delle tante belle città). \"Il Colosseo\" = luogo unico e famoso → sempre definito. \"il gelato\" = prodotto famoso in generale → definito. Luoghi e prodotti famosi unici = sempre IL/LA."
+            },
+            {
+              "tipo": "digitar",
+              "pergunta": "Tradurre in italiano:\n\n\"Ho un gatto e un vecchio zaino.\" \n\n(gatto = gatto · zaino = zaino · vecchio = vecchio)",
+              "resposta": "Ho un gatto e uno zaino vecchio.",
+              "dica": "GATTO: letra normal → UN | ZAINO: começa por Z → UNO",
+              "explicacao": "\"un gatto\" = G è una lettera normale → UN. \"uno zaino\" = Z → UNO (non \"un\"!). L'articolo cambia a causa della prima lettera di OGNI parola. ✓ Ho un gatto e uno zaino vecchio.",
+              "variantes": [
+                "Ho un gatto e uno zaino vecchio",
+                "Ho uno zaino vecchio e un gatto.",
+                "Ho uno zaino vecchio e un gatto"
+              ]
+            }
+          ],
+          "alerta": "Quando você chega na Itália e pede \"un caffè\", está certo. Mas se pedir \"uno caffè\" — todo italiano sorri. Um artigo errado é o primeiro sinal de quem não sabe o idioma.",
+          "inventario": [
+            "IL e UN — para palavras masculinas que começam por letra normal",
+            "LO e UNO — para palavras masculinas que começam por ST, SP, SC, Z...",
+            "LA e UNA — para palavras femininas que começam por consoante",
+            "L' e UN' — para qualquer palavra que começa por vogal (a, e, i, o, u)",
+            "No plural: IL vira I · LO vira GLI · LA vira LE"
+          ],
+          "definicao": {
+            "fenomeno": "il gatto · la pizza · lo zaino · l'amico",
+            "causa": "Por que 4 artigos diferentes? Estão falando de coisas diferentes?",
+            "conceito": "Não! São 4 formas de dizer \"o/a\" em italiano. Qual usar depende do gênero da palavra (masculino ou feminino) e da letra com que ela começa."
+          },
+          "tecnica": "Como escolher o artigo em 3 passos simples:\n\n**Passo 1** — A palavra é masculina ou feminina?\n(Se não souber, consulte o dicionário ou veja a tabela acima)\n\n**Passo 2** — Olhe a primeira letra da palavra:\n- Começa por **ST, SP, SC, SN, SL, Z, GN, PS**? → use **LO / GLI / UNO**\n- Começa por **vogal (A, E, I, O, U)**? → use **L' / GLI ou LE / UN'**\n- Todos os outros casos? → use **IL / LA / I / LE / UN / UNA**\n\n**Passo 3** — Singular ou plural?\n- Masculino: IL → I · LO → GLI\n- Feminino: LA → LE · L' → LE (ou GLI se masc.)",
+          "exemplos_prc": [
+            {
+              "oracao": "Il libro è sul tavolo.",
+              "pergunta": "LIBRO começa por qual letra? É masculino ou feminino?",
+              "resposta": "Começa por L (letra normal). É masculino (livro = masc. em italiano).",
+              "conclusao": "Masculino + letra normal → IL. \"il libro\" ✓"
+            },
+            {
+              "oracao": "Lo zaino è pesante.",
+              "pergunta": "ZAINO começa por qual letra? Por que LO e não IL?",
+              "resposta": "Começa por Z. Palavras com Z sempre usam LO, não IL.",
+              "conclusao": "Masculino + Z → LO. \"lo zaino\" ✓ (pesante = pesado)"
+            },
+            {
+              "oracao": "La pizza è buonissima!",
+              "pergunta": "PIZZA começa por qual letra? É masculino ou feminino?",
+              "resposta": "Começa por P (consoante normal). É feminino.",
+              "conclusao": "Feminino + consoante → LA. \"la pizza\" ✓"
+            },
+            {
+              "oracao": "Un'amica di Marco abita qui.",
+              "pergunta": "AMICA começa por vogal ou consoante? É masculino ou feminino?",
+              "resposta": "Começa por A (vogal!). É feminino (amiga).",
+              "conclusao": "Feminino + vogal → UN' (com apostrofo). \"un'amica\" ✓ (abita = mora)"
+            }
+          ],
+          "ponte": "Em português você diz: \"o gato / a pizza / o estudante / o amigo\" — simples, né?\n\nEm italiano funciona igual, mas a letra inicial da palavra também muda o artigo:\n- \"o gato\" → **il gatto** (g = letra normal → IL)\n- \"o estudante\" → **lo studente** (st = começa por S+consoante → LO, não IL)\n- \"a pizza\" → **la pizza** (feminino + consoante → LA)\n- \"o amigo\" → **l'amico** (começa por vogal → L')\n\n**Armadilhas para brasileiros:**\n- \"il PROBLEMA\" (não \"la problema\" — problema é masculino em italiano!)\n- \"la MANO\" (não \"il mano\" — mão é feminino em italiano!)\n- \"uno STUDENTE\" (não \"un studente\" — ST exige UNO, não UN)",
+          "coda": "Daqui em diante: aprenda cada palavra nova COM o artigo. Não diga só \"gatto\" — diga sempre \"il gatto\". O artigo FAZ PARTE da palavra.",
+          "nivel": "A1",
+          "tabela_visual": "<p class=\"tabela-intro\">Use durante os exercícios — não precisa decorar agora!</p>\n<div class=\"artigo-cards\">\n  <div class=\"artigo-card ac-azul\">\n    <div class=\"ac-titulo\">🔵 IL &nbsp;·&nbsp; UN</div>\n    <div class=\"ac-regra\">Masculino · letra normal<br><small>(b, c, d, f, g, l, m, n, p, r, t, v...)</small></div>\n    <div class=\"ac-exemplos\">il <strong>gatto</strong> (gato) · il <strong>libro</strong> (livro)<br>un <strong>caffè</strong> · un <strong>piano</strong></div>\n  </div>\n  <div class=\"artigo-card ac-amarelo\">\n    <div class=\"ac-titulo\">🟡 LO &nbsp;·&nbsp; UNO</div>\n    <div class=\"ac-regra\">Masculino · começa por:<br><strong>ST, SP, SC, SN, Z, GN, PS</strong></div>\n    <div class=\"ac-exemplos\">lo <strong>zaino</strong> (mochila) · lo <strong>studente</strong><br>uno <strong>zaino</strong> · uno <strong>studente</strong></div>\n  </div>\n  <div class=\"artigo-card ac-rosa\">\n    <div class=\"ac-titulo\">🔴 LA &nbsp;·&nbsp; UNA</div>\n    <div class=\"ac-regra\">Feminino · qualquer consoante</div>\n    <div class=\"ac-exemplos\">la <strong>pizza</strong> · la <strong>casa</strong> · la <strong>musica</strong><br>una <strong>pizza</strong> · una <strong>mamma</strong></div>\n  </div>\n  <div class=\"artigo-card ac-verde\">\n    <div class=\"ac-titulo\">🟢 L' &nbsp;·&nbsp; UN'</div>\n    <div class=\"ac-regra\">Masc. ou fem. · começa por <strong>vogal</strong><br><small>(a, e, i, o, u)</small></div>\n    <div class=\"ac-exemplos\">l'<strong>amico</strong> (amigo) · l'<strong>università</strong><br>un'<strong>amica</strong> (amiga) · un'<strong>ora</strong> (hora)</div>\n  </div>\n</div>\n<div class=\"tabela-plural\">📌 <strong>Plural:</strong> IL → <strong>I</strong> &nbsp;·&nbsp; LO → <strong>GLI</strong> &nbsp;·&nbsp; LA → <strong>LE</strong> &nbsp;·&nbsp; L' → <strong>GLI</strong> (masc.) ou <strong>LE</strong> (fem.)</div>",
+          "observacao_cards": [
+            {
+              "italiano": "il gatto",
+              "traducao": "o gato",
+              "artigo": "il",
+              "genero": "masculino",
+              "motivo": "Masculino + letra normal (g) → IL"
+            },
+            {
+              "italiano": "lo zaino",
+              "traducao": "a mochila",
+              "artigo": "lo",
+              "genero": "masculino",
+              "motivo": "Masculino + Z → LO"
+            },
+            {
+              "italiano": "la pizza",
+              "traducao": "a pizza",
+              "artigo": "la",
+              "genero": "feminino",
+              "motivo": "Feminino + consoante → LA"
+            },
+            {
+              "italiano": "l'amico",
+              "traducao": "o amigo",
+              "artigo": "l'",
+              "genero": "masculino",
+              "motivo": "Começa por vogal → L'"
+            }
+          ],
+          "armadilhas": [
+            {
+              "errado": "la problema",
+              "certo": "il problema",
+              "motivo": "\"problema\" é masculino em italiano"
+            },
+            {
+              "errado": "il mano",
+              "certo": "la mano",
+              "motivo": "\"mão\" é feminino em italiano"
+            },
+            {
+              "errado": "un studente",
+              "certo": "uno studente",
+              "motivo": "ST exige UNO, não UN"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

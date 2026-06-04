@@ -20,7 +20,14 @@ const Grammatica = {
   async carregar() {
     if (this.dados) return;
     try {
-      const r = await fetch('data/grammar.json');
+      let url = 'data/grammar.json';
+      if (typeof I18n !== 'undefined' && I18n.idioma === 'it') {
+        url = 'data/grammar-it.json';
+      }
+      let r = await fetch(url);
+      if (!r.ok && url.includes('-it.json')) {
+        r = await fetch('data/grammar.json');
+      }
       if (!r.ok) throw new Error('grammar.json não encontrado');
       this.dados = await r.json();
     } catch (e) {
