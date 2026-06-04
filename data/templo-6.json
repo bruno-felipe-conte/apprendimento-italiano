@@ -664,18 +664,6 @@
       "audio_ipa": "/anˈdaːre dakˈkɔrdo/"
     },
     {
-      "id": "t6_056",
-      "italiano": "sapere",
-      "portugues": "saber",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non so ancora se vengo alla festa.",
-      "exemplo_pt": "Ainda não sei se vou à festa.",
-      "categoria": "verbi_modali",
-      "dificuldade": "facil",
-      "audio_ipa": "/saˈpeːre/"
-    },
-    {
       "id": "t6_057",
       "italiano": "conoscere",
       "portugues": "conhecer",
@@ -866,18 +854,6 @@
       "categoria": "studi",
       "dificuldade": "medio",
       "audio_ipa": "/maˈɛstro/"
-    },
-    {
-      "id": "t6_073",
-      "italiano": "scuola",
-      "portugues": "escola",
-      "genero": "f",
-      "plural": "scuole",
-      "exemplo": "I bambini vanno a scuola.",
-      "exemplo_pt": "As crianças vão para a escola.",
-      "categoria": "studi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskwɔːla/"
     },
     {
       "id": "t6_074",
@@ -1286,6 +1262,30 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/impaˈraːre/"
+    },
+    {
+      "id": "t6_106",
+      "italiano": "rompere",
+      "portugues": "quebrar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Hai rotto il bicchiere.",
+      "exemplo_pt": "Você quebrou o copo.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/rompere/"
+    },
+    {
+      "id": "t6_107",
+      "italiano": "rubare",
+      "portugues": "roubar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Non si deve rubare.",
+      "exemplo_pt": "Não se deve roubar.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/rubare/"
     }
   ]
 }

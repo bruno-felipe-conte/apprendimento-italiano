@@ -155,16 +155,6 @@
       "audio_ipa": "/afˈfan.no/"
     },
     {
-      "id": "t16_016",
-      "italiano": "dolore",
-      "portugues": "dor (geral)",
-      "categoria": "sintomi",
-      "exemplo": "Il dolore è acuto.",
-      "exemplo_pt": "A dor é aguda.",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈlo.re/"
-    },
-    {
       "id": "t16_017",
       "italiano": "pulsazione",
       "portugues": "pulsação (pulso)",
@@ -183,16 +173,6 @@
       "exemplo_pt": "Eu tenho formigamento na perna.",
       "dificuldade": "medio",
       "audio_ipa": "/for.miˈkli.o/"
-    },
-    {
-      "id": "t16_019",
-      "italiano": "bruciore",
-      "portugues": "ardor/queimação",
-      "categoria": "sintomi",
-      "exemplo": "Ho bruciore allo stomaco.",
-      "exemplo_pt": "Eu tenho ardor no estômago.",
-      "dificuldade": "medio",
-      "audio_ipa": "/bɾuˈʧɔ.re/"
     },
     {
       "id": "t16_020",
@@ -283,16 +263,6 @@
       "exemplo_pt": "O câncer é grave.",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkan.kro/"
-    },
-    {
-      "id": "t16_029",
-      "italiano": "influenza",
-      "portugues": "gripe (influenza)",
-      "categoria": "malattie",
-      "exemplo": "L'influenza è contagiosa.",
-      "exemplo_pt": "A gripe é contagiosa.",
-      "dificuldade": "medio",
-      "audio_ipa": "/in.flwenˈza/"
     },
     {
       "id": "t16_030",
@@ -415,16 +385,6 @@
       "audio_ipa": "/ˈpronto so.kkur.so/"
     },
     {
-      "id": "t16_042",
-      "italiano": "ospedale",
-      "portugues": "hospital (sanitário)",
-      "categoria": "strutture",
-      "exemplo": "L'ospedale è moderno.",
-      "exemplo_pt": "O hospital é moderno.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ospedˈa.le/"
-    },
-    {
       "id": "t16_043",
       "italiano": "farmacia",
       "portugues": "farmácia (drogaria)",
@@ -433,16 +393,6 @@
       "exemplo_pt": "A farmácia está aberta.",
       "dificuldade": "medio",
       "audio_ipa": "/farˈma.tʃi.a/"
-    },
-    {
-      "id": "t16_044",
-      "italiano": "medico",
-      "portugues": "médico (profissão)",
-      "categoria": "strutture",
-      "exemplo": "Il medico è gentile.",
-      "exemplo_pt": "O médico é gentil.",
-      "dificuldade": "medio",
-      "audio_ipa": "/meˈdi.ko/"
     },
     {
       "id": "t16_045",
@@ -595,16 +545,6 @@
       "audio_ipa": "/mi.neˈra.li/"
     },
     {
-      "id": "t16_060",
-      "italiano": "acqua",
-      "portugues": "água (hidratação)",
-      "categoria": "salute",
-      "exemplo": "Bevo molta acqua ogni giorno.",
-      "exemplo_pt": "Eu bebo muita água todos os dias.",
-      "dificuldade": "medio",
-      "audio_ipa": "/akˈkwa/"
-    },
-    {
       "id": "t16_061",
       "italiano": "fumo",
       "portugues": "tabaco/fumar (vício)",
@@ -683,16 +623,6 @@
       "exemplo_pt": "A meditação acalma a mente.",
       "dificuldade": "medio",
       "audio_ipa": "/me.di.taˈtsjo.ne/"
-    },
-    {
-      "id": "t16_069",
-      "italiano": "yoga",
-      "portugues": "ioga (práticas)",
-      "categoria": "salute",
-      "exemplo": "Lo yoga è molto utile.",
-      "exemplo_pt": "O ioga é muito útil.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈjoɡa/"
     },
     {
       "id": "t16_070",
@@ -925,16 +855,6 @@
       "audio_ipa": "/ˈfer.ro/"
     },
     {
-      "id": "t16_093",
-      "italiano": "calcio",
-      "portugues": "cálcio (osso)",
-      "categoria": "nutrizione",
-      "exemplo": "Il calcio rafforza le ossa.",
-      "exemplo_pt": "O cálcio fortalece os ossos.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkal.tʃo/"
-    },
-    {
       "id": "t16_094",
       "italiano": "vitamina C",
       "portugues": "Vitamina C (imunidade)",
@@ -1009,7 +929,7 @@
       "italiano": "analisi del sangue",
       "portugues": "exame de sangue",
       "genero": "f",
-      "plural": null,
+      "plural": "analisi del sangui",
       "exemplo": "Le analisi del sangue sono pronte.",
       "exemplo_pt": "Os exames de sangue estão prontos.",
       "categoria": "salute",
@@ -1069,7 +989,7 @@
       "italiano": "terapia intensiva",
       "portugues": "terapia intensiva / UTI",
       "genero": "f",
-      "plural": null,
+      "plural": "terapia intensive",
       "exemplo": "Il paziente è in terapia intensiva.",
       "exemplo_pt": "O paciente está na UTI.",
       "categoria": "salute",
@@ -1081,7 +1001,7 @@
       "italiano": "donazione di organi",
       "portugues": "doação de órgãos",
       "genero": "f",
-      "plural": null,
+      "plural": "donazione di organi",
       "exemplo": "La donazione di organi salva vite.",
       "exemplo_pt": "A doação de órgãos salva vidas.",
       "categoria": "salute",
@@ -1099,6 +1019,102 @@
       "categoria": "salute",
       "dificuldade": "medio",
       "audio_ipa": "/trapˈjanto/"
+    },
+    {
+      "id": "t16_100",
+      "italiano": "preoccupare",
+      "portugues": "preocupar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con preoccupare.",
+      "exemplo_pt": "Exemplo com preocupar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/preoccupare/"
+    },
+    {
+      "id": "t16_101",
+      "italiano": "proporre",
+      "portugues": "propor",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con proporre.",
+      "exemplo_pt": "Exemplo com propor.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/proporre/"
+    },
+    {
+      "id": "t16_102",
+      "italiano": "recare",
+      "portugues": "trazer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con recare.",
+      "exemplo_pt": "Exemplo com trazer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/recare/"
+    },
+    {
+      "id": "t16_103",
+      "italiano": "rendere",
+      "portugues": "render",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con rendere.",
+      "exemplo_pt": "Exemplo com render.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/rendere/"
+    },
+    {
+      "id": "t16_104",
+      "italiano": "restare",
+      "portugues": "ficar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con restare.",
+      "exemplo_pt": "Exemplo com ficar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/restare/"
+    },
+    {
+      "id": "t16_105",
+      "italiano": "richiedere",
+      "portugues": "requerer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con richiedere.",
+      "exemplo_pt": "Exemplo com requerer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/richiedere/"
+    },
+    {
+      "id": "t16_106",
+      "italiano": "riconoscere",
+      "portugues": "reconhecer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con riconoscere.",
+      "exemplo_pt": "Exemplo com reconhecer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/riconoscere/"
+    },
+    {
+      "id": "t16_107",
+      "italiano": "rientrare",
+      "portugues": "reentrar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con rientrare.",
+      "exemplo_pt": "Exemplo com reentrar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/rientrare/"
     }
   ]
 }

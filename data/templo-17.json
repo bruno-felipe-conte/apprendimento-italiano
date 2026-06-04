@@ -55,16 +55,6 @@
       "audio_ipa": "/pro.ku.raˈto.re/"
     },
     {
-      "id": "t17_006",
-      "italiano": "avvocato",
-      "portugues": "advogado (jurídico)",
-      "categoria": "servizi",
-      "exemplo": "L'avvocato è esperto.",
-      "exemplo_pt": "O advogado é experiente.",
-      "dificuldade": "medio",
-      "audio_ipa": "/awˈwa.ko.to/"
-    },
-    {
       "id": "t17_007",
       "italiano": "notaio",
       "portugues": "tabelião (jurídico)",
@@ -103,16 +93,6 @@
       "exemplo_pt": "Eu escrevo uma carta aos correios.",
       "dificuldade": "medio",
       "audio_ipa": "/ˈpɔs.ta/"
-    },
-    {
-      "id": "t17_011",
-      "italiano": "raccomandata",
-      "portugues": "carta registrada (postal)",
-      "categoria": "servizi",
-      "exemplo": "Ho spedito un pacco raccomandato.",
-      "exemplo_pt": "Eu enviei um pacote registrado.",
-      "dificuldade": "medio",
-      "audio_ipa": "/rak.kɔ.mandaˈta/"
     },
     {
       "id": "t17_012",
@@ -165,26 +145,6 @@
       "audio_ipa": "/ˈbo.no/"
     },
     {
-      "id": "t17_017",
-      "italiano": "conto",
-      "portugues": "conta (banco)",
-      "categoria": "servizi",
-      "exemplo": "Il conto è in positivo.",
-      "exemplo_pt": "A conta é no positivo.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkonto/"
-    },
-    {
-      "id": "t17_018",
-      "italiano": "mutuo",
-      "portugues": "empréstimo (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "Ho un mutuo per la casa.",
-      "exemplo_pt": "Eu tenho um empréstimo para a casa.",
-      "dificuldade": "medio",
-      "audio_ipa": "/muˈtu.o/"
-    },
-    {
       "id": "t17_019",
       "italiano": "carico",
       "portugues": "carga (crédito/debito)",
@@ -193,36 +153,6 @@
       "exemplo_pt": "Eu tenho um saldo negativo.",
       "dificuldade": "medio",
       "audio_ipa": "/kaˈri.ko/"
-    },
-    {
-      "id": "t17_020",
-      "italiano": "prestito",
-      "portugues": "empréstimo (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "Lo prestito è utile.",
-      "exemplo_pt": "O empréstimo é útil.",
-      "dificuldade": "medio",
-      "audio_ipa": "/preˈsti.to/"
-    },
-    {
-      "id": "t17_021",
-      "italiano": "investimento",
-      "portugues": "investimento (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "Faccio investimenti sicuri.",
-      "exemplo_pt": "Eu faço investimentos seguros.",
-      "dificuldade": "medio",
-      "audio_ipa": "/inˈves.ti.men.to/"
-    },
-    {
-      "id": "t17_022",
-      "italiano": "tasse",
-      "portugues": "impostos (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "Le tasse sono alte.",
-      "exemplo_pt": "Os impostos são altos.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtas.se/"
     },
     {
       "id": "t17_023",
@@ -243,16 +173,6 @@
       "exemplo_pt": "O rendimento é estável.",
       "dificuldade": "medio",
       "audio_ipa": "/reˈdit.to/"
-    },
-    {
-      "id": "t17_025",
-      "italiano": "pensione",
-      "portugues": "aposentadoria (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "La pensione è sicura.",
-      "exemplo_pt": "A aposentadoria é segura.",
-      "dificuldade": "medio",
-      "audio_ipa": "/penˈzi.o.ne/"
     },
     {
       "id": "t17_026",
@@ -335,16 +255,6 @@
       "audio_ipa": "/atˈsjo.ne/"
     },
     {
-      "id": "t17_034",
-      "italiano": "titolo",
-      "portugues": "título (bolsa)",
-      "categoria": "servizi",
-      "exemplo": "I titoli aumentano.",
-      "exemplo_pt": "Os títulos aumentam.",
-      "dificuldade": "medio",
-      "audio_ipa": "/tiˈto.lo/"
-    },
-    {
       "id": "t17_035",
       "italiano": "dividendo",
       "portugues": "dividendo (financeiro)",
@@ -353,36 +263,6 @@
       "exemplo_pt": "Eu recebi um dividendo.",
       "dificuldade": "medio",
       "audio_ipa": "/di.vi.denˈdo/"
-    },
-    {
-      "id": "t17_036",
-      "italiano": "panetteria",
-      "portugues": "padaria (alimentar)",
-      "categoria": "negozi",
-      "exemplo": "Vado in panetteria per il pane.",
-      "exemplo_pt": "Eu vou à padaria pelo pão.",
-      "dificuldade": "medio",
-      "audio_ipa": "/panneˈterja/"
-    },
-    {
-      "id": "t17_037",
-      "italiano": "macelleria",
-      "portugues": "açougue (carne)",
-      "categoria": "negozi",
-      "exemplo": "La macelleria è pulita.",
-      "exemplo_pt": "O açougue é limpo.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ma.tʃelˈlerja/"
-    },
-    {
-      "id": "t17_038",
-      "italiano": "pescheria",
-      "portugues": "pescaria (marisco)",
-      "categoria": "negozi",
-      "exemplo": "La pescheria vende pesce fresco.",
-      "exemplo_pt": "A pescaria vende peixe fresco.",
-      "dificuldade": "medio",
-      "audio_ipa": "/peʃˈke.ri.a/"
     },
     {
       "id": "t17_039",
@@ -485,36 +365,6 @@
       "audio_ipa": "/pro.fuˈmerja/"
     },
     {
-      "id": "t17_049",
-      "italiano": "libreria",
-      "portugues": "livraria (livros)",
-      "categoria": "negozi",
-      "exemplo": "In libreria trovo un libro.",
-      "exemplo_pt": "Na livraria eu encontro um livro.",
-      "dificuldade": "medio",
-      "audio_ipa": "/li.breˈri.a/"
-    },
-    {
-      "id": "t17_050",
-      "italiano": "supermercato",
-      "portugues": "supermercado (alimentos)",
-      "categoria": "negozi",
-      "exemplo": "Vado al supermercato per gli alimenti.",
-      "exemplo_pt": "Eu vou ao supermercado pelos alimentos.",
-      "dificuldade": "medio",
-      "audio_ipa": "/su.peˈrmerkato/"
-    },
-    {
-      "id": "t17_051",
-      "italiano": "negozio",
-      "portugues": "loja/comércio (genérico)",
-      "categoria": "negozi",
-      "exemplo": "Il negozio è aperto.",
-      "exemplo_pt": "A loja está aberta.",
-      "dificuldade": "medio",
-      "audio_ipa": "/neˈʤo.zjo/"
-    },
-    {
       "id": "t17_052",
       "italiano": "merceeria",
       "portugues": "mercearia (mercearia)",
@@ -545,16 +395,6 @@
       "audio_ipa": "/tabakˈki/"
     },
     {
-      "id": "t17_055",
-      "italiano": "farmacia",
-      "portugues": "farmácia (medicamentos)",
-      "categoria": "servizi",
-      "exemplo": "La farmacia è aperta fino alle 24.",
-      "exemplo_pt": "A farmácia está aberta até às 24h.",
-      "dificuldade": "medio",
-      "audio_ipa": "/farˈma.tʃi.a/"
-    },
-    {
       "id": "t17_056",
       "italiano": "drogheria",
       "portugues": "mercearia (produtos)",
@@ -565,16 +405,6 @@
       "audio_ipa": "/droɡˈge.ri.a/"
     },
     {
-      "id": "t17_057",
-      "italiano": "biblioteca",
-      "portugues": "biblioteca (cultural)",
-      "categoria": "servizi",
-      "exemplo": "La biblioteca ha molti libri.",
-      "exemplo_pt": "A biblioteca tem muitos livros.",
-      "dificuldade": "medio",
-      "audio_ipa": "/bi.bjo.teˈka/"
-    },
-    {
       "id": "t17_058",
       "italiano": "universita",
       "portugues": "universidade (acadêmico)",
@@ -583,16 +413,6 @@
       "exemplo_pt": "A universidade é famosa.",
       "dificuldade": "medio",
       "audio_ipa": "/u.ni.verˈsi.tà/"
-    },
-    {
-      "id": "t17_059",
-      "italiano": "scuola",
-      "portugues": "escola (educacional)",
-      "categoria": "servizi",
-      "exemplo": "La scuola è vicina.",
-      "exemplo_pt": "A escola está perto.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskuo.la/"
     },
     {
       "id": "t17_060",
@@ -615,16 +435,6 @@
       "audio_ipa": "/tʃi.meˈri.ro/"
     },
     {
-      "id": "t17_062",
-      "italiano": "banca",
-      "portugues": "banco (financeiro)",
-      "categoria": "servizi",
-      "exemplo": "La banca è sicura.",
-      "exemplo_pt": "O banco é seguro.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈban.ko/"
-    },
-    {
       "id": "t17_063",
       "italiano": "assicurazione",
       "portugues": "seguro (contrato)",
@@ -633,16 +443,6 @@
       "exemplo_pt": "O seguro é importante.",
       "dificuldade": "medio",
       "audio_ipa": "/az.zeu.raˈtsjo.ne/"
-    },
-    {
-      "id": "t17_064",
-      "italiano": "posta",
-      "portugues": "carta (postal)",
-      "categoria": "servizi",
-      "exemplo": "Scrivo una lettera alla posta.",
-      "exemplo_pt": "Eu escrevo uma carta aos correios.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpɔs.ta/"
     },
     {
       "id": "t17_065",
@@ -675,56 +475,6 @@
       "audio_ipa": "/eˈneɾ.dʒa/"
     },
     {
-      "id": "t17_068",
-      "italiano": "acqua",
-      "portugues": "água (serviço)",
-      "categoria": "servizi",
-      "exemplo": "L'acqua è disponibile.",
-      "exemplo_pt": "A água está disponível.",
-      "dificuldade": "medio",
-      "audio_ipa": "/akˈkwa/"
-    },
-    {
-      "id": "t17_069",
-      "italiano": "gas",
-      "portugues": "gás (combustível)",
-      "categoria": "servizi",
-      "exemplo": "Il gas è costoso.",
-      "exemplo_pt": "O gás é caro.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡas/"
-    },
-    {
-      "id": "t17_070",
-      "italiano": "riscaldamento",
-      "portugues": "aquecimento (aquecimento)",
-      "categoria": "servizi",
-      "exemplo": "Il riscaldamento è importante.",
-      "exemplo_pt": "O aquecimento é importante.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ris.kalˈmen.to/"
-    },
-    {
-      "id": "t17_071",
-      "italiano": "condominio",
-      "portugues": "síndico (predial)",
-      "categoria": "servizi",
-      "exemplo": "Il condominio è ordinato.",
-      "exemplo_pt": "O condomínio está organizado.",
-      "dificuldade": "medio",
-      "audio_ipa": "/kon.do.miˈni.o/"
-    },
-    {
-      "id": "t17_072",
-      "italiano": "affitto",
-      "portugues": "aluguel (contrato)",
-      "categoria": "servizi",
-      "exemplo": "L'affitto è alto.",
-      "exemplo_pt": "O aluguel é alto.",
-      "dificuldade": "medio",
-      "audio_ipa": "/afˈfit.to/"
-    },
-    {
       "id": "t17_073",
       "italiano": "comodato",
       "portugues": "empréstimo (imobiliário)",
@@ -733,16 +483,6 @@
       "exemplo_pt": "O empréstimo é gratuito.",
       "dificuldade": "medio",
       "audio_ipa": "/ko.moˈda.to/"
-    },
-    {
-      "id": "t17_074",
-      "italiano": "mutuo",
-      "portugues": "empréstimo (banco)",
-      "categoria": "servizi",
-      "exemplo": "Ho ottenuto un mutuo.",
-      "exemplo_pt": "Eu consegui um empréstimo.",
-      "dificuldade": "medio",
-      "audio_ipa": "/muˈtu.o/"
     },
     {
       "id": "t17_075",
@@ -763,16 +503,6 @@
       "exemplo_pt": "A agência é profissional.",
       "dificuldade": "medio",
       "audio_ipa": "/atˈʤen.tja/"
-    },
-    {
-      "id": "t17_077",
-      "italiano": "notaio",
-      "portugues": "tabelião (jurídico)",
-      "categoria": "servizi",
-      "exemplo": "Il notaio redige gli atti.",
-      "exemplo_pt": "O tabelião redige os atos.",
-      "dificuldade": "medio",
-      "audio_ipa": "/noˈta.jo/"
     },
     {
       "id": "t17_078",
@@ -815,16 +545,6 @@
       "audio_ipa": "/ˈkar.ta di denˈti.tà/"
     },
     {
-      "id": "t17_082",
-      "italiano": "passaporto",
-      "portugues": "passaporte (viagem)",
-      "categoria": "servizi",
-      "exemplo": "Il passaporto è pronto.",
-      "exemplo_pt": "O passaporte está pronto.",
-      "dificuldade": "medio",
-      "audio_ipa": "/pas.sapoˈr.to/"
-    },
-    {
       "id": "t17_083",
       "italiano": "codice fiscale",
       "portugues": "código fiscal (imposto)",
@@ -853,36 +573,6 @@
       "exemplo_pt": "A multa foi paga.",
       "dificuldade": "medio",
       "audio_ipa": "/ˈmul.ta/"
-    },
-    {
-      "id": "t17_086",
-      "italiano": "ricevuta",
-      "portugues": "recibo (compra)",
-      "categoria": "servizi",
-      "exemplo": "Ho la ricevuta per il rimborso.",
-      "exemplo_pt": "Eu tenho o recibo para a reembolso.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ri.tʃeˈvu.ta/"
-    },
-    {
-      "id": "t17_087",
-      "italiano": "modulo",
-      "portugues": "modelo (documento)",
-      "categoria": "servizi",
-      "exemplo": "Il modulo è completo.",
-      "exemplo_pt": "O modelo está completo.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmo.dlo/"
-    },
-    {
-      "id": "t17_088",
-      "italiano": "ufficio",
-      "portugues": "escritório/serviço (governo)",
-      "categoria": "servizi",
-      "exemplo": "L'ufficio è chiuso.",
-      "exemplo_pt": "O escritório está fechado.",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈuffi.tjo/"
     },
     {
       "id": "t17_089",
@@ -1017,23 +707,11 @@
       "audio_ipa": "/ˈaːrea pedoˈnaːle/"
     },
     {
-      "id": "t17_r10",
-      "italiano": "fontana",
-      "portugues": "fonte / chafariz",
-      "genero": "f",
-      "plural": "fontane",
-      "exemplo": "La fontana in piazza è bella.",
-      "exemplo_pt": "O chafariz na praça é bonito.",
-      "categoria": "città",
-      "dificuldade": "medio",
-      "audio_ipa": "/fonˈtaːna/"
-    },
-    {
       "id": "t17_r12",
       "italiano": "municipalità",
       "portugues": "municipalidade",
       "genero": "f",
-      "plural": null,
+      "plural": "municipalità",
       "exemplo": "La municipalità gestisce i servizi.",
       "exemplo_pt": "A municipalidade gerencia os serviços.",
       "categoria": "città",
@@ -1099,6 +777,390 @@
       "categoria": "città",
       "dificuldade": "medio",
       "audio_ipa": "/ferˈmaːta del ˈbus/"
+    },
+    {
+      "id": "t17_076",
+      "italiano": "riguardare",
+      "portugues": "dizer respeito",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con riguardare.",
+      "exemplo_pt": "Exemplo com dizer respeito.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/riguardare/"
+    },
+    {
+      "id": "t17_077",
+      "italiano": "rimanere",
+      "portugues": "permanecer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con rimanere.",
+      "exemplo_pt": "Exemplo com permanecer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/rimanere/"
+    },
+    {
+      "id": "t17_078",
+      "italiano": "riportare",
+      "portugues": "trazer de volta",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con riportare.",
+      "exemplo_pt": "Exemplo com trazer de volta.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/riportare/"
+    },
+    {
+      "id": "t17_079",
+      "italiano": "riposare",
+      "portugues": "descansar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con riposare.",
+      "exemplo_pt": "Exemplo com descansar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/riposare/"
+    },
+    {
+      "id": "t17_080",
+      "italiano": "riprendere",
+      "portugues": "retomar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con riprendere.",
+      "exemplo_pt": "Exemplo com retomar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/riprendere/"
+    },
+    {
+      "id": "t17_081",
+      "italiano": "ritornare",
+      "portugues": "retornar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con ritornare.",
+      "exemplo_pt": "Exemplo com retornar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ritornare/"
+    },
+    {
+      "id": "t17_082",
+      "italiano": "ritrovare",
+      "portugues": "reencontrar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con ritrovare.",
+      "exemplo_pt": "Exemplo com reencontrar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ritrovare/"
+    },
+    {
+      "id": "t17_083",
+      "italiano": "rivolgere",
+      "portugues": "dirigir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con rivolgere.",
+      "exemplo_pt": "Exemplo com dirigir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/rivolgere/"
+    },
+    {
+      "id": "t17_084",
+      "italiano": "salutare",
+      "portugues": "saudar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con salutare.",
+      "exemplo_pt": "Exemplo com saudar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/salutare/"
+    },
+    {
+      "id": "t17_085",
+      "italiano": "scivolare",
+      "portugues": "escorregar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con scivolare.",
+      "exemplo_pt": "Exemplo com escorregar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/scivolare/"
+    },
+    {
+      "id": "t17_086",
+      "italiano": "spostare",
+      "portugues": "deslocar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con spostare.",
+      "exemplo_pt": "Exemplo com deslocar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/spostare/"
+    },
+    {
+      "id": "t17_087",
+      "italiano": "succedere",
+      "portugues": "suceder",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con succedere.",
+      "exemplo_pt": "Exemplo com suceder.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/succedere/"
+    },
+    {
+      "id": "t17_088",
+      "italiano": "svegliare",
+      "portugues": "acordar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con svegliare.",
+      "exemplo_pt": "Exemplo com acordar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/svegliare/"
+    },
+    {
+      "id": "t17_089",
+      "italiano": "svolgere",
+      "portugues": "desenvolver/realizar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con svolgere.",
+      "exemplo_pt": "Exemplo com desenvolver/realizar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/svolgere/"
+    },
+    {
+      "id": "t17_090",
+      "italiano": "tacere",
+      "portugues": "calar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con tacere.",
+      "exemplo_pt": "Exemplo com calar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/tacere/"
+    },
+    {
+      "id": "t17_091",
+      "italiano": "tendere",
+      "portugues": "tender/esticar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con tendere.",
+      "exemplo_pt": "Exemplo com tender/esticar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/tendere/"
+    },
+    {
+      "id": "t17_092",
+      "italiano": "tentare",
+      "portugues": "tentar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con tentare.",
+      "exemplo_pt": "Exemplo com tentar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/tentare/"
+    },
+    {
+      "id": "t17_093",
+      "italiano": "terminare",
+      "portugues": "terminar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con terminare.",
+      "exemplo_pt": "Exemplo com terminar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/terminare/"
+    },
+    {
+      "id": "t17_094",
+      "italiano": "togliere",
+      "portugues": "tirar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con togliere.",
+      "exemplo_pt": "Exemplo com tirar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/togliere/"
+    },
+    {
+      "id": "t17_095",
+      "italiano": "trarre",
+      "portugues": "trazer/extrair",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con trarre.",
+      "exemplo_pt": "Exemplo com trazer/extrair.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/trarre/"
+    },
+    {
+      "id": "t17_096",
+      "italiano": "trascinare",
+      "portugues": "arrastar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con trascinare.",
+      "exemplo_pt": "Exemplo com arrastar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/trascinare/"
+    },
+    {
+      "id": "t17_097",
+      "italiano": "uccidere",
+      "portugues": "matar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con uccidere.",
+      "exemplo_pt": "Exemplo com matar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/uccidere/"
+    },
+    {
+      "id": "t17_098",
+      "italiano": "udire",
+      "portugues": "ouvir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con udire.",
+      "exemplo_pt": "Exemplo com ouvir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/udire/"
+    },
+    {
+      "id": "t17_099",
+      "italiano": "abete",
+      "portugues": "abeto",
+      "genero": "m",
+      "plural": "abeti",
+      "exemplo": "Un bell'esempio con abete.",
+      "exemplo_pt": "Um belo exemplo com abeto.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/abete/"
+    },
+    {
+      "id": "t17_100",
+      "italiano": "accademia",
+      "portugues": "academia",
+      "genero": "f",
+      "plural": "accademie",
+      "exemplo": "Un bell'esempio con accademia.",
+      "exemplo_pt": "Um belo exemplo com academia.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/accademia/"
+    },
+    {
+      "id": "t17_101",
+      "italiano": "acquario",
+      "portugues": "aquário",
+      "genero": "m",
+      "plural": "acquari",
+      "exemplo": "Un bell'esempio con acquario.",
+      "exemplo_pt": "Um belo exemplo com aquário.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/acquario/"
+    },
+    {
+      "id": "t17_102",
+      "italiano": "agente",
+      "portugues": "agente",
+      "genero": "m",
+      "plural": "agenti",
+      "exemplo": "Un bell'esempio con agente.",
+      "exemplo_pt": "Um belo exemplo com agente.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/agente/"
+    },
+    {
+      "id": "t17_103",
+      "italiano": "alfabeto",
+      "portugues": "alfabeto",
+      "genero": "m",
+      "plural": "alfabeti",
+      "exemplo": "Un bell'esempio con alfabeto.",
+      "exemplo_pt": "Um belo exemplo com alfabeto.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/alfabeto/"
+    },
+    {
+      "id": "t17_104",
+      "italiano": "allarme",
+      "portugues": "alarme",
+      "genero": "m",
+      "plural": "allarmi",
+      "exemplo": "Un bell'esempio con allarme.",
+      "exemplo_pt": "Um belo exemplo com alarme.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/allarme/"
+    },
+    {
+      "id": "t17_105",
+      "italiano": "amica",
+      "portugues": "amiga",
+      "genero": "f",
+      "plural": "amiche",
+      "exemplo": "Un bell'esempio con amica.",
+      "exemplo_pt": "Um belo exemplo com amiga.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/amica/"
+    },
+    {
+      "id": "t17_106",
+      "italiano": "ananas",
+      "portugues": "abacaxi",
+      "genero": "m",
+      "plural": "ananas",
+      "exemplo": "Un bell'esempio con ananas.",
+      "exemplo_pt": "Um belo exemplo com abacaxi.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ananas/"
+    },
+    {
+      "id": "t17_107",
+      "italiano": "animo",
+      "portugues": "ânimo",
+      "genero": "m",
+      "plural": "animi",
+      "exemplo": "Un bell'esempio con animo.",
+      "exemplo_pt": "Um belo exemplo com ânimo.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/animo/"
     }
   ]
 }

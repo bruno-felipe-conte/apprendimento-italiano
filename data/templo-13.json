@@ -53,30 +53,6 @@
       "audio_ipa": "/ˈpjaːno/"
     },
     {
-      "id": "t13_005",
-      "italiano": "ascensore",
-      "portugues": "elevador",
-      "genero": "m",
-      "plural": "ascensori",
-      "exemplo": "L'ascensore è in manutenzione.",
-      "exemplo_pt": "O elevador está em manutenção.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/aʃenˈsoːre/"
-    },
-    {
-      "id": "t13_006",
-      "italiano": "scale",
-      "portugues": "escadas",
-      "genero": "f",
-      "plural": null,
-      "exemplo": "Le scale sono ripide.",
-      "exemplo_pt": "As escadas são íngremes.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskaːle/"
-    },
-    {
       "id": "t13_007",
       "italiano": "ingresso",
       "portugues": "entrada / hall",
@@ -87,18 +63,6 @@
       "categoria": "casa",
       "dificuldade": "medio",
       "audio_ipa": "/iŋˈɡresso/"
-    },
-    {
-      "id": "t13_008",
-      "italiano": "corridoio",
-      "portugues": "corredor",
-      "genero": "m",
-      "plural": "corridoi",
-      "exemplo": "Il corridoio è lungo e stretto.",
-      "exemplo_pt": "O corredor é longo e estreito.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/korriˈdɔːjo/"
     },
     {
       "id": "t13_009",
@@ -113,18 +77,6 @@
       "audio_ipa": "/saˈlɔtto/"
     },
     {
-      "id": "t13_010",
-      "italiano": "soggiorno",
-      "portugues": "sala / sala de estar",
-      "genero": "m",
-      "plural": "soggiorni",
-      "exemplo": "Il soggiorno è ampio e luminoso.",
-      "exemplo_pt": "A sala é ampla e luminosa.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/sodˈdʒorno/"
-    },
-    {
       "id": "t13_011",
       "italiano": "camera da letto",
       "portugues": "quarto",
@@ -137,42 +89,6 @@
       "audio_ipa": "/ˈkaːmera/"
     },
     {
-      "id": "t13_012",
-      "italiano": "cucina",
-      "portugues": "cozinha",
-      "genero": "f",
-      "plural": "cucine",
-      "exemplo": "La cucina è moderna e funzionale.",
-      "exemplo_pt": "A cozinha é moderna e funcional.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/kuˈtʃiːna/"
-    },
-    {
-      "id": "t13_013",
-      "italiano": "bagno",
-      "portugues": "banheiro",
-      "genero": "m",
-      "plural": "bagni",
-      "exemplo": "Il bagno è al fondo del corridoio.",
-      "exemplo_pt": "O banheiro é ao fundo do corredor.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbaɲɲo/"
-    },
-    {
-      "id": "t13_014",
-      "italiano": "studio",
-      "portugues": "escritório / estúdio",
-      "genero": "m",
-      "plural": "studi",
-      "exemplo": "Lo studio è il mio posto preferito.",
-      "exemplo_pt": "O escritório é meu lugar favorito.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstuːdjo/"
-    },
-    {
       "id": "t13_015",
       "italiano": "terrazza",
       "portugues": "terraço / varanda",
@@ -183,30 +99,6 @@
       "categoria": "casa",
       "dificuldade": "medio",
       "audio_ipa": "/terˈrattsa/"
-    },
-    {
-      "id": "t13_016",
-      "italiano": "balcone",
-      "portugues": "sacada",
-      "genero": "m",
-      "plural": "balconi",
-      "exemplo": "Mi rilasso sul balcone la sera.",
-      "exemplo_pt": "Me relaxo na sacada à noite.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/balˈkoːne/"
-    },
-    {
-      "id": "t13_017",
-      "italiano": "cantina",
-      "portugues": "adega / porão",
-      "genero": "f",
-      "plural": "cantine",
-      "exemplo": "Il vino è conservato in cantina.",
-      "exemplo_pt": "O vinho é guardado na adega.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/kanˈtiːna/"
     },
     {
       "id": "t13_018",
@@ -365,18 +257,6 @@
       "audio_ipa": "/lenˈtswɔːlo/"
     },
     {
-      "id": "t13_031",
-      "italiano": "cuscino",
-      "portugues": "travesseiro",
-      "genero": "m",
-      "plural": "cuscini",
-      "exemplo": "Dormo con due cuscini.",
-      "exemplo_pt": "Durmo com dois travesseiros.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/kuˈʃiːno/"
-    },
-    {
       "id": "t13_032",
       "italiano": "asciugamano",
       "portugues": "toalha",
@@ -435,18 +315,6 @@
       "categoria": "casa",
       "dificuldade": "medio",
       "audio_ipa": "/rubiˈnetto/"
-    },
-    {
-      "id": "t13_037",
-      "italiano": "lavatrice",
-      "portugues": "máquina de lavar",
-      "genero": "f",
-      "plural": "lavatrici",
-      "exemplo": "Metti i panni in lavatrice.",
-      "exemplo_pt": "Coloque as roupas na máquina de lavar.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/lavaˈtriːtʃe/"
     },
     {
       "id": "t13_038",
@@ -557,18 +425,6 @@
       "audio_ipa": "/ˈʃampo/"
     },
     {
-      "id": "t13_047",
-      "italiano": "affitto",
-      "portugues": "aluguel",
-      "genero": "m",
-      "plural": "affitti",
-      "exemplo": "L'affitto è troppo caro.",
-      "exemplo_pt": "O aluguel é muito caro.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/afˈfitto/"
-    },
-    {
       "id": "t13_048",
       "italiano": "mutuo",
       "portugues": "financiamento / hipoteca",
@@ -653,18 +509,6 @@
       "audio_ipa": "/serraˈtuːra/"
     },
     {
-      "id": "t13_055",
-      "italiano": "chiave",
-      "portugues": "chave",
-      "genero": "f",
-      "plural": "chiavi",
-      "exemplo": "Hai dimenticato le chiavi.",
-      "exemplo_pt": "Você esqueceu as chaves.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkjaːve/"
-    },
-    {
       "id": "t13_056",
       "italiano": "finestra",
       "portugues": "janela",
@@ -701,42 +545,6 @@
       "audio_ipa": "/porˈtoːne/"
     },
     {
-      "id": "t13_059",
-      "italiano": "pavimento",
-      "portugues": "chão / piso",
-      "genero": "m",
-      "plural": "pavimenti",
-      "exemplo": "Il pavimento è in marmo.",
-      "exemplo_pt": "O piso é de mármore.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/paviˈmento/"
-    },
-    {
-      "id": "t13_060",
-      "italiano": "soffitto",
-      "portugues": "teto",
-      "genero": "m",
-      "plural": "soffitti",
-      "exemplo": "Il soffitto è alto quattro metri.",
-      "exemplo_pt": "O teto tem quatro metros de altura.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/sofˈfitto/"
-    },
-    {
-      "id": "t13_061",
-      "italiano": "parete",
-      "portugues": "parede",
-      "genero": "f",
-      "plural": "pareti",
-      "exemplo": "Le pareti sono bianche.",
-      "exemplo_pt": "As paredes são brancas.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/paˈrɛːte/"
-    },
-    {
       "id": "t13_062",
       "italiano": "muro",
       "portugues": "muro / parede",
@@ -749,23 +557,11 @@
       "audio_ipa": "/ˈmuːro/"
     },
     {
-      "id": "t13_063",
-      "italiano": "tetto",
-      "portugues": "telhado",
-      "genero": "m",
-      "plural": "tetti",
-      "exemplo": "Il tetto perde quando piove.",
-      "exemplo_pt": "O telhado vaza quando chove.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtetto/"
-    },
-    {
       "id": "t13_064",
       "italiano": "riscaldamento",
       "portugues": "aquecimento",
       "genero": "m",
-      "plural": null,
+      "plural": "riscaldamenti",
       "exemplo": "Il riscaldamento è rotto.",
       "exemplo_pt": "O aquecimento está quebrado.",
       "categoria": "casa",
@@ -777,7 +573,7 @@
       "italiano": "aria condizionata",
       "portugues": "ar condicionado",
       "genero": "f",
-      "plural": null,
+      "plural": "aria condizionate",
       "exemplo": "L'aria condizionata fa fresco.",
       "exemplo_pt": "O ar condicionado esfria.",
       "categoria": "casa",
@@ -789,7 +585,7 @@
       "italiano": "bollette",
       "portugues": "contas (luz, água)",
       "genero": "f",
-      "plural": null,
+      "plural": "bolletti",
       "exemplo": "Le bollette sono aumentate.",
       "exemplo_pt": "As contas de serviços aumentaram.",
       "categoria": "casa",
@@ -797,23 +593,11 @@
       "audio_ipa": "/bolˈlɛtte/"
     },
     {
-      "id": "t13_067",
-      "italiano": "luce",
-      "portugues": "luz / eletricidade",
-      "genero": "f",
-      "plural": null,
-      "exemplo": "Spegni la luce quando esci.",
-      "exemplo_pt": "Apague a luz quando sair.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈluːtʃe/"
-    },
-    {
       "id": "t13_068",
       "italiano": "gas",
       "portugues": "gás",
       "genero": "m",
-      "plural": null,
+      "plural": "gas",
       "exemplo": "Controlla il gas prima di uscire.",
       "exemplo_pt": "Verifique o gás antes de sair.",
       "categoria": "casa",
@@ -825,7 +609,7 @@
       "italiano": "acqua",
       "portugues": "água",
       "genero": "f",
-      "plural": null,
+      "plural": "acque",
       "exemplo": "L'acqua corrente non funziona.",
       "exemplo_pt": "A água corrente não está funcionando.",
       "categoria": "casa",
@@ -837,7 +621,7 @@
       "italiano": "immondizia",
       "portugues": "lixo",
       "genero": "f",
-      "plural": null,
+      "plural": "immondizie",
       "exemplo": "Porta fuori l'immondizia.",
       "exemplo_pt": "Leve o lixo para fora.",
       "categoria": "casa",
@@ -849,7 +633,7 @@
       "italiano": "riciclaggio",
       "portugues": "reciclagem",
       "genero": "m",
-      "plural": null,
+      "plural": "riciclaggi",
       "exemplo": "Il riciclaggio è importante.",
       "exemplo_pt": "A reciclagem é importante.",
       "categoria": "casa",
@@ -861,7 +645,7 @@
       "italiano": "raccolta differenziata",
       "portugues": "coleta seletiva",
       "genero": "f",
-      "plural": null,
+      "plural": "raccolta differenziate",
       "exemplo": "Fai la raccolta differenziata.",
       "exemplo_pt": "Faça a coleta seletiva.",
       "categoria": "casa",
@@ -1185,24 +969,12 @@
       "italiano": "parquet",
       "portugues": "parquet",
       "genero": "m",
-      "plural": null,
+      "plural": "parquet",
       "exemplo": "Il parquet di legno è elegante.",
       "exemplo_pt": "O parquet de madeira é elegante.",
       "categoria": "casa",
       "dificuldade": "medio",
       "audio_ipa": "/parˈkɛ/"
-    },
-    {
-      "id": "t13_100",
-      "italiano": "quadro",
-      "portugues": "quadro",
-      "genero": "m",
-      "plural": "quadri",
-      "exemplo": "Il quadro è appeso in salotto.",
-      "exemplo_pt": "O quadro está pendurado na sala.",
-      "categoria": "casa",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkwaːdro/"
     },
     {
       "id": "t13_101",
@@ -1287,6 +1059,234 @@
       "categoria": "casa",
       "dificuldade": "medio",
       "audio_ipa": "/ˈpreːza/"
+    },
+    {
+      "id": "t13_089",
+      "italiano": "agire",
+      "portugues": "agir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con agire.",
+      "exemplo_pt": "Exemplo com agir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/agire/"
+    },
+    {
+      "id": "t13_090",
+      "italiano": "allontanare",
+      "portugues": "afastar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con allontanare.",
+      "exemplo_pt": "Exemplo com afastar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/allontanare/"
+    },
+    {
+      "id": "t13_091",
+      "italiano": "animare",
+      "portugues": "animar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con animare.",
+      "exemplo_pt": "Exemplo com animar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/animare/"
+    },
+    {
+      "id": "t13_092",
+      "italiano": "appoggiare",
+      "portugues": "apoiar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con appoggiare.",
+      "exemplo_pt": "Exemplo com apoiar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/appoggiare/"
+    },
+    {
+      "id": "t13_093",
+      "italiano": "assicurare",
+      "portugues": "assegurar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con assicurare.",
+      "exemplo_pt": "Exemplo com assegurar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/assicurare/"
+    },
+    {
+      "id": "t13_094",
+      "italiano": "assistere",
+      "portugues": "assistir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con assistere.",
+      "exemplo_pt": "Exemplo com assistir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/assistere/"
+    },
+    {
+      "id": "t13_095",
+      "italiano": "attaccare",
+      "portugues": "atacar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con attaccare.",
+      "exemplo_pt": "Exemplo com atacar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attaccare/"
+    },
+    {
+      "id": "t13_096",
+      "italiano": "attendere",
+      "portugues": "aguardar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con attendere.",
+      "exemplo_pt": "Exemplo com aguardar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attendere/"
+    },
+    {
+      "id": "t13_097",
+      "italiano": "avvenire",
+      "portugues": "ocorrer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con avvenire.",
+      "exemplo_pt": "Exemplo com ocorrer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avvenire/"
+    },
+    {
+      "id": "t13_098",
+      "italiano": "baciare",
+      "portugues": "beijar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con baciare.",
+      "exemplo_pt": "Exemplo com beijar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/baciare/"
+    },
+    {
+      "id": "t13_099",
+      "italiano": "badare",
+      "portugues": "cuidar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con badare.",
+      "exemplo_pt": "Exemplo com cuidar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/badare/"
+    },
+    {
+      "id": "t13_100",
+      "italiano": "bagnare",
+      "portugues": "molhar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con bagnare.",
+      "exemplo_pt": "Exemplo com molhar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bagnare/"
+    },
+    {
+      "id": "t13_101",
+      "italiano": "bastare",
+      "portugues": "bastar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con bastare.",
+      "exemplo_pt": "Exemplo com bastar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bastare/"
+    },
+    {
+      "id": "t13_102",
+      "italiano": "chiamare",
+      "portugues": "chamar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con chiamare.",
+      "exemplo_pt": "Exemplo com chamar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/chiamare/"
+    },
+    {
+      "id": "t13_103",
+      "italiano": "chiudere",
+      "portugues": "fechar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con chiudere.",
+      "exemplo_pt": "Exemplo com fechar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/chiudere/"
+    },
+    {
+      "id": "t13_104",
+      "italiano": "condurre",
+      "portugues": "conduzir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con condurre.",
+      "exemplo_pt": "Exemplo com conduzir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/condurre/"
+    },
+    {
+      "id": "t13_105",
+      "italiano": "contare",
+      "portugues": "contar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con contare.",
+      "exemplo_pt": "Exemplo com contar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/contare/"
+    },
+    {
+      "id": "t13_106",
+      "italiano": "continuare",
+      "portugues": "continuar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con continuare.",
+      "exemplo_pt": "Exemplo com continuar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/continuare/"
+    },
+    {
+      "id": "t13_107",
+      "italiano": "costituire",
+      "portugues": "constituir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con costituire.",
+      "exemplo_pt": "Exemplo com constituir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/costituire/"
     }
   ]
 }

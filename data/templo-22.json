@@ -701,30 +701,6 @@
       "audio_ipa": "/inkontamiˈnato/"
     },
     {
-      "id": "t22_081",
-      "italiano": "alba",
-      "portugues": "amanhecer",
-      "genero": "f",
-      "plural": "albe",
-      "exemplo": "Alzarsi all'alba.",
-      "exemplo_pt": "Levantar ao amanhecer.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈalba/"
-    },
-    {
-      "id": "t22_082",
-      "italiano": "tramonto",
-      "portugues": "pôr do sol",
-      "genero": "m",
-      "plural": "tramonti",
-      "exemplo": "Un bellissimo tramonto.",
-      "exemplo_pt": "Um belíssimo pôr do sol.",
-      "categoria": "tempo",
-      "dificuldade": "medio",
-      "audio_ipa": "/traˈmonto/"
-    },
-    {
       "id": "t22_083",
       "italiano": "crepuscolo",
       "portugues": "crepúsculo",
@@ -1065,7 +1041,7 @@
       "italiano": "oasi",
       "portugues": "oásis",
       "genero": "f",
-      "plural": null,
+      "plural": "oasi",
       "exemplo": "L'oasi è un rifugio nel deserto.",
       "exemplo_pt": "O oásis é um refúgio no deserto.",
       "categoria": "natura",
@@ -1137,7 +1113,7 @@
       "italiano": "siccità",
       "portugues": "seca",
       "genero": "f",
-      "plural": null,
+      "plural": "siccità",
       "exemplo": "La siccità ha distrutto il raccolto.",
       "exemplo_pt": "A seca destruiu a colheita.",
       "categoria": "natura",
@@ -1185,7 +1161,7 @@
       "italiano": "mangrovie",
       "portugues": "manguezal",
       "genero": "f",
-      "plural": null,
+      "plural": "mangrovii",
       "exemplo": "Le mangrovie proteggono la costa.",
       "exemplo_pt": "O manguezal protege a costa.",
       "categoria": "natura",
@@ -1299,6 +1275,18 @@
       "categoria": "natura",
       "dificuldade": "medio",
       "audio_ipa": "/ˈsteppa/"
+    },
+    {
+      "id": "t22_107",
+      "italiano": "cifra",
+      "portugues": "cifra/número",
+      "genero": "f",
+      "plural": "cifre",
+      "exemplo": "Un bell'esempio con cifra.",
+      "exemplo_pt": "Um belo exemplo com cifra/número.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cifra/"
     }
   ]
 }

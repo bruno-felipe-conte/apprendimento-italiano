@@ -164,7 +164,7 @@
       "italiano": "Natale",
       "portugues": "Natal",
       "genero": "m",
-      "plural": null,
+      "plural": "natali",
       "exemplo": "A Natale tutta la famiglia si riunisce.",
       "exemplo_pt": "No Natal toda a família se reúne.",
       "categoria": "occasioni",
@@ -176,7 +176,7 @@
       "italiano": "Pasqua",
       "portugues": "Páscoa",
       "genero": "f",
-      "plural": null,
+      "plural": "pasque",
       "exemplo": "A Pasqua ci riuniamo tutti in campagna.",
       "exemplo_pt": "Na Páscoa nos reunimos todos no campo.",
       "categoria": "occasioni",
@@ -652,18 +652,6 @@
       "audio_ipa": "/fiɡuˈrarsi/"
     },
     {
-      "id": "t7_055",
-      "italiano": "abitudine",
-      "portugues": "hábito / costume",
-      "genero": "f",
-      "plural": "abitudini",
-      "exemplo": "Quando abitavo a Roma, avevo l'abitudine di fare tardi la sera.",
-      "exemplo_pt": "Quando morava em Roma, tinha o hábito de ficar acordado até tarde.",
-      "categoria": "cultura",
-      "dificuldade": "medio",
-      "audio_ipa": "/abiˈtuːdine/"
-    },
-    {
       "id": "t7_056",
       "italiano": "comportamento",
       "portugues": "comportamento",
@@ -728,7 +716,7 @@
       "italiano": "saggezza",
       "portugues": "sabedoria",
       "genero": "f",
-      "plural": null,
+      "plural": "saggezze",
       "exemplo": "I proverbi esprimono la saggezza popolare.",
       "exemplo_pt": "Os provérbios expressam a sabedoria popular.",
       "categoria": "cultura",
@@ -784,18 +772,6 @@
       "audio_ipa": "/ˈkwadro/"
     },
     {
-      "id": "t7_066",
-      "italiano": "opinione",
-      "portugues": "opinião",
-      "genero": "f",
-      "plural": "opinioni",
-      "exemplo": "La mia opinione è diversa.",
-      "exemplo_pt": "Minha opinião é diferente.",
-      "categoria": "conversazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/opiˈnjoːne/"
-    },
-    {
       "id": "t7_067",
       "italiano": "idea",
       "portugues": "ideia",
@@ -830,18 +806,6 @@
       "categoria": "conversazione",
       "dificuldade": "medio",
       "audio_ipa": "/ˈtɔrto/"
-    },
-    {
-      "id": "t7_070",
-      "italiano": "accordo",
-      "portugues": "acordo",
-      "genero": "m",
-      "plural": "accordi",
-      "exemplo": "Siamo d'accordo su questo.",
-      "exemplo_pt": "Estamos de acordo com isso.",
-      "categoria": "conversazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/akˈkɔrdo/"
     },
     {
       "id": "t7_071",
@@ -940,18 +904,6 @@
       "audio_ipa": "/konsiʎˈʎaːre/"
     },
     {
-      "id": "t7_079",
-      "italiano": "consiglio",
-      "portugues": "conselho",
-      "genero": "m",
-      "plural": "consigli",
-      "exemplo": "Posso darti un consiglio?",
-      "exemplo_pt": "Posso te dar um conselho?",
-      "categoria": "conversazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/konˈsiʎʎo/"
-    },
-    {
       "id": "t7_080",
       "italiano": "forse",
       "portugues": "talvez",
@@ -1036,30 +988,6 @@
       "audio_ipa": "/alˈloːra/"
     },
     {
-      "id": "t7_087",
-      "italiano": "quindi",
-      "portugues": "portanto",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Piove, quindi resto a casa.",
-      "exemplo_pt": "Chove, portanto fico em casa.",
-      "categoria": "avverbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkwindi/"
-    },
-    {
-      "id": "t7_088",
-      "italiano": "perché",
-      "portugues": "por que / porque",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Perché non mangi?",
-      "exemplo_pt": "Por que não come?",
-      "categoria": "congiunzioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/perˈke/"
-    },
-    {
       "id": "t7_089",
       "italiano": "come",
       "portugues": "como",
@@ -1070,18 +998,6 @@
       "categoria": "congiunzioni",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkoːme/"
-    },
-    {
-      "id": "t7_090",
-      "italiano": "quando",
-      "portugues": "quando",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Quando arrivi chiamami.",
-      "exemplo_pt": "Quando chegar, me ligue.",
-      "categoria": "congiunzioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkwando/"
     },
     {
       "id": "t7_091",
@@ -1118,18 +1034,6 @@
       "categoria": "pronomi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈkɔːza/"
-    },
-    {
-      "id": "t7_094",
-      "italiano": "certo",
-      "portugues": "certo / claro",
-      "genero": "m",
-      "plural": "certi",
-      "exemplo": "Certo che vengo!",
-      "exemplo_pt": "Claro que venho!",
-      "categoria": "avverbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃɛrto/"
     },
     {
       "id": "t7_095",
@@ -1216,18 +1120,6 @@
       "audio_ipa": "/ˈskuːza/"
     },
     {
-      "id": "t7_102",
-      "italiano": "prego",
-      "portugues": "de nada",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Grazie! - Prego!",
-      "exemplo_pt": "Obrigado! - De nada!",
-      "categoria": "conversazione",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈprɛːɡo/"
-    },
-    {
       "id": "t7_103",
       "italiano": "saluto",
       "portugues": "saudação",
@@ -1286,6 +1178,114 @@
       "categoria": "conversazione",
       "dificuldade": "medio",
       "audio_ipa": "/ruˈmoːre/"
+    },
+    {
+      "id": "t7_099",
+      "italiano": "sbagliare",
+      "portugues": "errar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Tutti possono sbagliare.",
+      "exemplo_pt": "Todos podem errar.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/sbagliare/"
+    },
+    {
+      "id": "t7_100",
+      "italiano": "scappare",
+      "portugues": "escapar / fugir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Devo scappare al lavoro.",
+      "exemplo_pt": "Tenho que fugir para o trabalho.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/scappare/"
+    },
+    {
+      "id": "t7_101",
+      "italiano": "scherzare",
+      "portugues": "brincar / zombar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Sto solo scherzando.",
+      "exemplo_pt": "Estou só brincando.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/scherzare/"
+    },
+    {
+      "id": "t7_102",
+      "italiano": "scusare",
+      "portugues": "desculpar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Scusami per il ritardo.",
+      "exemplo_pt": "Desculpa-me pelo atraso.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/scusare/"
+    },
+    {
+      "id": "t7_103",
+      "italiano": "segnare",
+      "portugues": "marcar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il giocatore ha segnato un gol.",
+      "exemplo_pt": "O jogador marcou um gol.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/segnare/"
+    },
+    {
+      "id": "t7_104",
+      "italiano": "sembrare",
+      "portugues": "parecer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Mi sembra una buona idea.",
+      "exemplo_pt": "Parece-me uma boa ideia.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/sembrare/"
+    },
+    {
+      "id": "t7_105",
+      "italiano": "sfuggire",
+      "portugues": "escapar / fugir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Il cane è sfuggito dal giardino.",
+      "exemplo_pt": "O cão fugiu do jardim.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/sfuggire/"
+    },
+    {
+      "id": "t7_106",
+      "italiano": "significare",
+      "portugues": "significar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Cosa significa questa parola?",
+      "exemplo_pt": "O que significa esta palavra?",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/significare/"
+    },
+    {
+      "id": "t7_107",
+      "italiano": "sopportare",
+      "portugues": "suportar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Non posso sopportare il dolore.",
+      "exemplo_pt": "Não posso suportar a dor.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/sopportare/"
     }
   ]
 }

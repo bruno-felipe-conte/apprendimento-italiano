@@ -5,18 +5,6 @@
   "nivel": "B1",
   "palavras": [
     {
-      "id": "t21_001",
-      "italiano": "gioia",
-      "portugues": "alegria",
-      "genero": "f",
-      "plural": "gioie",
-      "exemplo": "Provo grande gioia.",
-      "exemplo_pt": "Sinto grande alegria.",
-      "categoria": "positive",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒɔja/"
-    },
-    {
       "id": "t21_002",
       "italiano": "felicità",
       "portugues": "felicidade",
@@ -27,18 +15,6 @@
       "categoria": "positive",
       "dificuldade": "medio",
       "audio_ipa": "/felitʃiˈta/"
-    },
-    {
-      "id": "t21_003",
-      "italiano": "amore",
-      "portugues": "amor",
-      "genero": "m",
-      "plural": "amori",
-      "exemplo": "L'amore vince sempre.",
-      "exemplo_pt": "O amor vence sempre.",
-      "categoria": "positive",
-      "dificuldade": "medio",
-      "audio_ipa": "/aˈmore/"
     },
     {
       "id": "t21_004",
@@ -605,18 +581,6 @@
       "audio_ipa": "/dʒeˈlozo/"
     },
     {
-      "id": "t21_060",
-      "italiano": "sicuro",
-      "portugues": "seguro",
-      "genero": "m",
-      "plural": "sicuri",
-      "exemplo": "Mi sento sicuro con te.",
-      "exemplo_pt": "Me sinto seguro com você.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/siˈkuro/"
-    },
-    {
       "id": "t21_061",
       "italiano": "insicuro",
       "portugues": "inseguro",
@@ -627,18 +591,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/insiˈkuro/"
-    },
-    {
-      "id": "t21_063",
-      "italiano": "odiare",
-      "portugues": "odiar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Lui odia il freddo.",
-      "exemplo_pt": "Ele odeia o frio.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/oˈdjare/"
     },
     {
       "id": "t21_068",
@@ -1149,7 +1101,7 @@
       "italiano": "senso di colpa",
       "portugues": "culpa",
       "genero": "m",
-      "plural": null,
+      "plural": "senso di colpi",
       "exemplo": "Il senso di colpa è pesante.",
       "exemplo_pt": "A culpa é pesada.",
       "categoria": "emozioni",
@@ -1287,6 +1239,54 @@
       "categoria": "emozioni",
       "dificuldade": "medio",
       "audio_ipa": "/determtnaˈtsjoːne/"
+    },
+    {
+      "id": "t21_104",
+      "italiano": "centinaio",
+      "portugues": "centena",
+      "genero": "m",
+      "plural": "centinaia",
+      "exemplo": "Un bell'esempio con centinaio.",
+      "exemplo_pt": "Um belo exemplo com centena.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/centinaio/"
+    },
+    {
+      "id": "t21_105",
+      "italiano": "chilometro",
+      "portugues": "quilômetro",
+      "genero": "m",
+      "plural": "chilometri",
+      "exemplo": "Un bell'esempio con chilometro.",
+      "exemplo_pt": "Um belo exemplo com quilômetro.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/chilometro/"
+    },
+    {
+      "id": "t21_106",
+      "italiano": "ciascuno",
+      "portugues": "cada um",
+      "genero": "m",
+      "plural": "ciascuni",
+      "exemplo": "Un bell'esempio con ciascuno.",
+      "exemplo_pt": "Um belo exemplo com cada um.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ciascuno/"
+    },
+    {
+      "id": "t21_107",
+      "italiano": "cibo",
+      "portugues": "comida",
+      "genero": "m",
+      "plural": "cibi",
+      "exemplo": "Un bell'esempio con cibo.",
+      "exemplo_pt": "Um belo exemplo com comida.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cibo/"
     }
   ]
 }

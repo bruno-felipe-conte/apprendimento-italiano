@@ -761,18 +761,6 @@
       "audio_ipa": "/veˈdersela/"
     },
     {
-      "id": "t47_067",
-      "italiano": "magari",
-      "portugues": "quem dera/talvez",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Magari fosse vero!",
-      "exemplo_pt": "Quem dera fosse verdade!",
-      "categoria": "avverbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/maˈɡari/"
-    },
-    {
       "id": "t47_069",
       "italiano": "macché",
       "portugues": "que nada!",
@@ -833,18 +821,6 @@
       "audio_ipa": "/inˈsomma/"
     },
     {
-      "id": "t47_075",
-      "italiano": "infatti",
-      "portugues": "de fato",
-      "genero": null,
-      "plural": null,
-      "exemplo": "È intelligente, e infatti studia molto.",
-      "exemplo_pt": "É inteligente, e de fato estuda muito.",
-      "categoria": "avverbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/inˈfatti/"
-    },
-    {
       "id": "t47_076",
       "italiano": "addirittura",
       "portugues": "até mesmo/nossa!",
@@ -867,18 +843,6 @@
       "categoria": "avverbi",
       "dificuldade": "difficile",
       "audio_ipa": "/orˈmai/"
-    },
-    {
-      "id": "t47_078",
-      "italiano": "allora",
-      "portugues": "então",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Allora, cosa facciamo?",
-      "exemplo_pt": "Então, o que fazemos?",
-      "categoria": "avverbi",
-      "dificuldade": "difficile",
-      "audio_ipa": "/alˈlora/"
     },
     {
       "id": "t47_080",
@@ -1323,66 +1287,6 @@
       "categoria": "espressioni",
       "dificuldade": "medio",
       "audio_ipa": "/riˈmettersi in ˈpjɛːdi/"
-    },
-    {
-      "id": "t47_r14",
-      "italiano": "fare a pezzi",
-      "portugues": "destruir / arrasar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "La critica ha fatto a pezzi il libro.",
-      "exemplo_pt": "A crítica destruiu o livro.",
-      "categoria": "espressioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfaːre a ˈpɛttsi/"
-    },
-    {
-      "id": "t47_r15",
-      "italiano": "mandare in malora",
-      "portugues": "mandar às favas / destruir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ha mandato tutto in malora.",
-      "exemplo_pt": "Ele mandou tudo às favas.",
-      "categoria": "espressioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/manˈdaːre in maˈlɔːra/"
-    },
-    {
-      "id": "t47_r16",
-      "italiano": "a cuor leggero",
-      "portugues": "de coração leve",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Parto a cuor leggero per le vacanze.",
-      "exemplo_pt": "Parto de coração leve para as férias.",
-      "categoria": "espressioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/a ˈkwɔːr ledˈdʒɛːro/"
-    },
-    {
-      "id": "t47_r17",
-      "italiano": "a malincuore",
-      "portugues": "a contragosto",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ho accettato a malincuore.",
-      "exemplo_pt": "Aceitei a contragosto.",
-      "categoria": "espressioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/a malinˈkwɔːre/"
-    },
-    {
-      "id": "t47_r18",
-      "italiano": "in quattro e quattr'otto",
-      "portugues": "rapidíssimo",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ha risolto il problema in quattro e quattr'otto.",
-      "exemplo_pt": "Resolveu o problema rapidíssimo.",
-      "categoria": "espressioni",
-      "dificuldade": "medio",
-      "audio_ipa": "/in kˈkwattro e kwatˈtrɔtto/"
     }
   ]
 }

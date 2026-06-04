@@ -101,30 +101,6 @@
       "audio_ipa": "/konsumaˈtore/"
     },
     {
-      "id": "t25_023",
-      "italiano": "soldi",
-      "portugues": "dinheiro",
-      "genero": "m",
-      "plural": "soldi",
-      "exemplo": "Non ho soldi con me.",
-      "exemplo_pt": "Não tenho dinheiro comigo.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsɔldi/"
-    },
-    {
-      "id": "t25_024",
-      "italiano": "denaro",
-      "portugues": "dinheiro",
-      "genero": "m",
-      "plural": "denari",
-      "exemplo": "Un prestito di denaro.",
-      "exemplo_pt": "Um empréstimo de dinheiro.",
-      "categoria": "denaro",
-      "dificuldade": "medio",
-      "audio_ipa": "/deˈnaro/"
-    },
-    {
       "id": "t25_026",
       "italiano": "offerta",
       "portugues": "oferta",
@@ -305,18 +281,6 @@
       "audio_ipa": "/proˈdotto/"
     },
     {
-      "id": "t25_055",
-      "italiano": "articolo",
-      "portugues": "artigo",
-      "genero": "m",
-      "plural": "articoli",
-      "exemplo": "Questo articolo è esaurito.",
-      "exemplo_pt": "Este artigo está esgotato.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/arˈtikolo/"
-    },
-    {
       "id": "t25_056",
       "italiano": "marca",
       "portugues": "marca",
@@ -425,18 +389,6 @@
       "audio_ipa": "/paˈɡare/"
     },
     {
-      "id": "t25_069",
-      "italiano": "spendere",
-      "portugues": "gastar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Non devi spendere troppo.",
-      "exemplo_pt": "Você não deve gastar muito.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspɛndere/"
-    },
-    {
       "id": "t25_070",
       "italiano": "costare",
       "portugues": "custar",
@@ -447,18 +399,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/kosˈtare/"
-    },
-    {
-      "id": "t25_071",
-      "italiano": "risparmiare",
-      "portugues": "economizar/poupar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Devo risparmiare per il viaggio.",
-      "exemplo_pt": "Devo economizar para a viagem.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/risparˈmjare/"
     },
     {
       "id": "t25_072",
@@ -495,18 +435,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/vaˈlere/"
-    },
-    {
-      "id": "t25_077",
-      "italiano": "guadagnare",
-      "portugues": "ganhar (dinheiro)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Lui guadagna molto bene.",
-      "exemplo_pt": "Ele ganha muito bem.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ɡwadaɲˈɲare/"
     },
     {
       "id": "t25_078",
@@ -567,18 +495,6 @@
       "categoria": "aggettivi",
       "dificuldade": "medio",
       "audio_ipa": "/ekoˈnɔmiko/"
-    },
-    {
-      "id": "t25_084",
-      "italiano": "gratis",
-      "portugues": "grátis",
-      "genero": null,
-      "plural": null,
-      "exemplo": "L'ingresso è gratis per i bambini.",
-      "exemplo_pt": "A entrada é grátis para as crianças.",
-      "categoria": "aggettivi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɡratis/"
     },
     {
       "id": "t25_085",
@@ -801,7 +717,7 @@
       "italiano": "inflazione",
       "portugues": "inflação",
       "genero": "f",
-      "plural": null,
+      "plural": "inflazioni",
       "exemplo": "L'inflazione erode il potere d'acquisto.",
       "exemplo_pt": "A inflação corrói o poder de compra.",
       "categoria": "economia",
@@ -813,7 +729,7 @@
       "italiano": "PIL",
       "portugues": "PIB",
       "genero": "m",
-      "plural": null,
+      "plural": "pil",
       "exemplo": "Il PIL è cresciuto del due per cento.",
       "exemplo_pt": "O PIB cresceu dois por cento.",
       "categoria": "economia",
@@ -921,7 +837,7 @@
       "italiano": "previdenza",
       "portugues": "previdência",
       "genero": "f",
-      "plural": null,
+      "plural": "previdenze",
       "exemplo": "La previdenza sociale è obbligatoria.",
       "exemplo_pt": "A previdência social é obrigatória.",
       "categoria": "lavoro",
@@ -957,7 +873,7 @@
       "italiano": "liquidità",
       "portugues": "liquidez",
       "genero": "f",
-      "plural": null,
+      "plural": "liquidità",
       "exemplo": "La liquidità dell'azienda è buona.",
       "exemplo_pt": "A liquidez da empresa é boa.",
       "categoria": "finanza",
@@ -1025,23 +941,11 @@
       "audio_ipa": "/oliɡoˈpɔːljo/"
     },
     {
-      "id": "t25_s04",
-      "italiano": "domanda",
-      "portugues": "demanda / procura",
-      "genero": "f",
-      "plural": "domande",
-      "exemplo": "La domanda di case è alta.",
-      "exemplo_pt": "A demanda por casas está alta.",
-      "categoria": "economia",
-      "dificuldade": "medio",
-      "audio_ipa": "/doˈmanda/"
-    },
-    {
       "id": "t25_s06",
       "italiano": "surplus",
       "portugues": "superávit",
       "genero": "m",
-      "plural": null,
+      "plural": "surplus",
       "exemplo": "Il surplus commerciale è record.",
       "exemplo_pt": "O superávit comercial é recorde.",
       "categoria": "economia",
@@ -1053,7 +957,7 @@
       "italiano": "deficit",
       "portugues": "déficit",
       "genero": "m",
-      "plural": null,
+      "plural": "deficit",
       "exemplo": "Il deficit di bilancio è preoccupante.",
       "exemplo_pt": "O déficit orçamentário é preocupante.",
       "categoria": "economia",
@@ -1149,7 +1053,7 @@
       "italiano": "franchising",
       "portugues": "franquia",
       "genero": "m",
-      "plural": null,
+      "plural": "franchising",
       "exemplo": "Gestisco un franchising di successo.",
       "exemplo_pt": "Gerencio uma franquia de sucesso.",
       "categoria": "commercio",
@@ -1185,7 +1089,7 @@
       "italiano": "copyright",
       "portugues": "direitos autorais",
       "genero": "m",
-      "plural": null,
+      "plural": "copyright",
       "exemplo": "Il copyright dura settant'anni.",
       "exemplo_pt": "Os direitos autorais duram setenta anos.",
       "categoria": "commercio",
@@ -1269,7 +1173,7 @@
       "italiano": "tasso di interesse reale",
       "portugues": "taxa de juros real",
       "genero": "m",
-      "plural": null,
+      "plural": "tasso di interesse reali",
       "exemplo": "Il tasso reale aggiusta per l'inflazione.",
       "exemplo_pt": "A taxa real ajusta para a inflação.",
       "categoria": "banca",
@@ -1281,12 +1185,108 @@
       "italiano": "rendimento a scadenza",
       "portugues": "rendimento ao vencimento",
       "genero": "m",
-      "plural": null,
+      "plural": "rendimento a scadenzi",
       "exemplo": "Il rendimento a scadenza è del 4%.",
       "exemplo_pt": "O rendimento ao vencimento é de 4%.",
       "categoria": "finanza",
       "dificuldade": "medio",
       "audio_ipa": "/rendiˈmento a skaˈdɛntsa/"
+    },
+    {
+      "id": "t25_100",
+      "italiano": "ciliegia",
+      "portugues": "cereja",
+      "genero": "f",
+      "plural": "ciliegie",
+      "exemplo": "Un bell'esempio con ciliegia.",
+      "exemplo_pt": "Um belo exemplo com cereja.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ciliegia/"
+    },
+    {
+      "id": "t25_101",
+      "italiano": "cinese",
+      "portugues": "chinês",
+      "genero": "m/f",
+      "plural": "cinesi",
+      "exemplo": "Un bell'esempio con cinese.",
+      "exemplo_pt": "Um belo exemplo com chinês.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cinese/"
+    },
+    {
+      "id": "t25_102",
+      "italiano": "circolo",
+      "portugues": "círculo/clube",
+      "genero": "m",
+      "plural": "circoli",
+      "exemplo": "Un bell'esempio con circolo.",
+      "exemplo_pt": "Um belo exemplo com círculo/clube.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/circolo/"
+    },
+    {
+      "id": "t25_103",
+      "italiano": "clinica",
+      "portugues": "clínica",
+      "genero": "f",
+      "plural": "cliniche",
+      "exemplo": "Un bell'esempio con clinica.",
+      "exemplo_pt": "Um belo exemplo com clínica.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/clinica/"
+    },
+    {
+      "id": "t25_104",
+      "italiano": "colle",
+      "portugues": "colina",
+      "genero": "m",
+      "plural": "colli",
+      "exemplo": "Un bell'esempio con colle.",
+      "exemplo_pt": "Um belo exemplo com colina.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/colle/"
+    },
+    {
+      "id": "t25_105",
+      "italiano": "collegio",
+      "portugues": "colégio",
+      "genero": "m",
+      "plural": "collegi",
+      "exemplo": "Un bell'esempio con collegio.",
+      "exemplo_pt": "Um belo exemplo com colégio.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/collegio/"
+    },
+    {
+      "id": "t25_106",
+      "italiano": "comando",
+      "portugues": "comando",
+      "genero": "m",
+      "plural": "comandi",
+      "exemplo": "Un bell'esempio con comando.",
+      "exemplo_pt": "Um belo exemplo com comando.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/comando/"
+    },
+    {
+      "id": "t25_107",
+      "italiano": "combattimento",
+      "portugues": "combate",
+      "genero": "m",
+      "plural": "combattimenti",
+      "exemplo": "Un bell'esempio con combattimento.",
+      "exemplo_pt": "Um belo exemplo com combate.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/combattimento/"
     }
   ]
 }

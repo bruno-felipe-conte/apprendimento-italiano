@@ -149,18 +149,6 @@
       "audio_ipa": "/ˈpɔrto/"
     },
     {
-      "id": "t19_022",
-      "italiano": "binario",
-      "portugues": "plataforma/trilho",
-      "genero": "m",
-      "plural": "binari",
-      "exemplo": "Il treno parte dal binario due.",
-      "exemplo_pt": "O trem parte da plataforma dois.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/biˈnarjo/"
-    },
-    {
       "id": "t19_023",
       "italiano": "autostrada",
       "portugues": "rodovia",
@@ -171,30 +159,6 @@
       "categoria": "infrastrutture",
       "dificuldade": "medio",
       "audio_ipa": "/autoˈstrada/"
-    },
-    {
-      "id": "t19_024",
-      "italiano": "strada",
-      "portugues": "rua/estrada",
-      "genero": "f",
-      "plural": "strade",
-      "exemplo": "La strada è chiusa.",
-      "exemplo_pt": "A rua está fechada.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈstrada/"
-    },
-    {
-      "id": "t19_026",
-      "italiano": "semaforo",
-      "portugues": "semáforo",
-      "genero": "m",
-      "plural": "semafori",
-      "exemplo": "Fermati al semaforo rosso.",
-      "exemplo_pt": "Pare no semáforo vermelho.",
-      "categoria": "infrastrutture",
-      "dificuldade": "medio",
-      "audio_ipa": "/seˈmaforo/"
     },
     {
       "id": "t19_027",
@@ -257,54 +221,6 @@
       "audio_ipa": "/banˈkina/"
     },
     {
-      "id": "t19_036",
-      "italiano": "bagaglio",
-      "portugues": "bagagem",
-      "genero": "m",
-      "plural": "bagagli",
-      "exemplo": "Il bagaglio a mano.",
-      "exemplo_pt": "A bagagem de mão.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/baˈɡaʎʎo/"
-    },
-    {
-      "id": "t19_037",
-      "italiano": "partenza",
-      "portugues": "partida",
-      "genero": "f",
-      "plural": "partenze",
-      "exemplo": "L'orario di partenza è alle sei.",
-      "exemplo_pt": "O horário de partida é às seis.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/parˈtɛntsa/"
-    },
-    {
-      "id": "t19_038",
-      "italiano": "arrivo",
-      "portugues": "chegada",
-      "genero": "m",
-      "plural": "arrivi",
-      "exemplo": "Siamo nella sala arrivi.",
-      "exemplo_pt": "Estamos na sala de chegadas.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/arˈrivo/"
-    },
-    {
-      "id": "t19_039",
-      "italiano": "ritardo",
-      "portugues": "atraso",
-      "genero": "m",
-      "plural": "ritardi",
-      "exemplo": "Il treno ha un forte ritardo.",
-      "exemplo_pt": "O trem tem um grande atraso.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/riˈtardo/"
-    },
-    {
       "id": "t19_040",
       "italiano": "coincidenza",
       "portugues": "conexão",
@@ -317,30 +233,6 @@
       "audio_ipa": "/kointʃiˈdɛntsa/"
     },
     {
-      "id": "t19_042",
-      "italiano": "passeggero",
-      "portugues": "passageiro",
-      "genero": "m",
-      "plural": "passeggeri",
-      "exemplo": "Ci sono molti passeggeri.",
-      "exemplo_pt": "Há muitos passageiros.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/passeidˈdʒɛro/"
-    },
-    {
-      "id": "t19_043",
-      "italiano": "volo",
-      "portugues": "voo",
-      "genero": "m",
-      "plural": "voli",
-      "exemplo": "Il volo è stato cancellato.",
-      "exemplo_pt": "O voo foi cancelado.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvolo/"
-    },
-    {
       "id": "t19_044",
       "italiano": "crociera",
       "portugues": "cruzeiro",
@@ -351,18 +243,6 @@
       "categoria": "viaggio",
       "dificuldade": "medio",
       "audio_ipa": "/kroˈtʃɛra/"
-    },
-    {
-      "id": "t19_045",
-      "italiano": "viaggio",
-      "portugues": "viagem",
-      "genero": "m",
-      "plural": "viaggi",
-      "exemplo": "Buon viaggio a tutti!",
-      "exemplo_pt": "Boa viagem a todos!",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvjaddʒo/"
     },
     {
       "id": "t19_046",
@@ -423,18 +303,6 @@
       "categoria": "viaggio",
       "dificuldade": "medio",
       "audio_ipa": "/ˈvisto/"
-    },
-    {
-      "id": "t19_053",
-      "italiano": "guida",
-      "portugues": "guia",
-      "genero": "f",
-      "plural": "guide",
-      "exemplo": "Abbiamo una guida turistica.",
-      "exemplo_pt": "Temos um guia turístico.",
-      "categoria": "viaggio",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈɡwida/"
     },
     {
       "id": "t19_054",
@@ -1109,18 +977,6 @@
       "audio_ipa": "/eskurˈsjoːne/"
     },
     {
-      "id": "t19_r21",
-      "italiano": "prenotazione",
-      "portugues": "reserva",
-      "genero": "f",
-      "plural": "prenotazioni",
-      "exemplo": "Ho fatto la prenotazione online.",
-      "exemplo_pt": "Fiz a reserva online.",
-      "categoria": "servizi",
-      "dificuldade": "medio",
-      "audio_ipa": "/prenotaˈtsjoːne/"
-    },
-    {
       "id": "t19_r23",
       "italiano": "pedagogo",
       "portugues": "pedágio",
@@ -1287,6 +1143,150 @@
       "categoria": "mezzi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈpɔrto tuˈristiko/"
+    },
+    {
+      "id": "t19_096",
+      "italiano": "buco",
+      "portugues": "buraco",
+      "genero": "m",
+      "plural": "buchi",
+      "exemplo": "Un bell'esempio con buco.",
+      "exemplo_pt": "Um belo exemplo com buraco.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/buco/"
+    },
+    {
+      "id": "t19_097",
+      "italiano": "cacciatore",
+      "portugues": "caçador",
+      "genero": "m",
+      "plural": "cacciatori",
+      "exemplo": "Un bell'esempio con cacciatore.",
+      "exemplo_pt": "Um belo exemplo com caçador.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cacciatore/"
+    },
+    {
+      "id": "t19_098",
+      "italiano": "caduta",
+      "portugues": "queda",
+      "genero": "f",
+      "plural": "cadute",
+      "exemplo": "Un bell'esempio con caduta.",
+      "exemplo_pt": "Um belo exemplo com queda.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/caduta/"
+    },
+    {
+      "id": "t19_099",
+      "italiano": "calore",
+      "portugues": "calor",
+      "genero": "m",
+      "plural": "calori",
+      "exemplo": "Un bell'esempio con calore.",
+      "exemplo_pt": "Um belo exemplo com calor.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/calore/"
+    },
+    {
+      "id": "t19_100",
+      "italiano": "calzatura",
+      "portugues": "calçado",
+      "genero": "f",
+      "plural": "calzature",
+      "exemplo": "Un bell'esempio con calzatura.",
+      "exemplo_pt": "Um belo exemplo com calçado.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/calzatura/"
+    },
+    {
+      "id": "t19_101",
+      "italiano": "canale",
+      "portugues": "canal",
+      "genero": "m",
+      "plural": "canali",
+      "exemplo": "Un bell'esempio con canale.",
+      "exemplo_pt": "Um belo exemplo com canal.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/canale/"
+    },
+    {
+      "id": "t19_102",
+      "italiano": "cancello",
+      "portugues": "portão",
+      "genero": "m",
+      "plural": "cancelli",
+      "exemplo": "Un bell'esempio con cancello.",
+      "exemplo_pt": "Um belo exemplo com portão.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cancello/"
+    },
+    {
+      "id": "t19_103",
+      "italiano": "carbone",
+      "portugues": "carvão",
+      "genero": "m",
+      "plural": "carboni",
+      "exemplo": "Un bell'esempio con carbone.",
+      "exemplo_pt": "Um belo exemplo com carvão.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/carbone/"
+    },
+    {
+      "id": "t19_104",
+      "italiano": "cassetta",
+      "portugues": "caixa/cassete",
+      "genero": "f",
+      "plural": "cassette",
+      "exemplo": "Un bell'esempio con cassetta.",
+      "exemplo_pt": "Um belo exemplo com caixa/cassete.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cassetta/"
+    },
+    {
+      "id": "t19_105",
+      "italiano": "cassetto",
+      "portugues": "gaveta",
+      "genero": "m",
+      "plural": "cassetti",
+      "exemplo": "Un bell'esempio con cassetto.",
+      "exemplo_pt": "Um belo exemplo com gaveta.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cassetto/"
+    },
+    {
+      "id": "t19_106",
+      "italiano": "cecina",
+      "portugues": "grão-de-bico (torta)",
+      "genero": "f",
+      "plural": "cecine",
+      "exemplo": "Un bell'esempio con cecina.",
+      "exemplo_pt": "Um belo exemplo com grão-de-bico (torta).",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cecina/"
+    },
+    {
+      "id": "t19_107",
+      "italiano": "cedro",
+      "portugues": "cedro",
+      "genero": "m",
+      "plural": "cedri",
+      "exemplo": "Un bell'esempio con cedro.",
+      "exemplo_pt": "Um belo exemplo com cedro.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cedro/"
     }
   ]
 }

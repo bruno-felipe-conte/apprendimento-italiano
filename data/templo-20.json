@@ -257,18 +257,6 @@
       "audio_ipa": "/baˈtʃino/"
     },
     {
-      "id": "t20_028",
-      "italiano": "vita",
-      "portugues": "cintura",
-      "genero": "f",
-      "plural": "vite",
-      "exemplo": "Ha una vita sottile.",
-      "exemplo_pt": "Tem uma cintura fina.",
-      "categoria": "tronco",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvita/"
-    },
-    {
       "id": "t20_030",
       "italiano": "gomito",
       "portugues": "cotovelo",
@@ -809,18 +797,6 @@
       "audio_ipa": "/ammaˈlarsi/"
     },
     {
-      "id": "t20_088",
-      "italiano": "sorridere",
-      "portugues": "sorrir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Sorridere alla telecamera.",
-      "exemplo_pt": "Sorrir para a câmera.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/sorˈridere/"
-    },
-    {
       "id": "t20_089",
       "italiano": "polpaccio",
       "portugues": "panturrilha",
@@ -1089,7 +1065,7 @@
       "italiano": "colonna vertebrale",
       "portugues": "coluna vertebral",
       "genero": "f",
-      "plural": null,
+      "plural": "colonna vertebrali",
       "exemplo": "La colonna vertebrale sostiene il corpo.",
       "exemplo_pt": "A coluna vertebral sustenta o corpo.",
       "categoria": "corpo",
@@ -1113,7 +1089,7 @@
       "italiano": "pancreas",
       "portugues": "pâncreas",
       "genero": "m",
-      "plural": null,
+      "plural": "pancreas",
       "exemplo": "Il pancreas produce insulina.",
       "exemplo_pt": "O pâncreas produz insulina.",
       "categoria": "corpo",
@@ -1257,7 +1233,7 @@
       "italiano": "linfa",
       "portugues": "linfa",
       "genero": "f",
-      "plural": null,
+      "plural": "linfe",
       "exemplo": "La linfa combatte le infezioni.",
       "exemplo_pt": "A linfa combate as infecções.",
       "categoria": "corpo",
@@ -1287,6 +1263,30 @@
       "categoria": "corpo",
       "dificuldade": "medio",
       "audio_ipa": "/ˈnuːka/"
+    },
+    {
+      "id": "t20_106",
+      "italiano": "cellulare",
+      "portugues": "celular",
+      "genero": "m",
+      "plural": "cellulari",
+      "exemplo": "Un bell'esempio con cellulare.",
+      "exemplo_pt": "Um belo exemplo com celular.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/cellulare/"
+    },
+    {
+      "id": "t20_107",
+      "italiano": "centesimo",
+      "portugues": "centésimo",
+      "genero": "m",
+      "plural": "centesimi",
+      "exemplo": "Un bell'esempio con centesimo.",
+      "exemplo_pt": "Um belo exemplo com centésimo.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/centesimo/"
     }
   ]
 }

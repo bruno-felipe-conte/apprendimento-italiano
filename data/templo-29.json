@@ -5,18 +5,6 @@
   "nivel": "B1",
   "palavras": [
     {
-      "id": "t29_003",
-      "italiano": "film",
-      "portugues": "filme",
-      "genero": "m",
-      "plural": "film",
-      "exemplo": "Un film di fantascienza.",
-      "exemplo_pt": "Um filme de ficção científica.",
-      "categoria": "opere",
-      "dificuldade": "medio",
-      "audio_ipa": "/film/"
-    },
-    {
       "id": "t29_006",
       "italiano": "tragedia",
       "portugues": "tragédia",
@@ -123,30 +111,6 @@
       "categoria": "generi",
       "dificuldade": "medio",
       "audio_ipa": "/kortomeˈtraddʒo/"
-    },
-    {
-      "id": "t29_015",
-      "italiano": "attore",
-      "portugues": "ator",
-      "genero": "m",
-      "plural": "attori",
-      "exemplo": "L'attore protagonista.",
-      "exemplo_pt": "O ator principal.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/atˈtore/"
-    },
-    {
-      "id": "t29_019",
-      "italiano": "personaggio",
-      "portugues": "personagem",
-      "genero": "m",
-      "plural": "personaggi",
-      "exemplo": "Il personaggio cattivo.",
-      "exemplo_pt": "O personagem mau.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/personˈnaddʒo/"
     },
     {
       "id": "t29_020",
@@ -1077,7 +1041,7 @@
       "italiano": "zoom",
       "portugues": "zoom",
       "genero": "m",
-      "plural": null,
+      "plural": "zoom",
       "exemplo": "Lo zoom avvicina il soggetto.",
       "exemplo_pt": "O zoom aproxima o sujeito.",
       "categoria": "cinema",
@@ -1185,7 +1149,7 @@
       "italiano": "CGI",
       "portugues": "CGI / efeitos digitais",
       "genero": "m",
-      "plural": null,
+      "plural": "cgi",
       "exemplo": "Il CGI crea mondi impossibili.",
       "exemplo_pt": "O CGI cria mundos impossíveis.",
       "categoria": "cinema",
@@ -1209,7 +1173,7 @@
       "italiano": "cinema neorealista",
       "portugues": "cinema neorrealista",
       "genero": "m",
-      "plural": null,
+      "plural": "cinema neorealisti",
       "exemplo": "Il cinema neorealista è di De Sica.",
       "exemplo_pt": "O cinema neorrealista é de De Sica.",
       "categoria": "generi",
@@ -1269,7 +1233,7 @@
       "italiano": "bianco e nero",
       "portugues": "preto e branco",
       "genero": "m",
-      "plural": null,
+      "plural": "bianco e neri",
       "exemplo": "Il bianco e nero è elegante.",
       "exemplo_pt": "O preto e branco é elegante.",
       "categoria": "tecnica",
@@ -1281,12 +1245,48 @@
       "italiano": "widescreen",
       "portugues": "widescreen / cinemascope",
       "genero": "m",
-      "plural": null,
+      "plural": "widescreen",
       "exemplo": "Il widescreen allarga il campo visivo.",
       "exemplo_pt": "O widescreen amplia o campo visual.",
       "categoria": "tecnica",
       "dificuldade": "medio",
       "audio_ipa": "/ˈwaɪdskriːn/"
+    },
+    {
+      "id": "t29_105",
+      "italiano": "conseguenza",
+      "portugues": "consequência",
+      "genero": "f",
+      "plural": "conseguenze",
+      "exemplo": "Un bell'esempio con conseguenza.",
+      "exemplo_pt": "Um belo exemplo com consequência.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/conseguenza/"
+    },
+    {
+      "id": "t29_106",
+      "italiano": "consenso",
+      "portugues": "consenso",
+      "genero": "m",
+      "plural": "consensi",
+      "exemplo": "Un bell'esempio con consenso.",
+      "exemplo_pt": "Um belo exemplo com consenso.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/consenso/"
+    },
+    {
+      "id": "t29_107",
+      "italiano": "contadino",
+      "portugues": "camponês",
+      "genero": "m",
+      "plural": "contadini",
+      "exemplo": "Un bell'esempio con contadino.",
+      "exemplo_pt": "Um belo exemplo com camponês.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/contadino/"
     }
   ]
 }

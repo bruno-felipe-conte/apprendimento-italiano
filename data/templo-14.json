@@ -5,54 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t14_001",
-      "italiano": "rosso",
-      "portugues": "vermelho",
-      "genero": "m",
-      "plural": "rossi",
-      "exemplo": "Il vestito rosso è bellissimo.",
-      "exemplo_pt": "O vestido vermelho é lindíssimo.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈrosso/"
-    },
-    {
-      "id": "t14_002",
-      "italiano": "blu",
-      "portugues": "azul",
-      "genero": "m",
-      "plural": "blu",
-      "exemplo": "Il cielo è molto blu oggi.",
-      "exemplo_pt": "O céu está muito azul hoje.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/blu/"
-    },
-    {
-      "id": "t14_003",
-      "italiano": "giallo",
-      "portugues": "amarelo",
-      "genero": "m",
-      "plural": "gialli",
-      "exemplo": "Ho comprato un fiore giallo.",
-      "exemplo_pt": "Comprei uma flor amarela.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdʒallo/"
-    },
-    {
-      "id": "t14_004",
-      "italiano": "verde",
-      "portugues": "verde",
-      "genero": "m",
-      "plural": "verdi",
-      "exemplo": "L'erba del giardino è verde.",
-      "exemplo_pt": "A grama do jardim é verde.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈverde/"
-    },
-    {
       "id": "t14_005",
       "italiano": "arancione",
       "portugues": "laranja",
@@ -101,30 +53,6 @@
       "audio_ipa": "/marˈrone/"
     },
     {
-      "id": "t14_009",
-      "italiano": "nero",
-      "portugues": "preto",
-      "genero": "m",
-      "plural": "neri",
-      "exemplo": "Il gatto nero dorme sul divano.",
-      "exemplo_pt": "O gato preto dorme no sofá.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈnero/"
-    },
-    {
-      "id": "t14_010",
-      "italiano": "bianco",
-      "portugues": "branco",
-      "genero": "m",
-      "plural": "bianchi",
-      "exemplo": "La neve è di colore bianco.",
-      "exemplo_pt": "A neve é de cor branca.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈbjanko/"
-    },
-    {
       "id": "t14_011",
       "italiano": "grigio",
       "portugues": "cinza",
@@ -135,18 +63,6 @@
       "categoria": "colori",
       "dificuldade": "medio",
       "audio_ipa": "/ˈɡridʒo/"
-    },
-    {
-      "id": "t14_012",
-      "italiano": "azzurro",
-      "portugues": "azul claro",
-      "genero": "m",
-      "plural": "azzurri",
-      "exemplo": "Ha gli occhi di un azzurro intenso.",
-      "exemplo_pt": "Ela tem olhos de um azul claro intenso.",
-      "categoria": "colori",
-      "dificuldade": "medio",
-      "audio_ipa": "/adˈdzurro/"
     },
     {
       "id": "t14_013",
@@ -317,18 +233,6 @@
       "audio_ipa": "/ˈpallido/"
     },
     {
-      "id": "t14_027",
-      "italiano": "vivace",
-      "portugues": "vivo",
-      "genero": "m",
-      "plural": "vivaci",
-      "exemplo": "Usa colori molto vivaci nei suoi quadri.",
-      "exemplo_pt": "Ele usa cores muito vivas em seus quadros.",
-      "categoria": "qualità",
-      "dificuldade": "medio",
-      "audio_ipa": "/viˈvatʃe/"
-    },
-    {
       "id": "t14_028",
       "italiano": "intenso",
       "portugues": "intenso",
@@ -411,18 +315,6 @@
       "categoria": "qualità",
       "dificuldade": "medio",
       "audio_ipa": "/sfoˈkato/"
-    },
-    {
-      "id": "t14_035",
-      "italiano": "luminoso",
-      "portugues": "luminoso",
-      "genero": "m",
-      "plural": "luminosi",
-      "exemplo": "L'appartamento è grande e luminoso.",
-      "exemplo_pt": "O apartamento é grande e luminoso.",
-      "categoria": "qualità",
-      "dificuldade": "medio",
-      "audio_ipa": "/lumiˈnoso/"
     },
     {
       "id": "t14_036",
@@ -689,30 +581,6 @@
       "audio_ipa": "/riˈflɛsso/"
     },
     {
-      "id": "t14_058",
-      "italiano": "luce",
-      "portugues": "luz",
-      "genero": "f",
-      "plural": "luci",
-      "exemplo": "La luce entra dalla finestra.",
-      "exemplo_pt": "A luz entra pela janela.",
-      "categoria": "aspetto",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlutʃe/"
-    },
-    {
-      "id": "t14_059",
-      "italiano": "ombra",
-      "portugues": "sombra",
-      "genero": "f",
-      "plural": "ombre",
-      "exemplo": "Riposiamo all'ombra di un albero.",
-      "exemplo_pt": "Vamos descansar à sombra de uma árvore.",
-      "categoria": "aspetto",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈombra/"
-    },
-    {
       "id": "t14_060",
       "italiano": "bagliore",
       "portugues": "clarão",
@@ -771,18 +639,6 @@
       "categoria": "aspetto",
       "dificuldade": "medio",
       "audio_ipa": "/ˈlinea/"
-    },
-    {
-      "id": "t14_065",
-      "italiano": "contorno",
-      "portugues": "contorno",
-      "genero": "m",
-      "plural": "contorni",
-      "exemplo": "Il contorno delle montagne al tramonto.",
-      "exemplo_pt": "O contorno das montanhas no pôr do sol.",
-      "categoria": "aspetto",
-      "dificuldade": "medio",
-      "audio_ipa": "/konˈtorno/"
     },
     {
       "id": "t14_066",
@@ -975,18 +831,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/koloˈrare/"
-    },
-    {
-      "id": "t14_082",
-      "italiano": "dipingere",
-      "portugues": "pintar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Voglio dipingere la mia stanza.",
-      "exemplo_pt": "Quero pintar o meu quarto.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/diˈpindʒere/"
     },
     {
       "id": "t14_083",
@@ -1193,18 +1037,6 @@
       "audio_ipa": "/okˈkjali/"
     },
     {
-      "id": "t14_100",
-      "italiano": "specchio",
-      "portugues": "espelho",
-      "genero": "m",
-      "plural": "specchi",
-      "exemplo": "Guardati allo specchio.",
-      "exemplo_pt": "Olhe-se no espelho.",
-      "categoria": "ottica",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈspɛkkjo/"
-    },
-    {
       "id": "t14_101",
       "italiano": "lente",
       "portugues": "lente",
@@ -1287,6 +1119,174 @@
       "categoria": "ottica",
       "dificuldade": "medio",
       "audio_ipa": "/abbaiˈʎato/"
+    },
+    {
+      "id": "t14_094",
+      "italiano": "costringere",
+      "portugues": "obrigar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con costringere.",
+      "exemplo_pt": "Exemplo com obrigar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/costringere/"
+    },
+    {
+      "id": "t14_095",
+      "italiano": "dare",
+      "portugues": "dar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con dare.",
+      "exemplo_pt": "Exemplo com dar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/dare/"
+    },
+    {
+      "id": "t14_096",
+      "italiano": "determinare",
+      "portugues": "determinar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con determinare.",
+      "exemplo_pt": "Exemplo com determinar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/determinare/"
+    },
+    {
+      "id": "t14_097",
+      "italiano": "dipendere",
+      "portugues": "depender",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con dipendere.",
+      "exemplo_pt": "Exemplo com depender.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/dipendere/"
+    },
+    {
+      "id": "t14_098",
+      "italiano": "dire",
+      "portugues": "dizer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con dire.",
+      "exemplo_pt": "Exemplo com dizer.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/dire/"
+    },
+    {
+      "id": "t14_099",
+      "italiano": "diventare",
+      "portugues": "tornar-se",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con diventare.",
+      "exemplo_pt": "Exemplo com tornar-se.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/diventare/"
+    },
+    {
+      "id": "t14_100",
+      "italiano": "elevare",
+      "portugues": "elevar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con elevare.",
+      "exemplo_pt": "Exemplo com elevar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/elevare/"
+    },
+    {
+      "id": "t14_101",
+      "italiano": "entrare",
+      "portugues": "entrar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con entrare.",
+      "exemplo_pt": "Exemplo com entrar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/entrare/"
+    },
+    {
+      "id": "t14_102",
+      "italiano": "fermare",
+      "portugues": "parar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con fermare.",
+      "exemplo_pt": "Exemplo com parar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/fermare/"
+    },
+    {
+      "id": "t14_103",
+      "italiano": "formare",
+      "portugues": "formar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con formare.",
+      "exemplo_pt": "Exemplo com formar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/formare/"
+    },
+    {
+      "id": "t14_104",
+      "italiano": "fumare",
+      "portugues": "fumar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con fumare.",
+      "exemplo_pt": "Exemplo com fumar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/fumare/"
+    },
+    {
+      "id": "t14_105",
+      "italiano": "giocare",
+      "portugues": "jogar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con giocare.",
+      "exemplo_pt": "Exemplo com jogar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/giocare/"
+    },
+    {
+      "id": "t14_106",
+      "italiano": "giungere",
+      "portugues": "chegar/juntar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con giungere.",
+      "exemplo_pt": "Exemplo com chegar/juntar.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/giungere/"
+    },
+    {
+      "id": "t14_107",
+      "italiano": "impedire",
+      "portugues": "impedir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Esempio con impedire.",
+      "exemplo_pt": "Exemplo com impedir.",
+      "categoria": "verbi",
+      "dificuldade": "medio",
+      "audio_ipa": "/impedire/"
     }
   ]
 }

@@ -1144,54 +1144,6 @@
       "audio_ipa": "/ˈstuːpido/"
     },
     {
-      "id": "t2_096",
-      "italiano": "intelligente",
-      "portugues": "inteligente",
-      "genero": "m/f",
-      "plural": "intelligenti",
-      "exemplo": "Quella ragazza è molto intelligente.",
-      "exemplo_pt": "Aquela garota é muito inteligente.",
-      "categoria": "personalidade",
-      "dificuldade": "medio",
-      "audio_ipa": "/intelliˈdʒɛnte/"
-    },
-    {
-      "id": "t2_097",
-      "italiano": "coraggioso",
-      "portugues": "corajoso",
-      "genero": "m",
-      "plural": "coraggiosi",
-      "exemplo": "Il pompiere è stato coraggioso.",
-      "exemplo_pt": "O bombeiro foi corajoso.",
-      "categoria": "personalidade",
-      "dificuldade": "medio",
-      "audio_ipa": "/koradˈdʒoːzo/"
-    },
-    {
-      "id": "t2_098",
-      "italiano": "timido",
-      "portugues": "tímido",
-      "genero": "m",
-      "plural": "timidi",
-      "exemplo": "Il bambino è ancora molto timido.",
-      "exemplo_pt": "O menino ainda é muito tímido.",
-      "categoria": "personalidade",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtiːmido/"
-    },
-    {
-      "id": "t2_099",
-      "italiano": "pigro",
-      "portugues": "preguiçoso",
-      "genero": "m",
-      "plural": "pigri",
-      "exemplo": "Mio fratello è un po' pigro.",
-      "exemplo_pt": "Meu irmão é um pouco preguiçoso.",
-      "categoria": "personalidade",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpiːɡro/"
-    },
-    {
       "id": "t2_100",
       "italiano": "attivo",
       "portugues": "ativo",
@@ -1228,30 +1180,6 @@
       "audio_ipa": "/maleduˈkaːto/"
     },
     {
-      "id": "t2_103",
-      "italiano": "ridere",
-      "portugues": "rir",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Mi fa sempre ridere.",
-      "exemplo_pt": "Ele sempre me faz rir.",
-      "categoria": "verbos_emocao",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈriːdere/"
-    },
-    {
-      "id": "t2_104",
-      "italiano": "piangere",
-      "portugues": "chorar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Il film mi ha fatto piangere.",
-      "exemplo_pt": "O filme me fez chorar.",
-      "categoria": "verbos_emocao",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpjandʒere/"
-    },
-    {
       "id": "t2_105",
       "italiano": "sorridere",
       "portugues": "sorrir",
@@ -1264,18 +1192,6 @@
       "audio_ipa": "/sorˈriːdere/"
     },
     {
-      "id": "t2_106",
-      "italiano": "sperare",
-      "portugues": "esperar (ter esperança)",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Spero che vada tutto bene.",
-      "exemplo_pt": "Espero que tudo dê certo.",
-      "categoria": "verbos_emocao",
-      "dificuldade": "medio",
-      "audio_ipa": "/speˈraːre/"
-    },
-    {
       "id": "t2_107",
       "italiano": "odiare",
       "portugues": "odiar",
@@ -1286,6 +1202,90 @@
       "categoria": "verbos_emocao",
       "dificuldade": "medio",
       "audio_ipa": "/oˈdjaːre/"
+    },
+    {
+      "id": "t2_101",
+      "italiano": "alzare",
+      "portugues": "levantar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Alza la voce per farti sentire.",
+      "exemplo_pt": "Levante a voz para ser ouvido.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/alzare/"
+    },
+    {
+      "id": "t2_102",
+      "italiano": "ammettere",
+      "portugues": "admitir",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Devi ammettere il tuo errore.",
+      "exemplo_pt": "Você deve admitir o seu erro.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/ammettere/"
+    },
+    {
+      "id": "t2_103",
+      "italiano": "applicare",
+      "portugues": "aplicar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Applica la crema sulla pelle.",
+      "exemplo_pt": "Aplique o creme na pele.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/applicare/"
+    },
+    {
+      "id": "t2_104",
+      "italiano": "aumentare",
+      "portugues": "aumentar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "I prezzi continuano ad aumentare.",
+      "exemplo_pt": "Os preços continuam a aumentar.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/aumentare/"
+    },
+    {
+      "id": "t2_105",
+      "italiano": "avvicinare",
+      "portugues": "aproximar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Avvicinati alla finestra.",
+      "exemplo_pt": "Aproxime-se da janela.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/avvicinare/"
+    },
+    {
+      "id": "t2_106",
+      "italiano": "bruciare",
+      "portugues": "queimar",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Fai attenzione a non bruciare la carne.",
+      "exemplo_pt": "Cuidado para não queimar a carne.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/bruciare/"
+    },
+    {
+      "id": "t2_107",
+      "italiano": "capitare",
+      "portugues": "acontecer",
+      "genero": null,
+      "plural": null,
+      "exemplo": "Può capitare a tutti.",
+      "exemplo_pt": "Pode acontecer com qualquer um.",
+      "categoria": "extra",
+      "dificuldade": "medio",
+      "audio_ipa": "/capitare/"
     }
   ]
 }

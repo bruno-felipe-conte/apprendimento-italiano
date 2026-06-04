@@ -5,42 +5,6 @@
   "nivel": "A2",
   "palavras": [
     {
-      "id": "t18_001",
-      "italiano": "studente",
-      "portugues": "estudante",
-      "genero": "m",
-      "plural": "studenti",
-      "exemplo": "Lo studente legge il libro.",
-      "exemplo_pt": "O estudante lê o livro.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/stuˈdɛnte/"
-    },
-    {
-      "id": "t18_002",
-      "italiano": "studentessa",
-      "portugues": "estudante (feminino)",
-      "genero": "f",
-      "plural": "studentesse",
-      "exemplo": "La studentessa scrive gli appunti.",
-      "exemplo_pt": "A estudante escreve as anotações.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/studenˈtessa/"
-    },
-    {
-      "id": "t18_003",
-      "italiano": "professore",
-      "portugues": "professor",
-      "genero": "m",
-      "plural": "professori",
-      "exemplo": "Il professore spiega la lezione.",
-      "exemplo_pt": "O professor explica a lição.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/profesˈsore/"
-    },
-    {
       "id": "t18_004",
       "italiano": "professoressa",
       "portugues": "professora",
@@ -51,18 +15,6 @@
       "categoria": "persone",
       "dificuldade": "medio",
       "audio_ipa": "/professoˈressa/"
-    },
-    {
-      "id": "t18_005",
-      "italiano": "maestro",
-      "portugues": "professor (ensino fundamental)",
-      "genero": "m",
-      "plural": "maestri",
-      "exemplo": "Il maestro insegna a leggere.",
-      "exemplo_pt": "O professor ensina a ler.",
-      "categoria": "persone",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈɛstro/"
     },
     {
       "id": "t18_006",
@@ -149,30 +101,6 @@
       "audio_ipa": "/maˈtrikola/"
     },
     {
-      "id": "t18_013",
-      "italiano": "scuola",
-      "portugues": "escola",
-      "genero": "f",
-      "plural": "scuole",
-      "exemplo": "I bambini vanno a scuola.",
-      "exemplo_pt": "As crianças vão para a escola.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskwɔla/"
-    },
-    {
-      "id": "t18_014",
-      "italiano": "università",
-      "portugues": "universidade",
-      "genero": "f",
-      "plural": "università",
-      "exemplo": "L'università è molto grande.",
-      "exemplo_pt": "A universidade é muito grande.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/univerziˈta/"
-    },
-    {
       "id": "t18_015",
       "italiano": "aula",
       "portugues": "sala de aula",
@@ -183,30 +111,6 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/ˈaula/"
-    },
-    {
-      "id": "t18_016",
-      "italiano": "classe",
-      "portugues": "classe",
-      "genero": "f",
-      "plural": "classi",
-      "exemplo": "La nostra classe è al primo piano.",
-      "exemplo_pt": "A nossa classe fica no primeiro andar.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈklasse/"
-    },
-    {
-      "id": "t18_017",
-      "italiano": "biblioteca",
-      "portugues": "biblioteca",
-      "genero": "f",
-      "plural": "biblioteche",
-      "exemplo": "Studio in biblioteca ogni giorno.",
-      "exemplo_pt": "Estudo na biblioteca todo dia.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/bibljoˈtɛka/"
     },
     {
       "id": "t18_018",
@@ -245,18 +149,6 @@
       "audio_ipa": "/ˈmɛnsa/"
     },
     {
-      "id": "t18_021",
-      "italiano": "corridoio",
-      "portugues": "corredor",
-      "genero": "m",
-      "plural": "corridoi",
-      "exemplo": "Non correre nel corridoio!",
-      "exemplo_pt": "Não corra no corredor!",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/korriˈdojo/"
-    },
-    {
       "id": "t18_022",
       "italiano": "cortile",
       "portugues": "pátio",
@@ -279,18 +171,6 @@
       "categoria": "luoghi",
       "dificuldade": "medio",
       "audio_ipa": "/seɡreteˈria/"
-    },
-    {
-      "id": "t18_024",
-      "italiano": "asilo",
-      "portugues": "jardim de infância",
-      "genero": "m",
-      "plural": "asili",
-      "exemplo": "Mio figlio va ancora all'asilo.",
-      "exemplo_pt": "Meu filho ainda vai ao jardim de infância.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/aˈzilo/"
     },
     {
       "id": "t18_025",
@@ -341,66 +221,6 @@
       "audio_ipa": "/ˈkampus/"
     },
     {
-      "id": "t18_029",
-      "italiano": "facoltà",
-      "portugues": "faculdade",
-      "genero": "f",
-      "plural": "facoltà",
-      "exemplo": "La facoltà di medicina è difficile.",
-      "exemplo_pt": "A faculdade de medicina é difícil.",
-      "categoria": "luoghi",
-      "dificuldade": "medio",
-      "audio_ipa": "/fakolˈta/"
-    },
-    {
-      "id": "t18_030",
-      "italiano": "libro",
-      "portugues": "livro",
-      "genero": "m",
-      "plural": "libri",
-      "exemplo": "Ho letto un bel libro.",
-      "exemplo_pt": "Eu li um belo livro.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlibro/"
-    },
-    {
-      "id": "t18_031",
-      "italiano": "quaderno",
-      "portugues": "caderno",
-      "genero": "m",
-      "plural": "quaderni",
-      "exemplo": "Scrivi gli appunti sul quaderno.",
-      "exemplo_pt": "Escreva as anotações no caderno.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/kwaˈdɛrno/"
-    },
-    {
-      "id": "t18_032",
-      "italiano": "penna",
-      "portugues": "caneta",
-      "genero": "f",
-      "plural": "penne",
-      "exemplo": "La penna blu non scrive più.",
-      "exemplo_pt": "A caneta azul não escreve mais.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpenna/"
-    },
-    {
-      "id": "t18_033",
-      "italiano": "matita",
-      "portugues": "lápis",
-      "genero": "f",
-      "plural": "matite",
-      "exemplo": "Uso una matita per disegnare.",
-      "exemplo_pt": "Uso um lápis para desenhar.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/maˈtita/"
-    },
-    {
       "id": "t18_034",
       "italiano": "gomma",
       "portugues": "borracha",
@@ -411,30 +231,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈɡomma/"
-    },
-    {
-      "id": "t18_035",
-      "italiano": "zaino",
-      "portugues": "mochila",
-      "genero": "m",
-      "plural": "zaini",
-      "exemplo": "Il mio zaino è molto pesante.",
-      "exemplo_pt": "Minha mochila está muito pesada.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈdzajno/"
-    },
-    {
-      "id": "t18_036",
-      "italiano": "lavagna",
-      "portugues": "lousa",
-      "genero": "f",
-      "plural": "lavagne",
-      "exemplo": "Il professore scrive sulla lavagna.",
-      "exemplo_pt": "O professor escreve na lousa.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/laˈvaɲɲa/"
     },
     {
       "id": "t18_037",
@@ -459,18 +255,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/ˈbanko/"
-    },
-    {
-      "id": "t18_039",
-      "italiano": "sedia",
-      "portugues": "cadeira",
-      "genero": "f",
-      "plural": "sedie",
-      "exemplo": "Questa sedia è scomoda.",
-      "exemplo_pt": "Esta cadeira é desconfortável.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈsɛdja/"
     },
     {
       "id": "t18_040",
@@ -521,18 +305,6 @@
       "audio_ipa": "/vokaboˈlarjo/"
     },
     {
-      "id": "t18_044",
-      "italiano": "dizionario",
-      "portugues": "dicionário",
-      "genero": "m",
-      "plural": "dizionari",
-      "exemplo": "Uso un dizionario bilingue.",
-      "exemplo_pt": "Uso um dicionário bilíngue.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ditsjoˈnarjo/"
-    },
-    {
       "id": "t18_045",
       "italiano": "calcolatrice",
       "portugues": "calculadora",
@@ -543,18 +315,6 @@
       "categoria": "oggetti",
       "dificuldade": "medio",
       "audio_ipa": "/kalkolaˈtritʃe/"
-    },
-    {
-      "id": "t18_046",
-      "italiano": "mappa",
-      "portugues": "mapa",
-      "genero": "f",
-      "plural": "mappe",
-      "exemplo": "Guardiamo la mappa del mondo.",
-      "exemplo_pt": "Vamos olhar o mapa do mundo.",
-      "categoria": "oggetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈmappa/"
     },
     {
       "id": "t18_047",
@@ -617,66 +377,6 @@
       "audio_ipa": "/maˈtɛrja/"
     },
     {
-      "id": "t18_052",
-      "italiano": "corso",
-      "portugues": "curso",
-      "genero": "m",
-      "plural": "corsi",
-      "exemplo": "Frequento un corso di italiano.",
-      "exemplo_pt": "Frequento um curso de italiano.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkorso/"
-    },
-    {
-      "id": "t18_053",
-      "italiano": "lezione",
-      "portugues": "aula (lição)",
-      "genero": "f",
-      "plural": "lezioni",
-      "exemplo": "La lezione comincia alle nove.",
-      "exemplo_pt": "A aula começa às nove.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/letˈtsjone/"
-    },
-    {
-      "id": "t18_054",
-      "italiano": "esame",
-      "portugues": "exame",
-      "genero": "m",
-      "plural": "esami",
-      "exemplo": "Ho un esame molto difficile.",
-      "exemplo_pt": "Tenho um exame muito difícil.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/eˈzame/"
-    },
-    {
-      "id": "t18_055",
-      "italiano": "voto",
-      "portugues": "nota",
-      "genero": "m",
-      "plural": "voti",
-      "exemplo": "Ho preso un buon voto.",
-      "exemplo_pt": "Tirei uma boa nota.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈvoto/"
-    },
-    {
-      "id": "t18_056",
-      "italiano": "compito",
-      "portugues": "tarefa",
-      "genero": "m",
-      "plural": "compiti",
-      "exemplo": "Hai fatto il compito di casa?",
-      "exemplo_pt": "Você fez a tarefa de casa?",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkompito/"
-    },
-    {
       "id": "t18_057",
       "italiano": "prova",
       "portugues": "prova",
@@ -699,18 +399,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/interroɡatˈtsjone/"
-    },
-    {
-      "id": "t18_059",
-      "italiano": "laurea",
-      "portugues": "formatura",
-      "genero": "f",
-      "plural": "lauree",
-      "exemplo": "Festeggiamo la sua laurea.",
-      "exemplo_pt": "Festejamos a sua formatura.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlaurea/"
     },
     {
       "id": "t18_060",
@@ -761,18 +449,6 @@
       "audio_ipa": "/apˈpunti/"
     },
     {
-      "id": "t18_064",
-      "italiano": "errore",
-      "portugues": "erro",
-      "genero": "m",
-      "plural": "errori",
-      "exemplo": "Ho fatto un errore nel test.",
-      "exemplo_pt": "Cometi um erro no teste.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/erˈrore/"
-    },
-    {
       "id": "t18_065",
       "italiano": "correzione",
       "portugues": "correção",
@@ -809,18 +485,6 @@
       "audio_ipa": "/triˈmɛstre/"
     },
     {
-      "id": "t18_068",
-      "italiano": "pausa",
-      "portugues": "pausa",
-      "genero": "f",
-      "plural": "pause",
-      "exemplo": "Facciamo una pausa di dieci minuti.",
-      "exemplo_pt": "Vamos fazer uma pausa de dez minutos.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpauza/"
-    },
-    {
       "id": "t18_069",
       "italiano": "ricreazione",
       "portugues": "recreio",
@@ -831,18 +495,6 @@
       "categoria": "concetti",
       "dificuldade": "medio",
       "audio_ipa": "/rikreatˈtsjone/"
-    },
-    {
-      "id": "t18_070",
-      "italiano": "vacanza",
-      "portugues": "férias",
-      "genero": "f",
-      "plural": "vacanze",
-      "exemplo": "Amo le vacanze estive.",
-      "exemplo_pt": "Amo as férias de verão.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/vaˈkantsa/"
     },
     {
       "id": "t18_071",
@@ -905,18 +557,6 @@
       "audio_ipa": "/apˈpɛllo/"
     },
     {
-      "id": "t18_076",
-      "italiano": "sessione",
-      "portugues": "sessão",
-      "genero": "f",
-      "plural": "sessioni",
-      "exemplo": "La sessione d'esami inizia oggi.",
-      "exemplo_pt": "A sessão de exames começa hoje.",
-      "categoria": "concetti",
-      "dificuldade": "medio",
-      "audio_ipa": "/sesˈsjone/"
-    },
-    {
       "id": "t18_077",
       "italiano": "cattedra",
       "portugues": "mesa do professor",
@@ -929,30 +569,6 @@
       "audio_ipa": "/ˈkattedra/"
     },
     {
-      "id": "t18_078",
-      "italiano": "studiare",
-      "portugues": "estudar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Devo studiare per l'esame.",
-      "exemplo_pt": "Devo estudar para o exame.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/stuˈdjare/"
-    },
-    {
-      "id": "t18_079",
-      "italiano": "imparare",
-      "portugues": "aprender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Voglio imparare l'italiano.",
-      "exemplo_pt": "Quero aprender italiano.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/impaˈrare/"
-    },
-    {
       "id": "t18_080",
       "italiano": "insegnare",
       "portugues": "ensinar",
@@ -963,42 +579,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/inseɲˈɲare/"
-    },
-    {
-      "id": "t18_081",
-      "italiano": "leggere",
-      "portugues": "ler",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Mi piace leggere i romanzi.",
-      "exemplo_pt": "Gosto de ler os romances.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlɛddʒere/"
-    },
-    {
-      "id": "t18_082",
-      "italiano": "scrivere",
-      "portugues": "escrever",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Devi scrivere un tema.",
-      "exemplo_pt": "Você deve escrever uma redação.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈskrivere/"
-    },
-    {
-      "id": "t18_083",
-      "italiano": "ascoltare",
-      "portugues": "escutar",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ascolta bene il professore.",
-      "exemplo_pt": "Escute bem o professor.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/askolˈtare/"
     },
     {
       "id": "t18_084",
@@ -1023,18 +603,6 @@
       "categoria": "verbi",
       "dificuldade": "medio",
       "audio_ipa": "/spjeˈɡare/"
-    },
-    {
-      "id": "t18_086",
-      "italiano": "capire",
-      "portugues": "entender",
-      "genero": null,
-      "plural": null,
-      "exemplo": "Ora riesco a capire tutto.",
-      "exemplo_pt": "Agora consigo entender tudo.",
-      "categoria": "verbi",
-      "dificuldade": "medio",
-      "audio_ipa": "/kaˈpire/"
     },
     {
       "id": "t18_087",
@@ -1193,42 +761,6 @@
       "audio_ipa": "/falˈlire/"
     },
     {
-      "id": "t18_100",
-      "italiano": "facile",
-      "portugues": "fácil",
-      "genero": "m",
-      "plural": "facili",
-      "exemplo": "Questo esercizio è facile.",
-      "exemplo_pt": "Este exercício é fácil.",
-      "categoria": "altro",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈfatʃile/"
-    },
-    {
-      "id": "t18_101",
-      "italiano": "difficile",
-      "portugues": "difícil",
-      "genero": "m",
-      "plural": "difficili",
-      "exemplo": "La matematica è difficile.",
-      "exemplo_pt": "A matemática é difícil.",
-      "categoria": "altro",
-      "dificuldade": "medio",
-      "audio_ipa": "/difˈfitʃile/"
-    },
-    {
-      "id": "t18_102",
-      "italiano": "presente",
-      "portugues": "presente",
-      "genero": "m",
-      "plural": "presenti",
-      "exemplo": "Sono tutti presenti oggi.",
-      "exemplo_pt": "Estão todos presentes hoje.",
-      "categoria": "altro",
-      "dificuldade": "medio",
-      "audio_ipa": "/preˈzɛnte/"
-    },
-    {
       "id": "t18_103",
       "italiano": "assente",
       "portugues": "ausente",
@@ -1323,6 +855,438 @@
       "categoria": "altro",
       "dificuldade": "medio",
       "audio_ipa": "/seˈvɛro/"
+    },
+    {
+      "id": "t18_072",
+      "italiano": "annuncio",
+      "portugues": "anúncio",
+      "genero": "m",
+      "plural": "annunci",
+      "exemplo": "Un bell'esempio con annuncio.",
+      "exemplo_pt": "Um belo exemplo com anúncio.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/annuncio/"
+    },
+    {
+      "id": "t18_073",
+      "italiano": "anticipo",
+      "portugues": "antecipação",
+      "genero": "m",
+      "plural": "anticipi",
+      "exemplo": "Un bell'esempio con anticipo.",
+      "exemplo_pt": "Um belo exemplo com antecipação.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/anticipo/"
+    },
+    {
+      "id": "t18_074",
+      "italiano": "appetito",
+      "portugues": "apetite",
+      "genero": "m",
+      "plural": "appetiti",
+      "exemplo": "Un bell'esempio con appetito.",
+      "exemplo_pt": "Um belo exemplo com apetite.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/appetito/"
+    },
+    {
+      "id": "t18_075",
+      "italiano": "appunto",
+      "portugues": "apontamento",
+      "genero": "m",
+      "plural": "appunti",
+      "exemplo": "Un bell'esempio con appunto.",
+      "exemplo_pt": "Um belo exemplo com apontamento.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/appunto/"
+    },
+    {
+      "id": "t18_076",
+      "italiano": "area",
+      "portugues": "área",
+      "genero": "f",
+      "plural": "aree",
+      "exemplo": "Un bell'esempio con area.",
+      "exemplo_pt": "Um belo exemplo com área.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/area/"
+    },
+    {
+      "id": "t18_077",
+      "italiano": "argento",
+      "portugues": "prata",
+      "genero": "m",
+      "plural": "argenti",
+      "exemplo": "Un bell'esempio con argento.",
+      "exemplo_pt": "Um belo exemplo com prata.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/argento/"
+    },
+    {
+      "id": "t18_078",
+      "italiano": "assemblea",
+      "portugues": "assembleia",
+      "genero": "f",
+      "plural": "assemblee",
+      "exemplo": "Un bell'esempio con assemblea.",
+      "exemplo_pt": "Um belo exemplo com assembleia.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/assemblea/"
+    },
+    {
+      "id": "t18_079",
+      "italiano": "assistente",
+      "portugues": "assistente",
+      "genero": "m",
+      "plural": "assistenti",
+      "exemplo": "Un bell'esempio con assistente.",
+      "exemplo_pt": "Um belo exemplo com assistente.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/assistente/"
+    },
+    {
+      "id": "t18_080",
+      "italiano": "associazione",
+      "portugues": "associação",
+      "genero": "f",
+      "plural": "associazioni",
+      "exemplo": "Un bell'esempio con associazione.",
+      "exemplo_pt": "Um belo exemplo com associação.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/associazione/"
+    },
+    {
+      "id": "t18_081",
+      "italiano": "attacco",
+      "portugues": "ataque",
+      "genero": "m",
+      "plural": "attacchi",
+      "exemplo": "Un bell'esempio con attacco.",
+      "exemplo_pt": "Um belo exemplo com ataque.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attacco/"
+    },
+    {
+      "id": "t18_082",
+      "italiano": "atteggiamento",
+      "portugues": "atitude",
+      "genero": "m",
+      "plural": "atteggiamenti",
+      "exemplo": "Un bell'esempio con atteggiamento.",
+      "exemplo_pt": "Um belo exemplo com atitude.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/atteggiamento/"
+    },
+    {
+      "id": "t18_083",
+      "italiano": "attenzione",
+      "portugues": "atenção",
+      "genero": "f",
+      "plural": "attenzioni",
+      "exemplo": "Un bell'esempio con attenzione.",
+      "exemplo_pt": "Um belo exemplo com atenção.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attenzione/"
+    },
+    {
+      "id": "t18_084",
+      "italiano": "attimo",
+      "portugues": "instante",
+      "genero": "m",
+      "plural": "attimi",
+      "exemplo": "Un bell'esempio con attimo.",
+      "exemplo_pt": "Um belo exemplo com instante.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attimo/"
+    },
+    {
+      "id": "t18_085",
+      "italiano": "attività",
+      "portugues": "atividade",
+      "genero": "f",
+      "plural": "attività",
+      "exemplo": "Un bell'esempio con attività.",
+      "exemplo_pt": "Um belo exemplo com atividade.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/attività/"
+    },
+    {
+      "id": "t18_086",
+      "italiano": "augurio",
+      "portugues": "voto/desejo",
+      "genero": "m",
+      "plural": "auguri",
+      "exemplo": "Un bell'esempio con augurio.",
+      "exemplo_pt": "Um belo exemplo com voto/desejo.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/augurio/"
+    },
+    {
+      "id": "t18_087",
+      "italiano": "automobile",
+      "portugues": "automóvel",
+      "genero": "f",
+      "plural": "automobili",
+      "exemplo": "Un bell'esempio con automobile.",
+      "exemplo_pt": "Um belo exemplo com automóvel.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/automobile/"
+    },
+    {
+      "id": "t18_088",
+      "italiano": "avanti",
+      "portugues": "frente",
+      "genero": "m",
+      "plural": "avanti",
+      "exemplo": "Un bell'esempio con avanti.",
+      "exemplo_pt": "Um belo exemplo com frente.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avanti/"
+    },
+    {
+      "id": "t18_089",
+      "italiano": "avanzo",
+      "portugues": "resto",
+      "genero": "m",
+      "plural": "avanzi",
+      "exemplo": "Un bell'esempio con avanzo.",
+      "exemplo_pt": "Um belo exemplo com resto.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avanzo/"
+    },
+    {
+      "id": "t18_090",
+      "italiano": "avvenimento",
+      "portugues": "acontecimento",
+      "genero": "m",
+      "plural": "avvenimenti",
+      "exemplo": "Un bell'esempio con avvenimento.",
+      "exemplo_pt": "Um belo exemplo com acontecimento.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avvenimento/"
+    },
+    {
+      "id": "t18_091",
+      "italiano": "avventura",
+      "portugues": "aventura",
+      "genero": "f",
+      "plural": "avventure",
+      "exemplo": "Un bell'esempio con avventura.",
+      "exemplo_pt": "Um belo exemplo com aventura.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avventura/"
+    },
+    {
+      "id": "t18_092",
+      "italiano": "avversario",
+      "portugues": "adversário",
+      "genero": "m",
+      "plural": "avversari",
+      "exemplo": "Un bell'esempio con avversario.",
+      "exemplo_pt": "Um belo exemplo com adversário.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avversario/"
+    },
+    {
+      "id": "t18_093",
+      "italiano": "avviso",
+      "portugues": "aviso",
+      "genero": "m",
+      "plural": "avvisi",
+      "exemplo": "Un bell'esempio con avviso.",
+      "exemplo_pt": "Um belo exemplo com aviso.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/avviso/"
+    },
+    {
+      "id": "t18_094",
+      "italiano": "babbo",
+      "portugues": "papai",
+      "genero": "m",
+      "plural": "babbi",
+      "exemplo": "Un bell'esempio con babbo.",
+      "exemplo_pt": "Um belo exemplo com papai.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/babbo/"
+    },
+    {
+      "id": "t18_095",
+      "italiano": "baffo",
+      "portugues": "bigode",
+      "genero": "m",
+      "plural": "baffi",
+      "exemplo": "Un bell'esempio con baffo.",
+      "exemplo_pt": "Um belo exemplo com bigode.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/baffo/"
+    },
+    {
+      "id": "t18_096",
+      "italiano": "ballo",
+      "portugues": "baile",
+      "genero": "m",
+      "plural": "balli",
+      "exemplo": "Un bell'esempio con ballo.",
+      "exemplo_pt": "Um belo exemplo com baile.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/ballo/"
+    },
+    {
+      "id": "t18_097",
+      "italiano": "bambino",
+      "portugues": "criança",
+      "genero": "m",
+      "plural": "bambini",
+      "exemplo": "Un bell'esempio con bambino.",
+      "exemplo_pt": "Um belo exemplo com criança.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bambino/"
+    },
+    {
+      "id": "t18_098",
+      "italiano": "banda",
+      "portugues": "banda",
+      "genero": "f",
+      "plural": "bande",
+      "exemplo": "Un bell'esempio con banda.",
+      "exemplo_pt": "Um belo exemplo com banda.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/banda/"
+    },
+    {
+      "id": "t18_099",
+      "italiano": "barone",
+      "portugues": "barão",
+      "genero": "m",
+      "plural": "baroni",
+      "exemplo": "Un bell'esempio con barone.",
+      "exemplo_pt": "Um belo exemplo com barão.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/barone/"
+    },
+    {
+      "id": "t18_100",
+      "italiano": "barriera",
+      "portugues": "barreira",
+      "genero": "f",
+      "plural": "barriere",
+      "exemplo": "Un bell'esempio con barriera.",
+      "exemplo_pt": "Um belo exemplo com barreira.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/barriera/"
+    },
+    {
+      "id": "t18_101",
+      "italiano": "battello",
+      "portugues": "barco",
+      "genero": "m",
+      "plural": "battelli",
+      "exemplo": "Un bell'esempio con battello.",
+      "exemplo_pt": "Um belo exemplo com barco.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/battello/"
+    },
+    {
+      "id": "t18_102",
+      "italiano": "baule",
+      "portugues": "baú",
+      "genero": "m",
+      "plural": "bauli",
+      "exemplo": "Un bell'esempio con baule.",
+      "exemplo_pt": "Um belo exemplo com baú.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/baule/"
+    },
+    {
+      "id": "t18_103",
+      "italiano": "bevanda",
+      "portugues": "bebida",
+      "genero": "f",
+      "plural": "bevande",
+      "exemplo": "Un bell'esempio con bevanda.",
+      "exemplo_pt": "Um belo exemplo com bebida.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bevanda/"
+    },
+    {
+      "id": "t18_104",
+      "italiano": "bomba",
+      "portugues": "bomba",
+      "genero": "f",
+      "plural": "bombe",
+      "exemplo": "Un bell'esempio con bomba.",
+      "exemplo_pt": "Um belo exemplo com bomba.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bomba/"
+    },
+    {
+      "id": "t18_105",
+      "italiano": "bove",
+      "portugues": "boi",
+      "genero": "m",
+      "plural": "bovi",
+      "exemplo": "Un bell'esempio con bove.",
+      "exemplo_pt": "Um belo exemplo com boi.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/bove/"
+    },
+    {
+      "id": "t18_106",
+      "italiano": "brano",
+      "portugues": "trecho",
+      "genero": "m",
+      "plural": "brani",
+      "exemplo": "Un bell'esempio con brano.",
+      "exemplo_pt": "Um belo exemplo com trecho.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/brano/"
+    },
+    {
+      "id": "t18_107",
+      "italiano": "brivido",
+      "portugues": "arrepio",
+      "genero": "m",
+      "plural": "brividi",
+      "exemplo": "Un bell'esempio con brivido.",
+      "exemplo_pt": "Um belo exemplo com arrepio.",
+      "categoria": "sostantivi",
+      "dificuldade": "medio",
+      "audio_ipa": "/brivido/"
     }
   ]
 }

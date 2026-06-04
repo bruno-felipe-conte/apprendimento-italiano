@@ -281,18 +281,6 @@
       "audio_ipa": "/link/"
     },
     {
-      "id": "t24_027",
-      "italiano": "pagina",
-      "portugues": "página",
-      "genero": "f",
-      "plural": "pagine",
-      "exemplo": "Una pagina web.",
-      "exemplo_pt": "Uma página web.",
-      "categoria": "reti",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈpadʒina/"
-    },
-    {
       "id": "t24_028",
       "italiano": "motore di ricerca",
       "portugues": "buscador",
@@ -399,18 +387,6 @@
       "categoria": "software",
       "dificuldade": "medio",
       "audio_ipa": "/karˈtɛlla/"
-    },
-    {
-      "id": "t24_039",
-      "italiano": "menu",
-      "portugues": "menu",
-      "genero": "m",
-      "plural": "menu",
-      "exemplo": "Apri il menu principale.",
-      "exemplo_pt": "Abra o menu principal.",
-      "categoria": "software",
-      "dificuldade": "medio",
-      "audio_ipa": "/meˈnu/"
     },
     {
       "id": "t24_040",
@@ -1209,7 +1185,7 @@
       "italiano": "crittografia",
       "portugues": "criptografia",
       "genero": "f",
-      "plural": null,
+      "plural": "crittografie",
       "exemplo": "La crittografia protegge i dati.",
       "exemplo_pt": "A criptografia protege os dados.",
       "categoria": "tecnologia",
@@ -1233,7 +1209,7 @@
       "italiano": "malware",
       "portugues": "malware",
       "genero": "m",
-      "plural": null,
+      "plural": "malwari",
       "exemplo": "Il malware ha infettato il computer.",
       "exemplo_pt": "O malware infectou o computador.",
       "categoria": "tecnologia",
@@ -1281,7 +1257,7 @@
       "italiano": "bluetooth",
       "portugues": "bluetooth",
       "genero": "m",
-      "plural": null,
+      "plural": "bluetooth",
       "exemplo": "Connetto le cuffie via bluetooth.",
       "exemplo_pt": "Conecto o fone via bluetooth.",
       "categoria": "tecnologia",
@@ -1293,7 +1269,7 @@
       "italiano": "realtà virtuale",
       "portugues": "realidade virtual",
       "genero": "f",
-      "plural": null,
+      "plural": "realtà virtuali",
       "exemplo": "La realtà virtuale immerge l'utente.",
       "exemplo_pt": "A realidade virtual imersiona o usuário.",
       "categoria": "tecnologia",
@@ -1305,72 +1281,12 @@
       "italiano": "realtà aumentata",
       "portugues": "realidade aumentada",
       "genero": "f",
-      "plural": null,
+      "plural": "realtà aumentate",
       "exemplo": "La realtà aumentata sovrappone informazioni.",
       "exemplo_pt": "A realidade aumentada sobrepõe informações.",
       "categoria": "tecnologia",
       "dificuldade": "medio",
       "audio_ipa": "/reaˈlta aumentaˈta/"
-    },
-    {
-      "id": "t24_r27",
-      "italiano": "cloud",
-      "portugues": "nuvem / cloud",
-      "genero": "m",
-      "plural": null,
-      "exemplo": "I dati sono salvati nel cloud.",
-      "exemplo_pt": "Os dados são salvos na nuvem.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/klawd/"
-    },
-    {
-      "id": "t24_r28",
-      "italiano": "cybersicurezza",
-      "portugues": "cibersegurança",
-      "genero": "f",
-      "plural": null,
-      "exemplo": "La cybersicurezza è fondamentale.",
-      "exemplo_pt": "A cibersegurança é fundamental.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈtʃajbersikuˈrɛttsa/"
-    },
-    {
-      "id": "t24_r30",
-      "italiano": "latenza",
-      "portugues": "latência",
-      "genero": "f",
-      "plural": "latenze",
-      "exemplo": "La latenza bassa migliora il gioco.",
-      "exemplo_pt": "A baixa latência melhora o jogo.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/laˈtɛntsa/"
-    },
-    {
-      "id": "t24_r34",
-      "italiano": "codice sorgente",
-      "portugues": "código-fonte",
-      "genero": "m",
-      "plural": null,
-      "exemplo": "Il codice sorgente è aperto.",
-      "exemplo_pt": "O código-fonte é aberto.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈkɔːditʃe sorˈdʒɛnte/"
-    },
-    {
-      "id": "t24_r35",
-      "italiano": "interfaccia",
-      "portugues": "interface",
-      "genero": "f",
-      "plural": "interfacce",
-      "exemplo": "L'interfaccia è semplice e intuitiva.",
-      "exemplo_pt": "A interface é simples e intuitiva.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/interˈfattʃa/"
     }
   ]
 }
