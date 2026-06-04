@@ -32,8 +32,8 @@
       font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif;
       background: var(--cor-pergaminho);
       color: var(--cor-inchiostro);
-      min-height: 100dvh;    /* dynamic viewport — no bege gap in PWA */
       min-height: 100vh;     /* fallback for older browsers */
+      min-height: 100dvh;    /* dynamic viewport — no bege gap in PWA */
       display: flex;
       flex-direction: column;
       overflow-x: hidden;    /* prevent horizontal scroll */
@@ -182,7 +182,7 @@
 
     /* ── Flashcard ── */
     .flashcard-arena { max-width: 520px; margin: 0 auto; }
-    ..card-selecao-templo {
+    .card-selecao-templo {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -1739,41 +1739,66 @@
         left: 0;
         right: 0;
         z-index: 2000;
-        background: #1C1816;
-        border-top: 2px solid #9B2335;
+        background: var(--cor-marmore);
+        border-top: 1px solid rgba(0,0,0,0.08);
         /* safe-area: home indicator no iOS */
-        padding: 0.4rem var(--safe-right) calc(0.6rem + var(--safe-bottom)) var(--safe-left);
-        justify-content: space-around;
-        box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+        padding: 0.5rem var(--safe-right) calc(0.6rem + var(--safe-bottom)) var(--safe-left);
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
         /* Ensure nav spans full width including safe areas */
         padding-left:  max(var(--safe-left),  0.25rem);
         padding-right: max(var(--safe-right), 0.25rem);
+      }
+      .bottom-nav::-webkit-scrollbar { display: none; }
+      body.dark-mode .bottom-nav {
+        background: #1C1816;
+        border-top-color: #2D2723;
+        box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
       }
       .nav-tabs {
         display: none !important;
       }
       .bottom-nav button {
-        background: none;
+        background: transparent;
         border: none;
-        color: #A69E94;
+        color: var(--cor-pietra);
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 0.25rem;
-        font-size: 0.75rem;
-        font-weight: 700;
+        justify-content: center;
+        font-size: 1.55rem;
         cursor: pointer;
-        transition: all 0.2s;
-        flex: 1;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s, filter 0.2s, opacity 0.2s;
+        flex: 0 0 auto;
+        width: 18%;
+        scroll-snap-align: center;
+        padding: 0.5rem 0;
+        margin: 0 0.15rem;
+        border-radius: 12px;
+        opacity: 0.55;
+        filter: grayscale(0.6);
+      }
+      body.dark-mode .bottom-nav button {
+        color: #A69E94;
       }
       .bottom-nav button span {
-        font-size: 0.58rem;
+        display: none;
       }
-      .bottom-nav button:hover, .bottom-nav button:active {
-        color: var(--cor-toscano);
+      .bottom-nav button:active {
+        transform: scale(0.9);
       }
       .bottom-nav button.ativa {
+        color: var(--cor-veneziano);
+        opacity: 1;
+        filter: grayscale(0);
+        background: rgba(155, 35, 53, 0.12);
+        transform: translateY(-2px);
+      }
+      body.dark-mode .bottom-nav button.ativa {
         color: var(--cor-toscano);
+        background: rgba(212, 168, 67, 0.15);
       }
       /* Spacer for bottom nav so content is not cut off */
       .app-footer {

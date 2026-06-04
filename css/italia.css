@@ -60,7 +60,9 @@ body {
   color: var(--cor-inchiostro);
   font-family: var(--fonte-ui);
   line-height: 1.6;
-  min-height: 100vh;
+  min-height: 100vh;    /* fallback */
+  min-height: 100dvh;   /* dynamic viewport — no gap in PWA/mobile */
+  overflow-x: hidden;
   background-image:
     repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(158,143,127,.04) 28px,rgba(158,143,127,.04) 29px),
     repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(201,149,42,.02) 60px,rgba(201,149,42,.02) 61px);
@@ -80,6 +82,8 @@ input,textarea,select { font-family:inherit; }
   background-color:var(--cor-marmore);
   box-shadow:var(--sombra-md);
   border-bottom:3px solid var(--cor-veneziano);
+  /* iOS notch / Dynamic Island */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 .app-header-inner {
   display:flex; align-items:center; justify-content:space-between;
@@ -123,7 +127,15 @@ input,textarea,select { font-family:inherit; }
 .tab-texto { display:none; }
 
 .section { display:none; padding:var(--esp-xl) 0; animation:entrada-sezione .35s ease both; }
-.section.active { display:block; }
+.section.active {
+  display:block;
+  /* extra bottom padding so last content isn't hidden by fixed bottom nav */
+  padding-bottom: calc(var(--esp-xl) + var(--nav-height, 56px) + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 641px) {
+  /* No bottom nav on desktop */
+  .section.active { padding-bottom: var(--esp-xl); }
+}
 
 .section-titulo {
   font-family:var(--fonte-titulo); font-size:1.6rem; font-weight:600;
@@ -500,13 +512,21 @@ input,textarea,select { font-family:inherit; }
 
 /* 11. TOAST NOTIFICATION */
 .toast {
-  position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(0);
+  position:fixed;
+  /* Above bottom-nav on mobile, clear of home indicator */
+  bottom: calc(2rem + var(--nav-height, 56px) + env(safe-area-inset-bottom, 0px));
+  left:50%;
+  transform:translateX(-50%) translateY(0);
   background:var(--cor-inchiostro); color:#fff;
   font-family:var(--fonte-ui); font-size:.875rem; font-weight:500;
   padding:var(--esp-sm) var(--esp-xl); border-radius:20px;
   box-shadow:var(--sombra-lg); z-index:var(--z-modal);
   animation:toast-entrar .3s ease both;
   white-space:nowrap;
+}
+/* On desktop, toast can stay near bottom without extra nav offset */
+@media (min-width: 641px) {
+  .toast { bottom: 2rem; }
 }
 .toast.ouro { background:linear-gradient(90deg,var(--cor-toscano),#E8B84B); color:var(--cor-inchiostro); }
 .toast.verde { background:var(--cor-verde-certo); }
