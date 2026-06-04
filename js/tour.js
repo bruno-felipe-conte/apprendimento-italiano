@@ -17,6 +17,14 @@ const Tour = {
     } catch(e) {}
 
     const driver = window.driver.js.driver;
+    const isMobile = window.innerWidth <= 768;
+    
+    // Function to get the right tab selector based on device
+    const getTab = (section) => {
+      return isMobile 
+        ? `.bottom-nav [data-section="${section}"]` 
+        : `.nav-tabs [data-section="${section}"]`;
+    };
     
     const driverObj = driver({
       showProgress: true,
@@ -26,6 +34,7 @@ const Tour = {
       prevBtnText: 'Indietro',
       doneBtnText: 'Finito!',
       progressText: 'Passo {{current}} de {{total}}',
+      popoverClass: 'app-tour-theme', // Our custom CSS theme
       onDestroyStarted: () => {
         if (!driverObj.hasNextStep() || confirm("Vuoi uscire dal tour? (Deseja pular o tour?)")) {
           driverObj.destroy();
@@ -36,82 +45,82 @@ const Tour = {
       },
       steps: [
         {
-          element: '#sec-templi',
+          element: getTab('templi'),
           popover: {
             title: '🏛️ Templi (Sua Jornada)',
             description: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('templi'); }
         },
         {
-          element: '#sec-dialoghi',
+          element: getTab('dialoghi'),
           popover: {
             title: '💬 Dialoghi',
             description: 'Leia e escute diálogos reais para pegar o ritmo, contexto e melhorar sua compreensão auditiva.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('dialoghi'); }
         },
         {
-          element: '#sec-canzoni',
+          element: getTab('canzoni'),
           popover: {
             title: '🎵 Canzoni',
             description: 'Aprenda vocabulário se divertindo com os clássicos da música italiana.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('canzoni'); }
         },
         {
-          element: '#sec-imitazione',
+          element: getTab('imitazione'),
           popover: {
             title: '🎙️ Imitazione',
             description: 'Escute um nativo falando e grave sua própria voz. O segredo para uma dicção autêntica.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('imitazione'); }
         },
         {
-          element: '#sec-flashcard',
+          element: getTab('flashcard'),
           popover: {
             title: '🧠 Flashcard',
             description: 'Revise o vocabulário no momento exato em que estiver prestes a esquecer, usando nosso algoritmo espaçado.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('flashcard'); }
         },
         {
-          element: '#sec-quiz',
+          element: getTab('quiz'),
           popover: {
             title: '📝 Quiz',
             description: 'Teste seus conhecimentos em baterias de exercícios rápidos e conquiste moedas.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('quiz'); }
         },
         {
-          element: '#sec-grammatica',
+          element: getTab('grammatica'),
           popover: {
             title: '📚 Grammatica',
             description: 'Dúvidas estruturais? Consulte rapidamente todas as regras de gramática aqui.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('grammatica'); }
         },
         {
-          element: '#sec-vocabolario',
+          element: getTab('vocabolario'),
           popover: {
             title: '📖 Vocabolario',
             description: 'Seu glossário mestre. Pesquise por qualquer palavra aprendida até o momento.',
-            side: 'top',
-            align: 'start'
+            side: isMobile ? 'top' : 'bottom',
+            align: 'center'
           },
           onHighlightStarted: () => { App.navegar('vocabolario'); }
         },
@@ -134,3 +143,4 @@ const Tour = {
     driverObj.drive();
   }
 };
+
