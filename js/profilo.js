@@ -113,6 +113,12 @@ const Profilo = {
             <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
             <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
           </div>
+          <!-- Tour -->
+          <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
+            <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),200)">
+              🗺️ Ver tour introdutório novamente
+            </button>
+          </div>
           <!-- Conteúdo Criado por Mim -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
             <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">${I18n.t('prof_conteudo_criado')}</div>
