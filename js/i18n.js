@@ -366,6 +366,13 @@ const I18n = {
     'ob_slide3_li3': { pt: 'Estude usando os <strong>FLASHCARDS</strong>', it: 'Studia con i <strong>FLASHCARD</strong>' },
     'ob_slide3_li4': { pt: 'Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!', it: 'Metti alla prova con i <strong>QUIZ</strong>!' },
 
+    // ── Dialoghi / Canzoni — botões de criação ──
+    'dial_btn_adicionar': { pt: '➕ Adicionar Diálogo', it: '➕ Aggiungi Dialogo' },
+    'can_btn_adicionar':  { pt: '➕ Adicionar Música',  it: '➕ Aggiungi Canzone' },
+
+    // ── Imitazione — botão ouvir ──
+    'imit_btn_ouvir_exemplo': { pt: '🔊 Ouvir Exemplo', it: '🔊 Ascolta l\'Esempio' },
+
     // ── Tour ──
     'tour_templi_title': { pt: '🏛️ Templi (Sua Jornada)', it: '🏛️ Templi (Il Tuo Viaggio)' },
     'tour_templi_desc': { pt: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', it: 'Questo è il cuore del tuo apprendimento. Sblocca nuovi templi e raggiungi il tuo obiettivo quotidiano di esperienza.' },

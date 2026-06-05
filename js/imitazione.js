@@ -148,7 +148,7 @@ const Imitazione = {
           <div style="font-family:monospace;color:var(--cor-pietra);font-size:0.8rem;margin-top:0.3rem">${item.audio_ipa}</div>
         </div>
         <br>
-        <button class="btn-audio" onclick="App.pronunciar('${(item.frase_italiano || item.frase).replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">🔊 Ouvir Exemplo</button>
+        <button class="btn-audio" onclick="App.pronunciar('${(item.frase_italiano || item.frase).replace(/'/g, "\\'")}')" style="font-size:1.1rem;padding:0.6rem 1.2rem">${I18n.t('imit_btn_ouvir_exemplo')}</button>
       </div>
 
       <div style="text-align:center;background:var(--cor-marmore-escuro);padding:2rem;border-radius:16px">

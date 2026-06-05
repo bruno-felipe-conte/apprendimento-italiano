@@ -43,7 +43,7 @@ const Canzoni = {
 
     let html = `
       <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
-        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()">➕ Adicionar Música</button>
+        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()">${I18n.t('can_btn_adicionar')}</button>
       </div>
       <div class="dialogo-grid">`;
 
