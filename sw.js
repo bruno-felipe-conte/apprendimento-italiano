@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker  |  Cache v12  |  Offline-first PWA
+// sw.js — Service Worker  |  Cache v13  |  Offline-first PWA
 // Estratégia:
 //   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
 //   • /data/*.json   → network-first com fallback de cache
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v25';
+const CACHE = 'italiano-v26';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -31,6 +31,7 @@ const STATIC = [
   './js/quiz_data.js',
   './js/vocab.js',
   './js/i18n.js',
+  './js/notificacoes.js',
   // Dados
   './data/conjugacoes.json',
   './data/grammar.json',
@@ -123,5 +124,39 @@ self.addEventListener('fetch', event => {
       if (res.ok) caches.open(CACHE).then(c => c.put(req, res.clone()));
       return res;
     }))
+  );
+});
+
+// ── Push Notifications ────────────────────────────────────
+// Recebe mensagem da página para agendar lembretes locais
+self.addEventListener('message', event => {
+  if (!event.data) return;
+
+  if (event.data.type === 'AGENDAR_LEMBRETE') {
+    const { delayMs, titulo, corpo, tag } = event.data;
+    // Agenda a notificação via setTimeout dentro do SW
+    // (funciona enquanto o SW estiver ativo; ao acordar o SW dispara)
+    setTimeout(() => {
+      self.registration.showNotification(titulo, {
+        body:    corpo,
+        icon:    './icons/icon.svg',
+        badge:   './icons/icon.svg',
+        tag:     tag || 'italiano-lembrete',
+        renotify: true,
+        data:    { url: './' },
+      });
+    }, delayMs);
+  }
+});
+
+// Clique na notificação → abre o app
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(lista => {
+      const existente = lista.find(c => c.url.includes('italiano') || c.url.endsWith('/'));
+      if (existente) return existente.focus();
+      return clients.openWindow(event.notification.data?.url || './');
+    })
   );
 });

@@ -100,6 +100,11 @@ const Profilo = {
           <div class="profilo-conquistas-grid" id="profilo-conquistas"></div>
         </div>
 
+        <!-- Lembretes push -->
+        <div class="profilo-card" style="margin-top:0">
+          ${typeof Notificacoes !== 'undefined' ? Notificacoes.renderizarCard() : ''}
+        </div>
+
         <div class="profilo-card" style="margin-top:1.5rem">
           <div class="profilo-card-titulo">${I18n.t('prof_gestao_dati')}</div>
           <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${I18n.t('prof_backup_desc')}</p>
