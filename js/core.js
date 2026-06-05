@@ -821,6 +821,8 @@ const App = {
 
   pronunciar(texto) {
     if (!texto) return;
+    // Respeita o botão 🔕 — sem som = sem TTS
+    if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
 
     if ('speechSynthesis' in window) {
       speechSynthesis.cancel();

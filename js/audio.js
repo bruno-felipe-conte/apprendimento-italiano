@@ -18,6 +18,10 @@ const SomFeedback = {
     this.ativo = !this.ativo;
     localStorage.setItem('it_som', this.ativo ? '1' : '0');
     this._atualizarBotao();
+    // Ao mutar: para imediatamente qualquer fala em andamento
+    if (!this.ativo && 'speechSynthesis' in window) {
+      speechSynthesis.cancel();
+    }
     App.notificar(this.ativo ? 'notif_sons_ativados' : 'notif_sons_desativados', 'alerta');
   },
 
