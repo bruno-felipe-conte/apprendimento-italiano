@@ -97,7 +97,7 @@ const Profilo = {
         <!-- Conquistas -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">🏆 I Miei Traguardi</div>
-          <div class="profilo-conquistas-grid" id="profilo-conquistas"></div>
+          ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
         </div>
 
         <!-- Lembretes push — só renderiza se o módulo estiver carregado e a API disponível -->

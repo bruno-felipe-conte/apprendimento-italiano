@@ -394,7 +394,7 @@ const App = {
       </div>
       <div class="pdd-acoes">
         <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
-        <button class="pdd-btn pdd-btn-study" onclick="App.estudarTemplo(${palavra._templo})">📚 Studiare</button>
+        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Studiare</button>
         <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = App.estado.progresso.favoritos.includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
         </button>
@@ -552,11 +552,24 @@ const App = {
   estudarTemplo(temploNum) {
     this.navegar('flashcard');
     const sel = document.getElementById('flashcard-templo-select');
-    if (sel) {
-      sel.value = temploNum;
-    }
-    if (typeof Flashcards !== 'undefined') {
-      Flashcards.init(temploNum);
+    if (sel) sel.value = temploNum;
+    if (typeof Flashcards !== 'undefined') Flashcards.init(temploNum);
+  },
+
+  // Abre flashcard do templo E posiciona na carta específica (Parola del Giorno)
+  estudarPalavra(palavraId, temploNum) {
+    this.navegar('flashcard');
+    const sel = document.getElementById('flashcard-templo-select');
+    if (sel) sel.value = temploNum;
+    if (typeof Flashcards === 'undefined') return;
+    Flashcards.init(temploNum);
+    // Após init, move a carta alvo para o início do deck
+    const idx = Flashcards.cartasDisponiveis.findIndex(p => p.id === palavraId);
+    if (idx > 0) {
+      const [carta] = Flashcards.cartasDisponiveis.splice(idx, 1);
+      Flashcards.cartasDisponiveis.unshift(carta);
+      Flashcards.indiceAtual = 0;
+      Flashcards.mostrarCarta();
     }
   },
 

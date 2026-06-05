@@ -18,6 +18,21 @@ const Quiz = {
       return;
     }
 
+    // Restaura sessão parcial se for o mesmo templo
+    const salvo = this._carregarSessao();
+    if (salvo && salvo.temploAtual === temploNum && salvo.perguntaAtual > 0 && salvo.perguntas?.length > 0) {
+      Object.assign(this, salvo);
+      const container = document.getElementById('quiz-container');
+      const resultado  = document.getElementById('quiz-resultado');
+      const seletor    = document.getElementById('quiz-templo-selector');
+      if (container) container.style.display = 'block';
+      if (resultado)  resultado.style.display  = 'none';
+      if (seletor)    seletor.style.display     = 'none';
+      App.notificar(`↩️ Retomando da pergunta ${this.perguntaAtual + 1}`, 'alerta');
+      this.mostrarPergunta();
+      return;
+    }
+
     this.temploAtual = temploNum;
     this.perguntaAtual = 0;
     this.pontuacao = 0;
@@ -229,16 +244,43 @@ const Quiz = {
     if (this.perguntaAtual >= this.perguntas.length) {
       this.mostrarResultado();
     } else {
+      this._salvarSessao(); // persiste progresso parcial
       this.mostrarPergunta();
     }
   },
 
   // ── Show final result screen ───────────────────────────────
+  // ── Persiste / restaura sessão parcial ────────────────────
+  _salvarSessao() {
+    try {
+      sessionStorage.setItem('it_quiz_sessao', JSON.stringify({
+        temploAtual:   this.temploAtual,
+        perguntas:     this.perguntas,
+        perguntaAtual: this.perguntaAtual,
+        pontuacao:     this.pontuacao,
+        xpTotal:       this.xpTotal,
+        combo:         this.combo,
+      }));
+    } catch(_) {}
+  },
+
+  _carregarSessao() {
+    try {
+      const raw = sessionStorage.getItem('it_quiz_sessao');
+      return raw ? JSON.parse(raw) : null;
+    } catch(_) { return null; }
+  },
+
+  _limparSessao() {
+    try { sessionStorage.removeItem('it_quiz_sessao'); } catch(_) {}
+  },
+
   mostrarResultado() {
+    this._limparSessao(); // sessão concluída — limpa
     const container = document.getElementById('quiz-container');
     const resultado = document.getElementById('quiz-resultado');
     if (container) container.style.display = 'none';
-    
+
     // Log quiz completion to heatmap diary (count actual questions answered)
     if (typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
     if (!resultado) return;

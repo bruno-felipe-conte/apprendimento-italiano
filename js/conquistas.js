@@ -205,5 +205,42 @@ const Conquistas = {
           <span class="conquista-badge-nome">${c.nome}</span>
         </div>`;
     }).join('');
+  },
+
+  // ── Painel completo com conquistas desbloqueadas + bloqueadas ─
+  renderizarPainelCompleto() {
+    const p = App.estado.progresso || {};
+    const fd = App.estado.flashcardData || {};
+    const conquistadas = p.conquistas || [];
+    const total = this.LISTA.length;
+    const ganhas = conquistadas.length;
+
+    const desbloqueadas = this.LISTA.filter(c => conquistadas.includes(c.id));
+    const bloqueadas    = this.LISTA.filter(c => !conquistadas.includes(c.id));
+
+    const renderBadge = (c, ganhou) => `
+      <div class="ach-item${ganhou ? ' ach-ganhou' : ' ach-bloqueada'}" title="${c.descricao}">
+        <span class="ach-emoji">${ganhou ? c.emoji : '🔒'}</span>
+        <div class="ach-info">
+          <div class="ach-nome">${c.nome}</div>
+          <div class="ach-desc">${c.descricao}</div>
+        </div>
+        ${ganhou ? '<span class="ach-check">✅</span>' : ''}
+      </div>`;
+
+    return `
+      <div class="ach-progresso-bar-wrap">
+        <div class="ach-progresso-bar">
+          <div class="ach-progresso-fill" style="width:${Math.round(ganhas/total*100)}%"></div>
+        </div>
+        <span class="ach-progresso-label">${ganhas} / ${total}</span>
+      </div>
+      ${ganhas > 0 ? `
+        <div class="ach-secao-titulo">✅ Conquistados</div>
+        <div class="ach-lista">${desbloqueadas.map(c => renderBadge(c, true)).join('')}</div>
+      ` : ''}
+      <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">🔒 Em progresso</div>
+      <div class="ach-lista">${bloqueadas.map(c => renderBadge(c, false)).join('')}</div>
+    `;
   }
 };

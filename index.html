@@ -1196,6 +1196,28 @@
     body.dark-mode .conquista-card-desc { color:#888; }
     body.dark-mode .conquista-badge { background:#25201D; border-color:#3D3530; }
     body.dark-mode .conquista-badge-nome { color:#C9BBA8; }
+    /* Conquistas painel completo */
+    .ach-progresso-bar-wrap { display:flex; align-items:center; gap:0.7rem; margin-bottom:1rem; }
+    .ach-progresso-bar { flex:1; height:8px; background:#f0e8d8; border-radius:4px; overflow:hidden; }
+    .ach-progresso-fill { height:100%; background:linear-gradient(90deg,#9B2335,#D4A843); border-radius:4px; transition:width 0.6s ease; }
+    .ach-progresso-label { font-size:0.78rem; font-weight:700; color:#9B2335; white-space:nowrap; }
+    .ach-secao-titulo { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#9B2335; margin-bottom:0.5rem; }
+    .ach-lista { display:flex; flex-direction:column; gap:0.5rem; }
+    .ach-item { display:flex; align-items:center; gap:0.7rem; padding:0.55rem 0.7rem; border-radius:10px; }
+    .ach-item.ach-ganhou { background:rgba(155,35,53,0.07); }
+    .ach-item.ach-bloqueada { background:#f8f4ef; opacity:0.6; }
+    .ach-emoji { font-size:1.5rem; flex-shrink:0; width:2rem; text-align:center; }
+    .ach-info { flex:1; min-width:0; }
+    .ach-nome { font-weight:700; font-size:0.85rem; color:#2a1a1a; }
+    .ach-desc { font-size:0.75rem; color:#888; line-height:1.4; }
+    .ach-check { font-size:1rem; flex-shrink:0; }
+    body.dark-mode .ach-progresso-bar { background:#2D2723; }
+    body.dark-mode .ach-progresso-label { color:#C4304A; }
+    body.dark-mode .ach-secao-titulo { color:#C4304A; }
+    body.dark-mode .ach-item.ach-ganhou { background:rgba(196,48,74,0.1); }
+    body.dark-mode .ach-item.ach-bloqueada { background:#25201D; }
+    body.dark-mode .ach-nome { color:#E6DFD3; }
+    body.dark-mode .ach-desc { color:#666; }
 
     /* ── Level-Up Modal ── */
     .levelup-modal { display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem; overflow:hidden; }

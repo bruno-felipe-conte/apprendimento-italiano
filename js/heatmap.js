@@ -156,7 +156,13 @@ const Calor = {
           level = r <= 0.25 ? 1 : r <= 0.5 ? 2 : r <= 0.75 ? 3 : 4;
         }
         const isToday = k === todayStr;
-        html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${k}: ${value} ${I18n.t('hm_atividades_tooltip')}" onclick="App.notificar('${k}: ${value} ${I18n.t('hm_atividades_tooltip')}','alerta')"></div>`;
+        const xpDia = this._lerEntrada(diario[k]).xp;
+        const dataFmt = new Date(k + 'T12:00:00').toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'numeric' });
+        const tooltipTxt = value > 0
+          ? `${dataFmt}: ${value} carta${value !== 1 ? 's' : ''}${xpDia > 0 ? ` · +${xpDia} XP` : ''}`
+          : `${dataFmt}: sem estudo`;
+        const toastMsg = tooltipTxt.replace(/'/g, "\\'");
+        html += `<div class="hm-cell l${level}${isToday ? ' today' : ''}" title="${tooltipTxt}" onclick="App.notificar('${toastMsg}','alerta')"></div>`;
       }
 
       html += '</div>'; // hm-month-grid
