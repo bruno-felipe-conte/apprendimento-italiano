@@ -346,12 +346,13 @@ const App = {
     const container = document.getElementById('parola-del-giorno');
     if (!container) return;
 
-    // Collect all words from loaded templos
+    // Só palavras de templos desbloqueados pelo usuário
+    const desbloqueados = (this.estado.progresso?.templos_desbloqueados) || [1];
     const vocab = [];
-    for (let i = 1; i <= 50; i++) {
+    desbloqueados.forEach(i => {
       const d = this.estado.templosData[i];
       if (d && d.palavras) d.palavras.forEach(p => vocab.push({ ...p, _templo: i }));
-    }
+    });
     if (vocab.length === 0) { container.style.display = 'none'; return; }
 
     // Select deterministically by day of year (same word all day)
@@ -676,7 +677,7 @@ const App = {
     if (!input) return;
     if (input.value.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
-      p.templos_desbloqueados = [1,2,3,4,5,6,7,8,9,10];
+      p.templos_desbloqueados = Array.from({length: 50}, (_, i) => i + 1);
       this.salvarProgresso();
       this.fecharModalTemplo();
       this.renderizarTemplos();

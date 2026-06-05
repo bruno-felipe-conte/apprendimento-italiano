@@ -364,10 +364,14 @@ const Quiz = {
       seletor.appendChild(btnMisto);
     }
 
-    for (let i = 1; i <= 10; i++) {
+    // Usa a lista de templos carregados (1-50), ordenados
+    const todosTemplos = Object.keys(App.estado.templosData)
+      .map(Number).sort((a, b) => a - b);
+
+    todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
+      const nome = (data && data.nome) || `Tempio ${i}`;
       const nivel = data ? data.nivel : '—';
 
       const btn = document.createElement('button');
@@ -376,14 +380,10 @@ const Quiz = {
         ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
         : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
 
-      if (desbloqueado) {
-        btn.onclick = () => this.iniciar(i);
-      } else {
-        btn.disabled = true;
-      }
-
+      if (desbloqueado) btn.onclick = () => this.iniciar(i);
+      else btn.disabled = true;
       seletor.appendChild(btn);
-    }
+    });
 
     // ── Morphology section ────────────────────────────────
     const sep = document.createElement('div');
@@ -391,24 +391,20 @@ const Quiz = {
     sep.textContent = I18n.t('quiz_morf_titulo');
     seletor.appendChild(sep);
 
-
-    for (let i = 1; i <= 10; i++) {
+    todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
+      const nome = (data && data.nome) || `Tempio ${i}`;
       const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
 
       const btn = document.createElement('button');
       btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
       btn.innerHTML = `🔤 ${i}. ${nome}`;
 
-      if (desbloqueado && temMorf) {
-        btn.onclick = () => this.iniciarMorfologia(i);
-      } else {
-        btn.disabled = true;
-      }
+      if (desbloqueado && temMorf) btn.onclick = () => this.iniciarMorfologia(i);
+      else btn.disabled = true;
       seletor.appendChild(btn);
-    }
+    });
 
     // ── Listening section ────────────────────────────────
     const sepList = document.createElement('div');
@@ -416,22 +412,19 @@ const Quiz = {
     sepList.textContent = I18n.t('quiz_list_titulo');
     seletor.appendChild(sepList);
 
-    for (let i = 1; i <= 10; i++) {
+    todosTemplos.forEach(i => {
       const desbloqueado = Progressao.temploDesbloqueado(i);
       const data = App.estado.templosData[i];
-      const nome = (data && data.nome) ? data.nome : (App.TEMPLO_NOMES && App.TEMPLO_NOMES[i]) || `Tempio ${i}`;
-      
+      const nome = (data && data.nome) || `Tempio ${i}`;
+
       const btn = document.createElement('button');
       btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;
       btn.innerHTML = `🎧 ${i}. ${nome}`;
 
-      if (desbloqueado) {
-        btn.onclick = () => this.iniciarListening(i);
-      } else {
-        btn.disabled = true;
-      }
+      if (desbloqueado) btn.onclick = () => this.iniciarListening(i);
+      else btn.disabled = true;
       seletor.appendChild(btn);
-    }
+    });
 
     // ── Gramática section ────────────────────────────────
     const sepGram = document.createElement('div');

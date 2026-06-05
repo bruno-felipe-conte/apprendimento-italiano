@@ -74,7 +74,7 @@ const Profilo = {
           ${this._row('Parole dominate', `${totalDominadas}`)}
           ${this._row('Parole difficili', totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
           ${this._row('Tempo stimato', `${tempoEstimadoMin} min`)}
-          ${this._row('Templi sbloccati', `${(p.templos_desbloqueados||[]).length} / 10`)}
+          ${this._row('Templi sbloccati', `${(p.templos_desbloqueados||[]).length} / 50`)}
           ${this._row('Accuratezza quiz', quizAcuracia)}
         </div>
 
