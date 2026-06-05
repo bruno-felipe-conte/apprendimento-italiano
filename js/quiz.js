@@ -106,11 +106,11 @@ const Quiz = {
         templo: temploNum,
         tipo: 'vocabulario',
         nivel: data.nivel || 'A1',
-        pergunta: `O que significa "${p.italiano}"?`,
+        pergunta: I18n.idioma === 'it' ? `Cosa significa "${p.italiano}"?` : `O que significa "${p.italiano}"?`,
         resposta_correta: p.portugues,
         alternativas: alternativas,
         explicacao: p.exemplo
-          ? `"${p.italiano}" significa "${p.portugues}". Exemplo: ${p.exemplo}`
+          ? (I18n.idioma === 'it' ? `"${p.italiano}" significa "${p.portugues}". Esempio: ${p.exemplo}` : `"${p.italiano}" significa "${p.portugues}". Exemplo: ${p.exemplo}`)
           : `"${p.italiano}" significa "${p.portugues}".`,
         xp_recompensa: 20
       });

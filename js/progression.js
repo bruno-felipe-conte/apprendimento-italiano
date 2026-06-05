@@ -65,32 +65,38 @@ const LevelUp = {
 const Progressao = {
   // Cumulative XP required to reach each level index
   // Index 0 = start of level 1 (0 XP), index 1 = start of level 2 (500 XP), etc.
+  // XP acumulado para iniciar cada nível (base 1)
+  // Curva suave: early levels rápidos, progressão crescente mas atingível.
+  // A 200 XP/dia: L10 ~43 dias, L20 ~300 dias (10 meses).
+  // A 300 XP/dia: L10 ~28 dias, L20 ~200 dias (7 meses).
   NIVEL_XP: [
-    0,       // level 1 starts at 0
-    500,     // level 2
-    800,     // level 3
-    1200,    // level 4
-    1800,    // level 5
-    2600,    // level 6
-    3500,    // level 7
-    4500,    // level 8
-    6000,    // level 9
-    8000,    // level 10
-    10000,   // level 11
-    13000,   // level 12
-    16000,   // level 13
-    20000,   // level 14
-    25000,   // level 15
-    30000,   // level 16
-    37000,   // level 17
-    45000,   // level 18
-    55000,   // level 19
-    65000,   // level 20
-    80000    // level 21
+    0,      // L1
+    300,    // L2  — primeiro marco, alcançável em 1-2 dias
+    700,    // L3
+    1200,   // L4
+    1900,   // L5
+    2700,   // L6
+    3700,   // L7
+    5000,   // L8
+    6500,   // L9
+    8500,   // L10 — T4 desbloqueado
+    11000,  // L11
+    13500,  // L12
+    17000,  // L13 — T7 desbloqueado
+    21000,  // L14
+    25000,  // L15 — T8 desbloqueado
+    30000,  // L16
+    36000,  // L17 — T9 desbloqueado
+    43000,  // L18
+    51000,  // L19
+    60000,  // L20 — T10 desbloqueado (maestro!)
+    70000,  // L21
+    82000,  // L22
   ],
 
-  // Minimum level required to unlock each temple
-  TEMPLO_NIVEL: { 1: 1, 2: 3, 3: 6, 4: 10, 5: 15, 6: 21, 7: 28, 8: 36, 9: 45, 10: 55 },
+  // Nível mínimo para desbloquear cada templo.
+  // Rebalanceado: T10 agora requer L20 (atingível em ~7-10 meses).
+  TEMPLO_NIVEL: { 1: 1, 2: 2, 3: 4, 4: 6, 5: 8, 6: 10, 7: 13, 8: 15, 9: 17, 10: 20 },
 
   // ── XP threshold for level N (1-based) ────────────────────
   // Returns the cumulative XP needed to reach the START of level N

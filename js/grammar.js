@@ -441,7 +441,7 @@ const Grammatica = {
     const actions = document.getElementById('gram-actions');
     if (actions) actions.style.display = 'flex';
 
-    if (correto) { this.acertos++; App.ganharXP(5); }
+    if (correto) { this.acertos++; App.ganharXP(8); }
   },
 
   // ─────────────────────────────────────────────────────────
@@ -474,7 +474,7 @@ const Grammatica = {
     const actions = document.getElementById('gram-actions');
     if (actions) actions.style.display = 'flex';
 
-    if (correto) { this.acertos++; App.ganharXP(5); }
+    if (correto) { this.acertos++; App.ganharXP(8); }
   },
 
   // ─────────────────────────────────────────────────────────
@@ -516,7 +516,7 @@ const Grammatica = {
     const total   = this.unidadeAtual.exercicios.length;
     const acertos = this.acertos;
     const pct     = total > 0 ? Math.round((acertos / total) * 100) : 0;
-    const bonus   = 50;
+    const bonus   = 60;
 
     const completadas = (App.estado.progresso || {}).grammatica_completadas || [];
     const jaFeita     = completadas.includes(this.unidadeAtual.id);

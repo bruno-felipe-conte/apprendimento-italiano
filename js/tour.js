@@ -1,6 +1,10 @@
 // ============================================================
 // tour.js — Walkthrough interativo via Driver.js
 // Sempre em Português — iniciantes precisam entender o app
+//
+// FIX: usa onNextClick/onPrevClick para navegar a seção ANTES
+// do Driver.js posicionar o overlay, garantindo que o elemento
+// alvo esteja visível quando o highlight for calculado.
 // ============================================================
 
 const Tour = {
@@ -19,7 +23,45 @@ const Tour = {
 
     const drv = window.driver.js.driver;
 
-    const driverObj = drv({
+    // Seção e preparação necessária para cada passo (indexed)
+    const passos = [
+      // 0 — header
+      { sec: 'templi',    prep: () => window.scrollTo(0,0) },
+      // 1 — stats bar
+      { sec: 'templi',    prep: () => window.scrollTo(0,0) },
+      // 2 — templos grid
+      { sec: 'templi',    prep: null },
+      // 3 — meta prazo
+      { sec: 'templi',    prep: () => window.scrollTo(0,0) },
+      // 4 — flashcard selector
+      { sec: 'flashcard', prep: null },
+      // 5 — modos de estudo
+      { sec: 'flashcard', prep: null },
+      // 6 — botões avaliação
+      { sec: 'flashcard', prep: () => {
+          const a = document.getElementById('card-actions');
+          if (a) a.style.display = 'grid';
+      }},
+      // 7 — quiz
+      { sec: 'quiz',       prep: null },
+      // 8 — gramática
+      { sec: 'grammatica', prep: null },
+      // 9 — vocabulário
+      { sec: 'vocabolario', prep: null },
+    ];
+
+    const navegar = (idx, cb) => {
+      const p = passos[idx];
+      if (!p) { cb(); return; }
+      App.navegar(p.sec);
+      if (p.prep) p.prep();
+      // Aguarda a seção renderizar antes do Driver posicionar o overlay
+      setTimeout(cb, 120);
+    };
+
+    let driverObj;
+
+    driverObj = drv({
       showProgress: true,
       animate:      true,
       allowClose:   true,
@@ -28,129 +70,111 @@ const Tour = {
       doneBtnText:  '🎉 Começar!',
       progressText: '{{current}} de {{total}}',
       popoverClass: 'app-tour-theme',
+
+      // Intercepta "próximo" — navega primeiro, depois move
+      onNextClick: () => {
+        const cur = driverObj.getActiveIndex() ?? 0;
+        navegar(cur + 1, () => driverObj.moveNext());
+      },
+
+      // Intercepta "anterior" — navega primeiro, depois move
+      onPrevClick: () => {
+        const cur = driverObj.getActiveIndex() ?? 0;
+        navegar(cur - 1, () => driverObj.movePrevious());
+      },
+
       onDestroyStarted: () => {
         if (!driverObj.hasNextStep() || confirm('Deseja sair do tour?')) {
           driverObj.destroy();
           try { localStorage.setItem(Tour.STORAGE_KEY, '1'); } catch(e) {}
         }
       },
+
       steps: [
-        // ── 1. Boas vindas ──────────────────────────────────────
         {
           element: '.app-header',
           popover: {
             title: '👋 Bem-vindo ao Italiano Autentico!',
             description: 'Este tour de 10 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
             side: 'bottom', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('templi'); window.scrollTo(0,0); }
+          }
         },
-
-        // ── 2. Stats bar ────────────────────────────────────────
         {
           element: '.stats-bar',
           popover: {
             title: '🏅 Nível, XP e Sequência',
             description: 'Aqui você acompanha seu progresso. Cada atividade rende XP. Ao atingir XP suficiente, seu nível sobe e novos templos são desbloqueados. A barra dourada mostra o quanto falta para o próximo nível.',
             side: 'bottom', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('templi'); window.scrollTo(0,0); }
+          }
         },
-
-        // ── 3. Templos ──────────────────────────────────────────
         {
           element: '#templos-grid',
           popover: {
             title: '🏛️ Templos — Seu Mapa de Aprendizado',
-            description: 'Cada templo é um pacote de vocabulário temático de uma cidade italiana. Comece pelo Templo 1 (Roma). Os demais se desbloqueiam conforme você evolui de nível.',
+            description: 'Cada templo é um pacote de vocabulário de uma cidade italiana. Comece pelo Templo 1 (Roma). Os demais se desbloqueiam conforme você evolui de nível.',
             side: 'top', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('templi'); }
+          }
         },
-
-        // ── 4. Meta prazo ───────────────────────────────────────
         {
           element: '#meta-prazo-container',
           popover: {
             title: '🎯 Defina uma Meta com Prazo',
-            description: 'Clique aqui para escolher um nível alvo e uma data limite. O app calcula quantos XP por dia você precisa para chegar lá a tempo — seu GPS de aprendizado!',
+            description: 'Escolha um nível alvo e uma data limite. O app calcula quantos XP por dia você precisa para chegar lá a tempo — seu GPS de aprendizado!',
             side: 'bottom', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('templi'); window.scrollTo(0,0); }
+          }
         },
-
-        // ── 5. Flashcard ────────────────────────────────────────
         {
           element: '.card-selecao-templo',
           popover: {
             title: '🃏 Flashcards com Repetição Espaçada',
-            description: 'Selecione um templo e estude as palavras. O algoritmo FSRS-4.5 decide quando cada palavra precisa ser revisada — você só vê uma carta no momento exato em que estaria prestes a esquecer.',
+            description: 'Selecione um templo e estude as palavras. O algoritmo FSRS-4.5 decide quando cada palavra precisa ser revisada — você vê a carta exatamente quando está prestes a esquecer.',
             side: 'bottom', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('flashcard'); }
+          }
         },
-
-        // ── 6. Modos de estudo ──────────────────────────────────
         {
           element: '#btn-reverso',
           popover: {
             title: '🔄 Três Modos de Estudo',
-            description: '🔄 Reverso: veja o português e diga o italiano · 📖 Contexto: complete a frase · 🎧 Escuta: ouça o áudio e adivinhe a palavra. Use os três para um aprendizado completo!',
+            description: '🔄 Reverso (PT→IT) · 📖 Contexto (complete a frase) · 🎧 Escuta (adivinhe pelo áudio). Use os três modos para domínio completo!',
             side: 'bottom', align: 'start'
-          },
-          onHighlightStarted: () => { App.navegar('flashcard'); }
+          }
         },
-
-        // ── 7. Botões de avaliação ──────────────────────────────
         {
           element: '.card-actions',
           popover: {
             title: '⭐ Como Avaliar as Cartas',
-            description: '❌ Esqueci → revisão em breve · ⚡ Difícil → 1 dia · ✅ Bom → 3 dias · ⭐ Fácil → 2 semanas. Seja honesto na avaliação — o sistema aprende com você e fica cada vez mais preciso!',
+            description: '❌ Esqueci → revisão amanhã · ⚡ Difícil → 1 dia · ✅ Bom → 3 dias · ⭐ Fácil → 2 semanas. Seja honesto — o sistema aprende com você!',
             side: 'top', align: 'center'
-          },
-          onHighlightStarted: () => {
-            App.navegar('flashcard');
-            const a = document.getElementById('card-actions');
-            if (a) a.style.display = 'grid';
           }
         },
-
-        // ── 8. Quiz ─────────────────────────────────────────────
         {
           element: '#quiz-templo-selector',
           popover: {
             title: '❓ Quiz — 4 Tipos de Exercício',
-            description: 'Teste seu italiano com: Vocabulário (múltipla escolha) · Morfologia (gênero & plural) · Listening (reconheça pelo áudio) · Conjugação verbal. Cada acerto rende XP!',
+            description: 'Vocabulário · Morfologia (gênero & plural) · Listening (reconheça pelo áudio) · Conjugação verbal. Cada acerto rende XP!',
             side: 'top', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('quiz'); }
+          }
         },
-
-        // ── 9. Gramática ────────────────────────────────────────
         {
           element: '#grammatica-container',
           popover: {
             title: '📚 Gramática — Do A1 ao C2',
-            description: '82 lições organizadas em 6 níveis (A1 → C2). Cada lição explica a regra com exemplos reais e tem exercícios interativos. Ative o Modo Imersão 🇮🇹 para ver tudo em italiano!',
+            description: '82 lições em 6 níveis. Cada lição tem explicação + exercícios interativos. Ative o Modo Imersão 🇮🇹 para ver tudo em italiano!',
             side: 'top', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('grammatica'); }
+          }
         },
-
-        // ── 10. Vocabulário ─────────────────────────────────────
         {
           element: '#vocab-search',
           popover: {
             title: '📖 Vocabulário — Seu Glossário Completo',
-            description: 'Pesquise qualquer palavra por italiano ou português. Filtre por dificuldade, favoritos ou templo. Clique em qualquer palavra para ouvir a pronúncia. Use "Ocultar PT/IT" para testar sua memória!',
+            description: 'Pesquise qualquer palavra. Filtre por dificuldade, favoritos ou templo. Clique para ouvir a pronúncia. Use "Ocultar PT/IT" para testar a memória!',
             side: 'bottom', align: 'center'
-          },
-          onHighlightStarted: () => { App.navegar('vocabolario'); }
+          }
         },
       ]
     });
 
-    driverObj.drive();
+    // Navega ao passo inicial antes de iniciar o Driver
+    navegar(0, () => driverObj.drive());
   }
 };
