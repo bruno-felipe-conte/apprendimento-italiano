@@ -2215,6 +2215,9 @@
           <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">📖</button>
           <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">🎧</button>
         </div>
+        <button id="btn-revisao-geral" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados" style="width:100%;margin-top:0.4rem;padding:0.5rem 1rem;background:linear-gradient(135deg,#9B2335,#D4A843);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+          🌍 <span id="btn-rg-label">Revisão Geral</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
+        </button>
         <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
         <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">

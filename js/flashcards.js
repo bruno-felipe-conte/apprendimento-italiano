@@ -859,6 +859,66 @@ const Flashcards = {
     });
   },
 
+  // ── Revisão Geral: all due cards across ALL unlocked temples ─
+  initRevisaoGeral() {
+    const p = App.estado.progresso;
+    if (!p) return;
+    const agora = Date.now();
+    const novas = [], devidas = [];
+
+    p.templos_desbloqueados.forEach(num => {
+      const data = App.estado.templosData[num];
+      if (!data || !data.palavras) return;
+      data.palavras.forEach(palavra => {
+        let fsrs = App.estado.flashcardData[palavra.id];
+        if (fsrs && fsrs.repeticoes !== undefined && fsrs.stability === undefined) {
+          fsrs = FSRS.migrateSM2(fsrs);
+          App.estado.flashcardData[palavra.id] = fsrs;
+        }
+        if (!fsrs || fsrs.state === 'new') {
+          novas.push(palavra);
+        } else if ((fsrs.nextReview || 0) <= agora) {
+          devidas.push({ ...palavra, _nextReview: fsrs.nextReview || 0 });
+        }
+      });
+    });
+
+    devidas.sort((a, b) => a._nextReview - b._nextReview);
+    // Mix: prioritize overdue, sprinkle new cards (max 5 new per session)
+    const novasLimitadas = novas.slice(0, 5);
+    const total = [...devidas, ...novasLimitadas];
+
+    if (total.length === 0) {
+      App.notificar('🎉 Nessuna carta in scadenza oggi!', 'sucesso');
+      return;
+    }
+
+    // Shuffle for variety
+    for (let i = total.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [total[i], total[j]] = [total[j], total[i]];
+    }
+
+    this.temploAtual       = null; // cross-temple mode
+    this.praticandoTodas   = false;
+    this.sessaoStats       = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
+    this.cartasDisponiveis = total.slice(0, 30); // cap at 30
+    this.indiceAtual       = 0;
+    this.virada            = false;
+    if (!this._swipeInitialized) { this._iniciarSwipe(); this._swipeInitialized = true; }
+
+    const vazio   = document.getElementById('flashcard-vazio');
+    const cardEl  = document.getElementById('flashcard');
+    const actions = document.getElementById('card-actions');
+    if (vazio)   vazio.style.display   = 'none';
+    if (cardEl)  cardEl.style.display  = '';
+    if (actions) actions.style.display = 'none';
+
+    const total_devidas = devidas.length;
+    App.notificar(`🌍 ${total_devidas} carta${total_devidas !== 1 ? 's' : ''} em revisão + ${novasLimitadas.length} novas`, 'alerta');
+    this.mostrarCarta();
+  },
+
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
     const data = App.estado.templosData[this.temploAtual];

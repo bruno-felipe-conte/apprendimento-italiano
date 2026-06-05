@@ -94,9 +94,23 @@ const Progressao = {
     82000,  // L22
   ],
 
-  // Nível mínimo para desbloquear cada templo.
-  // Rebalanceado: T10 agora requer L20 (atingível em ~7-10 meses).
-  TEMPLO_NIVEL: { 1: 1, 2: 2, 3: 4, 4: 6, 5: 8, 6: 10, 7: 13, 8: 15, 9: 17, 10: 20 },
+  // Nível mínimo para desbloquear cada templo (inclui templos 11-50).
+  TEMPLO_NIVEL: {
+    1:1,  2:2,  3:4,  4:6,  5:8,  6:10, 7:13, 8:15, 9:17, 10:20,
+    // A1
+    36:1,
+    // A2
+    11:2, 12:2, 13:2, 14:2, 15:2, 17:2, 18:2, 19:2,
+    22:2, 23:2, 25:2, 28:2, 33:2, 34:2,
+    // B1
+    16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4,
+    // B2
+    26:7, 27:7, 30:7, 31:7, 37:7, 38:7, 43:7, 46:7,
+    // C1
+    39:11, 40:11, 42:11, 44:11, 45:11,
+    // C2
+    41:15, 47:15, 48:15, 49:15, 50:15,
+  },
 
   // ── XP threshold for level N (1-based) ────────────────────
   // Returns the cumulative XP needed to reach the START of level N

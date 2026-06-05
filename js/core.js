@@ -14,19 +14,59 @@ const App = {
     flashcardData: {}      // persisted in localStorage
   },
 
-  // Temple gradient palettes (one per temple index 1-10)
+  // Temple gradient palettes (index = temple number, 1-based)
   TEMPLO_CORES: [
     null,
-    'linear-gradient(135deg, #9B2335, #6B1525)',   // 1 Roma
-    'linear-gradient(135deg, #1A5276, #154360)',   // 2 Venezia
-    'linear-gradient(135deg, #1E8449, #145A32)',   // 3 Firenze
-    'linear-gradient(135deg, #7D3C98, #5B2C6F)',   // 4 Napoli
-    'linear-gradient(135deg, #CA6F1E, #9C4A1A)',   // 5 Milano
-    'linear-gradient(135deg, #2E86C1, #1A5276)',   // 6 Bologna
-    'linear-gradient(135deg, #C0392B, #922B21)',   // 7 Torino
-    'linear-gradient(135deg, #117A65, #0E6655)',   // 8 Palermo
-    'linear-gradient(135deg, #6E2F8F, #512E6D)',   // 9 Bari
+    'linear-gradient(135deg, #9B2335, #6B1525)',   // 1  Roma
+    'linear-gradient(135deg, #1A5276, #154360)',   // 2  Venezia
+    'linear-gradient(135deg, #1E8449, #145A32)',   // 3  Firenze
+    'linear-gradient(135deg, #7D3C98, #5B2C6F)',   // 4  Napoli
+    'linear-gradient(135deg, #CA6F1E, #9C4A1A)',   // 5  Milano
+    'linear-gradient(135deg, #2E86C1, #1A5276)',   // 6  Bologna
+    'linear-gradient(135deg, #C0392B, #922B21)',   // 7  Torino
+    'linear-gradient(135deg, #117A65, #0E6655)',   // 8  Palermo
+    'linear-gradient(135deg, #6E2F8F, #512E6D)',   // 9  Bari
     'linear-gradient(135deg, #B7950B, #9A7D0A)',   // 10 Siena
+    'linear-gradient(135deg, #2C3E50, #1A252F)',   // 11
+    'linear-gradient(135deg, #1ABC9C, #148F77)',   // 12
+    'linear-gradient(135deg, #E74C3C, #CB4335)',   // 13
+    'linear-gradient(135deg, #3498DB, #2980B9)',   // 14
+    'linear-gradient(135deg, #27AE60, #1E8449)',   // 15
+    'linear-gradient(135deg, #F39C12, #D68910)',   // 16
+    'linear-gradient(135deg, #8E44AD, #7D3C98)',   // 17
+    'linear-gradient(135deg, #16A085, #148F77)',   // 18
+    'linear-gradient(135deg, #D35400, #BA4A00)',   // 19
+    'linear-gradient(135deg, #2980B9, #1A5276)',   // 20
+    'linear-gradient(135deg, #C0392B, #9B2335)',   // 21
+    'linear-gradient(135deg, #27AE60, #196F3D)',   // 22
+    'linear-gradient(135deg, #8E44AD, #512E6D)',   // 23
+    'linear-gradient(135deg, #E67E22, #CA6F1E)',   // 24
+    'linear-gradient(135deg, #2E86C1, #154360)',   // 25
+    'linear-gradient(135deg, #6C3483, #512E6D)',   // 26
+    'linear-gradient(135deg, #1A5276, #0E3460)',   // 27
+    'linear-gradient(135deg, #117A65, #0B5345)',   // 28
+    'linear-gradient(135deg, #9B59B6, #7D3C98)',   // 29
+    'linear-gradient(135deg, #B7950B, #7D6608)',   // 30
+    'linear-gradient(135deg, #1F618D, #154360)',   // 31
+    'linear-gradient(135deg, #922B21, #7B241C)',   // 32
+    'linear-gradient(135deg, #1E8449, #196F3D)',   // 33
+    'linear-gradient(135deg, #CA6F1E, #A04000)',   // 34
+    'linear-gradient(135deg, #148F77, #0E6655)',   // 35
+    'linear-gradient(135deg, #2980B9, #1F618D)',   // 36
+    'linear-gradient(135deg, #6D4C41, #4E342E)',   // 37
+    'linear-gradient(135deg, #455A64, #263238)',   // 38
+    'linear-gradient(135deg, #283593, #1A237E)',   // 39
+    'linear-gradient(135deg, #00695C, #004D40)',   // 40
+    'linear-gradient(135deg, #4A148C, #38006B)',   // 41
+    'linear-gradient(135deg, #BF360C, #870000)',   // 42
+    'linear-gradient(135deg, #827717, #5D4037)',   // 43
+    'linear-gradient(135deg, #1B5E20, #003300)',   // 44
+    'linear-gradient(135deg, #0D47A1, #002171)',   // 45
+    'linear-gradient(135deg, #880E4F, #560027)',   // 46
+    'linear-gradient(135deg, #E65100, #BF360C)',   // 47
+    'linear-gradient(135deg, #37474F, #1C313A)',   // 48
+    'linear-gradient(135deg, #4E342E, #3E2723)',   // 49
+    'linear-gradient(135deg, #9B2335, #4A0A15)',   // 50
   ],
 
   // Temple names (index = templo number)
@@ -44,8 +84,23 @@ const App = {
     'La Letteratura',      // 10 Siena
   ],
 
-  // XP needed to UNLOCK each temple (minimum level)
-  TEMPLO_NIVEL_MINIMO: { 1:1, 2:3, 3:6, 4:10, 5:15, 6:21, 7:28, 8:36, 9:45, 10:55 },
+  // Minimum level to unlock each temple (matches Progressao.TEMPLO_NIVEL)
+  TEMPLO_NIVEL_MINIMO: {
+    1:1,  2:2,  3:4,  4:6,  5:8,  6:10, 7:13, 8:15, 9:17, 10:20,
+    // A1 topics
+    36:1,
+    // A2 topics
+    11:2, 12:2, 13:2, 14:2, 15:2, 17:2, 18:2, 19:2,
+    22:2, 23:2, 25:2, 28:2, 33:2, 34:2,
+    // B1 topics
+    16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4,
+    // B2 topics
+    26:7, 27:7, 30:7, 31:7, 37:7, 38:7, 43:7, 46:7,
+    // C1 topics
+    39:11, 40:11, 42:11, 44:11, 45:11,
+    // C2 topics
+    41:15, 47:15, 48:15, 49:15, 50:15,
+  },
 
   // Secret unlock code — change to your personal password
   UNLOCK_CODE: '2012',
@@ -124,8 +179,8 @@ const App = {
   // ── Data loading ───────────────────────────────────────────
   async carregarDados() {
     const promises = [];
-    // Load templo-1.json through templo-10.json; skip gracefully on 404
-    for (let i = 1; i <= 10; i++) {
+    // Load templo-1.json through templo-50.json; skip gracefully on 404
+    for (let i = 1; i <= 50; i++) {
       promises.push(
         fetch(`data/templo-${i}.json`)
           .then(r => {
@@ -292,7 +347,7 @@ const App = {
 
     // Collect all words from loaded templos
     const vocab = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 50; i++) {
       const d = this.estado.templosData[i];
       if (d && d.palavras) d.palavras.forEach(p => vocab.push({ ...p, _templo: i }));
     }
@@ -415,7 +470,8 @@ const App = {
     if (!grid) return;
     grid.innerHTML = '';
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 50; i++) {
+      if (!this.estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue; // templo não existe
       const data = this.estado.templosData[i];
       const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
       const concluido = this.estado.progresso.templos_concluidos.includes(i);
@@ -645,13 +701,30 @@ const App = {
     const current = p.xp - xpInicio;
     const percent = range > 0 ? Math.min(100, Math.round((current / range) * 100)) : 0;
 
+    const totalTemplos = Object.keys(this.TEMPLO_NIVEL_MINIMO || {}).length || 50;
     if (elNivel)   elNivel.textContent   = `Livello ${p.nivel}`;
     if (elXp)      elXp.textContent      = `XP: ${p.xp}/${xpFim}`;
-    if (elTempli)  elTempli.textContent  = `Templi: ${p.templos_desbloqueados.length}/10`;
+    if (elTempli)  elTempli.textContent  = `Templi: ${p.templos_desbloqueados.length}/${totalTemplos}`;
     if (elParole)  elParole.textContent  = `Parole: ${p.total_palavras}`;
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
     if (elStreak)  elStreak.textContent  = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', s);
+
+    // Atualiza badge do botão Revisão Geral com total de cartas vencidas
+    const btnRgCount = document.getElementById('btn-rg-count');
+    if (btnRgCount) {
+      const agora = Date.now();
+      let vencidas = 0;
+      p.templos_desbloqueados.forEach(num => {
+        const data = this.estado.templosData[num];
+        if (!data || !data.palavras) return;
+        data.palavras.forEach(pw => {
+          const f = this.estado.flashcardData[pw.id];
+          if (!f || f.state === 'new' || (f.nextReview || 0) <= agora) vencidas++;
+        });
+      });
+      btnRgCount.textContent = vencidas > 0 ? `${vencidas} carta${vencidas !== 1 ? 's' : ''}` : '';
+    }
 
     // Daily goal bar — reset xp_hoje when the date rolls over
     const hoje = new Date().toISOString().slice(0, 10);
