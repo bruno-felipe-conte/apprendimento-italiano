@@ -29,39 +29,45 @@ const Tour = {
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
       // 1 — stats bar
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
-      // 2 — templos grid
+      // 2 — templo 1 (só o primeiro card)
       { sec: 'templi',    prep: null },
       // 3 — meta prazo
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
       // 4 — flashcard selector
       { sec: 'flashcard', prep: null },
-      // 5 — modos de estudo
+      // 5 — três modos de estudo (wrapper)
       { sec: 'flashcard', prep: null },
       // 6 — botões avaliação
       { sec: 'flashcard', prep: () => {
           const a = document.getElementById('card-actions');
           if (a) a.style.display = 'grid';
       }},
-      // 7 — quiz
-      { sec: 'quiz',       prep: null },
-      // 8 — gramática
-      { sec: 'grammatica', prep: null },
-      // 9 — vocabulário
-      { sec: 'vocabolario', prep: null },
+      // 7 — quiz → botão Le Fondamenta
+      { sec: 'quiz', prep: () => {
+          if (typeof Quiz !== 'undefined') Quiz.renderizarSeletor();
+      }},
+      // 8 — gramática → banner A1
+      { sec: 'grammatica', prep: () => {
+          if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
+      }},
+      // 9 — vocabulário → botões Ocultar PT/IT
+      { sec: 'vocabolario', prep: () => {
+          if (typeof Vocab !== 'undefined') Vocab.renderizar();
+      }},
     ];
 
     // Seletores de cada step — usados para scrollIntoView antes do Driver posicionar
     const stepSelectors = [
       '.app-header',
       '.stats-bar',
-      '#templos-grid',
+      '#templos-grid .templo-card:first-child',   // só o Templo 1
       '#meta-prazo-container',
       '.card-selecao-templo',
-      '#btn-reverso',
+      '#btn-modos-wrapper',                         // todos os 3 botões de modo
       '.card-actions',
-      '#quiz-templo-selector',
-      '#grammatica-container',
-      '#vocab-search',
+      '.quiz-templo-btn:not(.bloqueado)',           // Le Fondamenta
+      '.gram-nivel-banner',                         // bloco A1
+      '#vocab-blur-btns',                           // Ocultar PT / Ocultar IT
     ];
 
     const navegar = (idx, cb) => {
@@ -131,11 +137,11 @@ const Tour = {
           }
         },
         {
-          element: '#templos-grid',
+          element: '#templos-grid .templo-card:first-child',
           popover: {
-            title: '🏛️ Templos — Seu Mapa de Aprendizado',
-            description: 'Cada templo é um pacote de vocabulário de uma cidade italiana. Comece pelo Templo 1 (Roma). Os demais se desbloqueiam conforme você evolui de nível.',
-            side: 'top', align: 'center'
+            title: '🏛️ Templo 1 — Por Aqui Você Começa!',
+            description: 'Cada templo é um pacote de vocabulário de uma cidade italiana. Comece aqui, pelo Templo 1 (Roma). Os demais se desbloqueiam conforme você evolui de nível.',
+            side: 'bottom', align: 'center'
           }
         },
         {
@@ -155,11 +161,11 @@ const Tour = {
           }
         },
         {
-          element: '#btn-reverso',
+          element: '#btn-modos-wrapper',
           popover: {
             title: '🔄 Três Modos de Estudo',
             description: '🔄 Reverso (PT→IT) · 📖 Contexto (complete a frase) · 🎧 Escuta (adivinhe pelo áudio). Use os três modos para domínio completo!',
-            side: 'bottom', align: 'start'
+            side: 'bottom', align: 'center'
           }
         },
         {
@@ -171,26 +177,26 @@ const Tour = {
           }
         },
         {
-          element: '#quiz-templo-selector',
+          element: '.quiz-templo-btn:not(.bloqueado)',
           popover: {
             title: '❓ Quiz — 4 Tipos de Exercício',
-            description: 'Vocabulário · Morfologia (gênero & plural) · Listening (reconheça pelo áudio) · Conjugação verbal. Cada acerto rende XP!',
+            description: 'Comece pelo Templo 1. Vocabulário · Morfologia (gênero & plural) · Listening (reconheça pelo áudio) · Conjugação verbal. Cada acerto rende XP!',
             side: 'top', align: 'center'
           }
         },
         {
-          element: '#grammatica-container',
+          element: '.gram-nivel-banner',
           popover: {
             title: '📚 Gramática — Do A1 ao C2',
-            description: '82 lições em 6 níveis. Cada lição tem explicação + exercícios interativos. Ative o Modo Imersão 🇮🇹 para ver tudo em italiano!',
-            side: 'top', align: 'center'
+            description: '82 lições em 6 níveis. Clique no banner do nível para expandir ou recolher as lições. Ative o Modo Imersão 🇮🇹 para ver tudo em italiano!',
+            side: 'bottom', align: 'center'
           }
         },
         {
-          element: '#vocab-search',
+          element: '#vocab-blur-btns',
           popover: {
-            title: '📖 Vocabulário — Seu Glossário Completo',
-            description: 'Pesquise qualquer palavra. Filtre por dificuldade, favoritos ou templo. Clique para ouvir a pronúncia. Use "Ocultar PT/IT" para testar a memória!',
+            title: '📖 Vocabulário — Treine a Memória',
+            description: 'Use "Ocultar PT" ou "Ocultar IT" para esconder uma coluna e testar se você lembra a tradução. Pesquise, filtre por templo ou favoritos e clique para ouvir a pronúncia!',
             side: 'bottom', align: 'center'
           }
         },

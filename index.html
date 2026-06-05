@@ -515,7 +515,8 @@
     .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
     .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
     /* Grid de lezioni */
-    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; }
+    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; transition: none; }
+    .gram-lezioni-grid.recolhido { display: none; }
     /* Card de cada lezione */
     .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'Lato', sans-serif; }
     .gram-lez-card:hover { transform: translateY(-2px); box-shadow: 0 5px 18px rgba(155,35,53,0.14); border-left-color: #6B1525; border-left-width: 5px; }
@@ -2021,10 +2022,13 @@
       font-family: 'Atkinson Hyperlegible', Lato, sans-serif !important;
       font-weight: 700 !important;
       font-size: 0.82rem !important;
+      line-height: 1.2 !important;
       padding: 0.42rem 1.1rem !important;
       cursor: pointer !important;
       transition: background 0.15s, transform 0.1s !important;
       letter-spacing: 0.01em !important;
+      text-rendering: optimizeLegibility !important;
+      -webkit-font-smoothing: antialiased !important;
     }
     .app-tour-theme .driver-popover-footer button:hover {
       background: #7A1C28 !important;
@@ -2251,9 +2255,11 @@
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
             <option value="">-- Seleziona tempio --</option>
           </select>
-          <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT"          data-i18n-title="title_reverso">🔄</button>
-          <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">📖</button>
-          <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">🎧</button>
+          <div id="btn-modos-wrapper" style="display:flex;gap:0.3rem;align-items:center">
+            <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT"          data-i18n-title="title_reverso">🔄</button>
+            <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">📖</button>
+            <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">🎧</button>
+          </div>
         </div>
         <button id="btn-revisao-geral" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados" style="width:100%;margin-top:0.4rem;padding:0.5rem 1rem;background:linear-gradient(135deg,#9B2335,#D4A843);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
           🌍 <span id="btn-rg-label">Revisão Geral</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
@@ -2370,8 +2376,10 @@
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
-        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
-        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
+        <div id="vocab-blur-btns" style="display:flex;gap:0.4rem;flex-shrink:0">
+          <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
+          <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
+        </div>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">

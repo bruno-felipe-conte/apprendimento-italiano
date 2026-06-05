@@ -76,17 +76,20 @@ const Grammatica = {
       const completas = mod.lezioni.filter(u => completadas.includes(u.id)).length;
       const pct       = totalUnid > 0 ? Math.round((completas / totalUnid) * 100) : 0;
 
-      // Module banner
+      // Module banner (clicável para colapsar/expandir)
       const adminDesbloqueado = this._adminMods.has(mod.id);
-      html += `<div class="gram-nivel-banner" style="background:${mod.cor}">`;
+      html += `<div class="gram-nivel-banner" data-nivel="${mod.id}" style="background:${mod.cor};cursor:pointer;user-select:none" onclick="Grammatica.toggleNivel('${mod.id}')">`;
+      html += `<div style="display:flex;align-items:center;justify-content:space-between">`;
       html += `<div class="gram-nivel-badge-txt">${mod.id}${adminDesbloqueado ? ' &nbsp;🔓 Admin' : ''}</div>`;
+      html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
+      html += `</div>`;
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
       html += `<div class="gram-nivel-info">${completas}/${totalUnid} completi &middot; ${totalEx} esercizi</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
       html += '</div>';
 
-      // Grid of lezione cards
-      html += '<div class="gram-lezioni-grid">';
+      // Grid of lezione cards (id para colapso)
+      html += `<div class="gram-lezioni-grid" id="gram-grid-${mod.id}">`;
       for (const u of mod.lezioni) {
         const feita = completadas.includes(u.id);
         const nEx = u.exercicios.length;
@@ -199,6 +202,16 @@ const Grammatica = {
   // ─────────────────────────────────────────────────────────
   // Abrir lição
   // ─────────────────────────────────────────────────────────
+  // ── Colapsa / expande o grid de lições de um nível ───────────
+  toggleNivel(id) {
+    const grid   = document.getElementById(`gram-grid-${id}`);
+    const banner = document.querySelector(`.gram-nivel-banner[data-nivel="${id}"]`);
+    if (!grid) return;
+    const recolhido = grid.classList.toggle('recolhido');
+    const seta = banner?.querySelector('.gram-nivel-toggle-icone');
+    if (seta) seta.style.transform = recolhido ? 'rotate(-90deg)' : 'rotate(0deg)';
+  },
+
   abrirUnidade(moduloId, unidadeId) {
     const mod  = this.dados.moduli.find(m => m.id === moduloId);
     if (!mod) return;
