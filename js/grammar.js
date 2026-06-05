@@ -739,8 +739,8 @@ const Grammatica = {
     }
     return `
       <div class="gram-camada-bloco">
-        <div class="gram-camada-label">🔎 Fase 2: Observe e Descubra</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Clique nos cards abaixo para descobrir as regras e padrões de forma prática!</div>
+        <div class="gram-camada-label">${I18n.t('gram_fase2_label')}</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase2_sub')}</div>
         <div class="gram-observacao-grid">${cards}</div>
       </div>`;
   },
@@ -750,7 +750,7 @@ const Grammatica = {
     if (!u.tabela_visual) return '';
     return `
       <div class="gram-camada-bloco">
-        <div class="gram-camada-label">📋 Fase 3: Tabela de Referência Rápida</div>
+        <div class="gram-camada-label">${I18n.t('gram_fase3_label')}</div>
         <div class="gram-tabela-sem-details">${u.tabela_visual}</div>
       </div>`;
   },
@@ -766,19 +766,19 @@ const Grammatica = {
         <div class="gram-prc-expandivel" id="gram-prc-card-${i}">
           <div class="gram-prc-topo" onclick="this.parentElement.classList.toggle('aberto')">
             <span class="gram-prc-it">🔊 <em>${e.oracao || ''}</em></span>
-            <span class="gram-prc-btn-expandir">Ver detalhes ▾</span>
+            <span class="gram-prc-btn-expandir">${I18n.t('gram_fase4_ver_detalhes')}</span>
           </div>
           <div class="gram-prc-conteudo-oculto">
-            <div class="gram-prc-pq"><span class="gram-prc-tag">Pergunta</span> ${e.pergunta || ''}</div>
-            <div class="gram-prc-pq"><span class="gram-prc-tag">Resposta</span> ${e.resposta || ''}</div>
-            <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">Conclusão</span> <strong>${e.conclusao || ''}</strong></div>
+            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_pergunta')}</span> ${e.pergunta || ''}</div>
+            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_resposta')}</span> ${e.resposta || ''}</div>
+            <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">${I18n.t('gram_fase4_prc_conclusao')}</span> <strong>${e.conclusao || ''}</strong></div>
           </div>
         </div>`;
     }
     return `
       <div class="gram-camada-bloco">
-        <div class="gram-camada-label">🗣️ Fase 4: Analise os Exemplos</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Clique nos exemplos abaixo para exercitar seu raciocínio antes de ver a resposta!</div>
+        <div class="gram-camada-label">${I18n.t('gram_fase4_label')}</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase4_sub')}</div>
         <div class="gram-prc-lista">${rows}</div>
       </div>`;
   },
@@ -806,14 +806,14 @@ const Grammatica = {
             </div>
           </div>
           <div class="gram-armadilha-motivo">
-            <strong>Porquê?</strong> ${a.motivo}
+            <strong>${I18n.t('gram_fase5_porque')}</strong> ${a.motivo}
           </div>
         </div>`;
     }
     return `
       <div class="gram-camada-bloco">
-        <div class="gram-camada-label">⚠️ Fase 5: Evite Armadilhas Comuns</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">Erros comuns cometidos por estudantes de português e como evitá-los:</div>
+        <div class="gram-camada-label">${I18n.t('gram_fase5_label')}</div>
+        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase5_sub')}</div>
         <div class="gram-armadilhas-lista">${cards}</div>
       </div>`;
   },
@@ -836,7 +836,7 @@ const Grammatica = {
   _htmlInventario(u) {
     if (!u.inventario || !u.inventario.length) return '';
     const items = u.inventario.map(i => `<li>${this._formatarPergunta(i)}</li>`).join('');
-    return `<div class="gram-camada-bloco"><div class="gram-camada-label">✅ O que você vai aprender</div><ol class="gram-inventario">${items}</ol></div>`;
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">${I18n.t('gram_inventario_label')}</div><ol class="gram-inventario">${items}</ol></div>`;
   },
 
   _htmlDefinicao(u) {
@@ -844,11 +844,11 @@ const Grammatica = {
     const d = u.definicao;
     if (!d.fenomeno && !d.causa && !d.conceito) return '';
     return `<div class="gram-camada-bloco">
-      <div class="gram-camada-label">🔍 Observe e entenda</div>
+      <div class="gram-camada-label">${I18n.t('gram_definicao_label')}</div>
       <div class="gram-definicao-row">
-        ${d.fenomeno ? `<div class="gram-def-card gram-def-fenomeno"><div class="gram-def-label">Veja</div><div class="gram-def-corpo">${this._formatarPergunta(d.fenomeno)}</div></div>` : ''}
-        ${d.causa    ? `<div class="gram-def-card gram-def-causa"><div class="gram-def-label">Pense</div><div class="gram-def-corpo">${this._formatarPergunta(d.causa)}</div></div>` : ''}
-        ${d.conceito ? `<div class="gram-def-card gram-def-conceito"><div class="gram-def-label">Entenda</div><div class="gram-def-corpo">${this._formatarPergunta(d.conceito)}</div></div>` : ''}
+        ${d.fenomeno ? `<div class="gram-def-card gram-def-fenomeno"><div class="gram-def-label">${I18n.t('gram_def_veja')}</div><div class="gram-def-corpo">${this._formatarPergunta(d.fenomeno)}</div></div>` : ''}
+        ${d.causa    ? `<div class="gram-def-card gram-def-causa"><div class="gram-def-label">${I18n.t('gram_def_pense')}</div><div class="gram-def-corpo">${this._formatarPergunta(d.causa)}</div></div>` : ''}
+        ${d.conceito ? `<div class="gram-def-card gram-def-conceito"><div class="gram-def-label">${I18n.t('gram_def_entenda')}</div><div class="gram-def-corpo">${this._formatarPergunta(d.conceito)}</div></div>` : ''}
       </div>
     </div>`;
   },
@@ -856,7 +856,7 @@ const Grammatica = {
   _htmlTecnica(u) {
     if (!u.tecnica) return '';
     const ft = this._formatarTeoria(u.tecnica);
-    return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">📌 Como usar na prática</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
+    return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">${I18n.t('gram_tecnica_label')}</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
   },
 
   _htmlExemplosPRCLegado(u) {
@@ -871,12 +871,12 @@ const Grammatica = {
         <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">C</span><strong>${this._formatarPergunta(e.conclusao || '')}</strong></div>
       </div>`;
     }
-    return `<div class="gram-camada-bloco"><div class="gram-camada-label">🗣️ Veja os exemplos (clique 🔊 para ouvir)</div><div class="gram-prc-lista">${rows}</div></div>`;
+    return `<div class="gram-camada-bloco"><div class="gram-camada-label">${I18n.t('gram_exemplos_prc_label')}</div><div class="gram-prc-lista">${rows}</div></div>`;
   },
 
   _htmlPonte(u) {
     if (!u.ponte) return '';
-    return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">🇧🇷 Em português é assim… em italiano é assim:</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
+    return `<div class="gram-camada-bloco gram-ponte"><div class="gram-camada-label">${I18n.t('gram_ponte_label')}</div><div class="gram-ponte-corpo">${this._formatarTeoria(u.ponte)}</div></div>`;
   },
 
   _htmlCoda(u) {

@@ -2184,9 +2184,9 @@
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
             <option value="">-- Seleziona tempio --</option>
           </select>
-          <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT">🔄</button>
-          <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna">📖</button>
-          <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio">🎧</button>
+          <button id="btn-reverso"  class="btn-modo-toggle" onclick="Flashcards.toggleReverso()"  title="Reverso: PT→IT"          data-i18n-title="title_reverso">🔄</button>
+          <button id="btn-contexto" class="btn-modo-toggle" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">📖</button>
+          <button id="btn-escuta"   class="btn-modo-toggle" onclick="Flashcards.toggleEscuta()"   title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">🎧</button>
         </div>
         <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
@@ -2209,8 +2209,8 @@
         <div style="display:flex;align-items:center;justify-content:center;gap:0.7rem;margin-bottom:0.75rem;">
           <button class="btn-audio" onclick="Flashcards.pronunciar()" id="btn-audio" data-i18n="fc_btn_pronunciar">🔊 Pronunciar</button>
           <button class="btn-audio" onclick="Flashcards.toggleGravar()" id="btn-gravar" data-i18n="fc_btn_imitar">🎤 Imitar</button>
-          <button class="btn-dica" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Ver dica (nível 1)">💡</button>
-          <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito">🤍</button>
+          <button class="btn-dica" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Ver dica (nível 1)" data-i18n-title="title_dica">💡</button>
+          <button class="btn-favorito" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Adicionar/remover favorito" data-i18n-title="title_favorito">🤍</button>
         </div>
         <div id="imitacao-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.3rem;"></div>
         <div class="card-actions" id="card-actions" style="display:none">
@@ -2300,8 +2300,8 @@
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
-        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt">🙈 Ocultar PT</button>
-        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it">🙈 Ocultar IT</button>
+        <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
+        <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
@@ -2380,11 +2380,11 @@
           <div class="onb-emoji">🚀</div>
           <h3>Por onde começar?</h3>
           <p data-i18n="ob_como_comecar">É muito fácil começar sua jornada:</p>
-          <ol class="onb-steps-list">
-            <li>Acesse a aba <strong>TEMPLOS</strong></li>
-            <li>Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong></li>
-            <li>Estude usando os <strong>FLASHCARDS</strong></li>
-            <li>Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!</li>
+          <ol class="onb-steps-list" id="onb-steps-list">
+            <li id="onb-li1">Acesse a aba <strong>TEMPLOS</strong></li>
+            <li id="onb-li2">Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong></li>
+            <li id="onb-li3">Estude usando os <strong>FLASHCARDS</strong></li>
+            <li id="onb-li4">Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!</li>
           </ol>
         </div>
       </div>

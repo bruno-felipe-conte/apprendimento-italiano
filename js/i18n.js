@@ -329,6 +329,43 @@ const I18n = {
     // ── index.html — section titles ──
     'sec_dialoghi': { pt: 'Modo Diálogo', it: 'Modo Dialogo' },
 
+    // ── Grammar — NMA layer labels ──
+    'gram_fase2_label': { pt: '🔎 Fase 2: Observe e Descubra', it: '🔎 Fase 2: Osserva e Scopri' },
+    'gram_fase2_sub':   { pt: 'Clique nos cards abaixo para descobrir as regras e padrões de forma prática!', it: 'Clicca sulle schede per scoprire regole e schemi in modo pratico!' },
+    'gram_fase3_label': { pt: '📋 Fase 3: Tabela de Referência Rápida', it: '📋 Fase 3: Tabella di Riferimento Rapido' },
+    'gram_fase4_label': { pt: '🗣️ Fase 4: Analise os Exemplos', it: '🗣️ Fase 4: Analizza gli Esempi' },
+    'gram_fase4_sub':   { pt: 'Clique nos exemplos abaixo para exercitar seu raciocínio antes de ver a resposta!', it: 'Clicca sugli esempi per esercitare il ragionamento prima di vedere la risposta!' },
+    'gram_fase4_prc_pergunta': { pt: 'Pergunta', it: 'Domanda' },
+    'gram_fase4_prc_resposta': { pt: 'Resposta', it: 'Risposta' },
+    'gram_fase4_prc_conclusao': { pt: 'Conclusão', it: 'Conclusione' },
+    'gram_fase4_ver_detalhes': { pt: 'Ver detalhes ▾', it: 'Vedi dettagli ▾' },
+    'gram_fase5_label': { pt: '⚠️ Fase 5: Evite Armadilhas Comuns', it: '⚠️ Fase 5: Evita le Trappole Comuni' },
+    'gram_fase5_sub':   { pt: 'Erros comuns cometidos por estudantes de português e como evitá-los:', it: 'Errori comuni commessi dagli studenti e come evitarli:' },
+    'gram_fase5_porque': { pt: 'Porquê?', it: 'Perché?' },
+    'gram_inventario_label': { pt: '✅ O que você vai aprender', it: '✅ Cosa imparerai' },
+    'gram_definicao_label': { pt: '🔍 Observe e entenda', it: '🔍 Osserva e capisci' },
+    'gram_def_veja':    { pt: 'Veja', it: 'Osserva' },
+    'gram_def_pense':   { pt: 'Pense', it: 'Rifletti' },
+    'gram_def_entenda': { pt: 'Entenda', it: 'Capisci' },
+    'gram_tecnica_label': { pt: '📌 Como usar na prática', it: '📌 Come usarlo in pratica' },
+    'gram_exemplos_prc_label': { pt: '🗣️ Veja os exemplos (clique 🔊 para ouvir)', it: '🗣️ Vedi gli esempi (clicca 🔊 per ascoltare)' },
+    'gram_ponte_label': { pt: '🇧🇷 Em português é assim… em italiano é assim:', it: '🇧🇷 In portoghese è così… in italiano è così:' },
+
+    // ── Tooltips — flashcard buttons ──
+    'title_reverso':   { pt: 'Reverso: PT→IT', it: 'Inverso: PT→IT' },
+    'title_contexto':  { pt: 'Contexto: frase com lacuna', it: 'Contesto: frase con lacuna' },
+    'title_escuta':    { pt: 'Escuta: adivinhe pelo áudio', it: 'Ascolto: indovina dall\'audio' },
+    'title_dica':      { pt: 'Ver dica (nível 1)', it: 'Mostra suggerimento (livello 1)' },
+    'title_favorito':  { pt: 'Adicionar/remover favorito', it: 'Aggiungi/rimuovi dai preferiti' },
+    'title_blur_pt':   { pt: 'Oculta a coluna em português para testar sua memória', it: 'Nasconde la colonna portoghese per testare la memoria' },
+    'title_blur_it':   { pt: 'Oculta a coluna em italiano para testar sua memória', it: 'Nasconde la colonna italiana per testare la memoria' },
+
+    // ── Onboarding slide 3 ──
+    'ob_slide3_li1': { pt: 'Acesse a aba <strong>TEMPLOS</strong>', it: 'Vai alla scheda <strong>TEMPLI</strong>' },
+    'ob_slide3_li2': { pt: 'Escolha o <strong>1º Templo (Roma - Le Fondamenta)</strong>', it: 'Scegli il <strong>1° Tempio (Roma - Le Fondamenta)</strong>' },
+    'ob_slide3_li3': { pt: 'Estude usando os <strong>FLASHCARDS</strong>', it: 'Studia con i <strong>FLASHCARD</strong>' },
+    'ob_slide3_li4': { pt: 'Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!', it: 'Metti alla prova con i <strong>QUIZ</strong>!' },
+
     // ── Tour ──
     'tour_templi_title': { pt: '🏛️ Templi (Sua Jornada)', it: '🏛️ Templi (Il Tuo Viaggio)' },
     'tour_templi_desc': { pt: 'Aqui é o coração do seu aprendizado. Desbloqueie novos templos e alcance sua meta diária de experiência.', it: 'Questo è il cuore del tuo apprendimento. Sblocca nuovi templi e raggiungi il tuo obiettivo quotidiano di esperienza.' },
@@ -377,26 +414,31 @@ const I18n = {
 
   // Busca todos os elementos com data-i18n e substitui o innerText (ou HTML mantendo ícones)
   traduzirDOM() {
-    const elementos = document.querySelectorAll('[data-i18n]');
-    elementos.forEach(el => {
+    // Traduz textContent / value
+    document.querySelectorAll('[data-i18n]').forEach(el => {
       const chave = el.getAttribute('data-i18n');
-      if (this.dict[chave]) {
-        const texto = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
-        
-        if (el.tagName.toLowerCase() === 'input' && el.type === 'button') {
-          el.value = texto;
-        } else if (el.tagName.toLowerCase() === 'button' && el.querySelector('span')) {
-            // Se o botão tiver um <span> dentro (como bottom nav), traduz o textContent apenas do <span>, 
-            // assumindo que há um ícone emoji fora do span. Se o HTML for 🏛️<span>Início</span>
-            el.querySelector('span').textContent = texto;
-        } else {
-            // Se houver emoji junto no texto (ex: 💬 Dialoghi), isso vai sobrescrever.
-            // Para prevenir a remoção dos emojis, vamos usar replace no HTML ou os data-i18n devem 
-            // envolver apenas o texto.
-            // Para as navs do topo, vamos considerar: `💬 <span data-i18n="...">Dialoghi</span>`
-          el.textContent = texto;
-        }
+      if (!this.dict[chave]) return;
+      const texto = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+      if (el.tagName.toLowerCase() === 'input' && el.type === 'button') {
+        el.value = texto;
+      } else if (el.tagName.toLowerCase() === 'button' && el.querySelector('span')) {
+        el.querySelector('span').textContent = texto;
+      } else {
+        el.textContent = texto;
       }
+    });
+
+    // Traduz atributo title (data-i18n-title)
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const chave = el.getAttribute('data-i18n-title');
+      if (this.dict[chave]) el.title = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
+    });
+
+    // Onboarding slide 3 — contém HTML (negrito), usa innerHTML
+    ['onb-li1','onb-li2','onb-li3','onb-li4'].forEach((id, i) => {
+      const el = document.getElementById(id);
+      const key = `ob_slide3_li${i+1}`;
+      if (el && this.dict[key]) el.innerHTML = this.dict[key][this.idioma] || this.dict[key]['pt'];
     });
 
     const langBtn = document.getElementById('lang-toggle');
