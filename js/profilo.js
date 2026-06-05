@@ -100,10 +100,10 @@ const Profilo = {
           <div class="profilo-conquistas-grid" id="profilo-conquistas"></div>
         </div>
 
-        <!-- Lembretes push -->
-        <div class="profilo-card" style="margin-top:0">
-          ${typeof Notificacoes !== 'undefined' ? Notificacoes.renderizarCard() : ''}
-        </div>
+        <!-- Lembretes push — só renderiza se o módulo estiver carregado e a API disponível -->
+        ${(typeof Notificacoes !== 'undefined' && 'Notification' in window)
+          ? `<div class="profilo-card" style="margin-top:0">${Notificacoes.renderizarCard()}</div>`
+          : ''}
 
         <div class="profilo-card" style="margin-top:1.5rem">
           <div class="profilo-card-titulo">${I18n.t('prof_gestao_dati')}</div>

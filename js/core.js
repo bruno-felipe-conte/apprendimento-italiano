@@ -152,6 +152,7 @@ const App = {
     if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
     // Init sound feedback
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();
+    if (typeof Notificacoes !== 'undefined') Notificacoes.init();
     // Pre-load speech synthesis voices so the first pronunciar() call is instant
     if ('speechSynthesis' in window) {
       speechSynthesis.getVoices(); // trigger async load
