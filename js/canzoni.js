@@ -340,3 +340,7 @@ const Canzoni = {
     </div>`;
   }
 };
+
+document.addEventListener('i18n:changed', () => {
+  if (document.getElementById('canzoni-container')) Canzoni.renderizarSeletor();
+});

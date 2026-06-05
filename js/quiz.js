@@ -706,3 +706,18 @@ const Quiz = {
     return a;
   }
 };
+
+document.addEventListener('i18n:changed', () => {
+  const seletor   = document.getElementById('quiz-templo-selector');
+  const resultado = document.getElementById('quiz-resultado');
+  const pergunta  = document.getElementById('quiz-pergunta');
+  if (!seletor && !resultado && !pergunta) return;
+
+  if (resultado && resultado.style.display !== 'none') {
+    Quiz.mostrarResultado();
+  } else if (document.getElementById('quiz-container')?.style.display !== 'none') {
+    Quiz.mostrarPergunta(Quiz.indiceAtual);
+  } else {
+    Quiz.renderizarSeletor();
+  }
+});

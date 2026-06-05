@@ -968,3 +968,17 @@ const Flashcards = {
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);
   }
 };
+
+document.addEventListener('i18n:changed', () => {
+  if (!document.getElementById('flashcard')) return;
+  const vazio  = document.getElementById('flashcard-vazio');
+  const resumo = document.getElementById('flashcard-resumo');
+
+  if (resumo && resumo.style.display !== 'none') {
+    Flashcards.mostrarResumo();
+  } else if (vazio && vazio.style.display !== 'none') {
+    Flashcards.mostrarVazio();
+  } else if (Flashcards.cartaAtual) {
+    Flashcards.mostrarCarta();
+  }
+});

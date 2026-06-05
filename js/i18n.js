@@ -401,12 +401,29 @@ const I18n = {
 
   mudarIdioma(lang) {
     if (lang !== 'pt' && lang !== 'it') return;
-    this.idioma = lang;
-    localStorage.setItem('it_idioma', lang);
-    this.traduzirDOM();
-    // Força recarregamento dos dados de gramática na próxima visita à aba
-    if (typeof Grammatica !== 'undefined') Grammatica.dados = null;
-    if (typeof App !== 'undefined') App.notificar(lang === 'it' ? 'Lingua cambiata in Italiano!' : 'Idioma alterado para Português!', 'sucesso');
+    document.body.classList.add('lang-switching');       // fade out
+    setTimeout(() => {
+      this.idioma = lang;
+      localStorage.setItem('it_idioma', lang);
+      this.traduzirDOM();
+      document.dispatchEvent(new CustomEvent('i18n:changed', { detail: { lang } }));
+      // Força recarregamento dos dados de gramática na próxima visita à aba
+      if (typeof Grammatica !== 'undefined') Grammatica.dados = null;
+      document.body.classList.remove('lang-switching'); // fade in
+      if (typeof App !== 'undefined') {
+        if (lang === 'it') {
+          const primeiraVez = !localStorage.getItem('it_imersao_usada');
+          if (primeiraVez) {
+            localStorage.setItem('it_imersao_usada', '1');
+            App.notificar('Benvenuto! Ora sei in modalità Immersione 🇮🇹', 'alerta');
+          } else {
+            App.notificar('Lingua cambiata in Italiano!', 'sucesso');
+          }
+        } else {
+          App.notificar('Idioma alterado para Português!', 'sucesso');
+        }
+      }
+    }, 180);
   },
 
   toggleIdioma() {
@@ -450,7 +467,10 @@ const I18n = {
 
     const langBtn = document.getElementById('lang-toggle');
     if (langBtn) {
-      langBtn.textContent = this.idioma === 'pt' ? '🇮🇹' : '🇧🇷';
+      const ptSeg = document.getElementById('lang-pill-pt');
+      const itSeg = document.getElementById('lang-pill-it');
+      if (ptSeg) ptSeg.classList.toggle('ativo', this.idioma === 'pt');
+      if (itSeg) itSeg.classList.toggle('ativo', this.idioma === 'it');
       langBtn.title = this.idioma === 'pt' ? 'Mudar para Italiano' : 'Cambia in Portoghese';
     }
   }

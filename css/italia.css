@@ -66,7 +66,9 @@ body {
   background-image:
     repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(158,143,127,.04) 28px,rgba(158,143,127,.04) 29px),
     repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(201,149,42,.02) 60px,rgba(201,149,42,.02) 61px);
+  transition: opacity 0.18s ease;
 }
+body.lang-switching { opacity: 0; }
 img,video,svg { display:block; max-width:100%; }
 a { color:var(--cor-veneziano); text-decoration:none; transition:color var(--trans-rapida); }
 a:hover { color:var(--cor-veneziano-escuro); }

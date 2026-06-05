@@ -444,3 +444,7 @@ const Dialoghi = {
     `;
   }
 };
+
+document.addEventListener('i18n:changed', () => {
+  if (document.getElementById('dialoghi-container')) Dialoghi.renderizarSeletor();
+});

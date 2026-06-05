@@ -194,6 +194,7 @@ const Profilo = {
       diario:      JSON.parse(localStorage.getItem('it_diario')      || '{}'),
       onboarding:  localStorage.getItem('it_onboarding_done'),
       tema:        localStorage.getItem('it_tema'),
+      idioma:      localStorage.getItem('it_idioma') || 'pt',
       canzoni_custom:  JSON.parse(localStorage.getItem('it_canzoni_custom')  || '[]'),
       dialoghi_custom: JSON.parse(localStorage.getItem('it_dialoghi_custom') || '[]'),
     };
@@ -222,6 +223,7 @@ const Profilo = {
         if (backup.diario)     localStorage.setItem('it_diario',         JSON.stringify(backup.diario));
         if (backup.onboarding) localStorage.setItem('it_onboarding_done', backup.onboarding);
         if (backup.tema)       localStorage.setItem('it_tema',            backup.tema);
+        if (backup.idioma)     localStorage.setItem('it_idioma',          backup.idioma);
         if (backup.canzoni_custom)  localStorage.setItem('it_canzoni_custom',  JSON.stringify(backup.canzoni_custom));
         if (backup.dialoghi_custom) localStorage.setItem('it_dialoghi_custom', JSON.stringify(backup.dialoghi_custom));
         App.notificar('notif_backup_imp', 'sucesso');

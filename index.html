@@ -851,6 +851,20 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.18);
     }
 
+    /* ── Botão PT | IT ──────────────────────────────── */
+    .lang-pill-btn {
+      display: inline-flex; align-items: center; gap: 0.18rem;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 999px; padding: 0.2rem 0.6rem;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em;
+      cursor: pointer; color: rgba(255,255,255,0.5);
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .lang-pill-btn:hover { background: rgba(255,255,255,0.22); }
+    .lang-pill-seg { transition: color 0.18s, opacity 0.18s; opacity: 0.45; }
+    .lang-pill-seg.ativo { opacity: 1; color: #fff; }
+    .lang-pill-div { opacity: 0.3; }
+
     /* ══════════════════════════════════════════════════════
        DARK MODE THEME — Nero Classico Warm Atmosphere
        ══════════════════════════════════════════════════════ */
@@ -2076,7 +2090,11 @@
       <div class="header-logo-row">
         <div class="app-logo">🇮🇹 Italiano Autentico</div>
         <div class="header-icons">
-          <button id="lang-toggle" class="theme-toggle-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">🇮🇹</button>
+          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">
+            <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
+            <span class="lang-pill-div">|</span>
+            <span id="lang-pill-it" class="lang-pill-seg">IT</span>
+          </button>
           <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
           <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
           <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo">👤</button>

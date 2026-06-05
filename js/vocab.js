@@ -299,3 +299,7 @@ const Vocab = {
     return d.innerHTML;
   }
 };
+
+document.addEventListener('i18n:changed', () => {
+  if (document.getElementById('vocab-list')) Vocab.renderizar();
+});
