@@ -101,6 +101,7 @@ input,textarea,select { font-family:inherit; }
 .nav-tabs {
   display: flex;
   align-items: stretch;
+  justify-content: center;   /* centraliza as abas */
   gap: 0;
   overflow-x: auto;
   scrollbar-width: none;
