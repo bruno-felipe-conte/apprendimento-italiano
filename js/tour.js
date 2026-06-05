@@ -50,13 +50,36 @@ const Tour = {
       { sec: 'vocabolario', prep: null },
     ];
 
+    // Seletores de cada step — usados para scrollIntoView antes do Driver posicionar
+    const stepSelectors = [
+      '.app-header',
+      '.stats-bar',
+      '#templos-grid',
+      '#meta-prazo-container',
+      '.card-selecao-templo',
+      '#btn-reverso',
+      '.card-actions',
+      '#quiz-templo-selector',
+      '#grammatica-container',
+      '#vocab-search',
+    ];
+
     const navegar = (idx, cb) => {
       const p = passos[idx];
       if (!p) { cb(); return; }
       App.navegar(p.sec);
       if (p.prep) p.prep();
-      // Aguarda a seção renderizar antes do Driver posicionar o overlay
-      setTimeout(cb, 120);
+      // Aguarda seção renderizar, depois scrolla o elemento-alvo para o centro
+      // visível ANTES do Driver calcular a posição do overlay
+      setTimeout(() => {
+        const sel = stepSelectors[idx];
+        if (sel) {
+          const el = document.querySelector(sel);
+          if (el) el.scrollIntoView({ behavior: 'instant', block: 'center' });
+        }
+        // Pequena pausa extra para o scroll terminar
+        setTimeout(cb, 60);
+      }, 100);
     };
 
     let driverObj;

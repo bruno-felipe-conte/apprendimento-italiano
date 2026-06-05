@@ -50,6 +50,8 @@
     }
     .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
     .app-logo { font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+    .header-logo-row { display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 0; }
+    .header-icons { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
     .stats-bar { display: flex; gap: 0.38rem; align-items: center; flex-wrap: nowrap; background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 0.3rem 0.6rem; }
     .stat-item {
       background: rgba(0,0,0,0.22);
@@ -75,9 +77,13 @@
 
     @media (max-width: 600px) {
       /* Header empilha: logo acima, stats embaixo ocupando largura total */
-      .app-header { padding: calc(0.5rem + var(--safe-top)) 0.9rem 0.45rem; }
+      .app-header { padding: calc(0.5rem + var(--safe-top)) 0.75rem 0.4rem; }
+      /* No mobile: logo-row (logo + ícones) numa linha, stats embaixo */
       .header-top { flex-direction: column; align-items: stretch; gap: 0.3rem; }
-      .app-logo { font-size: 1.05rem; justify-content: space-between; }
+      .header-logo-row { justify-content: space-between; }
+      .app-logo { font-size: 0.95rem; }
+      /* Ícones menores para caber sem cortar */
+      .theme-toggle-btn { width: 30px !important; height: 30px !important; font-size: 0.95rem !important; }
 
       /* Stats bar ocupa largura toda e organiza em 2 linhas */
       .stats-bar {
@@ -88,13 +94,14 @@
         align-items: stretch;
         flex-wrap: nowrap;
       }
-      /* Linha principal: Livello + XP + Streak — centralizados */
+      /* Linha principal: Livello + XP + Streak — ocupam toda a largura */
       .stats-primary-row {
         display: flex;
         gap: 0.3rem;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
       }
+      .stats-primary-row .stat-item { flex: 1; text-align: center; }
       /* Linha secundária: Templi + Parole — menores, separados por linha fina */
       .stats-secondary-row {
         display: flex;
@@ -2066,12 +2073,14 @@
 
   <header class="app-header">
     <div class="header-top">
-      <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <div class="header-logo-row">
         <div class="app-logo">🇮🇹 Italiano Autentico</div>
-        <button id="lang-toggle" class="theme-toggle-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">🇮🇹</button>
-        <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
-        <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
-        <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo">👤</button>
+        <div class="header-icons">
+          <button id="lang-toggle" class="theme-toggle-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">🇮🇹</button>
+          <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
+          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
+          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo">👤</button>
+        </div>
       </div>
       <div class="stats-bar" id="stats-bar">
         <div class="stats-primary-row">
