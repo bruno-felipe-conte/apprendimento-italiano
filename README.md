@@ -25,11 +25,11 @@ Execute este comando apenas quando a versão estiver pronta para os usuários.
 
 | Módulo | Descrição |
 |---|---|
-| **🏛️ Templi** | 10 templos de vocabulário com progresso e heatmap de atividade |
+| **🏛️ Templi** | 51 templos de vocabulário com progresso e heatmap de atividade |
 | **🃏 Flashcard** | Sistema de revisão espaçada com blur-reveal e áudio |
 | **❓ Quiz** | Questões de múltipla escolha por categoria |
-| **📖 Vocabolario** | 700+ palavras organizadas por templo |
-| **📚 Grammatica** | 45 lições (A1/A2/B1/B2) com método pedagógico NMA de 10 camadas |
+| **📖 Vocabolario** | Vocabulário organizado por templo |
+| **📚 Grammatica** | 82 lezioni (A1/A2/B1/B2 + C1/C2 avançados) com método pedagógico NMA de 7 camadas |
 
 ### Gramática — Método NMA
 Cada lição segue 7 camadas pedagógicas:
@@ -74,9 +74,9 @@ italian-learning-app-pro/
 │   ├── grammar.js              # Módulo de gramática (renderer NMA)
 │   └── heatmap.js              # Heatmap de atividade diária
 ├── data/
-│   ├── grammar.json            # 45 lições com campos NMA
+│   ├── grammar.json            # 82 lezioni com campos NMA (PT e IT)
 │   ├── quizzes.json            # Questões de quiz
-│   └── templo-[1-10].json      # Vocabulário por templo
+│   └── templo-[1-51].json      # Vocabulário por templo
 └── icons/
     └── icon.svg
 ```
