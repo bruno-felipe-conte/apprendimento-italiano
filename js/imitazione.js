@@ -153,7 +153,7 @@ const Imitazione = {
 
       <div style="text-align:center;background:var(--cor-marmore-escuro);padding:2rem;border-radius:16px">
         <button id="btn-mic" class="mic-button" onclick="Imitazione.toggleGravacao()">🎙️</button>
-        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:var(--cor-inchiostro-claro)">Clique no microfone para falar</div>
+        <div id="mic-status" style="margin-top:1rem;font-weight:700;color:var(--cor-inchiostro-claro)">${I18n.idioma === 'it' ? 'Clicca sul microfono per parlare' : 'Clique no microfone para falar'}</div>
       </div>
 
       <div id="imitazione-resultado" style="display:none;margin-top:1.5rem;text-align:center;background:var(--cor-marmore);padding:1.5rem;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.1)">

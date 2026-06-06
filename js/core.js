@@ -396,7 +396,7 @@ const App = {
       <div class="pdd-acoes">
         <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
         <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Studiare</button>
-        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = App.estado.progresso.favoritos.includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
+        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
         </button>
       </div>
@@ -445,7 +445,7 @@ const App = {
     const cor = dados.atingeNoPrazo ? '#27AE60' : '#E74C3C';
     const emoji = dados.atingeNoPrazo ? '✅' : '⚠️';
     return `<div class="card-meta-prazo" onclick="App.abrirModalMetaPrazo()">
-      <div class="meta-prazo-titulo">${emoji} Meta: Nível ${dados.nivel_alvo} até ${new Date(dados.data_alvo).toLocaleDateString('pt-BR', {timeZone: 'UTC'})}</div>
+      <div class="meta-prazo-titulo">${emoji} ${I18n.idioma === 'it' ? 'Obiettivo' : 'Meta'}: ${I18n.idioma === 'it' ? 'Livello' : 'Nível'} ${dados.nivel_alvo} ${I18n.idioma === 'it' ? 'entro il' : 'até'} ${new Date(dados.data_alvo).toLocaleDateString(I18n.idioma === 'it' ? 'it-IT' : 'pt-BR', {timeZone: 'UTC'})}</div>
       <div class="meta-prazo-info">
         <span style="color:${cor}">${dados.xpPorDia} ${I18n.t('meta_xp_necessarios')}</span>
         <span>·</span>

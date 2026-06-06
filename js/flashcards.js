@@ -637,13 +637,8 @@ const Flashcards = {
       App.notificar('notif_fc_sem_favoritos', 'alerta');
       return;
     }
-    const favPalavras = [];
-    for (let i = 1; i <= 10; i++) {
-      const data = App.estado.templosData[i];
-      if (data && data.palavras) {
-        data.palavras.forEach(p => { if (favIds.includes(p.id)) favPalavras.push(p); });
-      }
-    }
+    // Busca em todos os templos carregados via vocabCache (inclui T11-T50)
+    const favPalavras = (App.estado.vocabCache || []).filter(p => favIds.includes(p.id));
     if (favPalavras.length === 0) {
       App.notificar('notif_fc_favoritos_nao_enc', 'erro');
       return;

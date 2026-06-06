@@ -109,13 +109,13 @@ const Canzoni = {
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.2rem">
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Nível</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.idioma === 'it' ? 'Livello' : 'Nível'}</label>
             <select id="can-nivel" style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:0.9rem">
               ${['A1','A2','B1','B2','C1'].map(n => `<option ${n===nivel?'selected':''}>${n}</option>`).join('')}
             </select>
           </div>
           <div>
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Ícone (emoji)</label>
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.idioma === 'it' ? 'Icona (emoji)' : 'Ícone (emoji)'}</label>
             <input id="can-icone" type="text" value="${icone}" maxlength="4"
               style="width:100%;padding:0.5rem;border:2px solid #ddd;border-radius:8px;margin-top:0.3rem;font-size:1.2rem;text-align:center">
           </div>
