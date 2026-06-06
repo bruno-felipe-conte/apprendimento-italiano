@@ -13,6 +13,14 @@ const Storie = {
   paragrafoAttivo: 0,
   traduzirVisivel: true,
   completate: [],
+  
+  // ── Novo: modo de renderização (parágrafos vs contínuo) ─────
+  modoContínuo: false,  // true = texto limpo em uma página única (modo contínuo)
+  
+  // ── Tooltip para tradução de palavras ──────────────────────
+  tooltipAtivo: null,    // { wordSpan, rect } ou null
+  tooltipTimeout: null,
+  completate: [],
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -127,6 +135,8 @@ const Storie = {
     const txtBtnTradOff = i ? '👁️ Mostra traduzione' : '👁️ Mostrar tradução';
     const txtBtnTutto = i ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo';
     const txtBtnIndietro = i ? '‹ Storie' : '‹ Storie';
+    const txtBtnContinuo = i ? '📄 Continuo' : '📄 Contínuo';
+    const txtBtnParagrafi = i ? '📑 Paragrafi' : '📑 Parágrafos';
 
     let html = `
       <div class="gram-lesson-nav">
@@ -144,37 +154,50 @@ const Storie = {
             ${this.traduzirVisivel ? txtBtnTrad : txtBtnTradOff}
           </button>
           <button class="btn-primario" onclick="Storie._ouvirTudo()">${txtBtnTutto}</button>
+          <button class="btn-secondario" onclick="Storie._toggleModoContinuo()">
+            ${this.modoContinuo ? txtBtnParagrafi : txtBtnContinuo}
+          </button>
         </div>
       </div>
 
       <div class="storie-paragrafi">`;
 
-    s.testo.forEach((p, idx) => {
-      const itText = this._markParole(p.italiano, p.parole || [], idx);
-      const ptText = (p.portugues || '').replace(/</g, '&lt;');
-      html += `
-        <div class="storie-paragrafo" id="storie-par-${idx}">
-          <div class="storie-paragrafo-it">
-            <span class="storie-paragrafo-num">${idx + 1}</span>
-            <span class="storie-texto-it">${itText}</span>
-            <button class="storie-audio-btn" onclick="App.pronunciar('${(p.italiano || '').replace(/'/g, "\\'")}')" title="${i ? 'Ascolta' : 'Ouvir'}">🔊</button>
-          </div>
-          ${this.traduzirVisivel ? `<div class="storie-paragrafo-pt">${ptText}</div>` : ''}
-          ${(p.parole && p.parole.length) ? this._renderVocabPanel(p.parole, idx) : ''}
-        </div>`;
-    });
+    if (this.modoContinuo) {
+      // Modo contínuo: texto limpo sem numeração de parágrafos
+      const textoCompleto = s.testo.map((p, idx) => {
+        const itText = this._markParole(p.italiano, p.parole || [], idx);
+        return `<span class="storie-texto-it">${itText}</span>`;
+      }).join(' ');
+      html += `<div class="storie-continuo">${textoCompleto}</div>`;
+    } else {
+      // Modo parágrafos (original)
+      s.testo.forEach((p, idx) => {
+        const itText = this._markParole(p.italiano, p.parole || [], idx);
+        const ptText = (p.portugues || '').replace(/</g, '&lt;');
+        html += `
+          <div class="storie-paragrafo" id="storie-par-${idx}">
+            <div class="storie-paragrafo-it">
+              <span class="storie-paragrafo-num">${idx + 1}</span>
+              <span class="storie-texto-it">${itText}</span>
+              <button class="storie-audio-btn" onclick="App.pronunciar('${(p.italiano || '').replace(/'/g, "\\'")}')" title="${i ? 'Ascolta' : 'Ouvir'}">🔊</button>
+            </div>
+            ${this.traduzirVisivel ? `<div class="storie-paragrafo-pt">${ptText}</div>` : ''}
+            ${(p.parole && p.parole.length) ? this._renderVocabPanel(p.parole, idx) : ''}
+          </div>`;
+      });
+    }
 
     html += `
-      </div>
+      </div>`;
 
-      <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1.2rem;flex-wrap:wrap">
+      <div class="storie-controls" style="${this.modoContínuo ? '' : 'display:flex;gap:0.5rem;justify-content:space-between'}">
         <button class="btn-secondario" onclick="Storie.renderizarSeletor()">
           ${i ? '‹ Tutte le storie' : '‹ Todas as histórias'}
         </button>
         <button class="btn-primario" onclick="Storie._marcarLida()">
           ${this.completate.includes(s.id)
             ? (i ? '✓ Riletta' : '✓ Relida')
-            : (i ? '✓ Ho finito' : '✓ Concluí (+' + (s.xp_recompensa || 50) + ' XP)')}
+            : (i ? '✓ Ho finito' : '✓ Concluí (' + (s.xp_recompensa || 50) + ' XP)')}
         </button>
       </div>`;
 
@@ -222,6 +245,11 @@ const Storie = {
     this._renderizarStoria();
   },
 
+  _toggleModoContinuo() {
+    this.modoContinuo = !this.modoContinuo;
+    this._renderizarStoria();
+  },
+
   _ouvirTudo() {
     if (!this.storAttuale) return;
     const paragrafi = this.storAttuale.testo.map(p => p.italiano).join(' ');
@@ -251,5 +279,99 @@ const Storie = {
   // ── Inicialização ao navegar para a aba ────────────────────
   init() {
     this.renderizarSeletor();
+    this._setupTooltipListener();
+  },
+
+  // ── Tooltip de tradução ao clicar na palavra ────────────────
+  _setupTooltipListener() {
+    const container = document.getElementById('storie-container');
+    if (!container) return;
+    // Remove listener anterior se houver
+    container.removeEventListener('click', this._handleWordClick);
+    // Adiciona novo listener
+    container.addEventListener('click', this._handleWordClick = (e) => {
+      const wordEl = e.target.closest('.storie-parola');
+      if (!wordEl) {
+        this._esconderTooltip();
+        return;
+      }
+      e.preventDefault();
+      e.stopPropagation();
+      this._mostrarTooltip(wordEl, e);
+    });
+    // Fechar tooltip ao clicar fora
+    document.addEventListener('click', this._handleDocClick = (e) => {
+      if (!e.target.closest('.storie-tooltip') && !e.target.closest('.storie-parola')) {
+        this._esconderTooltip();
+      }
+    });
+    // Fechar tooltip com ESC
+    document.addEventListener('keydown', this._handleEscKey = (e) => {
+      if (e.key === 'Escape') this._esconderTooltip();
+    });
+  },
+
+  _mostrarTooltip(wordEl, event) {
+    const palavra = wordEl.dataset.word;
+    const idxPar = wordEl.dataset.idxPar;
+    if (!palavra || !this.storAttuale) return;
+
+    // Encontrar dados da palavra no parágrafo correspondente
+    const paragrafo = this.storAttuale.testo[idxPar];
+    const wordData = (paragrafo.parole || []).find(p => p.parola.toLowerCase() === palavra.toLowerCase());
+    if (!wordData) return;
+
+    const i = I18n.idioma === 'it';
+    const tooltip = document.createElement('div');
+    tooltip.className = 'storie-tooltip';
+    tooltip.innerHTML = `
+      <div class="storie-tooltip-header">
+        <span class="storie-tooltip-word">${this._escape(wordData.parola)}</span>
+        <span class="storie-tooltip-ipa">${this._escape(wordData.ipa || '')}</span>
+      </div>
+      <div class="storie-tooltip-body">
+        <div class="storie-tooltip-trad">${this._escape(wordData.traduzione || '')}</div>
+        <div class="storie-tooltip-cat">${this._escape(wordData.categoria || '')}</div>
+      </div>
+      <button class="storie-tooltip-audio" onclick="App.pronunciar('${(wordData.parola || '').replace(/'/g, "\\'")}')" title="${i ? 'Ascolta' : 'Ouvir'}">🔊</button>
+    `;
+
+    // Remover tooltip anterior
+    this._esconderTooltip();
+
+    document.body.appendChild(tooltip);
+
+    // Posicionar próximo ao cursor/palavra
+    const rect = wordEl.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+    let left = rect.left + rect.width / 2 - tooltipRect.width / 2;
+    let top = rect.top - tooltipRect.height - 8;
+
+    // Ajustar se sair da tela
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    if (left < 8) left = 8;
+    if (left + tooltipRect.width > viewportWidth - 8) left = viewportWidth - tooltipRect.width - 8;
+    if (top < 8) top = rect.bottom + 8;
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+
+    // Animar entrada
+    requestAnimationFrame(() => tooltip.classList.add('visivel'));
+
+    this._currentTooltip = tooltip;
+  },
+
+  _esconderTooltip() {
+    if (this._currentTooltip) {
+      this._currentTooltip.classList.remove('visivel');
+      setTimeout(() => {
+        if (this._currentTooltip && this._currentTooltip.parentNode) {
+          this._currentTooltip.parentNode.removeChild(this._currentTooltip);
+        }
+      }, 150);
+      this._currentTooltip = null;
+    }
   },
 };

@@ -641,6 +641,96 @@
     /* ══════════════════════════════════════════════════════
        GRAMMATICA — Design Premium
        ══════════════════════════════════════════════════════ */
+    
+    /* ── STORIE: Tooltip flutuante de tradução ──────────── */
+    .storie-tooltip {
+      position: fixed;
+      z-index: 10000;
+      background: #FFF8E7;
+      border: 2px solid #D4A843;
+      border-radius: 12px;
+      padding: 0.6rem 0.8rem;
+      box-shadow: 0 8px 32px rgba(155, 35, 53, 0.25);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      min-width: 140px;
+      animation: storieTooltipFade 0.2s ease forwards;
+      pointer-events: auto;
+    }
+    .storie-tooltip.visivel { opacity: 1; transform: scale(1); }
+    @keyframes storieTooltipFade {
+      from { opacity: 0; transform: scale(0.9) translateY(8px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .storie-tooltip-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.3rem;
+      font-weight: 700;
+    }
+    .storie-tooltip-word { font-family: 'Cinzel', serif; color: #9B2335; font-size: 1.05rem; }
+    .storie-tooltip-ipa { font-size: 0.7rem; color: #666; font-style: italic; background: rgba(212,168,67,0.2); padding: 0.08rem 0.4rem; border-radius: 999px; }
+    .storie-tooltip-body { font-size: 0.85rem; color: #333; }
+    .storie-tooltip-trad { font-weight: 600; margin-bottom: 0.15rem; color: #2C2418; }
+    .storie-tooltip-cat { font-size: 0.7rem; text-transform: uppercase; color: #888; font-style: italic; }
+    .storie-tooltip-audio {
+      background: rgba(155,35,53,0.1);
+      border: none;
+      border-radius: 999px;
+      padding: 0.15rem 0.4rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      color: #9B2335;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .storie-tooltip-audio:hover { background: rgba(155,35,53,0.25); transform: scale(1.08); }
+    
+    /* ── STORIE: Toggle modo contínuo no header da história ─── */
+    .storie-controls {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+      padding-top: 0.7rem;
+      border-top: 1px dashed rgba(155,35,53,0.2);
+    }
+    .storie-controls button {
+      background: transparent;
+      border: 1.5px solid #9B2335;
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: #9B2335;
+      transition: all 0.18s;
+    }
+    .storie-controls button:hover { background: rgba(155,35,53,0.1); }
+    .storie-controls button.ativo { background: #9B2335; color: #FFF8F0; }
+    
+    /* ── STORIE: Texto contínuo (modo limpo) ───────────────── */
+    #storie-container.modo-contínuo .storie-paragrafi {
+      display: block !important;
+      flex-direction: column;
+    }
+    #storie-container.modo-contínuo .storie-paragrafo {
+      background: transparent !important;
+      border: none !important;
+      padding: 0.4rem 0 !important;
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+    #storie-container.modo-contínuo .storie-paragrafo-num { display: none !important; }
+    #storie-container.modo-contínuo .storie-paragrafo-it {
+    #storie-container.modo-contínuo .storie-paragrafo-it {
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    
+    /* ══════════════════════════════════════════════════════
+       GRAMMATICA — Design Premium
+       ══════════════════════════════════════════════════════ */
     #grammatica-container { max-width: 860px; margin: 0 auto; }
 
     /* ── Seletor — lezioni como cards individuais ── */
