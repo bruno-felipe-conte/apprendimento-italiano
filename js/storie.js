@@ -188,16 +188,15 @@ const Storie = {
     }
 
     html += `
-      </div>`;
-
-      <div class="storie-controls" style="${this.modoContínuo ? '' : 'display:flex;gap:0.5rem;justify-content:space-between'}">
+      </div>
+      <div class="storie-controls" style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
         <button class="btn-secondario" onclick="Storie.renderizarSeletor()">
           ${i ? '‹ Tutte le storie' : '‹ Todas as histórias'}
         </button>
         <button class="btn-primario" onclick="Storie._marcarLida()">
           ${this.completate.includes(s.id)
             ? (i ? '✓ Riletta' : '✓ Relida')
-            : (i ? '✓ Ho finito' : '✓ Concluí (' + (s.xp_recompensa || 50) + ' XP)')}
+            : (i ? '✓ Ho finito (+' + (s.xp_recompensa || 50) + ' XP)' : '✓ Concluir (+' + (s.xp_recompensa || 50) + ' XP)')}
         </button>
       </div>`;
 

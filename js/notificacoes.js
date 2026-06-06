@@ -121,34 +121,38 @@ const Notificacoes = {
     if (!suporta) return '';
 
     const { devidas, novas } = this._contarCartas();
-
-    return `
     const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    return `
-      <div class="notif-card">
+
+    const cartasTexto = devidas + novas > 0
+      ? `📚 ${devidas} ${it ? 'da ripassare' : 'em revisão'} · ${novas} ${it ? 'nuove oggi' : 'novas hoje'}`
+      : `✅ ${it ? 'Nessuna carta in scadenza oggi' : 'Nenhuma carta pendente hoje'}`;
+
+    if (perm === 'granted') {
+      return `<div class="notif-card">
         <div class="notif-titulo">🔔 ${it ? 'Promemoria di Studio' : 'Lembretes de Estudo'}</div>
-        ${perm === 'granted' ? `
-          <div class="notif-status ativo">✅ ${it ? 'Promemoria attivi' : 'Lembretes ativados'}</div>
-          <div class="notif-cartas">${devidas + novas > 0
-            ? `📚 ${devidas} ${it ? 'da ripassare' : 'em revisão'} · ${novas} ${it ? 'nuove' : 'novas'} ${it ? 'oggi' : 'hoje'}`
-            : `✅ ${it ? 'Nessuna carta in scadenza oggi' : 'Nenhuma carta pendente hoje'}`}</div>
-          <div class="notif-hora-row">
-            <label class="notif-hora-label">⏰ ${it ? 'Ricordami alle:' : 'Lembrar às:'}</label>
-            <input type="time" class="notif-hora-input" value="${hora}"
-              onchange="Notificacoes.setHora(this.value)">
-          </div>
-        ` : perm === 'denied' ? `
-          <div class="notif-status negado">🚫 ${it ? 'Permesso negato nel browser' : 'Permissão negada no browser'}</div>
-          <p class="notif-dica">${it ? 'Per attivare: Impostazioni browser → Notifiche → Consenti per questo sito.' : 'Para ativar: Configurações do browser → Notificações → Permitir para este site.'}</p>
-        ` : `
-          <div class="notif-status pendente">💤 ${it ? 'Promemoria disattivati' : 'Lembretes desativados'}</div>
-          <p class="notif-dica">${it ? 'Attiva per ricevere un promemoria giornaliero all\'orario che preferisci.' : 'Ative para receber um lembrete diário na hora que preferir.'}</p>
-          <button class="btn-primario" onclick="Notificacoes.pedirPermissao()" style="margin-top:0.5rem;width:100%">
-            🔔 ${it ? 'Attiva Promemoria' : 'Ativar Lembretes'}
-          </button>
-        `}
-      </div>
-    `;
+        <div class="notif-status ativo">✅ ${it ? 'Promemoria attivi' : 'Lembretes ativados'}</div>
+        <div class="notif-cartas">${cartasTexto}</div>
+        <div class="notif-hora-row">
+          <label class="notif-hora-label">⏰ ${it ? 'Ricordami alle:' : 'Lembrar às:'}</label>
+          <input type="time" class="notif-hora-input" value="${hora}" onchange="Notificacoes.setHora(this.value)">
+        </div>
+      </div>`;
+    }
+    if (perm === 'denied') {
+      return `<div class="notif-card">
+        <div class="notif-titulo">🔔 ${it ? 'Promemoria di Studio' : 'Lembretes de Estudo'}</div>
+        <div class="notif-status negado">🚫 ${it ? 'Permesso negato nel browser' : 'Permissão negada no browser'}</div>
+        <p class="notif-dica">${it ? 'Per attivare: Impostazioni browser → Notifiche → Consenti per questo sito.' : 'Para ativar: Configurações do browser → Notificações → Permitir para este site.'}</p>
+      </div>`;
+    }
+    return `<div class="notif-card">
+      <div class="notif-titulo">🔔 ${it ? 'Promemoria di Studio' : 'Lembretes de Estudo'}</div>
+      <div class="notif-status pendente">💤 ${it ? 'Promemoria disattivati' : 'Lembretes desativados'}</div>
+      <p class="notif-dica">${it ? "Attiva per ricevere un promemoria giornaliero all'orario che preferisci." : 'Ative para receber um lembrete diário na hora que preferir.'}</p>
+      <button class="btn-primario" onclick="Notificacoes.pedirPermissao()" style="margin-top:0.5rem;width:100%">
+        🔔 ${it ? 'Attiva Promemoria' : 'Ativar Lembretes'}
+      </button>
+    </div>`;
   },
 
   // ── Init: agenda lembrete se já tinha permissão ─────────
