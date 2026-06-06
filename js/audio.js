@@ -28,7 +28,12 @@ const SomFeedback = {
   _atualizarBotao() {
     const btn = document.getElementById('btn-som');
     if (btn) btn.textContent = this.ativo ? '🔔' : '🔕';
-    if (btn) btn.title = this.ativo ? 'Sons: ativados (clique para desligar)' : 'Sons: desativados (clique para ligar)';
+    if (btn) {
+      const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+      btn.title = this.ativo
+        ? (it ? 'Suoni: attivi (clicca per disattivare)' : 'Sons: ativados (clique para desligar)')
+        : (it ? 'Suoni: disattivati (clicca per attivare)' : 'Sons: desativados (clique para ligar)');
+    }
   },
 
   _ctx() {

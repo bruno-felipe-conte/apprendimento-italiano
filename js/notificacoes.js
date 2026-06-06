@@ -50,15 +50,22 @@ const Notificacoes = {
     const { devidas, novas } = this._contarCartas();
     const total = devidas + novas;
 
+    const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
     let corpo;
     if (total === 0) {
-      corpo = '✅ Nessuna carta in scadenza — ottimo lavoro oggi!';
+      corpo = it ? '✅ Nessuna carta in scadenza — ottimo lavoro oggi!' : '✅ Nenhuma carta vencida — ótimo trabalho hoje!';
     } else if (devidas > 0 && novas > 0) {
-      corpo = `📚 ${devidas} carta${devidas !== 1 ? 's' : ''} em revisão + ${novas} nova${novas !== 1 ? 's' : ''} esperando você.`;
+      corpo = it
+        ? `📚 ${devidas} carta${devidas !== 1 ? 'e' : ''} da ripassare + ${novas} nuova${novas !== 1 ? 'e' : ''} che ti aspettano.`
+        : `📚 ${devidas} carta${devidas !== 1 ? 's' : ''} em revisão + ${novas} nova${novas !== 1 ? 's' : ''} esperando você.`;
     } else if (devidas > 0) {
-      corpo = `⏰ ${devidas} carta${devidas !== 1 ? 's' : ''} vencida${devidas !== 1 ? 's' : ''} — não perca o ritmo!`;
+      corpo = it
+        ? `⏰ ${devidas} carta${devidas !== 1 ? 'e' : ''} scaduta${devidas !== 1 ? 'e' : ''} — non perdere il ritmo!`
+        : `⏰ ${devidas} carta${devidas !== 1 ? 's' : ''} vencida${devidas !== 1 ? 's' : ''} — não perca o ritmo!`;
     } else {
-      corpo = `🌱 ${novas} palavra${novas !== 1 ? 's' : ''} nova${novas !== 1 ? 's' : ''} pronta${novas !== 1 ? 's' : ''} para aprender.`;
+      corpo = it
+        ? `🌱 ${novas} parola${novas !== 1 ? 'e' : ''} nuova${novas !== 1 ? 'e' : ''} pronta${novas !== 1 ? 'e' : ''} da imparare.`
+        : `🌱 ${novas} palavra${novas !== 1 ? 's' : ''} nova${novas !== 1 ? 's' : ''} pronta${novas !== 1 ? 's' : ''} para aprender.`;
     }
 
     navigator.serviceWorker.ready.then(reg => {
@@ -82,7 +89,8 @@ const Notificacoes = {
     try { localStorage.setItem(this.STORAGE_KEY, hora); } catch(_) {}
     this.agendarHoje();
     if (typeof App !== 'undefined') {
-      App.notificar(`🔔 Lembrete configurado para as ${hora}`, 'sucesso');
+      const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+      App.notificar(it ? `🔔 Promemoria impostato per le ${hora}` : `🔔 Lembrete configurado para as ${hora}`, 'sucesso');
     }
   },
 
@@ -115,26 +123,28 @@ const Notificacoes = {
     const { devidas, novas } = this._contarCartas();
 
     return `
+    const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+    return `
       <div class="notif-card">
-        <div class="notif-titulo">🔔 Lembretes de Estudo</div>
+        <div class="notif-titulo">🔔 ${it ? 'Promemoria di Studio' : 'Lembretes de Estudo'}</div>
         ${perm === 'granted' ? `
-          <div class="notif-status ativo">✅ Lembretes ativados</div>
+          <div class="notif-status ativo">✅ ${it ? 'Promemoria attivi' : 'Lembretes ativados'}</div>
           <div class="notif-cartas">${devidas + novas > 0
-            ? `📚 ${devidas} em revisão · ${novas} novas hoje`
-            : '✅ Nenhuma carta pendente hoje'}</div>
+            ? `📚 ${devidas} ${it ? 'da ripassare' : 'em revisão'} · ${novas} ${it ? 'nuove' : 'novas'} ${it ? 'oggi' : 'hoje'}`
+            : `✅ ${it ? 'Nessuna carta in scadenza oggi' : 'Nenhuma carta pendente hoje'}`}</div>
           <div class="notif-hora-row">
-            <label class="notif-hora-label">⏰ Lembrar às:</label>
+            <label class="notif-hora-label">⏰ ${it ? 'Ricordami alle:' : 'Lembrar às:'}</label>
             <input type="time" class="notif-hora-input" value="${hora}"
               onchange="Notificacoes.setHora(this.value)">
           </div>
         ` : perm === 'denied' ? `
-          <div class="notif-status negado">🚫 Permissão negada no browser</div>
-          <p class="notif-dica">Para ativar: Configurações do browser → Notificações → Permitir para este site.</p>
+          <div class="notif-status negado">🚫 ${it ? 'Permesso negato nel browser' : 'Permissão negada no browser'}</div>
+          <p class="notif-dica">${it ? 'Per attivare: Impostazioni browser → Notifiche → Consenti per questo sito.' : 'Para ativar: Configurações do browser → Notificações → Permitir para este site.'}</p>
         ` : `
-          <div class="notif-status pendente">💤 Lembretes desativados</div>
-          <p class="notif-dica">Ative para receber um lembrete diário na hora que preferir.</p>
+          <div class="notif-status pendente">💤 ${it ? 'Promemoria disattivati' : 'Lembretes desativados'}</div>
+          <p class="notif-dica">${it ? 'Attiva per ricevere un promemoria giornaliero all\'orario che preferisci.' : 'Ative para receber um lembrete diário na hora que preferir.'}</p>
           <button class="btn-primario" onclick="Notificacoes.pedirPermissao()" style="margin-top:0.5rem;width:100%">
-            🔔 Ativar Lembretes
+            🔔 ${it ? 'Attiva Promemoria' : 'Ativar Lembretes'}
           </button>
         `}
       </div>

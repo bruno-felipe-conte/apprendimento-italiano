@@ -363,7 +363,10 @@ const Grammatica = {
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
-    html += '<div class="gram-revelar-hint">👆 Clique nas palavras para revelar, ou clique em "Ver resposta"</div>';
+    const hint = I18n.idioma === 'it'
+      ? '👆 Clicca sulle parole per rivelare, o clicca su "Vedi risposta"'
+      : '👆 Clique nas palavras para revelar, ou clique em "Ver resposta"';
+    html += `<div class="gram-revelar-hint">${hint}</div>`;
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
     html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Ver resposta</button>';
@@ -741,7 +744,7 @@ const Grammatica = {
               <div class="gfc-it">${c.italiano}</div>
               <div class="gfc-pt">${c.traducao}</div>
               <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">Clique para revelar 👆</div>
+              <div class="gfc-click">${I18n.idioma === 'it' ? 'Clicca per rivelare 👆' : 'Clique para revelar 👆'}</div>
             </div>
             <div class="gram-flip-card-back">
               <div class="gfc-titulo-regra">O Padrão:</div>

@@ -128,7 +128,7 @@ const Calor = {
     // ── Render month blocks ────────────────────────────────
     const canGoRight = this.offset > 0;
     let html = `<div class="hm-nav-row">`;
-    html += `<button class="hm-nav-btn" onclick="Calor.navegar(-1)" title="Mês anterior">&lt;</button>`;
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(-1)" title="${I18n.idioma === 'it' ? 'Mese precedente' : 'Mês anterior'}">&lt;</button>`;
     html += `<div class="hm-months-row">`;
 
     for (const { year, month } of months) {
@@ -171,7 +171,7 @@ const Calor = {
     }
 
     html += '</div>'; // hm-months-row
-    html += `<button class="hm-nav-btn" onclick="Calor.navegar(1)" ${canGoRight ? '' : 'disabled'} title="Próximo mês">&gt;</button>`;
+    html += `<button class="hm-nav-btn" onclick="Calor.navegar(1)" ${canGoRight ? '' : 'disabled'} title="${I18n.idioma === 'it' ? 'Mese successivo' : 'Próximo mês'}">&gt;</button>`;
     html += '</div>'; // hm-nav-row
     container.innerHTML = html;
 
