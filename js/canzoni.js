@@ -34,20 +34,44 @@ const Canzoni = {
   },
 
   // ── Renderizar seletor com built-in + custom + botão criar ─
+  _filtroNivel: '',
+  _filtroTexto: '',
+
   async renderizarSeletor() {
     await this.carregar();
     const c = document.getElementById('canzoni-container');
     if (!c) return;
 
     const todas = this.todasCanzoni();
+    const niveis = ['A1','A2','B1','B2','C1','C2'];
+    const counts = {};
+    todas.forEach(s => { counts[s.nivel] = (counts[s.nivel]||0)+1; });
+
+    let filtradas = todas;
+    if (this._filtroNivel) filtradas = filtradas.filter(s => s.nivel === this._filtroNivel);
+    if (this._filtroTexto) {
+      const q = this._filtroTexto.toLowerCase();
+      filtradas = filtradas.filter(s => s.titulo.toLowerCase().includes(q) || (s.artista||'').toLowerCase().includes(q));
+    }
 
     let html = `
-      <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
-        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()">${I18n.t('can_btn_adicionar')}</button>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
+        <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
+          oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
+          style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
+        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem">
+        <button onclick="Canzoni._filtroNivel='';Canzoni.renderizarSeletor()"
+          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+          Tutte (${todas.length})</button>
+        ${niveis.filter(n=>counts[n]).map(n => `<button onclick="Canzoni._filtroNivel='${n}';Canzoni.renderizarSeletor()"
+          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?'#9B2335':'#ddd'};background:${this._filtroNivel===n?'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+          ${n} (${counts[n]})</button>`).join('')}
       </div>
       <div class="dialogo-grid">`;
 
-    for (const can of todas) {
+    for (const can of filtradas) {
       const badgeCustom = can.custom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
         <div class="dialogo-icone">${can.icone || '🎵'}</div>
@@ -61,8 +85,8 @@ const Canzoni = {
       </div>`;
     }
 
-    if (todas.length === 0) {
-      html += '<p style="text-align:center;color:#aaa;grid-column:1/-1;">Nenhuma música ainda. Adicione a sua!</p>';
+    if (filtradas.length === 0) {
+      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? 'Nessun risultato.' : 'Nessuna canzone ancora.'}</p>`;
     }
 
     html += '</div>';

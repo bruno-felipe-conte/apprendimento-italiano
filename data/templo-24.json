@@ -246,8 +246,8 @@
     },
     {
       "id": "t24_024",
-      "italiano": "server",
-      "portugues": "servidor",
+      "italiano": "elaboratore remoto",
+      "portugues": "servidor remoto",
       "genero": "m",
       "plural": "server",
       "exemplo": "Il server è offline.",
@@ -341,18 +341,6 @@
       "audio_ipa": "/ˈsɔftwɛr/"
     },
     {
-      "id": "t24_034",
-      "italiano": "programma",
-      "portugues": "programa",
-      "genero": "m",
-      "plural": "programmi",
-      "exemplo": "Un programma di scrittura.",
-      "exemplo_pt": "Um programa de escrita.",
-      "categoria": "software",
-      "dificuldade": "medio",
-      "audio_ipa": "/proˈɡramma/"
-    },
-    {
       "id": "t24_035",
       "italiano": "sistema operativo",
       "portugues": "sistema operacional",
@@ -390,8 +378,8 @@
     },
     {
       "id": "t24_040",
-      "italiano": "password",
-      "portugues": "senha",
+      "italiano": "parola d'ordine",
+      "portugues": "senha / palavra-passe",
       "genero": "f",
       "plural": "password",
       "exemplo": "Hai dimenticato la password?",
@@ -1014,8 +1002,8 @@
     },
     {
       "id": "t24_103",
-      "italiano": "crash",
-      "portugues": "falha geral",
+      "italiano": "blocco del sistema",
+      "portugues": "travamento / falha do sistema",
       "genero": "m",
       "plural": "crash",
       "exemplo": "Il sistema ha subito un crash.",
@@ -1026,8 +1014,8 @@
     },
     {
       "id": "t24_104",
-      "italiano": "browser",
-      "portugues": "navegador",
+      "italiano": "navigatore web",
+      "portugues": "navegador web",
       "genero": "m",
       "plural": "browser",
       "exemplo": "Quale browser usi per navigare?",
@@ -1047,18 +1035,6 @@
       "categoria": "reti",
       "dificuldade": "medio",
       "audio_ipa": "/homˈpeidʒ/"
-    },
-    {
-      "id": "t24_106",
-      "italiano": "applicazione",
-      "portugues": "aplicativo",
-      "genero": "f",
-      "plural": "app",
-      "exemplo": "Scarica l'app dallo store.",
-      "exemplo_pt": "Baixe o app da loja.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ap/"
     },
     {
       "id": "t24_107",
@@ -1086,8 +1062,8 @@
     },
     {
       "id": "t24_109",
-      "italiano": "backup",
-      "portugues": "backup",
+      "italiano": "copia di sicurezza",
+      "portugues": "backup / cópia de segurança",
       "genero": "m",
       "plural": "backup",
       "exemplo": "Fai sempre un backup dei dati.",
@@ -1098,8 +1074,8 @@
     },
     {
       "id": "t24_110",
-      "italiano": "trasmissione online",
-      "portugues": "transmissão online",
+      "italiano": "trasmissione in rete",
+      "portugues": "transmissão pela internet",
       "genero": "m",
       "plural": "streaming",
       "exemplo": "Guardo film in streaming.",
@@ -1107,18 +1083,6 @@
       "categoria": "tecnologia",
       "dificuldade": "medio",
       "audio_ipa": "/ˈstrimiŋ/"
-    },
-    {
-      "id": "t24_r02",
-      "italiano": "laptop",
-      "portugues": "laptop / notebook",
-      "genero": "m",
-      "plural": "laptop",
-      "exemplo": "Il laptop è portatile e leggero.",
-      "exemplo_pt": "O laptop é portátil e leve.",
-      "categoria": "tecnologia",
-      "dificuldade": "medio",
-      "audio_ipa": "/ˈlaptop/"
     },
     {
       "id": "t24_r03",
@@ -1194,8 +1158,8 @@
     },
     {
       "id": "t24_r15",
-      "italiano": "hacker",
-      "portugues": "hacker",
+      "italiano": "pirata informatico",
+      "portugues": "hacker / pirata digital",
       "genero": "m",
       "plural": "hacker",
       "exemplo": "L'hacker ha violato il sistema.",
@@ -1206,8 +1170,8 @@
     },
     {
       "id": "t24_r16",
-      "italiano": "malware",
-      "portugues": "malware",
+      "italiano": "programma malevolo",
+      "portugues": "malware / programa malicioso",
       "genero": "m",
       "plural": "malwari",
       "exemplo": "Il malware ha infettato il computer.",

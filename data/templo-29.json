@@ -1038,8 +1038,8 @@
     },
     {
       "id": "t29_p04",
-      "italiano": "zoom",
-      "portugues": "zoom",
+      "italiano": "ingrandimento",
+      "portugues": "zoom / ampliação",
       "genero": "m",
       "plural": "zoom",
       "exemplo": "Lo zoom avvicina il soggetto.",
@@ -1134,8 +1134,8 @@
     },
     {
       "id": "t29_p13",
-      "italiano": "location",
-      "portugues": "locação / locação de filmagem",
+      "italiano": "luogo delle riprese",
+      "portugues": "locação / local das filmagens",
       "genero": "f",
       "plural": "location",
       "exemplo": "La location è perfetta per il film.",

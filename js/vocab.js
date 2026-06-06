@@ -82,15 +82,22 @@ const Vocab = {
         : I18n.t('vocab_favoritos');
     }
 
-    // Stats line
+    // Stats line + botão estudar filtro
     if (statsEl) {
       const total = todos.length;
       const mostrando = Math.min(filtrados.length, 100);
-      statsEl.textContent = this.filtroDificeis
+      const textoStats = this.filtroDificeis
         ? I18n.t(filtrados.length !== 1 ? 'vocab_palavras_dificeis' : 'vocab_palavra_dificil').replace('{n}', filtrados.length)
         : filtrados.length === total
           ? I18n.t('vocab_palavras_total').replace('{n}', total)
           : I18n.t('vocab_resultados').replace('{m}', mostrando).replace('{f}', filtrados.length).replace('{t}', total);
+
+      // Botão "estudar este filtro" só aparece quando há filtro ativo e resulados
+      const temFiltro = this.filtroTexto || this.filtroTemplo || this.filtroCategoria || this.filtroDificeis || this.filtroFavoritos;
+      const btnEstudar = (temFiltro && filtrados.length > 0)
+        ? `<button onclick="Vocab.estudarFiltroAtual()" style="margin-left:0.5rem;padding:0.18rem 0.6rem;background:#9B2335;color:#fff;border:none;border-radius:6px;font-size:0.72rem;font-weight:700;cursor:pointer">🃏 ${I18n.idioma==='it'?'Studia questo filtro':'Estudar este filtro'}</button>`
+        : '';
+      statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}`;
     }
 
     // Limit display to 100
@@ -297,6 +304,64 @@ const Vocab = {
     const d = document.createElement('div');
     d.textContent = str;
     return d.innerHTML;
+  },
+
+  // ── Inicia flashcards com as palavras do filtro atual ───────
+  estudarFiltroAtual() {
+    const todos = App.estado.vocabCache;
+    let filtrados = todos;
+    if (this.filtroTemplo) {
+      const num = parseInt(this.filtroTemplo, 10);
+      filtrados = filtrados.filter(p => p.templo_num === num);
+    }
+    if (this.filtroCategoria) {
+      const cat = this.filtroCategoria.toLowerCase();
+      filtrados = filtrados.filter(p => (p.categoria||'').toLowerCase() === cat);
+    }
+    if (this.filtroTexto) {
+      const q = this.filtroTexto.toLowerCase().trim();
+      filtrados = filtrados.filter(p =>
+        (p.italiano||'').toLowerCase().includes(q) ||
+        (p.portugues||'').toLowerCase().includes(q)
+      );
+    }
+    if (this.filtroDificeis) {
+      filtrados = filtrados.filter(p => {
+        const f = App.estado.flashcardData[p.id];
+        return f && (f.erros||0) >= 3;
+      });
+    }
+    if (this.filtroFavoritos) {
+      const favIds = (App.estado.progresso||{}).favoritos||[];
+      filtrados = filtrados.filter(p => favIds.includes(p.id));
+    }
+    if (filtrados.length === 0) return;
+
+    // Shuffle e cap 30
+    const embaralhado = [...filtrados].sort(() => Math.random() - 0.5).slice(0, 30);
+
+    App.navegar('flashcard');
+    if (typeof Flashcards === 'undefined') return;
+
+    Flashcards.temploAtual      = null;
+    Flashcards.praticandoTodas  = false;
+    Flashcards.sessaoStats      = { again:0, hard:0, good:0, easy:0, xp:0, novas:[] };
+    Flashcards.cartasDisponiveis = embaralhado;
+    Flashcards.indiceAtual      = 0;
+    Flashcards.virada           = false;
+    if (!Flashcards._swipeInitialized) { Flashcards._iniciarSwipe(); Flashcards._swipeInitialized = true; }
+
+    const vazio = document.getElementById('flashcard-vazio');
+    const resumo = document.getElementById('flashcard-resumo');
+    const cardEl = document.getElementById('flashcard');
+    const actions = document.getElementById('card-actions');
+    if (vazio)   vazio.style.display   = 'none';
+    if (resumo)  resumo.style.display  = 'none';
+    if (cardEl)  cardEl.style.display  = '';
+    if (actions) actions.style.display = 'none';
+
+    App.notificar(`🃏 ${embaralhado.length} parole dal filtro attivo`, 'alerta');
+    Flashcards.mostrarCarta();
   }
 };
 

@@ -3,6 +3,8 @@ const Imitazione = {
   itemAtual: 0,
   recognition: null,
   isRecording: false,
+  _filtroNivel: '',
+  _listaAtual: null, // frases filtradas
 
   async carregar() {
     if (this.dados) return;
@@ -16,8 +18,42 @@ const Imitazione = {
 
   async renderizar() {
     await this.carregar();
+    this._aplicarFiltro();
+  },
+
+  _aplicarFiltro() {
+    const todas = this.dados?.imitazioni || [];
+    this._listaAtual = this._filtroNivel
+      ? todas.filter(f => f.nivel === this._filtroNivel)
+      : todas;
     this.itemAtual = 0;
+    this._renderizarFiltros();
     this.mostrarDesafio();
+  },
+
+  _renderizarFiltros() {
+    const c = document.getElementById('imitazione-container');
+    if (!c) return;
+    const todas = this.dados?.imitazioni || [];
+    const niveis = ['A1','A2','B1','B2','C1'];
+    const counts = {};
+    todas.forEach(f => { counts[f.nivel] = (counts[f.nivel]||0)+1; });
+
+    const bar = document.getElementById('imit-filtro-bar') || (() => {
+      const d = document.createElement('div');
+      d.id = 'imit-filtro-bar';
+      c.parentElement?.insertBefore(d, c);
+      return d;
+    })();
+
+    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem">
+      <button onclick="Imitazione._filtroNivel='';Imitazione._aplicarFiltro()"
+        style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+        Tutte (${todas.length})</button>
+      ${niveis.map(n => `<button onclick="Imitazione._filtroNivel='${n}';Imitazione._aplicarFiltro()"
+        style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?'#9B2335':'#ddd'};background:${this._filtroNivel===n?'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+        ${n} (${counts[n]||0})</button>`).join('')}
+    </div>`;
   },
 
   initSpeechRecognition() {
@@ -35,7 +71,7 @@ const Imitazione = {
     this.recognition.onstart = () => {
       this.isRecording = true;
       document.getElementById('btn-mic').classList.add('recording');
-      document.getElementById('mic-status').innerText = 'Ouvindo... Fale agora!';
+      document.getElementById('mic-status').innerText = I18n.idioma === 'it' ? 'In ascolto... Parla adesso!' : 'Ouvindo... Fale agora!';
     };
 
     this.recognition.onresult = (event) => {
@@ -55,8 +91,9 @@ const Imitazione = {
       const btnMic = document.getElementById('btn-mic');
       if (btnMic) btnMic.classList.remove('recording');
       const st = document.getElementById('mic-status');
-      if (st && st.innerText === 'Ouvindo... Fale agora!') {
-        st.innerText = 'Processando...';
+      const ouvindo = I18n.idioma === 'it' ? 'In ascolto... Parla adesso!' : 'Ouvindo... Fale agora!';
+      if (st && st.innerText === ouvindo) {
+        st.innerText = I18n.idioma === 'it' ? 'Elaborazione...' : 'Processando...';
       }
     };
     
@@ -125,7 +162,8 @@ const Imitazione = {
 
   avancar() {
     this.itemAtual++;
-    if (this.itemAtual >= this.dados.imitazioni.length) {
+    const lista = this._listaAtual || this.dados?.imitazioni || [];
+    if (this.itemAtual >= lista.length) {
       this.mostrarFinal();
     } else {
       this.mostrarDesafio();
@@ -134,11 +172,17 @@ const Imitazione = {
 
   mostrarDesafio() {
     const c = document.getElementById('imitazione-container');
-    const item = this.dados.imitazioni[this.itemAtual];
+    const lista = this._listaAtual || this.dados?.imitazioni || [];
+    const item = lista[this.itemAtual];
+    if (!item) { this.mostrarFinal(); return; }
 
+    const it = I18n.idioma === 'it';
     c.innerHTML = `
       <div style="text-align:center;margin-bottom:1.5rem">
-        <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem">Frase ${this.itemAtual + 1} de ${this.dados.imitazioni.length}</div>
+        <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem">
+          ${it ? 'Frase' : 'Frase'} ${this.itemAtual + 1} ${it ? 'di' : 'de'} ${lista.length}
+          <span style="margin-left:0.5rem;background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
+        </div>
         <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
         <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>
         
@@ -163,12 +207,19 @@ const Imitazione = {
 
   mostrarFinal() {
     const c = document.getElementById('imitazione-container');
+    const it = I18n.idioma === 'it';
+    const lista = this._listaAtual || this.dados?.imitazioni || [];
     c.innerHTML = `
       <div style="text-align:center;padding:3rem 1rem">
         <div style="font-size:4rem;margin-bottom:1rem">🏆</div>
-        <h3 style="font-family:'Cinzel',serif;color:#9B2335;font-size:1.8rem;margin-bottom:1rem">Excelente!</h3>
-        <p style="font-size:1.1rem;color:#555;margin-bottom:2rem">Você completou todas as frases de imitação.</p>
-        <button class="btn-primario" onclick="App.navegar('templi')">Voltar ao Início</button>
+        <h3 style="font-family:'Cinzel',serif;color:#9B2335;font-size:1.8rem;margin-bottom:1rem">${it ? 'Eccellente!' : 'Excelente!'}</h3>
+        <p style="font-size:1.1rem;color:#555;margin-bottom:1rem">
+          ${it ? `Hai completato tutte le ${lista.length} frasi!` : `Você completou todas as ${lista.length} frases de imitação!`}
+        </p>
+        <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
+          <button class="btn-secondario" onclick="Imitazione._aplicarFiltro()">${it ? '🔄 Ricominciare' : '🔄 Repetir'}</button>
+          <button class="btn-primario" onclick="App.navegar('templi')">${it ? 'Torna all\'Inizio' : 'Voltar ao Início'}</button>
+        </div>
       </div>
     `;
   }

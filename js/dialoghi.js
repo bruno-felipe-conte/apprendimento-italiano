@@ -26,19 +26,47 @@ const Dialoghi = {
     localStorage.setItem('it_dialoghi_custom', JSON.stringify(this.custom));
   },
   
+  _filtroNivel: '',
+  _filtroTexto: '',
+
   async renderizarSeletor() {
     await this.carregar();
     const c = document.getElementById('dialoghi-container');
     if (!c) return;
-    
+
     const todos = this.todosDialoghi();
+    const niveis = ['A1','A2','B1','B2','C1'];
+
+    // Conta por nível
+    const counts = {};
+    todos.forEach(d => { counts[d.nivel] = (counts[d.nivel]||0)+1; });
+
+    // Filtro ativo
+    let filtrados = todos;
+    if (this._filtroNivel) filtrados = filtrados.filter(d => d.nivel === this._filtroNivel);
+    if (this._filtroTexto) {
+      const q = this._filtroTexto.toLowerCase();
+      filtrados = filtrados.filter(d => d.titulo.toLowerCase().includes(q));
+    }
+
     let html = `
-      <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
-        <button class="btn-primario" onclick="Dialoghi.abrirFormularioCriar()">${I18n.t('dial_btn_adicionar')}</button>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
+        <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
+          oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
+          style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
+        <button class="btn-primario" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem">
+        <button onclick="Dialoghi._filtroNivel='';Dialoghi.renderizarSeletor()"
+          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+          Tutti (${todos.length})</button>
+        ${niveis.map(n => `<button onclick="Dialoghi._filtroNivel='${n}';Dialoghi.renderizarSeletor()"
+          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?'#9B2335':'#ddd'};background:${this._filtroNivel===n?'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+          ${n} (${counts[n]||0})</button>`).join('')}
       </div>
       <div class="dialogo-grid">`;
 
-    for (const dial of todos) {
+    for (const dial of filtrados) {
       const badge = dial.custom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Meu</span>' : '';
       html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dial.id}','leitura')">
         <div class="dialogo-icone">${dial.icone}</div>
@@ -50,9 +78,9 @@ const Dialoghi = {
         </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
       </div>`;
     }
-    
-    if (todos.length === 0) {
-      html += '<p style="text-align:center;color:#aaa;grid-column:1/-1;">Nenhum diálogo ainda. Adicione o seu!</p>';
+
+    if (filtrados.length === 0) {
+      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${filtrados.length === 0 && this._filtroTexto ? 'Nenhum resultado.' : 'Nenhum diálogo ainda.'}</p>`;
     }
 
     html += '</div>';
