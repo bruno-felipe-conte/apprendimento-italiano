@@ -990,8 +990,8 @@
     },
     {
       "id": "t27_p04",
-      "italiano": "body art",
-      "portugues": "body art",
+      "italiano": "arte corporea",
+      "portugues": "arte corporal",
       "genero": "f",
       "plural": "body art",
       "exemplo": "La body art usa il corpo.",
@@ -1014,8 +1014,8 @@
     },
     {
       "id": "t27_p06",
-      "italiano": "street art",
-      "portugues": "arte de rua",
+      "italiano": "arte di strada",
+      "portugues": "arte de rua / arte urbana",
       "genero": "f",
       "plural": "street art",
       "exemplo": "La street art decora i muri.",
@@ -1074,8 +1074,8 @@
     },
     {
       "id": "t27_p11",
-      "italiano": "NFT",
-      "portugues": "NFT",
+      "italiano": "opera digitale certificata",
+      "portugues": "obra digital certificada (NFT)",
       "genero": "m",
       "plural": "NFT",
       "exemplo": "L'NFT certifica l'opera digitale.",
@@ -1098,13 +1098,13 @@
     },
     {
       "id": "t27_p13",
-      "italiano": "industrial design",
+      "italiano": "progettazione industriale",
       "portugues": "design industrial",
       "genero": "m",
       "plural": "industrial design",
       "exemplo": "L'industrial design è applicato.",
       "exemplo_pt": "O design industrial é aplicado.",
-      "categoria": "design",
+      "categoria": "arte",
       "dificuldade": "medio",
       "audio_ipa": "/inˈdʌstriəl diˈzajn/"
     },
