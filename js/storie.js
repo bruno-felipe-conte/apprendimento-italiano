@@ -63,40 +63,58 @@ const Storie = {
       ? { tut: 'Tutte', cerca: '🔍 Titolo o autore...', nenhuma: 'Nessuna storia ancora.', risultato: 'Nessun risultato.' }
       : { tut: 'Todas', cerca: '🔍 Título ou autor...', nenhuma: 'Nenhuma história ainda.', risultato: 'Nenhum resultado.' };
 
+    // Cores para cada nível CEFR
+    const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
+
     let html = `
+      <!-- Barra de filtros -->
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
         <input type="search" placeholder="${labels.cerca}" value="${this._filtroTexto}"
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
-          style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
+          style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
       </div>
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem">
+      <!-- Pills de nível -->
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1.2rem">
         <button onclick="Storie._filtroNivel='';Storie.renderizarSeletor()"
-          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel ? '#9B2335' : '#ddd'};background:${!this._filtroNivel ? '#9B2335' : 'transparent'};color:${!this._filtroNivel ? '#fff' : 'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+          style="padding:0.22rem 0.8rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ccc'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.78rem;font-weight:600;transition:all 0.15s">
           ${labels.tut} (${todas.length})</button>
-        ${niveis.filter(n => counts[n]).map(n => `<button onclick="Storie._filtroNivel='${n}';Storie.renderizarSeletor()"
-          style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel === n ? '#9B2335' : '#ddd'};background:${this._filtroNivel === n ? '#9B2335' : 'transparent'};color:${this._filtroNivel === n ? '#fff' : 'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
+        ${niveis.filter(n=>counts[n]).map(n=>`
+        <button onclick="Storie._filtroNivel='${n}';Storie.renderizarSeletor()"
+          style="padding:0.22rem 0.8rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?corNivel[n]||'#9B2335':'#ccc'};background:${this._filtroNivel===n?corNivel[n]||'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.78rem;font-weight:600;transition:all 0.15s">
           ${n} (${counts[n]})</button>`).join('')}
       </div>
-      <div class="dialogo-grid">`;
+      <!-- Grid de histórias -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">`;
 
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);
-      const lidaBadge = isLida
-        ? '<span style="font-size:0.65rem;background:#2A9D8F;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">✓</span>'
-        : '';
-      html += `<div class="dialogo-card" onclick="Storie.abrirStoria('${s.id}')">
-        <div class="dialogo-icone">${s.icone || '📖'}</div>
-        <div class="dialogo-titulo">${s.titulo}${lidaBadge}</div>
-        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${s.autor || ''}</div>
-        <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
-          <span class="dialogo-nivel">${s.nivel}</span>
-          <span style="font-size:0.7rem;color:#9B2335;font-weight:600">+${s.xp_recompensa || 50} XP</span>
-        </div>
-      </div>`;
+      const corN = corNivel[s.nivel] || '#9B2335';
+      html += `
+        <div onclick="Storie.abrirStoria('${s.id}')"
+          style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
+                 box-shadow:0 3px 12px rgba(0,0,0,0.09);cursor:pointer;border:2px solid transparent;
+                 transition:transform 0.18s,box-shadow 0.18s,border-color 0.18s;
+                 display:flex;flex-direction:column;align-items:center;gap:0.35rem"
+          onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,0.14)';this.style.borderColor='${corN}'"
+          onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.09)';this.style.borderColor='transparent'">
+          <!-- Ícone -->
+          <div style="font-size:2.4rem;line-height:1.1">${s.icone||'📜'}</div>
+          <!-- Título -->
+          <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
+            ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}
+          </div>
+          <!-- Autor -->
+          <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
+          <!-- Nível + XP -->
+          <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
+            <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
+            <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
+          </div>
+        </div>`;
     }
 
     if (filtrate.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? labels.risultato : labels.nessuna}</p>`;
+      html += `<p style="text-align:center;color:#aaa;font-style:italic;grid-column:1/-1;padding:2rem 0">${this._filtroTexto?labels.risultato:labels.nenhuma}</p>`;
     }
 
     html += '</div>';
