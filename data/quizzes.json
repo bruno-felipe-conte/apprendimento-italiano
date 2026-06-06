@@ -46,5 +46,50 @@
       {"id": "q_f_07", "italiano": "Nonno", "ptbr": "Vovô (avô)", "respostaCorreta": "nonno", "distratores": ["zia", "papà", "mamma"], "dica": "Avô"},
       {"id": "q_f_08", "italiano": "Cugino", "ptbr": "Primo(cunho)", "respostaCorreta": "cugino", "distratores": ["fratello", "sorella", "zia"], "dica": "Primo do pai/mãe"}
     ]
+  },
+  {
+    "categoria": "articoli",
+    "questoes": [
+      {"id": "q_a_01", "italiano": "___ libro (masculino, singular)", "ptbr": "O livro", "respostaCorreta": "il", "distratores": ["lo", "la", "l'"], "dica": "Artigo masculino singular antes de consoante comum"},
+      {"id": "q_a_02", "italiano": "___ studente (m., s+consonante)", "ptbr": "O estudante", "respostaCorreta": "lo", "distratores": ["il", "la", "i"], "dica": "Artigo usado antes de s+consonante, z, gn"},
+      {"id": "q_a_03", "italiano": "___ ragazza (fem., consoante)", "ptbr": "A moça", "respostaCorreta": "la", "distratores": ["il", "le", "una"], "dica": "Artigo feminino singular antes de consoante"},
+      {"id": "q_a_04", "italiano": "___ amico (masc., vogal)", "ptbr": "O amigo", "respostaCorreta": "l'", "distratores": ["il", "lo", "gli"], "dica": "Artigo elidido antes de vogal"},
+      {"id": "q_a_05", "italiano": "i ___ (plural de 'il libro')", "ptbr": "Os livros", "respostaCorreta": "libri", "distratores": ["libris", "libri", "libro"], "dica": "Plural masculino comum → i"},
+      {"id": "q_a_06", "italiano": "gli ___ (plural de 'lo studente')", "ptbr": "Os estudantes", "respostaCorreta": "studenti", "distratores": ["studente", "studii", "studii"], "dica": "Plural masculino irregular → gli"},
+      {"id": "q_a_07", "italiano": "le ___ (plural de 'la ragazza')", "ptbr": "As moças", "respostaCorreta": "ragazze", "distratores": ["ragazza", "ragazzi", "ragazze"], "dica": "Plural feminino troca -a → -e"},
+      {"id": "q_a_08", "italiano": "___ zia (fem., singular)", "ptbr": "A tia", "respostaCorreta": "la", "distratores": ["il", "le", "una"], "dica": "Fem. sing. com consoante comum"},
+      {"id": "q_a_09", "italiano": "___ orologio (m., singular)", "ptbr": "O relógio", "respostaCorreta": "l'", "distratores": ["il", "lo", "un"], "dica": "Masc. sing. antes de vogal → elisão"},
+      {"id": "q_a_10", "italiano": "i ___ (plural de 'il ragazzo')", "ptbr": "Os rapazes", "respostaCorreta": "ragazzi", "distratores": ["ragazzo", "ragazze", "ragazzii"], "dica": "Plural masc. troca -o → -i"}
+    ]
+  },
+  {
+    "categoria": "verbi_avancados",
+    "questoes": [
+      {"id": "q_va_01", "italiano": "Avere (indicativo presente, eu)", "ptbr": "Eu tenho", "respostaCorreta": "ho", "distratores": ["hoo", "ha", "hai"], "dica": "Verbo 'avere' conjugado em 'io'"},
+      {"id": "q_va_02", "italiano": "Essere (indicativo presente, eu)", "ptbr": "Eu sou", "respostaCorreta": "sono", "distratores": ["si", "sei", "è"], "dica": "Verbo 'essere' conjugado em 'io'"},
+      {"id": "q_va_03", "italiano": "Fare (indicativo presente, eu)", "ptbr": "Eu faço", "respostaCorreta": "faccio", "distratores": ["fo", "facio", "faccio"], "dica": "Verbo 'fare' é irregular"},
+      {"id": "q_va_04", "italiano": "Stare (indicativo presente, ele)", "ptbr": "Ele está", "respostaCorreta": "sta", "distratores": ["stae", "stai", "sto"], "dica": "Verbo 'stare' em 'lui/lei'"},
+      {"id": "q_va_05", "italiano": "Volere (indicativo presente, nós)", "ptbr": "Nós queremos", "respostaCorreta": "vogliamo", "distratores": ["vogliamo", "voliamo", "vogliamo"], "dica": "Verbo 'volere' é irregular"},
+      {"id": "q_va_06", "italiano": "Potere (indicativo presente, tu)", "ptbr": "Tu podes", "respostaCorreta": "puoi", "distratores": ["poi", "puoi", "puoi"], "dica": "Verbo 'potere' em 'tu'"},
+      {"id": "q_va_07", "italiano": "Dire (indicativo presente, ele)", "ptbr": "Ele diz", "respostaCorreta": "dice", "distratores": ["di", "dice", "dii"], "dica": "Verbo 'dire' em 'lui/lei'"},
+      {"id": "q_va_08", "italiano": "Uscire (indicativo presente, eu)", "ptbr": "Eu saio", "respostaCorreta": "esco", "distratores": ["uscio", "esco", "escì"], "dica": "Verbo 'uscire' é irregular"},
+      {"id": "q_va_09", "italiano": "Venire (indicativo presente, nós)", "ptbr": "Nós viemos", "respostaCorreta": "veniamo", "distratores": ["veniamo", "venimo", "veniamo"], "dica": "Verbo 'venire' em 'noi'"},
+      {"id": "q_va_10", "italiano": "Sapere (indicativo presente, eu)", "ptbr": "Eu sei", "respostaCorreta": "so", "distratores": ["sappo", "so", "sa"], "dica": "Verbo 'sapere' é irregular"}
+    ]
+  },
+  {
+    "categoria": "aggettivi",
+    "questoes": [
+      {"id": "q_g_01", "italiano": "Bello (fem. sing. antes de consoante)", "ptbr": "Linda", "respostaCorreta": "bella", "distratores": ["bello", "bei", "bell"], "dica": "Fem. sing. de 'bello' antes de consoante"},
+      {"id": "q_g_02", "italiano": "Bello (masc. pl. antes de consoante)", "ptbr": "Lindos", "respostaCorreta": "begli", "distratores": ["bello", "belli", "begli"], "dica": "Masc. pl. de 'bello' antes de s+consonante, z, gn"},
+      {"id": "q_g_03", "italiano": "Buono (masc. sing. antes de s+cons.)", "ptbr": "Bom", "respostaCorreta": "buono", "distratores": ["bon", "buon", "buono"], "dica": "Masc. sing. antes de consoante (exceto s+cons, z, gn)"},
+      {"id": "q_g_04", "italiano": "Buono (masc. sing. antes de vogal)", "ptbr": "Bom", "respostaCorreta": "buon", "distratores": ["buono", "buono", "buno"], "dica": "Masc. sing. antes de vogal → apócope"},
+      {"id": "q_g_05", "italiano": "Grande (masc. sing.)", "ptbr": "Grande", "respostaCorreta": "grande", "distratores": ["granne", "grandi", "grando"], "dica": "Adjetivo 'grande' é invariável"},
+      {"id": "q_g_06", "italiano": "Santo (masc. sing. antes de consoante)", "ptbr": "São (santo)", "respostaCorreta": "santo", "distratores": ["san", "santo", "santi"], "dica": "Masc. sing. de 'santo' antes de consoante"},
+      {"id": "q_g_07", "italiano": "Santo (masc. sing. antes de vogal)", "ptbr": "São (santo)", "respostaCorreta": "san", "distratores": ["santo", "sant'", "santo'"], "dica": "Apócope antes de vogal"},
+      {"id": "q_g_08", "italiano": "Nuovo (masc. sing. antes de consoante)", "ptbr": "Novo", "respostaCorreta": "nuovo", "distratores": ["nov", "nuovo", "nuo"], "dica": "Masc. sing. antes de consoante"},
+      {"id": "q_g_09", "italiano": "Vecchio (fem. pl.)", "ptbr": "Velhas", "respostaCorreta": "vecchie", "distratores": ["vecchia", "vecchi", "vecchii"], "dica": "Fem. pl. troca -a → -e (com -c- mantém 'ch')"},
+      {"id": "q_g_10", "italiano": "Bello (masc. sing. antes de vogal)", "ptbr": "Lindo", "respostaCorreta": "bell'", "distratores": ["bello", "bel", "begli"], "dica": "Masc. sing. antes de vogal → elisão"}
+    ]
   }
 ]

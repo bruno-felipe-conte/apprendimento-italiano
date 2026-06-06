@@ -501,6 +501,144 @@
     .heatmap-footer { display: none; }
 
     /* ══════════════════════════════════════════════════════
+       STORIE — Leitura interativa de histórias italianas
+       ══════════════════════════════════════════════════════ */
+    #storie-container { max-width: 760px; margin: 0 auto; padding: 0 0.5rem 2rem; }
+
+    /* Seletor: cards das histórias */
+    .storie-selector-card {
+      background: var(--cor-marmore, #faf6ee);
+      border-radius: 12px;
+      border: 1.5px solid #ede5d5;
+      border-left: 4px solid #9B2335;
+      padding: 1rem 1.1rem;
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.3rem;
+      position: relative;
+    }
+    .storie-selector-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(155, 35, 53, 0.18);
+      border-left-color: #6B1525;
+    }
+    body.dark-mode .storie-selector-card {
+      background: #2A2522;
+      border-color: #3A332E;
+    }
+    body.dark-mode .storie-selector-card:hover {
+      box-shadow: 0 8px 24px rgba(212, 168, 67, 0.18);
+    }
+    .storie-selector-icone { font-size: 2.4rem; line-height: 1; }
+    .storie-selector-titulo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem; color: #9B2335; line-height: 1.25; margin-top: 0.25rem; }
+    body.dark-mode .storie-selector-titulo { color: #D4A843; }
+    .storie-selector-autor { font-size: 0.72rem; color: #888; font-style: italic; }
+    .storie-selector-meta { display: flex; gap: 0.4rem; align-items: center; margin-top: 0.4rem; font-size: 0.72rem; }
+    .storie-selector-lida {
+      position: absolute; top: 0.5rem; right: 0.5rem;
+      background: #2A9D8F; color: white; font-size: 0.6rem;
+      padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
+    }
+
+    /* Leitor: parágrafos */
+    .storie-paragrafi { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.2rem; }
+    .storie-paragrafo {
+      background: var(--cor-marmore, #faf6ee);
+      border-radius: 12px;
+      border: 1px solid #ede5d5;
+      padding: 1rem 1.1rem;
+      line-height: 1.7;
+    }
+    body.dark-mode .storie-paragrafo { background: #2A2522; border-color: #3A332E; }
+    .storie-paragrafo-it {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      font-size: 1.02rem;
+      color: var(--cor-inchiostro, #2C2418);
+    }
+    body.dark-mode .storie-paragrafo-it { color: #F0E8D8; }
+    .storie-paragrafo-num {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.6rem; height: 1.6rem;
+      background: linear-gradient(135deg, #9B2335, #6B1525);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.75rem; font-weight: 800;
+    }
+    .storie-texto-it { flex: 1; }
+    .storie-audio-btn {
+      background: transparent; border: none; cursor: pointer;
+      font-size: 1rem; padding: 0.2rem 0.3rem; opacity: 0.7;
+      transition: opacity 0.15s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .storie-audio-btn:hover { opacity: 1; transform: scale(1.15); }
+    .storie-paragrafo-pt {
+      margin-top: 0.55rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed #ede5d5;
+      font-size: 0.88rem;
+      color: #6B5C42;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    body.dark-mode .storie-paragrafo-pt { color: #B5A98E; border-top-color: #3A332E; }
+
+    /* Palavra clicável inline */
+    .storie-parola {
+      cursor: pointer;
+      border-bottom: 1.5px dotted #D4A843;
+      transition: background 0.15s, color 0.15s;
+      padding: 0 1px;
+    }
+    .storie-parola:hover { background: rgba(212, 168, 67, 0.25); color: #9B2335; }
+
+    /* Vocabulário expansível por parágrafo */
+    .storie-vocab-details { margin-top: 0.7rem; font-size: 0.85rem; }
+    .storie-vocab-details summary {
+      cursor: pointer;
+      color: #9B2335; font-weight: 700;
+      padding: 0.3rem 0; user-select: none;
+    }
+    body.dark-mode .storie-vocab-details summary { color: #D4A843; }
+    .storie-vocab-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.5rem; margin-top: 0.5rem;
+    }
+    .storie-vocab-card {
+      background: #FFF8E7; border: 1px solid #D4A843; border-radius: 8px;
+      padding: 0.5rem 0.6rem; cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .storie-vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212,168,67,0.3); }
+    body.dark-mode .storie-vocab-card { background: #3A332E; border-color: #5C0E1A; }
+    .storie-vocab-it { font-weight: 700; font-size: 0.85rem; color: #6B1525; }
+    body.dark-mode .storie-vocab-it { color: #D4A843; }
+    .storie-vocab-ipa { font-size: 0.7rem; color: #888; font-weight: 400; margin-left: 0.2rem; font-style: italic; }
+    .storie-vocab-pt { font-size: 0.8rem; color: #444; margin-top: 0.15rem; }
+    body.dark-mode .storie-vocab-pt { color: #C0B5A0; }
+    .storie-vocab-cat { font-size: 0.65rem; color: #999; margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Filtros do seletor */
+    .storie-filtros {
+      display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center;
+    }
+    .storie-filtros input[type="search"] {
+      flex: 1; min-width: 140px; padding: 0.45rem 0.7rem;
+      border: 1.5px solid #ddd; border-radius: 8px; font-size: 0.88rem;
+      background: var(--cor-marmore, #faf6ee); color: var(--cor-inchiostro, #2C2418);
+    }
+    body.dark-mode .storie-filtros input[type="search"] { background: #2A2522; border-color: #3A332E; color: #F0E8D8; }
+
+    /* ══════════════════════════════════════════════════════
        GRAMMATICA — Design Premium
        ══════════════════════════════════════════════════════ */
     #grammatica-container { max-width: 860px; margin: 0 auto; }
@@ -2178,6 +2316,7 @@
     <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ <span data-i18n="top_nav_quiz">Quiz</span></button>
     <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 <span data-i18n="top_nav_vocabolario">Vocabolario</span></button>
     <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 <span data-i18n="top_nav_grammatica">Grammatica</span></button>
+    <button class="nav-tab" data-section="storie" onclick="App.navegar('storie')">📖 <span data-i18n="top_nav_storie">Storie</span></button>
   </nav>
 
   <!-- Daily goal bar -->
@@ -2369,6 +2508,14 @@
       </div>
     </section>
 
+    <!-- SECTION: Storie -->
+    <section id="sec-storie" class="section">
+      <h2 class="section-titulo" data-i18n="storie_titulo_secao">Storie Italiane</h2>
+      <div id="storie-container">
+        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento storie...</p>
+      </div>
+    </section>
+
     <!-- SECTION: Vocabolario -->
     <section id="sec-vocabolario" class="section">
       <h2 class="section-titulo">Il Vocabolario</h2>
@@ -2499,6 +2646,7 @@
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')" data-i18n="nav_quiz">❓<span>Quiz</span></button>
     <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')" data-i18n="nav_vocab">📖<span>Vocab</span></button>
     <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')" data-i18n="nav_gramatica">📚<span>Gramática</span></button>
+    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📖<span>Storie</span></button>
   </nav>
 
   <!-- ResponsiveVoice — Italian TTS fallback (free for educational use) -->
@@ -2520,6 +2668,7 @@
   <script src="js/dialoghi.js?v=1"></script>
   <script src="js/canzoni.js?v=1"></script>
   <script src="js/imitazione.js?v=1"></script>
+  <script src="js/storie.js?v=1"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');

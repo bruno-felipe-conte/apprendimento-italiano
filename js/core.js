@@ -180,8 +180,8 @@ const App = {
   // ── Data loading ───────────────────────────────────────────
   async carregarDados() {
     const promises = [];
-    // Load templo-1.json through templo-50.json; skip gracefully on 404
-    for (let i = 1; i <= 50; i++) {
+    // Load templo-1.json through templo-51.json; skip gracefully on 404
+    for (let i = 1; i <= 51; i++) {
       promises.push(
         fetch(`data/templo-${i}.json`)
           .then(r => {
@@ -275,6 +275,9 @@ const App = {
     }
     if (secao === 'grammatica' && typeof Grammatica !== 'undefined') {
       Grammatica.renderizarSeletor();
+    }
+    if (secao === 'storie' && typeof Storie !== 'undefined') {
+      Storie.renderizarSeletor();
     }
     if (secao === 'profilo' && typeof Profilo !== 'undefined') {
       Profilo.renderizar();
@@ -677,7 +680,7 @@ const App = {
     if (!input) return;
     if (input.value.trim() === this.UNLOCK_CODE) {
       const p = this.estado.progresso;
-      p.templos_desbloqueados = Array.from({length: 50}, (_, i) => i + 1);
+      p.templos_desbloqueados = Array.from({length: 51}, (_, i) => i + 1);
       this.salvarProgresso();
       this.fecharModalTemplo();
       this.renderizarTemplos();

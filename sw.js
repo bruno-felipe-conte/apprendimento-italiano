@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker  |  Cache v13  |  Offline-first PWA
+// sw.js — Service Worker  |  Cache v37  |  Offline-first PWA
 // Estratégia:
 //   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
 //   • /data/*.json   → network-first com fallback de cache
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v36';
+const CACHE = 'italiano-v37';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -33,6 +33,7 @@ const STATIC = [
   './js/i18n.js',
   './js/notificacoes.js',
   './js/tour.js',
+  './js/storie.js',
   // Dados
   './data/conjugacoes.json',
   './data/grammar.json',
@@ -40,8 +41,9 @@ const STATIC = [
   './data/dialogi.json',
   './data/canzoni.json',
   './data/imitazioni.json',
-  // Templos 1-50 (gerados dinamicamente)
-  ...Array.from({length: 50}, (_, i) => `./data/templo-${i+1}.json`),
+  './data/storie.json',
+  // Templos 1-51 (gerados dinamicamente)
+  ...Array.from({length: 51}, (_, i) => `./data/templo-${i+1}.json`),
   // Manifesto e ícone
   './manifest.webmanifest',
   './icons/icon.svg',

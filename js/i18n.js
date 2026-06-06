@@ -15,6 +15,7 @@ const I18n = {
     'nav_quiz': { pt: 'Quiz', it: 'Quiz' },
     'nav_vocab': { pt: 'Vocab', it: 'Vocabolario' },
     'nav_gramatica': { pt: 'Gramática', it: 'Grammatica' },
+    'nav_storie':    { pt: 'Storie', it: 'Storie' },
     
     // ── Abas de Navegação (Top / Desktop) ──
     'top_nav_templi': { pt: 'Templi', it: 'Templi' },
@@ -24,7 +25,8 @@ const I18n = {
     'top_nav_flashcard': { pt: 'Flashcard', it: 'Flashcard' },
     'top_nav_quiz': { pt: 'Quiz', it: 'Quiz' },
     'top_nav_vocabolario': { pt: 'Vocabolario', it: 'Vocabolario' },
-    'top_nav_grammatica': { pt: 'Grammatica', it: 'Grammatica' },
+    'top_nav_grammatica': { pt: 'Gramática', it: 'Grammatica' },
+    'top_nav_storie':     { pt: 'Storie',     it: 'Storie' },
 
     // ── Elementos Globais ──
     'meta_do_dia': { pt: 'Meta do dia', it: 'Obiettivo del giorno' },
@@ -218,6 +220,19 @@ const I18n = {
 
     // ── Imitazione ──
     'imit_erro_ouvir': { pt: 'Erro ao ouvir. Tente novamente.', it: 'Errore nell\'ascolto. Riprova.' },
+
+    // ── Storie — leitura interativa ──
+    'storie_titulo_secao':   { pt: 'Storie Italiane', it: 'Storie Italiane' },
+    'storie_escolha':        { pt: 'Escolha uma história para começar a leitura', it: 'Scegli una storia per iniziare la lettura' },
+    'storie_btn_traduzir':   { pt: '👁️ Ocultar tradução', it: '👁️ Nascondi traduzione' },
+    'storie_btn_mostrar':    { pt: '👁️ Mostrar tradução', it: '👁️ Mostra traduzione' },
+    'storie_btn_ouvir_tudo': { pt: '🔊 Ouvir tudo', it: '🔊 Ascolta tutto' },
+    'storie_btn_concluir':   { pt: '✓ Concluí (+{xp} XP)', it: '✓ Ho finito (+{xp} XP)' },
+    'storie_btn_relida':     { pt: '✓ Relida', it: '✓ Riletta' },
+    'storie_btn_todas':      { pt: '‹ Todas as histórias', it: '‹ Tutte le storie' },
+    'storie_notif_lida':     { pt: '📖 +{xp} XP por terminar a história!', it: '📖 +{xp} XP per aver finito la storia!' },
+    'storie_notif_ja_lida':  { pt: 'Você já leu esta história.', it: 'Hai già letto questa storia.' },
+    'storie_vocab_titulo':   { pt: '📚 Vocabulário ({n})', it: '📚 Vocabolario ({n})' },
 
     // ── index.html — onboarding e strings estáticas ──
     'ob_descricao': { pt: 'Este app foi desenhado para te levar do zero ao italiano falado de forma simples, natural e altamente eficaz. Cada sessão dura aproximadamente 10 minutos.', it: 'Questa app è stata progettata per portarti da zero all\'italiano parlato in modo semplice, naturale e altamente efficace. Ogni sessione dura circa 10 minuti.' },

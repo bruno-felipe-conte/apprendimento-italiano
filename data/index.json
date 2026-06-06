@@ -870,6 +870,28 @@
         "vita"
       ],
       "desbloqueado_em": 50
+    },
+    {
+      "templo": 51,
+      "arquivo": "templo-51.json",
+      "nome": "La Cucina Regionale",
+      "cidade": "Bologna",
+      "nivel": "B1",
+      "total_palavras": 30,
+      "cor": "#c0392b",
+      "categorias": [
+        "pasta",
+        "primi",
+        "secondi",
+        "salumi",
+        "formaggi",
+        "dolci",
+        "bevande",
+        "antipasti",
+        "condimenti",
+        "erbe"
+      ],
+      "desbloqueado_em": 51
     }
   ]
 }
