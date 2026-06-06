@@ -2053,23 +2053,36 @@
         border: none;
         color: var(--cor-pietra);
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 1.55rem;
+        gap: 2px;
+        font-size: 1.35rem;
         cursor: pointer;
         transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s, filter 0.2s, opacity 0.2s;
-        flex: 1;
-        padding: 0.5rem 0;
+        /* min-width garante que com 9 botões cada um tenha espaço adequado */
+        min-width: 56px;
+        flex: 1 0 56px;
+        padding: 0.35rem 0.2rem;
         margin: 0;
-        border-radius: 12px;
+        border-radius: 10px;
         opacity: 0.55;
         filter: grayscale(0.6);
+        scroll-snap-align: start;
       }
       body.dark-mode .bottom-nav button {
         color: #A69E94;
       }
       .bottom-nav button span {
-        display: none;
+        display: block;
+        font-size: 0.58rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: inherit;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 52px;
       }
       .bottom-nav button:active {
         transform: scale(0.9);
@@ -2080,6 +2093,11 @@
         filter: grayscale(0);
         background: rgba(155, 35, 53, 0.12);
         transform: translateY(-2px);
+        font-size: 1.45rem;
+      }
+      .bottom-nav button.ativa span {
+        color: var(--cor-veneziano);
+        font-weight: 700;
       }
       body.dark-mode .bottom-nav button.ativa {
         color: var(--cor-toscano);
@@ -2407,7 +2425,7 @@
     <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ <span data-i18n="top_nav_quiz">Quiz</span></button>
     <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 <span data-i18n="top_nav_vocabolario">Vocabolario</span></button>
     <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 <span data-i18n="top_nav_grammatica">Grammatica</span></button>
-    <button class="nav-tab" data-section="storie" onclick="App.navegar('storie')">📖 <span data-i18n="top_nav_storie">Storie</span></button>
+    <button class="nav-tab" data-section="storie" onclick="App.navegar('storie')">📜 <span data-i18n="top_nav_storie">Storie</span></button>
   </nav>
 
   <!-- Daily goal bar -->
@@ -2737,7 +2755,7 @@
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')" data-i18n="nav_quiz">❓<span>Quiz</span></button>
     <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')" data-i18n="nav_vocab">📖<span>Vocab</span></button>
     <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')" data-i18n="nav_gramatica">📚<span>Gramática</span></button>
-    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📖<span>Storie</span></button>
+    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📚<span>Storie</span></button>
   </nav>
 
   <!-- ResponsiveVoice — Italian TTS fallback (free for educational use) -->

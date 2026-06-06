@@ -13,14 +13,11 @@ const Storie = {
   paragrafoAttivo: 0,
   traduzirVisivel: true,
   completate: [],
-  
-  // ── Novo: modo de renderização (parágrafos vs contínuo) ─────
-  modoContínuo: false,  // true = texto limpo em uma página única (modo contínuo)
-  
-  // ── Tooltip para tradução de palavras ──────────────────────
-  tooltipAtivo: null,    // { wordSpan, rect } ou null
+  modoContínuo: false,
+  tooltipAtivo: null,
   tooltipTimeout: null,
-  completate: [],
+  _filtroNivel: '',
+  _filtroTexto: '',
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -39,10 +36,6 @@ const Storie = {
   _salvarCompletate() {
     localStorage.setItem('it_storie_lidas', JSON.stringify(this.completate));
   },
-
-  // ── Filtros ────────────────────────────────────────────────
-  _filtroNivel: '',
-  _filtroTexto: '',
 
   // ── Renderizar seletor de histórias ────────────────────────
   async renderizarSeletor() {
