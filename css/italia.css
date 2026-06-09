@@ -441,8 +441,12 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 
   /* Garante que o conteúdo não fique atrás da bottom nav */
   .app-footer {
-    margin-bottom: calc(var(--nav-height, 56px) + env(safe-area-inset-bottom) + 0.5rem);
+    margin-bottom: calc(var(--nav-height, 56px) + env(safe-area-inset-bottom));
   }
+
+  /* Remove gap entre footer e bottom-nav */
+  .app-footer + * { margin-top: 0; }
+  footer.app-footer { padding-bottom: 0.25rem; }
 
   /* Responsividade geral mobile */
   .gram-lesson-layout { gap: 1.4rem; }
