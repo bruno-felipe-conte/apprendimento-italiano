@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/italia.css?v=59">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css"/>
   <link rel="manifest" href="manifest.webmanifest">
   <!-- iOS não lê o manifest para ícone — precisa da tag específica -->
@@ -33,7 +33,7 @@
     }
 
     body {
-      font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif;
+      font-family: 'EB Garamond', Georgia, serif;
       background: var(--cor-pergaminho);
       color: var(--cor-inchiostro);
       min-height: 100vh;     /* fallback for older browsers */
@@ -202,7 +202,7 @@
     .tm-progress-bar { height:6px; background:#ede5d4; border-radius:3px; overflow:hidden; }
     .tm-progress-fill { height:100%; background:linear-gradient(90deg,#9B2335,#C0392B); border-radius:3px; transition:width 0.4s; }
     .tm-lock-banner { background:#fdf6e8; border:1px solid #e8d49a; border-radius:8px; padding:0.55rem 1rem; font-size:0.82rem; color:#8a6520; font-weight:600; margin-bottom:1rem; text-align:center; }
-    .tm-desc { font-family:'Atkinson Hyperlegible',Lato,sans-serif; font-size:0.97rem; line-height:1.8; color:#3a2a1a; font-style:italic; margin-bottom:1.4rem; }
+    .tm-desc { font-family:'EB Garamond',Georgia,serif; font-size:0.97rem; line-height:1.8; color:#3a2a1a; font-style:italic; margin-bottom:1.4rem; }
     .tm-actions { display:flex; gap:0.65rem; }
     .tm-btn-primary { flex:1; background:#9B2335; color:#FFF8F0; border:none; border-radius:10px; padding:0.7rem 1rem; font-size:0.9rem; font-weight:700; cursor:pointer; transition:background 0.18s; }
     .tm-btn-primary:hover { background:#7a1c2a; }
@@ -232,7 +232,7 @@
     .card-selecao-templo label { font-family: 'Cinzel', serif; font-size: 0.78rem; font-weight: 600; color: var(--cor-veneziano-escuro); letter-spacing: 0.03em; white-space: nowrap; }
     .selector-helper { font-size: 0.73rem; color: #b0a090; text-align: center; margin: -0.4rem 0 0.7rem; }
     body.dark-mode .selector-helper { color: #5a5048; }
-    .card-selecao-templo select { flex: 1; padding: 0.48rem 2.2rem 0.48rem 0.8rem; border: 1.5px solid rgba(155,35,53,0.45); border-radius: 8px; font-family: 'Atkinson Hyperlegible', Lato, sans-serif; font-size: 0.9rem; font-weight: 600; color: #2a1a1a; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%239B2335' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.7rem center; -webkit-appearance: none; appearance: none; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; }
+    .card-selecao-templo select { flex: 1; padding: 0.48rem 2.2rem 0.48rem 0.8rem; border: 1.5px solid rgba(155,35,53,0.45); border-radius: 8px; font-family: 'EB Garamond', Georgia, serif; font-size: 0.9rem; font-weight: 600; color: #2a1a1a; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%239B2335' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 0.7rem center; -webkit-appearance: none; appearance: none; cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s; }
     .card-selecao-templo select:focus { outline: none; border-color: var(--cor-veneziano-escuro); box-shadow: 0 0 0 3px rgba(155,35,53,0.12); }
     .card-info { text-align: right; color: #aaa; font-size: 0.75rem; letter-spacing: 0.04em; margin-bottom: 0.4rem; min-height: 1em; background: transparent !important; border: none !important; box-shadow: none !important; padding: 0 0.2rem !important; border-radius: 0 !important; font-variant-numeric: tabular-nums; }
     .card-info strong { color: var(--cor-veneziano-escuro); font-weight: 600; }
@@ -270,7 +270,7 @@
     .btn-secondario { padding: 0.55rem 1.1rem; border: none; border-radius: 20px; cursor: pointer; font-size: 0.95rem; font-weight: 600; font-family: 'EB Garamond', Georgia, serif; letter-spacing: 0.02em; transition: all 0.2s; background: #7F8C8D; color: white; }
     .btn-secondario:hover { background: #6c7a7b; }
     .empty-state { text-align: center; padding: 2rem; background: var(--cor-marmore); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 1rem; }
-    .ornamento-italiano { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--cor-veneziano-escuro); font-style: italic; margin-bottom: 0.5rem; }
+    .ornamento-italiano { font-family: 'EB Garamond', Georgia, serif; font-size: 2rem; color: var(--cor-veneziano-escuro); font-style: italic; margin-bottom: 0.5rem; }
     .em-revisao { color: var(--cor-pietra); font-size: 0.88rem; margin: 0.5rem 0 1rem; }
 
     /* ── Mode toggle buttons ── */
@@ -288,7 +288,7 @@
     .flashcard.modo-reverso .card-verso .ipa { color: rgba(255,248,240,0.65); }
     /* Context mode — ink-blue front */
     .flashcard.modo-contexto .card-frente { background: linear-gradient(135deg, #1a3a5c, #0d2440); }
-    .flashcard.modo-contexto .card-frente .palavra-italiana { font-size: 1.1rem !important; font-style: italic; font-family: 'Playfair Display', serif !important; line-height: 1.45; letter-spacing: 0; }
+    .flashcard.modo-contexto .card-frente .palavra-italiana { font-size: 1.1rem !important; font-style: italic; font-family: 'EB Garamond', Georgia, serif !important; line-height: 1.45; letter-spacing: 0; }
     .flashcard.modo-contexto .card-frente .card-dica { color: rgba(212,168,67,0.9); font-weight: 600; font-style: normal; }
     /* Listen mode — deep teal/purple front */
     .flashcard.modo-escuta .card-frente { background: linear-gradient(135deg, #2d1b4e, #1a0d30); }
@@ -563,7 +563,7 @@
       box-shadow: 0 8px 24px rgba(212, 168, 67, 0.18);
     }
     .storie-selector-icone { font-size: 2.4rem; line-height: 1; }
-    .storie-selector-titulo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 0.95rem; color: #9B2335; line-height: 1.25; margin-top: 0.25rem; }
+    .storie-selector-titulo { font-family: 'EB Garamond', Georgia, serif; font-weight: 700; font-size: 0.95rem; color: #9B2335; line-height: 1.25; margin-top: 0.25rem; }
     body.dark-mode .storie-selector-titulo { color: #D4A843; }
     .storie-selector-autor { font-size: 0.72rem; color: #888; font-style: italic; }
     .storie-selector-meta { display: flex; gap: 0.4rem; align-items: center; margin-top: 0.4rem; font-size: 0.72rem; }
@@ -878,7 +878,7 @@
     .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; transition: none; }
     .gram-lezioni-grid.recolhido { display: none; }
     /* Card de cada lezione */
-    .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'Lato', sans-serif; }
+    .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
     .gram-lez-card:hover { transform: translateY(-2px); box-shadow: 0 5px 18px rgba(155,35,53,0.14); border-left-color: #6B1525; border-left-width: 5px; }
     .gram-lez-card.feita { border-left-color: #27AE60; background: #f3fbf5; border-color: #c8e6d0; border-left-color: #27AE60; }
     .gram-lez-card.feita:hover { box-shadow: 0 5px 18px rgba(39,174,96,0.14); border-left-color: #1e8449; }
@@ -893,7 +893,7 @@
     .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
     /* Módulos bloqueados — linha inferior compacta */
     .gram-locked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.5rem; }
-    .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'Lato', sans-serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
+    .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
     .gram-locked-pill-icon { font-size: 1rem; }
     .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
     .gram-locked-pill-id { font-family: 'Cinzel', serif; font-size: 0.6rem; color: #999; letter-spacing: 0.15em; text-transform: uppercase; }
@@ -910,13 +910,13 @@
     .gram-admin-icon { font-size: 2.2rem; margin-bottom: 0.2rem; }
     .gram-admin-titulo { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--cor-inchiostro); letter-spacing: 0.04em; }
     .gram-admin-subtit { font-size: 0.8rem; color: var(--cor-veneziano-escuro); font-weight: 600; margin-bottom: 0.6rem; }
-    .gram-admin-input { width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; font-family: 'Lato', sans-serif; outline: none; text-align: center; letter-spacing: 0.25em; color: var(--cor-inchiostro); transition: border-color 0.18s; box-sizing: border-box; }
+    .gram-admin-input { width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; font-family: 'EB Garamond', Georgia, serif; outline: none; text-align: center; letter-spacing: 0.25em; color: var(--cor-inchiostro); transition: border-color 0.18s; box-sizing: border-box; }
     .gram-admin-input:focus { border-color: var(--cor-veneziano-escuro); }
     .gram-admin-erro { color: #c0392b; font-size: 0.78rem; font-weight: 600; margin-top: 0.1rem; }
     .gram-admin-btns { display: flex; gap: 0.75rem; margin-top: 0.8rem; width: 100%; }
-    .gram-admin-btn-cancel { flex: 1; background: none; border: 1.5px solid #ddd; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: var(--cor-pietra); cursor: pointer; font-weight: 600; transition: all 0.16s; }
+    .gram-admin-btn-cancel { flex: 1; background: none; border: 1.5px solid #ddd; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'EB Garamond', Georgia, serif; color: var(--cor-pietra); cursor: pointer; font-weight: 600; transition: all 0.16s; }
     .gram-admin-btn-cancel:hover { border-color: #bbb; color: var(--cor-inchiostro); }
-    .gram-admin-btn-ok { flex: 2; background: #9B2335; border: none; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: #FFF8F0; cursor: pointer; font-weight: 700; transition: background 0.16s; }
+    .gram-admin-btn-ok { flex: 2; background: #9B2335; border: none; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'EB Garamond', Georgia, serif; color: #FFF8F0; cursor: pointer; font-weight: 700; transition: background 0.16s; }
     .gram-admin-btn-ok:hover { background: #6B1525; }
     @keyframes gramFadeIn { from { opacity: 0 } to { opacity: 1 } }
     @keyframes gramFadeOut { from { opacity: 1 } to { opacity: 0 } }
@@ -970,7 +970,7 @@
     body.dark-mode .artigo-card .ac-exemplos { color: #A89F92; }
     body.dark-mode .tabela-plural { color: #A89F92; background: rgba(212,168,67,0.07); }
     .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
-    .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: var(--cor-veneziano-escuro); border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: var(--cor-veneziano-escuro); border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
     .gram-lesson-breadcrumb { font-size: 0.75rem; color: #bbb; }
     .gram-lesson-breadcrumb span { color: var(--cor-veneziano-escuro); font-weight: 700; }
@@ -1039,11 +1039,11 @@
 
     /* Múltipla escolha */
     .gram-options { padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; }
-    .gram-option { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #e8ddd0; border-radius: 12px; background: var(--cor-marmore); cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: var(--cor-inchiostro); transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'Lato', sans-serif; }
+    .gram-option { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #e8ddd0; border-radius: 12px; background: var(--cor-marmore); cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: var(--cor-inchiostro); transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-option:hover:not(:disabled) { border-color: var(--cor-veneziano-escuro); background: #fdf5f5; color: var(--cor-veneziano-escuro); }
-    .gram-option-correct { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.96rem; line-height: 1.65; color: #1a6b3c; font-weight: 700; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; animation: gramAcertoGlow 0.8s ease; }
-    .gram-option-wrong { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.96rem; line-height: 1.65; color: #7b241c; font-weight: 700; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; }
-    .gram-option-disabled { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.96rem; line-height: 1.65; color: #bbb; font-family: 'Atkinson Hyperlegible', 'Lato', sans-serif; }
+    .gram-option-correct { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.96rem; line-height: 1.65; color: #1a6b3c; font-weight: 700; font-family: 'EB Garamond', Georgia, serif; animation: gramAcertoGlow 0.8s ease; }
+    .gram-option-wrong { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.96rem; line-height: 1.65; color: #7b241c; font-weight: 700; font-family: 'EB Garamond', Georgia, serif; }
+    .gram-option-disabled { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.96rem; line-height: 1.65; color: #bbb; font-family: 'EB Garamond', Georgia, serif; }
 
     /* Blur-reveal */
     .gram-revelar-area { padding: 1.1rem 1.3rem; }
@@ -1089,7 +1089,7 @@
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
-      font-family: 'Lato', sans-serif;
+      font-family: 'EB Garamond', Georgia, serif;
       box-shadow: 0 4px 10px rgba(155, 35, 53, 0.18);
     }
     .gram-btn-rivela-tutto:hover {
@@ -1097,7 +1097,7 @@
       transform: translateY(-1px);
       box-shadow: 0 6px 14px rgba(155, 35, 53, 0.28);
     }
-    .gram-btn-nascondi { display: none; background: none; border: 1.5px solid #ccc; color: #999; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-nascondi { display: none; background: none; border: 1.5px solid #ccc; color: #999; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-nascondi:hover { background: #f4f4f4; }
 
     /* Feedback */
@@ -1108,11 +1108,11 @@
 
     /* Ações */
     .gram-ex-actions { padding: 0.75rem 1.3rem 1.3rem; display: flex; gap: 0.65rem; justify-content: flex-end; }
-    .gram-btn-next { padding: 0.68rem 1.6rem; background: #9B2335; color: #FFF8F0; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-next { padding: 0.68rem 1.6rem; background: #9B2335; color: #FFF8F0; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-next:hover { background: #7a1c2a; }
-    .gram-btn-acertei { padding: 0.68rem 1.25rem; background: #27AE60; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-acertei { padding: 0.68rem 1.25rem; background: #27AE60; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-acertei:hover { background: #1e8449; }
-    .gram-btn-errei { padding: 0.68rem 1.25rem; background: var(--cor-marmore); color: #C0392B; border: 2px solid #C0392B; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-errei { padding: 0.68rem 1.25rem; background: var(--cor-marmore); color: #C0392B; border: 2px solid #C0392B; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-errei:hover { background: #fde8e6; }
 
     /* Resultado */
@@ -1125,7 +1125,7 @@
     .gram-res-xp { font-size: 1.1rem; color: var(--cor-toscano); font-weight: 700; margin: 0.7rem 0; }
     .gram-res-msg { font-style: normal; color: #666; margin: 0.8rem 0 1.2rem; font-size: 0.95rem; font-weight: 600; }
     .gram-res-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-    .gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+    .gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
     .gram-btn-secondary:hover { background: #ede0c4; border-color: var(--cor-veneziano-escuro); color: var(--cor-veneziano-escuro); }
 
     /* Misc */
@@ -2361,7 +2361,7 @@
       border-radius: 16px !important;
       padding: 1.5rem 1.6rem 1.3rem !important;
       color: #2E1B0E !important;
-      font-family: 'Atkinson Hyperlegible', Lato, sans-serif !important;
+      font-family: 'EB Garamond', Georgia, serif !important;
       box-shadow: 0 24px 64px rgba(0,0,0,0.45), 0 6px 18px rgba(0,0,0,0.25) !important;
       max-width: 360px !important;
       min-width: 280px !important;
@@ -2394,7 +2394,7 @@
       color: #FFF8F0 !important;
       border: none !important;
       border-radius: 8px !important;
-      font-family: 'Atkinson Hyperlegible', Lato, sans-serif !important;
+      font-family: 'EB Garamond', Georgia, serif !important;
       font-weight: 700 !important;
       font-size: 0.82rem !important;
       line-height: 1.2 !important;

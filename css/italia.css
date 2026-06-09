@@ -5,7 +5,7 @@
    ============================================================================= */
 
 /* 1. GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
 
 /* 2. CSS CUSTOM PROPERTIES */
 :root {
@@ -24,8 +24,8 @@
   --cor-verde-certo:      #3D7A4A;
 
   --fonte-titulo:   'Cinzel', serif;
-  --fonte-italiano: 'Crimson Text', serif;
-  --fonte-ui:       'Inter', sans-serif;
+  --fonte-italiano: 'EB Garamond', Georgia, serif;
+  --fonte-ui:       'EB Garamond', Georgia, serif;
 
   --esp-xs:  0.25rem;
   --esp-sm:  0.5rem;
@@ -1060,7 +1060,7 @@ body.dark-mode .card-meta-prazo {
 .gram-nivel-toggle-icone { cursor: pointer; float: right; font-size: 1rem; opacity: 0.7; }
 .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; transition: none; }
 .gram-lezioni-grid.recolhido { display: none; }
-.gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'Lato', sans-serif; }
+.gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
 .gram-lez-card:hover { transform: translateY(-2px); box-shadow: 0 5px 18px rgba(155,35,53,0.14); border-left-color: #6B1525; border-left-width: 5px; }
 .gram-lez-card.feita { border-left-color: #27AE60; background: #f3fbf5; border-color: #c8e6d0; }
 .gram-lez-card.feita:hover { box-shadow: 0 5px 18px rgba(39,174,96,0.14); border-left-color: #1e8449; }
@@ -1074,7 +1074,7 @@ body.dark-mode .card-meta-prazo {
 .gram-lez-card:hover .gram-lez-arrow { color: var(--cor-veneziano-escuro); }
 .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
 .gram-locked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.5rem; }
-.gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'Lato', sans-serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
+.gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
 .gram-locked-pill-icon { font-size: 1rem; }
 .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
 .gram-locked-pill-id { font-family: 'Cinzel', serif; font-size: 0.6rem; color: #999; letter-spacing: 0.15em; text-transform: uppercase; }
@@ -1089,13 +1089,13 @@ body.dark-mode .card-meta-prazo {
 .gram-admin-icon { font-size: 2.2rem; margin-bottom: 0.2rem; }
 .gram-admin-titulo { font-family: 'Cinzel', serif; font-size: 1.05rem; font-weight: 700; color: var(--cor-inchiostro); letter-spacing: 0.04em; }
 .gram-admin-subtit { font-size: 0.8rem; color: var(--cor-veneziano-escuro); font-weight: 600; margin-bottom: 0.6rem; }
-.gram-admin-input { width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; font-family: 'Lato', sans-serif; outline: none; text-align: center; letter-spacing: 0.25em; color: var(--cor-inchiostro); transition: border-color 0.18s; box-sizing: border-box; }
+.gram-admin-input { width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; font-family: 'EB Garamond', Georgia, serif; outline: none; text-align: center; letter-spacing: 0.25em; color: var(--cor-inchiostro); transition: border-color 0.18s; box-sizing: border-box; }
 .gram-admin-input:focus { border-color: var(--cor-veneziano-escuro); }
 .gram-admin-erro { color: #c0392b; font-size: 0.78rem; font-weight: 600; margin-top: 0.1rem; }
 .gram-admin-btns { display: flex; gap: 0.75rem; margin-top: 0.8rem; width: 100%; }
-.gram-admin-btn-cancel { flex: 1; background: none; border: 1.5px solid #ddd; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: var(--cor-pietra); cursor: pointer; font-weight: 600; transition: all 0.16s; }
+.gram-admin-btn-cancel { flex: 1; background: none; border: 1.5px solid #ddd; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'EB Garamond', Georgia, serif; color: var(--cor-pietra); cursor: pointer; font-weight: 600; transition: all 0.16s; }
 .gram-admin-btn-cancel:hover { border-color: #bbb; color: var(--cor-inchiostro); }
-.gram-admin-btn-ok { flex: 2; background: #9B2335; border: none; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'Lato', sans-serif; color: #FFF8F0; cursor: pointer; font-weight: 700; transition: background 0.16s; }
+.gram-admin-btn-ok { flex: 2; background: #9B2335; border: none; border-radius: 9px; padding: 0.62rem; font-size: 0.88rem; font-family: 'EB Garamond', Georgia, serif; color: #FFF8F0; cursor: pointer; font-weight: 700; transition: background 0.16s; }
 .gram-admin-btn-ok:hover { background: #6B1525; }
 @keyframes gramFadeIn { from { opacity: 0 } to { opacity: 1 } }
 @keyframes gramFadeOut { from { opacity: 1 } to { opacity: 0 } }
@@ -1130,7 +1130,7 @@ body.dark-mode .card-meta-prazo {
 .ac-cinza .ac-titulo { color: #424949; }
 .tabela-plural { margin-top: 0.7rem; font-size: 0.82rem; color: #666; padding: 0.5rem 0.8rem; background: rgba(155,35,53,0.05); border-radius: 8px; }
 .gram-lesson-nav { display: flex; align-items: center; justify-content: space-between; }
-.gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: var(--cor-veneziano-escuro); border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-back { display: inline-flex; align-items: center; gap: 0.3rem; background: none; border: 1.5px solid #9B2335; color: var(--cor-veneziano-escuro); border-radius: 8px; padding: 0.38rem 0.85rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-back:hover { background: #9B2335; color: #FFF8F0; }
 .gram-lesson-breadcrumb { font-size: 0.75rem; color: #bbb; }
 .gram-lesson-breadcrumb span { color: var(--cor-veneziano-escuro); font-weight: 700; }
@@ -1183,11 +1183,11 @@ body.dark-mode .card-meta-prazo {
 .gram-ex-question em { color: #7a4800; font-style: normal; font-weight: 600; background: #fff3d4; border-radius: 3px; padding: 0 3px; }
 .gram-ex-dica { background: #fffbf0; border-left: 4px solid #D4A843; border-radius: 0 8px 8px 0; padding: 0.65rem 1rem; font-size: 0.88rem; color: #5a4500; margin: 0.5rem 0 1rem; line-height: 1.7; letter-spacing: 0.01em; }
 .gram-options { padding: 1.1rem 1.3rem; display: flex; flex-direction: column; gap: 0.6rem; }
-.gram-option { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #e8ddd0; border-radius: 12px; background: var(--cor-marmore); cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: var(--cor-inchiostro); transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'Lato', sans-serif; }
+.gram-option { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #e8ddd0; border-radius: 12px; background: var(--cor-marmore); cursor: pointer; font-size: 0.9rem; line-height: 1.45; color: var(--cor-inchiostro); transition: border-color 0.18s, background 0.18s, color 0.18s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-option:hover:not(:disabled) { border-color: var(--cor-veneziano-escuro); background: #fdf5f5; color: var(--cor-veneziano-escuro); }
-.gram-option-correct { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.96rem; line-height: 1.65; color: #1a6b3c; font-weight: 700; font-family: 'Lato', sans-serif; }
-.gram-option-wrong { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.96rem; line-height: 1.65; color: #7b241c; font-weight: 700; font-family: 'Lato', sans-serif; }
-.gram-option-disabled { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.96rem; line-height: 1.65; color: #bbb; font-family: 'Lato', sans-serif; }
+.gram-option-correct { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #27AE60; border-radius: 12px; background: #eafaf1; font-size: 0.96rem; line-height: 1.65; color: #1a6b3c; font-weight: 700; font-family: 'EB Garamond', Georgia, serif; }
+.gram-option-wrong { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #C0392B; border-radius: 12px; background: #fde8e6; font-size: 0.96rem; line-height: 1.65; color: #7b241c; font-weight: 700; font-family: 'EB Garamond', Georgia, serif; }
+.gram-option-disabled { display: block; width: 100%; text-align: left; padding: 1rem 1.3rem; border: 2px solid #eee; border-radius: 12px; background: #fafafa; font-size: 0.96rem; line-height: 1.65; color: #bbb; font-family: 'EB Garamond', Georgia, serif; }
 .gram-revelar-area { padding: 1.1rem 1.3rem; }
 .gram-revelar-hint { font-size: 0.85rem; color: #999; margin-bottom: 0.9rem; text-align: center; }
 .gram-risposta-container { font-size: 1.05rem; color: var(--cor-inchiostro); line-height: 1.75; margin-bottom: 0.85rem; padding: 0.9rem 1.1rem; background: #fdfaf4; border-radius: 10px; border: 1.5px dashed #d4c4a8; min-height: 3rem; }
@@ -1195,20 +1195,20 @@ body.dark-mode .card-meta-prazo {
 .gram-word-blur:hover { filter: blur(2px); background: rgba(155,35,53,0.15); border-color: var(--cor-veneziano-escuro); transform: scale(1.03); }
 .gram-word-blur.revealed { filter: none; opacity: 1; background: rgba(39,174,96,0.08); color: #27AE60; border: 1px solid rgba(39,174,96,0.3); cursor: default; transform: none; }
 .gram-revelar-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.gram-btn-rivela-tutto { background: #9B2335; border: none; color: white; padding: 0.62rem 1.4rem; border-radius: 10px; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; font-family: 'Lato', sans-serif; box-shadow: 0 4px 10px rgba(155,35,53,0.18); }
+.gram-btn-rivela-tutto { background: #9B2335; border: none; color: white; padding: 0.62rem 1.4rem; border-radius: 10px; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: all 0.2s ease; font-family: 'EB Garamond', Georgia, serif; box-shadow: 0 4px 10px rgba(155,35,53,0.18); }
 .gram-btn-rivela-tutto:hover { background: #7a1c2a; transform: translateY(-1px); }
-.gram-btn-nascondi { display: none; background: none; border: 1.5px solid #ccc; color: #999; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-nascondi { display: none; background: none; border: 1.5px solid #ccc; color: #999; padding: 0.38rem 0.9rem; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-nascondi:hover { background: #f4f4f4; }
 .gram-ex-feedback { padding: 0 1.3rem; }
 .gram-feedback-correct { background: #eafaf1; border-left: 4px solid #27AE60; color: #1a5c35; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
 .gram-feedback-wrong { background: #fde8e6; border-left: 4px solid #C0392B; color: #7b241c; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
 .gram-feedback-info { background: #fef9ec; border-left: 4px solid #D4A843; color: #7a5800; padding: 0.9rem 1.05rem; border-radius: 0 10px 10px 0; font-size: 0.88rem; line-height: 1.55; margin: 0.8rem 0; }
 .gram-ex-actions { padding: 0.75rem 1.3rem 1.3rem; display: flex; gap: 0.65rem; justify-content: flex-end; }
-.gram-btn-next { padding: 0.68rem 1.6rem; background: #9B2335; color: #FFF8F0; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-next { padding: 0.68rem 1.6rem; background: #9B2335; color: #FFF8F0; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-next:hover { background: #7a1c2a; }
-.gram-btn-acertei { padding: 0.68rem 1.25rem; background: #27AE60; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-acertei { padding: 0.68rem 1.25rem; background: #27AE60; color: white; border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: background 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-acertei:hover { background: #1e8449; }
-.gram-btn-errei { padding: 0.68rem 1.25rem; background: var(--cor-marmore); color: #C0392B; border: 2px solid #C0392B; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-errei { padding: 0.68rem 1.25rem; background: var(--cor-marmore); color: #C0392B; border: 2px solid #C0392B; border-radius: 10px; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-errei:hover { background: #fde8e6; }
 .gram-resultado { text-align: center; padding: 2.5rem 1.5rem; }
 .gram-res-emoji { font-size: 3rem; margin-bottom: 0.6rem; }
@@ -1219,7 +1219,7 @@ body.dark-mode .card-meta-prazo {
 .gram-res-xp { font-size: 1.1rem; color: var(--cor-toscano); font-weight: 700; margin: 0.7rem 0; }
 .gram-res-msg { color: #666; margin: 0.8rem 0 1.2rem; font-size: 0.95rem; font-weight: 600; }
 .gram-res-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-.gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'Lato', sans-serif; }
+.gram-btn-secondary { padding: 0.62rem 1.15rem; background: #f5edd8; color: #5a3e1b; border: 1.5px solid #d4c4a8; border-radius: 10px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; font-family: 'EB Garamond', Georgia, serif; }
 .gram-btn-secondary:hover { background: #ede0c4; border-color: var(--cor-veneziano-escuro); color: var(--cor-veneziano-escuro); }
 .gram-empty { text-align: center; color: #bbb; padding: 3rem 1rem; font-style: italic; }
 .gram-ex-tipo-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.07em; border-radius: 20px; padding: 0.18rem 0.6rem; }
