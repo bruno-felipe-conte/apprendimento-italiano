@@ -331,12 +331,15 @@ const Dialoghi = {
       for (const t of d.turni) {
         const isUtente = t.personaggio === 'Tu';
         const cssClass = isUtente ? 'utente' : 'personaggio';
+        // Fallback: se frase estiver vazia mas há alternativas, usa a resposta correta
+        const fraseExibir = t.frase || (t.alternativas ? t.alternativas[t.resposta_correta || 0] : '');
+        const traducaoExibir = t.traducao || '';
         html += `
           <div class="dialogo-turno ${cssClass}">
             <div class="dialogo-bubble">
               <div class="dialogo-nome">${t.personaggio}</div>
-              <div>${t.frase} <button class="dialogo-audio-btn" onclick="App.pronunciar('${t.frase.replace(/'/g, "\\'")}')">🔊</button></div>
-              <div class="dialogo-traducao">${t.traducao}</div>
+              <div>${fraseExibir} <button class="dialogo-audio-btn" onclick="App.pronunciar('${fraseExibir.replace(/'/g, "\\'")}')">🔊</button></div>
+              ${traducaoExibir ? `<div class="dialogo-traducao">${traducaoExibir}</div>` : ''}
             </div>
           </div>
         `;

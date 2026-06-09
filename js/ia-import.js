@@ -8,164 +8,234 @@ const IAImport = {
 
   // ── Prompts por tipo ─────────────────────────────────────
   prompts: {
-    dialogo: `Gere um diálogo em italiano para aprendizes. Retorne APENAS o JSON abaixo, sem texto extra:
+    dialogo: `Crie um diálogo em italiano para aprendizes de português. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+
+REGRAS OBRIGATÓRIAS:
+1. Turnos do PERSONAGEM: campos "frase" (italiano), "traducao" (português), "audio_ipa" (deixe "")
+2. Turnos do "Tu": campo "frase" = a resposta CORRETA em italiano, "traducao" = tradução dessa resposta, MAIS "alternativas" (4 opções em italiano, a correta INCLUÍDA) e "resposta_correta" = índice 0-3 da correta em alternativas
+3. Alterne sempre: PERSONAGEM → Tu → PERSONAGEM → Tu... (8 a 12 turnos no total)
+4. Todas as falas em italiano correto, todas as traduções em português brasileiro
+
+EXEMPLO de dois turnos (copie exatamente este formato):
 {
   "id": "dial_custom_001",
-  "titulo": "Nome do Diálogo",
-  "icone": "🎭",
+  "titulo": "No Mercato",
+  "icone": "🛒",
   "nivel": "A1",
-  "contexto": "Descrição da situação em português",
+  "contexto": "Você está num mercado comprando frutas.",
   "turni": [
     {
       "id": 1,
-      "personaggio": "Nomedalapessoa",
-      "frase": "Frase em italiano",
-      "traducao": "Tradução em português",
+      "personaggio": "Venditore",
+      "frase": "Buongiorno! Cosa desidera?",
+      "traducao": "Bom dia! O que deseja?",
       "audio_ipa": ""
     },
     {
       "id": 2,
       "personaggio": "Tu",
-      "frase": "",
-      "traducao": "",
+      "frase": "Vorrei delle mele, per favore.",
+      "traducao": "Eu gostaria de algumas maçãs, por favor.",
       "audio_ipa": "",
-      "alternativas": ["opção A em italiano", "opção B em italiano", "opção C em italiano", "opção D em italiano"],
+      "alternativas": [
+        "Vorrei delle mele, per favore.",
+        "Non mi piace la frutta.",
+        "Dov'è il bagno?",
+        "Quanto costa questo vestito?"
+      ],
       "resposta_correta": 0
+    },
+    {
+      "id": 3,
+      "personaggio": "Venditore",
+      "frase": "Certo! Quante ne vuole?",
+      "traducao": "Claro! Quantas quer?",
+      "audio_ipa": ""
+    },
+    {
+      "id": 4,
+      "personaggio": "Tu",
+      "frase": "Un chilo, grazie.",
+      "traducao": "Um quilo, obrigado.",
+      "audio_ipa": "",
+      "alternativas": [
+        "Non lo so.",
+        "Un chilo, grazie.",
+        "Sono a dieta.",
+        "Preferisco le banane."
+      ],
+      "resposta_correta": 1
     }
   ],
-  "vocabulario_chave": ["palavra1", "palavra2", "palavra3"],
+  "vocabulario_chave": ["desiderare", "mela", "chilo"],
   "xp_recompensa": 50
 }
 
-Notas:
-- "nivel" deve ser A1, A2, B1, B2 ou C1
-- Turnos do personagem só têm "frase" e "traducao"
-- Turnos do "Tu" têm "alternativas" (4 opções) e "resposta_correta" (índice 0-3 da opção certa)
-- Inclua 6 a 10 turnos no total alternando personagem e "Tu"
+TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "comprando passagem de trem em Milão", "pedindo ajuda numa farmácia", "fazendo check-in no hotel"]`,
 
-Tema do diálogo: [DESCREVA AQUI O TEMA — ex: pedir informações numa farmácia]`,
+    canzone: `Crie os dados de uma música italiana para estudo. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
-    canzone: `Gere dados de uma música italiana para aprendizes. Retorne APENAS o JSON abaixo, sem texto extra:
+REGRAS OBRIGATÓRIAS:
+1. "texto_completo" = verso real e completo da música
+2. "texto_lacuna" = o mesmo verso com UMA palavra substituída por ___
+3. "palavra_oculta" = exatamente essa palavra (deve estar no texto_completo)
+4. "traducao" = tradução do verso em português brasileiro
+5. "dica" = explicação gramatical breve da palavra oculta
+6. Inclua de 5 a 8 versos
+
+EXEMPLO COMPLETO (copie exatamente este formato):
 {
   "id": "can_custom_001",
-  "titulo": "Nome da Música",
-  "artista": "Nome do Artista",
+  "titulo": "Bella Ciao",
+  "artista": "Canto Partigiano",
   "nivel": "A2",
-  "icone": "🎵",
-  "tema": "amore",
+  "icone": "🌹",
+  "tema": "storia",
   "estrofes": [
     {
       "id": 1,
-      "texto_completo": "Verso completo da música em italiano",
-      "texto_lacuna": "Verso com ___ no lugar de uma palavra-chave",
-      "palavra_oculta": "palavra",
-      "traducao": "Tradução do verso em português",
-      "dica": "Dica gramatical sobre a palavra oculta"
+      "texto_completo": "Una mattina mi sono alzato",
+      "texto_lacuna": "Una mattina mi sono ___",
+      "palavra_oculta": "alzato",
+      "traducao": "Uma manhã eu me levantei",
+      "dica": "participio passato de 'alzarsi' (levantar-se)"
+    },
+    {
+      "id": 2,
+      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
+      "texto_lacuna": "O ___ ciao, bella ciao, bella ciao ciao ciao",
+      "palavra_oculta": "bella",
+      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
+      "dica": "aggettivo feminino — bela, bonita"
     }
   ],
-  "vocabulario_chave": ["palavra1", "palavra2", "palavra3"],
+  "vocabulario_chave": ["alzarsi", "mattina", "partigiano"],
   "xp_recompensa": 40
 }
 
-Notas:
-- "tema" pode ser: amore, vita, storia, natureza, festa, saudade
-- "texto_lacuna" é igual ao "texto_completo" mas com a "palavra_oculta" substituída por ___
-- Inclua de 4 a 8 estrofes/versos
+MÚSICA: [SUBSTITUA AQUI — ex: "Azzurro de Adriano Celentano", "Volare de Domenico Modugno", "L'Italiano de Toto Cotugno"]`,
 
-Música: [NOME DA MÚSICA E ARTISTA — ex: "Volare" de Domenico Modugno]`,
+    storia: `Crie uma história curta em italiano para aprendizes. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
-    storia: `Gere uma história curta em italiano para aprendizes. Retorne APENAS o JSON abaixo, sem texto extra:
+REGRAS OBRIGATÓRIAS:
+1. "italiano" = parágrafo em italiano correto
+2. "portugues" = tradução do parágrafo em português brasileiro
+3. "parole" = lista de 2-4 palavras importantes do parágrafo com tradução, IPA e categoria
+4. Inclua de 4 a 6 parágrafos
+5. "nivel" deve ser A1, A2, B1, B2, C1 ou C2
+
+EXEMPLO COMPLETO (copie exatamente este formato):
 {
   "id": "stor_custom_001",
-  "titulo": "Titolo in italiano",
-  "titulo_pt": "Título em Português",
+  "titulo": "Una Mattina a Roma",
+  "titulo_pt": "Uma Manhã em Roma",
   "nivel": "A1",
-  "icone": "📖",
-  "autor": "Nome do Autor ou Tradizionale",
+  "icone": "🏛️",
+  "autor": "Italiano Autentico",
   "tema": "quotidiano",
-  "descricao": "Breve descrição da história em italiano",
-  "descricao_pt": "Breve descrição da história em português",
+  "descricao": "Marco si sveglia presto e cammina per le strade di Roma.",
+  "descricao_pt": "Marco acorda cedo e caminha pelas ruas de Roma.",
   "xp_recompensa": 80,
   "testo": [
     {
       "id": "stor_custom_001_p1",
-      "italiano": "Primeiro parágrafo em italiano.",
-      "portugues": "Primeiro parágrafo em português.",
+      "italiano": "Marco si sveglia alle sette. Apre la finestra e vede il sole.",
+      "portugues": "Marco acorda às sete. Ele abre a janela e vê o sol.",
       "parole": [
-        {
-          "parola": "palavra-chave",
-          "traduzione": "tradução",
-          "ipa": "/ipa/",
-          "categoria": "sostantivo"
-        }
+        {"parola": "svegliarsi", "traduzione": "acordar", "ipa": "/zvɛʎˈʎarsi/", "categoria": "verbo"},
+        {"parola": "finestra", "traduzione": "janela", "ipa": "/fiˈnɛstra/", "categoria": "sostantivo"},
+        {"parola": "sole", "traduzione": "sol", "ipa": "/ˈsoːle/", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "stor_custom_001_p2",
+      "italiano": "Fa colazione con un caffè e un cornetto. È delizioso!",
+      "portugues": "Ele toma café da manhã com um espresso e um croissant. É delicioso!",
+      "parole": [
+        {"parola": "colazione", "traduzione": "café da manhã", "ipa": "/kolaˈtsjone/", "categoria": "sostantivo"},
+        {"parola": "cornetto", "traduzione": "croissant", "ipa": "/korˈnetto/", "categoria": "sostantivo"},
+        {"parola": "delizioso", "traduzione": "delicioso", "ipa": "/deliˈtsjoso/", "categoria": "aggettivo"}
       ]
     }
   ]
 }
 
-Notas:
-- "nivel" deve ser A1, A2, B1, B2, C1 ou C2
-- "tema" pode ser: quotidiano, fiaba, avventura, storia, cultura, umorismo
-- Inclua de 4 a 8 parágrafos em "testo"
-- Em cada parágrafo, "parole" deve ter de 2 a 4 palavras-chave com tradução e IPA
-- "categoria" pode ser: sostantivo, verbo, aggettivo, espressione, avverbio
+TEMA DA HISTÓRIA: [SUBSTITUA AQUI — ex: "um dia de compras num mercado em Florença", "férias numa praia da Sicília", "primeiro dia de trabalho em Milão"]`,
 
-Tema/assunto da história: [DESCREVA AQUI — ex: uma manhã típica de uma família italiana]`,
+    imitazione: `Crie frases italianas para prática de pronúncia. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
 
-    imitazione: `Gere frases italianas para prática de pronúncia. Retorne APENAS um array JSON, sem texto extra:
+REGRAS OBRIGATÓRIAS:
+1. Gere de 8 a 12 frases relacionadas ao tema
+2. "frase_italiano" = frase natural em italiano, nem curta demais nem longa demais
+3. "frase_portugues" = tradução em português brasileiro
+4. "contexto" = explicação em português de quando/como usar a frase (1-2 frases)
+5. "nivel" deve ser A1, A2, B1, B2 ou C1
+6. Deixe "audio_ipa" sempre como string vazia ""
+
+EXEMPLO COMPLETO (copie exatamente este formato):
 [
   {
     "id": "imi_custom_001",
-    "frase_italiano": "Frase em italiano",
-    "frase_portugues": "Tradução em português",
+    "frase_italiano": "Mi scusi, sa dov'è la stazione?",
+    "frase_portugues": "Com licença, o senhor sabe onde é a estação?",
     "nivel": "A1",
-    "contexto": "Quando e como usar esta frase",
+    "contexto": "Use para pedir informações sobre direções de forma educada para um desconhecido.",
     "audio_ipa": "",
     "xp_recompensa": 15
   },
   {
     "id": "imi_custom_002",
-    "frase_italiano": "Segunda frase",
-    "frase_portugues": "Tradução",
-    "nivel": "A1",
-    "contexto": "Contexto de uso",
+    "frase_italiano": "Potrebbe ripetere più lentamente, per favore?",
+    "frase_portugues": "Poderia repetir mais devagar, por favor?",
+    "nivel": "A2",
+    "contexto": "Use quando não entender o que alguém disse e precisar que repita mais devagar.",
     "audio_ipa": "",
     "xp_recompensa": 15
   }
 ]
 
-Notas:
-- "nivel" deve ser A1, A2, B1, B2 ou C1
-- Gere de 5 a 10 frases relacionadas ao tema
-- "contexto" deve explicar em português quando/como usar a frase
-- Deixe "audio_ipa" como string vazia ""
+TEMA DAS FRASES: [SUBSTITUA AQUI — ex: "pedir informações na rua", "no restaurante pedindo a conta", "expressões de surpresa e admiração"]`,
 
-Tema/contexto das frases: [DESCREVA AQUI — ex: expressões para pedir desculpas]`,
+    vocab: `Crie palavras de vocabulário italiano. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
 
-    vocab: `Gere palavras de vocabulário italiano. Retorne APENAS um array JSON, sem texto extra:
+REGRAS OBRIGATÓRIAS:
+1. Gere de 12 a 20 palavras relacionadas ao tema
+2. "genero": "m" para masculino, "f" para feminino, null para verbos e expressões
+3. "plural": forma plural do substantivo/adjetivo, null para verbos
+4. "exemplo" = frase real em italiano usando a palavra em contexto
+5. "exemplo_pt" = tradução da frase de exemplo em português brasileiro
+6. "audio_ipa" = transcrição IPA da palavra (só a palavra, não a frase)
+7. "dificuldade": "facil" (básica), "medio" (intermediária) ou "dificil" (avançada)
+
+EXEMPLO COMPLETO (copie exatamente este formato):
 [
   {
     "id": "vocab_custom_001",
-    "italiano": "parola",
-    "portugues": "palavra em português",
+    "italiano": "treno",
+    "portugues": "trem",
     "genero": "m",
-    "plural": "parole",
-    "exemplo": "Frase de exemplo em italiano usando a palavra.",
-    "exemplo_pt": "Frase de exemplo em português.",
-    "categoria": "sostantivi",
+    "plural": "treni",
+    "exemplo": "Il treno parte alle nove dalla stazione centrale.",
+    "exemplo_pt": "O trem parte às nove da estação central.",
+    "categoria": "viaggio",
+    "dificuldade": "facil",
+    "audio_ipa": "/ˈtrɛːno/"
+  },
+  {
+    "id": "vocab_custom_002",
+    "italiano": "prenotare",
+    "portugues": "reservar",
+    "genero": null,
+    "plural": null,
+    "exemplo": "Ho prenotato un posto sul treno per Venezia.",
+    "exemplo_pt": "Reservei um lugar no trem para Veneza.",
+    "categoria": "verbi",
     "dificuldade": "medio",
-    "audio_ipa": "/ˈpa.ro.la/"
+    "audio_ipa": "/prenoˈtaːre/"
   }
 ]
 
-Notas:
-- "genero" deve ser "m" (masculino), "f" (feminino) ou null para verbos/expressões
-- "plural" deve ser null para verbos
-- "categoria" pode ser: sostantivi, verbi, aggettivi, espressioni, saudacoes, numeri, colori, corpo, famiglia, cibo, viaggio
-- "dificuldade" pode ser: "facil", "medio" ou "dificil"
-- Gere de 10 a 20 palavras relacionadas ao tema
-
-Tema/categoria das palavras: [DESCREVA AQUI — ex: palavras relacionadas a viagem de trem]`
+TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", "palavras do restaurante e comida", "partes do corpo humano"]`
   },
 
   // ── Títulos do modal por tipo ────────────────────────────
