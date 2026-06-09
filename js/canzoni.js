@@ -422,11 +422,13 @@ const Canzoni = {
             '<span class="can-score-pill can-score-wrong">' + this.erros + ' ✗</span>' +
           '</div>' +
         '</div>' +
-        '<div class="can-toggle-row">' +
-          '<span class="can-toggle-label">tradução</span>' +
-          '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-label="alternar tradução"></button>' +
+        '<div class="can-subbar">' +
+          '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
+          '<div class="can-toggle-row">' +
+            '<span class="can-toggle-label">tradução</span>' +
+            '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-label="alternar tradução"></button>' +
+          '</div>' +
         '</div>' +
-        '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
         '<div class="can-lyrics-area" id="can-lyrics">' + versosHtml + '</div>' +
         choicesHtml +
       '</div>';
