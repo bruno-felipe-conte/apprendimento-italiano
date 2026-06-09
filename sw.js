@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v60';
+const CACHE = 'italiano-v61';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -14,26 +14,26 @@ const STATIC = [
   './index.html',
   './css/italia.css',
   './css/styles.css',
-  // JS — módulos da aplicação
-  './js/audio.js',
-  './js/conquistas.js',
-  './js/core.js',
-  './js/dialoghi.js',
-  './js/canzoni.js',
-  './js/imitazione.js',
-  './js/flashcards.js',
-  './js/grammar.js',
-  './js/heatmap.js',
-  './js/onboarding.js',
-  './js/profilo.js',
-  './js/progression.js',
-  './js/quiz.js',
+  // JS — módulos da aplicação (URLs com ?v=60 para forçar atualização de cache)
+  './js/audio.js?v=60',
+  './js/conquistas.js?v=60',
+  './js/core.js?v=60',
+  './js/dialoghi.js?v=60',
+  './js/canzoni.js?v=60',
+  './js/imitazione.js?v=60',
+  './js/flashcards.js?v=60',
+  './js/grammar.js?v=60',
+  './js/heatmap.js?v=60',
+  './js/onboarding.js?v=60',
+  './js/profilo.js?v=60',
+  './js/progression.js?v=60',
+  './js/quiz.js?v=60',
   './js/quiz_data.js',
-  './js/vocab.js',
-  './js/i18n.js',
+  './js/vocab.js?v=60',
+  './js/i18n.js?v=60',
   './js/notificacoes.js',
   './js/tour.js',
-  './js/storie.js',
+  './js/storie.js?v=60',
   './js/ia-import.js',
   // Dados
   './data/conjugacoes.json',
