@@ -68,14 +68,15 @@ const Dialoghi = {
       <div class="dialogo-grid">`;
 
     for (const dial of filtrados) {
-      const badge = dial.custom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Meu</span>' : '';
+      const ehCustom = dial.custom || dial._custom;
+      const badge = ehCustom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Meu</span>' : '';
       html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dial.id}','leitura')">
         <div class="dialogo-icone">${dial.icone}</div>
         <div class="dialogo-titulo">${dial.titulo}${badge}</div>
         <div class="dialogo-nivel">${dial.nivel}</div>
-        ${dial.custom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
-          <button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem">✏️</button>
-          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem">🗑️</button>
+        ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
+          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
+          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
         </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
       </div>`;
     }

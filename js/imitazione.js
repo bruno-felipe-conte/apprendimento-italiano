@@ -188,9 +188,10 @@ const Imitazione = {
     const it = I18n.idioma === 'it';
     c.innerHTML = `
       <div style="text-align:center;margin-bottom:1.5rem">
-        <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem">
-          ${it ? 'Frase' : 'Frase'} ${this.itemAtual + 1} ${it ? 'di' : 'de'} ${lista.length}
-          <span style="margin-left:0.5rem;background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
+        <div style="font-size:0.8rem;color:var(--cor-pietra);text-transform:uppercase;margin-bottom:0.5rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap">
+          <span>${it ? 'Frase' : 'Frase'} ${this.itemAtual + 1} ${it ? 'di' : 'de'} ${lista.length}</span>
+          <span style="background:rgba(155,35,53,0.1);border-radius:4px;padding:0.1rem 0.4rem">${item.nivel}</span>
+          ${item._custom ? `<button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:1.5px solid #c0392b;color:#c0392b;border-radius:6px;padding:0.1rem 0.45rem;font-size:0.72rem;cursor:pointer;font-weight:700;" title="Remover esta frase">🗑️ Remover</button>` : ''}
         </div>
         <h3 style="font-family:'Cinzel',serif;font-size:1.8rem;color:var(--cor-veneziano-escuro);margin-bottom:0.5rem">"${item.frase_italiano || item.frase}"</h3>
         <p style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem"><i>${item.frase_portugues || item.traducao}</i></p>

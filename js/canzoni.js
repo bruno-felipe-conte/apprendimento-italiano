@@ -82,14 +82,16 @@ const Canzoni = {
       <div class="dialogo-grid">`;
 
     for (const can of filtradas) {
-      const badgeCustom = can.custom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
+      const ehCustom = can.custom || can._custom;
+      const badgeCustom = ehCustom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Minha</span>' : '';
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
         <div class="dialogo-icone">${can.icone || '🎵'}</div>
         <div class="dialogo-titulo">${can.titulo}${badgeCustom}</div>
         <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${can.artista || ''}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
           <span class="dialogo-nivel">${can.nivel}</span>
-          ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>
+          ${ehCustom ? `
+          ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
           <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>` : ''}
         </div>
       </div>`;

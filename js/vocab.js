@@ -135,6 +135,7 @@ const Vocab = {
         ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
         ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
         <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
+        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remover palavra">🗑️</button>` : ''}
       `;
 
       // Click: pronounce normally; in blur mode clicking blurred cell reveals it
