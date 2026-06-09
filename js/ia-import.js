@@ -145,12 +145,18 @@ MÚSICA: [SUBSTITUA AQUI — pode ser qualquer música, ex: "Azzurro de Adriano 
 
 REGRAS OBRIGATÓRIAS:
 1. "italiano" = parágrafo em italiano correto
-2. "portugues" = tradução do parágrafo em português brasileiro
-3. "parole" = lista de 2-4 palavras importantes do parágrafo com tradução, IPA e categoria
+2. "portugues" = tradução COMPLETA do parágrafo em português brasileiro
+3. "parole" = lista com TODAS as palavras do parágrafo — SEM EXCEÇÃO
+   - Inclua substantivos, verbos, adjetivos, advérbios, artigos, preposições, pronomes, conjunções
+   - Cada token de palavra deve ter sua própria entrada (não pule nenhuma palavra)
+   - "parola" = a palavra exatamente como aparece no texto italiano
+   - "traduzione" = tradução em português (pode ser 1-3 palavras)
+   - "ipa" = transcrição fonética IPA apenas da palavra isolada (ex: "/ˈsoːle/")
+   - "categoria": "sostantivo", "verbo", "aggettivo", "avverbio", "articolo", "preposizione", "pronome", "congiunzione" ou "espressione"
 4. Inclua de 4 a 6 parágrafos
 5. "nivel" deve ser A1, A2, B1, B2, C1 ou C2
 
-EXEMPLO COMPLETO (copie exatamente este formato):
+EXEMPLO COMPLETO — note que TODAS as palavras aparecem em "parole" (copie exatamente este formato):
 {
   "id": "stor_custom_001",
   "titulo": "Una Mattina a Roma",
@@ -168,19 +174,18 @@ EXEMPLO COMPLETO (copie exatamente este formato):
       "italiano": "Marco si sveglia alle sette. Apre la finestra e vede il sole.",
       "portugues": "Marco acorda às sete. Ele abre a janela e vê o sol.",
       "parole": [
-        {"parola": "svegliarsi", "traduzione": "acordar", "ipa": "/zvɛʎˈʎarsi/", "categoria": "verbo"},
-        {"parola": "finestra", "traduzione": "janela", "ipa": "/fiˈnɛstra/", "categoria": "sostantivo"},
-        {"parola": "sole", "traduzione": "sol", "ipa": "/ˈsoːle/", "categoria": "sostantivo"}
-      ]
-    },
-    {
-      "id": "stor_custom_001_p2",
-      "italiano": "Fa colazione con un caffè e un cornetto. È delizioso!",
-      "portugues": "Ele toma café da manhã com um espresso e um croissant. É delicioso!",
-      "parole": [
-        {"parola": "colazione", "traduzione": "café da manhã", "ipa": "/kolaˈtsjone/", "categoria": "sostantivo"},
-        {"parola": "cornetto", "traduzione": "croissant", "ipa": "/korˈnetto/", "categoria": "sostantivo"},
-        {"parola": "delizioso", "traduzione": "delicioso", "ipa": "/deliˈtsjoso/", "categoria": "aggettivo"}
+        {"parola": "Marco",    "traduzione": "Marco",    "ipa": "/ˈmarko/",      "categoria": "sostantivo"},
+        {"parola": "si",       "traduzione": "se",       "ipa": "/si/",          "categoria": "pronome"},
+        {"parola": "sveglia",  "traduzione": "acorda",   "ipa": "/ˈzveʎʎa/",    "categoria": "verbo"},
+        {"parola": "alle",     "traduzione": "às",       "ipa": "/ˈalle/",       "categoria": "preposizione"},
+        {"parola": "sette",    "traduzione": "sete",     "ipa": "/ˈsɛtte/",      "categoria": "sostantivo"},
+        {"parola": "Apre",     "traduzione": "abre",     "ipa": "/ˈaːpre/",      "categoria": "verbo"},
+        {"parola": "la",       "traduzione": "a",        "ipa": "/la/",          "categoria": "articolo"},
+        {"parola": "finestra", "traduzione": "janela",   "ipa": "/fiˈnɛstra/",   "categoria": "sostantivo"},
+        {"parola": "e",        "traduzione": "e",        "ipa": "/e/",           "categoria": "congiunzione"},
+        {"parola": "vede",     "traduzione": "vê",       "ipa": "/ˈveːde/",      "categoria": "verbo"},
+        {"parola": "il",       "traduzione": "o",        "ipa": "/il/",          "categoria": "articolo"},
+        {"parola": "sole",     "traduzione": "sol",      "ipa": "/ˈsoːle/",      "categoria": "sostantivo"}
       ]
     }
   ]
