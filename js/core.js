@@ -231,6 +231,8 @@ const App = {
 
   // ── Navigation ─────────────────────────────────────────────
   navegar(secao) {
+    // 'home' é um alias para 'templi' (seção inicial)
+    if (secao === 'home') secao = 'templi';
     this.estado.secaoAtiva = secao;
 
     // Update tab buttons
@@ -277,6 +279,8 @@ const App = {
       Grammatica.renderizarSeletor();
     }
     if (secao === 'storie' && typeof Storie !== 'undefined') {
+      Storie._filtroNivel = '';
+      Storie._filtroTexto = '';
       Storie.renderizarSeletor();
     }
     if (secao === 'profilo' && typeof Profilo !== 'undefined') {
@@ -526,7 +530,7 @@ const App = {
         `;
       } else {
         card.style.cursor = 'pointer';
-        card.onclick = () => this.pedirSenhaTemplo(i);
+        card.onclick = () => this.abrirModalTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
             <div class="templo-num">Tempio ${i}</div>

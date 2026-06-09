@@ -13,7 +13,7 @@ const Storie = {
   paragrafoAttivo: 0,
   traduzirVisivel: true,
   completate: [],
-  modoContínuo: false,
+  modoContinuo: false,
   tooltipAtivo: null,
   tooltipTimeout: null,
   _filtroNivel: '',
@@ -24,13 +24,44 @@ const Storie = {
     if (!this.dados) {
       try {
         const r = await fetch('data/storie.json');
-        if (r.ok) this.dados = await r.json();
-        else this.dados = { storie: [] };
+        if (r.ok) {
+          const raw = await r.json();
+          raw.storie = (raw.storie || []).map(s => this._normalizar(s));
+          this.dados = raw;
+        } else this.dados = { storie: [] };
       } catch { this.dados = { storie: [] }; }
     }
     try {
       this.completate = JSON.parse(localStorage.getItem('it_storie_lidas') || '[]');
     } catch { this.completate = []; }
+  },
+
+  // Normaliza histórias com schema alternativo (titolo/livello/testo-string)
+  _normalizar(s) {
+    const out = Object.assign({}, s);
+    if (!out.titulo && out.titolo) out.titulo = out.titolo;
+    if (!out.titulo_pt) out.titulo_pt = out.titulo || out.titolo || '';
+    if (!out.nivel && out.livello) out.nivel = out.livello;
+    if (!out.descricao) out.descricao = out.tema || '';
+    if (!out.descricao_pt) out.descricao_pt = out.descricao;
+    if (!out.icone) out.icone = '📜';
+    if (!out.xp_recompensa) out.xp_recompensa = 60;
+    // testo como string simples → array de parágrafos
+    if (typeof out.testo === 'string') {
+      const frases = out.testo.split(/(?<=[.!?])\s+/).filter(Boolean);
+      const chunks = [];
+      for (let i = 0; i < frases.length; i += 3) {
+        chunks.push({
+          id: `p${i}`,
+          italiano: frases.slice(i, i + 3).join(' '),
+          portugues: '',
+          parole: [],
+        });
+      }
+      if (!chunks.length) chunks.push({ id: 'p0', italiano: out.testo, portugues: '', parole: [] });
+      out.testo = chunks;
+    }
+    return out;
   },
 
   _salvarCompletate() {
@@ -68,13 +99,13 @@ const Storie = {
 
     let html = `
       <!-- Barra de filtros -->
-      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem;justify-content:center">
         <input type="search" placeholder="${labels.cerca}" value="${this._filtroTexto}"
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
       </div>
       <!-- Pills de nível -->
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1.2rem">
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1.2rem;justify-content:center">
         <button onclick="Storie._filtroNivel='';Storie.renderizarSeletor()"
           style="padding:0.22rem 0.8rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ccc'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.78rem;font-weight:600;transition:all 0.15s">
           ${labels.tut} (${todas.length})</button>

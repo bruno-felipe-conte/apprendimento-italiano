@@ -2,11 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css">
+  <link rel="stylesheet" href="css/italia.css?v=47">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -126,14 +128,11 @@
 
 
     /* ── Main container ── */
-    .app-container { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 1.5rem 1rem; }
+    .app-container { flex: 1; max-width: 900px; width: 100%; margin: 0 auto; padding: 0.75rem 1rem; }
+    @media (min-width: 641px) { .app-container { padding: 1rem 1.5rem; } }
     .section { display: none; }
-    .section.active {
-      display: block;
-      /* Ensure last content is never hidden behind bottom nav */
-      padding-bottom: calc(var(--nav-height) + var(--safe-bottom) + 1rem);
-    }
-    .section-titulo { font-family: 'Cinzel', serif; font-size: 1.35rem; color: var(--cor-veneziano-escuro); margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid #D4A843; padding-bottom: 0.5rem; }
+    /* section.active: padding gerenciado pelo italia.css */
+    /* section-titulo: estilo gerenciado pelo italia.css */
 
     /* ── Templos Grid ── */
     .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
@@ -346,11 +345,11 @@
     .resultado-msg { font-style: italic; color: #666; margin: 0.8rem 0 1.2rem; }
 
     /* ── Vocab ── */
-    .vocab-filtros { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .vocab-filtros { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 0.85rem; justify-content: center; }
     .vocab-search { flex: 1; min-width: 130px; padding: 0.48rem 0.75rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
     .vocab-search:focus { border-color: var(--cor-veneziano-escuro); }
     .vocab-filtros select { padding: 0.48rem 0.65rem; border: 2px solid #ddd; border-radius: 8px; font-size: 0.83rem; background: var(--cor-marmore); cursor: pointer; flex: 1; min-width: 110px; }
-    .vocab-filtros-row2 { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+    .vocab-filtros-row2 { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.6rem; justify-content: center; }
     .vocab-stats { font-size: 0.82rem; color: var(--cor-pietra); margin-bottom: 0.7rem; }
     .vocab-list { display: flex; flex-direction: column; gap: 0.35rem; }
     .vocab-item { display: flex; align-items: center; gap: 0.6rem; background: var(--cor-marmore); padding: 0.55rem 0.85rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); flex-wrap: wrap; }
@@ -501,9 +500,9 @@
     .heatmap-legend { display: flex; align-items: center; gap: 3px; font-size: 0.7rem; color: #bbb; margin-top: 0.4rem; justify-content: flex-end; }
     .heatmap-footer { display: none; }
 
-    /* ══════════════════════════════════════════════════════
-       STORIE — Leitura interativa de histórias italianas
-       ══════════════════════════════════════════════════════ */
+    /* -------------------------------------------------------
+       STORIE - Leitura interativa de historias italianas
+       ------------------------------------------------------- */
     #storie-container { max-width: 760px; margin: 0 auto; padding: 0 0.5rem 2rem; }
 
     /* Seletor: cards das histórias */
@@ -630,7 +629,7 @@
 
     /* Filtros do seletor */
     .storie-filtros {
-      display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center;
+      display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; justify-content: center;
     }
     .storie-filtros input[type="search"] {
       flex: 1; min-width: 140px; padding: 0.45rem 0.7rem;
@@ -639,9 +638,9 @@
     }
     body.dark-mode .storie-filtros input[type="search"] { background: #2A2522; border-color: #3A332E; color: #F0E8D8; }
 
-    /* ══════════════════════════════════════════════════════
-       GRAMMATICA — Design Premium
-       ══════════════════════════════════════════════════════ */
+    /* -------------------------------------------------------
+       GRAMMATICA - Design Premium
+       ------------------------------------------------------- */
     
     /* ── STORIE: Tooltip flutuante de tradução ──────────── */
     .storie-tooltip {
@@ -710,11 +709,11 @@
     .storie-controls button.ativo { background: #9B2335; color: #FFF8F0; }
     
     /* ── STORIE: Texto contínuo (modo limpo) ───────────────── */
-    #storie-container.modo-contínuo .storie-paragrafi {
-      display: block !important;
+    #storie-container.modo-continuo .storie-paragrafi {
+      display: flex !important;
       flex-direction: column;
     }
-    #storie-container.modo-contínuo .storie-paragrafo {
+    #storie-container.modo-continuo .storie-paragrafo {
       background: transparent !important;
       border: none !important;
       padding: 0.4rem 0 !important;
@@ -722,16 +721,15 @@
       font-size: 1.05rem;
       line-height: 1.75;
     }
-    #storie-container.modo-contínuo .storie-paragrafo-num { display: none !important; }
-    #storie-container.modo-contínuo .storie-paragrafo-it {
-    #storie-container.modo-contínuo .storie-paragrafo-it {
+    #storie-container.modo-continuo .storie-paragrafo-num { display: none !important; }
+    #storie-container.modo-continuo .storie-paragrafo-it {
       flex-direction: column;
       gap: 0.2rem;
     }
     
-    /* ══════════════════════════════════════════════════════
-       GRAMMATICA — Design Premium
-       ══════════════════════════════════════════════════════ */
+    /* -------------------------------------------------------
+       GRAMMATICA - Design Premium
+       ------------------------------------------------------- */
     #grammatica-container { max-width: 860px; margin: 0 auto; }
 
     /* ── Seletor — lezioni como cards individuais ── */
@@ -2014,108 +2012,10 @@
       color: #ccc;
     }
 
-    /* ── Bottom Navigation & Mobile Responsiveness ── */
-    .bottom-nav {
-      display: none;
-    }
+    /* ── Bottom nav & mobile tweaks — ver italia.css ── */
     @media (max-width: 640px) {
-      .bottom-nav {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 2000;
-        background: var(--cor-marmore);
-        border-top: 1px solid rgba(0,0,0,0.08);
-        /* safe-area: home indicator no iOS */
-        padding: 0.5rem var(--safe-right) calc(0.6rem + var(--safe-bottom)) var(--safe-left);
-        justify-content: flex-start;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-        box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
-        /* Ensure nav spans full width including safe areas */
-        padding-left:  max(var(--safe-left),  0.25rem);
-        padding-right: max(var(--safe-right), 0.25rem);
-      }
-      .bottom-nav::-webkit-scrollbar { display: none; }
-      body.dark-mode .bottom-nav {
-        background: #1C1816;
-        border-top-color: #2D2723;
-        box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
-      }
-      .nav-tabs {
-        display: none !important;
-      }
-      .bottom-nav button {
-        background: transparent;
-        border: none;
-        color: var(--cor-pietra);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-        font-size: 1.35rem;
-        cursor: pointer;
-        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s, filter 0.2s, opacity 0.2s;
-        /* min-width garante que com 9 botões cada um tenha espaço adequado */
-        min-width: 56px;
-        flex: 1 0 56px;
-        padding: 0.35rem 0.2rem;
-        margin: 0;
-        border-radius: 10px;
-        opacity: 0.55;
-        filter: grayscale(0.6);
-        scroll-snap-align: start;
-      }
-      body.dark-mode .bottom-nav button {
-        color: #A69E94;
-      }
-      .bottom-nav button span {
-        display: block;
-        font-size: 0.58rem;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        color: inherit;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 52px;
-      }
-      .bottom-nav button:active {
-        transform: scale(0.9);
-      }
-      .bottom-nav button.ativa {
-        color: var(--cor-veneziano);
-        opacity: 1;
-        filter: grayscale(0);
-        background: rgba(155, 35, 53, 0.12);
-        transform: translateY(-2px);
-        font-size: 1.45rem;
-      }
-      .bottom-nav button.ativa span {
-        color: var(--cor-veneziano);
-        font-weight: 700;
-      }
-      body.dark-mode .bottom-nav button.ativa {
-        color: var(--cor-toscano);
-        background: rgba(212, 168, 67, 0.15);
-      }
-      /* Spacer for bottom nav so content is not cut off */
-      .app-footer {
-        margin-bottom: calc(var(--nav-height) + var(--safe-bottom) + 0.5rem);
-      }
-      
-      /* Responsiveness tweaks */
-      .flashcard {
-        height: 300px !important;
-      }
-      .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }
-      .artigo-cards {
-        grid-template-columns: 1fr !important;
-      }
+      .flashcard { height: 300px !important; }
+      .artigo-cards { grid-template-columns: 1fr !important; }
     }
     @media (min-width: 480px) and (max-width: 900px) {
       .artigo-cards {
@@ -2747,7 +2647,7 @@
 
   <!-- Bottom navigation for mobile -->
   <nav class="bottom-nav" id="bottom-nav">
-    <button class="nav-tab-btn" data-section="templi" onclick="App.navegar('templi')" data-i18n="nav_inicio">🏛️<span>Início</span></button>
+    <button class="nav-tab-btn ativa" data-section="templi" onclick="App.navegar('templi')" data-i18n="nav_inicio">🏛️<span>Início</span></button>
     <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')" data-i18n="nav_dialogos">💬<span>Diálogos</span></button>
     <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')" data-i18n="nav_canzoni">🎵<span>Canzoni</span></button>
     <button class="nav-tab-btn" data-section="imitazione" onclick="App.navegar('imitazione')" data-i18n="nav_imitacao">🗣️<span>Imitação</span></button>
@@ -2755,7 +2655,7 @@
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')" data-i18n="nav_quiz">❓<span>Quiz</span></button>
     <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')" data-i18n="nav_vocab">📖<span>Vocab</span></button>
     <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')" data-i18n="nav_gramatica">📚<span>Gramática</span></button>
-    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📚<span>Storie</span></button>
+    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📜<span>Storie</span></button>
   </nav>
 
   <!-- ResponsiveVoice — Italian TTS fallback (free for educational use) -->

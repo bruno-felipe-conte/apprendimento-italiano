@@ -54,6 +54,15 @@ const Canzoni = {
       filtradas = filtradas.filter(s => s.titulo.toLowerCase().includes(q) || (s.artista||'').toLowerCase().includes(q));
     }
 
+    // Ordenar: volumes da mesma música ficam juntos em sequência
+    filtradas = [...filtradas].sort((a, b) => {
+      const getBase = t => t.replace(/\s*\(Vol\.?\s*\d+\)\s*$/i, '').trim();
+      const getVol  = t => { const m = t.match(/\(Vol\.?\s*(\d+)\)/i); return m ? parseInt(m[1]) : 0; };
+      const baseA = getBase(a.titulo), baseB = getBase(b.titulo);
+      if (baseA !== baseB) return baseA.localeCompare(baseB, 'it');
+      return getVol(a.titulo) - getVol(b.titulo);
+    });
+
     let html = `
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
         <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
