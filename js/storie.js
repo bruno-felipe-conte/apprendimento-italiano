@@ -231,7 +231,19 @@ const Storie = {
       <div id="storie-word-modal" class="storie-word-modal" style="display:none"></div>
       <div id="storie-modal-overlay" onclick="Storie._fecharModal()" style="display:none"></div>`;
 
+    // Remove modais antigos do body (de render anterior)
+    document.getElementById('storie-word-modal')?.remove();
+    document.getElementById('storie-modal-overlay')?.remove();
+
     c.innerHTML = html;
+
+    // Move modal e overlay para document.body
+    // Isso garante que position:fixed use o viewport como referência,
+    // evitando distorção causada por transform em ancestrais do container
+    const modalEl   = c.querySelector('#storie-word-modal');
+    const overlayEl = c.querySelector('#storie-modal-overlay');
+    if (modalEl)   document.body.appendChild(modalEl);
+    if (overlayEl) document.body.appendChild(overlayEl);
 
     // Delegação de cliques para palavras
     const textoEl = c.querySelector('.storie-texto-corrido');
@@ -415,7 +427,7 @@ const Storie = {
       modal.style.left       = `${left}px`;
       modal.style.top        = `${top}px`;
       modal.style.visibility = 'visible';
-    });
+    }));
   },
 
   _fecharModal(removeEsc = true) {
