@@ -1,24 +1,21 @@
 // ============================================================
 // storie.js — Módulo de leitura interativa de histórias italianas
 // - 10 histórias A1-C2 (data/storie.json)
-// - Tradução toggle por parágrafo
+// - Texto corrido, toda palavra clicável
+// - Modal flutuante com IPA/tradução/categoria + salvar no deck
 // - TTS via App.pronunciar
-// - Vocabulário inline clicável
 // - Marcar como lida + XP recompensa
 // ============================================================
 
 const Storie = {
   dados: null,
   storAttuale: null,
-  paragrafoAttivo: 0,
   traduzirVisivel: true,
   completate: [],
-  modoContinuo: false,
-  tooltipAtivo: null,
-  tooltipTimeout: null,
   _filtroNivel: '',
   _filtroTexto: '',
   _filtroOrigem: '',
+  _escListener: null,
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -142,16 +139,12 @@ const Storie = {
                  display:flex;flex-direction:column;align-items:center;gap:0.35rem"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,0.14)';this.style.borderColor='${corN}'"
           onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.09)';this.style.borderColor='transparent'">
-          <!-- Ícone -->
           <div style="font-size:2.4rem;line-height:1.1">${s.icone||'📜'}</div>
-          <!-- Título -->
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
             ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
           ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remover</button>`:''}
-          <!-- Autor -->
           <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
-          <!-- Nível + XP -->
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
@@ -173,127 +166,300 @@ const Storie = {
     const s = (this.dados?.storie || []).find(x => x.id === id);
     if (!s) return;
     this.storAttuale = s;
-    this.paragrafoAttivo = 0;
     this.traduzirVisivel = true;
     this._renderizarStoria();
   },
 
-  // ── Renderizar a história em modo leitura ──────────────────
+  // ── Renderizar a história em modo leitura corrida ──────────
   _renderizarStoria() {
     const c = document.getElementById('storie-container');
     if (!c || !this.storAttuale) return;
-    c.classList.toggle('modo-continuo', this.modoContinuo);
     const s = this.storAttuale;
-    const i = I18n.idioma === 'it';
+    const il = I18n.idioma === 'it';
 
-    const tituloExibido = i ? s.titulo : (s.titulo_pt || s.titulo);
-    const descExibida = i ? s.descricao : (s.descricao_pt || s.descricao);
+    const tituloExibido = il ? s.titulo : (s.titulo_pt || s.titulo);
+    const descExibida   = il ? s.descricao : (s.descricao_pt || s.descricao);
 
-    const txtBtnTrad = i ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução';
-    const txtBtnTradOff = i ? '👁️ Mostra traduzione' : '👁️ Mostrar tradução';
-    const txtBtnTutto = i ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo';
-    const txtBtnIndietro = i ? '‹ Storie' : '‹ Storie';
-    const txtBtnContinuo = i ? '📄 Continuo' : '📄 Contínuo';
-    const txtBtnParagrafi = i ? '📑 Paragrafi' : '📑 Parágrafos';
+    // Constrói parágrafos com texto corrido — toda palavra clicável
+    let parasHtml = '';
+    s.testo.forEach((p, idx) => {
+      const textoMarcado = this._marcarPalavras(p.italiano, p.parole || [], idx);
+      const ptText = (p.portugues || '').replace(/</g, '&lt;');
+      parasHtml += `
+        <div class="storie-bloco">
+          <p class="storie-p">${textoMarcado}
+            <button class="storie-audio-btn"
+              onclick="event.stopPropagation();App.pronunciar('${(p.italiano||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')"
+              title="${il?'Ascolta':'Ouvir'}">🔊</button>
+          </p>
+          ${this.traduzirVisivel && ptText ? `<p class="storie-trad-p">${ptText}</p>` : ''}
+        </div>`;
+    });
 
-    let html = `
+    const html = `
       <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Storie.renderizarSeletor()">${txtBtnIndietro}</button>
-        <span style="font-size:0.85rem;font-weight:700">${s.nivel} · +${s.xp_recompensa || 50} XP</span>
+        <button class="gram-btn-back" onclick="Storie._fecharModal();Storie.renderizarSeletor()">‹ Storie</button>
+        <span style="font-size:0.85rem;font-weight:700">${s.nivel} · +${s.xp_recompensa||50} XP</span>
       </div>
 
       <div class="gram-card" style="margin-top:1rem;padding:1.2rem;text-align:center">
-        <div style="font-size:2.6rem;margin-bottom:0.4rem">${s.icone || '📖'}</div>
+        <div style="font-size:2.6rem;margin-bottom:0.4rem">${s.icone||'📖'}</div>
         <h2 style="margin:0 0 0.3rem;font-family:'Playfair Display',serif;font-size:1.45rem;color:#9B2335">${tituloExibido}</h2>
-        <div style="font-size:0.82rem;color:#666;font-style:italic">${s.autor || ''} · ${s.tema || ''}</div>
+        <div style="font-size:0.82rem;color:#666;font-style:italic">${s.autor||''} · ${s.tema||''}</div>
         <p style="font-size:0.85rem;color:#444;margin:0.7rem 0 0;line-height:1.4">${descExibida}</p>
         <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
           <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
-            ${this.traduzirVisivel ? txtBtnTrad : txtBtnTradOff}
+            ${this.traduzirVisivel
+              ? (il ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução')
+              : (il ? '👁️ Mostra traduzione'   : '👁️ Mostrar tradução')}
           </button>
-          <button class="btn-primario" onclick="Storie._ouvirTudo()">${txtBtnTutto}</button>
-          <button class="btn-secondario" onclick="Storie._toggleModoContinuo()">
-            ${this.modoContinuo ? txtBtnParagrafi : txtBtnContinuo}
+          <button class="btn-primario" onclick="Storie._ouvirTudo()">
+            ${il ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo'}
           </button>
         </div>
       </div>
 
-      <div class="storie-paragrafi">`;
+      <div class="storie-texto-corrido">${parasHtml}</div>
 
-    if (this.modoContinuo) {
-      // Modo contínuo: texto limpo sem numeração de parágrafos
-      const textoCompleto = s.testo.map((p, idx) => {
-        const itText = this._markParole(p.italiano, p.parole || [], idx);
-        return `<span class="storie-texto-it">${itText}</span>`;
-      }).join(' ');
-      html += `<div class="storie-continuo">${textoCompleto}</div>`;
-    } else {
-      // Modo parágrafos (original)
-      s.testo.forEach((p, idx) => {
-        const itText = this._markParole(p.italiano, p.parole || [], idx);
-        const ptText = (p.portugues || '').replace(/</g, '&lt;');
-        html += `
-          <div class="storie-paragrafo" id="storie-par-${idx}">
-            <div class="storie-paragrafo-it">
-              <span class="storie-paragrafo-num">${idx + 1}</span>
-              <span class="storie-texto-it">${itText}</span>
-              <button class="storie-audio-btn" onclick="App.pronunciar('${(p.italiano || '').replace(/'/g, "\\'")}')" title="${i ? 'Ascolta' : 'Ouvir'}">🔊</button>
-            </div>
-            ${this.traduzirVisivel ? `<div class="storie-paragrafo-pt">${ptText}</div>` : ''}
-            ${(p.parole && p.parole.length) ? this._renderVocabPanel(p.parole, idx) : ''}
-          </div>`;
-      });
-    }
-
-    html += `
-      </div>
-      <div class="storie-controls" style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
-        <button class="btn-secondario" onclick="Storie.renderizarSeletor()">
-          ${i ? '‹ Tutte le storie' : '‹ Todas as histórias'}
+      <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
+        <button class="btn-secondario" onclick="Storie._fecharModal();Storie.renderizarSeletor()">
+          ${il ? '‹ Tutte le storie' : '‹ Todas as histórias'}
         </button>
         <button class="btn-primario" onclick="Storie._marcarLida()">
           ${this.completate.includes(s.id)
-            ? (i ? '✓ Riletta' : '✓ Relida')
-            : (i ? '✓ Ho finito (+' + (s.xp_recompensa || 50) + ' XP)' : '✓ Concluir (+' + (s.xp_recompensa || 50) + ' XP)')}
+            ? (il ? '✓ Riletta' : '✓ Relida')
+            : (il ? `✓ Ho finito (+${s.xp_recompensa||50} XP)` : `✓ Concluir (+${s.xp_recompensa||50} XP)`)}
         </button>
-      </div>`;
+      </div>
+
+      <!-- Modal flutuante de palavra -->
+      <div id="storie-word-modal" class="storie-word-modal" style="display:none"></div>
+      <div id="storie-modal-overlay" onclick="Storie._fecharModal()" style="display:none"></div>`;
 
     c.innerHTML = html;
+
+    // Delegação de cliques para palavras
+    const textoEl = c.querySelector('.storie-texto-corrido');
+    if (textoEl) {
+      textoEl.addEventListener('click', (e) => {
+        const wordEl = e.target.closest('.storie-palavra');
+        if (wordEl) {
+          e.stopPropagation();
+          this._abrirModalPalavra(wordEl);
+        } else {
+          this._fecharModal();
+        }
+      });
+    }
+
+    // Fechar com ESC
+    if (this._escListener) document.removeEventListener('keydown', this._escListener);
+    this._escListener = (e) => { if (e.key === 'Escape') this._fecharModal(); };
+    document.addEventListener('keydown', this._escListener);
   },
 
-  // ── Marcar palavras inline com span clicável ───────────────
-  _markParole(texto, parole, idxPar) {
-    if (!parole || parole.length === 0) return this._escape(texto);
-    let out = this._escape(texto);
-    for (const p of parole) {
-      // Encontra a palavra (case-insensitive) e envolve com <span>
-      const safeWord = p.parola.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(`\\b(${safeWord})\\b`, 'i');
-      out = out.replace(regex,
-        `<span class="storie-parola" data-idx-par="${idxPar}" data-word="${this._escape(p.parola)}">$1</span>`);
-    }
-    return out;
+  // ── Tokenizar e marcar TODAS as palavras como clicáveis ────
+  _marcarPalavras(texto, parole, parIdx) {
+    if (!texto) return '';
+    // Tokeniza: palavras (incluindo acentuadas e apóstrofo) | pontuação | espaços
+    const tokens = texto.match(/[A-Za-zÀ-öø-ÿ']+|[^A-Za-zÀ-öø-ÿ'\s]+|\s+/g) || [];
+
+    return tokens.map((tok, wIdx) => {
+      // Espaços: retorna como está
+      if (/^\s+$/.test(tok)) return tok;
+      // Pontuação pura: escapa e retorna
+      if (/^[^A-Za-zÀ-öø-ÿ']+$/.test(tok)) return this._escape(tok);
+
+      // É uma palavra — buscar dados de vocab
+      const vocabDado = parole.find(p =>
+        this._normWord(p.parola) === this._normWord(tok)
+      );
+      const jaSalva = this._verificarSalva(tok);
+
+      const classes = ['storie-palavra'];
+      if (jaSalva)   classes.push('storie-palavra-salva');
+      if (vocabDado) classes.push('storie-palavra-vocab');
+
+      const attrs = [
+        `data-palavra="${this._escAttr(tok)}"`,
+        `data-par="${parIdx}"`,
+        `data-widx="${wIdx}"`,
+      ];
+      if (vocabDado) {
+        if (vocabDado.ipa)        attrs.push(`data-ipa="${this._escAttr(vocabDado.ipa)}"`);
+        if (vocabDado.traduzione) attrs.push(`data-trad="${this._escAttr(vocabDado.traduzione)}"`);
+        if (vocabDado.categoria)  attrs.push(`data-cat="${this._escAttr(vocabDado.categoria)}"`);
+      }
+
+      return `<span class="${classes.join(' ')}" ${attrs.join(' ')}>${this._escape(tok)}</span>`;
+    }).join('');
+  },
+
+  _normWord(w) {
+    return (w || '').toLowerCase().replace(/[''']/g, "'");
   },
 
   _escape(s) {
-    return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   },
 
-  // ── Painel de vocabulário por parágrafo (recolhível) ───────
-  _renderVocabPanel(parole, idxPar) {
-    const i = I18n.idioma === 'it';
-    const cards = parole.map(p => `
-      <div class="storie-vocab-card" onclick="App.pronunciar('${(p.parola || '').replace(/'/g, "\\'")}')">
-        <div class="storie-vocab-it">${this._escape(p.parola)} <span class="storie-vocab-ipa">${p.ipa || ''}</span></div>
-        <div class="storie-vocab-pt">${this._escape(p.traduzione || '')}</div>
-        <div class="storie-vocab-cat">${this._escape(p.categoria || '')}</div>
-      </div>
-    `).join('');
-    return `
-      <details class="storie-vocab-details">
-        <summary>${i ? `📚 Vocabolario (${parole.length})` : `📚 Vocabulário (${parole.length})`}</summary>
-        <div class="storie-vocab-grid">${cards}</div>
-      </details>`;
+  _escAttr(s) {
+    return String(s || '')
+      .replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+      .replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/'/g,'&#39;');
+  },
+
+  // ── Modal flutuante de palavra ─────────────────────────────
+  _abrirModalPalavra(wordEl) {
+    this._fecharModal(false);
+
+    const palavra  = wordEl.dataset.palavra || wordEl.textContent.trim();
+    const ipa      = wordEl.dataset.ipa  || '';
+    const trad     = wordEl.dataset.trad || '';
+    const cat      = wordEl.dataset.cat  || '';
+    const temVocab = !!(ipa || trad || cat);
+    const il       = I18n.idioma === 'it';
+    const jaSalva  = this._verificarSalva(palavra);
+
+    const tradPills = trad
+      ? trad.split(/[;,]/).map(t => t.trim()).filter(Boolean)
+             .map(t => `<span class="storie-trad-pill">${this._escape(t)}</span>`).join('')
+      : '';
+
+    const modal = document.getElementById('storie-word-modal');
+    if (!modal) return;
+
+    modal.innerHTML = `
+      <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
+      <div class="storie-modal-palavra">${this._escape(palavra)}</div>
+      ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
+      <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
+      ${tradPills ? `<div class="storie-modal-traducoes">${tradPills}</div>` : ''}
+      ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
+      ${!temVocab ? `<div style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;font-style:italic">${il?'Parola non catalogata':'Palavra não catalogada'}</div>` : ''}
+      <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
+        onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(trad)}',cat:'${this._escAttr(cat)}'})">
+        ${jaSalva
+          ? `✅ ${il ? 'Già salvata' : 'Já salva'}`
+          : `⭐ ${il ? 'Salva per revisione' : 'Salvar para revisão'}`}
+      </button>`;
+
+    modal.style.display = 'block';
+    this._posicionarModal(modal, wordEl);
+
+    const overlay = document.getElementById('storie-modal-overlay');
+    if (overlay) overlay.style.display = 'block';
+  },
+
+  _posicionarModal(modal, wordEl) {
+    // Oculta para medir sem flicker
+    modal.style.visibility = 'hidden';
+
+    requestAnimationFrame(() => {
+      const rect = wordEl.getBoundingClientRect();
+      const mW   = modal.offsetWidth  || 260;
+      const mH   = modal.offsetHeight || 190;
+      const vW   = window.innerWidth;
+      const vH   = window.innerHeight;
+
+      let left = rect.left + rect.width / 2 - mW / 2;
+      let top  = rect.top  - mH - 10;
+
+      // Prefere abaixo se não cabe acima
+      if (top < 8) top = rect.bottom + 10;
+      // Fallback centralizado verticalmente
+      if (top + mH > vH - 8) top = Math.max(8, Math.round(vH / 2 - mH / 2));
+
+      if (left < 8)               left = 8;
+      if (left + mW > vW - 8)     left = vW - mW - 8;
+
+      modal.style.left       = `${left}px`;
+      modal.style.top        = `${top}px`;
+      modal.style.visibility = 'visible';
+    });
+  },
+
+  _fecharModal(removeEsc = true) {
+    const modal   = document.getElementById('storie-word-modal');
+    const overlay = document.getElementById('storie-modal-overlay');
+    if (modal)   modal.style.display   = 'none';
+    if (overlay) overlay.style.display = 'none';
+    if (removeEsc && this._escListener) {
+      document.removeEventListener('keydown', this._escListener);
+      this._escListener = null;
+    }
+  },
+
+  // ── Salvar palavra no deck SRS ─────────────────────────────
+  _salvarNoDeck(palavra, dados) {
+    if (this._verificarSalva(palavra)) return;
+
+    const id = 'story_' + this._normWord(palavra).replace(/\W/g, '_') + '_' + Date.now();
+    const entrada = {
+      id,
+      italiano:  palavra,
+      portugues: dados?.trad || '',
+      categoria: dados?.cat  || 'vocabulo',
+      templo_num: 0,
+      _custom:    true,
+      _from_story: true,
+    };
+
+    // Persistir em localStorage
+    try {
+      const key    = 'it_vocab_custom';
+      const custom = JSON.parse(localStorage.getItem(key) || '[]');
+      if (!custom.find(v => (v.italiano||'').toLowerCase() === palavra.toLowerCase())) {
+        custom.push(entrada);
+        localStorage.setItem(key, JSON.stringify(custom));
+      }
+    } catch(e) {}
+
+    // Injetar no vocabCache global
+    if (typeof App !== 'undefined' && App.estado?.vocabCache) {
+      if (!App.estado.vocabCache.find(v => (v.italiano||'').toLowerCase() === palavra.toLowerCase())) {
+        App.estado.vocabCache.unshift(entrada);
+      }
+    }
+
+    // Inicializar estado FSRS
+    if (typeof App !== 'undefined' && App.estado?.flashcardData) {
+      if (!App.estado.flashcardData[id]) {
+        App.estado.flashcardData[id] = {
+          state: 'new', reps: 0, lapses: 0,
+          stability: 0, difficulty: 5,
+          nextReview: Date.now(),
+        };
+        if (App.salvarFlashcards) App.salvarFlashcards();
+      }
+    }
+
+    // Feedback visual no botão
+    const btn = document.getElementById('storie-btn-salvar');
+    if (btn) {
+      const il = I18n.idioma === 'it';
+      btn.textContent = `✅ ${il ? 'Già salvata' : 'Já salva'}`;
+      btn.classList.add('salvo');
+    }
+
+    // Destaca todas as ocorrências no texto
+    this._marcarPalavraSalvaNoDOM(palavra);
+  },
+
+  _verificarSalva(palavra) {
+    if (typeof App === 'undefined' || !App.estado?.vocabCache) return false;
+    const norm = (palavra || '').toLowerCase();
+    return App.estado.vocabCache.some(v => (v.italiano || '').toLowerCase() === norm);
+  },
+
+  _marcarPalavraSalvaNoDOM(palavra) {
+    const norm = (palavra || '').toLowerCase();
+    document.querySelectorAll('.storie-palavra').forEach(el => {
+      if ((el.dataset.palavra || '').toLowerCase() === norm) {
+        el.classList.add('storie-palavra-salva');
+      }
+    });
   },
 
   // ── Ações ─────────────────────────────────────────────────
@@ -302,133 +468,30 @@ const Storie = {
     this._renderizarStoria();
   },
 
-  _toggleModoContinuo() {
-    this.modoContinuo = !this.modoContinuo;
-    this._renderizarStoria();
-  },
-
   _ouvirTudo() {
     if (!this.storAttuale) return;
-    const paragrafi = this.storAttuale.testo.map(p => p.italiano).join(' ');
-    if (typeof App !== 'undefined' && App.pronunciar) {
-      App.pronunciar(paragrafi);
-    }
+    const texto = this.storAttuale.testo.map(p => p.italiano).join(' ');
+    if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(texto);
   },
 
   _marcarLida() {
     if (!this.storAttuale) return;
     const id = this.storAttuale.id;
-    const i = I18n.idioma === 'it';
+    const il = I18n.idioma === 'it';
     if (this.completate.includes(id)) {
-      App.notificar(i ? 'notif_gia_letta' : 'notif_ja_lida', 'info');
+      App.notificar(il ? 'notif_gia_letta' : 'notif_ja_lida', 'info');
       return;
     }
     this.completate.push(id);
     this._salvarCompletate();
     const xp = this.storAttuale.xp_recompensa || 50;
-    if (typeof App !== 'undefined' && App.adicionarXP) {
-      App.adicionarXP(xp);
-    }
-    App.notificar(i ? `notif_storia_letta_${id}` : `notif_storia_lida_${id}`, 'sucesso');
+    if (typeof App !== 'undefined' && App.adicionarXP) App.adicionarXP(xp);
+    App.notificar(il ? `notif_storia_letta_${id}` : `notif_storia_lida_${id}`, 'sucesso');
     this._renderizarStoria();
   },
 
   // ── Inicialização ao navegar para a aba ────────────────────
   init() {
     this.renderizarSeletor();
-    this._setupTooltipListener();
-  },
-
-  // ── Tooltip de tradução ao clicar na palavra ────────────────
-  _setupTooltipListener() {
-    const container = document.getElementById('storie-container');
-    if (!container) return;
-    // Remove listener anterior se houver
-    container.removeEventListener('click', this._handleWordClick);
-    // Adiciona novo listener
-    container.addEventListener('click', this._handleWordClick = (e) => {
-      const wordEl = e.target.closest('.storie-parola');
-      if (!wordEl) {
-        this._esconderTooltip();
-        return;
-      }
-      e.preventDefault();
-      e.stopPropagation();
-      this._mostrarTooltip(wordEl, e);
-    });
-    // Fechar tooltip ao clicar fora
-    document.addEventListener('click', this._handleDocClick = (e) => {
-      if (!e.target.closest('.storie-tooltip') && !e.target.closest('.storie-parola')) {
-        this._esconderTooltip();
-      }
-    });
-    // Fechar tooltip com ESC
-    document.addEventListener('keydown', this._handleEscKey = (e) => {
-      if (e.key === 'Escape') this._esconderTooltip();
-    });
-  },
-
-  _mostrarTooltip(wordEl, event) {
-    const palavra = wordEl.dataset.word;
-    const idxPar = wordEl.dataset.idxPar;
-    if (!palavra || !this.storAttuale) return;
-
-    // Encontrar dados da palavra no parágrafo correspondente
-    const paragrafo = this.storAttuale.testo[idxPar];
-    const wordData = (paragrafo.parole || []).find(p => p.parola.toLowerCase() === palavra.toLowerCase());
-    if (!wordData) return;
-
-    const i = I18n.idioma === 'it';
-    const tooltip = document.createElement('div');
-    tooltip.className = 'storie-tooltip';
-    tooltip.innerHTML = `
-      <div class="storie-tooltip-header">
-        <span class="storie-tooltip-word">${this._escape(wordData.parola)}</span>
-        <span class="storie-tooltip-ipa">${this._escape(wordData.ipa || '')}</span>
-      </div>
-      <div class="storie-tooltip-body">
-        <div class="storie-tooltip-trad">${this._escape(wordData.traduzione || '')}</div>
-        <div class="storie-tooltip-cat">${this._escape(wordData.categoria || '')}</div>
-      </div>
-      <button class="storie-tooltip-audio" onclick="App.pronunciar('${(wordData.parola || '').replace(/'/g, "\\'")}')" title="${i ? 'Ascolta' : 'Ouvir'}">🔊</button>
-    `;
-
-    // Remover tooltip anterior
-    this._esconderTooltip();
-
-    document.body.appendChild(tooltip);
-
-    // Posicionar próximo ao cursor/palavra
-    const rect = wordEl.getBoundingClientRect();
-    const tooltipRect = tooltip.getBoundingClientRect();
-    let left = rect.left + rect.width / 2 - tooltipRect.width / 2;
-    let top = rect.top - tooltipRect.height - 8;
-
-    // Ajustar se sair da tela
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-    if (left < 8) left = 8;
-    if (left + tooltipRect.width > viewportWidth - 8) left = viewportWidth - tooltipRect.width - 8;
-    if (top < 8) top = rect.bottom + 8;
-
-    tooltip.style.left = `${left}px`;
-    tooltip.style.top = `${top}px`;
-
-    // Animar entrada
-    requestAnimationFrame(() => tooltip.classList.add('visivel'));
-
-    this._currentTooltip = tooltip;
-  },
-
-  _esconderTooltip() {
-    if (this._currentTooltip) {
-      this._currentTooltip.classList.remove('visivel');
-      setTimeout(() => {
-        if (this._currentTooltip && this._currentTooltip.parentNode) {
-          this._currentTooltip.parentNode.removeChild(this._currentTooltip);
-        }
-      }, 150);
-      this._currentTooltip = null;
-    }
   },
 };

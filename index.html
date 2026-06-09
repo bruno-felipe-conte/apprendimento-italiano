@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=55">
+  <link rel="stylesheet" href="css/italia.css?v=56">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -575,88 +575,48 @@
       padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
     }
 
-    /* Leitor: parágrafos */
-    .storie-paragrafi { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.2rem; }
-    .storie-paragrafo {
-      background: var(--cor-marmore, #faf6ee);
-      border-radius: 12px;
-      border: 1px solid #ede5d5;
-      padding: 1rem 1.1rem;
-      line-height: 1.7;
-    }
-    body.dark-mode .storie-paragrafo { background: #2A2522; border-color: #3A332E; }
-    .storie-paragrafo-it {
-      display: flex;
-      gap: 0.5rem;
-      align-items: flex-start;
-      font-size: 1.02rem;
+    /* ── STORIE: Texto corrido ──────────────────────────────── */
+    .storie-texto-corrido { margin-top: 1.2rem; }
+    .storie-bloco { margin-bottom: 1.1rem; }
+    .storie-p {
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: var(--cor-inchiostro, #2C2418);
+      margin: 0 0 0.25rem;
     }
-    body.dark-mode .storie-paragrafo-it { color: #F0E8D8; }
-    .storie-paragrafo-num {
-      flex-shrink: 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.6rem; height: 1.6rem;
-      background: linear-gradient(135deg, #9B2335, #6B1525);
-      color: white;
-      border-radius: 50%;
-      font-size: 0.75rem; font-weight: 800;
-    }
-    .storie-texto-it { flex: 1; }
-    .storie-audio-btn {
-      background: transparent; border: none; cursor: pointer;
-      font-size: 1rem; padding: 0.2rem 0.3rem; opacity: 0.7;
-      transition: opacity 0.15s, transform 0.15s;
-      flex-shrink: 0;
-    }
-    .storie-audio-btn:hover { opacity: 1; transform: scale(1.15); }
-    .storie-paragrafo-pt {
-      margin-top: 0.55rem;
-      padding-top: 0.55rem;
-      border-top: 1px dashed #ede5d5;
+    body.dark-mode .storie-p { color: #F0E8D8; }
+    .storie-trad-p {
       font-size: 0.88rem;
       color: #6B5C42;
       font-style: italic;
-      line-height: 1.5;
+      line-height: 1.55;
+      margin: 0;
+      padding: 0.3rem 0 0.3rem 0.8rem;
+      border-left: 3px solid rgba(212,168,67,0.4);
     }
-    body.dark-mode .storie-paragrafo-pt { color: #B5A98E; border-top-color: #3A332E; }
+    body.dark-mode .storie-trad-p { color: #B5A98E; border-left-color: rgba(212,168,67,0.25); }
 
-    /* Palavra clicável inline */
-    .storie-parola {
+    /* Botão de áudio inline */
+    .storie-audio-btn {
+      background: transparent; border: none; cursor: pointer;
+      font-size: 0.9rem; padding: 0.1rem 0.25rem; opacity: 0.55;
+      transition: opacity 0.15s, transform 0.15s; vertical-align: middle;
+    }
+    .storie-audio-btn:hover { opacity: 1; transform: scale(1.15); }
+
+    /* Palavras clicáveis */
+    .storie-palavra {
       cursor: pointer;
-      border-bottom: 1.5px dotted #D4A843;
-      transition: background 0.15s, color 0.15s;
+      border-radius: 3px;
+      transition: background 0.12s;
       padding: 0 1px;
     }
-    .storie-parola:hover { background: rgba(212, 168, 67, 0.25); color: #9B2335; }
-
-    /* Vocabulário expansível por parágrafo */
-    .storie-vocab-details { margin-top: 0.7rem; font-size: 0.85rem; }
-    .storie-vocab-details summary {
-      cursor: pointer;
-      color: #9B2335; font-weight: 700;
-      padding: 0.3rem 0; user-select: none;
+    .storie-palavra:hover { background: rgba(212,168,67,0.28); }
+    .storie-palavra-vocab { border-bottom: 1.5px dotted #D4A843; }
+    .storie-palavra-salva {
+      border-bottom: 2px solid rgba(212,168,67,0.7);
+      border-radius: 2px;
     }
-    body.dark-mode .storie-vocab-details summary { color: #D4A843; }
-    .storie-vocab-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 0.5rem; margin-top: 0.5rem;
-    }
-    .storie-vocab-card {
-      background: #FFF8E7; border: 1px solid #D4A843; border-radius: 8px;
-      padding: 0.5rem 0.6rem; cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .storie-vocab-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212,168,67,0.3); }
-    body.dark-mode .storie-vocab-card { background: #3A332E; border-color: #5C0E1A; }
-    .storie-vocab-it { font-weight: 700; font-size: 0.85rem; color: #6B1525; }
-    body.dark-mode .storie-vocab-it { color: #D4A843; }
-    .storie-vocab-ipa { font-size: 0.7rem; color: #888; font-weight: 400; margin-left: 0.2rem; font-style: italic; }
-    .storie-vocab-pt { font-size: 0.8rem; color: #444; margin-top: 0.15rem; }
-    body.dark-mode .storie-vocab-pt { color: #C0B5A0; }
-    .storie-vocab-cat { font-size: 0.65rem; color: #999; margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 0.05em; }
 
     /* Filtros do seletor */
     .storie-filtros {
@@ -669,94 +629,90 @@
     }
     body.dark-mode .storie-filtros input[type="search"] { background: #2A2522; border-color: #3A332E; color: #F0E8D8; }
 
+    /* ── STORIE: Modal flutuante de palavra ─────────────────── */
+    .storie-word-modal {
+      position: fixed;
+      z-index: 9100;
+      background: #2C2418;
+      color: #F5EDD8;
+      border-radius: 14px;
+      padding: 1rem 1.15rem 0.9rem;
+      min-width: 220px;
+      max-width: 290px;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.42);
+      pointer-events: all;
+      animation: storieModalIn 0.18s ease forwards;
+    }
+    body.dark-mode .storie-word-modal { background: #1A120D; }
+    @keyframes storieModalIn {
+      from { opacity: 0; transform: scale(0.92) translateY(6px); }
+      to   { opacity: 1; transform: scale(1)    translateY(0);   }
+    }
+    .storie-modal-close {
+      position: absolute; top: 0.45rem; right: 0.6rem;
+      background: none; border: none; color: rgba(255,255,255,0.45);
+      font-size: 1.2rem; cursor: pointer; line-height: 1; padding: 0;
+    }
+    .storie-modal-close:hover { color: #fff; }
+    .storie-modal-palavra {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem; font-weight: 700;
+      color: #F5EDD8; margin-bottom: 0.1rem;
+    }
+    .storie-modal-ipa {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      margin-bottom: 0.55rem;
+    }
+    .storie-modal-audio {
+      background: rgba(155,35,53,0.22);
+      border: 1px solid rgba(155,35,53,0.5);
+      color: #F5EDD8; border-radius: 999px;
+      padding: 0.22rem 0.75rem; font-size: 0.8rem;
+      cursor: pointer; margin-bottom: 0.55rem;
+      transition: background 0.15s;
+    }
+    .storie-modal-audio:hover { background: rgba(155,35,53,0.45); }
+    .storie-modal-traducoes { margin-top: 0.35rem; }
+    .storie-trad-pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.82rem;
+      margin: 0.1rem 0.15rem 0.1rem 0;
+    }
+    .storie-modal-cat {
+      font-size: 0.7rem;
+      background: rgba(155,35,53,0.55);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      font-style: italic;
+    }
+    .storie-modal-salvar {
+      display: block; width: 100%; margin-top: 0.75rem;
+      background: rgba(212,168,67,0.18);
+      border: 1px solid rgba(212,168,67,0.45);
+      color: #F5EDD8; border-radius: 8px;
+      padding: 0.4rem 0.5rem; cursor: pointer;
+      font-size: 0.82rem; font-weight: 600;
+      transition: background 0.15s;
+    }
+    .storie-modal-salvar:hover { background: rgba(212,168,67,0.32); }
+    .storie-modal-salvar.salvo {
+      background: rgba(39,174,96,0.2);
+      border-color: rgba(39,174,96,0.45);
+      cursor: default;
+    }
+    #storie-modal-overlay {
+      position: fixed; inset: 0; z-index: 9099;
+      background: transparent; cursor: default;
+    }
+
     /* -------------------------------------------------------
        GRAMMATICA - Design Premium
        ------------------------------------------------------- */
-    
-    /* ── STORIE: Tooltip flutuante de tradução ──────────── */
-    .storie-tooltip {
-      position: fixed;
-      z-index: 10000;
-      background: #FFF8E7;
-      border: 2px solid #D4A843;
-      border-radius: 12px;
-      padding: 0.6rem 0.8rem;
-      box-shadow: 0 8px 32px rgba(155, 35, 53, 0.25);
-      font-size: 0.82rem;
-      line-height: 1.5;
-      min-width: 140px;
-      animation: storieTooltipFade 0.2s ease forwards;
-      pointer-events: auto;
-    }
-    .storie-tooltip.visivel { opacity: 1; transform: scale(1); }
-    @keyframes storieTooltipFade {
-      from { opacity: 0; transform: scale(0.9) translateY(8px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .storie-tooltip-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.3rem;
-      font-weight: 700;
-    }
-    .storie-tooltip-word { font-family: 'Cinzel', serif; color: #9B2335; font-size: 1.05rem; }
-    .storie-tooltip-ipa { font-size: 0.7rem; color: #666; font-style: italic; background: rgba(212,168,67,0.2); padding: 0.08rem 0.4rem; border-radius: 999px; }
-    .storie-tooltip-body { font-size: 0.85rem; color: #333; }
-    .storie-tooltip-trad { font-weight: 600; margin-bottom: 0.15rem; color: #2C2418; }
-    .storie-tooltip-cat { font-size: 0.7rem; text-transform: uppercase; color: #888; font-style: italic; }
-    .storie-tooltip-audio {
-      background: rgba(155,35,53,0.1);
-      border: none;
-      border-radius: 999px;
-      padding: 0.15rem 0.4rem;
-      cursor: pointer;
-      font-size: 0.8rem;
-      color: #9B2335;
-      transition: background 0.15s, transform 0.1s;
-    }
-    .storie-tooltip-audio:hover { background: rgba(155,35,53,0.25); transform: scale(1.08); }
-    
-    /* ── STORIE: Toggle modo contínuo no header da história ─── */
-    .storie-controls {
-      display: flex;
-      gap: 0.6rem;
-      margin-top: 0.6rem;
-      padding-top: 0.7rem;
-      border-top: 1px dashed rgba(155,35,53,0.2);
-    }
-    .storie-controls button {
-      background: transparent;
-      border: 1.5px solid #9B2335;
-      border-radius: 999px;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
-      color: #9B2335;
-      transition: all 0.18s;
-    }
-    .storie-controls button:hover { background: rgba(155,35,53,0.1); }
-    .storie-controls button.ativo { background: #9B2335; color: #FFF8F0; }
-    
-    /* ── STORIE: Texto contínuo (modo limpo) ───────────────── */
-    #storie-container.modo-continuo .storie-paragrafi {
-      display: flex !important;
-      flex-direction: column;
-    }
-    #storie-container.modo-continuo .storie-paragrafo {
-      background: transparent !important;
-      border: none !important;
-      padding: 0.4rem 0 !important;
-      margin-bottom: 0.8rem;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-    #storie-container.modo-continuo .storie-paragrafo-num { display: none !important; }
-    #storie-container.modo-continuo .storie-paragrafo-it {
-      flex-direction: column;
-      gap: 0.2rem;
-    }
     
     /* -------------------------------------------------------
        GRAMMATICA - Design Premium
