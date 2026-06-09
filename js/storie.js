@@ -314,10 +314,27 @@ const Storie = {
   _abrirModalPalavra(wordEl) {
     this._fecharModal(false);
 
-    const palavra  = wordEl.dataset.palavra || wordEl.textContent.trim();
-    const ipa      = wordEl.dataset.ipa  || '';
-    const trad     = wordEl.dataset.trad || '';
-    const cat      = wordEl.dataset.cat  || '';
+    const palavra = wordEl.dataset.palavra || wordEl.textContent.trim();
+    let ipa  = wordEl.dataset.ipa  || '';
+    let trad = wordEl.dataset.trad || '';
+    let cat  = wordEl.dataset.cat  || '';
+
+    // Se o span não tem dados (palavra fora do parole do parágrafo),
+    // faz busca global em todos os parágrafos da história
+    if (!trad && this.storAttuale) {
+      for (const p of this.storAttuale.testo) {
+        const found = (p.parole || []).find(pw =>
+          this._normWord(pw.parola) === this._normWord(palavra)
+        );
+        if (found) {
+          ipa  = ipa  || found.ipa        || '';
+          trad = trad || found.traduzione || '';
+          cat  = cat  || found.categoria  || '';
+          break;
+        }
+      }
+    }
+
     const temVocab = !!(ipa || trad || cat);
     const il       = I18n.idioma === 'it';
     const jaSalva  = this._verificarSalva(palavra);
@@ -355,25 +372,49 @@ const Storie = {
   _posicionarModal(modal, wordEl) {
     // Oculta para medir sem flicker
     modal.style.visibility = 'hidden';
+    modal.classList.remove('seta-baixo', 'seta-cima');
 
     requestAnimationFrame(() => {
-      const rect = wordEl.getBoundingClientRect();
-      const mW   = modal.offsetWidth  || 260;
-      const mH   = modal.offsetHeight || 190;
-      const vW   = window.innerWidth;
-      const vH   = window.innerHeight;
+      const rect  = wordEl.getBoundingClientRect();
+      const mW    = modal.offsetWidth  || 260;
+      const mH    = modal.offsetHeight || 200;
+      const vW    = window.innerWidth;
+      const vH    = window.innerHeight;
+      const GAP   = 14; // espaço entre modal e palavra (inclui altura da seta)
 
-      let left = rect.left + rect.width / 2 - mW / 2;
-      let top  = rect.top  - mH - 10;
+      // Centro horizontal da palavra
+      const wordCX = rect.left + rect.width / 2;
 
-      // Prefere abaixo se não cabe acima
-      if (top < 8) top = rect.bottom + 10;
-      // Fallback centralizado verticalmente
-      if (top + mH > vH - 8) top = Math.max(8, Math.round(vH / 2 - mH / 2));
+      // Posição left do modal (centrado na palavra)
+      let left = wordCX - mW / 2;
+      if (left < 8)           left = 8;
+      if (left + mW > vW - 8) left = vW - mW - 8;
 
-      if (left < 8)               left = 8;
-      if (left + mW > vW - 8)     left = vW - mW - 8;
+      // Offset da seta relativo ao modal
+      const arrowLeft = Math.min(Math.max(wordCX - left, 18), mW - 18);
+      modal.style.setProperty('--arrow-left', `${arrowLeft}px`);
 
+      // Prefere acima — vai abaixo só se não houver espaço
+      let top;
+      let setaDir;
+      if (rect.top - mH - GAP >= 8) {
+        // Cabe acima
+        top = rect.top - mH - GAP;
+        setaDir = 'seta-baixo'; // seta aponta para baixo (rumo à palavra)
+        modal.style.setProperty('--modal-origin-y', '100%');
+      } else {
+        // Coloca abaixo
+        top = rect.bottom + GAP;
+        setaDir = 'seta-cima';  // seta aponta para cima (rumo à palavra)
+        modal.style.setProperty('--modal-origin-y', '0%');
+      }
+
+      // Garante que não ultrapassa o viewport verticalmente
+      if (top + mH > vH - 8) top = vH - mH - 8;
+      if (top < 8)            top = 8;
+
+      modal.style.setProperty('--modal-origin-x', `${arrowLeft}px`);
+      modal.classList.add(setaDir);
       modal.style.left       = `${left}px`;
       modal.style.top        = `${top}px`;
       modal.style.visibility = 'visible';

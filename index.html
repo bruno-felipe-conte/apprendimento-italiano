@@ -636,17 +636,40 @@
       background: #2C2418;
       color: #F5EDD8;
       border-radius: 14px;
-      padding: 1rem 1.15rem 0.9rem;
+      padding: 1rem 1.15rem 1rem;
       min-width: 220px;
       max-width: 290px;
-      box-shadow: 0 10px 36px rgba(0,0,0,0.42);
+      box-shadow: 0 10px 36px rgba(0,0,0,0.48);
       pointer-events: all;
-      animation: storieModalIn 0.18s ease forwards;
+      animation: storieModalIn 0.18s cubic-bezier(.22,.8,.4,1) forwards;
+      transform-origin: var(--modal-origin-x, 50%) var(--modal-origin-y, 100%);
+    }
+    /* Seta apontando para a palavra (padrão: seta abaixo → modal acima) */
+    .storie-word-modal::after {
+      content: '';
+      position: absolute;
+      left: var(--arrow-left, 50%);
+      transform: translateX(-50%);
+      border: 9px solid transparent;
+    }
+    .storie-word-modal.seta-baixo::after {
+      bottom: -9px;
+      border-top-color: #2C2418;
+      border-bottom: none;
+      top: auto;
+    }
+    .storie-word-modal.seta-cima::after {
+      top: -9px;
+      border-bottom-color: #2C2418;
+      border-top: none;
+      bottom: auto;
     }
     body.dark-mode .storie-word-modal { background: #1A120D; }
+    body.dark-mode .storie-word-modal.seta-baixo::after { border-top-color: #1A120D; }
+    body.dark-mode .storie-word-modal.seta-cima::after  { border-bottom-color: #1A120D; }
     @keyframes storieModalIn {
-      from { opacity: 0; transform: scale(0.92) translateY(6px); }
-      to   { opacity: 1; transform: scale(1)    translateY(0);   }
+      from { opacity: 0; transform: scale(0.9); }
+      to   { opacity: 1; transform: scale(1);   }
     }
     .storie-modal-close {
       position: absolute; top: 0.45rem; right: 0.6rem;
