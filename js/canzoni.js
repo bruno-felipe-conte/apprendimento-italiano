@@ -69,6 +69,7 @@ const Canzoni = {
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
         <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
         <button onclick="Canzoni._filtroNivel='';Canzoni.renderizarSeletor()"

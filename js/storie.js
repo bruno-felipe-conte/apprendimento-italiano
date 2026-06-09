@@ -31,6 +31,14 @@ const Storie = {
         } else this.dados = { storie: [] };
       } catch { this.dados = { storie: [] }; }
     }
+    // Mescla histórias customizadas (via IA Import)
+    try {
+      const custom = JSON.parse(localStorage.getItem('it_storie_custom') || '[]');
+      if (custom.length) {
+        const normalizadas = custom.map(s => this._normalizar(s));
+        this.dados.storie = [...this.dados.storie, ...normalizadas];
+      }
+    } catch (e) {}
     try {
       this.completate = JSON.parse(localStorage.getItem('it_storie_lidas') || '[]');
     } catch { this.completate = []; }
@@ -103,6 +111,7 @@ const Storie = {
         <input type="search" placeholder="${labels.cerca}" value="${this._filtroTexto}"
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
+        <button class="btn-ia-add" onclick="IAImport.abrir('storia')">🤖 Adicionar via IA</button>
       </div>
       <!-- Pills de nível -->
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1.2rem;justify-content:center">
@@ -132,8 +141,9 @@ const Storie = {
           <div style="font-size:2.4rem;line-height:1.1">${s.icone||'📜'}</div>
           <!-- Título -->
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
-            ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}
+            ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
+          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remover</button>`:''}
           <!-- Autor -->
           <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
           <!-- Nível + XP -->

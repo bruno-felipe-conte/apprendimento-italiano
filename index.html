@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=50">
+  <link rel="stylesheet" href="css/italia.css?v=51">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -1414,6 +1414,40 @@
     body.dark-mode .gram-digitar-dica { background: #241C0A; color: #E5B84E; border-left-color: var(--cor-toscano); }
     body.dark-mode .gram-ex-tipo-digitar { background: #2A1545; color: #D2A9F7; border-color: #5b2181; }
 
+    /* ── IA Import Modal ── */
+    .ia-import-box { background:#fff; border-radius:18px; padding:1.5rem; max-width:620px; width:100%; max-height:92vh; overflow-y:auto; box-shadow:0 16px 48px rgba(0,0,0,0.3); position:relative; }
+    .ia-modal-close { position:absolute; top:1rem; right:1.1rem; background:none; border:none; font-size:1.6rem; cursor:pointer; color:#999; line-height:1; padding:0; }
+    .ia-modal-close:hover { color:#333; }
+    .ia-import-titulo { font-family:'Cinzel',serif; color:#9B2335; margin:0 0 1.2rem; font-size:1.2rem; padding-right:2rem; }
+    .ia-step { margin-bottom:1.1rem; }
+    .ia-step-label { font-weight:600; font-size:0.88rem; margin-bottom:0.45rem; color:#444; }
+    .ia-prompt-box { background:#f7f4f0; border:1px solid #e0d8d0; border-radius:10px; padding:0.8rem; }
+    .ia-prompt-box pre { white-space:pre-wrap; font-size:0.75rem; max-height:170px; overflow-y:auto; margin:0 0 0.6rem; font-family:monospace; color:#333; line-height:1.5; }
+    .ia-copy-btn { background:#9B2335; color:#fff; border:none; border-radius:20px; padding:0.3rem 0.9rem; font-size:0.8rem; font-weight:700; cursor:pointer; transition:background 0.2s; }
+    .ia-copy-btn:hover { background:#7a1b29; }
+    .ia-paste-area { width:100%; min-height:130px; font-family:monospace; font-size:0.8rem; padding:0.6rem; border:1.5px solid #ddd; border-radius:8px; resize:vertical; box-sizing:border-box; color:#333; background:#fff; }
+    .ia-paste-area:focus { border-color:#9B2335; outline:none; }
+    .ia-feedback { min-height:1.2rem; font-size:0.88rem; margin-bottom:0.6rem; font-weight:600; }
+    .ia-feedback-ok   { color:#27ae60; }
+    .ia-feedback-warn { color:#e67e22; }
+    .ia-feedback-error { color:#c0392b; }
+    .ia-actions { display:flex; justify-content:flex-end; gap:0.75rem; }
+    .btn-ia-add { background:linear-gradient(135deg,#9B2335,#c0392b); color:#fff; border:none; border-radius:20px; padding:0.38rem 1rem; font-weight:700; cursor:pointer; font-size:0.82rem; white-space:nowrap; transition:opacity 0.2s; }
+    .btn-ia-add:hover { opacity:0.88; }
+    .ia-custom-badge { background:#9B2335; color:#fff; font-size:0.65rem; font-weight:700; border-radius:6px; padding:0.1rem 0.4rem; margin-left:0.3rem; vertical-align:middle; }
+    .ia-del-btn { background:none; border:1.5px solid #c0392b; color:#c0392b; border-radius:6px; padding:0.18rem 0.55rem; font-size:0.75rem; cursor:pointer; font-weight:700; }
+    .ia-del-btn:hover { background:#c0392b; color:#fff; }
+    /* Dark mode */
+    body.dark-mode .ia-import-box { background:#1C1816; color:#E6DFD3; }
+    body.dark-mode .ia-modal-close { color:#888; }
+    body.dark-mode .ia-modal-close:hover { color:#eee; }
+    body.dark-mode .ia-import-titulo { color:#FF8F9E; }
+    body.dark-mode .ia-step-label { color:#C9BBA8; }
+    body.dark-mode .ia-prompt-box { background:#25201D; border-color:#3D3530; }
+    body.dark-mode .ia-prompt-box pre { color:#E6DFD3; }
+    body.dark-mode .ia-paste-area { background:#25201D; border-color:#3D3530; color:#E6DFD3; }
+    body.dark-mode .ia-paste-area:focus { border-color:var(--cor-toscano); }
+
     /* ── Conquista Modal ── */
     .conquista-modal { display:none; position:fixed; inset:0; z-index:2100; background:rgba(0,0,0,0.65); align-items:center; justify-content:center; padding:1rem; backdrop-filter:blur(6px); }
     .conquista-modal.ativo { display:flex; animation:fadeIn 0.2s ease; }
@@ -2543,6 +2577,7 @@
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
         <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('vocab')">🤖 Adicionar via IA</button>
         <div id="vocab-blur-btns" style="display:flex;gap:0.4rem;flex-shrink:0">
           <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
           <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
@@ -2742,7 +2777,37 @@
 
   <input type="file" id="backup-input" accept=".json" style="display:none" onchange="Profilo.importarDados(event)">
   <input type="file" id="custom-input" accept=".json" style="display:none" onchange="Profilo.importarConteudoCustom(event)">
+
+  <!-- IA Import Modal -->
+  <div id="ia-import-modal" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);">
+    <div class="ia-import-box">
+      <button class="ia-modal-close" onclick="IAImport.fechar()" aria-label="Fechar">×</button>
+      <h2 id="ia-import-titulo" class="ia-import-titulo">🤖 Adicionar via IA</h2>
+
+      <div class="ia-step">
+        <p class="ia-step-label">1. Copie o prompt abaixo e cole na sua IA favorita (ChatGPT, Claude, etc.):</p>
+        <div class="ia-prompt-box">
+          <pre id="ia-prompt-text"></pre>
+          <button class="ia-copy-btn" onclick="IAImport.copiarPrompt()">📋 Copiar Prompt</button>
+        </div>
+      </div>
+
+      <div class="ia-step">
+        <p class="ia-step-label">2. Cole aqui a resposta JSON gerada pela IA:</p>
+        <textarea id="ia-paste-area" class="ia-paste-area" placeholder="Cole o JSON gerado pela IA aqui..."></textarea>
+      </div>
+
+      <div id="ia-feedback" class="ia-feedback"></div>
+
+      <div class="ia-actions">
+        <button class="btn-secondario" onclick="IAImport.fechar()">Cancelar</button>
+        <button class="btn-primario" onclick="IAImport.importar()">✅ Importar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js"></script>
+  <script src="js/ia-import.js"></script>
 </body>
 </html>

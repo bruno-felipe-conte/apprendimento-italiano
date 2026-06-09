@@ -222,6 +222,15 @@ const App = {
 
     await Promise.all(promises);
 
+    // Injeta vocabulário customizado (via IA Import)
+    try {
+      const custom = JSON.parse(localStorage.getItem('it_vocab_custom') || '[]');
+      if (custom.length) {
+        custom.forEach(w => { if (!w.templo_num) w.templo_num = 0; });
+        this.estado.vocabCache.push(...custom);
+      }
+    } catch (e) {}
+
     // Update total_palavras in progress
     if (this.estado.progresso) {
       this.estado.progresso.total_palavras = this.estado.vocabCache.length;

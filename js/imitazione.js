@@ -13,7 +13,15 @@ const Imitazione = {
       this.dados = await r.json();
     } catch (e) {
       console.error('Erro ao carregar imitazioni.json', e);
+      this.dados = { imitazioni: [] };
     }
+    // Mescla frases customizadas (via IA Import)
+    try {
+      const custom = JSON.parse(localStorage.getItem('it_imitazioni_custom') || '[]');
+      if (custom.length) {
+        this.dados.imitazioni = [...(this.dados.imitazioni || []), ...custom];
+      }
+    } catch (e) {}
   },
 
   async renderizar() {
@@ -46,7 +54,8 @@ const Imitazione = {
       return d;
     })();
 
-    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem">
+    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem;align-items:center">
+      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.3rem">🤖 Adicionar via IA</button>
       <button onclick="Imitazione._filtroNivel='';Imitazione._aplicarFiltro()"
         style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
         Tutte (${todas.length})</button>
