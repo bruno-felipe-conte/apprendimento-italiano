@@ -13,7 +13,7 @@ const IAImport = {
 REGRAS OBRIGATÓRIAS:
 1. Turnos do PERSONAGEM: campos "frase" (italiano), "traducao" (português), "audio_ipa" (deixe "")
 2. Turnos do "Tu": campo "frase" = a resposta CORRETA em italiano, "traducao" = tradução dessa resposta, MAIS "alternativas" (4 opções em italiano, a correta INCLUÍDA) e "resposta_correta" = índice 0-3 da correta em alternativas
-3. Alterne sempre: PERSONAGEM → Tu → PERSONAGEM → Tu... (8 a 12 turnos no total)
+3. Alterne sempre: PERSONAGEM → Tu → PERSONAGEM → Tu... (sem limite de turnos — use quantos forem necessários para cobrir a conversa completa)
 4. Todas as falas em italiano correto, todas as traduções em português brasileiro
 
 EXEMPLO de dois turnos (copie exatamente este formato):
@@ -71,19 +71,25 @@ EXEMPLO de dois turnos (copie exatamente este formato):
   "xp_recompensa": 50
 }
 
-TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "comprando passagem de trem em Milão", "pedindo ajuda numa farmácia", "fazendo check-in no hotel"]`,
+TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "comprando passagem de trem em Milão", "pedindo ajuda numa farmácia", "fazendo check-in no hotel". Pode ter quantos turnos forem necessários para cobrir a conversa completa — sem limite]`,
 
-    canzone: `Crie os dados de uma música italiana para estudo. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    canzone: `Crie os dados de uma música italiana para estudo. Pode ser qualquer música — italiana, traduzida para o italiano, ou uma composição própria. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
 REGRAS OBRIGATÓRIAS:
-1. "texto_completo" = verso real e completo da música
-2. "texto_lacuna" = o mesmo verso com UMA palavra substituída por ___
-3. "palavra_oculta" = exatamente essa palavra (deve estar no texto_completo)
-4. "traducao" = tradução do verso em português brasileiro
-5. "dica" = explicação gramatical breve da palavra oculta
-6. Inclua de 5 a 8 versos
+1. Inclua TODOS os versos da música, sem limite de quantidade
+2. Para versos com conteúdo único e palavra interessante para aprender:
+   - "palavra_oculta" = a palavra a ser adivinhada
+   - "texto_lacuna" = o verso com essa palavra substituída por ___
+   - "dica" = explicação gramatical breve
+   - "repeticoes" = quantas vezes consecutivas esse verso se repete na música (1 se não repete)
+3. Para versos PURAMENTE repetitivos (refrão idêntico já incluído antes, interjeições sem valor pedagógico):
+   - Deixe "palavra_oculta" como "" (string vazia)
+   - "texto_lacuna" = "" (vazio)
+   - "dica" = "" (vazio)
+   - "repeticoes" = número de vezes que aparece em sequência
+4. NUNCA omita versos — use o campo "repeticoes" para indicar repetições em vez de duplicar linhas
 
-EXEMPLO COMPLETO (copie exatamente este formato):
+EXEMPLO COMPLETO com repetições (copie exatamente este formato):
 {
   "id": "can_custom_001",
   "titulo": "Bella Ciao",
@@ -98,7 +104,8 @@ EXEMPLO COMPLETO (copie exatamente este formato):
       "texto_lacuna": "Una mattina mi sono ___",
       "palavra_oculta": "alzato",
       "traducao": "Uma manhã eu me levantei",
-      "dica": "participio passato de 'alzarsi' (levantar-se)"
+      "dica": "participio passato de 'alzarsi' (levantar-se)",
+      "repeticoes": 1
     },
     {
       "id": 2,
@@ -106,14 +113,33 @@ EXEMPLO COMPLETO (copie exatamente este formato):
       "texto_lacuna": "O ___ ciao, bella ciao, bella ciao ciao ciao",
       "palavra_oculta": "bella",
       "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
-      "dica": "aggettivo feminino — bela, bonita"
+      "dica": "aggettivo feminino singular — bela, bonita",
+      "repeticoes": 3
+    },
+    {
+      "id": 3,
+      "texto_completo": "E questo è il fiore del partigiano",
+      "texto_lacuna": "E questo è il ___ del partigiano",
+      "palavra_oculta": "fiore",
+      "traducao": "E esta é a flor do partigiano",
+      "dica": "sostantivo maschile — flor",
+      "repeticoes": 1
+    },
+    {
+      "id": 4,
+      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
+      "texto_lacuna": "",
+      "palavra_oculta": "",
+      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
+      "dica": "",
+      "repeticoes": 2
     }
   ],
-  "vocabulario_chave": ["alzarsi", "mattina", "partigiano"],
+  "vocabulario_chave": ["alzarsi", "fiore", "partigiano"],
   "xp_recompensa": 40
 }
 
-MÚSICA: [SUBSTITUA AQUI — ex: "Azzurro de Adriano Celentano", "Volare de Domenico Modugno", "L'Italiano de Toto Cotugno"]`,
+MÚSICA: [SUBSTITUA AQUI — pode ser qualquer música, ex: "Azzurro de Adriano Celentano", "uma música que compus sobre Roma", "Volare de Domenico Modugno"]`,
 
     storia: `Crie uma história curta em italiano para aprendizes. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 

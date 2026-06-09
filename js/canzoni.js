@@ -303,14 +303,32 @@ const Canzoni = {
     const c = document.getElementById('canzoni-container');
     if (!c || !this.canzonAtual) return;
     const can = this.canzonAtual;
+
+    // Pula estrofes sem lacuna (versos de repetição marcados com repeticoes e sem palavra_oculta)
+    while (
+      this.estrofeAtual < can.estrofes.length &&
+      !can.estrofes[this.estrofeAtual].palavra_oculta
+    ) {
+      this.estrofeAtual++;
+    }
+    if (this.estrofeAtual >= can.estrofes.length) { this.mostrarResultado(); return; }
+
     const est = can.estrofes[this.estrofeAtual];
-    const total = can.estrofes.length;
-    const pct = Math.round(this.estrofeAtual / total * 100);
-    
+    // Estrofes com lacuna real (palavra_oculta preenchida)
+    const estrofesComLacuna = can.estrofes.filter(e => e.palavra_oculta);
+    const idxNaLista = estrofesComLacuna.indexOf(est);
+    const total = estrofesComLacuna.length;
+    const pct = Math.round(idxNaLista / total * 100);
+
+    // Badge de repetição: mostra "2x" "3x" etc.
+    const repBadge = (est.repeticoes && est.repeticoes > 1)
+      ? `<span style="background:#9B2335;color:#fff;font-size:0.7rem;font-weight:800;border-radius:10px;padding:0.1rem 0.5rem;margin-left:0.4rem">${est.repeticoes}x</span>`
+      : '';
+
     c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Canzoni</button>
-        <span style="font-size:0.85rem;color:var(--cor-pietra)">${this.estrofeAtual+1}/${total}</span>
+        <span style="font-size:0.85rem;color:var(--cor-pietra)">${idxNaLista+1}/${total}${repBadge}</span>
       </div>
       <div style="text-align:center;padding:1rem 0 0.5rem">
         <div style="font-size:1.5rem">${can.icone}</div>
