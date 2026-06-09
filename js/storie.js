@@ -330,6 +330,30 @@ const Storie = {
     }).join('');
   },
 
+  // ── Alinhamento posicional IT→PT para extrair tradução da palavra ──
+  // Divide ambas as frases em tokens, mapeia a posição proporcional
+  // do token italiano para o token português correspondente.
+  // Retorna 1-2 palavras ao redor da posição estimada.
+  _alinharPalavra(palavra, fraseIT, frasePT) {
+    const tokIT = (fraseIT.match(/[A-Za-zÀ-öø-ÿ']+/g) || []);
+    const tokPT = (frasePT.match(/[A-Za-zÀ-öø-ÿ']+/g) || []);
+    if (!tokIT.length || !tokPT.length) return '';
+
+    const norm  = this._normWord(palavra);
+    const idxIT = tokIT.findIndex(t => this._normWord(t) === norm);
+    if (idxIT === -1) return '';
+
+    // Mapeamento proporcional: posição relativa em IT → posição em PT
+    const ratio  = tokIT.length > 1 ? idxIT / (tokIT.length - 1) : 0;
+    const idxPT  = Math.round(ratio * (tokPT.length - 1));
+
+    // Retorna a palavra na posição + a seguinte se for artigo/prep curta
+    const w0 = tokPT[idxPT] || '';
+    const w1 = tokPT[idxPT + 1] || '';
+    const curta = w0.length <= 3; // artigos/prep curtos ganham palavra extra de contexto
+    return curta && w1 ? `${w0} ${w1}` : w0;
+  },
+
   _normWord(w) {
     return (w || '').toLowerCase().replace(/[''']/g, "'");
   },
@@ -369,10 +393,12 @@ const Storie = {
       }
     }
 
-    // Fallback: se ainda sem tradução individual, usa a tradução da frase (parágrafo)
-    const parIdx     = parseInt(wordEl.dataset.par ?? '-1', 10);
-    const paragrafo  = this.storAttuale?.testo?.[parIdx];
-    const tradFrase  = (!trad && paragrafo?.portugues) ? paragrafo.portugues.trim() : '';
+    // Fallback: extrai tradução da palavra por alinhamento posicional
+    const parIdx    = parseInt(wordEl.dataset.par ?? '-1', 10);
+    const paragrafo = this.storAttuale?.testo?.[parIdx];
+    if (!trad && paragrafo?.portugues && paragrafo?.italiano) {
+      trad = this._alinharPalavra(palavra, paragrafo.italiano, paragrafo.portugues);
+    }
 
     const temVocab = !!(ipa || trad || cat);
     const il       = I18n.idioma === 'it';
@@ -383,13 +409,7 @@ const Storie = {
              .map(t => `<span class="storie-trad-pill">${this._escape(t)}</span>`).join('')
       : '';
 
-    // Bloco da tradução da frase (quando não há tradução individual)
-    const tradFraseHtml = tradFrase
-      ? `<div class="storie-modal-trad-frase">
-           <span class="storie-modal-trad-label">${il ? 'Frase' : 'Frase'}</span>
-           ${this._escape(tradFrase)}
-         </div>`
-      : '';
+    const tradFraseHtml = '';
 
     const modal = document.getElementById('storie-word-modal');
     if (!modal) return;
