@@ -6,6 +6,7 @@ const Vocab = {
   filtroTexto: '',
   filtroTemplo: '',
   filtroCategoria: '',
+  filtroOrigem: '',   // '' | 'custom' | 'nativo'
   filtroDificeis:   false,
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
@@ -23,8 +24,22 @@ const Vocab = {
       return;
     }
 
+    // Update origin pills active state
+    const pillStyle = (active) => active
+      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
+      : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600';
+    const pT = document.getElementById('vocab-pill-todos');
+    const pC = document.getElementById('vocab-pill-custom');
+    const pN = document.getElementById('vocab-pill-nativo');
+    if (pT) pT.style.cssText = pillStyle(this.filtroOrigem === '');
+    if (pC) pC.style.cssText = pillStyle(this.filtroOrigem === 'custom');
+    if (pN) pN.style.cssText = pillStyle(this.filtroOrigem === 'nativo');
+
     // Apply filters
     let filtrados = todos;
+
+    if (this.filtroOrigem === 'custom') filtrados = filtrados.filter(p => p._custom || p.custom);
+    if (this.filtroOrigem === 'nativo') filtrados = filtrados.filter(p => !p._custom && !p.custom);
 
     if (this.filtroTemplo) {
       const num = parseInt(this.filtroTemplo, 10);

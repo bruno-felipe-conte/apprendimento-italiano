@@ -22,10 +22,11 @@ const Canzoni = {
     } catch { this.custom = []; }
   },
 
-  // ── Retorna TODAS as músicas (built-in + custom) ───────────
+  _filtroOrigem: '', // '' | 'custom' | 'nativo'
+
+  // ── Retorna TODAS as músicas — custom primeiro ─────────────
   todasCanzoni() {
-    const builtin = (this.dados?.canzoni || []);
-    return [...builtin, ...this.custom];
+    return [...this.custom, ...(this.dados?.canzoni || [])];
   },
 
   // ── Salvar custom no localStorage ─────────────────────────
@@ -48,6 +49,8 @@ const Canzoni = {
     todas.forEach(s => { counts[s.nivel] = (counts[s.nivel]||0)+1; });
 
     let filtradas = todas;
+    if (this._filtroOrigem === 'custom') filtradas = filtradas.filter(s => s.custom || s._custom);
+    if (this._filtroOrigem === 'nativo') filtradas = filtradas.filter(s => !s.custom && !s._custom);
     if (this._filtroNivel) filtradas = filtradas.filter(s => s.nivel === this._filtroNivel);
     if (this._filtroTexto) {
       const q = this._filtroTexto.toLowerCase();
@@ -70,6 +73,9 @@ const Canzoni = {
           style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
         <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">🤖 via IA</button>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;justify-content:center">
+        ${(()=>{const nC=todas.filter(s=>s.custom||s._custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;const pill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">${l} (${ct})</button>`;return pill('','Todas',todas.length)+pill('custom','🤖 Adicionadas',nC)+pill('nativo','📚 Nativas',nN);})()}
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
         <button onclick="Canzoni._filtroNivel='';Canzoni.renderizarSeletor()"

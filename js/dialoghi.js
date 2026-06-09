@@ -18,8 +18,11 @@ const Dialoghi = {
     } catch { this.custom = []; }
   },
 
+  _filtroOrigem: '', // '' | 'custom' | 'nativo'
+
   todosDialoghi() {
-    return [...(this.dados?.dialogi || []), ...this.custom];
+    // Custom primeiro
+    return [...this.custom, ...(this.dados?.dialogi || [])];
   },
 
   _salvarCustom() {
@@ -41,13 +44,23 @@ const Dialoghi = {
     const counts = {};
     todos.forEach(d => { counts[d.nivel] = (counts[d.nivel]||0)+1; });
 
-    // Filtro ativo
+    // Filtros
     let filtrados = todos;
+    if (this._filtroOrigem === 'custom')  filtrados = filtrados.filter(d => d.custom || d._custom);
+    if (this._filtroOrigem === 'nativo')  filtrados = filtrados.filter(d => !d.custom && !d._custom);
     if (this._filtroNivel) filtrados = filtrados.filter(d => d.nivel === this._filtroNivel);
     if (this._filtroTexto) {
       const q = this._filtroTexto.toLowerCase();
       filtrados = filtrados.filter(d => d.titulo.toLowerCase().includes(q));
     }
+
+    const nCustom = todos.filter(d => d.custom || d._custom).length;
+    const nNativo = todos.length - nCustom;
+    const _o = this._filtroOrigem;
+    const _origemPill = (val, label, count) =>
+      `<button onclick="Dialoghi._filtroOrigem='${val}';Dialoghi.renderizarSeletor()"
+        style="padding:0.22rem 0.7rem;border-radius:999px;border:1.5px solid ${_o===val?'#7B68A0':'#ddd'};background:${_o===val?'#7B68A0':'transparent'};color:${_o===val?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">
+        ${label} (${count})</button>`;
 
     let html = `
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem;justify-content:center">
@@ -56,6 +69,11 @@ const Dialoghi = {
           style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
         <button class="btn-primario" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
+      </div>
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;justify-content:center">
+        ${_origemPill('','Todos',todos.length)}
+        ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
+        ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo)     : ''}
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
         <button onclick="Dialoghi._filtroNivel='';Dialoghi.renderizarSeletor()"

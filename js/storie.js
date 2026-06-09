@@ -18,6 +18,7 @@ const Storie = {
   tooltipTimeout: null,
   _filtroNivel: '',
   _filtroTexto: '',
+  _filtroOrigem: '',
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -31,12 +32,12 @@ const Storie = {
         } else this.dados = { storie: [] };
       } catch { this.dados = { storie: [] }; }
     }
-    // Mescla histórias customizadas (via IA Import)
+    // Mescla histórias customizadas — custom primeiro
     try {
       const custom = JSON.parse(localStorage.getItem('it_storie_custom') || '[]');
       if (custom.length) {
         const normalizadas = custom.map(s => this._normalizar(s));
-        this.dados.storie = [...this.dados.storie, ...normalizadas];
+        this.dados.storie = [...normalizadas, ...this.dados.storie];
       }
     } catch (e) {}
     try {
@@ -88,6 +89,8 @@ const Storie = {
     todas.forEach(s => { counts[s.nivel] = (counts[s.nivel] || 0) + 1; });
 
     let filtrate = todas;
+    if (this._filtroOrigem === 'custom') filtrate = filtrate.filter(s => s._custom || s.custom);
+    if (this._filtroOrigem === 'nativo') filtrate = filtrate.filter(s => !s._custom && !s.custom);
     if (this._filtroNivel) filtrate = filtrate.filter(s => s.nivel === this._filtroNivel);
     if (this._filtroTexto) {
       const q = this._filtroTexto.toLowerCase();
@@ -112,6 +115,10 @@ const Storie = {
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
         <button class="btn-ia-add" onclick="IAImport.abrir('storia')">🤖 Adicionar via IA</button>
+      </div>
+      <!-- Pills de origem -->
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;justify-content:center">
+        ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;const pill=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600">${l} (${ct})</button>`;return pill('','Todas',todas.length)+pill('custom','🤖 Adicionadas',nC)+pill('nativo','📚 Nativas',nN);})()}
       </div>
       <!-- Pills de nível -->
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1.2rem;justify-content:center">

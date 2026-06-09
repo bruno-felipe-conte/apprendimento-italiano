@@ -4,6 +4,7 @@ const Imitazione = {
   recognition: null,
   isRecording: false,
   _filtroNivel: '',
+  _filtroOrigem: '',
   _listaAtual: null, // frases filtradas
 
   async carregar() {
@@ -15,11 +16,11 @@ const Imitazione = {
       console.error('Erro ao carregar imitazioni.json', e);
       this.dados = { imitazioni: [] };
     }
-    // Mescla frases customizadas (via IA Import)
+    // Mescla frases customizadas — custom primeiro
     try {
       const custom = JSON.parse(localStorage.getItem('it_imitazioni_custom') || '[]');
       if (custom.length) {
-        this.dados.imitazioni = [...(this.dados.imitazioni || []), ...custom];
+        this.dados.imitazioni = [...custom, ...(this.dados.imitazioni || [])];
       }
     } catch (e) {}
   },
@@ -30,7 +31,9 @@ const Imitazione = {
   },
 
   _aplicarFiltro() {
-    const todas = this.dados?.imitazioni || [];
+    let todas = this.dados?.imitazioni || [];
+    if (this._filtroOrigem === 'custom') todas = todas.filter(f => f._custom || f.custom);
+    if (this._filtroOrigem === 'nativo') todas = todas.filter(f => !f._custom && !f.custom);
     this._listaAtual = this._filtroNivel
       ? todas.filter(f => f.nivel === this._filtroNivel)
       : todas;
@@ -42,10 +45,13 @@ const Imitazione = {
   _renderizarFiltros() {
     const c = document.getElementById('imitazione-container');
     if (!c) return;
-    const todas = this.dados?.imitazioni || [];
+    const todasRaw = this.dados?.imitazioni || [];
     const niveis = ['A1','A2','B1','B2','C1'];
     const counts = {};
-    todas.forEach(f => { counts[f.nivel] = (counts[f.nivel]||0)+1; });
+    todasRaw.forEach(f => { counts[f.nivel] = (counts[f.nivel]||0)+1; });
+    const nC = todasRaw.filter(f => f._custom || f.custom).length;
+    const nN = todasRaw.length - nC;
+    const _o = this._filtroOrigem;
 
     const bar = document.getElementById('imit-filtro-bar') || (() => {
       const d = document.createElement('div');
@@ -54,11 +60,16 @@ const Imitazione = {
       return d;
     })();
 
-    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem;align-items:center">
+    const pill = (v, l, ct) => `<button onclick="Imitazione._filtroOrigem='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">${l} (${ct})</button>`;
+
+    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.4rem;padding:0 0.2rem;align-items:center">
       <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.3rem">🤖 Adicionar via IA</button>
+      ${pill('','Todas',todasRaw.length)}${pill('custom','🤖 Adicionadas',nC)}${pill('nativo','📚 Nativas',nN)}
+    </div>
+    <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem;align-items:center">
       <button onclick="Imitazione._filtroNivel='';Imitazione._aplicarFiltro()"
         style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
-        Tutte (${todas.length})</button>
+        Tutte (${todasRaw.length})</button>
       ${niveis.map(n => `<button onclick="Imitazione._filtroNivel='${n}';Imitazione._aplicarFiltro()"
         style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?'#9B2335':'#ddd'};background:${this._filtroNivel===n?'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
         ${n} (${counts[n]||0})</button>`).join('')}

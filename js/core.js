@@ -227,7 +227,7 @@ const App = {
       const custom = JSON.parse(localStorage.getItem('it_vocab_custom') || '[]');
       if (custom.length) {
         custom.forEach(w => { if (!w.templo_num) w.templo_num = 0; });
-        this.estado.vocabCache.push(...custom);
+        this.estado.vocabCache.unshift(...custom);
       }
     } catch (e) {}
 
