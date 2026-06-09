@@ -1,6 +1,7 @@
 const Canzoni = {
   dados: null,        // built-in (data/canzoni.json)
   custom: [],         // criados pelo usuário (localStorage)
+  _ocultas: [],       // IDs de nativas ocultadas pelo usuário
   canzonAtual: null,
   estrofeAtual: 0,
   acertos: 0,
@@ -20,18 +21,43 @@ const Canzoni = {
     try {
       this.custom = JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]');
     } catch { this.custom = []; }
+    // 3. Carrega lista de nativas ocultas
+    try {
+      this._ocultas = JSON.parse(localStorage.getItem('it_canzoni_ocultas') || '[]');
+    } catch { this._ocultas = []; }
   },
 
   _filtroOrigem: '', // '' | 'custom' | 'nativo'
 
-  // ── Retorna TODAS as músicas — custom primeiro ─────────────
+  // ── Retorna TODAS as músicas — custom primeiro, excluindo ocultas ──
   todasCanzoni() {
-    return [...this.custom, ...(this.dados?.canzoni || [])];
+    const nativas = (this.dados?.canzoni || []).filter(c => !this._ocultas.includes(c.id));
+    return [...this.custom, ...nativas];
   },
 
   // ── Salvar custom no localStorage ─────────────────────────
   _salvarCustom() {
     localStorage.setItem('it_canzoni_custom', JSON.stringify(this.custom));
+  },
+
+  // ── Ocultar música nativa (guarda ID no localStorage) ─────
+  ocultarNativa(id) {
+    const can = (this.dados?.canzoni || []).find(c => c.id === id);
+    if (!can) return;
+    if (!confirm(`Ocultar "${can.titulo}"?\nEla desaparece da lista mas pode ser restaurada depois.`)) return;
+    if (!this._ocultas.includes(id)) this._ocultas.push(id);
+    localStorage.setItem('it_canzoni_ocultas', JSON.stringify(this._ocultas));
+    App.notificar('Música ocultada. Use "Restaurar" para trazer de volta.', 'alerta');
+    this.renderizarSeletor();
+  },
+
+  // ── Restaurar todas as nativas ocultas ─────────────────────
+  restaurarNativas() {
+    if (!this._ocultas.length) return;
+    this._ocultas = [];
+    localStorage.removeItem('it_canzoni_ocultas');
+    App.notificar('Músicas nativas restauradas!', 'sucesso');
+    this.renderizarSeletor();
   },
 
   // ── Renderizar seletor com built-in + custom + botão criar ─
@@ -67,6 +93,7 @@ const Canzoni = {
     });
 
     const nC=todas.filter(s=>s.custom||s._custom).length, nN=todas.length-nC, _o=this._filtroOrigem;
+    const nOcultas = this._ocultas.length;
     const _oPill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
 
     let html = `
@@ -86,6 +113,7 @@ const Canzoni = {
           <option value="">🎯 Nível</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
+        ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">↩ Restaurar (${nOcultas})</button>` : ''}
       </div>
       <div class="dialogo-grid">`;
 
@@ -100,7 +128,8 @@ const Canzoni = {
           <span class="dialogo-nivel">${can.nivel}</span>
           ${ehCustom ? `
           ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>` : ''}
+          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
+          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Ocultar esta música">🗑️</button>`}
         </div>
       </div>`;
     }
