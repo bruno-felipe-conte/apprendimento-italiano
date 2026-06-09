@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=58">
+  <link rel="stylesheet" href="css/italia.css?v=59">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -649,7 +649,7 @@
       max-width: 290px;
       box-shadow: 0 10px 36px rgba(0,0,0,0.48);
       pointer-events: all;
-      animation: storieModalIn 0.18s cubic-bezier(.22,.8,.4,1) forwards;
+      animation: storieModalIn 0.22s cubic-bezier(.34,1.45,.64,1) forwards;
       transform-origin: var(--modal-origin-x, 50%) var(--modal-origin-y, 100%);
     }
     /* Seta apontando para a palavra (padrão: seta abaixo → modal acima) */
@@ -676,7 +676,7 @@
     body.dark-mode .storie-word-modal.seta-baixo::after { border-top-color: #1A120D; }
     body.dark-mode .storie-word-modal.seta-cima::after  { border-bottom-color: #1A120D; }
     @keyframes storieModalIn {
-      from { opacity: 0; transform: scale(0.9); }
+      from { opacity: 0; transform: scale(0.1); }
       to   { opacity: 1; transform: scale(1);   }
     }
     .storie-modal-close {

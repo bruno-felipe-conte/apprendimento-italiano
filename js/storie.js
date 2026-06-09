@@ -365,48 +365,50 @@ const Storie = {
   },
 
   _posicionarModal(modal, wordEl) {
-    // Oculta para medir sem flicker
     modal.style.visibility = 'hidden';
     modal.classList.remove('seta-baixo', 'seta-cima');
 
-    requestAnimationFrame(() => {
-      const rect  = wordEl.getBoundingClientRect();
-      const mW    = modal.offsetWidth  || 260;
-      const mH    = modal.offsetHeight || 200;
-      const vW    = window.innerWidth;
-      const vH    = window.innerHeight;
-      const GAP   = 14; // espaço entre modal e palavra (inclui altura da seta)
+    // Duplo rAF garante layout computado após display:block
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const rect = wordEl.getBoundingClientRect();
+      const mW   = modal.offsetWidth  || 260;
+      const mH   = modal.offsetHeight || 200;
+      // clientWidth é mais confiável que innerWidth no mobile (ignora scrollbar)
+      const vW   = document.documentElement.clientWidth;
+      const vH   = document.documentElement.clientHeight;
+      const SETA = 9;  // altura da seta CSS em px
+      const PAD  = 8;  // margem mínima das bordas do viewport
 
       // Centro horizontal da palavra
       const wordCX = rect.left + rect.width / 2;
 
-      // Posição left do modal (centrado na palavra)
+      // Tenta centralizar o modal sobre a palavra
       let left = wordCX - mW / 2;
-      if (left < 8)           left = 8;
-      if (left + mW > vW - 8) left = vW - mW - 8;
+      // Clamp horizontal
+      if (left < PAD)               left = PAD;
+      if (left + mW > vW - PAD)     left = vW - mW - PAD;
+      // Se ainda não cabe (modal maior que viewport), alinha à esquerda
+      if (left < 0) left = PAD;
 
-      // Offset da seta relativo ao modal
-      const arrowLeft = Math.min(Math.max(wordCX - left, 18), mW - 18);
+      // Seta sempre aponta para o centro da palavra, independente do deslocamento do modal
+      const arrowLeft = Math.min(Math.max(wordCX - left, 16), mW - 16);
       modal.style.setProperty('--arrow-left', `${arrowLeft}px`);
 
-      // Prefere acima — vai abaixo só se não houver espaço
+      // Vertical: prefere acima
       let top;
       let setaDir;
-      if (rect.top - mH - GAP >= 8) {
-        // Cabe acima
-        top = rect.top - mH - GAP;
-        setaDir = 'seta-baixo'; // seta aponta para baixo (rumo à palavra)
+      if (rect.top - mH - SETA - PAD >= 0) {
+        top     = rect.top - mH - SETA;
+        setaDir = 'seta-baixo';
         modal.style.setProperty('--modal-origin-y', '100%');
       } else {
-        // Coloca abaixo
-        top = rect.bottom + GAP;
-        setaDir = 'seta-cima';  // seta aponta para cima (rumo à palavra)
+        top     = rect.bottom + SETA;
+        setaDir = 'seta-cima';
         modal.style.setProperty('--modal-origin-y', '0%');
       }
 
-      // Garante que não ultrapassa o viewport verticalmente
-      if (top + mH > vH - 8) top = vH - mH - 8;
-      if (top < 8)            top = 8;
+      if (top + mH > vH - PAD) top = vH - mH - PAD;
+      if (top < PAD)            top = PAD;
 
       modal.style.setProperty('--modal-origin-x', `${arrowLeft}px`);
       modal.classList.add(setaDir);
