@@ -64,10 +64,8 @@ const Imitazione = {
     const nP=(v,l)=>`<button onclick="Imitazione._filtroNivel='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===v?'#9B2335':'#ddd'};background:${this._filtroNivel===v?'#9B2335':'transparent'};color:${this._filtroNivel===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l}</button>`;
 
     bar.innerHTML = `
-    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
-      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')">🤖 via IA</button>
-    </div>
     <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.9rem;align-items:center">
+      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.2rem">🤖 via IA</button>
       ${oP('','Todas',todasRaw.length)}${nC?oP('custom','🤖 Adicionadas',nC):''}${nN?oP('nativo','📚 Nativas',nN):''}
       <span style="width:1px;background:#ddd;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>
       ${nP('',`Tutte (${todasRaw.length})`)}${niveis.map(n=>nP(n,`${n} (${counts[n]||0})`)).join('')}

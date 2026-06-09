@@ -429,15 +429,6 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   .app-container { padding: 0 var(--esp-md); }
 }
 
-/* ── Telas intermediárias: nav scrollável antes de centralizar ── */
-@media (min-width: 641px) and (max-width: 1099px) {
-  .nav-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-  .nav-tab { scroll-snap-align: start; flex-shrink: 0; }
-}
 
 /* ── Desktop largo (>1024px) ── */
 @media (min-width: 1025px) {
