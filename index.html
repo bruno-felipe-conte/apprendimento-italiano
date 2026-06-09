@@ -2282,14 +2282,60 @@
     body.dark-mode .dialogo-opcao.errada { background: #2D1B1B; border-color: #C0392B; color: #F1948A; }
     body.dark-mode .dialogo-pratica-frase { color: var(--cor-toscano); }
     /* ── Canzoni ── */
-    .canzone-letra { font-size: 1.1rem; line-height: 1.8; text-align: center; color: var(--cor-inchiostro); margin-bottom: 1rem; }
-    .canzone-gap { display: inline-block; min-width: 80px; text-align: center; border-bottom: 2px solid #9B2335; padding: 0 0.5rem; font-weight: 700; color: var(--cor-veneziano-escuro); }
-    .canzone-gap.correta { color: #27AE60; border-color: #27AE60; }
-    .canzone-gap.errada { color: #C0392B; border-color: #C0392B; }
-    body.dark-mode .canzone-letra { color: #E6DFD3; }
-    body.dark-mode .canzone-gap { color: var(--cor-toscano); border-color: var(--cor-toscano); }
-    body.dark-mode .canzone-gap.correta { color: #73E69B; border-color: #27AE60; }
-    body.dark-mode .canzone-gap.errada { color: #F1948A; border-color: #C0392B; }
+    /* ── Canzoni Player — dark Spotify-style ── */
+    .can-player { background:#111; border-radius:14px; overflow:hidden; color:#F5EDD8; min-height:460px; display:flex; flex-direction:column; }
+    .can-player-header { background:#1c1c1c; padding:0.7rem 1rem; display:flex; align-items:center; justify-content:space-between; border-bottom:0.5px solid rgba(255,255,255,0.08); }
+    .can-back-btn { background:none; border:none; color:#F5EDD8; font-size:1.5rem; cursor:pointer; padding:0; line-height:1; opacity:0.6; transition:opacity 0.15s; }
+    .can-back-btn:hover { opacity:1; }
+    .can-header-song { text-align:center; flex:1; }
+    .can-header-title { font-size:0.88rem; font-weight:700; color:#F5EDD8; font-family:'Cinzel',serif; letter-spacing:0.04em; }
+    .can-header-artist { font-size:0.7rem; color:rgba(245,237,216,0.4); margin-top:1px; }
+    .can-score-row { display:flex; gap:5px; }
+    .can-score-pill { font-size:0.68rem; padding:0.15rem 0.45rem; border-radius:20px; font-weight:700; font-family:'Cinzel',serif; letter-spacing:0.03em; }
+    .can-score-correct { background:rgba(39,174,96,0.15); color:#5DCAA5; border:0.5px solid rgba(39,174,96,0.3); }
+    .can-score-wrong   { background:rgba(155,35,53,0.15);  color:#F09595; border:0.5px solid rgba(155,35,53,0.3); }
+    .can-toggle-row { display:flex; align-items:center; justify-content:flex-end; gap:6px; padding:0.4rem 1rem 0; }
+    .can-toggle-label { font-size:0.68rem; color:rgba(245,237,216,0.35); letter-spacing:0.04em; }
+    .can-toggle-btn { width:30px; height:17px; border-radius:9px; border:none; cursor:pointer; position:relative; transition:background 0.2s; flex-shrink:0; }
+    .can-toggle-btn.on  { background:#D4A843; }
+    .can-toggle-btn.off { background:rgba(255,255,255,0.15); }
+    .can-toggle-btn::after { content:''; position:absolute; top:2px; width:13px; height:13px; border-radius:50%; background:#fff; transition:left 0.2s; }
+    .can-toggle-btn.on::after  { left:15px; }
+    .can-toggle-btn.off::after { left:2px; }
+    .can-progress-wrap { height:2px; background:rgba(255,255,255,0.1); margin:0.35rem 1rem 0.25rem; border-radius:1px; }
+    .can-progress-fill { height:2px; background:#D4A843; border-radius:1px; transition:width 0.4s; }
+    .can-lyrics-area { flex:1; padding:0.4rem 0.85rem 0.4rem; overflow-y:auto; max-height:50vh; scroll-behavior:smooth; }
+    .can-verse { padding:0.5rem 0.65rem; border-radius:8px; margin-bottom:0.3rem; transition:all 0.25s; border:0.5px solid transparent; }
+    .can-verse-active      { background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.13); }
+    .can-verse-past-ok     { opacity:0.45; }
+    .can-verse-past-correct{ background:rgba(39,174,96,0.1); border-color:rgba(39,174,96,0.22); }
+    .can-verse-past-wrong  { background:rgba(155,35,53,0.1);  border-color:rgba(155,35,53,0.22); }
+    .can-verse-future      { opacity:0.22; }
+    .can-verse-line { font-size:0.95rem; font-weight:500; color:#F5EDD8; line-height:1.5; font-family:'EB Garamond',serif; }
+    .can-verse-past-correct .can-verse-line { color:#7DDDB8; }
+    .can-verse-past-wrong   .can-verse-line { color:#F09595; }
+    .can-verse-trad { font-size:0.7rem; color:rgba(245,237,216,0.33); line-height:1.4; margin-top:2px; font-style:italic; }
+    .can-blank { display:inline-block; min-width:58px; border-bottom:1.5px solid rgba(245,237,216,0.28); padding:0 3px; text-align:center; color:rgba(245,237,216,0.3); font-size:0.88rem; }
+    .can-blank-correct { border-bottom-color:#27AE60; color:#7DDDB8; font-weight:600; }
+    .can-blank-wrong   { border-bottom-color:#9B2335; color:#F09595; font-weight:600; text-decoration:line-through; }
+    .can-blank-revealed{ border-bottom-color:#D4A843; color:#D4A843; font-weight:600; margin-left:4px; }
+    .can-repeat-btn { background:none; border:none; color:rgba(245,237,216,0.22); font-size:0.66rem; cursor:pointer; padding:0.1rem 0; margin-top:2px; display:block; font-family:'EB Garamond',serif; letter-spacing:0.03em; transition:color 0.15s; }
+    .can-repeat-btn:hover { color:rgba(245,237,216,0.6); }
+    .can-choices-bar { padding:0.65rem 1rem 0.9rem; background:#1c1c1c; border-top:0.5px solid rgba(255,255,255,0.08); }
+    .can-choices-label { font-size:0.6rem; color:rgba(245,237,216,0.25); margin-bottom:0.45rem; text-transform:uppercase; letter-spacing:0.12em; font-family:'Cinzel',serif; }
+    .can-choices-grid { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+    .can-choice-btn { padding:0.6rem 0.5rem; border-radius:8px; border:0.5px solid rgba(245,237,216,0.13); background:rgba(245,237,216,0.05); color:#F5EDD8; font-size:0.95rem; font-family:'EB Garamond',serif; font-weight:500; cursor:pointer; transition:background 0.15s,transform 0.1s; }
+    .can-choice-btn:hover  { background:rgba(245,237,216,0.11); }
+    .can-choice-btn:active { transform:scale(0.97); }
+    .can-result { text-align:center; padding:2.5rem 1.5rem; display:flex; flex-direction:column; align-items:center; gap:0.35rem; }
+    .can-result-emoji { font-size:2.8rem; }
+    .can-result-title { font-family:'Cinzel',serif; font-size:1rem; color:#F5EDD8; margin-top:0.2rem; }
+    .can-result-score { font-size:2.2rem; font-weight:700; color:#D4A843; font-family:'Cinzel',serif; }
+    .can-result-score span { font-size:1.1rem; color:rgba(245,237,216,0.45); }
+    .can-result-xp { font-size:0.78rem; color:rgba(245,237,216,0.4); }
+    .can-restart-btn { padding:0.45rem 1.1rem; border-radius:20px; background:#D4A843; color:#1a0a00; font-size:0.85rem; font-weight:600; font-family:'EB Garamond',serif; border:none; cursor:pointer; transition:opacity 0.15s; }
+    .can-restart-btn:hover { opacity:0.85; }
+    .can-restart-btn.secundario { background:rgba(245,237,216,0.08); color:#F5EDD8; }
 
     /* ── Imitazione ── */
     .mic-button { font-size: 3.5rem; width: 100px; height: 100px; border-radius: 50%; border: none; background: var(--cor-marmore); box-shadow: 0 8px 25px rgba(0,0,0,0.15); cursor: pointer; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); outline: none; display: flex; align-items: center; justify-content: center; margin: 0 auto; }

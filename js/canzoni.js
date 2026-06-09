@@ -299,107 +299,190 @@ const Canzoni = {
   },
 
   // ── MÉTODOS DE JOGO ──────────────────────────────────────────
+  erros: 0,
+  respostas: [],
+  traduzirVisivel: false,
+
   async abrirCanzone(id) {
     await this.carregar();
     this.canzonAtual = this.todasCanzoni().find(c => c.id === id);
+    if (!this.canzonAtual) return;
     this.estrofeAtual = 0;
     this.acertos = 0;
-    this.renderizarEstrofe();
+    this.erros = 0;
+    this.respostas = this.canzonAtual.estrofes.map(() => null);
+    this.traduzirVisivel = false;
+    this._avancarProximoBlank();
   },
-  
-  renderizarEstrofe() {
+
+  _avancarProximoBlank() {
+    const can = this.canzonAtual;
+    if (!can) return;
+    while (this.estrofeAtual < can.estrofes.length && !can.estrofes[this.estrofeAtual].palavra_oculta) {
+      this.estrofeAtual++;
+    }
+    if (this.estrofeAtual >= can.estrofes.length) {
+      this._renderizarPlayer();
+      setTimeout(() => this.mostrarResultado(), 700);
+    } else {
+      this._renderizarPlayer();
+    }
+  },
+
+  _getDistrator(est) {
+    const can = this.canzonAtual;
+    const outras = can.estrofes
+      .filter(e => e.palavra_oculta && e.palavra_oculta.toLowerCase() !== est.palavra_oculta.toLowerCase())
+      .map(e => e.palavra_oculta);
+    if (outras.length > 0) return outras[Math.floor(Math.random() * outras.length)];
+    const fb = ['sempre','bene','grande','bella','notte','cuore','sole','vita','tempo','lungo'];
+    const filtrado = fb.filter(w => w.toLowerCase() !== est.palavra_oculta.toLowerCase());
+    return filtrado[Math.floor(Math.random() * filtrado.length)] || '???';
+  },
+
+  _esc(str) {
+    return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  },
+
+  _renderizarPlayer() {
     const c = document.getElementById('canzoni-container');
     if (!c || !this.canzonAtual) return;
     const can = this.canzonAtual;
 
-    // Pula estrofes sem lacuna (versos de repetição marcados com repeticoes e sem palavra_oculta)
-    while (
-      this.estrofeAtual < can.estrofes.length &&
-      !can.estrofes[this.estrofeAtual].palavra_oculta
-    ) {
-      this.estrofeAtual++;
-    }
-    if (this.estrofeAtual >= can.estrofes.length) { this.mostrarResultado(); return; }
+    const comLacuna = can.estrofes.filter(e => e.palavra_oculta);
+    const total = comLacuna.length;
+    const done  = comLacuna.filter(e => this.respostas[can.estrofes.indexOf(e)] !== null).length;
+    const pct   = total > 0 ? Math.round(done / total * 100) : 0;
 
+    const versosHtml = can.estrofes.map((v, i) => {
+      const resp = this.respostas[i];
+      let cls;
+      if (i < this.estrofeAtual) {
+        if (!v.palavra_oculta)  cls = 'past-ok';
+        else if (resp && resp.correto) cls = 'past-correct';
+        else if (resp)          cls = 'past-wrong';
+        else                    cls = 'past-ok';
+      } else if (i === this.estrofeAtual) {
+        cls = 'active';
+      } else {
+        cls = 'future';
+      }
+
+      let lineHtml;
+      if (!v.palavra_oculta || !v.texto_lacuna) {
+        lineHtml = '<span class="can-verse-line">' + this._esc(v.texto_completo||'') + '</span>';
+      } else {
+        let blankHtml;
+        if (cls === 'future' || cls === 'active') {
+          blankHtml = '<span class="can-blank">_____</span>';
+        } else if (resp && resp.correto) {
+          blankHtml = '<span class="can-blank can-blank-correct">' + this._esc(v.palavra_oculta) + '</span>';
+        } else if (resp) {
+          blankHtml = '<span class="can-blank can-blank-wrong">' + this._esc(resp.escolha) + '</span>'
+                    + '<span class="can-blank can-blank-revealed"> ' + this._esc(v.palavra_oculta) + '</span>';
+        } else {
+          blankHtml = '<span class="can-blank">' + this._esc(v.palavra_oculta) + '</span>';
+        }
+        const pts = (v.texto_lacuna||'').split('___');
+        lineHtml = '<span class="can-verse-line">' + this._esc(pts[0]) + blankHtml + this._esc(pts[1]||'') + '</span>';
+      }
+
+      const tradHtml = (this.traduzirVisivel && v.traducao)
+        ? '<div class="can-verse-trad">' + this._esc(v.traducao) + '</div>' : '';
+
+      const safeText = (v.texto_completo||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      const repeatHtml = (cls !== 'future')
+        ? '<button class="can-repeat-btn" onclick="App.pronunciar(\'' + safeText + '\')">&#9654; repetir</button>' : '';
+
+      return '<div class="can-verse can-verse-' + cls + '">' + lineHtml + tradHtml + repeatHtml + '</div>';
+    }).join('');
+
+    let choicesHtml = '';
     const est = can.estrofes[this.estrofeAtual];
-    // Estrofes com lacuna real (palavra_oculta preenchida)
-    const estrofesComLacuna = can.estrofes.filter(e => e.palavra_oculta);
-    const idxNaLista = estrofesComLacuna.indexOf(est);
-    const total = estrofesComLacuna.length;
-    const pct = Math.round(idxNaLista / total * 100);
+    if (est && est.palavra_oculta) {
+      const dist = this._getDistrator(est);
+      const arr  = Math.random() > 0.5 ? [est.palavra_oculta, dist] : [dist, est.palavra_oculta];
+      const btns = arr.map(w => {
+        const safeW = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+        return '<button class="can-choice-btn" onclick="Canzoni._escolher(\'' + safeW + '\')"><i>' + this._esc(w) + '</i></button>';
+      }).join('');
+      choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">Escolha a palavra</div><div class="can-choices-grid">' + btns + '</div></div>';
+    }
 
-    // Badge de repetição: mostra "2x" "3x" etc.
-    const repBadge = (est.repeticoes && est.repeticoes > 1)
-      ? `<span style="background:#9B2335;color:#fff;font-size:0.7rem;font-weight:800;border-radius:10px;padding:0.1rem 0.5rem;margin-left:0.4rem">${est.repeticoes}x</span>`
-      : '';
+    c.innerHTML =
+      '<div class="can-player">' +
+        '<div class="can-player-header">' +
+          '<button class="can-back-btn" onclick="Canzoni.renderizarSeletor()">&#8249;</button>' +
+          '<div class="can-header-song">' +
+            '<div class="can-header-title">' + this._esc(can.titulo) + '</div>' +
+            '<div class="can-header-artist">' + this._esc(can.artista||'') + '</div>' +
+          '</div>' +
+          '<div class="can-score-row">' +
+            '<span class="can-score-pill can-score-correct">' + this.acertos + ' ✓</span>' +
+            '<span class="can-score-pill can-score-wrong">' + this.erros + ' ✗</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="can-toggle-row">' +
+          '<span class="can-toggle-label">tradução</span>' +
+          '<button class="can-toggle-btn ' + (this.traduzirVisivel?'on':'off') + '" onclick="Canzoni._toggleTraduzir()" aria-label="alternar tradução"></button>' +
+        '</div>' +
+        '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="can-lyrics-area" id="can-lyrics">' + versosHtml + '</div>' +
+        choicesHtml +
+      '</div>';
 
-    c.innerHTML = `
-      <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Canzoni</button>
-        <span style="font-size:0.85rem;color:var(--cor-pietra)">${idxNaLista+1}/${total}${repBadge}</span>
-      </div>
-      <div style="text-align:center;padding:1rem 0 0.5rem">
-        <div style="font-size:1.5rem">${can.icone}</div>
-        <div style="font-family:'Cinzel',serif;font-weight:700;color:var(--cor-veneziano-escuro)">${can.titulo}</div>
-        <div style="font-size:0.8rem;color:var(--cor-pietra)">${can.artista}</div>
-      </div>
-      <div class="gram-ex-progress-bar" style="margin:0.5rem 1rem"><div class="gram-ex-progress-fill" style="width:${pct}%"></div></div>
-      <div class="gram-card" style="margin:1rem">
-        <div style="font-size:1rem;line-height:1.8;padding:1rem;text-align:center;font-style:italic;color:var(--cor-inchiostro)">
-          ${est.texto_lacuna.replace('___', '<input id="canzone-input" type="text" autocomplete="off" autocorrect="off" spellcheck="false" style="border:none;border-bottom:2px solid #9B2335;font-size:1rem;font-style:italic;width:100px;text-align:center;outline:none;background:transparent" placeholder="___" onkeydown="if(event.key===\'Enter\')Canzoni.verificar()">')}
-        </div>
-        <div style="text-align:center;font-size:0.82rem;color:var(--cor-pietra);font-style:italic;padding:0 1rem 0.5rem">${est.traducao}</div>
-        <div style="text-align:center;font-size:0.78rem;color:var(--cor-toscano);padding-bottom:1rem">💡 Dica: ${est.dica}</div>
-        <div id="canzone-feedback"></div>
-        <div style="display:flex;justify-content:center;gap:0.5rem;padding:0.5rem">
-          <button class="btn-primario" onclick="Canzoni.verificar()">✔ Verificar</button>
-          <button class="btn-secondario" onclick="App.pronunciar('${est.texto_completo.replace(/'/g,"\\'")}')">🔊 Ouvir</button>
-        </div>
-      </div>`;
-    setTimeout(() => document.getElementById('canzone-input')?.focus(), 100);
+    setTimeout(() => {
+      const el = document.querySelector('.can-verse-active');
+      if (el) el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }, 120);
   },
-  
-  verificar() {
-    const est = this.canzonAtual.estrofes[this.estrofeAtual];
-    const input = document.getElementById('canzone-input');
-    const fb = document.getElementById('canzone-feedback');
-    if (!input || !fb) return;
-    const digitado = input.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const correto = est.palavra_oculta.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-    const acertou = digitado === correto;
-    if (acertou) {
+
+  _escolher(palavra) {
+    const can = this.canzonAtual;
+    if (!can || this.estrofeAtual >= can.estrofes.length) return;
+    const est = can.estrofes[this.estrofeAtual];
+    if (!est.palavra_oculta) return;
+    const norm = s => s.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const correto = norm(palavra) === norm(est.palavra_oculta);
+    this.respostas[this.estrofeAtual] = { escolha: palavra, correto };
+    if (correto) {
       this.acertos++;
       if (typeof App !== 'undefined' && App.ganharXP) App.ganharXP(5);
-      fb.innerHTML = `<div style="color:#27AE60;text-align:center;padding:0.5rem;font-weight:700">✅ Corretto! "${est.palavra_oculta}"</div>`;
     } else {
-      fb.innerHTML = `<div style="color:#C0392B;text-align:center;padding:0.5rem">❌ A palavra era: <strong>${est.palavra_oculta}</strong></div>`;
+      this.erros++;
     }
-    input.disabled = true;
-    input.value = est.palavra_oculta;
-    input.style.color = acertou ? '#27AE60' : '#C0392B';
-    setTimeout(() => {
-      this.estrofeAtual++;
-      if (this.estrofeAtual >= this.canzonAtual.estrofes.length) this.mostrarResultado();
-      else this.renderizarEstrofe();
-    }, 1500);
+    this.estrofeAtual++;
+    setTimeout(() => this._avancarProximoBlank(), 200);
   },
-  
+
+  _toggleTraduzir() {
+    this.traduzirVisivel = !this.traduzirVisivel;
+    this._renderizarPlayer();
+  },
+
+  verificar() {},
+  renderizarEstrofe() { this._renderizarPlayer(); },
+
   mostrarResultado() {
     const can = this.canzonAtual;
-    const total = can.estrofes.length;
-    const pct = Math.round(this.acertos / total * 100);
+    const total = can.estrofes.filter(e => e.palavra_oculta).length;
+    const pct = total > 0 ? Math.round(this.acertos / total * 100) : 100;
     if (typeof Progressao !== 'undefined' && Progressao.ganhar) Progressao.ganhar(can.xp_recompensa);
     const c = document.getElementById('canzoni-container');
-    c.innerHTML = `<div style="text-align:center;padding:2rem">
-      <div style="font-size:3rem">${pct >= 80 ? '🎤' : '🎵'}</div>
-      <div style="font-family:'Cinzel',serif;font-size:1.2rem;color:var(--cor-veneziano-escuro);margin:0.5rem 0">${can.titulo}</div>
-      <div style="font-size:1.5rem;font-weight:700;margin:0.5rem 0">${I18n.t('can_corretas').replace('{a}', this.acertos).replace('{b}', total)}</div>
-      <div style="color:var(--cor-pietra);margin-bottom:1rem">+${can.xp_recompensa} XP</div>
-      <div style="display:flex;gap:0.5rem;justify-content:center">
-        <button class="btn-primario" onclick="Canzoni.abrirCanzone('${can.id}')">${I18n.t('can_repetir')}</button>
-        <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">${I18n.t('can_outras_musicas')}</button>
-      </div>
-    </div>`;
+    const emoji = pct >= 80 ? '🎤' : pct >= 50 ? '🎵' : '🎼';
+    c.innerHTML =
+      '<div class="can-player">' +
+        '<div class="can-result">' +
+          '<div class="can-result-emoji">' + emoji + '</div>' +
+          '<div class="can-result-title">' + this._esc(can.titulo) + '</div>' +
+          '<div class="can-result-score">' + this.acertos + '<span>/' + total + '</span></div>' +
+          '<div class="can-result-xp">+' + can.xp_recompensa + ' XP</div>' +
+          '<div style="display:flex;gap:0.5rem;justify-content:center;margin-top:1.2rem;flex-wrap:wrap">' +
+            '<button class="can-restart-btn" onclick="Canzoni.abrirCanzone(\'' + can.id + '\')">&#8635; Tentar novamente</button>' +
+            '<button class="can-restart-btn secundario" onclick="Canzoni.renderizarSeletor()">&#8592; M\u00fasicas</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
   }
 };
 
