@@ -474,7 +474,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 
   /* Remove gap entre footer e bottom-nav */
   .app-footer + * { margin-top: 0; }
-  footer.app-footer { padding-bottom: 0.25rem; }
+  footer.app-footer { padding-bottom: 0.6rem; }
 
   /* Responsividade geral mobile */
   .gram-lesson-layout { gap: 1.4rem; }
