@@ -938,17 +938,13 @@ const App = {
     const tentarFalar = () => {
       const voz = this._getVozItaliana();
 
-      // Vozes já carregaram mas nenhuma é italiana → ResponsiveVoice
-      if (!voz && this._vozItalianaResolvida) {
-        this._pronunciarRV(texto);
-        return;
-      }
-
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'it-IT';
       u.rate  = 0.85;
       u.pitch = 1;
       if (voz) u.voice = voz;
+      // Se não há voz italiana específica, usa lang='it-IT' sem voice explícita
+      // (a maioria dos browsers ainda sintetiza com o melhor disponível)
 
       u.onerror = (e) => {
         // Voz IT indisponível no browser → ResponsiveVoice
@@ -958,6 +954,11 @@ const App = {
       };
 
       speechSynthesis.speak(u);
+
+      // Também tenta RV em paralelo se não há voz italiana nativa
+      if (!voz && this._vozItalianaResolvida) {
+        this._pronunciarRV(texto);
+      }
     };
 
     if (speechSynthesis.getVoices().length > 0) {
