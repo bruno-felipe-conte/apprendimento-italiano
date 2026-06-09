@@ -339,29 +339,39 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     position: fixed;
     bottom: 0; left: 0; right: 0;
     z-index: 2000;
-    background: var(--cor-marmore);
-    border-top: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+    /* Fundo, borda e sombra movidos para ::after para desacoplar do overflow */
+    background: transparent;
     /* Safe area iOS */
     padding: 0.3rem max(env(safe-area-inset-right), 2px) calc(0.4rem + env(safe-area-inset-bottom)) max(env(safe-area-inset-left), 2px);
-    /* 9 botões iguais sem overflow */
+    /* padding-top extra: dá espaço físico para o botão ativo subir sem ser cortado */
+    padding-top: 10px;
     justify-content: stretch;
-    align-items: stretch;
-    overflow-x: auto;
+    align-items: center;
+    /* overflow: visible é a chave — permite transforms saírem da caixa */
+    overflow: visible;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
+  /* Fundo real da barra — elemento separado que NÃO interfere no overflow */
+  .bottom-nav::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--cor-marmore);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+    z-index: -1;
+    pointer-events: none;
+  }
   .bottom-nav::-webkit-scrollbar { display: none; }
 
-  body.dark-mode .bottom-nav {
+  body.dark-mode .bottom-nav::after {
     background: #1C1816;
     border-top-color: #2D2723;
     box-shadow: 0 -2px 12px rgba(0,0,0,0.35);
   }
 
   /* Cada botão ocupa 1/9 da largura disponível */
-  /* overflow: visible no nav para que o scale/translateY não seja clipado */
-  .bottom-nav { overflow: visible; overflow-x: auto; }
 
   .bottom-nav button {
     flex: 1 1 0;
