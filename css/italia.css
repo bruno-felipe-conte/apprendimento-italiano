@@ -372,10 +372,10 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   }
 
   /* Cada botão ocupa 1/9 da largura disponível */
-
   .bottom-nav button {
     flex: 1 1 0;
     min-width: 0;
+    position: relative;
     background: transparent;
     border: none;
     color: var(--cor-pietra);
@@ -383,34 +383,34 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1px;
+    gap: 2px;
     font-size: 1.15rem;
     line-height: 1;
     cursor: pointer;
-    padding: 0.3rem 0.1rem 0.25rem;
+    padding: 0.3rem 0.1rem 0.2rem;
     border-radius: 8px;
     opacity: 0.5;
     filter: grayscale(0.5);
-    transform-origin: center 80%;
     transition:
+      top 0.22s cubic-bezier(0.34,1.56,0.64,1),
       transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
       opacity 0.18s ease,
       filter 0.18s ease,
-      background 0.18s ease,
       box-shadow 0.18s ease;
   }
   body.dark-mode .bottom-nav button { color: #A09088; }
 
-  /* Hover: sobe e cresce — efeito "emergir" */
+  /* Hover: sobe levemente */
   .bottom-nav button:hover:not(.ativa) {
-    transform: translateY(-5px) scale(1.18);
-    opacity: 0.85;
+    top: -4px;
+    opacity: 0.82;
     filter: grayscale(0.1);
   }
 
-  /* Press: afunda e encolhe — efeito "pressionar" */
+  /* Press: afunda */
   .bottom-nav button:active {
-    transform: translateY(2px) scale(0.88);
+    top: 2px;
+    transform: scale(0.88);
     opacity: 0.9;
     transition-duration: 0.07s;
   }
@@ -428,25 +428,53 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     text-align: center;
   }
 
-  /* Ativo: flutua com sombra colorida */
+  /* ── Botão ativo: pop-out assimétrico ──
+     O ícone sobe para fora da barra dentro de um círculo flutuante.
+     A label permanece dentro da barra com posicionamento absoluto. */
   .bottom-nav button.ativa {
-    color: var(--cor-veneziano);
+    /* Sobe 14px — metade do círculo fica acima da borda da barra */
+    top: -14px;
     opacity: 1;
     filter: grayscale(0);
-    background: rgba(155,35,53,0.1);
-    transform: translateY(-6px) scale(1.2);
-    font-size: 1.25rem;
-    box-shadow: 0 8px 16px rgba(155,35,53,0.3), 0 2px 4px rgba(155,35,53,0.2);
+    color: var(--cor-veneziano);
+    /* Círculo simétrico que envolve o ícone */
+    background: var(--cor-marmore);
+    border: 2px solid var(--cor-veneziano);
+    border-radius: 50px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    font-size: 1.3rem;
+    /* Sombra 3D: dá profundidade ao efeito de flutuação */
+    box-shadow:
+      0 6px 18px rgba(155,35,53,0.35),
+      0 2px 6px rgba(155,35,53,0.2),
+      /* "base shadow" — simula objeto suspenso */
+      0 14px 8px -8px rgba(155,35,53,0.15);
+    /* Label posicionada absolutamente abaixo do círculo, dentro da barra */
+    overflow: visible;
   }
   .bottom-nav button.ativa span {
+    position: absolute;
+    /* empurra o label para baixo do círculo, de volta ao nível da barra */
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
     color: var(--cor-veneziano);
     font-weight: 800;
+    white-space: nowrap;
   }
+
   body.dark-mode .bottom-nav button.ativa {
+    background: #1C1816;
+    border-color: var(--cor-toscano);
     color: var(--cor-toscano);
-    background: rgba(212,168,67,0.12);
-    box-shadow: 0 8px 16px rgba(212,168,67,0.25), 0 2px 4px rgba(212,168,67,0.15);
+    box-shadow:
+      0 6px 18px rgba(212,168,67,0.3),
+      0 2px 6px rgba(212,168,67,0.18),
+      0 14px 8px -8px rgba(212,168,67,0.12);
   }
+  body.dark-mode .bottom-nav button.ativa span { color: var(--cor-toscano); }
 
   /* Garante que o conteúdo não fique atrás da bottom nav */
   .app-footer {
