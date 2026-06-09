@@ -60,19 +60,17 @@ const Imitazione = {
       return d;
     })();
 
-    const pill = (v, l, ct) => `<button onclick="Imitazione._filtroOrigem='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">${l} (${ct})</button>`;
+    const oP=(v,l,ct)=>`<button onclick="Imitazione._filtroOrigem='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
+    const nP=(v,l)=>`<button onclick="Imitazione._filtroNivel='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===v?'#9B2335':'#ddd'};background:${this._filtroNivel===v?'#9B2335':'transparent'};color:${this._filtroNivel===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l}</button>`;
 
-    bar.innerHTML = `<div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.4rem;padding:0 0.2rem;align-items:center">
-      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.3rem">🤖 Adicionar via IA</button>
-      ${pill('','Todas',todasRaw.length)}${pill('custom','🤖 Adicionadas',nC)}${pill('nativo','📚 Nativas',nN)}
+    bar.innerHTML = `
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
+      <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')">🤖 via IA</button>
     </div>
-    <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.8rem;padding:0 0.2rem;align-items:center">
-      <button onclick="Imitazione._filtroNivel='';Imitazione._aplicarFiltro()"
-        style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
-        Tutte (${todasRaw.length})</button>
-      ${niveis.map(n => `<button onclick="Imitazione._filtroNivel='${n}';Imitazione._aplicarFiltro()"
-        style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===n?'#9B2335':'#ddd'};background:${this._filtroNivel===n?'#9B2335':'transparent'};color:${this._filtroNivel===n?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
-        ${n} (${counts[n]||0})</button>`).join('')}
+    <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.9rem;align-items:center">
+      ${oP('','Todas',todasRaw.length)}${nC?oP('custom','🤖 Adicionadas',nC):''}${nN?oP('nativo','📚 Nativas',nN):''}
+      <span style="width:1px;background:#ddd;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>
+      ${nP('',`Tutte (${todasRaw.length})`)}${niveis.map(n=>nP(n,`${n} (${counts[n]||0})`)).join('')}
     </div>`;
   },
 

@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=52">
+  <link rel="stylesheet" href="css/italia.css?v=53">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -1432,8 +1432,16 @@
     .ia-feedback-warn { color:#e67e22; }
     .ia-feedback-error { color:#c0392b; }
     .ia-actions { display:flex; justify-content:flex-end; gap:0.75rem; }
-    .btn-ia-add { background:linear-gradient(135deg,#9B2335,#c0392b); color:#fff; border:none; border-radius:20px; padding:0.38rem 1rem; font-weight:700; cursor:pointer; font-size:0.82rem; white-space:nowrap; transition:opacity 0.2s; }
-    .btn-ia-add:hover { opacity:0.88; }
+    .btn-ia-add {
+      display:inline-flex; align-items:center; justify-content:center; gap:0.3rem;
+      background-color:#7B68A0; color:#fff;
+      border:2px solid #7B68A0; border-radius:6px;
+      padding:0.44rem 1rem; font-weight:600; cursor:pointer;
+      font-size:0.875rem; white-space:nowrap; letter-spacing:0.03em;
+      transition:background-color 0.18s,border-color 0.18s,transform 0.18s,box-shadow 0.18s;
+    }
+    .btn-ia-add:hover { background-color:#6a5890; border-color:#6a5890; transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+    .btn-ia-add:active { transform:translateY(0); }
     .ia-custom-badge { background:#9B2335; color:#fff; font-size:0.65rem; font-weight:700; border-radius:6px; padding:0.1rem 0.4rem; margin-left:0.3rem; vertical-align:middle; }
     .ia-del-btn { background:none; border:1.5px solid #c0392b; color:#c0392b; border-radius:6px; padding:0.18rem 0.55rem; font-size:0.75rem; cursor:pointer; font-weight:700; }
     .ia-del-btn:hover { background:#c0392b; color:#fff; }
@@ -2574,10 +2582,10 @@
           <option value="">Tutte le categorie</option>
         </select>
       </div>
-      <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;justify-content:center">
-        <button id="vocab-pill-todos"   onclick="Vocab.filtroOrigem='';Vocab.renderizar()"   style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600">Todas</button>
-        <button id="vocab-pill-custom"  onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600">🤖 Adicionadas</button>
-        <button id="vocab-pill-nativo"  onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600">📚 Nativas</button>
+      <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
+        <button id="vocab-pill-todos"   onclick="Vocab.filtroOrigem='';Vocab.renderizar()"          style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
+        <button id="vocab-pill-custom"  onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()"    style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
+        <button id="vocab-pill-nativo"  onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()"    style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
       </div>
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
