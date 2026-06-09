@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=57">
+  <link rel="stylesheet" href="css/italia.css?v=58">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -54,7 +54,6 @@
     }
     .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
     .app-logo { font-family: 'Cinzel', serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
-    .logo-txt-short { display: none; }
     .header-logo-row { display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 0; }
     .header-icons { display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
     .stats-bar { display: flex; gap: 0.38rem; align-items: center; flex-wrap: nowrap; background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.12); border-radius: 999px; padding: 0.3rem 0.6rem; }
@@ -86,7 +85,6 @@
       .stat-item { font-size: 0.7rem; padding: 0.18rem 0.55rem; }
       .app-logo { font-size: 1.05rem; }
       .logo-txt-full  { display: none; }
-      .logo-txt-short { display: inline; }
     }
 
     /* ── Nível select pílula ── */
@@ -2340,7 +2338,7 @@
   <header class="app-header">
     <div class="header-top">
       <div class="header-logo-row">
-        <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span><span class="logo-txt-short">IT</span></div>
+        <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
         <div class="header-icons">
           <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">
             <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
