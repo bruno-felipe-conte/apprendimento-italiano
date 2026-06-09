@@ -105,7 +105,8 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       fetch(req)
         .then(res => {
-          caches.open(CACHE).then(c => c.put(req, res.clone()));
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(req, clone));
           return res;
         })
         .catch(() => caches.match(req))
@@ -116,8 +117,10 @@ self.addEventListener('fetch', event => {
   // 3. Tudo o mais — cache-first
   event.respondWith(
     caches.match(req).then(cached => cached || fetch(req).then(res => {
-      // Cacheia recursos novos encontrados em runtime
-      if (res.ok) caches.open(CACHE).then(c => c.put(req, res.clone()));
+      if (res.ok) {
+        const clone = res.clone();
+        caches.open(CACHE).then(c => c.put(req, clone));
+      }
       return res;
     }))
   );
