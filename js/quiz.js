@@ -170,7 +170,7 @@ const Quiz = {
       if (p.tipo === 'listening') {
         btnOuvir.style.display = 'flex';
         // Auto play audio when question appears
-        if (p.italiano) setTimeout(() => { if (typeof App !== 'undefined' && App.falar) App.falar(p.italiano); }, 400);
+        if (p.italiano) setTimeout(() => { if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(p.italiano); }, 400);
       } else {
         btnOuvir.style.display = 'none';
       }

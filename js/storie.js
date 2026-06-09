@@ -167,6 +167,7 @@ const Storie = {
   _renderizarStoria() {
     const c = document.getElementById('storie-container');
     if (!c || !this.storAttuale) return;
+    c.classList.toggle('modo-continuo', this.modoContinuo);
     const s = this.storAttuale;
     const i = I18n.idioma === 'it';
 

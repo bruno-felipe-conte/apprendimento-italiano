@@ -64,13 +64,13 @@ const Canzoni = {
     });
 
     let html = `
-      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem">
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem;justify-content:center">
         <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:120px;padding:0.42rem 0.7rem;border:1.5px solid #ddd;border-radius:8px;font-size:0.88rem">
         <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
       </div>
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem">
+      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;justify-content:center">
         <button onclick="Canzoni._filtroNivel='';Canzoni.renderizarSeletor()"
           style="padding:0.25rem 0.7rem;border-radius:999px;border:1.5px solid ${!this._filtroNivel?'#9B2335':'#ddd'};background:${!this._filtroNivel?'#9B2335':'transparent'};color:${!this._filtroNivel?'#fff':'inherit'};cursor:pointer;font-size:0.78rem;font-weight:600">
           Tutte (${todas.length})</button>
