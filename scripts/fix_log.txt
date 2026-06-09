@@ -1,0 +1,14 @@
+﻿python : Traceback (most recent call last):
+No linha:1 caractere:1
++ python -c "exec(open('scripts/fix_all_vol_songs.py').read())" 2>&1 |  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 1, in <module>
+    exec(open('scripts/fix_all_vol_songs.py').read())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 520, in <module>
+OSError: [Errno 9] Bad file descriptor
+Fixed: 100
+Skipped (already OK): 0

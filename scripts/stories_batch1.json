@@ -1,0 +1,158 @@
+[
+  {
+    "id": "fil_seneca_sul_suicidio",
+    "testo": [
+      {
+        "id": "p0",
+        "italiano": "Era l'alba del diciassettesimo giorno di aprile dell'anno 65 dopo Cristo, e nella villa di Lucio Anneo Seneca, tra le colline di Nomentum, a una ventina di miglia da Roma, tutto sembrava procedere come sempre. Il filosofo era sveglio da ore, seduto al suo scrittoio di legno di cedro, mentre un giovane liberto di nome Felicio prendeva nota delle sue parole a voce alta. Fuori, gli ulivi argentei del giardino catturavano la prima luce, e i grilli notturni cedevano il campo ai merli. Seneca aveva sessantanove anni e il respiro affannoso dell'asmatico cronico, ma la mente era quella di sempre: precisa, tagliente, inarrestabile. Stava dettando una lettera a Lucilio, la centodiciassettesima di una corrispondenza destinata all'immortalità.",
+        "portugues": "Era o amanhecer do décimo sétimo dia de abril do ano 65 depois de Cristo, e na villa de Lúcio Aneu Sêneca, entre as colinas de Nomento, a umas vinte milhas de Roma, tudo parecia transcorrer como sempre. O filósofo estava acordado havia horas, sentado à sua escrivaninha de madeira de cedro, enquanto um jovem liberto chamado Felício tomava nota de suas palavras em voz alta. Lá fora, as oliveiras prateadas do jardim captavam a primeira luz, e os grilos noturnos cediam espaço aos melros. Sêneca tinha sessenta e nove anos e a respiração ofegante do asmático crônico, mas a mente era a de sempre: precisa, cortante, imparável. Estava ditando uma carta a Lucílio, a centésima décima sétima de uma correspondência destinada à imortalidade.",
+        "parole": [
+          {"parola": "liberto", "ipa": "/liˈbɛrto/", "traduzione": "escravo liberto, ex-escravo emancipado", "categoria": "sostantivo"},
+          {"parola": "asmatico", "ipa": "/azˈmatiko/", "traduzione": "asmático, que sofre de asma", "categoria": "aggettivo"},
+          {"parola": "corrispondenza", "ipa": "/korrisponˈdɛntsa/", "traduzione": "correspondência, troca de cartas", "categoria": "sostantivo"},
+          {"parola": "immortalità", "ipa": "/immortaliˈta/", "traduzione": "imortalidade", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p1",
+        "italiano": "«Dum differtur vita transcurrit» dettò Seneca, e Felicio incise le parole nella cera. Mentre la vita viene rimandata, essa trascorre. Era questo il filo rosso delle Epistulae Morales: il tempo che frana via come sabbia tra le dita, la morte che non è un evento futuro ma una presenza costante in ogni respiro. Fuori dalla finestra, in lontananza, la Via Nomentana brillava sotto i raggi obliqui del mattino. Carri di grano, schiavi con anfore, mercanti con muli carichi — tutta Roma era già in moto. Seneca li osservò un momento, poi riprese a dettare: «Recede in te ipse quantum potes» — ritirati in te stesso quanto puoi. Era l'otium come scelta etica, non come vizio — la ritirata dalla sfera pubblica per coltivare la filosofia.",
+        "portugues": "«Dum differtur vita transcurrit» ditou Sêneca, e Felício gravou as palavras na cera. Enquanto a vida é adiada, ela transcorre. Era este o fio vermelho das Epistulae Morales: o tempo que escorre como areia entre os dedos, a morte que não é um evento futuro mas uma presença constante em cada respiração. Pela janela, ao longe, a Via Nomentana brilhava sob os raios oblíquos da manhã. Carros de grão, escravos com ânforas, mercadores com mulas carregadas — toda Roma já estava em movimento. Sêneca os observou um momento, depois retomou o ditado: «Recede in te ipse quantum potes» — retira-te em ti mesmo quanto puderes. Era o otium como escolha ética, não como vício — a retirada da esfera pública para cultivar a filosofia.",
+        "parole": [
+          {"parola": "otium", "ipa": "/ˈɔːtium/", "traduzione": "ócio contemplativo, retiro filosófico (oposto de negotium)", "categoria": "sostantivo"},
+          {"parola": "Epistulae", "ipa": "/eˈpistulae/", "traduzione": "cartas, epístolas (plural latino)", "categoria": "sostantivo"},
+          {"parola": "anfore", "ipa": "/ˈanfore/", "traduzione": "ânforas, vasos de argila para transporte", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p2",
+        "italiano": "Bussarono alla porta. Non il picchio discreto di un servo, ma tre colpi secchi, militari, che fecero vibrare il legno antico. Felicio impallidì. Seneca posò lo stilo con la calma di chi ha aspettato quella bussata da anni, forse da decenni. Due pretoriani in armatura completa entrarono senza aspettare il permesso, e tra loro camminava il tribuno Gaio Silvano, un ufficiale giovane con lo sguardo di chi porta un peso che non ha scelto di portare. «Seneca, figlio di Seneca il Retore» disse il tribuno, la voce piatta come una sentenza già scritta. «L'imperatore Nerone, augusto e pio, ti ordina di rispondere alle seguenti accuse relative alla congiura dei Pisoni». Si fermò. Nella stanza calò un silenzio che aveva il peso dell'universo intero.",
+        "portugues": "Bateram à porta. Não a batida discreta de um servo, mas três golpes secos, militares, que fizeram vibrar a madeira antiga. Felício empalideceu. Sêneca pousou o estilete com a calma de quem esperava aquela batida há anos, talvez décadas. Dois pretorianos em armadura completa entraram sem aguardar permissão, e entre eles caminhava o tribuno Gaio Silvano, um oficial jovem com o olhar de quem carrega um peso que não escolheu carregar. «Sêneca, filho de Sêneca o Retor» disse o tribuno, a voz plana como uma sentença já escrita. «O imperador Nero, augusto e piedoso, ordena-te que respondas às seguintes acusações relativas à conspiração dos Pisões». Parou. Na sala caiu um silêncio que tinha o peso do universo inteiro.",
+        "parole": [
+          {"parola": "pretoriani", "ipa": "/pretoriˈani/", "traduzione": "pretorianos, guarda pessoal do imperador romano", "categoria": "sostantivo"},
+          {"parola": "tribuno", "ipa": "/triˈbuːno/", "traduzione": "tribuno, oficial militar romano de alta patente", "categoria": "sostantivo"},
+          {"parola": "congiura", "ipa": "/konˈdʒuːra/", "traduzione": "conspiração, complô político", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p3",
+        "italiano": "Seneca alzò gli occhi dal tavolo e guardò il tribuno per un lungo momento. La congiura dei Pisoni. Aveva saputo del complotto — ogni uomo di rango a Roma lo sapeva — ma non vi aveva partecipato, almeno non in modo diretto. Eppure le prove erano irrilevanti. Nerone aveva già deciso. Era la logica del principato al suo stadio avanzato: l'imperatore non accusa, condanna. La sentenza era già scritta prima del processo. «Posso mandare un messaggio a mia moglie?» chiese Seneca. Il tribuno scosse la testa. «Che cosa posso portare con me?» Il tribuno scosse ancora la testa. Seneca nodded — annuì lentamente, come se stesse ricevendo una risposta filosofica a una domanda che aveva posto lui stesso. Poi disse qualcosa che lasciò tutti di stucco: «Allora resteremo qui».",
+        "portugues": "Sêneca ergueu os olhos da mesa e olhou para o tribuno por um longo momento. A conspiração dos Pisões. Tinha sabido do complô — todo homem de rango em Roma sabia — mas não havia participado, pelo menos não diretamente. Porém as provas eram irrelevantes. Nero já havia decidido. Era a lógica do principado em seu estágio avançado: o imperador não acusa, condena. A sentença estava escrita antes do processo. «Posso enviar uma mensagem à minha esposa?» perguntou Sêneca. O tribuno sacudiu a cabeça. «O que posso levar comigo?» O tribuno sacudiu a cabeça novamente. Sêneca assentiu lentamente, como se estivesse recebendo uma resposta filosófica a uma pergunta que ele mesmo havia feito. Então disse algo que deixou todos boquiabertos: «Então ficaremos aqui».",
+        "parole": [
+          {"parola": "principato", "ipa": "/printʃiˈpaːto/", "traduzione": "principado, sistema de governo imperial romano", "categoria": "sostantivo"},
+          {"parola": "complotto", "ipa": "/komˈplɔtto/", "traduzione": "complô, conspiração secreta", "categoria": "sostantivo"},
+          {"parola": "di stucco", "ipa": "/di ˈstukko/", "traduzione": "boquiabertos, estupefatos (locução)", "categoria": "locuzione"}
+        ]
+      },
+      {
+        "id": "p4",
+        "italiano": "Paulina irruppe nella stanza. Aveva trentacinque anni, capelli neri ancora bagnati dall'acqua del mattino, e negli occhi la comprensione istantanea di chi ama qualcuno da abbastanza tempo da capire una situazione senza spiegazioni. Si gettò tra le braccia del marito. «Anch'io» disse, soltanto questo. «Anche me, insieme a te». Seneca la tenne stretta per un momento. Poi la guardò negli occhi con quella serena lucidità che aveva sempre fatto paura ai suoi allievi. «Tu hai una vita davanti» le disse. «Io ho usato la mia». Il tribuno si schiarì la gola con imbarazzo. La scena era fuori dai protocolli della sua formazione militare. La morte di un senatore romano doveva essere una questione d'ordine pubblico, non d'amore coniugale. Paulina non si mosse.",
+        "portugues": "Paulina irrompeu na sala. Tinha trinta e cinco anos, cabelos negros ainda molhados pela água da manhã, e nos olhos a compreensão instantânea de quem ama alguém há tempo suficiente para entender uma situação sem explicações. Jogou-se nos braços do marido. «Eu também» disse, apenas isso. «Eu também, junto contigo». Sêneca a segurou apertada por um momento. Depois a olhou nos olhos com aquela serena lucidez que sempre assustara seus alunos. «Tu tens uma vida à frente» disse. «Eu já usei a minha». O tribuno se pigarreou com embaraço. A cena estava fora dos protocolos de sua formação militar. A morte de um senador romano devia ser uma questão de ordem pública, não de amor conjugal. Paulina não se moveu.",
+        "parole": [
+          {"parola": "coniugale", "ipa": "/koniuˈɡaːle/", "traduzione": "conjugal, relativo ao casamento", "categoria": "aggettivo"},
+          {"parola": "irruppe", "ipa": "/irˈruppe/", "traduzione": "irrompeu (passato remoto di 'irrompere')", "categoria": "verbo"},
+          {"parola": "schiarì la gola", "ipa": "/skjaˈri la ˈɡɔːla/", "traduzione": "pigarreou, limpou a garganta", "categoria": "locuzione"}
+        ]
+      },
+      {
+        "id": "p5",
+        "italiano": "Seneca si sedette sul bordo del letto con la lentezza di un uomo che vuole assaporare ogni movimento. In tutta la sua vita aveva scritto della mors voluntaria — la morte scelta, dignitosa, l'ultima espressione della libertas stoica. Aveva scritto a Lucilio: «Omnia aliena sunt, tempus tantum nostrum est» — tutto è altrui, solo il tempo è nostro. Ora era il momento di smettere di scrivere e di agire. Prese un piccolo coltello dal cassetto — lo stesso che usava per temperare le penne. Lo girò tra le dita. Poi, con una calma che lasciò il tribuno quasi ammirato suo malgrado, tracciò il coltello sul polso sinistro. Il sangue uscì lentamente, troppo lentamente — la vecchiaia aveva reso le sue vene sottili come fili di seta.",
+        "portugues": "Sêneca sentou-se na beira da cama com a lentidão de um homem que quer saborear cada movimento. Em toda a sua vida havia escrito sobre a mors voluntaria — a morte escolhida, digna, a última expressão da libertas estoica. Havia escrito a Lucílio: «Omnia aliena sunt, tempus tantum nostrum est» — tudo é alheio, só o tempo é nosso. Agora era o momento de parar de escrever e agir. Pegou um pequeno faca da gaveta — a mesma que usava para afiar as penas. Virou-a entre os dedos. Depois, com uma calma que deixou o tribuno quase admirado a seu contragosto, traçou a faca sobre o pulso esquerdo. O sangue saiu lentamente, devagar demais — a velhice havia tornado suas veias finas como fios de seda.",
+        "parole": [
+          {"parola": "mors voluntaria", "ipa": "/mors volunˈtaːrja/", "traduzione": "morte voluntária, suicídio como ato de liberdade estoico", "categoria": "locuzione"},
+          {"parola": "libertas", "ipa": "/liˈbɛrtas/", "traduzione": "liberdade (conceito estoico central)", "categoria": "sostantivo"},
+          {"parola": "temperare", "ipa": "/tempeˈraːre/", "traduzione": "afiar, aguçar (referido a penas de escrever)", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p6",
+        "italiano": "Mentre il sangue colava lentamente, Seneca parlò. Non si rivolse al tribuno né ai pretoriani — si rivolse ai suoi amici e allievi che nel frattempo erano entrati nella stanza, richiamati dal trambusto. C'era Stazio Anneo, suo nipote. C'era il medico Annio Sereno. C'era persino Felicio, che teneva ancora in mano le tavolette con l'ultima lettera incompiuta. «Non vi chiedo di non piangere» disse Seneca. «Ma vi chiedo di non piangere per me. Piangete semmai per voi stessi, se avete ancora paura della morte». Si alzò, girò per la stanza, dettò alcune frasi — i testimoni le trascrissero fedelmente, in seguito. Il sangue non bastava. Era troppo poco, troppo lento. La morte si prendeva il suo tempo, come un ospite irriverente che non sa quando andarsene.",
+        "portugues": "Enquanto o sangue escorria lentamente, Sêneca falou. Não se dirigiu ao tribuno nem aos pretorianos — dirigiu-se aos seus amigos e alunos que entretanto haviam entrado na sala, chamados pela confusão. Havia Estácio Aneu, seu sobrinho. Havia o médico Ânio Sereno. Havia até Felício, que segurava ainda as tabuinhas com a última carta inacabada. «Não vos peço que não choreis» disse Sêneca. «Mas vos peço que não choreis por mim. Chorai antes por vós mesmos, se ainda tendes medo da morte». Levantou-se, caminhou pela sala, ditou algumas frases — as testemunhas as transcreveram fielmente, depois. O sangue não bastava. Era pouco demais, lento demais. A morte levava o seu tempo, como um hóspede irreverente que não sabe quando ir embora.",
+        "parole": [
+          {"parola": "trambusto", "ipa": "/tramˈbusto/", "traduzione": "confusão, alvoroço, barulho", "categoria": "sostantivo"},
+          {"parola": "irriverente", "ipa": "/irriˈvɛrente/", "traduzione": "irreverente, desrespeitoso", "categoria": "aggettivo"},
+          {"parola": "nipote", "ipa": "/niˈpɔːte/", "traduzione": "sobrinho (ou neto, dependendo do contexto)", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p7",
+        "italiano": "Paulina aveva fatto lo stesso. Anche lei si era tagliata i polsi, con la stessa lama, senza esitazione. Stava perdendo sangue accanto al marito quando arrivò un secondo ordine da Roma: Nerone aveva cambiato idea. Non voleva che Paulina morisse. Forse non voleva sembrare un mostro che uccide anche le mogli degli accusati. I pretoriani fasciarono i polsi di Paulina di forza, contro la sua volontà. Lei sopravvisse, coprì le cicatrici per il resto della sua vita, e per il resto della vita impallidì di colpo ogni volta che qualcuno nominava il nome di Nerone. Seneca osservò la scena con un'espressione che i testimoni descrissero come misto di sollievo e tristezza — era sollevato che Paulina vivesse, ma addolorato che lei avesse perso il diritto alla propria scelta.",
+        "portugues": "Paulina havia feito o mesmo. Ela também cortara os pulsos, com a mesma lâmina, sem hesitação. Estava perdendo sangue ao lado do marido quando chegou uma segunda ordem de Roma: Nero havia mudado de ideia. Não queria que Paulina morresse. Talvez não quisesse parecer um monstro que mata também as esposas dos acusados. Os pretorianos enfaixaram os pulsos de Paulina à força, contra sua vontade. Ela sobreviveu, cobriu as cicatrizes pelo resto da vida, e pelo resto da vida empalidecia subitamente toda vez que alguém pronunciava o nome de Nero. Sêneca observou a cena com uma expressão que as testemunhas descreveram como misto de alívio e tristeza — estava aliviado que Paulina vivesse, mas magoado que ela tivesse perdido o direito à sua própria escolha.",
+        "parole": [
+          {"parola": "cicatrici", "ipa": "/tʃikaˈtriːtʃi/", "traduzione": "cicatrizes (plural de cicatrice)", "categoria": "sostantivo"},
+          {"parola": "fasciarono", "ipa": "/faʃˈtʃarono/", "traduzione": "enfaixaram, bandaram (passato remoto)", "categoria": "verbo"},
+          {"parola": "sollievo", "ipa": "/solˈljɛːvo/", "traduzione": "alívio, sensação de leveza após tensão", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p8",
+        "italiano": "Il sangue non bastava ancora. Il medico suggerì la cicuta — il veleno che aveva ucciso Socrate quattro secoli prima. Un servo fu mandato di corsa a procurarla. Nell'attesa, Seneca chiese di essere portato nell'apodyterium, la sala del bagno. «Voglio morire nell'acqua calda» disse. «Come i vecchi filosofi greci». Era la meditatio mortis nella sua forma più concreta: non il pensiero della morte come esercizio mentale, ma la morte stessa come atto deliberato, consapevole, dignitoso. Mentre i servi preparavano il bagno, Seneca continuò a parlare — dettò ancora frasi ai testimoni, commentò la propria situazione con la distanza analitica di un filosofo che osserva un esperimento. I pretoriani, nella loro rigida formazione militare, non sapevano più dove guardare.",
+        "portugues": "O sangue ainda não bastava. O médico sugeriu a cicuta — o veneno que havia matado Sócrates quatro séculos antes. Um servo foi enviado correndo para procurá-la. Na espera, Sêneca pediu para ser levado ao apodyterium, a sala de banho. «Quero morrer na água quente» disse. «Como os velhos filósofos gregos». Era a meditatio mortis em sua forma mais concreta: não o pensamento da morte como exercício mental, mas a própria morte como ato deliberado, consciente, digno. Enquanto os servos preparavam o banho, Sêneca continuou a falar — ditou ainda frases às testemunhas, comentou sua própria situação com o distanciamento analítico de um filósofo que observa um experimento. Os pretorianos, em sua rígida formação militar, não sabiam mais para onde olhar.",
+        "parole": [
+          {"parola": "apodyterium", "ipa": "/apodyˈtɛːrium/", "traduzione": "vestiário/sala de banho nas termas romanas", "categoria": "sostantivo"},
+          {"parola": "meditatio mortis", "ipa": "/mediˈtaːtio ˈmortis/", "traduzione": "meditação sobre a morte (prática estoica)", "categoria": "locuzione"},
+          {"parola": "deliberato", "ipa": "/deliberˈaːto/", "traduzione": "deliberado, intencional, consciente", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p9",
+        "italiano": "La cicuta arrivò. Seneca la bevve in piedi, con la stessa compostezza con cui avrebbe bevuto una coppa di vino in compagnia di amici. Il veleno però non fece effetto rapidamente come previsto — il corpo anziano e consumato dall'asma resisteva anche alla morte. Fu necessario immergerlo nel bagno caldissimo, per accelerare la circolazione e l'assorbimento del veleno. Mentre scendeva nell'acqua fumante, Seneca disse ai suoi amici le parole che poi Tacito avrebbe tramandato ai posteri: «Lascio a voi la cosa più preziosa che possiedo: l'immagine della mia vita». Non i libri, non la ricchezza — che pure era stata sterminata, il paradosso di un predicatore di povertà morto ricchissimo. Non gli onori. Solo l'esempio.",
+        "portugues": "A cicuta chegou. Sêneca a bebeu de pé, com a mesma compostura com que teria bebido uma taça de vinho em companhia de amigos. O veneno, porém, não fez efeito rapidamente como previsto — o corpo idoso e consumido pela asma resistia até à morte. Foi necessário imergir-lhe no banho caldíssimo, para acelerar a circulação e a absorção do veneno. Enquanto descia na água fumegante, Sêneca disse aos seus amigos as palavras que Tácito depois transmitiria à posteridade: «Deixo a vós a coisa mais preciosa que possuo: a imagem da minha vida». Não os livros, não a riqueza — que era enorme, o paradoxo de um pregador de pobreza que morreu riquíssimo. Não as honras. Apenas o exemplo.",
+        "parole": [
+          {"parola": "compostezza", "ipa": "/komposˈtettsa/", "traduzione": "compostura, dignidade, serenidade no comportamento", "categoria": "sostantivo"},
+          {"parola": "posteri", "ipa": "/ˈpɔːsteri/", "traduzione": "posteridade, gerações futuras", "categoria": "sostantivo"},
+          {"parola": "sterminata", "ipa": "/stermiˈnaːta/", "traduzione": "imensíssima, enormíssima (riqueza)", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p10",
+        "italiano": "Il tribuno Silvano tornò a Roma con il rapporto della morte. Nerone lo ascoltò senza mostrare emozione — era già oltre quel tipo di reazioni. Ma quella notte, dicono alcune fonti, non dormì. Non per rimorso: l'imperatore non era capace di quello. Ma perché Seneca era stato il suo tutore per anni, l'uomo che gli aveva insegnato a parlare in pubblico, a gestire il Senato, a sembrare filosofo mentre faceva il tiranno. Uccidere il proprio maestro è un gesto che lascia il segno — anche nelle anime che non hanno più nulla da perdere. Paulina, nella sua stanza bendaggiata, ascoltava i servi che piangevano. Fuori dalla finestra, Roma continuava indifferente: le botteghe aprivano, i carri passavano, il Tevere scorreva.",
+        "portugues": "O tribuno Silvano voltou a Roma com o relatório da morte. Nero o escutou sem mostrar emoção — já estava além desse tipo de reação. Mas naquela noite, dizem algumas fontes, não dormiu. Não por remorso: o imperador não era capaz disso. Mas porque Sêneca havia sido seu tutor por anos, o homem que lhe ensinara a falar em público, a gerir o Senado, a parecer filósofo enquanto fazia o papel de tirano. Matar o próprio mestre é um gesto que deixa marca — mesmo nas almas que não têm mais nada a perder. Paulina, no seu quarto enfaixado, ouvia os servos que choravam. Pela janela, Roma continuava indiferente: as lojas abriam, os carros passavam, o Tibre corria.",
+        "parole": [
+          {"parola": "tutore", "ipa": "/tuˈtɔːre/", "traduzione": "tutor, preceptor, educador de uma criança nobre", "categoria": "sostantivo"},
+          {"parola": "rimorso", "ipa": "/riˈmorso/", "traduzione": "remorso, arrependimento profundo", "categoria": "sostantivo"},
+          {"parola": "bendaggiata", "ipa": "/bendadˈdʒaːta/", "traduzione": "enfaixada, com curativos nas feridas", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p11",
+        "italiano": "La notizia si diffuse come fuoco nell'erba secca. Nei peristili dei palazzi senatoriali, nei termopolii dell'Aventino, nei mercati di Traiano, la gente parlava sottovoce. «Seneca è morto». Qualcuno disse: «Era tempo — aveva vissuto troppo a lungo per un uomo che predicava la povertà dalla sua villa lussuosa». Qualcun altro rispose: «Forse. Ma almeno è morto com'era vissuto — predicando». La contraddizione era reale: Seneca aveva accusato se stesso, nelle lettere, di non riuscire a vivere all'altezza dei propri ideali. «Nondum sapiens sum» scriveva — non sono ancora saggio. Era questa onestà radicale su se stesso, questa incapacità di fingere la propria perfezione, che lo distingueva dai filosofi di mestiere. Aveva fatto della propria incoerenza un ulteriore argomento filosofico.",
+        "portugues": "A notícia se espalhou como fogo em palha seca. Nos peristilos dos palácios senatoriais, nos termopólios do Aventino, nos mercados de Trajano, as pessoas falavam em voz baixa. «Sêneca morreu». Alguém disse: «Era tempo — havia vivido por tempo demais para um homem que pregava a pobreza da sua villa luxuosa». Outro respondeu: «Talvez. Mas pelo menos morreu como viveu — pregando». A contradição era real: Sêneca havia se acusado a si mesmo, nas cartas, de não conseguir viver à altura de seus próprios ideais. «Nondum sapiens sum» escrevia — ainda não sou sábio. Era esta honestidade radical sobre si mesmo, esta incapacidade de fingir a própria perfeição, que o distinguia dos filósofos de ofício. Havia feito da própria incoerência um argumento filosófico adicional.",
+        "parole": [
+          {"parola": "termopolii", "ipa": "/termoˈpɔːlii/", "traduzione": "termopólios, tabernas de comida quente em Roma", "categoria": "sostantivo"},
+          {"parola": "peristili", "ipa": "/periˈstiːli/", "traduzione": "peristilos, pátios internos com colunas", "categoria": "sostantivo"},
+          {"parola": "incoerenza", "ipa": "/inkoˈɛːrentsa/", "traduzione": "incoerência, contradição entre discurso e ação", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p12",
+        "italiano": "Tacito, che nacque pochi anni dopo la morte di Seneca, avrebbe raccontato quella giornata negli Annales con una precisione quasi cinematografica. Ma la vera immortalità di Seneca non era negli Annales — era nelle Epistulae Morales, nei dialoghi De Vita Beata, De Brevitate Vitae, De Tranquillitate Animi. Testi scritti da un uomo che sapeva di non vivere all'altezza dei propri ideali, e che li scriveva ugualmente — anzi, proprio per questo. La constantia stoica non è la perfezione: è la coerenza nel tendere verso di essa, anche sapendo di non raggiungerla mai. Questa era la lezione finale di Seneca — non la morte eroica, ma il coraggio di scrivere la verità su se stessi anche quando quella verità è scomoda.",
+        "portugues": "Tácito, que nasceu poucos anos após a morte de Sêneca, teria narrado aquele dia nos Annales com uma precisão quase cinematográfica. Mas a verdadeira imortalidade de Sêneca não estava nos Annales — estava nas Epistulae Morales, nos diálogos De Vita Beata, De Brevitate Vitae, De Tranquillitate Animi. Textos escritos por um homem que sabia não viver à altura dos seus próprios ideais, e que os escrevia assim mesmo — aliás, precisamente por isso. A constantia estoica não é a perfeição: é a coerência no tender para ela, mesmo sabendo que jamais se chegará lá. Esta era a lição final de Sêneca — não a morte heroica, mas a coragem de escrever a verdade sobre si mesmo mesmo quando essa verdade é incômoda.",
+        "parole": [
+          {"parola": "constantia", "ipa": "/konˈstantia/", "traduzione": "constância estoica, firmeza de caráter inabalável", "categoria": "sostantivo"},
+          {"parola": "Annales", "ipa": "/ˈannales/", "traduzione": "Anais, obra histórica de Tácito sobre Roma imperial", "categoria": "sostantivo"},
+          {"parola": "scomoda", "ipa": "/ˈskɔːmoda/", "traduzione": "incômoda, desconfortável", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p13",
+        "italiano": "L'acqua del bagno era diventata rossa. Seneca aveva smesso di parlare — non per esaurimento, ma per scelta. Il filosofo stoico non muore in silenzio per paura: muore in silenzio perché ha già detto tutto. Gli amici rimasti nella stanza sentirono il suo respiro farsi più lento, poi più superficiale, poi assente. Il tribuno Silvano attestò ufficialmente il decesso e sigillò la villa. I servi cominciarono l'inventario dei beni — di lì a poco, tutto sarebbe passato al fisco imperiale. L'exitus era compiuto. Quella parola — exitus, uscita — era esattamente quella che Seneca aveva usato nelle sue lettere per descrivere la morte: non una fine, ma una soglia. Una porta che si apre da un lato solo, ma che nessuno dovrebbe temere di varcare.",
+        "portugues": "A água do banho havia se tornado vermelha. Sêneca havia parado de falar — não por esgotamento, mas por escolha. O filósofo estoico não morre em silêncio por medo: morre em silêncio porque já disse tudo. Os amigos que permaneceram na sala sentiram sua respiração tornar-se mais lenta, depois mais superficial, depois ausente. O tribuno Silvano atestou oficialmente o falecimento e selou a villa. Os servos começaram o inventário dos bens — dali a pouco, tudo passaria ao fisco imperial. O exitus estava consumado. Aquela palavra — exitus, saída — era exatamente a que Sêneca havia usado em suas cartas para descrever a morte: não um fim, mas uma soleira. Uma porta que se abre de um lado só, mas que ninguém deveria temer transpor.",
+        "parole": [
+          {"parola": "exitus", "ipa": "/ˈɛksitus/", "traduzione": "saída, morte (termo estoico para o fim da vida)", "categoria": "sostantivo"},
+          {"parola": "fisco imperiale", "ipa": "/ˈfisko impeˈrjaːle/", "traduzione": "tesouro imperial, erário do imperador", "categoria": "locuzione"},
+          {"parola": "soglia", "ipa": "/ˈsoʎʎa/", "traduzione": "soleira, limiar, umbral", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p14",
+        "italiano": "Duemila anni dopo, le Epistulae Morales di Seneca sono ancora lette in tutto il mondo. Sono state tradotte in più di cinquanta lingue. I terapeuti cognitivo-comportamentali citano Seneca senza saperlo quando dicono ai pazienti che non è la situazione a turbarci, ma il giudizio che ne facciamo — eco diretta dell'Epitteto che Seneca aveva letto. La sapientia — la sapienza come arte di vivere, non come accumulo di informazioni — rimane la risposta di Seneca alla domanda centrale della filosofia pratica: come si vive bene? Non accumulando, non sfuggendo, non rimandando. Ma scegliendo ogni giorno, in ogni piccolo atto, chi si vuole essere. Fino all'ultimo atto. Anche se l'ultimo atto è il più difficile di tutti.",
+        "portugues": "Dois mil anos depois, as Epistulae Morales de Sêneca ainda são lidas em todo o mundo. Foram traduzidas em mais de cinquenta línguas. Os terapeutas cognitivo-comportamentais citam Sêneca sem saber quando dizem aos pacientes que não é a situação que nos perturba, mas o julgamento que fazemos dela — eco direta do Epicteto que Sêneca havia lido. A sapientia — a sabedoria como arte de viver, não como acúmulo de informações — permanece a resposta de Sêneca à pergunta central da filosofia prática: como se vive bem? Não acumulando, não fugindo, não adiando. Mas escolhendo cada dia, em cada pequeno ato, quem se quer ser. Até o último ato. Mesmo que o último ato seja o mais difícil de todos.",
+        "parole": [
+          {"parola": "sapientia", "ipa": "/saˈpjɛntia/", "traduzione": "sabedoria como arte de viver bem (latim)", "categoria": "sostantivo"},
+          {"parola": "cognitivo-comportamentale", "ipa": "/koɲˈɲiːtivo komportamenˈtaːle/", "traduzione": "cognitivo-comportamental (psicoterapia)", "categoria": "aggettivo"},
+          {"parola": "rimandando", "ipa": "/rimanˈdando/", "traduzione": "adiando, procrastinando", "categoria": "verbo"}
+        ]
+      }
+    ]
+  }
+]

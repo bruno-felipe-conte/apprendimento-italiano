@@ -1,0 +1,16 @@
+{
+  "id": "fil_descartes_sul_metodo",
+  "testo": [
+    {
+      "id": "p0",
+      "italiano": "Era la sera del 10 novembre 1619, e a Neuburg sul Danubio, nei Paesi Bassi spagnoli, in una stanza riscaldata da un poêle olandese, René Descartes, ventitré anni, ufficiale dell'esercito del principe Maurizio d'Orange, si era ritirato dal freddo pungente e dalla neve che cadeva fitta fuori dalle finestre. Il giovane francese, nato a La Haye en Touraine, aveva lasciato la carriera militare per dedicarsi interamente alla ricerca della verità, e quella notte, nel tepore della stufa, decise di intraprendere l'impresa più audace della storia del pensiero: dubitare di tutto, assolutamente tutto, per trovare un fondamento incrollabile su cui ricostruire il sapere. Il poêle crepitava, e la sua luce danzava sulle pareti spoglie, mentre Descartes, avvolto nel suo mantello, prendeva appunti su fogli che sarebbero diventati i primi abbozzi del Discorso sul metodo e delle Meditazioni metafisiche. La neve batteva contro i vetri, e il silenzio della stanza era rotto solo dal respiro regolare del giovane e dallo scricchiolare del legno che si dilatava per il calore. In quel momento, Descartes fece un voto solenne: non avrebbe accettato nulla come vero se non lo avesse riconosciuto chiaramente e distintamente come tale, e avrebbe demolito tutte le sue opinioni precedenti, come chi abbatte una casa vecchia per costruirne una nuova su fondamenta solide.",
+      "portugues": "Era a noite de 10 de Novembro de 1619, e em Neuburg no Danúbio, nos Países Baixos espanhóis, num quarto aquecido por um poêle holandês, René Descartes, vinte e três anos, oficial do exército do príncipe Maurício de Orange, tinha-se retirado do frio pungente e da neve que caía espessa lá fora das janelas. O jovem francês, nascido em La Haye en Touraine, tinha deixado a carreira militar para se dedicar inteiramente à pesquisa da verdade, e aquela noite, no calor do fogão, decidiu empreender a empresa mais audaciosa da história do pensamento: duvidar de tudo, absolutamente tudo, para encontrar um fundamento inabalável sobre o qual reconstruir o saber. O poêle crepitava, e a sua luz dançava nas paredes nuas, enquanto Descartes, envolto no seu manto, tomava notas em folhas que se tornariam os primeiros esboços do Discurso do Método e das Meditações Metafísicas. A neve batia contra os vidros, e o silêncio do quarto era roto apenas pela respiração regular do jovem e pelo ranger da madeira que se dilatava com o calor. Nesse momento, Descartes fez um voto solene: não aceitaria nada como verdadeiro se não o reconhecesse clara e distintamente como tal, e demoliria todas as suas opiniões anteriores, como quem derruba uma casa velha para construir uma nova sobre alicerces sólidos.",
+      "parole": [
+        {"parola": "poêle", "ipa": "/pɔɛl/", "traduzione": "fogão / lareira holandesa", "categoria": "sostantivo"},
+        {"parola": "incrollabile", "ipa": "/inkrolˈlaːbile/", "traduzione": "inabalável / que não vacila", "categoria": "aggettivo"},
+        {"parola": "abbozzi", "ipa": "/abˈbɔttsi/", "traduzione": "esboços / rascunhos", "categoria": "sostantivo"},
+        {"parola": "distintamente", "ipa": "/distinˈtaːmente/", "traduzione": "distintamente / com clareza", "categoria": "avverbio"}
+      ]
+    }
+  ]
+}

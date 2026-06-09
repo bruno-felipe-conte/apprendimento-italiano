@@ -1,0 +1,1658 @@
+{
+  "storie": [
+    {
+      "id": "stor_001",
+      "titulo": "Cappuccetto Rosso",
+      "titulo_pt": "Chapeuzinho Vermelho",
+      "nivel": "A1",
+      "icone": "🐺",
+      "autor": "Tradizionale",
+      "tema": "fiaba",
+      "descricao": "La classica fiaba italiana di una bambina e il lupo cattivo.",
+      "descricao_pt": "O clássico conto italiano de uma menina e o lobo mau.",
+      "xp_recompensa": 80,
+      "testo": [
+        {
+          "id": "stor_001_p1",
+          "italiano": "C'era una volta una bambina che si chiamava Cappuccetto Rosso.",
+          "portugues": "Era uma vez uma menina que se chamava Chapeuzinho Vermelho.",
+          "parole": [
+            {"parola": "C'era", "traduzione": "Era (uma vez)", "ipa": "/ˈtʃɛːra/", "categoria": "espressione"},
+            {"parola": "bambina", "traduzione": "menina", "ipa": "/bamˈbiːna/", "categoria": "sostantivo"},
+            {"parola": "chiamava", "traduzione": "se chamava", "ipa": "/kjaˈmaːva/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_001_p2",
+          "italiano": "La bambina portava sempre un cappuccio rosso sulla testa.",
+          "portugues": "A menina usava sempre um capuz vermelho sobre a cabeça.",
+          "parole": [
+            {"parola": "portava", "traduzione": "usava / carregava", "ipa": "/porˈtaːva/", "categoria": "verbo"},
+            {"parola": "cappuccio", "traduzione": "capuz", "ipa": "/kapˈputtʃo/", "categoria": "sostantivo"},
+            {"parola": "rosso", "traduzione": "vermelho", "ipa": "/ˈrɔsso/", "categoria": "aggettivo"},
+            {"parola": "testa", "traduzione": "cabeça", "ipa": "/ˈtɛsta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p3",
+          "italiano": "Un giorno la mamma le disse: «Porta questo cestino alla nonna.»",
+          "portugues": "Um dia a mãe lhe disse: «Leve esta cestinha para a vovó.»",
+          "parole": [
+            {"parola": "giorno", "traduzione": "dia", "ipa": "/ˈdʒorno/", "categoria": "sostantivo"},
+            {"parola": "mamma", "traduzione": "mãe", "ipa": "/ˈmamma/", "categoria": "sostantivo"},
+            {"parola": "disse", "traduzione": "disse", "ipa": "/ˈdisse/", "categoria": "verbo"},
+            {"parola": "porta", "traduzione": "leve", "ipa": "/ˈpɔrta/", "categoria": "verbo"},
+            {"parola": "cestino", "traduzione": "cestinha", "ipa": "/tʃesˈtiːno/", "categoria": "sostantivo"},
+            {"parola": "nonna", "traduzione": "avó", "ipa": "/ˈnonna/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p4",
+          "italiano": "Nel cestino c'erano una bottiglia di vino e una focaccia.",
+          "portugues": "Na cestinha havia uma garrafa de vinho e um pão doce.",
+          "parole": [
+            {"parola": "c'erano", "traduzione": "havia", "ipa": "/tʃeˈraːno/", "categoria": "verbo"},
+            {"parola": "bottiglia", "traduzione": "garrafa", "ipa": "/botˈtiʎʎa/", "categoria": "sostantivo"},
+            {"parola": "vino", "traduzione": "vinho", "ipa": "/ˈviːno/", "categoria": "sostantivo"},
+            {"parola": "focaccia", "traduzione": "pão achatado italiano", "ipa": "/foˈkattʃa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p5",
+          "italiano": "La nonna abitava in una casetta nel bosco.",
+          "portugues": "A avó morava numa casinha no bosque.",
+          "parole": [
+            {"parola": "abitava", "traduzione": "morava", "ipa": "/abiˈtaːva/", "categoria": "verbo"},
+            {"parola": "casetta", "traduzione": "casinha", "ipa": "/kaˈzetta/", "categoria": "sostantivo"},
+            {"parola": "bosco", "traduzione": "bosque / floresta", "ipa": "/ˈbɔsko/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p6",
+          "italiano": "Cappuccetto Rosso incontrò un lupo grande e cattivo.",
+          "portugues": "Chapeuzinho Vermelho encontrou um lobo grande e mau.",
+          "parole": [
+            {"parola": "incontrò", "traduzione": "encontrou", "ipa": "/inkonˈtrɔ/", "categoria": "verbo"},
+            {"parola": "lupo", "traduzione": "lobo", "ipa": "/ˈluːpo/", "categoria": "sostantivo"},
+            {"parola": "grande", "traduzione": "grande", "ipa": "/ˈgrande/", "categoria": "aggettivo"},
+            {"parola": "cattivo", "traduzione": "mau", "ipa": "/katˈtiːvo/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p7",
+          "italiano": "Il lupo chiese: «Dove vai, bambina?»",
+          "portugues": "O lobo perguntou: «Para onde vai, menina?»",
+          "parole": [
+            {"parola": "chiese", "traduzione": "perguntou", "ipa": "/ˈkjɛːse/", "categoria": "verbo"},
+            {"parola": "vai", "traduzione": "vai", "ipa": "/vai/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_001_p8",
+          "italiano": "Cappuccetto Rosso rispose: «Dalla nonna, che sta male.»",
+          "portugues": "Chapeuzinho respondeu: «À casa da vovó, que está doente.»",
+          "parole": [
+            {"parola": "rispose", "traduzione": "respondeu", "ipa": "/risˈpoːse/", "categoria": "verbo"},
+            {"parola": "malato", "traduzione": "doente", "ipa": "/maˈlaːto/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p9",
+          "italiano": "Il lupo corse dalla nonna e la mangiò tutta.",
+          "portugues": "O lobo correu até a avó e a comeu inteira.",
+          "parole": [
+            {"parola": "corse", "traduzione": "correu", "ipa": "/ˈkorse/", "categoria": "verbo"},
+            {"parola": "mangiò", "traduzione": "comeu", "ipa": "/manˈdʒɔ/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_001_p10",
+          "italiano": "Poi il lupo si travestì da nonna e si mise nel letto.",
+          "portugues": "Depois o lobo se disfarçou de vovó e se deitou na cama.",
+          "parole": [
+            {"parola": "travestì", "traduzione": "disfarçou", "ipa": "/travesˈti/", "categoria": "verbo"},
+            {"parola": "mise", "traduzione": "colocou-se", "ipa": "/ˈmiːse/", "categoria": "verbo"},
+            {"parola": "letto", "traduzione": "cama", "ipa": "/ˈlɛtto/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_001_p11",
+          "italiano": "Quando Cappuccetto Rosso entrò, il lupo la mangiò.",
+          "portugues": "Quando Chapeuzinho entrou, o lobo a comeu.",
+          "parole": [
+            {"parola": "entrò", "traduzione": "entrou", "ipa": "/enˈtrɔ/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_001_p12",
+          "italiano": "Per fortuna un cacciatore sentì il rumore e salvò la bambina e la nonna.",
+          "portugues": "Por sorte um caçador ouviu o barulho e salvou a menina e a avó.",
+          "parole": [
+            {"parola": "fortuna", "traduzione": "sorte", "ipa": "/forˈtuːna/", "categoria": "sostantivo"},
+            {"parola": "cacciatore", "traduzione": "caçador", "ipa": "/kattʃaˈtoːre/", "categoria": "sostantivo"},
+            {"parola": "sentì", "traduzione": "ouviu", "ipa": "/senˈti/", "categoria": "verbo"},
+            {"parola": "rumore", "traduzione": "barulho", "ipa": "/ruˈmoːre/", "categoria": "sostantivo"},
+            {"parola": "salvò", "traduzione": "salvou", "ipa": "/salˈvɔ/", "categoria": "verbo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_002",
+      "titulo": "I Tre Porcellini",
+      "titulo_pt": "Os Três Porquinhos",
+      "nivel": "A1",
+      "icone": "🐷",
+      "autor": "Tradizionale",
+      "tema": "fiaba",
+      "descricao": "Tre porcellini costruiscono case diverse e devono sfuggire al lupo.",
+      "descricao_pt": "Três porquinhos constroem casas diferentes e precisam escapar do lobo.",
+      "xp_recompensa": 80,
+      "testo": [
+        {
+          "id": "stor_002_p1",
+          "italiano": "C'erano una volta tre porcellini che vivevano con la mamma.",
+          "portugues": "Eram uma vez três porquinhos que viviam com a mãe.",
+          "parole": [
+            {"parola": "porcellini", "traduzione": "porquinhos", "ipa": "/portʃelˈliːni/", "categoria": "sostantivo"},
+            {"parola": "vivevano", "traduzione": "viviam", "ipa": "/viˈveːvano/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_002_p2",
+          "italiano": "Un giorno la mamma disse: «Andate a costruire le vostre case.»",
+          "portugues": "Um dia a mãe disse: «Vão construir as vossas casas.»",
+          "parole": [
+            {"parola": "Andate", "traduzione": "Vão", "ipa": "/ˈandaːte/", "categoria": "verbo"},
+            {"parola": "costruire", "traduzione": "construir", "ipa": "/ko struˈiːre/", "categoria": "verbo"},
+            {"parola": "vostre", "traduzione": "vossas", "ipa": "/ˈvɔstre/", "categoria": "aggettivo"},
+            {"parola": "case", "traduzione": "casas", "ipa": "/ˈkaːze/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p3",
+          "italiano": "Il primo porcellino costruì una casa di paglia.",
+          "portugues": "O primeiro porquinho construiu uma casa de palha.",
+          "parole": [
+            {"parola": "primo", "traduzione": "primeiro", "ipa": "/ˈpriːmo/", "categoria": "aggettivo"},
+            {"parola": "costruì", "traduzione": "construiu", "ipa": "/ko struˈi/", "categoria": "verbo"},
+            {"parola": "paglia", "traduzione": "palha", "ipa": "/ˈpaʎʎa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p4",
+          "italiano": "Il secondo porcellino costruì una casa di legno.",
+          "portugues": "O segundo porquinho construiu uma casa de madeira.",
+          "parole": [
+            {"parola": "secondo", "traduzione": "segundo", "ipa": "/seˈkɔndo/", "categoria": "aggettivo"},
+            {"parola": "legno", "traduzione": "madeira", "ipa": "/ˈleɲɲo/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p5",
+          "italiano": "Il terzo porcellino era più saggio e costruì una casa di mattoni.",
+          "portugues": "O terceiro porquinho era mais sábio e construiu uma casa de tijolos.",
+          "parole": [
+            {"parola": "terzo", "traduzione": "terceiro", "ipa": "/ˈtɛrtso/", "categoria": "aggettivo"},
+            {"parola": "saggio", "traduzione": "sábio", "ipa": "/ˈsaddʒo/", "categoria": "aggettivo"},
+            {"parola": "mattoni", "traduzione": "tijolos", "ipa": "/matˈtoːni/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p6",
+          "italiano": "Un giorno arrivò il lupo e bussò alla porta della casa di paglia.",
+          "portugues": "Um dia chegou o lobo e bateu na porta da casa de palha.",
+          "parole": [
+            {"parola": "arrivò", "traduzione": "chegou", "ipa": "/arriˈvɔ/", "categoria": "verbo"},
+            {"parola": "bussò", "traduzione": "bateu", "ipa": "/busˈsɔ/", "categoria": "verbo"},
+            {"parola": "porta", "traduzione": "porta", "ipa": "/ˈpɔrta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p7",
+          "italiano": "«Aprite, aprite! Sono il lupo!» gridò con voce forte.",
+          "portugues": "«Abram, abram! Sou o lobo!» gritou com voz forte.",
+          "parole": [
+            {"parola": "Aprite", "traduzione": "Abram", "ipa": "/aˈpriːte/", "categoria": "verbo"},
+            {"parola": "gridò", "traduzione": "gritou", "ipa": "/griˈdɔ/", "categoria": "verbo"},
+            {"parola": "voce", "traduzione": "voz", "ipa": "/ˈvɔtʃe/", "categoria": "sostantivo"},
+            {"parola": "forte", "traduzione": "forte", "ipa": "/ˈfɔrte/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p8",
+          "italiano": "Il lupo soffiò così forte che la casa di paglia cadde.",
+          "portugues": "O lobo soprou tão forte que a casa de palha caiu.",
+          "parole": [
+            {"parola": "soffiò", "traduzione": "soprou", "ipa": "/sofˈfjɔ/", "categoria": "verbo"},
+            {"parola": "cadde", "traduzione": "caiu", "ipa": "/ˈkadde/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_002_p9",
+          "italiano": "Il primo porcellino scappò dal fratello nella casa di legno.",
+          "portugues": "O primeiro porquinho fugiu para o irmão na casa de madeira.",
+          "parole": [
+            {"parola": "scappò", "traduzione": "fugiu", "ipa": "/skapˈpɔ/", "categoria": "verbo"},
+            {"parola": "fratello", "traduzione": "irmão", "ipa": "/fraˈtɛllo/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p10",
+          "italiano": "Ma anche la casa di legno cadde con un soffio del lupo.",
+          "portugues": "Mas também a casa de madeira caiu com um sopro do lobo.",
+          "parole": [
+            {"parola": "souffio", "traduzione": "sopro", "ipa": "/ˈsɔffjo/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_002_p11",
+          "italiano": "I due porcellini corsero nella casa di mattoni del fratello.",
+          "portugues": "Os dois porquinhos correram para a casa de tijolos do irmão.",
+          "parole": [
+            {"parola": "corsero", "traduzione": "correram", "ipa": "/ˈkorsero/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_002_p12",
+          "italiano": "Il lupo soffiò e soffiò, ma la casa di mattoni non cadde mai.",
+          "portugues": "O lobo soprou e soprou, mas a casa de tijolos nunca caiu.",
+          "parole": [
+            {"parola": "mai", "traduzione": "nunca", "ipa": "/ˈmai/", "categoria": "avverbio"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_003",
+      "titulo": "Le Avventure di Pinocchio (Capitolo I)",
+      "titulo_pt": "As Aventuras de Pinóquio (Capítulo I)",
+      "nivel": "A2",
+      "icone": "🪵",
+      "autor": "Carlo Collodi",
+      "tema": "fiaba classica",
+      "descrizione": "Il primo capitolo del celebre romanzo di Carlo Collodi.",
+      "descricao_pt": "O primeiro capítulo do célebre romance de Carlo Collodi.",
+      "xp_recompensa": 100,
+      "testo": [
+        {
+          "id": "stor_003_p1",
+          "italiano": "C'era una volta un pezzo di legno che non era come gli altri legni.",
+          "portugues": "Era uma vez um pedaço de madeira que não era como as outras madeiras.",
+          "parole": [
+            {"parola": "pezzo", "traduzione": "pedaço", "ipa": "/ˈpettso/", "categoria": "sostantivo"},
+            {"parola": "legno", "traduzione": "madeira", "ipa": "/ˈleɲɲo/", "categoria": "sostantivo"},
+            {"parola": "altri", "traduzione": "outros", "ipa": "/ˈaltri/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p2",
+          "italiano": "Questo legno era stato portato dal vecchio falegname Mastro Ciliegia.",
+          "portugues": "Esta madeira tinha sido trazida pelo velho carpinteiro Mestre Cereja.",
+          "parole": [
+            {"parola": "vecchio", "traduzione": "velho", "ipa": "/ˈvɛkkjo/", "categoria": "aggettivo"},
+            {"parola": "falegname", "traduzione": "carpinteiro", "ipa": "/faleɲˈɲaːme/", "categoria": "sostantivo"},
+            {"parola": "Mastro", "traduzione": "Mestre", "ipa": "/ˈmastro/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p3",
+          "italiano": "Il falegname voleva fare un burattino, ma il legno parlava e rideva.",
+          "portugues": "O carpinteiro queria fazer um boneco, mas a madeira falava e ria.",
+          "parole": [
+            {"parola": "burattino", "traduzione": "boneco de manipulação", "ipa": "/buratˈtiːno/", "categoria": "sostantivo"},
+            {"parola": "parlava", "traduzione": "falava", "ipa": "/parˈlaːva/", "categoria": "verbo"},
+            {"parola": "rideva", "traduzione": "ria", "ipa": "/riˈdeːva/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_003_p4",
+          "italiano": "Spaventato, il falegname diede il legno al suo amico Geppetto.",
+          "portugues": "Assustado, o carpinteiro deu a madeira ao seu amigo Geppetto.",
+          "parole": [
+            {"parola": "Spaventato", "traduzione": "Assustado", "ipa": "/spavenˈtaːto/", "categoria": "aggettivo"},
+            {"parola": "diede", "traduzione": "deu", "ipa": "/ˈdjɛːde/", "categoria": "verbo"},
+            {"parola": "amico", "traduzione": "amigo", "ipa": "/aˈmiːko/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p5",
+          "italiano": "Geppetto era un vecchio molto povero ma bravissimo a scolpire il legno.",
+          "portugues": "Geppetto era um velho muito pobre, mas muito bom a esculpir madeira.",
+          "parole": [
+            {"parola": "povero", "traduzione": "pobre", "ipa": "/ˈpɔːvero/", "categoria": "aggettivo"},
+            {"parola": "scolpire", "traduzione": "esculpir", "ipa": "/skolˈpiːre/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_003_p6",
+          "italiano": "Prese il legno e cominciò a fabbricare il burattino.",
+          "portugues": "Pegou na madeira e começou a fabricar o boneco.",
+          "parole": [
+            {"parola": "cominciò", "traduzione": "começou", "ipa": "/kominˈtʃɔ/", "categoria": "verbo"},
+            {"parola": "fabbricare", "traduzione": "fabricar", "ipa": "/fabbriˈkaːre/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_003_p7",
+          "italiano": "Gli mise gli occhi, il naso, la bocca e le mani.",
+          "portugues": "Colocou-lhe os olhos, o nariz, a boca e as mãos.",
+          "parole": [
+            {"parola": "mise", "traduzione": "colocou", "ipa": "/ˈmiːse/", "categoria": "verbo"},
+            {"parola": "occhi", "traduzione": "olhos", "ipa": "/ˈɔkki/", "categoria": "sostantivo"},
+            {"parola": "naso", "traduzione": "nariz", "ipa": "/ˈnaːzo/", "categoria": "sostantivo"},
+            {"parola": "bocca", "traduzione": "boca", "ipa": "/ˈbɔkka/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p8",
+          "italiano": "Quando ebbe finito, il burattino aprì gli occhi e guardò Geppetto.",
+          "portugues": "Quando terminou, o boneco abriu os olhos e olhou para Geppetto.",
+          "parole": [
+            {"parola": "finito", "traduzione": "terminado", "ipa": "/fiˈniːto/", "categoria": "aggettivo"},
+            {"parola": "aprì", "traduzione": "abriu", "ipa": "/aˈpri/", "categoria": "verbo"},
+            {"parola": "guardò", "traduzione": "olhou", "ipa": "/gwarˈdɔ/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_003_p9",
+          "italiano": "Geppetto disse: «Come ti chiami?» E il burattino rispose: «Pinocchio!»",
+          "portugues": "Geppetto disse: «Como te chamas?» E o boneco respondeu: «Pinóquio!»",
+          "parole": [
+            {"parola": "chiami", "traduzione": "chamas (tu)", "ipa": "/ˈkjaːmi/", "categoria": "verbo"},
+            {"parola": "rispose", "traduzione": "respondeu", "ipa": "/risˈpoːse/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_003_p10",
+          "italiano": "Geppetto restò senza parole, perché il burattino aveva un nome suo!",
+          "portugues": "Geppetto ficou sem palavras, porque o boneco tinha um nome seu!",
+          "parole": [
+            {"parola": "restò", "traduzione": "ficou", "ipa": "/resˈtɔ/", "categoria": "verbo"},
+            {"parola": "parole", "traduzione": "palavras", "ipa": "/paˈrɔːle/", "categoria": "sostantivo"},
+            {"parola": "nome", "traduzione": "nome", "ipa": "/ˈnɔːme/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p11",
+          "italiano": "Ma Pinocchio aveva un brutto carattere: disobbediva sempre al suo babbo.",
+          "portugues": "Mas Pinóquio tinha um mau carácter: desobedecia sempre ao seu pai.",
+          "parole": [
+            {"parola": "carattere", "traduzione": "carácter", "ipa": "/karatˈtɛːre/", "categoria": "sostantivo"},
+            {"parola": "disobbediva", "traduzione": "desobedecia", "ipa": "/dizobbeˈdiːva/", "categoria": "verbo"},
+            {"parola": "babbo", "traduzione": "pai (informal)", "ipa": "/ˈbabbo/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_003_p12",
+          "italiano": "Quel giorno Pinocchio iniziò la sua vita avventurosa, piena di bugie e di magie.",
+          "portugues": "Nesse dia Pinóquio começou a sua vida aventurosa, cheia de mentiras e de magias.",
+          "parole": [
+            {"parola": "avventurosa", "traduzione": "aventurosa", "ipa": "/avventuˈroːsa/", "categoria": "aggettivo"},
+            {"parola": "piena", "traduzione": "cheia", "ipa": "/ˈpjɛːna/", "categoria": "aggettivo"},
+            {"parola": "bugie", "traduzione": "mentiras", "ipa": "/buˈdʒiːe/", "categoria": "sostantivo"},
+            {"parola": "magie", "traduzione": "magias", "ipa": "/maˈdʒiːe/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_004",
+      "titulo": "Cenerentola",
+      "titulo_pt": "Cinderela",
+      "nivel": "A2",
+      "icone": "👠",
+      "autor": "Tradizionale (versione di Charles Perrault, adattata in italiano)",
+      "tema": "fiaba",
+      "descricao": "La storia di una ragazza maltrattata dalla matrigna e aiutata dalla fata madrina.",
+      "descricao_pt": "A história de uma rapariga maltratada pela madrasta e ajudada pela fada-madrinha.",
+      "xp_recompensa": 100,
+      "testo": [
+        {
+          "id": "stor_004_p1",
+          "italiano": "C'era una volta una bella ragazza che si chiamava Cenerentola.",
+          "portugues": "Era uma vez uma linda rapariga que se chamava Cinderela.",
+          "parole": [
+            {"parola": "bella", "traduzione": "linda", "ipa": "/ˈbɛlla/", "categoria": "aggettivo"},
+            {"parola": "ragazza", "traduzione": "rapariga", "ipa": "/raˈɡattsa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p2",
+          "italiano": "Viveva con la matrigna e due sorellastre che la trattavano molto male.",
+          "portugues": "Vivia com a madrasta e duas meias-irmãs que a tratavam muito mal.",
+          "parole": [
+            {"parola": "matrigna", "traduzione": "madrasta", "ipa": "/maˈtriɲɲa/", "categoria": "sostantivo"},
+            {"parola": "sorellastre", "traduzione": "meias-irmãs", "ipa": "/sorelˈlastre/", "categoria": "sostantivo"},
+            {"parola": "trattavano", "traduzione": "tratavam", "ipa": "/trattaˈvaːno/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_004_p3",
+          "italiano": "Cenerentola doveva pulire la casa, cucinare e lavare i piatti tutto il giorno.",
+          "portugues": "Cinderela tinha de limpar a casa, cozinhar e lavar a loiça o dia todo.",
+          "parole": [
+            {"parola": "doveva", "traduzione": "tinha de", "ipa": "/doˈveːva/", "categoria": "verbo"},
+            {"parola": "pulire", "traduzione": "limpar", "ipa": "/puˈliːre/", "categoria": "verbo"},
+            {"parola": "cucinare", "traduzione": "cozinhar", "ipa": "/kutʃiˈnaːre/", "categoria": "verbo"},
+            {"parola": "lavare", "traduzione": "lavar", "ipa": "/laˈvaːre/", "categoria": "verbo"},
+            {"parola": "piatti", "traduzione": "pratos / loiça", "ipa": "/ˈpjatti/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p4",
+          "italiano": "Per questo motivo la chiamavano Cenerentola, perché stava sempre vicino alla cenere.",
+          "portugues": "Por isso a chamavam Cinderela, porque estava sempre perto da cinza.",
+          "parole": [
+            {"parola": "motivo", "traduzione": "motivo", "ipa": "/moˈtiːvo/", "categoria": "sostantivo"},
+            {"parola": "chiamavano", "traduzione": "chamavam", "ipa": "/kjaˈmaːvano/", "categoria": "verbo"},
+            {"parola": "cenere", "traduzione": "cinza", "ipa": "/ˈtʃɛːnere/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p5",
+          "italiano": "Un giorno il re organizzò un grande ballo nel suo palazzo.",
+          "portugues": "Um dia o rei organizou um grande baile no seu palácio.",
+          "parole": [
+            {"parola": "re", "traduzione": "rei", "ipa": "/re/", "categoria": "sostantivo"},
+            {"parola": "organizzò", "traduzione": "organizou", "ipa": "/orɡanidˈdzɔ/", "categoria": "verbo"},
+            {"parola": "ballo", "traduzione": "baile", "ipa": "/ˈballo/", "categoria": "sostantivo"},
+            {"parola": "palazzo", "traduzione": "palácio", "ipa": "/paˈlattso/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p6",
+          "italiano": "Tutte le ragazze del regno erano invitate, anche le due sorellastre.",
+          "portugues": "Todas as raparigas do reino eram convidadas, até as duas meias-irmãs.",
+          "parole": [
+            {"parola": "regno", "traduzione": "reino", "ipa": "/ˈreɲɲo/", "categoria": "sostantivo"},
+            {"parola": "invitate", "traduzione": "convidadas", "ipa": "/inviˈtaːte/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p7",
+          "italiano": "Cenerentola pianse, perché non poteva andare al ballo.",
+          "portugues": "Cinderela chorou, porque não podia ir ao baile.",
+          "parole": [
+            {"parola": "pianse", "traduzione": "chorou", "ipa": "/ˈpjanse/", "categoria": "verbo"},
+            {"parola": "poteva", "traduzione": "podia", "ipa": "/poˈteːva/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_004_p8",
+          "italiano": "Improvvisamente apparve una fata madrina, gentile e luminosa.",
+          "portugues": "De repente apareceu uma fada-madrinha, gentil e luminosa.",
+          "parole": [
+            {"parola": "Improvvisamente", "traduzione": "De repente", "ipa": "/improvvizamenˈte/", "categoria": "avverbio"},
+            {"parola": "apparve", "traduzione": "apareceu", "ipa": "/apˈparve/", "categoria": "verbo"},
+            {"parola": "fata", "traduzione": "fada", "ipa": "/ˈfaːta/", "categoria": "sostantivo"},
+            {"parola": "madrina", "traduzione": "madrinha", "ipa": "/maˈdriːna/", "categoria": "sostantivo"},
+            {"parola": "luminosa", "traduzione": "luminosa", "ipa": "/lumiˈnoːsa/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p9",
+          "italiano": "La fata trasformò una zucca in una carrozza e i topi in cavalli.",
+          "portugues": "A fada transformou uma abóbora numa carruagem e os ratos em cavalos.",
+          "parole": [
+            {"parola": "trasformò", "traduzione": "transformou", "ipa": "/trasforˈmɔ/", "categoria": "verbo"},
+            {"parola": "zucca", "traduzione": "abóbora", "ipa": "/ˈtsukka/", "categoria": "sostantivo"},
+            {"parola": "carrozza", "traduzione": "carruagem", "ipa": "/karˈrottsa/", "categoria": "sostantivo"},
+            {"parola": "topi", "traduzione": "ratos", "ipa": "/ˈtɔːpi/", "categoria": "sostantivo"},
+            {"parola": "cavalli", "traduzione": "cavalos", "ipa": "/kaˈvalli/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p10",
+          "italiano": "Poi diede a Cenerentola un vestito bellissimo e delle scarpette di vetro.",
+          "portugues": "Depois deu a Cinderela um vestido lindíssimo e uns sapatos de vidro.",
+          "parole": [
+            {"parola": "vestito", "traduzione": "vestido", "ipa": "/vesˈtiːto/", "categoria": "sostantivo"},
+            {"parola": "bellissimo", "traduzione": "lindíssimo", "ipa": "/belˈlissimo/", "categoria": "aggettivo"},
+            {"parola": "scarpette", "traduzione": "sapatinhos", "ipa": "/skarˈpette/", "categoria": "sostantivo"},
+            {"parola": "vetro", "traduzione": "vidro", "ipa": "/ˈvɛːtro/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p11",
+          "italiano": "Al ballo, il principe si innamorò subito di Cenerentola.",
+          "portugues": "No baile, o príncipe apaixonou-se de imediato por Cinderela.",
+          "parole": [
+            {"parola": "principe", "traduzione": "príncipe", "ipa": "/ˈprintʃiːpe/", "categoria": "sostantivo"},
+            {"parola": "innamorò", "traduzione": "apaixonou-se", "ipa": "/innamoˈrɔ/", "categoria": "verbo"},
+            {"parola": "subito", "traduzione": "imediatamente", "ipa": "/ˈsuːbito/", "categoria": "avverbio"}
+          ]
+        },
+        {
+          "id": "stor_004_p12",
+          "italiano": "Ma a mezzanotte Cenerentola scappò e perse una scarpina.",
+          "portugues": "Mas à meia-noite Cinderela fugiu e perdeu um sapato.",
+          "parole": [
+            {"parola": "mezzanotte", "traduzione": "meia-noite", "ipa": "/meddzanˈnɔtte/", "categoria": "sostantivo"},
+            {"parola": "scappò", "traduzione": "fugiu", "ipa": "/skapˈpɔ/", "categoria": "verbo"},
+            {"parola": "persa", "traduzione": "perdida", "ipa": "/ˈpɛːrsa/", "categoria": "aggettivo"},
+            {"parola": "scarpina", "traduzione": "sapato (sapato único)", "ipa": "/skarˈpiːna/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_004_p13",
+          "italiano": "Il principe cercò in tutto il regno la ragazza cui calzava quella scarpetta.",
+          "portugues": "O príncipe procurou por todo o reino a rapariga a quem servia aquele sapato.",
+          "parole": [
+            {"parola": "cercò", "traduzione": "procurou", "ipa": "/tʃerˈkɔ/", "categoria": "verbo"},
+            {"parola": "calzava", "traduzione": "servia (calçado)", "ipa": "/kalˈtsaːva/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_004_p14",
+          "italiano": "Cenerentola la provò e le stava perfetta! Si sposarono e vissero felici.",
+          "portugues": "Cinderela experimentou-o e servia-lhe na perfeição! Casaram e viveram felizes.",
+          "parole": [
+            {"parola": "provò", "traduzione": "experimentou", "ipa": "/proˈvɔ/", "categoria": "verbo"},
+            {"parola": "perfetta", "traduzione": "perfeita", "ipa": "/perˈfetta/", "categoria": "aggettivo"},
+            {"parola": "sposarono", "traduzione": "casaram", "ipa": "/spoˈzaːrono/", "categoria": "verbo"},
+            {"parola": "felici", "traduzione": "felizes", "ipa": "/feˈliːtʃi/", "categoria": "aggettivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_005",
+      "titulo": "Il Barone di Münchhausen in Italia",
+      "titulo_pt": "O Barão de Münchhausen em Itália",
+      "nivel": "B1",
+      "icone": "🎩",
+      "autor": "Adattamento",
+      "tema": "avventura umoristica",
+      "descricao": "Il famoso barone racconta le sue incredibili avventure durante un viaggio in Italia.",
+      "descricao_pt": "O famoso barão conta as suas incríveis aventuras durante uma viagem por Itália.",
+      "xp_recompensa": 120,
+      "testo": [
+        {
+          "id": "stor_005_p1",
+          "italiano": "Il Barone di Münchhausen era un uomo che amava raccontare storie incredibili.",
+          "portugues": "O Barão de Münchhausen era um homem que adorava contar histórias incríveis.",
+          "parole": [
+            {"parola": "Baronе", "traduzione": "Barão", "ipa": "/baˈroːne/", "categoria": "sostantivo"},
+            {"parola": "raccontare", "traduzione": "contar", "ipa": "/rakkonˈtaːre/", "categoria": "verbo"},
+            {"parola": "incredibile", "traduzione": "incrível", "ipa": "/inkreˈdiːbile/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p2",
+          "italiano": "Un giorno decise di visitare l'Italia con il suo fedele cavallo.",
+          "portugues": "Um dia decidiu visitar a Itália com o seu fiel cavalo.",
+          "parole": [
+            {"parola": "decise", "traduzione": "decidiu", "ipa": "/deˈtʃiːze/", "categoria": "verbo"},
+            {"parola": "visitare", "traduzione": "visitar", "ipa": "/viziˈtaːre/", "categoria": "verbo"},
+            {"parola": "fedele", "traduzione": "fiel", "ipa": "/feˈdɛːle/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p3",
+          "italiano": "Arrivò a Venezia con una gondola speciale, trainata da cigni dorati.",
+          "portugues": "Chegou a Veneza com uma gôndola especial, puxada por cisnes dourados.",
+          "parole": [
+            {"parola": "gondola", "traduzione": "gôndola", "ipa": "/ˈɡɔndola/", "categoria": "sostantivo"},
+            {"parola": "trainata", "traduzione": "puxada", "ipa": "/traiˈnaːta/", "categoria": "aggettivo"},
+            {"parola": "cigni", "traduzione": "cisnes", "ipa": "/ˈtʃiɲɲi/", "categoria": "sostantivo"},
+            {"parola": "dorati", "traduzione": "dourados", "ipa": "/doˈraːti/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p4",
+          "italiano": "A Roma, il barone incontrò un gruppo di turisti molto sorpresi.",
+          "portugues": "Em Roma, o barão encontrou um grupo de turistas muito surpreendidos.",
+          "parole": [
+            {"parola": "turisti", "traduzione": "turistas", "ipa": "/tuˈristi/", "categoria": "sostantivo"},
+            {"parola": "sorpresi", "traduzione": "surpreendidos", "ipa": "/sorˈprɛːzi/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p5",
+          "italiano": "«Buongiorno! Sono appena sceso dalla luna» disse loro con un sorriso.",
+          "portugues": "«Bom dia! Acabei de descer da lua» disse-lhes com um sorriso.",
+          "parole": [
+            {"parola": "sceso", "traduzione": "descido", "ipa": "/ˈʃɛːzo/", "categoria": "aggettivo"},
+            {"parola": "luna", "traduzione": "lua", "ipa": "/ˈluːna/", "categoria": "sostantivo"},
+            {"parola": "sorriso", "traduzione": "sorriso", "ipa": "/sorˈriːzo/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p6",
+          "italiano": "I turisti pensarono che fosse matto, ma il barone rise allegramente.",
+          "portugues": "Os turistas pensaram que era louco, mas o barão riu alegremente.",
+          "parole": [
+            {"parola": "pensarono", "traduzione": "pensaram", "ipa": "/pensaˈroːno/", "categoria": "verbo"},
+            {"parola": "matto", "traduzione": "louco", "ipa": "/ˈmatto/", "categoria": "aggettivo"},
+            {"parola": "allegramente", "traduzione": "alegremente", "ipa": "/alleɡramenˈte/", "categoria": "avverbio"}
+          ]
+        },
+        {
+          "id": "stor_005_p7",
+          "italiano": "Proseguì il viaggio verso Firenze, dove mangiò un piatto di pasta lungo un metro.",
+          "portugues": "Continuou a viagem para Florença, onde comeu um prato de massa com um metro de comprimento.",
+          "parole": [
+            {"parola": "Proseguì", "traduzione": "Continuou", "ipa": "/proseˈɡui/", "categoria": "verbo"},
+            {"parola": "viaggio", "traduzione": "viagem", "ipa": "/ˈvjaddʒo/", "categoria": "sostantivo"},
+            {"parola": "pasta", "traduzione": "massa", "ipa": "/ˈpasta/", "categoria": "sostantivo"},
+            {"parola": "metro", "traduzione": "metro", "ipa": "/ˈmɛːtro/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p8",
+          "italiano": "A Napoli, il barone ballò la tarantella con una bellissima dama.",
+          "portugues": "Em Nápoles, o barão dançou a tarantela com uma belíssima dama.",
+          "parole": [
+            {"parola": "ballò", "traduzione": "dançou", "ipa": "/balˈlɔ/", "categoria": "verbo"},
+            {"parola": "tarantella", "traduzione": "tarantela", "ipa": "/taranˈtella/", "categoria": "sostantivo"},
+            {"parola": "dama", "traduzione": "dama", "ipa": "/ˈdaːma/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p9",
+          "italiano": "La dama gli chiese: «È vero che ha viaggiato sulla luna?»",
+          "portugues": "A dama perguntou-lhe: «É verdade que viajou até à lua?»",
+          "parole": [
+            {"parola": "chiese", "traduzione": "perguntou", "ipa": "/ˈkjɛːze/", "categoria": "verbo"},
+            {"parola": "vero", "traduzione": "verdade", "ipa": "/ˈvɛːro/", "categoria": "sostantivo"},
+            {"parola": "viaggiato", "traduzione": "viajado", "ipa": "/vjadˈdʒaːto/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_005_p10",
+          "italiano": "«Certamente! Ci sono stato tre volte» rispose il barone.",
+          "portugues": "«Certamente! Estive lá três vezes» respondeu o barão.",
+          "parole": [
+            {"parola": "Certamente", "traduzione": "Certamente", "ipa": "/tʃertaˈmente/", "categoria": "avverbio"},
+            {"parola": "volte", "traduzione": "vezes", "ipa": "/ˈvɔlte/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p11",
+          "italiano": "La dama rise e gli diede un bacio sulla guancia.",
+          "portugues": "A dama riu e deu-lhe um beijo na face.",
+          "parole": [
+            {"parola": "bacio", "traduzione": "beijo", "ipa": "/ˈbaːtʃo/", "categoria": "sostantivo"},
+            {"parola": "guancia", "traduzione": "face", "ipa": "/ˈɡwantʃa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_005_p12",
+          "italiano": "Il barone partì il giorno dopo, promettendo di tornare presto in Italia.",
+          "portugues": "O barão partiu no dia seguinte, prometendo voltar logo a Itália.",
+          "parole": [
+            {"parola": "partì", "traduzione": "partiu", "ipa": "/parˈti/", "categoria": "verbo"},
+            {"parola": "seguente", "traduzione": "seguinte", "ipa": "/seˈɡwɛnte/", "categoria": "aggettivo"},
+            {"parola": "promettendo", "traduzione": "prometendo", "ipa": "/prometˈtɛndo/", "categoria": "verbo"},
+            {"parola": "tornare", "traduzione": "voltar", "ipa": "/torˈnaːre/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_005_p13",
+          "italiano": "«In Italia si mangia benissimo, si ride sempre e l'arte è ovunque» disse.",
+          "portugues": "«Em Itália come-se muito bem, ri-se sempre e a arte está em todo o lado» disse.",
+          "parole": [
+            {"parola": "benissimo", "traduzione": "muito bem", "ipa": "/beˈnissimo/", "categoria": "avverbio"},
+            {"parola": "sempre", "traduzione": "sempre", "ipa": "/ˈsɛmpre/", "categoria": "avverbio"},
+            {"parola": "ovunque", "traduzione": "em todo o lado", "ipa": "/oˈvunkwe/", "categoria": "avverbio"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_006",
+      "titulo": "Decameron — Prima Novella (adattamento)",
+      "titulo_pt": "Decameron — Primeira Novela (adaptação)",
+      "nivel": "B1",
+      "icone": "📜",
+      "autor": "Giovanni Boccaccio (adattamento)",
+      "tema": "novella",
+      "descricao": "Un adattamento della prima novella del Decameron, scritta da Boccaccio nel XIV secolo.",
+      "descricao_pt": "Uma adaptação da primeira novela do Decameron, escrita por Boccaccio no século XIV.",
+      "xp_recompensa": 120,
+      "testo": [
+        {
+          "id": "stor_006_p1",
+          "italiano": "Ser Ciappelletto, notaio, era un uomo molto malvagio e bugiardo.",
+          "portugues": "Ser Ciappelletto, notário, era um homem muito malvado e mentiroso.",
+          "parole": [
+            {"parola": "notaio", "traduzione": "notário", "ipa": "/noˈtaːjo/", "categoria": "sostantivo"},
+            {"parola": "malvagio", "traduzione": "malvado", "ipa": "/malˈvaːdʒo/", "categoria": "aggettivo"},
+            {"parola": "bugiardo", "traduzione": "mentiroso", "ipa": "/buˈdʒardo/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p2",
+          "italiano": "Per lavoro, doveva recarsi in Francia, ma si ammalò gravemente durante il viaggio.",
+          "portugues": "Por trabalho, teve de ir a França, mas ficou gravemente doente durante a viagem.",
+          "parole": [
+            {"parola": "recarsi", "traduzione": "ir/deslocar-se", "ipa": "/reˈkarsi/", "categoria": "verbo"},
+            {"parola": "ammalò", "traduzione": "adoeceu", "ipa": "/ammaˈlɔ/", "categoria": "verbo"},
+            {"parola": "gravemente", "traduzione": "gravemente", "ipa": "/ɡravemenˈte/", "categoria": "avverbio"}
+          ]
+        },
+        {
+          "id": "stor_006_p3",
+          "italiano": "I due mercanti che lo ospitavano erano molto preoccupati per la sua anima.",
+          "portugues": "Os dois mercadores que o acolhiam estavam muito preocupados com a sua alma.",
+          "parole": [
+            {"parola": "mercanti", "traduzione": "mercadores", "ipa": "/merˈkanti/", "categoria": "sostantivo"},
+            {"parola": "ospitavano", "traduzione": "acolhiam", "ipa": "/ospitaˈvaːno/", "categoria": "verbo"},
+            {"parola": "preoccupati", "traduzione": "preocupados", "ipa": "/preokkuˈpaːti/", "categoria": "aggettivo"},
+            {"parola": "anima", "traduzione": "alma", "ipa": "/ˈaːnima/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p4",
+          "italiano": "Chiamarono quindi un frate per confessarlo prima della morte.",
+          "portugues": "Chamaram então um frade para o confessar antes da morte.",
+          "parole": [
+            {"parola": "Chiamarono", "traduzione": "Chamaram", "ipa": "/kjamaˈroːno/", "categoria": "verbo"},
+            {"parola": "frate", "traduzione": "frade", "ipa": "/ˈfraːte/", "categoria": "sostantivo"},
+            {"parola": "confessare", "traduzione": "confessar", "ipa": "/konfesˈsaːre/", "categoria": "verbo"},
+            {"parola": "morte", "traduzione": "morte", "ipa": "/ˈmɔrte/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p5",
+          "italiano": "Il frate era un uomo semplice, ma molto devoto e serio.",
+          "portugues": "O frade era um homem simples, mas muito devoto e sério.",
+          "parole": [
+            {"parola": "semplice", "traduzione": "simples", "ipa": "/ˈsempliʃe/", "categoria": "aggettivo"},
+            {"parola": "devoto", "traduzione": "devoto", "ipa": "/deˈvɔːto/", "categoria": "aggettivo"},
+            {"parola": "serio", "traduzione": "sério", "ipa": "/ˈsɛːrjo/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p6",
+          "italiano": "Ser Ciappelletto capì che il frate era facile da ingannare.",
+          "portugues": "Ser Ciappelletto percebeu que o frade era fácil de enganar.",
+          "parole": [
+            {"parola": "capì", "traduzione": "percebeu", "ipa": "/kaˈpi/", "categoria": "verbo"},
+            {"parola": "ingannare", "traduzione": "enganar", "ipa": "/iŋɡanˈnaːre/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_006_p7",
+          "italiano": "Cominciò una confessione piena di bugie, dicendosi molto più peccatore di quanto fosse.",
+          "portugues": "Começou uma confissão cheia de mentiras, dizendo-se muito mais pecador do que era.",
+          "parole": [
+            {"parola": "piena", "traduzione": "cheia", "ipa": "/ˈpjɛːna/", "categoria": "aggettivo"},
+            {"parola": "peccatore", "traduzione": "pecador", "ipa": "/pekkaˈtoːre/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p8",
+          "italiano": "«Ho bestemmiato, ho ubriacato, ho tradito mia moglie molte volte» disse.",
+          "portugues": "«Blasfemei, embriaguei-me, traí a minha mulher muitas vezes» disse.",
+          "parole": [
+            {"parola": "bestemmiato", "traduzione": "blasfemado", "ipa": "/bestemˈmjaːto/", "categoria": "verbo"},
+            {"parola": "ubriacato", "traduzione": "embriagado", "ipa": "/ubrrjaˈkaːto/", "categoria": "verbo"},
+            {"parola": "tradito", "traduzione": "traído", "ipa": "/traˈdiːto/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_006_p9",
+          "italiano": "Il frate lo ascoltava, sempre più sconvolto e commosso dalla sua sincerità.",
+          "portugues": "O frade ouvia-o, cada vez mais perturbado e comovido pela sua sinceridade.",
+          "parole": [
+            {"parola": "ascoltava", "traduzione": "ouvia", "ipa": "/askolˈtaːva/", "categoria": "verbo"},
+            {"parola": "sconvolto", "traduzione": "perturbado", "ipa": "/skonˈvɔlto/", "categoria": "aggettivo"},
+            {"parola": "commosso", "traduzione": "comovido", "ipa": "/komˈmɔsso/", "categoria": "aggettivo"},
+            {"parola": "sincerità", "traduzione": "sinceridade", "ipa": "/sintʃeriˈta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p10",
+          "italiano": "In realtà, ogni cosa che Ser Ciappelletto diceva era una grande menzogna.",
+          "portugues": "Na verdade, tudo o que Ser Ciappelletto dizia era uma grande mentira.",
+          "parole": [
+            {"parola": "realtà", "traduzione": "realidade", "ipa": "/realˈta/", "categoria": "sostantivo"},
+            {"parola": "menzogna", "traduzione": "mentira", "ipa": "/menˈtsɔɲɲa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_006_p11",
+          "italiano": "Il frate gli diede l'assoluzione e lo dichiarò un santo, nonostante fosse un peccatore.",
+          "portugues": "O frade deu-lhe a absolvição e declarou-o santo, apesar de ser um pecador.",
+          "parole": [
+            {"parola": "assoluzione", "traduzione": "absolvição", "ipa": "/assolutˈtsjoːne/", "categoria": "sostantivo"},
+            {"parola": "dichiarò", "traduzione": "declarou", "ipa": "/dikjaˈrɔ/", "categoria": "verbo"},
+            {"parola": "santo", "traduzione": "santo", "ipa": "/ˈsanto/", "categoria": "sostantivo"},
+            {"parola": "nonostante", "traduzione": "apesar de", "ipa": "/nonoˈstante/", "categoria": "preposizione"}
+          ]
+        },
+        {
+          "id": "stor_006_p12",
+          "italiano": "Il giorno dopo, Ser Ciappelletto morì, e tutti lo piansero come un uomo buono.",
+          "portugues": "No dia seguinte, Ser Ciappelletto morreu, e todos o choraram como um homem bom.",
+          "parole": [
+            {"parola": "morì", "traduzione": "morreu", "ipa": "/moˈri/", "categoria": "verbo"},
+            {"parola": "piansero", "traduzione": "choraram", "ipa": "/ˈpjansero/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_006_p13",
+          "italiano": "Questa novella mostra come le apparenze possano ingannare anche i più devoti.",
+          "portugues": "Esta novela mostra como as aparências podem enganar até os mais devotos.",
+          "parole": [
+            {"parola": "mostra", "traduzione": "mostra", "ipa": "/ˈmɔːstra/", "categoria": "verbo"},
+            {"parola": "apparenze", "traduzione": "aparências", "ipa": "/appaˈrɛntse/", "categoria": "sostantivo"},
+            {"parola": "ingannare", "traduzione": "enganar", "ipa": "/iŋɡanˈnaːre/", "categoria": "verbo"},
+            {"parola": "devoti", "traduzione": "devotos", "ipa": "/deˈvɔːti/", "categoria": "aggettivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_007",
+      "titulo": "Marco Polo — Il Milione (estratto)",
+      "titulo_pt": "Marco Polo — O Milhão (excerto)",
+      "nivel": "B2",
+      "icone": "🌍",
+      "autor": "Marco Polo / Rustichello da Pisa",
+      "tema": "viaggio",
+      "descricao": "Un estratto del libro di viaggi di Marco Polo, scritto nel XIII secolo.",
+      "descricao_pt": "Um excerto do livro de viagens de Marco Polo, escrito no século XIII.",
+      "xp_recompensa": 140,
+      "testo": [
+        {
+          "id": "stor_007_p1",
+          "italiano": "Partii da Venezia, la mia città, all'età di diciassette anni, nell'anno 1271.",
+          "portugues": "Parti de Veneza, a minha cidade, com dezassete anos, no ano de 1271.",
+          "parole": [
+            {"parola": "Partii", "traduzione": "Parti", "ipa": "/parˈtiːi/", "categoria": "verbo"},
+            {"parola": "età", "traduzione": "idade", "ipa": "/eˈta/", "categoria": "sostantivo"},
+            {"parola": "diciassette", "traduzione": "dezassete", "ipa": "/ditʃasˈsette/", "categoria": "numero"}
+          ]
+        },
+        {
+          "id": "stor_007_p2",
+          "italiano": "Mio padre Niccolò e mio zio Matteo erano mercanti e mi portarono con loro.",
+          "portugues": "O meu pai Niccolò e o meu tio Matteo eram mercadores e levaram-me com eles.",
+          "parole": [
+            {"parola": "padre", "traduzione": "pai", "ipa": "/ˈpaːdre/", "categoria": "sostantivo"},
+            {"parola": "zio", "traduzione": "tio", "ipa": "/ˈtsjo/", "categoria": "sostantivo"},
+            {"parola": "portarono", "traduzione": "levaram", "ipa": "/porˈtaːrono/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_007_p3",
+          "italiano": "Navigammo per il Mediterraneo, passammo per l'isola di Cipro e l'Armenia.",
+          "portugues": "Navegámos pelo Mediterrâneo, passámos pela ilha de Chipre e pela Arménia.",
+          "parole": [
+            {"parola": "Navigammo", "traduzione": "Navegámos", "ipa": "/naviˈɡammo/", "categoria": "verbo"},
+            {"parola": "Mediterraneo", "traduzione": "Mediterrâneo", "ipa": "/mediterˈraːneo/", "categoria": "sostantivo"},
+            {"parola": "passammo", "traduzione": "passámos", "ipa": "/pasˈsammo/", "categoria": "verbo"},
+            {"parola": "isola", "traduzione": "ilha", "ipa": "/ˈiːzola/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p4",
+          "italiano": "Il cammino fu lungo e pieno di pericoli, attraversammo deserti e montagne.",
+          "portugues": "O caminho foi longo e cheio de perigos, atravessámos desertos e montanhas.",
+          "parole": [
+            {"parola": "cammino", "traduzione": "caminho", "ipa": "/kamˈmiːno/", "categoria": "sostantivo"},
+            {"parola": "pericoli", "traduzione": "perigos", "ipa": "/peˈriːkoli/", "categoria": "sostantivo"},
+            {"parola": "attraversammo", "traduzione": "atravessámos", "ipa": "/attraverˈsammo/", "categoria": "verbo"},
+            {"parola": "deserti", "traduzione": "desertos", "ipa": "/deˈzɛːrti/", "categoria": "sostantivo"},
+            {"parola": "montagne", "traduzione": "montanhas", "ipa": "/monˈtaɲɲe/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p5",
+          "italiano": "Dopo tre anni di viaggio, giungemmo finalmente alla corte del Gran Khan.",
+          "portugues": "Após três anos de viagem, chegámos finalmente à corte do Grão Cã.",
+          "parole": [
+            {"parola": "giungemmo", "traduzione": "chegámos", "ipa": "/dʒunˈdʒɛmmo/", "categoria": "verbo"},
+            {"parola": "corte", "traduzione": "corte", "ipa": "/ˈkɔrte/", "categoria": "sostantivo"},
+            {"parola": "Khan", "traduzione": "Cã (imperador mongol)", "ipa": "/kan/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p6",
+          "italiano": "Il Gran Khan Kubilai era un uomo saggio, con occhi vivi e curiosi.",
+          "portugues": "O Grão Cã Kublai era um homem sábio, com olhos vivos e curiosos.",
+          "parole": [
+            {"parola": "saggio", "traduzione": "sábio", "ipa": "/ˈsaddʒo/", "categoria": "aggettivo"},
+            {"parola": "vivi", "traduzione": "vivos", "ipa": "/ˈviːvi/", "categoria": "aggettivo"},
+            {"parola": "curiosi", "traduzione": "curiosos", "ipa": "/kuˈrjoːzi/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p7",
+          "italiano": "Il sovrano mi chiese di raccontare le storie delle terre lontane che avevo visitato.",
+          "portugues": "O soberano pediu-me para contar as histórias das terras distantes que eu tinha visitado.",
+          "parole": [
+            {"parola": "sovrano", "traduzione": "soberano", "ipa": "/soˈvraːno/", "categoria": "sostantivo"},
+            {"parola": "lontane", "traduzione": "distantes", "ipa": "/lonˈtaːne/", "categoria": "aggettivo"},
+            {"parola": "visitate", "traduzione": "visitadas", "ipa": "/viziˈtaːte/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p8",
+          "italiano": "Gli parlai della Cina, del Giappone, dell'India e delle isole dell'Indonesia.",
+          "portugues": "Contei-lhe da China, do Japão, da Índia e das ilhas da Indonésia.",
+          "parole": [
+            {"parola": "parlai", "traduzione": "falei", "ipa": "/parˈlai/", "categoria": "verbo"},
+            {"parola": "Cina", "traduzione": "China", "ipa": "/ˈtʃiːna/", "categoria": "sostantivo"},
+            {"parola": "Giappone", "traduzione": "Japão", "ipa": "/dʒapˈpoːne/", "categoria": "sostantivo"},
+            {"parola": "India", "traduzione": "Índia", "ipa": "/ˈindja/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p9",
+          "italiano": "Rimasi alla sua corte per quasi vent'anni, come ambasciatore e consigliere.",
+          "portugues": "Fiquei na sua corte durante quase vinte anos, como embaixador e conselheiro.",
+          "parole": [
+            {"parola": "Rimasi", "traduzione": "Fiquei", "ipa": "/riˈmaːzi/", "categoria": "verbo"},
+            {"parola": "ambasciatore", "traduzione": "embaixador", "ipa": "/ambaʃʃaˈtoːre/", "categoria": "sostantivo"},
+            {"parola": "consigliere", "traduzione": "conselheiro", "ipa": "/konsiʎˈʎɛːre/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p10",
+          "italiano": "In tutti quegli anni imparai le lingue, i costumi e le religioni di molti popoli.",
+          "portugues": "Em todos aqueles anos aprendi as línguas, os costumes e as religiões de muitos povos.",
+          "parole": [
+            {"parola": "imparai", "traduzione": "aprendi", "ipa": "/impaˈrai/", "categoria": "verbo"},
+            {"parola": "costumi", "traduzione": "costumes", "ipa": "/kosˈtuːmi/", "categoria": "sostantivo"},
+            {"parola": "religioni", "traduzione": "religiões", "ipa": "/relidˈdʒoːni/", "categoria": "sostantivo"},
+            {"parola": "popoli", "traduzione": "povos", "ipa": "/ˈpɔːpoli/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p11",
+          "italiano": "Quando finalmente tornai a Venezia, scoprii che molti non mi credevano.",
+          "portugues": "Quando finalmente regressei a Veneza, descobri que muitos não acreditavam em mim.",
+          "parole": [
+            {"parola": "tornai", "traduzione": "regressei", "ipa": "/torˈnai/", "categoria": "verbo"},
+            {"parola": "scoprii", "traduzione": "descobri", "ipa": "/skopˈpriːi/", "categoria": "verbo"},
+            {"parola": "credevano", "traduzione": "acreditavam", "ipa": "/kreˈdeːvano/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_007_p12",
+          "italiano": "Decisi così di dettare le mie memorie a un romanziere, Rustichello da Pisa.",
+          "portugues": "Decidi então ditar as minhas memórias a um romancista, Rustichello de Pisa.",
+          "parole": [
+            {"parola": "decisi", "traduzione": "decidi", "ipa": "/deˈtʃiːzi/", "categoria": "verbo"},
+            {"parola": "dettare", "traduzione": "ditar", "ipa": "/detˈtaːre/", "categoria": "verbo"},
+            {"parola": "memorie", "traduzione": "memórias", "ipa": "/meˈmɔːrje/", "categoria": "sostantivo"},
+            {"parola": "romanziere", "traduzione": "romancista", "ipa": "/romandˈdʒɛːre/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_007_p13",
+          "italiano": "Nacque così «Il Milione», che ancora oggi è letto in tutto il mondo.",
+          "portugues": "Nasceu assim «O Milhão», que ainda hoje é lido em todo o mundo.",
+          "parole": [
+            {"parola": "Nacque", "traduzione": "Nasceu", "ipa": "/ˈnakkwe/", "categoria": "verbo"},
+            {"parola": "letto", "traduzione": "lido", "ipa": "/ˈlɛtto/", "categoria": "aggettivo"},
+            {"parola": "mondo", "traduzione": "mundo", "ipa": "/ˈmondo/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_008",
+      "titulo": "Divina Commedia — Inferno, Canto I (estratto)",
+      "titulo_pt": "Divina Comédia — Inferno, Canto I (excerto)",
+      "nivel": "C1",
+      "icone": "🔥",
+      "autor": "Dante Alighieri",
+      "tema": "poesia epica",
+      "descricao": "L'inizio del viaggio di Dante nell'Inferno, in cui si smarrisce nella «selva oscura».",
+      "descricao_pt": "O início da viagem de Dante no Inferno, em que se perde na «selva escura».",
+      "xp_recompensa": 160,
+      "testo": [
+        {
+          "id": "stor_008_p1",
+          "italiano": "Nel mezzo del cammin di nostra vita, mi ritrovai per una selva oscura.",
+          "portugues": "No meio do caminho da nossa vida, encontrei-me numa selva escura.",
+          "parole": [
+            {"parola": "mezzo", "traduzione": "meio", "ipa": "/ˈmɛddzo/", "categoria": "sostantivo"},
+            {"parola": "cammin", "traduzione": "caminho (arcaico)", "ipa": "/kamˈmin/", "categoria": "sostantivo"},
+            {"parola": "ritrovai", "traduzione": "encontrei-me", "ipa": "/ritroˈvai/", "categoria": "verbo"},
+            {"parola": "selva", "traduzione": "selva / floresta", "ipa": "/ˈsɛlva/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p2",
+          "italiano": "Ché la diritta via era smarrita.",
+          "portugues": "Pois a reta via estava perdida.",
+          "parole": [
+            {"parola": "diritta", "traduzione": "reta", "ipa": "/diˈritta/", "categoria": "aggettivo"},
+            {"parola": "via", "traduzione": "via / caminho", "ipa": "/ˈviːa/", "categoria": "sostantivo"},
+            {"parola": "smarrita", "traduzione": "perdida", "ipa": "/zmarˈriːta/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p3",
+          "italiano": "Ahi quanto a dir qual era è cosa dura, esta selva selvaggia e aspra e forte.",
+          "portugues": "Ai, quanto é difícil dizer como era, esta selva bravia, áspera e densa.",
+          "parole": [
+            {"parola": "Ahi", "traduzione": "Ai (exclamação)", "ipa": "/ˈai̯/", "categoria": "esclamazione"},
+            {"parola": "dura", "traduzione": "difícil", "ipa": "/ˈduːra/", "categoria": "aggettivo"},
+            {"parola": "selvaggia", "traduzione": "bravia / agreste", "ipa": "/selˈvaddʒa/", "categoria": "aggettivo"},
+            {"parola": "aspra", "traduzione": "áspera", "ipa": "/ˈaspera/", "categoria": "aggettivo"},
+            {"parola": "forte", "traduzione": "densa / forte", "ipa": "/ˈfɔrte/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p4",
+          "italiano": "Nel pensier rinova la paura, tanto è amara che morte è poco più.",
+          "portugues": "Renova a memória tal medo, que é tão amargo que a morte é pouco mais.",
+          "parole": [
+            {"parola": "pensier", "traduzione": "pensamento", "ipa": "/penˈsjɛːr/", "categoria": "sostantivo"},
+            {"parola": "rinova", "traduzione": "renova", "ipa": "/riˈnɔːva/", "categoria": "verbo"},
+            {"parola": "paura", "traduzione": "medo", "ipa": "/paˈuːra/", "categoria": "sostantivo"},
+            {"parola": "amara", "traduzione": "amarga", "ipa": "/aˈmaːra/", "categoria": "aggettivo"},
+            {"parola": "morte", "traduzione": "morte", "ipa": "/ˈmɔrte/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p5",
+          "italiano": "Ma poi che v'ebbi alcun piè fermo loco, vidi in su l'erta una figura lieve.",
+          "portugues": "Mas quando ali tive lugar seguro, vi na colina uma figura esbelta.",
+          "parole": [
+            {"parola": "alcun", "traduzione": "algum", "ipa": "/alˈkun/", "categoria": "aggettivo"},
+            {"parola": "piè", "traduzione": "pé (arcaico)", "ipa": "/pjɛ/", "categoria": "sostantivo"},
+            {"parola": "fermo", "traduzione": "fixo / seguro", "ipa": "/ˈfɛrmo/", "categoria": "aggettivo"},
+            {"parola": "erta", "traduzione": "colina / encosta", "ipa": "/ˈɛrta/", "categoria": "sostantivo"},
+            {"parola": "figura", "traduzione": "figura", "ipa": "/fiˈɡuːra/", "categoria": "sostantivo"},
+            {"parola": "lieve", "traduzione": "esbelta / leve", "ipa": "/ˈljɛːve/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p6",
+          "italiano": "Era colui che per la selva diserta mi guidava, dolce e soave padre.",
+          "portugues": "Era aquele que pela selva deserta me guiava, doce e suave pai.",
+          "parole": [
+            {"parola": "colui", "traduzione": "aquele homem", "ipa": "/koˈluːi̯/", "categoria": "pronome"},
+            {"parola": "diserta", "traduzione": "deserta", "ipa": "/diˈzɛːrta/", "categoria": "aggettivo"},
+            {"parola": "guidava", "traduzione": "guiava", "ipa": "/ɡwiˈdaːva/", "categoria": "verbo"},
+            {"parola": "dolce", "traduzione": "doce", "ipa": "/ˈdɔltʃe/", "categoria": "aggettivo"},
+            {"parola": "soave", "traduzione": "suave", "ipa": "/soˈaːve/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p7",
+          "italiano": "Vergilio, il savio cantor di Mantova, mi apparve e mi disse: «Non ti disperate!»",
+          "portugues": "Virgílio, o sábio cantor de Mântua, apareceu-me e disse: «Não desesperes!»",
+          "parole": [
+            {"parola": "savio", "traduzione": "sábio", "ipa": "/ˈsaːvjo/", "categoria": "aggettivo"},
+            {"parola": "cantor", "traduzione": "cantor", "ipa": "/kanˈtɔr/", "categoria": "sostantivo"},
+            {"parola": "apparve", "traduzione": "apareceu", "ipa": "/apˈparve/", "categoria": "verbo"},
+            {"parola": "disperate", "traduzione": "desesperes", "ipa": "/dispeˈraːte/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_008_p8",
+          "italiano": "«Considera la tua nobile origine: tu sei fatto per salire alle stelle.»",
+          "portugues": "«Considera a tua nobre origem: tu foste feito para subir às estrelas.»",
+          "parole": [
+            {"parola": "Considera", "traduzione": "Considera", "ipa": "/konsiˈdɛːra/", "categoria": "verbo"},
+            {"parola": "nobile", "traduzione": "nobre", "ipa": "/ˈnɔːbile/", "categoria": "aggettivo"},
+            {"parola": "origine", "traduzione": "origem", "ipa": "/oˈridʒine/", "categoria": "sostantivo"},
+            {"parola": "stelle", "traduzione": "estrelas", "ipa": "/ˈstelle/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_008_p9",
+          "italiano": "Così Virgilio mi parlò e mi condusse per mano verso la luce.",
+          "portugues": "Assim Virgílio me falou e me conduziu pela mão em direção à luz.",
+          "parole": [
+            {"parola": "condusse", "traduzione": "conduziu", "ipa": "/konˈdusse/", "categoria": "verbo"},
+            {"parola": "verso", "traduzione": "em direção a", "ipa": "/ˈvɛrso/", "categoria": "preposizione"},
+            {"parola": "luce", "traduzione": "luz", "ipa": "/ˈluːtʃe/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_009",
+      "titulo": "I Promessi Sposi — Capitolo I (estratto)",
+      "titulo_pt": "Os Noivos — Capítulo I (excerto)",
+      "nivel": "C1",
+      "icone": "⛪",
+      "autor": "Alessandro Manzoni",
+      "tema": "romanzo storico",
+      "descricao": "L'incipit del celebre romanzo manzoniano, ambientato in Lombardia nel Seicento.",
+      "descricao_pt": "O início do célebre romance de Manzoni, ambientado na Lombardia do século XVII.",
+      "xp_recompensa": 160,
+      "testo": [
+        {
+          "id": "stor_009_p1",
+          "italiano": "Quel ramo del lago di Como, che volge a mezzogiorno, si stende quasi senza interruzione.",
+          "portugues": "Aquele ramo do lago de Como, que se volta para o meio-dia, estende-se quase sem interrupção.",
+          "parole": [
+            {"parola": "ramo", "traduzione": "ramo", "ipa": "/ˈraːmo/", "categoria": "sostantivo"},
+            {"parola": "lago", "traduzione": "lago", "ipa": "/ˈlaːgo/", "categoria": "sostantivo"},
+            {"parola": "volge", "traduzione": "volta", "ipa": "/ˈvɔldʒe/", "categoria": "verbo"},
+            {"parola": "mezzogiorno", "traduzione": "meio-dia / sul", "ipa": "/meddzoˈdʒorno/", "categoria": "sostantivo"},
+            {"parola": "stende", "traduzione": "estende", "ipa": "/ˈstɛnde/", "categoria": "verbo"},
+            {"parola": "interruzione", "traduzione": "interrupção", "ipa": "/interrutˈtsjoːne/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p2",
+          "italiano": "Tra due catene non interrotte di monti, il lago si apre in modo vario e pittoresco.",
+          "portugues": "Entre duas cadeias não interrompidas de montanhas, o lago abre-se de modo vário e pitoresco.",
+          "parole": [
+            {"parola": "catena", "traduzione": "cadeia", "ipa": "/kaˈtɛːna/", "categoria": "sostantivo"},
+            {"parola": "interrotte", "traduzione": "interrompidas", "ipa": "/interˈrɔtte/", "categoria": "aggettivo"},
+            {"parola": "monti", "traduzione": "montanhas", "ipa": "/ˈmɔnti/", "categoria": "sostantivo"},
+            {"parola": "vario", "traduzione": "vário", "ipa": "/ˈvaːrjo/", "categoria": "aggettivo"},
+            {"parola": "pittoresco", "traduzione": "pitoresco", "ipa": "/pittorˈrɛsko/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p3",
+          "italiano": "Lì, sulla riva sinistra, sorgeva un paesetto chiamato Pescarenico.",
+          "portugues": "Ali, na margem esquerda, erguia-se uma aldeia chamada Pescarenico.",
+          "parole": [
+            {"parola": "riva", "traduzione": "margem", "ipa": "/ˈriːva/", "categoria": "sostantivo"},
+            {"parola": "sinistra", "traduzione": "esquerda", "ipa": "/siˈniːstra/", "categoria": "aggettivo"},
+            {"parola": "sorgeva", "traduzione": "erguia-se", "ipa": "/sorˈdʒɛːva/", "categoria": "verbo"},
+            {"parola": "paesetto", "traduzione": "aldeola", "ipa": "/paeˈzetto/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p4",
+          "italiano": "In quel paesetto viveva Renzo Tramaglino, un giovane tessitore, e Lucia Mondella, sua promessa sposa.",
+          "portugues": "Nessa aldeola vivia Renzo Tramaglino, um jovem tecelão, e Lucia Mondella, sua noiva.",
+          "parole": [
+            {"parola": "giovane", "traduzione": "jovem", "ipa": "/ˈdʒɔːvane/", "categoria": "aggettivo"},
+            {"parola": "tessitore", "traduzione": "tecelão", "ipa": "/tessiˈtoːre/", "categoria": "sostantivo"},
+            {"parola": "promessa", "traduzione": "noiva", "ipa": "/proˈmessa/", "categoria": "sostantivo"},
+            {"parola": "sposa", "traduzione": "esposa", "ipa": "/ˈspɔːza/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p5",
+          "italiano": "I due giovani si amavano teneramente e desideravano sposarsi al più presto.",
+          "portugues": "Os dois jovens amavam-se ternamente e desejavam casar o mais breve possível.",
+          "parole": [
+            {"parola": "teneramente", "traduzione": "ternamente", "ipa": "/teneraˈmente/", "categoria": "avverbio"},
+            {"parola": "desideravano", "traduzione": "desejavam", "ipa": "/dezideraˈvaːno/", "categoria": "verbo"},
+            {"parola": "sposarsi", "traduzione": "casar-se", "ipa": "/spoˈzarsi/", "categoria": "verbo"},
+            {"parola": "presto", "traduzione": "cedo / rápido", "ipa": "/ˈprɛsto/", "categoria": "avverbio"}
+          ]
+        },
+        {
+          "id": "stor_009_p6",
+          "italiano": "Don Abbondio, il parroco del paese, avrebbe dovuto celebrare le nozze.",
+          "portugues": "D. Abbondio, o pároco da aldeia, deveria ter celebrado as bodas.",
+          "parole": [
+            {"parola": "parroco", "traduzione": "pároco", "ipa": "/ˈparroko/", "categoria": "sostantivo"},
+            {"parola": "avrebbe", "traduzione": "teria (condicional)", "ipa": "/avˈrɛbbe/", "categoria": "verbo"},
+            {"parola": "celebrare", "traduzione": "celebrar", "ipa": "/tʃelebˈraːre/", "categoria": "verbo"},
+            {"parola": "nozze", "traduzione": "bodas", "ipa": "/ˈnɔttse/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p7",
+          "italiano": "Ma una sera, mentre passeggiava, due bravi lo fermarono.",
+          "portugues": "Mas uma noite, enquanto passeava, dois capangas pararam-no.",
+          "parole": [
+            {"parola": "passeggiava", "traduzione": "passeava", "ipa": "/passedˈdʒaːva/", "categoria": "verbo"},
+            {"parola": "bravi", "traduzione": "capangas", "ipa": "/ˈbraːvi/", "categoria": "sostantivo"},
+            {"parola": "fermarono", "traduzione": "pararam", "ipa": "/fermaˈroːno/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_009_p8",
+          "italiano": "«Signor parroco, il matrimonio non s'ha da fare» dissero con voce minacciosa.",
+          "portugues": "«Senhor pároco, o casamento não se há de fazer» disseram com voz ameaçadora.",
+          "parole": [
+            {"parola": "matrimonio", "traduzione": "casamento", "ipa": "/matriˈmɔːnjo/", "categoria": "sostantivo"},
+            {"parola": "fare", "traduzione": "fazer", "ipa": "/ˈfaːre/", "categoria": "verbo"},
+            {"parola": "minacciosa", "traduzione": "ameaçadora", "ipa": "/minatˈtʃoːsa/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p9",
+          "italiano": "I bravi erano al servizio di Don Rodrigo, un signorotto arrogante e crudele.",
+          "portugues": "Os capangas estavam ao serviço de D. Rodrigo, um fidalgo arrogante e cruel.",
+          "parole": [
+            {"parola": "servizio", "traduzione": "serviço", "ipa": "/serˈvittsjo/", "categoria": "sostantivo"},
+            {"parola": "signorotto", "traduzione": "fidalgo poderoso", "ipa": "/siɲɲoˈrɔtto/", "categoria": "sostantivo"},
+            {"parola": "arrogante", "traduzione": "arrogante", "ipa": "/arroˈɡante/", "categoria": "aggettivo"},
+            {"parola": "crudele", "traduzione": "cruel", "ipa": "/kruˈdɛːle/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_009_p10",
+          "italiano": "Don Rodrigo aveva deciso di impossessarsi di Lucia, ma i due giovani fuggirono.",
+          "portugues": "D. Rodrigo tinha decidido apoderar-se de Lucia, mas os dois jovens fugiram.",
+          "parole": [
+            {"parola": "deciso", "traduzione": "decidido", "ipa": "/deˈtʃiːzo/", "categoria": "aggettivo"},
+            {"parola": "impossessarsi", "traduzione": "apoderar-se", "ipa": "/impossesˈsarsi/", "categoria": "verbo"},
+            {"parola": "fuggirono", "traduzione": "fugiram", "ipa": "/fudˈdʒiːrono/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_009_p11",
+          "italiano": "Inizia così un lungo viaggio, tra monasteri, città e terre lontane.",
+          "portugues": "Começa assim uma longa viagem, entre mosteiros, cidades e terras distantes.",
+          "parole": [
+            {"parola": "Inizia", "traduzione": "Começa", "ipa": "/iˈnittsja/", "categoria": "verbo"},
+            {"parola": "monasteri", "traduzione": "mosteiros", "ipa": "/monasˈtɛːri/", "categoria": "sostantivo"},
+            {"parola": "terre", "traduzione": "terras", "ipa": "/ˈtɛrre/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stor_010",
+      "titulo": "Inferno — Canto V: Paolo e Francesca",
+      "titulo_pt": "Inferno — Canto V: Paulo e Francisca",
+      "nivel": "C2",
+      "icone": "💔",
+      "autor": "Dante Alighieri",
+      "tema": "poesia e passione",
+      "descricao": "Il celebre episodio dei due amanti dannati, letto in chiave filologica.",
+      "descricao_pt": "O célebre episódio dos dois amantes danados, lido em chave filológica.",
+      "xp_recompensa": 200,
+      "testo": [
+        {
+          "id": "stor_010_p1",
+          "italiano": "Così discesi del cerchio secondo, là dove l'amor condemna i morti al pianto.",
+          "portugues": "Assim desci do segundo círculo, onde o amor condena os mortos ao pranto.",
+          "parole": [
+            {"parola": "discesi", "traduzione": "desci", "ipa": "/diʃˈʃɛːzi/", "categoria": "verbo"},
+            {"parola": "cerchio", "traduzione": "círculo", "ipa": "/ˈtʃɛrkjo/", "categoria": "sostantivo"},
+            {"parola": "condemna", "traduzione": "condena", "ipa": "/konˈdɛmna/", "categoria": "verbo"},
+            {"parola": "pianto", "traduzione": "pranto", "ipa": "/ˈpjanto/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p2",
+          "italiano": "Minosse, giudice severo, siede e con la coda indica il luogo a ciascun peccatore.",
+          "portugues": "Minos, juiz severo, senta-se e com a cauda indica o lugar a cada pecador.",
+          "parole": [
+            {"parola": "giudice", "traduzione": "juiz", "ipa": "/ˈdʒuːditʃe/", "categoria": "sostantivo"},
+            {"parola": "severo", "traduzione": "severo", "ipa": "/seˈvɛːro/", "categoria": "aggettivo"},
+            {"parola": "siede", "traduzione": "senta-se", "ipa": "/ˈsjɛːde/", "categoria": "verbo"},
+            {"parola": "coda", "traduzione": "cauda", "ipa": "/ˈkɔːda/", "categoria": "sostantivo"},
+            {"parola": "indica", "traduzione": "indica", "ipa": "/ˈindika/", "categoria": "verbo"},
+            {"parola": "peccatore", "traduzione": "pecador", "ipa": "/pekkaˈtoːre/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p3",
+          "italiano": "Lì vidi Semiramide, Cleopatra, Didone ed Elena, figure tragiche di donne antiche.",
+          "portugues": "Ali vi Semíramis, Cleópatra, Dido e Helena, figuras trágicas de mulheres antigas.",
+          "parole": [
+            {"parola": "Semiramide", "traduzione": "Semíramis", "ipa": "/semiˈraːmide/", "categoria": "sostantivo"},
+            {"parola": "Cleopatra", "traduzione": "Cleópatra", "ipa": "/kleˈɔːpatra/", "categoria": "sostantivo"},
+            {"parola": "Didone", "traduzione": "Dido", "ipa": "/diˈdoːne/", "categoria": "sostantivo"},
+            {"parola": "Elena", "traduzione": "Helena", "ipa": "/ˈeːlena/", "categoria": "sostantivo"},
+            {"parola": "tragiche", "traduzione": "trágicas", "ipa": "/ˈtraːdʒike/", "categoria": "aggettivo"},
+            {"parola": "antiche", "traduzione": "antigas", "ipa": "/anˈtiːke/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p4",
+          "italiano": "Ma tra costoro vidi due amanti legati insieme, sospinti dalla bufera infernale.",
+          "portugues": "Mas entre estes vi dois amantes atados juntos, impelidos pela borrasca infernal.",
+          "parole": [
+            {"parola": "costoro", "traduzione": "estes (pessoas)", "ipa": "/kosˈtɔːro/", "categoria": "pronome"},
+            {"parola": "amanti", "traduzione": "amantes", "ipa": "/aˈmanti/", "categoria": "sostantivo"},
+            {"parola": "legati", "traduzione": "atados", "ipa": "/leˈɡaːti/", "categoria": "aggettivo"},
+            {"parola": "sospinti", "traduzione": "impelidos", "ipa": "/sosˈpinti/", "categoria": "aggettivo"},
+            {"parola": "bufera", "traduzione": "borrasca / tempestade", "ipa": "/buˈfɛːra/", "categoria": "sostantivo"},
+            {"parola": "infernale", "traduzione": "invernal", "ipa": "/inferˈnaːle/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p5",
+          "italiano": "Francesca da Rimini e Paolo Malatesta, travolti dalla passione, scontano la loro colpa.",
+          "portugues": "Francesca da Rimini e Paolo Malatesta, arrastados pela paixão, expiam a sua culpa.",
+          "parole": [
+            {"parola": "travolti", "traduzione": "arrastados", "ipa": "/traˈvɔlti/", "categoria": "aggettivo"},
+            {"parola": "passione", "traduzione": "paixão", "ipa": "/pasˈsjoːne/", "categoria": "sostantivo"},
+            {"parola": "scontano", "traduzione": "expiam", "ipa": "/ˈskontano/", "categoria": "verbo"},
+            {"parola": "colpa", "traduzione": "culpa", "ipa": "/ˈkɔlpa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p6",
+          "italiano": "Dante, mosso da compassione, si rivolse a loro: «O anime affannate, parlate, se vi è concesso.»",
+          "portugues": "Dante, movido de compaixão, virou-se para eles: «Ó almas atribuladas, falai, se vos é permitido.»",
+          "parole": [
+            {"parola": "compassione", "traduzione": "compaixão", "ipa": "/kompaˈsjoːne/", "categoria": "sostantivo"},
+            {"parola": "rivolse", "traduzione": "virou-se", "ipa": "/riˈvɔlse/", "categoria": "verbo"},
+            {"parola": "anime", "traduzione": "almas", "ipa": "/ˈaːnime/", "categoria": "sostantivo"},
+            {"parola": "affannate", "traduzione": "atribuladas", "ipa": "/affanˈnaːte/", "categoria": "aggettivo"},
+            {"parola": "concesso", "traduzione": "permitido", "ipa": "/konˈtʃɛsso/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p7",
+          "italiano": "Francesca rispose con voce tremante: «Amor, ch'a nullo amato amar perdona, mi prese del costui piacer sì forte.»",
+          "portugues": "Francesca respondeu com voz trémula: «O Amor, que a nenhum amado amar perdoa, tomou-me de tal prazer dele tão forte.»",
+          "parole": [
+            {"parola": "tremante", "traduzione": "trémula", "ipa": "/treˈmante/", "categoria": "aggettivo"},
+            {"parola": "perdona", "traduzione": "perdoa", "ipa": "/perˈdɔna/", "categoria": "verbo"},
+            {"parola": "piacer", "traduzione": "prazer (arcaico)", "ipa": "/pjaˈtʃɛr/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p8",
+          "italiano": "Ella raccontò la sua storia: il matrimonio forzato con Gianciotto, l'amore per Paolo, la lettura del libro di Lancillotto.",
+          "portugues": "Ela contou a sua história: o casamento forçado com Gianciotto, o amor por Paolo, a leitura do livro de Lancelot.",
+          "parole": [
+            {"parola": "matrimonio", "traduzione": "casamento", "ipa": "/matriˈmɔːnjo/", "categoria": "sostantivo"},
+            {"parola": "forzato", "traduzione": "forçado", "ipa": "/forˈdzaːto/", "categoria": "aggettivo"},
+            {"parola": "lettura", "traduzione": "leitura", "ipa": "/letˈtuːra/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p9",
+          "italiano": "«Noi leggemmo un giorno per diletto di Lancialotto come amor lo strinse.»",
+          "portugues": "«Lemos um dia por deleite de Lancelot como o amor o prendeu.»",
+          "parole": [
+            {"parola": "diletto", "traduzione": "deleite / prazer", "ipa": "/diˈlɛtto/", "categoria": "sostantivo"},
+            {"parola": "strinse", "traduzione": "prendeu", "ipa": "/ˈstrinse/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_010_p10",
+          "italiano": "«Soli eravamo e sanza alcun sospetto: più volte fiammeggiaro i nostri occhi, e 'l viso di pallor si tinse.»",
+          "portugues": "«Estávamos sós e sem nenhum receio: várias vezes flamejaram os nossos olhos, e o rosto tingiu-se de palidez.»",
+          "parole": [
+            {"parola": "sospetto", "traduzione": "receio / suspeita", "ipa": "/sosˈpɛtto/", "categoria": "sostantivo"},
+            {"parola": "fiammeggiarono", "traduzione": "flamejaram", "ipa": "/fjammedˈdʒaːrono/", "categoria": "verbo"},
+            {"parola": "pallor", "traduzione": "palidez", "ipa": "/palˈlɔr/", "categoria": "sostantivo"},
+            {"parola": "tinse", "traduzione": "tingiu", "ipa": "/ˈtinse/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_010_p11",
+          "italiano": "«Ma fummo presi in un sol punto da quella lettura e da quei volti smarriti: Galeotto fu 'l libro e chi lo scrisse.»",
+          "portugues": "«Mas fomos presos num só instante por aquela leitura e por aqueles rostos perturbados: Galehaut foi o livro e quem o escreveu.»",
+          "parole": [
+            {"parola": "punto", "traduzione": "instante", "ipa": "/ˈpunto/", "categoria": "sostantivo"},
+            {"parola": "smarriti", "traduzione": "perturbados", "ipa": "/zmarˈriːti/", "categoria": "aggettivo"},
+            {"parola": "scrisse", "traduzione": "escreveu", "ipa": "/ˈskrisse/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_010_p12",
+          "italiano": "«Quel giorno più non vi leggemmo avante»: il bacio, il peccato e la dannazione eterna.",
+          "portugues": "«Nesse dia não mais lemos adiante»: o beijo, o pecado e a danação eterna.",
+          "parole": [
+            {"parola": "avante", "traduzione": "adiante", "ipa": "/aˈvante/", "categoria": "avverbio"},
+            {"parola": "bacio", "traduzione": "beijo", "ipa": "/ˈbaːtʃo/", "categoria": "sostantivo"},
+            {"parola": "peccato", "traduzione": "pecado", "ipa": "/pekˈkaːto/", "categoria": "sostantivo"},
+            {"parola": "dannazione", "traduzione": "danção", "ipa": "/dannatˈtsjoːne/", "categoria": "sostantivo"},
+            {"parola": "eterna", "traduzione": "eterna", "ipa": "/eˈtɛːrna/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_010_p13",
+          "italiano": "Dante, svenuto per la pietà, cadde come corpo morto cade.",
+          "portugues": "Dante, desmaiado de piedade, caiu como corpo morto cai.",
+          "parole": [
+            {"parola": "svenuto", "traduzione": "desmaiado", "ipa": "/zveˈnuːto/", "categoria": "aggettivo"},
+            {"parola": "pietà", "traduzione": "piedade", "ipa": "/pjeˈta/", "categoria": "sostantivo"},
+            {"parola": "corpo", "traduzione": "corpo", "ipa": "/ˈkɔrpo/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    }
+  ,
+    {
+      "id": "stor_011",
+      "titulo": "La Divina Commedia - Inferno I",
+      "titulo_pt": "A Divina Comédia - Inferno I",
+      "nivel": "C1",
+      "icone": "🔥",
+      "autor": "Dante Alighieri",
+      "tema": "letteratura classica",
+      "descricao": "L'inizio del poema epico più famoso della letteratura italiana: Dante si smarrisce nella selva oscura.",
+      "descricao_pt": "O início do poema épico mais famoso da literatura italiana: Dante se perde na selva escura.",
+      "xp_recompensa": 150,
+      "testo": [
+        {
+          "id": "stor_011_p1",
+          "italiano": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita.",
+          "portugues": "No meio do caminho de nossa vida, encontrei-me por uma selva escura, pois a reta via era perdida.",
+          "parole": [
+            {"parola": "cammin", "traduzione": "caminho", "ipa": "/kamˈmin/", "categoria": "sostantivo"},
+            {"parola": "selva", "traduzione": "selva", "ipa": "/ˈselva/", "categoria": "sostantivo"},
+            {"parola": "oscura", "traduzione": "escura", "ipa": "/osˈkuːra/", "categoria": "aggettivo"},
+            {"parola": "smarrita", "traduzione": "perdida", "ipa": "/zmarˈriːta/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_011_p2",
+          "italiano": "Ahi quanto a dir qual era è cosa dura questa selva selvaggia e aspra e forte che nel pensier rinova la paura!",
+          "portugues": "Ai, quão difícil é dizer qual era esta selva selvagem, áspera e forte que no pensamento renova o medo!",
+          "parole": [
+            {"parola": "dura", "traduzione": "dura/difícil", "ipa": "/ˈduːra/", "categoria": "aggettivo"},
+            {"parola": "selvaggia", "traduzione": "selvagem", "ipa": "/selˈvaddʒa/", "categoria": "aggettivo"},
+            {"parola": "aspr", "traduzione": "áspero", "ipa": "/ˈaspro/", "categoria": "aggettivo"},
+            {"parola": "rinova", "traduzione": "renova", "ipa": "/riˈnɔːva/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_011_p3",
+          "italiano": "Tant'è amara che poco è più morte; ma per trattar del ben ch'i' vi trovai, dirò de l'altre cose ch'i' v'ho scorte.",
+          "portugues": "Tão amarga é que pouco mais é a morte; mas para tratar do bem que ali encontrei, direi das outras coisas que vi.",
+          "parole": [
+            {"parola": "amara", "traduzione": "amarga", "ipa": "/aˈmaːra/", "categoria": "aggettivo"},
+            {"parola": "morte", "traduzione": "morte", "ipa": "/ˈmɔrte/", "categoria": "sostantivo"},
+            {"parola": "trattar", "traduzione": "tratar", "ipa": "/tratˈtar/", "categoria": "verbo"},
+            {"parola": "scorte", "traduzione": "vi/vistas", "ipa": "/ˈskɔrte/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_011_p4",
+          "italiano": "Io non so ben ridir com'io v'entrai, tant'era pien di sonno a quel punto che la verace via abbandonai.",
+          "portugues": "Não sei bem dizer como entrei, tão cheio de sono estava naquele ponto que abandonei a verdadeira via.",
+          "parole": [
+            {"parola": "ridir", "traduzione": "redizer", "ipa": "/riˈdir/", "categoria": "verbo"},
+            {"parola": "sonno", "traduzione": "sono", "ipa": "/ˈsɔnno/", "categoria": "sostantivo"},
+            {"parola": "abbandonai", "traduzione": "abandonei", "ipa": "/abbanˈdɔːnai/", "categoria": "verbo"},
+            {"parola": "verace", "traduzione": "verdadeira", "ipa": "/veˈraːtʃe/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_011_p5",
+          "italiano": "Ma poi ch'i' fui al piè d'un colle giunto, lá dove quella valle terminava, ch'avea di paura il cor compunto,",
+          "portugues": "Mas depois que cheguei ao pé de um monte, lá onde aquele vale terminava, que tinha o coração compungido de medo,",
+          "parole": [
+            {"parola": "colle", "traduzione": "monte/colina", "ipa": "/ˈkɔlle/", "categoria": "sostantivo"},
+            {"parola": "valle", "traduzione": "vale", "ipa": "/ˈvalle/", "categoria": "sostantivo"},
+            {"parola": "compunto", "traduzione": "compungido", "ipa": "/komˈpunktO/", "categoria": "aggettivo"},
+            {"parola": "giunto", "traduzione": "chegado", "ipa": "/ˈdʒunto/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_011_p6",
+          "italiano": "guardai in alto e vidi le sue spalle vestite già de' raggi del pianeta che mena dritto altrui per ogne calle.",
+          "portugues": "Olhei para cima e vi seus ombros já vestidos dos raios do planeta que guia direito os outros por todo caminho.",
+          "parole": [
+            {"parola": "spalle", "traduzione": "ombros", "ipa": "/ˈspalle/", "categoria": "sostantivo"},
+            {"parola": "vestite", "traduzione": "vestidos", "ipa": "/vesˈtiːte/", "categoria": "aggettivo"},
+            {"parola": "raggi", "traduzione": "raios", "ipa": "/ˈraddʒi/", "categoria": "sostantivo"},
+            {"parola": "pianeta", "traduzione": "planeta", "ipa": "/pjaˈneːta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_011_p7",
+          "italiano": "Allor fu la paura un poco queta, che nel lago del cor m'era durata la notte ch'i' passai con tanta pieta.",
+          "portugues": "Então o medo aquietou-se um pouco, que no lago do coração me durara a noite que passei com tanta piedade.",
+          "parole": [
+            {"parola": "queta", "traduzione": "aquietou/calma", "ipa": "/ˈkwɛːta/", "categoria": "aggettivo"},
+            {"parola": "lago", "traduzione": "lago", "ipa": "/ˈlaːɡo/", "categoria": "sostantivo"},
+            {"parola": "durata", "traduzione": "durou", "ipa": "/duˈraːta/", "categoria": "verbo"},
+            {"parola": "pieta", "traduzione": "piedade", "ipa": "/pjeˈta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_011_p8",
+          "italiano": "E come quei che con lena affannata, uscito fuor del pelago a la riva, si volge a l'acqua perigliosa e guata,",
+          "portugues": "E como aquele que com ânsia cansada, saiu do mar para a margem, volta-se para a água perigosa e olha,",
+          "parole": [
+            {"parola": "lena", "traduzione": "fôlego/ânsia", "ipa": "/ˈleːna/", "categoria": "sostantivo"},
+            {"parola": "affannata", "traduzione": "ansiosa/cansada", "ipa": "/affanˈnaːta/", "categoria": "aggettivo"},
+            {"parola": "pelago", "traduzione": "mar alto", "ipa": "/ˈpelaːɡo/", "categoria": "sostantivo"},
+            {"parola": "guata", "traduzione": "olha/observa", "ipa": "/ˈɡwaːta/", "categoria": "verbo"}
+          ]
+        },
+        {
+          "id": "stor_011_p9",
+          "italiano": "così l'animo mio, ch'ancor fuggiva, si volse a retro a rimirar lo passo che non lasciò già mai persona viva.",
+          "portugues": "assim minha alma, que ainda fugia, voltou-se para trás a contemplar o passo que nunca deixou pessoa viva.",
+          "parole": [
+            {"parola": "animo", "traduzione": "alma/ânimo", "ipa": "/aˈniːmo/", "categoria": "sostantivo"},
+            {"parola": "fuggiva", "traduzione": "fugia", "ipa": "/fudˈdʒiːva/", "categoria": "verbo"},
+            {"parola": "rimirar", "traduzione": "contemplar/olhar", "ipa": "/rimiˈrar/", "categoria": "verbo"},
+            {"parola": "passo", "traduzione": "passo", "ipa": "/ˈpaso/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_011_p10",
+          "italiano": "Poscia ch'èi posato il corpo lasso, ripresi via per la piaggia diserta, sì che 'l piè fermo sempre era 'l più basso.",
+          "portugues": "Depois que descansei o corpo cansado, retomei o caminho pela encosta deserta, de modo que o pé firme sempre era o mais baixo.",
+          "parole": [
+            {"parola": "posato", "traduzione": "descansado/pousado", "ipa": "/poˈzaːto/", "categoria": "verbo"},
+            {"parola": "lasso", "traduzione": "cansado", "ipa": "/ˈlaso/", "categoria": "aggettivo"},
+            {"parola": "piaggia", "traduzione": "encosta", "ipa": "/ˈpjaddʒa/", "categoria": "sostantivo"},
+            {"parola": "diserta", "traduzione": "deserta", "ipa": "/diˈzɛrta/", "categoria": "aggettivo"}
+          ]
+        }
+      ]
+    }
+  ,
+    {
+      "id": "stor_012",
+      "titulo": "La Divina Commedia - Inferno III",
+      "titulo_pt": "A Divina Comédia - Inferno III",
+      "nivel": "C1",
+      "icone": "🚪",
+      "autor": "Dante Alighieri",
+      "tema": "letteratura classica",
+      "descricao": "Dante e Virgilio arrivano alla porta dell'Inferno e leggono la famosa iscrizione.",
+      "descricao_pt": "Dante e Virgílio chegam à porta do Inferno e leem a famosa inscrição.",
+      "xp_recompensa": 150,
+      "testo": [
+        {
+          "id": "stor_012_p1",
+          "italiano": "Per me si va ne la città dolente, per me si va ne l'etterno dolore, per me si va tra la perduta gente.",
+          "portugues": "Por mim se vai à cidade dolente, por mim se vai ao eterno dolor, por mim se vai entre a gente perdida.",
+          "parole": [
+            {"parola": "città", "traduzione": "cidade", "ipa": "/tʃitˈta/", "categoria": "sostantivo"},
+            {"parola": "dolente", "traduzione": "dolente", "ipa": "/doˈlɛnte/", "categoria": "aggettivo"},
+            {"parola": "etterno", "traduzione": "eterno", "ipa": "/etˈtɛrno/", "categoria": "aggettivo"},
+            {"parola": "perduta", "traduzione": "perdida", "ipa": "/perˈduːta/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p2",
+          "italiano": "Giustizia mosse il mio alto fattore; fecemi la divina potestate, la somma sapienza e 'l primo amore.",
+          "portugues": "A justiça moveu meu alto criador; fez-me a divina potestade, a summa sabedoria e o primeiro amor.",
+          "parole": [
+            {"parola": "Giustizia", "traduzione": "Justiça", "ipa": "/dʒuˈstittsia/", "categoria": "sostantivo"},
+            {"parola": "fattore", "traduzione": "criador/fator", "ipa": "/fatˈtoːre/", "categoria": "sostantivo"},
+            {"parola": "potestate", "traduzione": "potestade", "ipa": "/poteˈstaːte/", "categoria": "sostantivo"},
+            {"parola": "somma", "traduzione": "suma/summa", "ipa": "/ˈsɔmma/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p3",
+          "italiano": "Dinanz' a me non fuor cose create se non etterne, e io etterno duro. Lasciate ogne speranza, voi ch'intrate.",
+          "portugues": "Diante de mim não foram coisas criadas senão eternas, e eu eterno duro. Deixai toda esperança, vós que entrais.",
+          "parole": [
+            {"parola": "create", "traduzione": "criadas", "ipa": "/kreˈaːte/", "categoria": "verbo"},
+            {"parola": "etterne", "traduzione": "eternas", "ipa": "/etˈtɛrne/", "categoria": "aggettivo"},
+            {"parola": "duro", "traduzione": "duro", "ipa": "/ˈduːro/", "categoria": "aggettivo"},
+            {"parola": "speranza", "traduzione": "esperança", "ipa": "/speˈranʣa/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p4",
+          "italiano": "Queste parole di color oscuro vidi scritte al sommo d'una porta; per ch'io: «Maestro, il lor senso m'è duro».",
+          "portugues": "Estas palavras de cor escura vi escritas no topo de uma porta; por que eu disse: 'Mestre, seu sentido me é duro'.",
+          "parole": [
+            {"parola": "oscuro", "traduzione": "escuro", "ipa": "/osˈkuːro/", "categoria": "aggettivo"},
+            {"parola": "scritte", "traduzione": "escritas", "ipa": "/ˈskritte/", "categoria": "verbo"},
+            {"parola": "sommo", "traduzione": "topo/cume", "ipa": "/ˈsɔmmo/", "categoria": "sostantivo"},
+            {"parola": "senso", "traduzione": "sentido", "ipa": "/ˈsɛnso/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p5",
+          "italiano": "Ed elli a me, come persona accorta: «Qui si convien lasciare ogne sospetto; ogne viltà convien che qui sia morta».",
+          "portugues": "E ele a mim, como pessoa avisada: 'Aqui convém deixar toda suspeita; toda vileza convém que aqui seja morta'.",
+          "parole": [
+            {"parola": "accorta", "traduzione": "avisada/esperta", "ipa": "/akˈkɔrta/", "categoria": "aggettivo"},
+            {"parola": "convien", "traduzione": "convém", "ipa": "/konˈvjɛn/", "categoria": "verbo"},
+            {"parola": "sospetto", "traduzione": "suspeita", "ipa": "/sosˈpɛtto/", "categoria": "sostantivo"},
+            {"parola": "viltà", "traduzione": "vileza/covardia", "ipa": "/vilˈta/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p6",
+          "italiano": "Noi siam venuti al loco ove t'ho detto che tu vedrai le genti dolorose c'hanno perduto il ben de l'intelletto.",
+          "portugues": "Nós viemos ao lugar onde te disse que verás as gentes dolorosas que perderam o bem do intelecto.",
+          "parole": [
+            {"parola": "loco", "traduzione": "lugar", "ipa": "/ˈlɔko/", "categoria": "sostantivo"},
+            {"parola": "genti", "traduzione": "gentes/pessoas", "ipa": "/ˈdʒɛnti/", "categoria": "sostantivo"},
+            {"parola": "dolorose", "traduzione": "dolorosas", "ipa": "/doloˈroːse/", "categoria": "aggettivo"},
+            {"parola": "intelletto", "traduzione": "intelecto", "ipa": "/intelˈletto/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p7",
+          "italiano": "E io: «Maestro, che è quel ch'i' odo? e che gente è che par nel dolor sì vinta?».",
+          "portugues": "E eu: 'Mestre, que é isso que ouço? e que gente é que parece na dor tão vencida?'.",
+          "parole": [
+            {"parola": "odo", "traduzione": "ouço", "ipa": "/ˈɔːdo/", "categoria": "verbo"},
+            {"parola": "vinta", "traduzione": "vencida", "ipa": "/ˈvinta/", "categoria": "aggettivo"},
+            {"parola": "par", "traduzione": "parece", "ipa": "/par/", "categoria": "verbo"},
+            {"parola": "dolor", "traduzione": "dor", "ipa": "/ˈdɔlor/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p8",
+          "italiano": "Ed elli a me: «Questo misero modo tengon l'anime triste di coloro che visser sanza 'nfamia e sanza lodo.",
+          "portugues": "E ele a mim: 'Este miserável modo mantêm as almas tristes daqueles que viveram sem infâmia e sem louvor.",
+          "parole": [
+            {"parola": "misero", "traduzione": "miserável", "ipa": "/miˈzeːro/", "categoria": "aggettivo"},
+            {"parola": "modo", "traduzione": "modo", "ipa": "/ˈmɔdo/", "categoria": "sostantivo"},
+            {"parola": "anime", "traduzione": "almas", "ipa": "/aˈniːme/", "categoria": "sostantivo"},
+            {"parola": "infamia", "traduzione": "infâmia", "ipa": "/inˈfaːmja/", "categoria": "sostantivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p9",
+          "italiano": "Mischiate sono a quel cattivo coro d'angeli che non furon ribelli né fur fedeli a Dio, ma per sé fuoro.",
+          "portugues": "Misturadas estão a esse mau coro de anjos que não foram rebeldes nem fiéis a Deus, mas por si foram.",
+          "parole": [
+            {"parola": "Mischiate", "traduzione": "Misturadas", "ipa": "/misˈkjaːte/", "categoria": "verbo"},
+            {"parola": "coro", "traduzione": "coro", "ipa": "/ˈkɔro/", "categoria": "sostantivo"},
+            {"parola": "ribelli", "traduzione": "rebeldes", "ipa": "/riˈbɛlli/", "categoria": "aggettivo"},
+            {"parola": "fedeli", "traduzione": "fiéis", "ipa": "/feˈdeːli/", "categoria": "aggettivo"}
+          ]
+        },
+        {
+          "id": "stor_012_p10",
+          "italiano": "Cacciati son dal ciel, che non esser men belli, né lo profondo inferno li riceve, ch'alcuna gloria i' avrebber li ribelli.",
+          "portugues": "Expulsos são do céu, para não serem menos belos, nem o profundo inferno os recebe, que alguma glória teriam os rebeldes.",
+          "parole": [
+            {"parola": "Cacciati", "traduzione": "Expulsos", "ipa": "/katˈtʃaːti/", "categoria": "verbo"},
+            {"parola": "ciel", "traduzione": "céu", "ipa": "/tʃɛl/", "categoria": "sostantivo"},
+            {"parola": "riceve", "traduzione": "recebe", "ipa": "/riˈtʃɛːve/", "categoria": "verbo"},
+            {"parola": "gloria", "traduzione": "glória", "ipa": "/ˈɡlɔːrja/", "categoria": "sostantivo"}
+          ]
+        }
+      ]
+    }
+  ]
+}

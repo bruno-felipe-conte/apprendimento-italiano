@@ -1,0 +1,170 @@
+{
+  "id": "fil_socrate_e_la_verit",
+  "testo": [
+    {
+      "id": "p0",
+      "italiano": "Era il pomeriggio del mese di Targelione dell'anno 430 a.C., nel ginnasio di Taurisco, alle falde del Licabetto. I giovani ateniesi, unti d'olio e coperti di polvere, avevano finito gli esercizi del pancrazio e stavano adagiati all'ombra dei platani, mentre gli schiavi versavano acqua fresca sulle loro spalle. Socrate, che non era un atleta ma un frequentatore abituale del ginnasio, sedeva su una panca di pietra, con la sua tunica lisa e i piedi scalzi, e osservava il pubblico con i suoi occhi da tafano. Quel giorno si annunciava una dimostrazione di retorica del più celebre dei sofisti giunto in Atene dalla Sicilia: Gorgia, figlio di Empedotimo, di Leontini, ormai anziano e venerato come un dio.",
+      "portugues": "Era a tarde do mês de Targélion do ano 430 a.C., no ginásio de Taurisco, aos pés do Licabeto. Os jovens atenienses, untados de azeite e cobertos de pó, tinham terminado os exercícios do pancrácio e estavam recostados à sombra dos plátanos, enquanto os escravos vertiam água fresca sobre os seus ombros. Sócrates, que não era um atleta mas um frequentador habitual do ginásio, estava sentado num banco de pedra, com a sua túnica rasgada e os pés descalços, e observava o público com os seus olhos de tavão. Nesse dia anunciava-se uma demonstração de retórica do mais célebre dos sofistas chegados a Atenas vindos da Sicília: Górgias, filho de Empédoto, de Leontinos, já ancião e venerado como um deus.",
+      "parole": [
+        {"parola": "pancrazio", "ipa": "/panˈkrattsjo/", "traduzione": "pancrácio / luta grega que combinava pugilato e luta livre", "categoria": "sostantivo"},
+        {"parola": "Licabetto", "ipa": "/likaˈbɛtto/", "traduzione": "Licabeto / colina de Atenas", "categoria": "sostantivo"},
+        {"parola": "sofista", "ipa": "/soˈfista/", "traduzione": "sofista / professor de retórica na Grécia antiga", "categoria": "sostantivo"},
+        {"parola": "tafano", "ipa": "/ˈtaːfano/", "traduzione": "tavão / inseto que morde; metáfora que Platão usa para Sócrates", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p1",
+      "italiano": "Gorgia entrò nel ginnasio portandosi dietro due discepoli: Polo, un giovane ambizioso venuto dalla Tessaglia, con un mantello di lino fine che tradiva la ricchezza del padre, e Callicle, un politico di Atene sui quarant'anni, dal volto severo, che già sognava di diventare stratego. Gorgia era seguito anche da uno stuolo di ammiratori che gli lanciavano fiori e gli baciavano le mani. Sedette su una cattedra d'avorio, si terse il sudore con un panno di bisso, e con voce di velluto cominciò: «Cittadini di Atene, io sono qui per dimostrarvi che la parola è la più potente delle armi. Il medico guarisce il corpo con le erbe; il filosofo tenta di guarire l'anima con i concetti; ma il retore, signori, può persuadere un'intera assemblea a cambiare opinione in pochi minuti. Ascoltatemi, e lo vedrete coi vostri occhi».",
+      "portugues": "Górgias entrou no ginásio trazendo consigo dois discípulos: Polo, um jovem ambicioso vindo da Tessália, com um manto de linho fino que traía a riqueza do pai, e Cálicles, um político de Atenas de cerca de quarenta anos, de rosto severo, que já sonhava tornar-se estratego. Górgias era seguido também por um grupo de admiradores que lhe lançavam flores e lhe beijavam as mãos. Sentou-se numa cadeira de marfim, enxugou o suor com um pano de linho fino, e com voz de veludo começou: «Cidadãos de Atenas, estou aqui para vos demonstrar que a palavra é a mais poderosa das armas. O médico cura o corpo com ervas; o filósofo tenta curar a alma com conceitos; mas o retor, senhores, pode persuadir uma assembleia inteira a mudar de opinião em poucos minutos. Ouvi-me, e vê-lo-eis com os vossos próprios olhos».",
+      "parole": [
+        {"parola": "bisso", "ipa": "/ˈbisso/", "traduzione": "linho fino / tecido precioso do antigo Egito", "categoria": "sostantivo"},
+        {"parola": "cattedra", "ipa": "/ˈkattedra/", "traduzione": "cadeira / assento do professor", "categoria": "sostantivo"},
+        {"parola": "Tessaglia", "ipa": "/tesˈsalʎa/", "traduzione": "Tessália / região do norte da Grécia", "categoria": "sostantivo"},
+        {"parola": "velluto", "ipa": "/velˈluːto/", "traduzione": "veludo / tecido suave (usado metaforicamente)", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p2",
+      "italiano": "Per quasi un'ora Gorgia parlò senza interruzione, tessendo un elogio funebre per i caduti di Egina che fece piangere metà del pubblico, poi una difesa della democrazia che fece applaudire l'altra metà, infine un'invettiva contro la tirannide che fece tremare i presenti. Alla fine, si fermò, bevve un sorso d'acqua, e disse: «Avete visto? Con la mia arte ho fatto di voi ciò che volevo: vi ho fatto piangere, ridere, indignarvi, esultare. E in nessun caso vi ho detto qualcosa di falso. Ho solo scelto le parole, l'ordine, il ritmo. Questo è il potere della retorica: dare forma alla verità. Se la verità è una statua grezza, io sono lo scultore». Il pubblico esplose in un applauso. I giovani si spinsero in avanti per toccargli il mantello. Callicle gridò: «Maestro, sei il più grande!».",
+      "portugues": "Durante quase uma hora Górgias falou sem interrupção, tecendo um elogio fúnebre pelos caídos de Egina que fez chorar metade do público, depois uma defesa da democracia que fez aplaudir a outra metade, por fim uma investida contra a tirania que fez tremer os presentes. No final, parou, bebeu um gole de água, e disse: «Vistes? Com a minha arte fiz de vós o que quis: fiz-vos chorar, rir, indignar-vos, exultar. E em nenhum caso vos disse algo falso. Apenas escolhi as palavras, a ordem, o ritmo. Este é o poder da retórica: dar forma à verdade. Se a verdade é uma estátua tosca, eu sou o escultor». O público explodiu numa ovação. Os jovens empurraram-se para a frente para lhe tocar o manto. Cálicles gritou: «Mestre, és o maior!».",
+      "parole": [
+        {"parola": "Egina", "ipa": "/ˈeːdʒina/", "traduzione": "Egina / ilha próxima de Atenas", "categoria": "sostantivo"},
+        {"parola": "invettiva", "ipa": "/inˈvettiva/", "traduzione": "investida / discurso violento contra alguém", "categoria": "sostantivo"},
+        {"parola": "tirannide", "ipa": "/tiˈrannide/", "traduzione": "tirania / governo de um só", "categoria": "sostantivo"},
+        {"parola": "ritmo", "ipa": "/ˈritmo/", "traduzione": "ritmo / cadência do discurso", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p3",
+      "italiano": "A quel punto Socrate si alzò dalla sua panca, e con la sua voce sottile che pure si faceva sentire in ogni angolo del ginnasio, disse: «Gorgia, ti faccio i miei complimenti: hai fatto piangere e ridere questi giovani come fossero bambini. Ma io, che sono un uomo ostinato, ho una sola domanda da farti. Tu dici che la retorica dà forma alla verità. Ma dimmi: tu, che sei un maestro della parola, conosci tu la verità di cui parli? Sai tu, Gorgia, che cos'è il giusto? Che cos'è il bello? Che cos'è l'anima? O ti limiti a persuadere gli altri, senza sapere di cosa li persuadi?». Un silenzio di tomba calò sul ginnasio. I giovani si voltarono a guardare Socrate con gli occhi spalancati. Gorgia, che pure aveva fronteggiato tiranni e re, sentì un brivido percorrergli la schiena. Capì, con l'intuito del veterano, che quell'uomo piccolo e scalzo era più pericoloso di qualunque avversario avesse mai incontrato.",
+      "portugues": "Nesse momento Sócrates levantou-se do seu banco, e com a sua voz fina que mesmo assim se fazia ouvir em cada canto do ginásio, disse: «Górgias, apresento-te os meus cumprimentos: fizeste chorar e rir estes jovens como se fossem crianças. Mas eu, que sou um homem teimoso, tenho uma única pergunta para te fazer. Tu dizes que a retórica dá forma à verdade. Mas diz-me: tu, que és um mestre da palavra, conheces a verdade de que falas? Sabes tu, Górgias, o que é o justo? O que é o belo? O que é a alma? Ou te limitas a persuadir os outros, sem saber do que os persuades?». Um silêncio de sepultura caiu sobre o ginásio. Os jovens voltaram-se para olhar Sócrates com os olhos arregalados. Górgias, que enfrentara tiranos e reis, sentiu um arrepio percorrer-lhe a espinha. Compreendeu, com o instinto do veterano, que aquele homem pequeno e descalço era mais perigoso do que qualquer adversário que jamais encontrara.",
+      "parole": [
+        {"parola": "scalzo", "ipa": "/ˈskaltso/", "traduzione": "descalço / sem sapatos", "categoria": "aggettivo"},
+        {"parola": "tiranno", "ipa": "/tiˈranno/", "traduzione": "tirano / governante absoluto", "categoria": "sostantivo"},
+        {"parola": "intuito", "ipa": "/intuˈiːto/", "traduzione": "instinto / compreensão imediata", "categoria": "sostantivo"},
+        {"parola": "veterano", "ipa": "/veteˈraːno/", "traduzione": "veterano / muito experiente", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p4",
+      "italiano": "Callicle, vedendo il suo maestro esitare, si fece avanti e disse con voce tagliente: «Socrate, tu sei sempre il solito. Vieni qui a fare lo scemo, a fare domande che non hanno risposta, e pretendi che gli uomini seri, quelli che hanno costruito la grandezza di Atene, si umilino davanti alle tue astuzie da avvocato. Io ti dico una cosa: la filosofia è una malattia dell'anima, un'infantilità cronica. Tu, che passi le giornate a chiedere che cos'è il giusto, non hai mai fatto niente di utile. Non hai mai guidato un esercito, non hai mai costruito una nave, non hai mai convinto un'assemblea a votare in un senso piuttosto che in un altro. Sei un cittadino inutile, e per di più pericoloso, perché insegni ai giovani a disprezzare la vita pratica».",
+      "portugues": "Cálicles, vendo o seu mestre hesitar, adiantou-se e disse com voz cortante: «Sócrates, tu és sempre o mesmo. Vens aqui fazer de parvo, a fazer perguntas que não têm resposta, e pretendes que os homens sérios, os que construíram a grandeza de Atenas, se humilhem diante das tuas astúcias de advogado. Eu digo-te uma coisa: a filosofia é uma doença da alma, uma infantilidade crónica. Tu, que passas os dias a perguntar o que é o justo, nunca fizeste nada de útil. Nunca comandaste um exército, nunca construíste um navio, nunca convenceste uma assembleia a votar num sentido em vez de outro. És um cidadão inútil, e ainda por cima perigoso, porque ensinas os jovens a desprezar a vida prática».",
+      "parole": [
+        {"parola": "tagliente", "ipa": "/taʎˈʎɛnte/", "traduzione": "cortante / que fere com palavras", "categoria": "aggettivo"},
+        {"parola": "astuzia", "ipa": "/aˈstuttsja/", "traduzione": "astúcia / esperteza", "categoria": "sostantivo"},
+        {"parola": "infantilità", "ipa": "/infantiliˈta/", "traduzione": "infantilidade / imaturidade", "categoria": "sostantivo"},
+        {"parola": "pericoloso", "ipa": "/perikoˈloːso/", "traduzione": "perigoso / que causa dano", "categoria": "aggettivo"}
+      ]
+    },
+    {
+      "id": "p5",
+      "italiano": "Socrate non si scompose. Si grattò il naso, sorrise con quella sua aria di chi la sa lunga, e rispose: «Callicle, tu mi lodi per aver detto una cosa che è proprio il contrario di quello che pensi. Tu dici che sono inutile, ma è perché, nel tuo vocabolario, utile significa potente. E io non sono potente. Ma dimmi: se per essere utili occorre essere ingiusti, preferisci tu essere utile o essere giusto? Se mi risponderai che preferisci essere utile, allora sappi che la città sarà sempre nelle mani dei più ingiusti, perché i più ingiusti sono anche i più «utili» — almeno nel senso che intendi tu. Ma io non ti chiedo quale vita è più potente, ti chiedo quale vita è più bella. E qui, Callicle, tu ed io abbiamo visioni opposte. Tu credi che il bello sia il potere; io credo che il bello sia la giustizia».",
+      "portugues": "Sócrates não se perturbou. Coçou o nariz, sorriu com aquele seu ar de quem sabe muito, e respondeu: «Cálicles, tu elogias-me por ter dito uma coisa que é justamente o contrário do que pensas. Tu dizes que sou inútil, mas é porque, no teu vocabulário, útil significa poderoso. E eu não sou poderoso. Mas diz-me: se para ser útil é preciso ser injusto, preferes tu ser útil ou ser justo? Se me responderes que preferes ser útil, então fica sabendo que a cidade estará sempre nas mãos dos mais injustos, porque os mais injustos são também os mais «úteis» — pelo menos no sentido que dás à palavra. Mas eu não te pergunto qual vida é mais poderosa, pergunto-te qual vida é mais bela. E aqui, Cálicles, tu e eu temos visões opostas. Tu acreditas que o belo é o poder; eu acredito que o belo é a justiça».",
+      "parole": [
+        {"parola": "scomporsi", "ipa": "/skomˈporsi/", "traduzione": "perturbar-se / perder a calma", "categoria": "verbo"},
+        {"parola": "vocabolario", "ipa": "/vokabboˈlaːrjo/", "traduzione": "vocabulário / conjunto de palavras", "categoria": "sostantivo"},
+        {"parola": "opposto", "ipa": "/opˈpɔsto/", "traduzione": "oposto / contrário", "categoria": "aggettivo"},
+        {"parola": "giustizia", "ipa": "/dʒustˈtattsja/", "traduzione": "justiça / virtude do justo", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p6",
+      "italiano": "Callicle diventò paonazzo. Si levò in piedi, e con voce che tremava d'ira: «Tu parli come un uomo libero, Socrate, ma libero non sei. Sei uno schiavo del tuo logos, prigioniero delle tue stesse parole. Io ti dico: la legge della natura è una sola — il più forte comanda, il più debole obbedisce. È così che funziona il mondo, dagli insetti agli dei. E tu vieni qui, con le tue domande, a cercare di negare l'evidenza. Ma Atene, Atene stessa, quando era grande, non era forse guidata dai più forti? Temistocle, Cimone, Pericle — non erano forse i più potenti, e dunque i migliori? La democrazia ha indebolito Atene, perché ha dato voce anche agli incapaci. Ci vuole un uomo forte, un tiranno illuminato, per governare».",
+      "portugues": "Cálicles ficou escarlate. Levantou-se de pé, e com voz que tremia de ira: «Tu falas como um homem livre, Sócrates, mas livre não és. És um escravo do teu logos, prisioneiro das tuas próprias palavras. Eu digo-te: a lei da natureza é uma só — o mais forte manda, o mais fraco obedece. É assim que o mundo funciona, dos insectos aos deuses. E tu vens aqui, com as tuas perguntas, tentar negar a evidência. Mas Atenas, a própria Atenas, quando era grande, não era porventura guiada pelos mais fortes? Temístocles, Címon, Péricles — não eram porventura os mais poderosos, e portanto os melhores? A democracia enfraqueceu Atenas, porque deu voz também aos incapazes. É preciso um homem forte, um tirano esclarecido, para governar».",
+      "parole": [
+        {"parola": "paonazzo", "ipa": "/paoˈnattso/", "traduzione": "escarlate / vermelho de raiva", "categoria": "aggettivo"},
+        {"parola": "Temistocle", "ipa": "/teˈmistokle/", "traduzione": "Temístocles / general ateniense das Guerras Médicas", "categoria": "sostantivo"},
+        {"parola": "Cimone", "ipa": "/ˈtʃiːmone/", "traduzione": "Címon / político e general ateniense", "categoria": "sostantivo"},
+        {"parola": "illuminato", "ipa": "/illumiˈnaːto/", "traduzione": "esclarecido / que tem visão", "categoria": "aggettivo"}
+      ]
+    },
+    {
+      "id": "p7",
+      "italiano": "Socrate, con una calma che disorientava Callicle più di qualsiasi risposta feroce, disse: «Callicle, tu mi accusi di essere schiavo del logos. Hai ragione: lo sono. Ma dimmi: lo schiavo è forse chi ascolta la ragione, o chi ascolta l'appetito? Tu dici che la legge della natura è il più forte. Ma chi è il più forte, Callicle? L'uomo che resiste al dolore, o l'uomo che fugge? L'uomo che governa le sue passioni, o l'uomo che le serva? Tu, se davvero fossi il più forte, saresti anche il più giusto, perché la forza senza la giustizia è solo violenza. Ma il fatto stesso che tu mi accusi di non avere potere, mentre io ti accuso di non avere ragione, dimostra che tu credi che il potere conti più della ragione. È il sofisma dei tiranni, Callicle. È il discorso che oggi ti sembra forte, e domani ti spezzerà il collo».",
+      "portugues": "Sócrates, com uma calma que desorientava Cálicles mais do que qualquer resposta feroz, disse: «Cálicles, tu acusas-me de ser escravo do logos. Tens razão: sou-o. Mas diz-me: o escravo é porventura aquele que ouve a razão, ou o que ouve o apetite? Tu dizes que a lei da natureza é o mais forte. Mas quem é o mais forte, Cálicles? O homem que resiste à dor, ou o homem que foge? O homem que governa as suas paixões, ou o homem que as serve? Tu, se verdadeiramente fosses o mais forte, serias também o mais justo, porque a força sem a justiça é apenas violência. Mas o próprio facto de me acusares de não ter poder, enquanto eu te acuso de não ter razão, mostra que tu acreditas que o poder vale mais do que a razão. É o sofisma dos tiranos, Cálicles. É o discurso que hoje te parece forte, e amanhã te partirá o pescoço».",
+      "parole": [
+        {"parola": "disorientare", "ipa": "/dizorjenˈtaːre/", "traduzione": "desorientar / confundir", "categoria": "verbo"},
+        {"parola": "sofisma", "ipa": "/soˈfizma/", "traduzione": "sofisma / argumento falacioso", "categoria": "sostantivo"},
+        {"parola": "appetito", "ipa": "/appˈɛːtito/", "traduzione": "apetite / desejo", "categoria": "sostantivo"},
+        {"parola": "violenza", "ipa": "/vjoˈlɛntsa/", "traduzione": "violência / força bruta", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p8",
+      "italiano": "Gorgia, che aveva ascoltato tutto, si decise finalmente a intervenire. Disse, con voce pacata: «Socrate, il mio discepolo Callicle ha parlato con il cuore, non con la testa. Perdonalo. Io voglio rispondere alla tua domanda, che è onesta. Tu mi chiedi se la retorica dà forma alla verità o se la costruisce. Ti rispondo: la retorica costruisce la verità. Non nel senso che mente, ma nel senso che la verità non esiste come un blocco di marmo, già pronta, già bella. La verità è come l'argilla: va plasmata, va data forma. Il retore è l'artigiano della verità. Senza di lui, la verità resta informe, muta, inutile. Capisci, Socrate? La retorica non è serva della verità, è la sua levatrice».",
+      "portugues": "Górgias, que tinha escutado tudo, decidiu finalmente intervir. Disse, com voz pausada: «Sócrates, o meu discípulo Cálicles falou com o coração, não com a cabeça. Perdoa-o. Eu quero responder à tua pergunta, que é honesta. Tu me perguntas se a retórica dá forma à verdade ou se a constrói. Respondo-te: a retórica constrói a verdade. Não no sentido de que mente, mas no sentido de que a verdade não existe como um bloco de mármore, já pronta, já bela. A verdade é como a argila: há-de ser moldada, há-de receber forma. O retor é o artesão da verdade. Sem ele, a verdade permanece informe, muda, inútil. Compreendes, Sócrates? A retórica não é serva da verdade, é a sua parteira».",
+      "parole": [
+        {"parola": "plasmare", "ipa": "/plazˈmaːre/", "traduzione": "moldar / dar forma", "categoria": "verbo"},
+        {"parola": "informe", "ipa": "/inˈfɔrme/", "traduzione": "informe / sem forma definida", "categoria": "aggettivo"},
+        {"parola": "levatrice", "ipa": "/levaˈtriːtʃe/", "traduzione": "parteira / quem ajuda a dar à luz", "categoria": "sostantivo"},
+        {"parola": "muto", "ipa": "/ˈmuːto/", "traduzione": "mudo / que não fala", "categoria": "aggettivo"}
+      ]
+    },
+    {
+      "id": "p9",
+      "italiano": "Socrate annuì lentamente, e disse: «Gorgia, la tua metafora è bella. Ma è proprio sulla metafora che ti voglio interrogare. Tu dici che la verità è come l'argilla, e che il retore la plasma. Ma dimmi: l'argilla, una volta plasmata, è ancora la stessa di prima? E se il retore plasma l'argilla in mille modi diversi, avremo mille verità? O ci sarà una sola argilla, e infinite forme possibili? E se è così, qual è la forma giusta? Tu, Gorgia, hai mai visto una forma «giusta»? Una statua che fosse la verità di sé stessa, e non una delle sue innumerevoli versioni? Se la risposta è sì, allora esiste un criterio, una misura, una verità oggettiva al di là delle forme retoriche. Se la risposta è no, allora la retorica è solo un gioco di prestigio, e tu sei un prestigiatore, non un filosofo».",
+      "portugues": "Sócrates anuiu lentamente, e disse: «Górgias, a tua metáfora é bela. Mas é justamente sobre a metáfora que te quero interrogar. Tu dizes que a verdade é como a argila, e que o retor a molda. Mas diz-me: a argila, uma vez moldada, ainda é a mesma de antes? E se o retor molda a argila de mil modos diferentes, teremos mil verdades? Ou haverá uma só argila, e infinitas formas possíveis? E sendo assim, qual é a forma justa? Tu, Górgias, alguma vez viste uma forma «justa»? Uma estátua que fosse a verdade de si mesma, e não uma das suas inúmeras versões? Se a resposta é sim, então existe um critério, uma medida, uma verdade objectiva para além das formas retóricas. Se a resposta é não, então a retórica é apenas um jogo de prestidigitação, e tu és um prestidigitador, não um filósofo».",
+      "parole": [
+        {"parola": "metafora", "ipa": "/ˈmɛːtafora/", "traduzione": "metáfora / comparação figurada", "categoria": "sostantivo"},
+        {"parola": "prestigio", "ipa": "/prɛˈstidʒo/", "traduzione": "prestidigitação / magia de palco", "categoria": "sostantivo"},
+        {"parola": "oggettivo", "ipa": "/oddʒetˈtiːvo/", "traduzione": "objectivo / que existe fora de nós", "categoria": "aggettivo"},
+        {"parola": "criterio", "ipa": "/kriˈtɛːrjo/", "traduzione": "critério / regra de julgamento", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p10",
+      "italiano": "Gorgia, che pure era il più abile dei retori, sentì vacillare la sua sicurezza. Per un momento il vecchio siciliano parve smarrito, come chi si accorge di aver camminato tutta la vita su un pavimento di vetro. Poi, con voce malferma, disse: «Socrate, la tua domanda è onesta, e ti rispondo con onestà. La verità, per come la vedo io, è ciò che persuade la maggioranza dei presenti in un dato momento. Se la maggioranza dei presenti è persuasa, allora si tratta di verità. Non ti sembra sufficiente?». Socrate scosse il capo: «No, Gorgia. Se la verità fosse ciò che persuade, allora gli ateniesi che credono che la terra sia piatta e quelli che credono che sia rotonda avrebbero entrambi ragione, se fossero abbastanza numerosi. La verità non dipende dal numero di chi la crede, ma da ciò che è».",
+      "portugues": "Górgias, que era o mais hábil dos retores, sentiu vacilar a sua segurança. Por um momento o velho siciliano pareceu desorientado, como quem repara que andou a vida inteira sobre um pavimento de vidro. Depois, com voz trémula, disse: «Sócrates, a tua pergunta é honesta, e respondo-te com honestidade. A verdade, da forma como a vejo, é o que persuade a maioria dos presentes num dado momento. Se a maioria dos presentes é persuadida, então trata-se de verdade. Não te parece suficiente?». Sócrates abanou a cabeça: «Não, Górgias. Se a verdade fosse o que persuade, então os atenienses que crêem que a terra é chã e os que crêem que é redonda teriam ambos razão, se fossem suficientemente numerosos. A verdade não depende do número dos que crêem, mas daquilo que é».",
+      "parole": [
+        {"parola": "vacillare", "ipa": "/vatʃilˈlaːre/", "traduzione": "vacilar / tremer, perder firmeza", "categoria": "verbo"},
+        {"parola": "smarrito", "ipa": "/zmarˈriːto/", "traduzione": "desorientado / que perdeu o rumo", "categoria": "aggettivo"},
+        {"parola": "malfermo", "ipa": "/malˈfɛrmo/", "traduzione": "trémulo / que treme", "categoria": "aggettivo"},
+        {"parola": "piatto", "ipa": "/ˈpjatto/", "traduzione": "chão / plano (referente a terra)", "categoria": "aggettivo"}
+      ]
+    },
+    {
+      "id": "p11",
+      "italiano": "Polo, che fino a quel momento era rimasto in silenzio, sentì che il suo maestro era stato messo alle strette, e intervenne con foga: «Socrate, tu sei abile nel porre domande, ma sei vile nel rispondere. Tu critichi la retorica, ma non ci dici che cosa proponi al suo posto. La retorica ha fatto grandi cose: ha convinto gli ateniesi a costruire la flotta che ha sconfitto i persiani a Salamina. Ha permesso a Pericle di guidare la città per quarant'anni. Tu, Socrate, che cosa hai fatto di paragonabile? Quale città hai salvato? Quale esercito hai guidato? Sei solo un parassita della polis, e se non fosse per la democrazia che ti permette di parlare liberamente, saresti già stato messo a tacere da tempo».",
+      "portugues": "Polo, que até esse momento tinha ficado em silêncio, sentiu que o seu mestre tinha sido posto em dificuldades, e interveio com ardor: «Sócrates, tu és hábil a fazer perguntas, mas és cobarde nas respostas. Tu criticas a retórica, mas não nos dizes o que propões em seu lugar. A retórica fez grandes coisas: convenceu os atenienses a construir a frota que derrotou os persas em Salamina. Permitiu a Péricles guiar a cidade durante quarenta anos. Tu, Sócrates, o que fizeste de comparável? Que cidade salvaste? Que exército comandaste? És apenas um parasita da polis, e se não fosse a democracia que te permite falar livremente, já terias sido silenciado há muito».",
+      "parole": [
+        {"parola": "foga", "ipa": "/ˈfɔːɡa/", "traduzione": "ardor / paixão intensa", "categoria": "sostantivo"},
+        {"parola": "vile", "ipa": "/ˈviːle/", "traduzione": "cobarde / sem coragem", "categoria": "aggettivo"},
+        {"parola": "parassita", "ipa": "/parˈrassita/", "traduzione": "parasita / que vive à custa dos outros", "categoria": "sostantivo"},
+        {"parola": "Salamina", "ipa": "/salaˈmiːna/", "traduzione": "Salamina / batalha naval contra os persas em 480 a.C.", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p12",
+      "italiano": "Socrate, con quella pazienza infinita che aveva, rispose a Polo senza alzare la voce: «Polo, tu dici che sono un parassita. Ma dimmi: un medico che non fa il soldato è forse un parassita? Un filosofo che non fa il politico è forse un parassita? O non è piuttosto la città che ha bisogno di tutti, e non solo di quelli che sanno persuadere? Tu mi accusi di non aver guidato eserciti. Hai ragione. Ma dimmi: Temistocle, che pure guidò la flotta a Salamina, fu poi condannato all'esilio. Cimone fu cacciato dalla città. Pericle, che pure governò per quarant'anni, finì i suoi giorni amareggiato dalla morte dei figli. I grandi retori che tu ammiri, Polo, sono morti tutti in disgrazia. Hanno avuto potere, ma non hanno avuto gioia. Hanno persuaso, ma non hanno saputo. Io, che non ho persuaso nessuno, sono ancora qui, invecchiando serenamente, con pochi amici e nessun nemico. Quale vita preferisci? La loro, o la mia?».",
+      "portugues": "Sócrates, com aquela paciência infinita que tinha, respondeu a Polo sem levantar a voz: «Polo, tu dizes que sou um parasita. Mas diz-me: um médico que não faz o soldado é porventura um parasita? Um filósofo que não faz o político é porventura um parasita? Ou não é antes a cidade que precisa de todos, e não só dos que sabem persuadir? Tu acusas-me de não ter comandado exércitos. Tens razão. Mas diz-me: Temístocles, que comandou a frota em Salamina, foi depois condenado ao exílio. Címon foi expulso da cidade. Péricles, que governou durante quarenta anos, acabou os seus dias amargurado pela morte dos filhos. Os grandes retores que admiras, Polo, morreram todos em desgraça. Tiveram poder, mas não tiveram alegria. Persuadiram, mas não souberam. Eu, que não persuadi ninguém, ainda estou aqui, envelhecendo serenamente, com poucos amigos e nenhum inimigo. Que vida preferes? A deles, ou a minha?».",
+      "parole": [
+        {"parola": "pazienza", "ipa": "/patˈtsjɛntsa/", "traduzione": "paciência / capacidade de esperar", "categoria": "sostantivo"},
+        {"parola": "amareggiato", "ipa": "/amaredˈdʒaːto/", "traduzione": "amargurado / cheio de amargura", "categoria": "aggettivo"},
+        {"parola": "serenamente", "ipa": "/sereˈnamente/", "traduzione": "serenamente / com paz interior", "categoria": "avverbio"},
+        {"parola": "esilio", "ipa": "/eˈziːljo/", "traduzione": "exílio / expulsão da pátria", "categoria": "sostantivo"}
+      ]
+    },
+    {
+      "id": "p13",
+      "italiano": "Polo non seppe rispondere. Callicle mormorò qualcosa di incomprensibile. Gorgia, pallido, si alzò dalla sua cattedra d'avorio e, con un gesto che non si era mai visto in lui, si inchinò davanti a Socrate. Disse: «Tu mi hai vinto, filosofo di Atene. Ho viaggiato in tutta la Grecia, ho parlato davanti a re e tiranni, mi hanno applaudito in tutte le assemblee. Ma oggi, qui, in questo ginnasio, ho incontrato qualcuno che parla diversamente da me. Tu non cerchi il potere, non cerchi l'applauso, non cerchi la ricchezza. Tu cerchi la verità. E io, che pure ho passato la vita a insegnare l'arte della parola, devo confessarti che non so che cosa sia la verità. Forse è tempo di smettere di fare il sofista e di diventare, finalmente, un uomo che cerca».",
+      "portugues": "Polo não soube responder. Cálicles murmurou algo de incompreensível. Górgias, pálido, levantou-se da sua cadeira de marfim e, com um gesto que nunca se lhe vira, inclinou-se diante de Sócrates. Disse: «Tu venceste-me, filósofo de Atenas. Viajei por toda a Grécia, falei diante de reis e tiranos, fui aplaudido em todas as assembleias. Mas hoje, aqui, neste ginásio, encontrei alguém que fala de modo diferente do meu. Tu não procuras o poder, não procuras o aplauso, não procuras a riqueza. Tu procuras a verdade. E eu, que passei a vida a ensinar a arte da palavra, devo confessar-te que não sei o que é a verdade. Talvez seja tempo de deixar de ser sofista e de me tornar, finalmente, um homem que procura».",
+      "parole": [
+        {"parola": "inchinarsi", "ipa": "/inkinˈarsi/", "traduzione": "inclinar-se / curvar-se em reverência", "categoria": "verbo"},
+        {"parola": "confessare", "ipa": "/konfesˈsaːre/", "traduzione": "confessar / admitir", "categoria": "verbo"},
+        {"parola": "applauso", "ipa": "/apˈplawzo/", "traduzione": "aplauso / ovação", "categoria": "sostantivo"},
+        {"parola": "pallido", "ipa": "/ˈpallido/", "traduzione": "pálido / sem cor", "categoria": "aggettivo"}
+      ]
+    },
+    {
+      "id": "p14",
+      "italiano": "Quel pomeriggio nel ginnasio di Taurisco segnò una frattura nella storia del pensiero greco. Per la prima volta, il più celebre dei sofisti riconosceva la propria sconfitta davanti a un filosofo che non aveva né denaro, né scuola, né allievi paganti. Da quel giorno, il termine «sofista» cominciò a portare con sé una sfumatura negativa — quella di chi vende la parola senza cercare la verità —, mentre «filosofo» diventò il nome di chi cerca la verità anche a costo di apparire debole. Il dialogo che Platone, anni dopo, avrebbe intitolato «Gorgia» resta una delle pagine più importanti dell'intera storia della filosofia: in esso, la distinzione tra verità e persuasione, tra sapere e opinione, tra giustizia e potere, viene posta per la prima volta come il problema centrale della vita umana. Una distinzione che, duemilaquattrocento anni dopo, è ancora il cuore della filosofia occidentale.",
+      "portugues": "Nessa tarde no ginásio de Taurisco marcou uma fratura na história do pensamento grego. Pela primeira vez, o mais célebre dos sofistas reconhecia a própria derrota diante de um filósofo que não tinha nem dinheiro, nem escola, nem alunos pagantes. A partir desse dia, o termo «sofista» começou a trazer consigo uma tonalidade negativa — a de quem vende a palavra sem procurar a verdade —, enquanto «filósofo» se tornou o nome de quem procura a verdade mesmo ao custo de parecer fraco. O diálogo que Platão, anos depois, haveria de intitular «Górgias» permanece uma das páginas mais importantes de toda a história da filosofia: nele, a distinção entre verdade e persuasão, entre saber e opinião, entre justiça e poder, é posta pela primeira vez como o problema central da vida humana. Uma distinção que, dois mil e quatrocentos anos depois, ainda é o coração da filosofia ocidental.",
+      "parole": [
+        {"parola": "frattura", "ipa": "/fratˈtuːra/", "traduzione": "fratura / rutura", "categoria": "sostantivo"},
+        {"parola": "sfumatura", "ipa": "/sfumaˈtuːra/", "traduzione": "tonalidade / nuance", "categoria": "sostantivo"},
+        {"parola": "opinione", "ipa": "/opiˈnjoːne/", "traduzione": "opinião / crença subjectiva", "categoria": "sostantivo"},
+        {"parola": "duemilaquattrocento", "ipa": "/dwemilakwatˈtroˈtʃɛnto/", "traduzione": "dois mil e quatrocentos (anos)", "categoria": "aggettivo"}
+      ]
+    }
+  ]
+}

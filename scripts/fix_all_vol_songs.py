@@ -1,0 +1,531 @@
+"""
+Run BOTH fix passes and save once.
+Pass 1: fix 6 themes (amore, estate, notte, ballo, tristezza, viaggio) - 60 songs
+Pass 2: fix 4 extra themes (amicizia, ribellione, nostalgia, vita) - 40 songs
+"""
+import json, re
+
+# ===================== PASS 1 THEMES =====================
+TEMAS_P1 = {
+    "amore": [
+        ("Ti amo con tutto il cuore, ogni giorno di piu.", "cuore", "Eu te amo com todo o coracao, cada dia mais.", "organo centrale / sinonimo: anima"),
+        ("I tuoi occhi brillano come le stelle nel cielo.", "occhi", "Seus olhos brilham como as estrelas no ceu.", "sostantivo plurale: gli organi della vista"),
+        ("Quando sei lontana, mi manca la tua voce.", "manca", "Quando voce esta longe, sinto falta da sua voz.", "verbo mancare: essere assente"),
+        ("L'amore e una fiamma che non si spegne mai.", "fiamma", "O amor e uma chama que nunca se apaga.", "sostantivo: sinonimo di fuoco"),
+        ("Il mio cuore batte forte ogni volta che ti vedo.", "batte", "Meu coracao bate forte cada vez que te vejo.", "verbo battere: pulsare"),
+        ("Con te, ogni giorno diventa speciale e unico.", "speciale", "Com voce, cada dia se torna especial e unico.", "aggettivo: straordinario"),
+        ("Il tuo sorriso illumina la mia giornata.", "sorriso", "Seu sorriso ilumina o meu dia.", "sostantivo: espressione di felicita"),
+        ("Ti penso sempre, anche nei momenti piu difficili.", "penso", "Penso em voce sempre, mesmo nos momentos mais dificeis.", "verbo pensare: avere in mente"),
+        ("Ogni notte sogno di stare tra le tue braccia.", "braccia", "Toda noite sonho em estar entre seus bracos.", "sostantivo plurale di braccio"),
+        ("La tua voce e la musica piu dolce per me.", "dolce", "Sua voz e a musica mais doce para mim.", "aggettivo: soave, piacevole"),
+        ("Insieme siamo forti, separati siamo soli.", "forti", "Juntos somos fortes, separados estamos sos.", "aggettivo: robusti, potenti"),
+        ("Ti aspetto ogni sera davanti alla finestra.", "aspetto", "Espero por voce toda tarde diante da janela.", "verbo aspettare: attendere"),
+        ("Il primo bacio che ci siamo dati non lo scordero mai.", "bacio", "O primeiro beijo que nos demos nunca esquecerei.", "sostantivo: gesto d'amore"),
+        ("Senza di te, la vita non ha piu sapore.", "sapore", "Sem voce, a vida nao tem mais sabor.", "sostantivo: gusto, senso"),
+        ("Mi hai insegnato il significato della parola amore.", "insegnato", "Voce me ensinou o significado da palavra amor.", "participio passato di insegnare"),
+        ("Il tempo vola quando sono con te.", "vola", "O tempo voa quando estou com voce.", "verbo volare: passare velocemente"),
+        ("La nostra storia e scritta nelle stelle.", "stelle", "Nossa historia esta escrita nas estrelas.", "sostantivo plurale di stella"),
+        ("Ti cerco tra la folla ma non ti trovo.", "folla", "Procuro voce na multidao mas nao te encontro.", "sostantivo: gruppo grande di persone"),
+        ("Hai cambiato la mia vita per sempre.", "cambiato", "Voce mudou minha vida para sempre.", "participio passato di cambiare"),
+        ("Il tuo profumo rimane con me tutto il giorno.", "profumo", "Seu perfume fica comigo o dia todo.", "sostantivo: fragranza"),
+        ("Non ho parole per dirti quanto ti voglio bene.", "parole", "Nao tenho palavras para dizer o quanto gosto de voce.", "sostantivo plurale: termini, vocaboli"),
+        ("Ogni volta che sorridi, il mondo diventa piu bello.", "sorridi", "Cada vez que voce sorri, o mundo fica mais bonito.", "verbo sorridere: mostrare gioia"),
+        ("Mi fido di te con tutto me stesso.", "fido", "Confio em voce com todo eu mesmo.", "verbo fidarsi: avere fiducia"),
+        ("Sei il mio sole nelle giornate piu buie.", "buie", "Voce e o meu sol nos dias mais sombrios.", "aggettivo: scure, senza luce"),
+        ("Vorrei fermare il tempo per stare sempre con te.", "fermare", "Eu queria parar o tempo para ficar sempre com voce.", "infinito: bloccare, immobilizzare"),
+        ("La tua risata e la mia canzone preferita.", "risata", "Sua risada e minha musica favorita.", "sostantivo: atto del ridere"),
+        ("Tu sei la ragione per cui sono felice.", "ragione", "Voce e o motivo pelo qual sou feliz.", "sostantivo: causa, motivo"),
+        ("Quando piangi, voglio asciugare le tue lacrime.", "lacrime", "Quando voce chora, quero enxugar suas lagrimas.", "sostantivo plurale: gocce di pianto"),
+        ("Il tuo abbraccio e il posto piu sicuro del mondo.", "abbraccio", "Seu abraco e o lugar mais seguro do mundo.", "sostantivo: gesto di affetto"),
+        ("Siamo diversi, ma ci completiamo a vicenda.", "completiamo", "Somos diferentes, mas nos completamos mutuamente.", "verbo completare: riempire"),
+        ("Con ogni canzone penso a te, amore mio.", "canzone", "Com cada musica penso em voce, meu amor.", "sostantivo: composizione musicale"),
+        ("Il nostro amore e come il vino, migliora col tempo.", "migliora", "Nosso amor e como o vinho, melhora com o tempo.", "verbo migliorare: diventare meglio"),
+        ("Ti guardo negli occhi e vedo il mio futuro.", "futuro", "Olho nos seus olhos e vejo meu futuro.", "sostantivo: tempo che verra"),
+        ("Saro sempre al tuo fianco, qualunque cosa accada.", "fianco", "Estarei sempre ao seu lado, aconteca o que acontecer.", "sostantivo: lato, parte laterale"),
+        ("L'amore non si spiega, si sente nel petto.", "petto", "O amor nao se explica, se sente no peito.", "sostantivo: parte anteriore del torso"),
+        ("Ogni giorno che passa, ti amo di piu.", "passa", "Cada dia que passa, te amo mais.", "verbo passare: trascorrere"),
+        ("Il nostro primo incontro fu come un sogno.", "incontro", "Nosso primeiro encontro foi como um sonho.", "sostantivo: momento di ritrovarsi"),
+        ("Con te ho imparato cosa e la felicita vera.", "felicita", "Com voce aprendi o que e a felicidade verdadeira.", "sostantivo: stato di gioia"),
+        ("Hai preso il mio cuore e non me lo restituisci.", "restituisci", "Voce pegou meu coracao e nao me devolve.", "verbo restituire: ridare"),
+        ("Innamorarsi di te e stata la mia migliore scelta.", "scelta", "Apaixonar-me por voce foi minha melhor escolha.", "sostantivo: decisione, opzione"),
+    ],
+    "estate": [
+        ("Il sole brilla forte sulla spiaggia dorata.", "brilla", "O sol brilha forte na praia dourada.", "verbo brillare: splendere"),
+        ("Il mare e azzurro e profondo come il cielo.", "azzurro", "O mar e azul e profundo como o ceu.", "aggettivo: colore blu"),
+        ("I bambini giocano sulla sabbia con grande gioia.", "sabbia", "As criancas brincam na areia com grande alegria.", "sostantivo: granuli minerali della spiaggia"),
+        ("L'estate porta con se calore e spensieratezza.", "calore", "O verao traz consigo calor e despreocupacao.", "sostantivo: temperatura elevata"),
+        ("Mangiamo il gelato seduti all'ombra degli alberi.", "gelato", "Comemos sorvete sentados a sombra das arvores.", "sostantivo: dolce freddo"),
+        ("Le onde del mare ci accarezzano i piedi.", "onde", "As ondas do mar nos acariciam os pes.", "sostantivo plurale: movimento dell'acqua"),
+        ("Di sera, facciamo lunghe passeggiate sul lungomare.", "lungomare", "A tarde, fazemos longas caminhadas a beira-mar.", "sostantivo: strada vicino al mare"),
+        ("Il tramonto dipinge il cielo di rosso e arancione.", "tramonto", "O por do sol pinta o ceu de vermelho e laranja.", "sostantivo: fine del giorno"),
+        ("La brezza marina rinfresca le calde giornate estive.", "brezza", "A brisa maritima refresca os quentes dias de verao.", "sostantivo: vento leggero"),
+        ("Facciamo il bagno nelle acque cristalline del mare.", "bagno", "Nos banhamos nas aguas cristalinas do mar.", "sostantivo: immersione nell'acqua"),
+        ("Il profumo del mare mi rilassa e mi fa sognare.", "rilassa", "O cheiro do mar me relaxa e me faz sonhar.", "verbo rilassare: calmare"),
+        ("Quest'estate ho conosciuto persone meravigliose.", "meravigliose", "Neste verao conheci pessoas maravilhosas.", "aggettivo: straordinarie, stupende"),
+        ("Gli ombrelloni colorati decorano la spiaggia.", "ombrelloni", "Os guarda-sois coloridos decoram a praia.", "sostantivo plurale: grandi ombrelli da spiaggia"),
+        ("La sera, seduti sul terrazzo, guardiamo le stelle.", "terrazzo", "A noite, sentados na varanda, olhamos as estrelas.", "sostantivo: spazio aperto sulla casa"),
+        ("I bambini raccolgono conchiglie sulla riva del mare.", "conchiglie", "As criancas coletam conchas a beira do mar.", "sostantivo plurale: gusci di molluschi"),
+        ("Beviamo limonata fresca sotto l'ombrellone.", "limonata", "Bebemos limonada fresca sob o guarda-sol.", "sostantivo: bevanda con limone"),
+        ("Il sole tramonta lentamente dietro le montagne.", "tramonta", "O sol se poe lentamente atras das montanhas.", "verbo tramontare: scendere all'orizzonte"),
+        ("Ci sdraiamo sulla sabbia e guardiamo il cielo.", "sdraiamo", "Deitamo-nos na areia e olhamos o ceu.", "verbo sdraiarsi: distendersi"),
+        ("La frutta di stagione estiva e dolce e succosa.", "stagione", "A fruta da estacao de verao e doce e suculenta.", "sostantivo: periodo dell'anno"),
+        ("Il sole abbronza la pelle durante le lunghe giornate.", "abbronza", "O sol bronzeia a pele durante os longos dias.", "verbo abbronzare: scurire la pelle"),
+        ("I gabbiani volano bassi sulla riva del mare.", "gabbiani", "As gaivotas voam baixas a beira do mar.", "sostantivo plurale: uccelli marini"),
+        ("Mangiamo pesce fresco con il vino bianco freddo.", "pesce", "Comemos peixe fresco com vinho branco gelado.", "sostantivo: animale acquatico"),
+        ("Costruiamo castelli di sabbia sulla spiaggia.", "castelli", "Construimos castelos de areia na praia.", "sostantivo plurale di castello"),
+        ("Il cielo estivo e di un blu intenso e profondo.", "intenso", "O ceu de verao e de um azul intenso e profundo.", "aggettivo: forte, concentrato"),
+        ("Facciamo una gita in barca per vedere i fondali.", "fondali", "Fazemos um passeio de barco para ver o fundo do mar.", "sostantivo plurale: fondo del mare"),
+        ("Sotto la luna d'agosto, tutto e silenzioso.", "silenzioso", "Sob a lua de agosto, tudo e silencioso.", "aggettivo: quieto, senza rumore"),
+        ("L'acqua del mare e ancora fresca di mattina.", "fresca", "A agua do mar ainda esta fresca de manha.", "aggettivo: con bassa temperatura"),
+        ("Le cicale cantano senza sosta durante il pomeriggio.", "cicale", "As cigarras cantam sem parar durante a tarde.", "sostantivo plurale: insetti estivi rumorosi"),
+        ("Il primo tuffo nell'acqua e sempre una gioia.", "tuffo", "O primeiro mergulho na agua e sempre uma alegria.", "sostantivo: azione di immergersi"),
+        ("Raccogliamo frutta fresca nei campi assolati.", "assolati", "Colhemos frutas frescas nos campos ensolarados.", "aggettivo: pieni di sole"),
+        ("La pizzeria sul lungomare e sempre affollata.", "affollata", "A pizzaria a beira-mar esta sempre cheia de gente.", "aggettivo: piena di persone"),
+        ("Dormiamo con le finestre aperte per il caldo.", "finestre", "Dormimos com as janelas abertas por causa do calor.", "sostantivo plurale: aperture nel muro"),
+        ("L'estate e la stagione dei concerti all'aperto.", "concerti", "O verao e a estacao dos shows ao ar livre.", "sostantivo plurale: spettacoli musicali"),
+        ("I colori dell'estate sono vivaci e luminosi.", "vivaci", "As cores do verao sao vibrantes e luminosas.", "aggettivo: brillanti, intensi"),
+        ("Andiamo a fare snorkeling nelle acque del golfo.", "golfo", "Vamos fazer snorkeling nas aguas do golfo.", "sostantivo: insenatura del mare"),
+        ("La spiaggia si riempie di turisti ad agosto.", "turisti", "A praia se enche de turistas em agosto.", "sostantivo plurale: visitatori"),
+        ("Con la famiglia, ogni estate e un'avventura.", "avventura", "Com a familia, todo verao e uma aventura.", "sostantivo: esperienza emozionante"),
+        ("Il mare d'estate e pieno di barche a vela.", "vela", "O mar no verao esta cheio de barcos a vela.", "sostantivo: tessuto che muove la barca"),
+        ("Ogni estate mi porta ricordi bellissimi.", "ricordi", "Todo verao me traz lembrancas belissimas.", "sostantivo plurale: memorie"),
+        ("La notte d'estate e calda e piena di suoni.", "suoni", "A noite de verao e quente e cheia de sons.", "sostantivo plurale: rumori, melodie"),
+    ],
+    "notte": [
+        ("Le stelle brillano nel cielo notturno come diamanti.", "brillano", "As estrelas brilham no ceu noturno como diamantes.", "verbo brillare: risplendere"),
+        ("La luna piena illumina il paesaggio addormentato.", "illumina", "A lua cheia ilumina a paisagem adormecida.", "verbo illuminare: fare luce su"),
+        ("Il silenzio della notte e profondo e misterioso.", "silenzio", "O silencio da noite e profundo e misterioso.", "sostantivo: assenza di suono"),
+        ("Conto le stelle e mi perdo nel loro numero infinito.", "infinito", "Conto as estrelas e me perco em seu numero infinito.", "aggettivo: senza fine"),
+        ("La Via Lattea attraversa il cielo come un fiume di luce.", "Lattea", "A Via Lactea atravessa o ceu como um rio de luz.", "aggettivo: relativo al latte"),
+        ("Di notte, i pensieri si fanno piu profondi e sinceri.", "profondi", "A noite, os pensamentos ficam mais profundos e sinceros.", "aggettivo: intensi, non superficiali"),
+        ("Il vento notturno porta con se un profumo di fiori.", "notturno", "O vento noturno traz consigo um perfume de flores.", "aggettivo: della notte"),
+        ("Osservo le costellazioni e penso all'universo infinito.", "costellazioni", "Observo as constelaoes e penso no universo infinito.", "sostantivo plurale: gruppi di stelle"),
+        ("Le stelle cadenti portano fortuna a chi le vede.", "cadenti", "As estrelas cadentes trazem sorte a quem as ve.", "aggettivo: che cadono"),
+        ("La notte stellata mi fa sentire piccolo ma libero.", "libero", "A noite estrelada me faz sentir pequeno mas livre.", "aggettivo: senza vincoli"),
+        ("Il cielo notturno e una mappa dell'universo.", "mappa", "O ceu noturno e um mapa do universo.", "sostantivo: rappresentazione geografica"),
+        ("Sento il fruscio delle foglie nel buio della notte.", "fruscio", "Ouco o sussurro das folhas no escuro da noite.", "sostantivo: suono leggero delle foglie"),
+        ("La luce delle stelle impiega anni per raggiungerci.", "raggiungerci", "A luz das estrelas leva anos para nos alcancar.", "verbo raggiungere + pronome"),
+        ("Sotto le stelle, mi sento in pace con me stesso.", "pace", "Sob as estrelas, me sinto em paz comigo mesmo.", "sostantivo: tranquillita, armonia"),
+        ("La notte porta con se sogni e visioni meravigliose.", "sogni", "A noite traz consigo sonhos e visoes maravilhosas.", "sostantivo plurale: visioni nel sonno"),
+        ("I pianeti si muovono lentamente nel cielo notturno.", "pianeti", "Os planetas se movem lentamente no ceu noturno.", "sostantivo plurale: corpi celesti"),
+        ("Il telescopio mi permette di vedere le stelle da vicino.", "telescopio", "O telescopio me permite ver as estrelas de perto.", "sostantivo: strumento ottico"),
+        ("Nell'oscurita piu profonda, le stelle brillano di piu.", "oscurita", "Na escuridao mais profunda, as estrelas brilham mais.", "sostantivo: assenza di luce"),
+        ("Il cielo notturno cambia con le stagioni.", "stagioni", "O ceu noturno muda com as estacoes.", "sostantivo plurale: periodi dell'anno"),
+        ("Sento la voce del vento che mi chiama nel buio.", "buio", "Ouco a voz do vento que me chama no escuro.", "sostantivo: mancanza di luce"),
+        ("Il chiaro di luna trasforma il paesaggio in argento.", "argento", "O luar transforma a paisagem em prata.", "sostantivo: metallo prezioso"),
+        ("Aspetto l'alba seduto sotto il cielo stellato.", "alba", "Espero o amanhecer sentado sob o ceu estrelado.", "sostantivo: inizio del giorno"),
+        ("I sogni piu belli nascono nelle notti stellate.", "nascono", "Os sonhos mais bonitos nascem nas noites estreladas.", "verbo nascere: venire al mondo"),
+        ("La nebbia sale dalla valle e avvolge le stelle.", "nebbia", "A neblina sobe do vale e envolve as estrelas.", "sostantivo: vapore acqueo"),
+        ("Guardare le stelle mi fa dimenticare i problemi.", "dimenticare", "Olhar as estrelas me faz esquecer os problemas.", "verbo: non ricordare piu"),
+        ("La Via Lattea e visibile solo lontano dalle citta.", "visibile", "A Via Lactea e visivel somente longe das cidades.", "aggettivo: che si puo vedere"),
+        ("Il cielo stellato e il piu bel quadro naturale.", "quadro", "O ceu estrelado e o mais belo quadro natural.", "sostantivo: opera visiva"),
+        ("Ogni stella ha la sua storia scritta nel firmamento.", "firmamento", "Cada estrela tem sua historia escrita no firmamento.", "sostantivo: volta celeste"),
+        ("Il confine tra il cielo e la terra scompare di notte.", "scompare", "O limite entre o ceu e a terra desaparece a noite.", "verbo scomparire: non essere piu visibile"),
+        ("Le lucciole danzano nell'oscurita come piccole stelle.", "lucciole", "Os vagalumes dancam na escuridao como pequenas estrelas.", "sostantivo plurale: insetti luminosi"),
+        ("Sento la magia della notte stellata nella mia anima.", "magia", "Sinto a magia da noite estrelada em minha alma.", "sostantivo: potere misterioso"),
+        ("L'astronomia mi ha insegnato a guardare il cielo.", "astronomia", "A astronomia me ensinou a olhar o ceu.", "sostantivo: scienza dei corpi celesti"),
+        ("Le stelle non mentono, riflettono la verita.", "verita", "As estrelas nao mentem, refletem a verdade.", "sostantivo: realta, opposto di bugia"),
+        ("La luna nuova lascia il cielo completamente buio.", "nuova", "A lua nova deixa o ceu completamente escuro.", "aggettivo: senza fase illuminata"),
+        ("I filosofi guardavano le stelle per trovare risposte.", "filosofi", "Os filosofos olhavam as estrelas para encontrar respostas.", "sostantivo plurale: pensatori"),
+        ("La bellezza del cielo notturno non ha confronti.", "confronti", "A beleza do ceu noturno nao tem comparacao.", "sostantivo plurale: comparazioni"),
+        ("Le notti senza luna sono perfette per osservare le stelle.", "perfette", "As noites sem lua sao perfeitas para observar as estrelas.", "aggettivo: ideali, senza difetti"),
+        ("Il mistero dello spazio mi affascina profondamente.", "affascina", "O misterio do espaco me fascina profundamente.", "verbo affascinare: attrarre con forza"),
+        ("Ogni notte stellata e un dono della natura.", "dono", "Cada noite estrelada e um presente da natureza.", "sostantivo: regalo"),
+        ("La notte e la madre di tutti i sogni e le speranze.", "speranze", "A noite e a mae de todos os sonhos e esperancas.", "sostantivo plurale: desideri per il futuro"),
+    ],
+    "ballo": [
+        ("La musica mi entra nel sangue e mi fa ballare.", "sangue", "A musica entra no meu sangue e me faz dancar.", "sostantivo: liquido nel corpo"),
+        ("Il ritmo della canzone mi trascina sulla pista.", "ritmo", "O ritmo da musica me arrasta para a pista.", "sostantivo: cadenza musicale"),
+        ("Quando ballo, dimentico tutti i problemi della giornata.", "dimentico", "Quando danco, esqueco todos os problemas do dia.", "verbo dimenticare: non ricordare"),
+        ("La pista da ballo e piena di gente felice e spensierata.", "spensierata", "A pista de danca esta cheia de gente feliz e despreocupada.", "aggettivo: senza preoccupazioni"),
+        ("Il mio corpo si muove naturalmente seguendo la musica.", "naturalmente", "Meu corpo se move naturalmente seguindo a musica.", "avverbio: in modo spontaneo"),
+        ("Balliamo insieme tutta la notte senza fermarci mai.", "fermarci", "Dancamos juntos a noite toda sem nunca parar.", "verbo fermarsi: smettere di muoversi"),
+        ("La musica alta mi fa sentire vivo e libero.", "libero", "A musica alta me faz sentir vivo e livre.", "aggettivo: senza vincoli"),
+        ("Il DJ mette le canzoni piu belle della serata.", "serata", "O DJ coloca as musicas mais bonitas da noite.", "sostantivo: intera durata della notte"),
+        ("Muovo i piedi al ritmo della musica incalzante.", "incalzante", "Movo os pes ao ritmo da musica insistente.", "aggettivo: che incalza, pressante"),
+        ("Con i miei amici, la discoteca diventa magica.", "discoteca", "Com meus amigos, a discoteca se torna magica.", "sostantivo: locale da ballo"),
+        ("Il ballo e il modo migliore per esprimere la gioia.", "esprimere", "A danca e o melhor jeito de expressar a alegria.", "verbo: manifestare, comunicare"),
+        ("Mi piace ballare lento con la persona che amo.", "lento", "Gosto de dancar lento com a pessoa que amo.", "aggettivo: con poco ritmo"),
+        ("Il ballo mi libera da ogni tensione e stanchezza.", "tensione", "A danca me liberta de toda tensao e cansaco.", "sostantivo: stato di stress"),
+        ("Imparo un nuovo passo di danza ogni settimana.", "passo", "Aprendo um novo passo de danca toda semana.", "sostantivo: movimento nel ballo"),
+        ("La musica salsa mi fa venire voglia di ballare.", "salsa", "A musica salsa me da vontade de dancar.", "sostantivo: genere musicale latino"),
+        ("Danzo come se nessuno mi stesse guardando.", "guardando", "Danco como se ninguem estivesse me olhando.", "verbo guardare: osservare"),
+        ("Il ballo e un linguaggio universale che tutti capiscono.", "linguaggio", "A danca e uma linguagem universal que todos entendem.", "sostantivo: sistema di comunicazione"),
+        ("La festa finisce ma la voglia di ballare rimane.", "voglia", "A festa termina mas a vontade de dancar permanece.", "sostantivo: desiderio, volonta"),
+        ("Balliamo sotto le stelle fino all'alba.", "alba", "Dancamos sob as estrelas ate o amanhecer.", "sostantivo: inizio del giorno"),
+        ("Il mio partner di ballo e il piu bravo della scuola.", "partner", "Meu parceiro de danca e o melhor da escola.", "sostantivo: compagno/a"),
+        ("Mi sono innamorato ballando con lei tutta la sera.", "innamorato", "Me apaixonei dancando com ela a noite toda.", "participio passato di innamorarsi"),
+        ("La coreografia del gruppo e stata applaudita da tutti.", "coreografia", "A coreografia do grupo foi aplaudida por todos.", "sostantivo: sequenza di movimenti"),
+        ("La musica del Sud Italia ha un ritmo inconfondibile.", "inconfondibile", "A musica do sul da Italia tem um ritmo inconfundivel.", "aggettivo: unico, riconoscibile"),
+        ("Il ballo di coppia richiede sintonia e fiducia.", "sintonia", "A danca a dois exige sintonia e confianca.", "sostantivo: accordo, armonia"),
+        ("Ogni movimento del corpo racconta una storia.", "racconta", "Cada movimento do corpo conta uma historia.", "verbo raccontare: narrare"),
+        ("La musica popolare italiana fa venire voglia di muoversi.", "popolare", "A musica popular italiana da vontade de se mover.", "aggettivo: del popolo, famoso"),
+        ("Il ritmo incalzante del tamburello mi travolge.", "tamburello", "O ritmo insistente do pandeiro me arrasta.", "sostantivo: strumento a percussione"),
+        ("Dopo una notte di ballo, mi sento leggero e felice.", "leggero", "Apos uma noite de danca, me sinto leve e feliz.", "aggettivo: senza peso"),
+        ("La danza classica richiede anni di allenamento.", "allenamento", "A danca classica exige anos de treino.", "sostantivo: pratica, esercizio"),
+        ("Ballo da quando avevo sei anni e non smetto piu.", "smetto", "Danco desde que tinha seis anos e nao paro mais.", "verbo smettere: interrompere"),
+        ("Il teatro dell'opera e pieno di danzatori eleganti.", "danzatori", "O teatro de opera esta cheio de dancadores elegantes.", "sostantivo plurale: chi danza professionalmente"),
+        ("Nel ballo, il corpo parla meglio delle parole.", "parla", "Na danca, o corpo fala melhor do que as palavras.", "verbo parlare: comunicare"),
+        ("La voglia di ballare nasce quando sento una bella canzone.", "nasce", "A vontade de dancar nasce quando ouco uma bela musica.", "verbo nascere: avere origine"),
+        ("Ballo il liscio con i miei nonni la domenica.", "liscio", "Danco o liscio com meus avos no domingo.", "sostantivo: tipo di ballo italiano"),
+        ("I miei piedi si muovono da soli quando sento musica.", "muovono", "Meus pes se movem sozinhos quando ouco musica.", "verbo muoversi: spostarsi"),
+        ("La danza mi ha insegnato la disciplina e la pazienza.", "disciplina", "A danca me ensinou a disciplina e a paciencia.", "sostantivo: autocontrollo"),
+        ("La musica jazz mi fa improvvisare passi nuovi.", "improvvisare", "A musica jazz me faz improvisar passos novos.", "verbo: creare sul momento"),
+        ("Con il ballo, il tempo sembra fermarsi per un attimo.", "attimo", "Com a danca, o tempo parece parar por um instante.", "sostantivo: momento brevissimo"),
+        ("La scuola di danza e il mio posto preferito in citta.", "scuola", "A escola de danca e meu lugar favorito na cidade.", "sostantivo: luogo di apprendimento"),
+        ("Danzo per gioia, per amore, per la vita.", "gioia", "Danco por alegria, por amor, pela vida.", "sostantivo: felicita intensa"),
+    ],
+    "tristezza": [
+        ("La pioggia scende e porta con se la malinconia.", "malinconia", "A chuva desce e traz consigo a melancolia.", "sostantivo: tristezza profonda"),
+        ("Il silenzio della camera vuota mi pesa sul cuore.", "pesa", "O silencio do quarto vazio pesa em meu coracao.", "verbo pesare: gravare"),
+        ("Le lacrime scorrono senza che io possa fermarle.", "scorrono", "As lagrimas escorrem sem que eu possa dete-las.", "verbo scorrere: fluire"),
+        ("Mi manca la persona che amavo di piu al mondo.", "manca", "Sinto falta da pessoa que mais amava no mundo.", "verbo mancare: essere assente"),
+        ("Il dolore del distacco non si descrive a parole.", "distacco", "A dor da separacao nao se descreve em palavras.", "sostantivo: separazione"),
+        ("Ogni luogo mi ricorda chi non c'e piu con me.", "ricorda", "Cada lugar me lembra quem nao esta mais comigo.", "verbo ricordare: far tornare in mente"),
+        ("La tristezza mi accompagna come un'ombra silenziosa.", "ombra", "A tristeza me acompanha como uma sombra silenciosa.", "sostantivo: oscurita proiettata"),
+        ("Cerco la pace interiore ma non riesco a trovarla.", "interiore", "Procuro a paz interior mas nao consigo encontra-la.", "aggettivo: dentro di se"),
+        ("Mi siedo vicino alla finestra e guardo la pioggia.", "finestra", "Sento perto da janela e olho a chuva.", "sostantivo: apertura nel muro"),
+        ("La solitudine pesa come una pietra sul petto.", "solitudine", "A solidao pesa como uma pedra no peito.", "sostantivo: stato di essere solo"),
+        ("Ogni notte mi sveglio pensando a quello che ho perso.", "perso", "Toda noite acordo pensando no que perdi.", "participio passato di perdere"),
+        ("Il tempo passa ma il dolore rimane sempre uguale.", "uguale", "O tempo passa mas a dor permanece sempre igual.", "aggettivo: identico, lo stesso"),
+        ("Le parole non bastano per descrivere questo vuoto.", "vuoto", "As palavras nao bastam para descrever esse vazio.", "sostantivo: spazio privo di contenuto"),
+        ("Ho cercato la felicita ma ho trovato solo dolore.", "felicita", "Procurei a felicidade mas encontrei apenas dor.", "sostantivo: stato di gioia"),
+        ("Sento un peso insopportabile nel mio cuore stanco.", "insopportabile", "Sinto um peso insuportavel em meu coracao cansado.", "aggettivo: intollerabile"),
+        ("Il cielo grigio rispecchia il mio stato d'animo.", "rispecchia", "O ceu cinza reflete meu estado de espirito.", "verbo rispecchiare: riflettere"),
+        ("Le fotografie ingiallite raccontano tempi migliori.", "ingiallite", "As fotografias amareladas contam tempos melhores.", "aggettivo: diventate gialle"),
+        ("La musica triste mi fa compagnia nelle notti lunghe.", "compagnia", "A musica triste me faz companhia nas noites longas.", "sostantivo: presenza di qualcuno"),
+        ("Cerco nel silenzio una risposta che non arriva.", "risposta", "Procuro no silencio uma resposta que nao chega.", "sostantivo: cio che risponde"),
+        ("Il cuore ferito guarisce lentamente con il tempo.", "ferito", "O coracao ferido cura-se lentamente com o tempo.", "aggettivo: che ha ricevuto una ferita"),
+        ("Le sere solitarie sembrano non finire mai.", "solitarie", "As tardes solitarias parecem nao terminar nunca.", "aggettivo: prive di compagnia"),
+        ("Il passato torna sempre nei sogni piu bui.", "passato", "O passado sempre volta nos sonhos mais sombrios.", "sostantivo: cio che e gia accaduto"),
+        ("Sento la mancanza di qualcosa che non posso nominare.", "mancanza", "Sinto a falta de algo que nao consigo nomear.", "sostantivo: assenza, privazione"),
+        ("Il grigio del cielo riflette la mia tristezza profonda.", "riflette", "O cinza do ceu reflete minha tristeza profunda.", "verbo riflettere: riprodurre"),
+        ("Non riesco a dormire quando il cuore e pesante.", "pesante", "Nao consigo dormir quando o coracao esta pesado.", "aggettivo: di molto peso"),
+        ("Scrivo lettere che non inviero mai a nessuno.", "inviero", "Escrevo cartas que nunca enviarei a ninguem.", "verbo inviare: futuro"),
+        ("La nostalgia mi opprime come un cielo senza stelle.", "nostalgia", "A nostalgia me oprime como um ceu sem estrelas.", "sostantivo: dolore per il passato"),
+        ("Ogni addio lascia una cicatrice nell'anima.", "cicatrice", "Cada adeus deixa uma cicatriz na alma.", "sostantivo: segno di una ferita"),
+        ("La tristezza e come la marea, sale e scende.", "marea", "A tristeza e como a mare, sobe e desce.", "sostantivo: movimento del mare"),
+        ("Il peso del silenzio e a volte insostenibile.", "insostenibile", "O peso do silencio e as vezes insustentavel.", "aggettivo: non sopportabile"),
+        ("Alcune ferite dell'anima non guariscono mai del tutto.", "ferite", "Algumas feridas da alma nunca curam completamente.", "sostantivo plurale: lesioni"),
+        ("Vivo in un presente che sa solo di passato.", "presente", "Vivo em um presente que sabe apenas de passado.", "sostantivo: momento attuale"),
+        ("Anche la bellezza del mondo non riesce a consolarmi.", "consolarmi", "Ate a beleza do mundo nao consegue me consolar.", "verbo consolare + pronome"),
+        ("Ogni tramonto mi ricorda quanto sia breve la vita.", "breve", "Cada por do sol me lembra o quao breve e a vida.", "aggettivo: di corta durata"),
+        ("Mi perdo nei pensieri e non trovo la via d'uscita.", "uscita", "Me perco nos pensamentos e nao encontro a saida.", "sostantivo: punto di uscita"),
+        ("Il tempo cura le ferite ma i ricordi restano.", "cura", "O tempo cura as feridas mas as memorias ficam.", "verbo curare: guarire"),
+        ("L'amore perduto e il dolore piu difficile da superare.", "superare", "O amor perdido e a dor mais dificil de superar.", "verbo: andare oltre, vincere"),
+        ("Ogni lacrima porta con se un pezzo di anima.", "lacrima", "Cada lagrima traz consigo um pedaco de alma.", "sostantivo: goccia dal pianto"),
+        ("La tristezza infinita non conosce ne fine ne misura.", "misura", "A tristeza infinita nao conhece nem fim nem medida.", "sostantivo: limite, dimensione"),
+        ("Le parole dette nell'ira fanno male a lungo.", "ira", "As palavras ditas na raiva doem por muito tempo.", "sostantivo: rabbia intensa"),
+    ],
+    "viaggio": [
+        ("Il treno parte e mi porta verso terre sconosciute.", "sconosciute", "O trem parte e me leva para terras desconhecidas.", "aggettivo: non conosciute"),
+        ("Ho preparato lo zaino con tutto l'essenziale.", "zaino", "Preparei a mochila com tudo o essencial.", "sostantivo: borsa da portare in spalla"),
+        ("Il viaggio inizia sempre con un primo passo.", "inizia", "A viagem sempre comeca com um primeiro passo.", "verbo iniziare: cominciare"),
+        ("Guardo dal finestrino e vedo paesaggi meravigliosi.", "finestrino", "Olho pela janela e vejo paisagens maravilhosas.", "sostantivo: piccola finestra del treno"),
+        ("Ogni citta che visito mi insegna qualcosa di nuovo.", "insegna", "Cada cidade que visito me ensina algo novo.", "verbo insegnare: dare conoscenza"),
+        ("Il passaporto e il mio biglietto per il mondo.", "passaporto", "O passaporte e meu bilhete para o mundo.", "sostantivo: documento di viaggio"),
+        ("L'aeroporto e il luogo dove inizia ogni avventura.", "avventura", "O aeroporto e o lugar onde comeca cada aventura.", "sostantivo: esperienza emozionante"),
+        ("Il mare in lontananza mi chiama verso nuovi orizzonti.", "orizzonti", "O mar ao longe me chama para novos horizontes.", "sostantivo plurale: limite visivo"),
+        ("Mi perdo nelle strade di citta che non conosco.", "strade", "Me perco nas ruas de cidades que nao conheco.", "sostantivo plurale: vie"),
+        ("Ogni viaggio lascia un segno profondo nell'anima.", "segno", "Cada viagem deixa uma marca profunda na alma.", "sostantivo: traccia, impressione"),
+        ("Ho incontrato persone straordinarie durante il cammino.", "straordinarie", "Encontrei pessoas extraordinarias durante o caminho.", "aggettivo: fuori dal comune"),
+        ("Il cibo locale racconta la storia di ogni luogo.", "racconta", "A comida local conta a historia de cada lugar.", "verbo raccontare: narrare"),
+        ("La fotografia cattura i momenti del viaggio per sempre.", "cattura", "A fotografia captura os momentos da viagem para sempre.", "verbo catturare: prendere, fermare"),
+        ("Il treno percorre chilometri di pianura silenziosa.", "pianura", "O trem percorre quilometros de planice silenciosa.", "sostantivo: territorio piatto"),
+        ("Dormo in ostelli e conosco viaggiatori da tutto il mondo.", "ostelli", "Durmo em albergues e conheco viajantes do mundo todo.", "sostantivo plurale: luoghi economici"),
+        ("Ogni tramonto in viaggio e diverso dall'altro.", "tramonto", "Cada por do sol em viagem e diferente do outro.", "sostantivo: fine del giorno"),
+        ("Tornare a casa dopo un lungo viaggio e sempre dolce.", "dolce", "Voltar para casa apos uma longa viagem e sempre doce.", "aggettivo: piacevole, gradito"),
+        ("Le montagne lontane mi attraggono come un magnete.", "attraggono", "As montanhas distantes me atraem como um ima.", "verbo attrarre: esercitare attrazione"),
+        ("Ogni idioma che imparo apre una nuova porta.", "idioma", "Cada idioma que aprendo abre uma nova porta.", "sostantivo: lingua"),
+        ("Il silenzio della natura mi ricarica le energie.", "ricarica", "O silencio da natureza recarrega minhas energias.", "verbo ricaricare: dare nuova energia"),
+        ("Il profumo dei mercati locali mi conquista sempre.", "conquista", "O cheiro dos mercados locais sempre me conquista.", "verbo conquistare: vincere"),
+        ("Ho camminato per ore sulle rive di un fiume antico.", "rive", "Caminhei por horas as margens de um rio antigo.", "sostantivo plurale: bordi del fiume"),
+        ("Ogni viaggio e un capitolo nuovo della mia storia.", "capitolo", "Cada viagem e um capitulo novo da minha historia.", "sostantivo: parte di un libro"),
+        ("Visitare le rovine antiche e come viaggiare nel tempo.", "rovine", "Visitar as ruinas antigas e como viajar no tempo.", "sostantivo plurale: resti di edifici"),
+        ("Ogni incontro con uno straniero arricchisce la mente.", "straniero", "Cada encontro com um estrangeiro enriquece a mente.", "sostantivo: persona di altro paese"),
+        ("La bicicletta e il modo migliore per visitare le citta.", "bicicletta", "A bicicleta e o melhor jeito de visitar as cidades.", "sostantivo: veicolo a due ruote"),
+        ("Il treno notturno attraversa la penisola in silenzio.", "penisola", "O trem noturno atravessa a peninsula em silencio.", "sostantivo: terra circondata dal mare"),
+        ("La lingua locale cambia, ma il sorriso e universale.", "universale", "A lingua local muda, mas o sorriso e universal.", "aggettivo: di tutti, ovunque"),
+        ("Ogni partenza e difficile, ma ne vale sempre la pena.", "partenza", "Cada partida e dificil, mas sempre vale a pena.", "sostantivo: azione del partire"),
+        ("La cucina locale racconta la cultura del luogo.", "cucina", "A cozinha local conta a cultura do lugar.", "sostantivo: arte culinaria"),
+        ("Viaggiare da soli insegna l'indipendenza e il coraggio.", "coraggio", "Viajar sozinho ensina a independencia e a coragem.", "sostantivo: audacia, bravura"),
+        ("Ogni villaggio nasconde tesori che non trovi nelle guide.", "tesori", "Cada vilarejo esconde tesouros que nao se encontra nos guias.", "sostantivo plurale: cose preziose"),
+        ("Il sole di mezzogiorno brucia ma non ci ferma.", "brucia", "O sol do meio-dia queima mas nao nos para.", "verbo bruciare: essere molto caldo"),
+        ("Le strade di Roma parlano di secoli di storia.", "secoli", "As ruas de Roma falam de seculos de historia.", "sostantivo plurale: cento anni"),
+        ("Il tramonto sul mare mi ricorda perche viaggio.", "ricorda", "O por do sol no mar me lembra por que viajo.", "verbo ricordare: far pensare"),
+        ("La pioggia nel viaggio non e un ostacolo, e un'esperienza.", "ostacolo", "A chuva na viagem nao e um obstaculo, e uma experiencia.", "sostantivo: impedimento"),
+        ("La nostalgia di casa cresce con la distanza.", "nostalgia", "A saudade de casa cresce com a distancia.", "sostantivo: desiderio del passato"),
+        ("Le stelle mi guidano quando mi perdo nella foresta.", "guidano", "As estrelas me guiam quando me perco na floresta.", "verbo guidare: indicare la via"),
+        ("Il vento del nord porta odori di terre sconosciute.", "odori", "O vento do norte traz cheiros de terras desconhecidas.", "sostantivo plurale: fragranze"),
+        ("Ho trovato un paese piccolo e meraviglioso fuori dalle mappe.", "mappe", "Encontrei uma cidadezinha maravilhosa fora dos mapas.", "sostantivo plurale: cartine geografiche"),
+    ],
+}
+
+# ===================== PASS 2 THEMES =====================
+TEMAS_P2 = {
+    "amicizia": [
+        ("Gli amici veri restano accanto a te nei momenti difficili.", "veri", "Os amigos verdadeiros ficam do seu lado nos momentos dificeis.", "aggettivo: autentici, sinceri"),
+        ("Con i miei amici mi sento sempre a casa.", "amici", "Com meus amigos sempre me sinto em casa.", "sostantivo plurale: persone care"),
+        ("L'amicizia e il dono piu prezioso della vita.", "dono", "A amizade e o presente mais precioso da vida.", "sostantivo: regalo"),
+        ("Ridiamo insieme fino alle lacrime ogni volta.", "lacrime", "Rimos juntos ate as lagrimas cada vez.", "sostantivo plurale: gocce dal pianto"),
+        ("Un amico sincero vale piu di mille conoscenti.", "sincero", "Um amigo sincero vale mais que mil conhecidos.", "aggettivo: onesto, genuino"),
+        ("Ci siamo incontrati per caso e non ci siamo piu lasciati.", "lasciati", "Nos conhecemos por acaso e nunca mais nos separamos.", "participio passato di lasciarsi"),
+        ("La distanza non spezza l'amicizia vera.", "spezza", "A distancia nao quebra a amizade verdadeira.", "verbo spezzare: rompere"),
+        ("Con te posso essere me stesso senza maschere.", "maschere", "Com voce posso ser eu mesmo sem mascaras.", "sostantivo plurale: travestimenti"),
+        ("Gli amici di infanzia sono i piu difficili da dimenticare.", "infanzia", "Os amigos de infancia sao os mais dificeis de esquecer.", "sostantivo: periodo dell'eta giovane"),
+        ("Ti ascolto sempre quando hai bisogno di parlare.", "bisogno", "Sempre te escuto quando voce precisa falar.", "sostantivo: necessita"),
+        ("Condividere i problemi con un amico li rende piu leggeri.", "condividere", "Compartilhar os problemas com um amigo os torna mais leves.", "verbo: dividere con altri"),
+        ("La nostra amicizia e nata un pomeriggio d'estate.", "nata", "Nossa amizade nasceu numa tarde de verao.", "participio passato di nascere"),
+        ("Un vero amico sa cosa pensi anche senza parlare.", "pensa", "Um amigo verdadeiro sabe o que voce pensa sem falar.", "verbo pensare: avere in mente"),
+        ("Con te ogni giornata diventa piu bella e speciale.", "speciale", "Com voce cada dia se torna mais bonito e especial.", "aggettivo: fuori dal comune"),
+        ("Gli amici sono la famiglia che scegliamo noi stessi.", "famiglia", "Os amigos sao a familia que escolhemos nos mesmos.", "sostantivo: gruppo di persone care"),
+        ("Festeggiamo insieme ogni piccola vittoria della vita.", "vittoria", "Celebramos juntos cada pequena vitoria da vida.", "sostantivo: successo ottenuto"),
+        ("Mi fido ciecamente di te come di un fratello.", "fratello", "Confio cegamente em voce como em um irmao.", "sostantivo: figlio degli stessi genitori"),
+        ("L'amicizia vera cresce con il tempo e le esperienze.", "cresce", "A amizade verdadeira cresce com o tempo e as experiencias.", "verbo crescere: aumentare"),
+        ("Ci aiutiamo a vicenda senza aspettarci nulla.", "aiutiamo", "Nos ajudamos mutuamente sem esperar nada em troca.", "verbo aiutarsi: sostenersi"),
+        ("Il tuo sorriso mi da forza quando sono giu di morale.", "morale", "Seu sorriso me da forca quando estou pra baixo.", "sostantivo: stato d'animo"),
+        ("Abbiamo condiviso migliaia di risate e qualche lacrima.", "risate", "Compartilhamos milhares de risadas e algumas lagrimas.", "sostantivo plurale: atti del ridere"),
+        ("Sei la persona con cui voglio celebrare ogni successo.", "celebrare", "Voce e a pessoa com quem quero celebrar cada sucesso.", "verbo: festeggiare"),
+        ("Ogni viaggio e piu bello se lo faccio con te.", "viaggio", "Cada viagem e mais bonita se a faco com voce.", "sostantivo: spostamento"),
+        ("La nostra amicizia resiste a tutte le tempeste.", "tempeste", "Nossa amizade resiste a todas as tempestades.", "sostantivo plurale: difficolta"),
+        ("Ci capiamo senza bisogno di spiegare troppo.", "capiamo", "Nos entendemos sem precisar explicar muito.", "verbo capirsi: comprendersi"),
+        ("Sei il primo a cui telefono quando ho una buona notizia.", "notizia", "Voce e o primeiro a quem ligo quando tenho uma boa noticia.", "sostantivo: informazione"),
+        ("Gli anni passano ma la nostra amicizia non invecchia.", "invecchia", "Os anos passam mas nossa amizade nao envelhece.", "verbo invecchiare: diventare vecchio"),
+        ("Con te non ho bisogno di fare finta di stare bene.", "finta", "Com voce nao preciso fingir estar bem.", "sostantivo: finzione"),
+        ("Ti conosco cosi bene che so quando stai soffrendo.", "soffrendo", "Te conheco tao bem que sei quando voce esta sofrendo.", "gerundio di soffrire"),
+        ("Siamo diversi ma questo e il segreto della nostra amicizia.", "segreto", "Somos diferentes mas este e o segredo da nossa amizade.", "sostantivo: cosa nascosta"),
+        ("Ho imparato tanto da te negli anni che siamo amici.", "amici", "Aprendi muito com voce nos anos em que somos amigos.", "sostantivo plurale: persone care"),
+        ("Ogni momento trascorso insieme e un regalo.", "regalo", "Cada momento passado junto e um presente.", "sostantivo: dono, regalare"),
+        ("Il tuo supporto mi ha dato il coraggio di andare avanti.", "coraggio", "Seu apoio me deu a coragem de seguir em frente.", "sostantivo: audacia, bravura"),
+        ("Con gli amici il tempo non si misura in ore ma in emozioni.", "emozioni", "Com amigos o tempo nao se mede em horas mas em emocoes.", "sostantivo plurale: sentimenti"),
+        ("Sei la prova vivente che l'amicizia puo durare per sempre.", "vivente", "Voce e a prova viva de que a amizade pode durar para sempre.", "aggettivo: che e in vita"),
+        ("Quando sono con te, tutti i problemi sembrano piccoli.", "piccoli", "Quando estou com voce, todos os problemas parecem pequenos.", "aggettivo: di dimensioni ridotte"),
+        ("Grazie per esserci sempre, anche nelle notti piu buie.", "buie", "Obrigado por estar sempre, mesmo nas noites mais sombrias.", "aggettivo: senza luce"),
+        ("La vera amicizia non si conta in anni ma in qualita.", "qualita", "A verdadeira amizade nao se conta em anos mas em qualidade.", "sostantivo: valore, caratteristica"),
+        ("Insieme abbiamo superato tutto, e continueremo cosi.", "superato", "Juntos superamos tudo, e continuaremos assim.", "participio passato di superare"),
+        ("Sei l'amico che tutti vorrebbero avere nella vita.", "vorrebbero", "Voce e o amigo que todos gostariam de ter na vida.", "condizionale di volere"),
+    ],
+    "ribellione": [
+        ("Non seguo le regole che gli altri hanno scritto per me.", "regole", "Nao sigo as regras que os outros escreveram para mim.", "sostantivo plurale: norme, leggi"),
+        ("Mi ribello contro ogni forma di ingiustizia.", "ribello", "Me rebelo contra toda forma de injustica.", "verbo ribellarsi: opporsi"),
+        ("La liberta non si chiede, si prende con forza.", "liberta", "A liberdade nao se pede, se toma com forca.", "sostantivo: stato di essere liberi"),
+        ("Ho detto no quando tutti gli altri dicevano si.", "dicevano", "Disse nao quando todos os outros diziam sim.", "verbo dire: imperfetto plurale"),
+        ("Non accetto di vivere nella gabbia che la societa costruisce.", "gabbia", "Nao aceito viver na gaiola que a sociedade constroi.", "sostantivo: prigione per uccelli"),
+        ("Mi alzo e grido: non siamo schiavi del sistema.", "schiavi", "Me levanto e grito: nao somos escravos do sistema.", "sostantivo plurale: persone non libere"),
+        ("La mia voce non si spegne neanche quando mi chiedono il silenzio.", "neanche", "Minha voz nao se apaga nem quando me pedem silencio.", "congiunzione: nemmeno"),
+        ("Ogni regola ingiusta merita di essere contestata.", "contestata", "Cada regra injusta merece ser contestada.", "participio passato di contestare"),
+        ("Rompo le catene che tengono la mia mente prigioniera.", "catene", "Quebre as correntes que mantem minha mente prisioneira.", "sostantivo plurale: legami di metallo"),
+        ("Non temo le conseguenze di dire quello che penso.", "penso", "Nao temo as consequencias de dizer o que penso.", "verbo pensare: avere in mente"),
+        ("La ribellione nasce quando l'ingiustizia diventa insopportabile.", "insopportabile", "A rebeliao nasce quando a injustica se torna insuportavel.", "aggettivo: intollerabile"),
+        ("Cammino controcorrente anche quando e difficile farlo.", "controcorrente", "Caminho contra a corrente mesmo quando e dificil.", "avverbio: nel senso contrario"),
+        ("Non mi fermo davanti ai muri che cercano di bloccarmi.", "bloccarmi", "Nao me paro diante dos muros que tentam me bloquear.", "verbo bloccare + pronome"),
+        ("Il silenzio e complicita, e io non voglio essere complice.", "complicita", "O silencio e cumplicidade, e eu nao quero ser cumplice.", "sostantivo: partecipazione passiva"),
+        ("Grido la verita anche quando fa paura ascoltarla.", "verita", "Grito a verdade mesmo quando da medo ouvi-la.", "sostantivo: realta, contrario di bugia"),
+        ("Mi rifiuto di obbedire a ordini che vanno contro la coscienza.", "coscienza", "Me recuso a obedecer a ordens que vao contra a consciencia.", "sostantivo: senso morale"),
+        ("La generazione che sfida il passato costruisce il futuro.", "sfida", "A geracao que desafia o passado constroi o futuro.", "verbo sfidare: affrontare con coraggio"),
+        ("Non ho paura di essere diverso dalla massa.", "massa", "Nao tenho medo de ser diferente da massa.", "sostantivo: insieme indistinto di persone"),
+        ("La rivoluzione inizia dentro di noi prima che fuori.", "rivoluzione", "A revolucao comeca dentro de nos antes que fora.", "sostantivo: cambiamento radicale"),
+        ("Lottiamo per un mondo piu giusto e libero per tutti.", "giusto", "Lutamos por um mundo mais justo e livre para todos.", "aggettivo: equo, corretto"),
+        ("Non lascio che la paura del giudizio mi metta a tacere.", "giudizio", "Nao deixo que o medo do julgamento me faca calar.", "sostantivo: opinione, valutazione"),
+        ("Ogni forma d'arte puo essere un atto di ribellione.", "ribellione", "Toda forma de arte pode ser um ato de rebeliao.", "sostantivo: azione di opporsi"),
+        ("Mi vesto come voglio e non mi importa cosa pensano gli altri.", "importa", "Me visto como quero e nao me importa o que os outros pensam.", "verbo importare: avere importanza"),
+        ("Non si puo fermare chi crede nella propria causa.", "causa", "Nao se pode parar quem acredita na propria causa.", "sostantivo: ragione per cui si lotta"),
+        ("Ho deciso di seguire il mio cuore invece delle convenzioni.", "convenzioni", "Decidi seguir meu coracao em vez das convencoes.", "sostantivo plurale: regole sociali"),
+        ("La gioventu ha sempre il diritto di mettere in discussione tutto.", "discussione", "A juventude sempre tem o direito de questionar tudo.", "sostantivo: dibattito, confronto"),
+        ("Non accetto compromessi quando si tratta di dignita.", "dignita", "Nao aceito compromissos quando se trata de dignidade.", "sostantivo: valore personale"),
+        ("Mi alzo ogni giorno con la volonta di cambiare qualcosa.", "volonta", "Me levanto todo dia com a vontade de mudar algo.", "sostantivo: desiderio forte"),
+        ("Il potere teme chi non ha paura di parlare chiaramente.", "chiaramente", "O poder teme quem nao tem medo de falar claramente.", "avverbio: in modo chiaro"),
+        ("Rompere gli schemi e l'unico modo per progredire.", "schemi", "Quebrar os esquemas e o unico jeito de progredir.", "sostantivo plurale: modelli, sistemi"),
+        ("Non mi piace l'omologazione, preferisco la differenza.", "omologazione", "Nao gosto da homologacao, prefiro a diferenca.", "sostantivo: uniformita imposta"),
+        ("Chi resiste all'ingiustizia e gia un eroe per me.", "resiste", "Quem resiste a injustica ja e um heroi para mim.", "verbo resistere: opporsi"),
+        ("La musica ribelle e la colonna sonora della mia vita.", "colonna", "A musica rebelde e a trilha sonora da minha vida.", "sostantivo: struttura portante"),
+        ("Non voglio adattarmi, voglio che il mondo si adatti a me.", "adattarmi", "Nao quero me adaptar, quero que o mundo se adapte a mim.", "verbo adattarsi + pronome"),
+        ("Ogni piccola protesta e un passo verso la liberta.", "protesta", "Cada pequeno protesto e um passo em direcao a liberdade.", "sostantivo: manifestazione di disaccordo"),
+        ("Chi non si ribella accetta implicitamente l'ingiustizia.", "implicitamente", "Quem nao se rebela aceita implicitamente a injustica.", "avverbio: in modo non esplicito"),
+        ("La mia ribellione e pacifica ma decisa e coerente.", "coerente", "Minha rebeliao e pacifica mas decidida e coerente.", "aggettivo: in accordo con i propri valori"),
+        ("Ho smesso di chiedere permesso per essere me stesso.", "permesso", "Parei de pedir permissao para ser eu mesmo.", "sostantivo: autorizzazione"),
+        ("L'arte e il mezzo piu potente di ribellione contro il sistema.", "potente", "A arte e o meio mais poderoso de rebeliao contra o sistema.", "aggettivo: forte, efficace"),
+        ("Viviamo in un'epoca in cui il coraggio fa la differenza.", "differenza", "Vivemos em uma epoca em que a coragem faz a diferenca.", "sostantivo: distinzione, cambiamento"),
+    ],
+    "nostalgia": [
+        ("Chiudo gli occhi e rivedo i giorni della mia infanzia.", "infanzia", "Fecho os olhos e revejo os dias da minha infancia.", "sostantivo: periodo dell'eta giovane"),
+        ("Il profumo del pane appena sfornato mi riporta a casa.", "sfornato", "O cheiro do pao recem-assado me leva de volta para casa.", "participio passato di sfornare"),
+        ("Guardo le vecchie fotografie e sento il cuore stringersi.", "fotografie", "Olho as fotos antigas e sinto o coracao apertar.", "sostantivo plurale: immagini del passato"),
+        ("La canzone che suonava mia madre mi fa sempre piangere.", "suonava", "A musica que minha mae tocava sempre me faz chorar.", "verbo suonare: imperfetto"),
+        ("Vorrei tornare ai pomeriggi d'estate della mia giovinezza.", "giovinezza", "Eu queria voltar as tardes de verao da minha juventude.", "sostantivo: periodo della vita giovane"),
+        ("I sapori della cucina di casa mi mancano ogni giorno.", "sapori", "Os sabores da cozinha de casa me fazem falta todo dia.", "sostantivo plurale: gusti"),
+        ("Penso spesso al paese dove sono cresciuto.", "cresciuto", "Penso frequentemente na cidade onde cresci.", "participio passato di crescere"),
+        ("Le serate in famiglia avevano un calore speciale.", "calore", "As noitadas em familia tinham um calor especial.", "sostantivo: tepore, affetto"),
+        ("Mi manca la semplicita dei tempi andati.", "semplicita", "Sinto falta da simplicidade dos tempos passados.", "sostantivo: qualita di essere semplice"),
+        ("Il passato e un paese straniero dove non si puo tornare.", "straniero", "O passado e um pais estrangeiro onde nao se pode voltar.", "aggettivo: di altro paese"),
+        ("Sento ancora la voce di mio nonno che mi racconta storie.", "racconta", "Ainda ouco a voz do meu avo me contando historias.", "verbo raccontare: narrare"),
+        ("Ogni cosa vecchia porta con se un ricordo perduto.", "perduto", "Cada coisa velha traz consigo uma memoria perdida.", "aggettivo: smarrito"),
+        ("Quando sento quella melodia, torno bambino per un istante.", "melodia", "Quando ouco aquela melodia, volto a ser crianca por um instante.", "sostantivo: sequenza di note musicali"),
+        ("La nostalgia e un dolore dolce che non vuoi lasciare andare.", "dolce", "A nostalgia e uma dor doce que nao quer deixar ir.", "aggettivo: piacevole ma triste"),
+        ("I giochi dell'infanzia mi sembrano ora un sogno lontano.", "giochi", "As brincadeiras da infancia me parecem agora um sonho distante.", "sostantivo plurale: attivita per bambini"),
+        ("Riconosco ancora la strada dove andavo a scuola da piccolo.", "riconosco", "Ainda reconheco a rua onde ia para a escola quando pequeno.", "verbo riconoscere: identificare"),
+        ("Ogni vecchia canzone e una macchina del tempo.", "macchina", "Cada musica antiga e uma maquina do tempo.", "sostantivo: veicolo, strumento"),
+        ("Gli amici di scuola sono dispersi in tutto il mondo.", "dispersi", "Os amigos da escola estao espalhados pelo mundo inteiro.", "aggettivo: separati, lontani"),
+        ("Il sapore di certe pietanze mi fa tornare indietro di anni.", "pietanze", "O sabor de certos pratos me faz voltar anos atras.", "sostantivo plurale: piatti di cibo"),
+        ("Sento nostalgia per le domeniche in famiglia d'un tempo.", "domeniche", "Sinto nostalgia pelos domingos em familia de antigamente.", "sostantivo plurale: settimo giorno"),
+        ("Il quartiere dove sono nato e cambiato ma non nella memoria.", "memoria", "O bairro onde nasci mudou mas nao na memoria.", "sostantivo: capacita di ricordare"),
+        ("Certe parole mi ricordano conversazioni dimenticate.", "conversazioni", "Certas palavras me lembram conversas esquecidas.", "sostantivo plurale: dialoghi"),
+        ("I vecchi giocattoli conservati in soffitta hanno un'anima.", "soffitta", "Os brinquedos velhos guardados no sotao tem uma alma.", "sostantivo: ultimo piano di una casa"),
+        ("Rivedo nei sogni i luoghi dove ho vissuto da giovane.", "vissuto", "Revejo nos sonhos os lugares onde vivi quando jovem.", "participio passato di vivere"),
+        ("Ogni anniversario mi porta un misto di gioia e malinconia.", "anniversario", "Cada aniversario me traz uma mistura de alegria e melancolia.", "sostantivo: ricorrenza annuale"),
+        ("Le lettere scritte a mano hanno un valore inestimabile.", "inestimabile", "As cartas escritas a mao tem um valor inestimavel.", "aggettivo: che non si puo calcolare"),
+        ("Mi mancano le risate spenserate di quando ero ragazzo.", "spenserate", "Sinto falta das risadas despreocupadas de quando era jovem.", "aggettivo: senza pensieri"),
+        ("La casa della mia infanzia esiste solo nei miei ricordi.", "infanzia", "A casa da minha infancia existe so nas minhas memorias.", "sostantivo: periodo della vita giovane"),
+        ("Ogni tramonto mi riporta a quei momenti irripetibili.", "irripetibili", "Cada por do sol me leva de volta aqueles momentos irrepetibili.", "aggettivo: che non si possono ripetere"),
+        ("La nostalgia non e malattia, e il segno di aver amato.", "malattia", "A nostalgia nao e doenca, e o sinal de ter amado.", "sostantivo: condizione patologica"),
+        ("Sento il profumo della pioggia e torno alla mia infanzia.", "pioggia", "Sinto o cheiro da chuva e volto a minha infancia.", "sostantivo: acqua che cade dal cielo"),
+        ("I film vecchi mi fanno rivivere emozioni perdute.", "rivivere", "Os filmes antigos me fazem reviver emocoes perdidas.", "verbo: vivere di nuovo"),
+        ("Conservo ogni biglietto e fotografia come un tesoro.", "conservo", "Guardo cada bilhete e fotografia como um tesouro.", "verbo conservare: tenere con cura"),
+        ("Il tempo non si ferma ma la memoria si.", "ferma", "O tempo nao para mas a memoria sim.", "verbo fermarsi: cessare"),
+        ("La storia della mia famiglia e incisa nel mio cuore.", "incisa", "A historia da minha familia esta gravada no meu coracao.", "participio passato di incidere"),
+        ("Certe emozioni non si spiegano, si sentono soltanto.", "soltanto", "Certas emocoes nao se explicam, se sentem somente.", "avverbio: solo, solamente"),
+        ("Ogni vecchia fotografia vale piu di mille parole.", "fotografia", "Cada foto antiga vale mais que mil palavras.", "sostantivo: immagine impressa"),
+        ("La nostalgia mi insegna ad apprezzare il presente.", "insegna", "A nostalgia me ensina a apreciar o presente.", "verbo insegnare: far imparare"),
+        ("Rivivo il passato nei sogni e mi sveglio con il sorriso.", "rivivo", "Revivo o passado nos sonhos e acordo com o sorriso.", "verbo rivivere: vivere di nuovo"),
+        ("I migliori ricordi sono quelli che non svaniscono mai.", "svaniscono", "As melhores lembrancas sao aquelas que nunca desaparecem.", "verbo svanire: sparire"),
+    ],
+    "vita": [
+        ("La vita e troppo breve per rimpianti e paure inutili.", "rimpianti", "A vida e curta demais para arrependimentos e medos inuteis.", "sostantivo plurale: dispiaceri"),
+        ("Ogni mattina e una nuova possibilita di iniziare.", "possibilita", "Cada manha e uma nova possibilidade de comecar.", "sostantivo: opportunita"),
+        ("Vivo il presente perche il futuro e incerto.", "incerto", "Vivo o presente porque o futuro e incerto.", "aggettivo: non sicuro"),
+        ("La vita mi ha insegnato che niente e per sempre.", "insegnato", "A vida me ensinou que nada e para sempre.", "participio passato di insegnare"),
+        ("Ogni esperienza, buona o cattiva, mi ha reso piu forte.", "esperienza", "Cada experiencia, boa ou ruim, me tornou mais forte.", "sostantivo: vissuto, conoscenza"),
+        ("Il tempo e il bene piu prezioso che abbiamo.", "prezioso", "O tempo e o bem mais precioso que temos.", "aggettivo: di grande valore"),
+        ("Bisogna saper cogliere le occasioni prima che svaniscano.", "cogliere", "E preciso saber aproveitar as oportunidades antes que desaparecam.", "verbo: prendere al momento giusto"),
+        ("La vita e bella soprattutto nei dettagli piu piccoli.", "dettagli", "A vida e bonita especialmente nos detalhes mais pequenos.", "sostantivo plurale: particolari"),
+        ("Ogni giorno che passa e un regalo da non sprecare.", "sprecare", "Cada dia que passa e um presente a nao desperdicar.", "verbo: usare male, gettare via"),
+        ("Le difficolta della vita ci rendono piu resilienti.", "resilienti", "As dificuldades da vida nos tornam mais resilientes.", "aggettivo: capaci di riprendersi"),
+        ("Ho imparato a sorridere anche quando fa male.", "sorridere", "Aprendi a sorrir mesmo quando doi.", "verbo: mostrare gioia col viso"),
+        ("La felicita non si trova, si costruisce giorno dopo giorno.", "costruisce", "A felicidade nao se encontra, se constroi dia apos dia.", "verbo costruire: edificare"),
+        ("Non sprecare energie su chi non merita la tua attenzione.", "merita", "Nao desperdice energias em quem nao merece sua atencao.", "verbo meritare: essere degno"),
+        ("La vita scorre veloce, quindi dobbiamo assaporarla.", "assaporarla", "A vida corre rapido, entao devemos saborea-la.", "verbo assaporare + pronome"),
+        ("Ho scelto di circondarmi di persone positive e sincere.", "positiva", "Escolhi me cercar de pessoas positivas e sinceras.", "aggettivo: ottimista"),
+        ("Ogni fallimento e una lezione travestita da sconfitta.", "lezione", "Cada fracasso e uma licao disfarcada de derrota.", "sostantivo: insegnamento"),
+        ("La vita non e sempre giusta, ma e sempre istruttiva.", "istruttiva", "A vida nem sempre e justa, mas sempre e instrutiva.", "aggettivo: che insegna qualcosa"),
+        ("Vivo senza rimpianti perche ho dato il massimo.", "rimpianti", "Vivo sem arrependimentos porque dei o maximo.", "sostantivo plurale: dispiaceri"),
+        ("Le scelte difficili ci definiscono come persone.", "definiscono", "As escolhas dificeis nos definem como pessoas.", "verbo definire: determinare"),
+        ("Il coraggio non e assenza di paura, ma agire nonostante essa.", "nonostante", "A coragem nao e ausencia de medo, mas agir apesar dele.", "preposizione: malgrado"),
+        ("Nella vita contano le relazioni, non le cose materiali.", "materiali", "Na vida contam os relacionamentos, nao as coisas materiais.", "aggettivo: fisico, tangibile"),
+        ("Ho capito che la salute e il vero lusso della vita.", "lusso", "Entendi que a saude e o verdadeiro luxo da vida.", "sostantivo: bene raro e costoso"),
+        ("Ogni persona che incontro mi arricchisce in qualche modo.", "arricchisce", "Cada pessoa que encontro me enriquece de alguma forma.", "verbo arricchire: rendere piu ricco"),
+        ("Scegliere la felicita e un atto di coraggio quotidiano.", "quotidiano", "Escolher a felicidade e um ato de coragem diario.", "aggettivo: di ogni giorno"),
+        ("La vita e un viaggio e non una destinazione.", "destinazione", "A vida e uma viagem e nao um destino.", "sostantivo: luogo di arrivo"),
+        ("Non rimando mai a domani cio che posso fare oggi.", "rimando", "Nunca adio para amanha o que posso fazer hoje.", "verbo rimandare: posticipare"),
+        ("I momenti semplici sono spesso i piu belli.", "semplici", "Os momentos simples sao muitas vezes os mais bonitos.", "aggettivo: non complicati"),
+        ("La vita cambia direzione quando meno ce lo aspettiamo.", "aspettiamo", "A vida muda de direcao quando menos esperamos.", "verbo aspettarsi: prevedere"),
+        ("Ho imparato a lasciar andare cio che non posso controllare.", "controllare", "Aprendi a deixar ir o que nao posso controlar.", "verbo: governare, gestire"),
+        ("Vivere con gratitudine trasforma ogni giorno.", "gratitudine", "Viver com gratidao transforma cada dia.", "sostantivo: sentimento di riconoscenza"),
+        ("La vita e il risultato delle scelte che facciamo ogni giorno.", "risultato", "A vida e o resultado das escolhas que fazemos todo dia.", "sostantivo: conseguenza, esito"),
+        ("Non esistono strade perfette, solo strade percorse.", "percorse", "Nao existem estradas perfeitas, apenas estradas percorridas.", "participio passato di percorrere"),
+        ("Il senso della vita si trova nelle piccole cose.", "senso", "O sentido da vida se encontra nas pequenas coisas.", "sostantivo: significato, scopo"),
+        ("Cambiare idea non e debolezza, e saggezza.", "saggezza", "Mudar de ideia nao e fraqueza, e sabedoria.", "sostantivo: qualita di chi e saggio"),
+        ("La vita mi ha dato tutto cio di cui avevo bisogno.", "bisogno", "A vida me deu tudo o que eu precisava.", "sostantivo: necessita"),
+        ("Non smettere mai di imparare e il segreto della giovinezza.", "giovinezza", "Nunca parar de imparare e o segredo da juventude.", "sostantivo: periodo della vita giovane"),
+        ("Ogni tramonto e una promessa di un nuovo domani.", "promessa", "Cada por do sol e uma promessa de um novo amanha.", "sostantivo: impegno preso"),
+        ("Ho scelto di costruire ponti invece di muri.", "ponti", "Escolhi construir pontes em vez de muros.", "sostantivo plurale: strutture di collegamento"),
+        ("La vita e piu bella quando la condividi con gli altri.", "condividi", "A vida e mais bonita quando a compartilhas com os outros.", "verbo condividere: dividere con altri"),
+        ("Ogni respiro e un invito a vivere pienamente.", "rispiro", "Cada respiracao e um convite a viver plenamente.", "sostantivo: azione del respirare"),
+    ],
+}
+
+ALL_TEMAS = {}
+ALL_TEMAS.update(TEMAS_P1)
+ALL_TEMAS.update(TEMAS_P2)
+
+TEMA_MAP_ALL = {
+    "amore": "amore",
+    "estate": "estate",
+    "notte": "notte",
+    "ballo": "ballo",
+    "tristezza": "tristezza",
+    "viaggio": "viaggio",
+    "amicizia": "amicizia",
+    "ribellione": "ribellione",
+    "nostalgia": "nostalgia",
+    "vita": "vita",
+}
+
+def make_estrofa(idx, frase_tuple):
+    testo, parola, traducao, dica = frase_tuple
+    lacuna = testo.replace(parola, "___", 1)
+    return {
+        "id": idx,
+        "texto_completo": testo,
+        "texto_lacuna": lacuna,
+        "palavra_oculta": parola,
+        "traducao": traducao,
+        "dica": dica
+    }
+
+def is_generic(estrofe_list):
+    for e in estrofe_list:
+        txt = e.get("texto_completo", "")
+        if "Questo" in txt and "verso" in txt:
+            return True
+    return False
+
+# Load
+with open("data/canzoni.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+songs = data["canzoni"]
+fixed = 0
+skipped = 0
+unknown = []
+
+tema_usage = {t: 0 for t in ALL_TEMAS}
+
+for song in songs:
+    sid = song["id"]
+    num_match = re.match(r"can_(\d+)", sid)
+    if not num_match:
+        continue
+    num = int(num_match.group(1))
+    if not (51 <= num <= 150):
+        continue
+
+    tema = song.get("tema", "")
+    tema_key = TEMA_MAP_ALL.get(tema)
+
+    if not tema_key:
+        unknown.append((sid, tema))
+        continue
+
+    if not is_generic(song.get("estrofes", [])):
+        skipped += 1
+        continue
+
+    pool = ALL_TEMAS[tema_key]
+    start = tema_usage[tema_key]
+    frases = [pool[(start + i) % len(pool)] for i in range(4)]
+    tema_usage[tema_key] += 4
+
+    song["estrofes"] = [make_estrofa(i+1, frases[i]) for i in range(4)]
+    song["vocabulario_chave"] = [f[1] for f in frases]
+    fixed += 1
+
+print("Fixed: " + str(fixed))
+print("Skipped (already OK): " + str(skipped))
+if unknown:
+    print("Unknown tema: " + str(unknown))
+
+# Save cleanly
+output = json.dumps(data, ensure_ascii=False, indent=2)
+with open("data/canzoni.json", "w", encoding="utf-8", newline="\n") as f:
+    f.write(output)
+
+print("Saved OK -> data/canzoni.json")
+
+# Verify sample
+print("\n--- Sample Verification ---")
+for s in data["canzoni"]:
+    if s["id"] in ("can_051", "can_057", "can_058", "can_059", "can_060", "can_150"):
+        print(s["id"] + " [" + s.get("tema","?") + "]: " + s["titulo"])
+        if s["estrofes"]:
+            e = s["estrofes"][0]
+            print("  -> " + e["texto_completo"])

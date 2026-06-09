@@ -1,0 +1,470 @@
+[
+  {
+    "id": "fil_plotino_sulla_conoscenza",
+    "testo": [
+      {
+        "id": "p0",
+        "italiano": "Roma, nell'anno 255 dopo Cristo, era ancora la capitale del mondo — ma un mondo che cominciava a sgretolarsi ai bordi come un affresco esposto alla pioggia. L'imperatore Valeriano era minacciato dai Goti a nord e dai Persiani a est, la moneta si svalutava, e nelle strade del quartiere Subura si udivano più lingue di quante ne parlasse qualunque accademia. In questo caos, nella casa dell'aristocratica Gemina sul colle Esquilino, accadeva ogni giovedì sera qualcosa di straordinario: un uomo di sessant'anni con gli occhi febbricitanti e il mantello logoro radunava intorno a sé senatori, medici, matrone patrizie e giovani filosofi, e parlava del l'Uno — dell'assoluto indicibile che precede ogni essere e ogni pensiero. Quell'uomo si chiamava Plotino, e veniva dall'Egitto.",
+        "portugues": "Roma, no ano 255 depois de Cristo, ainda era a capital do mundo — mas um mundo que começava a se desmoronar nas bordas como um afresco exposto à chuva. O imperador Valeriano era ameaçado pelos Godos ao norte e pelos Persas a leste, a moeda se desvalorizava, e nas ruas do bairro Subura se ouvia mais línguas do que qualquer academia poderia ensinar. Neste caos, na casa da aristocrata Gemina no morro Esquilino, acontecia toda quinta-feira à noite algo extraordinário: um homem de sessenta anos com olhos febris e manto gasto reunia ao seu redor senadores, médicos, matronas patrícias e jovens filósofos, e falava do Uno — do absoluto indizível que precede todo ser e todo pensamento. Aquele homem chamava-se Plotino, e vinha do Egito.",
+        "parole": [
+          {"parola": "sgretolarsi", "ipa": "/zɡretoˈlarsi/", "traduzione": "desmoronar-se, fragmentar-se aos poucos", "categoria": "verbo"},
+          {"parola": "febbricitanti", "ipa": "/febbritʃiˈtanti/", "traduzione": "febris, ardentes (referidos a olhos intensos)", "categoria": "aggettivo"},
+          {"parola": "matrone", "ipa": "/maˈtrɔːne/", "traduzione": "matronas, mulheres nobres da aristocracia romana", "categoria": "sostantivo"},
+          {"parola": "Esquilino", "ipa": "/eskwiˈliːno/", "traduzione": "Esquilino, uma das sete colinas de Roma", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p1",
+        "italiano": "Porfírio di Tiro, il suo allievo più brillante, era arrivato a Roma due anni prima con una lettera di presentazione scritta da Longino di Atene, il critico letterario più famoso del momento. Aveva ventidue anni, capelli crespi, gli occhi rapidi di chi legge troppo e dorme poco. Quella sera, nell'atrio della casa di Gemina illuminato da decine di lampade ad olio, Porfírio aveva posto a Plotino una domanda che non riusciva a togliersi dalla testa da mesi: «Come si conosce ciò che sta al di là del conoscibile?» Era una domanda che portava dentro di sé la propria contraddizione: se l'Uno è oltre ogni limite, ogni categoria, ogni logos — come possiamo anche solo avvicinarci ad esso col pensiero? Non era una domanda retorica. Era una crisi filosofica autentica che teneva il giovane sveglio di notte.",
+        "portugues": "Porfírio de Tiro, seu aluno mais brilhante, havia chegado a Roma dois anos antes com uma carta de apresentação escrita por Longino de Atenas, o crítico literário mais famoso do momento. Tinha vinte e dois anos, cabelos crespos, os olhos rápidos de quem lê demais e dorme pouco. Naquela noite, no átrio da casa de Gemina iluminado por dezenas de lâmpadas de azeite, Porfírio havia feito a Plotino uma pergunta que não conseguia tirar da cabeça havia meses: «Como se conhece o que está além do cognoscível?» Era uma pergunta que carregava dentro de si sua própria contradição: se o Uno está além de todo limite, toda categoria, todo logos — como podemos sequer aproximar-nos dele com o pensamento? Não era uma pergunta retórica. Era uma crise filosófica autêntica que mantinha o jovem acordado à noite.",
+        "parole": [
+          {"parola": "conoscibile", "ipa": "/konoʃˈʃiːbile/", "traduzione": "cognoscível, passível de ser conhecido", "categoria": "aggettivo"},
+          {"parola": "logos", "ipa": "/ˈlɔːɡos/", "traduzione": "razão, discurso, princípio racional (grego)", "categoria": "sostantivo"},
+          {"parola": "atrio", "ipa": "/ˈaːtrio/", "traduzione": "átrio, pátio de entrada de uma casa romana", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p2",
+        "italiano": "Plotino chiuse gli occhi per un lungo momento — un gesto che i suoi discepoli conoscevano bene, che significava non silenzio ma concentrazione assoluta, come se stesse pescando una risposta da una profondità che non aveva nome. Poi aprì gli occhi, e quando parlò, la sua voce aveva quella qualità strana che solo lui possedeva: non quella del professore che spiega, ma quella del testimone che racconta qualcosa che ha visto personalmente. «La domanda contiene già l'errore» disse. «Tu presupponi che la conoscenza sia sempre un atto del soggetto verso un oggetto. Ma l'Uno non è un oggetto. Non è nemmeno un soggetto. L'Uno è ciò a partire da cui soggetto e oggetto diventano possibili. Come potresti conoscerlo nel senso ordinario? È come chiedere all'occhio di vedere se stesso senza specchio».",
+        "portugues": "Plotino fechou os olhos por um longo momento — um gesto que seus discípulos conheciam bem, que significava não silêncio mas concentração absoluta, como se estivesse pescando uma resposta de uma profundidade sem nome. Então abriu os olhos, e quando falou, sua voz tinha aquela qualidade estranha que só ele possuía: não a do professor que explica, mas a da testemunha que conta algo que viu pessoalmente. «A pergunta já contém o erro» disse. «Tu pressupões que o conhecimento é sempre um ato do sujeito em relação a um objeto. Mas o Uno não é um objeto. Não é sequer um sujeito. O Uno é aquilo a partir do qual sujeito e objeto se tornam possíveis. Como poderias conhecê-lo no sentido ordinário? É como perguntar ao olho se ele pode ver-se a si mesmo sem espelho».",
+        "parole": [
+          {"parola": "to Hen", "ipa": "/to ˈhɛn/", "traduzione": "o Uno (grego) — o absoluto indizível de Plotino", "categoria": "sostantivo"},
+          {"parola": "presupponi", "ipa": "/presupˈpɔːni/", "traduzione": "pressupões, assumis como dado de antemão", "categoria": "verbo"},
+          {"parola": "testimone", "ipa": "/testiˈmɔːne/", "traduzione": "testemunha, quem viu algo diretamente", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p3",
+        "italiano": "Porfírio non era soddisfatto. «Ma allora è impossibile» disse, con la voce tagliente di chi ha vegliato tutta la notte su un problema e si sente autorizzato all'impazienza. «Se l'Uno non può essere conosciuto con la ragione, e nemmeno con i sensi, e nemmeno con l'intuizione — allora possiamo solo parlarne per via negativa, dicendo ciò che non è». Plotino sorrise — non il sorriso condiscendente del maestro che ha già sentito quell'obiezione, ma quello più raro del filosofo che riconosce in un errore il percorso verso la verità. «Esatto» disse. «Hai appena inventato la teologia apofatica. Non parlare dell'Uno come se fosse una cosa. Parla dell'Uno togliendo ogni predicato. Non è materia. Non è forma. Non è pensiero. Non è essere. E quando hai tolto tutto, ciò che rimane — quella traccia di silenzio — è ciò che si avvicina di più».",
+        "portugues": "Porfírio não estava satisfeito. «Então é impossível» disse, com a voz cortante de quem ficou acordado a noite toda sobre um problema e se sente autorizado à impaciência. «Se o Uno não pode ser conhecido pela razão, nem pelos sentidos, nem pela intuição — então só podemos falar dele por via negativa, dizendo o que ele não é». Plotino sorriu — não o sorriso condescendente do mestre que já ouviu aquela objeção, mas o mais raro do filósofo que reconhece num erro o caminho para a verdade. «Exatamente» disse. «Acabas de inventar a teologia apofática. Não fales do Uno como se fosse uma coisa. Fala do Uno removendo todo predicado. Não é matéria. Não é forma. Não é pensamento. Não é ser. E quando tiveres removido tudo, o que resta — aquele rastro de silêncio — é o que mais se aproxima».",
+        "parole": [
+          {"parola": "apofatica", "ipa": "/apoˈfaːtika/", "traduzione": "apofática — teologia que descreve Deus pelo que ele NÃO é", "categoria": "aggettivo"},
+          {"parola": "predicato", "ipa": "/prediˈkaːto/", "traduzione": "predicado, atributo lógico de um sujeito", "categoria": "sostantivo"},
+          {"parola": "condiscendente", "ipa": "/kondiʃˈtʃɛndente/", "traduzione": "condescendente, que trata o outro como inferior", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p4",
+        "italiano": "Nella stanza c'era una matrona di nome Marcella, moglie di un senatore, che seguiva le lezioni di Plotino da tre anni e raramente parlava. Quella sera alzò la mano — con il gesto incerto di chi non è abituato a farlo. «Maestro» disse, «ma lei stesso — lei ha mai avuto questa esperienza? Ha mai raggiunto l'Uno?». La domanda tagliò l'aria come una lama. Era la domanda che tutti i discepoli volevano porre ma nessuno aveva il coraggio di formulare, perché portava con sé l'imbarazzo del mistico che racconta la sua esperienza privata, e il rischio di sembrare un impostore. Plotino non si irrigidì. Anzi — la sua espressione si ammorbidì in qualcosa che stava tra la nostalgia e la gratitudine. «Sì» disse. «Quattro volte, fino ad oggi. Non so spiegare come. Ma so che non era un sogno».",
+        "portugues": "Na sala havia uma matrona chamada Marcella, esposa de um senador, que acompanhava as aulas de Plotino há três anos e raramente falava. Naquela noite ergueu a mão — com o gesto incerto de quem não está habituado a fazê-lo. «Mestre» disse, «mas o senhor mesmo — já teve esta experiência? Já alcançou o Uno?». A pergunta cortou o ar como uma lâmina. Era a pergunta que todos os discípulos queriam fazer mas nenhum tinha coragem de formular, porque carregava consigo o embaraço do místico que conta sua experiência privada, e o risco de parecer um impostor. Plotino não se enrijeceu. Pelo contrário — sua expressão se abrandou em algo que ficava entre a nostalgia e a gratidão. «Sim» disse. «Quatro vezes, até hoje. Não sei explicar como. Mas sei que não era um sonho».",
+        "parole": [
+          {"parola": "impostore", "ipa": "/imposˈtɔːre/", "traduzione": "impostor, charlatão, quem finge", "categoria": "sostantivo"},
+          {"parola": "si ammorbidì", "ipa": "/si ammorbiˈdiː/", "traduzione": "se abrandou, se suavizou (referido a expressão facial)", "categoria": "verbo"},
+          {"parola": "nostalgia", "ipa": "/nostalˈdʒiːa/", "traduzione": "nostalgia, saudade de algo distante ou passado", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p5",
+        "italiano": "Porfírio si avvicinò. «Quattro volte» ripeté lentamente. «E come... come si arriva lì?». Era la domanda tecnica, la domanda pratica — come un apprendista alchimista che vuole sapere la procedura. Plotino scosse la testa con dolcezza. «Non ci si arriva. L'Uno non è una destinazione. È più come... un ricordare qualcosa che non si è mai dimenticato davvero. Si tratta di togliere tutto ciò che nasconde ciò che già si è». Fece una pausa. «La theōria non è osservazione dall'esterno. È partecipazione. Quando contempli l'Uno, non sei tu che lo vedi — sei tu che temporaneamente smetti di essere separato da esso. La henōsis è la dissoluzione del confine tra il vedente e il veduto».",
+        "portugues": "Porfírio se aproximou. «Quatro vezes» repetiu lentamente. «E como... como se chega lá?». Era a pergunta técnica, a pergunta prática — como um aprendiz de alquimista que quer saber o procedimento. Plotino sacudiu a cabeça com delicadeza. «Não se chega lá. O Uno não é um destino. É mais como... lembrar algo que nunca foi realmente esquecido. Trata-se de remover tudo que esconde o que já se é». Fez uma pausa. «A theōria não é observação de fora. É participação. Quando contemplas o Uno, não és tu que o vês — és tu que temporariamente cessas de estar separado dele. A henōsis é a dissolução da fronteira entre o vidente e o visto».",
+        "parole": [
+          {"parola": "henōsis", "ipa": "/hɛˈnoːsis/", "traduzione": "henose, união mística com o Uno (grego)", "categoria": "sostantivo"},
+          {"parola": "theōria", "ipa": "/tɛˈoːria/", "traduzione": "contemplação filosófica ativa (diferente de observação passiva)", "categoria": "sostantivo"},
+          {"parola": "vedente", "ipa": "/veˈdɛnte/", "traduzione": "vidente, aquele que vê", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p6",
+        "italiano": "Un giovane senatore di nome Rogoziano, che seguiva le lezioni da pochi mesi, intervenne con il tono seccato di chi ha studiato logica aristotelica e fatica a farla corrispondere con ciò che sta sentendo. «Ma questo è misticismo puro» disse. «Come si distingue la henōsis da un sogno, da un'allucinazione, da uno stato alterato prodotto dal digiuno o dalla malattia?». Era un'obiezione seria, formulata con precisione. Plotino non la respinse. «Non si distingue con prove esterne» ammise. «Si distingue per la certezza interna che rimane dopo — e per la trasformazione che produce. Chi ha toccato l'Uno anche per un solo istante non vede più il mondo allo stesso modo. Non come credenza nuova, ma come evidenza diretta». Fece una pausa. «Hai mai amato qualcuno così profondamente da sentire che tu e quella persona eravate momentaneamente la stessa cosa?». Il senatore arrossì.",
+        "portugues": "Um jovem senador chamado Rogoziano, que seguia as aulas há poucos meses, interveio com o tom irritado de quem estudou lógica aristotélica e dificilmente consegue fazê-la corresponder ao que está ouvindo. «Mas isso é misticismo puro» disse. «Como se distingue a henōsis de um sonho, de uma alucinação, de um estado alterado produzido pelo jejum ou pela doença?». Era uma objeção séria, formulada com precisão. Plotino não a rejeitou. «Não se distingue com provas externas» admitiu. «Distingue-se pela certeza interna que permanece depois — e pela transformação que produz. Quem tocou o Uno mesmo por um único instante não vê mais o mundo da mesma forma. Não como nova crença, mas como evidência direta». Fez uma pausa. «Já amaste alguém tão profundamente que sentiste que tu e essa pessoa éreis momentaneamente a mesma coisa?». O senador corou.",
+        "parole": [
+          {"parola": "allucinazione", "ipa": "/allutʃinatˈtsjoːne/", "traduzione": "alucinação, percepção sem estímulo real", "categoria": "sostantivo"},
+          {"parola": "digiuno", "ipa": "/diˈdʒuːno/", "traduzione": "jejum, abstinência de alimento", "categoria": "sostantivo"},
+          {"parola": "arrossì", "ipa": "/arossˈsiː/", "traduzione": "corou, ficou vermelho (passato remoto)", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p7",
+        "italiano": "Plotino continuò: «L'amore erotico è una forma imperfetta e fugace della henōsis — è il motivo per cui Platone lo usò come immagine nella sua scala dell'Eros. In quell'istante in cui due amanti si perdono l'uno nell'altra, c'è un'eco dell'Uno. Non perché l'Uno sia amore sentimentale — ma perché ogni unificazione riflette, per un momento, la struttura originaria dell'essere». Porfírio stava scrivendo velocemente su una tavoletta. Plotino lo vide e si fermò. «Porfírio, smetti di scrivere». L'allievo alzò la testa, sorpreso. «Ma se non scrivo, dimentico». «Bene» disse Plotino. «Dimentica. Ciò che si può scrivere non è l'Uno. L'Uno non è un concetto da memorizzare. Smetti di prendere note e inizia a prestare attenzione».",
+        "portugues": "Plotino continuou: «O amor erótico é uma forma imperfeita e fugaz da henōsis — é o motivo pelo qual Platão o usou como imagem em sua escada do Eros. Naquele instante em que dois amantes se perdem um no outro, há um eco do Uno. Não porque o Uno seja amor sentimental — mas porque toda unificação reflete, por um momento, a estrutura originária do ser». Porfírio estava escrevendo rapidamente numa tabuinha. Plotino o viu e parou. «Porfírio, para de escrever». O aluno ergueu a cabeça, surpreso. «Mas se não escrevo, esqueço». «Bem» disse Plotino. «Esquece. O que pode ser escrito não é o Uno. O Uno não é um conceito para memorizar. Para de tomar notas e começa a prestar atenção».",
+        "parole": [
+          {"parola": "fugace", "ipa": "/fuˈɡaːtʃe/", "traduzione": "fugaz, passageiro, que dura pouco", "categoria": "aggettivo"},
+          {"parola": "eco", "ipa": "/ˈɛːko/", "traduzione": "eco, ressonância, reflexo distante", "categoria": "sostantivo"},
+          {"parola": "memorizzare", "ipa": "/memoridˈdzaːre/", "traduzione": "memorizar, gravar na memória", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p8",
+        "italiano": "Nella stanza era calato un silenzio diverso da tutti i silenzi precedenti. Non il silenzio dell'attesa, non quello dell'imbarazzo — ma un silenzio attivo, come quello che si fa prima di ascoltare un suono lontanissimo. Plotino lasciò quel silenzio stare per qualche minuto. Poi parlò di nuovo, con una voce più bassa: «Le Enneadi — i testi che Porfírio sta raccogliendo e ordinando — non sono la filosofia dell'Uno. Sono mappe per avvicinarsi a un territorio che le mappe non possono rappresentare. Questo è il limite onesto di qualunque logos filosofico: può guidarti fino all'orlo, ma non può portarti oltre». Le lampade ad olio tremolarono per una corrente d'aria. Le ombre danzarono sulle pareti bianche. Nessuno si mosse.",
+        "portugues": "Na sala havia caído um silêncio diferente de todos os silêncios anteriores. Não o silêncio da espera, nem o do embaraço — mas um silêncio ativo, como o que se faz antes de escutar um som distantíssimo. Plotino deixou aquele silêncio ficar por alguns minutos. Depois falou novamente, com uma voz mais baixa: «As Enéadas — os textos que Porfírio está recolhendo e ordenando — não são a filosofia do Uno. São mapas para aproximar-se de um território que os mapas não podem representar. Este é o limite honesto de qualquer logos filosófico: pode guiar-te até a beira, mas não pode levarte além». As lâmpadas de azeite tremeluziam por uma corrente de ar. As sombras dançavam nas paredes brancas. Ninguém se moveu.",
+        "parole": [
+          {"parola": "Enneadi", "ipa": "/ɛnˈneːadi/", "traduzione": "Enéadas — obra de Plotino organizada por Porfírio em 6 grupos de 9 textos", "categoria": "sostantivo"},
+          {"parola": "tremolarono", "ipa": "/tremoˈlarono/", "traduzione": "tremeluzaram, vibraram (de chamas ou luzes)", "categoria": "verbo"},
+          {"parola": "orlo", "ipa": "/ˈɔːrlo/", "traduzione": "beira, margem, limite extremo", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p9",
+        "italiano": "Rogoziano, il senatore scettico, non si arrese. «Maestro, con tutto il rispetto — lei sta descrivendo qualcosa di ineffabile. E quando qualcosa è ineffabile, non è possibile insegnarlo. Allora a che serve la filosofia?». Era il momento più difficile della serata — la sfida esistenziale alla stessa ragion d'essere della scuola. Plotino lo guardò con qualcosa che, nel suo viso quasi sempre immobile, poteva essere interpretato come affetto. «La filosofia non serve a raggiungere l'Uno» disse. «Serve a togliere gli ostacoli che impediscono all'Uno di raggiungerti. Come un medico che non crea la salute — la salute è già nell'organismo — ma toglie ciò che la impedisce. La katharsis filosofica non aggiunge nulla. Purifica ciò che già è».",
+        "portugues": "Rogoziano, o senador cético, não se rendeu. «Mestre, com todo o respeito — o senhor está descrevendo algo de inefável. E quando algo é inefável, não é possível ensiná-lo. Então para que serve a filosofia?». Era o momento mais difícil da noite — o desafio existencial à própria razão de ser da escola. Plotino o olhou com algo que, no seu rosto quase sempre imóvel, podia ser interpretado como afeto. «A filosofia não serve para alcançar o Uno» disse. «Serve para remover os obstáculos que impedem o Uno de alcançar-te. Como um médico que não cria a saúde — a saúde já está no organismo — mas remove o que a impede. A katharsis filosófica não acrescenta nada. Purifica o que já é».",
+        "parole": [
+          {"parola": "ineffabile", "ipa": "/ineffˈaːbile/", "traduzione": "inefável, impossível de expressar em palavras", "categoria": "aggettivo"},
+          {"parola": "katharsis", "ipa": "/kaˈtarsis/", "traduzione": "catarse, purificação da alma (grego)", "categoria": "sostantivo"},
+          {"parola": "organismo", "ipa": "/orgaˈnizmo/", "traduzione": "organismo, ser vivo em seu conjunto", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p10",
+        "italiano": "Marcella, la matrona, intervenne di nuovo: «E il nous? Il nous precede l'Uno o ne deriva?». Era una domanda tecnicamente precisa che mostrava anni di studio serio. Plotino si animò — era la domanda giusta, quella che apriva la struttura intera del sistema. «Il nous è la prima emanazione dell'Uno. L'Uno trabocca — non per scelta, non per necessità, ma per eccesso di perfezione, come il sole che non decide di fare luce. Il nous è il primo specchio dell'Uno, il primo momento in cui l'Uno diventa visibile a se stesso attraverso il pensiero. Dal nous emana la psychē — l'Anima — e dall'Anima emana la materia. Questa è la struttura delle tre hypostaseis: Uno, Nous, Anima. Tutto il resto è variazione e declinazione di questa triade».",
+        "portugues": "Marcella, a matrona, interveio novamente: «E o nous? O nous precede o Uno ou dele deriva?». Era uma pergunta tecnicamente precisa que mostrava anos de estudo sério. Plotino se animou — era a pergunta certa, aquela que abria a estrutura inteira do sistema. «O nous é a primeira emanação do Uno. O Uno transborda — não por escolha, não por necessidade, mas por excesso de perfeição, como o sol que não decide produzir luz. O nous é o primeiro espelho do Uno, o primeiro momento em que o Uno torna-se visível a si mesmo através do pensamento. Do nous emana a psychē — a Alma — e da Alma emana a matéria. Esta é a estrutura das três hypostaseis: Uno, Nous, Alma. Todo o resto é variação e declinação desta tríade».",
+        "parole": [
+          {"parola": "nous", "ipa": "/nuːs/", "traduzione": "Nous — Intelecto divino, segunda hipóstase de Plotino", "categoria": "sostantivo"},
+          {"parola": "hypostaseis", "ipa": "/hyˈpostaseis/", "traduzione": "hipóstases — os três níveis do ser em Plotino: Uno, Nous, Alma", "categoria": "sostantivo"},
+          {"parola": "trabocca", "ipa": "/traˈbɔkka/", "traduzione": "transborda, derrama-se por excesso", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p11",
+        "italiano": "La sessione andò avanti fino a tardi. Porfírio, nonostante l'ordine di Plotino, continuò a scrivere di nascosto — o piuttosto, scrisse il giorno dopo tutto ciò che riuscì a ricordare. Era questa la sua funzione: non solo discepolo, ma archivista dell'indicibile. Quella notte, tornando a casa attraverso le strade buie del Celio, Rogoziano si fermò a guardare il cielo stellato di settembre. Aveva combattuto tutto la sera contro Plotino, ma qualcosa — non sapeva esattamente cosa — aveva cominciato a cedere. Non nella sua logica: quella era intatta. Ma in quel posto sotto la logica dove vivono le certezze più profonde. Entro un anno, Rogoziano avrebbe venduto tutti i suoi beni, rinunciato alla carriera senatoria e si sarebbe ritirato a vita contemplativa. Plotino disse di lui: «Ha fatto ciò che io non ho avuto il coraggio di fare».",
+        "portugues": "A sessão foi adiante até tarde. Porfírio, apesar da ordem de Plotino, continuou a escrever às escondidas — ou melhor, escreveu no dia seguinte tudo o que conseguiu lembrar. Era esta sua função: não apenas discípulo, mas arquivista do indizível. Naquela noite, voltando a casa pelas ruas escuras do Célio, Rogoziano parou para olhar o céu estrelado de setembro. Havia lutado a noite toda contra Plotino, mas algo — não sabia exatamente o quê — havia começado a ceder. Não na sua lógica: aquela estava intacta. Mas naquele lugar sob a lógica onde vivem as certezas mais profundas. Em menos de um ano, Rogoziano havia vendido todos os seus bens, renunciado à carreira senatorial e se retirado à vida contemplativa. Plotino disse dele: «Fez o que eu não tive a coragem de fazer».",
+        "parole": [
+          {"parola": "archivista", "ipa": "/arkiˈvista/", "traduzione": "arquivista, guardião de registros e documentos", "categoria": "sostantivo"},
+          {"parola": "senatoria", "ipa": "/senatˈtɔːria/", "traduzione": "senatorial, relativa ao Senado romano", "categoria": "aggettivo"},
+          {"parola": "contemplativa", "ipa": "/kontemplˈaːtiva/", "traduzione": "contemplativa (vida retirada dedicada à meditação)", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p12",
+        "italiano": "Plotino morì quattro anni dopo, nell'anno 270, nella villa di un amico in Campania. Le sue ultime parole, secondo Eustóchio che era presente, furono: «Cercate di ricondurre il divino in voi al divino nell'universo». Non un testamento teologico — una pratica. Una cosa concreta da fare ogni giorno. Porfírio non era presente — stava attraversando una crisi personale profonda e Plotino lo aveva mandato a Sicilia per recuperare. Quando tornò, trovò il maestro morto e si dedicò per il resto della vita a ordinare e pubblicare le sue lezioni: cinquantaquattro testi, raggruppati in sei Enneadi di nove trattati ciascuna. Senza Porfírio, Plotino sarebbe noto solo a specialisti. Con Porfírio, divenne uno dei pilastri della filosofia europea.",
+        "portugues": "Plotino morreu quatro anos depois, no ano 270, na villa de um amigo na Campânia. Suas últimas palavras, segundo Eustóquio que estava presente, foram: «Procurai reconduzir o divino em vós ao divino no universo». Não um testamento teológico — uma prática. Uma coisa concreta a fazer cada dia. Porfírio não estava presente — estava atravessando uma crise pessoal profunda e Plotino o havia enviado à Sicília para se recuperar. Quando voltou, encontrou o mestre morto e dedicou o resto da vida a ordenar e publicar suas aulas: cinquenta e quatro textos, agrupados em seis Enéadas de nove tratados cada uma. Sem Porfírio, Plotino seria conhecido apenas por especialistas. Com Porfírio, tornou-se um dos pilares da filosofia europeia.",
+        "parole": [
+          {"parola": "testamento", "ipa": "/testaˈmento/", "traduzione": "testamento, última vontade, legado", "categoria": "sostantivo"},
+          {"parola": "trattati", "ipa": "/tratˈtaːti/", "traduzione": "tratados, textos filosóficos sistemáticos", "categoria": "sostantivo"},
+          {"parola": "pilastri", "ipa": "/piˈlastri/", "traduzione": "pilastras, pilares (figurado: fundamentos)", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p13",
+        "italiano": "La domanda di Porfírio — come si conosce l'inconoscibile — non trovò mai una risposta definitiva. Ma trovò qualcosa di meglio: una pratica. La apophasis, la theōria, la katharsis — non erano procedimenti logici ma esercizi spirituali. Plotino aveva rovesciato la direzione del sapere: invece di proiettare la mente verso l'esterno, verso gli oggetti del mondo, insegnava a ritirare la mente verso il suo centro — a quella zona silenziosa dove, secondo lui, il confine tra il pensante e l'essere si dissolve. Questa inversione — che i mistici cristiani avrebbero chiamato raccoglimento, i buddisti samadhi, i sufi fana — è forse il contributo più radicale di Plotino alla storia dell'esperienza umana: la certezza che la realtà più profonda non è là fuori, da raggiungere, ma qui dentro, da ricordare.",
+        "portugues": "A pergunta de Porfírio — como se conhece o incognoscível — nunca encontrou uma resposta definitiva. Mas encontrou algo melhor: uma prática. A apophasis, a theōria, a katharsis — não eram procedimentos lógicos mas exercícios espirituais. Plotino havia invertido a direção do saber: em vez de projetar a mente para o exterior, em direção aos objetos do mundo, ensinava a recolher a mente para o seu centro — àquela zona silenciosa onde, segundo ele, a fronteira entre o pensante e o ser se dissolve. Esta inversão — que os místicos cristãos chamariam de recolhimento, os budistas samadhi, os sufis fana — é talvez a contribuição mais radical de Plotino à história da experiência humana: a certeza de que a realidade mais profunda não está lá fora, a alcançar, mas aqui dentro, a recordar.",
+        "parole": [
+          {"parola": "raccoglimento", "ipa": "/rakkɔʎˈʎimento/", "traduzione": "recolhimento, concentração interior (mística cristã)", "categoria": "sostantivo"},
+          {"parola": "rovesciato", "ipa": "/rovɛʃˈʃaːto/", "traduzione": "invertido, virado de cabeça para baixo", "categoria": "verbo"},
+          {"parola": "dissolve", "ipa": "/disˈsɔːlve/", "traduzione": "dissolve, se desfaz, desaparece", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p14",
+        "italiano": "Il neoplatonismo di Plotino non morì con lui. Attraversò il Mediterraneo come un fiume sotterraneo: Agostino d'Ippona lesse le Enneadi nella traduzione di Mario Vittorino e ne rimase trasformato — le sue Confessioni sono impensabili senza Plotino. La mistica islamica di Ibn Arabi porta l'impronta della henōsis. Meister Eckhart, nel XIV secolo, descrive la Gottheit — la Divinità al di là di Dio — con le stesse strutture apofatiche del maestro egiziano. Ancora oggi, i neuroscienziati che studiano gli stati alterati di coscienza trovano nella descrizione plotiniana della henōsis qualcosa di riconoscibile: quella perdita del senso del confine tra sé e il mondo che alcune esperienze mistiche e alcune droghe psicoattive producono. Plotino avrebbe sorriso: «Vedete? Non era misticismo. Era topografia».",
+        "portugues": "O neoplatonismo de Plotino não morreu com ele. Atravessou o Mediterrâneo como um rio subterrâneo: Agostinho de Hipona leu as Enéadas na tradução de Mário Vitorino e ficou transformado — suas Confissões são impensáveis sem Plotino. A mística islâmica de Ibn Arabi carrega a marca da henōsis. Meister Eckhart, no século XIV, descreve a Gottheit — a Divindade além de Deus — com as mesmas estruturas apofáticas do mestre egípcio. Ainda hoje, os neurocientistas que estudam os estados alterados de consciência encontram na descrição plotiniana da henōsis algo de reconhecível: aquela perda do senso do limite entre si e o mundo que algumas experiências místicas e algumas drogas psicoativas produzem. Plotino teria sorrido: «Veem? Não era misticismo. Era topografia».",
+        "parole": [
+          {"parola": "neuroscienziati", "ipa": "/neurɔʃʃɛnˈtsjati/", "traduzione": "neurocientistas, estudiosos do sistema nervoso", "categoria": "sostantivo"},
+          {"parola": "topografia", "ipa": "/topoɡraˈfiːa/", "traduzione": "topografia, mapeamento de terreno (aqui: da consciência)", "categoria": "sostantivo"},
+          {"parola": "psicoattive", "ipa": "/psikoatˈtiːve/", "traduzione": "psicoativas, que afetam a mente e a consciência", "categoria": "aggettivo"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fil_plotino_sullanima",
+    "testo": [
+      {
+        "id": "p0",
+        "italiano": "Era la prima volta che Plotino vedeva una giovane donna piangere nella sua scuola. Di solito le donne — e ce n'erano alcune, brave come gli uomini migliori — non mostravano le proprie emozioni in pubblico, per una questione di decoro e di sopravvivenza sociale in un ambiente dominato da ex senatori e filosofi formati alla vecchia maniera. Ma quella mattina di primavera del 260 dopo Cristo, mentre la luce entrava obliqua dal piccolo cortile della casa di Gemina sull'Esquilino, una giovane donna di nome Filotea si era seduta sull'ultima panca e aveva cominciato a piangere in silenzio, con la mascella stretta e le mani in grembo, come chi piange non per conforto ma perché il corpo non trova altro da fare. Aveva perso sua madre tre giorni prima.",
+        "portugues": "Era a primeira vez que Plotino via uma jovem mulher chorar na sua escola. Normalmente as mulheres — e havia algumas, tão boas quanto os melhores homens — não mostravam as próprias emoções em público, por uma questão de decoro e de sobrevivência social num ambiente dominado por ex-senadores e filósofos formados à moda antiga. Mas naquela manhã de primavera do ano 260 depois de Cristo, enquanto a luz entrava oblíqua pelo pequeno pátio da casa de Gemina no Esquilino, uma jovem mulher chamada Filoteia havia se sentado no último banco e começara a chorar em silêncio, com a mandíbula cerrada e as mãos no colo, como quem chora não por consolo mas porque o corpo não encontra outra coisa a fazer. Havia perdido sua mãe três dias antes.",
+        "parole": [
+          {"parola": "decoro", "ipa": "/deˈkɔːro/", "traduzione": "decoro, dignidade, compostura social", "categoria": "sostantivo"},
+          {"parola": "grembo", "ipa": "/ˈɡrɛmbo/", "traduzione": "colo, regaço (parte superior das coxas sentado)", "categoria": "sostantivo"},
+          {"parola": "obliqua", "ipa": "/obˈliːkwa/", "traduzione": "oblíqua, diagonal (referido à luz)", "categoria": "aggettivo"},
+          {"parola": "panca", "ipa": "/ˈpaŋka/", "traduzione": "banco, assento sem encosto", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p1",
+        "italiano": "Plotino non era un uomo di conforto emotivo convenzionale. Non abbracciava i discepoli, non usava parole di circostanza. Ma quella mattina, invece di cominciare la lezione come al solito, si avvicinò a Filotea, si sedette accanto a lei sulla panca senza dire nulla per qualche minuto, e poi le pose la domanda che aveva posto tante volte a tanti interlocutori, ma che in quel contesto suonò diversamente, più acuta: «Cosa era tua madre, oltre al corpo che hai amato?». La giovane alzò lo sguardo, sorpresa dal tono — non freddo, ma chirurgico, diretto alla sostanza come una freccia. «Era... lei» disse, con l'impotenza di chi cerca le parole e trova solo il vuoto. «Era tutto ciò che conosco da quando sono nata».",
+        "portugues": "Plotino não era um homem de consolo emocional convencional. Não abraçava os discípulos, não usava palavras de circunstância. Mas naquela manhã, em vez de começar a aula como de costume, aproximou-se de Filoteia, sentou-se ao lado dela no banco sem dizer nada por alguns minutos, e depois lhe fez a pergunta que havia feito tantas vezes a tantos interlocutores, mas que naquele contexto soou diferente, mais aguda: «O que era tua mãe, além do corpo que amaste?». A jovem ergueu o olhar, surpresa pelo tom — não frio, mas cirúrgico, direcionado à substância como uma flecha. «Era... ela» disse, com a impotência de quem busca as palavras e encontra apenas o vazio. «Era tudo o que conheço desde que nasci».",
+        "parole": [
+          {"parola": "circostanza", "ipa": "/tʃirkoˈstantsa/", "traduzione": "circunstância (parole di circostanza = palavras convencionais de condolência)", "categoria": "sostantivo"},
+          {"parola": "chirurgico", "ipa": "/kiˈruːrdʒiko/", "traduzione": "cirúrgico (figurado: preciso, direto ao ponto)", "categoria": "aggettivo"},
+          {"parola": "interlocutori", "ipa": "/interlokuˈtɔːri/", "traduzione": "interlocutores, pessoas em diálogo", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p2",
+        "italiano": "Plotino annuì. «Quello che descrivi è reale» disse. «Ma è solo una parte di ciò che era. Il corpo che hai visto crescere, invecchiare, ammalarsi e smettere di muoversi — quello era il livello più basso di sua esistenza. Come la superficie di un lago che riflette il cielo ma non è il cielo». Si alzò, camminò fino alla piccola finestra che dava sul cortile. «La psychē — l'anima — non è prodotta dal corpo. Il corpo è prodotto dall'anima. Tua madre non era il suo corpo più di quanto tu sia il tuo mantello. Il mantello si consuma, si strappa, si butta via. Chi lo indossava non smette di esistere per questo». Le lacrime di Filotea non si fermarono. Ma cambiarono qualcosa — divennero meno disperate, come se avessero trovato una direzione.",
+        "portugues": "Plotino assentiu. «O que descreves é real» disse. «Mas é apenas uma parte do que ela era. O corpo que viste crescer, envelhecer, adoecer e parar de mover-se — esse era o nível mais baixo de sua existência. Como a superfície de um lago que reflete o céu mas não é o céu». Levantou-se, caminhou até a pequena janela que dava para o pátio. «A psychē — a alma — não é produzida pelo corpo. O corpo é produzido pela alma. Tua mãe não era o seu corpo mais do que tu és o teu manto. O manto se desgasta, se rasga, se joga fora. Quem o usava não deixa de existir por isso». As lágrimas de Filoteia não pararam. Mas mudaram algo — tornaram-se menos desesperadas, como se tivessem encontrado uma direção.",
+        "parole": [
+          {"parola": "psychē", "ipa": "/ˈpsyːkɛː/", "traduzione": "psiquê, alma (grego) — segundo Plotino, emana do Nous", "categoria": "sostantivo"},
+          {"parola": "si strappa", "ipa": "/si ˈstrappa/", "traduzione": "rasga-se, dilacera-se", "categoria": "verbo"},
+          {"parola": "disperate", "ipa": "/dispeˈraːte/", "traduzione": "desesperadas, sem esperança", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p3",
+        "italiano": "Gli altri discepoli erano entrati nel frattempo — Porfírio, Rogoziano, Amelio, e alcune delle donne abituali. Tutti si erano seduti in silenzio, capendo che stava accadendo qualcosa di diverso dalla lezione ordinaria. Plotino continuò: «La proodos — l'emanazione — non va solo verso il basso. Va anche verso l'alto. L'anima non si limita a discendere nella materia; essa può anche risalire verso il nous, verso l'intelletto divino, e da lì verso l'Uno. Questo movimento di ritorno si chiama epistrophē. Ogni anima è una luce che per qualche ragione — per quella che Platone chiamava hybris dell'anima, la sua tracotanza cosmica — si è allontanata dalla fonte. E ogni vita filosofica è il tentativo di ricordare la strada di ritorno».",
+        "portugues": "Os outros discípulos haviam entrado entretanto — Porfírio, Rogoziano, Amélio, e algumas das mulheres habituais. Todos haviam se sentado em silêncio, entendendo que estava acontecendo algo diferente da aula ordinária. Plotino continuou: «A proodos — a emanação — não vai apenas para baixo. Vai também para cima. A alma não se limita a descer na matéria; ela pode também subir em direção ao nous, ao intelecto divino, e daí em direção ao Uno. Este movimento de retorno chama-se epistrophē. Cada alma é uma luz que por alguma razão — por aquilo que Platão chamava hybris da alma, a sua arrogância cósmica — afastou-se da fonte. E cada vida filosófica é a tentativa de lembrar o caminho de volta».",
+        "parole": [
+          {"parola": "proodos", "ipa": "/ˈproodos/", "traduzione": "próodos, emanação — o processo de descida do Uno à matéria", "categoria": "sostantivo"},
+          {"parola": "epistrophē", "ipa": "/episˈtrofɛː/", "traduzione": "epistrofé, retorno — o processo inverso de subida da alma ao Uno", "categoria": "sostantivo"},
+          {"parola": "hybris", "ipa": "/ˈhybris/", "traduzione": "hybris, arrogância que leva à queda (conceito grego)", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p4",
+        "italiano": "Porfírio alzò la mano. «Ma se l'anima è per natura divina — se viene dall'Uno attraverso il nous — perché mai è scesa nella materia? Cosa ha guadagnato da questa discesa?». Era la domanda che i cristiani avrebbero formulato in modo diverso: perché il male? Perché la sofferenza? Perché Dio ha creato un mondo imperfetto se era perfetto? Plotino rispose senza esitazione: «Non ha guadagnato nulla per sé stessa. Ma il cosmo ha guadagnato qualcosa: la bellezza. Senza l'anima che discende nella materia, la materia sarebbe cieca e oscura — hylē pura, non-essere puro. L'anima porta la luce nella materia. Quando guardate un volto bello, una scultura riuscita, il tramonto sul Tevere — state vedendo l'anima che ha trasformato la materia in qualcosa che riflette l'Uno».",
+        "portugues": "Porfírio ergueu a mão. «Mas se a alma é por natureza divina — se vem do Uno através do nous — por que desceu à matéria? O que ganhou com esta descida?». Era a pergunta que os cristãos formulariam de modo diferente: por que o mal? Por que o sofrimento? Por que Deus criou um mundo imperfeito se era perfeito? Plotino respondeu sem hesitação: «Não ganhou nada para si mesma. Mas o cosmo ganhou algo: a beleza. Sem a alma que desce na matéria, a matéria seria cega e escura — hylē pura, não-ser puro. A alma traz a luz na matéria. Quando olhais um rosto belo, uma escultura conseguida, o pôr do sol sobre o Tibre — estais vendo a alma que transformou a matéria em algo que reflete o Uno».",
+        "parole": [
+          {"parola": "hylē", "ipa": "/ˈhylɛː/", "traduzione": "hilê, matéria pura — o nível mais baixo do ser, quase o não-ser", "categoria": "sostantivo"},
+          {"parola": "riuscita", "ipa": "/riuʃˈʃiːta/", "traduzione": "bem executada, conseguida, que deu certo", "categoria": "aggettivo"},
+          {"parola": "discesa", "ipa": "/diˈʃeːsa/", "traduzione": "descida, o ato de descer da dimensão superior", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p5",
+        "italiano": "Filotea aveva smesso di piangere. Stava ascoltando con l'intensità di chi sente che la risposta alla domanda più urgente della propria vita potrebbe arrivare nella frase successiva. «E allora mia madre» disse piano, «non è... finita?». Plotino tornò a sedersi vicino a lei. «La psychē individuale — quella che ha vissuto in tuo corpo di tua madre, che ha pensato i suoi pensieri, amato le sue persone — quella non perisce con il corpo fisico. Si dissolve nella psychē universale, nell'Anima del mondo. Come una goccia d'acqua che rientra nel fiume — non smette di essere acqua. Smette di essere una goccia separata». Fece una pausa breve. «So che questo non è il conforto che cercavi. Non ti restituisce la voce di tua madre o il suo sorriso. Ma è la verità che ho».",
+        "portugues": "Filoteia havia parado de chorar. Estava escutando com a intensidade de quem sente que a resposta à pergunta mais urgente de sua vida poderia chegar na frase seguinte. «E então minha mãe» disse baixinho, «não... acabou?». Plotino voltou a sentar-se perto dela. «A psychē individual — aquela que viveu no corpo de tua mãe, que pensou seus pensamentos, amou suas pessoas — essa não perece com o corpo físico. Dissolve-se na psychē universal, na Alma do mundo. Como uma gota d'água que volta ao rio — não deixa de ser água. Deixa de ser uma gota separada». Fez uma pausa breve. «Sei que este não é o consolo que buscavas. Não te devolve a voz de tua mãe ou seu sorriso. Mas é a verdade que tenho».",
+        "parole": [
+          {"parola": "perisce", "ipa": "/peˈriʃʃe/", "traduzione": "perece, morre, se extingue", "categoria": "verbo"},
+          {"parola": "goccia", "ipa": "/ˈɡɔttʃa/", "traduzione": "gota (de água ou outro líquido)", "categoria": "sostantivo"},
+          {"parola": "si dissolve", "ipa": "/si disˈsɔːlve/", "traduzione": "dissolve-se, funde-se com o todo", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p6",
+        "italiano": "Amelio, un discepolo più anziano e più duro, non era convinto. «Plotino» disse, con rispetto ma senza deferentismo, «questa dottrina dell'anima che discende e risale — non è verificabile. Come si differenzia da una storia consolatoria che inventiamo perché la morte fa paura?». Era l'obiezione razionalista, perenne, legittima. Plotino la affrontò senza irritazione. «Non si differenzia per via di prove empiriche — hai ragione su questo. Si differenzia per coerenza interna e per la qualità dell'esperienza che produce. Una dottrina vera non è necessariamente quella che si dimostra con i sensi — spesso ciò che è più reale non è sensorialmente accessibile. La geometria non si dimostra toccando i triangoli. L'anima non si dimostra sezionando i cadaveri».",
+        "portugues": "Amélio, um discípulo mais velho e mais duro, não estava convencido. «Plotino» disse, com respeito mas sem deferência, «esta doutrina da alma que desce e sobe — não é verificável. Como se diferencia de uma história consoladora que inventamos porque a morte assusta?». Era a objeção racionalista, perene, legítima. Plotino a enfrentou sem irritação. «Não se diferencia por via de provas empíricas — tens razão nisso. Diferencia-se por coerência interna e pela qualidade da experiência que produz. Uma doutrina verdadeira não é necessariamente aquela que se demonstra com os sentidos — frequentemente o que é mais real não é sensorialmente acessível. A geometria não se demonstra tocando triângulos. A alma não se demonstra dissecionando cadáveres».",
+        "parole": [
+          {"parola": "deferentismo", "ipa": "/defereˈnizmo/", "traduzione": "deferência excessiva, submissão acrítica à autoridade", "categoria": "sostantivo"},
+          {"parola": "empiriche", "ipa": "/emˈpiːrike/", "traduzione": "empíricas, baseadas na experiência sensorial", "categoria": "aggettivo"},
+          {"parola": "sezionando", "ipa": "/sɛttsjoˈnando/", "traduzione": "dissecionando, cortando para examinar", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p7",
+        "italiano": "«Ma allora» insistette Amelio, «cosa distingue la tua teoria da quella di qualunque altro che inventa storie sull'aldilà?». Plotino rimase in silenzio per un momento. «La differenza è il punto di partenza. Io non parto dalla consolazione e cerco poi una teoria che la sostenga. Parto dalla struttura dell'essere — dall'Uno che trabocca, dal nous che riflette, dall'anima che emana — e arrivo alla conclusione che la morte individuale non è l'annientamento. Non come speranza, ma come conseguenza logica della struttura ontologica. Se il mio punto di partenza è sbagliato, anche la conclusione è sbagliata. Ma la struttura regge internamente. Questo è il massimo che la filosofia può fare: coerenza. Il resto è silenzio o fede».",
+        "portugues": "«Mas então» insistiu Amélio, «o que diferencia tua teoria da de qualquer outro que inventa histórias sobre o além?». Plotino permaneceu em silêncio por um momento. «A diferença é o ponto de partida. Eu não parto do consolo e busco depois uma teoria que o sustente. Parto da estrutura do ser — do Uno que transborda, do nous que reflete, da alma que emana — e chego à conclusão de que a morte individual não é o aniquilamento. Não como esperança, mas como consequência lógica da estrutura ontológica. Se meu ponto de partida está errado, também a conclusão está errada. Mas a estrutura se sustenta internamente. Isto é o máximo que a filosofia pode fazer: coerência. O resto é silêncio ou fé».",
+        "parole": [
+          {"parola": "annientamento", "ipa": "/annientaˈmento/", "traduzione": "aniquilamento, destruição total, o nada", "categoria": "sostantivo"},
+          {"parola": "ontologica", "ipa": "/ontolˈɔːdʒika/", "traduzione": "ontológica, relativa à natureza do ser", "categoria": "aggettivo"},
+          {"parola": "aldilà", "ipa": "/aldiˈla/", "traduzione": "além, vida após a morte", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p8",
+        "italiano": "Filotea aveva smesso del tutto di piangere. Stava guardando Plotino con un'espressione che Porfírio avrebbe descritto nelle sue memorie come «la prima volta che ho visto qualcuno smettere di avere paura non perché avesse trovato una risposta, ma perché aveva trovato la domanda giusta». Plotino continuò: «La katharsis che ti propongo non è la consolazione di chi ti dice 'tua madre è in un posto migliore'. È il percorso di ritorno dell'anima verso la propria origine — un percorso che richiede la filosofia come pratica quotidiana, non come teoria. Ogni volta che scegli la bellezza sulla bruttezza, il pensiero sul pregiudizio, l'amore sull'indifferenza — stai facendo risalire l'anima. Stai facendo epistrophē». Amelio rimase in silenzio. Aveva altre obiezioni, ma le tenne per sé.",
+        "portugues": "Filoteia havia parado completamente de chorar. Estava olhando para Plotino com uma expressão que Porfírio descreveria em suas memórias como «a primeira vez que vi alguém parar de ter medo não porque havia encontrado uma resposta, mas porque havia encontrado a pergunta certa». Plotino continuou: «A katharsis que te proponho não é o consolo de quem te diz 'tua mãe está num lugar melhor'. É o caminho de retorno da alma em direção à sua origem — um caminho que requer a filosofia como prática cotidiana, não como teoria. Cada vez que escolhes a beleza sobre a fealdade, o pensamento sobre o preconceito, o amor sobre a indiferença — estás fazendo a alma subir. Estás fazendo epistrophē». Amélio permaneceu em silêncio. Tinha outras objeções, mas as guardou para si.",
+        "parole": [
+          {"parola": "pregiudizio", "ipa": "/predʒuˈdiːtsjo/", "traduzione": "preconceito, julgamento prévio sem exame", "categoria": "sostantivo"},
+          {"parola": "quotidiana", "ipa": "/kwotiˈdjaːna/", "traduzione": "cotidiana, diária, do dia a dia", "categoria": "aggettivo"},
+          {"parola": "bruttezza", "ipa": "/brutˈtettsa/", "traduzione": "fealdade, feiura, ausência de beleza", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p9",
+        "italiano": "Una settimana dopo, Filotea tornò con una domanda nuova. «Se l'anima mia è parte dell'Anima universale» chiese, «come mai sono diversa da te? Come mai ogni persona sembra avere un'anima propria, con propri ricordi, proprie paure?». Era la domanda sulla individuazione — uno dei problemi più difficili del sistema plotiniano. Plotino ci pensò seriamente prima di rispondere. «L'anima universale — la psychē del cosmo — contiene tutte le anime individuali come il sole contiene tutti i raggi. Ogni raggio è distinto, ha una direzione propria, illumina un angolo diverso. Ma tutti provengono dalla stessa fonte e tornano alla stessa fonte. La tua individualità è reale — ma è reale come raggio, non come fonte separata».",
+        "portugues": "Uma semana depois, Filoteia voltou com uma pergunta nova. «Se minha alma é parte da Alma universal» perguntou, «por que sou diferente de ti? Por que cada pessoa parece ter uma alma própria, com próprias memórias, próprios medos?». Era a pergunta sobre a individuação — um dos problemas mais difíceis do sistema plotiniano. Plotino pensou seriamente antes de responder. «A alma universal — a psychē do cosmos — contém todas as almas individuais como o sol contém todos os raios. Cada raio é distinto, tem uma direção própria, ilumina um ângulo diferente. Mas todos provêm da mesma fonte e voltam à mesma fonte. Tua individualidade é real — mas é real como raio, não como fonte separada».",
+        "parole": [
+          {"parola": "individuazione", "ipa": "/individwaˈtsjone/", "traduzione": "individuação, processo que torna cada ser único", "categoria": "sostantivo"},
+          {"parola": "raggio", "ipa": "/ˈraddʒo/", "traduzione": "raio (de luz solar)", "categoria": "sostantivo"},
+          {"parola": "provengono", "ipa": "/proˈvɛŋɡono/", "traduzione": "provêm, têm origem em", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p10",
+        "italiano": "Il mese successivo, Filotea portò alla scuola di Plotino sua sorella, poi un'amica vedova, poi il filosofo stoico con cui dibatteva al foro. Plotino la guardava con quella sua aria distante e affettuosa insieme, come un giardiniere che osserva una pianta crescere. L'anima si risveglia per contatto — questo era uno dei principi non scritti della sua pedagogia. Non si insegna l'anima: si crea un ambiente in cui l'anima ricorda se stessa. La methexis — la partecipazione — non è passiva: chi partecipa alla ricerca filosofica cambia la propria struttura interiore, non solo le proprie idee. «La filosofia non è una materia» disse Plotino un giorno. «È una dieta. Mangi diversamente, e il corpo cambia. Pensi diversamente — e l'anima ricomincia il suo viaggio verso l'alto».",
+        "portugues": "No mês seguinte, Filoteia trouxe à escola de Plotino sua irmã, depois uma amiga viúva, depois o filósofo estoico com quem debatia no foro. Plotino a olhava com aquele seu ar distante e afetuoso ao mesmo tempo, como um jardineiro que observa uma planta crescer. A alma se desperta por contato — este era um dos princípios não escritos de sua pedagogia. Não se ensina a alma: cria-se um ambiente em que a alma lembra de si mesma. A methexis — a participação — não é passiva: quem participa da pesquisa filosófica muda a própria estrutura interior, não apenas as próprias ideias. «A filosofia não é uma disciplina» disse Plotino um dia. «É uma dieta. Comes diferente, e o corpo muda. Pensas diferente — e a alma recomeça sua viagem para cima».",
+        "parole": [
+          {"parola": "methexis", "ipa": "/ˈmɛːthɛksis/", "traduzione": "méthexis, participação — modo pelo qual as coisas participam das Formas", "categoria": "sostantivo"},
+          {"parola": "vedova", "ipa": "/ˈvɛːdova/", "traduzione": "viúva, mulher cujo marido morreu", "categoria": "sostantivo"},
+          {"parola": "giardiniere", "ipa": "/dʒardiˈnjɛːre/", "traduzione": "jardineiro, quem cuida de jardins", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p11",
+        "italiano": "Porfírio stava attraversando una crisi profonda in quel periodo — pensieri di suicidio, una stanchezza del mondo che lo svuotava di energia. Plotino lo capì senza che Porfírio glielo dicesse esplicitamente — aveva quell'intuizione rara per gli stati dell'anima altrui. «Porfírio» gli disse un mattino, camminando nel giardino. «Ti mando in Sicilia». L'allievo protestò. «Ma le lezioni—». «Le lezioni possono aspettare. La tua anima non può». Era questa la teoria dell'anima in azione: non astratta, non consolatoria, ma diagnostica. Porfírio andò in Sicilia, trascorse un anno lontano da Roma, e tornò guarito — non da una malattia, ma dal dimenticare che esisteva qualcosa di più del proprio dolore. A to auto — il Sé più profondo — aveva fatto il suo lavoro.",
+        "portugues": "Porfírio estava atravessando uma crise profunda naquele período — pensamentos de suicídio, um cansaço do mundo que o esvaziava de energia. Plotino o percebeu sem que Porfírio lhe tivesse dito explicitamente — tinha aquela intuição rara para os estados da alma alheia. «Porfírio» disse-lhe numa manhã, caminhando no jardim. «Estou te mandando à Sicília». O aluno protestou. «Mas as aulas—». «As aulas podem esperar. Tua alma não pode». Era esta a teoria da alma em ação: não abstrata, não consoladora, mas diagnóstica. Porfírio foi à Sicília, passou um ano longe de Roma, e voltou curado — não de uma doença, mas do esquecimento de que existia algo mais que a própria dor. A to auto — o Si mais profundo — havia feito seu trabalho.",
+        "parole": [
+          {"parola": "to auto", "ipa": "/to ˈauto/", "traduzione": "o Si mesmo, o Eu profundo (grego plotiniano)", "categoria": "sostantivo"},
+          {"parola": "diagnostica", "ipa": "/diɑɡˈnoːstika/", "traduzione": "diagnóstica, que identifica a natureza de um problema", "categoria": "aggettivo"},
+          {"parola": "svuotava", "ipa": "/zvwoˈtaːva/", "traduzione": "esvaziava, tirava a energia de", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p12",
+        "italiano": "Anni dopo, Porfírio avrebbe scritto nelle sue memorie che la teoria plotiniana dell'anima non era filosofia nel senso ordinario del termine — era qualcosa di più simile a una mappa dell'esperienza interiore che permetteva di orientarsi anche nelle zone più buie. «Plotino non ci insegnava ad avere meno dolore» scrisse. «Ci insegnava che il dolore si situa su un livello dell'essere — quello più basso, quello della materia e del corpo — e che c'è un livello più alto in noi che il dolore non raggiunge. Non ci consolava. Ci mostrava il piano dell'edificio e ci diceva: siete più grandi del vostro piano terra».",
+        "portugues": "Anos depois, Porfírio escreveria em suas memórias que a teoria plotiniana da alma não era filosofia no sentido ordinário do termo — era algo mais parecido com um mapa da experiência interior que permitia orientar-se mesmo nas zonas mais escuras. «Plotino não nos ensinava a ter menos dor» escreveu. «Nos ensinava que a dor se situa num nível do ser — o mais baixo, o da matéria e do corpo — e que há um nível mais alto em nós que a dor não alcança. Não nos consolava. Nos mostrava a planta do edifício e nos dizia: sois maiores que vosso andar térreo».",
+        "parole": [
+          {"parola": "piano terra", "ipa": "/ˈpjano ˈtɛːrra/", "traduzione": "andar térreo, o nível mais baixo de um edifício", "categoria": "locuzione"},
+          {"parola": "orientarsi", "ipa": "/orjenˈtarsi/", "traduzione": "orientar-se, encontrar a direção em terreno desconhecido", "categoria": "verbo"},
+          {"parola": "situa", "ipa": "/ˈsiːtwa/", "traduzione": "se situa, está localizado", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p13",
+        "italiano": "Filotea non divenne una filosofa famosa. Non lasciò testi, non fondò scuole. Ma Porfírio la menziona due volte nelle Vite dei Filosofi come esempio di cosa può fare la filosofia con chi soffre davvero — non come terapia del linguaggio, non come analisi intellettuale, ma come trasformazione ontologica: un cambiamento nel modo in cui l'essere si percepisce. Lei rimase nella scuola di Plotino fino alla morte del maestro. Dopo, si ritirò in una piccola comunità di donne a Ostia, vicino al mare, e scrisse — almeno secondo Porfírio — un breve testo sulla psychē che non è sopravvissuto. Sarebbe interessante leggerlo: la teorizzazione plotiniana dell'anima attraverso gli occhi di chi ha perso sua madre.",
+        "portugues": "Filoteia não se tornou uma filósofa famosa. Não deixou textos, não fundou escolas. Mas Porfírio a menciona duas vezes nas Vidas dos Filósofos como exemplo do que a filosofia pode fazer com quem sofre de verdade — não como terapia da linguagem, não como análise intelectual, mas como transformação ontológica: uma mudança no modo em que o ser se percebe. Ela permaneceu na escola de Plotino até a morte do mestre. Depois, retirou-se a uma pequena comunidade de mulheres em Óstia, perto do mar, e escreveu — pelo menos segundo Porfírio — um breve texto sobre a psychē que não sobreviveu. Seria interessante lê-lo: a teorização plotiniana da alma através dos olhos de quem perdeu sua mãe.",
+        "parole": [
+          {"parola": "teorizzazione", "ipa": "/teorittsatˈsjone/", "traduzione": "teorização, elaboração sistemática de uma teoria", "categoria": "sostantivo"},
+          {"parola": "ontologica", "ipa": "/ontolˈɔːdʒika/", "traduzione": "ontológica, relativa à natureza fundamental do ser", "categoria": "aggettivo"},
+          {"parola": "sopravvissuto", "ipa": "/sopravvisˈsuːto/", "traduzione": "sobrevivido, que chegou até nós através do tempo", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p14",
+        "italiano": "La psicologia di Plotino non è morta con il neoplatonismo. È riemersa — spesso senza citarlo — in alcune delle correnti più influenti del pensiero contemporaneo. Carl Gustav Jung descrisse il processo di individuazione nei termini di un'anima che si riconcilia con la propria origine — un linguaggio diverso per la stessa mappa. Il buddhismo tibetano, tradotto in Occidente nel Novecento, usò la metafora della luce che si separa dalla fonte e desidera tornare — identica alla proodos e epistrophē plotiniane. La psicologia transpersonale di Abraham Maslow e le esperienze di picco che egli descrisse trovano eco nella henōsis di Plotino. L'intuizione centrale rimane la stessa attraverso i secoli: nell'essere umano esiste qualcosa che non è prodotto dal corpo, che precede la nascita e sopravvive alla morte — non come dogma, ma come ipotesi lavorativa per vivere bene.",
+        "portugues": "A psicologia de Plotino não morreu com o neoplatonismo. Ressurgiu — frequentemente sem citá-lo — em algumas das correntes mais influentes do pensamento contemporâneo. Carl Gustav Jung descreveu o processo de individuação nos termos de uma alma que se reconcilia com a própria origem — uma linguagem diferente para o mesmo mapa. O budismo tibetano, traduzido no Ocidente no século XX, usou a metáfora da luz que se separa da fonte e deseja voltar — idêntica à proodos e epistrophē plotinianas. A psicologia transpessoal de Abraham Maslow e as experiências de pico que ele descreveu encontram eco na henōsis de Plotino. A intuição central permanece a mesma através dos séculos: no ser humano existe algo que não é produzido pelo corpo, que precede o nascimento e sobrevive à morte — não como dogma, mas como hipótese de trabalho para viver bem.",
+        "parole": [
+          {"parola": "transpersonale", "ipa": "/transpersonˈaːle/", "traduzione": "transpessoal, que vai além da identidade pessoal individual", "categoria": "aggettivo"},
+          {"parola": "riemersa", "ipa": "/rjeˈmɛrsa/", "traduzione": "ressurgida, que apareceu novamente à superfície", "categoria": "verbo"},
+          {"parola": "ipotesi lavorativa", "ipa": "/iˈpɔːtesi lavoˈraːtiva/", "traduzione": "hipótese de trabalho, suposição provisória útil para agir", "categoria": "locuzione"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fil_plotino_sul_bene",
+    "testo": [
+      {
+        "id": "p0",
+        "italiano": "Il senatore Marco Cornelio Fronto aveva attraversato mezzo Impero per trovare risposte a una domanda che i suoi filosofi di corte non sapevano più dargli: se gli dèi sono buoni e governano il mondo, perché il mondo è pieno di schiavitù, di guerre, di bambini che muoiono di febbre prima dei tre anni? Era l'anno 258 dopo Cristo, Roma stava attraversando quella che gli storici avrebbero chiamato la Crisi del Terzo Secolo — imperatori assassinati ogni anno, confini che cedevano come argini dopo la pioggia, epidemie che svuotavano città intere. Fronto era un uomo pratico, abituato al linguaggio del potere e dei numeri, e portava quella domanda come si porta un chiodo nella scarpa: sempre lì, sempre fastidioso, impossibile da ignorare.",
+        "portugues": "O senador Marco Cornélio Fronto havia atravessado meio Império para encontrar respostas a uma pergunta que seus filósofos de corte não sabiam mais dar: se os deuses são bons e governam o mundo, por que o mundo está cheio de escravidão, guerras, crianças que morrem de febre antes dos três anos? Era o ano 258 depois de Cristo, Roma estava atravessando o que os historiadores chamariam de Crise do Terceiro Século — imperadores assassinados a cada ano, fronteiras cedendo como diques após a chuva, epidemias que esvaziavam cidades inteiras. Fronto era um homem prático, habituado à linguagem do poder e dos números, e carregava aquela pergunta como se carrega um prego no sapato: sempre lá, sempre incômodo, impossível de ignorar.",
+        "parole": [
+          {"parola": "argini", "ipa": "/ˈardʒini/", "traduzione": "diques, margens de contenção de rios", "categoria": "sostantivo"},
+          {"parola": "chiodo nella scarpa", "ipa": "/ˈkjɔːdo ˈnɛlla ˈskarpa/", "traduzione": "prego no sapato (metáfora: algo que incomoda persistentemente)", "categoria": "locuzione"},
+          {"parola": "epidemie", "ipa": "/epideˈmiːe/", "traduzione": "epidemias, doenças que se espalham por uma população", "categoria": "sostantivo"},
+          {"parola": "svuotavano", "ipa": "/zvwoˈtaːvano/", "traduzione": "esvaziavam, tornavam vazias", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p1",
+        "italiano": "Qualcuno a Roma gli aveva parlato di Plotino — un egiziano strano che teneva lezioni nella casa di una patrizia sull'Esquilino, che non cercava nuovi seguaci ma non rifiutava nessuno che venisse in buona fede, e che aveva risposto alla domanda sul male in modo che anche i senatori più scettici avevano trovato difficile ribattere. Fronto si presentò una sera di tardo ottobre, con il suo segretario e due servi armati — i senatori non giravano soli di notte in quella Roma che stava perdendo il controllo delle proprie strade. Fu accolto da Porfírio, che lo guidò nell'atrio e lo presentò a Plotino senza cerimonie. Plotino lo guardò e, prima che Fronto aprisse bocca, servì del vino e disse: «Dimmi prima di quale bene hai bisogno tu personalmente. La teodicea può aspettare».",
+        "portugues": "Alguém em Roma lhe havia falado de Plotino — um egípcio estranho que dava aulas na casa de uma patrícia no Esquilino, que não procurava novos seguidores mas não recusava ninguém que viesse de boa fé, e que havia respondido à pergunta sobre o mal de um modo que até os senadores mais céticos haviam encontrado difícil de refutar. Fronto apresentou-se numa tarde de final de outubro, com seu secretário e dois servos armados — os senadores não circulavam sozinhos à noite naquela Roma que estava perdendo o controle de suas próprias ruas. Foi recebido por Porfírio, que o guiou ao átrio e o apresentou a Plotino sem cerimônias. Plotino o olhou e, antes que Fronto abrisse a boca, serviu vinho e disse: «Diz-me primeiro de que bem precisas tu pessoalmente. A teodiceia pode esperar».",
+        "parole": [
+          {"parola": "teodicea", "ipa": "/teodiˈtʃɛːa/", "traduzione": "teodiceia, justificativa da bondade divina diante do mal no mundo", "categoria": "sostantivo"},
+          {"parola": "ribattere", "ipa": "/riˈbattere/", "traduzione": "refutar, contrariar com argumentos", "categoria": "verbo"},
+          {"parola": "buona fede", "ipa": "/ˈbwona ˈfɛːde/", "traduzione": "boa fé, intenção honesta e sincera", "categoria": "locuzione"}
+        ]
+      },
+      {
+        "id": "p2",
+        "italiano": "Fronto rimase sorpreso dalla domanda — non se l'aspettava da un filosofo. I filosofi di solito iniziavano con le grandi astrazioni e arrivavano alle questioni personali solo alla fine, se mai ci arrivavano. Bevve un sorso di vino e rispose più onestamente di quanto avesse pianificato: «Ho perso tre figli negli ultimi cinque anni. Febbre, guerra, un incidente. Mia moglie ha smesso di parlare con gli dèi. Io ho smesso di credere che abbiano qualcosa di sensato da dire». Plotino annuì con attenzione. «Questo è il male concreto, il male che senti nel corpo, nelle notti senza sonno. Di questo parleremo per primi. La teoria arriverà dopo, come cornice — non come sostituto del dolore».",
+        "portugues": "Fronto ficou surpreso com a pergunta — não a esperava de um filósofo. Os filósofos geralmente começavam com as grandes abstrações e chegavam às questões pessoais só no final, se é que chegavam. Bebeu um gole de vinho e respondeu mais honestamente do que havia planejado: «Perdi três filhos nos últimos cinco anos. Febre, guerra, um acidente. Minha esposa parou de falar com os deuses. Eu parei de acreditar que eles têm algo sensato a dizer». Plotino assentiu com atenção. «Este é o mal concreto, o mal que sentes no corpo, nas noites sem sono. Deste falaremos primeiro. A teoria chegará depois, como moldura — não como substituto da dor».",
+        "parole": [
+          {"parola": "cornice", "ipa": "/korˈniːtʃe/", "traduzione": "moldura, enquadramento (aqui: contexto teórico)", "categoria": "sostantivo"},
+          {"parola": "astrazioni", "ipa": "/astrattˈsjoni/", "traduzione": "abstrações, conceitos distantes da experiência concreta", "categoria": "sostantivo"},
+          {"parola": "sorso", "ipa": "/ˈsorso/", "traduzione": "gole, pequena quantidade de líquido bebida de uma vez", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p3",
+        "italiano": "Dopo un'ora di ascolto e di domande sui figli di Fronto — i loro nomi, le loro età, cosa amavano fare, cosa avrebbero potuto diventare — Plotino introdusse la questione filosofica. Ma lo fece al contrario di come Fronto si aspettava: non cominciò da Dio e scese verso il male, ma cominciò dal male e salì verso il Bene. «Quando chiedi perché c'è il male» disse, «stai già presupponendo che il Bene esista. Altrimenti la domanda non avrebbe senso. Chi non crede in nessun bene non chiede perché c'è il male — semplicemente lo constata». Fronto fece una smorfia. «Questo mi sembra un trucco retorico». «No» disse Plotino. «È il punto di partenza. To agathon — il Bene — è ciò che è. Il male non è ciò che è, ma ciò che manca».",
+        "portugues": "Após uma hora de escuta e perguntas sobre os filhos de Fronto — seus nomes, suas idades, o que amavam fazer, o que poderiam ter se tornado — Plotino introduziu a questão filosófica. Mas fê-lo ao contrário do que Fronto esperava: não começou por Deus e desceu em direção ao mal, mas começou pelo mal e subiu em direção ao Bem. «Quando perguntas por que há o mal» disse, «já estás pressupondo que o Bem existe. Caso contrário a pergunta não teria sentido. Quem não acredita em nenhum bem não pergunta por que há o mal — simplesmente o constata». Fronto fez uma careta. «Isso me parece um truque retórico». «Não» disse Plotino. «É o ponto de partida. To agathon — o Bem — é aquilo que é. O mal não é aquilo que é, mas aquilo que falta».",
+        "parole": [
+          {"parola": "to agathon", "ipa": "/to aˈɡaθon/", "traduzione": "o Bem (grego) — o Uno coincide com o Bem em Plotino", "categoria": "sostantivo"},
+          {"parola": "smorfia", "ipa": "/ˈzmɔrfia/", "traduzione": "careta, expressão facial de desagrado ou ceticismo", "categoria": "sostantivo"},
+          {"parola": "constata", "ipa": "/konˈstaːta/", "traduzione": "constata, verifica, registra sem questionar", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p4",
+        "italiano": "«Il male come mancanza» disse Fronto lentamente, come se stesse assaggiando il concetto. «Ma i tuoi figli morti — sono una mancanza di qualcosa?». Era un colpo basso, e Fronto lo sapeva. Ma era anche la prova di fuoco di qualunque filosofia: reggere davanti al dolore reale, non solo davanti al dolore astratto. Plotino non batté ciglio. «La sterēsis — la privazione — non è un'entità. È l'assenza di un'entità. Quando un bambino muore di febbre, non c'è un Dio della Morte che lo prende: c'è un'interruzione del processo vitale. La materia, che è il livello più basso dell'emanazione, contiene in sé la possibilità dell'imperfezione perché è il più lontano dall'Uno, che è la perfezione assoluta. Non è punizione. È struttura».",
+        "portugues": "«O mal como falta» disse Fronto lentamente, como se estivesse degustando o conceito. «Mas os teus filhos mortos — são uma falta de algo?». Era um golpe baixo, e Fronto o sabia. Mas era também a prova de fogo de qualquer filosofia: resistir diante da dor real, não apenas diante da dor abstrata. Plotino não piscou. «A sterēsis — a privação — não é uma entidade. É a ausência de uma entidade. Quando uma criança morre de febre, não há um Deus da Morte que a toma: há uma interrupção do processo vital. A matéria, que é o nível mais baixo da emanação, contém em si a possibilidade da imperfeição porque é a mais distante do Uno, que é a perfeição absoluta. Não é punição. É estrutura».",
+        "parole": [
+          {"parola": "sterēsis", "ipa": "/stɛˈrɛːsis/", "traduzione": "sterése, privação — o mal como ausência de bem (Plotino)", "categoria": "sostantivo"},
+          {"parola": "non batté ciglio", "ipa": "/non batˈte ˈtʃiʎʎo/", "traduzione": "não piscou, não se abalou (locução idiomática)", "categoria": "locuzione"},
+          {"parola": "imperfezione", "ipa": "/imperfetˈtsjone/", "traduzione": "imperfeição, ausência de perfeição", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p5",
+        "italiano": "Fronto stava covando un'obiezione che aveva tenuto pronta dalla mattina. «Ma allora gli dèi — l'Uno, come lo chiami tu — non è responsabile di ciò che crea? Se il male deriva dalla struttura dell'essere, e l'Uno ha creato quella struttura, allora l'Uno è responsabile del male». Plotino scosse la testa con una pazienza che non tradiva stanchezza. «L'Uno non crea per scelta. L'Uno trabocca — come il sole non decide di emettere luce. Il sole è la fonte della luce, ma non è responsabile delle ombre che si formano dove la luce non arriva. Il male è l'ombra — non un'entità creata, ma l'assenza necessaria che la perfezione proietta su ciò che è più lontano da lei. Ogni luce produce ombra. Non per volontà: per geometria».",
+        "portugues": "Fronto estava incubando uma objeção que havia mantido pronta desde a manhã. «Mas então os deuses — o Uno, como o chamas — não é responsável pelo que cria? Se o mal deriva da estrutura do ser, e o Uno criou aquela estrutura, então o Uno é responsável pelo mal». Plotino sacudiu a cabeça com uma paciência que não traía cansaço. «O Uno não cria por escolha. O Uno transborda — como o sol não decide emitir luz. O sol é a fonte da luz, mas não é responsável pelas sombras que se formam onde a luz não chega. O mal é a sombra — não uma entidade criada, mas a ausência necessária que a perfeição projeta sobre o que é mais distante dela. Toda luz produz sombra. Não por vontade: por geometria».",
+        "parole": [
+          {"parola": "covando", "ipa": "/koˈvando/", "traduzione": "incubando, guardando para usar no momento certo", "categoria": "verbo"},
+          {"parola": "trabocca", "ipa": "/traˈbɔkka/", "traduzione": "transborda, derrama-se por excesso", "categoria": "verbo"},
+          {"parola": "geometria", "ipa": "/dʒeomeˈtriːa/", "traduzione": "geometria (aqui: estrutura necessária, não arbitrária)", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p6",
+        "italiano": "Porfírio, che stava ascoltando dall'angolo, intervenne con la precisione del discepolo che sa quando il maestro ha bisogno di essere completato. «Il punto cruciale» disse, «è la distinzione tra bonum e kalon — tra il Bene e il Bello. Il Bene è l'Uno — assoluto, senza forma, non-detto. Il Bello è il nous — il primo specchio del Bene, la forma del Bene. Quando percepiamo qualcosa come bello — un tramonto, una dimostrazione matematica elegante, la faccia di un bambino appena nato — stiamo percependo l'eco del Bene nell'universo manifesto. Il male non può avere bellezza perché è mancanza di essere. E la mancanza di essere non può essere bella — può solo essere assenza».",
+        "portugues": "Porfírio, que estava escutando do canto, interveio com a precisão do discípulo que sabe quando o mestre precisa ser completado. «O ponto crucial» disse, «é a distinção entre bonum e kalon — entre o Bem e o Belo. O Bem é o Uno — absoluto, sem forma, não-dito. O Belo é o nous — o primeiro espelho do Bem, a forma do Bem. Quando percebemos algo como belo — um pôr do sol, uma demonstração matemática elegante, o rosto de uma criança recém-nascida — estamos percebendo o eco do Bem no universo manifesto. O mal não pode ter beleza porque é falta de ser. E a falta de ser não pode ser bela — pode apenas ser ausência».",
+        "parole": [
+          {"parola": "kalon", "ipa": "/ˈkaːlon/", "traduzione": "o Belo (grego) — em Plotino, o nous como espelho do Bem", "categoria": "sostantivo"},
+          {"parola": "manifesto", "ipa": "/maniˈfɛsto/", "traduzione": "manifesto, visível, que se apresenta à experiência", "categoria": "aggettivo"},
+          {"parola": "eco", "ipa": "/ˈɛːko/", "traduzione": "eco, ressonância, reflexo distante de algo", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p7",
+        "italiano": "Fronto non era ancora convinto. Era un uomo abituato ai processi giudiziari, dove ogni argomento viene pesato contro il suo contrario, e l'argomento più forte vince. «Ma nella pratica» disse, «dire che il male è \"assenza\" non cambia nulla. Mio figlio è morto. Che sia un'assenza o una presenza non mi fa stare meglio». Plotino lo guardò con qualcosa che poteva essere compassione, ma che aveva una qualità diversa dalla pietà ordinaria — era più simile al rispetto per qualcuno che sta guardando in faccia qualcosa di difficile senza distogliere lo sguardo. «Hai ragione» disse. «Non cambia il dolore. Cambia il modo in cui interpreti l'universo in cui il dolore esiste. Se il male fosse una potenza attiva contro il Bene, vivresti in un universo in guerra. Se il male è assenza, vivi in un universo orientato verso il Bene — con zone d'ombra inevitabili».",
+        "portugues": "Fronto ainda não estava convencido. Era um homem habituado aos processos judiciais, onde cada argumento é pesado contra o seu contrário, e o argumento mais forte vence. «Mas na prática» disse, «dizer que o mal é 'ausência' não muda nada. Meu filho morreu. Que seja uma ausência ou uma presença não me faz sentir melhor». Plotino o olhou com algo que podia ser compaixão, mas que tinha uma qualidade diferente da piedade ordinária — era mais parecido com o respeito por alguém que está encarando algo difícil sem desviar o olhar. «Tens razão» disse. «Não muda a dor. Muda o modo em que interpretas o universo em que a dor existe. Se o mal fosse uma potência ativa contra o Bem, viveria num universo em guerra. Se o mal é ausência, vives num universo orientado para o Bem — com zonas de sombra inevitáveis».",
+        "parole": [
+          {"parola": "potenza", "ipa": "/poˈtɛntsa/", "traduzione": "potência, força ativa (sentido filosófico)", "categoria": "sostantivo"},
+          {"parola": "distogliere", "ipa": "/disˈtɔʎʎere/", "traduzione": "desviar, afastar (o olhar de algo)", "categoria": "verbo"},
+          {"parola": "compassione", "ipa": "/kompassˈjone/", "traduzione": "compaixão, sentir junto ao sofrimento alheio", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p8",
+        "italiano": "«Un universo orientato verso il Bene» ripeté Fronto lentamente. «Con zone d'ombra inevitabili». Si alzò e camminò verso la finestra. Fuori, il Celio stava illuminandosi con i lumi del tramonto — Roma in quell'ora color dell'arancio sembrava quasi bella, anche con le sue strade malate e i suoi imperatori corrotti. «E il Bene — to agathon, l'Uno — è autarkes? Si basta da solo?». Plotino sorrise — era la domanda giusta, quella che mostrava che Fronto aveva capito qualcosa di fondamentale. «L'autarcia è la caratteristica per eccellenza dell'Uno. L'Uno non ha bisogno di nulla — non di culto, non di preghiere, non di sacrifici, non della nostra ammirazione. L'Uno trabocca non perché abbia bisogno di esprimersi, ma perché la perfezione assoluta non può contenere se stessa: deve dare».",
+        "portugues": "«Um universo orientado para o Bem» repetiu Fronto lentamente. «Com zonas de sombra inevitáveis». Levantou-se e caminhou até a janela. Lá fora, o Célio estava se iluminando com as luzes do pôr do sol — Roma naquela hora cor de laranja parecia quase bela, mesmo com suas ruas doentes e seus imperadores corruptos. «E o Bem — to agathon, o Uno — é autarkes? Basta-se a si mesmo?». Plotino sorriu — era a pergunta certa, aquela que mostrava que Fronto havia entendido algo fundamental. «A autarcia é a característica por excelência do Uno. O Uno não precisa de nada — não de culto, não de orações, não de sacrifícios, não da nossa admiração. O Uno transborda não porque precise expressar-se, mas porque a perfeição absoluta não pode conter-se a si mesma: precisa dar».",
+        "parole": [
+          {"parola": "autarkes", "ipa": "/auˈtarkes/", "traduzione": "autossuficiente (grego) — que não depende de nada exterior", "categoria": "aggettivo"},
+          {"parola": "autarcia", "ipa": "/autarˈtʃiːa/", "traduzione": "autarcia, autossuficiência completa", "categoria": "sostantivo"},
+          {"parola": "culto", "ipa": "/ˈkulto/", "traduzione": "culto, veneração religiosa organizada", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p9",
+        "italiano": "La discussione andò avanti fino a tardi. Il segretario di Fronto aveva riempito tre tavolette di appunti. I servi armati aspettavano fuori con la crescente impazienza di professionisti che sanno che le notti a Roma non sono sicure. Ma Fronto non voleva andarsene. Aveva trovato qualcosa che non si aspettava di trovare — non una risposta al problema del male, ma un modo diverso di abitare la domanda. «Cosa mi consiglieresti?» chiese infine, con la semplicità di chi ha abbandonato la costruzione del proprio personaggio. «Per smettere di essere arrabbiato con gli dèi?». Plotino ci pensò. «Non ti consiglio di smettere di essere arrabbiato. Ti consiglio di capire contro cosa sei arrabbiato. Se sei arrabbiato contro l'assenza — stai combattendo contro il buio. Invece di combattere il buio, porta la luce».",
+        "portugues": "A discussão foi adiante até tarde. O secretário de Fronto havia preenchido três tabuinhas de apontamentos. Os servos armados esperavam lá fora com a crescente impaciência de profissionais que sabem que as noites em Roma não são seguras. Mas Fronto não queria ir embora. Havia encontrado algo que não esperava encontrar — não uma resposta ao problema do mal, mas um modo diferente de habitar a pergunta. «O que me aconselharias?» perguntou por fim, com a simplicidade de quem abandonou a construção do próprio personagem. «Para parar de estar irritado com os deuses?». Plotino pensou. «Não te aconselho a parar de estar irritado. Aconselho-te a entender contra o que estás irritado. Se estás irritado contra a ausência — estás combatendo contra o escuro. Em vez de combater o escuro, traz a luz».",
+        "parole": [
+          {"parola": "abitare la domanda", "ipa": "/abiˈtaːre la doˈmanda/", "traduzione": "habitar a pergunta, viver com a questão em vez de resolvê-la", "categoria": "locuzione"},
+          {"parola": "personaggio", "ipa": "/personˈaddʒo/", "traduzione": "personagem, papel social que apresentamos ao mundo", "categoria": "sostantivo"},
+          {"parola": "tavolette", "ipa": "/tavoˈlɛtte/", "traduzione": "tabuinhas de cera usadas para escrever", "categoria": "sostantivo"}
+        ]
+      },
+      {
+        "id": "p10",
+        "italiano": "Fronto lasciò la casa di Gemina quando era già buio. Cammino per la strada del Celio con i suoi servi, e per la prima volta da mesi non stava pensando ai suoi figli morti — stava pensando alla luce. Non nel senso letterale: stava pensando a cosa avrebbero fatto, cosa avrebbero costruito, quali Beni avrebbero portato nel mondo se fossero vissuti. E per la prima volta quella riflessione non lo tormentava ma lo orientava. Era ancora dolore — ma era un dolore con direzione. Porfírio, che aveva osservato tutto dalla finestra, scrisse nelle sue memorie: «Quella sera Plotino non persuase il senatore. Trasformò la domanda. E una domanda trasformata trasforma chi la porta».",
+        "portugues": "Fronto deixou a casa de Gemina quando já estava escuro. Caminhou pela rua do Célio com seus servos, e pela primeira vez em meses não estava pensando nos seus filhos mortos — estava pensando na luz. Não no sentido literal: estava pensando no que teriam feito, o que teriam construído, quais Bens teriam trazido ao mundo se tivessem vivido. E pela primeira vez aquela reflexão não o atormentava mas o orientava. Ainda era dor — mas era uma dor com direção. Porfírio, que havia observado tudo pela janela, escreveu em suas memórias: «Naquela noite Plotino não persuadiu o senador. Transformou a pergunta. E uma pergunta transformada transforma quem a carrega».",
+        "parole": [
+          {"parola": "persuase", "ipa": "/perˈzwaːze/", "traduzione": "persuadiu, convenceu (passato remoto)", "categoria": "verbo"},
+          {"parola": "orientava", "ipa": "/orjenˈtaːva/", "traduzione": "orientava, dava direção a", "categoria": "verbo"},
+          {"parola": "tormentava", "ipa": "/tormenˈtaːva/", "traduzione": "atormentava, causava sofrimento intenso", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p11",
+        "italiano": "Plotino tornò alle sue Enneadi quella notte stessa. Stava scrivendo — o meglio, dettando a Amelio — il trattato che avrebbe chiamato Sull'Uno e sul Bene. La sua scrittura era oscura, densa, spesso quasi illeggibile per chi non conosceva il suo sistema dall'interno. Ma in quel trattato c'era qualcosa di diverso dagli altri: un senso di urgenza, come se stesse cercando di catturare qualcosa che sapeva di non poter mai catturare completamente. «L'Uno non si dice» dettò. «Si indica. Come un dito che punta verso la luna — il dito non è la luna, ma senza il dito la luna rimane invisibile a chi non sa già dove guardare». Amelio scrisse in fretta, senza interrompere. Sapeva che queste erano le ore di massima chiarezza del maestro.",
+        "portugues": "Plotino voltou às suas Enéadas naquela mesma noite. Estava escrevendo — ou melhor, ditando a Amélio — o tratado que chamaria De Uno et Bono. Sua escrita era obscura, densa, frequentemente quase ilegível para quem não conhecia seu sistema por dentro. Mas naquele tratado havia algo diferente dos outros: um sentido de urgência, como se estivesse tentando capturar algo que sabia não poder nunca capturar completamente. «O Uno não se diz» ditou. «Se indica. Como um dedo que aponta para a lua — o dedo não é a lua, mas sem o dedo a lua permanece invisível para quem não sabe já onde olhar». Amélio escreveu rapidamente, sem interromper. Sabia que estas eram as horas de máxima clareza do mestre.",
+        "parole": [
+          {"parola": "urgenza", "ipa": "/urˈdʒɛntsa/", "traduzione": "urgência, necessidade imediata", "categoria": "sostantivo"},
+          {"parola": "dettando", "ipa": "/detˈtando/", "traduzione": "ditando, falando para alguém escrever", "categoria": "verbo"},
+          {"parola": "illeggibile", "ipa": "/illedˈdʒiːbile/", "traduzione": "ilegível, impossível de ler", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p12",
+        "italiano": "Fronto tornò da Plotino tre settimane dopo, questa volta da solo, senza segretario né servi. Rimase per due ore. Quando uscì aveva un'espressione che Porfírio avrebbe descritto come «quella di chi ha smesso di combattere qualcosa». Non era pace nel senso dell'indifferenza — era qualcosa di più sottile: l'accettazione che certi dolori non si risolvono ma si abitano, e che abitarli bene richiede una filosofia, non solo una terapia. Entro un anno, Fronto avrebbe finanziato la costruzione di una scuola — non filosofica, ma elementare — in onore dei tre figli morti. Non per compensare la loro perdita. Per fare di quella perdita un Bene che potesse tornare nel mondo.",
+        "portugues": "Fronto voltou a ver Plotino três semanas depois, desta vez sozinho, sem secretário nem servos. Ficou por duas horas. Quando saiu tinha uma expressão que Porfírio descreveria como «a de quem parou de lutar contra algo». Não era paz no sentido da indiferença — era algo mais sutil: a aceitação de que certas dores não se resolvem mas se habitam, e que habitá-las bem requer uma filosofia, não apenas uma terapia. Em menos de um ano, Fronto havia financiado a construção de uma escola — não filosófica, mas elementar — em honra dos três filhos mortos. Não para compensar a perda deles. Para fazer daquela perda um Bem que pudesse voltar ao mundo.",
+        "parole": [
+          {"parola": "sottile", "ipa": "/sotˈtiːle/", "traduzione": "sutil, delicado, difícil de perceber", "categoria": "aggettivo"},
+          {"parola": "elementare", "ipa": "/elementˈaːre/", "traduzione": "elementar, para crianças pequenas (escola primária)", "categoria": "aggettivo"},
+          {"parola": "finanziato", "ipa": "/finantˈsjaːto/", "traduzione": "financiado, que forneceu os fundos para algo", "categoria": "verbo"}
+        ]
+      },
+      {
+        "id": "p13",
+        "italiano": "Plotino non seppe mai di quella scuola — morì nell'anno 270, prima che fosse terminata. Ma Porfírio lo seppe, e lo annotò nelle sue memorie come esempio di ciò che chiamò «il Bene in azione»: non una teoria del Bene, ma il Bene che si concretizza nel mondo attraverso chi ha compreso la struttura dell'essere. La katharsis aveva funzionato — non come consolazione, ma come trasformazione. Fronto non era un uomo meno addolorato. Era un uomo che sapeva fare qualcosa con il suo dolore. E questo — in una Roma che stava perdendo tutto, le frontiere, gli imperatori, la moneta, la sicurezza — era forse la cosa più utile che un filosofo potesse offrire: non risposte, ma orientamento.",
+        "portugues": "Plotino nunca soube daquela escola — morreu no ano 270, antes que fosse terminada. Mas Porfírio soube, e o anotou em suas memórias como exemplo do que chamou «o Bem em ação»: não uma teoria do Bem, mas o Bem que se concretiza no mundo através de quem compreendeu a estrutura do ser. A katharsis havia funcionado — não como consolo, mas como transformação. Fronto não era um homem menos angustiado. Era um homem que sabia fazer algo com sua dor. E isso — numa Roma que estava perdendo tudo, as fronteiras, os imperadores, a moeda, a segurança — era talvez a coisa mais útil que um filósofo poderia oferecer: não respostas, mas orientação.",
+        "parole": [
+          {"parola": "annotò", "ipa": "/annoˈtɔ/", "traduzione": "anotou, registrou em nota (passato remoto)", "categoria": "verbo"},
+          {"parola": "concretizza", "ipa": "/konkreˈtittsa/", "traduzione": "concretiza, se torna concreto no mundo real", "categoria": "verbo"},
+          {"parola": "addolorato", "ipa": "/addoloˈraːto/", "traduzione": "angustiado, tomado de dor", "categoria": "aggettivo"}
+        ]
+      },
+      {
+        "id": "p14",
+        "italiano": "Agostino di Ippona lesse le Enneadi di Plotino, nella traduzione latina di Mario Vittorino, nell'anno 386 — un anno prima della sua conversione al Cristianesimo. La struttura plotiniana del Bene come Uno assoluto, del male come sterēsis, dell'anima come luce che ha dimenticato la sua origine — tutto questo entrò nelle Confessioni e nel De Civitate Dei con il nome cristiano di Dio, ma con la struttura metafisica di Plotino. La teodicea cristiana medievale — da Agostino a Tommaso d'Aquino — è neoplatonica nel suo scheletro. Quando un teologo dice che il male non è un essere ma un'assenza di bene, sta ripetendo Plotino. Quando un mistico dice che l'anima è esiliata da Dio e anela al ritorno, sta ripetendo Plotino. L'egiziano silenzioso dell'Esquilino aveva riscritto la grammatica del divino per i duemila anni successivi.",
+        "portugues": "Agostinho de Hipona leu as Enéadas de Plotino, na tradução latina de Mário Vitorino, no ano 386 — um ano antes de sua conversão ao Cristianismo. A estrutura plotiniana do Bem como Uno absoluto, do mal como sterēsis, da alma como luz que esqueceu sua origem — tudo isso entrou nas Confissões e no De Civitate Dei com o nome cristão de Deus, mas com a estrutura metafísica de Plotino. A teodiceia cristã medieval — de Agostinho a Tomás de Aquino — é neoplatônica em seu esqueleto. Quando um teólogo diz que o mal não é um ser mas uma ausência de bem, está repetindo Plotino. Quando um místico diz que a alma está exilada de Deus e anseia pelo retorno, está repetindo Plotino. O egípcio silencioso do Esquilino havia reescrito a gramática do divino para os dois mil anos seguintes.",
+        "parole": [
+          {"parola": "scheletro", "ipa": "/ˈskɛːletro/", "traduzione": "esqueleto, estrutura fundamental (aqui: base invisível)", "categoria": "sostantivo"},
+          {"parola": "anela", "ipa": "/aˈnɛːla/", "traduzione": "anseia, deseja com ardor", "categoria": "verbo"},
+          {"parola": "grammatica del divino", "ipa": "/ɡramˈmaːtika del diˈviːno/", "traduzione": "gramática do divino (metáfora: as regras que estruturam o discurso sobre Deus)", "categoria": "locuzione"}
+        ]
+      }
+    ]
+  }
+]

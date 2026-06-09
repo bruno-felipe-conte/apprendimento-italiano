@@ -1,0 +1,150 @@
+can_151: Il Mondo | Jimmy Fontana | A2 | vita
+  [1] Il mondo è grigio, il mondo è azzurro, il mondo è tristezza e bugie.
+  [2] E il cuore ha paura di amare ma poi si innamora.
+can_152: Non Ho L'Età | Gigliola Cinquetti | A2 | amore
+  [1] Non ho l'età, per amarti, non ho l'età per vivere.
+  [2] Sarai il mio primo amore, il primo pensiero al mattino.
+can_153: Quando Quando Quando | Tony Renis | A1 | amore
+  [1] Dimmi quando tu verrai, dimmi quando quando quando.
+  [2] L'anno, il giorno, l'ora in cui forse tu mi bacerai.
+can_154: Io Vagabondo | Nomadi | B1 | libertà
+  [1] Io vagabondo, io sono un vagabondo, e me ne vado per le strade del mondo.
+  [2] Cammino sempre senza sosta, in cerca di un posto nel sole.
+can_155: Tanti Auguri | Raffaella Carrà | A1 | festa
+  [1] Tanti auguri a te, tanti auguri a te, tanti auguri auguri auguri tanti auguri a te.
+  [2] E buon compleanno, che tu possa essere felice.
+can_156: Luce (Tramonti a Nord Est) | Elisa | B1 | sentimenti
+  [1] E sei luce, luce divina, luce che illumina il cammino.
+  [2] Quel che è, quel che sarà, mi regala la tua serenità.
+can_157: Come Saprei | Giorgia | B1 | amore
+  [1] Come saprei amarti, come saprei tenerti per mano.
+  [2] Tra mille strade perdute io troverei la via per te.
+can_158: Nessuno Mi Può Giudicare | Caterina Caselli | B1 | libertà
+  [1] Nessuno mi può giudicare, nemmeno tu che piangi sempre.
+  [2] Ho fatto quello che volevo, ho vissuto la mia vita.
+can_159: La Bambola | Patty Pravo | A2 | ribellione
+  [1] La bambola, la bambola, la mia bambola sei tu.
+  [2] Non voglio stare sola, ho bisogno di qualcuno.
+can_160: Sei Nell'Anima | Gianna Nannini | B1 | passione
+  [1] Sei nell'anima, sei nella mente, sei tutto quello che sento.
+  [2] Dentro di me c'è solo il tuo nome che brucia.
+can_161: America | Gianna Nannini | B1 | sogno
+  [1] America, America, il sogno di un giorno arrivare.
+  [2] La libertà non ha confini quando il cuore vola lontano.
+can_162: Via del Campo | Fabrizio De André | B2 | poesia
+  [1] Via del campo ce n'è una ragazza, occhi grandi come un gatto selvatico.
+  [2] Dai diamanti non nasce niente, dal letame nascono i fiori.
+can_163: La Canzone di Marinella | Fabrizio De André | B2 | poesia
+  [1] Questa di Marinella è la storia vera, che scivolò nel fiume a primavera.
+  [2] Ma il vento che la vide così bella, dal fiume la portò sopra una stella.
+can_164: Bocca di Rosa | Fabrizio De André | C1 | poesia
+  [1] Bocca di Rosa si chiamava, metteva l'amore sopra ogni cosa.
+  [2] L'amore è bello e fa sognare, ma costa caro e fa penare.
+can_165: Il Pescatore | Fabrizio De André | B2 | poesia
+  [1] All'ombra dell'ultimo sole s'era assopito un pescatore.
+  [2] E alla fine prese il largo con il carico di pena.
+can_166: Napule è | Pino Daniele | B1 | città
+  [1] Napule è mille culure, Napule è mille paure.
+  [2] Napule è na carta sporca e nisciuno se ne importa.
+can_167: Ma il Cielo è Sempre Più Blu | Rino Gaetano | B1 | società
+  [1] C'è chi ha le scarpe rotte e chi ha il cuore matto.
+  [2] Ma il cielo è sempre più blu, ma il cielo è sempre più blu.
+can_168: Un'Emozione per Sempre | Eros Ramazzotti | A2 | amore
+  [1] Un'emozione per sempre, un'emozione che non finirà mai.
+  [2] Che resta nel cuore anche quando il tempo passa.
+can_169: Com'è Profondo il Mare | Lucio Dalla | B2 | riflessione
+  [1] Com'è profondo il mare, com'è profondo il mare.
+  [2] E quante lacrime contiene insieme a quelle mie.
+can_170: Canzone | Lucio Dalla | B1 | musica
+  [1] L'anno che verrà sarà un anno bellissimo, ti aspetto tra la neve.
+  [2] Caro amico ti scrivo così mi distraggo un po'.
+can_171: Amarsi un Po' | Lucio Battisti | A2 | amore
+  [1] Amarsi un po', amarsi un po' si può, amarsi in fondo si può.
+  [2] Senza pensare troppo a quello che sarà domani.
+can_172: Ancora Ancora Ancora | Mina | A2 | amore
+  [1] Ancora, ancora, ancora, ti voglio amare ancora.
+  [2] Il nostro amore è come il vento, forte e senza confini.
+can_173: Parole Parole | Mina | B1 | sentimenti
+  [1] Parole, parole, parole, soltanto parole, parole tra noi.
+  [2] Io ti cerco tra le stelle e mi perdo nel vuoto.
+can_174: L'Emozione Non Ha Voce | Adriano Celentano | B1 | sentimenti
+  [1] L'emozione non ha voce, è come il vento che non si vede.
+  [2] Ma si sente nel silenzio di due occhi che si guardano.
+can_175: Sono Solo Canzonette | Edoardo Bennato | B2 | musica
+  [1] Sono solo canzonette, non ci creder troppo su.
+  [2] È solo il rumore del vento che passa tra le foglie.
+can_176: Sei Bellissima | Loredana Bertè | A2 | bellezza
+  [1] Sei bellissima quando sorridi, sei bellissima quando piangi.
+  [2] Nei tuoi occhi c'è un universo che non finisce mai.
+can_177: Romagna Mia | Secondo Casadei | A1 | tradizione
+  [1] Romagna mia, Romagna soave, terra di sogni e di canzoni.
+  [2] Là dove nasce il sole, là dove splende la luna.
+can_178: La Donna dei Sogni | Vasco Rossi | B1 | sogno
+  [1] La donna dei sogni è quella che non arriva mai.
+  [2] L'aspetti tutta la vita e quando arriva non la riconosci.
+can_179: Come Musica | Giorgia | B1 | musica
+  [1] Come musica nell'aria, come un raggio di sole che mi scalda.
+  [2] Sei la melodia che porto sempre con me.
+can_180: Sogno e Son Desto | Massimo Ranieri | B1 | sogno
+  [1] Sogno e son desto, sto cercando te tra la gente.
+  [2] Tra mille facce cerco sempre la tua e non la trovo.
+can_181: Nessun Dorma | Giacomo Puccini | B2 | opera
+  [1] Nessun dorma! Nessun dorma! Tu pure, o Principessa.
+  [2] All'alba vincerò! Vincerò! Vincerò!
+can_182: O Mio Babbino Caro | Giacomo Puccini | B1 | opera
+  [1] O mio babbino caro, mi piace, è bello, bello.
+  [2] Vò andare in Porta Rossa a comperar l'anello!
+can_183: Una Furtiva Lagrima | Gaetano Donizetti | B2 | opera
+  [1] Una furtiva lagrima negli occhi suoi spuntò.
+  [2] Cielo! Si può morir, si può morir d'amor.
+can_184: L'Aurora | Eros Ramazzotti | A2 | amore
+  [1] Come l'aurora che nasce dal buio, così sei tu nella mia vita.
+  [2] Porti la luce dove c'era il freddo e il silenzio.
+can_185: Inevitabile | Elisa | B2 | sentimenti
+  [1] Era inevitabile, lo sapevo da sempre che ti avrei amato.
+  [2] Come il mare che deve incontrare la riva.
+can_186: Io Canto | Laura Pausini | A2 | musica
+  [1] Io canto e il mondo gira intorno a me, io canto e mi sento libera.
+  [2] La voce è la mia arma più potente contro il dolore.
+can_187: Invece No | Laura Pausini | B1 | sentimenti
+  [1] Invece no, invece no, non è andata come speravo.
+  [2] Pensavo che l'amore fosse eterno, invece finisce.
+can_188: Benvenuto | Subsonica | B2 | città
+  [1] Benvenuto in questo mondo che non ti aspettava.
+  [2] Le strade sono grigie ma il cielo è ancora blu.
+can_189: Quello Che le Donne Non Dicono | Fiorella Mannoia | B2 | donna
+  [1] Quello che le donne non dicono, si porta nel cuore come un peso.
+  [2] Un segreto che non vuole uscire, una verità difficile.
+can_190: Caffè del Mattino | Fiorella Mannoia | A1 | quotidiano
+  [1] Un caffè del mattino, un sorriso, la giornata comincia.
+  [2] Ogni giorno è un regalo, ogni mattino una promessa.
+can_191: Almeno Tu | Bruno Lauzi | B1 | amore
+  [1] Almeno tu nell'universo, sei rimasta sempre uguale a te.
+  [2] Un punto fermo nella mia follia d'infinito.
+can_192: Vedrai Vedrai | Luigi Tenco | B1 | speranza
+  [1] Vedrai vedrai vedrai, vedrai che cambierà.
+  [2] Le cose che non vanno adesso, domani anderanno meglio.
+can_193: Ciao Amore Ciao | Luigi Tenco | B2 | addio
+  [1] Ciao amore, ciao, ciao amore, ciao, vado via.
+  [2] Resto qui a guardare il cielo che si fa grigio.
+can_194: Il Cielo in una Stanza (Cover) | Mina | A2 | amore
+  [1] Quando sei qui con me, questa stanza non ha più pareti.
+  [2] Ma alberi, foreste, profumo di fiori appena nati.
+can_195: Pensieri e Parole | Lucio Battisti | B1 | riflessione
+  [1] Pensieri e parole, immagini e parole, musica e parole.
+  [2] Finalmente libero di dirti quello che sento dentro.
+can_196: Perduto Amor | Franco Battiato | C1 | poesia
+  [1] Perduto amor, dove sei adesso, in quale cielo ti trovi?
+  [2] Ti cerco ancora tra i ricordi che non muoiono mai.
+can_197: La Luna e il Sole | Lucio Battisti | A2 | natura
+  [1] La luna brilla nel cielo scuro, il sole dorme lontano.
+  [2] E io penso a te mentre guardo le stelle che tremano.
+can_198: Profumo di Donna | Armando Trovajoli | B1 | cinema
+  [1] Nel profumo di donna c'è tutto un mondo di dolcezza.
+  [2] Un sorriso, uno sguardo, e il cuore si risveglia.
+can_199: Come Prima | Tony Dallara | A2 | nostalgia
+  [1] Come prima, più di prima, t'amerò per sempre.
+  [2] La mia vita senza te è un'alba senza sole.
+can_200: Canto delle Lavandaie del Vomero | Canto Napoletano | A2 | tradizione
+  [1] Scetate, bambenella, ca ll'aria è doce e bella.
+  [2] E il sole già s'affaccia e ti chiama col suo raggio.
