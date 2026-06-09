@@ -166,7 +166,7 @@ const Storie = {
     const s = (this.dados?.storie || []).find(x => x.id === id);
     if (!s) return;
     this.storAttuale = s;
-    this.traduzirVisivel = true;
+    this.traduzirVisivel = false;
     this._renderizarStoria();
   },
 
