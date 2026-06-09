@@ -16,6 +16,7 @@ const Storie = {
   _filtroTexto: '',
   _filtroOrigem: '',
   _escListener: null,
+  _tradCache: {},   // cache in-memory: palavra → tradução
 
   // ── Carregar dados ─────────────────────────────────────────
   async carregar() {
@@ -330,29 +331,6 @@ const Storie = {
     }).join('');
   },
 
-  // ── Alinhamento posicional IT→PT para extrair tradução da palavra ──
-  // Divide ambas as frases em tokens, mapeia a posição proporcional
-  // do token italiano para o token português correspondente.
-  // Retorna 1-2 palavras ao redor da posição estimada.
-  _alinharPalavra(palavra, fraseIT, frasePT) {
-    const tokIT = (fraseIT.match(/[A-Za-zÀ-öø-ÿ']+/g) || []);
-    const tokPT = (frasePT.match(/[A-Za-zÀ-öø-ÿ']+/g) || []);
-    if (!tokIT.length || !tokPT.length) return '';
-
-    const norm  = this._normWord(palavra);
-    const idxIT = tokIT.findIndex(t => this._normWord(t) === norm);
-    if (idxIT === -1) return '';
-
-    // Mapeamento proporcional: posição relativa em IT → posição em PT
-    const ratio  = tokIT.length > 1 ? idxIT / (tokIT.length - 1) : 0;
-    const idxPT  = Math.round(ratio * (tokPT.length - 1));
-
-    // Retorna a palavra na posição + a seguinte se for artigo/prep curta
-    const w0 = tokPT[idxPT] || '';
-    const w1 = tokPT[idxPT + 1] || '';
-    const curta = w0.length <= 3; // artigos/prep curtos ganham palavra extra de contexto
-    return curta && w1 ? `${w0} ${w1}` : w0;
-  },
 
   _normWord(w) {
     return (w || '').toLowerCase().replace(/[''']/g, "'");
@@ -393,47 +371,82 @@ const Storie = {
       }
     }
 
-    // Fallback: extrai tradução da palavra por alinhamento posicional
-    const parIdx    = parseInt(wordEl.dataset.par ?? '-1', 10);
-    const paragrafo = this.storAttuale?.testo?.[parIdx];
-    if (!trad && paragrafo?.portugues && paragrafo?.italiano) {
-      trad = this._alinharPalavra(palavra, paragrafo.italiano, paragrafo.portugues);
-    }
+    const il      = I18n.idioma === 'it';
+    const jaSalva = this._verificarSalva(palavra);
 
-    const temVocab = !!(ipa || trad || cat);
-    const il       = I18n.idioma === 'it';
-    const jaSalva  = this._verificarSalva(palavra);
+    // Se já temos trad do parole[], renderiza direto
+    // Caso contrário, verifica cache → mostra placeholder → busca API
+    const tradInicial = trad;
 
-    const tradPills = trad
-      ? trad.split(/[;,]/).map(t => t.trim()).filter(Boolean)
-             .map(t => `<span class="storie-trad-pill">${this._escape(t)}</span>`).join('')
+    const buildPills = (t) => t
+      ? t.split(/[;,]/).map(s => s.trim()).filter(Boolean)
+          .map(s => `<span class="storie-trad-pill">${this._escape(s)}</span>`).join('')
       : '';
 
-    const tradFraseHtml = '';
+    const renderModal = (tradAtual, carregando = false) => {
+      const pills = buildPills(tradAtual);
+      return `
+        <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
+        <div class="storie-modal-palavra">${this._escape(palavra)}</div>
+        ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
+        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
+        <div class="storie-modal-traducoes" id="storie-modal-pills">
+          ${pills || (carregando ? '<span class="storie-trad-loading">…</span>' : '')}
+        </div>
+        ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
+        <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
+          onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})">
+          ${jaSalva
+            ? `✅ ${il ? 'Già salvata' : 'Já salva'}`
+            : `⭐ ${il ? 'Salva per revisione' : 'Salvar para revisão'}`}
+        </button>`;
+    };
 
     const modal = document.getElementById('storie-word-modal');
     if (!modal) return;
 
-    modal.innerHTML = `
-      <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
-      <div class="storie-modal-palavra">${this._escape(palavra)}</div>
-      ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
-      <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
-      ${tradPills ? `<div class="storie-modal-traducoes">${tradPills}</div>` : ''}
-      ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
-      ${tradFraseHtml}
-      <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
-        onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(trad)}',cat:'${this._escAttr(cat)}'})">
-        ${jaSalva
-          ? `✅ ${il ? 'Già salvata' : 'Já salva'}`
-          : `⭐ ${il ? 'Salva per revisione' : 'Salvar para revisão'}`}
-      </button>`;
-
+    // Renderiza imediatamente (com loading se sem trad)
+    modal.innerHTML = renderModal(tradInicial, !tradInicial);
     modal.style.display = 'block';
     this._posicionarModal(modal, wordEl);
 
     const overlay = document.getElementById('storie-modal-overlay');
     if (overlay) overlay.style.display = 'block';
+
+    // Se não tem tradução, busca via API (com cache)
+    if (!tradInicial) {
+      this._buscarTradAPI(palavra).then(tradAPI => {
+        // Verifica se o modal ainda mostra esta palavra
+        const pillsEl = document.getElementById('storie-modal-pills');
+        if (!pillsEl) return;
+        if (tradAPI) {
+          pillsEl.innerHTML = buildPills(tradAPI);
+          // Atualiza o onclick do botão salvar com a trad real
+          const btn = document.getElementById('storie-btn-salvar');
+          if (btn) btn.setAttribute('onclick',
+            `Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAPI)}',cat:'${this._escAttr(cat)}'})`);
+        } else {
+          pillsEl.innerHTML = '';
+        }
+      });
+    }
+  },
+
+  // ── Tradução via MyMemory API (gratuita, sem chave) ────────
+  async _buscarTradAPI(palavra) {
+    const norm = this._normWord(palavra);
+    if (this._tradCache[norm]) return this._tradCache[norm];
+    try {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(palavra)}&langpair=it|pt-BR`;
+      const res  = await fetch(url, { signal: AbortSignal.timeout(4000) });
+      const json = await res.json();
+      const t    = json?.responseData?.translatedText || '';
+      // Filtra respostas ruins (igual à entrada ou muito longas)
+      const boa  = t && t.toLowerCase() !== palavra.toLowerCase() && t.split(' ').length <= 4;
+      const val  = boa ? t : '';
+      this._tradCache[norm] = val;
+      return val;
+    } catch { return ''; }
   },
 
   _posicionarModal(modal, wordEl) {
