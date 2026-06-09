@@ -10,7 +10,7 @@
 const Storie = {
   dados: null,
   storAttuale: null,
-  traduzirVisivel: true,
+  traduzirVisivel: false,
   completate: [],
   _filtroNivel: '',
   _filtroTexto: '',
@@ -185,15 +185,10 @@ const Storie = {
     s.testo.forEach((p, idx) => {
       const textoMarcado = this._marcarPalavras(p.italiano, p.parole || [], idx);
       const ptText = (p.portugues || '').replace(/</g, '&lt;');
-      parasHtml += `
-        <div class="storie-bloco">
-          <p class="storie-p">${textoMarcado}
-            <button class="storie-audio-btn"
-              onclick="event.stopPropagation();App.pronunciar('${(p.italiano||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')"
-              title="${il?'Ascolta':'Ouvir'}">🔊</button>
-          </p>
-          ${this.traduzirVisivel && ptText ? `<p class="storie-trad-p">${ptText}</p>` : ''}
-        </div>`;
+      const audioSafe = (p.italiano||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+      parasHtml += `<div class="storie-bloco">
+<p class="storie-p">${textoMarcado}<button class="storie-audio-btn" onclick="event.stopPropagation();App.pronunciar('${audioSafe}')" title="${il?'Ascolta':'Ouvir'}">🔊</button></p>${this.traduzirVisivel && ptText ? `\n<span class="storie-trad-p">${ptText}</span>` : ''}
+</div>`;
     });
 
     const html = `

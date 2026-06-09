@@ -575,26 +575,36 @@
       padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
     }
 
-    /* ── STORIE: Texto corrido ──────────────────────────────── */
-    .storie-texto-corrido { margin-top: 1.2rem; }
-    .storie-bloco { margin-bottom: 1.1rem; }
+    /* ── STORIE: Texto corrido — página de livro ───────────── */
+    .storie-texto-corrido {
+      margin-top: 1.4rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* Cada bloco = um parágrafo: flui sem separação visual entre si */
+    .storie-bloco { margin: 0; }
     .storie-p {
+      font-family: 'Lato', Georgia, serif;
       font-size: 1.05rem;
-      line-height: 1.85;
+      line-height: 1.95;
       color: var(--cor-inchiostro, #2C2418);
-      margin: 0 0 0.25rem;
-    }
-    body.dark-mode .storie-p { color: #F0E8D8; }
-    .storie-trad-p {
-      font-size: 0.88rem;
-      color: #6B5C42;
-      font-style: italic;
-      line-height: 1.55;
       margin: 0;
-      padding: 0.3rem 0 0.3rem 0.8rem;
-      border-left: 3px solid rgba(212,168,67,0.4);
+      text-indent: 1.4em;
     }
-    body.dark-mode .storie-trad-p { color: #B5A98E; border-left-color: rgba(212,168,67,0.25); }
+    .storie-bloco + .storie-bloco { margin-top: 0.5rem; }
+    body.dark-mode .storie-p { color: #F0E8D8; }
+
+    /* Tradução: aparece logo abaixo do parágrafo em itálico sutil */
+    .storie-trad-p {
+      font-size: 0.83rem;
+      color: #8A7055;
+      font-style: italic;
+      line-height: 1.6;
+      margin: 0.15rem 0 0.6rem 1.4em;
+      display: block;
+    }
+    body.dark-mode .storie-trad-p { color: #9A8870; }
 
     /* Botão de áudio inline */
     .storie-audio-btn {
