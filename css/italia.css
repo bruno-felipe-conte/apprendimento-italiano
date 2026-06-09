@@ -360,8 +360,8 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   }
 
   /* Cada botão ocupa 1/9 da largura disponível */
-  /* Perspectiva 3D no container para que os filhos recebam a profundidade */
-  .bottom-nav { perspective: 600px; }
+  /* overflow: visible no nav para que o scale/translateY não seja clipado */
+  .bottom-nav { overflow: visible; overflow-x: auto; }
 
   .bottom-nav button {
     flex: 1 1 0;
@@ -381,8 +381,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     border-radius: 8px;
     opacity: 0.5;
     filter: grayscale(0.5);
-    transform-style: preserve-3d;
-    transform-origin: center bottom;
+    transform-origin: center 80%;
     transition:
       transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
       opacity 0.18s ease,
@@ -392,18 +391,18 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   }
   body.dark-mode .bottom-nav button { color: #A09088; }
 
-  /* Hover: inclina levemente para cima com perspectiva */
+  /* Hover: sobe e cresce — efeito "emergir" */
   .bottom-nav button:hover:not(.ativa) {
-    transform: rotateX(18deg) translateY(-3px) scale(1.08);
-    opacity: 0.8;
-    filter: grayscale(0.2);
+    transform: translateY(-5px) scale(1.18);
+    opacity: 0.85;
+    filter: grayscale(0.1);
   }
 
-  /* Press: afunda — efeito de "empurrar" */
+  /* Press: afunda e encolhe — efeito "pressionar" */
   .bottom-nav button:active {
-    transform: rotateX(-8deg) translateY(2px) scale(0.9);
+    transform: translateY(2px) scale(0.88);
     opacity: 0.9;
-    transition-duration: 0.08s;
+    transition-duration: 0.07s;
   }
 
   .bottom-nav button span {
@@ -419,15 +418,15 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     text-align: center;
   }
 
-  /* Ativo: sobe com leve sombra colorida — "flutua" */
+  /* Ativo: flutua com sombra colorida */
   .bottom-nav button.ativa {
     color: var(--cor-veneziano);
     opacity: 1;
     filter: grayscale(0);
     background: rgba(155,35,53,0.1);
-    transform: rotateX(12deg) translateY(-5px) scale(1.12);
+    transform: translateY(-6px) scale(1.2);
     font-size: 1.25rem;
-    box-shadow: 0 6px 14px rgba(155,35,53,0.25);
+    box-shadow: 0 8px 16px rgba(155,35,53,0.3), 0 2px 4px rgba(155,35,53,0.2);
   }
   .bottom-nav button.ativa span {
     color: var(--cor-veneziano);
@@ -436,7 +435,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   body.dark-mode .bottom-nav button.ativa {
     color: var(--cor-toscano);
     background: rgba(212,168,67,0.12);
-    box-shadow: 0 6px 14px rgba(212,168,67,0.2);
+    box-shadow: 0 8px 16px rgba(212,168,67,0.25), 0 2px 4px rgba(212,168,67,0.15);
   }
 
   /* Garante que o conteúdo não fique atrás da bottom nav */
