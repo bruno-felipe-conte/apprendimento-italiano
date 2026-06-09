@@ -121,13 +121,18 @@ const Profilo = {
           </div>
           <!-- Conteúdo Criado por Mim -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
-            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.5rem">${I18n.t('prof_conteudo_criado')}</div>
+            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.3rem">${I18n.t('prof_conteudo_criado')}</div>
+            <div style="font-size:0.75rem;color:#888;margin-bottom:0.5rem">
+              ${I18n.idioma==='it'
+                ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti manualmente o via IA.'
+                : 'Músicas, diálogos, histórias, imitações e vocabulário adicionados manualmente ou via IA.'}
+            </div>
             <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
               <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
-                ${I18n.t('prof_exp_conteudo')}
+                ⬇️ ${I18n.idioma==='it' ? 'Esporta Contenuto' : 'Exportar Conteúdo'}
               </button>
               <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="font-size:0.82rem">
-                ${I18n.t('prof_imp_conteudo')}
+                ⬆️ ${I18n.idioma==='it' ? 'Importa Contenuto' : 'Importar Conteúdo'}
               </button>
             </div>
           </div>
@@ -198,16 +203,22 @@ const Profilo = {
   // ── Exportar backup ───────────────────────────────────────
   exportarDados() {
     const backup = {
-      versao: 1,
+      versao: 2,
       data: new Date().toISOString(),
-      progresso:   JSON.parse(localStorage.getItem('it_progresso')   || 'null'),
-      flashcards:  JSON.parse(localStorage.getItem('it_flashcards')  || '{}'),
-      diario:      JSON.parse(localStorage.getItem('it_diario')      || '{}'),
-      onboarding:  localStorage.getItem('it_onboarding_done'),
-      tema:        localStorage.getItem('it_tema'),
-      idioma:      localStorage.getItem('it_idioma') || 'pt',
-      canzoni_custom:  JSON.parse(localStorage.getItem('it_canzoni_custom')  || '[]'),
-      dialoghi_custom: JSON.parse(localStorage.getItem('it_dialoghi_custom') || '[]'),
+      progresso:         JSON.parse(localStorage.getItem('it_progresso')        || 'null'),
+      flashcards:        JSON.parse(localStorage.getItem('it_flashcards')       || '{}'),
+      diario:            JSON.parse(localStorage.getItem('it_diario')           || '{}'),
+      onboarding:        localStorage.getItem('it_onboarding_done'),
+      tema:              localStorage.getItem('it_tema'),
+      idioma:            localStorage.getItem('it_idioma') || 'pt',
+      // conteúdo customizado
+      canzoni_custom:    JSON.parse(localStorage.getItem('it_canzoni_custom')   || '[]'),
+      dialoghi_custom:   JSON.parse(localStorage.getItem('it_dialoghi_custom')  || '[]'),
+      storie_custom:     JSON.parse(localStorage.getItem('it_storie_custom')    || '[]'),
+      imitazioni_custom: JSON.parse(localStorage.getItem('it_imitazioni_custom')|| '[]'),
+      vocab_custom:      JSON.parse(localStorage.getItem('it_vocab_custom')     || '[]'),
+      // preferências de ocultação
+      canzoni_ocultas:   JSON.parse(localStorage.getItem('it_canzoni_ocultas')  || '[]'),
     };
     const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
     const url  = URL.createObjectURL(blob);
@@ -229,14 +240,18 @@ const Profilo = {
         const backup = JSON.parse(e.target.result);
         if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
         if (!confirm(I18n.t('prof_confirm_importar'))) return;
-        if (backup.progresso)  localStorage.setItem('it_progresso',      JSON.stringify(backup.progresso));
-        if (backup.flashcards) localStorage.setItem('it_flashcards',     JSON.stringify(backup.flashcards));
-        if (backup.diario)     localStorage.setItem('it_diario',         JSON.stringify(backup.diario));
-        if (backup.onboarding) localStorage.setItem('it_onboarding_done', backup.onboarding);
-        if (backup.tema)       localStorage.setItem('it_tema',            backup.tema);
-        if (backup.idioma)     localStorage.setItem('it_idioma',          backup.idioma);
-        if (backup.canzoni_custom)  localStorage.setItem('it_canzoni_custom',  JSON.stringify(backup.canzoni_custom));
-        if (backup.dialoghi_custom) localStorage.setItem('it_dialoghi_custom', JSON.stringify(backup.dialoghi_custom));
+        if (backup.progresso)         localStorage.setItem('it_progresso',         JSON.stringify(backup.progresso));
+        if (backup.flashcards)        localStorage.setItem('it_flashcards',        JSON.stringify(backup.flashcards));
+        if (backup.diario)            localStorage.setItem('it_diario',            JSON.stringify(backup.diario));
+        if (backup.onboarding)        localStorage.setItem('it_onboarding_done',   backup.onboarding);
+        if (backup.tema)              localStorage.setItem('it_tema',              backup.tema);
+        if (backup.idioma)            localStorage.setItem('it_idioma',            backup.idioma);
+        if (backup.canzoni_custom?.length)    localStorage.setItem('it_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
+        if (backup.dialoghi_custom?.length)   localStorage.setItem('it_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
+        if (backup.storie_custom?.length)     localStorage.setItem('it_storie_custom',     JSON.stringify(backup.storie_custom));
+        if (backup.imitazioni_custom?.length) localStorage.setItem('it_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
+        if (backup.vocab_custom?.length)      localStorage.setItem('it_vocab_custom',      JSON.stringify(backup.vocab_custom));
+        if (backup.canzoni_ocultas?.length)   localStorage.setItem('it_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
         App.notificar('notif_backup_imp', 'sucesso');
         setTimeout(() => location.reload(), 1200);
       } catch(err) {
@@ -251,19 +266,25 @@ const Profilo = {
   resetProgresso() {
     if (!confirm(I18n.t('prof_confirm_apagar1'))) return;
     if (!confirm(I18n.t('prof_confirm_apagar2'))) return;
-    ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia', 'it_canzoni_custom', 'it_dialoghi_custom'].forEach(k => localStorage.removeItem(k));
+    ['it_progresso','it_flashcards','it_diario','it_onboarding_done','it_palavra_dia',
+     'it_canzoni_custom','it_dialoghi_custom','it_storie_custom','it_imitazioni_custom',
+     'it_vocab_custom','it_canzoni_ocultas'].forEach(k => localStorage.removeItem(k));
     App.notificar('notif_prog_reset', 'alerta');
     setTimeout(() => location.reload(), 1200);
   },
 
   // ── Exportar/Importar Apenas Conteúdo Custom ──────────────
   exportarConteudoCustom() {
+    const canzoni    = JSON.parse(localStorage.getItem('it_canzoni_custom')    || '[]');
+    const dialoghi   = JSON.parse(localStorage.getItem('it_dialoghi_custom')   || '[]');
+    const storie     = JSON.parse(localStorage.getItem('it_storie_custom')     || '[]');
+    const imitazioni = JSON.parse(localStorage.getItem('it_imitazioni_custom') || '[]');
+    const vocab      = JSON.parse(localStorage.getItem('it_vocab_custom')      || '[]');
     const backup = {
-      versao: 1,
+      versao: 2,
       tipo: 'conteudo_custom',
       data: new Date().toISOString(),
-      canzoni: JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]'),
-      dialoghi: JSON.parse(localStorage.getItem('it_dialoghi_custom') || '[]')
+      canzoni, dialoghi, storie, imitazioni, vocab
     };
     const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -272,7 +293,8 @@ const Profilo = {
     a.download = `italiano_conteudo_${new Date().toISOString().slice(0,10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    App.notificar('notif_conteudo_exp', 'sucesso');
+    const total = canzoni.length + dialoghi.length + storie.length + imitazioni.length + vocab.length;
+    App.notificar(`✅ ${total} item(ns) exportado(s)`, 'sucesso');
   },
 
   importarConteudoCustom(event) {
@@ -283,22 +305,28 @@ const Profilo = {
       try {
         const backup = JSON.parse(e.target.result);
         if (backup.tipo !== 'conteudo_custom') throw new Error('Arquivo inválido (deve ser conteúdo custom)');
-        if (!confirm(I18n.t('prof_confirm_import_content').replace('{c}', backup.canzoni?.length || 0).replace('{d}', backup.dialoghi?.length || 0))) return;
-        
-        // Merge (não sobrescreve — adiciona os que não existem)
-        const canExist = JSON.parse(localStorage.getItem('it_canzoni_custom') || '[]');
-        const dialExist = JSON.parse(localStorage.getItem('it_dialoghi_custom') || '[]');
-        
-        const canIds = new Set(canExist.map(x => x.id));
-        const dialIds = new Set(dialExist.map(x => x.id));
-        
-        const canNovos = (backup.canzoni || []).filter(x => !canIds.has(x.id));
-        const dialNovos = (backup.dialoghi || []).filter(x => !dialIds.has(x.id));
-        
-        localStorage.setItem('it_canzoni_custom', JSON.stringify([...canExist, ...canNovos]));
-        localStorage.setItem('it_dialoghi_custom', JSON.stringify([...dialExist, ...dialNovos]));
-        
-        App.notificar(`✅ ${canNovos.length} ${I18n.idioma === 'it' ? 'canzoni e' : 'músicas e'} ${dialNovos.length} ${I18n.idioma === 'it' ? 'dialoghi importati!' : 'diálogos importados!'}`, 'sucesso');
+
+        // Contagens para confirmação
+        const nc = backup.canzoni?.length||0, nd = backup.dialoghi?.length||0,
+              ns = backup.storie?.length||0,  ni = backup.imitazioni?.length||0,
+              nv = backup.vocab?.length||0;
+        if (!confirm(`Importar conteúdo?\n• ${nc} músicas\n• ${nd} diálogos\n• ${ns} histórias\n• ${ni} imitações\n• ${nv} palavras de vocab`)) return;
+
+        // Merge por chave (não sobrescreve itens existentes)
+        const _merge = (lsKey, novos) => {
+          if (!novos?.length) return;
+          const exist = JSON.parse(localStorage.getItem(lsKey) || '[]');
+          const ids = new Set(exist.map(x => x.id));
+          localStorage.setItem(lsKey, JSON.stringify([...exist, ...novos.filter(x => !ids.has(x.id))]));
+        };
+        _merge('it_canzoni_custom',    backup.canzoni);
+        _merge('it_dialoghi_custom',   backup.dialoghi);
+        _merge('it_storie_custom',     backup.storie);
+        _merge('it_imitazioni_custom', backup.imitazioni);
+        _merge('it_vocab_custom',      backup.vocab);
+
+        App.notificar(`✅ Conteúdo importado com sucesso!`, 'sucesso');
+        setTimeout(() => location.reload(), 1200);
       } catch(err) {
         App.notificar(I18n.t('notif_arquivo_inv') + err.message, 'erro');
       }
