@@ -116,15 +116,17 @@ const Storie = {
           style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
         <button class="btn-ia-add" onclick="IAImport.abrir('storia')">🤖 via IA</button>
       </div>
-      <!-- Pills de origem + nível unificados -->
+      <!-- Pills de origem + select de nível -->
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
           const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
-          const nP=(v,l)=>`<button onclick="Storie._filtroNivel='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===v?(corNivel[v]||'#9B2335'):'#ccc'};background:${this._filtroNivel===v?(corNivel[v]||'#9B2335'):'transparent'};color:${this._filtroNivel===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l}</button>`;
-          return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN)
-            +'<span style="width:1px;background:#ccc;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>'
-            +nP('',`${labels.tut} (${todas.length})`)+niveis.filter(n=>counts[n]).map(n=>nP(n,`${n} (${counts[n]})`)).join('');
+          return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
         })()}
+        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+          onchange="Storie._filtroNivel=this.value;Storie.renderizarSeletor()">
+          <option value="">🎯 Nível</option>
+          ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
+        </select>
       </div>
       <!-- Grid de histórias -->
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">`;

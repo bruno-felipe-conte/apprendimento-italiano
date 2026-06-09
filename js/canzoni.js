@@ -68,23 +68,24 @@ const Canzoni = {
 
     const nC=todas.filter(s=>s.custom||s._custom).length, nN=todas.length-nC, _o=this._filtroOrigem;
     const _oPill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
-    const _nPill=(v,l)=>`<button onclick="Canzoni._filtroNivel='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===v?'#9B2335':'#ddd'};background:${this._filtroNivel===v?'#9B2335':'transparent'};color:${this._filtroNivel===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l}</button>`;
 
     let html = `
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
         <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:120px;padding:0.44rem 0.75rem;border:2px solid #ddd;border-radius:6px;font-size:0.875rem">
-        <button class="btn-primario" onclick="Canzoni.abrirFormularioCriar()">${I18n.t('can_btn_adicionar')}</button>
+        <button class="btn-pill-add" onclick="Canzoni.abrirFormularioCriar()">${I18n.t('can_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('canzone')">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_oPill('','Todas',todas.length)}
         ${nC?_oPill('custom','🤖 Adicionadas',nC):''}
         ${nN?_oPill('nativo','📚 Nativas',nN):''}
-        <span style="width:1px;background:#ddd;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>
-        ${_nPill('',`Tutte (${todas.length})`)}
-        ${niveis.filter(n=>counts[n]).map(n=>_nPill(n,`${n} (${counts[n]})`)).join('')}
+        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+          onchange="Canzoni._filtroNivel=this.value;Canzoni.renderizarSeletor()">
+          <option value="">🎯 Nível</option>
+          ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
+        </select>
       </div>
       <div class="dialogo-grid">`;
 

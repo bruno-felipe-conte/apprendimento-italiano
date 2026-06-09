@@ -62,25 +62,23 @@ const Dialoghi = {
         style="padding:0.22rem 0.7rem;border-radius:999px;border:1.5px solid ${_o===val?'#7B68A0':'#ddd'};background:${_o===val?'#7B68A0':'transparent'};color:${_o===val?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">
         ${label} (${count})</button>`;
 
-    const _nPill = (val, label) => `<button onclick="Dialoghi._filtroNivel='${val}';Dialoghi.renderizarSeletor()"
-      style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===val?(val?'#9B2335':'#9B2335'):'#ddd'};background:${this._filtroNivel===val?'#9B2335':'transparent'};color:${this._filtroNivel===val?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">
-      ${label}</button>`;
-
     let html = `
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
         <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:120px;padding:0.44rem 0.75rem;border:2px solid #ddd;border-radius:6px;font-size:0.875rem">
-        <button class="btn-primario" onclick="Dialoghi.abrirFormularioCriar()">${I18n.t('dial_btn_adicionar')}</button>
+        <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()">${I18n.t('dial_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')">🤖 via IA</button>
       </div>
       <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_origemPill('','Todos',todos.length)}
         ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
         ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}
-        <span style="width:1px;background:#ddd;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>
-        ${_nPill('', `Tutti (${todos.length})`)}
-        ${niveis.filter(n=>counts[n]).map(n => _nPill(n, `${n} (${counts[n]})`)).join('')}
+        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+          onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
+          <option value="">🎯 Nível</option>
+          ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
+        </select>
       </div>
       <div class="dialogo-grid">`;
 

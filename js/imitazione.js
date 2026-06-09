@@ -61,14 +61,16 @@ const Imitazione = {
     })();
 
     const oP=(v,l,ct)=>`<button onclick="Imitazione._filtroOrigem='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
-    const nP=(v,l)=>`<button onclick="Imitazione._filtroNivel='${v}';Imitazione._aplicarFiltro()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${this._filtroNivel===v?'#9B2335':'#ddd'};background:${this._filtroNivel===v?'#9B2335':'transparent'};color:${this._filtroNivel===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l}</button>`;
 
     bar.innerHTML = `
     <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.9rem;align-items:center">
       <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.2rem">🤖 via IA</button>
       ${oP('','Todas',todasRaw.length)}${nC?oP('custom','🤖 Adicionadas',nC):''}${nN?oP('nativo','📚 Nativas',nN):''}
-      <span style="width:1px;background:#ddd;align-self:stretch;margin:0 0.2rem;flex-shrink:0"></span>
-      ${nP('',`Tutte (${todasRaw.length})`)}${niveis.map(n=>nP(n,`${n} (${counts[n]||0})`)).join('')}
+      <select class="nivel-select${this._filtroNivel?' ativo':''}"
+        onchange="Imitazione._filtroNivel=this.value;Imitazione._aplicarFiltro()">
+        <option value="">🎯 Nível</option>
+        ${niveis.map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]||0})</option>`).join('')}
+      </select>
     </div>`;
   },
 
