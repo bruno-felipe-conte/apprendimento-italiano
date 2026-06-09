@@ -170,7 +170,7 @@ const Storie = {
     this._renderizarStoria();
   },
 
-  // ── Renderizar a história em modo leitura corrida ──────────
+  // ── Renderizar a história em modo livro aberto ────────────
   _renderizarStoria() {
     const c = document.getElementById('storie-container');
     if (!c || !this.storAttuale) return;
@@ -178,18 +178,19 @@ const Storie = {
     const il = I18n.idioma === 'it';
 
     const tituloExibido = il ? s.titulo : (s.titulo_pt || s.titulo);
-    const descExibida   = il ? s.descricao : (s.descricao_pt || s.descricao);
 
-    // Constrói parágrafos com texto corrido — toda palavra clicável
-    let parasHtml = '';
-    s.testo.forEach((p, idx) => {
+    // Constrói HTML de um grupo de parágrafos
+    const buildParas = (paras, startIdx) => paras.map((p, i) => {
+      const idx = startIdx + i;
       const textoMarcado = this._marcarPalavras(p.italiano, p.parole || [], idx);
       const ptText = (p.portugues || '').replace(/</g, '&lt;');
-      const audioSafe = (p.italiano||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      parasHtml += `<div class="storie-bloco">
-<p class="storie-p">${textoMarcado}<button class="storie-audio-btn" onclick="event.stopPropagation();App.pronunciar('${audioSafe}')" title="${il?'Ascolta':'Ouvir'}">🔊</button></p>${this.traduzirVisivel && ptText ? `\n<span class="storie-trad-p">${ptText}</span>` : ''}
-</div>`;
-    });
+      return `<div class="storie-bloco"><p class="storie-p">${textoMarcado}</p>${this.traduzirVisivel && ptText ? `<span class="storie-trad-p">${ptText}</span>` : ''}</div>`;
+    }).join('');
+
+    // Divide parágrafos entre página esquerda e direita
+    const mid   = Math.ceil(s.testo.length / 2);
+    const pgEsq = buildParas(s.testo.slice(0, mid), 0);
+    const pgDir = buildParas(s.testo.slice(mid), mid);
 
     const html = `
       <div class="gram-lesson-nav">
@@ -197,26 +198,42 @@ const Storie = {
         <span style="font-size:0.85rem;font-weight:700">${s.nivel} · +${s.xp_recompensa||50} XP</span>
       </div>
 
-      <div class="gram-card" style="margin-top:1rem;padding:1.2rem;text-align:center">
-        <div style="font-size:2.6rem;margin-bottom:0.4rem">${s.icone||'📖'}</div>
-        <h2 style="margin:0 0 0.3rem;font-family:'Playfair Display',serif;font-size:1.45rem;color:#9B2335">${tituloExibido}</h2>
-        <div style="font-size:0.82rem;color:#666;font-style:italic">${s.autor||''} · ${s.tema||''}</div>
-        <p style="font-size:0.85rem;color:#444;margin:0.7rem 0 0;line-height:1.4">${descExibida}</p>
-        <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem">
-          <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
-            ${this.traduzirVisivel
-              ? (il ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução')
-              : (il ? '👁️ Mostra traduzione'   : '👁️ Mostrar tradução')}
-          </button>
-          <button class="btn-primario" onclick="Storie._ouvirTudo()">
-            ${il ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo'}
-          </button>
+      <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0">
+        <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
+          ${this.traduzirVisivel
+            ? (il ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução')
+            : (il ? '👁️ Mostra traduzione'   : '👁️ Mostrar tradução')}
+        </button>
+        <button class="btn-primario" onclick="Storie._ouvirTudo()">
+          ${il ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo'}
+        </button>
+      </div>
+
+      <div class="book-scene">
+        <div class="book-spread">
+
+          <div class="book-page book-page-left storie-texto-corrido">
+            <div class="book-header">
+              <span class="book-icon">${s.icone||'📖'}</span>
+              <div class="book-titulo">${tituloExibido}</div>
+              <div class="book-subtitulo">${s.autor||''} · ${s.tema||''}</div>
+              <div class="book-ornamento">— ✦ —</div>
+            </div>
+            ${pgEsq}
+            <div class="book-pagina">— 12 —</div>
+          </div>
+
+          <div class="book-page book-page-right storie-texto-corrido">
+            ${pgDir}
+            <div class="book-ornamento" style="margin-top:auto;padding-top:1rem">— ✦ —</div>
+            <div class="book-fine">${il ? 'Fine' : 'Fim'}</div>
+            <div class="book-pagina">— 13 —</div>
+          </div>
+
         </div>
       </div>
 
-      <div class="storie-texto-corrido">${parasHtml}</div>
-
-      <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
+      <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
         <button class="btn-secondario" onclick="Storie._fecharModal();Storie.renderizarSeletor()">
           ${il ? '‹ Tutte le storie' : '‹ Todas as histórias'}
         </button>
@@ -237,27 +254,20 @@ const Storie = {
 
     c.innerHTML = html;
 
-    // Move modal e overlay para document.body
-    // Isso garante que position:fixed use o viewport como referência,
-    // evitando distorção causada por transform em ancestrais do container
+    // Move modal para document.body — position:fixed usa viewport como referência
     const modalEl   = c.querySelector('#storie-word-modal');
     const overlayEl = c.querySelector('#storie-modal-overlay');
     if (modalEl)   document.body.appendChild(modalEl);
     if (overlayEl) document.body.appendChild(overlayEl);
 
-    // Delegação de cliques para palavras
-    const textoEl = c.querySelector('.storie-texto-corrido');
-    if (textoEl) {
+    // Delegação de cliques (ambas as páginas)
+    c.querySelectorAll('.storie-texto-corrido').forEach(textoEl => {
       textoEl.addEventListener('click', (e) => {
         const wordEl = e.target.closest('.storie-palavra');
-        if (wordEl) {
-          e.stopPropagation();
-          this._abrirModalPalavra(wordEl);
-        } else {
-          this._fecharModal();
-        }
+        if (wordEl) { e.stopPropagation(); this._abrirModalPalavra(wordEl); }
+        else        { this._fecharModal(); }
       });
-    }
+    });
 
     // Fechar com ESC
     if (this._escListener) document.removeEventListener('keydown', this._escListener);
@@ -270,6 +280,7 @@ const Storie = {
     if (!texto) return '';
     // Tokeniza: palavras (incluindo acentuadas e apóstrofo) | pontuação | espaços
     const tokens = texto.match(/[A-Za-zÀ-öø-ÿ']+|[^A-Za-zÀ-öø-ÿ'\s]+|\s+/g) || [];
+    let primeiraWord = true; // para capitular no primeiro parágrafo
 
     return tokens.map((tok, wIdx) => {
       // Espaços: retorna como está
@@ -298,7 +309,16 @@ const Storie = {
         if (vocabDado.categoria)  attrs.push(`data-cat="${this._escAttr(vocabDado.categoria)}"`);
       }
 
-      return `<span class="${classes.join(' ')}" ${attrs.join(' ')}>${this._escape(tok)}</span>`;
+      // Capitular: primeira letra do primeiro parágrafo (parIdx===0)
+      let inner = this._escape(tok);
+      if (parIdx === 0 && primeiraWord) {
+        primeiraWord = false;
+        inner = `<span class="storie-capitular">${this._escape(tok[0])}</span>${this._escape(tok.slice(1))}`;
+      } else if (primeiraWord) {
+        primeiraWord = false;
+      }
+
+      return `<span class="${classes.join(' ')}" ${attrs.join(' ')}>${inner}</span>`;
     }).join('');
   },
 

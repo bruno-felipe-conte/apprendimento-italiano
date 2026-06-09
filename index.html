@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/italia.css?v=59">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css"/>
   <link rel="manifest" href="manifest.webmanifest">
   <!-- iOS não lê o manifest para ícone — precisa da tag específica -->
@@ -573,44 +573,159 @@
       padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
     }
 
-    /* ── STORIE: Texto corrido — página de livro ───────────── */
-    .storie-texto-corrido {
-      margin-top: 1.4rem;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
+    /* ── STORIE: Livro aberto ───────────────────────────────── */
+    .book-scene {
+      display: flex;
+      justify-content: center;
+      padding: 1.4rem 0 2rem;
     }
-    /* Cada bloco = um parágrafo: flui sem separação visual entre si */
-    .storie-bloco { margin: 0; }
-    .storie-p {
-      font-family: 'Lato', Georgia, serif;
-      font-size: 1.05rem;
-      line-height: 1.95;
-      color: var(--cor-inchiostro, #2C2418);
-      margin: 0;
-      text-indent: 1.4em;
+    .book-spread {
+      display: flex;
+      width: 100%;
+      max-width: 740px;
+      border-radius: 3px 10px 10px 3px;
+      box-shadow:
+        -6px 0 14px rgba(0,0,0,0.20),
+        6px 8px 28px rgba(0,0,0,0.22);
+      overflow: hidden;
+      position: relative;
     }
-    .storie-bloco + .storie-bloco { margin-top: 0.5rem; }
-    body.dark-mode .storie-p { color: #F0E8D8; }
-
-    /* Tradução: aparece logo abaixo do parágrafo em itálico sutil */
-    .storie-trad-p {
-      font-size: 0.83rem;
-      color: #8A7055;
+    .book-page {
+      flex: 1;
+      padding: 2.2rem 1.7rem 1.4rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .book-page-left {
+      background: #f2e9d2;
+      border-right: 3px solid rgba(100,68,28,0.22);
+    }
+    .book-page-left::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(80,48,12,0.10) 0%, rgba(80,48,12,0.03) 18%, transparent 40%),
+                  linear-gradient(to left,  rgba(80,48,12,0.06) 0%, transparent 30%);
+      pointer-events: none;
+    }
+    .book-page-right {
+      background: #f7f1e1;
+    }
+    .book-page-right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 22px;
+      background: linear-gradient(to right, rgba(80,48,12,0.13), transparent);
+      pointer-events: none;
+    }
+    .book-header {
+      text-align: center;
+      margin-bottom: 1.1rem;
+    }
+    .book-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.4rem;
+      opacity: 0.72;
+      filter: sepia(0.45);
+    }
+    .book-titulo {
+      font-family: 'UnifrakturMaguntia', cursive;
+      font-size: 1.45rem;
+      color: #5c3a18;
+      margin: 0 0 0.2rem;
+      line-height: 1.2;
+    }
+    .book-subtitulo {
+      font-family: 'EB Garamond', Georgia, serif;
       font-style: italic;
-      line-height: 1.6;
-      margin: 0.15rem 0 0.6rem 1.4em;
+      font-size: 0.76rem;
+      color: #8a7250;
+      margin: 0 0 0.8rem;
+      letter-spacing: 0.04em;
+    }
+    .book-ornamento {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #9c7a40;
+      letter-spacing: 0.3em;
+      margin: 0.4rem 0 0.9rem;
+    }
+    .book-divider {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #9c7a40;
+      letter-spacing: 0.5em;
+      margin: 0.5rem 0;
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+    .book-fine {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 0.76rem;
+      color: #8a7250;
+      text-align: center;
+      margin-top: 0.4rem;
+    }
+    .book-pagina {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.68rem;
+      color: #8a7250;
+      text-align: center;
+      margin-top: auto;
+      padding-top: 1rem;
+      letter-spacing: 0.12em;
+    }
+    /* Bloco = parágrafo dentro do livro */
+    .storie-bloco { margin: 0; }
+    .storie-bloco + .storie-bloco { margin-top: 0; }
+    .storie-texto-corrido { flex: 1; }
+    .storie-p {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.97rem;
+      line-height: 1.88;
+      color: #2c1e0e;
+      margin: 0 0 0.5em;
+      text-align: justify;
+      hyphens: auto;
+      text-indent: 0;
+    }
+    body.dark-mode .storie-p { color: #E8DEC8; }
+
+    /* Tradução */
+    .storie-trad-p {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.8rem;
+      color: #7a6040;
+      font-style: italic;
+      line-height: 1.55;
+      margin: 0 0 0.55em 0;
       display: block;
     }
     body.dark-mode .storie-trad-p { color: #9A8870; }
 
-    /* Botão de áudio inline */
-    .storie-audio-btn {
-      background: transparent; border: none; cursor: pointer;
-      font-size: 0.9rem; padding: 0.1rem 0.25rem; opacity: 0.55;
-      transition: opacity 0.15s, transform 0.15s; vertical-align: middle;
+    /* Botão de áudio: escondido no livro, acessível via modal */
+    .storie-audio-btn { display: none !important; }
+
+    /* Capitular — primeira letra ornamentada */
+    .storie-capitular {
+      font-family: 'UnifrakturMaguntia', cursive;
+      float: left;
+      font-size: 3.3em;
+      line-height: 0.78;
+      margin: 5px 5px -3px 0;
+      color: #7a3a12;
+      pointer-events: none;
     }
-    .storie-audio-btn:hover { opacity: 1; transform: scale(1.15); }
+
+    /* Mobile: páginas empilhadas */
+    @media (max-width: 599px) {
+      .book-spread { flex-direction: column; border-radius: 8px; }
+      .book-page-left { border-right: none; border-bottom: 2px solid rgba(100,68,28,0.2); }
+      .book-page-right::before { display: none; }
+    }
 
     /* Palavras clicáveis */
     .storie-palavra {
