@@ -354,8 +354,7 @@ const Storie = {
     let trad = wordEl.dataset.trad || '';
     let cat  = wordEl.dataset.cat  || '';
 
-    // Se o span não tem dados (palavra fora do parole do parágrafo),
-    // faz busca global em todos os parágrafos da história
+    // Busca global em todos os parágrafos da história
     if (!trad && this.storAttuale) {
       for (const p of this.storAttuale.testo) {
         const found = (p.parole || []).find(pw =>
@@ -370,6 +369,11 @@ const Storie = {
       }
     }
 
+    // Fallback: se ainda sem tradução individual, usa a tradução da frase (parágrafo)
+    const parIdx     = parseInt(wordEl.dataset.par ?? '-1', 10);
+    const paragrafo  = this.storAttuale?.testo?.[parIdx];
+    const tradFrase  = (!trad && paragrafo?.portugues) ? paragrafo.portugues.trim() : '';
+
     const temVocab = !!(ipa || trad || cat);
     const il       = I18n.idioma === 'it';
     const jaSalva  = this._verificarSalva(palavra);
@@ -377,6 +381,14 @@ const Storie = {
     const tradPills = trad
       ? trad.split(/[;,]/).map(t => t.trim()).filter(Boolean)
              .map(t => `<span class="storie-trad-pill">${this._escape(t)}</span>`).join('')
+      : '';
+
+    // Bloco da tradução da frase (quando não há tradução individual)
+    const tradFraseHtml = tradFrase
+      ? `<div class="storie-modal-trad-frase">
+           <span class="storie-modal-trad-label">${il ? 'Frase' : 'Frase'}</span>
+           ${this._escape(tradFrase)}
+         </div>`
       : '';
 
     const modal = document.getElementById('storie-word-modal');
@@ -389,7 +401,7 @@ const Storie = {
       <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
       ${tradPills ? `<div class="storie-modal-traducoes">${tradPills}</div>` : ''}
       ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
-      ${!temVocab ? `<div style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:0.5rem;font-style:italic">${il?'Parola non catalogata':'Palavra não catalogada'}</div>` : ''}
+      ${tradFraseHtml}
       <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
         onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(trad)}',cat:'${this._escAttr(cat)}'})">
         ${jaSalva
