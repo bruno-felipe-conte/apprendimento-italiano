@@ -54,6 +54,12 @@ const Tour = {
       { sec: 'vocabolario', prep: () => {
           if (typeof Vocab !== 'undefined') Vocab.renderizar();
       }},
+      // 10 — storie
+      { sec: 'storie', prep: null },
+      // 11 — dialoghi
+      { sec: 'dialoghi', prep: null },
+      // 12 — canzoni
+      { sec: 'canzoni', prep: null },
     ];
 
     // Seletores de cada step — usados para scrollIntoView antes do Driver posicionar
@@ -68,6 +74,9 @@ const Tour = {
       '.quiz-templo-btn:not(.bloqueado)',           // Le Fondamenta
       '.gram-nivel-banner',                         // bloco A1
       '#vocab-blur-btns',                           // Ocultar PT / Ocultar IT
+      '#storie-lista',                              // lista de histórias
+      '.dialogo-card',                              // card de diálogo
+      '.canzone-card',                              // card de canção
     ];
 
     const navegar = (idx, cb) => {
@@ -124,7 +133,7 @@ const Tour = {
           element: '.app-header',
           popover: {
             title: '👋 Bem-vindo ao Italiano Autentico!',
-            description: 'Este tour de 10 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
+            description: 'Este tour de 13 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
             side: 'bottom', align: 'center'
           }
         },
@@ -197,6 +206,30 @@ const Tour = {
           popover: {
             title: '📖 Vocabulário — Treine a Memória',
             description: 'Use "Ocultar PT" ou "Ocultar IT" para esconder uma coluna e testar se você lembra a tradução. Pesquise, filtre por templo ou favoritos e clique para ouvir a pronúncia!',
+            side: 'bottom', align: 'center'
+          }
+        },
+        {
+          element: '#storie-lista',
+          popover: {
+            title: '📖 Storie — Leitura Autêntica',
+            description: 'Leia textos italianos reais com dificuldade A1–C2. Ative o Modo Imersão para esconder a tradução e testar sua compreensão!',
+            side: 'bottom', align: 'center'
+          }
+        },
+        {
+          element: '.dialogo-card',
+          popover: {
+            title: '💬 Dialoghi — Conversação Real',
+            description: 'Pratique diálogos do cotidiano italiano. Ouça, leia e repita — ideal para treinar ouvido e fala!',
+            side: 'bottom', align: 'center'
+          }
+        },
+        {
+          element: '.canzone-card',
+          popover: {
+            title: '🎵 Canzoni — Aprenda com Música',
+            description: '200 músicas italianas com letra completa. Ouça e acompanhe a letra — aprender italiano nunca foi tão divertido!',
             side: 'bottom', align: 'center'
           }
         },
