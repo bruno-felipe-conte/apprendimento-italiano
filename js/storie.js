@@ -163,9 +163,11 @@ const Storie = {
   // ── Abrir uma história para leitura ────────────────────────
   async abrirStoria(id) {
     await this.carregar();
-    const s = (this.dados?.storie || []).find(x => x.id === id);
-    if (!s) return;
-    this.storAttuale = s;
+    const lista = this.dados?.storie || [];
+    const idx   = lista.findIndex(x => x.id === id);
+    if (idx === -1) return;
+    this.storAttuale   = lista[idx];
+    this._storyIndex   = idx;        // índice para numeração de página
     this.traduzirVisivel = false;
     this._renderizarStoria();
   },
@@ -191,6 +193,12 @@ const Storie = {
     const mid   = Math.ceil(s.testo.length / 2);
     const pgEsq = buildParas(s.testo.slice(0, mid), 0);
     const pgDir = buildParas(s.testo.slice(mid), mid);
+
+    // Numeração: páginas ímpares à esquerda, pares à direita
+    // As 2 primeiras páginas (1-2) são capa/guarda; histórias começam na 3
+    const paginaBase = (this._storyIndex || 0) * 2 + 3;
+    const paginaEsq  = paginaBase;
+    const paginaDir  = paginaBase + 1;
 
     const html = `
       <div class="gram-lesson-nav">
@@ -220,14 +228,14 @@ const Storie = {
               <div class="book-ornamento">— ✦ —</div>
             </div>
             ${pgEsq}
-            <div class="book-pagina">— 12 —</div>
+            <div class="book-pagina">— ${paginaEsq} —</div>
           </div>
 
           <div class="book-page book-page-right storie-texto-corrido">
             ${pgDir}
             <div class="book-ornamento" style="margin-top:auto;padding-top:1rem">— ✦ —</div>
             <div class="book-fine">${il ? 'Fine' : 'Fim'}</div>
-            <div class="book-pagina">— 13 —</div>
+            <div class="book-pagina">— ${paginaDir} —</div>
           </div>
 
         </div>
