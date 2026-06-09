@@ -54,7 +54,7 @@
 
 /* 3. RESET + BASE */
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-html { scroll-behavior:smooth; font-size:16px; -webkit-text-size-adjust:100%; }
+html { scroll-behavior:smooth; font-size:18px; -webkit-text-size-adjust:100%; }
 body {
   background-color: var(--cor-pergaminho);
   color: var(--cor-inchiostro);
@@ -417,7 +417,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 
   .bottom-nav button span {
     display: block;
-    font-size: 0.48rem;
+    font-size: 0.53rem;
     font-weight: 700;
     letter-spacing: 0.01em;
     color: inherit;
@@ -455,7 +455,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     left: auto; top: auto;
     color: var(--cor-veneziano);
     font-weight: 800;
-    font-size: 0.44rem;
+    font-size: 0.48rem;
     white-space: nowrap;
   }
 

@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v76';
+const CACHE = 'italiano-v77';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
