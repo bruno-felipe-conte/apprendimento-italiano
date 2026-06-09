@@ -346,8 +346,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     padding: 0.3rem max(env(safe-area-inset-right), 2px) calc(0.4rem + env(safe-area-inset-bottom)) max(env(safe-area-inset-left), 2px);
     /* 9 botões iguais sem overflow */
     justify-content: stretch;
-    align-items: flex-end;
-    overflow: visible;
+    align-items: stretch;
     overflow-x: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -361,6 +360,9 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   }
 
   /* Cada botão ocupa 1/9 da largura disponível */
+  /* overflow: visible no nav para que o scale/translateY não seja clipado */
+  .bottom-nav { overflow: visible; overflow-x: auto; }
+
   .bottom-nav button {
     flex: 1 1 0;
     min-width: 0;
@@ -370,16 +372,16 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    gap: 2px;
+    justify-content: center;
+    gap: 1px;
     font-size: 1.15rem;
     line-height: 1;
     cursor: pointer;
-    padding: 0.3rem 0.1rem 0.2rem;
+    padding: 0.3rem 0.1rem 0.25rem;
     border-radius: 8px;
     opacity: 0.5;
     filter: grayscale(0.5);
-    transform-origin: center 100%;
+    transform-origin: center 80%;
     transition:
       transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
       opacity 0.18s ease,
@@ -391,7 +393,7 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 
   /* Hover: sobe e cresce — efeito "emergir" */
   .bottom-nav button:hover:not(.ativa) {
-    transform: translateY(-5px) scale(1.15);
+    transform: translateY(-5px) scale(1.18);
     opacity: 0.85;
     filter: grayscale(0.1);
   }
@@ -416,47 +418,24 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     text-align: center;
   }
 
-  /* Ativo: sobe acima da barra com bolha veneziana */
+  /* Ativo: flutua com sombra colorida */
   .bottom-nav button.ativa {
     color: var(--cor-veneziano);
     opacity: 1;
     filter: grayscale(0);
-    /* sobe 18px acima da borda — "estoura" fora da barra */
-    transform: translateY(-18px);
-    font-size: 1.3rem;
-    background: transparent;
+    background: rgba(155,35,53,0.1);
+    transform: translateY(-6px) scale(1.2);
+    font-size: 1.25rem;
+    box-shadow: 0 8px 16px rgba(155,35,53,0.3), 0 2px 4px rgba(155,35,53,0.2);
   }
-  /* Bolha de fundo que flutua acima da barra */
-  .bottom-nav button.ativa::before {
-    content: '';
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--cor-marmore);
-    border: 2px solid var(--cor-veneziano);
-    box-shadow: 0 4px 16px rgba(155,35,53,0.35), 0 0 0 4px var(--cor-marmore);
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .bottom-nav button { position: relative; }
   .bottom-nav button.ativa span {
     color: var(--cor-veneziano);
     font-weight: 800;
-    /* label volta ao nível da barra */
-    margin-top: 20px;
-    transform: translateY(18px);
-    display: block;
   }
   body.dark-mode .bottom-nav button.ativa {
     color: var(--cor-toscano);
-  }
-  body.dark-mode .bottom-nav button.ativa::before {
-    background: #1C1816;
-    border-color: var(--cor-toscano);
-    box-shadow: 0 4px 16px rgba(212,168,67,0.3), 0 0 0 4px #1C1816;
+    background: rgba(212,168,67,0.12);
+    box-shadow: 0 8px 16px rgba(212,168,67,0.25), 0 2px 4px rgba(212,168,67,0.15);
   }
 
   /* Garante que o conteúdo não fique atrás da bottom nav */
