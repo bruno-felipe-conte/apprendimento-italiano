@@ -428,36 +428,31 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
     text-align: center;
   }
 
-  /* ── Botão ativo: pop-out assimétrico ──
-     Quadrado com cantos arredondados, ícone + label juntos dentro da caixa. */
+  /* ── Botão ativo: cresce suavemente a partir da barra ── */
   .bottom-nav button.ativa {
-    top: -16px;
+    /* Sobe apenas 8px — discreto, integrado */
+    top: -8px;
     opacity: 1;
     filter: grayscale(0);
     color: var(--cor-veneziano);
-    /* Quadrado com cantos arredondados */
-    background: var(--cor-marmore);
-    border: 1.5px solid rgba(155,35,53,0.35);
-    border-radius: 14px;
-    width: 52px;
-    height: 52px;
+    /* Mesma linguagem da barra: fundo levemente tingido, sem borda forte */
+    background: rgba(155,35,53,0.09);
+    border: 1px solid rgba(155,35,53,0.2);
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
     padding: 4px 2px 3px;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     gap: 2px;
-    /* Label junto com ícone — layout normal (coluna) */
     justify-content: center;
     overflow: visible;
-    box-shadow:
-      0 6px 18px rgba(155,35,53,0.28),
-      0 2px 6px rgba(155,35,53,0.14),
-      0 14px 8px -8px rgba(155,35,53,0.1);
+    /* Sombra suave — não dramatiza, só separa levemente */
+    box-shadow: 0 4px 12px rgba(155,35,53,0.18), 0 1px 3px rgba(155,35,53,0.1);
   }
   .bottom-nav button.ativa span {
-    /* Volta ao fluxo normal — label dentro da caixa junto do ícone */
     position: static;
     transform: none;
-    left: auto;
-    top: auto;
+    left: auto; top: auto;
     color: var(--cor-veneziano);
     font-weight: 800;
     font-size: 0.44rem;
@@ -465,13 +460,10 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
   }
 
   body.dark-mode .bottom-nav button.ativa {
-    background: #1C1816;
-    border-color: rgba(212,168,67,0.35);
+    background: rgba(212,168,67,0.1);
+    border-color: rgba(212,168,67,0.22);
     color: var(--cor-toscano);
-    box-shadow:
-      0 6px 18px rgba(212,168,67,0.22),
-      0 2px 6px rgba(212,168,67,0.14),
-      0 14px 8px -8px rgba(212,168,67,0.1);
+    box-shadow: 0 4px 12px rgba(212,168,67,0.18), 0 1px 3px rgba(212,168,67,0.1);
   }
   body.dark-mode .bottom-nav button.ativa span { color: var(--cor-toscano); }
 
