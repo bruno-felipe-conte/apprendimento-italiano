@@ -63,14 +63,14 @@ const Dialoghi = {
         ${label} (${count})</button>`;
 
     let html = `
-      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
+      <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
         <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
-          style="flex:1;min-width:120px;padding:0.44rem 0.75rem;border:2px solid #ddd;border-radius:6px;font-size:0.875rem">
-        <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()">${I18n.t('dial_btn_adicionar')}</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')">🤖 via IA</button>
+          style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
+        <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
       </div>
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_origemPill('','Todos',todos.length)}
         ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
         ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}

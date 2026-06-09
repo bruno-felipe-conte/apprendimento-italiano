@@ -97,14 +97,16 @@ const Canzoni = {
     const _oPill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
 
     let html = `
-      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.75rem">
+      <!-- Linha 1: busca + ações -->
+      <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
         <input type="search" placeholder="🔍 Titolo o artista..." value="${this._filtroTexto}"
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
-          style="flex:1;min-width:120px;padding:0.44rem 0.75rem;border:2px solid #ddd;border-radius:6px;font-size:0.875rem">
-        <button class="btn-pill-add" onclick="Canzoni.abrirFormularioCriar()">${I18n.t('can_btn_adicionar')}</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('canzone')">🤖 via IA</button>
+          style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
+        <button class="btn-pill-add" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">🤖 via IA</button>
       </div>
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <!-- Linha 2: filtros numa só linha -->
+      <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${_oPill('','Todas',todas.length)}
         ${nC?_oPill('custom','🤖 Adicionadas',nC):''}
         ${nN?_oPill('nativo','📚 Nativas',nN):''}
@@ -113,7 +115,7 @@ const Canzoni = {
           <option value="">🎯 Nível</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
-        ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">↩ Restaurar (${nOcultas})</button>` : ''}
+        ${nOcultas ? `<button onclick="Canzoni.restaurarNativas()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #c9952a;background:rgba(201,149,42,0.1);color:#7a5a00;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">↩ Restaurar (${nOcultas})</button>` : ''}
       </div>
       <div class="dialogo-grid">`;
 

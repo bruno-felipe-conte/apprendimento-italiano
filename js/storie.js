@@ -107,17 +107,17 @@ const Storie = {
     const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
 
     let html = `
-      <!-- Barra de filtros -->
-      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.8rem;justify-content:center">
+      <!-- Linha 1: busca + ação -->
+      <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
         <input type="search" placeholder="${labels.cerca}" value="${this._filtroTexto}"
           oninput="Storie._filtroTexto=this.value;Storie.renderizarSeletor()"
-          style="flex:1;min-width:140px;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:8px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro)">
-        <button class="btn-ia-add" onclick="IAImport.abrir('storia')">🤖 via IA</button>
+          style="flex:1;min-width:0;padding:0.45rem 0.8rem;border:1.5px solid var(--cor-pietra);border-radius:20px;font-size:0.88rem;background:var(--cor-marmore);color:var(--cor-inchiostro);font-family:inherit">
+        <button class="btn-ia-add" onclick="IAImport.abrir('storia')" style="white-space:nowrap">🤖 via IA</button>
       </div>
-      <!-- Pills de origem + select de nível -->
-      <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <!-- Linha 2: filtros -->
+      <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
-          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
+          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
           return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
         })()}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
