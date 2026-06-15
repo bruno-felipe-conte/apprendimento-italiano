@@ -974,7 +974,9 @@ const App = {
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      const rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      const speedStr = localStorage.getItem('it_audio_speed');
+      let rate = parseFloat(speedStr);
+      if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
       responsiveVoice.speak(texto, 'Italian Female', { rate: rate, pitch: 1 });
     }
   },
@@ -993,7 +995,12 @@ const App = {
 
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'it-IT';
-      u.rate  = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      
+      const speedStr = localStorage.getItem('it_audio_speed');
+      let rate = parseFloat(speedStr);
+      if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      
+      u.rate  = rate;
       u.pitch = 1;
       if (voz) u.voice = voz;
       // Se não há voz italiana específica, usa lang='it-IT' sem voice explícita

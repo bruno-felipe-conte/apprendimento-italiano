@@ -60,44 +60,76 @@ const Profilo = {
     } catch(e) {}
 
     // ── Build HTML ─────────────────────────────────────────
+    const currentSpeed = (p.audio_rate !== undefined) ? p.audio_rate : 0.85;
+
     container.innerHTML = `
       <!-- Stats grid -->
       <div class="profilo-grid">
 
         <!-- General stats -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📊 Statistiche Generali</div>
-          ${this._row('Livello attuale', `${p.nivel || 1}`)}
-          ${this._row('XP totale', `${(p.xp || 0).toLocaleString()} XP`)}
-          ${this._row('Streak attuale', `${p.streak || 0} 🔥 giorni`)}
-          ${this._row('Flashcard revisionate', `${totalRevisoes.toLocaleString()}`)}
-          ${this._row('Parole dominate', `${totalDominadas}`)}
-          ${this._row('Parole difficili', totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
-          ${this._row('Tempo stimato', `${tempoEstimadoMin} min`)}
-          ${this._row('Templi sbloccati', `${(p.templos_desbloqueados||[]).length} / 50`)}
-          ${this._row('Accuratezza quiz', quizAcuracia)}
+          <div class="profilo-card-titulo">${I18n.t('prof_stats_gerais')}</div>
+          ${this._row(I18n.t('prof_nivel_atual'), `${p.nivel || 1}`)}
+          ${this._row(I18n.t('prof_xp_total'), `${(p.xp || 0).toLocaleString()} XP`)}
+          ${this._row(I18n.t('prof_streak_atual'), `${p.streak || 0} 🔥 ${I18n.t('hm_dias')}`)}
+          ${this._row(I18n.t('prof_fc_revisadas'), `${totalRevisoes.toLocaleString()}`)}
+          ${this._row(I18n.t('prof_palavras_dom'), `${totalDominadas}`)}
+          ${this._row(I18n.t('prof_palavras_dif'), totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
+          ${this._row(I18n.t('prof_tempo_est'), `${tempoEstimadoMin} min`)}
+          ${this._row(I18n.t('prof_templos_desb'), `${(p.templos_desbloqueados||[]).length} / 50`)}
+          ${this._row(I18n.t('prof_acc_quiz'), quizAcuracia)}
         </div>
 
         <!-- Weekly report -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📅 Questa Settimana</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_esta_semana')}</div>
           ${this._renderGrafico(semana)}
-          ${this._row('Totale sessioni', `${semana.totalSessoes}`)}
-          ${this._row('Card studiate', `${semana.totalCards}`)}
-          ${this._row('XP guadagnato', `${semana.totalXP} XP`)}
-          ${this._row('Giorni attivi', `${semana.giorniAttivi} / 7`)}
+          ${this._row(I18n.t('prof_tot_sessoes'), `${semana.totalSessoes}`)}
+          ${this._row(I18n.t('prof_cards_est'), `${semana.totalCards}`)}
+          ${this._row(I18n.t('prof_xp_ganho'), `${semana.totalXP} XP`)}
+          ${this._row(I18n.t('prof_dias_ativos'), `${semana.giorniAttivi} / 7`)}
+        </div>
+
+        <!-- Audio Speed -->
+        <div class="profilo-card">
+          <div class="profilo-card-titulo">${I18n.t('prof_velocidade_audio')}</div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
+            <span style="font-size:1.5rem">🐢</span>
+            <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.05" value="${currentSpeed}" 
+                   onchange="Profilo.salvarAudioSpeed(this.value)" oninput="document.getElementById('audio-speed-display').textContent = this.value + 'x'" style="flex:1;">
+            <span style="font-size:1.5rem">🐇</span>
+          </div>
+          <div style="text-align:center; margin-top:5px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
+          <button class="btn-secondario" onclick="if(typeof App !== 'undefined') App.pronunciar(I18n.t('prof_testar_audio'))" style="margin-top:10px; width:100%;">
+            ${I18n.t('prof_testar_audio')}
+          </button>
         </div>
 
         <!-- Categories -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">📚 Categorie Più Studiate</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_cats_est')}</div>
           <div style="font-size:0.87rem;color:#666;line-height:1.8;">${topCats}</div>
         </div>
 
         <!-- Conquistas -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">🏆 I Miei Traguardi</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_traguardi')}</div>
           ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
+        </div>
+
+        <!-- Velocidade do Áudio -->
+        <div class="profilo-card">
+          <div class="profilo-card-titulo">🎧 Velocità Audio (Audio Speed)</div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
+            <span style="font-size:1.5rem">🐢</span>
+            <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.1" value="${parseFloat(localStorage.getItem('it_audio_speed')) || 0.85}" 
+                   onchange="Profilo.salvarAudioSpeed(this.value)" style="flex:1;">
+            <span style="font-size:1.5rem">🐇</span>
+          </div>
+          <div style="text-align:center; margin-top:5px; font-weight:bold;" id="audio-speed-display">${parseFloat(localStorage.getItem('it_audio_speed')) || 0.85}x</div>
+          <button class="btn-secondario" onclick="App.pronunciar('Questo è un test della velocità audio.')" style="margin-top:10px; width:100%;">
+            🔊 Testa Audio
+          </button>
         </div>
 
         <!-- Lembretes push — só renderiza se o módulo estiver carregado e a API disponível -->
@@ -144,6 +176,18 @@ const Profilo = {
     if (typeof Conquistas !== 'undefined') {
       Conquistas.renderizarPainel('profilo-conquistas');
     }
+  },
+
+  // ── Salvar Audio Speed ────────────────────────────────────
+  salvarAudioSpeed(valor) {
+    if (typeof App === 'undefined') return;
+    const p = App.estado.progresso;
+    if (!p) return;
+    p.audio_rate = parseFloat(valor);
+    App.salvarProgresso();
+    if (typeof App.atualizarAudioSpeedUI === 'function') App.atualizarAudioSpeedUI();
+    const display = document.getElementById('audio-speed-display');
+    if (display) display.textContent = valor + 'x';
   },
 
   // ── Build last-7-days chart data ──────────────────────────
@@ -198,6 +242,13 @@ const Profilo = {
         </div>`;
     }).join('');
     return `<div class="relatorio-chart">${bars}</div>`;
+  },
+
+  // ── Audio Speed ───────────────────────────────────────────
+  salvarAudioSpeed(valor) {
+    localStorage.setItem('it_audio_speed', valor);
+    const display = document.getElementById('audio-speed-display');
+    if (display) display.textContent = valor + 'x';
   },
 
   // ── Exportar backup ───────────────────────────────────────
