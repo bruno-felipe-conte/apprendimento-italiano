@@ -1313,7 +1313,8 @@ body.dark-mode .ac-cinza { background: #1a1d1e; }
   padding: 1.2rem;
   border-radius: 16px;
   position: relative;
-  font-size: 1.05rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
   line-height: 1.5;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
@@ -1350,7 +1351,8 @@ body.dark-mode .dialogo-turno.utente .dialogo-bubble {
 }
 
 .dialogo-nome {
-  font-size: 0.75rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
   text-transform: uppercase;
@@ -1368,7 +1370,8 @@ body.dark-mode .dialogo-turno.utente .dialogo-bubble {
 }
 
 .dialogo-traducao {
-  font-size: 0.85rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.95rem;
   margin-top: 0.6rem;
   font-style: italic;
   border-top: 1px solid rgba(0,0,0,0.08);
@@ -1412,10 +1415,13 @@ body.dark-mode .dialogo-turno.utente .dialogo-bubble {
 }
 
 .dialogo-pratica-frase {
-  font-weight: 700;
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.2rem;
   color: var(--cor-veneziano-escuro);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .dialogo-opcoes {
