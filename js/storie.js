@@ -30,14 +30,13 @@ const Storie = {
         } else this.dados = { storie: [] };
       } catch { this.dados = { storie: [] }; }
     }
-    // Mescla histórias customizadas — custom primeiro
+    // Mescla histórias customizadas — custom primeiro (preserva base para evitar duplicatas)
+    if (!this._storieBase) this._storieBase = [...this.dados.storie];
     try {
       const custom = JSON.parse(localStorage.getItem('it_storie_custom') || '[]');
-      if (custom.length) {
-        const normalizadas = custom.map(s => this._normalizar(s));
-        this.dados.storie = [...normalizadas, ...this.dados.storie];
-      }
-    } catch (e) {}
+      const normalizadas = custom.map(s => this._normalizar(s));
+      this.dados.storie = [...normalizadas, ...this._storieBase];
+    } catch (e) { this.dados.storie = [...this._storieBase]; }
     try {
       this.completate = JSON.parse(localStorage.getItem('it_storie_lidas') || '[]');
     } catch { this.completate = []; }
@@ -608,7 +607,7 @@ const Storie = {
     this.completate.push(id);
     this._salvarCompletate();
     const xp = this.storAttuale.xp_recompensa || 50;
-    if (typeof App !== 'undefined' && App.adicionarXP) App.adicionarXP(xp);
+    if (typeof App !== 'undefined' && App.ganharXP) App.ganharXP(xp);
     App.notificar(il ? `notif_storia_letta_${id}` : `notif_storia_lida_${id}`, 'sucesso');
     this._renderizarStoria();
   },

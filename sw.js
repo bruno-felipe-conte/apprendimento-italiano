@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v83';
+const CACHE = 'italiano-v85';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -100,7 +100,7 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
 
   // 2. /data/*.json — network-first (recebe atualizações de conteúdo)
-  //    Se offline, entrega do cache
+  //    Se offline, entrega do cache; se não cacheado, retorna 503 JSON vazio
   if (url.pathname.includes('/data/')) {
     event.respondWith(
       fetch(req)
@@ -109,7 +109,9 @@ self.addEventListener('fetch', event => {
           caches.open(CACHE).then(c => c.put(req, clone));
           return res;
         })
-        .catch(() => caches.match(req))
+        .catch(() => caches.match(req).then(cached =>
+          cached || new Response('{"palavras":[],"storie":[],"nome":"","numero":0}', { status: 503, headers: { 'Content-Type': 'application/json' } })
+        ))
     );
     return;
   }

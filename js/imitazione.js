@@ -135,7 +135,7 @@ const Imitazione = {
   },
 
   avaliarPronuncia(textoOuvido) {
-    const item = this.dados.imitazioni[this.itemAtual];
+    const item = (this._listaAtual || this.dados.imitazioni)[this.itemAtual];
     const esperado = this.normalizeText(item.frase_italiano || item.frase);
     const recebido = this.normalizeText(textoOuvido);
 

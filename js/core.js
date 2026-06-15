@@ -342,7 +342,12 @@ const App = {
   salvarProgresso() {
     try {
       localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso));
-    } catch (e) { /* ignore */ }
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        this._gcFlashcards();
+        try { localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso)); } catch (_) {}
+      }
+    }
   },
 
   carregarFlashcards() {
@@ -356,7 +361,28 @@ const App = {
   salvarFlashcards() {
     try {
       localStorage.setItem('it_flashcards', JSON.stringify(this.estado.flashcardData));
-    } catch (e) { /* ignore */ }
+    } catch (e) {
+      if (e.name === 'QuotaExceededError') {
+        this._gcFlashcards();
+        try { localStorage.setItem('it_flashcards', JSON.stringify(this.estado.flashcardData)); } catch (_) {}
+      }
+    }
+  },
+
+  _gcFlashcards() {
+    const data = this.estado.flashcardData;
+    if (!data) return;
+    const agora = Date.now();
+    const NOVENTA_DIAS = 90 * 24 * 3600 * 1000;
+    let removidos = 0;
+    for (const id in data) {
+      const f = data[id];
+      if (f.state === 'suspended' || (f.lastReview && agora - f.lastReview > NOVENTA_DIAS && f.state === 'new')) {
+        delete data[id];
+        removidos++;
+      }
+    }
+    if (removidos > 0) console.info(`[GC] Flashcards removidos do cache: ${removidos}`);
   },
 
   // ── Temple grid rendering ──────────────────────────────────
@@ -494,8 +520,8 @@ const App = {
     for (let i = 1; i <= 50; i++) {
       if (!this.estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue; // templo não existe
       const data = this.estado.templosData[i];
-      const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
-      const concluido = this.estado.progresso.templos_concluidos.includes(i);
+      const desbloqueado = this.estado.progresso?.templos_desbloqueados?.includes(i) ?? false;
+      const concluido = this.estado.progresso?.templos_concluidos?.includes(i) ?? false;
       const nivelMinimo = this.TEMPLO_NIVEL_MINIMO[i] || i;
       const cor = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
 
@@ -604,8 +630,8 @@ const App = {
   // ── Templo detail modal ────────────────────────────────────
   abrirModalTemplo(i) {
     const data = this.estado.templosData[i];
-    const desbloqueado = this.estado.progresso.templos_desbloqueados.includes(i);
-    const concluido    = this.estado.progresso.templos_concluidos.includes(i);
+    const desbloqueado = this.estado.progresso?.templos_desbloqueados?.includes(i) ?? false;
+    const concluido    = this.estado.progresso?.templos_concluidos?.includes(i) ?? false;
     const cor          = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
     const nome         = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
     const cidade       = data ? data.cidade : '—';
@@ -761,7 +787,8 @@ const App = {
     }
 
     // Daily goal bar — reset xp_hoje when the date rolls over
-    const hoje = new Date().toISOString().slice(0, 10);
+    const _d = new Date();
+    const hoje = `${_d.getFullYear()}-${String(_d.getMonth()+1).padStart(2,'0')}-${String(_d.getDate()).padStart(2,'0')}`;
     if (p.data_xp_hoje !== hoje) {
       p.xp_hoje = 0;
       p.data_xp_hoje = hoje;
@@ -973,18 +1000,18 @@ const App = {
       // (a maioria dos browsers ainda sintetiza com o melhor disponível)
 
       u.onerror = (e) => {
-        // Voz IT indisponível no browser → ResponsiveVoice
-        if (['language-unavailable','synthesis-failed','not-allowed'].includes(e.error)) {
+        if (['language-unavailable','synthesis-failed','not-allowed','interrupted'].includes(e.error)) {
+          speechSynthesis.cancel();
           this._pronunciarRV(texto);
         }
       };
 
-      speechSynthesis.speak(u);
-
-      // Também tenta RV em paralelo se não há voz italiana nativa
+      // Se não há voz italiana nativa e já resolvemos isso → usar só RV, sem duplo stream
       if (!voz && this._vozItalianaResolvida) {
         this._pronunciarRV(texto);
+        return;
       }
+      speechSynthesis.speak(u);
     };
 
     if (speechSynthesis.getVoices().length > 0) {

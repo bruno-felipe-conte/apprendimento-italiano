@@ -128,7 +128,8 @@ const Progressao = {
     if (!p) return;
 
     // Track daily XP (reset if new day)
-    const hoje = new Date().toISOString().slice(0, 10);
+    const _d = new Date();
+    const hoje = `${_d.getFullYear()}-${String(_d.getMonth()+1).padStart(2,'0')}-${String(_d.getDate()).padStart(2,'0')}`;
     if (p.data_xp_hoje !== hoje) {
       p.xp_hoje = 0;
       p.data_xp_hoje = hoje;

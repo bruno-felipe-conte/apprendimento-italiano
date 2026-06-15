@@ -450,7 +450,8 @@ const Dialoghi = {
       }, 1200);
     } else {
       btn.classList.add('errada');
-      container.children[turno.resposta_correta].classList.add('correta');
+      const elCorreta = container.children[turno.resposta_correta];
+      if (elCorreta) elCorreta.classList.add('correta');
       setTimeout(() => {
         this.avancarTurno();
       }, 2500);
@@ -460,7 +461,7 @@ const Dialoghi = {
   mostrarResultado() {
     const d = this.dialogoAtual;
     const totalTu = d.turni.filter(t => t.personaggio === 'Tu').length;
-    const pct = Math.round((this.acertos / totalTu) * 100);
+    const pct = totalTu > 0 ? Math.round((this.acertos / totalTu) * 100) : 100;
     
     // Apenas ganha XP se acertar a maioria e estiver no modo prática
     let ganhouXp = false;

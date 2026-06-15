@@ -504,8 +504,11 @@ const Flashcards = {
         Progressao.marcarTemploConcluido(this.temploAtual);
       }
 
-      // Check achievements after each review
-      if (typeof Conquistas !== 'undefined') Conquistas.verificar();
+      // Check achievements off the critical path to avoid jank on card transition
+      if (typeof Conquistas !== 'undefined') {
+        if (typeof requestIdleCallback === 'function') requestIdleCallback(() => Conquistas.verificar());
+        else setTimeout(() => Conquistas.verificar(), 300);
+      }
 
       this.proxima();
     } catch (err) {

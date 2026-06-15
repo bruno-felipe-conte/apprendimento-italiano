@@ -22,9 +22,14 @@ const Calor = {
     return { cards: entry.cards || 0, xp: entry.xp || 0 };
   },
 
+  _dataLocal(d) {
+    d = d || new Date();
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  },
+
   // ── Log activity (called from flashcards/quiz/progression) ─
   registrar(quantidade = 1, xp = 0) {
-    const hoje = new Date().toISOString().split('T')[0];
+    const hoje = this._dataLocal();
     let diario = {};
     try {
       diario = JSON.parse(localStorage.getItem('it_diario') || '{}');
@@ -54,7 +59,7 @@ const Calor = {
     const d = new Date();
     let streak = 0;
     for (let i = 0; i < 365; i++) {
-      const key = d.toISOString().split('T')[0];
+      const key = this._dataLocal(d);
       const entry = this._lerEntrada(diario[key]);
       if (entry.cards > 0 || entry.xp > 0) {
         streak++;
