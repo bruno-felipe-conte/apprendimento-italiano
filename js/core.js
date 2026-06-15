@@ -153,6 +153,7 @@ const App = {
     // Init sound feedback
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();
     if (typeof Notificacoes !== 'undefined') Notificacoes.init();
+    this.atualizarAudioSpeedUI();
     // Pre-load speech synthesis voices so the first pronunciar() call is instant
     if ('speechSynthesis' in window) {
       speechSynthesis.getVoices(); // trigger async load
@@ -312,6 +313,7 @@ const App = {
         if (!p.conquistas)  p.conquistas  = [];
         if (!p.data_inicio) p.data_inicio = p.ultimo_estudo || Date.now();
         if (p.meta_prazo === undefined) p.meta_prazo = null;
+        if (p.audio_rate === undefined) p.audio_rate = 0.85;
         return p;
       }
     } catch (e) { /* ignore */ }
@@ -332,7 +334,8 @@ const App = {
       favoritos:   [],
       conquistas:  [],
       data_inicio: Date.now(),
-      meta_prazo: null
+      meta_prazo: null,
+      audio_rate: 0.85
     };
   },
 
@@ -901,6 +904,28 @@ const App = {
   },
 
   // ── Text-to-speech ─────────────────────────────────────────
+  toggleAudioSpeed() {
+    const p = this.estado.progresso;
+    if (!p) return;
+    if (p.audio_rate === 1) p.audio_rate = 0.85;
+    else if (p.audio_rate === 0.85) p.audio_rate = 0.7;
+    else if (p.audio_rate === 0.7) p.audio_rate = 0.5;
+    else p.audio_rate = 1;
+    this.salvarProgresso();
+    this.atualizarAudioSpeedUI();
+    const desc = (typeof I18n !== 'undefined' && I18n.idioma === 'it') ? 'Velocità audio: ' : 'Velocidade: ';
+    this.notificar(desc + p.audio_rate + 'x', 'info');
+  },
+
+  atualizarAudioSpeedUI() {
+    const btn = document.getElementById('btn-audio-speed');
+    if (!btn) return;
+    const rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+    let label = rate.toString();
+    if (label.startsWith('0.')) label = label.substring(1);
+    btn.textContent = label + 'x';
+  },
+
   _vozItaliana: null,      // cache da voz italiana (null = ainda não resolvido)
   _vozItalianaResolvida: false, // true quando já procuramos (mesmo se não achou)
 
@@ -922,7 +947,8 @@ const App = {
   _pronunciarRV(texto) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      responsiveVoice.speak(texto, 'Italian Female', { rate: 0.9, pitch: 1 });
+      const rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      responsiveVoice.speak(texto, 'Italian Female', { rate: rate, pitch: 1 });
     }
   },
 
@@ -940,7 +966,7 @@ const App = {
 
       const u = new SpeechSynthesisUtterance(texto);
       u.lang  = 'it-IT';
-      u.rate  = 0.85;
+      u.rate  = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
       u.pitch = 1;
       if (voz) u.voice = voz;
       // Se não há voz italiana específica, usa lang='it-IT' sem voice explícita

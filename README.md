@@ -1,103 +1,109 @@
-# 🇮🇹 Italiano Autentico
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bruno-felipe-conte/apprendimento-italiano/master/icons/icon.svg" width="120" alt="Logo">
+  <h1>🇮🇹 Italiano Autentico</h1>
+  <p><strong>Uma experiência Premium de Aprendizado de Italiano em PWA</strong></p>
 
-**🔗 App online:** https://bruno-felipe-conte.github.io/apprendimento-italiano/
+  <p>
+    <a href="https://bruno-felipe-conte.github.io/apprendimento-italiano/"><img src="https://img.shields.io/badge/Acessar%20App-Online-success?style=for-the-badge&logo=googlechrome"></a>
+    <img src="https://img.shields.io/badge/PWA-100%25%20Offline-blue?style=for-the-badge&logo=pwa">
+    <img src="https://img.shields.io/badge/N%C3%ADveis-A1%20a%20C2-orange?style=for-the-badge">
+  </p>
+</div>
 
-PWA para aprendizado de italiano — Flashcards, Quiz, Vocabulário e Gramática estruturada pelo método do Pe. Napoleão Mendes de Almeida (NMA).
+---
 
-> **Funciona 100% offline** após a primeira visita. Todo progresso salvo localmente no navegador. Instale como app: no Chrome/Edge clique em ⊕ na barra de endereço; no Safari iOS use Compartilhar → "Adicionar à Tela de Início".
+## 🌟 O Projeto
 
-## Branches
+**Italiano Autentico** é uma aplicação web progressiva (PWA) de alto nível para o ensino do idioma italiano. Desenvolvido para oferecer imersão completa, o aplicativo funciona inteiramente no navegador e **100% offline** após o primeiro acesso, salvando o progresso do usuário de forma segura e local. 
 
-| Branch | Propósito |
-|---|---|
-| `master` | Desenvolvimento — todos os commits vão aqui |
-| `gh-pages` | Produção — GitHub Pages serve deste branch |
+Com um design requintado (Premium/Luxo), fontes amigáveis à dislexia (*Atkinson Hyperlegible*), Modo Escuro nativo, e TTS (Text-to-Speech) integrado, ele eleva a experiência do usuário a um patamar excepcional.
 
-**Para publicar uma versão:**
+---
+
+## ✨ Módulos Principais
+
+| Módulo | Descrição |
+| :--- | :--- |
+| **🏛️ Templi (Módulos)** | 51 Templos de aprendizagem gamificados com XP e Heatmap de atividade diária. |
+| **📚 Grammatica** | 82 Lições completas (A1 a C2) estruturadas rigorosamente no método do Pe. Napoleão Mendes de Almeida (NMA). |
+| **📜 Storie** | Contos interativos com tradução parágrafo-a-parágrafo, tooltip flutuante de vocabulário e áudio TTS. |
+| **🎵 Canzoni** | Aprenda com músicas italianas reais! Exercícios de preencher as lacunas com correção automática. |
+| **💬 Dialoghi** | Diálogos práticos do dia a dia para desenvolver compreensão conversacional. |
+| **🗣️ Imitazione** | Exercícios de *Shadowing* para aperfeiçoar a pronúncia e entonação. |
+| **🃏 Flashcards** | Sistema poderoso de repetição espaçada (SM-2) com interface Blur-Reveal e áudio. |
+| **❓ Quizzes** | Questões de múltipla escolha focadas na morfologia e retenção. |
+
+---
+
+## 🏛 Metodologia Gramatical NMA
+
+Nossa seção de gramática utiliza as 7 camadas pedagógicas clássicas:
+1. **Alerta** — Frase motivacional de abertura
+2. **Inventário** — Estrutura numerada do conteúdo
+3. **Definição indutiva** — Fenômeno → Causa → Conceito
+4. **Técnica** — Algoritmo verbal de aplicação prática
+5. **Exemplos (P→R→C)** — Pergunta / Resposta / Conclusão
+6. **Ponte** — Equivalência Português → Italiano
+7. **Coda** — Responsabilização do aluno
+
+---
+
+## 📱 Instalação como App (PWA)
+
+Esqueça as lojas de aplicativos! Instale direto do seu navegador:
+
+- 🟢 **Android / Chrome:** Clique em `Menu ⋮` → **Adicionar à tela inicial**
+- 🍎 **iOS / Safari:** Clique em `Compartilhar` → **Adicionar à Tela de Início**
+- 💻 **Desktop:** Clique no ícone `⊕` (instalar) na barra de endereços do Chrome/Edge.
+
+---
+
+## 🚀 Como Rodar Localmente
+
+Clone o repositório e rode um servidor estático simples.
+
+```bash
+git clone https://github.com/bruno-felipe-conte/apprendimento-italiano.git
+cd apprendimento-italiano
+
+# Usando npx
+npx serve -l 5500 .
+
+# Ou usando Python
+python -m http.server 5500
+```
+Em seguida, abra `http://localhost:5500` no seu navegador!
+
+---
+
+## 📦 Estrutura da Aplicação
+
+```text
+italian-learning-app-pro/
+├── index.html           # Core App (Single Page Application)
+├── css/                 # Estilização Premium (italia.css)
+├── js/                  # Lógica Modular (core, gramática, histórias, flashcards, etc.)
+├── data/                # Base de dados em JSON (Storie, Canzoni, Grammatica, Templi)
+├── sw.js                # Service Worker para PWA (Cache Offline)
+└── manifest.webmanifest # Configurações de App PWA
+```
+
+> **Privacidade:** Todos os dados (XP, Ofensivas, Lições Completadas) são armazenados localmente no seu dispositivo via `localStorage`. Nenhuma nuvem, nenhuma conta necessária. Seus dados são seus!
+
+---
+
+## 🌿 Branches e Deploy
+
+O fluxo de trabalho Git é simples:
+- `master`: Desenvolvimento principal.
+- `gh-pages`: Deploy de Produção (GitHub Pages).
+
+Para publicar uma nova versão:
 ```bash
 git push origin master:gh-pages
 ```
-Execute este comando apenas quando a versão estiver pronta para os usuários.
 
----
-
-## ✨ Funcionalidades
-
-| Módulo | Descrição |
-|---|---|
-| **🏛️ Templi** | 51 templos de vocabulário com progresso e heatmap de atividade |
-| **🃏 Flashcard** | Sistema de revisão espaçada com blur-reveal e áudio |
-| **❓ Quiz** | Questões de múltipla escolha por categoria |
-| **📖 Vocabolario** | Vocabulário organizado por templo |
-| **📚 Grammatica** | 82 lezioni (A1/A2/B1/B2 + C1/C2 avançados) com método pedagógico NMA de 7 camadas |
-
-### Gramática — Método NMA
-Cada lição segue 7 camadas pedagógicas:
-1. **Alerta** — frase motivacional de abertura
-2. **Inventário** — estrutura numerada do conteúdo
-3. **Definição indutiva** — Fenômeno → Causa → Conceito
-4. **Técnica** — algoritmo verbal de aplicação
-5. **Exemplos P→R→C** — Pergunta / Resposta / Conclusão
-6. **Ponte** — equivalência Português → Italiano
-7. **Coda** — responsabilização do aluno
-
----
-
-## 🚀 Rodar localmente
-
-```bash
-npx serve -l 5500 .
-```
-
-Acesse: `http://localhost:5500`
-
-### Celular (mesma rede Wi-Fi)
-
-1. Descubra o IP do seu computador: `ipconfig` → IPv4
-2. No celular: `http://192.168.x.x:5500`
-3. Ou instale como PWA — o app aparecerá na tela inicial
-
----
-
-## 📦 Estrutura do projeto
-
-```
-italian-learning-app-pro/
-├── index.html                  # App completo (HTML + CSS inline + imports JS)
-├── manifest.webmanifest        # Configuração PWA
-├── sw.js                       # Service Worker (cache offline)
-├── js/
-│   ├── core.js                 # App singleton — navegação, XP, progresso, TTS
-│   ├── flashcards.js           # Módulo de flashcards
-│   ├── quiz.js                 # Módulo de quiz
-│   ├── vocab.js                # Módulo de vocabulário
-│   ├── grammar.js              # Módulo de gramática (renderer NMA)
-│   └── heatmap.js              # Heatmap de atividade diária
-├── data/
-│   ├── grammar.json            # 82 lezioni com campos NMA (PT e IT)
-│   ├── quizzes.json            # Questões de quiz
-│   └── templo-[1-51].json      # Vocabulário por templo
-└── icons/
-    └── icon.svg
-```
-
----
-
-## 💾 Dados persistidos
-
-Tudo no `localStorage` do navegador — sem backend, sem conta:
-
-| Chave | Conteúdo |
-|---|---|
-| `it_progresso` | XP, nível, streak, lições completadas |
-| `it_diario` | Atividade diária `{"2026-05-27": 14, ...}` |
-
----
-
-## 📱 Instalar como app (PWA)
-
-**Android/Chrome:** Menu ⋮ → *Adicionar à tela inicial*  
-**iOS/Safari:** Compartilhar → *Adicionar à Tela de Início*  
-**Desktop/Chrome:** Ícone ⊕ na barra de endereços
-
-O app funciona offline após a primeira visita.
+<div align="center">
+  <br>
+  <p><i>Fatto con ❤️ per gli amanti della lingua italiana.</i></p>
+</div>

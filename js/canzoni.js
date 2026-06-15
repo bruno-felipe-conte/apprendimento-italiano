@@ -60,7 +60,7 @@ const Canzoni = {
     this.renderizarSeletor();
   },
 
-  // ── Renderizar seletor com built-in + custom + botão criar ─
+  // ── Renderizar seletor com built-in + custom + botão criar + avaliar ──
   _filtroNivel: '',
   _filtroTexto: '',
 
@@ -85,8 +85,8 @@ const Canzoni = {
 
     // Ordenar: volumes da mesma música ficam juntos em sequência
     filtradas = [...filtradas].sort((a, b) => {
-      const getBase = t => t.replace(/\s*\(Vol\.?\s*\d+\)\s*$/i, '').trim();
-      const getVol  = t => { const m = t.match(/\(Vol\.?\s*(\d+)\)/i); return m ? parseInt(m[1]) : 0; };
+      const getBase = t => t.replace(/\s*\(Vol\.\s*\d+\)\s*$/i, '').trim();
+      const getVol  = t => { const m = t.match(/\(Vol\.\s*(\d+)\)/i); return m ? parseInt(m[1]) : 0; };
       const baseA = getBase(a.titulo), baseB = getBase(b.titulo);
       if (baseA !== baseB) return baseA.localeCompare(baseB, 'it');
       return getVol(a.titulo) - getVol(b.titulo);

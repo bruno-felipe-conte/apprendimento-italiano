@@ -60,43 +60,46 @@
       "estrofes": [
         {
           "id": 1,
-          "texto_completo": "Testo generico per L'Italiano strofa 1.",
-          "texto_lacuna": "Testo generico per L'Italiano ___ 1.",
-          "palavra_oculta": "strofa",
-          "traducao": "Texto genérico para L'Italiano estrofe 1.",
-          "dica": "Substantivo feminino singular"
+          "texto_completo": "Buongiorno Italia, gli spaghetti al dente e un partigiano come presidente.",
+          "texto_lacuna": "Buongiorno Italia, gli spaghetti al ____ e un partigiano come presidente.",
+          "palavra_oculta": "dente",
+          "traducao": "Bom dia Itália, os espaguetes al dente e um partigiano como presidente.",
+          "dica": "Expressão para massa cozida no ponto certo"
         },
         {
           "id": 2,
-          "texto_completo": "Testo generico per L'Italiano strofa 2.",
-          "texto_lacuna": "Testo generico per L'Italiano ___ 2.",
-          "palavra_oculta": "strofa",
-          "traducao": "Texto genérico para L'Italiano estrofe 2.",
-          "dica": "Substantivo feminino singular"
+          "texto_completo": "Con la radio nella mano destra e un canarino sopra la finestra.",
+          "texto_lacuna": "Con la radio nella mano ____ e un canarino sopra la finestra.",
+          "palavra_oculta": "destra",
+          "traducao": "Com o rádio na mão direita e um canário acima da janela.",
+          "dica": "Oposto de sinistra"
         },
         {
           "id": 3,
-          "texto_completo": "Testo generico per L'Italiano strofa 3.",
-          "texto_lacuna": "Testo generico per L'Italiano ___ 3.",
-          "palavra_oculta": "strofa",
-          "traducao": "Texto genérico para L'Italiano estrofe 3.",
-          "dica": "Substantivo feminino singular"
+          "texto_completo": "Lasciatemi cantare con la chitarra in mano, lasciatemi cantare, sono un italiano.",
+          "texto_lacuna": "Lasciatemi ____ con la chitarra in mano, lasciatemi cantare, sono un italiano.",
+          "palavra_oculta": "cantare",
+          "traducao": "Deixem-me cantar com o violão na mão, deixem-me cantar, sou um italiano.",
+          "dica": "Verbo infinitivo: cantar"
         },
         {
           "id": 4,
-          "texto_completo": "Testo generico per L'Italiano strofa 4.",
-          "texto_lacuna": "Testo generico per L'Italiano ___ 4.",
-          "palavra_oculta": "strofa",
-          "traducao": "Texto genérico para L'Italiano estrofe 4.",
-          "dica": "Substantivo feminino singular"
+          "texto_completo": "Buongiorno Italia, caffè corretto, la domenica a messa, il lunedì al mercato.",
+          "texto_lacuna": "Buongiorno Italia, caffè ______, la domenica a messa, il lunedì al mercato.",
+          "palavra_oculta": "corretto",
+          "traducao": "Bom dia Itália, café corretto, o domingo na missa, a segunda no mercado.",
+          "dica": "Café com um toque de licor"
         }
       ],
       "vocabulario_chave": [
-        "amore",
-        "cuore",
-        "sole",
-        "vita",
-        "mondo"
+        "dente",
+        "destra",
+        "cantare",
+        "corretto",
+        "partigiano",
+        "canarino",
+        "chitarra",
+        "mercato"
       ],
       "xp_recompensa": 40
     },

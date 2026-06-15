@@ -5,8 +5,7 @@
 //   • /data/*.json   → network-first com fallback de cache
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
-
-const CACHE = 'italiano-v81';
+const CACHE = 'italiano-v82';
 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -17,7 +16,7 @@ const STATIC = [
   // JS — módulos da aplicação (URLs com ?v=60 para forçar atualização de cache)
   './js/audio.js?v=60',
   './js/conquistas.js?v=60',
-  './js/core.js?v=60',
+  './js/core.js?v=61',
   './js/dialoghi.js?v=60',
   './js/canzoni.js?v=60',
   './js/imitazione.js?v=60',
