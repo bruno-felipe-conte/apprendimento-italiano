@@ -60,6 +60,14 @@ const Tour = {
       { sec: 'dialoghi', prep: null },
       // 12 — canzoni
       { sec: 'canzoni', prep: null },
+      // 13 — imitazione
+      { sec: 'imitazione', prep: () => {
+          if (typeof Imitazione !== 'undefined') Imitazione.renderizar?.();
+      }},
+      // 14 — botão 🤖 via IA (storie)
+      { sec: 'storie', prep: () => {
+          if (typeof Storie !== 'undefined') Storie.renderizarSeletor?.();
+      }},
     ];
 
     // Seletores de cada step — usados para scrollIntoView antes do Driver posicionar
@@ -77,6 +85,8 @@ const Tour = {
       '#storie-lista',                              // lista de histórias
       '.dialogo-card',                              // card de diálogo
       '.canzone-card',                              // card de canção
+      '#imitazione-container',                      // container imitazione
+      '.btn-ia-add',                                // botão 🤖 via IA
     ];
 
     const navegar = (idx, cb) => {
@@ -133,7 +143,7 @@ const Tour = {
           element: '.app-header',
           popover: {
             title: '👋 Bem-vindo ao Italiano Autentico!',
-            description: 'Este tour de 13 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
+            description: 'Este tour de 15 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
             side: 'bottom', align: 'center'
           }
         },
@@ -230,6 +240,22 @@ const Tour = {
           popover: {
             title: '🎵 Canzoni — Aprenda com Música',
             description: '200 músicas italianas com letra completa. Ouça e acompanhe a letra — aprender italiano nunca foi tão divertido!',
+            side: 'bottom', align: 'center'
+          }
+        },
+        {
+          element: '#imitazione-container',
+          popover: {
+            title: '🎤 Imitazione — Treine sua Pronúncia',
+            description: 'Ouça frases italianas nativas e repita em voz alta. O app usa reconhecimento de voz para avaliar sua pronúncia em tempo real. Ideal para soar como um italiano de verdade!',
+            side: 'top', align: 'center'
+          }
+        },
+        {
+          element: '.btn-ia-add',
+          popover: {
+            title: '🤖 Crie Conteúdo com IA',
+            description: 'Clique em "🤖 via IA" em qualquer seção para gerar diálogos, histórias, músicas, frases ou vocabulário personalizados. O app inclui automaticamente as palavras que você está errando no flashcard — o LLM é forçado a usá-las no texto gerado!',
             side: 'bottom', align: 'center'
           }
         },
