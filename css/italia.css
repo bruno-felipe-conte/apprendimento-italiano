@@ -1279,3 +1279,161 @@ body.dark-mode .ac-cinza { background: #1a1d1e; }
   min-height: 165px;
   justify-content: space-between;
 }
+
+/* ============================================================ */
+/* DIALOGHI - CHAT UI */
+/* ============================================================ */
+.dialogo-conversa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: var(--cor-papel);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dialogo-turno {
+  display: flex;
+  width: 100%;
+}
+
+.dialogo-turno.personaggio {
+  justify-content: flex-start;
+}
+
+.dialogo-turno.utente {
+  justify-content: flex-end;
+}
+
+.dialogo-bubble {
+  max-width: 80%;
+  padding: 1rem;
+  border-radius: 12px;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dialogo-turno.personaggio .dialogo-bubble {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  border-bottom-left-radius: 2px;
+}
+
+.dialogo-turno.utente .dialogo-bubble {
+  background: #E8F5E9; /* Verde claro */
+  border: 1px solid #C8E6C9;
+  border-bottom-right-radius: 2px;
+}
+
+body.dark-mode .dialogo-turno.personaggio .dialogo-bubble {
+  background: var(--cor-surface-dark);
+  border-color: #333;
+}
+body.dark-mode .dialogo-turno.utente .dialogo-bubble {
+  background: #1e3a24;
+  border-color: #2e5a34;
+}
+
+.dialogo-nome {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cor-pietra);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dialogo-turno.utente .dialogo-nome {
+  text-align: right;
+  color: #27AE60;
+}
+
+.dialogo-traducao {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 0.5rem;
+  font-style: italic;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 0.3rem;
+}
+
+body.dark-mode .dialogo-traducao {
+  border-top-color: rgba(255,255,255,0.05);
+}
+
+.dialogo-audio-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+  padding: 0 0.3rem;
+}
+
+.dialogo-audio-btn:hover {
+  opacity: 1;
+}
+
+.dialogo-pratica-frase {
+  font-weight: 700;
+  color: var(--cor-veneziano-escuro);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.dialogo-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.dialogo-opcao {
+  padding: 0.8rem 1rem;
+  background: white;
+  border: 2px solid var(--cor-borda);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+body.dark-mode .dialogo-opcao {
+  background: var(--cor-surface-dark);
+  border-color: #333;
+}
+
+.dialogo-opcao:hover:not([disabled]) {
+  border-color: #7B68A0;
+  background: #F4F1FA;
+}
+body.dark-mode .dialogo-opcao:hover:not([disabled]) {
+  background: #2a2235;
+}
+
+.dialogo-opcao.correta {
+  border-color: #27AE60;
+  background: #E8F5E9;
+  color: #1a7d42;
+  font-weight: 600;
+}
+body.dark-mode .dialogo-opcao.correta {
+  background: #1e3a24;
+  color: #a5d6a7;
+}
+
+.dialogo-opcao.errada {
+  border-color: #C0392B;
+  background: #FDEDEC;
+  color: #922b21;
+}
+body.dark-mode .dialogo-opcao.errada {
+  background: #3a1e1e;
+  color: #ef9a9a;
+}
