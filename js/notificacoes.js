@@ -69,14 +69,19 @@ const Notificacoes = {
     }
 
     navigator.serviceWorker.ready.then(reg => {
-      // Envia para o SW agendar
-      reg.active?.postMessage({
-        type:    'AGENDAR_LEMBRETE',
-        delayMs,
-        titulo:  '🇮🇹 Italiano Autentico',
-        corpo,
-        tag:     'italiano-revisao',
-      });
+      const payload = { type: 'AGENDAR_LEMBRETE', delayMs, titulo: '🇮🇹 Italiano Autentico', corpo, tag: 'italiano-revisao' };
+      const sw = reg.active || reg.installing || reg.waiting;
+      if (!sw) return;
+      if (sw.state === 'activated') {
+        sw.postMessage(payload);
+      } else {
+        sw.addEventListener('statechange', function handler() {
+          if (this.state === 'activated') {
+            this.postMessage(payload);
+            this.removeEventListener('statechange', handler);
+          }
+        });
+      }
     });
   },
 

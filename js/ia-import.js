@@ -278,13 +278,43 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
     vocab:      '🤖 Adicionar Vocabulário via IA',
   },
 
+  // ── Palavras que o aluno está errando (i+1 targeting) ──
+  _obterPalavrasDificeis() {
+    if (typeof App === 'undefined' || !App.estado?.flashcardData || !App.estado?.vocabCache) return [];
+    const candidatos = [];
+    for (const [id, f] of Object.entries(App.estado.flashcardData)) {
+      if ((f.lapses > 0) || (f.stability && f.stability < 15) || f.state === 'learning' || f.state === 'new') {
+        candidatos.push(id);
+      }
+    }
+    const palavras = candidatos.map(id => {
+      const v = App.estado.vocabCache.find(w => w.id === id);
+      return v ? (v.italiano || v.word || v.frase) : null;
+    }).filter(Boolean);
+    // Embaralha e retorna até 7
+    for (let i = palavras.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [palavras[i], palavras[j]] = [palavras[j], palavras[i]];
+    }
+    return palavras.slice(0, 7);
+  },
+
   // ── Abrir modal ──────────────────────────────────────────
   abrir(tipo) {
     this.tipoAtual = tipo;
     const modal = document.getElementById('ia-import-modal');
     if (!modal) return;
     document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Adicionar via IA';
-    document.getElementById('ia-prompt-text').textContent = this.prompts[tipo] || '';
+
+    let prompt = this.prompts[tipo] || '';
+    if (['dialogo', 'storia', 'imitazione'].includes(tipo)) {
+      const dificeis = this._obterPalavrasDificeis();
+      if (dificeis.length > 0) {
+        prompt += `\n\n🎯 SFIDA VOCABOLARIO OBBLIGATORIA:\nDevi includere organicamente nel testo le seguenti parole (sono parole con cui lo studente sta avendo difficoltà):\n[ ${dificeis.join(', ')} ]`;
+      }
+    }
+
+    document.getElementById('ia-prompt-text').textContent = prompt;
     document.getElementById('ia-paste-area').value = '';
     const fb = document.getElementById('ia-feedback');
     if (fb) { fb.textContent = ''; fb.className = 'ia-feedback'; }
