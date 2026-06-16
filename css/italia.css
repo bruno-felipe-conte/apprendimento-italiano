@@ -1306,6 +1306,7 @@ body.dark-mode .ac-cinza { background: #1a1d1e; }
 
 .dialogo-turno.utente {
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .dialogo-bubble {
