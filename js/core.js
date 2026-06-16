@@ -408,7 +408,7 @@ const App = {
     // Check localStorage cache
     let cached = null;
     try { cached = JSON.parse(localStorage.getItem('it_palavra_dia') || 'null'); } catch (_) {}
-    const todayStr = now.toISOString().slice(0, 10);
+    const todayStr = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
     let palavra;
     if (cached && cached.data === todayStr) {
       palavra = vocab.find(p => p.id === cached.id) || vocab[dayN % vocab.length];
@@ -999,6 +999,7 @@ const App = {
       const speedStr = localStorage.getItem('it_audio_speed');
       let rate = parseFloat(speedStr);
       if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      rate = Math.max(0.1, Math.min(2.0, rate)); // Previne crashes de bounds out-of-range no WebKit
       
       u.rate  = rate;
       u.pitch = 1;

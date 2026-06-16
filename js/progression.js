@@ -288,7 +288,7 @@ const Progressao = {
     let xpSemana = 0;
     for (let i = 0; i < 7; i++) {
       const d = new Date(hoje7); d.setDate(d.getDate() - i);
-      const k = d.toISOString().slice(0,10);
+      const k = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
       const entry = diario[k];
       if (entry) xpSemana += (typeof entry === 'object' ? entry.xp : 0);
     }

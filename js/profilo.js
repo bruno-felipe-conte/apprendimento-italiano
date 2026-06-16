@@ -204,7 +204,7 @@ const Profilo = {
     for (let i = 6; i >= 0; i--) {
       const d = new Date(hoje);
       d.setDate(d.getDate() - i);
-      const key = d.toISOString().slice(0, 10);
+      const key = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
       // _lerEntrada handles both legacy number format and new {cards,xp} format
       const entry = (typeof Calor !== 'undefined')
         ? Calor._lerEntrada(diario[key])
@@ -275,7 +275,7 @@ const Profilo = {
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement('a');
     a.href     = url;
-    a.download = `italiano_backup_${new Date().toISOString().slice(0,10)}.json`;
+    a.download = `italiano_backup_${new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
     App.notificar('notif_backup_exp', 'sucesso');
@@ -341,7 +341,7 @@ const Profilo = {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `italiano_conteudo_${new Date().toISOString().slice(0,10)}.json`;
+    a.download = `italiano_conteudo_${new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
     const total = canzoni.length + dialoghi.length + storie.length + imitazioni.length + vocab.length;

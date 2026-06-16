@@ -401,7 +401,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
       if (!d.id) d.id = 'dial_custom_' + Date.now() + '_' + i;
       d._custom = true;
     });
-    localStorage.setItem(key, JSON.stringify([...existing, ...arr]));
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     // Recarregar módulo se estiver ativo
     if (typeof Dialoghi !== 'undefined') {
       Dialoghi.dados = null;
@@ -417,7 +417,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
       if (!d.id) d.id = 'can_custom_' + Date.now() + '_' + i;
       d._custom = true;
     });
-    localStorage.setItem(key, JSON.stringify([...existing, ...arr]));
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     if (typeof Canzoni !== 'undefined') {
       Canzoni.dados = null;
       Canzoni.renderizarSeletor?.();
@@ -432,7 +432,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
       if (!d.id) d.id = 'stor_custom_' + Date.now() + '_' + i;
       d._custom = true;
     });
-    localStorage.setItem(key, JSON.stringify([...existing, ...arr]));
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     if (typeof Storie !== 'undefined') {
       Storie.dados = null;
       Storie.renderizarSeletor?.();
@@ -447,7 +447,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
       if (!d.id) d.id = 'imi_custom_' + Date.now() + '_' + i;
       d._custom = true;
     });
-    localStorage.setItem(key, JSON.stringify([...existing, ...arr]));
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     if (typeof Imitazione !== 'undefined') {
       Imitazione.dados = null;
       Imitazione.renderizar?.();
@@ -462,7 +462,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
       if (!d.id) d.id = 'vocab_custom_' + Date.now() + '_' + i;
       d._custom = true;
     });
-    localStorage.setItem(key, JSON.stringify([...existing, ...arr]));
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     // Injeta no vocabCache do App e re-renderiza
     if (typeof App !== 'undefined' && App.estado?.vocabCache) {
       arr.forEach(w => {
@@ -488,7 +488,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", 
     const key = keys[tipo];
     if (!key) return;
     const arr = JSON.parse(localStorage.getItem(key) || '[]').filter(x => x.id !== id);
-    localStorage.setItem(key, JSON.stringify(arr));
+    try { localStorage.setItem(key, JSON.stringify(arr)); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     // Re-renderizar seção
     const renders = {
       dialogo:    () => { if (typeof Dialoghi !== 'undefined') { Dialoghi.dados=null; Dialoghi.renderizarSeletor?.(); } },

@@ -110,7 +110,7 @@ self.addEventListener('fetch', event => {
           return res;
         })
         .catch(() => caches.match(req).then(cached =>
-          cached || new Response('{"palavras":[],"storie":[],"nome":"","numero":0}', { status: 503, headers: { 'Content-Type': 'application/json' } })
+          cached || new Response('{"palavras":[],"storie":[],"nome":"","numero":0,"dialogi":[],"canzoni":[],"perguntas":[],"fases":[],"imitazioni":[]}', { status: 503, headers: { 'Content-Type': 'application/json' } })
         ))
     );
     return;
