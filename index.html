@@ -2272,6 +2272,13 @@
     .dialogo-opcao.errada { background: #fdeee9; border-color: #C0392B; color: #C0392B; text-decoration: line-through; }
     .dialogo-pratica-frase { text-align: center; font-weight: 700; color: var(--cor-veneziano-escuro); margin-bottom: 0.5rem; }
     
+    @media (max-width: 640px) {
+      .dialogo-conversa { padding: 1rem 0.8rem; }
+      .dialogo-turno { max-width: 92%; }
+      .dialogo-turno.utente { align-self: flex-start; margin-left: 8%; }
+      .dialogo-turno.utente .dialogo-nome { text-align: left; }
+    }
+    
     body.dark-mode .dialogo-card { background: #1C1816; }
     body.dark-mode .dialogo-titulo { color: #E6DFD3; }
     body.dark-mode .dialogo-nivel { background: #333; color: #aaa; }
