@@ -40,7 +40,14 @@
           "personaggio": "Tu",
           "frase": "Grazie mille.",
           "traducao": "Muito obrigado.",
-          "audio_ipa": ""
+          "audio_ipa": "",
+          "alternativas": [
+            "Grazie mille.",
+            "Dov'è il bagno?",
+            "Voglio il conto.",
+            "Non mi piace."
+          ],
+          "resposta_correta": 0
         },
         {
           "id": 5,
@@ -118,7 +125,7 @@
             "No, non ho allergie. Grazie.",
             "Sì, sono allergico alla penicillina.",
             "Non lo so.",
-            "Ho allergie molte."
+            "Ho molte allergie."
           ],
           "resposta_correta": 0
         },
@@ -163,20 +170,20 @@
         {
           "id": 1,
           "personaggio": "Addetta",
-          "frase": "Buongiorno, come posso aiutarla?",
-          "traducao": "Bom dia, como posso ajudá-lo(a)?",
+          "frase": "Buongiorno! Il passaporto e il biglietto, per favore.",
+          "traducao": "Bom dia! O passaporte e a passagem, por favor.",
           "audio_ipa": ""
         },
         {
           "id": 2,
           "personaggio": "Tu",
-          "frase": "Salve, avrei bisogno di aiuto per passaporto.",
-          "traducao": "Olá, eu precisaria de ajuda para passaporto.",
+          "frase": "Buongiorno. Ecco i miei documenti.",
+          "traducao": "Bom dia. Aqui estão meus documentos.",
           "audio_ipa": "",
           "alternativas": [
-            "Salve, avrei bisogno di aiuto per passaporto.",
+            "Buongiorno. Ecco i miei documenti.",
             "Non voglio niente.",
-            "Arrivederci.",
+            "Dov'è il treno?",
             "Non so parlare italiano."
           ],
           "resposta_correta": 0
@@ -184,19 +191,19 @@
         {
           "id": 3,
           "personaggio": "Addetta",
-          "frase": "Certamente. Ecco qui il suo passaporto. Le serve anche biglietto?",
-          "traducao": "Certamente. Aqui está o seu passaporto. Precisa também de biglietto?",
+          "frase": "Perfetto. Ha dei bagagli da stivare?",
+          "traducao": "Perfeito. Você tem bagagens para despachar?",
           "audio_ipa": ""
         },
         {
           "id": 4,
           "personaggio": "Tu",
-          "frase": "Sì, grazie. E vorrei anche valigia.",
-          "traducao": "Sim, obrigado. E gostaria também de valigia.",
+          "frase": "Sì, ho questa valigia grande e un bagaglio a mano.",
+          "traducao": "Sim, tenho esta mala grande e uma bagagem de mão.",
           "audio_ipa": "",
           "alternativas": [
-            "Sì, grazie. E vorrei anche valigia.",
-            "No, odio questa cosa.",
+            "Sì, ho questa valigia grande e un bagaglio a mano.",
+            "No, odio viaggiare.",
             "Dove si trova il bagno?",
             "È troppo caro."
           ],
@@ -205,21 +212,21 @@
         {
           "id": 5,
           "personaggio": "Addetta",
-          "frase": "Va benissimo. Saranno 15 euro in totale.",
-          "traducao": "Tudo bem. Serão 15 euros no total.",
+          "frase": "Va benissimo. La metta sul nastro, per favore. Il suo volo partirà dal gate 5.",
+          "traducao": "Tudo bem. Coloque na esteira, por favor. Seu voo partirá do portão 5.",
           "audio_ipa": ""
         },
         {
           "id": 6,
           "personaggio": "Tu",
-          "frase": "Ecco a lei. Arrivederci!",
-          "traducao": "Aqui está. Até logo!",
+          "frase": "Grazie mille. A che ora è l'imbarco?",
+          "traducao": "Muito obrigado. A que horas é o embarque?",
           "audio_ipa": "",
           "alternativas": [
-            "Ecco a lei. Arrivederci!",
+            "Grazie mille. A che ora è l'imbarco?",
             "Non voglio pagare.",
-            "Scappi via!",
-            "Non mi piace."
+            "Non mi piace.",
+            "Arrivederci!"
           ],
           "resposta_correta": 0
         }
