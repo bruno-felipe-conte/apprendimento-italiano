@@ -345,7 +345,7 @@ const Dialoghi = {
     
     if (this.modo === 'leitura') {
       for (const t of d.turni) {
-        const isUtente = t.personaggio && t.personaggio.trim().toLowerCase() === 'tu';
+        const isUtente = t.personaggio && (t.personaggio.trim().toLowerCase() === 'tu' || t.personaggio.trim().toLowerCase() === 'you');
         const cssClass = isUtente ? 'utente' : 'personaggio';
         // Fallback: se frase estiver vazia mas há alternativas, usa a resposta correta
         const fraseExibir = t.frase || (t.alternativas ? t.alternativas[t.resposta_correta || 0] : '');
@@ -369,7 +369,7 @@ const Dialoghi = {
       // Modo prática: renderiza apenas o turno atual e os anteriores
       for (let i = 0; i <= this.turnoAtual; i++) {
         const t = d.turni[i];
-        const isUtente = t.personaggio && t.personaggio.trim().toLowerCase() === 'tu';
+        const isUtente = t.personaggio && (t.personaggio.trim().toLowerCase() === 'tu' || t.personaggio.trim().toLowerCase() === 'you');
         const cssClass = isUtente ? 'utente' : 'personaggio';
         
         if (i < this.turnoAtual) {
