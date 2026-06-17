@@ -155,7 +155,9 @@ const Canzoni = {
     const artista = existente?.artista || '';
     const nivel = existente?.nivel || 'A2';
     const icone = existente?.icone || '🎵';
-    const estrofes = existente?.estrofes || [{ id: 1, texto_completo: '', texto_lacuna: '', palavra_oculta: '', traducao: '', dica: '' }];
+    const audioKey = existente?.audio_store_key || '';
+    const estrofes = existente?.estrofes?.map(e => ({ ...e, tempo: e.inicio_ms != null ? (e.inicio_ms / 1000) : '' }))
+      || [{ id: 1, texto_completo: '', texto_lacuna: '', palavra_oculta: '', traducao: '', dica: '', tempo: '' }];
 
     let estrofesHtml = '';
     estrofes.forEach((est, i) => {
@@ -196,29 +198,265 @@ const Canzoni = {
           </div>
         </div>
 
+        <div style="background:#f0f4fa;border:1px solid #c8d6ea;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
+          <div style="font-size:0.85rem;font-weight:700;color:#003E8A;margin-bottom:0.6rem">🎵 Áudio da música (opcional)</div>
+          <input type="hidden" id="can-audio-key" value="${audioKey}">
+          <input type="file" id="can-audio-file" accept="audio/*" onchange="Canzoni._onAudioSelecionado(event)" style="font-size:0.85rem">
+          <audio id="can-audio-preview" controls style="width:100%;margin-top:0.6rem;display:${audioKey ? 'block' : 'none'}"></audio>
+          <button id="can-btn-remover-audio" class="btn-secondario" onclick="Canzoni._removerAudio()"
+            style="margin-top:0.5rem;font-size:0.8rem;display:${audioKey ? 'inline-block' : 'none'}">🗑️ Remover áudio</button>
+        </div>
+
+        <div style="background:#f9f6f0;border:1px solid #ede5d5;border-radius:10px;padding:0.9rem;margin-bottom:1rem">
+          <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.6rem">🤖 Criar exercícios com IA</div>
+          <div style="font-size:0.75rem;color:#8a7a60;margin-bottom:0.5rem">Cole uma transcrição com tempos (formato LRC ou tabela do YouTube), clique em <strong>Criar Prompt IA</strong>, copie o prompt para o ChatGPT / Claude, depois cole o resultado aqui para importar todos os versos automaticamente.</div>
+          <textarea id="can-lrc-paste" class="ia-paste-area" rows="5" style="width:100%;font-family:monospace;font-size:0.82rem"
+            placeholder="[00:12.34] Bella ciao, bella ciao
+[00:16.80] Bella ciao ciao ciao"></textarea>
+          <div style="margin-top:0.5rem">
+            <button class="btn-secondario" onclick="Canzoni._construirPromptIA()">🤖 Criar Prompt IA (com exercícios)</button>
+          </div>
+
+          <div id="can-ia-bloco" style="display:block;margin-top:0.8rem">
+            <p style="font-size:0.78rem;color:#8a7a60;margin-bottom:0.4rem">1. Copie o prompt abaixo e cole no seu AI favorito (ChatGPT, Claude, etc.):</p>
+            <div class="ia-prompt-box">
+              <pre id="can-ia-prompt-text"></pre>
+              <button class="ia-copy-btn" onclick="Canzoni._copiarPromptIA()">📋 Copiar Prompt</button>
+            </div>
+            <p style="font-size:0.78rem;color:#8a7a60;margin:0.6rem 0 0.4rem">2. Cole aqui o JSON gerado pelo AI:</p>
+            <textarea id="can-ia-resultado" class="ia-paste-area" rows="5" placeholder="Cole aqui o JSON gerado pelo AI..."></textarea>
+            <button class="btn-primario" onclick="Canzoni._importarResultadoIA()" style="margin-top:0.5rem">✅ Importar Resultado</button>
+          </div>
+        </div>
+
         <div style="font-size:0.85rem;font-weight:700;color:#9B2335;margin-bottom:0.8rem;border-top:1px solid #f0e8d8;padding-top:1rem">
           📝 Estrofes (versos com lacunas)
         </div>
 
-        <div id="can-estrofes">${estrofesHtml}</div>
+        <div style="max-height:420px;overflow-y:auto;padding-right:4px;margin-bottom:0.8rem">
+          <div id="can-estrofes">${estrofesHtml}</div>
+        </div>
 
-        <button onclick="Canzoni._adicionarEstrofe()" class="btn-secondario" style="width:100%;margin:0.8rem 0">
+        <button onclick="Canzoni._adicionarEstrofe()" class="btn-secondario" style="width:100%;margin:0 0 0.8rem">
           ➕ Adicionar verso
         </button>
 
-        <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.8rem;margin-bottom:1rem;font-size:0.82rem;color:#6B4C1A">
+        <div style="background:#FFF8E7;border:1px solid #D4A843;border-radius:8px;padding:0.8rem;margin-bottom:0.5rem;font-size:0.82rem;color:#6B4C1A">
           💡 <strong>Como criar a lacuna:</strong> Escreva o texto completo no campo "Texto completo".
           No "Texto com lacuna", substitua a palavra que quer ocultar por <code>___</code> (três underscores).
           Informe a palavra oculta no campo "Palavra oculta".
         </div>
 
-        <div style="display:flex;gap:0.5rem">
-          <button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar || ''}')">
-            💾 Salvar Música
-          </button>
-          <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
+        <div style="position:sticky;bottom:0;background:#fff;padding:0.75rem 0 0.25rem;border-top:1px solid #f0e8d8;z-index:10;margin-top:0.25rem">
+          <div style="display:flex;gap:0.5rem">
+            <button class="btn-primario" style="flex:1" onclick="Canzoni._salvarFormulario('${idEditar || ''}')">
+              💾 Salvar Música
+            </button>
+            <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
+          </div>
         </div>
       </div>`;
+
+    if (audioKey) {
+      AudioStore.obterURL(audioKey).then(url => {
+        const audioEl = document.getElementById('can-audio-preview');
+        if (audioEl && url) audioEl.src = url;
+      });
+    }
+  },
+
+  // ── Áudio sincronizado (formulário) ────────────────────────
+  async _onAudioSelecionado(event) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    const keyInput = document.getElementById('can-audio-key');
+    const key = keyInput?.value || `audio_${Date.now()}`;
+    try {
+      await AudioStore.salvar(key, file);
+      if (keyInput) keyInput.value = key;
+      const url = await AudioStore.obterURL(key);
+      const audioEl = document.getElementById('can-audio-preview');
+      if (audioEl) { audioEl.src = url; audioEl.style.display = 'block'; }
+      const btnRemover = document.getElementById('can-btn-remover-audio');
+      if (btnRemover) btnRemover.style.display = 'inline-block';
+    } catch (e) {
+      App.notificar('Erro ao salvar arquivo de áudio', 'erro');
+    }
+  },
+
+  async _removerAudio() {
+    const keyInput = document.getElementById('can-audio-key');
+    const key = keyInput?.value;
+    if (key) { try { await AudioStore.remover(key); } catch (e) {} }
+    if (keyInput) keyInput.value = '';
+    const audioEl = document.getElementById('can-audio-preview');
+    if (audioEl) { audioEl.removeAttribute('src'); audioEl.style.display = 'none'; }
+    const fileInput = document.getElementById('can-audio-file');
+    if (fileInput) fileInput.value = '';
+    const btnRemover = document.getElementById('can-btn-remover-audio');
+    if (btnRemover) btnRemover.style.display = 'none';
+  },
+
+  _marcarTempoAgora(i) {
+    const audioEl = document.getElementById('can-audio-preview');
+    if (!audioEl || !audioEl.src) { App.notificar('Carregue um arquivo de áudio primeiro', 'alerta'); return; }
+    const tempoInput = document.querySelector(`#can-est-${i} [data-campo="tempo"]`);
+    if (tempoInput) tempoInput.value = audioEl.currentTime.toFixed(2);
+  },
+
+  _parseLRC(texto) {
+    const re = /^\[(\d+):(\d+(?:\.\d+)?)\](.*)$/;
+    return texto.split('\n').reduce((acc, linha) => {
+      const m = linha.trim().match(re);
+      if (!m) return acc;
+      const textoCompleto = m[3].trim();
+      if (!textoCompleto) return acc;
+      acc.push({ tempo: parseInt(m[1], 10) * 60 + parseFloat(m[2]), texto_completo: textoCompleto });
+      return acc;
+    }, []);
+  },
+
+  // Aceita "12s", "1:01" (m:ss) ou "1:02:03" (h:mm:ss) → segundos
+  _parseTempoGenerico(str) {
+    str = (str || '').trim();
+    const seg = str.match(/^(\d+)\s*s$/i);
+    if (seg) return parseInt(seg[1], 10);
+    if (!/^\d+(:\d+){1,2}$/.test(str)) return null;
+    const partes = str.split(':').map(p => parseInt(p, 10));
+    if (partes.some(isNaN)) return null;
+    if (partes.length === 2) return partes[0] * 60 + partes[1];
+    return partes[0] * 3600 + partes[1] * 60 + partes[2];
+  },
+
+  // Tabela colada de sites de transcrição/legenda (Time | Subtitle | Tradução), separada por TAB
+  // ou por 2+ espaços quando o TAB não sobrevive à colagem.
+  _parseTabelaTranscricao(texto) {
+    return texto.split('\n').reduce((acc, linha) => {
+      if (!linha.trim()) return acc;
+      const cols = linha.includes('\t') ? linha.split('\t') : linha.split(/ {2,}/);
+      if (cols.length < 2) return acc;
+      const tempo = this._parseTempoGenerico(cols[0]);
+      if (tempo == null) return acc;
+      const textoCompleto = (cols[1] || '').replace(/♪/g, '').trim();
+      if (!textoCompleto) return acc;
+      const traducao = (cols[2] || '').replace(/♪/g, '').trim();
+      acc.push({ tempo, texto_completo: textoCompleto, traducao });
+      return acc;
+    }, []);
+  },
+
+  // ── Prompt de IA: padroniza tempo + letra + tradução + cria as lacunas, tudo de uma vez ──
+  _construirPromptIA() {
+    const textarea = document.getElementById('can-lrc-paste');
+    const textoColado = (textarea?.value || '').trim();
+
+    const titulo = document.getElementById('can-titulo')?.value.trim() || '';
+    const artista = document.getElementById('can-artista')?.value.trim() || '';
+    const nivel   = document.getElementById('can-nivel')?.value || 'A2';
+    const icone   = document.getElementById('can-icone')?.value.trim() || '🎵';
+
+    const prompt = `Você está ajudando a criar um exercício de listening sincronizado com lacunas para um app de aprendizado de italiano, a partir de uma transcrição temporizada de música.
+
+Vou colar uma transcrição temporizada abaixo. Pode estar no formato LRC ("[mm:ss.xx] texto"), ou numa tabela com colunas Tempo / Legenda / Tradução (ex: copiado de site de transcrição do YouTube), com tempos como "12s", "1:01" ou "1:02:03".
+
+Retorne um único objeto JSON (não um array) com esta estrutura exata:
+{
+  "titulo": "${titulo || 'PREENCHA O TÍTULO DA MÚSICA'}",
+  "artista": "${artista || 'PREENCHA O NOME DO ARTISTA'}",
+  "nivel": "${nivel}",
+  "icone": "${icone}",
+  "estrofes": [
+    {
+      "tempo": <número — tempo de início da linha em SEGUNDOS, como decimal, ex: "1:02" -> 62, "0:12.5" -> 12.5>,
+      "texto_completo": "<o texto da linha, sem símbolos ♪>",
+      "traducao": "<tradução em português da linha — use a que estiver na transcrição se houver, senão traduza você mesmo>",
+      "palavra_oculta": "<uma palavra pedagogicamente útil desta linha, ou \\"\\" se esta linha não tiver lacuna>",
+      "texto_lacuna": "<a mesma linha com essa palavra substituída por \\"___\\", ou \\"\\" se não tiver lacuna>",
+      "dica": "<dica curta: classe gramatical + significado breve, ou \\"\\" se não tiver lacuna>"
+    }
+  ]
+}
+
+REGRAS OBRIGATÓRIAS:
+1. Mantenha as linhas na mesma ordem da transcrição original. Não pule nenhuma linha.
+2. Converta todos os timestamps para segundos decimais.
+3. Para aproximadamente 30%–50% das linhas com conteúdo cantado real (pule ruídos de multidão, efeitos sonoros entre parênteses ou ad-libs repetidos), preencha "palavra_oculta", "texto_lacuna" e "dica" como descrito acima. Escolha vocabulário útil em italiano, não artigos como "il"/"la" ou pronomes.
+4. Para todas as outras linhas, deixe "palavra_oculta", "texto_lacuna" e "dica" como strings vazias "".
+5. Retorne APENAS o objeto JSON, sem texto antes ou depois.
+
+TRANSCRIÇÃO:
+${textoColado || '[COLE SUA TRANSCRIÇÃO TEMPORIZADA AQUI ANTES DE ENVIAR ESTE PROMPT]'}`;
+
+    const pre = document.getElementById('can-ia-prompt-text');
+    if (pre) pre.textContent = prompt;
+    pre?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  },
+
+  _copiarPromptIA() {
+    const txt = document.getElementById('can-ia-prompt-text')?.textContent || '';
+    const setCopiado = () => {
+      const btn = document.querySelector('#can-ia-bloco .ia-copy-btn');
+      if (!btn) return;
+      const orig = btn.textContent;
+      btn.textContent = '✅ Copiado!';
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    };
+    navigator.clipboard.writeText(txt).then(setCopiado).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = txt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      setCopiado();
+    });
+  },
+
+  _importarResultadoIA() {
+    const raw = document.getElementById('can-ia-resultado')?.value.trim() || '';
+    if (!raw) { App.notificar('Cole o JSON gerado pelo AI primeiro', 'alerta'); return; }
+
+    let dados;
+    try {
+      const match = raw.match(/(\{[\s\S]*\}|\[[\s\S]*\])/);
+      if (!match) throw new Error('No JSON found');
+      dados = JSON.parse(match[1]);
+      // Novo formato: wrapper com { titulo, artista, nivel, icone, estrofes }
+      if (!Array.isArray(dados) && Array.isArray(dados.estrofes)) {
+        if (dados.titulo) { const el = document.getElementById('can-titulo'); if (el && !el.value.trim()) el.value = dados.titulo; }
+        if (dados.artista) { const el = document.getElementById('can-artista'); if (el && !el.value.trim()) el.value = dados.artista; }
+        if (dados.nivel) { const el = document.getElementById('can-nivel'); if (el) el.value = dados.nivel; }
+        if (dados.icone) { const el = document.getElementById('can-icone'); if (el && !el.value.trim()) el.value = dados.icone; }
+        dados = dados.estrofes;
+      }
+      if (!Array.isArray(dados)) dados = [dados];
+    } catch (e) {
+      App.notificar('JSON inválido. Verifique a resposta do AI e tente novamente.', 'erro');
+      return;
+    }
+
+    const validos = dados.filter(d => d && typeof d.texto_completo === 'string' && d.texto_completo.trim());
+    if (validos.length === 0) { App.notificar('Nenhum verso válido encontrado no JSON', 'erro'); return; }
+
+    const container = document.getElementById('can-estrofes');
+    if (!container) return;
+    const existentes = container.querySelectorAll('.can-estrofe-form').length;
+    if (existentes > 0 && !confirm(`Isso vai substituir ${existentes} verso(s) existente(s) por ${validos.length} versos importados. Continuar?`)) return;
+    container.innerHTML = '';
+    validos.forEach((l, i) => {
+      const div = document.createElement('div');
+      div.innerHTML = this._htmlEstrofeForm({
+        id: i + 1,
+        texto_completo: l.texto_completo,
+        texto_lacuna: l.texto_lacuna || '',
+        palavra_oculta: l.palavra_oculta || '',
+        traducao: l.traducao || '',
+        dica: l.dica || '',
+        tempo: l.tempo ?? ''
+      }, i);
+      container.appendChild(div.firstElementChild);
+    });
+    App.notificar(`${validos.length} versos importados do resultado do AI`, 'sucesso');
   },
 
   _htmlEstrofeForm(est, i) {
@@ -226,7 +464,7 @@ const Canzoni = {
       <div class="can-estrofe-form" id="can-est-${i}" style="background:#f9f6f0;border-radius:10px;padding:0.9rem;margin-bottom:0.8rem;border:1px solid #ede5d5">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem">
           <span style="font-weight:700;font-size:0.82rem;color:#9B2335">Verso ${i + 1}</span>
-          <button onclick="Canzoni._removerEstrofe(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️ Remover</button>
+          <button class="can-btn-remover-verso" onclick="Canzoni._removerEstrofe(${i})" style="background:none;border:none;cursor:pointer;color:#C0392B;font-size:0.85rem">🗑️ Remover</button>
         </div>
         <div style="display:flex;flex-direction:column;gap:0.5rem">
           <input type="text" placeholder="Texto completo (ex: Cerco l'estate tutto l'anno)" data-campo="texto_completo" data-idx="${i}"
@@ -246,6 +484,13 @@ const Canzoni = {
           <input type="text" placeholder="Tradução em português" data-campo="traducao" data-idx="${i}"
             value="${est.traducao || ''}"
             style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem">
+          <div style="display:flex;gap:0.5rem;align-items:center">
+            <input type="number" step="0.1" min="0" placeholder="Tempo (s)" data-campo="tempo" data-idx="${i}"
+              value="${est.tempo ?? ''}"
+              style="padding:0.45rem 0.6rem;border:2px solid #ddd;border-radius:7px;font-size:0.88rem;width:7rem">
+            <button class="can-btn-marcar-tempo" onclick="Canzoni._marcarTempoAgora(${i})"
+              style="background:none;border:1px solid #9B2335;color:#9B2335;border-radius:7px;padding:0.4rem 0.6rem;cursor:pointer;font-size:0.78rem;white-space:nowrap">🎙️ Marcar agora</button>
+          </div>
         </div>
       </div>`;
   },
@@ -255,7 +500,7 @@ const Canzoni = {
     if (!container) return;
     const i = container.querySelectorAll('.can-estrofe-form').length;
     const div = document.createElement('div');
-    div.innerHTML = this._htmlEstrofeForm({ id: i+1, texto_completo:'', texto_lacuna:'', palavra_oculta:'', traducao:'', dica:'' }, i);
+    div.innerHTML = this._htmlEstrofeForm({ id: i+1, texto_completo:'', texto_lacuna:'', palavra_oculta:'', traducao:'', dica:'', tempo:'' }, i);
     container.appendChild(div.firstElementChild);
   },
 
@@ -267,7 +512,10 @@ const Canzoni = {
       el.id = `can-est-${idx}`;
       el.querySelector('span').textContent = `Verso ${idx + 1}`;
       el.querySelectorAll('[data-idx]').forEach(inp => inp.dataset.idx = idx);
-      el.querySelector('button[onclick]').setAttribute('onclick', `Canzoni._removerEstrofe(${idx})`);
+      const btnRemover = el.querySelector('.can-btn-remover-verso');
+      if (btnRemover) btnRemover.setAttribute('onclick', `Canzoni._removerEstrofe(${idx})`);
+      const btnMarcar = el.querySelector('.can-btn-marcar-tempo');
+      if (btnMarcar) btnMarcar.setAttribute('onclick', `Canzoni._marcarTempoAgora(${idx})`);
     });
   },
 
@@ -280,15 +528,27 @@ const Canzoni = {
     document.querySelectorAll('.can-estrofe-form').forEach((el, i) => {
       const campos = {};
       el.querySelectorAll('[data-campo]').forEach(inp => { campos[inp.dataset.campo] = inp.value.trim(); });
-      if (campos.texto_completo && campos.palavra_oculta) {
-        // Auto-gerar texto_lacuna se não preenchido
-        if (!campos.texto_lacuna && campos.palavra_oculta) {
-          campos.texto_lacuna = campos.texto_completo.replace(campos.palavra_oculta, '___');
-        }
-        estrofes.push({ id: i+1, ...campos });
+      if (!campos.texto_completo) return;
+      // Auto-gerar texto_lacuna se não preenchido
+      if (!campos.texto_lacuna && campos.palavra_oculta) {
+        const reEscape = campos.palavra_oculta.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        campos.texto_lacuna = campos.texto_completo.replace(new RegExp(reEscape, 'i'), '___');
       }
+      const est = {
+        id: i + 1,
+        texto_completo: campos.texto_completo,
+        texto_lacuna: campos.texto_lacuna || '',
+        palavra_oculta: campos.palavra_oculta || '',
+        traducao: campos.traducao || '',
+        dica: campos.dica || ''
+      };
+      const tempo = campos.tempo !== '' && campos.tempo != null ? parseFloat(campos.tempo) : NaN;
+      if (!isNaN(tempo)) est.inicio_ms = Math.round(tempo * 1000);
+      estrofes.push(est);
     });
     if (estrofes.length === 0) { App.notificar('notif_can_sem_verso', 'erro'); return; }
+
+    const audioKey = document.getElementById('can-audio-key')?.value || '';
 
     const nova = {
       id: idEditar || `custom_can_${Date.now()}`,
@@ -303,6 +563,7 @@ const Canzoni = {
       vocabulario_chave: estrofes.map(e => e.palavra_oculta).filter(Boolean),
       xp_recompensa: Math.min(10 + estrofes.length * 5, 60)
     };
+    if (audioKey) nova.audio_store_key = audioKey;
 
     if (idEditar) {
       const idx = this.custom.findIndex(x => x.id === idEditar);
@@ -343,18 +604,47 @@ const Canzoni = {
     this.erros = 0;
     this.respostas = this.canzonAtual.estrofes.map(() => null);
     this.traduzirVisivel = false;
+    this._audioResumeTime = null;
+    this._audioShouldPlay = false;
+    this._distratorCache = {};
+    this._syncGen = (this._syncGen || 0) + 1;
     this._avancarProximoBlank();
+  },
+
+  _repetirVerso(inicioMs, fimMs) {
+    const audioEl = document.getElementById('can-audio-player');
+    if (!audioEl || inicioMs == null) return;
+    if (this._repeatListener) {
+      audioEl.removeEventListener('timeupdate', this._repeatListener);
+      this._repeatListener = null;
+    }
+    audioEl.currentTime = inicioMs / 1000;
+    audioEl.play();
+    if (fimMs != null) {
+      const parar = () => {
+        if (audioEl.currentTime * 1000 >= fimMs) {
+          audioEl.pause();
+          audioEl.removeEventListener('timeupdate', parar);
+          this._repeatListener = null;
+        }
+      };
+      this._repeatListener = parar;
+      audioEl.addEventListener('timeupdate', parar);
+    }
   },
 
   _avancarProximoBlank() {
     const can = this.canzonAtual;
     if (!can) return;
+    // Músicas sem nenhuma lacuna (ex.: só áudio sincronizado, sem exercício) ficam em modo "ouvir letra",
+    // sem pular automaticamente pra tela de resultado.
+    const temLacunas = can.estrofes.some(e => e.palavra_oculta);
     while (this.estrofeAtual < can.estrofes.length && !can.estrofes[this.estrofeAtual].palavra_oculta) {
       this.estrofeAtual++;
     }
     if (this.estrofeAtual >= can.estrofes.length) {
       this._renderizarPlayer();
-      setTimeout(() => this.mostrarResultado(), 700);
+      if (temLacunas) setTimeout(() => this.mostrarResultado(), 700);
     } else {
       this._renderizarPlayer();
     }
@@ -380,9 +670,8 @@ const Canzoni = {
     if (!c || !this.canzonAtual) return;
     const can = this.canzonAtual;
 
-    const comLacuna = can.estrofes.filter(e => e.palavra_oculta);
-    const total = comLacuna.length;
-    const done  = comLacuna.filter(e => this.respostas[can.estrofes.indexOf(e)] !== null).length;
+    const total = can.estrofes.filter(e => e.palavra_oculta).length;
+    const done  = can.estrofes.filter((e, i) => e.palavra_oculta && this.respostas[i] !== null).length;
     const pct   = total > 0 ? Math.round(done / total * 100) : 0;
 
     const versosHtml = can.estrofes.map((v, i) => {
@@ -421,24 +710,37 @@ const Canzoni = {
       const tradHtml = (this.traduzirVisivel && v.traducao)
         ? '<div class="can-verse-trad">' + this._esc(v.traducao) + '</div>' : '';
 
-      const safeText = (v.texto_completo||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
-      const repeatHtml = (cls !== 'future')
-        ? '<button class="can-repeat-btn" onclick="App.pronunciar(\'' + safeText + '\')">&#9654; repetir</button>' : '';
+      const proximoMs = can.estrofes.slice(i + 1).find(e => e.inicio_ms != null)?.inicio_ms;
+      const repeatHtml = (cls !== 'future' && v.inicio_ms != null && can.audio_store_key)
+        ? '<button class="can-repeat-btn" onclick="Canzoni._repetirVerso(' + v.inicio_ms + ',' + (proximoMs ?? 'undefined') + ')">&#9654; repetir</button>'
+        : (cls !== 'future' && !can.audio_store_key
+          ? '<button class="can-repeat-btn" onclick="App.pronunciar(\'' + (v.texto_completo||'').replace(/\\/g,'\\\\').replace(/'/g,"\\'") + '\')">&#9654; repetir</button>'
+          : '');
 
-      return '<div class="can-verse can-verse-' + cls + '">' + lineHtml + tradHtml + repeatHtml + '</div>';
+      const temposAttr = (v.inicio_ms != null) ? ' data-tempo-ms="' + v.inicio_ms + '"' : '';
+      return '<div class="can-verse can-verse-' + cls + '"' + temposAttr + '>' + lineHtml + tradHtml + repeatHtml + '</div>';
     }).join('');
 
     let choicesHtml = '';
     const est = can.estrofes[this.estrofeAtual];
     if (est && est.palavra_oculta) {
-      const dist = this._getDistrator(est);
-      const arr  = Math.random() > 0.5 ? [est.palavra_oculta, dist] : [dist, est.palavra_oculta];
+      const idx = this.estrofeAtual;
+      if (!this._distratorCache) this._distratorCache = {};
+      if (!this._distratorCache[idx]) {
+        this._distratorCache[idx] = { dist: this._getDistrator(est), ordem: Math.random() > 0.5 };
+      }
+      const { dist, ordem } = this._distratorCache[idx];
+      const arr = ordem ? [est.palavra_oculta, dist] : [dist, est.palavra_oculta];
       const btns = arr.map(w => {
         const safeW = w.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
         return '<button class="can-choice-btn" onclick="Canzoni._escolher(\'' + safeW + '\')"><i>' + this._esc(w) + '</i></button>';
       }).join('');
-      choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">Escolha a palavra</div><div class="can-choices-grid">' + btns + '</div></div>';
+      choicesHtml = '<div class="can-choices-bar"><div class="can-choices-label">Scegli la parola</div><div class="can-choices-grid">' + btns + '</div></div>';
     }
+
+    const audioBarHtml = can.audio_store_key
+      ? '<div class="can-audio-bar"><audio id="can-audio-player" controls></audio></div>'
+      : '';
 
     c.innerHTML =
       '<div class="can-player">' +
@@ -453,6 +755,7 @@ const Canzoni = {
             '<span class="can-score-pill can-score-wrong">' + this.erros + ' ✗</span>' +
           '</div>' +
         '</div>' +
+        audioBarHtml +
         '<div class="can-subbar">' +
           '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
           '<div class="can-toggle-row">' +
@@ -466,8 +769,81 @@ const Canzoni = {
 
     setTimeout(() => {
       const el = document.querySelector('.can-verse-active');
-      if (el) el.scrollIntoView({ behavior:'smooth', block:'center' });
-    }, 120);
+      if (el) el.scrollIntoView({ behavior:'instant', block:'center' });
+    }, 0);
+
+    if (can.audio_store_key) this._iniciarSyncAudio(can);
+  },
+
+  // ── Reprodução de áudio sincronizado com a letra ──────────
+  async _iniciarSyncAudio(can) {
+    const gen = this._syncGen;
+    let url;
+    try { url = await AudioStore.obterURL(can.audio_store_key); } catch (e) { return; }
+    if (!url || gen !== this._syncGen) return;
+    const audioEl = document.getElementById('can-audio-player');
+    if (!audioEl) return;
+
+    // Preserva a posição de reprodução entre re-renders
+    if (this._audioResumeTime != null) {
+      const tempoRetomar = this._audioResumeTime;
+      const deveTocar = this._audioShouldPlay;
+      this._audioResumeTime = null;
+      this._audioShouldPlay = false;
+      const onMeta = () => {
+        audioEl.currentTime = tempoRetomar;
+        if (deveTocar) audioEl.play();
+      };
+      audioEl.addEventListener('loadedmetadata', onMeta, { once: true });
+      audioEl.src = url;
+      if (audioEl.readyState >= 1) {
+        audioEl.removeEventListener('loadedmetadata', onMeta);
+        onMeta();
+      }
+    } else {
+      audioEl.src = url;
+    }
+
+    const verseEls = Array.from(document.querySelectorAll('#can-lyrics .can-verse[data-tempo-ms]'))
+      .sort((a, b) => parseInt(a.dataset.tempoMs, 10) - parseInt(b.dataset.tempoMs, 10));
+
+    verseEls.forEach(el => {
+      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => {
+        const ms = parseInt(el.dataset.tempoMs, 10);
+        if (isNaN(ms)) return;
+        audioEl.currentTime = ms / 1000;
+        audioEl.play();
+      });
+    });
+
+    let pausadoParaLacuna = false;
+
+    audioEl.addEventListener('timeupdate', () => {
+      const curMs = audioEl.currentTime * 1000;
+      let activeEl = null;
+      for (let i = 0; i < verseEls.length; i++) {
+        const startMs = parseInt(verseEls[i].dataset.tempoMs, 10);
+        const nextMs = (i + 1 < verseEls.length) ? parseInt(verseEls[i + 1].dataset.tempoMs, 10) : Infinity;
+        if (curMs >= startMs && curMs < nextMs) { activeEl = verseEls[i]; break; }
+      }
+      verseEls.forEach(el => el.classList.toggle('can-verse-playing', el === activeEl));
+      if (activeEl) activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Pausa automaticamente ao alcançar uma lacuna ainda não respondida
+      const idxAtual = this.estrofeAtual;
+      const estrofeAtualObj = can.estrofes[idxAtual];
+      if (
+        !pausadoParaLacuna &&
+        estrofeAtualObj && estrofeAtualObj.palavra_oculta &&
+        this.respostas[idxAtual] == null &&
+        estrofeAtualObj.inicio_ms != null &&
+        curMs >= estrofeAtualObj.inicio_ms
+      ) {
+        pausadoParaLacuna = true;
+        audioEl.pause();
+      }
+    });
   },
 
   _escolher(palavra) {
@@ -475,7 +851,8 @@ const Canzoni = {
     if (!can || this.estrofeAtual >= can.estrofes.length) return;
     const est = can.estrofes[this.estrofeAtual];
     if (!est.palavra_oculta) return;
-    const norm = s => s.toLowerCase().trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    document.querySelectorAll('.can-choice-btn').forEach(b => { b.disabled = true; b.style.pointerEvents = 'none'; });
+    const norm = s => s.toLowerCase().trim().normalize('NFD').replace(/[̀-ͯ]/g,'');
     const correto = norm(palavra) === norm(est.palavra_oculta);
     this.respostas[this.estrofeAtual] = { escolha: palavra, correto };
     if (correto) {
@@ -485,11 +862,24 @@ const Canzoni = {
       this.erros++;
     }
     this.estrofeAtual++;
+
+    // Se a música tem áudio sincronizado, retoma a reprodução de onde pausou
+    const audioEl = document.getElementById('can-audio-player');
+    if (audioEl) {
+      this._audioResumeTime = audioEl.currentTime;
+      this._audioShouldPlay = true;
+    }
+
     setTimeout(() => this._avancarProximoBlank(), 200);
   },
 
   _toggleTraduzir() {
     this.traduzirVisivel = !this.traduzirVisivel;
+    const audioEl = document.getElementById('can-audio-player');
+    if (audioEl) {
+      this._audioResumeTime = audioEl.currentTime;
+      this._audioShouldPlay = !audioEl.paused;
+    }
     this._renderizarPlayer();
   },
 
@@ -500,7 +890,8 @@ const Canzoni = {
     const can = this.canzonAtual;
     const total = can.estrofes.filter(e => e.palavra_oculta).length;
     const pct = total > 0 ? Math.round(this.acertos / total * 100) : 100;
-    if (typeof Progressao !== 'undefined' && Progressao.ganhar) Progressao.ganhar(can.xp_recompensa);
+    const xpGanho = Math.round(can.xp_recompensa * pct / 100);
+    if (xpGanho > 0 && typeof Progressao !== 'undefined' && Progressao.ganhar) Progressao.ganhar(xpGanho);
     const c = document.getElementById('canzoni-container');
     const emoji = pct >= 80 ? '🎤' : pct >= 50 ? '🎵' : '🎼';
     c.innerHTML =
@@ -509,10 +900,10 @@ const Canzoni = {
           '<div class="can-result-emoji">' + emoji + '</div>' +
           '<div class="can-result-title">' + this._esc(can.titulo) + '</div>' +
           '<div class="can-result-score">' + this.acertos + '<span>/' + total + '</span></div>' +
-          '<div class="can-result-xp">+' + can.xp_recompensa + ' XP</div>' +
+          '<div class="can-result-xp">+' + xpGanho + ' XP</div>' +
           '<div style="display:flex;gap:0.5rem;justify-content:center;margin-top:1.2rem;flex-wrap:wrap">' +
             '<button class="can-restart-btn" onclick="Canzoni.abrirCanzone(\'' + can.id + '\')">&#8635; Tentar novamente</button>' +
-            '<button class="can-restart-btn secundario" onclick="Canzoni.renderizarSeletor()">&#8592; M\u00fasicas</button>' +
+            '<button class="can-restart-btn secundario" onclick="Canzoni.renderizarSeletor()">&#8592; Músicas</button>' +
           '</div>' +
         '</div>' +
       '</div>';
