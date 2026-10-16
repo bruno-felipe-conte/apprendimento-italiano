@@ -1,14 +1,16 @@
 // ============================================================
-// grammar.js — Grammatica Italiana — Design Premium v2
-// Parla e Scrivi — 30 capítulos
-// Tipos: "escolha" (múltipla escolha) | "revelar" (blur-reveal)
-// XP: +5 por acerto · +50 bônus por capítulo concluído
+// grammar.js — Grammatica Italiana — Design Didático em 3 Etapas
+// Parla e Scrivi — A1 a C2
+// Etapas: 1. Aprender a Regra | 2. Exemplos & Armadilhas | 3. Praticar
+// Tipos: "escolha" (múltipla escolha) | "revelar" (blur-reveal) | "digitar"
+// XP: +8 por acerto · +60 bônus por capítulo concluído
 // ============================================================
 
 const Grammatica = {
   dados: null,
   moduloAtual: null,
   unidadeAtual: null,
+  etapaAtual: 'aprender', // 'aprender' | 'exemplos' | 'praticar'
   exIndex: 0,
   acertos: 0,
   respondida: false,
@@ -42,8 +44,8 @@ const Grammatica = {
   // Voltar ao seletor (com confirmação se exercício em andamento)
   voltarSeletor() {
     const total = this.unidadeAtual?.exercicios?.length || 0;
-    if (this.unidadeAtual && this.exIndex > 0 && this.exIndex < total) {
-      if (!confirm('Vuoi tornare? Il progresso di questa lezione andrà perso.')) return;
+    if (this.unidadeAtual && this.etapaAtual === 'praticar' && this.exIndex > 0 && this.exIndex < total) {
+      if (!confirm('Deseja voltar aos módulos? O progresso dos exercícios desta lição será perdido.')) return;
     }
     this.renderizarSeletor();
   },
@@ -65,7 +67,7 @@ const Grammatica = {
       const totalUnid = mod.lezioni.length;
       if (bloqueado || totalUnid === 0) continue; // skip locked/empty modules
 
-      const totalEx   = mod.lezioni.reduce((s, u) => s + u.exercicios.length, 0);
+      const totalEx   = mod.lezioni.reduce((s, u) => s + (u.exercicios?.length || 0), 0);
       const completas = mod.lezioni.filter(u => completadas.includes(u.id)).length;
       const pct       = totalUnid > 0 ? Math.round((completas / totalUnid) * 100) : 0;
 
@@ -77,7 +79,7 @@ const Grammatica = {
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
       html += `</div>`;
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
-      html += `<div class="gram-nivel-info">${completas}/${totalUnid} completi &middot; ${totalEx} esercizi</div>`;
+      html += `<div class="gram-nivel-info">${completas}/${totalUnid} concluídas &middot; ${totalEx} exercícios</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
       html += '</div>';
 
@@ -85,13 +87,14 @@ const Grammatica = {
       html += `<div class="gram-lezioni-grid" id="gram-grid-${mod.id}">`;
       for (const u of mod.lezioni) {
         const feita = completadas.includes(u.id);
-        const nEx = u.exercicios.length;
+        const nEx = (u.exercicios || []).length;
+        const nCards = (u.observacao_cards || []).length;
         html += `<button class="gram-lez-card${feita ? ' feita' : ''}" onclick="Grammatica.abrirUnidade('${mod.id}','${u.id}')">`;
         html += `<span class="gram-lez-icon">${feita ? '✅' : '📘'}</span>`;
         html += `<span class="gram-lez-info">`;
-        html += `<span class="gram-lez-num-label">${u.num}</span>`;
+        if (u.num) html += `<span class="gram-lez-num-label">${u.num}</span>`;
         html += `<span class="gram-lez-titulo">${u.titulo}</span>`;
-        html += `<span class="gram-lez-meta">${nEx} esercizi</span>`;
+        html += `<span class="gram-lez-meta">📖 Teoria${nCards ? ` · ${nCards} cards` : ''} · ✏️ ${nEx} exercícios</span>`;
         html += `</span>`;
         html += `<span class="gram-lez-arrow">›</span>`;
         html += '</button>';
@@ -104,12 +107,12 @@ const Grammatica = {
     if (bloqueados.length > 0) {
       html += '<div class="gram-locked-row">';
       for (const mod of bloqueados) {
-        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Accesso amministratore">`;
+        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Acesso administrativo (senha: 2012)">`;
         html += `<span class="gram-locked-pill-icon">🔒</span>`;
         html += `<span class="gram-locked-pill-info">`;
         html += `<span class="gram-locked-pill-id">${mod.id}</span>`;
         html += `<span class="gram-locked-pill-nome">${mod.nome}</span>`;
-        html += `<span class="gram-locked-pill-req">Richiede Livello ${mod.nivel_minimo}</span>`;
+        html += `<span class="gram-locked-pill-req">Requer Nível ${mod.nivel_minimo} (ou clique para desbloquear)</span>`;
         html += `</span>`;
         html += `<span class="gram-locked-pill-arrow">›</span>`;
         html += `</button>`;
@@ -125,7 +128,6 @@ const Grammatica = {
   // Acesso administrativo — popup de senha
   // ─────────────────────────────────────────────────────────
   pedirSenhaAdmin(modId) {
-    // Remove modal anterior se existir
     const old = document.getElementById('gram-admin-modal');
     if (old) old.remove();
 
@@ -138,29 +140,27 @@ const Grammatica = {
     overlay.innerHTML = `
       <div class="gram-admin-box" role="dialog" aria-modal="true">
         <div class="gram-admin-icon">🔐</div>
-        <div class="gram-admin-titulo">Accesso Amministratore</div>
+        <div class="gram-admin-titulo">Desbloquear Módulo</div>
         <div class="gram-admin-subtit">${nome}</div>
         <input
           id="gram-admin-input"
           class="gram-admin-input"
           type="password"
-          placeholder="Inserisci la password"
+          placeholder="Senha (dica: 2012)"
           maxlength="20"
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
         />
-        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Password errata. Riprova.</div>
+        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Senha incorreta. Tente novamente (2012).</div>
         <div class="gram-admin-btns">
-          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Annulla</button>
-          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Conferma</button>
+          <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Cancelar</button>
+          <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Desbloquear</button>
         </div>
       </div>`;
 
-    // Fechar ao clicar fora
     overlay.addEventListener('click', e => { if (e.target === overlay) this._fecharModal(); });
     document.body.appendChild(overlay);
 
-    // Foco automático no input
     requestAnimationFrame(() => {
       const inp = document.getElementById('gram-admin-input');
       if (inp) inp.focus();
@@ -180,7 +180,6 @@ const Grammatica = {
     if (inp.value === '2012') {
       this._adminMods.add(modId);
       this._fecharModal();
-      // Re-renderiza o seletor com o módulo desbloqueado
       const c = document.getElementById('grammatica-container');
       if (c) c.innerHTML = this._htmlSeletor();
     } else {
@@ -192,9 +191,6 @@ const Grammatica = {
     }
   },
 
-  // ─────────────────────────────────────────────────────────
-  // Abrir lição
-  // ─────────────────────────────────────────────────────────
   // ── Colapsa / expande o grid de lições de um nível ───────────
   toggleNivel(id) {
     const grid   = document.getElementById(`gram-grid-${id}`);
@@ -205,7 +201,10 @@ const Grammatica = {
     if (seta) seta.style.transform = recolhido ? 'rotate(-90deg)' : 'rotate(0deg)';
   },
 
-  abrirUnidade(moduloId, unidadeId) {
+  // ─────────────────────────────────────────────────────────
+  // Abrir lição (Inicia sempre na Etapa 1: Aprender a Regra)
+  // ─────────────────────────────────────────────────────────
+  abrirUnidade(moduloId, unidadeId, etapaInicial = 'aprender') {
     const mod  = this.dados.moduli.find(m => m.id === moduloId);
     if (!mod) return;
     const unid = mod.lezioni.find(u => u.id === unidadeId);
@@ -213,6 +212,7 @@ const Grammatica = {
 
     this.moduloAtual  = mod;
     this.unidadeAtual = unid;
+    this.etapaAtual   = etapaInicial;
     this.exIndex      = 0;
     this.acertos      = 0;
     this.respondida   = false;
@@ -220,47 +220,189 @@ const Grammatica = {
     const c = document.getElementById('grammatica-container');
     if (c) {
       c.innerHTML = this._htmlUnidade(unid);
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  },
+
+  irParaEtapa(etapa) {
+    if (!this.unidadeAtual) return;
+    this.etapaAtual = etapa;
+    const c = document.getElementById('grammatica-container');
+    if (c) {
+      c.innerHTML = this._htmlUnidade(this.unidadeAtual);
+      const nav = document.querySelector('.gram-steps-bar');
+      if (nav) nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   },
 
   // ─────────────────────────────────────────────────────────
-  // HTML completo da lição
+  // HTML completo da lição com Barra de 3 Etapas Didáticas
   // ─────────────────────────────────────────────────────────
   _htmlUnidade(u) {
     const mod = this.moduloAtual;
+    const nEx = (u.exercicios || []).length;
 
     let html = '<div class="gram-lesson-layout">';
 
-    // Nav
+    // Nav superior
     html += '<div class="gram-lesson-nav">';
-    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>`;
-    html += `<div class="gram-lesson-breadcrumb"><span>${mod.id}</span> › <span>${u.num}</span></div>`;
+    html += `<button class="gram-btn-back" onclick="Grammatica.voltarSeletor()">‹ Todos os módulos</button>`;
+    html += `<div class="gram-lesson-breadcrumb"><span>${mod.id}</span>${u.num ? ` › <span>${u.num}</span>` : ''}</div>`;
     html += '</div>';
 
-    // Cabeçalho
+    // Cabeçalho da lição
     html += '<div class="gram-lesson-header">';
-    html += `<div class="gram-lesson-eyebrow">${u.num}</div>`;
+    if (u.num) html += `<div class="gram-lesson-eyebrow">${u.num}</div>`;
     html += `<h2 class="gram-lesson-title">${u.titulo}</h2>`;
     if (u.subtitulo) html += `<p class="gram-lesson-subtitle">${u.subtitulo}</p>`;
     html += '</div>';
 
-    // 📋 Tabela de consulta rápida (colapsável) para uso durante os exercícios
-    html += this._htmlTabelaVisual(u);
+    // Barra de Navegação das 3 Etapas Didáticas
+    html += `
+      <div class="gram-steps-bar" role="tablist" aria-label="Etapas da lição">
+        <button class="gram-step-btn ${this.etapaAtual === 'aprender' ? 'active' : ''}"
+                onclick="Grammatica.irParaEtapa('aprender')" role="tab" aria-selected="${this.etapaAtual === 'aprender'}">
+          <span class="gram-step-num">1</span>
+          <span class="gram-step-txt">📖 Aprender a Regra</span>
+        </button>
+        <button class="gram-step-btn ${this.etapaAtual === 'exemplos' ? 'active' : ''}"
+                onclick="Grammatica.irParaEtapa('exemplos')" role="tab" aria-selected="${this.etapaAtual === 'exemplos'}">
+          <span class="gram-step-num">2</span>
+          <span class="gram-step-txt">🔍 Exemplos & Armadilhas</span>
+        </button>
+        <button class="gram-step-btn ${this.etapaAtual === 'praticar' ? 'active' : ''}"
+                onclick="Grammatica.irParaEtapa('praticar')" role="tab" aria-selected="${this.etapaAtual === 'praticar'}">
+          <span class="gram-step-num">3</span>
+          <span class="gram-step-txt">✏️ Praticar (${nEx})</span>
+        </button>
+      </div>`;
 
-    // ✏️ Exercícios (MOVIDO PARA O TOPO)
-    html += '<div id="gram-ex-area">';
-    html += this._htmlExercicio();
-    html += '</div>';
-
-    // 📖 Teoria estruturada (5 Fases Didáticas)
-    html += '<div class="gram-card gram-teoria-card">';
-    html += '<div class="gram-card-header"><span>📖</span> Teoria e Prática da Lição</div>';
-    html += this._htmlFases(u);
-    html += '</div>';
+    // Conteúdo da Etapa Ativa
+    if (this.etapaAtual === 'aprender') {
+      html += this._htmlEtapaAprender(u);
+    } else if (this.etapaAtual === 'exemplos') {
+      html += this._htmlEtapaExemplos(u);
+    } else {
+      html += this._htmlEtapaPraticar(u);
+    }
 
     html += '</div>'; // lesson-layout
     return html;
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // ETAPA 1: 📖 Aprender a Regra (Integra TODAS as camadas teóricas)
+  // ─────────────────────────────────────────────────────────
+  _htmlEtapaAprender(u) {
+    let h = '<div class="gram-card gram-teoria-card"><div class="gram-camadas">';
+
+    // 1. Alerta / Por que isso importa
+    h += this._htmlFase1Ancoragem(u);
+
+    // 2. Definição (Veja -> Pense -> Entenda)
+    h += this._htmlDefinicao(u);
+
+    // 3. Inventário de Estruturas-Chave
+    h += this._htmlInventario(u);
+
+    // 4. Tabela Visual Resumida (Cards visuais)
+    h += this._htmlFase3Tabela(u);
+
+    // 5. Cards Interativos de Observação (Flip Cards com botão de áudio isolado)
+    h += this._htmlFase2Observacao(u);
+
+    // 6. Técnica Passo a Passo (Como Aplicar)
+    h += this._htmlTecnica(u);
+
+    // 7. Teoria Completa e Tabelas Detalhadas (Antes ignorada!)
+    if (u.teoria) {
+      h += `
+        <div class="gram-camada-bloco">
+          <div class="gram-camada-label">📚 Explicação Completa & Quadros de Referência</div>
+          <div class="gram-teoria-corpo" style="padding: 1.1rem 1.25rem">${this._formatarTeoria(u.teoria)}</div>
+        </div>`;
+    }
+
+    // 8. Ponte com o Português (Comparação contrastiva PT ↔ IT)
+    h += this._htmlPonte(u);
+
+    // Botão de avanço intuitivo para a Etapa 2
+    h += `
+      <div class="gram-step-footer">
+        <button class="gram-btn-next gram-btn-step-cta" onclick="Grammatica.irParaEtapa('exemplos')">
+          Avançar para Exemplos & Armadilhas →
+        </button>
+      </div>`;
+
+    h += '</div></div>';
+    return h;
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // ETAPA 2: 🔍 Exemplos & Armadilhas
+  // ─────────────────────────────────────────────────────────
+  _htmlEtapaExemplos(u) {
+    const nEx = (u.exercicios || []).length;
+    let h = '<div class="gram-card gram-teoria-card"><div class="gram-camadas">';
+
+    // 1. Exemplos Analisados (Pergunta -> Resposta -> Conclusão) com áudio isolado
+    h += this._htmlFase4Exemplos(u);
+
+    // 2. Frases extras de exemplo com áudio clicável
+    if (u.exemplos && u.exemplos.length) {
+      let lista = '';
+      for (const ex of u.exemplos) {
+        const it = typeof ex === 'string' ? ex : (ex.it || '');
+        const pt = typeof ex === 'string' ? '' : (ex.pt || '');
+        const safe = it.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+        lista += `
+          <div class="gram-esempio" onclick="App.pronunciar('${safe}')" style="cursor:pointer" title="Clique para ouvir a pronúncia em italiano">
+            <div class="gram-esempio-it">🔊 ${this._formatarPergunta(it)}</div>
+            ${pt ? `<div class="gram-esempio-pt">${this._formatarPergunta(pt)}</div>` : ''}
+          </div>`;
+      }
+      h += `
+        <div class="gram-camada-bloco">
+          <div class="gram-camada-label">🎧 Frases Autênticas para Ouvir e Repetir</div>
+          <div class="gram-esempi-lista" style="padding: 0.9rem 1.25rem">${lista}</div>
+        </div>`;
+    }
+
+    // 3. Armadilhas Comuns (Errado ✗ vs Certo ✓ com áudio na forma certa)
+    h += this._htmlFase5Armadilhas(u);
+
+    // 4. Coda (Resumo prático de memorização)
+    h += this._htmlCoda(u);
+
+    // Botões de navegação de rodapé
+    h += `
+      <div class="gram-step-footer" style="display:flex;gap:0.75rem;justify-content:space-between;flex-wrap:wrap">
+        <button class="gram-btn-secondary" onclick="Grammatica.irParaEtapa('aprender')">
+          ← Voltar à Regra
+        </button>
+        <button class="gram-btn-next gram-btn-step-cta" onclick="Grammatica.irParaEtapa('praticar')">
+          Ir para os Exercícios (${nEx}) ✏️ →
+        </button>
+      </div>`;
+
+    h += '</div></div>';
+    return h;
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // ETAPA 3: ✏️ Praticar (Exercícios + Consulta Rápida no Topo)
+  // ─────────────────────────────────────────────────────────
+  _htmlEtapaPraticar(u) {
+    let h = '';
+    // Painel colapsável de consulta rápida (Tabela Visual + Técnica + Ponte)
+    h += this._htmlTabelaVisual(u);
+
+    // Área de exercícios
+    h += '<div id="gram-ex-area">';
+    h += this._htmlExercicio();
+    h += '</div>';
+
+    return h;
   },
 
   // ─────────────────────────────────────────────────────────
@@ -288,11 +430,6 @@ const Grammatica = {
     // Pergunta
     html += `<div class="gram-ex-question">${qHtml}</div>`;
 
-    // A explicação só aparece no feedback (pós-resposta) — nunca antes,
-    // pois entregaria a resposta. A dica opcional (campo dica) continua
-    // visível antes para digitar, mas fica fora deste bloco.
-    // (removida renderização pre-answer de explicacao para todos os tipos)
-
     // Corpo do exercício
     if (ex.tipo === 'escolha') {
       html += this._htmlEscolha(ex);
@@ -302,13 +439,13 @@ const Grammatica = {
       html += this._htmlRivelar(ex);
     }
 
-    // Feedback (oculto)
+    // Feedback (oculto até responder)
     html += '<div class="gram-ex-feedback" id="gram-feedback"></div>';
 
     // Ações (ocultas até responder)
     html += '<div class="gram-ex-actions" id="gram-actions" style="display:none">';
     if (ex.tipo === 'revelar') {
-      html += '<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ Errei</button>';
+      html += '<button class="gram-btn-errei"  onclick="Grammatica.proximoExercicio()">❌ Preciso revisar</button>';
       html += '<button class="gram-btn-acertei" onclick="Grammatica.marcarAcerto()">✅ Acertei</button>';
     } else {
       html += '<button class="gram-btn-next" onclick="Grammatica.proximoExercicio()">Próximo →</button>';
@@ -348,21 +485,21 @@ const Grammatica = {
 
   // ─── Blur-reveal ───
   _htmlRivelar(ex) {
-    // Divide a resposta em palavras individuais com blur
-    const partes = ex.resposta.split(/(\s+)/);
+    const respStr = String(ex.resposta || '');
+    const partes = respStr.split(/(\s+)/);
     const spans  = partes.map(p => {
-      if (/^\s+$/.test(p)) return p; // espaços mantidos
+      if (/^\s+$/.test(p)) return p;
       return `<span class="gram-word-blur" onclick="Grammatica.togglePalavra(this)">${p}</span>`;
     }).join('');
 
     let html = '<div class="gram-revelar-area">';
     const hint = I18n.idioma === 'it'
       ? '👆 Clicca sulle parole per rivelare, o clicca su "Vedi risposta"'
-      : '👆 Clique nas palavras para revelar, ou clique em "Ver resposta"';
+      : '👆 Pense na resposta e clique nas palavras para conferir (ou em "Ver resposta")';
     html += `<div class="gram-revelar-hint">${hint}</div>`;
     html += `<div class="gram-risposta-container" id="gram-risposta">${spans}</div>`;
     html += '<div class="gram-revelar-actions">';
-    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">Ver resposta</button>';
+    html += '<button class="gram-btn-rivela-tutto" onclick="Grammatica.revelarTudo()">👁️ Ver resposta completa</button>';
     html += '<button class="gram-btn-nascondi" id="gram-btn-nascondi" onclick="Grammatica.nasconderTudo()">Ocultar</button>';
     html += '</div>';
     html += '</div>';
@@ -402,19 +539,36 @@ const Grammatica = {
     }
   },
 
+  _botaoOuvirExercicio(ex) {
+    let fraseParaOuvir = '';
+    if (ex.tipo === 'escolha' && Array.isArray(ex.opcoes) && typeof ex.resposta === 'number') {
+      const opCorreta = ex.opcoes[ex.resposta] || '';
+      if (ex.pergunta && ex.pergunta.includes('___')) {
+        fraseParaOuvir = ex.pergunta.replace(/___+/g, opCorreta).replace(/\*\*|\*/g, '');
+      } else {
+        fraseParaOuvir = opCorreta;
+      }
+    } else if (ex.resposta) {
+      fraseParaOuvir = String(ex.resposta);
+    }
+    fraseParaOuvir = fraseParaOuvir.replace(/\n+/g, ' ').trim();
+    if (!fraseParaOuvir || fraseParaOuvir.length > 180) return '';
+    const safe = fraseParaOuvir.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    return `<div style="margin-top:0.55rem"><button class="gram-audio-mini-btn" onclick="App.pronunciar('${safe}')">🔊 Ouvir pronúncia em italiano</button></div>`;
+  },
+
   _afterReveal() {
     if (this.respondida) return;
     this.respondida = true;
     const ex = this.unidadeAtual.exercicios[this.exIndex];
     const fb = document.getElementById('gram-feedback');
     if (fb && ex.explicacao) {
-      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>${I18n.t('gram_por_que')}</strong> ${ex.explicacao}</div>`;
+      fb.innerHTML = `<div class="gram-feedback-info">💡 <strong>${I18n.t('gram_por_que')}</strong> ${this._formatarPergunta(ex.explicacao)}${this._botaoOuvirExercicio(ex)}</div>`;
     }
     const actions = document.getElementById('gram-actions');
     if (actions) actions.style.display = 'flex';
   },
 
-  // Compatibilidade com código legado
   revelarResposta() { this.revelarTudo(); },
 
   // ─────────────────────────────────────────────────────────
@@ -427,7 +581,6 @@ const Grammatica = {
     const ex      = this.unidadeAtual.exercicios[this.exIndex];
     const correto = (indice === ex.resposta);
 
-    // Colorir opções
     for (let i = 0; i < ex.opcoes.length; i++) {
       const btn = document.getElementById(`gram-op-${i}`);
       if (!btn) continue;
@@ -439,12 +592,13 @@ const Grammatica = {
           : 'gram-option-disabled';
     }
 
-    // Feedback
     const fb = document.getElementById('gram-feedback');
     if (fb) {
+      const expHtml = this._formatarPergunta(ex.explicacao || '');
+      const audioBtn = this._botaoOuvirExercicio(ex);
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong> ${ex.explicacao}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${ex.explicacao}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong> ${expHtml}${audioBtn}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${expHtml}${audioBtn}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
@@ -475,9 +629,11 @@ const Grammatica = {
 
     const fb = document.getElementById('gram-feedback');
     if (fb) {
+      const expHtml = ex.explicacao ? ' ' + this._formatarPergunta(ex.explicacao) : '';
+      const audioBtn = this._botaoOuvirExercicio(ex);
       fb.innerHTML = correto
-        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong>${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`
-        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${I18n.t('gram_resposta_era')} <strong>${ex.resposta}</strong>.${ex.explicacao ? ' ' + ex.explicacao : ''}</div>`;
+        ? `<div class="gram-feedback-correct">✅ <strong>${I18n.t('gram_correto')}</strong>${expHtml}${audioBtn}</div>`
+        : `<div class="gram-feedback-wrong">❌ <strong>${I18n.t('gram_errado')}</strong> ${I18n.t('gram_resposta_era')} <strong>${ex.resposta}</strong>.${expHtml}${audioBtn}</div>`;
     }
 
     const actions = document.getElementById('gram-actions');
@@ -503,7 +659,6 @@ const Grammatica = {
     this.respondida = false;
     const area = document.getElementById('gram-ex-area');
     if (!area) return;
-    // Animação de saída
     area.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
     area.style.opacity = '0';
     area.style.transform = 'translateY(8px)';
@@ -511,7 +666,6 @@ const Grammatica = {
       area.innerHTML = this.exIndex >= this.unidadeAtual.exercicios.length
         ? this._htmlResultado()
         : this._htmlExercicio();
-      // Animação de entrada
       area.style.opacity = '1';
       area.style.transform = 'translateY(0)';
       area.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -539,10 +693,10 @@ const Grammatica = {
 
     if (typeof Calor !== 'undefined') Calor.registrar(total);
 
-    let emoji = '📚', msg = 'Continua a studiare — ci riesci!';
-    if      (pct === 100) { emoji = '🌟'; msg = 'Perfetto! Nessun errore!'; }
-    else if (pct >= 80)   { emoji = '🎉'; msg = 'Ottimo lavoro! Quasi perfetto!'; }
-    else if (pct >= 60)   { emoji = '💪'; msg = 'Bene! Continua così!'; }
+    let emoji = '📚', msg = 'Continue praticando — revise a teoria e tente novamente!';
+    if      (pct === 100) { emoji = '🌟'; msg = 'Perfeito! Você dominou todas as questões desta lição!'; }
+    else if (pct >= 80)   { emoji = '🎉'; msg = 'Excelente trabalho! Domínio muito sólido do tema!'; }
+    else if (pct >= 60)   { emoji = '💪'; msg = 'Bom resultado! Vale revisar as armadilhas para chegar a 100%.'; }
 
     // Próxima lição
     const unids = this.moduloAtual.lezioni;
@@ -550,49 +704,49 @@ const Grammatica = {
     let proxBtn = '';
     if (idx >= 0 && idx < unids.length - 1) {
       const prox = unids[idx + 1];
-      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">Prossimo capitolo →</button>`;
+      proxBtn = `<button class="gram-btn-next" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${prox.id}')">Próxima lição →</button>`;
     }
 
     return `
       <div class="gram-card gram-resultado">
         <div class="gram-res-emoji">${emoji}</div>
-        <div class="gram-res-title">Capitolo Completato!</div>
+        <div class="gram-res-title">Lição Concluída!</div>
         <div class="gram-res-score">${acertos}<span>/${total}</span></div>
-        <div class="gram-res-pct">${pct}% corretto</div>
+        <div class="gram-res-pct">${pct}% de acertos</div>
         ${!jaFeita ? `<div class="gram-res-xp">+${bonus} XP bônus 🏆</div>` : ''}
         <div class="gram-res-msg">${msg}</div>
         <div class="gram-res-actions">
-          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}')">🔄 Ripeti</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.abrirUnidade('${this.moduloAtual.id}','${this.unidadeAtual.id}','praticar')">🔄 Refazer Exercícios</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.irParaEtapa('aprender')">📖 Revisar Teoria</button>
           ${proxBtn}
-          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ Tutti i moduli</button>
+          <button class="gram-btn-secondary" onclick="Grammatica.voltarSeletor()">‹ Todos os módulos</button>
         </div>
       </div>`;
   },
 
   // ─────────────────────────────────────────────────────────
-  // Formatação da teoria (Markdown simples → HTML)
-  // Suporta:
-  //   • **bold** / *italic*
-  //   • pipe tables simples
-  //   • HTML tables raw (protegidas contra reprocessamento)
+  // Formatação da teoria (Markdown → HTML)
   // ─────────────────────────────────────────────────────────
   _formatarTeoria(texto) {
     if (!texto) return '';
 
-    // 0. Proteger HTML tables existentes (rowspan/colspan/etc.)
-    //    Substituímos por placeholders antes de qualquer processamento.
     const htmlTables = [];
     texto = texto.replace(/<table[\s\S]*?<\/table>/gi, (m) => {
       htmlTables.push(m);
       return `\x00T${htmlTables.length - 1}\x00`;
     });
 
-    // 1. Bold e italic
+    // Headings markdown (### e ####)
+    texto = texto
+      .replace(/^####\s+(.+)$/gm, '<h4 style="color:#9B2335;margin:1rem 0 0.4rem;font-size:1rem">$1</h4>')
+      .replace(/^###\s+(.+)$/gm, '<h3 style="color:#6B1A2A;margin:1.1rem 0 0.5rem;font-size:1.12rem;border-bottom:1px solid #ede0d0;padding-bottom:0.25rem">$1</h3>');
+
+    // Bold e italic
     texto = texto
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>');
 
-    // 2. Linhas pipe → <tr> (separadores |---|---| viram vazio)
+    // Linhas pipe → <tr>
     texto = texto.replace(/^(\|.+\|)$/gm, (row) => {
       const clean = row.replace(/[\|\s\-:]/g, '');
       if (!clean) return '';
@@ -604,47 +758,38 @@ const Grammatica = {
       }).join('') + '</tr>';
     });
 
-    // 3. Agrupa <tr> consecutivos em <table class="gram-table">
     texto = texto.replace(/((<tr>[\s\S]*?<\/tr>\n*)+)/g,
       '<table class="gram-table">$1</table>');
 
-    // 4. Remove \n dentro de <table> simples (geradas por pipe)
     texto = texto.replace(/(<table[^>]*>)([\s\S]*?)(<\/table>)/g,
       (_, open, inner, close) => open + inner.replace(/\n+/g, '') + close);
 
-    // 5. Normaliza \n ao redor de <table>
     texto = texto.replace(/\n+(<table)/g, '\n$1');
     texto = texto.replace(/(<\/table>)\n+/g, '$1\n');
 
-    // 6. Parágrafo e quebras de linha
     texto = texto.replace(/\n{2,}/g, '\n\n');
     texto = texto.replace(/\n\n/g, '</p><p>');
     texto = texto.replace(/\n/g, '<br>');
 
-    // 7. Limpeza de artefatos ao redor de tabelas
     texto = texto.replace(/<p>\s*<\/p>/g, '');
     texto = texto.replace(/(<br>)+(<table)/g, '$2');
     texto = texto.replace(/(<\/table>)(<br>)+/g, '$1');
     texto = texto.replace(/<p>(<table)/g, '$1');
     texto = texto.replace(/(<\/table>)<\/p>/g, '$1');
 
-    // 8. Restaurar HTML tables protegidas (com suas classes e rowspan/colspan)
     htmlTables.forEach((t, i) => {
       texto = texto.replace(`\x00T${i}\x00`, t);
     });
 
-    // 9. Caixas de destaque automáticas (Regola / Attenzione / Nota)
-    // Detecta parágrafos que começam com <strong>Regola</strong> ou similar
     texto = texto.replace(
-      /(<p>)(<strong>(?:Regola|Nota bene|Nota)[^<]*:<\/strong>)/gi,
+      /(<p>)(<strong>(?:Regola|Nota bene|Nota|Regra)[^<]*:<\/strong>)/gi,
       '<p class="gram-regola">$2'
     );
     texto = texto.replace(
-      /(<p>)(<strong>(?:Attenzione|Importante|Achtung)[^<]*!?:?<\/strong>)/gi,
+      /(<p>)(<strong>(?:Attenzione|Importante|Achtung|Atenção)[^<]*!?:?<\/strong>)/gi,
       '<p class="gram-attenzione">$2'
     );
 
-    // 10. Caixa de diálogo — detecta <p> com múltiplos <strong>Nome:</strong> seguidos de texto
     texto = texto.replace(
       /<p>(<strong>[A-ZÀÈÉÌÒÙ][a-zàèéìòùA-Z\s]+:<\/strong>[^<p]{0,300}<br>[^<p]{0,50}<strong>[A-ZÀÈÉÌÒÙ])/g,
       '<p class="gram-dialogo-box">$1'
@@ -653,9 +798,6 @@ const Grammatica = {
     return texto;
   },
 
-  // ─────────────────────────────────────────────────────────
-  // Formata texto de pergunta/opção (bold + italic)
-  // ─────────────────────────────────────────────────────────
   _formatarPergunta(texto) {
     if (!texto) return '';
     return String(texto)
@@ -664,84 +806,37 @@ const Grammatica = {
       .replace(/\n/g, '<br>');
   },
 
-  // ─────────────────────────────────────────────────────────
-  // Método NMA: orquestra as camadas pedagógicas
-  // Se a unidade tiver os novos campos, renderiza as camadas.
-  // Caso contrário, faz fallback para `teoria` + `exemplos` legados.
-  // ─────────────────────────────────────────────────────────
-  _htmlFases(u) {
-    const hasNovasFases = u.observacao_cards || u.armadilhas;
-    if (!hasNovasFases) {
-      // Fallback legado / NMA padrão de 7 camadas
-      return this._htmlCamadasLegado(u);
-    }
-
-    let h = '<div class="gram-camadas">';
-    h += this._htmlFase1Ancoragem(u);
-    h += this._htmlFase2Observacao(u);
-    h += this._htmlFase3Tabela(u);
-    h += this._htmlFase4Exemplos(u);
-    h += this._htmlFase5Armadilhas(u);
-    h += this._htmlCoda(u);
-    h += '</div>';
-    return h;
-  },
-
-  _htmlCamadasLegado(u) {
-    const hasNovos = u.alerta || u.inventario || u.definicao || u.tecnica || u.exemplos_prc || u.ponte || u.coda;
-    if (!hasNovos) {
-      let h = `<div class="gram-teoria-corpo">${this._formatarTeoria(u.teoria)}</div>`;
-      if (u.exemplos && u.exemplos.length) {
-        h += '<div class="gram-esempi-lista">';
-        for (const ex of u.exemplos) {
-          const it = typeof ex === 'string' ? ex : (ex.it || '');
-          const pt = typeof ex === 'string' ? '' : (ex.pt || '');
-          const safe = it.replace(/'/g, "\\'");
-          h += `<div class="gram-esempio"><div class="gram-esempio-it" onclick="App.pronunciar('${safe}')">🔊 ${it}</div>`;
-          if (pt) h += `<div class="gram-esempio-pt">${pt}</div>`;
-          h += '</div>';
-        }
-        h += '</div>';
-      }
-      return h;
-    }
-
-    let h = '<div class="gram-camadas">';
-    h += this._htmlAlerta(u);
-    h += this._htmlInventario(u);
-    h += this._htmlDefinicao(u);
-    h += this._htmlTecnica(u);
-    h += this._htmlExemplosPRCLegado(u);
-    h += this._htmlPonte(u);
-    h += this._htmlCoda(u);
-    h += '</div>';
-    return h;
-  },
-
   // ─── FASE 1: Ancoragem ───
   _htmlFase1Ancoragem(u) {
     if (!u.alerta) return '';
     return `<div class="gram-alerta">💬 <strong>${I18n.t('gram_por_que_importa')}</strong><br>${this._formatarPergunta(u.alerta)}</div>`;
   },
 
-  // ─── FASE 2: Observação (Flip Cards Clicáveis) ───
+  // ─── FASE 2: Observação (Flip Cards Clicáveis + Botão de Áudio) ───
   _htmlFase2Observacao(u) {
     if (!u.observacao_cards || !u.observacao_cards.length) return '';
     let cards = '';
     for (let i = 0; i < u.observacao_cards.length; i++) {
       const c = u.observacao_cards[i];
+      const safeIt = (c.italiano || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+      const badgeTxt = (c.artigo && c.artigo !== '⚠️' && c.artigo !== '📌')
+        ? `${c.artigo} · ${c.genero || ''}`
+        : (c.genero || 'regra');
       cards += `
         <div class="gram-flip-card" onclick="this.classList.toggle('flipped')">
           <div class="gram-flip-card-inner">
             <div class="gram-flip-card-front">
-              <div class="gfc-it">${c.italiano}</div>
-              <div class="gfc-pt">${c.traducao}</div>
-              <div class="gfc-badge">${c.genero}</div>
-              <div class="gfc-click">${I18n.idioma === 'it' ? 'Clicca per rivelare 👆' : 'Clique para revelar 👆'}</div>
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:0.4rem">
+                <div class="gfc-it">${c.italiano}</div>
+                <button class="gram-audio-mini-btn" onclick="event.stopPropagation();App.pronunciar('${safeIt}')" title="Ouvir pronúncia">🔊</button>
+              </div>
+              <div class="gfc-pt">🇧🇷 ${c.traducao}</div>
+              <div class="gfc-badge">${badgeTxt}</div>
+              <div class="gfc-click">${I18n.idioma === 'it' ? 'Clicca per vedere la regola 👆' : 'Clique no card para ver o porquê 👆'}</div>
             </div>
             <div class="gram-flip-card-back">
-              <div class="gfc-titulo-regra">O Padrão:</div>
-              <div class="gfc-regra-txt">${c.motivo}</div>
+              <div class="gfc-titulo-regra">💡 Por que funciona assim:</div>
+              <div class="gfc-regra-txt">${this._formatarPergunta(c.motivo)}</div>
             </div>
           </div>
         </div>`;
@@ -749,7 +844,7 @@ const Grammatica = {
     return `
       <div class="gram-camada-bloco">
         <div class="gram-camada-label">${I18n.t('gram_fase2_label')}</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase2_sub')}</div>
+        <div style="padding: 0.85rem 1.25rem 0.4rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase2_sub')}</div>
         <div class="gram-observacao-grid">${cards}</div>
       </div>`;
   },
@@ -764,79 +859,97 @@ const Grammatica = {
       </div>`;
   },
 
-  // ─── FASE 4: Exemplos P/R/C (Clicáveis / Colapsáveis) ───
+  // ─── FASE 4: Exemplos P/R/C (Com botão de expandir todos e áudio isolado) ───
+  toggleTodosPRC() {
+    const cards = document.querySelectorAll('.gram-prc-expandivel');
+    const todosAbertos = [...cards].every(c => c.classList.contains('aberto'));
+    cards.forEach(c => c.classList.toggle('aberto', !todosAbertos));
+  },
+
   _htmlFase4Exemplos(u) {
     if (!u.exemplos_prc || !u.exemplos_prc.length) return '';
     let rows = '';
     for (let i = 0; i < u.exemplos_prc.length; i++) {
       const e = u.exemplos_prc[i];
-      const safe = (e.oracao || '').replace(/'/g, "\\'");
+      const safe = (e.oracao || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+      // Deixa o 1º exemplo já aberto por padrão para o aluno entender a dinâmica
+      const abertoCls = i === 0 ? ' aberto' : '';
       rows += `
-        <div class="gram-prc-expandivel" id="gram-prc-card-${i}">
+        <div class="gram-prc-expandivel${abertoCls}" id="gram-prc-card-${i}">
           <div class="gram-prc-topo" onclick="this.parentElement.classList.toggle('aberto')">
-            <span class="gram-prc-it">🔊 <em>${e.oracao || ''}</em></span>
+            <span class="gram-prc-it">
+              <button class="gram-audio-mini-btn" onclick="event.stopPropagation();App.pronunciar('${safe}')" title="Ouvir frase">🔊</button>
+              <em>${this._formatarPergunta(e.oracao || '')}</em>
+            </span>
             <span class="gram-prc-btn-expandir">${I18n.t('gram_fase4_ver_detalhes')}</span>
           </div>
           <div class="gram-prc-conteudo-oculto">
-            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_pergunta')}</span> ${e.pergunta || ''}</div>
-            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_resposta')}</span> ${e.resposta || ''}</div>
-            <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">${I18n.t('gram_fase4_prc_conclusao')}</span> <strong>${e.conclusao || ''}</strong></div>
+            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_pergunta')}</span> ${this._formatarPergunta(e.pergunta || '')}</div>
+            <div class="gram-prc-pq"><span class="gram-prc-tag">${I18n.t('gram_fase4_prc_resposta')}</span> ${this._formatarPergunta(e.resposta || '')}</div>
+            <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">${I18n.t('gram_fase4_prc_conclusao')}</span> <strong>${this._formatarPergunta(e.conclusao || '')}</strong></div>
           </div>
         </div>`;
     }
     return `
       <div class="gram-camada-bloco">
-        <div class="gram-camada-label">${I18n.t('gram_fase4_label')}</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase4_sub')}</div>
+        <div class="gram-camada-label" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem">
+          <span>${I18n.t('gram_fase4_label')}</span>
+          <button class="gram-audio-mini-btn" onclick="Grammatica.toggleTodosPRC()" style="font-size:0.74rem">↕ Expandir / Recolher Todos</button>
+        </div>
+        <div style="padding: 0.85rem 1.25rem 0.4rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase4_sub')}</div>
         <div class="gram-prc-lista">${rows}</div>
       </div>`;
   },
 
-  // ─── FASE 5: Armadilhas (Lado a Lado Errado ✗ vs Certo ✓) ───
+  // ─── FASE 5: Armadilhas (Lado a Lado Errado ✗ vs Certo ✓ com Áudio) ───
   _htmlFase5Armadilhas(u) {
     if (!u.armadilhas || !u.armadilhas.length) return '';
     let cards = '';
     for (let i = 0; i < u.armadilhas.length; i++) {
       const a = u.armadilhas[i];
+      const safeCerto = (a.certo || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
       cards += `
         <div class="gram-armadilha-row">
           <div class="gram-armadilha-col gram-arm-errada">
             <span class="gram-arm-icon">✗</span>
             <div class="gram-arm-texto">
               <span class="gram-arm-lbl">${I18n.t('gram_arm_errado')}</span>
-              <strong>${a.errado}</strong>
+              <strong>${this._formatarPergunta(a.errado)}</strong>
             </div>
           </div>
-          <div class="gram-armadilha-col gram-arm-certa">
+          <div class="gram-armadilha-col gram-arm-certa" onclick="App.pronunciar('${safeCerto}')" style="cursor:pointer" title="Clique para ouvir a forma correta">
             <span class="gram-arm-icon">✓</span>
             <div class="gram-arm-texto">
-              <span class="gram-arm-lbl">${I18n.t('gram_arm_certo')}</span>
-              <strong>${a.certo}</strong>
+              <span class="gram-arm-lbl">${I18n.t('gram_arm_certo')} 🔊</span>
+              <strong>${this._formatarPergunta(a.certo)}</strong>
             </div>
           </div>
           <div class="gram-armadilha-motivo">
-            <strong>${I18n.t('gram_fase5_porque')}</strong> ${a.motivo}
+            <strong>${I18n.t('gram_fase5_porque')}</strong> ${this._formatarPergunta(a.motivo)}
           </div>
         </div>`;
     }
     return `
       <div class="gram-camada-bloco">
         <div class="gram-camada-label">${I18n.t('gram_fase5_label')}</div>
-        <div style="padding: 1rem 1.25rem 0.5rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase5_sub')}</div>
+        <div style="padding: 0.85rem 1.25rem 0.4rem; font-size: 0.9rem; color: #666; line-height: 1.5;">${I18n.t('gram_fase5_sub')}</div>
         <div class="gram-armadilhas-lista">${cards}</div>
       </div>`;
   },
 
-  // ── Tabela colapsável acima dos exercícios ──
+  // ── Painel de consulta rápida acima dos exercícios ──
   _htmlTabelaVisual(u) {
-    if (!u.tabela_visual) return '';
+    if (!u.tabela_visual && !u.tecnica) return '';
     return `<details class="gram-tabela-visual">
-      <summary>📋 Ver tabela de consulta (use durante os exercícios)</summary>
-      <div class="gram-tabela-conteudo">${u.tabela_visual}</div>
+      <summary>📋 Consulta Rápida da Regra (clique se precisar lembrar durante os exercícios)</summary>
+      <div class="gram-tabela-conteudo">
+        ${u.tabela_visual || ''}
+        ${u.tecnica ? `<div style="margin-top:0.85rem;padding-top:0.85rem;border-top:1px dashed #d9cbb8">${this._formatarTeoria(u.tecnica)}</div>` : ''}
+      </div>
     </details>`;
   },
 
-  // ── Camadas Legadas NMA ──
+  // ── Camadas Estruturais NMA (Agora sempre integradas na Etapa 1) ──
   _htmlAlerta(u) {
     if (!u.alerta) return '';
     return `<div class="gram-alerta">💬 ${this._formatarPergunta(u.alerta)}</div>`;
@@ -866,21 +979,6 @@ const Grammatica = {
     if (!u.tecnica) return '';
     const ft = this._formatarTeoria(u.tecnica);
     return `<div class="gram-camada-bloco gram-tecnica"><div class="gram-camada-label">${I18n.t('gram_tecnica_label')}</div><div class="gram-tecnica-corpo">${ft}</div></div>`;
-  },
-
-  _htmlExemplosPRCLegado(u) {
-    if (!u.exemplos_prc || !u.exemplos_prc.length) return '';
-    let rows = '';
-    for (const e of u.exemplos_prc) {
-      const safe = (e.oracao || '').replace(/'/g, "\\'");
-      rows += `<div class="gram-prc-row">
-        <div class="gram-prc-oracao" onclick="App.pronunciar('${safe}')">🔊 <em>${e.oracao || ''}</em></div>
-        <div class="gram-prc-pq"><span class="gram-prc-tag">P</span>${this._formatarPergunta(e.pergunta || '')}</div>
-        <div class="gram-prc-pq"><span class="gram-prc-tag">R</span>${this._formatarPergunta(e.resposta || '')}</div>
-        <div class="gram-prc-conclusao"><span class="gram-prc-tag gram-prc-tag-c">C</span><strong>${this._formatarPergunta(e.conclusao || '')}</strong></div>
-      </div>`;
-    }
-    return `<div class="gram-camada-bloco"><div class="gram-camada-label">${I18n.t('gram_exemplos_prc_label')}</div><div class="gram-prc-lista">${rows}</div></div>`;
   },
 
   _htmlPonte(u) {
