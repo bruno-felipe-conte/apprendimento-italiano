@@ -90,18 +90,35 @@ const Profilo = {
           ${this._row(I18n.t('prof_dias_ativos'), `${semana.giorniAttivi} / 7`)}
         </div>
 
-        <!-- Audio Speed -->
+        <!-- Configuração de Áudio & Voz Italiana -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">${I18n.t('prof_velocidade_audio')}</div>
-          <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
+          <div class="profilo-card-titulo">🎧 ${I18n.t('prof_velocidade_audio') || 'Configuração de Áudio & Voz'}</div>
+          
+          <div style="margin-bottom: 1rem;">
+            <label style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.35rem;">
+              🗣️ Voz Italiana (Sintetizador)
+            </label>
+            <select id="select-voz-italiana" onchange="Profilo.salvarVozItaliana(this.value)" style="width: 100%; padding: 0.55rem 0.8rem; border-radius: 8px; border: 1.5px solid #dcd3c5; font-family: inherit; font-size: 0.9rem; background: var(--cor-pergamena, #fbf7ee); color: var(--cor-inchiostro);">
+              ${Profilo.renderizarOpcoesVozes ? Profilo.renderizarOpcoesVozes() : '<option value="">Padrão do Sistema</option>'}
+            </select>
+            <div style="font-size: 0.75rem; color: #7f6e5d; margin-top: 0.3rem;">
+              ✨ Vozes <em>Natural/Online/Neural</em> proporcionam pronúncia autêntica humana.
+            </div>
+          </div>
+
+          <label style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
+            ⚡ Velocidade de Reprodução
+          </label>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:5px;">
             <span style="font-size:1.5rem">🐢</span>
             <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.05" value="${currentSpeed}" 
                    onchange="Profilo.salvarAudioSpeed(this.value)" oninput="document.getElementById('audio-speed-display').textContent = this.value + 'x'" style="flex:1;">
             <span style="font-size:1.5rem">🐇</span>
           </div>
           <div style="text-align:center; margin-top:5px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
-          <button class="btn-secondario" onclick="if(typeof App !== 'undefined') App.pronunciar(I18n.t('prof_testar_audio'))" style="margin-top:10px; width:100%;">
-            ${I18n.t('prof_testar_audio')}
+          
+          <button class="btn-secondario" onclick="App.pronunciar('Buongiorno! Questo è un test della voce italiana.')" style="margin-top:12px; width:100%;">
+            🔊 ${I18n.t('prof_testar_audio') || 'Testar Áudio'}
           </button>
         </div>
 
@@ -116,10 +133,6 @@ const Profilo = {
           <div class="profilo-card-titulo">${I18n.t('prof_traguardi')}</div>
           ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
         </div>
-
-        <!-- Velocidade do Áudio -->
-        <div class="profilo-card">
-          <div class="profilo-card-titulo">🎧 Velocità Audio (Audio Speed)</div>
           <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
             <span style="font-size:1.5rem">🐢</span>
             <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.1" value="${parseFloat(localStorage.getItem('it_audio_speed')) || 0.85}" 
@@ -244,9 +257,54 @@ const Profilo = {
     return `<div class="relatorio-chart">${bars}</div>`;
   },
 
+  // ── Seletor de Vozes Italianas (VoiceEngine) ───────────
+  renderizarOpcoesVozes() {
+    if (typeof VoiceEngine === 'undefined') {
+      return '<option value="">Padrão do Sistema</option>';
+    }
+    const vozes = VoiceEngine.obterMelhoresVozesItalianas();
+    if (!vozes.length) {
+      return '<option value="">Padrão do Navegador (it-IT)</option>';
+    }
+    const selecionada = localStorage.getItem('it_voz_preferida') || (VoiceEngine.obterVozSelecionada()?.name || '');
+    return vozes.map(v => {
+      const isSel = (v.name === selecionada) ? 'selected' : '';
+      let badge = '';
+      const nomeLower = v.name.toLowerCase();
+      if (nomeLower.includes('natural') || nomeLower.includes('online') || nomeLower.includes('neural')) {
+        badge = ' ✨ Neural';
+      } else if (nomeLower.includes('premium') || nomeLower.includes('enhanced')) {
+        badge = ' 💎 Premium';
+      } else if (nomeLower.includes('google')) {
+        badge = ' 🌐 Google';
+      }
+      return `<option value="${v.name}" ${isSel}>${v.name}${badge} (${v.lang})</option>`;
+    }).join('');
+  },
+
+  salvarVozItaliana(nome) {
+    if (nome) {
+      localStorage.setItem('it_voz_preferida', nome);
+      if (typeof VoiceEngine !== 'undefined') {
+        VoiceEngine._cacheVozes = null;
+      }
+      if (typeof App !== 'undefined') {
+        App._vozItaliana = null;
+        App._vozItalianaResolvida = false;
+        App.notificar('🗣️ Voz italiana atualizada!', 'sucesso');
+        App.pronunciar('Ottimo! Questa voce è pronta.');
+      }
+    }
+  },
+
   // ── Audio Speed ───────────────────────────────────────────
   salvarAudioSpeed(valor) {
     localStorage.setItem('it_audio_speed', valor);
+    if (typeof App !== 'undefined' && App.estado && App.estado.progresso) {
+      App.estado.progresso.audio_rate = parseFloat(valor);
+      App.salvarProgresso();
+      if (typeof App.atualizarAudioSpeedUI === 'function') App.atualizarAudioSpeedUI();
+    }
     const display = document.getElementById('audio-speed-display');
     if (display) display.textContent = valor + 'x';
   },

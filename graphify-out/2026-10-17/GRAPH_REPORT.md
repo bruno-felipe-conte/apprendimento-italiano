@@ -1,12 +1,12 @@
 # Graph Report - apprendimento-italiano  (2026-10-17)
 
 ## Corpus Check
-- 124 files · ~1,056,011 words
+- 125 files · ~1,063,848 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .webmanifest 1)
 
 ## Summary
-- 136 nodes · 128 edges · 32 communities (9 shown, 23 thin omitted)
+- 139 nodes · 131 edges · 32 communities (9 shown, 23 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
@@ -85,7 +85,7 @@
 ## Communities (32 total, 23 thin omitted)
 
 ### Community 1 - "json"
-Cohesion: 0.16
+Cohesion: 0.14
 Nodes (5): main(), make_est(), translate_hint_to_pt(), main(), translate_it_explanation_to_pt()
 
 ### Community 4 - "Core App Specs and Docs"
@@ -122,15 +122,17 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **13 isolated node(s):** `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source`, `Schema Curricular A1, A2, B1, B2 (Moduli e Unità)`, `Grammar JSON Schema (moduli, unidades, escolha, revelar)` (+8 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 82 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 83 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Main Single-Page Application HTML Shell (index.html)` connect `Core App Specs and Docs` to `PWA Offline-First Architecture QA Audit Checklist`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **What connects `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source` to the rest of the system?**
   _13 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `json` be split into smaller, more focused modules?**
+  _Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected._
 - **Why does `Service Worker Registration & ControllerChange Auto-Reload` connect `PWA Offline-First Architecture QA Audit Checklist` to `Core App Specs and Docs`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._

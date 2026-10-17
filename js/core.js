@@ -1056,11 +1056,16 @@ const App = {
   _vozItalianaResolvida: false, // true quando já procuramos (mesmo se não achou)
 
   _getVozItaliana() {
-    // Reseta cache se as vozes mudaram desde a última busca
-    if (!this._vozItalianaResolvida) {
+    if (typeof VoiceEngine !== 'undefined' && VoiceEngine.obterVozSelecionada) {
+      const voz = VoiceEngine.obterVozSelecionada();
+      if (voz) return voz;
+    }
+    // Fallback nativo resiliente se VoiceEngine ainda não estiver pronto
+    if (!this._vozItalianaResolvida && typeof speechSynthesis !== 'undefined') {
       const vozes = speechSynthesis.getVoices();
-      if (!vozes.length) return null; // ainda carregando
+      if (!vozes.length) return null;
       this._vozItaliana =
+        vozes.find(v => v.lang === 'it-IT' && (v.name.includes('Natural') || v.name.includes('Online'))) ||
         vozes.find(v => v.lang === 'it-IT') ||
         vozes.find(v => v.lang.startsWith('it')) ||
         null;
@@ -1076,7 +1081,8 @@ const App = {
       const speedStr = localStorage.getItem('it_audio_speed');
       let rate = parseFloat(speedStr);
       if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
-      responsiveVoice.speak(texto, 'Italian Female', { rate: rate, pitch: 1 });
+      const textoLimpo = (typeof VoiceEngine !== 'undefined') ? VoiceEngine.normalizarParaFala(texto) : texto;
+      responsiveVoice.speak(textoLimpo, 'Italian Female', { rate: rate, pitch: 1 });
     }
   },
 
@@ -1085,37 +1091,50 @@ const App = {
     // Respeita o botão 🔕
     if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
 
-    if (!('speechSynthesis' in window)) { this._pronunciarRV(texto); return; }
+    // Normalização fonética e de prosódia inspirada no VoiceStudio
+    const textoParaFalar = (typeof VoiceEngine !== 'undefined')
+      ? VoiceEngine.normalizarParaFala(texto)
+      : texto;
+
+    if (!textoParaFalar) return;
+
+    if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar); return; }
 
     speechSynthesis.cancel();
 
     const tentarFalar = () => {
       const voz = this._getVozItaliana();
 
-      const u = new SpeechSynthesisUtterance(texto);
-      u.lang  = 'it-IT';
-      
       const speedStr = localStorage.getItem('it_audio_speed');
       let rate = parseFloat(speedStr);
       if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
       rate = Math.max(0.1, Math.min(2.0, rate)); // Previne crashes de bounds out-of-range no WebKit
-      
+
+      const u = new SpeechSynthesisUtterance(textoParaFalar);
+      u.lang  = (voz && voz.lang) ? voz.lang : 'it-IT';
       u.rate  = rate;
-      u.pitch = 1;
+      
+      // Prosódia italiana natural (pergunta ganha leve elevação melódica)
+      if (textoParaFalar.endsWith('?')) {
+        u.pitch = 1.05;
+      } else if (textoParaFalar.endsWith('!')) {
+        u.pitch = 1.02;
+      } else {
+        u.pitch = 1.0;
+      }
+
       if (voz) u.voice = voz;
-      // Se não há voz italiana específica, usa lang='it-IT' sem voice explícita
-      // (a maioria dos browsers ainda sintetiza com o melhor disponível)
 
       u.onerror = (e) => {
         if (['language-unavailable','synthesis-failed','not-allowed','interrupted'].includes(e.error)) {
           speechSynthesis.cancel();
-          this._pronunciarRV(texto);
+          this._pronunciarRV(textoParaFalar);
         }
       };
 
-      // Se não há voz italiana nativa e já resolvemos isso → usar só RV, sem duplo stream
+      // Se não há voz italiana nativa e já resolvemos isso → usar só RV
       if (!voz && this._vozItalianaResolvida) {
-        this._pronunciarRV(texto);
+        this._pronunciarRV(textoParaFalar);
         return;
       }
       speechSynthesis.speak(u);
@@ -1127,7 +1146,7 @@ const App = {
       // Vozes ainda não carregaram — aguarda e reseta cache
       speechSynthesis.onvoiceschanged = () => {
         speechSynthesis.onvoiceschanged = null;
-        this._vozItalianaResolvida = false; // força nova busca com lista completa
+        this._vozItalianaResolvida = false;
         tentarFalar();
       };
     }

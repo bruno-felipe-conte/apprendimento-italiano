@@ -1,23 +1,24 @@
 # Graph Report - apprendimento-italiano  (2026-10-17)
 
 ## Corpus Check
-- 125 files · ~1,063,848 words
+- 126 files · ~1,065,769 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .webmanifest 1)
 
 ## Summary
-- 139 nodes · 131 edges · 32 communities (9 shown, 23 thin omitted)
+- 141 nodes · 132 edges · 33 communities (9 shown, 24 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `429b0e7a`
+- Built from commit: `d493ed39`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - PWA Offline-First Architecture QA Audit Checklist
 - json
+- voice_engine.js
 - Core App Specs and Docs
 - json
 - Grammar Curriculum Docs
@@ -82,7 +83,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (32 total, 23 thin omitted)
+## Communities (33 total, 24 thin omitted)
 
 ### Community 1 - "json"
 Cohesion: 0.14
@@ -122,8 +123,8 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **13 isolated node(s):** `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source`, `Schema Curricular A1, A2, B1, B2 (Moduli e Unità)`, `Grammar JSON Schema (moduli, unidades, escolha, revelar)` (+8 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 83 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 85 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

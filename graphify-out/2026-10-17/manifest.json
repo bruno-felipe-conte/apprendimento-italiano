@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "js/canzoni.js": {
-    "mtime": 1792204731.136856,
-    "seen": 1792205138.159209,
-    "ast_hash": "70b6d5a32f47ad2d5914c6c9eaf0d5d5",
+    "mtime": 1792241920.616809,
+    "seen": 1792242005.8494005,
+    "ast_hash": "8580bc2bb9d08a56ca51e2036fb99d19",
     "semantic_hash": ""
   },
   "js/conquistas.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792240064.7575605,
-    "seen": 1792240079.1966064,
-    "ast_hash": "a2b173444c90cb988709e12aa057b9f4",
+    "mtime": 1792266838.7167966,
+    "seen": 1792266919.9486206,
+    "ast_hash": "b169775e5bb0f211817c1bfbb8521b55",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792204320.6969266,
-    "seen": 1792205138.289838,
-    "ast_hash": "e44a434b046ba12e70bb7252c1e8f821",
+    "mtime": 1792266832.4613943,
+    "seen": 1792266920.2808065,
+    "ast_hash": "51d08965a898cc75b5f6fd0cb6342b1f",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -750,21 +750,27 @@
     "semantic_hash": ""
   },
   "data/locales/it-IT.json": {
-    "mtime": 1792229266.6196575,
-    "seen": 1792229385.2535264,
-    "ast_hash": "30fcf981c9bc7dec0e3c90f86c2870b7",
+    "mtime": 1792241580.4271479,
+    "seen": 1792242004.5477514,
+    "ast_hash": "48fc3830885036207634d258452e0ff5",
     "semantic_hash": ""
   },
   "data/locales/pt-BR.json": {
-    "mtime": 1792240064.8204472,
-    "seen": 1792240078.6675487,
-    "ast_hash": "839db75eca061b16d114616312221602",
+    "mtime": 1792241580.392593,
+    "seen": 1792242004.5477595,
+    "ast_hash": "00a44e819541019c954270dd5b3e2ef2",
     "semantic_hash": ""
   },
   "scripts/narrativizar_grammar.py": {
     "mtime": 1792240045.0041509,
     "seen": 1792240079.1650004,
     "ast_hash": "d5b9d3c43ee6214f7972cdd2ad2e6a7d",
+    "semantic_hash": ""
+  },
+  "scripts/build_canzoni_cloze.py": {
+    "mtime": 1792241834.6029484,
+    "seen": 1792242006.1448755,
+    "ast_hash": "37e8ed364052dcc016d341c058f87800",
     "semantic_hash": ""
   }
 }
