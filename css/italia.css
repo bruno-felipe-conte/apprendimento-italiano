@@ -1111,9 +1111,86 @@ body.dark-mode .card-meta-prazo {
 .gram-tabela-visual[open] summary::before { content: 'v '; font-size: 0.65rem; opacity: 0.7; }
 .gram-tabela-visual:not([open]) summary::before { content: '> '; font-size: 0.65rem; opacity: 0.7; }
 .gram-tabela-conteudo { padding: 0.85rem 1rem 1rem; border-top: 1px solid #f0e0b0; overflow-x: auto; }
-.gram-tabela-conteudo .tabela-intro { font-size: 0.82rem; color: var(--cor-pietra); margin-bottom: 0.8rem; }
-.artigo-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
-@media (max-width: 600px) { .artigo-cards { grid-template-columns: 1fr; } }
+.tabela-intro,
+.gram-tabela-conteudo .tabela-intro {
+  font-size: 0.85rem;
+  color: var(--cor-pietra, #7f6e5d);
+  margin-bottom: 0.85rem;
+  text-align: center;
+  line-height: 1.45;
+}
+/* Cards de Referência / Artigo / Verbo */
+.artigo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.85rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0.5rem auto;
+}
+/* 2 cards (A2 e B2 - 25 lições) */
+.artigo-cards:has(> :first-child:nth-last-child(2)) {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+/* 3 cards */
+.artigo-cards:has(> :first-child:nth-last-child(3)) {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+/* 3 cards + 1 irregular full-width (a1-lez2) */
+.artigo-cards:has(> .ac-cinza) {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+/* 4 cards (A1-lez1, C1, C2) */
+@media (min-width: 768px) {
+  .artigo-cards:has(> :first-child:nth-last-child(4)) {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+@media (min-width: 520px) and (max-width: 767px) {
+  .artigo-cards:has(> :first-child:nth-last-child(4)) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 580px) {
+  .artigo-cards,
+  .artigo-cards:has(> :first-child:nth-last-child(2)),
+  .artigo-cards:has(> :first-child:nth-last-child(3)),
+  .artigo-cards:has(> :first-child:nth-last-child(4)),
+  .artigo-cards:has(> .ac-cinza) {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* Cards sem cor fixa (.ac-card em A2, B2, C1, C2) */
+.ac-card {
+  background: var(--cor-pergamena, #fbf7ee);
+  border: 1px solid rgba(212, 168, 67, 0.35);
+  border-left: 5px solid var(--cor-veneziano, #9B2335);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ac-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.ac-head {
+  font-family: 'Cinzel', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--cor-veneziano-escuro, #7A1A28);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.02em;
+}
+.ac-body {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--cor-inchiostro, #2C2C2C);
+}
 .artigo-card { border-radius: 10px; padding: 0.75rem 0.9rem; border-left: 5px solid transparent; }
 .artigo-card .ac-titulo { font-size: 1.05rem; font-weight: 900; margin-bottom: 0.3rem; letter-spacing: 0.04em; }
 .artigo-card .ac-regra { font-size: 0.8rem; line-height: 1.45; margin-bottom: 0.35rem; }
@@ -1272,6 +1349,21 @@ body.dark-mode .ac-amarelo { background: #1f1a08; }
 body.dark-mode .ac-rosa { background: #1f0a14; }
 body.dark-mode .ac-verde { background: #0a1f12; }
 body.dark-mode .ac-cinza { background: #1a1d1e; }
+body.dark-mode .ac-card {
+  background: #1f1c19;
+  border-color: #3e3428;
+  border-left-color: #D4A843;
+}
+body.dark-mode .ac-head {
+  color: #D4A843;
+}
+body.dark-mode .ac-body {
+  color: #e0d8cc;
+}
+body.dark-mode .tabela-intro,
+body.dark-mode .gram-tabela-conteudo .tabela-intro {
+  color: #c4b5a2;
+}
 @media (max-width: 640px) { .gram-lesson-title { font-size: 1.25rem; } .gram-lesson-nav { flex-direction: column; align-items: flex-start; gap: 0.4rem; } .gram-ex-actions { justify-content: center; } .gram-res-score { font-size: 3.5rem; } }
 
 /* Canzoni cards - mais altos que dialoghi */

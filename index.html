@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=68">
+  <link rel="stylesheet" href="css/italia.css?v=69">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -938,10 +938,101 @@
     .gram-tabela-visual[open] summary::before { content: '▼ '; font-size: 0.65rem; opacity: 0.7; }
     .gram-tabela-visual:not([open]) summary::before { content: '▶ '; font-size: 0.65rem; opacity: 0.7; }
     .gram-tabela-conteudo { padding: 0.85rem 1rem 1rem; border-top: 1px solid #f0e0b0; overflow-x: auto; }
-    .gram-tabela-conteudo .tabela-intro { font-size: 0.82rem; color: var(--cor-pietra); margin-bottom: 0.8rem; }
-    /* Cards coloridos por artigo */
-    .artigo-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.65rem; }
-    @media (max-width: 600px) { .artigo-cards { grid-template-columns: 1fr; } }
+    .tabela-intro,
+    .gram-tabela-conteudo .tabela-intro {
+      font-size: 0.85rem;
+      color: var(--cor-pietra, #7f6e5d);
+      margin-bottom: 0.85rem;
+      text-align: center;
+      line-height: 1.45;
+    }
+    body.dark-mode .tabela-intro,
+    body.dark-mode .gram-tabela-conteudo .tabela-intro {
+      color: #c4b5a2;
+    }
+    /* Cards de Referência / Artigo / Verbo */
+    .artigo-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.85rem;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      margin: 0.5rem auto;
+    }
+    /* 2 cards (A2 e B2 - 25 lições) */
+    .artigo-cards:has(> :first-child:nth-last-child(2)) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    /* 3 cards */
+    .artigo-cards:has(> :first-child:nth-last-child(3)) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    /* 3 cards + 1 irregular full-width (a1-lez2) */
+    .artigo-cards:has(> .ac-cinza) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    /* 4 cards (A1-lez1, C1, C2) */
+    @media (min-width: 768px) {
+      .artigo-cards:has(> :first-child:nth-last-child(4)) {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+    }
+    @media (min-width: 520px) and (max-width: 767px) {
+      .artigo-cards:has(> :first-child:nth-last-child(4)) {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 580px) {
+      .artigo-cards,
+      .artigo-cards:has(> :first-child:nth-last-child(2)),
+      .artigo-cards:has(> :first-child:nth-last-child(3)),
+      .artigo-cards:has(> :first-child:nth-last-child(4)),
+      .artigo-cards:has(> .ac-cinza) {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    /* Cards sem cor fixa (.ac-card em A2, B2, C1, C2) */
+    .ac-card {
+      background: var(--cor-pergamena, #fbf7ee);
+      border: 1px solid rgba(212, 168, 67, 0.35);
+      border-left: 5px solid var(--cor-veneziano, #9B2335);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .ac-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    .ac-head {
+      font-family: 'Cinzel', serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--cor-veneziano-escuro, #7A1A28);
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.02em;
+    }
+    .ac-body {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--cor-inchiostro, #2C2C2C);
+    }
+    body.dark-mode .ac-card {
+      background: #1f1c19;
+      border-color: #3e3428;
+      border-left-color: #D4A843;
+    }
+    body.dark-mode .ac-head {
+      color: #D4A843;
+    }
+    body.dark-mode .ac-body {
+      color: #e0d8cc;
+    }
     .artigo-card { border-radius: 10px; padding: 0.75rem 0.9rem; border-left: 5px solid transparent; }
     .artigo-card .ac-titulo { font-size: 1.05rem; font-weight: 900; margin-bottom: 0.3rem; letter-spacing: 0.04em; }
     .artigo-card .ac-regra { font-size: 0.8rem; line-height: 1.45; margin-bottom: 0.35rem; }
@@ -2183,17 +2274,6 @@
     /* ── Bottom nav & mobile tweaks — ver italia.css ── */
     @media (max-width: 640px) {
       .flashcard { height: 300px !important; }
-      .artigo-cards { grid-template-columns: 1fr !important; }
-    }
-    @media (min-width: 480px) and (max-width: 900px) {
-      .artigo-cards {
-        grid-template-columns: 1fr 1fr !important;
-      }
-    }
-    @media (min-width: 900px) {
-      .artigo-cards {
-        grid-template-columns: 1fr 1fr 1fr 1fr !important;
-      }
     }
   
     @media (max-width: 640px) {
