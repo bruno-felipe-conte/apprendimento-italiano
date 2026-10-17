@@ -540,9 +540,9 @@
     "semantic_hash": "bf19e0c3ae4a6a612349ed50e5b0fd81"
   },
   "js/profilo.js": {
-    "mtime": 1792270161.4145527,
-    "seen": 1792270346.6235156,
-    "ast_hash": "1f821b94d684803180ce1a43a7ace00a",
+    "mtime": 1792273609.1627035,
+    "seen": 1792273874.1712012,
+    "ast_hash": "f34fa2317419c0c0a4fb3cdee0cd6ed9",
     "semantic_hash": ""
   },
   "js/progression.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792270199.536472,
-    "seen": 1792270346.918496,
-    "ast_hash": "6cba370da5291751fe7b43249c4ed9c2",
+    "mtime": 1792273824.476684,
+    "seen": 1792273874.5163724,
+    "ast_hash": "f67d83c82a7eebd7c204981092473411",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792270181.9874167,
-    "seen": 1792270347.208811,
-    "ast_hash": "c94871a6780c77e9409f1380c9fa30c0",
+    "mtime": 1792273771.4988453,
+    "seen": 1792273874.8726377,
+    "ast_hash": "fb6cc75b2daac4045d243efc8eaaa72e",
     "semantic_hash": ""
   },
   "icons/icon.svg": {

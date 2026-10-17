@@ -77,7 +77,13 @@ button { cursor:pointer; border:none; background:none; font-family:inherit; }
 input,textarea,select { font-family:inherit; }
 
 /* 4. LAYOUT */
-.app-container { max-width:1100px; margin:0 auto; padding:0 var(--esp-md); }
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--esp-md);
+  transition: max-width 0.2s ease;
+}
 
 .app-header {
   position:sticky; top:0; z-index:var(--z-sticky);
@@ -487,9 +493,12 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 }
 
 
-/* ── Desktop largo (>1024px) ── */
+/* ── Desktop largo (>1024px) e Widescreen (>1400px) ── */
 @media (min-width: 1025px) {
-  .app-container { max-width: 1100px; }
+  .app-container { max-width: 1200px; }
+}
+@media (min-width: 1400px) {
+  .app-container { max-width: 1440px; padding: 0 var(--esp-lg); }
 }
 
 /* ===============================================================
@@ -882,6 +891,7 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 @media (min-width:600px) { .tab-icone{display:none;} .tab-texto{display:block;} }
 @media (min-width:768px) { .templos-grid{grid-template-columns:repeat(2,1fr);} .flashcard{height:340px;} .section-titulo{font-size:2rem;} }
 @media (min-width:1100px) { .templos-grid{grid-template-columns:repeat(3,1fr);} .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
+@media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)) !important; gap: 1.25rem;} }
 
 /* 16. UTILITIES */
 .oculto { display:none !important; }
@@ -1045,11 +1055,21 @@ body.dark-mode .card-meta-prazo {
 @media (min-width:1100px) {
   .dialogo-grid { grid-template-columns: repeat(auto-fill, minmax(195px,1fr)); }
 }
+@media (min-width:1400px) {
+  .dialogo-grid { grid-template-columns: repeat(auto-fill, minmax(210px,1fr)) !important; gap: 1.25rem; }
+}
+
+@media (min-width:1024px) {
+  .profilo-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important; gap: 1.25rem; }
+}
 
 /* ===============================================================
    19. GRAMMATICA - Design Premium (migrado do inline HTML)
    =============================================================== */
 #grammatica-container { max-width: 860px; margin: 0 auto; }
+@media (min-width: 1200px) {
+  #grammatica-container { max-width: 1100px; }
+}
 .gram-seletor-titulo { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--cor-veneziano-escuro); margin-bottom: 1.4rem; text-align: center; letter-spacing: 0.06em; }
 .gram-nivel-banner { border-radius: 14px; padding: 1.1rem 1.4rem; margin-bottom: 1.3rem; color: #FFF8F0; }
 .gram-nivel-badge-txt { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.82; }

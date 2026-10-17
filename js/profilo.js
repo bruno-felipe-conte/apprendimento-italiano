@@ -128,21 +128,10 @@ const Profilo = {
           <div style="font-size:0.87rem;color:#666;line-height:1.8;">${topCats}</div>
         </div>
 
-        <!-- Conquistas -->
+                <!-- Conquistas -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_traguardi')}</div>
           ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
-        </div>
-          <div style="display:flex; align-items:center; gap:10px; margin-top:10px;">
-            <span style="font-size:1.5rem">🐢</span>
-            <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.1" value="${parseFloat(localStorage.getItem('it_audio_speed')) || 0.85}" 
-                   onchange="Profilo.salvarAudioSpeed(this.value)" style="flex:1;">
-            <span style="font-size:1.5rem">🐇</span>
-          </div>
-          <div style="text-align:center; margin-top:5px; font-weight:bold;" id="audio-speed-display">${parseFloat(localStorage.getItem('it_audio_speed')) || 0.85}x</div>
-          <button class="btn-secondario" onclick="App.pronunciar('Questo è un test della velocità audio.')" style="margin-top:10px; width:100%;">
-            🔊 Testa Audio
-          </button>
         </div>
 
         <!-- Lembretes push — só renderiza se o módulo estiver carregado e a API disponível -->
@@ -189,6 +178,7 @@ const Profilo = {
     if (typeof Conquistas !== 'undefined') {
       Conquistas.renderizarPainel('profilo-conquistas');
     }
+    this.atualizarSelectVozes();
   },
 
   // ── Salvar Audio Speed ────────────────────────────────────
@@ -280,6 +270,16 @@ const Profilo = {
       }
       return `<option value="${v.name}" ${isSel}>${v.name}${badge} (${v.lang})</option>`;
     }).join('');
+  },
+
+  atualizarSelectVozes() {
+    const sel = document.getElementById('select-voz-italiana');
+    if (sel && typeof this.renderizarOpcoesVozes === 'function') {
+      const html = this.renderizarOpcoesVozes();
+      if (html && html !== sel.innerHTML) {
+        sel.innerHTML = html;
+      }
+    }
   },
 
   salvarVozItaliana(nome) {
@@ -452,3 +452,13 @@ const Profilo = {
     </div>`;
   }
 };
+
+
+// Garante que o select de vozes seja atualizado quando o navegador carregar a lista de vozes
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  window.speechSynthesis.addEventListener('voiceschanged', () => {
+    if (typeof Profilo !== 'undefined' && typeof Profilo.atualizarSelectVozes === 'function') {
+      Profilo.atualizarSelectVozes();
+    }
+  });
+}
