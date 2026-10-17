@@ -17,14 +17,33 @@ const Grammatica = {
   _adminMods: new Set(),   // módulos desbloqueados temporariamente pelo admin
 
   // ─────────────────────────────────────────────────────────
-  // Carregar dados
+  // Carregar dados (Stale-While-Revalidate)
   // ─────────────────────────────────────────────────────────
   async carregar() {
     if (this.dados) return;
     try {
+      const cached = localStorage.getItem('it_swr_grammar');
+      if (cached) {
+        this.dados = JSON.parse(cached);
+        // Revalida em background sem bloquear a UI
+        fetch('data/grammar.json')
+          .then(r => r.ok ? r.json() : null)
+          .then(fresh => {
+            if (fresh && Array.isArray(fresh.moduli)) {
+              this.dados = fresh;
+              try { localStorage.setItem('it_swr_grammar', JSON.stringify(fresh)); } catch (_) {}
+            }
+          })
+          .catch(() => {});
+        return;
+      }
+    } catch (_) {}
+
+    try {
       const r = await fetch('data/grammar.json');
       if (!r.ok) throw new Error('grammar.json não encontrado');
       this.dados = await r.json();
+      try { localStorage.setItem('it_swr_grammar', JSON.stringify(this.dados)); } catch (_) {}
     } catch (e) {
       console.error('Grammatica: erro ao carregar dados', e);
       this.dados = { moduli: [] };
@@ -47,6 +66,7 @@ const Grammatica = {
     if (this.unidadeAtual && this.etapaAtual === 'praticar' && this.exIndex > 0 && this.exIndex < total) {
       if (!confirm('Deseja voltar aos módulos? O progresso dos exercícios desta lição será perdido.')) return;
     }
+    this.unidadeAtual = null;
     this.renderizarSeletor();
   },
 
@@ -73,13 +93,17 @@ const Grammatica = {
 
       // Module banner (clicável para colapsar/expandir)
       const adminDesbloqueado = this._adminMods.has(mod.id);
+      const infoTxt = I18n.t('gram_concluidas_info')
+        .replace('{c}', completas)
+        .replace('{t}', totalUnid)
+        .replace('{e}', totalEx);
       html += `<div class="gram-nivel-banner" data-nivel="${mod.id}" style="background:${mod.cor};cursor:pointer;user-select:none" onclick="Grammatica.toggleNivel('${mod.id}')">`;
       html += `<div style="display:flex;align-items:center;justify-content:space-between">`;
       html += `<div class="gram-nivel-badge-txt">${mod.id}${adminDesbloqueado ? ' &nbsp;🔓 Admin' : ''}</div>`;
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;
       html += `</div>`;
       html += `<div class="gram-nivel-nome">${mod.nome}</div>`;
-      html += `<div class="gram-nivel-info">${completas}/${totalUnid} concluídas &middot; ${totalEx} exercícios</div>`;
+      html += `<div class="gram-nivel-info">${infoTxt}</div>`;
       html += `<div class="gram-nivel-barra"><div style="width:${pct}%"></div></div>`;
       html += '</div>';
 
@@ -94,7 +118,7 @@ const Grammatica = {
         html += `<span class="gram-lez-info">`;
         if (u.num) html += `<span class="gram-lez-num-label">${u.num}</span>`;
         html += `<span class="gram-lez-titulo">${u.titulo}</span>`;
-        html += `<span class="gram-lez-meta">📖 Teoria${nCards ? ` · ${nCards} cards` : ''} · ✏️ ${nEx} exercícios</span>`;
+        html += `<span class="gram-lez-meta">${I18n.t('gram_meta_teoria')}${nCards ? ` · ${nCards} cards` : ''} · ✏️ ${nEx} ${I18n.t('gram_meta_exercicios')}</span>`;
         html += `</span>`;
         html += `<span class="gram-lez-arrow">›</span>`;
         html += '</button>';
@@ -112,7 +136,7 @@ const Grammatica = {
         html += `<span class="gram-locked-pill-info">`;
         html += `<span class="gram-locked-pill-id">${mod.id}</span>`;
         html += `<span class="gram-locked-pill-nome">${mod.nome}</span>`;
-        html += `<span class="gram-locked-pill-req">Requer Nível ${mod.nivel_minimo} (ou clique para desbloquear)</span>`;
+        html += `<span class="gram-locked-pill-req">${I18n.t('gram_requer_nivel').replace('{n}', mod.nivel_minimo)}</span>`;
         html += `</span>`;
         html += `<span class="gram-locked-pill-arrow">›</span>`;
         html += `</button>`;
@@ -296,8 +320,9 @@ const Grammatica = {
   _htmlEtapaAprender(u) {
     let h = '<div class="gram-card gram-teoria-card"><div class="gram-camadas">';
 
-    // 1. Alerta / Por que isso importa
-    h += this._htmlFase1Ancoragem(u);
+    // 0. Jornada narrativa: cena viva + fio condutor
+    h += this._htmlCena(u);
+    if (u.fio && u.fio.descoberta) h += `<p class="gram-fio">${this._formatarPergunta(u.fio.descoberta)}</p>`;
 
     // 2. Definição (Veja -> Pense -> Entenda)
     h += this._htmlDefinicao(u);
@@ -325,6 +350,8 @@ const Grammatica = {
 
     // 8. Ponte com o Português (Comparação contrastiva PT ↔ IT)
     h += this._htmlPonte(u);
+
+    if (u.fio && u.fio.fecho) h += `<p class="gram-fio gram-fio-fecho">${this._formatarPergunta(u.fio.fecho)}</p>`;
 
     // Botão de avanço intuitivo para a Etapa 2
     h += `
@@ -807,6 +834,21 @@ const Grammatica = {
   },
 
   // ─── FASE 1: Ancoragem ───
+  _htmlCena(u) {
+    if (!u.cena) return '';
+    const esc = t => t.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const linhas = u.cena.texto.split('\n').map(x => x.trim()).filter(x => x && !/^_.*_$/.test(x));
+    let corpo = '';
+    for (const raw of linhas) {
+      const plain = raw.replace(/\*\*[^*]+:\*\*\s*/, '').replace(/\*/g, '').replace(/_/g, '');
+      corpo += `<div class="gram-cena-linha"><button class="gram-audio-mini-btn" onclick="App.pronunciar('${esc(plain)}')" title="Ouvir">🔊</button><span>${this._formatarPergunta(raw)}</span></div>`;
+    }
+    const abertura = (u.fio && u.fio.abertura) ? `<p class="gram-fio">${this._formatarPergunta(u.fio.abertura)}</p>` : '';
+    return `<div class="gram-cena">
+      <div class="gram-cena-etiqueta">🎭 ${u.cena.origem === 'parla_e_scrivi' ? 'La scena' : 'Vozes da vida real'} — ${u.cena.titulo}</div>
+      ${abertura}<div class="gram-cena-corpo">${corpo}</div></div>`;
+  },
+
   _htmlFase1Ancoragem(u) {
     if (!u.alerta) return '';
     return `<div class="gram-alerta">💬 <strong>${I18n.t('gram_por_que_importa')}</strong><br>${this._formatarPergunta(u.alerta)}</div>`;

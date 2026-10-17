@@ -1,6 +1,5 @@
 {
   "0": "PWA Offline-First Architecture QA Audit Checklist",
-  "1": "update_grammar.py",
-  "5": "json",
-  "10": "update_canzoni.py"
+  "1": "json",
+  "5": "json"
 }

@@ -22,11 +22,33 @@ const Storie = {
   async carregar() {
     if (!this.dados) {
       try {
+        const cached = localStorage.getItem('it_swr_storie');
+        if (cached) {
+          const raw = JSON.parse(cached);
+          raw.storie = (raw.storie || []).map(s => this._normalizar(s));
+          this.dados = raw;
+          fetch('data/storie.json')
+            .then(r => r.ok ? r.json() : null)
+            .then(fresh => {
+              if (fresh && Array.isArray(fresh.storie)) {
+                fresh.storie = fresh.storie.map(s => this._normalizar(s));
+                this.dados = fresh;
+                try { localStorage.setItem('it_swr_storie', JSON.stringify(fresh)); } catch (_) {}
+              }
+            })
+            .catch(() => {});
+        }
+      } catch (_) {}
+    }
+
+    if (!this.dados) {
+      try {
         const r = await fetch('data/storie.json');
         if (r.ok) {
           const raw = await r.json();
           raw.storie = (raw.storie || []).map(s => this._normalizar(s));
           this.dados = raw;
+          try { localStorage.setItem('it_swr_storie', JSON.stringify(raw)); } catch (_) {}
         } else this.dados = { storie: [] };
       } catch { this.dados = { storie: [] }; }
     }

@@ -624,11 +624,11 @@ const Flashcards = {
     resumo.style.display = 'block';
   },
 
-  // ── Toggle favorite for current card ─────────────────────
+  // ── Toggle favorite for current card (Optimistic UI) ───────
   toggleFavorito() {
     if (!this.cartaAtual) return;
-    const adicionado = App.toggleFavorito(this.cartaAtual.id);
     const btn = document.getElementById('btn-favorito');
+    const adicionado = App.toggleFavorito(this.cartaAtual.id, btn);
     if (btn) btn.textContent = adicionado ? '❤️' : '🤍';
     App.notificar(adicionado ? 'notif_fc_favorito_add' : 'notif_fc_favorito_rem', 'alerta');
   },

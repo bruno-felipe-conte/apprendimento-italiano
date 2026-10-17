@@ -6,34 +6,37 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v100';
-
+const CACHE = 'italiano-v104';
+ 
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
   './',
   './index.html',
   './css/italia.css',
   './css/styles.css',
-  // JS — módulos da aplicação (URLs com ?v=68 para forçar atualização de cache)
-  './js/audio.js?v=68',
-  './js/conquistas.js?v=68',
-  './js/core.js?v=68',
-  './js/dialoghi.js?v=68',
-  './js/canzoni.js?v=68',
-  './js/imitazione.js?v=68',
-  './js/flashcards.js?v=68',
-  './js/grammar.js?v=68',
-  './js/heatmap.js?v=68',
-  './js/onboarding.js?v=68',
-  './js/profilo.js?v=68',
-  './js/progression.js?v=68',
-  './js/quiz.js?v=68',
+  // Dicionários desacoplados i18n
+  './data/locales/pt-BR.json',
+  './data/locales/it-IT.json',
+  // JS — módulos da aplicação (URLs com ?v=69 para forçar atualização de cache)
+  './js/audio.js?v=69',
+  './js/conquistas.js?v=69',
+  './js/core.js?v=69',
+  './js/dialoghi.js?v=69',
+  './js/canzoni.js?v=69',
+  './js/imitazione.js?v=69',
+  './js/flashcards.js?v=69',
+  './js/grammar.js?v=69',
+  './js/heatmap.js?v=69',
+  './js/onboarding.js?v=69',
+  './js/profilo.js?v=69',
+  './js/progression.js?v=69',
+  './js/quiz.js?v=69',
   './js/quiz_data.js',
-  './js/vocab.js?v=68',
-  './js/i18n.js?v=68',
+  './js/vocab.js?v=69',
+  './js/i18n.js?v=69',
   './js/notificacoes.js',
   './js/tour.js',
-  './js/storie.js?v=68',
+  './js/storie.js?v=69',
   './js/ia-import.js',
   // Dados
   './data/conjugacoes.json',
@@ -99,19 +102,18 @@ self.addEventListener('fetch', event => {
   // Ignora requisições cross-origin que não sejam fontes
   if (url.origin !== self.location.origin) return;
 
-  // 2. /data/*.json — network-first (recebe atualizações de conteúdo)
-  //    Se offline, entrega do cache; se não cacheado, retorna 503 JSON vazio
+  // 2. /data/*.json — Stale-While-Revalidate (retorna cache instantâneo e revalida em background)
   if (url.pathname.includes('/data/')) {
     event.respondWith(
-      fetch(req)
-        .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(req, clone));
-          return res;
+      caches.open(CACHE).then(cache =>
+        cache.match(req).then(cached => {
+          const networkFetch = fetch(req).then(res => {
+            if (res.ok) cache.put(req, res.clone());
+            return res;
+          }).catch(() => cached || new Response('{"palavras":[],"storie":[],"nome":"","numero":0,"dialogi":[],"canzoni":[],"perguntas":[],"fases":[],"imitazioni":[]}', { status: 503, headers: { 'Content-Type': 'application/json' } }));
+          return cached || networkFetch;
         })
-        .catch(() => caches.match(req).then(cached =>
-          cached || new Response('{"palavras":[],"storie":[],"nome":"","numero":0,"dialogi":[],"canzoni":[],"perguntas":[],"fases":[],"imitazioni":[]}', { status: 503, headers: { 'Content-Type': 'application/json' } })
-        ))
+      )
     );
     return;
   }

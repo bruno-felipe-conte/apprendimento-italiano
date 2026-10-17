@@ -8,13 +8,33 @@ const Imitazione = {
   _listaAtual: null, // frases filtradas
 
   async carregar() {
-    if (this.dados) return;
-    try {
-      const r = await fetch('data/imitazioni.json');
-      this.dados = await r.json();
-    } catch (e) {
-      console.error('Erro ao carregar imitazioni.json', e);
-      this.dados = { imitazioni: [] };
+    if (!this.dados) {
+      try {
+        const cached = localStorage.getItem('it_swr_imitazioni');
+        if (cached) {
+          this.dados = JSON.parse(cached);
+          fetch('data/imitazioni.json')
+            .then(r => r.ok ? r.json() : null)
+            .then(fresh => {
+              if (fresh && Array.isArray(fresh.imitazioni)) {
+                this.dados = fresh;
+                try { localStorage.setItem('it_swr_imitazioni', JSON.stringify(fresh)); } catch (_) {}
+              }
+            })
+            .catch(() => {});
+        }
+      } catch (_) {}
+    }
+
+    if (!this.dados) {
+      try {
+        const r = await fetch('data/imitazioni.json');
+        this.dados = await r.json();
+        try { localStorage.setItem('it_swr_imitazioni', JSON.stringify(this.dados)); } catch (_) {}
+      } catch (e) {
+        console.error('Erro ao carregar imitazioni.json', e);
+        this.dados = { imitazioni: [] };
+      }
     }
     // Mescla frases customizadas — custom primeiro
     try {

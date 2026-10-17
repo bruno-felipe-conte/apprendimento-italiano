@@ -2567,11 +2567,11 @@
             <span class="lang-pill-div">|</span>
             <span id="lang-pill-it" class="lang-pill-seg">IT</span>
           </button>
-          <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema">☀️</button>
-          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados">🔕</button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio" style="font-family: monospace; font-size: 0.7rem; font-weight: bold;">.85x</button>
-          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório">❓</button>
-          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo">👤</button>
+          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
+          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
+          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
+          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
+          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
         </div>
       </div>
       <div class="stats-bar" id="stats-bar">
@@ -2605,10 +2605,10 @@
 
   <!-- Daily goal bar -->
   <div class="daily-goal-bar" id="daily-goal-bar">
-    <span class="meta-bar-label" id="meta-bar-label">🎯 Meta do dia</span>
+    <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
     <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
     <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
-    <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️</button>
+    <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
   </div>
 
   <!-- Meta settings modal -->
@@ -2636,27 +2636,32 @@
       <!-- Heatmap di attività — topo da página -->
       <div class="heatmap-container">
         <div class="heatmap-header">
-          <h3 class="heatmap-titolo">🔥 La Tua Attività</h3>
+          <h3 class="heatmap-titolo" data-i18n="hm_titulo">🔥 Sua Atividade</h3>
           <div class="heatmap-stats" id="heatmap-stats"></div>
         </div>
         <div id="heatmap"></div>
         <div class="heatmap-legend">
-          <span>Meno</span>
+          <span data-i18n="hm_meno">Menos</span>
           <span class="hm-cell l0"></span>
           <span class="hm-cell l1"></span>
           <span class="hm-cell l2"></span>
           <span class="hm-cell l3"></span>
           <span class="hm-cell l4"></span>
-          <span>Più</span>
+          <span data-i18n="hm_piu">Mais</span>
         </div>
       </div>
 
       <!-- Parola del Giorno -->
       <div id="parola-del-giorno" style="display:none"></div>
 
-      <h2 class="section-titulo">I Dieci Templi dell'Italiano</h2>
+      <h2 class="section-titulo" data-i18n="templi_titulo">I Dieci Templi dell'Italiano</h2>
       <div class="templos-grid" id="templos-grid">
-        <p style="color:#888;font-style:italic;padding:1rem;">Caricamento in corso...</p>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
+        <div class="skeleton-card-templo"><div class="sk-head skeleton-box"></div><div class="sk-body"><div class="skeleton-line" style="height:12px;width:65%;margin-bottom:8px"></div><div class="skeleton-line" style="height:6px;width:100%"></div></div></div>
       </div>
     </section>
 
@@ -2668,13 +2673,13 @@
 
     <!-- SECTION: Canzoni -->
     <section id="sec-canzoni" class="section">
-      <h2 class="section-titulo">Modo Canzone</h2>
+      <h2 class="section-titulo" data-i18n="can_sec_titulo">Modo Música</h2>
       <div id="canzoni-container"></div>
     </section>
 
     <!-- SECTION: Imitazione -->
     <section id="sec-imitazione" class="section">
-      <h2 class="section-titulo">Modo Imitazione</h2>
+      <h2 class="section-titulo" data-i18n="imit_sec_titulo">Modo Imitação</h2>
       <div id="imitazione-container"></div>
     </section>
 
@@ -2682,7 +2687,7 @@
     <section id="sec-flashcard" class="section">
       <div class="flashcard-arena">
         <div class="card-selecao-templo">
-          <label for="flashcard-templo-select">Studiando:</label>
+          <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
           <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
             <option value="">-- Seleziona tempio --</option>
           </select>
@@ -2693,7 +2698,7 @@
           </div>
         </div>
         <button id="btn-revisao-geral" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados" style="width:100%;margin-top:0.4rem;padding:0.5rem 1rem;background:linear-gradient(135deg,#9B2335,#D4A843);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:0.85rem;cursor:pointer;letter-spacing:0.04em;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
-          🌍 <span id="btn-rg-label">Revisão Geral</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
+          🌍 <span id="btn-rg-label" data-i18n="fc_revisao_geral_btn">Revisão Geral</span> <span id="btn-rg-count" style="background:rgba(255,255,255,0.25);border-radius:999px;padding:0.1rem 0.5rem;font-size:0.78rem;"></span>
         </button>
         <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
         <div class="card-info" id="card-info"></div>
@@ -2754,7 +2759,7 @@
 
     <!-- SECTION: Quiz -->
     <section id="sec-quiz" class="section">
-      <h2 class="section-titulo">Verifica le tue Conoscenze</h2>
+      <h2 class="section-titulo" data-i18n="quiz_sec_titulo">Verifica le tue Conoscenze</h2>
       <div class="quiz-templo-selector" id="quiz-templo-selector"></div>
       <div class="quiz-container" id="quiz-container" style="display:none">
         <div class="quiz-progresso">
@@ -2776,7 +2781,7 @@
         </div>
       </div>
       <div class="quiz-resultado" id="quiz-resultado" style="display:none">
-        <p class="resultado-titulo">Risultato del Quiz</p>
+        <p class="resultado-titulo" data-i18n="quiz_res_titulo">Risultato del Quiz</p>
         <div class="resultado-score" id="resultado-score">0/10</div>
         <div class="resultado-xp" id="resultado-xp">+0 XP</div>
         <p class="resultado-msg" id="resultado-msg"></p>
@@ -2786,9 +2791,14 @@
 
     <!-- SECTION: Grammatica -->
     <section id="sec-grammatica" class="section">
-      <h2 class="section-titulo">Grammatica Italiana</h2>
+      <h2 class="section-titulo" data-i18n="gram_sec_titulo">Grammatica Italiana</h2>
       <div id="grammatica-container">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento grammatica...</p>
+        <div class="skeleton-box" style="height:88px;border-radius:14px;margin-bottom:1.2rem"></div>
+        <div class="gram-lezioni-grid">
+          <div class="skeleton-box" style="height:68px;border-radius:11px"></div>
+          <div class="skeleton-box" style="height:68px;border-radius:11px"></div>
+          <div class="skeleton-box" style="height:68px;border-radius:11px"></div>
+        </div>
       </div>
     </section>
 
@@ -2796,31 +2806,35 @@
     <section id="sec-storie" class="section">
       <h2 class="section-titulo" data-i18n="storie_titulo_secao">Storie Italiane</h2>
       <div id="storie-container">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:2rem;">Caricamento storie...</p>
+        <div class="dialogo-grid">
+          <div class="skeleton-card-media"><div class="skeleton-box" style="width:48px;height:48px;border-radius:50%"></div><div class="skeleton-line" style="height:14px;width:75%"></div><div class="skeleton-line" style="height:10px;width:45%"></div></div>
+          <div class="skeleton-card-media"><div class="skeleton-box" style="width:48px;height:48px;border-radius:50%"></div><div class="skeleton-line" style="height:14px;width:75%"></div><div class="skeleton-line" style="height:10px;width:45%"></div></div>
+          <div class="skeleton-card-media"><div class="skeleton-box" style="width:48px;height:48px;border-radius:50%"></div><div class="skeleton-line" style="height:14px;width:75%"></div><div class="skeleton-line" style="height:10px;width:45%"></div></div>
+        </div>
       </div>
     </section>
 
     <!-- SECTION: Vocabolario -->
     <section id="sec-vocabolario" class="section">
-      <h2 class="section-titulo">Il Vocabolario</h2>
+      <h2 class="section-titulo" data-i18n="vocab_sec_titulo">Il Vocabolario</h2>
       <div class="vocab-filtros">
-        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." oninput="Vocab.buscar(this.value)">
+        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." data-i18n-placeholder="vocab_busca_placeholder" oninput="Vocab.buscar(this.value)">
         <select id="vocab-templo-filtro" onchange="Vocab.filtrarTemplo(this.value)">
-          <option value="">Tutti i templi</option>
+          <option value="" data-i18n="vocab_todos_templos">Tutti i templi</option>
         </select>
         <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
-          <option value="">Tutte le categorie</option>
+          <option value="" data-i18n="vocab_todas_categorias">Tutte le categorie</option>
         </select>
       </div>
       <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
-        <button id="vocab-pill-todos"   onclick="Vocab.filtroOrigem='';Vocab.renderizar()"          style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
-        <button id="vocab-pill-custom"  onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()"    style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
-        <button id="vocab-pill-nativo"  onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()"    style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
+        <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
+        <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
+        <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
       </div>
       <div class="vocab-filtros-row2">
-        <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()">⚠️ Difíceis</button>
-        <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()">❤️ Favoritos</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('vocab')">🤖 Adicionar via IA</button>
+        <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()" data-i18n="vocab_dificeis">⚠️ Difíceis</button>
+        <button id="vocab-btn-favoritos"  class="vocab-btn-favoritos"  onclick="Vocab.toggleFavoritos()" data-i18n="vocab_favoritos">❤️ Favoritos</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('vocab')" data-i18n="vocab_btn_ia">🤖 Adicionar via IA</button>
         <div id="vocab-blur-btns" style="display:flex;gap:0.4rem;flex-shrink:0">
           <button id="vocab-btn-blur-pt" class="vocab-btn-blur" onclick="Vocab.toggleBlur('pt')" title="Oculta a coluna em português para testar sua memória" data-i18n="vocab_ocultar_pt" data-i18n-title="title_blur_pt">🙈 Ocultar PT</button>
           <button id="vocab-btn-blur-it" class="vocab-btn-blur" onclick="Vocab.toggleBlur('it')" title="Oculta a coluna em italiano para testar sua memória" data-i18n="vocab_ocultar_it" data-i18n-title="title_blur_it">🙈 Ocultar IT</button>
@@ -2828,13 +2842,15 @@
       </div>
       <div class="vocab-stats" id="vocab-stats"></div>
       <div class="vocab-list" id="vocab-list">
-        <p style="color:#aaa;font-style:italic;text-align:center;padding:1rem;">Caricamento vocabolario...</p>
+        <div class="skeleton-vocab-row"><div class="skeleton-line" style="width:110px;height:14px"></div><div class="skeleton-line" style="flex:1;height:14px"></div></div>
+        <div class="skeleton-vocab-row"><div class="skeleton-line" style="width:95px;height:14px"></div><div class="skeleton-line" style="flex:1;height:14px"></div></div>
+        <div class="skeleton-vocab-row"><div class="skeleton-line" style="width:130px;height:14px"></div><div class="skeleton-line" style="flex:1;height:14px"></div></div>
       </div>
     </section>
 
     <!-- SECTION: Profilo -->
     <section id="sec-profilo" class="section">
-      <h2 class="section-titulo">Il Mio Profilo</h2>
+      <h2 class="section-titulo" data-i18n="prof_sec_titulo">Il Mio Profilo</h2>
       <div id="profilo-container"></div>
     </section>
 
@@ -2898,7 +2914,7 @@
             <li>📚 <strong><span data-i18n="ob_gramatica">Gramática:</span></strong> 82 lições do A1 ao C2.</li>
             <li>📜 <strong>Storie:</strong> Leia textos autênticos com modo imersão.</li>
             <li>💬 <strong>Dialoghi:</strong> Pratique conversas cotidianas reais.</li>
-            <li>🎵 <strong>Canzoni:</strong> Aprenda com 200 músicas italianas.</li>
+            <li>🎵 <strong>Canzoni:</strong> Aprenda com 100 músicas italianas autênticas.</li>
             <li>🎤 <strong>Imitazione:</strong> Treine pronúncia imitando nativos.</li>
           </ul>
         </div>
@@ -2913,7 +2929,7 @@
             <li id="onb-li3">Estude usando os <strong>FLASHCARDS</strong></li>
             <li id="onb-li4">Pratique o que aprendeu respondendo aos <strong>QUIZZES</strong>!</li>
           </ol>
-          <p style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Toque em <strong>❓</strong> no topo da tela a qualquer momento para rever o tour interativo do app!</p>
+          <p style="margin-top:1rem;font-size:0.85rem;opacity:0.85;">💡 Toque em <strong>❓ Ajuda</strong> no topo da tela a qualquer momento para rever o tour interativo do app!</p>
         </div>
       </div>
       
@@ -2935,35 +2951,35 @@
   <nav class="bottom-nav" id="bottom-nav">
     <button class="nav-tab-btn ativa" data-section="templi" onclick="App.navegar('templi')" data-i18n="nav_inicio">🏛️<span>Início</span></button>
     <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')" data-i18n="nav_dialogos">💬<span>Diálogos</span></button>
-    <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')" data-i18n="nav_canzoni">🎵<span>Canzoni</span></button>
+    <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')" data-i18n="nav_canzoni">🎵<span>Músicas</span></button>
     <button class="nav-tab-btn" data-section="imitazione" onclick="App.navegar('imitazione')" data-i18n="nav_imitacao">🗣️<span>Imitação</span></button>
     <button class="nav-tab-btn" data-section="flashcard" onclick="App.navegar('flashcard')" data-i18n="nav_flashcard">🃏<span>Flashcard</span></button>
     <button class="nav-tab-btn" data-section="quiz" onclick="App.navegar('quiz')" data-i18n="nav_quiz">❓<span>Quiz</span></button>
     <button class="nav-tab-btn" data-section="vocabolario" onclick="App.navegar('vocabolario')" data-i18n="nav_vocab">📖<span>Vocab</span></button>
     <button class="nav-tab-btn" data-section="grammatica" onclick="App.navegar('grammatica')" data-i18n="nav_gramatica">📚<span>Gramática</span></button>
-    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📜<span>Storie</span></button>
+    <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📜<span>Histórias</span></button>
   </nav>
 
   <!-- ResponsiveVoice — Italian TTS fallback (free for educational use) -->
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
-  <script src="js/audio.js?v=68"></script>
-  <script src="js/conquistas.js?v=68"></script>
-  <script src="js/onboarding.js?v=68"></script>
-  <script src="js/i18n.js?v=68"></script>
-  <script src="js/core.js?v=68"></script>
-  <script src="js/progression.js?v=68"></script>
-  <script src="js/flashcards.js?v=68"></script>
-  <script src="js/quiz.js?v=68"></script>
-  <script src="js/vocab.js?v=68"></script>
-  <script src="js/heatmap.js?v=68"></script>
-  <script src="js/grammar.js?v=68"></script>
-  <script src="js/profilo.js?v=68"></script>
-  <script src="js/dialoghi.js?v=68"></script>
-  <script src="js/canzoni.js?v=68"></script>
-  <script src="js/imitazione.js?v=68"></script>
-  <script src="js/storie.js?v=68"></script>
+  <script src="js/audio.js?v=69"></script>
+  <script src="js/conquistas.js?v=69"></script>
+  <script src="js/onboarding.js?v=69"></script>
+  <script src="js/i18n.js?v=69"></script>
+  <script src="js/core.js?v=69"></script>
+  <script src="js/progression.js?v=69"></script>
+  <script src="js/flashcards.js?v=69"></script>
+  <script src="js/quiz.js?v=69"></script>
+  <script src="js/vocab.js?v=69"></script>
+  <script src="js/heatmap.js?v=69"></script>
+  <script src="js/grammar.js?v=69"></script>
+  <script src="js/profilo.js?v=69"></script>
+  <script src="js/dialoghi.js?v=69"></script>
+  <script src="js/canzoni.js?v=70"></script>
+  <script src="js/imitazione.js?v=69"></script>
+  <script src="js/storie.js?v=69"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -2971,7 +2987,9 @@
 
       const updateIcon = () => {
         const isDark = document.body.classList.contains('dark-mode');
-        toggleBtn.textContent = isDark ? '🌙' : '☀️';
+        const ico = document.getElementById('theme-toggle-ico');
+        if (ico) ico.textContent = isDark ? '🌙' : '☀️';
+        else toggleBtn.textContent = isDark ? '🌙' : '☀️';
       };
 
       updateIcon();

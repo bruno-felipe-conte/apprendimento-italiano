@@ -9,8 +9,27 @@ const Dialoghi = {
   async carregar() {
     if (!this.dados) {
       try {
+        const cached = localStorage.getItem('it_swr_dialogi');
+        if (cached) {
+          this.dados = JSON.parse(cached);
+          fetch('data/dialogi.json')
+            .then(r => r.ok ? r.json() : null)
+            .then(fresh => {
+              if (fresh && Array.isArray(fresh.dialogi)) {
+                this.dados = fresh;
+                try { localStorage.setItem('it_swr_dialogi', JSON.stringify(fresh)); } catch (_) {}
+              }
+            })
+            .catch(() => {});
+        }
+      } catch (_) {}
+    }
+
+    if (!this.dados) {
+      try {
         const r = await fetch('data/dialogi.json');
         this.dados = r.ok ? await r.json() : { dialogi: [] };
+        try { localStorage.setItem('it_swr_dialogi', JSON.stringify(this.dados)); } catch (_) {}
       } catch { this.dados = { dialogi: [] }; }
     }
     try {
@@ -64,19 +83,19 @@ const Dialoghi = {
 
     let html = `
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
-        <input type="search" placeholder="🔍 Cerca..." value="${this._filtroTexto}"
+        <input type="search" placeholder="${I18n.t('dial_busca_ph')}" value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
-        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">🤖 via IA</button>
+        <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">${I18n.t('dial_btn_ia')}</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
-        ${_origemPill('','Todos',todos.length)}
-        ${nCustom ? _origemPill('custom','🤖 Adicionados',nCustom) : ''}
-        ${nNativo  ? _origemPill('nativo','📚 Nativos',nNativo) : ''}
+        ${_origemPill('', I18n.t('dial_filtro_todos'), todos.length)}
+        ${nCustom ? _origemPill('custom', I18n.t('dial_filtro_adicionados'), nCustom) : ''}
+        ${nNativo  ? _origemPill('nativo', I18n.t('dial_filtro_nativos'), nNativo) : ''}
         <select class="nivel-select${this._filtroNivel?' ativo':''}"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
-          <option value="">🎯 Nível</option>
+          <option value="">${I18n.t('dial_filtro_nivel')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
@@ -84,20 +103,20 @@ const Dialoghi = {
 
     for (const dial of filtrados) {
       const ehCustom = dial.custom || dial._custom;
-      const badge = ehCustom ? '<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">Meu</span>' : '';
+      const badge = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('dial_badge_meu')}</span>` : '';
       html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dial.id}','leitura')">
         <div class="dialogo-icone">${dial.icone}</div>
         <div class="dialogo-titulo">${dial.titulo}${badge}</div>
         <div class="dialogo-nivel">${dial.nivel}</div>
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
           ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
+          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
         </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
       </div>`;
     }
 
     if (filtrados.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${filtrados.length === 0 && this._filtroTexto ? 'Nenhum resultado.' : 'Nenhum diálogo ainda.'}</p>`;
+      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? I18n.t('dial_sem_resultado') : I18n.t('dial_sem_dialogo')}</p>`;
     }
 
     html += '</div>';
@@ -304,13 +323,20 @@ const Dialoghi = {
 
   editarDialogo(id) { this.abrirFormularioCriar(id); },
 
-  excluirDialogo(id) {
+  excluirDialogo(id, cardEl = null) {
     const d = this.custom.find(x => x.id === id);
     if (!d || !confirm(I18n.t('dial_excluir_confirm').replace('{t}', d.titulo))) return;
+    if (cardEl && cardEl.classList) cardEl.classList.add('optimistic-removing');
+    const backup = [...this.custom];
     this.custom = this.custom.filter(x => x.id !== id);
-    this._salvarCustom();
-    App.notificar('notif_dial_excluido', 'alerta');
-    this.renderizarSeletor();
+    try {
+      this._salvarCustom();
+      App.notificar('notif_dial_excluido', 'alerta');
+      setTimeout(() => this.renderizarSeletor(), cardEl ? 180 : 0);
+    } catch (_) {
+      this.custom = backup;
+      if (cardEl) cardEl.classList.remove('optimistic-removing');
+    }
   },
 
   // ── MÉTODOS DE JOGO ──────────────────────────────────────────

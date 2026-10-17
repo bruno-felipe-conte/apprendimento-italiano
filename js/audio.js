@@ -27,7 +27,9 @@ const SomFeedback = {
 
   _atualizarBotao() {
     const btn = document.getElementById('btn-som');
-    if (btn) btn.textContent = this.ativo ? '🔔' : '🔕';
+    const ico = document.getElementById('btn-som-ico');
+    if (ico) ico.textContent = this.ativo ? '🔔' : '🔕';
+    else if (btn) btn.textContent = this.ativo ? '🔔' : '🔕';
     if (btn) {
       const it = typeof I18n !== 'undefined' && I18n.idioma === 'it';
       btn.title = this.ativo

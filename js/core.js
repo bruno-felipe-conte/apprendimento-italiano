@@ -135,6 +135,15 @@ const App = {
     this.estado.progresso = this.carregarProgresso();
     this.estado.flashcardData = this.carregarFlashcards();
     if (typeof I18n !== 'undefined') I18n.inicializar();
+
+    // 1. Hidratação instantânea via Stale-While-Revalidate (0ms se já houver cache local)
+    const usouCache = this._hidratarCacheLocal();
+    if (usouCache) {
+      this.atualizarStats();
+      this.renderizarTemplos();
+    }
+
+    // 2. Carregamento/revalidação dos dados em segundo plano
     await this.carregarDados();
     this.atualizarStats();
     this.renderizarTemplos();
@@ -178,8 +187,29 @@ const App = {
     });
   },
 
-  // ── Data loading ───────────────────────────────────────────
+  // ── Stale-While-Revalidate helper for Templos & Vocab ──────
+  _hidratarCacheLocal() {
+    try {
+      const raw = localStorage.getItem('it_swr_templos_meta');
+      if (!raw) return false;
+      const meta = JSON.parse(raw);
+      if (!meta || typeof meta !== 'object') return false;
+      for (const k of Object.keys(meta)) {
+        const num = Number(k);
+        if (!this.estado.templosData[num]) {
+          this.estado.templosData[num] = meta[k];
+        }
+      }
+      return Object.keys(meta).length > 0;
+    } catch (_) {
+      return false;
+    }
+  },
+
+  // ── Data loading (Stale-While-Revalidate) ──────────────────
   async carregarDados() {
+    const novosTemplos = {};
+    const novoVocab = [];
     const promises = [];
     // Load templo-1.json through templo-51.json; skip gracefully on 404
     for (let i = 1; i <= 51; i++) {
@@ -194,8 +224,8 @@ const App = {
             // Normalize: JSON files use "vocabulario" or "palavras" — always expose as "palavras"
             const lista = data.palavras || data.vocabulario || [];
             data.palavras = lista.map(p => ({ ...p, templo_num: data.templo }));
-            this.estado.vocabCache.push(...data.palavras);
-            this.estado.templosData[data.templo] = data;
+            novoVocab.push(...data.palavras);
+            novosTemplos[data.templo] = data;
           })
           .catch(() => null) // network error — skip
       );
@@ -223,6 +253,25 @@ const App = {
 
     await Promise.all(promises);
 
+    if (Object.keys(novosTemplos).length > 0) {
+      this.estado.templosData = novosTemplos;
+      this.estado.vocabCache = novoVocab;
+      // Salva resumo leve de metadados para Stale-While-Revalidate instantâneo na próxima abertura
+      try {
+        const metaLeve = {};
+        for (const [num, t] of Object.entries(novosTemplos)) {
+          metaLeve[num] = {
+            templo: t.templo,
+            nome: t.nome,
+            cidade: t.cidade,
+            nivel: t.nivel,
+            palavras: (t.palavras || []).map(p => ({ id: p.id, italiano: p.italiano, portugues: p.portugues, audio_ipa: p.audio_ipa, categoria: p.categoria, exemplo: p.exemplo, exemplo_pt: p.exemplo_pt }))
+          };
+        }
+        localStorage.setItem('it_swr_templos_meta', JSON.stringify(metaLeve));
+      } catch (_) {}
+    }
+
     // Injeta vocabulário customizado (via IA Import)
     try {
       const custom = JSON.parse(localStorage.getItem('it_vocab_custom') || '[]');
@@ -239,11 +288,16 @@ const App = {
     }
   },
 
-  // ── Navigation ─────────────────────────────────────────────
+  // ── Navigation (Preserves DOM & Filter state across tabs) ──
   navegar(secao) {
     // 'home' é um alias para 'templi' (seção inicial)
     if (secao === 'home') secao = 'templi';
     this.estado.secaoAtiva = secao;
+
+    // Pausa karaokê se sair da aba de músicas
+    if (secao !== 'canzoni' && typeof Canzoni !== 'undefined' && Canzoni.tocandoKaraoke) {
+      Canzoni.pararAudio();
+    }
 
     // Update tab buttons
     document.querySelectorAll('.nav-tab').forEach(btn => {
@@ -266,32 +320,36 @@ const App = {
       this.salvarProgresso();
     }
 
-    // Lazy-render on first visit
+    const _precisaRender = (containerId) => {
+      const el = document.getElementById(containerId);
+      if (!el) return true;
+      return el.children.length === 0 || !!el.querySelector('.skeleton-box, .skeleton-card-media, .skeleton-card-templo, .skeleton-vocab-row');
+    };
+
+    // Lazy-render on first visit or when container only has skeleton (preserves active lessons & filters!)
     if (secao === 'dialoghi' && typeof Dialoghi !== 'undefined') {
-      Dialoghi.renderizarSeletor();
+      if (_precisaRender('dialogo-seletor') && !Dialoghi.dialogoAtual) Dialoghi.renderizarSeletor();
     }
     if (secao === 'canzoni' && typeof Canzoni !== 'undefined') {
-      Canzoni.renderizarSeletor();
+      if (_precisaRender('canzoni-container')) Canzoni.renderizarSeletor();
     }
     if (secao === 'imitazione' && typeof Imitazione !== 'undefined') {
-      Imitazione.renderizar();
+      if (_precisaRender('imitazione-container')) Imitazione.renderizar();
     }
     if (secao === 'vocabolario' && typeof Vocab !== 'undefined') {
-      Vocab.renderizar();
+      if (_precisaRender('vocab-list')) Vocab.renderizar();
     }
     if (secao === 'quiz' && typeof Quiz !== 'undefined') {
-      Quiz.renderizarSeletor();
+      if (_precisaRender('quiz-seletor')) Quiz.renderizarSeletor();
     }
     if (secao === 'flashcard' && typeof Flashcards !== 'undefined') {
       Flashcards.atualizarSelectTemplo();
     }
     if (secao === 'grammatica' && typeof Grammatica !== 'undefined') {
-      Grammatica.renderizarSeletor();
+      if (_precisaRender('grammatica-container')) Grammatica.renderizarSeletor();
     }
     if (secao === 'storie' && typeof Storie !== 'undefined') {
-      Storie._filtroNivel = '';
-      Storie._filtroTexto = '';
-      Storie.renderizarSeletor();
+      if (_precisaRender('storie-container')) Storie.renderizarSeletor();
     }
     if (secao === 'profilo' && typeof Profilo !== 'undefined') {
       Profilo.renderizar();
@@ -441,7 +499,7 @@ const App = {
       <div class="pdd-acoes">
         <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
         <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Studiare</button>
-        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="App.toggleFavorito('${palavra.id}'); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
+        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="this.classList.remove('optimistic-pop'); void this.offsetWidth; this.classList.add('optimistic-pop'); App.toggleFavorito('${palavra.id}', this); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
           ${favEmoji} Fav
         </button>
       </div>
@@ -542,6 +600,10 @@ const App = {
       }
 
       const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
+      const txtDominadas = I18n.t('templo_palavras_dom')
+        .replace('{dom}', dominadas)
+        .replace('{tot}', totalPalavras);
+      const badgeCompleto = concluido ? `<span class="nivel-badge">${I18n.t('templo_completo_badge')}</span>` : '';
 
       const card = document.createElement('div');
       card.className = `templo-card${desbloqueado ? '' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
@@ -556,11 +618,11 @@ const App = {
             <div class="templo-meta">
               <span class="templo-cidade">📍 ${cidade}</span>
               <span class="nivel-badge">${nivel}</span>
-              ${concluido ? '<span class="nivel-badge">✅ Completo</span>' : ''}
+              ${badgeCompleto}
             </div>
           </div>
           <div class="templo-body">
-            <div class="progresso-label">${dominadas}/${totalPalavras} parole dominate</div>
+            <div class="progresso-label">${txtDominadas}</div>
             <div class="progresso-bar-container">
               <div class="progresso-bar-fill" style="width:${progPercent}%"></div>
             </div>
@@ -805,16 +867,33 @@ const App = {
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
   },
 
-  // ── Favoritos ─────────────────────────────────────────────
-  toggleFavorito(id) {
+  // ── Favoritos (Optimistic UI com micro-animação e rollback) ──
+  toggleFavorito(id, btnEl = null) {
     const p = this.estado.progresso;
     if (!p) return false;
     if (!p.favoritos) p.favoritos = [];
     const idx = p.favoritos.indexOf(id);
     const adicionado = idx === -1;
+
+    // Optimistic UI: aplica estado e animação imediatamente
     if (adicionado) p.favoritos.push(id);
     else            p.favoritos.splice(idx, 1);
-    this.salvarProgresso();
+
+    if (btnEl && btnEl.classList) {
+      btnEl.classList.remove('optimistic-pop');
+      void btnEl.offsetWidth;
+      btnEl.classList.add('optimistic-pop');
+    }
+
+    try {
+      this.salvarProgresso();
+    } catch (err) {
+      // Rollback em caso de falha crítica de persistência
+      if (adicionado) p.favoritos.pop();
+      else            p.favoritos.splice(idx, 0, id);
+      this.notificar('Erro ao salvar favorito', 'erro');
+      return !adicionado;
+    }
     return adicionado;
   },
 
@@ -842,11 +921,24 @@ const App = {
 
   setMeta(valor) {
     if (!this.estado.progresso) return;
+    const anterior = this.estado.progresso.meta_diaria;
+    // Optimistic UI: atualiza barra de meta e fecha modal imediatamente
     this.estado.progresso.meta_diaria = valor;
-    this.salvarProgresso();
     this.atualizarStats();
     this.fecharMetaSettings();
-    this.notificar(I18n.t('notif_meta_definida').replace('{val}', valor), 'sucesso');
+    const metaBar = document.querySelector('.daily-goal-bar');
+    if (metaBar) {
+      metaBar.classList.remove('optimistic-xp-pulse');
+      void metaBar.offsetWidth;
+      metaBar.classList.add('optimistic-xp-pulse');
+    }
+    try {
+      this.salvarProgresso();
+      this.notificar(I18n.t('notif_meta_definida').replace('{val}', valor), 'sucesso');
+    } catch (_) {
+      this.estado.progresso.meta_diaria = anterior;
+      this.atualizarStats();
+    }
   },
 
   // ── Meta Prazo Modal ────────────────────────────────────────
@@ -882,8 +974,14 @@ const App = {
     this.renderizarTemplos();
   },
 
-  // ── XP system ─────────────────────────────────────────────
+  // ── XP system (Optimistic UI pulse) ───────────────────────
   ganharXP(quantidade) {
+    const elXp = document.getElementById('stat-xp');
+    if (elXp) {
+      elXp.classList.remove('optimistic-xp-pulse');
+      void elXp.offsetWidth;
+      elXp.classList.add('optimistic-xp-pulse');
+    }
     if (typeof Progressao !== 'undefined') {
       Progressao.ganhar(quantidade);
     } else {
@@ -947,10 +1045,11 @@ const App = {
   atualizarAudioSpeedUI() {
     const btn = document.getElementById('btn-audio-speed');
     if (!btn) return;
+    const ico = document.getElementById('btn-audio-speed-ico') || btn;
     const rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
     let label = rate.toString();
     if (label.startsWith('0.')) label = label.substring(1);
-    btn.textContent = label + 'x';
+    ico.textContent = label + 'x';
   },
 
   _vozItaliana: null,      // cache da voz italiana (null = ainda não resolvido)

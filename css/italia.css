@@ -1475,3 +1475,504 @@ body.dark-mode .dialogo-opcao.errada {
   background: #3a1e1e;
   color: #ef9a9a;
 }
+
+/* ===============================================================
+   20. UX PERCEPTUAL: SKELETON SCREENS, OPTIMISTIC UI & RÓTULOS DE ÍCONES
+   =============================================================== */
+
+/* ── Rótulos Claros em Ícones do Header e Meta ── */
+.theme-toggle-btn {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1px !important;
+  width: auto !important;
+  min-width: 38px !important;
+  height: auto !important;
+  min-height: 36px !important;
+  padding: 0.2rem 0.38rem !important;
+  border-radius: 10px !important;
+  background: rgba(0,0,0,0.22) !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  color: #F5EDD8 !important;
+  transition: transform 0.14s ease, background 0.15s ease, border-color 0.15s ease !important;
+}
+.theme-toggle-btn:hover {
+  background: rgba(255,255,255,0.14) !important;
+  border-color: rgba(255,255,255,0.35) !important;
+  transform: translateY(-1px);
+}
+.theme-toggle-btn:active {
+  transform: scale(0.92);
+}
+.hdr-btn-ico {
+  font-size: 0.95rem;
+  line-height: 1.05;
+  display: block;
+}
+.hdr-btn-lbl {
+  font-family: var(--fonte-ui);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: rgba(245,237,216,0.92);
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .theme-toggle-btn {
+    min-width: 32px !important;
+    min-height: 32px !important;
+    padding: 0.14rem 0.26rem !important;
+    border-radius: 8px !important;
+  }
+  .hdr-btn-ico { font-size: 0.82rem; }
+  .hdr-btn-lbl { font-size: 0.5rem; }
+}
+
+.meta-settings-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+  padding: 0.18rem 0.55rem !important;
+  border-radius: 999px !important;
+  background: rgba(155,35,53,0.08) !important;
+  border: 1px solid rgba(155,35,53,0.22) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  color: var(--cor-veneziano-escuro) !important;
+  transition: transform 0.15s ease, background 0.15s ease !important;
+}
+.meta-settings-btn:hover {
+  background: rgba(155,35,53,0.15) !important;
+  transform: translateY(-1px);
+}
+body.dark-mode .meta-settings-btn {
+  background: rgba(212,168,67,0.12) !important;
+  border-color: rgba(212,168,67,0.3) !important;
+  color: var(--cor-toscano) !important;
+}
+
+/* ── Skeleton Screens (Shimmer Perceptual) ── */
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.skeleton-box, .skeleton-line, .skeleton-pill {
+  background: linear-gradient(90deg, rgba(158,143,127,0.16) 25%, rgba(201,149,42,0.22) 50%, rgba(158,143,127,0.16) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.35s infinite linear;
+  border-radius: 8px;
+}
+body.dark-mode .skeleton-box,
+body.dark-mode .skeleton-line,
+body.dark-mode .skeleton-pill {
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(212,168,67,0.14) 50%, rgba(255,255,255,0.06) 75%);
+  background-size: 200% 100%;
+}
+.skeleton-card-templo {
+  background: var(--cor-marmore);
+  border-radius: 12px;
+  border: 1px solid rgba(158,143,127,0.25);
+  overflow: hidden;
+  box-shadow: var(--sombra-sm);
+}
+.skeleton-card-templo .sk-head {
+  height: 92px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.skeleton-card-templo .sk-body {
+  padding: 0.85rem;
+}
+.skeleton-card-media {
+  background: var(--cor-marmore);
+  border-radius: 12px;
+  border: 1px solid rgba(158,143,127,0.25);
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 150px;
+}
+.skeleton-vocab-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 1rem;
+  background: var(--cor-marmore);
+  border: 1px solid rgba(158,143,127,0.2);
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+/* ── Optimistic UI — Micro-interações instantâneas ── */
+@keyframes opt-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.38); }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+@keyframes opt-xp-pulse {
+  0%   { filter: brightness(1); transform: scaleY(1); }
+  50%  { filter: brightness(1.35); transform: scaleY(1.45); }
+  100% { filter: brightness(1); transform: scaleY(1); }
+}
+.optimistic-pop {
+  animation: opt-pop 0.34s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+.optimistic-xp-pulse {
+  animation: opt-xp-pulse 0.45s ease !important;
+}
+.optimistic-removing {
+  opacity: 0 !important;
+  transform: scale(0.88) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  pointer-events: none !important;
+}
+
+
+/* Gramática narrativa */
+.gram-cena { background: #FBF3E0; border-left: 5px solid #B5532B; border-radius: 10px; padding: 1.1rem 1.25rem; margin-bottom: 1rem; font-family: Georgia, 'Times New Roman', serif; color: #3a2a1a; }
+.gram-cena-etiqueta { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: #B5532B; font-weight: 700; margin-bottom: 0.5rem; }
+.gram-cena-linha { display: flex; gap: 0.5rem; align-items: flex-start; margin: 0.45rem 0; line-height: 1.7; font-size: 1.02rem; }
+.gram-fio { font-family: Georgia, serif; font-size: 1.02rem; line-height: 1.8; color: #4a3826; margin: 0.6rem 0; font-style: italic; }
+.gram-fio-fecho { border-top: 1px dashed #B5532B; padding-top: 0.8rem; }
+
+/* ─────────────────────────────────────────────────────────────
+   LYRICS CLOZE PLAYER (Treino Auditivo Musical Sincronizado)
+   ───────────────────────────────────────────────────────────── */
+.cloze-player {
+  background: var(--bg-pergaminho, #EDE5D0);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  box-shadow: 0 8px 32px rgba(61,13,24,0.32);
+  border: 1px solid rgba(107,26,42,0.25);
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+.cloze-topbar {
+  background: linear-gradient(135deg, #3d0d18 0%, #6b1a2a 100%);
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.cloze-song-meta {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+.cloze-song-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #FDFBF7;
+}
+.cloze-song-artist {
+  font-size: 0.76rem;
+  color: rgba(255,220,190,0.8);
+  font-style: italic;
+}
+
+.cloze-stats-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f5eedf;
+}
+
+.cloze-controls-strip {
+  background: #2a080f;
+  padding: 0.45rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cloze-audio-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cloze-btn-ctrl {
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,220,180,0.25);
+  color: #FDFBF7;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.cloze-btn-ctrl:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: #D4A843;
+}
+.cloze-btn-ctrl.primary {
+  background: #9b2335;
+  border-color: #d4a843;
+  color: #fff;
+  font-weight: 700;
+}
+.cloze-btn-ctrl.primary.playing {
+  background: #10b981;
+  border-color: #6ee7b7;
+  box-shadow: 0 0 10px rgba(16,185,129,0.5);
+}
+
+.cloze-progress-line-wrap {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: rgba(255,220,190,0.7);
+  font-variant-numeric: tabular-nums;
+}
+.cloze-progress-track {
+  flex: 1;
+  height: 5px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.cloze-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #D4A843, #10b981);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}
+
+/* Área de Letra Karaokê */
+.cloze-lyrics-stage {
+  flex: 1;
+  padding: 1.5rem 1.25rem;
+  overflow-y: auto;
+  max-height: 48vh;
+  min-height: 240px;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #FAF5EB;
+}
+
+.cloze-verse {
+  padding: 0.65rem 0.95rem;
+  border-radius: 9px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #1a0808;
+  transform-origin: center center;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+  user-select: text;
+}
+
+/* Estado Ativo: iluminado, scale(1.06) */
+.cloze-verse.is-active {
+  transform: scale(1.06);
+  opacity: 1 !important;
+  background: #FFF8E8;
+  box-shadow: 0 4px 18px rgba(201,149,42,0.22), 0 0 0 1.5px rgba(201,149,42,0.55);
+  font-weight: 600;
+  color: #3b1016;
+}
+
+/* Versos Passados e Futuros: opacidade reduzida */
+.cloze-verse.is-past,
+.cloze-verse.is-future {
+  opacity: 0.42;
+}
+.cloze-verse:hover {
+  opacity: 0.85;
+}
+
+/* Lacunas Cloze */
+.cloze-blank {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  margin: 0 0.15rem;
+  border-radius: 6px;
+  font-weight: 700;
+  vertical-align: baseline;
+  transition: filter 200ms ease, color 200ms ease, background 200ms ease, transform 150ms ease;
+}
+
+/* Desfoque inicial */
+.cloze-blank.is-blurred {
+  filter: blur(5px);
+  user-select: none;
+  background: rgba(107,26,42,0.08);
+  border-bottom: 2px dashed #9B2335;
+  color: #6b1a2a;
+}
+
+/* Lacuna que está sendo esperada no momento */
+.cloze-blank.is-target {
+  box-shadow: 0 0 0 2px #D4A843;
+  animation: clozeTargetPulse 1.2s infinite ease-in-out;
+}
+@keyframes clozeTargetPulse {
+  0%, 100% { box-shadow: 0 0 0 2px #D4A843; }
+  50% { box-shadow: 0 0 0 4px rgba(212,168,67,0.4); }
+}
+
+/* Acerto: Verde #10b981 em definitivo */
+.cloze-blank.is-correct {
+  filter: blur(0) !important;
+  color: #10b981 !important;
+  border-bottom: 2px solid #10b981;
+  background: rgba(16,185,129,0.12);
+  font-weight: 700;
+}
+
+/* Erro temporário ou marcado: Vermelho #ef4444 */
+.cloze-blank.is-wrong {
+  color: #ef4444 !important;
+  border-bottom: 2px solid #ef4444;
+  background: rgba(239,68,68,0.12);
+}
+
+/* Tremor (shake) */
+.is-error-shake {
+  animation: clozeShake 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+}
+@keyframes clozeShake {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(3px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-5px, 0, 0); }
+  40%, 60% { transform: translate3d(5px, 0, 0); }
+}
+
+/* Banner de Pausa Suave */
+.cloze-waiting-banner {
+  background: linear-gradient(135deg, #78281F, #9B2335);
+  color: #FFFDF8;
+  padding: 0.5rem 1rem;
+  font-size: 0.84rem;
+  text-align: center;
+  font-weight: 600;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Banco de Palavras (Word Bank) */
+.cloze-wordbank-container {
+  background: #25070e;
+  padding: 0.75rem 1rem 1rem;
+  border-top: 2px solid #3d0d18;
+}
+.cloze-wordbank-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,220,190,0.65);
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+.cloze-wordbank-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+}
+
+/* Pílulas de Palavras */
+.cloze-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1.5px solid rgba(255,215,160,0.3);
+  color: #FDFBF7;
+  padding: 0.42rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+.cloze-pill:hover:not(.is-used) {
+  background: rgba(212,168,67,0.22);
+  border-color: #D4A843;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.cloze-pill:active:not(.is-used) {
+  transform: translateY(0);
+}
+.cloze-pill.is-used {
+  opacity: 0.25;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-style: dashed;
+  text-decoration: line-through;
+}
+.cloze-pill.is-wrong-pill {
+  background: rgba(239,68,68,0.3) !important;
+  border-color: #ef4444 !important;
+  color: #ffa5a5 !important;
+}
+
+/* Modal / Estúdio de Importação Cloze */
+.cloze-studio-box {
+  background: #FFFDF8;
+  border-radius: 14px;
+  padding: 1.4rem;
+  border: 1px solid #D4A843;
+  box-shadow: 0 10px 30px rgba(61,13,24,0.18);
+  margin-top: 1rem;
+}
+.cloze-upload-dropzone {
+  border: 2px dashed #9B2335;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  background: rgba(155,35,53,0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+.cloze-upload-dropzone:hover {
+  background: rgba(155,35,53,0.08);
+  border-color: #D4A843;
+}
+.cloze-upload-dropzone.has-file {
+  border-color: #10b981;
+  background: rgba(16,185,129,0.08);
+}
