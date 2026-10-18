@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792320842.628506,
-    "seen": 1792320992.9532773,
-    "ast_hash": "d9beb0077677d627646d36d2538677d5",
+    "mtime": 1792322001.2779956,
+    "seen": 1792322109.9249878,
+    "ast_hash": "0819fa55a295d5d83de76bcf91f2c200",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792320882.6645892,
-    "seen": 1792320993.2589571,
-    "ast_hash": "39264915ebc599544926c2b97c35b7f9",
+    "mtime": 1792322060.7437434,
+    "seen": 1792322110.1555443,
+    "ast_hash": "2d456b9d5b67ad93f31c8f2792465d88",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
