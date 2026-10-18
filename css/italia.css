@@ -1994,6 +1994,55 @@ body.dark-mode .skeleton-pill {
   40%, 60% { transform: translate3d(5px, 0, 0); }
 }
 
+/* Word-Level Live Karaoke Highlight */
+.cloze-word-token {
+  display: inline-block;
+  padding: 0 1px;
+  border-radius: 3px;
+  transition: color 0.14s ease, text-shadow 0.14s ease, transform 0.14s ease;
+}
+
+.cloze-verse.is-active .cloze-word-token.is-sung {
+  color: var(--cor-veneziano, #9B2335);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(212, 168, 67, 0.4);
+  transform: translateY(-1px);
+}
+
+body.dark-mode .cloze-verse.is-active .cloze-word-token.is-sung {
+  color: #F5C842;
+  text-shadow: 0 0 12px rgba(245, 200, 66, 0.5);
+}
+
+.cloze-badge-timing {
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(46, 125, 50, 0.12);
+  color: #2E7D32;
+  border: 1px solid rgba(46, 125, 50, 0.3);
+  letter-spacing: 0.03em;
+}
+
+body.dark-mode .cloze-badge-timing {
+  background: rgba(76, 175, 80, 0.2);
+  color: #81C784;
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.cloze-traducao {
+  font-size: 0.78rem;
+  color: var(--cor-inchiostro-claro, #6B4C3B);
+  font-style: italic;
+  margin-top: 0.25rem;
+  opacity: 0.85;
+}
+
+body.dark-mode .cloze-traducao {
+  color: #C9BBA8;
+}
+
 /* Banner de Pausa Suave */
 .cloze-waiting-banner {
   background: linear-gradient(135deg, #78281F, #9B2335);

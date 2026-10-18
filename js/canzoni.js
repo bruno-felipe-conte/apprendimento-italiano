@@ -1180,9 +1180,19 @@ const Canzoni = {
     }
 
     // 4. Parser de timestamps e geração de lacunas Cloze
-    const duracaoEstimada = (this._audioReal && this._audioReal.duration) ? this._audioReal.duration : 0;
-    const parsed = this._parseLRCOrText(textoLetra, duracaoEstimada);
-    const { clozeItems, wordBankWords } = this._processarVersosParaCloze(parsed, densidade);
+    let clozeItems, wordBankWords;
+    if (can.versos_sincronizados || can.word_timings || this._isJSONWordTimings(textoLetra)) {
+      const jsonDados = can.versos_sincronizados || can.word_timings || this._tryParseJSON(textoLetra);
+      const res = this._processarJSONWordTimings(jsonDados, can, densidade);
+      clozeItems = res.clozeItems;
+      wordBankWords = res.wordBankWords;
+    } else {
+      const duracaoEstimada = (this._audioReal && this._audioReal.duration) ? this._audioReal.duration : 0;
+      const parsed = this._parseLRCOrText(textoLetra, duracaoEstimada);
+      const res = this._processarVersosParaCloze(parsed, densidade);
+      clozeItems = res.clozeItems;
+      wordBankWords = res.wordBankWords;
+    }
 
     this._clozeItems = clozeItems;
     this._clozeTotalBlanks = clozeItems.filter(it => it.blank).length;
@@ -1338,6 +1348,192 @@ const Canzoni = {
     return { clozeItems, wordBankWords };
   },
 
+  // Detecta se a entrada é estrutura JSON de timings por palavra
+  _isJSONWordTimings(strOuObj) {
+    if (!strOuObj) return false;
+    if (typeof strOuObj === 'object') {
+      if (Array.isArray(strOuObj)) {
+        return strOuObj.length > 0 && (strOuObj[0].palavras || strOuObj[0].words || strOuObj[0].w || strOuObj[0].start !== undefined);
+      }
+      return !!(strOuObj.versos || strOuObj.segments || strOuObj.words || strOuObj.versos_sincronizados);
+    }
+    if (typeof strOuObj === 'string') {
+      const trimmed = strOuObj.trim();
+      if ((trimmed.startsWith('[') && trimmed.endsWith(']')) || (trimmed.startsWith('{') && trimmed.endsWith('}'))) {
+        try {
+          const parsed = JSON.parse(trimmed);
+          return this._isJSONWordTimings(parsed);
+        } catch (_) {
+          return false;
+        }
+      }
+    }
+    return false;
+  },
+
+  _tryParseJSON(strOuObj) {
+    if (!strOuObj) return null;
+    if (typeof strOuObj === 'object') return strOuObj;
+    try {
+      return JSON.parse(strOuObj);
+    } catch (_) {
+      return null;
+    }
+  },
+
+  // Processa dados JSON estruturados com sincronização precisa a nível de palavra (Opção B)
+  _processarJSONWordTimings(jsonDados, can, densidade = 'padrao') {
+    const stopwords = new Set([
+      'il','lo','la','i','gli','le','un','uno','una',"un'",
+      'e','ed','o','od','ma','se','non','che','chi','cui',
+      'di','a','da','in','con','su','per','tra','fra',
+      'del','dello','della','dei','degli','delle',
+      'al','allo','alla','ai','agli','alle',
+      'dal','dallo','dalla','dai','dagli','dalle',
+      'nel','nello','nella','nei','negli','nelle',
+      'sul','sullo','sulla','sui','sugli','sulle',
+      'mi','ti','si','ci','vi','me','te','lui','lei','noi','voi','loro'
+    ]);
+
+    let rawVerses = [];
+    if (Array.isArray(jsonDados)) {
+      rawVerses = jsonDados;
+    } else if (jsonDados.versos_sincronizados) {
+      rawVerses = jsonDados.versos_sincronizados;
+    } else if (jsonDados.versos) {
+      rawVerses = jsonDados.versos;
+    } else if (jsonDados.segments) {
+      rawVerses = jsonDados.segments;
+    } else if (jsonDados.words) {
+      rawVerses = [{ palavras: jsonDados.words }];
+    }
+
+    const clozeItems = [];
+    const wordBankWords = [];
+    let blankCounter = 0;
+
+    for (let i = 0; i < rawVerses.length; i++) {
+      const v = rawVerses[i];
+      const rawWords = v.palavras || v.words || v.tokens || [];
+      const traducao = v.traducao || (can.estrofes && can.estrofes[i]?.traducao) || '';
+
+      const parsedWords = [];
+      let verseStartTime = Infinity;
+      let verseEndTime = 0;
+
+      for (let wIdx = 0; wIdx < rawWords.length; wIdx++) {
+        const item = rawWords[wIdx];
+        const rawText = item.w || item.word || item.text || '';
+        const time = (item.t !== undefined ? item.t : (item.start !== undefined ? item.start : item.time)) || 0;
+        const endTime = (item.end !== undefined ? item.end : (item.endTime !== undefined ? item.endTime : time + 0.5));
+        const isExplicitBlank = !!item.blank;
+
+        if (time < verseStartTime) verseStartTime = time;
+        if (endTime > verseEndTime) verseEndTime = endTime;
+
+        const m = String(rawText).match(/^([^A-Za-zÀ-ÖØ-öø-ÿ0-9]*)([A-Za-zÀ-ÖØ-öø-ÿ0-9'-]+)([^A-Za-zÀ-ÖØ-öø-ÿ0-9]*)$/);
+        let prefixPunct = '';
+        let cleanWord = rawText;
+        let suffixPunct = '';
+
+        if (m) {
+          prefixPunct = m[1];
+          cleanWord = m[2];
+          suffixPunct = m[3];
+        }
+
+        parsedWords.push({
+          rawText,
+          cleanWord,
+          prefixPunct,
+          suffixPunct,
+          time,
+          endTime,
+          isExplicitBlank
+        });
+      }
+
+      if (verseStartTime === Infinity) verseStartTime = i * 4.0;
+      if (verseEndTime <= verseStartTime) verseEndTime = verseStartTime + 3.5;
+
+      // Seleção da palavra oculta
+      let blankWordIndex = parsedWords.findIndex(pw => pw.isExplicitBlank);
+      if (blankWordIndex === -1) {
+        const estrofePalavra = can.estrofes && can.estrofes[i]?.palavra_oculta;
+        if (estrofePalavra) {
+          const normE = estrofePalavra.toLowerCase().trim();
+          blankWordIndex = parsedWords.findIndex(pw => pw.cleanWord.toLowerCase().trim() === normE);
+        }
+      }
+
+      if (blankWordIndex === -1 && parsedWords.length > 0) {
+        if (densidade !== 'leve' || i % 2 === 0) {
+          const candidatos = parsedWords
+            .map((pw, idx) => ({ ...pw, idx }))
+            .filter(pw => pw.cleanWord.length >= 4 && !stopwords.has(pw.cleanWord.toLowerCase()));
+          if (candidatos.length > 0) {
+            candidatos.sort((a, b) => b.cleanWord.length - a.cleanWord.length);
+            blankWordIndex = candidatos[0].idx;
+          } else {
+            blankWordIndex = parsedWords.length - 1;
+          }
+        }
+      }
+
+      const tokens = [];
+      let blankObj = null;
+
+      for (let wIdx = 0; wIdx < parsedWords.length; wIdx++) {
+        const pw = parsedWords[wIdx];
+        if (wIdx === blankWordIndex) {
+          const bId = `blank_${blankCounter++}`;
+          blankObj = {
+            blankId: bId,
+            verseIdx: i,
+            word: pw.cleanWord,
+            pauseTime: pw.time, // Pausa exata no início da palavra a ser cantada
+            status: 'blurred',
+            attempts: 0,
+            firstTry: true
+          };
+          tokens.push({
+            text: pw.cleanWord,
+            prefixPunct: pw.prefixPunct,
+            suffixPunct: pw.suffixPunct,
+            isBlank: true,
+            blankId: bId,
+            time: pw.time
+          });
+          wordBankWords.push(pw.cleanWord);
+        } else {
+          tokens.push({
+            text: pw.cleanWord,
+            rawText: pw.rawText,
+            prefixPunct: pw.prefixPunct,
+            suffixPunct: pw.suffixPunct,
+            isBlank: false,
+            time: pw.time
+          });
+        }
+      }
+
+      const rawTextJoined = parsedWords.map(p => p.rawText).join(' ');
+
+      clozeItems.push({
+        idx: i,
+        startTime: verseStartTime,
+        endTime: verseEndTime,
+        rawText: rawTextJoined,
+        traducao,
+        hasWordTimings: true,
+        tokens,
+        blank: blankObj
+      });
+    }
+
+    return { clozeItems, wordBankWords };
+  },
+
   _embaralharWordBank(words) {
     const arr = words.map((w, i) => ({ id: `wb_${i}_${Date.now()}`, word: w, used: false }));
     for (let i = arr.length - 1; i > 0; i--) {
@@ -1387,23 +1583,47 @@ const Canzoni = {
     let versesHtml = '';
     this._clozeItems.forEach((v, i) => {
       let lineHtml = '';
-      v.tokens.forEach(t => {
-        if (t.isBlank) {
-          const isTarget = v.blank && v.blank.status === 'blurred' && (!this._clozeItems.slice(0, i).some(x => x.blank && x.blank.status === 'blurred'));
-          const cls = v.blank.status === 'correct' ? 'is-correct' : (v.blank.status === 'wrong' ? 'is-wrong' : 'is-blurred');
-          const targetCls = isTarget ? ' is-target' : '';
-          lineHtml += `<span class="cloze-blank ${cls}${targetCls}" id="${t.blankId}" data-word="${this._esc(t.text)}">${this._esc(t.text)}</span>`;
-        } else {
-          lineHtml += this._esc(t.text);
-        }
-      });
+      if (v.hasWordTimings) {
+        v.tokens.forEach((t, tIdx) => {
+          const prefix = t.prefixPunct ? this._esc(t.prefixPunct) : '';
+          const suffix = t.suffixPunct ? this._esc(t.suffixPunct) : '';
+          if (t.isBlank) {
+            const isTarget = v.blank && v.blank.status === 'blurred' && (!this._clozeItems.slice(0, i).some(x => x.blank && x.blank.status === 'blurred'));
+            const cls = v.blank.status === 'correct' ? 'is-correct' : (v.blank.status === 'wrong' ? 'is-wrong' : 'is-blurred');
+            const targetCls = isTarget ? ' is-target' : '';
+            const timingAttr = t.time !== undefined ? ` data-time="${t.time}"` : '';
+            lineHtml += `${prefix}<span class="cloze-blank ${cls}${targetCls}" id="${t.blankId}" data-word="${this._esc(t.text)}"${timingAttr}>${this._esc(t.text)}</span>${suffix} `;
+          } else {
+            const timingAttr = t.time !== undefined ? ` data-time="${t.time}" id="cloze-token-${i}-${tIdx}"` : '';
+            lineHtml += `${prefix}<span class="cloze-word-token"${timingAttr}>${this._esc(t.text)}</span>${suffix} `;
+          }
+        });
+      } else {
+        v.tokens.forEach(t => {
+          if (t.isBlank) {
+            const isTarget = v.blank && v.blank.status === 'blurred' && (!this._clozeItems.slice(0, i).some(x => x.blank && x.blank.status === 'blurred'));
+            const cls = v.blank.status === 'correct' ? 'is-correct' : (v.blank.status === 'wrong' ? 'is-wrong' : 'is-blurred');
+            const targetCls = isTarget ? ' is-target' : '';
+            lineHtml += `<span class="cloze-blank ${cls}${targetCls}" id="${t.blankId}" data-word="${this._esc(t.text)}">${this._esc(t.text)}</span>`;
+          } else {
+            lineHtml += this._esc(t.text);
+          }
+        });
+      }
+
+      const timingBadge = v.hasWordTimings ? `<span class="cloze-badge-timing">⚡ Word-Sync</span>` : '';
+      const tradHtml = v.traducao ? `<div class="cloze-traducao">${this._esc(v.traducao)}</div>` : '';
 
       versesHtml += `
         <div class="cloze-verse is-future" id="cloze-verse-${i}" onclick="Canzoni._pularParaVersoCloze(${i})">
-          <div style="font-size:0.68rem;color:#9B2335;font-weight:700;margin-bottom:0.15rem;letter-spacing:0.04em">
-            VERSO ${i + 1}/${this._clozeItems.length}
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.15rem">
+            <span style="font-size:0.68rem;color:#9B2335;font-weight:700;letter-spacing:0.04em">
+              VERSO ${i + 1}/${this._clozeItems.length}
+            </span>
+            ${timingBadge}
           </div>
           <div class="cloze-line">${lineHtml}</div>
+          ${tradHtml}
         </div>
       `;
     });
@@ -1643,6 +1863,10 @@ const Canzoni = {
       this._atualizarDestaqueVersos(activeIdx);
     }
 
+    if (activeIdx !== -1) {
+      this._atualizarDestaquePalavras(curTime, activeIdx);
+    }
+
     // ── Monitoramento de Lacuna: Cenário B (Fade-out suave 200ms e Pause) ──
     const pendingBlanks = items.map(it => it.blank).filter(b => b && b.status === 'blurred');
     if (pendingBlanks.length > 0) {
@@ -1669,9 +1893,11 @@ const Canzoni = {
       } else if (idx < activeIdx) {
         vEl.classList.remove('is-active', 'is-future');
         vEl.classList.add('is-past');
+        vEl.querySelectorAll('.cloze-word-token').forEach(tok => tok.classList.add('is-sung'));
       } else {
         vEl.classList.remove('is-active', 'is-past');
         vEl.classList.add('is-future');
+        vEl.querySelectorAll('.cloze-word-token').forEach(tok => tok.classList.remove('is-sung'));
       }
     });
 
@@ -1680,6 +1906,28 @@ const Canzoni = {
     if (activeEl) {
       activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  },
+
+  // Efeito Karaokê em tempo real palavra por palavra (Word-Level Sync)
+  _atualizarDestaquePalavras(curTime, activeIdx) {
+    if (activeIdx < 0 || !this._clozeItems || !this._clozeItems[activeIdx]) return;
+    const item = this._clozeItems[activeIdx];
+    if (!item.hasWordTimings) return;
+
+    const vEl = document.getElementById(`cloze-verse-${activeIdx}`);
+    if (!vEl) return;
+
+    const tokens = vEl.querySelectorAll('.cloze-word-token[data-time]');
+    tokens.forEach(tok => {
+      const t = parseFloat(tok.getAttribute('data-time'));
+      if (!isNaN(t)) {
+        if (curTime >= t) {
+          tok.classList.add('is-sung');
+        } else {
+          tok.classList.remove('is-sung');
+        }
+      }
+    });
   },
 
   _atualizarUIWaitingBanner(mostrar, targetBlank = null) {
@@ -1901,6 +2149,10 @@ const Canzoni = {
       this._clozeActiveVerseIdx = activeIdx;
       this._atualizarDestaqueVersos(activeIdx);
       this._falarVersoTTS(items[activeIdx]);
+    }
+
+    if (activeIdx !== -1) {
+      this._atualizarDestaquePalavras(curTime, activeIdx);
     }
 
     // Monitora lacunas pendentes

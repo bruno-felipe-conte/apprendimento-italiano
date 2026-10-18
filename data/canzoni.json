@@ -50,6 +50,94 @@
           "repeticoes": 2
         }
       ],
+      "versos_sincronizados": [
+        {
+          "id": 1,
+          "traducao": "Uma manhã eu me levantei, ó bella ciao, bella ciao, bella ciao ciao ciao!",
+          "palavras": [
+            { "w": "Una", "t": 2.00 },
+            { "w": "mattina", "t": 2.50 },
+            { "w": "mi", "t": 3.20 },
+            { "w": "sono", "t": 3.50 },
+            { "w": "alzato,", "t": 3.90, "blank": true },
+            { "w": "o", "t": 4.90 },
+            { "w": "bella", "t": 5.20 },
+            { "w": "ciao,", "t": 5.70 },
+            { "w": "bella", "t": 6.20 },
+            { "w": "ciao,", "t": 6.70 },
+            { "w": "bella", "t": 7.20 },
+            { "w": "ciao", "t": 7.65 },
+            { "w": "ciao", "t": 8.05 },
+            { "w": "ciao!", "t": 8.45 }
+          ]
+        },
+        {
+          "id": 2,
+          "traducao": "Uma manhã eu me levantei e encontrei o invasor.",
+          "palavras": [
+            { "w": "Una", "t": 10.50 },
+            { "w": "mattina", "t": 11.00 },
+            { "w": "mi", "t": 11.70 },
+            { "w": "sono", "t": 12.00 },
+            { "w": "alzato", "t": 12.40 },
+            { "w": "e", "t": 13.40 },
+            { "w": "ho", "t": 13.80 },
+            { "w": "trovato", "t": 14.20, "blank": true },
+            { "w": "l'invasor.", "t": 15.20 }
+          ]
+        },
+        {
+          "id": 3,
+          "traducao": "Ó partigiano, leva-me embora, ó bella ciao, bella ciao, bella ciao ciao ciao!",
+          "palavras": [
+            { "w": "O", "t": 17.50 },
+            { "w": "partigiano,", "t": 17.90 },
+            { "w": "portami", "t": 19.00, "blank": true },
+            { "w": "via,", "t": 19.80 },
+            { "w": "o", "t": 20.40 },
+            { "w": "bella", "t": 20.80 },
+            { "w": "ciao,", "t": 21.30 },
+            { "w": "bella", "t": 21.80 },
+            { "w": "ciao,", "t": 22.30 },
+            { "w": "bella", "t": 22.80 },
+            { "w": "ciao", "t": 23.25 },
+            { "w": "ciao", "t": 23.65 },
+            { "w": "ciao!", "t": 24.05 }
+          ]
+        },
+        {
+          "id": 4,
+          "traducao": "Ó partigiano, leva-me embora, pois sinto que vou morrer.",
+          "palavras": [
+            { "w": "O", "t": 25.00 },
+            { "w": "partigiano,", "t": 25.40 },
+            { "w": "portami", "t": 26.30 },
+            { "w": "via,", "t": 27.00 },
+            { "w": "ché", "t": 27.70 },
+            { "w": "mi", "t": 28.10 },
+            { "w": "sento", "t": 28.50 },
+            { "w": "di", "t": 29.00 },
+            { "w": "morir.", "t": 29.40, "blank": true }
+          ]
+        },
+        {
+          "id": 5,
+          "traducao": "E esta é a flor do partigiano, morto pela liberdade!",
+          "palavras": [
+            { "w": "E", "t": 31.00 },
+            { "w": "questo", "t": 31.30 },
+            { "w": "è", "t": 31.80 },
+            { "w": "il", "t": 32.10 },
+            { "w": "fiore", "t": 32.40 },
+            { "w": "del", "t": 33.00 },
+            { "w": "partigiano,", "t": 33.40 },
+            { "w": "morto", "t": 34.50 },
+            { "w": "per", "t": 35.10 },
+            { "w": "la", "t": 35.40 },
+            { "w": "libertà!", "t": 35.80, "blank": true }
+          ]
+        }
+      ],
       "vocabulario_chave": [
         "mattina",
         "alzato",

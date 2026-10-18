@@ -6,9 +6,9 @@
     "semantic_hash": "be3b19f4b696480702f2c2e4460579b7"
   },
   "data/canzoni.json": {
-    "mtime": 1792188782.578459,
-    "seen": 1792189898.6511552,
-    "ast_hash": "61b95ee60cd6247785fb554b9eb5c24b",
+    "mtime": 1792328969.8134193,
+    "seen": 1792329364.8285959,
+    "ast_hash": "66f0ea0405120f61ec51a57a9191c073",
     "semantic_hash": ""
   },
   "data/conjugacoes.json": {
@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "js/canzoni.js": {
-    "mtime": 1792241920.616809,
-    "seen": 1792242005.8494005,
-    "ast_hash": "8580bc2bb9d08a56ca51e2036fb99d19",
+    "mtime": 1792329263.6221986,
+    "seen": 1792329365.7097795,
+    "ast_hash": "ecaf26e41f6f7464d00056e023f8b21e",
     "semantic_hash": ""
   },
   "js/conquistas.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792326249.4895055,
-    "seen": 1792326308.8218584,
-    "ast_hash": "507e3ef6cc636848e66fe6fba85d421c",
+    "mtime": 1792329318.8871467,
+    "seen": 1792329366.0394576,
+    "ast_hash": "27ce6fe9362b909c0a74c827df40d1bd",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792326234.5675952,
-    "seen": 1792326309.1593072,
-    "ast_hash": "ff464376ec55abaf59a036d1f6ba4f21",
+    "mtime": 1792329306.5708597,
+    "seen": 1792329366.2430007,
+    "ast_hash": "d8f19bbda5ca0e4bbdfc3c7dd203c93a",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
