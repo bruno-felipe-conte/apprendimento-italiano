@@ -637,16 +637,21 @@ const Canzoni = {
       return;
     }
 
-    const u = new SpeechSynthesisUtterance(texto);
+    const textoNormalizado = (typeof VoiceEngine !== 'undefined')
+      ? VoiceEngine.normalizarParaFala(texto)
+      : texto;
+
+    const u = new SpeechSynthesisUtterance(textoNormalizado);
     u.lang = 'it-IT';
     u.rate = this.velocidadeAudio || 0.85;
-    if (typeof App !== 'undefined' && App._vozItaliana) {
-      u.voice = App._vozItaliana;
-    } else {
-      const vozes = window.speechSynthesis.getVoices();
-      const vozIt = vozes.find(v => v.lang.startsWith('it'));
-      if (vozIt) u.voice = vozIt;
+
+    let voz = (typeof VoiceEngine !== 'undefined') ? VoiceEngine.obterVozSelecionada() : null;
+    if (!voz && typeof App !== 'undefined') {
+      voz = App._getVozItaliana();
     }
+    if (voz) u.voice = voz;
+
+    window._activeUtterance = u;
 
     u.onboundary = (ev) => {
       if (ev.name === 'word' || typeof ev.charIndex === 'number') {
@@ -661,6 +666,9 @@ const Canzoni = {
     };
 
     u.onend = () => {
+      if (window._activeUtterance === u) {
+        window._activeUtterance = null;
+      }
       if (this._timerKaraoke) {
         clearInterval(this._timerKaraoke);
         this._timerKaraoke = null;
@@ -679,10 +687,19 @@ const Canzoni = {
     };
 
     u.onerror = () => {
+      if (window._activeUtterance === u) {
+        window._activeUtterance = null;
+      }
       this.pararAudio();
     };
 
-    window.speechSynthesis.speak(u);
+    try {
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+      window.speechSynthesis.cancel();
+      window.speechSynthesis.speak(u);
+    } catch (_) {
+      this.pararAudio();
+    }
   },
 
   _avancarProximoBlank(autoPlay = true) {
