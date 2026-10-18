@@ -163,6 +163,7 @@ const App = {
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();
     if (typeof Notificacoes !== 'undefined') Notificacoes.init();
     this.atualizarAudioSpeedUI();
+    this.initSidebarPin();
     // Pre-load speech synthesis voices so the first pronunciar() call is instant
     if ('speechSynthesis' in window) {
       speechSynthesis.getVoices(); // trigger async load
@@ -185,6 +186,39 @@ const App = {
       else if (e.key === '4') this.navegar('vocabolario');
       else if (e.key === '5') this.navegar('grammatica');
     });
+  },
+
+  // ── Desktop Sidebar Pin / Unpin ───────────────────────────
+  initSidebarPin() {
+    const isPinned = localStorage.getItem('it_sidebar_pinned') === 'true';
+    const sidebar = document.getElementById('app-sidebar');
+    const pinBtn = document.getElementById('sidebar-pin-btn');
+    const pinIcon = document.getElementById('sidebar-pin-icon');
+
+    if (isPinned) {
+      document.body.classList.add('sidebar-pinned');
+      if (sidebar) sidebar.classList.add('pinned');
+      if (pinBtn) {
+        pinBtn.classList.add('ativo');
+        pinBtn.title = 'Desafixar barra lateral';
+      }
+      if (pinIcon) pinIcon.textContent = '📍';
+    } else {
+      document.body.classList.remove('sidebar-pinned');
+      if (sidebar) sidebar.classList.remove('pinned');
+      if (pinBtn) {
+        pinBtn.classList.remove('ativo');
+        pinBtn.title = 'Fixar barra lateral';
+      }
+      if (pinIcon) pinIcon.textContent = '📌';
+    }
+  },
+
+  toggleSidebarPin() {
+    const isPinned = document.body.classList.contains('sidebar-pinned');
+    const novoEstado = !isPinned;
+    localStorage.setItem('it_sidebar_pinned', novoEstado ? 'true' : 'false');
+    this.initSidebarPin();
   },
 
   // ── Stale-While-Revalidate helper for Templos & Vocab ──────
@@ -328,7 +362,7 @@ const App = {
 
     // Lazy-render on first visit or when container only has skeleton (preserves active lessons & filters!)
     if (secao === 'dialoghi' && typeof Dialoghi !== 'undefined') {
-      if (_precisaRender('dialogo-seletor') && !Dialoghi.dialogoAtual) Dialoghi.renderizarSeletor();
+      if (_precisaRender('dialoghi-container') && !Dialoghi.dialogoAtual) Dialoghi.renderizarSeletor();
     }
     if (secao === 'canzoni' && typeof Canzoni !== 'undefined') {
       if (_precisaRender('canzoni-container')) Canzoni.renderizarSeletor();

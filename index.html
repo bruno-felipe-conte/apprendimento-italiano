@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=73">
+  <link rel="stylesheet" href="css/italia.css?v=74">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -2634,62 +2634,72 @@
       if (tema === 'dark') {
         document.body.classList.add('dark-mode');
       }
+      const sidebarPinned = localStorage.getItem('it_sidebar_pinned');
+      if (sidebarPinned === 'true') {
+        document.body.classList.add('sidebar-pinned');
+      }
     })();
   </script>
 
-  <header class="app-header">
-    <div class="header-top">
-      <div class="header-logo-row">
-        <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
-        <div class="header-icons">
-          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">
-            <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
-            <span class="lang-pill-div">|</span>
-            <span id="lang-pill-it" class="lang-pill-seg">IT</span>
-          </button>
-          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
-          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
+  <aside class="app-sidebar" id="app-sidebar">
+    <button id="sidebar-pin-btn" class="sidebar-pin-btn" onclick="App.toggleSidebarPin()" title="Fixar barra lateral">
+      <span class="pin-icon" id="sidebar-pin-icon">📌</span>
+    </button>
+
+    <header class="app-header">
+      <div class="header-top">
+        <div class="header-logo-row">
+          <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
+          <div class="header-icons">
+            <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">
+              <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
+              <span class="lang-pill-div">|</span>
+              <span id="lang-pill-it" class="lang-pill-seg">IT</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
+            <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
+            <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
+            <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
+            <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
+          </div>
+        </div>
+        <div class="stats-bar" id="stats-bar">
+          <div class="stats-primary-row">
+            <span class="stat-item" id="stat-nivel">Livello 1</span>
+            <span class="stat-item" id="stat-xp">XP: 0/500</span>
+            <span class="stat-item" id="stat-streak">🔥 0 dias</span>
+          </div>
+          <div class="stats-secondary-row">
+            <span class="stat-item secondary" id="stat-templi">Templi: 1/10</span>
+            <span class="stat-item secondary" id="stat-parole">Parole: 0</span>
+          </div>
         </div>
       </div>
-      <div class="stats-bar" id="stats-bar">
-        <div class="stats-primary-row">
-          <span class="stat-item" id="stat-nivel">Livello 1</span>
-          <span class="stat-item" id="stat-xp">XP: 0/500</span>
-          <span class="stat-item" id="stat-streak">🔥 0 dias</span>
-        </div>
-        <div class="stats-secondary-row">
-          <span class="stat-item secondary" id="stat-templi">Templi: 1/10</span>
-          <span class="stat-item secondary" id="stat-parole">Parole: 0</span>
-        </div>
+      <div class="xp-bar-container">
+        <div class="xp-bar-fill" id="xp-bar-fill"></div>
       </div>
-    </div>
-    <div class="xp-bar-container">
-      <div class="xp-bar-fill" id="xp-bar-fill"></div>
-    </div>
-  </header>
+    </header>
 
-  <nav class="nav-tabs">
-    <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')">🏛️ <span data-i18n="top_nav_templi">Templi</span></button>
-    <button class="nav-tab" data-section="dialoghi" onclick="App.navegar('dialoghi')">💬 <span data-i18n="top_nav_dialoghi">Dialoghi</span></button>
-    <button class="nav-tab" data-section="canzoni" onclick="App.navegar('canzoni')">🎵 <span data-i18n="top_nav_canzoni">Canzoni</span></button>
-    <button class="nav-tab" data-section="imitazione" onclick="App.navegar('imitazione')">🗣️ <span data-i18n="top_nav_imitazione">Imitazione</span></button>
-    <button class="nav-tab" data-section="flashcard" onclick="App.navegar('flashcard')">🃏 <span data-i18n="top_nav_flashcard">Flashcard</span></button>
-    <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')">❓ <span data-i18n="top_nav_quiz">Quiz</span></button>
-    <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')">📖 <span data-i18n="top_nav_vocabolario">Vocabolario</span></button>
-    <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')">📚 <span data-i18n="top_nav_grammatica">Grammatica</span></button>
-    <button class="nav-tab" data-section="storie" onclick="App.navegar('storie')">📜 <span data-i18n="top_nav_storie">Storie</span></button>
-  </nav>
+    <nav class="nav-tabs">
+      <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')" title="Templi"><span class="nav-tab-icon">🏛️</span> <span class="nav-tab-label" data-i18n="top_nav_templi">Templi</span></button>
+      <button class="nav-tab" data-section="dialoghi" onclick="App.navegar('dialoghi')" title="Dialoghi"><span class="nav-tab-icon">💬</span> <span class="nav-tab-label" data-i18n="top_nav_dialoghi">Dialoghi</span></button>
+      <button class="nav-tab" data-section="canzoni" onclick="App.navegar('canzoni')" title="Canzoni"><span class="nav-tab-icon">🎵</span> <span class="nav-tab-label" data-i18n="top_nav_canzoni">Canzoni</span></button>
+      <button class="nav-tab" data-section="imitazione" onclick="App.navegar('imitazione')" title="Imitazione"><span class="nav-tab-icon">🗣️</span> <span class="nav-tab-label" data-i18n="top_nav_imitazione">Imitazione</span></button>
+      <button class="nav-tab" data-section="flashcard" onclick="App.navegar('flashcard')" title="Flashcard"><span class="nav-tab-icon">🃏</span> <span class="nav-tab-label" data-i18n="top_nav_flashcard">Flashcard</span></button>
+      <button class="nav-tab" data-section="quiz" onclick="App.navegar('quiz')" title="Quiz"><span class="nav-tab-icon">❓</span> <span class="nav-tab-label" data-i18n="top_nav_quiz">Quiz</span></button>
+      <button class="nav-tab" data-section="vocabolario" onclick="App.navegar('vocabolario')" title="Vocabolario"><span class="nav-tab-icon">📖</span> <span class="nav-tab-label" data-i18n="top_nav_vocabolario">Vocabolario</span></button>
+      <button class="nav-tab" data-section="grammatica" onclick="App.navegar('grammatica')" title="Grammatica"><span class="nav-tab-icon">📚</span> <span class="nav-tab-label" data-i18n="top_nav_grammatica">Grammatica</span></button>
+      <button class="nav-tab" data-section="storie" onclick="App.navegar('storie')" title="Storie"><span class="nav-tab-icon">📜</span> <span class="nav-tab-label" data-i18n="top_nav_storie">Storie</span></button>
+    </nav>
 
-  <!-- Daily goal bar -->
-  <div class="daily-goal-bar" id="daily-goal-bar">
-    <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
-    <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
-    <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
-    <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
-  </div>
+    <!-- Daily goal bar -->
+    <div class="daily-goal-bar" id="daily-goal-bar">
+      <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
+      <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
+      <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
+      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
+    </div>
+  </aside>
 
   <!-- Meta settings modal -->
   <div class="meta-settings-modal" id="meta-settings-modal" onclick="if(event.target===this)App.fecharMetaSettings()">
@@ -3118,23 +3128,23 @@
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
-  <script src="js/audio.js?v=73"></script>
-  <script src="js/conquistas.js?v=73"></script>
-  <script src="js/onboarding.js?v=73"></script>
-  <script src="js/i18n.js?v=73"></script>
-  <script src="js/voice_engine.js?v=73"></script>
-  <script src="js/core.js?v=73"></script>
-  <script src="js/progression.js?v=73"></script>
-  <script src="js/flashcards.js?v=73"></script>
-  <script src="js/quiz.js?v=73"></script>
-  <script src="js/vocab.js?v=73"></script>
-  <script src="js/heatmap.js?v=73"></script>
-  <script src="js/grammar.js?v=73"></script>
-  <script src="js/profilo.js?v=73"></script>
-  <script src="js/dialoghi.js?v=73"></script>
-  <script src="js/canzoni.js?v=73"></script>
-  <script src="js/imitazione.js?v=73"></script>
-  <script src="js/storie.js?v=73"></script>
+  <script src="js/audio.js?v=74"></script>
+  <script src="js/conquistas.js?v=74"></script>
+  <script src="js/onboarding.js?v=74"></script>
+  <script src="js/i18n.js?v=74"></script>
+  <script src="js/voice_engine.js?v=74"></script>
+  <script src="js/core.js?v=74"></script>
+  <script src="js/progression.js?v=74"></script>
+  <script src="js/flashcards.js?v=74"></script>
+  <script src="js/quiz.js?v=74"></script>
+  <script src="js/vocab.js?v=74"></script>
+  <script src="js/heatmap.js?v=74"></script>
+  <script src="js/grammar.js?v=74"></script>
+  <script src="js/profilo.js?v=74"></script>
+  <script src="js/dialoghi.js?v=74"></script>
+  <script src="js/canzoni.js?v=74"></script>
+  <script src="js/imitazione.js?v=74"></script>
+  <script src="js/storie.js?v=74"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
