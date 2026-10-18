@@ -574,158 +574,523 @@
       padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
     }
 
-    /* ── STORIE: Livro aberto ───────────────────────────────── */
-    .book-scene {
+    /* ── STORIE: MODO LEITOR DE LIVRO IMERSIVO (ZERO ROLAGEM) ── */
+    .book-reader-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2500;
+      height: 100dvh;
+      width: 100vw;
       display: flex;
-      justify-content: center;
-      padding: 1.4rem 0 2rem;
+      flex-direction: column;
+      background: radial-gradient(circle at center, #2b2117 0%, #140e09 100%);
+      color: #f4ecd8;
+      overflow: hidden;
+      user-select: text;
+      animation: bookFadeIn 0.22s ease-out;
     }
-    .book-spread {
+    @keyframes bookFadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Barra Superior Slim */
+    .book-top-bar {
+      height: 48px;
+      min-height: 48px;
       display: flex;
-      width: 100%;
-      max-width: 740px;
-      border-radius: 3px 10px 10px 3px;
-      box-shadow:
-        -6px 0 14px rgba(0,0,0,0.20),
-        6px 8px 28px rgba(0,0,0,0.22);
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      background: rgba(20, 14, 9, 0.95);
+      border-bottom: 1px solid rgba(212, 168, 67, 0.25);
+      backdrop-filter: blur(8px);
+      z-index: 30;
+      box-sizing: border-box;
+    }
+    .book-top-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      overflow: hidden;
+    }
+    .book-btn-voltar {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #ecdcc0;
+      border-radius: 6px;
+      padding: 0.32rem 0.65rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .book-btn-voltar:hover {
+      background: rgba(255,255,255,0.16);
+      color: #fff;
+    }
+    .book-top-title-wrap {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .book-top-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.92rem;
+      color: #F5EDD8;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .book-top-subtitle {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.72rem;
+      color: #c4af88;
+      font-style: italic;
+    }
+    .book-top-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .book-action-btn {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(212,168,67,0.22);
+      color: #ecdcc0;
+      border-radius: 6px;
+      padding: 0.32rem 0.6rem;
+      font-size: 0.76rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .book-action-btn:hover {
+      background: rgba(212,168,67,0.18);
+      border-color: #d4a843;
+      color: #fff;
+    }
+    .book-action-btn.active {
+      background: #8b2332;
+      border-color: #b83244;
+      color: #fff;
+    }
+
+    /* Palco Central do Livro (sempre sem scroll) */
+    .book-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
       overflow: hidden;
       position: relative;
+      box-sizing: border-box;
+      perspective: 1800px;
     }
-    .book-page {
+
+    /* Livro Físico Aberto */
+    .antique-book {
+      display: flex;
+      width: 100%;
+      max-width: 960px;
+      height: 100%;
+      max-height: calc(100dvh - 108px);
+      position: relative;
+      background: #f5eedc;
+      border-radius: 6px 14px 14px 6px;
+      box-shadow:
+        /* Pilha de folhas cortadas (Deckle Edge / Page Stack) */
+        -4px 0 0 #e4d8bb,
+        -8px 0 0 #d8cba9,
+        -12px 0 0 #cbbd94,
+        4px 0 0 #e4d8bb,
+        8px 0 0 #d8cba9,
+        12px 0 0 #cbbd94,
+        /* Sombras externas */
+        0 20px 48px rgba(0,0,0,0.65),
+        0 6px 16px rgba(0,0,0,0.45);
+      box-sizing: border-box;
+      transition: transform 0.25s ease;
+    }
+
+    /* Lombada e vinco central 3D */
+    .book-spine-crease {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 44px;
+      z-index: 10;
+      pointer-events: none;
+      background: linear-gradient(
+        to right,
+        rgba(30, 20, 10, 0.45) 0%,
+        rgba(50, 30, 15, 0.20) 25%,
+        rgba(0, 0, 0, 0.65) 50%,
+        rgba(50, 30, 15, 0.20) 75%,
+        rgba(30, 20, 10, 0.45) 100%
+      );
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    }
+    .book-spine-crease::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 50%;
+      width: 2px;
+      transform: translateX(-50%);
+      background: rgba(30,15,5,0.7);
+    }
+
+    /* Páginas (Esquerda e Direita) */
+    .antique-page {
       flex: 1;
-      padding: 2.2rem 1.7rem 1.4rem;
+      height: 100%;
+      padding: 1.4rem 2rem 1.1rem;
       position: relative;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      box-sizing: border-box;
+      background: #f7f1e3;
     }
-    .book-page-left {
-      background: #f2e9d2;
-      border-right: 3px solid rgba(100,68,28,0.22);
+    .antique-page-left {
+      background: #f4ecda;
+      border-right: 1px solid rgba(80, 50, 20, 0.15);
+      border-radius: 6px 0 0 6px;
     }
-    .book-page-left::before {
+    .antique-page-left::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(80,48,12,0.10) 0%, rgba(80,48,12,0.03) 18%, transparent 40%),
-                  linear-gradient(to left,  rgba(80,48,12,0.06) 0%, transparent 30%);
+      top: 0; right: 0; bottom: 0;
+      width: 35px;
+      background: linear-gradient(to left, rgba(60,35,15,0.18), transparent);
       pointer-events: none;
     }
-    .book-page-right {
-      background: #f7f1e1;
+    .antique-page-right {
+      background: #f8f3e7;
+      border-radius: 0 14px 14px 0;
     }
-    .book-page-right::before {
+    .antique-page-right::after {
       content: '';
       position: absolute;
       top: 0; left: 0; bottom: 0;
-      width: 22px;
-      background: linear-gradient(to right, rgba(80,48,12,0.13), transparent);
+      width: 35px;
+      background: linear-gradient(to right, rgba(60,35,15,0.18), transparent);
       pointer-events: none;
     }
-    .book-header {
+
+    /* Cabeçalho editorial da página */
+    .antique-page-header {
       text-align: center;
-      margin-bottom: 1.1rem;
+      margin-bottom: 0.65rem;
+      min-height: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(140, 100, 50, 0.16);
+      padding-bottom: 0.35rem;
     }
-    .book-icon {
-      font-size: 2rem;
+    .antique-running-head {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8c6a45;
+    }
+
+    /* Título ornamental na primeira página */
+    .antique-cover-header {
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+    .antique-cover-icon {
+      font-size: 1.8rem;
       display: block;
-      margin-bottom: 0.4rem;
-      opacity: 0.72;
-      filter: sepia(0.45);
+      margin-bottom: 0.25rem;
+      opacity: 0.8;
+      filter: sepia(0.4);
     }
-    .book-titulo {
-      font-family: 'UnifrakturMaguntia', cursive;
-      font-size: 1.45rem;
+    .antique-cover-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
       color: #5c3a18;
-      margin: 0 0 0.2rem;
+      margin: 0 0 0.15rem;
       line-height: 1.2;
     }
-    .book-subtitulo {
+    .antique-cover-subtitle {
       font-family: 'EB Garamond', Georgia, serif;
       font-style: italic;
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       color: #8a7250;
-      margin: 0 0 0.8rem;
-      letter-spacing: 0.04em;
+      margin: 0 0 0.4rem;
     }
-    .book-ornamento {
+    .antique-ornamento {
       text-align: center;
-      font-size: 0.78rem;
+      font-size: 0.74rem;
       color: #9c7a40;
       letter-spacing: 0.3em;
-      margin: 0.4rem 0 0.9rem;
+      margin: 0.2rem 0 0.5rem;
     }
-    .book-divider {
-      text-align: center;
-      font-size: 0.72rem;
-      color: #9c7a40;
-      letter-spacing: 0.5em;
-      margin: 0.5rem 0;
-      font-family: 'EB Garamond', Georgia, serif;
+
+    /* Conteúdo textual da página — garantido sem rolagem */
+    .antique-page-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow: hidden;
+      box-sizing: border-box;
     }
-    .book-fine {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-style: italic;
-      font-size: 0.76rem;
-      color: #8a7250;
-      text-align: center;
-      margin-top: 0.4rem;
+    .antique-para-wrap {
+      margin-bottom: 0.6rem;
     }
-    .book-pagina {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.68rem;
-      color: #8a7250;
-      text-align: center;
-      margin-top: auto;
-      padding-top: 1rem;
-      letter-spacing: 0.12em;
+    .antique-para-wrap:last-child {
+      margin-bottom: 0;
     }
-    /* Bloco = parágrafo dentro do livro */
-    .storie-bloco { margin: 0; }
-    .storie-bloco + .storie-bloco { margin-top: 0; }
-    .storie-texto-corrido { flex: 1; }
-    .storie-p {
+    .antique-para {
       font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.97rem;
-      line-height: 1.88;
-      color: #2c1e0e;
-      margin: 0 0 0.5em;
+      font-size: 1.05rem;
+      line-height: 1.74;
+      color: #2b1d11;
       text-align: justify;
       hyphens: auto;
+      text-indent: 1.3em;
+      margin: 0;
+    }
+    .antique-para.no-indent {
       text-indent: 0;
     }
-    body.dark-mode .storie-p { color: #E8DEC8; }
-
-    /* Tradução */
-    .storie-trad-p {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.8rem;
-      color: #7a6040;
-      font-style: italic;
-      line-height: 1.55;
-      margin: 0 0 0.55em 0;
+    .antique-para-trad {
       display: block;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.84rem;
+      line-height: 1.48;
+      font-style: italic;
+      color: #7a5e3a;
+      margin-top: 0.25rem;
+      text-indent: 0;
     }
-    body.dark-mode .storie-trad-p { color: #9A8870; }
 
-    /* Botão de áudio: escondido no livro, acessível via modal */
-    .storie-audio-btn { display: none !important; }
+    /* Rodapé da página com número */
+    .antique-page-footer {
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.75rem;
+      color: #8c6a45;
+      letter-spacing: 0.18em;
+      margin-top: auto;
+      padding-top: 0.35rem;
+      border-top: 1px solid rgba(140, 100, 50, 0.14);
+    }
 
-    /* Capitular — primeira letra ornamentada */
-    .storie-capitular {
-      font-family: 'UnifrakturMaguntia', cursive;
+    /* Letra Capitular */
+    .antique-drop-cap {
+      font-family: 'Cinzel', serif;
       float: left;
-      font-size: 3.3em;
-      line-height: 0.78;
-      margin: 5px 5px -3px 0;
-      color: #7a3a12;
+      font-size: 3.1rem;
+      line-height: 0.8;
+      margin: 3px 6px -2px 0;
+      color: #8b2332;
+      font-weight: 700;
       pointer-events: none;
     }
 
-    /* Mobile: páginas empilhadas */
-    @media (max-width: 599px) {
-      .book-spread { flex-direction: column; border-radius: 8px; }
-      .book-page-left { border-right: none; border-bottom: 2px solid rgba(100,68,28,0.2); }
-      .book-page-right::before { display: none; }
+    /* Barra Inferior de Navegação Slim */
+    .book-bottom-bar {
+      height: 52px;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.2rem;
+      background: rgba(20, 14, 9, 0.95);
+      border-top: 1px solid rgba(212, 168, 67, 0.25);
+      backdrop-filter: blur(8px);
+      z-index: 30;
+      box-sizing: border-box;
+    }
+    .book-nav-btn {
+      background: #8b2332;
+      border: 1px solid #b83244;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease;
+    }
+    .book-nav-btn:hover:not(:disabled) {
+      background: #a32b3c;
+      transform: translateY(-1px);
+    }
+    .book-nav-btn:disabled {
+      opacity: 0.32;
+      cursor: not-allowed;
+      border-color: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      transform: none;
+    }
+    .book-progress-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .book-progress-text {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 0.82rem;
+      color: #ecdcc0;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    .book-progress-slider {
+      width: 130px;
+      accent-color: #d4a843;
+      cursor: pointer;
+    }
+
+    /* Drawer / Modal de Capítulos */
+    .book-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(3px);
+      z-index: 2600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .book-drawer {
+      background: #231c15;
+      border: 1px solid rgba(212,168,67,0.3);
+      border-radius: 12px;
+      max-width: 480px;
+      width: 100%;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.85);
+      color: #f4ecd8;
+      overflow: hidden;
+    }
+    .book-drawer-header {
+      padding: 0.85rem 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(212,168,67,0.2);
+    }
+    .book-drawer-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      color: #f4ecd8;
+      font-weight: 700;
+    }
+    .book-drawer-list {
+      padding: 0.6rem;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .book-chapter-item {
+      padding: 0.65rem 0.8rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.15s ease;
+      color: #ecdcc0;
+      text-decoration: none;
+    }
+    .book-chapter-item:hover {
+      background: rgba(212,168,67,0.15);
+      border-color: rgba(212,168,67,0.3);
+      color: #fff;
+    }
+    .book-chapter-item.active {
+      background: #8b2332;
+      border-color: #b83244;
+      color: #fff;
+    }
+
+    /* Animação suave de virada de página 3D */
+    .antique-book.turning-next .antique-page-right {
+      animation: flipNext 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .antique-book.turning-prev .antique-page-left {
+      animation: flipPrev 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes flipNext {
+      0% { transform: rotateY(0deg); opacity: 1; }
+      50% { transform: rotateY(-18deg); opacity: 0.7; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+    @keyframes flipPrev {
+      0% { transform: rotateY(0deg); opacity: 1; }
+      50% { transform: rotateY(18deg); opacity: 0.7; }
+      100% { transform: rotateY(0deg); opacity: 1; }
+    }
+
+    /* RESPONSIVIDADE MOBILE (Página Única de Bolso) */
+    @media (max-width: 767px) {
+      .antique-book {
+        max-width: 460px;
+        border-radius: 8px;
+        box-shadow:
+          4px 0 0 #e4d8bb,
+          8px 0 0 #d8cba9,
+          0 12px 30px rgba(0,0,0,0.5);
+      }
+      .book-spine-crease {
+        display: none !important;
+      }
+      .antique-page-left {
+        display: none !important;
+      }
+      .antique-page-right {
+        border-radius: 8px;
+        padding: 1.1rem 1.2rem 0.9rem;
+      }
+      .antique-page-right::after {
+        display: none;
+      }
+      .book-top-subtitle {
+        display: none;
+      }
+      .book-progress-slider {
+        display: none;
+      }
+      .antique-para {
+        font-size: 0.96rem;
+        line-height: 1.66;
+      }
+      .book-action-btn span.label {
+        display: none;
+      }
     }
 
     /* Palavras clicáveis */
@@ -3188,7 +3553,7 @@
   <script src="js/dialoghi.js?v=79"></script>
   <script src="js/canzoni.js?v=79"></script>
   <script src="js/imitazione.js?v=79"></script>
-  <script src="js/storie.js?v=79"></script>
+  <script src="js/storie.js?v=80"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -3258,31 +3623,65 @@
       <button class="ia-modal-close" onclick="IAImport.fechar()" aria-label="Fechar">×</button>
       <h2 id="ia-import-titulo" class="ia-import-titulo">🤖 Adicionar via IA</h2>
 
-      <div class="ia-step">
-        <p class="ia-step-label">1. Copie o prompt abaixo e cole na sua IA favorita (ChatGPT, Claude, etc.):</p>
-        <div class="ia-prompt-box">
-          <pre id="ia-prompt-text"></pre>
-          <button class="ia-copy-btn" onclick="IAImport.copiarPrompt()">📋 Copiar Prompt</button>
+      <!-- Abas do modal (visível para storie / livros) -->
+      <div id="ia-storia-tabs" style="display:none;gap:0.5rem;margin-bottom:1rem;">
+        <button id="ia-tab-prompt" class="btn-primario" style="flex:1;font-size:0.82rem;padding:0.45rem" onclick="IAImport.trocarAbaStoria('prompt')">🤖 Prompt IA (JSON)</button>
+        <button id="ia-tab-livro" class="btn-secondario" style="flex:1;font-size:0.82rem;padding:0.45rem" onclick="IAImport.trocarAbaStoria('livro')">📖 Colar Livro / Texto Livre</button>
+      </div>
+
+      <!-- Conteúdo da Aba 1: Prompt IA -->
+      <div id="ia-box-prompt">
+        <div class="ia-step">
+          <p class="ia-step-label">1. Copie o prompt abaixo e cole na sua IA favorita (ChatGPT, Claude, etc.):</p>
+          <div class="ia-prompt-box">
+            <pre id="ia-prompt-text"></pre>
+            <button class="ia-copy-btn" onclick="IAImport.copiarPrompt()">📋 Copiar Prompt</button>
+          </div>
+        </div>
+
+        <div class="ia-step">
+          <p class="ia-step-label">2. Cole aqui a resposta JSON gerada pela IA:</p>
+          <textarea id="ia-paste-area" class="ia-paste-area" placeholder="Cole o JSON gerado pela IA aqui..."></textarea>
+        </div>
+
+        <div class="ia-actions" style="margin-top:1rem">
+          <button class="btn-secondario" onclick="IAImport.fechar()">Cancelar</button>
+          <button class="btn-primario" onclick="IAImport.importar()">✅ Importar</button>
         </div>
       </div>
 
-      <div class="ia-step">
-        <p class="ia-step-label">2. Cole aqui a resposta JSON gerada pela IA:</p>
-        <textarea id="ia-paste-area" class="ia-paste-area" placeholder="Cole o JSON gerado pela IA aqui..."></textarea>
+      <!-- Conteúdo da Aba 2: Livro / Texto Livre -->
+      <div id="ia-box-livro" style="display:none">
+        <p class="ia-step-label" style="margin-bottom:0.6rem">Cole livros inteiros, contos ou capítulos em italiano. O sistema diagramará automaticamente em páginas de livro clássico sem rolagem com tradução sob demanda!</p>
+        
+        <div style="display:flex;gap:0.5rem;margin-bottom:0.6rem;flex-wrap:wrap">
+          <input type="text" id="ia-livro-titulo" placeholder="Título do Livro (ex: Le Avventure di Pinocchio)" style="flex:2;min-width:180px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+          <input type="text" id="ia-livro-autor" placeholder="Autor (ex: Carlo Collodi)" style="flex:1;min-width:130px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+          <select id="ia-livro-nivel" style="padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+            <option value="A1">Nível A1</option>
+            <option value="A2">Nível A2</option>
+            <option value="B1" selected>Nível B1</option>
+            <option value="B2">Nível B2</option>
+            <option value="C1">Nível C1</option>
+            <option value="C2">Nível C2</option>
+          </select>
+        </div>
+
+        <textarea id="ia-livro-texto" class="ia-paste-area" style="min-height:160px;height:180px" placeholder="Cole aqui o texto em italiano do livro ou dos capítulos (quebras de linha separam parágrafos; 'Capitolo 1', 'Capitolo 2' etc. criam novos capítulos automaticamente)..."></textarea>
+
+        <div class="ia-actions" style="margin-top:1rem">
+          <button class="btn-secondario" onclick="IAImport.fechar()">Cancelar</button>
+          <button class="btn-primario" onclick="IAImport.importarLivroTextoLivre()">📖 Criar Livro para Leitura</button>
+        </div>
       </div>
 
-      <div id="ia-feedback" class="ia-feedback"></div>
-
-      <div class="ia-actions">
-        <button class="btn-secondario" onclick="IAImport.fechar()">Cancelar</button>
-        <button class="btn-primario" onclick="IAImport.importar()">✅ Importar</button>
-      </div>
+      <div id="ia-feedback" class="ia-feedback" style="margin-top:0.6rem"></div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js?v=68"></script>
-  <script src="js/ia-import.js?v=79"></script>
+  <script src="js/ia-import.js?v=80"></script>
 </body>
 </html>
 

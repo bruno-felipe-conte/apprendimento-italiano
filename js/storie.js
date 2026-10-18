@@ -12,6 +12,13 @@ const Storie = {
   storAttuale: null,
   traduzirVisivel: false,
   completate: [],
+  paginaAtual: 1,
+  _paginas: [],
+  _indiceAberto: false,
+  _touchStartX: 0,
+  _touchStartY: 0,
+  _keyListener: null,
+  _resizeListener: null,
   _filtroNivel: '',
   _filtroTexto: '',
   _filtroOrigem: '',
@@ -182,143 +189,623 @@ const Storie = {
     c.innerHTML = html;
   },
 
-  // ── Abrir uma história para leitura ────────────────────────
+  // ── Utilitários do Leitor de Livro ──────────────────────────
+  _isMobile() {
+    return window.innerWidth < 768;
+  },
+
+  _tocarSomFolhear() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const dur = 0.16;
+      const bufferSize = Math.floor(ctx.sampleRate * dur);
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * 0.32;
+      }
+      const noise = ctx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(1100, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(140, ctx.currentTime + dur);
+      const gain = ctx.createGain();
+      gain.gain.setValueAtTime(0.08, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(ctx.destination);
+      noise.start();
+    } catch (_) {}
+  },
+
+  // ── Gerador de Páginas Sem Transbordamento (Zero Scroll) ────
+  _gerarPaginas(s, isMobile) {
+    if (!s || !Array.isArray(s.testo) || s.testo.length === 0) return [];
+
+    // Capacidade ajustada para garantir ZERO barra de rolagem em qualquer dispositivo
+    const capBase = isMobile
+      ? (this.traduzirVisivel ? 210 : 340)
+      : (this.traduzirVisivel ? 420 : 680);
+
+    const paginas = [];
+    let blocosAtuais = [];
+    let charsAtuais = 0;
+    let isFirstPage = true;
+    let capituloAtivo = s.titulo || 'Capitolo 1';
+
+    const empilharPagina = () => {
+      if (blocosAtuais.length === 0) return;
+      paginas.push({
+        numero: paginas.length + 1,
+        isFirstPage: paginas.length === 0,
+        capituloTitulo: capituloAtivo,
+        blocos: [...blocosAtuais]
+      });
+      blocosAtuais = [];
+      charsAtuais = 0;
+      isFirstPage = false;
+    };
+
+    s.testo.forEach((p, parIdx) => {
+      const textoIt = (p.italiano || '').trim();
+      const textoPt = (p.portugues || '').trim();
+      const parole = p.parole || [];
+
+      // Detecção de novo capítulo no fluxo de leitura
+      const matchCap = textoIt.match(/^(?:###\s*|Capitolo\s+\d+|Capítulo\s+\d+|Parte\s+\d+)/i);
+      if (matchCap && blocosAtuais.length > 0) {
+        empilharPagina();
+        capituloAtivo = textoIt.replace(/^###\s*/, '').trim();
+      }
+
+      const limiteEfetivo = isFirstPage ? Math.max(capBase - 130, 150) : capBase;
+      const pesoTotal = textoIt.length + (this.traduzirVisivel ? textoPt.length : 0);
+
+      if (charsAtuais + pesoTotal <= limiteEfetivo || charsAtuais === 0) {
+        blocosAtuais.push({
+          italiano: textoIt,
+          portugues: textoPt,
+          parole: parole,
+          parIdx: parIdx,
+          continua: false,
+          temCapitular: isFirstPage && blocosAtuais.length === 0
+        });
+        charsAtuais += pesoTotal;
+      } else if (pesoTotal > limiteEfetivo && charsAtuais === 0) {
+        // Quebra parágrafo longo em sentenças para caber na página sem estourar
+        const sentencas = textoIt.match(/[^.!?]+[.!?]+|\S+$/g) || [textoIt];
+        let acumulado = '';
+        sentencas.forEach((sent, sIdx) => {
+          if (charsAtuais + sent.length > limiteEfetivo && acumulado) {
+            blocosAtuais.push({
+              italiano: acumulado.trim(),
+              portugues: '',
+              parole: parole,
+              parIdx: parIdx,
+              continua: sIdx > 0,
+              temCapitular: isFirstPage && blocosAtuais.length === 0
+            });
+            empilharPagina();
+            acumulado = sent;
+            charsAtuais = sent.length;
+          } else {
+            acumulado += (acumulado ? ' ' : '') + sent;
+            charsAtuais += sent.length;
+          }
+        });
+        if (acumulado.trim()) {
+          blocosAtuais.push({
+            italiano: acumulado.trim(),
+            portugues: '',
+            parole: parole,
+            parIdx: parIdx,
+            continua: true,
+            temCapitular: false
+          });
+        }
+      } else {
+        empilharPagina();
+        const novoLimite = isFirstPage ? Math.max(capBase - 130, 150) : capBase;
+        blocosAtuais.push({
+          italiano: textoIt,
+          portugues: textoPt,
+          parole: parole,
+          parIdx: parIdx,
+          continua: false,
+          temCapitular: isFirstPage && blocosAtuais.length === 0
+        });
+        charsAtuais += pesoTotal;
+      }
+    });
+
+    empilharPagina();
+    return paginas;
+  },
+
+  // ── Abrir história em modo livro autêntico ──────────────────
   async abrirStoria(id) {
     await this.carregar();
     const lista = this.dados?.storie || [];
     const idx   = lista.findIndex(x => x.id === id);
     if (idx === -1) return;
     this.storAttuale   = lista[idx];
-    this._storyIndex   = idx;        // índice para numeração de página
+    this._storyIndex   = idx;
     this.traduzirVisivel = false;
+    this._indiceAberto   = false;
+
+    // Gera as páginas com base no tamanho de tela atual
+    this._paginas = this._gerarPaginas(this.storAttuale, this._isMobile());
+
+    // Restaura marcador de página salvo ou inicia na 1
+    const bookmarkSalvo = localStorage.getItem('it_book_bm_' + id);
+    let pagInicial = bookmarkSalvo ? parseInt(bookmarkSalvo, 10) : 1;
+    if (isNaN(pagInicial) || pagInicial < 1) pagInicial = 1;
+    if (pagInicial > this._paginas.length) pagInicial = this._paginas.length;
+
+    // Em desktop, garante abertura na página ímpar do spread
+    if (!this._isMobile() && pagInicial % 2 === 0) {
+      pagInicial = Math.max(1, pagInicial - 1);
+    }
+    this.paginaAtual = pagInicial;
+
+    this._iniciarListenersLeitor();
     this._renderizarStoria();
   },
 
-  // ── Renderizar a história em modo livro aberto ────────────
+  _iniciarListenersLeitor() {
+    // Teclado: Setas e Esc
+    if (this._keyListener) document.removeEventListener('keydown', this._keyListener);
+    this._keyListener = (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        this.proximaPagina();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        this.paginaAnterior();
+      } else if (e.key === 'Escape') {
+        if (this._indiceAberto) {
+          this._fecharIndiceCapitulos();
+        } else if (document.getElementById('storie-word-modal')?.style.display === 'block') {
+          this._fecharModal();
+        } else {
+          this.fecharLeitor();
+        }
+      }
+    };
+    document.addEventListener('keydown', this._keyListener);
+
+    // Resize com debounce para reajustar paginação
+    if (this._resizeListener) window.removeEventListener('resize', this._resizeListener);
+    let resizeTimer = null;
+    this._resizeListener = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (!this.storAttuale) return;
+        const totalAntigo = this._paginas.length || 1;
+        const proporcao = this.paginaAtual / totalAntigo;
+        this._paginas = this._gerarPaginas(this.storAttuale, this._isMobile());
+        let novaPag = Math.round(proporcao * this._paginas.length);
+        if (novaPag < 1) novaPag = 1;
+        if (!this._isMobile() && novaPag % 2 === 0) novaPag = Math.max(1, novaPag - 1);
+        this.paginaAtual = Math.min(novaPag, this._paginas.length);
+        this._renderizarStoria();
+      }, 220);
+    };
+    window.addEventListener('resize', this._resizeListener);
+  },
+
+  fecharLeitor() {
+    if (this._keyListener) {
+      document.removeEventListener('keydown', this._keyListener);
+      this._keyListener = null;
+    }
+    if (this._resizeListener) {
+      window.removeEventListener('resize', this._resizeListener);
+      this._resizeListener = null;
+    }
+    this._fecharModal();
+    const overlay = document.getElementById('book-reader-overlay');
+    if (overlay) overlay.remove();
+    this.renderizarSeletor();
+  },
+
+  // ── Renderizar Leitor Imersivo Sem Rolagem ──────────────────
   _renderizarStoria() {
-    const c = document.getElementById('storie-container');
-    if (!c || !this.storAttuale) return;
+    if (!this.storAttuale) return;
     const s = this.storAttuale;
     const il = I18n.idioma === 'it';
+    const total = this._paginas.length;
+    const isMobile = this._isMobile();
+
+    // Garante que paginaAtual está nos limites válidos
+    if (this.paginaAtual < 1) this.paginaAtual = 1;
+    if (this.paginaAtual > total) this.paginaAtual = Math.max(1, total);
+    if (!isMobile && this.paginaAtual % 2 === 0) this.paginaAtual -= 1;
+
+    // Páginas a exibir
+    const pagEsq = isMobile ? null : (this._paginas[this.paginaAtual - 1] || null);
+    const pagDir = isMobile
+      ? (this._paginas[this.paginaAtual - 1] || null)
+      : (this._paginas[this.paginaAtual] || null);
 
     const tituloExibido = il ? s.titulo : (s.titulo_pt || s.titulo);
+    const bookmarkSalvo = parseInt(localStorage.getItem('it_book_bm_' + s.id) || '0', 10);
+    const isBookmarkAtual = bookmarkSalvo === this.paginaAtual || (!isMobile && bookmarkSalvo === this.paginaAtual + 1);
 
-    // Constrói HTML de um grupo de parágrafos
-    const buildParas = (paras, startIdx) => paras.map((p, i) => {
-      const idx = startIdx + i;
-      const textoMarcado = this._marcarPalavras(p.italiano, p.parole || [], idx);
-      const ptText = (p.portugues || '').replace(/</g, '&lt;');
-      return `<div class="storie-bloco"><p class="storie-p">${textoMarcado}</p>${this.traduzirVisivel && ptText ? `<span class="storie-trad-p">${ptText}</span>` : ''}</div>`;
-    }).join('');
+    // Contagem da barra inferior
+    const textoProgresso = isMobile
+      ? `${il ? 'Pagina' : 'Página'} ${this.paginaAtual} ${il ? 'di' : 'de'} ${total}`
+      : `${il ? 'Pagine' : 'Páginas'} ${this.paginaAtual}–${Math.min(this.paginaAtual + 1, total)} ${il ? 'di' : 'de'} ${total}`;
 
-    // Divide parágrafos entre página esquerda e direita
-    const mid   = Math.ceil(s.testo.length / 2);
-    const pgEsq = buildParas(s.testo.slice(0, mid), 0);
-    const pgDir = buildParas(s.testo.slice(mid), mid);
+    const isFim = isMobile ? (this.paginaAtual >= total) : (this.paginaAtual + 1 >= total);
 
-    // Numeração: páginas ímpares à esquerda, pares à direita
-    // As 2 primeiras páginas (1-2) são capa/guarda; histórias começam na 3
-    const paginaBase = (this._storyIndex || 0) * 2 + 3;
-    const paginaEsq  = paginaBase;
-    const paginaDir  = paginaBase + 1;
+    // Cria ou recupera container do leitor
+    let overlay = document.getElementById('book-reader-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'book-reader-overlay';
+      overlay.className = 'book-reader-overlay';
+      document.body.appendChild(overlay);
+    }
 
     const html = `
-      <div class="gram-lesson-nav">
-        <button class="gram-btn-back" onclick="Storie._fecharModal();Storie.renderizarSeletor()">‹ Storie</button>
-        <span style="font-size:0.85rem;font-weight:700">${s.nivel} · +${s.xp_recompensa||50} XP</span>
-      </div>
-
-      <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin:0.8rem 0 0">
-        <button class="btn-secondario" onclick="Storie._toggleTraduzir()">
-          ${this.traduzirVisivel
-            ? (il ? '👁️ Nascondi traduzione' : '👁️ Ocultar tradução')
-            : (il ? '👁️ Mostra traduzione'   : '👁️ Mostrar tradução')}
-        </button>
-        <button class="btn-primario" onclick="Storie._ouvirTudo()">
-          ${il ? '🔊 Ascolta tutto' : '🔊 Ouvir tudo'}
-        </button>
-      </div>
-
-      <div class="book-scene">
-        <div class="book-spread">
-
-          <div class="book-page book-page-left storie-texto-corrido">
-            <div class="book-header">
-              <span class="book-icon">${s.icone||'📖'}</span>
-              <div class="book-titulo">${tituloExibido}</div>
-              <div class="book-subtitulo">${s.autor||''} · ${s.tema||''}</div>
-              <div class="book-ornamento">— ✦ —</div>
-            </div>
-            ${pgEsq}
-            <div class="book-pagina">— ${paginaEsq} —</div>
+      <!-- BARRA SUPERIOR SLIM -->
+      <header class="book-top-bar">
+        <div class="book-top-left">
+          <button class="book-btn-voltar" onclick="Storie.fecharLeitor()" title="${il ? 'Chiudi' : 'Fechar'}">
+            ‹ <span>${il ? 'Storie' : 'Histórias'}</span>
+          </button>
+          <div class="book-top-title-wrap">
+            <span class="book-top-title">${tituloExibido}</span>
+            <span class="book-top-subtitle">${s.autor || 'Letteratura'} · ${s.nivel}</span>
           </div>
-
-          <div class="book-page book-page-right storie-texto-corrido">
-            ${pgDir}
-            <div class="book-ornamento" style="margin-top:auto;padding-top:1rem">— ✦ —</div>
-            <div class="book-fine">${il ? 'Fine' : 'Fim'}</div>
-            <div class="book-pagina">— ${paginaDir} —</div>
-          </div>
-
         </div>
-      </div>
 
-      <div style="display:flex;gap:0.5rem;justify-content:space-between;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cor-pietra)">
-        <button class="btn-secondario" onclick="Storie._fecharModal();Storie.renderizarSeletor()">
-          ${il ? '‹ Tutte le storie' : '‹ Todas as histórias'}
+        <div class="book-top-actions">
+          <button class="book-action-btn" onclick="Storie._abrirIndiceCapitulos()" title="${il ? 'Indice dei capitoli' : 'Índice de capítulos'}">
+            📑 <span class="label">${il ? 'Indice' : 'Capítulos'}</span>
+          </button>
+          <button class="book-action-btn${isBookmarkAtual ? ' active' : ''}" onclick="Storie._toggleSegnalibro()" title="${il ? 'Segnalibro' : 'Marcador de página'}">
+            🔖 <span class="label">${isBookmarkAtual ? (il ? 'Salvato' : 'Marcada') : (il ? 'Segna' : 'Marcar')}</span>
+          </button>
+          <button class="book-action-btn${this.traduzirVisivel ? ' active' : ''}" onclick="Storie._toggleTraduzir()" title="${il ? 'Mostra/Nascondi traduzione' : 'Mostrar/Ocultar tradução'}">
+            👁️ <span class="label">${il ? 'Traduzione' : 'Tradução'}</span>
+          </button>
+          <button class="book-action-btn" onclick="Storie._ouvirPaginaAtual()" title="${il ? 'Ascolta pagina' : 'Ouvir página'}">
+            🔊 <span class="label">${il ? 'Ascolta' : 'Ouvir'}</span>
+          </button>
+          <button class="book-btn-voltar" style="padding:0.32rem 0.5rem" onclick="Storie.fecharLeitor()">✕</button>
+        </div>
+      </header>
+
+      <!-- PALCO CENTRAL: LIVRO FÍSICO 3D (ZERO ROLAGEM) -->
+      <main class="book-stage">
+        <div class="antique-book" id="antique-book-element">
+          <!-- Vinco central e sombra de lombada 3D -->
+          <div class="book-spine-crease"></div>
+
+          <!-- PÁGINA ESQUERDA (Desktop/Tablet) -->
+          ${!isMobile ? this._construirHtmlPagina(pagEsq, 'left', total) : ''}
+
+          <!-- PÁGINA DIREITA (Desktop ou Única em Mobile) -->
+          ${this._construirHtmlPagina(pagDir, 'right', total)}
+        </div>
+      </main>
+
+      <!-- BARRA INFERIOR DE NAVEGAÇÃO SLIM -->
+      <footer class="book-bottom-bar">
+        <button class="book-nav-btn" onclick="Storie.paginaAnterior()" ${this.paginaAtual <= 1 ? 'disabled' : ''}>
+          ◀ <span>${il ? 'Precedente' : 'Anterior'}</span>
         </button>
-        <button class="btn-primario" onclick="Storie._marcarLida()">
-          ${this.completate.includes(s.id)
-            ? (il ? '✓ Riletta' : '✓ Relida')
-            : (il ? `✓ Ho finito (+${s.xp_recompensa||50} XP)` : `✓ Concluir (+${s.xp_recompensa||50} XP)`)}
-        </button>
-      </div>
+
+        <div class="book-progress-wrap">
+          <span class="book-progress-text">${textoProgresso}</span>
+          <input type="range" class="book-progress-slider" min="1" max="${total}" value="${this.paginaAtual}"
+            oninput="Storie.irParaPagina(parseInt(this.value, 10))">
+        </div>
+
+        ${isFim ? `
+          <button class="book-nav-btn" style="background:#2A9D8F;border-color:#227D72" onclick="Storie._marcarLida()">
+            ✓ <span>${this.completate.includes(s.id) ? (il ? 'Completata' : 'Concluída') : `+${s.xp_recompensa || 50} XP`}</span>
+          </button>
+        ` : `
+          <button class="book-nav-btn" onclick="Storie.proximaPagina()">
+            <span>${il ? 'Successiva' : 'Próxima'}</span> ▶
+          </button>
+        `}
+      </footer>
 
       <!-- Modal flutuante de palavra -->
       <div id="storie-word-modal" class="storie-word-modal" style="display:none"></div>
-      <div id="storie-modal-overlay" onclick="Storie._fecharModal()" style="display:none"></div>`;
+      <div id="storie-modal-overlay" onclick="Storie._fecharModal()" style="display:none"></div>
 
-    // Remove modais antigos do body (de render anterior)
-    document.getElementById('storie-word-modal')?.remove();
-    document.getElementById('storie-modal-overlay')?.remove();
+      <!-- Drawer de Capítulos -->
+      ${this._indiceAberto ? this._construirHtmlDrawerCapitulos() : ''}
+    `;
 
-    c.innerHTML = html;
+    overlay.innerHTML = html;
 
-    // Move modal para document.body — position:fixed usa viewport como referência
-    const modalEl   = c.querySelector('#storie-word-modal');
-    const overlayEl = c.querySelector('#storie-modal-overlay');
-    if (modalEl)   document.body.appendChild(modalEl);
-    if (overlayEl) document.body.appendChild(overlayEl);
-
-    // Delegação de cliques (ambas as páginas)
-    c.querySelectorAll('.storie-texto-corrido').forEach(textoEl => {
+    // Delegação de cliques em palavras
+    overlay.querySelectorAll('.storie-texto-corrido').forEach(textoEl => {
       textoEl.addEventListener('click', (e) => {
         const wordEl = e.target.closest('.storie-palavra');
-        if (wordEl) { e.stopPropagation(); this._abrirModalPalavra(wordEl); }
-        else        { this._fecharModal(); }
+        if (wordEl) {
+          e.stopPropagation();
+          this._abrirModalPalavra(wordEl);
+        } else {
+          this._fecharModal();
+        }
       });
     });
 
-    // Fechar com ESC
-    if (this._escListener) document.removeEventListener('keydown', this._escListener);
-    this._escListener = (e) => { if (e.key === 'Escape') this._fecharModal(); };
-    document.addEventListener('keydown', this._escListener);
+    // Gestos de Touch Swipe no livro físico
+    const bookEl = document.getElementById('antique-book-element');
+    if (bookEl) {
+      bookEl.addEventListener('touchstart', (e) => {
+        if (e.touches && e.touches[0]) {
+          this._touchStartX = e.touches[0].clientX;
+          this._touchStartY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      bookEl.addEventListener('touchend', (e) => {
+        if (!e.changedTouches || !e.changedTouches[0]) return;
+        const diffX = e.changedTouches[0].clientX - this._touchStartX;
+        const diffY = e.changedTouches[0].clientY - this._touchStartY;
+        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX < 0) {
+            this.proximaPagina();
+          } else {
+            this.paginaAnterior();
+          }
+        }
+      }, { passive: true });
+    }
+  },
+
+  // ── Construtor de Página Clássica de Livro ──────────────────
+  _construirHtmlPagina(pag, lado, total) {
+    const il = I18n.idioma === 'it';
+    if (!pag) {
+      return `
+        <div class="antique-page antique-page-${lado}">
+          <div class="antique-page-header">
+            <span class="antique-running-head">—</span>
+          </div>
+          <div class="antique-page-body" style="align-items:center;justify-content:center;opacity:0.65">
+            <div style="font-size:2.2rem;margin-bottom:0.4rem">⚜️</div>
+            <div class="antique-ornamento">— ✦ —</div>
+            <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:#8a7250">
+              ${il ? 'Fine del volume' : 'Fim do livro'}
+            </div>
+          </div>
+          <div class="antique-page-footer">— ${total} —</div>
+        </div>
+      `;
+    }
+
+    const s = this.storAttuale;
+    const tituloExibido = il ? s.titulo : (s.titulo_pt || s.titulo);
+
+    let cabecalhoHtml = '';
+    if (pag.isFirstPage) {
+      cabecalhoHtml = `
+        <div class="antique-cover-header">
+          <span class="antique-cover-icon">${s.icone || '📖'}</span>
+          <h2 class="antique-cover-title">${tituloExibido}</h2>
+          <div class="antique-cover-subtitle">${s.autor || 'Letteratura Italiana'} ${s.tema ? '· ' + s.tema : ''}</div>
+          <div class="antique-ornamento">— ✦ —</div>
+        </div>
+      `;
+    } else {
+      cabecalhoHtml = `
+        <div class="antique-page-header">
+          <span class="antique-running-head">${pag.capituloTitulo || tituloExibido}</span>
+        </div>
+      `;
+    }
+
+    const blocosHtml = pag.blocos.map((bloco, bIdx) => {
+      const textoMarcado = this._marcarPalavras(bloco.italiano, bloco.parole || [], bloco.parIdx, bloco.temCapitular && bIdx === 0);
+      const ptText = (bloco.portugues || '').replace(/</g, '&lt;');
+      const noIndent = bloco.continua || (bloco.temCapitular && bIdx === 0);
+      return `
+        <div class="antique-para-wrap">
+          <p class="antique-para${noIndent ? ' no-indent' : ''}">${textoMarcado}</p>
+          ${this.traduzirVisivel && ptText ? `<span class="antique-para-trad">${ptText}</span>` : ''}
+        </div>
+      `;
+    }).join('');
+
+    const isUltima = pag.numero === total;
+    const finalizadorHtml = isUltima ? `
+      <div style="margin-top:auto;text-align:center;padding:0.25rem 0">
+        <div class="antique-ornamento">— ✦ —</div>
+        <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.85rem;color:#8a7250">
+          ${il ? 'Fine' : 'Fim'}
+        </div>
+      </div>
+    ` : '';
+
+    return `
+      <div class="antique-page antique-page-${lado} storie-texto-corrido">
+        ${cabecalhoHtml}
+        <div class="antique-page-body">
+          ${blocosHtml}
+          ${finalizadorHtml}
+        </div>
+        <div class="antique-page-footer">— ${pag.numero} —</div>
+      </div>
+    `;
+  },
+
+  // ── Navegação de Páginas e Virada 3D ────────────────────────
+  proximaPagina() {
+    const step = this._isMobile() ? 1 : 2;
+    const total = this._paginas.length;
+    if (this.paginaAtual + step > total && (this._isMobile() || this.paginaAtual >= total)) {
+      return;
+    }
+    this.paginaAtual = Math.min(this.paginaAtual + step, total);
+    this._tocarSomFolhear();
+    this._salvarBookmarkSilencioso();
+
+    const bookEl = document.getElementById('antique-book-element');
+    if (bookEl) {
+      bookEl.classList.add('turning-next');
+      setTimeout(() => bookEl.classList.remove('turning-next'), 300);
+    }
+    this._renderizarStoria();
+  },
+
+  paginaAnterior() {
+    const step = this._isMobile() ? 1 : 2;
+    if (this.paginaAtual <= 1) return;
+    this.paginaAtual = Math.max(1, this.paginaAtual - step);
+    if (!this._isMobile() && this.paginaAtual % 2 === 0) this.paginaAtual -= 1;
+    this._tocarSomFolhear();
+    this._salvarBookmarkSilencioso();
+
+    const bookEl = document.getElementById('antique-book-element');
+    if (bookEl) {
+      bookEl.classList.add('turning-prev');
+      setTimeout(() => bookEl.classList.remove('turning-prev'), 300);
+    }
+    this._renderizarStoria();
+  },
+
+  irParaPagina(num) {
+    if (isNaN(num)) return;
+    const total = this._paginas.length;
+    let pag = Math.min(Math.max(1, num), total);
+    if (!this._isMobile() && pag % 2 === 0) pag -= 1;
+    if (pag === this.paginaAtual) return;
+    this.paginaAtual = pag;
+    this._tocarSomFolhear();
+    this._salvarBookmarkSilencioso();
+    this._renderizarStoria();
+  },
+
+  _salvarBookmarkSilencioso() {
+    if (this.storAttuale) {
+      localStorage.setItem('it_book_bm_' + this.storAttuale.id, this.paginaAtual);
+    }
+  },
+
+  _toggleSegnalibro() {
+    if (!this.storAttuale) return;
+    const id = this.storAttuale.id;
+    const chave = 'it_book_bm_' + id;
+    const salvo = parseInt(localStorage.getItem(chave) || '0', 10);
+    const il = I18n.idioma === 'it';
+
+    if (salvo === this.paginaAtual) {
+      localStorage.removeItem(chave);
+      App.notificar(il ? 'Segnalibro rimosso' : 'Marcador removido', 'info');
+    } else {
+      localStorage.setItem(chave, this.paginaAtual);
+      App.notificar(il ? `Segnalibro salvato alla pagina ${this.paginaAtual}` : `Marcador salvo na página ${this.paginaAtual}`, 'sucesso');
+    }
+    this._renderizarStoria();
+  },
+
+  _toggleTraduzir() {
+    this.traduzirVisivel = !this.traduzirVisivel;
+    // Repagina preservando a proporção de leitura
+    const totalAntigo = this._paginas.length || 1;
+    const prop = this.paginaAtual / totalAntigo;
+    this._paginas = this._gerarPaginas(this.storAttuale, this._isMobile());
+    let novaPag = Math.round(prop * this._paginas.length);
+    if (novaPag < 1) novaPag = 1;
+    if (!this._isMobile() && novaPag % 2 === 0) novaPag = Math.max(1, novaPag - 1);
+    this.paginaAtual = Math.min(novaPag, this._paginas.length);
+    this._renderizarStoria();
+  },
+
+  _ouvirPaginaAtual() {
+    if (!this.storAttuale || this._paginas.length === 0) return;
+    const isMobile = this._isMobile();
+    const pag1 = this._paginas[this.paginaAtual - 1];
+    const pag2 = isMobile ? null : this._paginas[this.paginaAtual];
+
+    const textos = [];
+    if (pag1) {
+      pag1.blocos.forEach(b => textos.push(b.italiano));
+    }
+    if (pag2) {
+      pag2.blocos.forEach(b => textos.push(b.italiano));
+    }
+
+    const textoCompleto = textos.join(' ').trim();
+    if (textoCompleto && typeof App !== 'undefined' && App.pronunciar) {
+      App.pronunciar(textoCompleto);
+    }
+  },
+
+  // ── Drawer de Capítulos e Índice ───────────────────────────
+  _abrirIndiceCapitulos() {
+    this._indiceAberto = true;
+    this._renderizarStoria();
+  },
+
+  _fecharIndiceCapitulos() {
+    this._indiceAberto = false;
+    this._renderizarStoria();
+  },
+
+  _construirHtmlDrawerCapitulos() {
+    const il = I18n.idioma === 'it';
+    // Mapeia onde cada capítulo começa
+    const capitulos = [];
+    const capsVistos = new Set();
+    this._paginas.forEach(p => {
+      const capNome = p.capituloTitulo || (il ? 'Capitolo' : 'Capítulo');
+      if (!capsVistos.has(capNome)) {
+        capsVistos.add(capNome);
+        capitulos.push({ titulo: capNome, pagina: p.numero });
+      }
+    });
+
+    const itensHtml = capitulos.map(c => {
+      const ativo = this.paginaAtual >= c.pagina;
+      return `
+        <div class="book-chapter-item${ativo ? ' active' : ''}" onclick="Storie.irParaPagina(${c.pagina});Storie._fecharIndiceCapitulos();">
+          <span>📖 ${this._escape(c.titulo)}</span>
+          <span style="font-size:0.75rem;opacity:0.8">${il ? 'pag.' : 'pág.'} ${c.pagina}</span>
+        </div>
+      `;
+    }).join('');
+
+    return `
+      <div class="book-drawer-overlay" onclick="Storie._fecharIndiceCapitulos()">
+        <div class="book-drawer" onclick="event.stopPropagation()">
+          <div class="book-drawer-header">
+            <span class="book-drawer-title">📑 ${il ? 'Indice dei Capitoli' : 'Índice de Capítulos'}</span>
+            <button class="book-btn-voltar" style="padding:0.25rem 0.5rem" onclick="Storie._fecharIndiceCapitulos()">✕</button>
+          </div>
+          <div class="book-drawer-list">
+            ${itensHtml}
+          </div>
+        </div>
+      </div>
+    `;
   },
 
   // ── Tokenizar e marcar TODAS as palavras como clicáveis ────
-  _marcarPalavras(texto, parole, parIdx) {
+  _marcarPalavras(texto, parole, parIdx, temCapitular = false) {
     if (!texto) return '';
-    // Tokeniza: palavras (incluindo acentuadas e apóstrofo) | pontuação | espaços
     const tokens = texto.match(/[A-Za-zÀ-öø-ÿ']+|[^A-Za-zÀ-öø-ÿ'\s]+|\s+/g) || [];
-    let primeiraWord = true; // para capitular no primeiro parágrafo
+    let primeiraWord = temCapitular;
 
     return tokens.map((tok, wIdx) => {
-      // Espaços: retorna como está
       if (/^\s+$/.test(tok)) return tok;
-      // Pontuação pura: escapa e retorna
       if (/^[^A-Za-zÀ-öø-ÿ']+$/.test(tok)) return this._escape(tok);
 
-      // É uma palavra — buscar dados de vocab
       const vocabDado = parole.find(p =>
         this._normWord(p.parola) === this._normWord(tok)
       );
@@ -339,13 +826,10 @@ const Storie = {
         if (vocabDado.categoria)  attrs.push(`data-cat="${this._escAttr(vocabDado.categoria)}"`);
       }
 
-      // Capitular: primeira letra do primeiro parágrafo (parIdx===0)
       let inner = this._escape(tok);
-      if (parIdx === 0 && primeiraWord) {
+      if (primeiraWord) {
         primeiraWord = false;
-        inner = `<span class="storie-capitular">${this._escape(tok[0])}</span>${this._escape(tok.slice(1))}`;
-      } else if (primeiraWord) {
-        primeiraWord = false;
+        inner = `<span class="antique-drop-cap">${this._escape(tok[0])}</span>${this._escape(tok.slice(1))}`;
       }
 
       return `<span class="${classes.join(' ')}" ${attrs.join(' ')}>${inner}</span>`;

@@ -279,6 +279,21 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     if (!modal) return;
     document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Adicionar via IA';
 
+    // Abas de livro (visíveis exclusivamente na seção storie)
+    const tabsEl = document.getElementById('ia-storia-tabs');
+    if (tabsEl) {
+      if (tipo === 'storia') {
+        tabsEl.style.display = 'flex';
+        this.trocarAbaStoria('prompt');
+      } else {
+        tabsEl.style.display = 'none';
+        const boxP = document.getElementById('ia-box-prompt');
+        const boxL = document.getElementById('ia-box-livro');
+        if (boxP) boxP.style.display = 'block';
+        if (boxL) boxL.style.display = 'none';
+      }
+    }
+
     let prompt = this.prompts[tipo] || '';
     if (['dialogo', 'storia', 'imitazione'].includes(tipo)) {
       const dificeis = this._obterPalavrasDificeis();
@@ -292,6 +307,77 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     const fb = document.getElementById('ia-feedback');
     if (fb) { fb.textContent = ''; fb.className = 'ia-feedback'; }
     modal.style.display = 'flex';
+  },
+
+  trocarAbaStoria(aba) {
+    const tabPrompt = document.getElementById('ia-tab-prompt');
+    const tabLivro  = document.getElementById('ia-tab-livro');
+    const boxPrompt = document.getElementById('ia-box-prompt');
+    const boxLivro  = document.getElementById('ia-box-livro');
+    const fb = document.getElementById('ia-feedback');
+    if (fb) { fb.textContent = ''; fb.className = 'ia-feedback'; }
+
+    if (aba === 'livro') {
+      if (tabPrompt) tabPrompt.className = 'btn-secondario';
+      if (tabLivro)  tabLivro.className  = 'btn-primario';
+      if (boxPrompt) boxPrompt.style.display = 'none';
+      if (boxLivro)  boxLivro.style.display  = 'block';
+    } else {
+      if (tabPrompt) tabPrompt.className = 'btn-primario';
+      if (tabLivro)  tabLivro.className  = 'btn-secondario';
+      if (boxPrompt) boxPrompt.style.display = 'block';
+      if (boxLivro)  boxLivro.style.display  = 'none';
+    }
+  },
+
+  importarLivroTextoLivre() {
+    const titulo = document.getElementById('ia-livro-titulo')?.value.trim() || 'Libro Italiano';
+    const autor  = document.getElementById('ia-livro-autor')?.value.trim() || 'Letteratura';
+    const nivel  = document.getElementById('ia-livro-nivel')?.value || 'B1';
+    const raw    = document.getElementById('ia-livro-texto')?.value.trim() || '';
+
+    if (!raw) {
+      this._setFeedback('⚠️ Cole o texto em italiano do livro primeiro.', 'warn');
+      return;
+    }
+
+    // Quebra parágrafos limpos por quebras de linha duplas ou simples
+    const linhas = raw.split(/\n\s*\n|\r\n\s*\r\n/).map(l => l.trim()).filter(Boolean);
+    if (linhas.length === 0) {
+      this._setFeedback('⚠️ Nenhum conteúdo legível encontrado.', 'warn');
+      return;
+    }
+
+    const paragrafos = linhas.map((parTexto) => ({
+      italiano: parTexto.replace(/\s+/g, ' '),
+      portugues: '',
+      parole: []
+    }));
+
+    const novoLivro = {
+      id: 'book_' + Date.now(),
+      titulo: titulo,
+      titulo_pt: titulo,
+      nivel: nivel,
+      icone: '📚',
+      autor: autor,
+      tema: 'letteratura',
+      descricao: `${titulo} di ${autor}.`,
+      descricao_pt: `${titulo} de ${autor}.`,
+      xp_recompensa: Math.min(paragrafos.length * 10, 300),
+      testo: paragrafos,
+      _custom: true
+    };
+
+    this._importarStoria(novoLivro);
+    this.fechar();
+    if (typeof App !== 'undefined') {
+      App.notificar(`📚 Livro "${titulo}" adicionado com sucesso!`, 'sucesso');
+    }
+    // Abre imediatamente para leitura no leitor
+    if (typeof Storie !== 'undefined') {
+      setTimeout(() => Storie.abrirStoria(novoLivro.id), 150);
+    }
   },
 
   fechar() {
