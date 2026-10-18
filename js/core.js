@@ -195,26 +195,32 @@ const App = {
     const pinBtn = document.getElementById('sidebar-pin-btn');
     const pinIcon = document.getElementById('sidebar-pin-icon');
 
+    const svgUnpinned = `<svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>`;
+    const svgPinned = `<svg viewBox="0 0 24 24" width="13" height="13" stroke="currentColor" stroke-width="2" fill="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"></line><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a1 1 0 0 0 0-2H8a1 1 0 0 0 0 2h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"></path></svg>`;
+
     if (isPinned) {
       document.body.classList.add('sidebar-pinned');
       if (sidebar) sidebar.classList.add('pinned');
       if (pinBtn) {
         pinBtn.classList.add('ativo');
         pinBtn.title = 'Desafixar barra lateral';
+        pinBtn.setAttribute('aria-label', 'Desafixar barra lateral');
       }
-      if (pinIcon) pinIcon.textContent = '📍';
+      if (pinIcon) pinIcon.innerHTML = svgPinned;
     } else {
       document.body.classList.remove('sidebar-pinned');
       if (sidebar) sidebar.classList.remove('pinned');
       if (pinBtn) {
         pinBtn.classList.remove('ativo');
         pinBtn.title = 'Fixar barra lateral';
+        pinBtn.setAttribute('aria-label', 'Fixar barra lateral');
       }
-      if (pinIcon) pinIcon.textContent = '📌';
+      if (pinIcon) pinIcon.innerHTML = svgUnpinned;
     }
   },
 
-  toggleSidebarPin() {
+  toggleSidebarPin(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
     const isPinned = document.body.classList.contains('sidebar-pinned');
     const novoEstado = !isPinned;
     localStorage.setItem('it_sidebar_pinned', novoEstado ? 'true' : 'false');

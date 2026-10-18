@@ -274,10 +274,14 @@ const Profilo = {
 
   atualizarSelectVozes() {
     const sel = document.getElementById('select-voz-italiana');
-    if (sel && typeof this.renderizarOpcoesVozes === 'function') {
-      const html = this.renderizarOpcoesVozes();
-      if (html && html !== sel.innerHTML) {
-        sel.innerHTML = html;
+    if (!sel || typeof this.renderizarOpcoesVozes !== 'function') return;
+
+    const html = this.renderizarOpcoesVozes();
+    if (html && html !== sel.innerHTML) {
+      const valorAntes = sel.value;
+      sel.innerHTML = html;
+      if (valorAntes && sel.querySelector(`option[value="${valorAntes}"]`)) {
+        sel.value = valorAntes;
       }
     }
   },
@@ -456,9 +460,22 @@ const Profilo = {
 
 // Garante que o select de vozes seja atualizado quando o navegador carregar a lista de vozes
 if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
-  window.speechSynthesis.addEventListener('voiceschanged', () => {
+  const _sincronizarVozes = () => {
     if (typeof Profilo !== 'undefined' && typeof Profilo.atualizarSelectVozes === 'function') {
       Profilo.atualizarSelectVozes();
     }
+  };
+
+  window.speechSynthesis.addEventListener('voiceschanged', _sincronizarVozes);
+
+  // Retries proativos para navegadores cujo handshake assíncrono atrasa ou não dispara voiceschanged
+  [200, 600, 1500, 3000].forEach(delay => {
+    setTimeout(() => {
+      if (typeof VoiceEngine !== 'undefined') {
+        VoiceEngine.obterMelhoresVozesItalianas();
+      }
+      _sincronizarVozes();
+    }, delay);
   });
 }
+

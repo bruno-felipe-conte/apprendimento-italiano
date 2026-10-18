@@ -189,15 +189,34 @@ const VoiceEngine = {
   obterMelhoresVozesItalianas() {
     if (typeof speechSynthesis === 'undefined') return [];
 
-    const todas = speechSynthesis.getVoices() || [];
-    const italianas = todas.filter(v => v.lang && (v.lang === 'it-IT' || v.lang.startsWith('it')));
+    let todas = [];
+    try {
+      todas = speechSynthesis.getVoices() || [];
+    } catch (e) {
+      todas = [];
+    }
+
+    // Se o array de vozes for populado, mantém em cache de segurança
+    if (todas.length > 0) {
+      this._cacheVozes = todas;
+    } else if (this._cacheVozes && this._cacheVozes.length > 0) {
+      todas = this._cacheVozes;
+    }
+
+    // Filtragem tolerante a formatos: it-IT, it_IT, it*, ou qualquer voz com "italiano"/"italian" no nome
+    const italianas = todas.filter(v => {
+      const l = (v.lang || '').toLowerCase().replace(/_/g, '-');
+      const n = (v.name || '').toLowerCase();
+      return l === 'it-it' || l.startsWith('it-') || l === 'it' || n.includes('italian') || n.includes('italiano');
+    });
 
     if (!italianas.length) return [];
 
-    // Sistema de pontuação de qualidade
+    // Sistema de pontuação de qualidade (estilo VoiceStudio)
     const pontuarVoz = (v) => {
       let score = 0;
       const nome = (v.name || '').toLowerCase();
+      const lang = (v.lang || '').toLowerCase().replace(/_/g, '-');
 
       // Tier S: Vozes Neurais / Naturais modernas (alta definição humana)
       if (nome.includes('natural') || nome.includes('online')) score += 100;
@@ -213,8 +232,8 @@ const VoiceEngine = {
       if (nome.includes('alice')) score += 25;    // Apple Alice
       if (nome.includes('luca')) score += 25;     // Apple Luca
 
-      // Se for estritamente it-IT (não apenas it genérico)
-      if (v.lang === 'it-IT') score += 15;
+      // Preferência se for estritamente it-IT
+      if (lang === 'it-it') score += 15;
 
       // Penalidade para vozes desktop antigas SAPI5 (soam metálicas/robóticas)
       if (nome.includes('desktop') || nome.includes('sapi')) score -= 50;
