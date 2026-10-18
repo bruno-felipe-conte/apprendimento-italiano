@@ -644,9 +644,9 @@ const Grammatica = {
 
     const ex = this.unidadeAtual.exercicios[this.exIndex];
     const digitado = input.value.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-    const correta  = (ex.resposta || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const correta  = String(ex.resposta ?? '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const variantes = (ex.variantes || []).map(v =>
-      v.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+      String(v ?? '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     );
     const correto = digitado === correta || variantes.includes(digitado);
 
