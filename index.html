@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=78">
+  <link rel="stylesheet" href="css/italia.css?v=79">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -1811,6 +1811,29 @@
       justify-content: space-between;
       position: relative;
     }
+    .onb-btn-skip {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.2rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(245, 237, 216, 0.85);
+      border-radius: 999px;
+      padding: 0.28rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+    .onb-btn-skip:hover {
+      background: rgba(255, 255, 255, 0.24);
+      color: #fff;
+      transform: translateY(-1px);
+    }
     .onb-slides {
       flex: 1;
       display: flex;
@@ -2370,19 +2393,19 @@
     body.dark-mode .dialogo-opcao.errada { background: #2D1B1B; border-color: #C0392B; color: #F1948A; }
     body.dark-mode .dialogo-pratica-frase { color: var(--cor-toscano); }
     /* ── Canzoni Player — pergaminho com topbar veneziano ── */
-    .can-player { --bg-pergaminho:#EDE5D0; --vinho-escuro:#3d0d18; --vinho-medio:#6b1a2a; --vinho-claro:#9b2335; --dourado:#c9952a; --texto-escuro:#1a0808; --font-serif:'EB Garamond',Georgia,serif; --font-display:'Cinzel',serif; background:var(--bg-pergaminho); border-radius:10px; overflow:hidden; font-family:var(--font-serif); min-height:460px; display:flex; flex-direction:column; box-shadow:0 6px 28px rgba(61,13,24,0.28), 0 2px 8px rgba(61,13,24,0.18); }
-    .can-player-header { background:var(--vinho-medio); padding:0.55rem 1rem; display:flex; align-items:center; justify-content:space-between; }
+    .can-player { --bg-pergaminho:#EDE5D0; --vinho-escuro:#3d0d18; --vinho-medio:#6b1a2a; --vinho-claro:#9b2335; --dourado:#c9952a; --texto-escuro:#1a0808; --font-serif:'EB Garamond',Georgia,serif; --font-display:'Cinzel',serif; background:var(--bg-pergaminho); border-radius:12px; overflow:hidden; font-family:var(--font-serif); height:min(82vh, 760px); max-height:calc(100vh - 175px); min-height:460px; display:flex; flex-direction:column; box-shadow:0 6px 28px rgba(61,13,24,0.28), 0 2px 8px rgba(61,13,24,0.18); position:relative; }
+    .can-player-header { background:var(--vinho-medio); padding:0.55rem 1rem; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
     .can-back-btn { background:none; border:none; color:rgba(255,220,200,0.8); font-size:1.4rem; cursor:pointer; padding:0 4px; line-height:1; transition:color 0.15s ease; user-select:none; }
     .can-back-btn:hover { color:#fff; }
-    .can-header-song { text-align:center; flex:1; }
-    .can-header-title { font-size:0.92rem; font-weight:600; color:#fff; letter-spacing:0.05em; font-family:var(--font-display); }
+    .can-header-song { text-align:center; flex:1; min-width:0; }
+    .can-header-title { font-size:0.92rem; font-weight:600; color:#fff; letter-spacing:0.05em; font-family:var(--font-display); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .can-header-artist { font-size:0.72rem; color:rgba(255,210,190,0.75); font-style:italic; margin-top:2px; }
-    .can-score-row { display:flex; gap:5px; }
+    .can-score-row { display:flex; gap:5px; flex-shrink:0; }
     .can-score-pill { font-size:0.78rem; padding:0.2rem 0.6rem; border-radius:20px; font-family:var(--font-serif); font-weight:700; }
     .can-score-correct { background:#1a5c42; color:#c8f5e4; border:1px solid rgba(168,240,216,0.4); }
     .can-score-wrong   { background:#7a1a1a; color:#ffd0d0; border:1px solid rgba(255,160,160,0.4); }
     /* Subbar: barra de progresso + toggle de tradução */
-    .can-subbar { background:var(--vinho-escuro); padding:0.45rem 1rem; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(107,26,42,0.6); }
+    .can-subbar { background:var(--vinho-escuro); padding:0.45rem 1rem; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid rgba(107,26,42,0.6); flex-shrink:0; }
     .can-progress-wrap { height:3px; background:rgba(255,255,255,0.12); flex:1; margin-right:0.75rem; border-radius:2px; }
     .can-progress-fill { height:100%; background:var(--dourado); border-radius:2px; transition:width 0.3s ease; }
     .can-toggle-row { display:flex; align-items:center; gap:5px; }
@@ -2394,7 +2417,7 @@
     .can-toggle-btn.on::after  { left:15px; }
     .can-toggle-btn.off::after { left:2px; }
     /* Área de letras: pergaminho claro com texto escuro forte */
-    .can-lyrics-area { flex:1; padding:0.85rem 1.1rem 0.65rem; overflow-y:auto; max-height:52vh; scroll-behavior:smooth; }
+    .can-lyrics-area { flex:1 1 auto; min-height:0; padding:0.85rem 1.1rem 0.65rem; overflow-y:auto; scroll-behavior:smooth; }
     .can-verse { padding:0.55rem 0.75rem; border-radius:7px; margin-bottom:0.42rem; transition:all 0.2s ease; border:1px solid transparent; }
     .can-verse-active      { background:rgba(107,26,42,0.12); border-color:rgba(107,26,42,0.35); }
     .can-verse-past-ok,
@@ -2414,10 +2437,10 @@
     .can-repeat-btn { display:inline-flex; align-items:center; gap:5px; font-size:0.78rem; color:var(--vinho-medio); background:rgba(107,26,42,0.1); border:1px solid rgba(107,26,42,0.28); border-radius:20px; cursor:pointer; padding:0.22rem 0.65rem; margin-top:0.5rem; font-family:var(--font-serif); font-style:italic; transition:background 0.15s,color 0.15s; user-select:none; }
     .can-repeat-btn:hover { background:rgba(107,26,42,0.2); color:var(--vinho-escuro); }
     /* Choices: escuro profundo, botões grandes, texto claro e legível */
-    .can-choices-bar { background:var(--vinho-escuro); border-top:1px solid rgba(107,26,42,0.5); }
+    .can-choices-bar { background:var(--vinho-escuro); border-top:1px solid rgba(107,26,42,0.5); flex-shrink:0; }
     .can-choices-label { font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,200,170,0.55); padding:0.45rem 1rem 0.3rem; display:block; font-family:var(--font-display); }
     .can-choices-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,0.07); }
-    .can-choice-btn { padding:0.95rem 0.7rem; border:none; background:var(--vinho-escuro); color:#f5d0b0; font-size:1.25rem; font-family:var(--font-serif); font-weight:600; cursor:pointer; transition:background 0.15s,color 0.15s; letter-spacing:0.02em; user-select:none; }
+    .can-choice-btn { padding:0.72rem 0.6rem; border:none; background:var(--vinho-escuro); color:#f5d0b0; font-size:1.15rem; font-family:var(--font-serif); font-weight:600; cursor:pointer; transition:background 0.15s,color 0.15s; letter-spacing:0.02em; user-select:none; }
     .can-choice-btn:hover  { background:rgba(155,35,53,0.45); color:#fff; }
     .can-choice-btn:active { background:rgba(155,35,53,0.65); }
     /* Resultado final */
@@ -3077,6 +3100,9 @@
   <!-- Onboarding modal -->
   <div id="onboarding-modal" class="onboarding-modal" style="display:none;">
     <div class="onb-card">
+      <button class="onb-btn-skip" onclick="Onboarding.pularTudo()" title="Pular introdução">
+        Pular Tudo ✕
+      </button>
       <div class="onb-slides">
         <!-- Slide 1 -->
         <div class="onb-slide active">
@@ -3146,23 +3172,23 @@
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
-  <script src="js/audio.js?v=78"></script>
-  <script src="js/conquistas.js?v=78"></script>
-  <script src="js/onboarding.js?v=78"></script>
-  <script src="js/i18n.js?v=78"></script>
-  <script src="js/voice_engine.js?v=78"></script>
-  <script src="js/core.js?v=78"></script>
-  <script src="js/progression.js?v=78"></script>
-  <script src="js/flashcards.js?v=78"></script>
-  <script src="js/quiz.js?v=78"></script>
-  <script src="js/vocab.js?v=78"></script>
-  <script src="js/heatmap.js?v=78"></script>
-  <script src="js/grammar.js?v=78"></script>
-  <script src="js/profilo.js?v=78"></script>
-  <script src="js/dialoghi.js?v=78"></script>
-  <script src="js/canzoni.js?v=78"></script>
-  <script src="js/imitazione.js?v=78"></script>
-  <script src="js/storie.js?v=78"></script>
+  <script src="js/audio.js?v=79"></script>
+  <script src="js/conquistas.js?v=79"></script>
+  <script src="js/onboarding.js?v=79"></script>
+  <script src="js/i18n.js?v=79"></script>
+  <script src="js/voice_engine.js?v=79"></script>
+  <script src="js/core.js?v=79"></script>
+  <script src="js/progression.js?v=79"></script>
+  <script src="js/flashcards.js?v=79"></script>
+  <script src="js/quiz.js?v=79"></script>
+  <script src="js/vocab.js?v=79"></script>
+  <script src="js/heatmap.js?v=79"></script>
+  <script src="js/grammar.js?v=79"></script>
+  <script src="js/profilo.js?v=79"></script>
+  <script src="js/dialoghi.js?v=79"></script>
+  <script src="js/canzoni.js?v=79"></script>
+  <script src="js/imitazione.js?v=79"></script>
+  <script src="js/storie.js?v=79"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -3256,7 +3282,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js?v=68"></script>
-  <script src="js/ia-import.js?v=68"></script>
+  <script src="js/ia-import.js?v=79"></script>
 </body>
 </html>
 

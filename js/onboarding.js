@@ -33,6 +33,10 @@ const Onboarding = {
     // Tour só inicia quando o usuário clicar em ❓ no header
   },
 
+  pularTudo() {
+    this.concluir();
+  },
+
   proximoSlide() {
     const slides = document.querySelectorAll('.onb-slide');
     if (this.slideAtual < slides.length - 1) {

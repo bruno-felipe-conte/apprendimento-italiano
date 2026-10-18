@@ -2140,6 +2140,75 @@ body.dark-mode .cloze-traducao {
   background: rgba(16,185,129,0.08);
 }
 
+/* Prompt de Auxílio para IA (Gemini Audio Sync) no Cloze Studio */
+.cloze-ai-prompt-box {
+  background: rgba(155, 35, 53, 0.04);
+  border: 1.5px solid rgba(155, 35, 53, 0.25);
+  border-radius: 12px;
+  padding: 1.1rem;
+  margin-bottom: 1.25rem;
+}
+
+body.dark-mode .cloze-ai-prompt-box {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(212, 168, 67, 0.3);
+}
+
+.cloze-ai-prompt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cloze-gemini-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a73e8;
+  text-decoration: none;
+  padding: 0.32rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid rgba(26, 115, 232, 0.35);
+  background: rgba(26, 115, 232, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all 0.15s ease;
+}
+
+.cloze-gemini-link:hover {
+  background: rgba(26, 115, 232, 0.16);
+  text-decoration: none;
+}
+
+body.dark-mode .cloze-gemini-link {
+  color: #8ab4f8;
+  border-color: rgba(138, 180, 248, 0.35);
+  background: rgba(138, 180, 248, 0.12);
+}
+
+.cloze-prompt-pre {
+  background: #1c1816;
+  color: #f5eedf;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.76rem;
+  line-height: 1.48;
+  max-height: 170px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid rgba(212, 168, 67, 0.2);
+}
+
+body.dark-mode .cloze-studio-box {
+  background: #1C1816;
+  color: #E6DFD3;
+  border-color: rgba(212, 168, 67, 0.3);
+}
+
 
 /* ===============================================================
    21. L'ATELIER DELLA MEMORIA (FLASHCARDS REDESIGN)

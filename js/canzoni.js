@@ -208,7 +208,6 @@ const Canzoni = {
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
         <button class="btn-pill-add" onclick="Canzoni.abrirClozeStudio()" style="white-space:nowrap;background:linear-gradient(135deg,#3d0d18,#6b1a2a);border:1px solid #d4a843">${I18n.t('can_btn_cloze_studio')}</button>
-        <button class="btn-pill-add" onclick="Canzoni.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('can_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">${I18n.t('can_btn_ia')}</button>
       </div>
       <!-- Linha 2: filtros numa só linha -->
@@ -988,6 +987,60 @@ const Canzoni = {
   // ─────────────────────────────────────────────────────────────
 
   // ── 1. STUDIO DE IMPORTAÇÃO (Upload de Áudio + Letra .lrc / Texto) ──
+  // ── Prompt de auxílio para extração de áudio via Gemini / LLM ──
+  _obterPromptGemini() {
+    return `# Ruolo: Transcrittore Audio con Timestamp Parola per Parola
+
+## Obiettivo
+Analizzare file audio (parlato, dialoghi, canzoni) e generare una trascrizione temporizzata con precisione parola per parola, restituendo il risultato esclusivamente in formato JSON.
+
+## Specifiche del Formato JSON
+Ogni elemento della lista deve essere un oggetto contenente:
+- "w" (string): La singola parola pronunciata, inclusa l'eventuale punteggiatura associata (es. virgole, punti, punti interrogativi).
+- "t" (number): Il secondo esatto in cui inizia l'emissione vocale della parola, espresso con 2 cifre decimali (es. 2.15).
+- "blank" (boolean, opzionale): Impostato su true esclusivamente sull'ultima parola di un verso, frase o prima di una pausa/stacco musicale rilevante, per indicare l'interruzione della riga.
+
+## Schema di Esempio
+[
+  { "w": "Parola1,", "t": 0.05 },
+  { "w": "parola2", "t": 1.10 },
+  { "w": "parola3.", "t": 2.15, "blank": true }
+]
+
+## Regole di Trascrizione
+1. Precisione temporale: Allinea l'attacco di ciascun termine ("t") all'istante sonoro reale.
+2. Segmentazione: Separa chiaramente le parole e mantieni la punteggiatura logica attaccata al termine di appartenenza.
+3. Formato di output: Rispondi fornendo unicamente il blocco JSON valido, senza introduzioni o commenti aggiuntivi.`;
+  },
+
+  copiarPromptGemini() {
+    const txt = this._obterPromptGemini();
+    navigator.clipboard.writeText(txt).then(() => {
+      const btn = document.getElementById('cloze-copy-prompt-btn');
+      if (btn) {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✅ Copiado!';
+        btn.style.background = '#27ae60';
+        btn.style.color = '#fff';
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 2200);
+      }
+      App.notificar('Prompt copiado para a área de transferência!', 'sucesso');
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = txt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      App.notificar('Prompt copiado!', 'sucesso');
+    });
+  },
+
+  // ── 1. STUDIO DE IMPORTAÇÃO (Upload de Áudio + Letra JSON Gemini / Whisper) ──
   abrirClozeStudio(idEditar = null) {
     this.pararAudio();
     const c = document.getElementById('canzoni-container');
@@ -997,24 +1050,30 @@ const Canzoni = {
     const titulo = can ? can.titulo : '';
     const artista = can ? can.artista : '';
 
-    let lrcExemplo = `[00:02.00] Una mattina mi sono {{alzato}}
-[00:06.50] O bella ciao, bella ciao, bella ciao ciao ciao!
-[00:11.20] Una mattina mi sono alzato e ho {{trovato}} l'invasor
-[00:17.80] O partigiano, {{portami}} via, ché mi sento di morir`;
+    const jsonExemplo = `[
+  { "w": "Una", "t": 2.00 },
+  { "w": "mattina", "t": 2.50 },
+  { "w": "mi", "t": 3.20 },
+  { "w": "sono", "t": 3.50 },
+  { "w": "alzato,", "t": 3.90, "blank": true },
+  { "w": "o", "t": 4.90 },
+  { "w": "bella", "t": 5.20 },
+  { "w": "ciao,", "t": 5.70, "blank": true }
+]`;
 
     c.innerHTML = `
       <div class="gram-lesson-nav">
         <button class="gram-btn-back" onclick="Canzoni.renderizarSeletor()">‹ Voltar</button>
-        <span style="font-size:0.95rem;font-weight:700">${I18n.t('can_cloze_studio_title')}</span>
+        <span style="font-size:0.95rem;font-weight:700">🎧 Cloze Studio — Sincronização por Palavra com IA</span>
       </div>
 
       <div class="cloze-studio-box">
         <div style="font-size:0.88rem;color:#6b1a2a;line-height:1.55;margin-bottom:1.2rem">
-          Importe uma música real (arquivo de áudio) e sincronize com a letra em formato <strong>.lrc</strong> ou texto corrido.
-          O sistema criará o <strong>Lyrics Cloze Player</strong> com pausas suaves, desfoque e banco de palavras.
+          Importe seu arquivo de música (MP3/WAV) e sincronize com precisão <strong>palavra por palavra</strong> através do Google Gemini.
+          O sistema criará o <strong>Lyrics Cloze Player</strong> com pausas com <strong>desvio zero (0ms)</strong> e iluminação Karaokê em tempo real.
         </div>
 
-        <!-- Dropzone de Arquivo de Áudio -->
+        <!-- 1. Dropzone de Arquivo de Áudio -->
         <div class="cloze-upload-dropzone" id="cloze-dropzone" onclick="document.getElementById('cloze-audio-file').click()">
           <input type="file" id="cloze-audio-file" accept=".mp3,.wav,.ogg,audio/*" style="display:none" onchange="Canzoni._onStudioFileSelect(this)">
           <div style="font-size:2rem;margin-bottom:0.35rem">📁</div>
@@ -1023,7 +1082,7 @@ const Canzoni = {
           <audio id="cloze-audio-preview" controls style="display:none;margin:0.8rem auto 0;max-width:320px;width:100%"></audio>
         </div>
 
-        <!-- Metadados -->
+        <!-- 2. Metadados -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem">
           <div>
             <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Título da Música *</label>
@@ -1037,18 +1096,41 @@ const Canzoni = {
           </div>
         </div>
 
-        <!-- Letra com .lrc ou {{...}} -->
-        <div style="margin-bottom:1rem">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem">
-            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.t('can_cloze_letra_label')}</label>
-            <span style="font-size:0.74rem;color:#777">Dica: use <code>{{palavra}}</code> para marcar lacunas</span>
+        <!-- 3. Prompt de Auxílio para IA (Google Gemini) -->
+        <div class="cloze-ai-prompt-box">
+          <div class="cloze-ai-prompt-header">
+            <div style="font-weight:700;font-size:0.92rem;color:#9B2335;display:flex;align-items:center;gap:0.4rem">
+              <span>🤖 Prompt para o Google Gemini</span>
+              <span style="font-size:0.68rem;background:rgba(212,168,67,0.22);color:#9B2335;padding:0.12rem 0.45rem;border-radius:4px;border:1px solid rgba(212,168,67,0.45);font-weight:700">Recomendado</span>
+            </div>
+            <div style="display:flex;gap:0.4rem;align-items:center">
+              <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="cloze-gemini-link" title="Abrir Google Gemini em nova aba">Abrir Gemini ↗</a>
+              <button class="ia-copy-btn" id="cloze-copy-prompt-btn" onclick="Canzoni.copiarPromptGemini()">📋 Copiar Prompt</button>
+            </div>
           </div>
-          <textarea id="cloze-letra" rows="8" placeholder="${lrcExemplo}"
-            style="width:100%;padding:0.65rem;border:2px solid #ddd;border-radius:8px;font-family:monospace;font-size:0.85rem;line-height:1.5">${lrcExemplo}</textarea>
-          <div style="font-size:0.76rem;color:#777;margin-top:0.3rem">${I18n.t('can_cloze_letra_desc')}</div>
+          <div style="font-size:0.8rem;color:#666;margin:0.5rem 0 0.65rem;line-height:1.45">
+            <strong>Como usar com o Gemini:</strong><br>
+            1. Clique em <strong>📋 Copiar Prompt</strong> acima e abra o <strong>Google Gemini</strong>.<br>
+            2. Anexe o seu arquivo MP3 na conversa e envie junto com o prompt copiado.<br>
+            3. Copie o bloco JSON retornado pelo Gemini e cole no campo de transcrição abaixo.
+          </div>
+          <pre id="cloze-gemini-prompt-text" class="cloze-prompt-pre">${this._obterPromptGemini()}</pre>
         </div>
 
-        <!-- Densidade de lacunas -->
+        <!-- 4. Letra / JSON com Timestamps por Palavra -->
+        <div style="margin-bottom:1rem">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.35rem">
+            <label style="font-size:0.82rem;font-weight:700;color:#9B2335">Transcrição JSON com Timestamps por Palavra *</label>
+            <span style="font-size:0.74rem;color:#777">Formato: array de palavras <code>{ w, t, blank }</code></span>
+          </div>
+          <textarea id="cloze-letra" rows="8" placeholder='${jsonExemplo}'
+            style="width:100%;padding:0.65rem;border:2px solid #ddd;border-radius:8px;font-family:monospace;font-size:0.85rem;line-height:1.5"></textarea>
+          <div style="font-size:0.76rem;color:#777;margin-top:0.3rem">
+            Cole diretamente o JSON gerado pelo Gemini. As palavras com <code>"blank": true</code> delimitarão o final do verso e as lacunas interativas.
+          </div>
+        </div>
+
+        <!-- 5. Densidade de lacunas -->
         <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.4rem;flex-wrap:wrap">
           <span style="font-size:0.82rem;font-weight:700;color:#9B2335">${I18n.t('can_cloze_densidade')}:</span>
           <label style="font-size:0.82rem;cursor:pointer"><input type="radio" name="cloze-dens" value="padrao" checked> 1 por verso (Padrão)</label>
@@ -1056,10 +1138,10 @@ const Canzoni = {
           <label style="font-size:0.82rem;cursor:pointer"><input type="radio" name="cloze-dens" value="todas"> Intensa (Todas as chaves)</label>
         </div>
 
-        <!-- Ações -->
+        <!-- 6. Ações -->
         <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
           <button class="btn-primario" style="flex:1" onclick="Canzoni._iniciarClozeDoStudio()">
-            ${I18n.t('can_cloze_iniciar')}
+            🚀 Iniciar Lyrics Cloze
           </button>
           <button class="btn-secondario" onclick="Canzoni.renderizarSeletor()">Cancelar</button>
         </div>
@@ -1117,7 +1199,7 @@ const Canzoni = {
     const densidade = document.querySelector('input[name="cloze-dens"]:checked')?.value || 'padrao';
 
     if (!letra) {
-      App.notificar('Por favor, informe a letra da música.', 'erro');
+      App.notificar('Por favor, informe a transcrição JSON gerada pelo Gemini.', 'erro');
       return;
     }
 
@@ -1129,6 +1211,8 @@ const Canzoni = {
       await CanzoniAudioDB.salvar(songId, file);
     }
 
+    const jsonParsed = this._tryParseJSON(letra);
+
     // Monta objeto da música
     const customSong = {
       id: songId,
@@ -1137,6 +1221,7 @@ const Canzoni = {
       nivel: 'B1',
       icone: '🎧',
       letra_raw: letra,
+      versos_sincronizados: jsonParsed || null,
       densidade,
       tem_audio_local: !!file,
       estrofes: [] // preenchido via parser
@@ -1353,20 +1438,13 @@ const Canzoni = {
     if (!strOuObj) return false;
     if (typeof strOuObj === 'object') {
       if (Array.isArray(strOuObj)) {
-        return strOuObj.length > 0 && (strOuObj[0].palavras || strOuObj[0].words || strOuObj[0].w || strOuObj[0].start !== undefined);
+        return strOuObj.length > 0 && (strOuObj[0].palavras || strOuObj[0].words || strOuObj[0].w !== undefined || strOuObj[0].start !== undefined);
       }
       return !!(strOuObj.versos || strOuObj.segments || strOuObj.words || strOuObj.versos_sincronizados);
     }
     if (typeof strOuObj === 'string') {
-      const trimmed = strOuObj.trim();
-      if ((trimmed.startsWith('[') && trimmed.endsWith(']')) || (trimmed.startsWith('{') && trimmed.endsWith('}'))) {
-        try {
-          const parsed = JSON.parse(trimmed);
-          return this._isJSONWordTimings(parsed);
-        } catch (_) {
-          return false;
-        }
-      }
+      const parsed = this._tryParseJSON(strOuObj);
+      if (parsed) return this._isJSONWordTimings(parsed);
     }
     return false;
   },
@@ -1375,7 +1453,11 @@ const Canzoni = {
     if (!strOuObj) return null;
     if (typeof strOuObj === 'object') return strOuObj;
     try {
-      return JSON.parse(strOuObj);
+      let str = String(strOuObj).trim();
+      str = str.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+      const match = str.match(/(\[[\s\S]*\]|\{[\s\S]*\})/);
+      if (match) return JSON.parse(match[1]);
+      return JSON.parse(str);
     } catch (_) {
       return null;
     }
@@ -1396,7 +1478,22 @@ const Canzoni = {
     ]);
 
     let rawVerses = [];
-    if (Array.isArray(jsonDados)) {
+    if (Array.isArray(jsonDados) && jsonDados.length > 0 && (jsonDados[0].w !== undefined || jsonDados[0].word !== undefined || jsonDados[0].text !== undefined)) {
+      // Formato Gemini / Whisper: array plano de palavras com "blank: true" delimitando o final de cada verso
+      const groupedVerses = [];
+      let currentVerse = [];
+      for (const w of jsonDados) {
+        currentVerse.push(w);
+        if (w.blank === true) {
+          groupedVerses.push({ palavras: currentVerse });
+          currentVerse = [];
+        }
+      }
+      if (currentVerse.length > 0) {
+        groupedVerses.push({ palavras: currentVerse });
+      }
+      rawVerses = groupedVerses;
+    } else if (Array.isArray(jsonDados)) {
       rawVerses = jsonDados;
     } else if (jsonDados.versos_sincronizados) {
       rawVerses = jsonDados.versos_sincronizados;

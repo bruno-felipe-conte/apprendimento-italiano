@@ -86,7 +86,6 @@ const Dialoghi = {
         <input type="search" placeholder="${I18n.t('dial_busca_ph')}" value="${this._filtroTexto}"
           oninput="Dialoghi._filtroTexto=this.value;Dialoghi.renderizarSeletor()"
           style="flex:1;min-width:0;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
-        <button class="btn-pill-add" onclick="Dialoghi.abrirFormularioCriar()" style="white-space:nowrap">${I18n.t('dial_btn_adicionar')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('dialogo')" style="white-space:nowrap">${I18n.t('dial_btn_ia')}</button>
       </div>
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">

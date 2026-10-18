@@ -89,73 +89,28 @@ EXEMPLO DE ESTRUTURA (copie exatamente este formato):
 
 TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "fazendo check-in no hotel em Florença", "comprando bilhete de trem em Milão", "na farmácia pedindo remédio"]`,
 
-    canzone: `Crie os dados de uma música italiana para estudo. Pode ser qualquer música — italiana, traduzida para o italiano, ou uma composição própria. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    canzone: `# Ruolo: Transcrittore Audio con Timestamp Parola per Parola
 
-REGRAS OBRIGATÓRIAS:
-1. Inclua TODOS os versos da música, sem limite de quantidade
-2. Para versos com conteúdo único e palavra interessante para aprender:
-   - "palavra_oculta" = a palavra a ser adivinhada
-   - "texto_lacuna" = o verso com essa palavra substituída por ___
-   - "dica" = explicação gramatical breve
-   - "repeticoes" = quantas vezes consecutivas esse verso se repete na música (1 se não repete)
-3. Para versos PURAMENTE repetitivos (refrão idêntico já incluído antes, interjeições sem valor pedagógico):
-   - Deixe "palavra_oculta" como "" (string vazia)
-   - "texto_lacuna" = "" (vazio)
-   - "dica" = "" (vazio)
-   - "repeticoes" = número de vezes que aparece em sequência
-4. NUNCA omita versos — use o campo "repeticoes" para indicar repetições em vez de duplicar linhas
+## Obiettivo
+Analizzare file audio (parlato, dialoghi, canzoni) e generare una trascrizione temporizzata con precisione parola per parola, restituendo il risultato esclusivamente in formato JSON.
 
-EXEMPLO COMPLETO com repetições (copie exatamente este formato):
-{
-  "id": "can_custom_001",
-  "titulo": "Bella Ciao",
-  "artista": "Canto Partigiano",
-  "nivel": "A2",
-  "icone": "🌹",
-  "tema": "storia",
-  "estrofes": [
-    {
-      "id": 1,
-      "texto_completo": "Una mattina mi sono alzato",
-      "texto_lacuna": "Una mattina mi sono ___",
-      "palavra_oculta": "alzato",
-      "traducao": "Uma manhã eu me levantei",
-      "dica": "participio passato de 'alzarsi' (levantar-se)",
-      "repeticoes": 1
-    },
-    {
-      "id": 2,
-      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
-      "texto_lacuna": "O ___ ciao, bella ciao, bella ciao ciao ciao",
-      "palavra_oculta": "bella",
-      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
-      "dica": "aggettivo feminino singular — bela, bonita",
-      "repeticoes": 3
-    },
-    {
-      "id": 3,
-      "texto_completo": "E questo è il fiore del partigiano",
-      "texto_lacuna": "E questo è il ___ del partigiano",
-      "palavra_oculta": "fiore",
-      "traducao": "E esta é a flor do partigiano",
-      "dica": "sostantivo maschile — flor",
-      "repeticoes": 1
-    },
-    {
-      "id": 4,
-      "texto_completo": "O bella ciao, bella ciao, bella ciao ciao ciao",
-      "texto_lacuna": "",
-      "palavra_oculta": "",
-      "traducao": "Ó adeus bonita, adeus bonita, adeus adeus adeus",
-      "dica": "",
-      "repeticoes": 2
-    }
-  ],
-  "vocabulario_chave": ["alzarsi", "fiore", "partigiano"],
-  "xp_recompensa": 40
-}
+## Specifiche del Formato JSON
+Ogni elemento della lista deve essere un oggetto contenente:
+- "w" (string): La singola parola pronunciata, inclusa l'eventuale punteggiatura associata (es. virgole, punti, punti interrogativi).
+- "t" (number): Il secondo esatto in cui inizia l'emissione vocale della parola, espresso con 2 cifre decimali (es. 2.15).
+- "blank" (boolean, opzionale): Impostato su true esclusivamente sull'ultima parola di un verso, frase o prima di una pausa/stacco musicale rilevante, per indicare l'interruzione della riga.
 
-MÚSICA: [SUBSTITUA AQUI — pode ser qualquer música, ex: "Azzurro de Adriano Celentano", "uma música que compus sobre Roma", "Volare de Domenico Modugno"]`,
+## Schema di Esempio
+[
+  { "w": "Parola1,", "t": 0.05 },
+  { "w": "parola2", "t": 1.10 },
+  { "w": "parola3.", "t": 2.15, "blank": true }
+]
+
+## Regole di Trascrizione
+1. Precisione temporale: Allinea l'attacco di ciascun termine ("t") all'istante sonoro reale.
+2. Segmentazione: Separa chiaramente le parole e mantieni la punteggiatura logica attaccata al termine di appartenenza.
+3. Formato di output: Rispondi fornendo unicamente il blocco JSON valido, senza introduzioni o commenti aggiuntivi.`,
 
     storia: `Crie uma história curta em italiano para aprendizes. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
@@ -428,13 +383,28 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
   },
 
   _importarCanzone(data) {
-    const arr = Array.isArray(data) ? data : [data];
+    let arr;
+    if (Array.isArray(data) && data.length > 0 && (data[0].w !== undefined || data[0].word !== undefined)) {
+      // Array de palavras com timestamps do Gemini
+      arr = [{
+        id: 'can_custom_' + Date.now(),
+        titulo: 'Música Sincronizada (IA)',
+        artista: 'Gemini',
+        nivel: 'B1',
+        icone: '🎧',
+        versos_sincronizados: data,
+        letra_raw: JSON.stringify(data),
+        _custom: true
+      }];
+    } else {
+      arr = Array.isArray(data) ? data : [data];
+      arr.forEach((d, i) => {
+        if (!d.id) d.id = 'can_custom_' + Date.now() + '_' + i;
+        d._custom = true;
+      });
+    }
     const key = 'it_canzoni_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
-    arr.forEach((d, i) => {
-      if (!d.id) d.id = 'can_custom_' + Date.now() + '_' + i;
-      d._custom = true;
-    });
     try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     if (typeof Canzoni !== 'undefined') {
       Canzoni.dados = null;
