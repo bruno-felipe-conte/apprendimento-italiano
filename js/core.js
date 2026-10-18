@@ -1144,9 +1144,15 @@ const App = {
 
     if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar, taxaCustom); return; }
 
-    speechSynthesis.cancel();
-
     const tentarFalar = () => {
+      try {
+        // Desbloqueia fila pendente se o sintetizador estiver pausado ou travado no Chromium
+        if (speechSynthesis.paused) {
+          speechSynthesis.resume();
+        }
+        speechSynthesis.cancel();
+      } catch (_) {}
+
       const voz = this._getVozItaliana();
 
       let rate = taxaCustom;
@@ -1172,9 +1178,21 @@ const App = {
 
       if (voz) u.voice = voz;
 
+      // Fix Crítico do Chromium: Manter referência global do Utterance para não ser coletado pelo GC antes de falar
+      window._activeUtterance = u;
+
+      u.onend = () => {
+        if (window._activeUtterance === u) {
+          window._activeUtterance = null;
+        }
+      };
+
       u.onerror = (e) => {
+        if (window._activeUtterance === u) {
+          window._activeUtterance = null;
+        }
         if (['language-unavailable','synthesis-failed','not-allowed','interrupted'].includes(e.error)) {
-          speechSynthesis.cancel();
+          try { speechSynthesis.cancel(); } catch (_) {}
           this._pronunciarRV(textoParaFalar, taxaCustom);
         }
       };
@@ -1184,18 +1202,31 @@ const App = {
         this._pronunciarRV(textoParaFalar, taxaCustom);
         return;
       }
-      speechSynthesis.speak(u);
+
+      try {
+        speechSynthesis.speak(u);
+      } catch (err) {
+        this._pronunciarRV(textoParaFalar, taxaCustom);
+      }
     };
 
-    if (speechSynthesis.getVoices().length > 0) {
+    if (speechSynthesis.getVoices().length > 0 || (typeof VoiceEngine !== 'undefined' && VoiceEngine._cacheVozes?.length)) {
       tentarFalar();
     } else {
-      // Vozes ainda não carregaram — aguarda e reseta cache
-      speechSynthesis.onvoiceschanged = () => {
-        speechSynthesis.onvoiceschanged = null;
+      // Vozes ainda não carregaram — timeout de 180ms para não gerar atraso perceptível
+      let chamado = false;
+      const callback = () => {
+        if (chamado) return;
+        chamado = true;
         this._vozItalianaResolvida = false;
         tentarFalar();
       };
+
+      speechSynthesis.onvoiceschanged = () => {
+        speechSynthesis.onvoiceschanged = null;
+        callback();
+      };
+      setTimeout(callback, 180);
     }
   }
 };
