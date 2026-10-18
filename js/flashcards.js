@@ -324,6 +324,34 @@ const Flashcards = {
       elIpa.textContent = raw ? (raw.startsWith('/') ? raw : `/${raw}/`) : '';
     }
 
+    // Verso Italian header
+    const elVersoIt = document.getElementById('card-verso-it');
+    if (elVersoIt) elVersoIt.textContent = this.cartaAtual.italiano || '';
+
+    // Deck stacking physical depth
+    const restantes = this.cartasDisponiveis.length - this.indiceAtual;
+    const layer1 = document.getElementById('deck-layer-1');
+    const layer2 = document.getElementById('deck-layer-2');
+    if (layer1) layer1.style.display = restantes >= 2 ? 'block' : 'none';
+    if (layer2) layer2.style.display = restantes >= 3 ? 'block' : 'none';
+
+    // Progressive hint pearls
+    const elPearls = document.getElementById('dica-pearls');
+    if (elPearls) {
+      elPearls.textContent = this.nivelDica === 1 ? '● ○ ○' : (this.nivelDica === 2 ? '● ● ○' : (this.nivelDica >= 3 ? '● ● ●' : '○ ○ ○'));
+    }
+
+    // Mode pills update
+    const isNormal = !this.modoReverso && !this.modoContexto && !this.modoEscuta;
+    const btnNormal = document.getElementById('btn-modo-normal');
+    if (btnNormal) btnNormal.classList.toggle('ativo', isNormal);
+    const btnRev = document.getElementById('btn-reverso');
+    if (btnRev) btnRev.classList.toggle('ativo', !!this.modoReverso);
+    const btnCtx = document.getElementById('btn-contexto');
+    if (btnCtx) btnCtx.classList.toggle('ativo', !!this.modoContexto);
+    const btnEsc = document.getElementById('btn-escuta');
+    if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
+
     this.atualizarContador();
     // Update favorite button state
     const btnFav = document.getElementById('btn-favorito');
@@ -348,7 +376,7 @@ const Flashcards = {
       if (fsrs && fsrs.stability > 0 && fsrs.lastReview) {
         const tDays = (Date.now() - fsrs.lastReview) / 86400000;
         const r     = FSRS.retrievability(tDays, fsrs.stability);
-        rStr        = ` · R ${Math.round(r * 100)}%`;
+        rStr        = ` <span class="fc-retrievability-pill">R ${Math.round(r * 100)}%</span>`;
       }
     }
 
@@ -358,7 +386,7 @@ const Flashcards = {
     if (novosCount   > 0) partes.push(`${novosCount} ${I18n.t('fc_novas')}`);
     if (revisaoCount > 0) partes.push(`${revisaoCount} ${I18n.t('fc_revisao')}`);
 
-    elInfo.innerHTML = `<strong>${atual}</strong> / ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}${rStr}`;
+    elInfo.innerHTML = `<span>Carta <strong>${atual}</strong> de ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}</span>${rStr}`;
   },
 
   // ── Flip card to reveal answer ─────────────────────────────
@@ -388,6 +416,10 @@ const Flashcards = {
     // Mark dica button
     const btnDica = document.getElementById('btn-dica');
     if (btnDica) btnDica.classList.add('ativo');
+    const elPearls = document.getElementById('dica-pearls');
+    if (elPearls) {
+      elPearls.textContent = this.nivelDica === 1 ? '● ○ ○' : (this.nivelDica === 2 ? '● ● ○' : '● ● ●');
+    }
 
     // In reverse mode the target word is Italian; in context mode the user
     // must guess the Italian word (fill the blank); in normal mode it's Portuguese.
@@ -716,10 +748,12 @@ const Flashcards = {
     this.modoReverso  = false;
     this.modoContexto = false;
     this.modoEscuta   = false;
-    ['btn-reverso','btn-contexto','btn-escuta'].forEach(id => {
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta'].forEach(id => {
       const b = document.getElementById(id);
       if (b) b.classList.remove('ativo');
     });
+    const btnNormal = document.getElementById('btn-modo-normal');
+    if (btnNormal) btnNormal.classList.add('ativo');
   },
 
   toggleReverso() {
@@ -940,7 +974,21 @@ const Flashcards = {
   // ── Pronounce the current word ────────────────────────────
   pronunciar() {
     if (this.cartaAtual && this.cartaAtual.italiano) {
-      App.pronunciar(this.cartaAtual.italiano);
+      if (typeof VoiceEngine !== 'undefined') {
+        VoiceEngine.falar(this.cartaAtual.italiano, { rate: parseFloat(localStorage.getItem('it_audio_speed')) || 0.88 });
+      } else {
+        App.pronunciar(this.cartaAtual.italiano);
+      }
+    }
+  },
+
+  pronunciarLento() {
+    if (this.cartaAtual && this.cartaAtual.italiano) {
+      if (typeof VoiceEngine !== 'undefined') {
+        VoiceEngine.falar(this.cartaAtual.italiano, { rate: 0.72 });
+      } else {
+        App.pronunciar(this.cartaAtual.italiano, 0.72);
+      }
     }
   },
 
@@ -1038,5 +1086,52 @@ document.addEventListener('i18n:changed', () => {
     Flashcards.mostrarVazio();
   } else if (Flashcards.cartaAtual) {
     Flashcards.mostrarCarta();
+  }
+});
+
+
+// ── Atalhos de Teclado no Flashcards ────────────────────────
+window.addEventListener('keydown', (e) => {
+  const tag = (e.target.tagName || '').toUpperCase();
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) return;
+
+  const sec = document.getElementById('sec-flashcard');
+  if (!sec || !sec.classList.contains('active')) return;
+  if (!Flashcards.cartaAtual || !Flashcards.cartasDisponiveis || Flashcards.cartasDisponiveis.length === 0) return;
+
+  const key = e.key;
+
+  // Espaço ou Enter: virar a carta
+  if (key === ' ' || key === 'Enter') {
+    e.preventDefault();
+    if (!Flashcards.virada) {
+      Flashcards.virar();
+    }
+    return;
+  }
+
+  // Teclas 1 a 4 para classificar no FSRS (quando carta virada)
+  if (Flashcards.virada) {
+    if (key === '1') { e.preventDefault(); Flashcards.avaliar(1); return; }
+    if (key === '2') { e.preventDefault(); Flashcards.avaliar(2); return; }
+    if (key === '3') { e.preventDefault(); Flashcards.avaliar(3); return; }
+    if (key === '4') { e.preventDefault(); Flashcards.avaliar(4); return; }
+  }
+
+  // Atalhos utilitários
+  if (key === 'r' || key === 'R' || key === 'a' || key === 'A') {
+    e.preventDefault();
+    Flashcards.pronunciar();
+    return;
+  }
+  if (key === 'd' || key === 'D') {
+    e.preventDefault();
+    Flashcards.mostrarDica();
+    return;
+  }
+  if (key === 'f' || key === 'F') {
+    e.preventDefault();
+    Flashcards.toggleFavorito();
+    return;
   }
 });

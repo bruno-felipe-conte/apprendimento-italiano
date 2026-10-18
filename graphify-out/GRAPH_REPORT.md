@@ -1,7 +1,7 @@
-# Graph Report - apprendimento-italiano  (2026-10-17)
+# Graph Report - apprendimento-italiano  (2026-10-18)
 
 ## Corpus Check
-- 126 files · ~1,065,769 words
+- 126 files · ~1,067,117 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .webmanifest 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d493ed39`
+- Built from commit: `12b733c6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

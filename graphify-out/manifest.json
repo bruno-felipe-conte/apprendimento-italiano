@@ -492,15 +492,15 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1792204562.2618973,
-    "seen": 1792205138.1625738,
-    "ast_hash": "d4067c6e4cfd7ebbbaf1c0f923690823",
+    "mtime": 1792316661.3542986,
+    "seen": 1792316932.4722998,
+    "ast_hash": "acfc39b7c70379bbb1ba3a58530edfff",
     "semantic_hash": ""
   },
   "js/grammar.js": {
-    "mtime": 1792240064.7120235,
-    "seen": 1792240079.0978858,
-    "ast_hash": "1d3c937e595ef979b8c7215e81a07f33",
+    "mtime": 1792285376.2460015,
+    "seen": 1792285461.25247,
+    "ast_hash": "116f053a39563c83285dacffb77b0744",
     "semantic_hash": ""
   },
   "js/heatmap.js": {
@@ -522,9 +522,9 @@
     "semantic_hash": "425f686a3f8749d912c4457a2664dd4b"
   },
   "js/imitazione.js": {
-    "mtime": 1792205025.278179,
-    "seen": 1792205138.1697836,
-    "ast_hash": "c3f08fbd5b3327b3de6f9c6ffeef1004",
+    "mtime": 1792316723.638607,
+    "seen": 1792316932.590709,
+    "ast_hash": "56d584398e731b85275b5fba6da5a489",
     "semantic_hash": ""
   },
   "js/notificacoes.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792273824.476684,
-    "seen": 1792273874.5163724,
-    "ast_hash": "f67d83c82a7eebd7c204981092473411",
+    "mtime": 1792316783.753293,
+    "seen": 1792316933.2053528,
+    "ast_hash": "a6a75ffafab49313375346a21dc0ffb1",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792273771.4988453,
-    "seen": 1792273874.8726377,
-    "ast_hash": "fb6cc75b2daac4045d243efc8eaaa72e",
+    "mtime": 1792316775.836383,
+    "seen": 1792316933.663459,
+    "ast_hash": "452d17fa6905a73755a1c9305c2a1cd7",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
