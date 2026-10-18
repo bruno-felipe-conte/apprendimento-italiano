@@ -23,6 +23,8 @@
   --cor-cielo:            #4A7FA5;
   --cor-verde-certo:      #3D7A4A;
 
+  --app-header-h:         70px;
+
   --fonte-titulo:   'Cinzel', serif;
   --fonte-italiano: 'EB Garamond', Georgia, serif;
   --fonte-ui:       'EB Garamond', Georgia, serif;
@@ -3222,16 +3224,9 @@ body.dark-mode .sidebar-pin-btn.ativo {
 
 /* Responsive Desktop (>= 1024px) */
 @media (min-width: 1024px) {
-  .daily-goal-bar {
-    position: sticky;
-    top: 71px;
-    z-index: 990;
-    background: var(--cor-marmore);
-  }
-
   .app-sidebar {
     position: fixed;
-    top: 101px; /* Positioned directly beneath horizontal top header + daily goal bar */
+    top: var(--app-header-h, 70px); /* Encosta perfeitamente na linha vermelha do logo */
     left: 0;
     bottom: 0;
     width: 64px;
@@ -3263,16 +3258,47 @@ body.dark-mode .sidebar-pin-btn.ativo {
     width: 220px;
   }
 
-  /* Main container offset on desktop */
-  .app-container {
-    margin-left: 64px !important;
-    transition: margin-left 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-    max-width: calc(100vw - 90px) !important;
+  /* Área Principal Responsiva: envolve daily-goal-bar, app-container e footer */
+  .app-main-wrapper {
+    margin-left: 64px;
+    width: calc(100% - 64px);
+    max-width: calc(100vw - 64px);
+    min-height: calc(100vh - var(--app-header-h, 70px));
+    transition: margin-left 0.22s cubic-bezier(0.16, 1, 0.3, 1), width 0.22s cubic-bezier(0.16, 1, 0.3, 1), max-width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
   }
 
-  body.sidebar-pinned .app-container {
-    margin-left: 220px !important;
-    max-width: calc(100vw - 250px) !important;
+  /* Quando a barra expande (hover ou pin), o conteúdo inteiro se adapta responsivamente sem ficar embaixo da barra */
+  .app-sidebar:hover ~ .app-main-wrapper,
+  body.sidebar-pinned .app-main-wrapper {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    max-width: calc(100vw - 220px);
+  }
+
+  .app-main-wrapper .daily-goal-bar {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    position: sticky;
+    top: var(--app-header-h, 70px);
+    z-index: 900;
+    background: var(--cor-marmore);
+  }
+
+  body.dark-mode .app-main-wrapper .daily-goal-bar {
+    background: #1C1816;
+  }
+
+  .app-main-wrapper .app-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto !important;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
   }
 
   /* Navigation Tabs inside Sidebar - Starts right at the top */
@@ -3387,8 +3413,17 @@ body.dark-mode .sidebar-pin-btn.ativo {
   .app-sidebar {
     display: none !important;
   }
-  .app-container {
+  .app-main-wrapper {
     margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .app-main-wrapper .daily-goal-bar {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .app-main-wrapper .app-container {
+    margin: 0 auto !important;
     max-width: 100% !important;
   }
 }

@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v112';
+const CACHE = 'italiano-v113';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -17,28 +17,28 @@ const STATIC = [
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
-  // JS — módulos da aplicação (URLs com ?v=76 para forçar atualização de cache)
+  // JS — módulos da aplicação (URLs com ?v=77 para forçar atualização de cache)
   './js/voice_engine.js',
-  './js/voice_engine.js?v=76',
-  './js/audio.js?v=76',
-  './js/conquistas.js?v=76',
-  './js/core.js?v=76',
-  './js/dialoghi.js?v=76',
-  './js/canzoni.js?v=76',
-  './js/imitazione.js?v=76',
-  './js/flashcards.js?v=76',
-  './js/grammar.js?v=76',
-  './js/heatmap.js?v=76',
-  './js/onboarding.js?v=76',
-  './js/profilo.js?v=76',
-  './js/progression.js?v=76',
-  './js/quiz.js?v=76',
+  './js/voice_engine.js?v=77',
+  './js/audio.js?v=77',
+  './js/conquistas.js?v=77',
+  './js/core.js?v=77',
+  './js/dialoghi.js?v=77',
+  './js/canzoni.js?v=77',
+  './js/imitazione.js?v=77',
+  './js/flashcards.js?v=77',
+  './js/grammar.js?v=77',
+  './js/heatmap.js?v=77',
+  './js/onboarding.js?v=77',
+  './js/profilo.js?v=77',
+  './js/progression.js?v=77',
+  './js/quiz.js?v=77',
   './js/quiz_data.js',
-  './js/vocab.js?v=76',
-  './js/i18n.js?v=76',
+  './js/vocab.js?v=77',
+  './js/i18n.js?v=77',
   './js/notificacoes.js',
   './js/tour.js',
-  './js/storie.js?v=76',
+  './js/storie.js?v=77',
   './js/ia-import.js',
   // Dados
   './data/conjugacoes.json',
