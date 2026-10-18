@@ -1075,18 +1075,22 @@ const App = {
   },
 
   // ResponsiveVoice — fallback garantido de voz italiana
-  _pronunciarRV(texto) {
+  _pronunciarRV(texto, taxaCustom = null) {
     if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
       responsiveVoice.cancel();
-      const speedStr = localStorage.getItem('it_audio_speed');
-      let rate = parseFloat(speedStr);
-      if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      let rate = taxaCustom;
+      if (rate == null) {
+        const speedStr = localStorage.getItem('it_audio_speed');
+        rate = parseFloat(speedStr);
+        if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      }
+      rate = Math.max(0.4, Math.min(1.8, rate));
       const textoLimpo = (typeof VoiceEngine !== 'undefined') ? VoiceEngine.normalizarParaFala(texto) : texto;
       responsiveVoice.speak(textoLimpo, 'Italian Female', { rate: rate, pitch: 1 });
     }
   },
 
-  pronunciar(texto) {
+  pronunciar(texto, taxaCustom = null) {
     if (!texto) return;
     // Respeita o botão 🔕
     if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
@@ -1098,16 +1102,19 @@ const App = {
 
     if (!textoParaFalar) return;
 
-    if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar); return; }
+    if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar, taxaCustom); return; }
 
     speechSynthesis.cancel();
 
     const tentarFalar = () => {
       const voz = this._getVozItaliana();
 
-      const speedStr = localStorage.getItem('it_audio_speed');
-      let rate = parseFloat(speedStr);
-      if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      let rate = taxaCustom;
+      if (rate == null) {
+        const speedStr = localStorage.getItem('it_audio_speed');
+        rate = parseFloat(speedStr);
+        if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
+      }
       rate = Math.max(0.1, Math.min(2.0, rate)); // Previne crashes de bounds out-of-range no WebKit
 
       const u = new SpeechSynthesisUtterance(textoParaFalar);
@@ -1128,13 +1135,13 @@ const App = {
       u.onerror = (e) => {
         if (['language-unavailable','synthesis-failed','not-allowed','interrupted'].includes(e.error)) {
           speechSynthesis.cancel();
-          this._pronunciarRV(textoParaFalar);
+          this._pronunciarRV(textoParaFalar, taxaCustom);
         }
       };
 
       // Se não há voz italiana nativa e já resolvemos isso → usar só RV
       if (!voz && this._vozItalianaResolvida) {
-        this._pronunciarRV(textoParaFalar);
+        this._pronunciarRV(textoParaFalar, taxaCustom);
         return;
       }
       speechSynthesis.speak(u);

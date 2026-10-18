@@ -135,11 +135,7 @@ const Imitazione = {
     const wave = document.getElementById('dojo-wave');
     if (wave) wave.classList.add('active');
 
-    if (typeof VoiceEngine !== 'undefined') {
-      VoiceEngine.falar(frase, { rate: taxa });
-    } else {
-      App.pronunciar(frase, taxa);
-    }
+    App.pronunciar(frase, taxa);
 
     setTimeout(() => {
       const w = document.getElementById('dojo-wave');

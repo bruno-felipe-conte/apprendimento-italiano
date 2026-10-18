@@ -2095,12 +2095,164 @@ body.dark-mode .skeleton-pill {
    =============================================================== */
 .atelier-memoria {
   width: 100%;
-  max-width: 820px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0.5rem 0 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.fc-studio-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.fc-studio-sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.fc-studio-stage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .fc-studio-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 2.2rem;
+    align-items: start;
+  }
+
+  .fc-studio-sidebar {
+    background: var(--cor-marmore);
+    border-radius: 18px;
+    border: 1.5px solid rgba(212,168,67,0.35);
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 85px;
+  }
+
+  .fc-studio-sidebar .card-selecao-templo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+
+  .fc-studio-sidebar .card-selecao-templo label {
+    font-size: 0.82rem;
+    color: var(--cor-veneziano-escuro);
+  }
+
+  .fc-studio-sidebar .card-selecao-templo select {
+    width: 100%;
+    font-family: 'Cinzel', serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--cor-veneziano-escuro);
+    background-color: #fff;
+    border: 1.5px solid #d4a843;
+    border-radius: 10px;
+    padding: 0.55rem 0.9rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .fc-studio-sidebar .selector-helper {
+    margin: -0.2rem 0 0.5rem;
+    text-align: left;
+    font-size: 0.78rem;
+  }
+
+  .fc-studio-sidebar .fc-mode-pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .fc-studio-sidebar .fc-mode-pill {
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .fc-studio-sidebar .btn-revisao-geral-atelier {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  .fc-studio-sidebar .fc-status-hud {
+    padding: 0.75rem 0 0;
+    border-top: 1px solid rgba(212,168,67,0.3);
+    margin-bottom: 0;
+  }
+
+  .fc-studio-sidebar .fc-keyboard-hud {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(155,35,53,0.04);
+    border: 1px dashed rgba(155,35,53,0.25);
+    border-radius: 10px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--cor-pietra);
+  }
+
+  .flashcard-deck-stack {
+    max-width: 760px;
+    height: 380px;
+    margin-bottom: 1.5rem;
+  }
+
+  .flashcard-deck-stack .palavra-italiana {
+    font-size: 3rem;
+  }
+
+  .flashcard-deck-stack .card-verso .traducao {
+    font-size: 2.1rem;
+  }
+
+  .flashcard-deck-stack .card-verso .exemplo-frase {
+    font-size: 1.15rem;
+    max-width: 600px;
+  }
+
+  .fc-toolbelt {
+    max-width: 760px;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fc-tool-btn {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.88rem;
+  }
+
+  .fc-fsrs-actions {
+    max-width: 760px;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fc-fsrs-actions .btn-rating {
+    padding: 0.85rem 0.5rem;
+  }
 }
 
 /* Top bar: Seletor + Modos + Revisão Geral */
@@ -2546,7 +2698,7 @@ body.dark-mode .skeleton-pill {
    =============================================================== */
 .imitazione-dojo {
   width: 100%;
-  max-width: 880px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0.5rem 0 3rem;
   display: flex;
@@ -2556,6 +2708,8 @@ body.dark-mode .skeleton-pill {
 
 /* Dojo Filter & Progress Bar */
 .dojo-filtro-bar {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2955,6 +3109,7 @@ body.dark-mode .skeleton-pill {
 }
 
 /* Dark mode tweaks */
+body.dark-mode .fc-studio-sidebar,
 body.dark-mode .fc-atelier-topbar,
 body.dark-mode .dojo-filtro-bar,
 body.dark-mode .dojo-hero-card,
@@ -2962,6 +3117,11 @@ body.dark-mode .dojo-feedback-panel {
   background: #1C1816;
   border-color: rgba(212,168,67,0.25);
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+body.dark-mode .fc-studio-sidebar .card-selecao-templo select {
+  background-color: #25201D;
+  color: #E6DFD3;
 }
 
 body.dark-mode .fc-tool-btn {

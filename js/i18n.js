@@ -890,12 +890,12 @@ const I18n = {
         "it": "Torna domani per le prossime revisioni."
     },
     "fc_btn_pronunciar": {
-        "pt": "🔊 Pronunciar",
-        "it": "🔊 Pronuncia"
+        "pt": "Pronunciar",
+        "it": "Pronuncia"
     },
     "fc_btn_imitar": {
-        "pt": "🎤 Imitar",
-        "it": "🎤 Imita"
+        "pt": "Imitar",
+        "it": "Imita"
     },
     "fc_btn_esqueci": {
         "pt": "❌ Esqueci",

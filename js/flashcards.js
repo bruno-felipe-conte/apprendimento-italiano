@@ -974,21 +974,13 @@ const Flashcards = {
   // ── Pronounce the current word ────────────────────────────
   pronunciar() {
     if (this.cartaAtual && this.cartaAtual.italiano) {
-      if (typeof VoiceEngine !== 'undefined') {
-        VoiceEngine.falar(this.cartaAtual.italiano, { rate: parseFloat(localStorage.getItem('it_audio_speed')) || 0.88 });
-      } else {
-        App.pronunciar(this.cartaAtual.italiano);
-      }
+      App.pronunciar(this.cartaAtual.italiano);
     }
   },
 
   pronunciarLento() {
     if (this.cartaAtual && this.cartaAtual.italiano) {
-      if (typeof VoiceEngine !== 'undefined') {
-        VoiceEngine.falar(this.cartaAtual.italiano, { rate: 0.72 });
-      } else {
-        App.pronunciar(this.cartaAtual.italiano, 0.72);
-      }
+      App.pronunciar(this.cartaAtual.italiano, 0.72);
     }
   },
 

@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=72">
+  <link rel="stylesheet" href="css/italia.css?v=73">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -217,7 +217,7 @@
     .tm-btn-unlock { background:#9B2335; color:#FFF8F0; border:none; border-radius:8px; padding:0.45rem 1rem; font-size:0.85rem; font-weight:700; cursor:pointer; }
 
     /* ── Flashcard ── */
-    .flashcard-arena { max-width: 520px; margin: 0 auto; }
+    .flashcard-arena { width: 100%; margin: 0 auto; }
     .card-selecao-templo {
       display: flex;
       align-items: center;
@@ -2766,143 +2766,148 @@
     <!-- SECTION: Flashcard -->
     <section id="sec-flashcard" class="section">
       <div class="flashcard-arena atelier-memoria">
-        <!-- Top bar: Seletor + Modos + Revisão Geral -->
-        <div class="fc-atelier-topbar">
-          <div class="card-selecao-templo">
-            <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
-            <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
-              <option value="">-- Seleziona tempio --</option>
-            </select>
-          </div>
+        <div class="fc-studio-layout">
+          <!-- Coluna 1: Estúdio Lateral (Controles, Modos e Progresso) -->
+          <aside class="fc-studio-sidebar">
+            <div class="card-selecao-templo">
+              <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
+              <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
+                <option value="">-- Seleziona tempio --</option>
+              </select>
+            </div>
 
-          <div class="fc-mode-pills" id="btn-modos-wrapper">
-            <button id="btn-modo-normal" class="fc-mode-pill ativo" onclick="Flashcards._limparModos();Flashcards.mostrarCarta();">
-              <span>🎴 Normal</span>
+            <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+
+            <div class="fc-mode-pills" id="btn-modos-wrapper">
+              <button id="btn-modo-normal" class="fc-mode-pill ativo" onclick="Flashcards._limparModos();Flashcards.mostrarCarta();">
+                <span>🎴 Normal</span>
+              </button>
+              <button id="btn-reverso" class="fc-mode-pill" onclick="Flashcards.toggleReverso()" title="Reverso: PT→IT" data-i18n-title="title_reverso">
+                <span>🔄 Reverso</span>
+              </button>
+              <button id="btn-contexto" class="fc-mode-pill" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">
+                <span>📖 Contexto</span>
+              </button>
+              <button id="btn-escuta" class="fc-mode-pill" onclick="Flashcards.toggleEscuta()" title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">
+                <span>🎧 Escuta</span>
+              </button>
+            </div>
+
+            <button id="btn-revisao-geral" class="btn-revisao-geral-atelier" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados">
+              <span>🌍 <span id="btn-rg-label" data-i18n="fc_revisao_geral_btn">Revisão Geral</span></span>
+              <span id="btn-rg-count" class="rg-badge-count"></span>
             </button>
-            <button id="btn-reverso" class="fc-mode-pill" onclick="Flashcards.toggleReverso()" title="Reverso: PT→IT" data-i18n-title="title_reverso">
-              <span>🔄 Reverso</span>
-            </button>
-            <button id="btn-contexto" class="fc-mode-pill" onclick="Flashcards.toggleContexto()" title="Contexto: frase com lacuna" data-i18n-title="title_contexto">
-              <span>📖 Contexto</span>
-            </button>
-            <button id="btn-escuta" class="fc-mode-pill" onclick="Flashcards.toggleEscuta()" title="Escuta: adivinhe pelo áudio" data-i18n-title="title_escuta">
-              <span>🎧 Escuta</span>
-            </button>
-          </div>
 
-          <button id="btn-revisao-geral" class="btn-revisao-geral-atelier" onclick="Flashcards.initRevisaoGeral()" title="Revisar todas as cartas vencidas de todos os templos desbloqueados">
-            <span>🌍 <span id="btn-rg-label" data-i18n="fc_revisao_geral_btn">Revisão Geral</span></span>
-            <span id="btn-rg-count" class="rg-badge-count"></span>
-          </button>
-        </div>
+            <!-- Status & Retrievability HUD -->
+            <div class="fc-status-hud" id="card-info"></div>
 
-        <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+            <!-- Desktop Keyboard HUD -->
+            <div class="fc-keyboard-hud">
+              <span>⌨️ <strong>Atalhos:</strong><br>[Espaço] Virar<br>[1] Esqueci · [2] Difícil<br>[3] Bom · [4] Fácil<br>[R] Áudio · [D] Dica · [F] Favorito</span>
+            </div>
+          </aside>
 
-        <!-- Status & Retrievability HUD -->
-        <div class="fc-status-hud" id="card-info"></div>
+          <!-- Coluna 2: Palco do Flashcard (Deck 3D, Ferramentas e FSRS) -->
+          <main class="fc-studio-stage">
+            <!-- Deck Stack Wrapper (Tactile 3D Depth) -->
+            <div class="flashcard-deck-stack" id="flashcard-deck-stack">
+              <div class="deck-layer deck-layer-2" id="deck-layer-2"></div>
+              <div class="deck-layer deck-layer-1" id="deck-layer-1"></div>
 
-        <!-- Deck Stack Wrapper (Tactile 3D Depth) -->
-        <div class="flashcard-deck-stack" id="flashcard-deck-stack">
-          <div class="deck-layer deck-layer-2" id="deck-layer-2"></div>
-          <div class="deck-layer deck-layer-1" id="deck-layer-1"></div>
-
-          <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
-            <div id="swipe-hint-left" class="swipe-hint"></div>
-            <div id="swipe-hint-right" class="swipe-hint"></div>
-            <div class="card-inner">
-              <div class="card-frente">
-                <div class="card-ornament-corner top-left"></div>
-                <div class="card-ornament-corner top-right"></div>
-                <div class="palavra-italiana" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Tempio</div>
-                <div class="card-dica" id="card-dica" data-i18n="fc_use_seletor">↑ use o seletor acima</div>
-                <div class="card-categoria" id="card-categoria"></div>
-                <div class="card-tap-prompt">
-                  <span class="tap-icon">👆</span>
-                  <span class="tap-text">Toque ou [Espaço] para virar</span>
+              <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
+                <div id="swipe-hint-left" class="swipe-hint"></div>
+                <div id="swipe-hint-right" class="swipe-hint"></div>
+                <div class="card-inner">
+                  <div class="card-frente">
+                    <div class="card-ornament-corner top-left"></div>
+                    <div class="card-ornament-corner top-right"></div>
+                    <div class="palavra-italiana" id="card-italiano" data-i18n="fc_selecione_tempio">Selecione um Tempio</div>
+                    <div class="card-dica" id="card-dica" data-i18n="fc_use_seletor">↑ use o seletor acima</div>
+                    <div class="card-categoria" id="card-categoria"></div>
+                    <div class="card-tap-prompt">
+                      <span class="tap-icon">👆</span>
+                      <span class="tap-text">Toque ou [Espaço] para virar</span>
+                    </div>
+                  </div>
+                  <div class="card-verso">
+                    <div class="card-ornament-corner top-left"></div>
+                    <div class="card-ornament-corner top-right"></div>
+                    <div class="card-verso-top">
+                      <span class="verso-it-word" id="card-verso-it"></span>
+                      <div class="ipa" id="card-ipa"></div>
+                    </div>
+                    <div class="traducao" id="card-traducao"></div>
+                    <div class="exemplo-frase" id="card-exemplo"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="card-verso">
-                <div class="card-ornament-corner top-left"></div>
-                <div class="card-ornament-corner top-right"></div>
-                <div class="card-verso-top">
-                  <span class="verso-it-word" id="card-verso-it"></span>
-                  <div class="ipa" id="card-ipa"></div>
-                </div>
-                <div class="traducao" id="card-traducao"></div>
-                <div class="exemplo-frase" id="card-exemplo"></div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Toolbelt de Interação -->
-        <div class="fc-toolbelt">
-          <button class="fc-tool-btn btn-audio-play" onclick="Flashcards.pronunciar()" id="btn-audio" title="Ouvir pronúncia [R]">
-            <span class="btn-tool-icon">🔊</span>
-            <span class="btn-tool-label" data-i18n="fc_btn_pronunciar">Pronunciar</span>
-          </button>
-          <button class="fc-tool-btn btn-audio-slow" onclick="Flashcards.pronunciarLento()" id="btn-audio-slow" title="Ouvir devagar (0.75x)">
-            <span class="btn-tool-icon">🐢</span>
-            <span class="btn-tool-label">Lento</span>
-          </button>
-          <button class="fc-tool-btn btn-dica-prog" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Dica progressiva [D]">
-            <span class="btn-tool-icon">💡</span>
-            <span class="btn-tool-label">Dica</span>
-            <span class="dica-pearls" id="dica-pearls">● ○ ○</span>
-          </button>
-          <button class="fc-tool-btn btn-imitar-mic" onclick="Flashcards.toggleGravar()" id="btn-gravar" title="Treinar fala">
-            <span class="btn-tool-icon">🎤</span>
-            <span class="btn-tool-label" data-i18n="fc_btn_imitar">Imitar</span>
-          </button>
-          <button class="fc-tool-btn btn-fav-toggle" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Favoritar [F]">
-            <span class="btn-tool-icon">🤍</span>
-            <span class="btn-tool-label">Favorito</span>
-          </button>
-        </div>
+            <!-- Toolbelt de Interação -->
+            <div class="fc-toolbelt">
+              <button class="fc-tool-btn btn-audio-play" onclick="Flashcards.pronunciar()" id="btn-audio" title="Ouvir pronúncia [R]">
+                <span class="btn-tool-icon">🔊</span>
+                <span class="btn-tool-label" data-i18n="fc_btn_pronunciar">Pronunciar</span>
+              </button>
+              <button class="fc-tool-btn btn-audio-slow" onclick="Flashcards.pronunciarLento()" id="btn-audio-slow" title="Ouvir devagar (0.75x)">
+                <span class="btn-tool-icon">🐢</span>
+                <span class="btn-tool-label">Lento</span>
+              </button>
+              <button class="fc-tool-btn btn-dica-prog" id="btn-dica" onclick="Flashcards.mostrarDica()" title="Dica progressiva [D]">
+                <span class="btn-tool-icon">💡</span>
+                <span class="btn-tool-label">Dica</span>
+                <span class="dica-pearls" id="dica-pearls">● ○ ○</span>
+              </button>
+              <button class="fc-tool-btn btn-imitar-mic" onclick="Flashcards.toggleGravar()" id="btn-gravar" title="Treinar fala">
+                <span class="btn-tool-icon">🎤</span>
+                <span class="btn-tool-label" data-i18n="fc_btn_imitar">Imitar</span>
+              </button>
+              <button class="fc-tool-btn btn-fav-toggle" id="btn-favorito" onclick="Flashcards.toggleFavorito()" title="Favoritar [F]">
+                <span class="btn-tool-icon">🤍</span>
+                <span class="btn-tool-label">Favorito</span>
+              </button>
+            </div>
 
-        <div id="imitacao-feedback" class="imitacao-live-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.4rem"></div>
+            <div id="imitacao-feedback" class="imitacao-live-feedback" style="display:none;text-align:center;font-size:0.85rem;margin-bottom:0.75rem;padding:0.4rem"></div>
 
-        <!-- Avaliação FSRS (aparece ao virar) -->
-        <div class="card-actions fc-fsrs-actions" id="card-actions" style="display:none">
-          <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
-            <span class="btn-key-badge">1</span>
-            <span class="btn-label" data-i18n="fc_btn_esqueci">❌ Esqueci</span>
-            <span class="btn-intervalo">—</span>
-          </button>
-          <button id="btn-hard" class="btn-rating btn-hard" onclick="Flashcards.avaliar(2)">
-            <span class="btn-key-badge">2</span>
-            <span class="btn-label" data-i18n="fc_btn_dificil">⚡ Difícil</span>
-            <span class="btn-intervalo">—</span>
-          </button>
-          <button id="btn-good" class="btn-rating btn-good" onclick="Flashcards.avaliar(3)">
-            <span class="btn-key-badge">3</span>
-            <span class="btn-label" data-i18n="fc_btn_bom">✅ Bom</span>
-            <span class="btn-intervalo">—</span>
-          </button>
-          <button id="btn-easy" class="btn-rating btn-easy" onclick="Flashcards.avaliar(4)">
-            <span class="btn-key-badge">4</span>
-            <span class="btn-label" data-i18n="fc_btn_facil">⭐ Fácil</span>
-            <span class="btn-intervalo">—</span>
-          </button>
-        </div>
+            <!-- Avaliação FSRS (aparece ao virar) -->
+            <div class="card-actions fc-fsrs-actions" id="card-actions" style="display:none">
+              <button id="btn-again" class="btn-rating btn-again" onclick="Flashcards.avaliar(1)">
+                <span class="btn-key-badge">1</span>
+                <span class="btn-label" data-i18n="fc_btn_esqueci">❌ Esqueci</span>
+                <span class="btn-intervalo">—</span>
+              </button>
+              <button id="btn-hard" class="btn-rating btn-hard" onclick="Flashcards.avaliar(2)">
+                <span class="btn-key-badge">2</span>
+                <span class="btn-label" data-i18n="fc_btn_dificil">⚡ Difícil</span>
+                <span class="btn-intervalo">—</span>
+              </button>
+              <button id="btn-good" class="btn-rating btn-good" onclick="Flashcards.avaliar(3)">
+                <span class="btn-key-badge">3</span>
+                <span class="btn-label" data-i18n="fc_btn_bom">✅ Bom</span>
+                <span class="btn-intervalo">—</span>
+              </button>
+              <button id="btn-easy" class="btn-rating btn-easy" onclick="Flashcards.avaliar(4)">
+                <span class="btn-key-badge">4</span>
+                <span class="btn-label" data-i18n="fc_btn_facil">⭐ Fácil</span>
+                <span class="btn-intervalo">—</span>
+              </button>
+            </div>
 
-        <!-- Desktop Keyboard HUD -->
-        <div class="fc-keyboard-hud">
-          <span>⌨️ <strong>Atalhos:</strong> [Espaço] Virar · [1] Esqueci · [2] Difícil · [3] Bom · [4] Fácil · [R] Áudio · [D] Dica · [F] Favorito</span>
+            <!-- Empty & Summary states -->
+            <div class="empty-state" id="flashcard-vazio" style="display:none">
+              <div class="ornamento-italiano">Bravissimo!</div>
+              <p class="empty-state-msg" data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
+              <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
+              <div class="empty-actions" style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
+                <button class="btn-primario" onclick="Flashcards.praticaTodas()" data-i18n="fc_btn_praticar_todas">🔁 Praticar todas</button>
+                <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" data-i18n="fc_btn_favoritos">❤️ Favoritos</button>
+                <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" data-i18n="fc_btn_dificeis">⚠️ Difíceis</button>
+              </div>
+            </div>
+            <div id="flashcard-resumo" style="display:none"></div>
+          </main>
         </div>
-
-        <!-- Empty & Summary states -->
-        <div class="empty-state" id="flashcard-vazio" style="display:none">
-          <div class="ornamento-italiano">Bravissimo!</div>
-          <p class="empty-state-msg" data-i18n="fc_todas_estudadas">Todas as cartas estudadas hoje.</p>
-          <p class="em-revisao" data-i18n="fc_volte_amanha">Volte amanhã para as próximas revisões.</p>
-          <div class="empty-actions" style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;margin-top:0.5rem;">
-            <button class="btn-primario" onclick="Flashcards.praticaTodas()" data-i18n="fc_btn_praticar_todas">🔁 Praticar todas</button>
-            <button class="btn-secondario" onclick="Flashcards.estudarFavoritos()" data-i18n="fc_btn_favoritos">❤️ Favoritos</button>
-            <button class="btn-secondario" onclick="Flashcards.estudarDificeis()" data-i18n="fc_btn_dificeis">⚠️ Difíceis</button>
-          </div>
-        </div>
-        <div id="flashcard-resumo" style="display:none"></div>
       </div>
     </section>
 
@@ -3113,23 +3118,23 @@
   <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
-  <script src="js/audio.js?v=72"></script>
-  <script src="js/conquistas.js?v=72"></script>
-  <script src="js/onboarding.js?v=72"></script>
-  <script src="js/i18n.js?v=72"></script>
-  <script src="js/voice_engine.js?v=72"></script>
-  <script src="js/core.js?v=72"></script>
-  <script src="js/progression.js?v=72"></script>
-  <script src="js/flashcards.js?v=72"></script>
-  <script src="js/quiz.js?v=72"></script>
-  <script src="js/vocab.js?v=72"></script>
-  <script src="js/heatmap.js?v=72"></script>
-  <script src="js/grammar.js?v=72"></script>
-  <script src="js/profilo.js?v=72"></script>
-  <script src="js/dialoghi.js?v=72"></script>
-  <script src="js/canzoni.js?v=72"></script>
-  <script src="js/imitazione.js?v=72"></script>
-  <script src="js/storie.js?v=72"></script>
+  <script src="js/audio.js?v=73"></script>
+  <script src="js/conquistas.js?v=73"></script>
+  <script src="js/onboarding.js?v=73"></script>
+  <script src="js/i18n.js?v=73"></script>
+  <script src="js/voice_engine.js?v=73"></script>
+  <script src="js/core.js?v=73"></script>
+  <script src="js/progression.js?v=73"></script>
+  <script src="js/flashcards.js?v=73"></script>
+  <script src="js/quiz.js?v=73"></script>
+  <script src="js/vocab.js?v=73"></script>
+  <script src="js/heatmap.js?v=73"></script>
+  <script src="js/grammar.js?v=73"></script>
+  <script src="js/profilo.js?v=73"></script>
+  <script src="js/dialoghi.js?v=73"></script>
+  <script src="js/canzoni.js?v=73"></script>
+  <script src="js/imitazione.js?v=73"></script>
+  <script src="js/storie.js?v=73"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
