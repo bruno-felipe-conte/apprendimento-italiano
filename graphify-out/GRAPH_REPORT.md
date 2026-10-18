@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-18)
 
 ## Corpus Check
-- 126 files · ~1,067,117 words
+- 127 files · ~1,069,851 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .webmanifest 1)
 
 ## Summary
-- 141 nodes · 132 edges · 33 communities (9 shown, 24 thin omitted)
+- 165 nodes · 155 edges · 34 communities (10 shown, 24 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `12b733c6`
+- Built from commit: `d2e16568`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,6 +19,7 @@
 - PWA Offline-First Architecture QA Audit Checklist
 - json
 - voice_engine.js
+- Guia Canônico de Prompts para Geração de Conteúdo
 - Core App Specs and Docs
 - json
 - Grammar Curriculum Docs
@@ -51,16 +52,16 @@
 - Service Worker Offline Cache
 
 ## God Nodes (most connected - your core abstractions)
-1. `Main Single-Page Application HTML Shell (index.html)` - 7 edges
-2. `Relatório: Expansão das 21 Histórias Filosóficas` - 5 edges
-3. `Celebrity Language Learning Methods Spec (Dialoghi, Meta Prazo, Canzoni, Imitazione)` - 5 edges
-4. `main()` - 4 edges
-5. `PWA Offline-First Architecture QA Audit Checklist` - 4 edges
-6. `Expansão das 21 Histórias Filosóficas (Resultado Final)` - 4 edges
-7. `SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo)` - 4 edges
-8. `User-Created Content Spec (Custom Canzoni & Dialoghi)` - 4 edges
-9. `traduzir()` - 3 edges
-10. `main()` - 3 edges
+1. `Guia Canônico de Prompts para Geração de Conteúdo` - 9 edges
+2. `Main Single-Page Application HTML Shell (index.html)` - 7 edges
+3. `Relatório: Expansão das 21 Histórias Filosóficas` - 5 edges
+4. `Celebrity Language Learning Methods Spec (Dialoghi, Meta Prazo, Canzoni, Imitazione)` - 5 edges
+5. `main()` - 4 edges
+6. `PWA Offline-First Architecture QA Audit Checklist` - 4 edges
+7. `Expansão das 21 Histórias Filosóficas (Resultado Final)` - 4 edges
+8. `SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo)` - 4 edges
+9. `User-Created Content Spec (Custom Canzoni & Dialoghi)` - 4 edges
+10. `traduzir()` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Service Worker Cache & Fetch Lifecycle Resilience` --rationale_for--> `Service Worker Registration & ControllerChange Auto-Reload`  [INFERRED]
@@ -83,11 +84,15 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (33 total, 24 thin omitted)
+## Communities (34 total, 24 thin omitted)
 
 ### Community 1 - "json"
 Cohesion: 0.14
 Nodes (5): main(), make_est(), translate_hint_to_pt(), main(), translate_it_explanation_to_pt()
+
+### Community 3 - "Guia Canônico de Prompts para Geração de Conteúdo"
+Cohesion: 0.08
+Nodes (23): 1. Aba: 💬 Dialoghi (Diálogos Situacionais), 2. Aba: 🎵 Canzoni (Letras com Cloze Test), 3. Aba: 📜 Storie (Leitura Assistida e Vocabulário Tokenizado), 4. Aba: 🗣️ Imitazione (Shadowing Fonético), 5. Aba: 🏛️ Templi & Flashcards (Vocabulário Sistemático), 6. Aba: 📚 Grammatica (Método NMA em 7 Camadas Didáticas), 7. Aba: ❓ Quizzes (Banco de Questões Morfológicas), Estrutura dos Dados (`data/canzoni.json` e `it_canzoni_custom`) (+15 more)
 
 ### Community 4 - "Core App Specs and Docs"
 Cohesion: 0.15
@@ -123,17 +128,19 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **13 isolated node(s):** `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source`, `Schema Curricular A1, A2, B1, B2 (Moduli e Unità)`, `Grammar JSON Schema (moduli, unidades, escolha, revelar)` (+8 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 85 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 101 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Main Single-Page Application HTML Shell (index.html)` connect `Core App Specs and Docs` to `PWA Offline-First Architecture QA Audit Checklist`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source` to the rest of the system?**
   _13 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.1368421052631579 - nodes in this community are weakly interconnected._
 - **Why does `Service Worker Registration & ControllerChange Auto-Reload` connect `PWA Offline-First Architecture QA Audit Checklist` to `Core App Specs and Docs`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Should `Guia Canônico de Prompts para Geração de Conteúdo` be split into smaller, more focused modules?**
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._

@@ -516,10 +516,10 @@
     "semantic_hash": ""
   },
   "js/ia-import.js": {
-    "mtime": 1792185183.6991415,
-    "seen": 1792187132.6012366,
-    "ast_hash": "425f686a3f8749d912c4457a2664dd4b",
-    "semantic_hash": "425f686a3f8749d912c4457a2664dd4b"
+    "mtime": 1792320086.116068,
+    "seen": 1792320188.69302,
+    "ast_hash": "1c715013025f291362d2104562d45b5a",
+    "semantic_hash": ""
   },
   "js/imitazione.js": {
     "mtime": 1792318935.578886,
@@ -777,6 +777,12 @@
     "mtime": 1792270238.7204792,
     "seen": 1792270346.7165163,
     "ast_hash": "2fbaa4f992ff9657d1ea401d8dba74ff",
+    "semantic_hash": ""
+  },
+  "DOCUMENTACAO/PROMPTS_CRIACAO_CONTEUDO.md": {
+    "mtime": 1792320123.7141836,
+    "seen": 1792320189.1227443,
+    "ast_hash": "61582decbbd2f5e9d6f26282abca004d",
     "semantic_hash": ""
   }
 }

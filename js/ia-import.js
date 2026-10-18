@@ -8,21 +8,37 @@ const IAImport = {
 
   // ── Prompts por tipo ─────────────────────────────────────
   prompts: {
-    dialogo: `Crie um diálogo em italiano para aprendizes de português. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
+    dialogo: `Crie um diálogo em italiano para estudantes brasileiros. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
 REGRAS OBRIGATÓRIAS:
-1. Turnos do PERSONAGEM: campos "frase" (italiano), "traducao" (português), "audio_ipa" (deixe "")
-2. Turnos do "Tu": campo "frase" = a resposta CORRETA em italiano, "traducao" = tradução dessa resposta, MAIS "alternativas" (4 opções em italiano, a correta INCLUÍDA) e "resposta_correta" = índice 0-3 da correta em alternativas
-3. Alterne sempre: PERSONAGEM → Tu → PERSONAGEM → Tu... (sem limite de turnos — use quantos forem necessários para cobrir a conversa completa)
-4. Todas as falas em italiano correto, todas as traduções em português brasileiro
+1. "nivel": deve ser "A1", "A2", "B1", "B2" ou "C1"
+2. "contexto": descrição clara da situação prática (1-2 frases em português)
+3. "turni": array ordenado de turnos de conversa:
+   - Turnos do PERSONAGEM:
+     * "id": número sequencial (1, 2, 3...)
+     * "personaggio": nome do interlocutor (ex: "Cameriere", "Commessa", "Dottore")
+     * "frase": fala natural em italiano
+     * "traducao": tradução em português brasileiro
+     * "audio_ipa": transcrição fonética IPA opcional (pode deixar "")
+   - Turnos do "Tu" (o usuário responde):
+     * "id": número sequencial
+     * "personaggio": "Tu"
+     * "frase": a resposta CORRETA em italiano
+     * "traducao": tradução da resposta em português brasileiro
+     * "audio_ipa": ""
+     * "alternativas": 4 opções em italiano (a correta obrigatoriamente inclusa)
+     * "resposta_correta": índice (0 a 3) indicando qual opção de "alternativas" é a correta
+4. Alterne os turnos: PERSONAGEM → Tu → PERSONAGEM → Tu...
+5. "vocabulario_chave": array com 3 a 5 termos principais em italiano
+6. "xp_recompensa": número inteiro (ex: 50)
 
-EXEMPLO de dois turnos (copie exatamente este formato):
+EXEMPLO DE ESTRUTURA (copie exatamente este formato):
 {
   "id": "dial_custom_001",
-  "titulo": "No Mercato",
+  "titulo": "Al Mercato",
   "icone": "🛒",
   "nivel": "A1",
-  "contexto": "Você está num mercado comprando frutas.",
+  "contexto": "Você está comprando frutas em uma feira na Itália.",
   "turni": [
     {
       "id": 1,
@@ -40,7 +56,7 @@ EXEMPLO de dois turnos (copie exatamente este formato):
       "alternativas": [
         "Vorrei delle mele, per favore.",
         "Non mi piace la frutta.",
-        "Dov'è il bagno?",
+        "Dov\x27è il bagno?",
         "Quanto costa questo vestito?"
       ],
       "resposta_correta": 0
@@ -71,7 +87,7 @@ EXEMPLO de dois turnos (copie exatamente este formato):
   "xp_recompensa": 50
 }
 
-TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "comprando passagem de trem em Milão", "pedindo ajuda numa farmácia", "fazendo check-in no hotel". Pode ter quantos turnos forem necessários para cobrir a conversa completa — sem limite]`,
+TEMA DO DIÁLOGO: [SUBSTITUA AQUI — ex: "fazendo check-in no hotel em Florença", "comprando bilhete de trem em Milão", "na farmácia pedindo remédio"]`,
 
     canzone: `Crie os dados de uma música italiana para estudo. Pode ser qualquer música — italiana, traduzida para o italiano, ou uma composição própria. Retorne APENAS o JSON, sem nenhum texto antes ou depois.
 
@@ -193,25 +209,26 @@ EXEMPLO COMPLETO — note que TODAS as palavras aparecem em "parole" (copie exat
 
 TEMA DA HISTÓRIA: [SUBSTITUA AQUI — ex: "um dia de compras num mercado em Florença", "férias numa praia da Sicília", "primeiro dia de trabalho em Milão"]`,
 
-    imitazione: `Crie frases italianas para prática de pronúncia. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
+    imitazione: `Crie frases italianas para prática de pronúncia guiada (Shadowing). Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
 
 REGRAS OBRIGATÓRIAS:
-1. Gere de 8 a 12 frases relacionadas ao tema
-2. "frase_italiano" = frase natural em italiano, nem curta demais nem longa demais
-3. "frase_portugues" = tradução em português brasileiro
-4. "contexto" = explicação em português de quando/como usar a frase (1-2 frases)
-5. "nivel" deve ser A1, A2, B1, B2 ou C1
-6. Deixe "audio_ipa" sempre como string vazia ""
+1. Gere de 8 a 12 frases relacionadas ao tema prático
+2. "frase_italiano" = frase autêntica em italiano, com pontuação correta
+3. "frase_portugues" = tradução precisa em português brasileiro
+4. "contexto" = situação pragmática de uso (1-2 frases explicando quando e como usar)
+5. "nivel" = "A1", "A2", "B1", "B2" ou "C1"
+6. "audio_ipa" = transcrição fonética IPA entre barras (ex: "/mi ˈskuːzi/") ou string vazia ""
+7. "xp_recompensa" = 15
 
 EXEMPLO COMPLETO (copie exatamente este formato):
 [
   {
     "id": "imi_custom_001",
-    "frase_italiano": "Mi scusi, sa dov'è la stazione?",
-    "frase_portugues": "Com licença, o senhor sabe onde é a estação?",
+    "frase_italiano": "Mi scusi, sa dirmi dov\x27è la stazione centrale?",
+    "frase_portugues": "Com licença, o senhor sabe me dizer onde fica a estação central?",
     "nivel": "A1",
-    "contexto": "Use para pedir informações sobre direções de forma educada para um desconhecido.",
-    "audio_ipa": "",
+    "contexto": "Use para pedir orientações na rua com cortesia e respeito a um desconhecido.",
+    "audio_ipa": "/mi ˈskuːzi sa ˈdirmi dov\x27ɛ la statˈtsjoːne tʃenˈtraːle/",
     "xp_recompensa": 15
   },
   {
@@ -219,24 +236,25 @@ EXEMPLO COMPLETO (copie exatamente este formato):
     "frase_italiano": "Potrebbe ripetere più lentamente, per favore?",
     "frase_portugues": "Poderia repetir mais devagar, por favor?",
     "nivel": "A2",
-    "contexto": "Use quando não entender o que alguém disse e precisar que repita mais devagar.",
+    "contexto": "Use quando o interlocutor falar rápido e você precisar de clareza auditiva.",
     "audio_ipa": "",
     "xp_recompensa": 15
   }
 ]
 
-TEMA DAS FRASES: [SUBSTITUA AQUI — ex: "pedir informações na rua", "no restaurante pedindo a conta", "expressões de surpresa e admiração"]`,
+TEMA DAS FRASES: [SUBSTITUA AQUI — ex: "pedir informações na rua", "no restaurante pedindo a conta", "expressões de cortesia formal"]`,
 
-    vocab: `Crie palavras de vocabulário italiano. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
+    vocab: `Crie palavras de vocabulário italiano no padrão dos Templos do app. Retorne APENAS um array JSON, sem nenhum texto antes ou depois.
 
 REGRAS OBRIGATÓRIAS:
-1. Gere de 12 a 20 palavras relacionadas ao tema
-2. "genero": "m" para masculino, "f" para feminino, null para verbos e expressões
-3. "plural": forma plural do substantivo/adjetivo, null para verbos
-4. "exemplo" = frase real em italiano usando a palavra em contexto
-5. "exemplo_pt" = tradução da frase de exemplo em português brasileiro
-6. "audio_ipa" = transcrição IPA da palavra (só a palavra, não a frase)
-7. "dificuldade": "facil" (básica), "medio" (intermediária) ou "dificil" (avançada)
+1. Gere de 12 a 20 vocábulos relacionados ao tema
+2. "genero": "m" para masculino, "f" para feminino, "m/f" para ambos, ou null para verbos/advérbios/expressões
+3. "plural": forma plural italiana correta, ou null para verbos e invariáveis
+4. "exemplo": frase contextual em italiano aplicando o vocábulo de forma natural
+5. "exemplo_pt": tradução completa da frase de exemplo para português brasileiro
+6. "categoria": categoria temática (ex: "trasporti", "ristorante", "lavoro", "salute")
+7. "dificuldade": "facil" (básico), "medio" (intermediário) ou "dificil" (avançado)
+8. "audio_ipa": transcrição fonética IPA entre barras obrigatórias (ex: "/ˈtrɛːno/")
 
 EXEMPLO COMPLETO (copie exatamente este formato):
 [
@@ -246,8 +264,8 @@ EXEMPLO COMPLETO (copie exatamente este formato):
     "portugues": "trem",
     "genero": "m",
     "plural": "treni",
-    "exemplo": "Il treno parte alle nove dalla stazione centrale.",
-    "exemplo_pt": "O trem parte às nove da estação central.",
+    "exemplo": "Il treno regionale parte alle nove dalla stazione centrale.",
+    "exemplo_pt": "O trem regional parte às nove da estação central.",
     "categoria": "viaggio",
     "dificuldade": "facil",
     "audio_ipa": "/ˈtrɛːno/"
@@ -258,15 +276,15 @@ EXEMPLO COMPLETO (copie exatamente este formato):
     "portugues": "reservar",
     "genero": null,
     "plural": null,
-    "exemplo": "Ho prenotato un posto sul treno per Venezia.",
-    "exemplo_pt": "Reservei um lugar no trem para Veneza.",
-    "categoria": "verbi",
+    "exemplo": "Ho prenotato una camera doppia per il prossimo fine settimana.",
+    "exemplo_pt": "Reservei um quarto duplo para o próximo fim de semana.",
+    "categoria": "albergo",
     "dificuldade": "medio",
     "audio_ipa": "/prenoˈtaːre/"
   }
 ]
 
-TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "vocabulário de viagem de trem", "palavras do restaurante e comida", "partes do corpo humano"]`
+TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "comidas típicas e restaurante", "profissões e ambiente de trabalho"]`
   },
 
   // ── Títulos do modal por tipo ────────────────────────────
