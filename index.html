@@ -3703,8 +3703,8 @@
     if ('serviceWorker' in navigator) {
       // Caminho relativo — funciona tanto na raiz quanto em subdiretório
       navigator.serviceWorker.register('./sw.js').then(reg => {
-        // Verifica atualizações a cada vez que a aba fica em foco
-        reg.update();
+        // Verifica atualizações sem travar caso haja oscilação de rede
+        try { reg.update().catch(() => {}); } catch (_) {}
       }).catch(err => console.warn('[SW] Registro falhou:', err));
       // Quando novo SW ativa e assume o controle → recarrega para servir arquivos novos
       navigator.serviceWorker.addEventListener('controllerchange', () => {
