@@ -5,6 +5,7 @@
 
 const IAImport = {
   tipoAtual: null,
+  origemAtual: null,
 
   // ── Prompts por tipo ─────────────────────────────────────
   prompts: {
@@ -273,8 +274,9 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
   },
 
   // ── Abrir modal ──────────────────────────────────────────
-  abrir(tipo) {
+  abrir(tipo, origem = null) {
     this.tipoAtual = tipo;
+    this.origemAtual = origem;
     const modal = document.getElementById('ia-import-modal');
     if (!modal) return;
     document.getElementById('ia-import-titulo').textContent = this.titulos[tipo] || '🤖 Adicionar via IA';
@@ -532,21 +534,94 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     const arr = Array.isArray(data) ? data : [data];
     const key = 'it_vocab_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
-    arr.forEach((d, i) => {
-      if (!d.id) d.id = 'vocab_custom_' + Date.now() + '_' + i;
+    
+    // Normalizador de texto italiano para comparação e slug
+    const normalizarTermo = (s) => (s || '')
+      .toLowerCase()
+      .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]/g, '');
+
+    // Mapeia termos já existentes em todo o acervo (Templos 1-51 + custom)
+    const todosVocab = (typeof App !== 'undefined' && App.estado?.vocabCache)
+      ? App.estado.vocabCache
+      : existing;
+    const termosExistentes = new Set(
+      todosVocab.map(w => normalizarTermo(w.italiano || w.word || w.frase || ''))
+    );
+
+    const palavrasNovas = [];
+    let duplicatasIgnoradas = 0;
+
+    arr.forEach((d) => {
+      const termo = (d.italiano || d.word || '').trim();
+      if (!termo) return;
+      const chaveNorm = normalizarTermo(termo);
+
+      if (termosExistentes.has(chaveNorm)) {
+        duplicatasIgnoradas++;
+        return;
+      }
+
+      // Gera ID determinístico baseado no slug da palavra italiana
+      d.id = 'w_custom_' + (chaveNorm || ('rnd_' + Math.random().toString(36).substring(2, 7)));
+      d.italiano = termo;
       d._custom = true;
+      if (!d.templo_num) d.templo_num = 0; // "Extra" / deck customizado
+
+      termosExistentes.add(chaveNorm);
+      palavrasNovas.push(d);
     });
-    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
-    // Injeta no vocabCache do App e re-renderiza
+
+    if (palavrasNovas.length === 0) {
+      if (duplicatasIgnoradas > 0) {
+        throw new Error(`Todas as ${duplicatasIgnoradas} palavras já existem no vocabulário!`);
+      }
+      throw new Error('Nenhuma palavra válida encontrada para importação.');
+    }
+
+    try {
+      localStorage.setItem(key, JSON.stringify([...existing, ...palavrasNovas]));
+    } catch(e) {
+      if (e.name === 'QuotaExceededError') {
+        App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro');
+      }
+    }
+
+    // Injeta no vocabCache do App
     if (typeof App !== 'undefined' && App.estado?.vocabCache) {
-      arr.forEach(w => {
-        if (!w.templo_num) w.templo_num = 0; // "Extra" / sem templo
+      palavrasNovas.forEach(w => {
         if (!App.estado.vocabCache.find(v => v.id === w.id)) {
-          App.estado.vocabCache.push(w);
+          App.estado.vocabCache.unshift(w);
         }
       });
+      if (App.estado.progresso) {
+        App.estado.progresso.total_palavras = App.estado.vocabCache.length;
+        App.salvarProgresso();
+      }
     }
+
+    // Feedback descritivo
+    let msgFeedback = `✅ ${palavrasNovas.length} nova(s) palavra(s) importada(s)!`;
+    if (duplicatasIgnoradas > 0) {
+      msgFeedback += ` (${duplicatasIgnoradas} já existiam e foram ignoradas)`;
+    }
+    this._setFeedback(msgFeedback, 'ok');
+
     if (typeof Vocab !== 'undefined') Vocab.renderizar?.();
+    if (typeof Flashcards !== 'undefined') Flashcards.atualizarSelectTemplo?.();
+
+    // Se a importação ocorreu na aba de Flashcards (ou com flag origem = 'flashcard')
+    const veioDeFlashcards = this.origemAtual === 'flashcard' || (typeof App !== 'undefined' && App.estado?.secaoAtiva === 'flashcard');
+    if (veioDeFlashcards && typeof Flashcards !== 'undefined') {
+      setTimeout(() => {
+        const sel = document.getElementById('flashcard-templo-select');
+        if (sel) sel.value = 'custom';
+        Flashcards.init('custom');
+        App.notificar('🎴 Estudo iniciado com os novos Flashcards!', 'sucesso');
+      }, 500);
+    }
   },
 
   // ── Excluir item customizado ─────────────────────────────

@@ -3228,9 +3228,10 @@
           <aside class="fc-studio-sidebar">
             <div class="card-selecao-templo">
               <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
-              <select id="flashcard-templo-select" onchange="Flashcards.init(parseInt(this.value))">
+              <select id="flashcard-templo-select" onchange="Flashcards.init(this.value === 'custom' ? 'custom' : parseInt(this.value))">
                 <option value="">-- Seleziona tempio --</option>
               </select>
+              <button class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="margin-left:auto;white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
             </div>
 
             <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
@@ -3586,16 +3587,16 @@
   <script src="js/voice_engine.js?v=79"></script>
   <script src="js/core.js?v=79"></script>
   <script src="js/progression.js?v=79"></script>
-  <script src="js/flashcards.js?v=79"></script>
-  <script src="js/quiz.js?v=79"></script>
-  <script src="js/vocab.js?v=79"></script>
-  <script src="js/heatmap.js?v=79"></script>
-  <script src="js/grammar.js?v=79"></script>
-  <script src="js/profilo.js?v=79"></script>
-  <script src="js/dialoghi.js?v=79"></script>
-  <script src="js/canzoni.js?v=79"></script>
-  <script src="js/imitazione.js?v=79"></script>
-  <script src="js/storie.js?v=83"></script>
+  <script src="js/flashcards.js?v=84"></script>
+  <script src="js/quiz.js?v=84"></script>
+  <script src="js/vocab.js?v=84"></script>
+  <script src="js/heatmap.js?v=84"></script>
+  <script src="js/grammar.js?v=84"></script>
+  <script src="js/profilo.js?v=84"></script>
+  <script src="js/dialoghi.js?v=84"></script>
+  <script src="js/canzoni.js?v=84"></script>
+  <script src="js/imitazione.js?v=84"></script>
+  <script src="js/storie.js?v=84"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -3723,7 +3724,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js?v=68"></script>
-  <script src="js/ia-import.js?v=80"></script>
+  <script src="js/ia-import.js?v=84"></script>
 </body>
 </html>
 

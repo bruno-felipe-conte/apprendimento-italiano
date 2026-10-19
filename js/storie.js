@@ -75,32 +75,87 @@ const Storie = {
     } catch { this.completate = []; }
   },
 
-  // Normaliza histórias com schema alternativo (titolo/livello/testo-string)
+  // Normaliza histórias com schema alternativo (titolo/livello/testo-string/capitoli/paragrafi)
   _normalizar(s) {
+    if (!s) return s;
     const out = Object.assign({}, s);
     if (!out.titulo && out.titolo) out.titulo = out.titolo;
     if (!out.titulo_pt) out.titulo_pt = out.titulo || out.titolo || '';
     if (!out.nivel && out.livello) out.nivel = out.livello;
-    if (!out.descricao) out.descricao = out.tema || '';
+    if (!out.descricao) out.descricao = out.tema || out.sinossi || '';
     if (!out.descricao_pt) out.descricao_pt = out.descricao;
     if (!out.icone) out.icone = '📜';
     if (!out.xp_recompensa) out.xp_recompensa = 60;
+
+    // Normaliza capítulos aninhados se vier em out.capitoli
+    if (!out.testo && Array.isArray(out.capitoli)) {
+      const flat = [];
+      out.capitoli.forEach((cap, cIdx) => {
+        const capTit = cap.titulo || cap.titolo || `Capitolo ${cIdx + 1}`;
+        const pars = Array.isArray(cap.paragrafi) ? cap.paragrafi : (Array.isArray(cap.testo) ? cap.testo : []);
+        pars.forEach((p, pIdx) => {
+          flat.push({
+            ...(typeof p === 'string' ? { italiano: p } : p),
+            capituloTitulo: pIdx === 0 ? capTit : undefined
+          });
+        });
+      });
+      out.testo = flat;
+    }
+
+    if (!out.testo && Array.isArray(out.paragrafi)) {
+      out.testo = out.paragrafi;
+    }
+
     // testo como string simples → array de parágrafos
     if (typeof out.testo === 'string') {
-      const frases = out.testo.split(/(?<=[.!?])\s+/).filter(Boolean);
-      const chunks = [];
-      for (let i = 0; i < frases.length; i += 3) {
-        chunks.push({
-          id: `p${i}`,
-          italiano: frases.slice(i, i + 3).join(' '),
-          portugues: '',
-          parole: [],
-        });
-      }
-      if (!chunks.length) chunks.push({ id: 'p0', italiano: out.testo, portugues: '', parole: [] });
-      out.testo = chunks;
+      const linhas = out.testo.split(/\n\s*\n|\r\n\s*\r\n/).map(l => l.trim()).filter(Boolean);
+      out.testo = linhas.map((l, i) => ({
+        id: `p${i}`,
+        italiano: l,
+        portugues: '',
+        parole: []
+      }));
     }
+
+    // Normaliza cada bloco/parágrafo dentro de out.testo
+    if (Array.isArray(out.testo)) {
+      out.testo = out.testo.map((p, idx) => {
+        if (typeof p === 'string') {
+          return { id: `p${idx}`, italiano: p, portugues: '', parole: [] };
+        }
+        const it = (p.italiano || p.it || p.testo || p.testo_italiano || p.frase || p.paragrafo || '').trim();
+        const pt = (p.portugues || p.traducao || p.traduzione || p.pt || p.portoghese || p.traducao_pt || p.translation || '').trim();
+        const parole = Array.isArray(p.parole) ? p.parole.map(w => ({
+          parola: w.parola || w.word || w.termo || '',
+          traduzione: w.traduzione || w.traducao || w.trad || w.translation || '',
+          ipa: w.ipa || '',
+          categoria: w.categoria || ''
+        })) : [];
+
+        return {
+          id: p.id || `p${idx}`,
+          italiano: it,
+          portugues: pt,
+          parole: parole,
+          capituloTitulo: p.capituloTitulo
+        };
+      });
+    }
+
     return out;
+  },
+
+  _salvarStoriaCustomAtualizada(storia) {
+    if (!storia) return;
+    try {
+      const custom = JSON.parse(localStorage.getItem('it_storie_custom') || '[]');
+      const idx = custom.findIndex(s => s.id === storia.id);
+      if (idx !== -1) {
+        custom[idx] = storia;
+        localStorage.setItem('it_storie_custom', JSON.stringify(custom));
+      }
+    } catch (_) {}
   },
 
   _salvarCompletate() {
@@ -290,19 +345,29 @@ const Storie = {
       } else if (pesoTotal > limiteEfetivo && charsAtuais === 0) {
         // Quebra parágrafo longo em sentenças para caber na página sem estourar
         const sentencas = textoIt.match(/[^.!?]+[.!?]+|\S+$/g) || [textoIt];
+        const sentencasPt = textoPt ? (textoPt.match(/[^.!?]+[.!?]+|\S+$/g) || [textoPt]) : [];
         let acumulado = '';
+        let chunkStartIdx = 0;
+
         sentencas.forEach((sent, sIdx) => {
           if (charsAtuais + sent.length > limiteEfetivo && acumulado) {
+            let ptChunk = '';
+            if (sentencasPt.length > 0) {
+              const ptStart = Math.floor((chunkStartIdx / sentencas.length) * sentencasPt.length);
+              const ptEnd   = Math.floor((sIdx / sentencas.length) * sentencasPt.length);
+              ptChunk = sentencasPt.slice(ptStart, Math.max(ptStart + 1, ptEnd)).join(' ').trim();
+            }
             blocosAtuais.push({
               italiano: acumulado.trim(),
-              portugues: '',
+              portugues: ptChunk,
               parole: parole,
               parIdx: parIdx,
-              continua: sIdx > 0,
+              continua: chunkStartIdx > 0,
               temCapitular: isFirstPage && blocosAtuais.length === 0
             });
             empilharPagina();
             acumulado = sent;
+            chunkStartIdx = sIdx;
             charsAtuais = sent.length;
           } else {
             acumulado += (acumulado ? ' ' : '') + sent;
@@ -310,12 +375,17 @@ const Storie = {
           }
         });
         if (acumulado.trim()) {
+          let ptChunk = '';
+          if (sentencasPt.length > 0) {
+            const ptStart = Math.floor((chunkStartIdx / sentencas.length) * sentencasPt.length);
+            ptChunk = sentencasPt.slice(ptStart).join(' ').trim();
+          }
           blocosAtuais.push({
             italiano: acumulado.trim(),
-            portugues: '',
+            portugues: ptChunk,
             parole: parole,
             parIdx: parIdx,
-            continua: true,
+            continua: chunkStartIdx > 0,
             temCapitular: false
           });
         }
@@ -582,24 +652,22 @@ const Storie = {
     }
   },
 
-  // ── Construtor de Página Clássica de Livro ──────────────────
-  _construirHtmlPagina(pag, lado, total) {
+  // ── Conteúdo Interno da Página de Livro ────────────────────
+  _obterHtmlConteudoPagina(pag, lado, total) {
     const il = I18n.idioma === 'it';
     if (!pag) {
       return `
-        <div class="antique-page antique-page-${lado}">
-          <div class="antique-page-header">
-            <span class="antique-running-head">—</span>
-          </div>
-          <div class="antique-page-body" style="align-items:center;justify-content:center;opacity:0.65">
-            <div style="font-size:2.2rem;margin-bottom:0.4rem">⚜️</div>
-            <div class="antique-ornamento">— ✦ —</div>
-            <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:#8a7250">
-              ${il ? 'Fine del volume' : 'Fim do livro'}
-            </div>
-          </div>
-          <div class="antique-page-footer">— ${total} —</div>
+        <div class="antique-page-header">
+          <span class="antique-running-head">—</span>
         </div>
+        <div class="antique-page-body" style="align-items:center;justify-content:center;opacity:0.65">
+          <div style="font-size:2.2rem;margin-bottom:0.4rem">⚜️</div>
+          <div class="antique-ornamento">— ✦ —</div>
+          <div style="font-family:'EB Garamond',serif;font-style:italic;font-size:0.95rem;color:#8a7250">
+            ${il ? 'Fine del volume' : 'Fim do livro'}
+          </div>
+        </div>
+        <div class="antique-page-footer">— ${total} —</div>
       `;
     }
 
@@ -631,7 +699,9 @@ const Storie = {
       return `
         <div class="antique-para-wrap">
           <p class="antique-para${noIndent ? ' no-indent' : ''}">${textoMarcado}</p>
-          ${this.traduzirVisivel && ptText ? `<span class="antique-para-trad">${ptText}</span>` : ''}
+          ${this.traduzirVisivel ? `
+            <span class="antique-para-trad" data-bloco-id="${bloco.parIdx}">${ptText || '<span class="trad-loading">Traduzione in corso...</span>'}</span>
+          ` : ''}
         </div>
       `;
     }).join('');
@@ -647,18 +717,25 @@ const Storie = {
     ` : '';
 
     return `
+      ${cabecalhoHtml}
+      <div class="antique-page-body">
+        ${blocosHtml}
+        ${finalizadorHtml}
+      </div>
+      <div class="antique-page-footer">— ${pag.numero} —</div>
+    `;
+  },
+
+  // ── Construtor de Página Clássica de Livro ──────────────────
+  _construirHtmlPagina(pag, lado, total) {
+    return `
       <div class="antique-page antique-page-${lado} storie-texto-corrido">
-        ${cabecalhoHtml}
-        <div class="antique-page-body">
-          ${blocosHtml}
-          ${finalizadorHtml}
-        </div>
-        <div class="antique-page-footer">— ${pag.numero} —</div>
+        ${this._obterHtmlConteudoPagina(pag, lado, total)}
       </div>
     `;
   },
 
-  // ── Transição Animada 3D da Página (RotateY) ─────────────
+  // ── Transição Animada 3D da Página com Verso Real (RotateY) ─
   _animarViradaPagina(direcao, callbackFinal) {
     if (this._animandoVirada) return;
 
@@ -674,22 +751,53 @@ const Storie = {
     this._tocarSomFolhear();
 
     const isNext = direcao === 'next';
+    const total = this._paginas.length;
     const flippingContainer = document.createElement('div');
     flippingContainer.className = `page-flipping-container ${isNext ? 'right-to-left' : 'left-to-right'}`;
 
-    // Captura o conteúdo atual da página que vai se mover
     const pageRightEl = stage.querySelector('.antique-page-right');
     const pageLeftEl  = stage.querySelector('.antique-page-left');
-    const conteudoOrigemHTML = isNext
-      ? (pageRightEl ? pageRightEl.innerHTML : '')
-      : (pageLeftEl ? pageLeftEl.innerHTML : '');
+
+    let pagFrente = null;
+    let pagVerso  = null;
+    let ladoFrente = '';
+    let ladoVerso  = '';
+
+    if (isNext) {
+      ladoFrente = 'right';
+      ladoVerso  = 'left';
+      // Folha da direita (frente) gira para a esquerda (verso)
+      pagFrente = this._paginas[this.paginaAtual] || null; // página atual da direita (N+1)
+      pagVerso  = this._paginas[this.paginaAtual + 1] || null; // nova página da esquerda (N+2)
+      const pagSubjacente = this._paginas[this.paginaAtual + 2] || null; // nova página da direita (N+3)
+
+      // Atualiza a página direita estática do livro por baixo da folha que vai girar
+      if (pageRightEl) {
+        pageRightEl.innerHTML = this._obterHtmlConteudoPagina(pagSubjacente, 'right', total);
+      }
+    } else {
+      ladoFrente = 'left';
+      ladoVerso  = 'right';
+      // Folha da esquerda (frente) gira para a direita (verso)
+      pagFrente = this._paginas[this.paginaAtual - 1] || null; // página atual da esquerda (N)
+      pagVerso  = this._paginas[this.paginaAtual - 2] || null; // nova página da direita (N-1)
+      const pagSubjacente = this._paginas[this.paginaAtual - 3] || null; // nova página da esquerda (N-2)
+
+      // Atualiza a página esquerda estática do livro por baixo da folha que vai girar
+      if (pageLeftEl) {
+        pageLeftEl.innerHTML = this._obterHtmlConteudoPagina(pagSubjacente, 'left', total);
+      }
+    }
+
+    const conteudoFrenteHtml = this._obterHtmlConteudoPagina(pagFrente, ladoFrente, total);
+    const conteudoVersoHtml  = this._obterHtmlConteudoPagina(pagVerso, ladoVerso, total);
 
     flippingContainer.innerHTML = `
-      <div class="flipping-face">
-        ${conteudoOrigemHTML}
+      <div class="flipping-face front antique-page antique-page-${ladoFrente}">
+        ${conteudoFrenteHtml}
       </div>
-      <div class="flipping-face back">
-        <div style="opacity:0.35;text-align:center;padding-top:42%;font-family:'Cinzel',serif;font-size:1.2rem;color:#8c6a45">⚜️</div>
+      <div class="flipping-face back antique-page antique-page-${ladoVerso}">
+        ${conteudoVersoHtml}
       </div>
     `;
 
@@ -708,6 +816,110 @@ const Storie = {
       this._animandoVirada = false;
       callbackFinal();
     }, 880);
+  },
+
+  // ── Auto-tradução On-Demand para Livros / Parágrafos sem PT ───
+  async _traduzirParagrafoAPI(texto) {
+    if (!texto || !texto.trim()) return '';
+    const norm = texto.trim();
+    if (this._tradCache[norm]) return this._tradCache[norm];
+
+    // Tenta Google Translate gtx (rápido e sem limite para parágrafos normais)
+    try {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=it&tl=pt&dt=t&q=${encodeURIComponent(norm)}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data) && Array.isArray(data[0])) {
+          const trad = data[0].map(item => item[0]).join('');
+          if (trad) {
+            this._tradCache[norm] = trad;
+            return trad;
+          }
+        }
+      }
+    } catch (_) {}
+
+    // Fallback: MyMemory API
+    try {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(norm.slice(0, 480))}&langpair=it|pt-BR`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
+      if (res.ok) {
+        const json = await res.json();
+        const t = json?.responseData?.translatedText;
+        if (t && t.toLowerCase() !== norm.toLowerCase()) {
+          this._tradCache[norm] = t;
+          return t;
+        }
+      }
+    } catch (_) {}
+
+    return '';
+  },
+
+  async _autoTraduzirPaginasVisiveis() {
+    if (!this.traduzirVisivel || !this.storAttuale) return;
+    const isMobile = this._isMobile();
+    const pag1 = this._paginas[this.paginaAtual - 1];
+    const pag2 = isMobile ? null : this._paginas[this.paginaAtual];
+    const blocosSemTrad = [];
+
+    const coletar = (pag) => {
+      if (!pag || !pag.blocos) return;
+      pag.blocos.forEach(b => {
+        if (!b.portugues && b.italiano) blocosSemTrad.push(b);
+      });
+    };
+    coletar(pag1);
+    coletar(pag2);
+
+    if (blocosSemTrad.length === 0) return;
+
+    for (const b of blocosSemTrad) {
+      try {
+        const trad = await this._traduzirParagrafoAPI(b.italiano);
+        if (trad && this.traduzirVisivel) {
+          b.portugues = trad;
+          if (this.storAttuale.testo && this.storAttuale.testo[b.parIdx]) {
+            this.storAttuale.testo[b.parIdx].portugues = trad;
+          }
+          this._salvarStoriaCustomAtualizada(this.storAttuale);
+        }
+      } catch (_) {}
+    }
+
+    if (this.traduzirVisivel) {
+      this._atualizarTextosTraducaoDOM();
+    }
+  },
+
+  _atualizarTextosTraducaoDOM() {
+    const overlay = document.getElementById('book-reader-overlay');
+    if (!overlay) return;
+    const isMobile = this._isMobile();
+    const pag1 = this._paginas[this.paginaAtual - 1];
+    const pag2 = isMobile ? null : this._paginas[this.paginaAtual];
+
+    const atualizar = (pag) => {
+      if (!pag || !pag.blocos) return;
+      pag.blocos.forEach(b => {
+        if (b.portugues) {
+          const els = overlay.querySelectorAll(`.antique-para-trad[data-bloco-id="${b.parIdx}"]`);
+          els.forEach(el => {
+            if (el.innerHTML.includes('trad-loading') || !el.textContent.trim()) {
+              el.textContent = b.portugues;
+              el.style.opacity = '0';
+              requestAnimationFrame(() => {
+                el.style.transition = 'opacity 0.25s ease';
+                el.style.opacity = '1';
+              });
+            }
+          });
+        }
+      });
+    };
+    atualizar(pag1);
+    atualizar(pag2);
   },
 
   // ── Navegação de Páginas e Virada 3D ────────────────────────

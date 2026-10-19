@@ -180,14 +180,18 @@ const Flashcards = {
 
   // ── Initialize for a specific temple ──────────────────────
   init(templo) {
-    if (!templo || isNaN(templo)) return;
-    if (!Progressao.temploDesbloqueado(templo)) {
-      App.notificar('notif_fc_bloqueado', 'erro');
-      return;
-    }
-    if (!App.estado.templosData[templo]) {
-      App.notificar('notif_fc_vocab_nao_carregado', 'erro');
-      return;
+    if (!templo) return;
+    const ehCustom = templo === 'custom';
+    if (!ehCustom) {
+      if (isNaN(templo)) return;
+      if (!Progressao.temploDesbloqueado(templo)) {
+        App.notificar('notif_fc_bloqueado', 'erro');
+        return;
+      }
+      if (!App.estado.templosData[templo]) {
+        App.notificar('notif_fc_vocab_nao_carregado', 'erro');
+        return;
+      }
     }
     this.temploAtual     = templo;
     this.praticandoTodas = false;
@@ -220,14 +224,23 @@ const Flashcards = {
 
   // ── Load and sort cards due for review ────────────────────
   carregarCartas() {
-    const data = App.estado.templosData[this.temploAtual];
-    if (!data || !data.palavras) { this.cartasDisponiveis = []; return; }
+    let listaPalavras = [];
+
+    if (this.temploAtual === 'custom') {
+      const todos = App.estado?.vocabCache || [];
+      listaPalavras = todos.filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    } else {
+      const data = App.estado.templosData[this.temploAtual];
+      listaPalavras = data?.palavras || [];
+    }
+
+    if (!listaPalavras.length) { this.cartasDisponiveis = []; return; }
 
     const agora   = Date.now();
     const novas   = [];
     const devidas = [];
 
-    data.palavras.forEach(palavra => {
+    listaPalavras.forEach(palavra => {
       let fsrs = App.estado.flashcardData[palavra.id];
 
       // Migrate SM-2 records automatically
@@ -604,10 +617,16 @@ const Flashcards = {
     // Next due card
     let proxLabel = I18n.t('fc_resumo_sem_agendamento');
     if (this.temploAtual) {
-      const data = App.estado.templosData[this.temploAtual];
-      if (data && data.palavras) {
+      let palavrasTemplo = [];
+      if (this.temploAtual === 'custom') {
+        palavrasTemplo = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+      } else {
+        const data = App.estado.templosData[this.temploAtual];
+        palavrasTemplo = data?.palavras || [];
+      }
+      if (palavrasTemplo.length > 0) {
         const agora = Date.now();
-        const proximas = data.palavras
+        const proximas = palavrasTemplo
           .map(p => App.estado.flashcardData[p.id])
           .filter(f => f && f.nextReview && f.nextReview > agora)
           .map(f => f.nextReview)
@@ -915,6 +934,21 @@ const Flashcards = {
       });
     });
 
+    // Inclui também palavras adicionadas via IA / personalizadas
+    const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    customVocab.forEach(palavra => {
+      let fsrs = App.estado.flashcardData[palavra.id];
+      if (fsrs && fsrs.repeticoes !== undefined && fsrs.stability === undefined) {
+        fsrs = FSRS.migrateSM2(fsrs);
+        App.estado.flashcardData[palavra.id] = fsrs;
+      }
+      if (!fsrs || fsrs.state === 'new') {
+        novas.push(palavra);
+      } else if ((fsrs.nextReview || 0) <= agora) {
+        devidas.push({ ...palavra, _nextReview: fsrs.nextReview || 0 });
+      }
+    });
+
     devidas.sort((a, b) => a._nextReview - b._nextReview);
     // Mix: prioritize overdue, sprinkle new cards (max 5 new per session)
     const novasLimitadas = novas.slice(0, 5);
@@ -953,11 +987,17 @@ const Flashcards = {
 
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
-    const data = App.estado.templosData[this.temploAtual];
-    if (!data || !data.palavras || data.palavras.length === 0) return;
+    let palavrasTemplo = [];
+    if (this.temploAtual === 'custom') {
+      palavrasTemplo = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    } else {
+      const data = App.estado.templosData[this.temploAtual];
+      palavrasTemplo = data?.palavras || [];
+    }
+    if (!palavrasTemplo || palavrasTemplo.length === 0) return;
     this.praticandoTodas  = true;
     this.sessaoStats      = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
-    this.cartasDisponiveis = [...data.palavras];
+    this.cartasDisponiveis = [...palavrasTemplo];
     this.indiceAtual      = 0;
     this.virada           = false;
 
@@ -1000,6 +1040,17 @@ const Flashcards = {
       opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
       sel.appendChild(opt);
     });
+    // Adiciona opção de deck customizado se houver palavras adicionadas via IA
+    const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+    if (customVocab.length > 0) {
+      const optCustom = document.createElement('option');
+      optCustom.value = 'custom';
+      optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
+      optCustom.style.fontWeight = 'bold';
+      optCustom.style.color = '#7B68A0';
+      sel.appendChild(optCustom);
+    }
+
     if (anterior && sel.querySelector(`option[value="${anterior}"]`)) {
       sel.value = anterior;
     }
