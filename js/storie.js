@@ -20,6 +20,9 @@ const Storie = {
   _keyListener: null,
   _resizeListener: null,
   _animandoVirada: false,
+  _reproduzindoAudio: false,
+  _audioFilaSentencas: [],
+  _audioIndexSentenca: 0,
   _filtroNivel: '',
   _filtroTexto: '',
   _filtroOrigem: '',
@@ -409,6 +412,7 @@ const Storie = {
   },
 
   fecharLeitor() {
+    this._pararAudioPagina();
     this._animandoVirada = false;
     if (this._keyListener) {
       document.removeEventListener('keydown', this._keyListener);
@@ -486,8 +490,8 @@ const Storie = {
           <button class="book-action-btn${this.traduzirVisivel ? ' active' : ''}" onclick="Storie._toggleTraduzir()" title="${il ? 'Mostra/Nascondi traduzione' : 'Mostrar/Ocultar tradução'}">
             👁️ <span class="label">${il ? 'Traduzione' : 'Tradução'}</span>
           </button>
-          <button class="book-action-btn" onclick="Storie._ouvirPaginaAtual()" title="${il ? 'Ascolta pagina' : 'Ouvir página'}">
-            🔊 <span class="label">${il ? 'Ascolta' : 'Ouvir'}</span>
+          <button id="book-btn-ouvir" class="book-action-btn${this._reproduzindoAudio ? ' active' : ''}" onclick="Storie._ouvirPaginaAtual()" title="${this._reproduzindoAudio ? (il ? 'Ferma lettura' : 'Parar leitura') : (il ? 'Ascolta pagina' : 'Ouvir página')}">
+            ${this._reproduzindoAudio ? '⏹️' : '🔊'} <span class="label">${this._reproduzindoAudio ? (il ? 'Ferma' : 'Parar') : (il ? 'Ascolta' : 'Ouvir')}</span>
           </button>
           <button class="book-btn-voltar" style="padding:0.32rem 0.5rem" onclick="Storie.fecharLeitor()">✕</button>
         </div>
@@ -709,6 +713,7 @@ const Storie = {
   // ── Navegação de Páginas e Virada 3D ────────────────────────
   proximaPagina() {
     if (this._animandoVirada) return;
+    this._pararAudioPagina();
     const step = this._isMobile() ? 1 : 2;
     const total = this._paginas.length;
     if (this.paginaAtual + step > total && (this._isMobile() || this.paginaAtual >= total)) {
@@ -724,6 +729,7 @@ const Storie = {
 
   paginaAnterior() {
     if (this._animandoVirada) return;
+    this._pararAudioPagina();
     const step = this._isMobile() ? 1 : 2;
     if (this.paginaAtual <= 1) return;
 
@@ -737,6 +743,7 @@ const Storie = {
 
   irParaPagina(num) {
     if (isNaN(num)) return;
+    this._pararAudioPagina();
     const total = this._paginas.length;
     let pag = Math.min(Math.max(1, num), total);
     if (!this._isMobile() && pag % 2 === 0) pag -= 1;
@@ -771,6 +778,7 @@ const Storie = {
   },
 
   _toggleTraduzir() {
+    this._pararAudioPagina();
     this.traduzirVisivel = !this.traduzirVisivel;
     // Repagina preservando a proporção de leitura
     const totalAntigo = this._paginas.length || 1;
@@ -783,23 +791,163 @@ const Storie = {
     this._renderizarStoria();
   },
 
+  // ── Reprodução de Áudio Sequencial e Robusta da Página ─────
   _ouvirPaginaAtual() {
-    if (!this.storAttuale || this._paginas.length === 0) return;
+    if (!this.storAttuale || !this._paginas || this._paginas.length === 0) return;
+    const il = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+
+    // Se já estiver reproduzindo, interrompe (Toggle Stop)
+    if (this._reproduzindoAudio) {
+      this._pararAudioPagina();
+      return;
+    }
+
     const isMobile = this._isMobile();
     const pag1 = this._paginas[this.paginaAtual - 1];
     const pag2 = isMobile ? null : this._paginas[this.paginaAtual];
 
-    const textos = [];
-    if (pag1) {
-      pag1.blocos.forEach(b => textos.push(b.italiano));
-    }
-    if (pag2) {
-      pag2.blocos.forEach(b => textos.push(b.italiano));
+    const frasesExtraidas = [];
+    const coletarFrases = (pag) => {
+      if (!pag || !pag.blocos) return;
+      pag.blocos.forEach(b => {
+        const txt = (b.italiano || '').trim();
+        if (!txt) return;
+        // Quebra em sentenças naturais para não estourar o buffer do SpeechSynthesis
+        const partes = txt.match(/[^.!?\n]+[.!?]+|[^.!?\n]+$/g) || [txt];
+        partes.forEach(p => {
+          const limpo = p.trim();
+          if (limpo) frasesExtraidas.push(limpo);
+        });
+      });
+    };
+
+    coletarFrases(pag1);
+    coletarFrases(pag2);
+
+    if (frasesExtraidas.length === 0) {
+      if (typeof App !== 'undefined' && App.notificar) {
+        App.notificar(il ? 'Nessun testo da ascoltare' : 'Nenhum texto para ouvir nesta página', 'info');
+      }
+      return;
     }
 
-    const textoCompleto = textos.join(' ').trim();
-    if (textoCompleto && typeof App !== 'undefined' && App.pronunciar) {
-      App.pronunciar(textoCompleto);
+    this._audioFilaSentencas = frasesExtraidas;
+    this._audioIndexSentenca = 0;
+    this._reproduzindoAudio  = true;
+
+    // Atualiza botão para estado de parada com destaque
+    const btn = document.getElementById('book-btn-ouvir');
+    if (btn) {
+      btn.innerHTML = `⏹️ <span class="label">${il ? 'Ferma' : 'Parar'}</span>`;
+      btn.classList.add('active');
+    }
+
+    this._tocarProximaSentenca();
+  },
+
+  _tocarProximaSentenca() {
+    if (!this._reproduzindoAudio) return;
+
+    if (this._audioIndexSentenca >= this._audioFilaSentencas.length) {
+      this._pararAudioPagina();
+      return;
+    }
+
+    const fraseOriginal = this._audioFilaSentencas[this._audioIndexSentenca];
+    const fraseNormalizada = (typeof VoiceEngine !== 'undefined')
+      ? VoiceEngine.normalizarParaFala(fraseOriginal)
+      : fraseOriginal;
+
+    if (!('speechSynthesis' in window)) {
+      if (typeof App !== 'undefined' && App._pronunciarRV) {
+        App._pronunciarRV(fraseNormalizada || fraseOriginal);
+      }
+      this._pararAudioPagina();
+      return;
+    }
+
+    try {
+      if (speechSynthesis.paused) {
+        speechSynthesis.resume();
+      }
+      speechSynthesis.cancel();
+    } catch (_) {}
+
+    // Busca a melhor voz italiana
+    let voz = null;
+    if (typeof VoiceEngine !== 'undefined') {
+      voz = VoiceEngine.obterVozSelecionada();
+    }
+    if (!voz && typeof App !== 'undefined' && App._getVozItaliana) {
+      voz = App._getVozItaliana();
+    }
+
+    let rate = parseFloat(localStorage.getItem('it_audio_speed'));
+    if (isNaN(rate) || rate <= 0) rate = 0.88;
+    rate = Math.max(0.5, Math.min(1.8, rate));
+
+    const u = new SpeechSynthesisUtterance(fraseNormalizada || fraseOriginal);
+    u.lang = (voz && voz.lang) ? voz.lang : 'it-IT';
+    u.rate = rate;
+    if (voz) u.voice = voz;
+
+    if (fraseOriginal.endsWith('?')) {
+      u.pitch = 1.05;
+    } else if (fraseOriginal.endsWith('!')) {
+      u.pitch = 1.02;
+    } else {
+      u.pitch = 1.0;
+    }
+
+    // Fix do Chromium Garbage Collector
+    window._storyActiveUtterance = u;
+
+    u.onend = () => {
+      if (!this._reproduzindoAudio) return;
+      this._audioIndexSentenca++;
+      setTimeout(() => {
+        if (this._reproduzindoAudio) {
+          this._tocarProximaSentenca();
+        }
+      }, 110);
+    };
+
+    u.onerror = (e) => {
+      console.warn('[Storie Audio Error]', e);
+      if (!this._reproduzindoAudio) return;
+      this._audioIndexSentenca++;
+      setTimeout(() => {
+        if (this._reproduzindoAudio) {
+          this._tocarProximaSentenca();
+        }
+      }, 90);
+    };
+
+    try {
+      speechSynthesis.speak(u);
+    } catch (err) {
+      console.warn('[Storie Speech Exception]', err);
+      this._pararAudioPagina();
+    }
+  },
+
+  _pararAudioPagina() {
+    this._reproduzindoAudio = false;
+    this._audioFilaSentencas = [];
+    this._audioIndexSentenca = 0;
+    window._storyActiveUtterance = null;
+
+    try {
+      if (typeof speechSynthesis !== 'undefined') {
+        speechSynthesis.cancel();
+      }
+    } catch (_) {}
+
+    const il = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+    const btn = document.getElementById('book-btn-ouvir');
+    if (btn) {
+      btn.innerHTML = `🔊 <span class="label">${il ? 'Ascolta' : 'Ouvir'}</span>`;
+      btn.classList.remove('active');
     }
   },
 
@@ -1146,17 +1294,7 @@ const Storie = {
     });
   },
 
-  // ── Ações ─────────────────────────────────────────────────
-  _toggleTraduzir() {
-    this.traduzirVisivel = !this.traduzirVisivel;
-    this._renderizarStoria();
-  },
-
-  _ouvirTudo() {
-    if (!this.storAttuale) return;
-    const texto = this.storAttuale.testo.map(p => p.italiano).join(' ');
-    if (typeof App !== 'undefined' && App.pronunciar) App.pronunciar(texto);
-  },
+  // ── Ações de Leitura ──────────────────────────────────────
 
   _marcarLida() {
     if (!this.storAttuale) return;
