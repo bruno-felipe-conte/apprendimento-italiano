@@ -650,6 +650,10 @@ const Storie = {
         }
       }, { passive: true });
     }
+
+    if (this.traduzirVisivel) {
+      this._autoTraduzirPaginasVisiveis();
+    }
   },
 
   // ── Conteúdo Interno da Página de Livro ────────────────────
