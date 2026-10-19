@@ -504,11 +504,12 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     const arr = Array.isArray(data) ? data : [data];
     const key = 'it_storie_custom';
     const existing = JSON.parse(localStorage.getItem(key) || '[]');
-    arr.forEach((d, i) => {
+    const normalizadas = arr.map((d, i) => {
       if (!d.id) d.id = 'stor_custom_' + Date.now() + '_' + i;
       d._custom = true;
+      return (typeof Storie !== 'undefined' && Storie._normalizar) ? Storie._normalizar(d) : d;
     });
-    try { localStorage.setItem(key, JSON.stringify([...existing, ...arr])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
+    try { localStorage.setItem(key, JSON.stringify([...existing, ...normalizadas])); } catch(e) { if(e.name === 'QuotaExceededError') { App.notificar('Memoria piena! Elimina vecchie storie/canzoni.', 'erro'); } }
     if (typeof Storie !== 'undefined') {
       Storie.dados = null;
       Storie.renderizarSeletor?.();
