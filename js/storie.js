@@ -289,15 +289,28 @@ const Storie = {
     } catch (_) {}
   },
 
-  // ── Gerador de Páginas Sem Transbordamento (Zero Scroll) ────
+  // ── Cálculo dinâmico e responsivo da capacidade da folha ────
+  _calcularCapacidade(isMobile) {
+    const winH = (typeof window !== 'undefined' && window.innerHeight) ? window.innerHeight : 800;
+    // Fator normalizador baseado na altura real do viewport do dispositivo
+    const fatorH = Math.min(1.25, Math.max(0.60, winH / 840));
+
+    if (isMobile) {
+      // Mobile: 1 folha por tela. Linhas curtas (~34-38 chars)
+      const base = this.traduzirVisivel ? 150 : 250;
+      return Math.round(base * fatorH);
+    } else {
+      // Desktop/Tablet: 2 folhas no spread.
+      const base = this.traduzirVisivel ? 260 : 460;
+      return Math.round(base * fatorH);
+    }
+  },
+
+  // ── Gerador de Páginas Sem Transbordamento e Sem Cortes (Zero Scroll) ────
   _gerarPaginas(s, isMobile) {
     if (!s || !Array.isArray(s.testo) || s.testo.length === 0) return [];
 
-    // Capacidade ajustada para garantir ZERO barra de rolagem em qualquer dispositivo
-    const capBase = isMobile
-      ? (this.traduzirVisivel ? 210 : 340)
-      : (this.traduzirVisivel ? 420 : 680);
-
+    const capBase = this._calcularCapacidade(isMobile);
     const paginas = [];
     let blocosAtuais = [];
     let charsAtuais = 0;
@@ -317,10 +330,44 @@ const Storie = {
       isFirstPage = false;
     };
 
+    // Fatiador inteligente: quebra por sentenças e subfrases para nunca estourar a folha
+    const fatiarTextoEmAtomos = (texto, capMax) => {
+      if (!texto) return [];
+      const sentencas = texto.match(/[^.!?\n]+(?:[.!?\n]+|$)/g) || [texto];
+      const atomos = [];
+
+      sentencas.forEach(sent => {
+        const sTrim = sent.trim();
+        if (!sTrim) return;
+
+        // Se uma sentença individual for maior que 60% da folha, subdivide por pontuações secundárias
+        if (sTrim.length > capMax * 0.6) {
+          const pedacos = sTrim.match(/[^,;:—\n]+(?:[,;:—\n]+|$)/g) || [sTrim];
+          let subBuffer = '';
+          pedacos.forEach(p => {
+            const pTrim = p.trim();
+            if (!pTrim) return;
+            if (subBuffer && (subBuffer.length + pTrim.length > capMax * 0.45)) {
+              atomos.push(subBuffer.trim());
+              subBuffer = pTrim;
+            } else {
+              subBuffer += (subBuffer ? ' ' : '') + pTrim;
+            }
+          });
+          if (subBuffer.trim()) atomos.push(subBuffer.trim());
+        } else {
+          atomos.push(sTrim);
+        }
+      });
+
+      return atomos;
+    };
+
     s.testo.forEach((p, parIdx) => {
       const textoIt = (p.italiano || '').trim();
       const textoPt = (p.portugues || '').trim();
       const parole = p.parole || [];
+      if (!textoIt) return;
 
       // Detecção de novo capítulo no fluxo de leitura
       const matchCap = textoIt.match(/^(?:###\s*|Capitolo\s+\d+|Capítulo\s+\d+|Parte\s+\d+)/i);
@@ -329,10 +376,14 @@ const Storie = {
         capituloAtivo = textoIt.replace(/^###\s*/, '').trim();
       }
 
-      const limiteEfetivo = isFirstPage ? Math.max(capBase - 130, 150) : capBase;
-      const pesoTotal = textoIt.length + (this.traduzirVisivel ? textoPt.length : 0);
+      // Limite da página atual: na primeira folha de capa reserva espaço para título/autor
+      const limiteFolha = () => isFirstPage ? Math.max(Math.round(capBase * 0.55), 110) : capBase;
+      const pesoEstimado = (len) => len + (this.traduzirVisivel ? Math.round(len * 1.05) : 0);
 
-      if (charsAtuais + pesoTotal <= limiteEfetivo || charsAtuais === 0) {
+      const pesoParagrafo = pesoEstimado(textoIt.length);
+
+      // 1. Se o parágrafo inteiro cabe na folha atual
+      if (charsAtuais + pesoParagrafo <= limiteFolha()) {
         blocosAtuais.push({
           italiano: textoIt,
           portugues: textoPt,
@@ -341,66 +392,84 @@ const Storie = {
           continua: false,
           temCapitular: isFirstPage && blocosAtuais.length === 0
         });
-        charsAtuais += pesoTotal;
-      } else if (pesoTotal > limiteEfetivo && charsAtuais === 0) {
-        // Quebra parágrafo longo em sentenças para caber na página sem estourar
-        const sentencas = textoIt.match(/[^.!?]+[.!?]+|\S+$/g) || [textoIt];
-        const sentencasPt = textoPt ? (textoPt.match(/[^.!?]+[.!?]+|\S+$/g) || [textoPt]) : [];
-        let acumulado = '';
-        let chunkStartIdx = 0;
+        charsAtuais += pesoParagrafo;
+        return;
+      }
 
-        sentencas.forEach((sent, sIdx) => {
-          if (charsAtuais + sent.length > limiteEfetivo && acumulado) {
-            let ptChunk = '';
-            if (sentencasPt.length > 0) {
-              const ptStart = Math.floor((chunkStartIdx / sentencas.length) * sentencasPt.length);
-              const ptEnd   = Math.floor((sIdx / sentencas.length) * sentencasPt.length);
-              ptChunk = sentencasPt.slice(ptStart, Math.max(ptStart + 1, ptEnd)).join(' ').trim();
-            }
-            blocosAtuais.push({
-              italiano: acumulado.trim(),
-              portugues: ptChunk,
-              parole: parole,
-              parIdx: parIdx,
-              continua: chunkStartIdx > 0,
-              temCapitular: isFirstPage && blocosAtuais.length === 0
-            });
-            empilharPagina();
-            acumulado = sent;
-            chunkStartIdx = sIdx;
-            charsAtuais = sent.length;
-          } else {
-            acumulado += (acumulado ? ' ' : '') + sent;
-            charsAtuais += sent.length;
-          }
-        });
-        if (acumulado.trim()) {
+      // 2. Se a folha atual já tem conteúdo e o parágrafo não cabe nela:
+      if (charsAtuais > 0) {
+        empilharPagina();
+        const novoLimite = limiteFolha();
+        if (pesoParagrafo <= novoLimite) {
+          blocosAtuais.push({
+            italiano: textoIt,
+            portugues: textoPt,
+            parole: parole,
+            parIdx: parIdx,
+            continua: false,
+            temCapitular: isFirstPage && blocosAtuais.length === 0
+          });
+          charsAtuais += pesoParagrafo;
+          return;
+        }
+      }
+
+      // 3. Parágrafo longo (maior que a folha): fatiamento contínuo em sentenças
+      const atomos = fatiarTextoEmAtomos(textoIt, capBase);
+      const sentencasPt = textoPt ? (textoPt.match(/[^.!?\n]+(?:[.!?\n]+|$)/g) || [textoPt]) : [];
+
+      let bufferIt = '';
+      let chunkStartIdx = 0;
+      let ePrimeiraFatia = true;
+
+      atomos.forEach((atomo, aIdx) => {
+        const pesoAtomo = pesoEstimado(atomo.length);
+        const lim = limiteFolha();
+
+        if (charsAtuais + pesoAtomo > lim && bufferIt.trim()) {
           let ptChunk = '';
           if (sentencasPt.length > 0) {
-            const ptStart = Math.floor((chunkStartIdx / sentencas.length) * sentencasPt.length);
-            ptChunk = sentencasPt.slice(ptStart).join(' ').trim();
+            const ptStart = Math.floor((chunkStartIdx / atomos.length) * sentencasPt.length);
+            const ptEnd = Math.floor((aIdx / atomos.length) * sentencasPt.length);
+            ptChunk = sentencasPt.slice(ptStart, Math.max(ptStart + 1, ptEnd)).join(' ').trim();
           }
+
           blocosAtuais.push({
-            italiano: acumulado.trim(),
+            italiano: bufferIt.trim(),
             portugues: ptChunk,
             parole: parole,
             parIdx: parIdx,
-            continua: chunkStartIdx > 0,
-            temCapitular: false
+            continua: !ePrimeiraFatia,
+            temCapitular: ePrimeiraFatia && isFirstPage && blocosAtuais.length === 0
           });
+
+          empilharPagina();
+          bufferIt = atomo;
+          chunkStartIdx = aIdx;
+          charsAtuais = pesoEstimado(atomo.length);
+          ePrimeiraFatia = false;
+        } else {
+          bufferIt += (bufferIt ? ' ' : '') + atomo;
+          charsAtuais += pesoAtomo;
         }
-      } else {
-        empilharPagina();
-        const novoLimite = isFirstPage ? Math.max(capBase - 130, 150) : capBase;
+      });
+
+      if (bufferIt.trim()) {
+        let ptChunk = '';
+        if (sentencasPt.length > 0) {
+          const ptStart = Math.floor((chunkStartIdx / atomos.length) * sentencasPt.length);
+          ptChunk = sentencasPt.slice(ptStart).join(' ').trim();
+        }
+
         blocosAtuais.push({
-          italiano: textoIt,
-          portugues: textoPt,
+          italiano: bufferIt.trim(),
+          portugues: ptChunk,
           parole: parole,
           parIdx: parIdx,
-          continua: false,
-          temCapitular: isFirstPage && blocosAtuais.length === 0
+          continua: !ePrimeiraFatia,
+          temCapitular: ePrimeiraFatia && isFirstPage && blocosAtuais.length === 0
         });
-        charsAtuais += pesoTotal;
+        charsAtuais += pesoEstimado(bufferIt.length);
       }
     });
 

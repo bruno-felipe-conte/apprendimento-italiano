@@ -831,18 +831,24 @@
       margin: 0.2rem 0 0.45rem;
     }
 
-    /* Conteúdo textual da página — garantido sem rolagem */
+    /* Conteúdo textual da página — perfeitamente dimensionado */
     .antique-page-body {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
       box-sizing: border-box;
       z-index: 2;
     }
+    .antique-page-body::-webkit-scrollbar {
+      display: none;
+    }
     .antique-para-wrap {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.45rem;
     }
     .antique-para-wrap:last-child {
       margin-bottom: 0;
@@ -850,12 +856,12 @@
     .antique-para {
       font-family: 'EB Garamond', Georgia, serif;
       font-size: 1.05rem;
-      line-height: 1.76;
+      line-height: 1.74;
       color: #2b1d11;
       text-align: justify;
       hyphens: auto;
       text-indent: 1.4em;
-      margin: 0 0 0.6rem 0;
+      margin: 0;
     }
     .antique-para.no-indent {
       text-indent: 0;
@@ -867,7 +873,7 @@
       line-height: 1.48;
       font-style: italic;
       color: #7a5e3a;
-      margin-top: 0.25rem;
+      margin-top: 0.18rem;
       text-indent: 0;
     }
 
@@ -1101,9 +1107,13 @@
 
     /* RESPONSIVIDADE MOBILE (Página Única de Bolso) */
     @media (max-width: 767px) {
+      .book-stage {
+        padding: 0.35rem 0.5rem;
+      }
       .antique-book {
         width: 100%;
         max-width: min(100%, 540px);
+        max-height: calc(100dvh - 86px);
         border-radius: 10px;
         box-shadow: 4px 2px 0 #dcd1bb, 8px 4px 0 #c2b49a, 0 15px 35px rgba(0,0,0,0.6);
       }
@@ -1115,7 +1125,10 @@
       }
       .antique-page-right {
         border-radius: 10px;
-        padding: 1.3rem 1.4rem 1rem;
+        padding: 1.1rem 1.15rem 0.8rem;
+      }
+      .antique-page::before {
+        inset: 8px;
       }
       .antique-page-right::after {
         display: none;
@@ -1127,8 +1140,15 @@
         display: none;
       }
       .antique-para {
-        font-size: 0.98rem;
-        line-height: 1.68;
+        font-size: 0.95rem;
+        line-height: 1.62;
+      }
+      .antique-cover-icon {
+        font-size: 1.4rem;
+        margin-bottom: 0.15rem;
+      }
+      .antique-cover-title {
+        font-size: 1.18rem;
       }
       .book-action-btn span.label {
         display: none;
@@ -3599,7 +3619,7 @@
   <script src="js/dialoghi.js?v=84"></script>
   <script src="js/canzoni.js?v=84"></script>
   <script src="js/imitazione.js?v=84"></script>
-  <script src="js/storie.js?v=84"></script>
+  <script src="js/storie.js?v=85"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -3727,7 +3747,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js?v=68"></script>
-  <script src="js/ia-import.js?v=84"></script>
+  <script src="js/ia-import.js?v=85"></script>
 </body>
 </html>
 
