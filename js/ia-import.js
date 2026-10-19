@@ -600,6 +600,7 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
       if (App.estado.progresso) {
         App.estado.progresso.total_palavras = App.estado.vocabCache.length;
         App.salvarProgresso();
+        App.atualizarStats();
       }
     }
 
@@ -648,6 +649,11 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
       vocab:      () => {
         if (typeof App !== 'undefined' && App.estado?.vocabCache) {
           App.estado.vocabCache = App.estado.vocabCache.filter(v => v.id !== id);
+          if (App.estado.progresso) {
+            App.estado.progresso.total_palavras = App.estado.vocabCache.length;
+            App.salvarProgresso();
+            App.atualizarStats();
+          }
         }
         if (typeof Vocab !== 'undefined') Vocab.renderizar?.();
       },

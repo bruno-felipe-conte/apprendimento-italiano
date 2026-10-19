@@ -67,6 +67,7 @@ const App = {
     'linear-gradient(135deg, #37474F, #1C313A)',   // 48
     'linear-gradient(135deg, #4E342E, #3E2723)',   // 49
     'linear-gradient(135deg, #9B2335, #4A0A15)',   // 50
+    'linear-gradient(135deg, #D35400, #962D00)',   // 51 La Cucina Regionale
   ],
 
   // Temple names (index = templo number)
@@ -93,7 +94,7 @@ const App = {
     11:2, 12:2, 13:2, 14:2, 15:2, 17:2, 18:2, 19:2,
     22:2, 23:2, 25:2, 28:2, 33:2, 34:2,
     // B1 topics
-    16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4,
+    16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4, 51:4,
     // B2 topics
     26:7, 27:7, 30:7, 31:7, 37:7, 38:7, 43:7, 46:7,
     // C1 topics
@@ -615,7 +616,7 @@ const App = {
     if (!grid) return;
     grid.innerHTML = '';
 
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 51; i++) {
       if (!this.estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue; // templo não existe
       const data = this.estado.templosData[i];
       const desbloqueado = this.estado.progresso?.templos_desbloqueados?.includes(i) ?? false;
@@ -863,7 +864,9 @@ const App = {
     const current = p.xp - xpInicio;
     const percent = range > 0 ? Math.min(100, Math.round((current / range) * 100)) : 0;
 
-    const totalTemplos = Object.keys(this.TEMPLO_NIVEL_MINIMO || {}).length || 50;
+    // Total de templos jogáveis (exclui templos desativados com nível 99, ex: T36)
+    const totalTemplos = Object.entries(this.TEMPLO_NIVEL_MINIMO || {})
+      .filter(([, lvl]) => lvl < 90).length || 50;
     if (elNivel)   elNivel.textContent   = `Livello ${p.nivel}`;
     if (elXp)      elXp.textContent      = `XP: ${p.xp}/${xpFim}`;
     if (elTempli)  elTempli.textContent  = `Templi: ${p.templos_desbloqueados.length}/${totalTemplos}`;

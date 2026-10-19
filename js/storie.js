@@ -1532,6 +1532,11 @@ const Storie = {
     if (typeof App !== 'undefined' && App.estado?.vocabCache) {
       if (!App.estado.vocabCache.find(v => (v.italiano||'').toLowerCase() === palavra.toLowerCase())) {
         App.estado.vocabCache.unshift(entrada);
+        if (App.estado.progresso) {
+          App.estado.progresso.total_palavras = App.estado.vocabCache.length;
+          App.salvarProgresso();
+          App.atualizarStats();
+        }
       }
     }
 
