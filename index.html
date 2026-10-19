@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=87">
+  <link rel="stylesheet" href="css/italia.css?v=88">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -2169,8 +2169,20 @@
     .ach-progresso-fill { height:100%; background:linear-gradient(90deg,#9B2335,#D4A843); border-radius:4px; transition:width 0.6s ease; }
     .ach-progresso-label { font-size:0.78rem; font-weight:700; color:#9B2335; white-space:nowrap; }
     .ach-secao-titulo { font-size:0.72rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:#9B2335; margin-bottom:0.5rem; }
+    .ach-scroll-container {
+      max-height: 250px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-right: 0.35rem;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(155,35,53,0.3) transparent;
+    }
+    .ach-scroll-container::-webkit-scrollbar { width: 5px; }
+    .ach-scroll-container::-webkit-scrollbar-track { background: transparent; }
+    .ach-scroll-container::-webkit-scrollbar-thumb { background: rgba(155,35,53,0.3); border-radius: 999px; }
+    .ach-scroll-container::-webkit-scrollbar-thumb:hover { background: rgba(155,35,53,0.6); }
     .ach-lista { display:flex; flex-direction:column; gap:0.5rem; }
-    .ach-item { display:flex; align-items:center; gap:0.7rem; padding:0.55rem 0.7rem; border-radius:10px; }
+    .ach-item { display:flex; align-items:center; gap:0.7rem; padding:0.55rem 0.7rem; border-radius:10px; min-height: 52px; box-sizing: border-box; }
     .ach-item.ach-ganhou { background:rgba(155,35,53,0.07); }
     .ach-item.ach-bloqueada { background:#f8f4ef; opacity:0.6; }
     .ach-emoji { font-size:1.5rem; flex-shrink:0; width:2rem; text-align:center; }
@@ -3643,7 +3655,7 @@
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
   <script src="js/audio.js?v=79"></script>
-  <script src="js/conquistas.js?v=79"></script>
+  <script src="js/conquistas.js?v=88"></script>
   <script src="js/onboarding.js?v=79"></script>
   <script src="js/i18n.js?v=79"></script>
   <script src="js/audio_cache.js?v=87"></script>
