@@ -498,9 +498,9 @@
     "semantic_hash": ""
   },
   "js/grammar.js": {
-    "mtime": 1792285376.2460015,
-    "seen": 1792285461.25247,
-    "ast_hash": "116f053a39563c83285dacffb77b0744",
+    "mtime": 1792453020.186488,
+    "seen": 1792453169.1839292,
+    "ast_hash": "6beaf3b6c28d90b259cf0109c49e0614",
     "semantic_hash": ""
   },
   "js/heatmap.js": {
@@ -540,8 +540,8 @@
     "semantic_hash": ""
   },
   "js/profilo.js": {
-    "mtime": 1792437409.3193164,
-    "seen": 1792437554.646494,
+    "mtime": 1792437603.3352852,
+    "seen": 1792453169.429873,
     "ast_hash": "f13d24bda3c1c017b5e0cbbce0218c46",
     "semantic_hash": ""
   },
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792437470.9789536,
-    "seen": 1792437554.934667,
-    "ast_hash": "a8f7e84d4c17f0bd670dd8696dfd453b",
+    "mtime": 1792453041.461862,
+    "seen": 1792453170.15169,
+    "ast_hash": "36d22e866c2e65231f6da39e605dfbc3",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792437488.947642,
-    "seen": 1792437555.283985,
-    "ast_hash": "41e795322da20975e5bad3e27397dd27",
+    "mtime": 1792453055.8953218,
+    "seen": 1792453171.012983,
+    "ast_hash": "711bdd1a5cee97a952b33db8993e7c00",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -774,8 +774,8 @@
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1792437364.5578663,
-    "seen": 1792437554.768515,
+    "mtime": 1792437603.4374735,
+    "seen": 1792453169.7036724,
     "ast_hash": "c0e3eaaac61d354cb7d05f4576a0eafb",
     "semantic_hash": ""
   },
@@ -792,14 +792,14 @@
     "semantic_hash": ""
   },
   "js/audio_cache.js": {
-    "mtime": 1792437269.8687508,
-    "seen": 1792437554.5003948,
+    "mtime": 1792437603.2849562,
+    "seen": 1792453168.986162,
     "ast_hash": "ef965bfd6f4f62c2783e34d8bad79c11",
     "semantic_hash": ""
   },
   "js/tts_worker.js": {
-    "mtime": 1792437321.1085188,
-    "seen": 1792437554.748339,
+    "mtime": 1792437603.3878014,
+    "seen": 1792453169.6600137,
     "ast_hash": "836749ab4d237a41b2d1997e8d25cf54",
     "semantic_hash": ""
   },
@@ -807,6 +807,12 @@
     "mtime": 1792430744.850388,
     "seen": 1792435924.0704682,
     "ast_hash": "423b5422446e777c0917d94f4c03e7c9",
+    "semantic_hash": ""
+  },
+  "test_piper.html": {
+    "mtime": 1792438604.2353456,
+    "seen": 1792453171.012993,
+    "ast_hash": "ceabbc7706cfc122ac506acf32c96190",
     "semantic_hash": ""
   }
 }

@@ -550,8 +550,10 @@ const Grammatica = {
 
   nasconderTudo() {
     document.querySelectorAll('.gram-word-blur').forEach(w => w.classList.remove('revealed'));
-    document.getElementById('gram-feedback').innerHTML = '';
-    document.getElementById('gram-actions').style.display = 'none';
+    const fb = document.getElementById('gram-feedback');
+    if (fb) fb.innerHTML = '';
+    const actions = document.getElementById('gram-actions');
+    if (actions) actions.style.display = 'none';
     const btn = document.getElementById('gram-btn-nascondi');
     if (btn) btn.style.display = 'none';
     this.respondida = false;
