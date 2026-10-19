@@ -109,7 +109,7 @@ const Profilo = {
             <div id="card-voz-neural-status" style="margin-top:0.75rem;padding:0.75rem;border-radius:8px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.3)">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.35rem">
                 <span style="font-size:0.82rem;font-weight:700;color:#5c3a18">🎙️ Voz Neural Offline (WASM)</span>
-                <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:#2A9D8F;color:#fff">
+                <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '#2A9D8F' : '#888'};color:#fff">
                   ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? 'Ativa' : 'Disponível'}
                 </span>
               </div>
@@ -123,8 +123,8 @@ const Profilo = {
                 <div id="texto-progresso-voz" style="font-size:0.7rem;color:#666;text-align:right;margin-top:2px">0%</div>
               </div>
               <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
-                <button type="button" class="btn-secondario" onclick="Profilo.gerenciarVozNeural()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
-                  ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '🔄 Reinstalar Voz' : '⬇️ Baixar Pacote (18 MB)'}
+                <button type="button" id="btn-gerenciar-voz-neural" class="btn-secondario" onclick="Profilo.gerenciarVozNeural()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
+                  ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '🔄 Reinstalar Voz' : '⬇️ Baixar Pacote (~28 MB)'}
                 </button>
                 <button type="button" class="btn-secondario" onclick="Profilo.limparCacheAudio()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
                   🗑️ Limpar Cache Áudio
@@ -316,8 +316,14 @@ const Profilo = {
     const barra = document.getElementById('barra-voz-neural');
     const textoProgresso = document.getElementById('texto-progresso-voz');
     const badge = document.getElementById('badge-voz-neural');
+    const btnAcao = document.getElementById('btn-gerenciar-voz-neural');
 
     if (wrapProgresso) wrapProgresso.style.display = 'block';
+    if (barra) barra.style.width = '0%';
+    if (textoProgresso) textoProgresso.textContent = 'Iniciando download...';
+    if (btnAcao) btnAcao.disabled = true;
+
+    const jaInstalada = VoiceEngine.statusVozNeural().instalada;
 
     VoiceEngine.baixarVozNeural(
       (percent) => {
@@ -326,6 +332,10 @@ const Profilo = {
       },
       () => {
         if (wrapProgresso) wrapProgresso.style.display = 'none';
+        if (btnAcao) {
+          btnAcao.disabled = false;
+          btnAcao.textContent = '🔄 Reinstalar Voz';
+        }
         if (badge) {
           badge.textContent = 'Ativa';
           badge.style.background = '#2A9D8F';
@@ -333,16 +343,18 @@ const Profilo = {
         localStorage.setItem('it_voz_preferida', 'wasm_neural');
         this.atualizarSelectVozes();
         if (typeof App !== 'undefined') {
-          App.notificar('🎙️ Voz Neural Offline instalada e pronta!', 'sucesso');
+          App.notificar('🎙️ Voz Neural instalada e pronta!', 'sucesso');
           App.pronunciar('Benvenuto! La voce neurale è attiva e pronta per la lettura.');
         }
       },
       (err) => {
         if (wrapProgresso) wrapProgresso.style.display = 'none';
+        if (btnAcao) btnAcao.disabled = false;
         if (typeof App !== 'undefined') {
           App.notificar('❌ Erro no download da voz neural: ' + err, 'erro');
         }
-      }
+      },
+      jaInstalada
     );
   },
 

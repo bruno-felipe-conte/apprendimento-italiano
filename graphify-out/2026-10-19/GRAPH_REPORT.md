@@ -1,17 +1,17 @@
-# Graph Report - apprendimento-italiano  (2026-10-18)
+# Graph Report - apprendimento-italiano  (2026-10-19)
 
 ## Corpus Check
-- 127 files · ~1,069,851 words
+- 130 files · ~1,080,511 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 4 file(s) not represented in the graph (top: .css 2, (none) 1, .webmanifest 1)
+- Unclassified: 5 file(s) not represented in the graph (top: .css 2, (none) 1, .ico 1)
 
 ## Summary
-- 165 nodes · 155 edges · 34 communities (10 shown, 24 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
+- 173 nodes · 164 edges · 36 communities (12 shown, 24 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d2e16568`
+- Built from commit: `d0bac60b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,9 @@
 - voice_engine.js
 - Guia Canônico de Prompts para Geração de Conteúdo
 - Core App Specs and Docs
-- json
+- update_canzoni.py
+- tts_worker.js
+- audio_cache.js
 - Grammar Curriculum Docs
 - Philosophical Stories Docs
 - NMA Grammar Card Upgrader
@@ -61,7 +63,7 @@
 7. `Expansão das 21 Histórias Filosóficas (Resultado Final)` - 4 edges
 8. `SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo)` - 4 edges
 9. `User-Created Content Spec (Custom Canzoni & Dialoghi)` - 4 edges
-10. `traduzir()` - 3 edges
+10. `sintetizarTexto()` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Service Worker Cache & Fetch Lifecycle Resilience` --rationale_for--> `Service Worker Registration & ControllerChange Auto-Reload`  [INFERRED]
@@ -84,11 +86,11 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (34 total, 24 thin omitted)
+## Communities (36 total, 24 thin omitted)
 
 ### Community 1 - "json"
 Cohesion: 0.14
-Nodes (5): main(), make_est(), translate_hint_to_pt(), main(), translate_it_explanation_to_pt()
+Nodes (4): main(), traduzir(), main(), translate_it_explanation_to_pt()
 
 ### Community 3 - "Guia Canônico de Prompts para Geração de Conteúdo"
 Cohesion: 0.08
@@ -97,6 +99,14 @@ Nodes (23): 1. Aba: 💬 Dialoghi (Diálogos Situacionais), 2. Aba: 🎵 Canzoni
 ### Community 4 - "Core App Specs and Docs"
 Cohesion: 0.15
 Nodes (15): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Main Single-Page Application HTML Shell (index.html), Italiano Autentico PWA Overview & Architecture, User-Created Content Spec (Custom Canzoni & Dialoghi) (+7 more)
+
+### Community 5 - "update_canzoni.py"
+Cohesion: 0.24
+Nodes (3): main(), make_est(), translate_hint_to_pt()
+
+### Community 6 - "tts_worker.js"
+Cohesion: 0.53
+Nodes (4): criarWavDePcm(), executarInferencia(), sintetizarTexto(), writeString()
 
 ### Community 16 - "Grammar Curriculum Docs"
 Cohesion: 0.40
@@ -128,14 +138,14 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **13 isolated node(s):** `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source`, `Schema Curricular A1, A2, B1, B2 (Moduli e Unità)`, `Grammar JSON Schema (moduli, unidades, escolha, revelar)` (+8 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 101 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 104 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Main Single-Page Application HTML Shell (index.html)` connect `Core App Specs and Docs` to `PWA Offline-First Architecture QA Audit Checklist`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source` to the rest of the system?**
   _13 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `json` be split into smaller, more focused modules?**

@@ -4,6 +4,12 @@
 // para nunca bloquear a interface do usuário ou animações 3D.
 // ============================================================
 
+const CACHE_NAME = 'it-voice-cache-v1';
+const DEFAULT_MODEL_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/it/it_IT/riccardo/x_low/it_IT-riccardo-x_low.onnx';
+const DEFAULT_CONFIG_URL = 'wasm/it_IT-riccardo-x_low.json';
+const FALLBACK_CONFIG_URL = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/it/it_IT/riccardo/x_low/it_IT-riccardo-x_low.onnx.json';
+const KNOWN_MODEL_SIZE = 28130791; // ~28 MB Piper INT8
+
 let isInitialized = false;
 let isDownloading = false;
 let currentVoiceConfig = null;
@@ -14,6 +20,9 @@ self.onmessage = async (e) => {
 
   switch (type) {
     case 'CHECK_STATUS':
+      if (!isInitialized && !isDownloading) {
+        await verificarCacheSilencioso();
+      }
       self.postMessage({
         type: 'STATUS',
         isInitialized,
@@ -35,10 +44,47 @@ self.onmessage = async (e) => {
   }
 };
 
+// ── Verificação Silenciosa de Cache ─────────────────────────
+async function verificarCacheSilencioso() {
+  try {
+    if (typeof caches === 'undefined') return;
+    const cache = await caches.open(CACHE_NAME);
+    const cachedModel = await cache.match(DEFAULT_MODEL_URL);
+    if (!cachedModel) return;
+
+    let modelConfig = null;
+    const cachedConfig = await cache.match(DEFAULT_CONFIG_URL);
+    if (cachedConfig) {
+      modelConfig = await cachedConfig.json();
+    } else {
+      const cfgResp = await fetch(DEFAULT_CONFIG_URL).catch(() => null);
+      if (cfgResp && cfgResp.ok) {
+        modelConfig = await cfgResp.json();
+      }
+    }
+
+    const modelBuffer = await cachedModel.arrayBuffer();
+    self._piperModel = {
+      buffer: modelBuffer,
+      config: modelConfig || {}
+    };
+    isInitialized = true;
+    currentVoiceConfig = { id: 'it_IT-riccardo-x_low' };
+  } catch (err) {
+    console.warn('[TTSWorker] Falha ao verificar cache silencioso:', err);
+  }
+}
+
 // ── Inicialização e Download da Voz Neural ──────────────────
 async function inicializarVoz(config = {}) {
-  if (isInitialized) {
+  const forceRefresh = !!config.forceRefresh;
+
+  if (isInitialized && !forceRefresh) {
     self.postMessage({ type: 'INIT_SUCCESS', voiceId: currentVoiceConfig?.id });
+    return;
+  }
+
+  if (isDownloading) {
     return;
   }
 
@@ -46,60 +92,152 @@ async function inicializarVoz(config = {}) {
   currentVoiceConfig = config;
 
   try {
-    self.postMessage({ type: 'STATUS_UPDATE', status: 'downloading', message: 'Baixando modelo neural...' });
+    self.postMessage({ type: 'STATUS_UPDATE', status: 'downloading', message: 'Inicializando voz neural...' });
 
-    // URL do modelo da voz italiana (Piper INT8 ~18MB)
-    const modelUrl = config.modelUrl || 'wasm/it_IT-riccardo-x_low.onnx';
-    const configUrl = config.configUrl || 'wasm/it_IT-riccardo-x_low.json';
+    const modelUrl = config.modelUrl || DEFAULT_MODEL_URL;
+    const configUrl = config.configUrl || DEFAULT_CONFIG_URL;
 
-    // 1. Baixa a configuração com relatório de progresso
-    const cfgResp = await fetch(configUrl);
-    if (!cfgResp.ok) {
-      throw new Error(`Falha ao obter configuração do modelo: ${cfgResp.status}`);
-    }
-    const modelConfig = await cfgResp.json();
-
-    // 2. Baixa o modelo binário com progresso de streaming
-    const modelResp = await fetch(modelUrl);
-    if (!modelResp.ok) {
-      throw new Error(`Falha ao obter pesos da voz: ${modelResp.status}`);
-    }
-
-    const contentLength = +(modelResp.headers.get('Content-Length') || 0);
-    const reader = modelResp.body.getReader();
-    let receivedLength = 0;
-    const chunks = [];
-
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      chunks.push(value);
-      receivedLength += value.length;
-
-      if (contentLength > 0) {
-        const percent = Math.min(100, Math.round((receivedLength / contentLength) * 100));
-        self.postMessage({
-          type: 'DOWNLOAD_PROGRESS',
-          loaded: receivedLength,
-          total: contentLength,
-          percent
-        });
+    let cacheStorage = null;
+    if (typeof caches !== 'undefined') {
+      try {
+        cacheStorage = await caches.open(CACHE_NAME);
+        if (forceRefresh) {
+          await cacheStorage.delete(modelUrl);
+          await cacheStorage.delete(configUrl);
+        }
+      } catch (e) {
+        console.warn('[TTSWorker] CacheStorage inacessível:', e);
       }
     }
 
-    // Monta o buffer final do modelo
-    const modelBuffer = new Uint8Array(receivedLength);
-    let position = 0;
-    for (const chunk of chunks) {
-      modelBuffer.set(chunk, position);
-      position += chunk.length;
+    // 1. Obtém a configuração JSON (do cache ou da rede/local)
+    let modelConfig = null;
+    if (cacheStorage && !forceRefresh) {
+      try {
+        const cachedCfg = await cacheStorage.match(configUrl);
+        if (cachedCfg) {
+          modelConfig = await cachedCfg.json();
+        }
+      } catch (_) {}
     }
 
-    // Inicialização do runtime WebAssembly
-    // Guarda na memória do worker
+    if (!modelConfig) {
+      try {
+        const cfgResp = await fetch(configUrl);
+        if (cfgResp.ok) {
+          modelConfig = await cfgResp.json();
+        }
+      } catch (_) {}
+    }
+
+    if (!modelConfig) {
+      try {
+        const hfCfgResp = await fetch(FALLBACK_CONFIG_URL);
+        if (hfCfgResp.ok) {
+          modelConfig = await hfCfgResp.json();
+        }
+      } catch (_) {}
+    }
+
+    if (cacheStorage && modelConfig) {
+      try {
+        await cacheStorage.put(configUrl, new Response(JSON.stringify(modelConfig), {
+          headers: { 'Content-Type': 'application/json' }
+        }));
+      } catch (_) {}
+    }
+
+    // 2. Verifica se o modelo binário já está no CacheStorage local
+    let modelArrayBuffer = null;
+    if (cacheStorage && !forceRefresh) {
+      try {
+        const cachedModelResp = await cacheStorage.match(modelUrl);
+        if (cachedModelResp) {
+          self.postMessage({
+            type: 'DOWNLOAD_PROGRESS',
+            loaded: KNOWN_MODEL_SIZE,
+            total: KNOWN_MODEL_SIZE,
+            percent: 100
+          });
+          modelArrayBuffer = await cachedModelResp.arrayBuffer();
+        }
+      } catch (e) {
+        console.warn('[TTSWorker] Erro ao ler modelo do cache:', e);
+      }
+    }
+
+    // 3. Se não estiver em cache, faz o download via CDN com streaming e progresso
+    if (!modelArrayBuffer) {
+      self.postMessage({ type: 'STATUS_UPDATE', status: 'downloading', message: 'Baixando modelo neural do CDN...' });
+
+      let modelResp;
+      try {
+        modelResp = await fetch(modelUrl);
+      } catch (netErr) {
+        throw new Error('Falha de conexão com CDN: ' + (netErr.message || 'Verifique sua internet'));
+      }
+
+      if (!modelResp.ok) {
+        throw new Error(`Falha ao obter pesos da voz: HTTP ${modelResp.status}`);
+      }
+
+      let contentLength = +(modelResp.headers.get('Content-Length') || 0);
+      if (!contentLength || isNaN(contentLength)) {
+        contentLength = KNOWN_MODEL_SIZE;
+      }
+
+      const reader = modelResp.body.getReader();
+      let receivedLength = 0;
+      const chunks = [];
+      let lastReport = 0;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        chunks.push(value);
+        receivedLength += value.length;
+
+        const now = performance.now();
+        if (now - lastReport > 60 || receivedLength >= contentLength) {
+          lastReport = now;
+          const percent = Math.min(100, Math.round((receivedLength / contentLength) * 100));
+          self.postMessage({
+            type: 'DOWNLOAD_PROGRESS',
+            loaded: receivedLength,
+            total: contentLength,
+            percent
+          });
+        }
+      }
+
+      // Monta buffer contíguo
+      const modelBuffer = new Uint8Array(receivedLength);
+      let position = 0;
+      for (const chunk of chunks) {
+        modelBuffer.set(chunk, position);
+        position += chunk.length;
+      }
+      modelArrayBuffer = modelBuffer.buffer;
+
+      // Salva no CacheStorage para nunca mais precisar baixar da rede
+      if (cacheStorage) {
+        try {
+          await cacheStorage.put(modelUrl, new Response(modelArrayBuffer.slice(0), {
+            headers: {
+              'Content-Type': 'application/octet-stream',
+              'Content-Length': String(modelArrayBuffer.byteLength)
+            }
+          }));
+        } catch (saveErr) {
+          console.warn('[TTSWorker] Aviso: não foi possível salvar modelo no CacheStorage:', saveErr);
+        }
+      }
+    }
+
+    // 4. Salva o modelo na memória do Worker
     self._piperModel = {
-      buffer: modelBuffer.buffer,
-      config: modelConfig
+      buffer: modelArrayBuffer,
+      config: modelConfig || {}
     };
 
     isInitialized = true;
@@ -107,8 +245,8 @@ async function inicializarVoz(config = {}) {
 
     self.postMessage({
       type: 'INIT_SUCCESS',
-      voiceId: config.id || 'it_IT-riccardo',
-      bytes: receivedLength
+      voiceId: config.id || 'it_IT-riccardo-x_low',
+      bytes: modelArrayBuffer.byteLength
     });
   } catch (err) {
     isDownloading = false;

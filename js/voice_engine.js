@@ -387,7 +387,7 @@ const VoiceEngine = {
     };
   },
 
-  baixarVozNeural(onProgress, onSuccess, onError) {
+  baixarVozNeural(onProgress, onSuccess, onError, forceRefresh = false) {
     const worker = this._getWorker();
     if (!worker) {
       if (onError) onError('Web Worker não suportado');
@@ -400,8 +400,27 @@ const VoiceEngine = {
 
     worker.postMessage({
       type: 'INIT_VOICE',
-      payload: { id: 'it_IT-riccardo-x_low' }
+      payload: { id: 'it_IT-riccardo-x_low', forceRefresh: !!forceRefresh }
     });
+  },
+
+  async desinstalarVozNeural() {
+    try {
+      if (typeof caches !== 'undefined') {
+        await caches.delete('it-voice-cache-v1');
+      }
+    } catch (_) {}
+    localStorage.removeItem('it_voz_neural_instalada');
+    if (localStorage.getItem('it_voz_preferida') === 'wasm_neural') {
+      localStorage.removeItem('it_voz_preferida');
+    }
+    this._workerInitialized = false;
+    this._workerDownloading = false;
+    if (this._worker) {
+      try { this._worker.terminate(); } catch (_) {}
+      this._worker = null;
+    }
+    return true;
   },
 
   // Para qualquer áudio neural ou fala nativa em execução

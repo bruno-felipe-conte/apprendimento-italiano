@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v128';
+const CACHE = 'italiano-v129';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -21,11 +21,11 @@ const STATIC = [
   './data/locales/it-IT.json',
   // JS — módulos da aplicação (URLs com ?v=88 para forçar atualização de cache)
   './js/audio_cache.js',
-  './js/audio_cache.js?v=87',
+  './js/audio_cache.js?v=88',
   './js/tts_worker.js',
-  './js/tts_worker.js?v=87',
+  './js/tts_worker.js?v=88',
   './js/voice_engine.js',
-  './js/voice_engine.js?v=87',
+  './js/voice_engine.js?v=88',
   './js/audio.js?v=79',
   './js/conquistas.js?v=88',
   './js/core.js?v=86',
@@ -36,7 +36,7 @@ const STATIC = [
   './js/grammar.js?v=84',
   './js/heatmap.js?v=84',
   './js/onboarding.js?v=79',
-  './js/profilo.js?v=86',
+  './js/profilo.js?v=88',
   './js/progression.js?v=86',
   './js/quiz.js?v=84',
   './js/quiz_data.js',
@@ -48,6 +48,8 @@ const STATIC = [
   './js/storie.js?v=87',
   './js/ia-import.js',
   './js/ia-import.js?v=86',
+  // WASM Config
+  './wasm/it_IT-riccardo-x_low.json',
   // Dados
   './data/conjugacoes.json',
   './data/grammar.json',
@@ -75,11 +77,11 @@ self.addEventListener('install', event => {
   self.skipWaiting();
 });
 
-// ── Activate: apaga caches antigos ───────────────────────
+// ── Activate: apaga caches antigos (preservando o cache da voz neural) ──
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+      Promise.all(keys.filter(k => k !== CACHE && !k.startsWith('it-voice-')).map(k => caches.delete(k)))
     )
   );
   self.clients.claim();
