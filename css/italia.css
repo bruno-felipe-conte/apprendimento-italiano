@@ -1632,11 +1632,11 @@ body.dark-mode .dialogo-opcao.errada {
   color: rgba(245,237,216,0.92);
   white-space: nowrap;
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .theme-toggle-btn {
     min-width: 32px !important;
     min-height: 32px !important;
-    padding: 0.14rem 0.26rem !important;
+    padding: 0.14rem 0.24rem !important;
     border-radius: 8px !important;
   }
   .hdr-btn-ico { font-size: 0.82rem; }
