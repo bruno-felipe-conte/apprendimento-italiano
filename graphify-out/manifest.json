@@ -474,8 +474,8 @@
     "semantic_hash": ""
   },
   "js/conquistas.js": {
-    "mtime": 1792435774.3705995,
-    "seen": 1792435923.7365668,
+    "mtime": 1792436315.4288788,
+    "seen": 1792437554.5065367,
     "ast_hash": "ab023ab981b8f30117cda16e5fe4b7fb",
     "semantic_hash": ""
   },
@@ -540,9 +540,9 @@
     "semantic_hash": ""
   },
   "js/profilo.js": {
-    "mtime": 1792436105.7707067,
-    "seen": 1792436254.7842684,
-    "ast_hash": "853e1738a5dec4afd8ba78387317e3d1",
+    "mtime": 1792437409.3193164,
+    "seen": 1792437554.646494,
+    "ast_hash": "f13d24bda3c1c017b5e0cbbce0218c46",
     "semantic_hash": ""
   },
   "js/progression.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792436176.7777593,
-    "seen": 1792436254.9801066,
-    "ast_hash": "9a20b0c5f8f3ccff6e5d6a7365d330e2",
+    "mtime": 1792437470.9789536,
+    "seen": 1792437554.934667,
+    "ast_hash": "a8f7e84d4c17f0bd670dd8696dfd453b",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792436192.3496213,
-    "seen": 1792436255.2711086,
-    "ast_hash": "6b6a08a64556609bcb6c84b70da8dfcc",
+    "mtime": 1792437488.947642,
+    "seen": 1792437555.283985,
+    "ast_hash": "41e795322da20975e5bad3e27397dd27",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1792436054.8788257,
-    "seen": 1792436254.8583262,
-    "ast_hash": "f2d0d57c9f6ad4a4b9efc91ae812787c",
+    "mtime": 1792437364.5578663,
+    "seen": 1792437554.768515,
+    "ast_hash": "c0e3eaaac61d354cb7d05f4576a0eafb",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/PROMPTS_CRIACAO_CONTEUDO.md": {
@@ -792,15 +792,15 @@
     "semantic_hash": ""
   },
   "js/audio_cache.js": {
-    "mtime": 1792430744.4855993,
-    "seen": 1792435923.7203934,
-    "ast_hash": "2c0b336de12d2c75f12b77eb26d6ffc8",
+    "mtime": 1792437269.8687508,
+    "seen": 1792437554.5003948,
+    "ast_hash": "ef965bfd6f4f62c2783e34d8bad79c11",
     "semantic_hash": ""
   },
   "js/tts_worker.js": {
-    "mtime": 1792436014.399433,
-    "seen": 1792436254.8459306,
-    "ast_hash": "a9fdc162c54df14ce991de6fa7cab56c",
+    "mtime": 1792437321.1085188,
+    "seen": 1792437554.748339,
+    "ast_hash": "836749ab4d237a41b2d1997e8d25cf54",
     "semantic_hash": ""
   },
   "wasm/it_IT-riccardo-x_low.json": {

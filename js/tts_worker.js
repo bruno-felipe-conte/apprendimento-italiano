@@ -299,36 +299,16 @@ async function sintetizarTexto({ id, text, rate = 1.0, pitch = 1.0 }) {
   }
 }
 
-// Simulação de inferência acústica compatível com formato de saída do Piper
+// Inferência acústica via ONNX WebAssembly
 async function executarInferencia(texto, rate, pitch) {
-  // Número estimado de amostras de áudio baseado no comprimento do texto e taxa de fala
-  // O italiano fala em média ~14 caracteres por segundo em ritmo normal
-  const taxaCharsPorSeg = 14 * Math.max(0.6, Math.min(1.6, rate));
-  const segundos = Math.max(0.6, texto.length / taxaCharsPorSeg);
-  const sampleRate = 22050;
-  const totalSamples = Math.floor(segundos * sampleRate);
-
-  // Aloca buffer PCM
-  const pcm = new Float32Array(totalSamples);
-  
   // Se o runtime ONNX real estiver carregado via WebAssembly, executa
   if (self._onnxSession && typeof self._onnxSession.run === 'function') {
     return await self._onnxSession.run(texto, rate);
   }
 
-  // Gera áudio senoidal harmônico de fala suave caso em modo de pré-aquecimento
-  const freqBase = 140 * pitch;
-  for (let i = 0; i < totalSamples; i++) {
-    const t = i / sampleRate;
-    // Envelope suave de ataque e decaimento
-    const env = Math.sin(Math.min(Math.PI, (i / totalSamples) * Math.PI));
-    const s1 = Math.sin(2 * Math.PI * freqBase * t);
-    const s2 = 0.5 * Math.sin(2 * Math.PI * (freqBase * 2) * t);
-    const s3 = 0.25 * Math.sin(2 * Math.PI * (freqBase * 3) * t);
-    pcm[i] = (s1 + s2 + s3) * 0.2 * env;
-  }
-
-  return pcm;
+  // Se o runtime WASM não estiver carregado, recusa gerar ruídos senoidais
+  // para que o sistema use instantaneamente as vozes humanas de alta fidelidade
+  throw new Error('Sessão ONNX WebAssembly requer compilação nativa. Usando síntese nativa de alta fidelidade.');
 }
 
 // ── Utilitário: Gerador de Header WAV 16-bit PCM ────────────

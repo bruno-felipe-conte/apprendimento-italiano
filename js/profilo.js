@@ -276,22 +276,18 @@ const Profilo = {
 
   // ── Seletor de Vozes Italianas (VoiceEngine) ───────────
   renderizarOpcoesVozes() {
-    const neuralOpcao = `
-      <option value="wasm_neural" ${(localStorage.getItem('it_voz_preferida') === 'wasm_neural') ? 'selected' : ''}>
-        🎙️ Voz Neural Offline (Piper WASM) ⭐
-      </option>
-    `;
+    const selecionada = localStorage.getItem('it_voz_preferida') || 'auto';
+    const autoOpcao = `<option value="auto" ${(selecionada === 'auto' || selecionada === 'wasm_neural') ? 'selected' : ''}>⭐ Melhor Voz Humana do Dispositivo (Recomendado)</option>`;
 
     if (typeof VoiceEngine === 'undefined') {
-      return neuralOpcao + '<option value="">Padrão do Sistema</option>';
+      return autoOpcao + '<option value="">Padrão do Sistema</option>';
     }
 
     const vozes = VoiceEngine.obterMelhoresVozesItalianas();
     if (!vozes.length) {
-      return neuralOpcao + '<option value="">Padrão do Navegador (it-IT)</option>';
+      return autoOpcao + '<option value="">Padrão do Navegador (it-IT)</option>';
     }
 
-    const selecionada = localStorage.getItem('it_voz_preferida') || 'wasm_neural';
     const opcoesNativas = vozes.map(v => {
       const isSel = (v.name === selecionada) ? 'selected' : '';
       let badge = '';
@@ -306,7 +302,7 @@ const Profilo = {
       return `<option value="${v.name}" ${isSel}>${v.name}${badge} (${v.lang})</option>`;
     }).join('');
 
-    return neuralOpcao + opcoesNativas;
+    return autoOpcao + opcoesNativas;
   },
 
   gerenciarVozNeural() {

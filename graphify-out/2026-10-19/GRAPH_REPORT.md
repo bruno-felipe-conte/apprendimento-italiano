@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-19)
 
 ## Corpus Check
-- 130 files · ~1,080,511 words
+- 130 files · ~1,081,100 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 5 file(s) not represented in the graph (top: .css 2, (none) 1, .ico 1)
 
 ## Summary
-- 173 nodes · 164 edges · 36 communities (12 shown, 24 thin omitted)
+- 174 nodes · 165 edges · 36 communities (11 shown, 25 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d0bac60b`
+- Built from commit: `544bf7c2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,7 @@
 - voice_engine.js
 - Guia Canônico de Prompts para Geração de Conteúdo
 - Core App Specs and Docs
-- update_canzoni.py
+- traduzir_filosofia.py
 - tts_worker.js
 - audio_cache.js
 - Grammar Curriculum Docs
@@ -86,11 +86,11 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (36 total, 24 thin omitted)
+## Communities (36 total, 25 thin omitted)
 
 ### Community 1 - "json"
 Cohesion: 0.14
-Nodes (4): main(), traduzir(), main(), translate_it_explanation_to_pt()
+Nodes (5): main(), make_est(), translate_hint_to_pt(), main(), translate_it_explanation_to_pt()
 
 ### Community 3 - "Guia Canônico de Prompts para Geração de Conteúdo"
 Cohesion: 0.08
@@ -100,12 +100,8 @@ Nodes (23): 1. Aba: 💬 Dialoghi (Diálogos Situacionais), 2. Aba: 🎵 Canzoni
 Cohesion: 0.15
 Nodes (15): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Main Single-Page Application HTML Shell (index.html), Italiano Autentico PWA Overview & Architecture, User-Created Content Spec (Custom Canzoni & Dialoghi) (+7 more)
 
-### Community 5 - "update_canzoni.py"
-Cohesion: 0.24
-Nodes (3): main(), make_est(), translate_hint_to_pt()
-
 ### Community 6 - "tts_worker.js"
-Cohesion: 0.53
+Cohesion: 0.43
 Nodes (4): criarWavDePcm(), executarInferencia(), sintetizarTexto(), writeString()
 
 ### Community 16 - "Grammar Curriculum Docs"
@@ -138,8 +134,8 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **13 isolated node(s):** `scripts/generare_tutte_le_storie.py`, `scripts/trasla_storie_dopo_b1_a2.py`, `Parla e Scrivi Raw OCR Source`, `Schema Curricular A1, A2, B1, B2 (Moduli e Unità)`, `Grammar JSON Schema (moduli, unidades, escolha, revelar)` (+8 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 104 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 105 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_

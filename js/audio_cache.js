@@ -167,11 +167,33 @@ const AudioCache = {
     } catch (_) {
       return false;
     }
+  },
+
+  // Remove entradas de simulação senoidal/mock que não são voz humana
+  async limparMockAudio() {
+    try {
+      const db = await this._abrirDB();
+      if (!db) return;
+      const tx = db.transaction(this.STORE_NAME, 'readwrite');
+      const store = tx.objectStore(this.STORE_NAME);
+      const req = store.openCursor();
+      req.onsuccess = (e) => {
+        const cursor = e.target.result;
+        if (cursor) {
+          if (cursor.value.vozId === 'neural_it' || (cursor.value.tamanho && cursor.value.tamanho < 4096)) {
+            cursor.delete();
+          }
+          cursor.continue();
+        }
+      };
+    } catch (_) {}
   }
 };
 
+// Executa limpeza preventiva de áudios senoidais corrompidos
 if (typeof window !== 'undefined') {
   window.AudioCache = AudioCache;
+  try { AudioCache.limparMockAudio(); } catch (_) {}
 }
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = AudioCache;

@@ -425,8 +425,11 @@ const VoiceEngine = {
 
   // Para qualquer áudio neural ou fala nativa em execução
   parar() {
+    window._activeVoiceUtterance = null;
     if (typeof speechSynthesis !== 'undefined') {
-      try { speechSynthesis.cancel(); } catch (_) {}
+      try {
+        speechSynthesis.cancel();
+      } catch (_) {}
     }
     if (this._currentAudioSource) {
       try {
@@ -485,33 +488,34 @@ const VoiceEngine = {
 
     this.parar();
 
-    // 1. Verifica cache persistente local no IndexedDB (0ms latência)
+    // 1. Verifica cache persistente local no IndexedDB (apenas gravações reais válidas > 4KB)
     if (typeof AudioCache !== 'undefined') {
       try {
         const blobCache = await AudioCache.obter(textoNorm, 'neural_it');
-        if (blobCache) {
+        if (blobCache && blobCache.size > 4096) {
           const buffer = await blobCache.arrayBuffer();
-          return await this._tocarBuffer(buffer, opcoes);
+          if (buffer.byteLength > 4096) {
+            return await this._tocarBuffer(buffer, opcoes);
+          }
         }
       } catch (_) {}
     }
 
-    // 2. Se a voz neural estiver ativa e o worker pronto, sintetiza on-device
+    // 2. Se a voz neural WASM com inferência ONNX real estiver carregada, executa
     const st = this.statusVozNeural();
     const worker = this._getWorker();
 
-    if (st.ativa && worker && this._workerInitialized) {
+    if (st.ativa && worker && this._workerInitialized && this._realNeuralInferenceAvailable) {
       try {
         const reqId = 'req_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
         const pBuffer = new Promise((resolve, reject) => {
           this._pendingSyntheses.set(reqId, { resolve, reject });
-          // Timeout de segurança (10s)
           setTimeout(() => {
             if (this._pendingSyntheses.has(reqId)) {
               this._pendingSyntheses.delete(reqId);
               reject(new Error('Timeout na síntese neural'));
             }
-          }, 10000);
+          }, 8000);
         });
 
         worker.postMessage({
@@ -525,23 +529,22 @@ const VoiceEngine = {
         });
 
         const wavBuffer = await pBuffer;
-
-        // Salva no IndexedDB para as próximas vezes
-        if (typeof AudioCache !== 'undefined') {
-          AudioCache.salvar(textoNorm, wavBuffer, 'neural_it').catch(() => {});
+        if (wavBuffer && wavBuffer.byteLength > 4096) {
+          if (typeof AudioCache !== 'undefined') {
+            AudioCache.salvar(textoNorm, wavBuffer, 'neural_it').catch(() => {});
+          }
+          return await this._tocarBuffer(wavBuffer, opcoes);
         }
-
-        return await this._tocarBuffer(wavBuffer, opcoes);
       } catch (err) {
-        console.warn('[VoiceEngine] Falha na síntese neural, usando fallback nativo:', err);
+        // Fallback silencioso para a voz humana nativa
       }
     }
 
-    // 3. Fallback inteligente: Web Speech API com as melhores vozes do SO
+    // 3. Execução Principal: Voz nativa de alta definição do sistema com prosódia do VoiceStudio
     return this.falar(textoNorm, opcoes);
   },
 
-  // ── 10. Execução Principal de Fala (Fallback Nativo) ────────
+  // ── 10. Execução Principal de Fala (Voz Nativa de Alta Fidelidade) ────────
   falar(texto, opcoes = {}) {
     if (!texto) return false;
 
@@ -549,10 +552,19 @@ const VoiceEngine = {
     if (!textoNormalizado) return false;
 
     if (typeof speechSynthesis === 'undefined') {
+      if (typeof App !== 'undefined' && App._pronunciarRV) {
+        App._pronunciarRV(textoNormalizado, opcoes.rate);
+        if (opcoes.onend) setTimeout(opcoes.onend, 1000);
+        return true;
+      }
       return false;
     }
 
     try {
+      // Destrava fila no Chromium caso esteja pausada
+      if (speechSynthesis.paused) {
+        try { speechSynthesis.resume(); } catch (_) {}
+      }
       this.parar();
 
       const voz = this.obterVozSelecionada();
@@ -578,13 +590,41 @@ const VoiceEngine = {
         u.pitch = 1.0;
       }
 
-      if (opcoes.onend) u.onend = opcoes.onend;
-      if (opcoes.onerror) u.onerror = opcoes.onerror;
+      // Previne coleta de lixo prematura do Chromium (Chromium GC Bug)
+      window._activeVoiceUtterance = u;
+
+      u.onend = () => {
+        if (window._activeVoiceUtterance === u) {
+          window._activeVoiceUtterance = null;
+        }
+        if (opcoes.onend) opcoes.onend();
+      };
+
+      u.onerror = (err) => {
+        if (window._activeVoiceUtterance === u) {
+          window._activeVoiceUtterance = null;
+        }
+        console.warn('[VoiceEngine] Falha na síntese, acionando fallback:', err);
+        if (typeof App !== 'undefined' && App._pronunciarRV) {
+          App._pronunciarRV(textoNormalizado, rate);
+        }
+        if (opcoes.onend) {
+          setTimeout(opcoes.onend, 800);
+        } else if (opcoes.onerror) {
+          opcoes.onerror(err);
+        }
+      };
 
       speechSynthesis.speak(u);
       return true;
     } catch (err) {
-      console.warn('[VoiceEngine] Falha ao sintetizar fala:', err);
+      console.warn('[VoiceEngine] Exceção ao sintetizar fala:', err);
+      if (typeof App !== 'undefined' && App._pronunciarRV) {
+        App._pronunciarRV(textoNormalizado, opcoes.rate);
+        if (opcoes.onend) setTimeout(opcoes.onend, 1000);
+        return true;
+      }
+      if (opcoes.onerror) opcoes.onerror(err);
       return false;
     }
   }

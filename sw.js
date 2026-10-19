@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v129';
+const CACHE = 'italiano-v130';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -19,13 +19,13 @@ const STATIC = [
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
-  // JS — módulos da aplicação (URLs com ?v=88 para forçar atualização de cache)
+  // JS — módulos da aplicação (URLs com ?v=89 para forçar atualização de cache)
   './js/audio_cache.js',
-  './js/audio_cache.js?v=88',
+  './js/audio_cache.js?v=89',
   './js/tts_worker.js',
-  './js/tts_worker.js?v=88',
+  './js/tts_worker.js?v=89',
   './js/voice_engine.js',
-  './js/voice_engine.js?v=88',
+  './js/voice_engine.js?v=89',
   './js/audio.js?v=79',
   './js/conquistas.js?v=88',
   './js/core.js?v=86',
@@ -36,7 +36,7 @@ const STATIC = [
   './js/grammar.js?v=84',
   './js/heatmap.js?v=84',
   './js/onboarding.js?v=79',
-  './js/profilo.js?v=88',
+  './js/profilo.js?v=89',
   './js/progression.js?v=86',
   './js/quiz.js?v=84',
   './js/quiz_data.js',
@@ -45,7 +45,7 @@ const STATIC = [
   './js/notificacoes.js',
   './js/tour.js',
   './js/storie.js',
-  './js/storie.js?v=87',
+  './js/storie.js?v=89',
   './js/ia-import.js',
   './js/ia-import.js?v=86',
   // WASM Config

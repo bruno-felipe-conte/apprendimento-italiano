@@ -540,9 +540,9 @@
     "semantic_hash": ""
   },
   "js/profilo.js": {
-    "mtime": 1792430744.61821,
-    "seen": 1792435923.8574653,
-    "ast_hash": "1a2b0edac224a233631bd9af610af8ea",
+    "mtime": 1792436105.7707067,
+    "seen": 1792436254.7842684,
+    "ast_hash": "853e1738a5dec4afd8ba78387317e3d1",
     "semantic_hash": ""
   },
   "js/progression.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792435841.3146038,
-    "seen": 1792435924.070461,
-    "ast_hash": "a73c8d6983ae8631e9f26d8a3959ea68",
+    "mtime": 1792436176.7777593,
+    "seen": 1792436254.9801066,
+    "ast_hash": "9a20b0c5f8f3ccff6e5d6a7365d330e2",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792435875.2924583,
-    "seen": 1792435924.4458957,
-    "ast_hash": "0c2a44584d219ceba08d2fda18748929",
+    "mtime": 1792436192.3496213,
+    "seen": 1792436255.2711086,
+    "ast_hash": "6b6a08a64556609bcb6c84b70da8dfcc",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1792430744.7833006,
-    "seen": 1792435923.9188392,
-    "ast_hash": "67aa21704ef0df5a44d49b413dce252d",
+    "mtime": 1792436054.8788257,
+    "seen": 1792436254.8583262,
+    "ast_hash": "f2d0d57c9f6ad4a4b9efc91ae812787c",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/PROMPTS_CRIACAO_CONTEUDO.md": {
@@ -798,9 +798,9 @@
     "semantic_hash": ""
   },
   "js/tts_worker.js": {
-    "mtime": 1792430744.7400036,
-    "seen": 1792435923.9056005,
-    "ast_hash": "3f1bdf4f2906e4a74a9bca0c000614a2",
+    "mtime": 1792436014.399433,
+    "seen": 1792436254.8459306,
+    "ast_hash": "a9fdc162c54df14ce991de6fa7cab56c",
     "semantic_hash": ""
   },
   "wasm/it_IT-riccardo-x_low.json": {
