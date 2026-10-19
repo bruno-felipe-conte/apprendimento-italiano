@@ -574,7 +574,7 @@
       padding: 0.12rem 0.45rem; border-radius: 999px; font-weight: 700;
     }
 
-    /* ── STORIE: MODO LEITOR DE LIVRO IMERSIVO (ZERO ROLAGEM) ── */
+    /* ── STORIE: MODO LEITOR DE LIVRO DE CONTOS DE FADAS (IMERSIVO) ── */
     .book-reader-overlay {
       position: fixed;
       inset: 0;
@@ -583,11 +583,11 @@
       width: 100vw;
       display: flex;
       flex-direction: column;
-      background: radial-gradient(circle at center, #2b2117 0%, #140e09 100%);
-      color: #f4ecd8;
+      background: radial-gradient(circle at center, #26170d 0%, #0d0704 100%);
+      color: #2b1d11;
       overflow: hidden;
       user-select: text;
-      animation: bookFadeIn 0.22s ease-out;
+      animation: bookFadeIn 0.3s ease-out;
     }
     @keyframes bookFadeIn {
       from { opacity: 0; transform: scale(0.98); }
@@ -685,122 +685,105 @@
       color: #fff;
     }
 
-    /* Palco Central do Livro (sempre sem scroll) */
+    /* Palco Central com Perspectiva 3D Profunda */
     .book-stage {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5rem 1rem;
+      padding: 1rem;
       overflow: hidden;
       position: relative;
       box-sizing: border-box;
-      perspective: 1800px;
+      perspective: 2400px;
     }
 
-    /* Livro Físico Aberto */
+    /* Capa de Couro Externa do Livro Físico */
     .antique-book {
       display: flex;
       width: 100%;
-      max-width: 960px;
+      max-width: 980px;
       height: 100%;
-      max-height: calc(100dvh - 108px);
+      max-height: calc(100dvh - 96px);
       position: relative;
-      background: #f5eedc;
-      border-radius: 6px 14px 14px 6px;
+      background: #f4ecda;
+      border-radius: 8px 16px 16px 8px;
       box-shadow:
-        /* Pilha de folhas cortadas (Deckle Edge / Page Stack) */
-        -4px 0 0 #e4d8bb,
-        -8px 0 0 #d8cba9,
-        -12px 0 0 #cbbd94,
-        4px 0 0 #e4d8bb,
-        8px 0 0 #d8cba9,
-        12px 0 0 #cbbd94,
-        /* Sombras externas */
-        0 20px 48px rgba(0,0,0,0.65),
-        0 6px 16px rgba(0,0,0,0.45);
+        /* Bloco de páginas empilhadas lateralmente (deckle edges) */
+        -4px 2px 0 #dcd1bb, -7px 4px 0 #c2b49a, -10px 6px 0 #a3947b, -13px 8px 0 #7e6f57,
+        4px 2px 0 #dcd1bb, 7px 4px 0 #c2b49a, 10px 6px 0 #a3947b, 13px 8px 0 #7e6f57,
+        /* Sombra volumétrica profunda na mesa de madeira */
+        0 35px 70px rgba(0, 0, 0, 0.8),
+        0 10px 25px rgba(0, 0, 0, 0.5);
       box-sizing: border-box;
-      transition: transform 0.25s ease;
+      transform-style: preserve-3d;
     }
 
-    /* Lombada e vinco central 3D */
+    /* Lombada Central Natural e Iluminada (Substitui a barra cinza) */
     .book-spine-crease {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
+      top: 0; bottom: 0; left: 50%;
       transform: translateX(-50%);
-      width: 44px;
-      z-index: 10;
+      width: 50px;
+      z-index: 20;
       pointer-events: none;
       background: linear-gradient(
         to right,
-        rgba(30, 20, 10, 0.45) 0%,
-        rgba(50, 30, 15, 0.20) 25%,
-        rgba(0, 0, 0, 0.65) 50%,
-        rgba(50, 30, 15, 0.20) 75%,
-        rgba(30, 20, 10, 0.45) 100%
+        rgba(20, 11, 4, 0.35) 0%,
+        rgba(255, 252, 240, 0.25) 45%, /* Ponto alto do relevo da folha */
+        rgba(0, 0, 0, 0.55) 50%,     /* A fenda profunda central */
+        rgba(255, 252, 240, 0.25) 55%, /* Ponto alto do relevo da folha */
+        rgba(20, 11, 4, 0.35) 100%
       );
-      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
-    }
-    .book-spine-crease::before {
-      content: '';
-      position: absolute;
-      top: 0; bottom: 0; left: 50%;
-      width: 2px;
-      transform: translateX(-50%);
-      background: rgba(30,15,5,0.7);
     }
 
-    /* Páginas (Esquerda e Direita) */
+    /* Páginas Individuais com Textura de Pergaminho e Vinheta */
     .antique-page {
       flex: 1;
       height: 100%;
-      padding: 1.4rem 2rem 1.1rem;
+      padding: 1.8rem 2.4rem 1.4rem;
       position: relative;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       box-sizing: border-box;
-      background: #f7f1e3;
+      background-color: #f7f1e3;
+      box-shadow: inset 0 0 50px rgba(138, 96, 48, 0.18);
     }
+
     .antique-page-left {
-      background: #f4ecda;
-      border-right: 1px solid rgba(80, 50, 20, 0.15);
-      border-radius: 6px 0 0 6px;
+      border-radius: 8px 0 0 8px;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.02) 0%, rgba(255,255,255,0.4) 85%, rgba(65,42,20,0.28) 100%);
     }
-    .antique-page-left::after {
-      content: '';
-      position: absolute;
-      top: 0; right: 0; bottom: 0;
-      width: 35px;
-      background: linear-gradient(to left, rgba(60,35,15,0.18), transparent);
-      pointer-events: none;
-    }
+
     .antique-page-right {
-      background: #f8f3e7;
-      border-radius: 0 14px 14px 0;
+      border-radius: 0 16px 16px 0;
+      background-image: linear-gradient(to left, rgba(0,0,0,0.02) 0%, rgba(255,255,255,0.4) 85%, rgba(65,42,20,0.28) 100%);
     }
-    .antique-page-right::after {
-      content: '';
+
+    /* Moldura Ornamental Interna nas Páginas */
+    .antique-page::before {
+      content: "";
       position: absolute;
-      top: 0; left: 0; bottom: 0;
-      width: 35px;
-      background: linear-gradient(to right, rgba(60,35,15,0.18), transparent);
+      inset: 12px;
+      border: 1px solid rgba(139, 98, 54, 0.22);
+      outline: 1px solid rgba(139, 98, 54, 0.10);
+      outline-offset: -3px;
       pointer-events: none;
     }
 
     /* Cabeçalho editorial da página */
     .antique-page-header {
       text-align: center;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.6rem;
       min-height: 22px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       border-bottom: 1px solid rgba(140, 100, 50, 0.16);
-      padding-bottom: 0.35rem;
+      padding-bottom: 0.3rem;
+      z-index: 2;
     }
     .antique-running-head {
       font-family: 'EB Garamond', Georgia, serif;
@@ -813,13 +796,14 @@
     /* Título ornamental na primeira página */
     .antique-cover-header {
       text-align: center;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.75rem;
+      z-index: 2;
     }
     .antique-cover-icon {
       font-size: 1.8rem;
       display: block;
       margin-bottom: 0.25rem;
-      opacity: 0.8;
+      opacity: 0.85;
       filter: sepia(0.4);
     }
     .antique-cover-title {
@@ -834,14 +818,14 @@
       font-style: italic;
       font-size: 0.75rem;
       color: #8a7250;
-      margin: 0 0 0.4rem;
+      margin: 0 0 0.35rem;
     }
     .antique-ornamento {
       text-align: center;
       font-size: 0.74rem;
       color: #9c7a40;
       letter-spacing: 0.3em;
-      margin: 0.2rem 0 0.5rem;
+      margin: 0.2rem 0 0.45rem;
     }
 
     /* Conteúdo textual da página — garantido sem rolagem */
@@ -852,6 +836,7 @@
       justify-content: flex-start;
       overflow: hidden;
       box-sizing: border-box;
+      z-index: 2;
     }
     .antique-para-wrap {
       margin-bottom: 0.6rem;
@@ -862,12 +847,12 @@
     .antique-para {
       font-family: 'EB Garamond', Georgia, serif;
       font-size: 1.05rem;
-      line-height: 1.74;
+      line-height: 1.76;
       color: #2b1d11;
       text-align: justify;
       hyphens: auto;
-      text-indent: 1.3em;
-      margin: 0;
+      text-indent: 1.4em;
+      margin: 0 0 0.6rem 0;
     }
     .antique-para.no-indent {
       text-indent: 0;
@@ -894,20 +879,91 @@
       color: #8c6a45;
       letter-spacing: 0.18em;
       margin-top: auto;
-      padding-top: 0.35rem;
+      padding-top: 0.3rem;
       border-top: 1px solid rgba(140, 100, 50, 0.14);
+      z-index: 2;
     }
 
     /* Letra Capitular */
     .antique-drop-cap {
       font-family: 'Cinzel', serif;
       float: left;
-      font-size: 3.1rem;
-      line-height: 0.8;
-      margin: 3px 6px -2px 0;
+      font-size: 3.3rem;
+      line-height: 0.76;
+      margin: 4px 8px -2px 0;
       color: #8b2332;
       font-weight: 700;
       pointer-events: none;
+      text-shadow: 1px 1px 0 rgba(139,35,50,0.2);
+    }
+
+    /* ── CONTAINER DA FOLHA EM ANIMAÇÃO 3D REAL (ROTATE Y) ── */
+    .page-flipping-container {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      z-index: 30;
+      transform-style: preserve-3d;
+      pointer-events: none;
+    }
+
+    .page-flipping-container.right-to-left {
+      right: 0;
+      transform-origin: left center;
+      transition: transform 0.88s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .page-flipping-container.left-to-right {
+      left: 0;
+      transform-origin: right center;
+      transition: transform 0.88s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    /* Estados de Giro Ativo */
+    .page-flipping-container.turning-next {
+      transform: rotateY(-180deg);
+    }
+
+    .page-flipping-container.turning-prev {
+      transform: rotateY(180deg);
+    }
+
+    /* Faces da Folha em Rotação */
+    .flipping-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      box-sizing: border-box;
+      padding: 1.8rem 2.4rem 1.4rem;
+      background-color: #f7f1e3;
+      box-shadow: inset 0 0 40px rgba(138, 96, 48, 0.2);
+      border-radius: 0 16px 16px 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flipping-face.back {
+      transform: rotateY(180deg);
+      border-radius: 8px 0 0 8px;
+    }
+
+    /* Sombra Dinâmica projetada sobre a página durante o giro */
+    .flipping-face::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.45), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.44s ease-in-out;
+      pointer-events: none;
+    }
+    .page-flipping-container.turning-next .flipping-face::after {
+      opacity: 0.65;
+    }
+    .page-flipping-container.turning-prev .flipping-face::after {
+      opacity: 0.65;
     }
 
     /* Barra Inferior de Navegação Slim */
@@ -1037,33 +1093,12 @@
       color: #fff;
     }
 
-    /* Animação suave de virada de página 3D */
-    .antique-book.turning-next .antique-page-right {
-      animation: flipNext 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .antique-book.turning-prev .antique-page-left {
-      animation: flipPrev 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    @keyframes flipNext {
-      0% { transform: rotateY(0deg); opacity: 1; }
-      50% { transform: rotateY(-18deg); opacity: 0.7; }
-      100% { transform: rotateY(0deg); opacity: 1; }
-    }
-    @keyframes flipPrev {
-      0% { transform: rotateY(0deg); opacity: 1; }
-      50% { transform: rotateY(18deg); opacity: 0.7; }
-      100% { transform: rotateY(0deg); opacity: 1; }
-    }
-
     /* RESPONSIVIDADE MOBILE (Página Única de Bolso) */
     @media (max-width: 767px) {
       .antique-book {
         max-width: 460px;
-        border-radius: 8px;
-        box-shadow:
-          4px 0 0 #e4d8bb,
-          8px 0 0 #d8cba9,
-          0 12px 30px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        box-shadow: 4px 2px 0 #dcd1bb, 8px 4px 0 #c2b49a, 0 15px 35px rgba(0,0,0,0.6);
       }
       .book-spine-crease {
         display: none !important;
@@ -1072,8 +1107,8 @@
         display: none !important;
       }
       .antique-page-right {
-        border-radius: 8px;
-        padding: 1.1rem 1.2rem 0.9rem;
+        border-radius: 10px;
+        padding: 1.3rem 1.4rem 1rem;
       }
       .antique-page-right::after {
         display: none;
@@ -1085,11 +1120,14 @@
         display: none;
       }
       .antique-para {
-        font-size: 0.96rem;
-        line-height: 1.66;
+        font-size: 0.98rem;
+        line-height: 1.68;
       }
       .book-action-btn span.label {
         display: none;
+      }
+      .page-flipping-container {
+        width: 100%;
       }
     }
 
@@ -3553,7 +3591,7 @@
   <script src="js/dialoghi.js?v=79"></script>
   <script src="js/canzoni.js?v=79"></script>
   <script src="js/imitazione.js?v=79"></script>
-  <script src="js/storie.js?v=80"></script>
+  <script src="js/storie.js?v=81"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');

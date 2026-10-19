@@ -19,6 +19,7 @@ const Storie = {
   _touchStartY: 0,
   _keyListener: null,
   _resizeListener: null,
+  _animandoVirada: false,
   _filtroNivel: '',
   _filtroTexto: '',
   _filtroOrigem: '',
@@ -194,27 +195,35 @@ const Storie = {
     return window.innerWidth < 768;
   },
 
+  // Som de folhear papel mais rico e texturizado
   _tocarSomFolhear() {
     try {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (!AudioCtx) return;
       const ctx = new AudioCtx();
-      const dur = 0.16;
+      const dur = 0.22;
       const bufferSize = Math.floor(ctx.sampleRate * dur);
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
       const data = buffer.getChannelData(0);
+
+      // Ruído filtrado simulando atrito de páginas antigas com decaimento exponencial
       for (let i = 0; i < bufferSize; i++) {
-        data[i] = (Math.random() * 2 - 1) * 0.32;
+        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.4));
       }
+
       const noise = ctx.createBufferSource();
       noise.buffer = buffer;
+
       const filter = ctx.createBiquadFilter();
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(1100, ctx.currentTime);
-      filter.frequency.exponentialRampToValueAtTime(140, ctx.currentTime + dur);
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(800, ctx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(300, ctx.currentTime + dur);
+      filter.Q.value = 1.5;
+
       const gain = ctx.createGain();
-      gain.gain.setValueAtTime(0.08, ctx.currentTime);
+      gain.gain.setValueAtTime(0.12, ctx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+
       noise.connect(filter);
       filter.connect(gain);
       gain.connect(ctx.destination);
@@ -400,6 +409,7 @@ const Storie = {
   },
 
   fecharLeitor() {
+    this._animandoVirada = false;
     if (this._keyListener) {
       document.removeEventListener('keydown', this._keyListener);
       this._keyListener = null;
@@ -644,39 +654,85 @@ const Storie = {
     `;
   },
 
+  // ── Transição Animada 3D da Página (RotateY) ─────────────
+  _animarViradaPagina(direcao, callbackFinal) {
+    if (this._animandoVirada) return;
+
+    const stage = document.getElementById('antique-book-element');
+    if (!stage || this._isMobile()) {
+      // No mobile ou se faltar elemento, executa com som e callback direto
+      this._tocarSomFolhear();
+      callbackFinal();
+      return;
+    }
+
+    this._animandoVirada = true;
+    this._tocarSomFolhear();
+
+    const isNext = direcao === 'next';
+    const flippingContainer = document.createElement('div');
+    flippingContainer.className = `page-flipping-container ${isNext ? 'right-to-left' : 'left-to-right'}`;
+
+    // Captura o conteúdo atual da página que vai se mover
+    const pageRightEl = stage.querySelector('.antique-page-right');
+    const pageLeftEl  = stage.querySelector('.antique-page-left');
+    const conteudoOrigemHTML = isNext
+      ? (pageRightEl ? pageRightEl.innerHTML : '')
+      : (pageLeftEl ? pageLeftEl.innerHTML : '');
+
+    flippingContainer.innerHTML = `
+      <div class="flipping-face">
+        ${conteudoOrigemHTML}
+      </div>
+      <div class="flipping-face back">
+        <div style="opacity:0.35;text-align:center;padding-top:42%;font-family:'Cinzel',serif;font-size:1.2rem;color:#8c6a45">⚜️</div>
+      </div>
+    `;
+
+    stage.appendChild(flippingContainer);
+
+    // Força reflow e dispara a classe de rotação 3D
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        flippingContainer.classList.add(isNext ? 'turning-next' : 'turning-prev');
+      });
+    });
+
+    // Remove o elemento temporário após o término da transição CSS (880ms)
+    setTimeout(() => {
+      flippingContainer.remove();
+      this._animandoVirada = false;
+      callbackFinal();
+    }, 880);
+  },
+
   // ── Navegação de Páginas e Virada 3D ────────────────────────
   proximaPagina() {
+    if (this._animandoVirada) return;
     const step = this._isMobile() ? 1 : 2;
     const total = this._paginas.length;
     if (this.paginaAtual + step > total && (this._isMobile() || this.paginaAtual >= total)) {
       return;
     }
-    this.paginaAtual = Math.min(this.paginaAtual + step, total);
-    this._tocarSomFolhear();
-    this._salvarBookmarkSilencioso();
 
-    const bookEl = document.getElementById('antique-book-element');
-    if (bookEl) {
-      bookEl.classList.add('turning-next');
-      setTimeout(() => bookEl.classList.remove('turning-next'), 300);
-    }
-    this._renderizarStoria();
+    this._animarViradaPagina('next', () => {
+      this.paginaAtual = Math.min(this.paginaAtual + step, total);
+      this._salvarBookmarkSilencioso();
+      this._renderizarStoria();
+    });
   },
 
   paginaAnterior() {
+    if (this._animandoVirada) return;
     const step = this._isMobile() ? 1 : 2;
     if (this.paginaAtual <= 1) return;
-    this.paginaAtual = Math.max(1, this.paginaAtual - step);
-    if (!this._isMobile() && this.paginaAtual % 2 === 0) this.paginaAtual -= 1;
-    this._tocarSomFolhear();
-    this._salvarBookmarkSilencioso();
 
-    const bookEl = document.getElementById('antique-book-element');
-    if (bookEl) {
-      bookEl.classList.add('turning-prev');
-      setTimeout(() => bookEl.classList.remove('turning-prev'), 300);
-    }
-    this._renderizarStoria();
+    this._animarViradaPagina('prev', () => {
+      this.paginaAtual = Math.max(1, this.paginaAtual - step);
+      if (!this._isMobile() && this.paginaAtual % 2 === 0) this.paginaAtual -= 1;
+      this._salvarBookmarkSilencioso();
+      this._renderizarStoria();
+    });
   },
 
   irParaPagina(num) {

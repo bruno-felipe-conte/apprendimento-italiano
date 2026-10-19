@@ -516,8 +516,8 @@
     "semantic_hash": ""
   },
   "js/ia-import.js": {
-    "mtime": 1792344350.2465792,
-    "seen": 1792344458.3502169,
+    "mtime": 1792345435.346584,
+    "seen": 1792419274.8257403,
     "ast_hash": "3e863668118b578e661034f6dd235cfc",
     "semantic_hash": ""
   },
@@ -564,9 +564,9 @@
     "semantic_hash": "9e3058f8d744968d07a307bf777d2c3f"
   },
   "js/storie.js": {
-    "mtime": 1792344232.415943,
-    "seen": 1792344458.4333222,
-    "ast_hash": "2a3506cf9e73fdc1720cdb371d102bdb",
+    "mtime": 1792419119.7566004,
+    "seen": 1792419274.9355352,
+    "ast_hash": "f2bbd0198e2ae4aabbc291b87aff4101",
     "semantic_hash": ""
   },
   "js/tour.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792344389.2492616,
-    "seen": 1792344458.6043055,
-    "ast_hash": "bff0d5469bb40b8f96a0671674f8273f",
+    "mtime": 1792419196.4214802,
+    "seen": 1792419275.108995,
+    "ast_hash": "c926c32239d4bed1b5068d4d04186700",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792344399.1538215,
-    "seen": 1792344458.8733716,
-    "ast_hash": "7f7b21806b82ffd206e6bd6a19f23c98",
+    "mtime": 1792419180.3833306,
+    "seen": 1792419275.3511343,
+    "ast_hash": "6a5c0a22fcbc232724f4af5d0004025e",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
