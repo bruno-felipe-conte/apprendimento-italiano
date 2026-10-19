@@ -14,7 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css"/>
   <link rel="manifest" href="manifest.webmanifest">
-  <!-- iOS não lê o manifest para ícone — precisa da tag específica -->
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
   <link rel="apple-touch-icon" href="./icons/icon.svg">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
@@ -799,13 +801,13 @@
     /* Título ornamental na primeira página */
     .antique-cover-header {
       text-align: center;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
       z-index: 2;
     }
     .antique-cover-icon {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       display: block;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
       opacity: 0.85;
       filter: sepia(0.4);
     }
@@ -821,14 +823,14 @@
       font-style: italic;
       font-size: 0.75rem;
       color: #8a7250;
-      margin: 0 0 0.35rem;
+      margin: 0 0 0.25rem;
     }
     .antique-ornamento {
       text-align: center;
       font-size: 0.74rem;
       color: #9c7a40;
       letter-spacing: 0.3em;
-      margin: 0.2rem 0 0.45rem;
+      margin: 0.15rem 0 0.35rem;
     }
 
     /* Conteúdo textual da página — perfeitamente dimensionado */
@@ -3599,8 +3601,7 @@
     <button class="nav-tab-btn" data-section="storie" onclick="App.navegar('storie')" data-i18n="nav_storie">📜<span>Histórias</span></button>
   </nav>
 
-  <!-- ResponsiveVoice — Italian TTS fallback (free for educational use) -->
-  <script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+
   <!-- Scripts (load order matters) -->
   <script src="js/notificacoes.js"></script>
   <script src="js/audio.js?v=79"></script>
@@ -3619,7 +3620,7 @@
   <script src="js/dialoghi.js?v=84"></script>
   <script src="js/canzoni.js?v=84"></script>
   <script src="js/imitazione.js?v=84"></script>
-  <script src="js/storie.js?v=85"></script>
+  <script src="js/storie.js?v=86"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
@@ -3747,7 +3748,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
   <script src="js/tour.js?v=68"></script>
-  <script src="js/ia-import.js?v=85"></script>
+  <script src="js/ia-import.js?v=86"></script>
 </body>
 </html>
 

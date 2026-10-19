@@ -289,31 +289,42 @@ const Storie = {
     } catch (_) {}
   },
 
-  // ── Cálculo dinâmico e responsivo da capacidade da folha ────
-  _calcularCapacidade(isMobile) {
+  // ── Cálculo Geométrico Real por Orçamento de Linhas (Line-Budget) ──
+  _calcularOrcamentoGeometria(isMobile) {
+    const winW = (typeof window !== 'undefined' && window.innerWidth) ? window.innerWidth : 1200;
     const winH = (typeof window !== 'undefined' && window.innerHeight) ? window.innerHeight : 800;
-    // Fator normalizador baseado na altura real do viewport do dispositivo
-    const fatorH = Math.min(1.25, Math.max(0.60, winH / 840));
 
     if (isMobile) {
-      // Mobile: 1 folha por tela. Linhas curtas (~34-38 chars)
-      const base = this.traduzirVisivel ? 150 : 250;
-      return Math.round(base * fatorH);
+      // Mobile: 1 folha vertical.
+      // Altura líquida útil descontando topo, rodapé e margens internas
+      const alturaUtil = Math.max(320, winH - 170);
+      const alturaLinha = this.traduzirVisivel ? 24 : 26;
+      const linhasDisponiveis = Math.floor(alturaUtil / alturaLinha);
+      // Caracteres por linha com base na largura real do aparelho (36-48 chars)
+      const charsPorLinha = Math.max(36, Math.min(48, Math.floor((winW - 50) / 8.5)));
+      const linhasCapa = Math.max(8, Math.floor(linhasDisponiveis * 0.45));
+      return { linhasDisponiveis, charsPorLinha, linhasCapa };
     } else {
-      // Desktop/Tablet: 2 folhas no spread.
-      const base = this.traduzirVisivel ? 260 : 460;
-      return Math.round(base * fatorH);
+      // Desktop / Tablet: 2 folhas lado a lado em spread aberto
+      const alturaUtil = Math.max(400, winH - 200);
+      const alturaLinha = this.traduzirVisivel ? 25 : 28;
+      const linhasDisponiveis = Math.floor(alturaUtil / alturaLinha);
+      // Largura de cada folha (~60 a 76 chars por linha)
+      const larguraFolha = Math.min(580, Math.max(420, (winW - 120) / 2));
+      const charsPorLinha = Math.max(58, Math.floor(larguraFolha / 7.5));
+      const linhasCapa = Math.max(10, Math.floor(linhasDisponiveis * 0.45));
+      return { linhasDisponiveis, charsPorLinha, linhasCapa };
     }
   },
 
-  // ── Gerador de Páginas Sem Transbordamento e Sem Cortes (Zero Scroll) ────
+  // ── Gerador de Páginas Responsivo de Alta Densidade Editorial ────
   _gerarPaginas(s, isMobile) {
     if (!s || !Array.isArray(s.testo) || s.testo.length === 0) return [];
 
-    const capBase = this._calcularCapacidade(isMobile);
+    const geo = this._calcularOrcamentoGeometria(isMobile);
     const paginas = [];
     let blocosAtuais = [];
-    let charsAtuais = 0;
+    let linhasAtuais = 0;
     let isFirstPage = true;
     let capituloAtivo = s.titulo || 'Capitolo 1';
 
@@ -326,41 +337,24 @@ const Storie = {
         blocos: [...blocosAtuais]
       });
       blocosAtuais = [];
-      charsAtuais = 0;
+      linhasAtuais = 0;
       isFirstPage = false;
     };
 
-    // Fatiador inteligente: quebra por sentenças e subfrases para nunca estourar a folha
-    const fatiarTextoEmAtomos = (texto, capMax) => {
+    // Calcula o custo vertical em linhas do parágrafo (considerando tradução quando ativa)
+    const calcularCustoLinhas = (lenIt, lenPt) => {
+      const linIt = Math.ceil(lenIt / geo.charsPorLinha);
+      if (this.traduzirVisivel) {
+        const linPt = Math.ceil((lenPt || lenIt) / geo.charsPorLinha);
+        return linIt + linPt + 1.2;
+      }
+      return linIt + 0.8;
+    };
+
+    // Decompõe parágrafos longos em sentenças naturais
+    const fatiarEmSentencas = (texto) => {
       if (!texto) return [];
-      const sentencas = texto.match(/[^.!?\n]+(?:[.!?\n]+|$)/g) || [texto];
-      const atomos = [];
-
-      sentencas.forEach(sent => {
-        const sTrim = sent.trim();
-        if (!sTrim) return;
-
-        // Se uma sentença individual for maior que 60% da folha, subdivide por pontuações secundárias
-        if (sTrim.length > capMax * 0.6) {
-          const pedacos = sTrim.match(/[^,;:—\n]+(?:[,;:—\n]+|$)/g) || [sTrim];
-          let subBuffer = '';
-          pedacos.forEach(p => {
-            const pTrim = p.trim();
-            if (!pTrim) return;
-            if (subBuffer && (subBuffer.length + pTrim.length > capMax * 0.45)) {
-              atomos.push(subBuffer.trim());
-              subBuffer = pTrim;
-            } else {
-              subBuffer += (subBuffer ? ' ' : '') + pTrim;
-            }
-          });
-          if (subBuffer.trim()) atomos.push(subBuffer.trim());
-        } else {
-          atomos.push(sTrim);
-        }
-      });
-
-      return atomos;
+      return (texto.match(/[^.!?\n]+(?:[.!?\n]+|$)/g) || [texto]).map(s => s.trim()).filter(Boolean);
     };
 
     s.testo.forEach((p, parIdx) => {
@@ -376,14 +370,11 @@ const Storie = {
         capituloAtivo = textoIt.replace(/^###\s*/, '').trim();
       }
 
-      // Limite da página atual: na primeira folha de capa reserva espaço para título/autor
-      const limiteFolha = () => isFirstPage ? Math.max(Math.round(capBase * 0.55), 110) : capBase;
-      const pesoEstimado = (len) => len + (this.traduzirVisivel ? Math.round(len * 1.05) : 0);
+      const limiteFolha = () => isFirstPage ? geo.linhasCapa : geo.linhasDisponiveis;
+      const custoParagrafo = calcularCustoLinhas(textoIt.length, textoPt.length);
 
-      const pesoParagrafo = pesoEstimado(textoIt.length);
-
-      // 1. Se o parágrafo inteiro cabe na folha atual
-      if (charsAtuais + pesoParagrafo <= limiteFolha()) {
+      // 1. O parágrafo cabe INTEIRO na folha atual: preserva integridade total
+      if (linhasAtuais + custoParagrafo <= limiteFolha()) {
         blocosAtuais.push({
           italiano: textoIt,
           portugues: textoPt,
@@ -392,15 +383,17 @@ const Storie = {
           continua: false,
           temCapitular: isFirstPage && blocosAtuais.length === 0
         });
-        charsAtuais += pesoParagrafo;
+        linhasAtuais += custoParagrafo;
         return;
       }
 
-      // 2. Se a folha atual já tem conteúdo e o parágrafo não cabe nela:
-      if (charsAtuais > 0) {
+      // 2. O parágrafo não cabe na folha atual:
+      // Se a folha atual já está bem preenchida (>= 58%), NÃO quebra o parágrafo no fim;
+      // Inicia o parágrafo inteiro no topo da folha seguinte, mantendo a coesão da leitura.
+      if (linhasAtuais > 0 && (linhasAtuais / limiteFolha() >= 0.58)) {
         empilharPagina();
         const novoLimite = limiteFolha();
-        if (pesoParagrafo <= novoLimite) {
+        if (custoParagrafo <= novoLimite) {
           blocosAtuais.push({
             italiano: textoIt,
             portugues: textoPt,
@@ -409,28 +402,31 @@ const Storie = {
             continua: false,
             temCapitular: isFirstPage && blocosAtuais.length === 0
           });
-          charsAtuais += pesoParagrafo;
+          linhasAtuais += custoParagrafo;
           return;
         }
       }
 
-      // 3. Parágrafo longo (maior que a folha): fatiamento contínuo em sentenças
-      const atomos = fatiarTextoEmAtomos(textoIt, capBase);
-      const sentencasPt = textoPt ? (textoPt.match(/[^.!?\n]+(?:[.!?\n]+|$)/g) || [textoPt]) : [];
+      // 3. Folha tem espaço sobrando (< 58%) OU parágrafo é maior que uma folha inteira:
+      // Quebra suavemente nas fronteiras de frases para preencher a folha sem cortes cegos
+      const sentencasIt = fatiarEmSentencas(textoIt);
+      const sentencasPt = fatiarEmSentencas(textoPt);
 
       let bufferIt = '';
       let chunkStartIdx = 0;
       let ePrimeiraFatia = true;
 
-      atomos.forEach((atomo, aIdx) => {
-        const pesoAtomo = pesoEstimado(atomo.length);
+      sentencasIt.forEach((sent, sIdx) => {
+        const proporcao = textoPt.length / (textoIt.length || 1);
+        const custoSent = calcularCustoLinhas(sent.length, Math.round(sent.length * proporcao));
         const lim = limiteFolha();
 
-        if (charsAtuais + pesoAtomo > lim && bufferIt.trim()) {
+        if (linhasAtuais + custoSent > lim && bufferIt.trim()) {
+          // Extrai a fatia correspondente de português proporcionalmente
           let ptChunk = '';
           if (sentencasPt.length > 0) {
-            const ptStart = Math.floor((chunkStartIdx / atomos.length) * sentencasPt.length);
-            const ptEnd = Math.floor((aIdx / atomos.length) * sentencasPt.length);
+            const ptStart = Math.floor((chunkStartIdx / sentencasIt.length) * sentencasPt.length);
+            const ptEnd = Math.floor((sIdx / sentencasIt.length) * sentencasPt.length);
             ptChunk = sentencasPt.slice(ptStart, Math.max(ptStart + 1, ptEnd)).join(' ').trim();
           }
 
@@ -444,20 +440,20 @@ const Storie = {
           });
 
           empilharPagina();
-          bufferIt = atomo;
-          chunkStartIdx = aIdx;
-          charsAtuais = pesoEstimado(atomo.length);
+          bufferIt = sent;
+          chunkStartIdx = sIdx;
+          linhasAtuais = custoSent;
           ePrimeiraFatia = false;
         } else {
-          bufferIt += (bufferIt ? ' ' : '') + atomo;
-          charsAtuais += pesoAtomo;
+          bufferIt += (bufferIt ? ' ' : '') + sent;
+          linhasAtuais += custoSent;
         }
       });
 
       if (bufferIt.trim()) {
         let ptChunk = '';
         if (sentencasPt.length > 0) {
-          const ptStart = Math.floor((chunkStartIdx / atomos.length) * sentencasPt.length);
+          const ptStart = Math.floor((chunkStartIdx / sentencasIt.length) * sentencasPt.length);
           ptChunk = sentencasPt.slice(ptStart).join(' ').trim();
         }
 
@@ -469,7 +465,6 @@ const Storie = {
           continua: !ePrimeiraFatia,
           temCapitular: ePrimeiraFatia && isFirstPage && blocosAtuais.length === 0
         });
-        charsAtuais += pesoEstimado(bufferIt.length);
       }
     });
 
