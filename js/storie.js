@@ -159,7 +159,7 @@ const Storie = {
         </select>
       </div>
       <!-- Grid de histórias -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem">`;
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem">`;
 
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);

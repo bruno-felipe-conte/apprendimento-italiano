@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#9B2335">
   <meta name="description" content="Apprendi l'italiano con autenticità - Flashcard, Quiz e Vocabolario">
   <title>Italiano Autentico</title>
-  <link rel="stylesheet" href="css/italia.css?v=79">
+  <link rel="stylesheet" href="css/italia.css?v=83">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -533,7 +533,7 @@
     /* -------------------------------------------------------
        STORIE - Leitura interativa de historias italianas
        ------------------------------------------------------- */
-    #storie-container { max-width: 760px; margin: 0 auto; padding: 0 0.5rem 2rem; }
+    #storie-container { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 0 2rem; }
 
     /* Seletor: cards das histórias */
     .storie-selector-card {
@@ -702,7 +702,7 @@
     .antique-book {
       display: flex;
       width: 100%;
-      max-width: 980px;
+      max-width: 1200px;
       height: 100%;
       max-height: calc(100dvh - 96px);
       position: relative;
@@ -717,6 +717,9 @@
         0 10px 25px rgba(0, 0, 0, 0.5);
       box-sizing: border-box;
       transform-style: preserve-3d;
+    }
+    @media (min-width: 1400px) {
+      .antique-book { max-width: 1280px; }
     }
 
     /* Lombada Central Natural e Iluminada (Substitui a barra cinza) */
@@ -1096,7 +1099,8 @@
     /* RESPONSIVIDADE MOBILE (Página Única de Bolso) */
     @media (max-width: 767px) {
       .antique-book {
-        max-width: 460px;
+        width: 100%;
+        max-width: min(100%, 540px);
         border-radius: 10px;
         box-shadow: 4px 2px 0 #dcd1bb, 8px 4px 0 #c2b49a, 0 15px 35px rgba(0,0,0,0.6);
       }
@@ -1267,7 +1271,7 @@
     /* -------------------------------------------------------
        GRAMMATICA - Design Premium
        ------------------------------------------------------- */
-    #grammatica-container { max-width: 860px; margin: 0 auto; }
+    #grammatica-container { width: 100%; max-width: 100%; margin: 0 auto; padding-bottom: 2rem; }
 
     /* ── Seletor — lezioni como cards individuais ── */
     .gram-seletor-titulo { font-family: 'Cinzel', serif; font-size: 1rem; color: var(--cor-veneziano-escuro); margin-bottom: 1.4rem; text-align: center; letter-spacing: 0.06em; }
@@ -1279,7 +1283,7 @@
     .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
     .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
     /* Grid de lezioni */
-    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-bottom: 2rem; transition: none; }
+    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
     .gram-lezioni-grid.recolhido { display: none; }
     /* Card de cada lezione */
     .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
@@ -1296,7 +1300,7 @@
     .gram-lez-card:hover .gram-lez-arrow { color: var(--cor-veneziano-escuro); }
     .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
     /* Módulos bloqueados — linha inferior compacta */
-    .gram-locked-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; margin-top: 0.5rem; }
+    .gram-locked-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-top: 0.5rem; }
     .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #ccc; padding: 0.75rem 1rem; opacity: 0.72; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
     .gram-locked-pill-icon { font-size: 1rem; }
     .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
@@ -3591,7 +3595,7 @@
   <script src="js/dialoghi.js?v=79"></script>
   <script src="js/canzoni.js?v=79"></script>
   <script src="js/imitazione.js?v=79"></script>
-  <script src="js/storie.js?v=82"></script>
+  <script src="js/storie.js?v=83"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggleBtn = document.getElementById('theme-toggle');
