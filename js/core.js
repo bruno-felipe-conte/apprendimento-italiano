@@ -1135,8 +1135,6 @@ const App = {
 
   pronunciar(texto, taxaCustom = null) {
     if (!texto) return;
-    // Respeita o botão 🔕
-    if (typeof SomFeedback !== 'undefined' && !SomFeedback.ativo) return;
 
     // Normalização fonética e de prosódia inspirada no VoiceStudio
     const textoParaFalar = (typeof VoiceEngine !== 'undefined')
@@ -1144,6 +1142,18 @@ const App = {
       : texto;
 
     if (!textoParaFalar) return;
+
+    // Se o VoiceEngine estiver disponível, delega para sua síntese com prosódia e cache neural
+    if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.falarNeural === 'function') {
+      let rate = taxaCustom;
+      if (rate == null) {
+        const speedStr = localStorage.getItem('it_audio_speed');
+        rate = parseFloat(speedStr);
+        if (isNaN(rate)) rate = (this.estado && this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.88;
+      }
+      VoiceEngine.falarNeural(textoParaFalar, { rate });
+      return;
+    }
 
     if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar, taxaCustom); return; }
 

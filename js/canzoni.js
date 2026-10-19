@@ -207,7 +207,7 @@ const Canzoni = {
         <input type="search" placeholder="${I18n.t('can_busca_ph')}" value="${this._filtroTexto}"
           oninput="Canzoni._filtroTexto=this.value;Canzoni.renderizarSeletor()"
           style="flex:1;min-width:140px;padding:0.44rem 0.75rem;border:1.5px solid #ddd;border-radius:20px;font-size:0.875rem;font-family:inherit">
-        <button class="btn-pill-add" onclick="Canzoni.abrirClozeStudio()" style="white-space:nowrap;background:linear-gradient(135deg,#3d0d18,#6b1a2a);border:1px solid #d4a843">${I18n.t('can_btn_cloze_studio')}</button>
+        <button class="btn-pill-add" onclick="Canzoni.abrirClozeStudio()">${I18n.t('can_btn_cloze_studio')}</button>
         <button class="btn-ia-add" onclick="IAImport.abrir('canzone')" style="white-space:nowrap">${I18n.t('can_btn_ia')}</button>
       </div>
       <!-- Linha 2: filtros numa só linha -->

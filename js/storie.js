@@ -1397,6 +1397,12 @@ const Storie = {
     // Se já temos trad do parole[], renderiza direto
     // Caso contrário, verifica cache → mostra placeholder → busca API
     const tradInicial = trad;
+    this._modalData = {
+      palavra,
+      ipa,
+      trad: tradInicial,
+      cat
+    };
 
     const buildPills = (t) => t
       ? t.split(/[;,]/).map(s => s.trim()).filter(Boolean)
@@ -1409,13 +1415,13 @@ const Storie = {
         <button class="storie-modal-close" onclick="Storie._fecharModal()">×</button>
         <div class="storie-modal-palavra">${this._escape(palavra)}</div>
         ${ipa ? `<div class="storie-modal-ipa">${this._escape(ipa)}</div>` : ''}
-        <button class="storie-modal-audio" onclick="App.pronunciar('${this._escAttr(palavra)}')">🔊 ${il?'Ascolta':'Ouvir'}</button>
+        <button class="storie-modal-audio" data-palavra="${this._escAttr(palavra)}" onclick="event.stopPropagation(); App.pronunciar(this.dataset.palavra || Storie._modalData?.palavra)">🔊 ${il?'Ascolta':'Ouvir'}</button>
         <div class="storie-modal-traducoes" id="storie-modal-pills">
           ${pills || (carregando ? '<span class="storie-trad-loading">…</span>' : '')}
         </div>
         ${cat ? `<div style="margin-top:0.45rem"><span class="storie-modal-cat">${this._escape(cat)}</span></div>` : ''}
         <button class="storie-modal-salvar${jaSalva?' salvo':''}" id="storie-btn-salvar"
-          onclick="Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAtual)}',cat:'${this._escAttr(cat)}'})">
+          onclick="Storie._salvarModalDeck()">
           ${jaSalva
             ? `✅ ${il ? 'Già salvata' : 'Já salva'}`
             : `⭐ ${il ? 'Salva per revisione' : 'Salvar para revisão'}`}
@@ -1440,11 +1446,10 @@ const Storie = {
         const pillsEl = document.getElementById('storie-modal-pills');
         if (!pillsEl) return;
         if (tradAPI) {
+          if (this._modalData && this._modalData.palavra === palavra) {
+            this._modalData.trad = tradAPI;
+          }
           pillsEl.innerHTML = buildPills(tradAPI);
-          // Atualiza o onclick do botão salvar com a trad real
-          const btn = document.getElementById('storie-btn-salvar');
-          if (btn) btn.setAttribute('onclick',
-            `Storie._salvarNoDeck('${this._escAttr(palavra)}',{ipa:'${this._escAttr(ipa)}',trad:'${this._escAttr(tradAPI)}',cat:'${this._escAttr(cat)}'})`);
         } else {
           pillsEl.innerHTML = '';
         }
@@ -1532,6 +1537,16 @@ const Storie = {
       document.removeEventListener('keydown', this._escListener);
       this._escListener = null;
     }
+  },
+
+  // ── Salvar palavra selecionada no modal para o deck SRS ───
+  _salvarModalDeck() {
+    if (!this._modalData || !this._modalData.palavra) return;
+    this._salvarNoDeck(this._modalData.palavra, {
+      ipa: this._modalData.ipa,
+      trad: this._modalData.trad,
+      cat: this._modalData.cat
+    });
   },
 
   // ── Salvar palavra no deck SRS ─────────────────────────────

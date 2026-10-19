@@ -468,9 +468,9 @@
     "semantic_hash": ""
   },
   "js/canzoni.js": {
-    "mtime": 1792334420.47481,
-    "seen": 1792344458.2776325,
-    "ast_hash": "64fd5e925ee5fac4451e29830bebff0a",
+    "mtime": 1792453410.290314,
+    "seen": 1792453720.8677955,
+    "ast_hash": "57c328b9e5fb66e650f72f51ba32ff26",
     "semantic_hash": ""
   },
   "js/conquistas.js": {
@@ -480,9 +480,9 @@
     "semantic_hash": ""
   },
   "js/core.js": {
-    "mtime": 1792430744.5292673,
-    "seen": 1792435923.7365701,
-    "ast_hash": "7ba7ce6e7c8e7e4902d0c2925630d4aa",
+    "mtime": 1792453364.812783,
+    "seen": 1792453720.9142811,
+    "ast_hash": "62e93edb7e61f6997e1f170081a833eb",
     "semantic_hash": ""
   },
   "js/dialoghi.js": {
@@ -564,9 +564,9 @@
     "semantic_hash": "9e3058f8d744968d07a307bf777d2c3f"
   },
   "js/storie.js": {
-    "mtime": 1792430744.7073202,
-    "seen": 1792435923.8917775,
-    "ast_hash": "f7c5860c758a9054eb555c1c5a4fd9f4",
+    "mtime": 1792453506.425052,
+    "seen": 1792453721.525529,
+    "ast_hash": "9a5fbdfa68871953fd24cf21b7175cdc",
     "semantic_hash": ""
   },
   "js/tour.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792453041.461862,
-    "seen": 1792453170.15169,
-    "ast_hash": "36d22e866c2e65231f6da39e605dfbc3",
+    "mtime": 1792453537.3402026,
+    "seen": 1792453722.084439,
+    "ast_hash": "6c1198eff43cb1cc7f51dacf364e623d",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792453055.8953218,
-    "seen": 1792453171.012983,
-    "ast_hash": "711bdd1a5cee97a952b33db8993e7c00",
+    "mtime": 1792453608.0331674,
+    "seen": 1792453722.886827,
+    "ast_hash": "16b1026cb3a7559a57d8a54b66ae427c",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -807,12 +807,6 @@
     "mtime": 1792430744.850388,
     "seen": 1792435924.0704682,
     "ast_hash": "423b5422446e777c0917d94f4c03e7c9",
-    "semantic_hash": ""
-  },
-  "test_piper.html": {
-    "mtime": 1792438604.2353456,
-    "seen": 1792453171.012993,
-    "ast_hash": "ceabbc7706cfc122ac506acf32c96190",
     "semantic_hash": ""
   }
 }
