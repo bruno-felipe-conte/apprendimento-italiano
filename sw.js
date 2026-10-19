@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v126';
+const CACHE = 'italiano-v127';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -19,9 +19,13 @@ const STATIC = [
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
-  // JS — módulos da aplicação (URLs com ?v=86 para forçar atualização de cache)
+  // JS — módulos da aplicação (URLs com ?v=87 para forçar atualização de cache)
+  './js/audio_cache.js',
+  './js/audio_cache.js?v=87',
+  './js/tts_worker.js',
+  './js/tts_worker.js?v=87',
   './js/voice_engine.js',
-  './js/voice_engine.js?v=79',
+  './js/voice_engine.js?v=87',
   './js/audio.js?v=79',
   './js/conquistas.js?v=79',
   './js/core.js?v=86',
@@ -41,7 +45,7 @@ const STATIC = [
   './js/notificacoes.js',
   './js/tour.js',
   './js/storie.js',
-  './js/storie.js?v=86',
+  './js/storie.js?v=87',
   './js/ia-import.js',
   './js/ia-import.js?v=86',
   // Dados

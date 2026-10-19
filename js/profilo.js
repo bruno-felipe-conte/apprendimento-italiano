@@ -104,6 +104,33 @@ const Profilo = {
             <div style="font-size: 0.75rem; color: #7f6e5d; margin-top: 0.3rem;">
               ✨ Vozes <em>Natural/Online/Neural</em> proporcionam pronúncia autêntica humana.
             </div>
+
+            <!-- Banner Voz Neural Offline WebAssembly -->
+            <div id="card-voz-neural-status" style="margin-top:0.75rem;padding:0.75rem;border-radius:8px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.3)">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.35rem">
+                <span style="font-size:0.82rem;font-weight:700;color:#5c3a18">🎙️ Voz Neural Offline (WASM)</span>
+                <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:#2A9D8F;color:#fff">
+                  ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? 'Ativa' : 'Disponível'}
+                </span>
+              </div>
+              <div style="font-size:0.75rem;color:#7a6245;line-height:1.4;margin-bottom:0.5rem">
+                Sintetiza áudios com qualidade neural direto no seu aparelho, sem servidores e sem internet.
+              </div>
+              <div id="progresso-voz-neural-wrap" style="display:none;margin-bottom:0.5rem">
+                <div style="height:6px;width:100%;background:#e0d6c4;border-radius:3px;overflow:hidden">
+                  <div id="barra-voz-neural" style="height:100%;width:0%;background:#2A9D8F;transition:width 0.2s"></div>
+                </div>
+                <div id="texto-progresso-voz" style="font-size:0.7rem;color:#666;text-align:right;margin-top:2px">0%</div>
+              </div>
+              <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+                <button type="button" class="btn-secondario" onclick="Profilo.gerenciarVozNeural()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
+                  ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '🔄 Reinstalar Voz' : '⬇️ Baixar Pacote (18 MB)'}
+                </button>
+                <button type="button" class="btn-secondario" onclick="Profilo.limparCacheAudio()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
+                  🗑️ Limpar Cache Áudio
+                </button>
+              </div>
+            </div>
           </div>
 
           <label style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
@@ -249,15 +276,23 @@ const Profilo = {
 
   // ── Seletor de Vozes Italianas (VoiceEngine) ───────────
   renderizarOpcoesVozes() {
+    const neuralOpcao = `
+      <option value="wasm_neural" ${(localStorage.getItem('it_voz_preferida') === 'wasm_neural') ? 'selected' : ''}>
+        🎙️ Voz Neural Offline (Piper WASM) ⭐
+      </option>
+    `;
+
     if (typeof VoiceEngine === 'undefined') {
-      return '<option value="">Padrão do Sistema</option>';
+      return neuralOpcao + '<option value="">Padrão do Sistema</option>';
     }
+
     const vozes = VoiceEngine.obterMelhoresVozesItalianas();
     if (!vozes.length) {
-      return '<option value="">Padrão do Navegador (it-IT)</option>';
+      return neuralOpcao + '<option value="">Padrão do Navegador (it-IT)</option>';
     }
-    const selecionada = localStorage.getItem('it_voz_preferida') || (VoiceEngine.obterVozSelecionada()?.name || '');
-    return vozes.map(v => {
+
+    const selecionada = localStorage.getItem('it_voz_preferida') || 'wasm_neural';
+    const opcoesNativas = vozes.map(v => {
       const isSel = (v.name === selecionada) ? 'selected' : '';
       let badge = '';
       const nomeLower = v.name.toLowerCase();
@@ -270,6 +305,61 @@ const Profilo = {
       }
       return `<option value="${v.name}" ${isSel}>${v.name}${badge} (${v.lang})</option>`;
     }).join('');
+
+    return neuralOpcao + opcoesNativas;
+  },
+
+  gerenciarVozNeural() {
+    if (typeof VoiceEngine === 'undefined') return;
+
+    const wrapProgresso = document.getElementById('progresso-voz-neural-wrap');
+    const barra = document.getElementById('barra-voz-neural');
+    const textoProgresso = document.getElementById('texto-progresso-voz');
+    const badge = document.getElementById('badge-voz-neural');
+
+    if (wrapProgresso) wrapProgresso.style.display = 'block';
+
+    VoiceEngine.baixarVozNeural(
+      (percent) => {
+        if (barra) barra.style.width = percent + '%';
+        if (textoProgresso) textoProgresso.textContent = percent + '% baixado';
+      },
+      () => {
+        if (wrapProgresso) wrapProgresso.style.display = 'none';
+        if (badge) {
+          badge.textContent = 'Ativa';
+          badge.style.background = '#2A9D8F';
+        }
+        localStorage.setItem('it_voz_preferida', 'wasm_neural');
+        this.atualizarSelectVozes();
+        if (typeof App !== 'undefined') {
+          App.notificar('🎙️ Voz Neural Offline instalada e pronta!', 'sucesso');
+          App.pronunciar('Benvenuto! La voce neurale è attiva e pronta per la lettura.');
+        }
+      },
+      (err) => {
+        if (wrapProgresso) wrapProgresso.style.display = 'none';
+        if (typeof App !== 'undefined') {
+          App.notificar('❌ Erro no download da voz neural: ' + err, 'erro');
+        }
+      }
+    );
+  },
+
+  async limparCacheAudio() {
+    if (typeof AudioCache === 'undefined') return;
+    const stats = await AudioCache.estatisticas();
+    if (stats.itens === 0) {
+      if (typeof App !== 'undefined') App.notificar('ℹ️ O cache de áudio já está vazio.', 'info');
+      return;
+    }
+    const mb = (stats.bytes / (1024 * 1024)).toFixed(1);
+    if (!confirm(`Deseja limpar ${stats.itens} arquivos de áudio em cache (~${mb} MB)?`)) return;
+
+    await AudioCache.limpar();
+    if (typeof App !== 'undefined') {
+      App.notificar(`🧹 ${stats.itens} áudios removidos do cache local!`, 'sucesso');
+    }
   },
 
   atualizarSelectVozes() {
@@ -289,6 +379,11 @@ const Profilo = {
   salvarVozItaliana(nome) {
     if (nome) {
       localStorage.setItem('it_voz_preferida', nome);
+      if (nome === 'wasm_neural') {
+        localStorage.setItem('it_usar_voz_neural', 'true');
+      } else {
+        localStorage.setItem('it_usar_voz_neural', 'false');
+      }
       if (typeof VoiceEngine !== 'undefined') {
         VoiceEngine._cacheVozes = null;
       }

@@ -540,9 +540,9 @@
     "semantic_hash": ""
   },
   "js/profilo.js": {
-    "mtime": 1792427824.1589773,
-    "seen": 1792427902.516003,
-    "ast_hash": "30bf565cab77fb2e10973bdcfd0d4a4a",
+    "mtime": 1792430604.2804785,
+    "seen": 1792430674.6192832,
+    "ast_hash": "1a2b0edac224a233631bd9af610af8ea",
     "semantic_hash": ""
   },
   "js/progression.js": {
@@ -564,9 +564,9 @@
     "semantic_hash": "9e3058f8d744968d07a307bf777d2c3f"
   },
   "js/storie.js": {
-    "mtime": 1792427643.847689,
-    "seen": 1792427717.8945975,
-    "ast_hash": "6247a134f9e5a835cf9d140b10951518",
+    "mtime": 1792430416.9662857,
+    "seen": 1792430674.668737,
+    "ast_hash": "f7c5860c758a9054eb555c1c5a4fd9f4",
     "semantic_hash": ""
   },
   "js/tour.js": {
@@ -612,9 +612,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792428110.9048643,
-    "seen": 1792428178.6095285,
-    "ast_hash": "fcb4c4d5b8b29701d32884d8dcdd52e8",
+    "mtime": 1792430492.7449963,
+    "seen": 1792430674.817088,
+    "ast_hash": "a3e2f593b6dd2539a0223c8247b06b65",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -726,9 +726,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792428128.5560367,
-    "seen": 1792428178.8464308,
-    "ast_hash": "e9afa231f77430d8e84e7c06d4ed86e6",
+    "mtime": 1792430448.153126,
+    "seen": 1792430675.0874808,
+    "ast_hash": "0d5fbac4138245ea8bce9bd4a3405fe6",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1792334420.847751,
-    "seen": 1792344458.4630034,
-    "ast_hash": "23fd79b47e9fc4d9c8d2784de8f4ec74",
+    "mtime": 1792430361.0222423,
+    "seen": 1792430674.6957939,
+    "ast_hash": "67aa21704ef0df5a44d49b413dce252d",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/PROMPTS_CRIACAO_CONTEUDO.md": {
@@ -789,6 +789,24 @@
     "mtime": 1792427110.1439338,
     "seen": 1792427718.299282,
     "ast_hash": "7e71c58836e974a8083b54e625e40762",
+    "semantic_hash": ""
+  },
+  "js/audio_cache.js": {
+    "mtime": 1792430301.8332152,
+    "seen": 1792430674.4071524,
+    "ast_hash": "2c0b336de12d2c75f12b77eb26d6ffc8",
+    "semantic_hash": ""
+  },
+  "js/tts_worker.js": {
+    "mtime": 1792430324.6855397,
+    "seen": 1792430674.6808398,
+    "ast_hash": "3f1bdf4f2906e4a74a9bca0c000614a2",
+    "semantic_hash": ""
+  },
+  "wasm/it_IT-riccardo-x_low.json": {
+    "mtime": 1792430500.9353728,
+    "seen": 1792430674.8170924,
+    "ast_hash": "423b5422446e777c0917d94f4c03e7c9",
     "semantic_hash": ""
   }
 }

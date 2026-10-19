@@ -3,5 +3,7 @@
   "1": "json",
   "2": "voice_engine.js",
   "3": "Guia Canônico de Prompts para Geração de Conteúdo",
-  "5": "json"
+  "5": "update_canzoni.py",
+  "6": "tts_worker.js",
+  "7": "audio_cache.js"
 }

@@ -316,19 +316,225 @@ const VoiceEngine = {
     }
   },
 
-  // ── 8. Execução Principal de Fala Aprimorada ───────────────
+  // ── 8. Motor Neural WebAssembly & Cache IndexedDB ──────────
+  _worker: null,
+  _pendingSyntheses: new Map(),
+  _currentAudioSource: null,
+  _workerInitialized: false,
+  _workerDownloading: false,
+
+  _getWorker() {
+    if (this._worker) return this._worker;
+    if (typeof Worker === 'undefined') return null;
+
+    try {
+      this._worker = new Worker('js/tts_worker.js');
+      this._worker.onmessage = (e) => this._onWorkerMessage(e);
+      this._worker.onerror = (err) => {
+        console.warn('[VoiceEngine] Erro no TTS Web Worker:', err);
+      };
+      // Consulta status inicial do worker
+      this._worker.postMessage({ type: 'CHECK_STATUS' });
+      return this._worker;
+    } catch (e) {
+      console.warn('[VoiceEngine] Web Worker não suportado ou bloqueado:', e);
+      return null;
+    }
+  },
+
+  _onWorkerMessage(e) {
+    const { type, id, error, wavBuffer, isInitialized, percent } = e.data || {};
+
+    if (type === 'STATUS') {
+      this._workerInitialized = !!isInitialized;
+    } else if (type === 'DOWNLOAD_PROGRESS') {
+      if (typeof this._onDownloadProgress === 'function') {
+        this._onDownloadProgress(percent);
+      }
+    } else if (type === 'INIT_SUCCESS') {
+      this._workerInitialized = true;
+      this._workerDownloading = false;
+      localStorage.setItem('it_voz_neural_instalada', 'true');
+      if (typeof this._onDownloadSuccess === 'function') {
+        this._onDownloadSuccess();
+      }
+    } else if (type === 'INIT_ERROR') {
+      this._workerDownloading = false;
+      if (typeof this._onDownloadError === 'function') {
+        this._onDownloadError(error);
+      }
+    } else if (type === 'SYNTHESIZE_SUCCESS') {
+      const resolver = this._pendingSyntheses.get(id);
+      if (resolver) {
+        this._pendingSyntheses.delete(id);
+        resolver.resolve(wavBuffer);
+      }
+    } else if (type === 'SYNTHESIZE_ERROR') {
+      const resolver = this._pendingSyntheses.get(id);
+      if (resolver) {
+        this._pendingSyntheses.delete(id);
+        resolver.reject(new Error(error || 'Erro na síntese neural'));
+      }
+    }
+  },
+
+  statusVozNeural() {
+    const salva = localStorage.getItem('it_voz_neural_instalada') === 'true';
+    return {
+      instalada: salva || this._workerInitialized,
+      baixando: this._workerDownloading,
+      ativa: localStorage.getItem('it_usar_voz_neural') !== 'false'
+    };
+  },
+
+  baixarVozNeural(onProgress, onSuccess, onError) {
+    const worker = this._getWorker();
+    if (!worker) {
+      if (onError) onError('Web Worker não suportado');
+      return;
+    }
+    this._workerDownloading = true;
+    this._onDownloadProgress = onProgress;
+    this._onDownloadSuccess = onSuccess;
+    this._onDownloadError = onError;
+
+    worker.postMessage({
+      type: 'INIT_VOICE',
+      payload: { id: 'it_IT-riccardo-x_low' }
+    });
+  },
+
+  // Para qualquer áudio neural ou fala nativa em execução
+  parar() {
+    if (typeof speechSynthesis !== 'undefined') {
+      try { speechSynthesis.cancel(); } catch (_) {}
+    }
+    if (this._currentAudioSource) {
+      try {
+        this._currentAudioSource.stop();
+        this._currentAudioSource.disconnect();
+      } catch (_) {}
+      this._currentAudioSource = null;
+    }
+  },
+
+  // Reproduz um ArrayBuffer de áudio WAV via Web Audio API com cadeia de clareza
+  async _tocarBuffer(wavBuffer, opcoes = {}) {
+    this.parar();
+    const ctx = this.obterAudioContext();
+    if (!ctx) return false;
+
+    try {
+      const audioBuffer = await ctx.decodeAudioData(wavBuffer.slice(0));
+      const source = ctx.createBufferSource();
+      source.buffer = audioBuffer;
+
+      // Rate de velocidade
+      let rate = opcoes.rate;
+      if (rate == null) {
+        const speedStr = localStorage.getItem('it_audio_speed');
+        rate = parseFloat(speedStr);
+      }
+      if (!isNaN(rate) && rate > 0) {
+        source.playbackRate.value = Math.max(0.5, Math.min(2.0, rate));
+      }
+
+      source.connect(ctx.destination);
+      this._currentAudioSource = source;
+
+      source.onended = () => {
+        if (this._currentAudioSource === source) {
+          this._currentAudioSource = null;
+        }
+        if (opcoes.onend) opcoes.onend();
+      };
+
+      source.start();
+      return true;
+    } catch (err) {
+      console.warn('[VoiceEngine] Falha ao decodificar/tocar buffer:', err);
+      if (opcoes.onerror) opcoes.onerror(err);
+      return false;
+    }
+  },
+
+  // ── 9. Síntese Neural Unificada com Cache Automático e Fallback ──
+  async falarNeural(texto, opcoes = {}) {
+    if (!texto) return false;
+    const textoNorm = this.normalizarParaFala(texto);
+    if (!textoNorm) return false;
+
+    this.parar();
+
+    // 1. Verifica cache persistente local no IndexedDB (0ms latência)
+    if (typeof AudioCache !== 'undefined') {
+      try {
+        const blobCache = await AudioCache.obter(textoNorm, 'neural_it');
+        if (blobCache) {
+          const buffer = await blobCache.arrayBuffer();
+          return await this._tocarBuffer(buffer, opcoes);
+        }
+      } catch (_) {}
+    }
+
+    // 2. Se a voz neural estiver ativa e o worker pronto, sintetiza on-device
+    const st = this.statusVozNeural();
+    const worker = this._getWorker();
+
+    if (st.ativa && worker && this._workerInitialized) {
+      try {
+        const reqId = 'req_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+        const pBuffer = new Promise((resolve, reject) => {
+          this._pendingSyntheses.set(reqId, { resolve, reject });
+          // Timeout de segurança (10s)
+          setTimeout(() => {
+            if (this._pendingSyntheses.has(reqId)) {
+              this._pendingSyntheses.delete(reqId);
+              reject(new Error('Timeout na síntese neural'));
+            }
+          }, 10000);
+        });
+
+        worker.postMessage({
+          type: 'SYNTHESIZE',
+          payload: {
+            id: reqId,
+            text: textoNorm,
+            rate: opcoes.rate || 1.0,
+            pitch: opcoes.pitch || 1.0
+          }
+        });
+
+        const wavBuffer = await pBuffer;
+
+        // Salva no IndexedDB para as próximas vezes
+        if (typeof AudioCache !== 'undefined') {
+          AudioCache.salvar(textoNorm, wavBuffer, 'neural_it').catch(() => {});
+        }
+
+        return await this._tocarBuffer(wavBuffer, opcoes);
+      } catch (err) {
+        console.warn('[VoiceEngine] Falha na síntese neural, usando fallback nativo:', err);
+      }
+    }
+
+    // 3. Fallback inteligente: Web Speech API com as melhores vozes do SO
+    return this.falar(textoNorm, opcoes);
+  },
+
+  // ── 10. Execução Principal de Fala (Fallback Nativo) ────────
   falar(texto, opcoes = {}) {
-    if (!texto) return;
+    if (!texto) return false;
 
     const textoNormalizado = this.normalizarParaFala(texto);
-    if (!textoNormalizado) return;
+    if (!textoNormalizado) return false;
 
     if (typeof speechSynthesis === 'undefined') {
       return false;
     }
 
     try {
-      speechSynthesis.cancel();
+      this.parar();
 
       const voz = this.obterVozSelecionada();
       const u = new SpeechSynthesisUtterance(textoNormalizado);
@@ -345,7 +551,6 @@ const VoiceEngine = {
       u.rate = Math.max(0.5, Math.min(1.8, rate));
 
       // Afinação (pitch) adaptativo baseado na pontuação da frase
-      // Perguntas ganham uma leve elevação final de pitch, como no italiano autêntico
       if (textoNormalizado.endsWith('?')) {
         u.pitch = 1.05;
       } else if (textoNormalizado.endsWith('!')) {
@@ -368,3 +573,4 @@ const VoiceEngine = {
 
 // Exporta globalmente para o navegador
 window.VoiceEngine = VoiceEngine;
+

@@ -1166,6 +1166,33 @@ const Storie = {
     if (isNaN(rate) || rate <= 0) rate = 0.88;
     rate = Math.max(0.5, Math.min(1.8, rate));
 
+    // Usa o motor neural com cache IndexedDB e fallback nativo
+    if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.falarNeural === 'function') {
+      VoiceEngine.falarNeural(fraseOriginal, {
+        rate: rate,
+        onend: () => {
+          if (!this._reproduzindoAudio) return;
+          this._audioIndexSentenca++;
+          setTimeout(() => {
+            if (this._reproduzindoAudio) {
+              this._tocarProximaSentenca();
+            }
+          }, 110);
+        },
+        onerror: (e) => {
+          console.warn('[Storie Audio Error]', e);
+          if (!this._reproduzindoAudio) return;
+          this._audioIndexSentenca++;
+          setTimeout(() => {
+            if (this._reproduzindoAudio) {
+              this._tocarProximaSentenca();
+            }
+          }, 90);
+        }
+      });
+      return;
+    }
+
     const u = new SpeechSynthesisUtterance(fraseNormalizada || fraseOriginal);
     u.lang = (voz && voz.lang) ? voz.lang : 'it-IT';
     u.rate = rate;
@@ -1217,11 +1244,15 @@ const Storie = {
     this._audioIndexSentenca = 0;
     window._storyActiveUtterance = null;
 
-    try {
-      if (typeof speechSynthesis !== 'undefined') {
-        speechSynthesis.cancel();
-      }
-    } catch (_) {}
+    if (typeof VoiceEngine !== 'undefined') {
+      VoiceEngine.parar();
+    } else {
+      try {
+        if (typeof speechSynthesis !== 'undefined') {
+          speechSynthesis.cancel();
+        }
+      } catch (_) {}
+    }
 
     const il = typeof I18n !== 'undefined' && I18n.idioma === 'it';
     const btn = document.getElementById('book-btn-ouvir');
