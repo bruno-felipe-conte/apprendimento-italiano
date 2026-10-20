@@ -101,7 +101,7 @@ const Dialoghi = {
         ${_origemPill('', I18n.t('dial_filtro_todos'), todos.length)}
         ${nCustom ? _origemPill('custom', I18n.t('dial_filtro_adicionados'), nCustom) : ''}
         ${nNativo  ? _origemPill('nativo', I18n.t('dial_filtro_nativos'), nNativo) : ''}
-        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+        <select class="nivel-select${this._filtroNivel?' ativo':''}" aria-label="Filtrar diálogos por nível"
           onchange="Dialoghi._filtroNivel=this.value;Dialoghi.renderizarSeletor()">
           <option value="">${I18n.t('dial_filtro_nivel')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
@@ -123,12 +123,12 @@ const Dialoghi = {
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
           ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dIdEsc}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
           <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
-        </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa || 30} XP</div>`}
+        </div>` : `<div style="font-size:0.75rem;color:var(--cor-inchiostro-claro,#5A4535);margin-top:0.3rem">🎁 ${dial.xp_recompensa || 30} XP</div>`}
       </div>`;
     }
 
     if (filtrados.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? I18n.t('dial_sem_resultado') : I18n.t('dial_sem_dialogo')}</p>`;
+      html += `<p style="text-align:center;color:var(--cor-inchiostro-claro,#5A4535);grid-column:1/-1">${this._filtroTexto ? I18n.t('dial_sem_resultado') : I18n.t('dial_sem_dialogo')}</p>`;
     }
 
     html += '</div>';

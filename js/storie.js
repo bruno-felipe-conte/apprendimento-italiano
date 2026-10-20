@@ -190,8 +190,8 @@ const Storie = {
       ? { tut: 'Tutte', cerca: '🔍 Titolo o autore...', nenhuma: 'Nessuna storia ancora.', risultato: 'Nessun risultato.' }
       : { tut: 'Todas', cerca: '🔍 Título ou autor...', nenhuma: 'Nenhuma história ainda.', risultato: 'Nenhum resultado.' };
 
-    // Cores para cada nível CEFR
-    const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
+    // Cores para cada nível CEFR (WCAG AA compliant: contrast >= 4.5:1 against white and parchment)
+    const corNivel = { A1:'#145A32', A2:'#0A5C55', B1:'#1A5276', B2:'#6C3483', C1:'#9C3D00', C2:'#922B21' };
 
     let html = `
       <!-- Linha 1: busca + ação -->
@@ -204,10 +204,10 @@ const Storie = {
       <!-- Linha 2: filtros -->
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
-          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
+          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#543D75':'#8F7E6D'};background:${_o===v?'#543D75':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
           return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
         })()}
-        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+        <select class="nivel-select${this._filtroNivel?' ativo':''}" aria-label="Filtrar histórias por nível"
           onchange="Storie._filtroNivel=this.value;Storie.renderizarSeletor()">
           <option value="">🎯 Nível</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
@@ -237,7 +237,7 @@ const Storie = {
             ${sTituloEsc}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
           ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${sIdEsc}')">🗑️ Remover</button>`:''}
-          <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${sAutorEsc}</div>
+          <div style="font-size:0.72rem;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic">${sAutorEsc}</div>
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
@@ -246,7 +246,7 @@ const Storie = {
     }
 
     if (filtrate.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;font-style:italic;grid-column:1/-1;padding:2rem 0">${this._filtroTexto?labels.risultato:labels.nenhuma}</p>`;
+      html += `<p style="text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;grid-column:1/-1;padding:2rem 0">${this._filtroTexto?labels.risultato:labels.nenhuma}</p>`;
     }
 
     html += '</div>';
@@ -261,9 +261,18 @@ const Storie = {
   // Som de folhear papel mais rico e texturizado
   _tocarSomFolhear() {
     try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
+      let ctx = null;
+      if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.obterAudioContext === 'function') {
+        ctx = VoiceEngine.obterAudioContext();
+      } else {
+        if (!this._somFolhaCtx || this._somFolhaCtx.state === 'closed') {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this._somFolhaCtx = new AudioCtx();
+        }
+        ctx = this._somFolhaCtx;
+      }
+      if (!ctx || ctx.state === 'closed') return;
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
       const dur = 0.22;
       const bufferSize = Math.floor(ctx.sampleRate * dur);
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
@@ -528,10 +537,16 @@ const Storie = {
         }
       }
     };
-    document.addEventListener('keydown', this._keyListener);
 
-    // Resize com debounce para reajustar paginação
-    if (this._resizeListener) window.removeEventListener('resize', this._resizeListener);
+    // Resize e eventos com AbortController para garantia total de limpeza
+    if (this._readerAbort) {
+      try { this._readerAbort.abort(); } catch (_) {}
+    }
+    this._readerAbort = new AbortController();
+    const { signal } = this._readerAbort;
+
+    document.addEventListener('keydown', this._keyListener, { signal });
+
     let resizeTimer = null;
     this._resizeListener = () => {
       clearTimeout(resizeTimer);
@@ -547,20 +562,18 @@ const Storie = {
         this._renderizarStoria();
       }, 220);
     };
-    window.addEventListener('resize', this._resizeListener);
+    window.addEventListener('resize', this._resizeListener, { signal });
   },
 
   fecharLeitor() {
     this._pararAudioPagina();
     this._animandoVirada = false;
-    if (this._keyListener) {
-      document.removeEventListener('keydown', this._keyListener);
-      this._keyListener = null;
+    if (this._readerAbort) {
+      try { this._readerAbort.abort(); } catch (_) {}
+      this._readerAbort = null;
     }
-    if (this._resizeListener) {
-      window.removeEventListener('resize', this._resizeListener);
-      this._resizeListener = null;
-    }
+    this._keyListener = null;
+    this._resizeListener = null;
     this._fecharModal();
     const overlay = document.getElementById('book-reader-overlay');
     if (overlay) overlay.remove();
@@ -891,41 +904,102 @@ const Storie = {
     }, 880);
   },
 
+  // ── Utilitário com Retry Exponencial, Backoff e Tratamento 429 ─
+  async fetchWithRetry(url, { retries = 3, backoff = 200, timeout = 5000, ...opts } = {}) {
+    let attempt = 0;
+    while (attempt <= retries) {
+      try {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeout);
+        const res = await fetch(url, { ...opts, signal: controller.signal });
+        clearTimeout(timer);
+
+        if (res.status === 429) {
+          if (attempt === retries) return res;
+          const retryAfter = res.headers.get('Retry-After');
+          const waitMs = retryAfter
+            ? (parseInt(retryAfter, 10) * 1000 || backoff * Math.pow(2, attempt))
+            : backoff * Math.pow(2, attempt);
+          console.warn(`[Storie] Rate limit (429) em API externa. Tentativa ${attempt + 1}/${retries}. Aguardando ${waitMs}ms...`);
+          await new Promise(r => setTimeout(r, waitMs));
+          attempt++;
+          continue;
+        }
+
+        if (!res.ok && res.status >= 500) {
+          if (attempt === retries) return res;
+          const waitMs = backoff * Math.pow(2, attempt);
+          console.warn(`[Storie] Erro ${res.status} em API externa. Retry em ${waitMs}ms...`);
+          await new Promise(r => setTimeout(r, waitMs));
+          attempt++;
+          continue;
+        }
+
+        return res;
+      } catch (err) {
+        if (attempt === retries) throw err;
+        const waitMs = backoff * Math.pow(2, attempt);
+        console.warn(`[Storie] Falha de rede em API externa (${attempt + 1}/${retries}). Retry em ${waitMs}ms...`, err);
+        await new Promise(r => setTimeout(r, waitMs));
+        attempt++;
+      }
+    }
+  },
+
   // ── Auto-tradução On-Demand para Livros / Parágrafos sem PT ───
   async _traduzirParagrafoAPI(texto) {
     if (!texto || !texto.trim()) return '';
     const norm = texto.trim();
     if (this._tradCache[norm]) return this._tradCache[norm];
 
-    // Tenta Google Translate gtx (rápido e sem limite para parágrafos normais)
+    // Consulta cache persistente (IndexedDB com TTL 7 dias)
+    if (typeof AudioCache !== 'undefined' && typeof AudioCache.obterTraducao === 'function') {
+      const cachePersistente = await AudioCache.obterTraducao(norm);
+      if (cachePersistente) {
+        this._tradCache[norm] = cachePersistente;
+        return cachePersistente;
+      }
+    }
+
+    // Tenta Google Translate gtx com retry e backoff
     try {
       const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=it&tl=pt&dt=t&q=${encodeURIComponent(norm)}`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
-      if (res.ok) {
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 250, timeout: 5000 });
+      if (res && res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && Array.isArray(data[0])) {
           const trad = data[0].map(item => item[0]).join('');
           if (trad) {
             this._tradCache[norm] = trad;
+            if (typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+              AudioCache.salvarTraducao(norm, trad).catch(() => {});
+            }
             return trad;
           }
         }
       }
-    } catch (_) {}
+    } catch (err) {
+      console.warn("[Storie] Erro na tradução Google Translate:", err);
+    }
 
-    // Fallback: MyMemory API
+    // Fallback: MyMemory API com retry e backoff
     try {
       const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(norm.slice(0, 480))}&langpair=it|pt-BR`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
-      if (res.ok) {
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 300, timeout: 5000 });
+      if (res && res.ok) {
         const json = await res.json();
         const t = json?.responseData?.translatedText;
         if (t && t.toLowerCase() !== norm.toLowerCase()) {
           this._tradCache[norm] = t;
+          if (typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+            AudioCache.salvarTraducao(norm, t).catch(() => {});
+          }
           return t;
         }
       }
-    } catch (_) {}
+    } catch (err) {
+      console.warn("[Storie] Erro na tradução MyMemory:", err);
+    }
 
     return '';
   },
@@ -1466,17 +1540,35 @@ const Storie = {
   async _buscarTradAPI(palavra) {
     const norm = this._normWord(palavra);
     if (this._tradCache[norm]) return this._tradCache[norm];
+
+    if (typeof AudioCache !== 'undefined' && typeof AudioCache.obterTraducao === 'function') {
+      const cached = await AudioCache.obterTraducao(norm);
+      if (cached) {
+        this._tradCache[norm] = cached;
+        return cached;
+      }
+    }
+
     try {
       const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(palavra)}&langpair=it|pt-BR`;
-      const res  = await fetch(url, { signal: AbortSignal.timeout(4000) });
-      const json = await res.json();
-      const t    = json?.responseData?.translatedText || '';
-      // Filtra respostas ruins (igual à entrada ou muito longas)
-      const boa  = t && t.toLowerCase() !== palavra.toLowerCase() && t.split(' ').length <= 4;
-      const val  = boa ? t : '';
-      this._tradCache[norm] = val;
-      return val;
-    } catch (err) { console.warn("[Storie] Erro MyMemory API:", err); return ''; }
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 250, timeout: 4500 });
+      if (res && res.ok) {
+        const json = await res.json();
+        const t = json?.responseData?.translatedText || '';
+        // Filtra respostas ruins (igual à entrada ou muito longas)
+        const boa = t && t.toLowerCase() !== palavra.toLowerCase() && t.split(' ').length <= 4;
+        const val = boa ? t : '';
+        this._tradCache[norm] = val;
+        if (val && typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+          AudioCache.salvarTraducao(norm, val).catch(() => {});
+        }
+        return val;
+      }
+      return '';
+    } catch (err) {
+      console.warn("[Storie] Erro MyMemory API:", err);
+      return '';
+    }
   },
 
   _posicionarModal(modal, wordEl) {

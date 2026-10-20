@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v132';
+const CACHE = 'italiano-v137';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -14,21 +14,42 @@ const STATIC = [
   './favicon.ico',
   './index.html',
   './css/italia.css',
-  './css/italia.css?v=91',
-  './css/styles.css',
+  './css/italia.css?v=92',
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
-  // JS — módulos da aplicação (URLs com ?v=90 para forçar atualização de cache)
+  // JS & TS — módulos da aplicação
   './js/audio_cache.js',
   './js/audio_cache.js?v=91',
   './js/tts_worker.js',
   './js/tts_worker.js?v=89',
-  './js/voice_engine.js',
-  './js/voice_engine.js?v=91',
+  './js/voice_engine.ts',
+  './js/modal_manager.ts',
+  './js/progression.ts',
   './js/audio.js?v=91',
   './js/conquistas.js?v=88',
-  './js/core.js?v=91',
+  './js/core/state.js',
+  './js/core/state.js?v=93',
+  './js/core/navigation.js',
+  './js/core/navigation.js?v=93',
+  './js/core/xp.js',
+  './js/core/xp.js?v=93',
+  './js/core/stats.js',
+  './js/core/stats.js?v=93',
+  './js/core/meta.js',
+  './js/core/meta.js?v=93',
+  './js/core/favorites.js',
+  './js/core/favorites.js?v=93',
+  './js/core/templo_data.js',
+  './js/core/templo_data.js?v=93',
+  './js/core/templo_modal.js',
+  './js/core/templo_modal.js?v=93',
+  './js/core/templos.js',
+  './js/core/templos.js?v=93',
+  './js/core/tts.js',
+  './js/core/tts.js?v=93',
+  './js/core.js',
+  './js/core.js?v=93',
   './js/dialoghi.js?v=91',
   './js/canzoni.js?v=91',
   './js/imitazione.js?v=84',

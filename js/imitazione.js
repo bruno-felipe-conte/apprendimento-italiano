@@ -119,7 +119,7 @@ const Imitazione = {
         ${nN ? pillOrigem('nativo', '📚 Nativas', nN) : ''}
       </div>
       <div class="dojo-level-pills">
-        <span style="font-size:0.75rem;font-weight:700;color:var(--cor-pietra);margin-right:0.2rem">NÍVEL:</span>
+        <span style="font-size:0.75rem;font-weight:700;color:var(--cor-inchiostro-claro, #5A4535);margin-right:0.2rem">NÍVEL:</span>
         ${niveis.map(lvl => pillNivel(lvl)).join('')}
       </div>
     `;

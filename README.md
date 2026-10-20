@@ -144,21 +144,29 @@ O aplicativo funciona diretamente no navegador e pode ser instalado sem loja de 
 
 ---
 
-## 🛠️ Execução Local
+## 🛠️ Desenvolvimento & Execução Local
+
+O projeto utiliza Vite 8 e TypeScript estrito, com suíte automatizada de testes (Vitest + Playwright + axe-core):
 
 ```bash
-# 1. Clonar o repositório
-git clone https://github.com/bruno-felipe-conte/apprendimento-italiano.git
+# 1. Instalar dependências
+npm install
 
-# 2. Entrar no diretório
-cd apprendimento-italiano
+# 2. Iniciar servidor de desenvolvimento (Vite)
+npm run dev
 
-# 3. Iniciar um servidor HTTP local
-python3 -m http.server 5500
-# ou: npx serve -l 5500 .
+# 3. Executar suíte de testes unitários (Vitest)
+npm run test
+
+# 4. Executar auditoria de acessibilidade WCAG 2.1 AA (@axe-core)
+npm run test:a11y
+
+# 5. Verificação de tipos estritos
+npm run typecheck
+
+# 6. Compilação de produção
+npm run build
 ```
-
-Abra `http://localhost:5500` no seu navegador.
 
 ---
 
@@ -166,23 +174,41 @@ Abra `http://localhost:5500` no seu navegador.
 
 ```text
 apprendimento-italiano/
-├── index.html              # Ponto de entrada (Single Page Application)
+├── index.html              # Ponto de entrada (Single Page Application PWA)
+├── vite.config.ts          # Configuração do Vite e Vitest
+├── playwright.config.ts    # Configuração de testes de acessibilidade Playwright
+├── tsconfig.json           # Configuração TypeScript (Strict mode)
 ├── css/
 │   └── italia.css          # Design system clássico (Cinzel, Garamond, paleta renascentista)
+├── types/
+│   └── app.d.ts            # Contratos e tipos canônicos da aplicação
 ├── js/
-│   ├── core.js             # Gerenciamento de estado, navegação e áudio base
-│   ├── grammar.js          # Motor das 82 lições NMA
-│   ├── flashcards.js       # Algoritmo de repetição espaçada SM-2
+│   ├── core/               # Módulos desacoplados de estado, navegação, XP e diagnósticos
+│   │   ├── state.js        # Estado reativo e persistência
+│   │   ├── navigation.js   # Controle de navegação e sidebar
+│   │   ├── xp.js           # Gamificação, cálculo de XP e ofensivas
+│   │   ├── stats.js        # Estatísticas de estudo e Health Check
+│   │   └── ...
+│   ├── core.js             # Facade global retrocompatível (App.*)
+│   ├── modal_manager.ts    # Gerenciador unificado de modais (focus trap, ARIA)
+│   ├── progression.ts      # Motor de progressão e FSRS
+│   ├── voice_engine.ts     # Síntese neural Piper TTS WASM + Web Speech API
+│   ├── flashcards.js       # Agendador de repetição espaçada FSRS
+│   ├── grammar.js          # Motor das lições de gramática
+│   ├── vocab.js            # Explorador dos 51 Templos de Vocabulário
 │   ├── dialoghi.js         # Simulação de diálogos interativos
 │   ├── canzoni.js          # Exercícios com músicas e cloze test
 │   ├── imitazione.js       # Treinos de shadowing fonético
 │   └── storie.js           # Visualizador de histórias bilíngues
-├── data/
-│   ├── templo-1.json..51   # 5.396 palavras categorizadas
-│   ├── grammar.json        # Módulos A1 a C2 estruturados
-│   ├── dialogi.json        # 200 diálogos organizados por tema
-│   ├── canzoni.json        # 100 canções com letras e lacunas
-│   └── storie.json         # Acervo literário e filosófico
+├── tests/
+│   ├── a11y/               # Testes automatizados de acessibilidade (WCAG 2.1 AA)
+│   ├── progression.test.ts # Testes de progressão e FSRS
+│   ├── voice_engine.test.ts# Testes do motor de áudio
+│   ├── security.test.js    # Testes de sanitização XSS e segurança
+│   └── navigation.test.js  # Testes de rotas e navegação
+├── docs/
+│   └── adr/                # Registros de Decisões Arquiteturais (ADRs 001 a 004)
+├── data/                   # Acervo JSON (Templos, Gramática, Diálogos, Canções)
 ├── sw.js                   # Service Worker (estratégia cache-first offline)
 └── manifest.webmanifest    # Manifesto para instalação PWA
 ```
