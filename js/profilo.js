@@ -210,6 +210,7 @@ const Profilo = {
 
   // ── Salvar Audio Speed ────────────────────────────────────
   salvarAudioSpeed(valor) {
+    try { localStorage.setItem('it_audio_speed', valor); } catch (_) {}
     if (typeof App === 'undefined') return;
     const p = App.estado.progresso;
     if (!p) return;
@@ -404,17 +405,7 @@ const Profilo = {
     }
   },
 
-  // ── Audio Speed ───────────────────────────────────────────
-  salvarAudioSpeed(valor) {
-    localStorage.setItem('it_audio_speed', valor);
-    if (typeof App !== 'undefined' && App.estado && App.estado.progresso) {
-      App.estado.progresso.audio_rate = parseFloat(valor);
-      App.salvarProgresso();
-      if (typeof App.atualizarAudioSpeedUI === 'function') App.atualizarAudioSpeedUI();
-    }
-    const display = document.getElementById('audio-speed-display');
-    if (display) display.textContent = valor + 'x';
-  },
+
 
   // ── Exportar backup ───────────────────────────────────────
   exportarDados() {

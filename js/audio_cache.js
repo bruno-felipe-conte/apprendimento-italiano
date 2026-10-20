@@ -7,15 +7,16 @@
 
 const AudioCache = {
   DB_NAME: 'it_audio_db',
-  DB_VERSION: 1,
+  DB_VERSION: 2,
   STORE_NAME: 'audio_cache',
+  TRAD_STORE: 'trad_cache',
   _dbPromise: null,
 
   // Inicializa e abre a conexão com o IndexedDB
   _abrirDB() {
     if (this._dbPromise) return this._dbPromise;
 
-    this._dbPromise = new Promise((resolve, reject) => {
+    this._dbPromise = new Promise((resolve) => {
       if (typeof indexedDB === 'undefined') {
         resolve(null);
         return;
@@ -28,6 +29,10 @@ const AudioCache = {
         if (!db.objectStoreNames.contains(this.STORE_NAME)) {
           // Cria a store indexada pela chave hash do texto
           db.createObjectStore(this.STORE_NAME, { keyPath: 'hash' });
+        }
+        if (!db.objectStoreNames.contains(this.TRAD_STORE)) {
+          // Cria store persistente de traduções (TTL 7 dias)
+          db.createObjectStore(this.TRAD_STORE, { keyPath: 'hash' });
         }
       };
 
@@ -187,6 +192,64 @@ const AudioCache = {
         }
       };
     } catch (_) {}
+  },
+
+  // Recupera tradução com validação de TTL (7 dias por padrão)
+  async obterTraducao(texto) {
+    if (!texto) return null;
+    try {
+      const db = await this._abrirDB();
+      if (!db || !db.objectStoreNames.contains(this.TRAD_STORE)) return null;
+
+      const hash = await this.gerarHash(texto, 'trad_it_pt');
+      return new Promise((resolve) => {
+        const tx = db.transaction(this.TRAD_STORE, 'readonly');
+        const store = tx.objectStore(this.TRAD_STORE);
+        const req = store.get(hash);
+        req.onsuccess = () => {
+          const item = req.result;
+          if (item && item.traducao) {
+            if (item.expiraEm && Date.now() > item.expiraEm) {
+              resolve(null);
+            } else {
+              resolve(item.traducao);
+            }
+          } else {
+            resolve(null);
+          }
+        };
+        req.onerror = () => resolve(null);
+      });
+    } catch (_) {
+      return null;
+    }
+  },
+
+  // Salva tradução no IndexedDB com TTL de 7 dias
+  async salvarTraducao(texto, traducao, ttlMs = 7 * 24 * 60 * 60 * 1000) {
+    if (!texto || !traducao) return false;
+    try {
+      const db = await this._abrirDB();
+      if (!db || !db.objectStoreNames.contains(this.TRAD_STORE)) return false;
+
+      const hash = await this.gerarHash(texto, 'trad_it_pt');
+      return new Promise((resolve) => {
+        const tx = db.transaction(this.TRAD_STORE, 'readwrite');
+        const store = tx.objectStore(this.TRAD_STORE);
+        const registro = {
+          hash,
+          texto,
+          traducao,
+          salvoEm: Date.now(),
+          expiraEm: Date.now() + ttlMs
+        };
+        const req = store.put(registro);
+        req.onsuccess = () => resolve(true);
+        req.onerror = () => resolve(false);
+      });
+    } catch (_) {
+      return false;
+    }
   }
 };
 

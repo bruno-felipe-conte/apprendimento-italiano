@@ -891,41 +891,102 @@ const Storie = {
     }, 880);
   },
 
+  // ── Utilitário com Retry Exponencial, Backoff e Tratamento 429 ─
+  async fetchWithRetry(url, { retries = 3, backoff = 200, timeout = 5000, ...opts } = {}) {
+    let attempt = 0;
+    while (attempt <= retries) {
+      try {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeout);
+        const res = await fetch(url, { ...opts, signal: controller.signal });
+        clearTimeout(timer);
+
+        if (res.status === 429) {
+          if (attempt === retries) return res;
+          const retryAfter = res.headers.get('Retry-After');
+          const waitMs = retryAfter
+            ? (parseInt(retryAfter, 10) * 1000 || backoff * Math.pow(2, attempt))
+            : backoff * Math.pow(2, attempt);
+          console.warn(`[Storie] Rate limit (429) em API externa. Tentativa ${attempt + 1}/${retries}. Aguardando ${waitMs}ms...`);
+          await new Promise(r => setTimeout(r, waitMs));
+          attempt++;
+          continue;
+        }
+
+        if (!res.ok && res.status >= 500) {
+          if (attempt === retries) return res;
+          const waitMs = backoff * Math.pow(2, attempt);
+          console.warn(`[Storie] Erro ${res.status} em API externa. Retry em ${waitMs}ms...`);
+          await new Promise(r => setTimeout(r, waitMs));
+          attempt++;
+          continue;
+        }
+
+        return res;
+      } catch (err) {
+        if (attempt === retries) throw err;
+        const waitMs = backoff * Math.pow(2, attempt);
+        console.warn(`[Storie] Falha de rede em API externa (${attempt + 1}/${retries}). Retry em ${waitMs}ms...`, err);
+        await new Promise(r => setTimeout(r, waitMs));
+        attempt++;
+      }
+    }
+  },
+
   // ── Auto-tradução On-Demand para Livros / Parágrafos sem PT ───
   async _traduzirParagrafoAPI(texto) {
     if (!texto || !texto.trim()) return '';
     const norm = texto.trim();
     if (this._tradCache[norm]) return this._tradCache[norm];
 
-    // Tenta Google Translate gtx (rápido e sem limite para parágrafos normais)
+    // Consulta cache persistente (IndexedDB com TTL 7 dias)
+    if (typeof AudioCache !== 'undefined' && typeof AudioCache.obterTraducao === 'function') {
+      const cachePersistente = await AudioCache.obterTraducao(norm);
+      if (cachePersistente) {
+        this._tradCache[norm] = cachePersistente;
+        return cachePersistente;
+      }
+    }
+
+    // Tenta Google Translate gtx com retry e backoff
     try {
       const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=it&tl=pt&dt=t&q=${encodeURIComponent(norm)}`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
-      if (res.ok) {
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 250, timeout: 5000 });
+      if (res && res.ok) {
         const data = await res.json();
         if (Array.isArray(data) && Array.isArray(data[0])) {
           const trad = data[0].map(item => item[0]).join('');
           if (trad) {
             this._tradCache[norm] = trad;
+            if (typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+              AudioCache.salvarTraducao(norm, trad).catch(() => {});
+            }
             return trad;
           }
         }
       }
-    } catch (_) {}
+    } catch (err) {
+      console.warn("[Storie] Erro na tradução Google Translate:", err);
+    }
 
-    // Fallback: MyMemory API
+    // Fallback: MyMemory API com retry e backoff
     try {
       const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(norm.slice(0, 480))}&langpair=it|pt-BR`;
-      const res = await fetch(url, { signal: AbortSignal.timeout(4500) });
-      if (res.ok) {
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 300, timeout: 5000 });
+      if (res && res.ok) {
         const json = await res.json();
         const t = json?.responseData?.translatedText;
         if (t && t.toLowerCase() !== norm.toLowerCase()) {
           this._tradCache[norm] = t;
+          if (typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+            AudioCache.salvarTraducao(norm, t).catch(() => {});
+          }
           return t;
         }
       }
-    } catch (_) {}
+    } catch (err) {
+      console.warn("[Storie] Erro na tradução MyMemory:", err);
+    }
 
     return '';
   },
@@ -1466,17 +1527,35 @@ const Storie = {
   async _buscarTradAPI(palavra) {
     const norm = this._normWord(palavra);
     if (this._tradCache[norm]) return this._tradCache[norm];
+
+    if (typeof AudioCache !== 'undefined' && typeof AudioCache.obterTraducao === 'function') {
+      const cached = await AudioCache.obterTraducao(norm);
+      if (cached) {
+        this._tradCache[norm] = cached;
+        return cached;
+      }
+    }
+
     try {
       const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(palavra)}&langpair=it|pt-BR`;
-      const res  = await fetch(url, { signal: AbortSignal.timeout(4000) });
-      const json = await res.json();
-      const t    = json?.responseData?.translatedText || '';
-      // Filtra respostas ruins (igual à entrada ou muito longas)
-      const boa  = t && t.toLowerCase() !== palavra.toLowerCase() && t.split(' ').length <= 4;
-      const val  = boa ? t : '';
-      this._tradCache[norm] = val;
-      return val;
-    } catch (err) { console.warn("[Storie] Erro MyMemory API:", err); return ''; }
+      const res = await this.fetchWithRetry(url, { retries: 2, backoff: 250, timeout: 4500 });
+      if (res && res.ok) {
+        const json = await res.json();
+        const t = json?.responseData?.translatedText || '';
+        // Filtra respostas ruins (igual à entrada ou muito longas)
+        const boa = t && t.toLowerCase() !== palavra.toLowerCase() && t.split(' ').length <= 4;
+        const val = boa ? t : '';
+        this._tradCache[norm] = val;
+        if (val && typeof AudioCache !== 'undefined' && typeof AudioCache.salvarTraducao === 'function') {
+          AudioCache.salvarTraducao(norm, val).catch(() => {});
+        }
+        return val;
+      }
+      return '';
+    } catch (err) {
+      console.warn("[Storie] Erro MyMemory API:", err);
+      return '';
+    }
   },
 
   _posicionarModal(modal, wordEl) {

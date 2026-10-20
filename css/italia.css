@@ -3655,3 +3655,69 @@ body.dark-mode .nivel-select option {
   transform: translateY(0);
 }
 
+/* =============================================================================
+   LEGACY RULES (Migrated from css/styles.css — QW-08)
+   ============================================================================= */
+.bg-parchment { background-color: #f3eacb; border-radius: 4px; }
+.bg-gold { background-color: #d4af37; color: white; }
+.bg-venetian-red { background-color: #8b0000; color: white; }
+
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.btn-primary { background: #8b0000; color: white; }
+.btn-secondary { background: #555; color: white; }
+.btn-success { background: #1e8449; color: white; }
+.btn-warning { background: #f7941d; color: white; }
+.btn-danger { background: #dc3545; color: white; }
+.btn-secondary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+.grid-reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.review-card {
+  background: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.review-card.success-anim { animation: successPulse 0.5s ease; }
+.review-card.warning-anim { animation: warningPulse 0.5s ease; }
+.review-card.danger-anim { animation: dangerPulse 0.5s ease; }
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes warningPulse {
+  0% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  100% { transform: translateX(-3px); }
+}
+
+@keyframes dangerPulse {
+  0% { background-color: #8b0000; color: white; }
+  50% { background-color: #dc3545; color: white; }
+  100% { background-color: #f7941d; color: white; }
+}
+

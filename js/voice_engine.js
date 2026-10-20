@@ -615,10 +615,7 @@ const VoiceEngine = {
         if (window._activeVoiceUtterance === u) {
           window._activeVoiceUtterance = null;
         }
-        console.warn('[VoiceEngine] Falha na síntese, acionando fallback:', err);
-        if (typeof App !== 'undefined' && App._pronunciarRV) {
-          App._pronunciarRV(textoNormalizado, rate);
-        }
+        console.warn('[VoiceEngine] Falha na síntese nativa de fala:', err);
         if (opcoes.onend) {
           setTimeout(opcoes.onend, 800);
         } else if (opcoes.onerror) {
@@ -630,11 +627,6 @@ const VoiceEngine = {
       return true;
     } catch (err) {
       console.warn('[VoiceEngine] Exceção ao sintetizar fala:', err);
-      if (typeof App !== 'undefined' && App._pronunciarRV) {
-        App._pronunciarRV(textoNormalizado, opcoes.rate);
-        if (opcoes.onend) setTimeout(opcoes.onend, 1000);
-        return true;
-      }
       if (opcoes.onerror) opcoes.onerror(err);
       return false;
     }

@@ -153,8 +153,47 @@ const App = {
     'Siena custodisce il volgare illustre, la lingua di Dante. Nel decimo tempio raggiungi la vetta: il linguaggio della letteratura, della filosofia e dell\'espressione artistica. Le parole non comunicano soltanto — evocano, suggeriscono, trasformano.',
   ],
 
+  // ── Error Boundary Global (HAR-01) ────────────────────────
+  initGlobalErrorHandler() {
+    window.onerror = (message, source, lineno, colno, error) => {
+      try {
+        const errorLog = {
+          tipo: 'uncaught_error',
+          timestamp: new Date().toISOString(),
+          message: String(message),
+          source: String(source),
+          lineno,
+          colno,
+          stack: error?.stack || null,
+          userAgent: navigator.userAgent
+        };
+        console.error('[GlobalError]', errorLog);
+        const logs = JSON.parse(localStorage.getItem('it_client_errors') || '[]');
+        logs.unshift(errorLog);
+        localStorage.setItem('it_client_errors', JSON.stringify(logs.slice(0, 30)));
+      } catch (_) {}
+    };
+
+    window.addEventListener('unhandledrejection', (event) => {
+      try {
+        const errorLog = {
+          tipo: 'unhandled_rejection',
+          timestamp: new Date().toISOString(),
+          reason: String(event.reason?.message || event.reason),
+          stack: event.reason?.stack || null,
+          userAgent: navigator.userAgent
+        };
+        console.error('[UnhandledRejection]', errorLog);
+        const logs = JSON.parse(localStorage.getItem('it_client_errors') || '[]');
+        logs.unshift(errorLog);
+        localStorage.setItem('it_client_errors', JSON.stringify(logs.slice(0, 30)));
+      } catch (_) {}
+    });
+  },
+
   // ── Initialization ─────────────────────────────────────────
   async init() {
+    this.initGlobalErrorHandler();
     this.estado.progresso = this.carregarProgresso();
     this.estado.flashcardData = this.carregarFlashcards();
     if (typeof I18n !== 'undefined') I18n.inicializar();
@@ -1156,22 +1195,6 @@ const App = {
     return this._vozItaliana;
   },
 
-  // ResponsiveVoice — fallback garantido de voz italiana
-  _pronunciarRV(texto, taxaCustom = null) {
-    if (typeof responsiveVoice !== 'undefined' && responsiveVoice.voiceSupport()) {
-      responsiveVoice.cancel();
-      let rate = taxaCustom;
-      if (rate == null) {
-        const speedStr = localStorage.getItem('it_audio_speed');
-        rate = parseFloat(speedStr);
-        if (isNaN(rate)) rate = (this.estado.progresso && this.estado.progresso.audio_rate) ? this.estado.progresso.audio_rate : 0.85;
-      }
-      rate = Math.max(0.4, Math.min(1.8, rate));
-      const textoLimpo = (typeof VoiceEngine !== 'undefined') ? VoiceEngine.normalizarParaFala(texto) : texto;
-      responsiveVoice.speak(textoLimpo, 'Italian Female', { rate: rate, pitch: 1 });
-    }
-  },
-
   pronunciar(texto, taxaCustom = null) {
     if (!texto) return;
 
@@ -1194,7 +1217,7 @@ const App = {
       return;
     }
 
-    if (!('speechSynthesis' in window)) { this._pronunciarRV(textoParaFalar, taxaCustom); return; }
+    if (!('speechSynthesis' in window)) return;
 
     const tentarFalar = () => {
       try {
