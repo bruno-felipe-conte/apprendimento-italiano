@@ -287,6 +287,34 @@ const VoiceEngine = {
     return this._audioCtx;
   },
 
+  suspenderAudioContext() {
+    if (this._audioCtx && this._audioCtx.state === 'running') {
+      this._audioCtx.suspend().catch(() => {});
+    }
+  },
+
+  fecharAudioContext() {
+    if (this._audioCtx && this._audioCtx.state !== 'closed') {
+      this._audioCtx.close().catch(() => {});
+      this._audioCtx = null;
+    }
+  },
+
+  destruirWorker() {
+    if (this._worker) {
+      try { this._worker.terminate(); } catch (_) {}
+      this._worker = null;
+      this._workerInitialized = false;
+      this._workerDownloading = false;
+    }
+  },
+
+  destruir() {
+    this.parar();
+    this.fecharAudioContext();
+    this.destruirWorker();
+  },
+
   // Conecta um elemento HTMLAudioElement à cadeia de clareza do VoiceStudio
   aplicarMasteringAudioElement(audioEl) {
     if (!audioEl || audioEl._vsMastered) return;
@@ -635,4 +663,17 @@ const VoiceEngine = {
 
 // Exporta globalmente para o navegador
 window.VoiceEngine = VoiceEngine;
+
+if (typeof document !== 'undefined') {
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && typeof VoiceEngine !== 'undefined') {
+      VoiceEngine.suspenderAudioContext();
+    }
+  });
+  window.addEventListener('beforeunload', () => {
+    if (typeof VoiceEngine !== 'undefined') {
+      VoiceEngine.destruir();
+    }
+  });
+}
 

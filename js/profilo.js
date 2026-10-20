@@ -174,10 +174,13 @@ const Profilo = {
             <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
             <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
           </div>
-          <!-- Tour -->
-          <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
+          <!-- Tour & Diagnóstico -->
+          <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.4rem">
             <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),200)">
               🗺️ Ver tour introdutório novamente
+            </button>
+            <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.abrirHealthCheck()">
+              🩺 Diagnóstico PWA (Health Check)
             </button>
           </div>
           <!-- Conteúdo Criado por Mim -->
@@ -602,7 +605,10 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
     }
   };
 
-  window.speechSynthesis.addEventListener('voiceschanged', _sincronizarVozes);
+  window.speechSynthesis.addEventListener('voiceschanged', _sincronizarVozes, { once: true });
+  window.addEventListener('beforeunload', () => {
+    try { window.speechSynthesis.removeEventListener('voiceschanged', _sincronizarVozes); } catch (_) {}
+  });
 
   // Retries proativos para navegadores cujo handshake assíncrono atrasa ou não dispara voiceschanged
   [200, 600, 1500, 3000].forEach(delay => {

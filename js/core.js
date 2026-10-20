@@ -917,6 +917,93 @@ const App = {
     }
   },
 
+  // ── Health Check PWA (HAR-02) ──────────────────────────────
+  async abrirHealthCheck() {
+    let est = { usage: 0, quota: 0 };
+    if (navigator.storage && navigator.storage.estimate) {
+      try { est = await navigator.storage.estimate(); } catch (_) {}
+    }
+    const usageMB = ((est.usage || 0) / 1048576).toFixed(2);
+    const quotaMB = ((est.quota || 0) / 1048576).toFixed(0);
+    const pct = est.quota ? (((est.usage || 0) / est.quota) * 100).toFixed(1) : '0.0';
+
+    let audioStats = { itens: 0, bytes: 0 };
+    if (typeof AudioCache !== 'undefined' && AudioCache.estatisticas) {
+      try { audioStats = await AudioCache.estatisticas(); } catch (_) {}
+    }
+    const audioMB = (audioStats.bytes / 1048576).toFixed(2);
+
+    const swAtivo = ('serviceWorker' in navigator && navigator.serviceWorker.controller) ? '✅ Ativo (v134)' : '⚠️ Inativo / Standby';
+    const vozNeural = (typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural) ? VoiceEngine.statusVozNeural() : null;
+    const erros = JSON.parse(localStorage.getItem('it_client_errors') || '[]');
+    const totalFlashcards = Object.keys(this.estado.flashcardData || {}).length;
+    const totalVocab = (this.estado.vocabCache || []).length;
+
+    let modal = document.getElementById('health-check-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'health-check-modal';
+      modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(3px);';
+      modal.innerHTML = `
+        <div style="background:var(--cor-marmore,#FAF7F2);border:2px solid var(--cor-toscano,#C9952A);border-radius:14px;max-width:480px;width:100%;box-shadow:0 12px 36px rgba(0,0,0,0.35);overflow:hidden;font-family:inherit;">
+          <div style="background:linear-gradient(135deg,#9B2335,#6B1525);color:#fff;padding:0.9rem 1.2rem;display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-family:'Cinzel',serif;font-weight:700;font-size:1.05rem;">🩺 Diagnóstico & Saúde PWA</div>
+            <button onclick="App.fecharHealthCheck()" style="background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;">✕</button>
+          </div>
+          <div id="health-check-content" style="padding:1.2rem;display:flex;flex-direction:column;gap:0.75rem;font-size:0.88rem;max-height:75vh;overflow-y:auto;">
+          </div>
+          <div style="padding:0.8rem 1.2rem;background:#EDE5D8;display:flex;justify-content:flex-end;">
+            <button class="btn-primario" onclick="App.fecharHealthCheck()" style="padding:0.4rem 1.2rem;">Fechar</button>
+          </div>
+        </div>
+      `;
+      modal.addEventListener('click', (e) => { if (e.target === modal) this.fecharHealthCheck(); });
+      document.body.appendChild(modal);
+    }
+
+    const content = document.getElementById('health-check-content');
+    if (content) {
+      content.innerHTML = `
+        <div style="background:#fff;padding:0.7rem 0.9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="font-weight:700;color:#9B2335;margin-bottom:0.25rem;">🌐 Service Worker & Cache PWA</div>
+          <div>Status: <strong>${swAtivo}</strong></div>
+          <div style="font-size:0.78rem;color:#777;margin-top:0.2rem;">Cache estático, dicionários e SWR operacionais para modo 100% offline.</div>
+        </div>
+
+        <div style="background:#fff;padding:0.7rem 0.9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="font-weight:700;color:#9B2335;margin-bottom:0.25rem;">💾 Armazenamento Local & Quota</div>
+          <div>Uso Total: <strong>${usageMB} MB</strong> de ${quotaMB} MB (${pct}%)</div>
+          <div style="font-size:0.78rem;color:#777;margin-top:0.2rem;">${parseFloat(pct) > 80 ? '⚠️ Quota próxima do limite (>80%)' : '✅ Quota saudável (<80%)'}</div>
+        </div>
+
+        <div style="background:#fff;padding:0.7rem 0.9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="font-weight:700;color:#9B2335;margin-bottom:0.25rem;">🎧 IndexedDB (Áudio & Traduções)</div>
+          <div>Áudios Cacheados: <strong>${audioStats.itens}</strong> (${audioMB} MB)</div>
+          <div style="font-size:0.78rem;color:#777;margin-top:0.2rem;">Banco IndexedDB it_audio_db v2 com TTL de 7 dias para traduções.</div>
+        </div>
+
+        <div style="background:#fff;padding:0.7rem 0.9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="font-weight:700;color:#9B2335;margin-bottom:0.25rem;">🧠 Voz Neural Riccardo (WASM)</div>
+          <div>Status: <strong>${vozNeural?.instalada ? '✅ Instalada localmente' : (vozNeural?.baixando ? '⏳ Baixando...' : '⚪ Não instalada (usando nativa)')}</strong></div>
+          <div>Modo Neural Ativo: <strong>${vozNeural?.ativa ? 'Sim' : 'Não'}</strong></div>
+        </div>
+
+        <div style="background:#fff;padding:0.7rem 0.9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);">
+          <div style="font-weight:700;color:#9B2335;margin-bottom:0.25rem;">📚 Estado da Sessão & FSRS</div>
+          <div>Cartas com Histórico FSRS: <strong>${totalFlashcards}</strong></div>
+          <div>Vocabulário Total Disponível: <strong>${totalVocab}</strong></div>
+          <div>Erros Capturados (Error Boundary): <strong>${erros.length}</strong></div>
+        </div>
+      `;
+    }
+    modal.style.display = 'flex';
+  },
+
+  fecharHealthCheck() {
+    const modal = document.getElementById('health-check-modal');
+    if (modal) modal.style.display = 'none';
+  },
+
   // ── Header stats ───────────────────────────────────────────
   atualizarStats() {
     const p = this.estado.progresso;
@@ -1308,3 +1395,12 @@ const App = {
 
 // ── Bootstrap ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => App.init());
+
+window.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.shiftKey && (e.key === 'H' || e.key === 'h')) {
+    e.preventDefault();
+    if (typeof App !== 'undefined' && typeof App.abrirHealthCheck === 'function') {
+      App.abrirHealthCheck();
+    }
+  }
+});

@@ -261,9 +261,18 @@ const Storie = {
   // Som de folhear papel mais rico e texturizado
   _tocarSomFolhear() {
     try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
+      let ctx = null;
+      if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.obterAudioContext === 'function') {
+        ctx = VoiceEngine.obterAudioContext();
+      } else {
+        if (!this._somFolhaCtx || this._somFolhaCtx.state === 'closed') {
+          const AudioCtx = window.AudioContext || window.webkitAudioContext;
+          if (AudioCtx) this._somFolhaCtx = new AudioCtx();
+        }
+        ctx = this._somFolhaCtx;
+      }
+      if (!ctx || ctx.state === 'closed') return;
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {});
       const dur = 0.22;
       const bufferSize = Math.floor(ctx.sampleRate * dur);
       const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
@@ -528,10 +537,16 @@ const Storie = {
         }
       }
     };
-    document.addEventListener('keydown', this._keyListener);
 
-    // Resize com debounce para reajustar paginação
-    if (this._resizeListener) window.removeEventListener('resize', this._resizeListener);
+    // Resize e eventos com AbortController para garantia total de limpeza
+    if (this._readerAbort) {
+      try { this._readerAbort.abort(); } catch (_) {}
+    }
+    this._readerAbort = new AbortController();
+    const { signal } = this._readerAbort;
+
+    document.addEventListener('keydown', this._keyListener, { signal });
+
     let resizeTimer = null;
     this._resizeListener = () => {
       clearTimeout(resizeTimer);
@@ -547,20 +562,18 @@ const Storie = {
         this._renderizarStoria();
       }, 220);
     };
-    window.addEventListener('resize', this._resizeListener);
+    window.addEventListener('resize', this._resizeListener, { signal });
   },
 
   fecharLeitor() {
     this._pararAudioPagina();
     this._animandoVirada = false;
-    if (this._keyListener) {
-      document.removeEventListener('keydown', this._keyListener);
-      this._keyListener = null;
+    if (this._readerAbort) {
+      try { this._readerAbort.abort(); } catch (_) {}
+      this._readerAbort = null;
     }
-    if (this._resizeListener) {
-      window.removeEventListener('resize', this._resizeListener);
-      this._resizeListener = null;
-    }
+    this._keyListener = null;
+    this._resizeListener = null;
     this._fecharModal();
     const overlay = document.getElementById('book-reader-overlay');
     if (overlay) overlay.remove();
