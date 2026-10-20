@@ -219,20 +219,25 @@ const Storie = {
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);
       const corN = corNivel[s.nivel] || '#9B2335';
+      const sIdEsc = this._escAttr(s.id);
+      const sTituloEsc = this._escape(s.titulo);
+      const sAutorEsc = this._escape(s.autor || '');
+      const sIconeEsc = this._escape(s.icone || '📜');
+      const sNivelEsc = this._escape(s.nivel);
       html += `
-        <div onclick="Storie.abrirStoria('${s.id}')"
+        <div onclick="Storie.abrirStoria('${sIdEsc}')"
           style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
                  box-shadow:0 3px 12px rgba(0,0,0,0.09);cursor:pointer;border:2px solid transparent;
                  transition:transform 0.18s,box-shadow 0.18s,border-color 0.18s;
                  display:flex;flex-direction:column;align-items:center;gap:0.35rem"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,0.14)';this.style.borderColor='${corN}'"
           onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.09)';this.style.borderColor='transparent'">
-          <div style="font-size:2.4rem;line-height:1.1">${s.icone||'📜'}</div>
+          <div style="font-size:2.4rem;line-height:1.1">${sIconeEsc}</div>
           <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
-            ${s.titulo}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
+            ${sTituloEsc}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
-          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${s.id}')">🗑️ Remover</button>`:''}
-          <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${s.autor||''}</div>
+          ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${sIdEsc}')">🗑️ Remover</button>`:''}
+          <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${sAutorEsc}</div>
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
@@ -953,7 +958,7 @@ const Storie = {
           }
           this._salvarStoriaCustomAtualizada(this.storAttuale);
         }
-      } catch (_) {}
+      } catch (err) { console.warn("[Storie] Erro na tradução via API:", err); }
     }
 
     if (this.traduzirVisivel) {
@@ -1471,7 +1476,7 @@ const Storie = {
       const val  = boa ? t : '';
       this._tradCache[norm] = val;
       return val;
-    } catch { return ''; }
+    } catch (err) { console.warn("[Storie] Erro MyMemory API:", err); return ''; }
   },
 
   _posicionarModal(modal, wordEl) {

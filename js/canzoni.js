@@ -228,18 +228,23 @@ const Canzoni = {
       const ehCustom = can.custom || can._custom;
       const badgeCustom = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('can_badge_minha')}</span>` : '';
       const qtdVersos = (can.estrofes || []).length;
-      html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${can.id}')">
-        <div class="dialogo-icone">${can.icone || '🎵'}</div>
-        <div class="dialogo-titulo">${can.titulo}${badgeCustom}</div>
-        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${can.artista || ''}</div>
+      const canIdEsc = this._esc(can.id);
+      const canTituloEsc = this._esc(can.titulo);
+      const canArtistaEsc = this._esc(can.artista || '');
+      const canIconeEsc = this._esc(can.icone || '🎵');
+      const canNivelEsc = this._esc(can.nivel);
+      html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${canIdEsc}')">
+        <div class="dialogo-icone">${canIconeEsc}</div>
+        <div class="dialogo-titulo">${canTituloEsc}${badgeCustom}</div>
+        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${canArtistaEsc}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
-          <span class="dialogo-nivel">${can.nivel}</span>
+          <span class="dialogo-nivel">${canNivelEsc}</span>
           <span style="font-size:0.68rem;color:#9B2335;background:rgba(155,35,53,0.08);padding:0.1rem 0.42rem;border-radius:8px;font-weight:600">${qtdVersos} ${I18n.t('can_versos_count')}</span>
-          <button onclick="event.stopPropagation();Canzoni.iniciarCloze('${can.id}')" style="background:rgba(201,149,42,0.18);border:1px solid rgba(201,149,42,0.5);color:#6b1a2a;padding:0.1rem 0.45rem;border-radius:6px;font-size:0.68rem;font-weight:700;cursor:pointer" title="Treino Cloze Sincronizado">🎧 Cloze</button>
+          <button onclick="event.stopPropagation();Canzoni.iniciarCloze('${canIdEsc}')" style="background:rgba(201,149,42,0.18);border:1px solid rgba(201,149,42,0.5);color:#6b1a2a;padding:0.1rem 0.45rem;border-radius:6px;font-size:0.68rem;font-weight:700;cursor:pointer" title="Treino Cloze Sincronizado">🎧 Cloze</button>
           ${ehCustom ? `
-          ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${can.id}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${can.id}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
-          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${can.id}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Ocultar esta música">🗑️</button>`}
+          ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${canIdEsc}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
+          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
+          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Ocultar esta música">🗑️</button>`}
         </div>
       </div>`;
     }
@@ -765,7 +770,7 @@ const Canzoni = {
   },
 
   _esc(str) {
-    return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   },
 
   // Transforma um trecho de texto em spans individuais por palavra para o destaque Karaokê

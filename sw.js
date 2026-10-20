@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v131';
+const CACHE = 'italiano-v132';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -14,40 +14,40 @@ const STATIC = [
   './favicon.ico',
   './index.html',
   './css/italia.css',
-  './css/italia.css?v=90',
+  './css/italia.css?v=91',
   './css/styles.css',
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
   // JS — módulos da aplicação (URLs com ?v=90 para forçar atualização de cache)
   './js/audio_cache.js',
-  './js/audio_cache.js?v=90',
+  './js/audio_cache.js?v=91',
   './js/tts_worker.js',
   './js/tts_worker.js?v=89',
   './js/voice_engine.js',
-  './js/voice_engine.js?v=90',
-  './js/audio.js?v=90',
+  './js/voice_engine.js?v=91',
+  './js/audio.js?v=91',
   './js/conquistas.js?v=88',
-  './js/core.js?v=90',
-  './js/dialoghi.js?v=84',
-  './js/canzoni.js?v=90',
+  './js/core.js?v=91',
+  './js/dialoghi.js?v=91',
+  './js/canzoni.js?v=91',
   './js/imitazione.js?v=84',
   './js/flashcards.js?v=84',
-  './js/grammar.js?v=90',
+  './js/grammar.js?v=91',
   './js/heatmap.js?v=84',
   './js/onboarding.js?v=79',
   './js/profilo.js?v=89',
   './js/progression.js?v=86',
   './js/quiz.js?v=84',
   './js/quiz_data.js',
-  './js/vocab.js?v=84',
+  './js/vocab.js?v=91',
   './js/i18n.js?v=79',
   './js/notificacoes.js',
   './js/tour.js',
   './js/storie.js',
-  './js/storie.js?v=90',
+  './js/storie.js?v=91',
   './js/ia-import.js',
-  './js/ia-import.js?v=86',
+  './js/ia-import.js?v=91',
   // WASM Config
   './wasm/it_IT-riccardo-x_low.json',
   // Dados

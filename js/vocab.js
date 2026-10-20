@@ -191,7 +191,10 @@ const Vocab = {
   // ── Search handler ────────────────────────────────────────
   buscar(texto) {
     this.filtroTexto = texto;
-    this.renderizar();
+    if (this._debounceTimer) clearTimeout(this._debounceTimer);
+    this._debounceTimer = setTimeout(() => {
+      this.renderizar();
+    }, 150);
   },
 
   // ── Temple filter handler ─────────────────────────────────

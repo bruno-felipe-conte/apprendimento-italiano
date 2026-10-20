@@ -51,6 +51,15 @@ const Dialoghi = {
   _filtroNivel: '',
   _filtroTexto: '',
 
+  _esc(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  },
+
   async renderizarSeletor() {
     await this.carregar();
     const c = document.getElementById('dialoghi-container');
@@ -103,14 +112,18 @@ const Dialoghi = {
     for (const dial of filtrados) {
       const ehCustom = dial.custom || dial._custom;
       const badge = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('dial_badge_meu')}</span>` : '';
-      html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dial.id}','leitura')">
-        <div class="dialogo-icone">${dial.icone}</div>
-        <div class="dialogo-titulo">${dial.titulo}${badge}</div>
-        <div class="dialogo-nivel">${dial.nivel}</div>
+      const dIdEsc = this._esc(dial.id);
+      const dTituloEsc = this._esc(dial.titulo);
+      const dIconeEsc = this._esc(dial.icone || '💬');
+      const dNivelEsc = this._esc(dial.nivel);
+      html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dIdEsc}','leitura')">
+        <div class="dialogo-icone">${dIconeEsc}</div>
+        <div class="dialogo-titulo">${dTituloEsc}${badge}</div>
+        <div class="dialogo-nivel">${dNivelEsc}</div>
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
-          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dial.id}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dial.id}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
-        </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa} XP</div>`}
+          ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dIdEsc}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
+          <button onclick="event.stopPropagation();Dialoghi.excluirDialogo('${dIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Excluir">🗑️</button>
+        </div>` : `<div style="font-size:0.75rem;color:var(--cor-pietra);margin-top:0.3rem">🎁 ${dial.xp_recompensa || 30} XP</div>`}
       </div>`;
     }
 

@@ -103,8 +103,30 @@ const App = {
     41:15, 47:15, 48:15, 49:15, 50:15,
   },
 
-  // Secret unlock code — change to your personal password
-  UNLOCK_CODE: '2012',
+  // Hash criptográfico SHA-256 do código mestre de acesso/desbloqueio
+  _UNLOCK_HASH: '4b9a7f50c0bb198c6f5414c5a8459f5d216d34ab521ea94c060ea35cac66f900',
+
+  async verificarCodigoAcesso(codigo) {
+    if (!codigo || typeof codigo !== 'string') return false;
+    try {
+      const enc = new TextEncoder().encode(codigo.trim());
+      const buf = await crypto.subtle.digest('SHA-256', enc);
+      const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+      return hex === this._UNLOCK_HASH;
+    } catch (_) {
+      return false;
+    }
+  },
+
+  escapeHtml(str) {
+    if (str == null) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  },
 
   // Italian descriptions per temple (difficulty proportional to level)
   TEMPLO_DESC: [
@@ -163,6 +185,20 @@ const App = {
     // Init sound feedback
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();
     if (typeof Notificacoes !== 'undefined') Notificacoes.init();
+
+    // Verificação proativa de espaço em disco (Storage Quota)
+    if (navigator.storage && navigator.storage.estimate) {
+      navigator.storage.estimate().then(est => {
+        if (est.quota && est.usage) {
+          const pct = (est.usage / est.quota) * 100;
+          if (pct > 80) {
+            console.warn(`[Storage] Armazenamento próximo do limite: ${pct.toFixed(1)}% (${(est.usage/1048576).toFixed(1)}MB / ${(est.quota/1048576).toFixed(1)}MB)`);
+            this.notificar('Atenção: Armazenamento local quase cheio (>80%). Considere limpar itens antigos.', 'alerta');
+          }
+        }
+      }).catch(() => {});
+    }
+
     this.atualizarAudioSpeedUI();
     this.initSidebarPin();
     // Pre-load speech synthesis voices so the first pronunciar() call is instant
@@ -268,7 +304,10 @@ const App = {
             novoVocab.push(...data.palavras);
             novosTemplos[data.templo] = data;
           })
-          .catch(() => null) // network error — skip
+          .catch(err => {
+            console.warn(`[App] Falha de rede ao carregar data/templo-${i}.json:`, err);
+            return null;
+          })
       );
     }
 
@@ -279,7 +318,10 @@ const App = {
         .then(data => {
           this.estado.quizData = data.perguntas || [];
         })
-        .catch(() => { this.estado.quizData = []; })
+        .catch(err => {
+          console.warn('[App] Falha ao carregar quizzes.json:', err);
+          this.estado.quizData = [];
+        })
     );
 
     // Load verb conjugations
@@ -289,7 +331,10 @@ const App = {
         .then(data => {
           this.estado.conjugacoesData = data.verbos || [];
         })
-        .catch(() => { this.estado.conjugacoesData = []; })
+        .catch(err => {
+          console.warn('[App] Falha ao carregar conjugacoes.json:', err);
+          this.estado.conjugacoesData = [];
+        })
     );
 
     await Promise.all(promises);
@@ -754,14 +799,19 @@ const App = {
     const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
 
     const body = document.getElementById('templo-modal-body');
+    const nomeEsc = this.escapeHtml(nome);
+    const cidadeEsc = this.escapeHtml(cidade);
+    const descEsc = this.escapeHtml(desc);
+    const nivelEsc = this.escapeHtml(nivel);
+
     body.innerHTML = `
       <div class="tm-header" style="background:${cor}${!desbloqueado ? ';filter:grayscale(0.5)' : ''}">
         <button class="tm-close" onclick="App.fecharModalTemplo()" title="Chiudi">✕</button>
         <div class="tm-num">Tempio ${i}</div>
-        <div class="tm-nome">${nome}</div>
+        <div class="tm-nome">${nomeEsc}</div>
         <div class="tm-meta">
-          <span class="tm-badge">📍 ${cidade}</span>
-          <span class="tm-badge">${nivel}</span>
+          <span class="tm-badge">📍 ${cidadeEsc}</span>
+          <span class="tm-badge">${nivelEsc}</span>
           ${concluido ? '<span class="tm-badge">✅ Completo</span>' : ''}
         </div>
       </div>
@@ -772,14 +822,14 @@ const App = {
             <div class="tm-progress-bar"><div class="tm-progress-fill" style="width:${progPercent}%"></div></div>
           </div>
         ` : `<div class="tm-lock-banner">🔒 Richiede Livello ${nivelMinimo}</div>`}
-        <p class="tm-desc">${desc}</p>
+        <p class="tm-desc">${descEsc}</p>
         ${desbloqueado ? `
           <div class="tm-actions">
             <button class="tm-btn-primary" onclick="App.fecharModalTemplo();App.estudarTemplo(${i})">📚 Studia i vocaboli</button>
             <button class="tm-btn-quiz" onclick="App.fecharModalTemplo();App.quizTemplo(${i})">❓ Fai il Quiz</button>
           </div>
         ` : `
-          <details class="tm-unlock-area">
+          <details class="tm-unlock-area" id="tm-unlock-details">
             <summary>Hai un codice di accesso?</summary>
             <div class="tm-unlock-form">
               <input id="tm-code-input" type="password" placeholder="Inserisci il codice..." class="tm-code-input"
@@ -801,29 +851,18 @@ const App = {
   },
 
   pedirSenhaTemplo(temploNum) {
-    const nome = this.TEMPLO_NOMES[temploNum] || `Tempio ${temploNum}`;
-    const codigo = prompt(`🔒 Tempio ${temploNum} — ${nome}\n\nInsira o código de acesso:`);
-    if (codigo === null) return; // cancelou
-    if (codigo.trim() === this.UNLOCK_CODE) {
-      const p = this.estado.progresso;
-      if (!p.templos_desbloqueados.includes(temploNum)) {
-        p.templos_desbloqueados.push(temploNum);
-        p.templos_desbloqueados.sort((a, b) => a - b);
-      }
-      this.salvarProgresso();
-      this.renderizarTemplos();
-      this.atualizarStats();
-      if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
-      this.notificar(I18n.t('notif_templo_sbloccato').replace('{n}', temploNum), 'sucesso');
-    } else {
-      this.notificar('notif_codice_errato', 'erro');
-    }
+    this.abrirModalTemplo(temploNum);
+    const details = document.getElementById('tm-unlock-details');
+    if (details) details.open = true;
+    const input = document.getElementById('tm-code-input');
+    if (input) setTimeout(() => input.focus(), 120);
   },
 
-  tentarDesbloquear(temploNum) {
+  async tentarDesbloquear(temploNum) {
     const input = document.getElementById('tm-code-input');
     if (!input) return;
-    if (input.value.trim() === this.UNLOCK_CODE) {
+    const valido = await this.verificarCodigoAcesso(input.value);
+    if (valido) {
       const p = this.estado.progresso;
       p.templos_desbloqueados = Array.from({length: 51}, (_, i) => i + 1);
       this.salvarProgresso();

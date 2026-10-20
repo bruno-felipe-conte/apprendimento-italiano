@@ -134,15 +134,26 @@ const VoiceEngine = {
     return s;
   },
 
+  _lexicoCompilado: null,
+
+  _obterLexicoCompilado() {
+    if (!this._lexicoCompilado) {
+      this._lexicoCompilado = Object.entries(this.LEXICO_FONETICO_IT).map(([termo, substituicao]) => ({
+        regex: new RegExp(`(?<=[^a-zA-ZÀ-ÿ]|^)${termo}(?=[^a-zA-ZÀ-ÿ]|$)`, 'g'),
+        substituicao
+      }));
+    }
+    return this._lexicoCompilado;
+  },
+
   // ── 4. Aplicação do Léxico Fonético ───────────────────────
   // Portado de VoiceStudio/backend/services/pronunciation.py (apply_lexicon)
   aplicarLexicoFonico(texto) {
     if (!texto) return '';
+    const lista = this._obterLexicoCompilado();
     let out = texto;
-    for (const [termo, substituicao] of Object.entries(this.LEXICO_FONETICO_IT)) {
-      // Cria boundary seguro respeitando acentos e apóstrofos
-      const regex = new RegExp(`(?<=[^a-zA-ZÀ-ÿ]|^)${termo}(?=[^a-zA-ZÀ-ÿ]|$)`, 'g');
-      out = out.replace(regex, substituicao);
+    for (let i = 0; i < lista.length; i++) {
+      out = out.replace(lista[i].regex, lista[i].substituicao);
     }
     return out;
   },

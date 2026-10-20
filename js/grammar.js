@@ -131,7 +131,7 @@ const Grammatica = {
     if (bloqueados.length > 0) {
       html += '<div class="gram-locked-row">';
       for (const mod of bloqueados) {
-        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Acesso administrativo (senha: 2012)">`;
+        html += `<button class="gram-locked-pill" onclick="Grammatica.pedirSenhaAdmin('${mod.id}')" title="Acesso administrativo">`;
         html += `<span class="gram-locked-pill-icon">🔒</span>`;
         html += `<span class="gram-locked-pill-info">`;
         html += `<span class="gram-locked-pill-id">${mod.id}</span>`;
@@ -170,12 +170,12 @@ const Grammatica = {
           id="gram-admin-input"
           class="gram-admin-input"
           type="password"
-          placeholder="Senha (dica: 2012)"
+          placeholder="Senha de acesso..."
           maxlength="20"
           autocomplete="off"
           onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
         />
-        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Senha incorreta. Tente novamente (2012).</div>
+        <div id="gram-admin-erro" class="gram-admin-erro" style="display:none">Senha incorreta. Tente novamente.</div>
         <div class="gram-admin-btns">
           <button class="gram-admin-btn-cancel" onclick="Grammatica._fecharModal()">Cancelar</button>
           <button class="gram-admin-btn-ok" onclick="Grammatica._confirmarSenha('${modId}')">Desbloquear</button>
@@ -196,12 +196,16 @@ const Grammatica = {
     if (m) { m.classList.add('gram-admin-saindo'); setTimeout(() => m.remove(), 220); }
   },
 
-  _confirmarSenha(modId) {
+  async _confirmarSenha(modId) {
     const inp = document.getElementById('gram-admin-input');
     const erro = document.getElementById('gram-admin-erro');
     if (!inp) return;
 
-    if (inp.value === '2012') {
+    const valido = (typeof App !== 'undefined' && App.verificarCodigoAcesso)
+      ? await App.verificarCodigoAcesso(inp.value)
+      : false;
+
+    if (valido) {
       this._adminMods.add(modId);
       this._fecharModal();
       const c = document.getElementById('grammatica-container');

@@ -431,18 +431,134 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     }
 
     try {
+      const dataValida = this._validarSchema(this.tipoAtual, data);
       switch (this.tipoAtual) {
-        case 'dialogo':    this._importarDialogo(data); break;
-        case 'canzone':    this._importarCanzone(data); break;
-        case 'storia':     this._importarStoria(data); break;
-        case 'imitazione': this._importarImitazione(data); break;
-        case 'vocab':      this._importarVocab(data); break;
+        case 'dialogo':    this._importarDialogo(dataValida); break;
+        case 'canzone':    this._importarCanzone(dataValida); break;
+        case 'storia':     this._importarStoria(dataValida); break;
+        case 'imitazione': this._importarImitazione(dataValida); break;
+        case 'vocab':      this._importarVocab(dataValida); break;
         default: throw new Error('Tipo desconhecido: ' + this.tipoAtual);
       }
       this._setFeedback('✅ Importado com sucesso!', 'ok');
       setTimeout(() => this.fechar(), 1400);
     } catch (e) {
       this._setFeedback('❌ Erro ao importar: ' + e.message, 'error');
+    }
+  },
+
+  _sanitizarString(str) {
+    if (typeof str !== 'string') return '';
+    return str.replace(/<[^>]*>?/gm, '').trim();
+  },
+
+  _validarSchema(tipo, data) {
+    if (!data || typeof data !== 'object') {
+      throw new Error('Conteúdo inválido: esperava objeto ou lista JSON.');
+    }
+
+    switch (tipo) {
+      case 'dialogo': {
+        const arr = Array.isArray(data) ? data : [data];
+        if (arr.length === 0) throw new Error('Nenhum diálogo encontrado.');
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          if (!item.titulo || typeof item.titulo !== 'string') {
+            throw new Error(`Diálogo #${i + 1} sem campo "titulo".`);
+          }
+          if (!Array.isArray(item.turnos) || item.turnos.length === 0) {
+            throw new Error(`Diálogo "${item.titulo}" deve conter lista de "turnos".`);
+          }
+          item.titulo = this._sanitizarString(item.titulo);
+          item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+          item.turnos.forEach((t, idx) => {
+            if (!t.frase && !t.alternativas) {
+              throw new Error(`Turno ${idx + 1} sem frase ou alternativas.`);
+            }
+            if (t.frase) t.frase = this._sanitizarString(t.frase);
+            if (t.falante) t.falante = this._sanitizarString(t.falante);
+            if (t.traducao) t.traducao = this._sanitizarString(t.traducao);
+          });
+        }
+        return arr;
+      }
+
+      case 'canzone': {
+        if (Array.isArray(data) && data.length > 0 && (data[0].w !== undefined || data[0].word !== undefined)) {
+          return data;
+        }
+        const arr = Array.isArray(data) ? data : [data];
+        if (arr.length === 0) throw new Error('Nenhuma música encontrada.');
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          if (!item.titulo || typeof item.titulo !== 'string') {
+            throw new Error(`Música #${i + 1} sem campo "titulo".`);
+          }
+          item.titulo = this._sanitizarString(item.titulo);
+          item.artista = this._sanitizarString(item.artista || 'Artista Desconhecido');
+          item.nivel = this._sanitizarString(item.nivel || 'A2').toUpperCase();
+        }
+        return arr;
+      }
+
+      case 'storia': {
+        const arr = Array.isArray(data) ? data : [data];
+        if (arr.length === 0) throw new Error('Nenhuma história encontrada.');
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          if (!item.titulo || typeof item.titulo !== 'string') {
+            throw new Error(`História #${i + 1} sem campo "titulo".`);
+          }
+          if (!Array.isArray(item.paragrafos) || item.paragrafos.length === 0) {
+            throw new Error(`História "${item.titulo}" deve conter lista de "paragrafos".`);
+          }
+          item.titulo = this._sanitizarString(item.titulo);
+          item.autor = this._sanitizarString(item.autor || 'IA');
+          item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+        }
+        return arr;
+      }
+
+      case 'imitazione': {
+        const arr = Array.isArray(data) ? data : [data];
+        if (arr.length === 0) throw new Error('Nenhuma lição de imitação encontrada.');
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          if (!item.titulo || typeof item.titulo !== 'string') {
+            throw new Error(`Imitação #${i + 1} sem campo "titulo".`);
+          }
+          if (!Array.isArray(item.frases) || item.frases.length === 0) {
+            throw new Error(`Imitação "${item.titulo}" deve conter lista de "frases".`);
+          }
+          item.titulo = this._sanitizarString(item.titulo);
+          item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+        }
+        return arr;
+      }
+
+      case 'vocab': {
+        const arr = Array.isArray(data) ? data : [data];
+        if (arr.length === 0) throw new Error('Nenhuma palavra encontrada.');
+        for (let i = 0; i < arr.length; i++) {
+          const item = arr[i];
+          const it = item.italiano || item.word;
+          const pt = item.portugues || item.traducao || item.traduzione;
+          if (!it || typeof it !== 'string') {
+            throw new Error(`Item ${i + 1} de vocabulário sem termo em italiano ("italiano").`);
+          }
+          if (!pt || typeof pt !== 'string') {
+            throw new Error(`Palavra "${it}" sem tradução em português ("portugues").`);
+          }
+          item.italiano = this._sanitizarString(it);
+          item.portugues = this._sanitizarString(pt);
+          if (item.categoria) item.categoria = this._sanitizarString(item.categoria);
+          if (item.exemplo) item.exemplo = this._sanitizarString(item.exemplo);
+        }
+        return arr;
+      }
+
+      default:
+        throw new Error('Tipo desconhecido: ' + tipo);
     }
   },
 
