@@ -12,6 +12,7 @@ export default [
         ...globals.worker,
         ...globals.node,
         App: 'writable',
+        ModalManager: 'writable',
         VoiceEngine: 'writable',
         AudioCache: 'writable',
         I18n: 'writable',
