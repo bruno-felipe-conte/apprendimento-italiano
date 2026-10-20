@@ -52,6 +52,8 @@ const AppNavigation = {
     const stateMod = (typeof window !== 'undefined' && window.AppState) || (typeof globalThis !== 'undefined' && globalThis.AppState) || (typeof AppState !== 'undefined' ? AppState : null);
     const estado = stateMod ? stateMod.estado : (typeof App !== 'undefined' && App.estado ? App.estado : null);
 
+    const secaoAnterior = estado ? estado.secaoAtiva : '';
+
     if (estado) {
       estado.secaoAtiva = secao;
     }
@@ -59,6 +61,12 @@ const AppNavigation = {
     // Pausa karaokê se sair da aba de músicas
     if (secao !== 'canzoni' && typeof Canzoni !== 'undefined' && Canzoni.tocandoKaraoke) {
       Canzoni.pararAudio();
+    }
+
+    // Notifica plugins de mudança de seção
+    const pluginMgr = (typeof window !== 'undefined' && window.AppPluginManager) || (typeof globalThis !== 'undefined' && globalThis.AppPluginManager);
+    if (pluginMgr && typeof pluginMgr.notifySectionChange === 'function') {
+      pluginMgr.notifySectionChange(secao, secaoAnterior);
     }
 
     if (typeof document !== 'undefined') {
@@ -86,6 +94,12 @@ const AppNavigation = {
       } else if (typeof App !== 'undefined' && typeof App.salvarProgresso === 'function') {
         App.salvarProgresso();
       }
+    }
+
+    // Se houver plugin com rota registrada para a seção, despacha para ele
+    if (pluginMgr && typeof pluginMgr.hasRoute === 'function' && pluginMgr.hasRoute(secao)) {
+      pluginMgr.dispatchRoute(secao);
+      return;
     }
 
     const _precisaRender = (containerId) => {

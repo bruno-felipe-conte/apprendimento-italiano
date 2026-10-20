@@ -76,9 +76,19 @@ const App = {
   _getVozItaliana: () => _g('AppTTS')?._getVozItaliana?.() || null,
   pronunciar: (txt, r) => _g('AppTTS')?.pronunciar?.(txt, r),
 
+  // ── Plugin Architecture (js/core/plugins.ts) ───────────────
+  get pluginManager() { return _g('AppPluginManager'); },
+  registerPlugin: (p) => _g('AppPluginManager')?.register(p),
+  unregisterPlugin: (id) => _g('AppPluginManager')?.unregister(id),
+  getPlugin: (id) => _g('AppPluginManager')?.get(id),
+  getPlugins: () => _g('AppPluginManager')?.getAll() || [],
+
   // ── Bootstrap & Lifecycle ──────────────────────────────────
   async init() {
     this.initGlobalErrorHandler();
+    if (_g('AppPluginManager')) {
+      await _g('AppPluginManager').initAll(this);
+    }
     this.estado.progresso = this.carregarProgresso();
     this.estado.flashcardData = this.carregarFlashcards();
     if (typeof I18n !== 'undefined') I18n.inicializar();

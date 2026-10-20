@@ -115,11 +115,36 @@ export interface ModalConfig {
   larguraMax?: string;
 }
 
+export interface PluginRoute {
+  path: string;
+  handler: (params?: Record<string, any>) => void;
+  title?: string;
+}
+
+export interface PluginContext {
+  app: any;
+  state: any;
+  navigation: any;
+  modals: any;
+  t: (key: string) => string;
+}
+
+export interface IPlugin {
+  id: string;
+  name: string;
+  version?: string;
+  routes?: PluginRoute[];
+  init(ctx?: PluginContext | any): Promise<void> | void;
+  destroy?(): Promise<void> | void;
+  onSectionChange?(novaSecao: string, secaoAnterior: string): void;
+}
+
 declare global {
   interface Window {
     App: any;
     AppState: any;
     AppNavigation: any;
+    AppPluginManager: any;
     AppXP: any;
     AppStats: any;
     AppMeta: any;
