@@ -1,6 +1,6 @@
 // @vitest-environment happy-dom
 import { describe, it, expect, beforeEach } from 'vitest';
-import ModalManager from '../js/modal_manager.js';
+import ModalManager from '../js/modal_manager';
 
 describe('ARC-04: Sistema Unificado de Modais (ModalManager)', () => {
   beforeEach(() => {
@@ -26,6 +26,7 @@ describe('ARC-04: Sistema Unificado de Modais (ModalManager)', () => {
       html: '<p>Conteúdo 2</p>'
     });
 
+    expect(id2).toBe('modal_test_2');
     expect(ModalManager.stack.length).toBe(2);
     expect(ModalManager.stack[1].id).toBe('modal_test_2');
 

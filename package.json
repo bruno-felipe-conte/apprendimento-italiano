@@ -5,14 +5,17 @@
   "main": "sw.js",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:security": "vitest run tests/security.test.js",
-    "lint": "eslint js/",
-    "lint:fix": "eslint js/ --fix",
+    "lint": "eslint js/ tests/",
+    "lint:fix": "eslint js/ tests/ --fix",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write \"js/**/*.js\" \"css/**/*.css\"",
-    "format:check": "prettier --check \"js/**/*.js\" \"css/**/*.css\""
+    "format": "prettier --write \"js/**/*.{js,ts}\" \"css/**/*.css\" \"types/**/*.ts\"",
+    "format:check": "prettier --check \"js/**/*.{js,ts}\" \"css/**/*.css\" \"types/**/*.ts\""
   },
   "repository": {
     "type": "git",
@@ -29,11 +32,14 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.39.5",
+    "@types/dom-speech-recognition": "^0.0.12",
     "eslint": "^9.20.1",
     "globals": "^17.13.0",
     "happy-dom": "^21.0.4",
     "prettier": "^3.5.2",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.72.0",
+    "vite": "^8.3.4",
     "vitest": "^5.0.5"
   }
 }

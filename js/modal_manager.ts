@@ -1,20 +1,44 @@
 // ============================================================
-// js/modal_manager.js — Sistema Unificado de Modais (ARC-04)
+// js/modal_manager.ts — Sistema Unificado de Modais (ARC-03 / ARC-04)
 // Gerenciador singleton com stack, trap de foco, acessibilidade
 // WCAG 2.1 AA, tecla ESC e clique fora.
 // ============================================================
 
-const ModalManager = {
-  stack: [],
-  _initialized: false,
-  _previouslyFocused: null,
+export interface ModalAcao {
+  texto?: string;
+  classe?: string;
+  primario?: boolean;
+  onclick?: (id: string) => void;
+}
 
-  init() {
+export interface ModalOpcoes {
+  id?: string;
+  titulo?: string;
+  html?: string;
+  acoes?: ModalAcao[];
+  fecharAoClicarFora?: boolean;
+  tamanho?: 'pequeno' | 'medio' | 'grande';
+  onclose?: () => void;
+}
+
+export interface ModalItem {
+  id: string;
+  overlay: HTMLDivElement;
+  box: HTMLDivElement;
+  onclose?: () => void;
+}
+
+export const ModalManager = {
+  stack: [] as ModalItem[],
+  _initialized: false,
+  _previouslyFocused: null as HTMLElement | null,
+
+  init(): void {
     if (this._initialized || typeof window === 'undefined') return;
     this._initialized = true;
 
     // Listener global para fechar o modal do topo com tecla Escape
-    window.addEventListener('keydown', (e) => {
+    window.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key === 'Escape' && this.stack.length > 0) {
         e.preventDefault();
         this.fecharTopo();
@@ -23,18 +47,18 @@ const ModalManager = {
   },
 
   // Retorna os elementos focáveis dentro de um container
-  _obterFocaveis(el) {
+  _obterFocaveis(el: HTMLElement | null): HTMLElement[] {
     if (!el) return [];
     return Array.from(
-      el.querySelectorAll(
+      el.querySelectorAll<HTMLElement>(
         'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
       )
     );
   },
 
   // Prende a navegação por Tab no modal ativo (Focus Trap)
-  _ativarFocusTrap(modalEl) {
-    modalEl.addEventListener('keydown', (e) => {
+  _ativarFocusTrap(modalEl: HTMLElement): void {
+    modalEl.addEventListener('keydown', (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return;
       const focaveis = this._obterFocaveis(modalEl);
       if (focaveis.length === 0) {
@@ -58,22 +82,14 @@ const ModalManager = {
     });
   },
 
-  /**
-   * Abre um modal gerenciado
-   * @param {Object} opts
-   * @param {string} opts.id Identificador único
-   * @param {string} opts.titulo Título exibido no cabeçalho
-   * @param {string} opts.html Conteúdo HTML do corpo
-   * @param {Array}  opts.acoes Botões [{ texto, classe, onclick, primario }]
-   * @param {boolean} opts.fecharAoClicarFora Fechar ao clicar no backdrop (default true)
-   * @param {string} opts.tamanho 'pequeno' | 'medio' | 'grande' (default 'medio')
-   */
-  abrir(opts = {}) {
+  abrir(opts: ModalOpcoes = {}): string {
     this.init();
     const id = opts.id || `modal_${Date.now()}`;
     this.fechar(id); // Evita duplicata se já aberto
 
-    this._previouslyFocused = document.activeElement;
+    if (typeof document !== 'undefined') {
+      this._previouslyFocused = document.activeElement as HTMLElement | null;
+    }
 
     const overlay = document.createElement('div');
     overlay.id = `modal_overlay_${id}`;
@@ -130,7 +146,7 @@ const ModalManager = {
     body.innerHTML = opts.html || '';
 
     // Rodapé de Ações
-    let footer = null;
+    let footer: HTMLDivElement | null = null;
     if (Array.isArray(opts.acoes) && opts.acoes.length > 0) {
       footer = document.createElement('div');
       footer.style.cssText = `
@@ -156,7 +172,7 @@ const ModalManager = {
     overlay.appendChild(box);
 
     if (opts.fecharAoClicarFora !== false) {
-      overlay.addEventListener('click', (e) => {
+      overlay.addEventListener('click', (e: MouseEvent) => {
         if (e.target === overlay) this.fechar(id);
       });
     }
@@ -177,7 +193,7 @@ const ModalManager = {
     return id;
   },
 
-  fechar(id) {
+  fechar(id: string): void {
     const idx = this.stack.findIndex(m => m.id === id);
     if (idx === -1) return;
 
@@ -190,7 +206,7 @@ const ModalManager = {
     setTimeout(() => {
       item.overlay.remove();
       if (typeof item.onclose === 'function') item.onclose();
-      if (this.stack.length === 0) {
+      if (this.stack.length === 0 && typeof document !== 'undefined') {
         document.body.style.overflow = '';
         if (this._previouslyFocused && typeof this._previouslyFocused.focus === 'function') {
           this._previouslyFocused.focus();
@@ -199,7 +215,7 @@ const ModalManager = {
     }, 200);
   },
 
-  fecharTopo() {
+  fecharTopo(): void {
     if (this.stack.length > 0) {
       const topo = this.stack[this.stack.length - 1];
       this.fechar(topo.id);
@@ -210,7 +226,8 @@ const ModalManager = {
 if (typeof window !== 'undefined') {
   window.ModalManager = ModalManager;
 }
-
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ModalManager;
+if (typeof globalThis !== 'undefined') {
+  (globalThis as any).ModalManager = ModalManager;
 }
+
+export default ModalManager;

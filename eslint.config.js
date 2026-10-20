@@ -1,8 +1,10 @@
 import js from '@eslint/js';
 import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2022,
@@ -44,26 +46,31 @@ export default [
         Notificacoes: 'writable',
         Tour: 'writable',
         Progressao: 'writable',
+        LevelUp: 'writable',
         Calor: 'writable',
         driver: 'writable',
         confetti: 'writable'
       }
     },
     rules: {
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
       'no-empty': ['warn', { allowEmptyCatch: true }],
       'no-console': 'off',
       'no-useless-escape': 'off',
       'no-misleading-character-class': 'off',
-      'no-undef': 'error'
+      'no-undef': 'off'
     }
   },
   {
     ignores: [
       'node_modules/**',
+      'dist/**',
       'graphify-out/**',
       'wasm/**',
       'data/**'
     ]
   }
-];
+);
