@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v135';
+const CACHE = 'italiano-v136';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -29,7 +29,28 @@ const STATIC = [
   './js/modal_manager.js?v=92',
   './js/audio.js?v=91',
   './js/conquistas.js?v=88',
-  './js/core.js?v=91',
+  './js/core/state.js',
+  './js/core/state.js?v=93',
+  './js/core/navigation.js',
+  './js/core/navigation.js?v=93',
+  './js/core/xp.js',
+  './js/core/xp.js?v=93',
+  './js/core/stats.js',
+  './js/core/stats.js?v=93',
+  './js/core/meta.js',
+  './js/core/meta.js?v=93',
+  './js/core/favorites.js',
+  './js/core/favorites.js?v=93',
+  './js/core/templo_data.js',
+  './js/core/templo_data.js?v=93',
+  './js/core/templo_modal.js',
+  './js/core/templo_modal.js?v=93',
+  './js/core/templos.js',
+  './js/core/templos.js?v=93',
+  './js/core/tts.js',
+  './js/core/tts.js?v=93',
+  './js/core.js',
+  './js/core.js?v=93',
   './js/dialoghi.js?v=91',
   './js/canzoni.js?v=91',
   './js/imitazione.js?v=84',
