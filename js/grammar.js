@@ -152,11 +152,46 @@ const Grammatica = {
   // Acesso administrativo — popup de senha
   // ─────────────────────────────────────────────────────────
   pedirSenhaAdmin(modId) {
-    const old = document.getElementById('gram-admin-modal');
-    if (old) old.remove();
-
     const mod = this.dados.moduli.find(m => m.id === modId);
     const nome = mod ? mod.nome : modId;
+
+    if (typeof ModalManager !== 'undefined' && ModalManager.abrir) {
+      ModalManager.abrir({
+        id: 'gram-admin-modal',
+        titulo: 'Desbloquear Módulo',
+        tamanho: 'pequeno',
+        html: `
+          <div style="text-align:center; padding: 0.5rem 0;">
+            <div style="font-size:2rem; margin-bottom:0.3rem">🔐</div>
+            <div style="font-size:0.95rem; color:var(--cor-veneziano-escuro); font-weight:600; margin-bottom:0.8rem">${nome}</div>
+            <input
+              id="gram-admin-input"
+              class="gram-admin-input"
+              type="password"
+              placeholder="Senha de acesso..."
+              maxlength="20"
+              autocomplete="off"
+              style="width: 100%; border: 2px solid #e0d5c5; border-radius: 10px; padding: 0.72rem 1rem; font-size: 1rem; text-align: center; letter-spacing: 0.25em; box-sizing: border-box;"
+              onkeydown="if(event.key==='Enter') Grammatica._confirmarSenha('${modId}'); if(event.key==='Escape') Grammatica._fecharModal()"
+            />
+            <div id="gram-admin-erro" class="gram-admin-erro" style="display:none; color:#c0392b; font-size:0.8rem; font-weight:600; margin-top:0.4rem">Senha incorreta. Tente novamente.</div>
+          </div>
+        `,
+        acoes: [
+          { texto: 'Cancelar', primario: false, onclick: () => this._fecharModal() },
+          { texto: 'Desbloquear', primario: true, onclick: () => this._confirmarSenha(modId) }
+        ]
+      });
+
+      requestAnimationFrame(() => {
+        const inp = document.getElementById('gram-admin-input');
+        if (inp) inp.focus();
+      });
+      return;
+    }
+
+    const old = document.getElementById('gram-admin-modal');
+    if (old) old.remove();
 
     const overlay = document.createElement('div');
     overlay.id = 'gram-admin-modal';
@@ -192,6 +227,9 @@ const Grammatica = {
   },
 
   _fecharModal() {
+    if (typeof ModalManager !== 'undefined' && ModalManager.fechar) {
+      ModalManager.fechar('gram-admin-modal');
+    }
     const m = document.getElementById('gram-admin-modal');
     if (m) { m.classList.add('gram-admin-saindo'); setTimeout(() => m.remove(), 220); }
   },
