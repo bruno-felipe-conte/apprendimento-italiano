@@ -95,10 +95,10 @@ const Profilo = {
           <div class="profilo-card-titulo">🎧 ${I18n.t('prof_velocidade_audio') || 'Configuração de Áudio & Voz'}</div>
           
           <div style="margin-bottom: 1rem;">
-            <label style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.35rem;">
+            <label for="select-voz-italiana" style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.35rem;">
               🗣️ Voz Italiana (Sintetizador)
             </label>
-            <select id="select-voz-italiana" onchange="Profilo.salvarVozItaliana(this.value)" style="width: 100%; padding: 0.55rem 0.8rem; border-radius: 8px; border: 1.5px solid #dcd3c5; font-family: inherit; font-size: 0.9rem; background: var(--cor-pergamena, #fbf7ee); color: var(--cor-inchiostro);">
+            <select id="select-voz-italiana" aria-label="Voz Italiana (Sintetizador)" onchange="Profilo.salvarVozItaliana(this.value)" style="width: 100%; padding: 0.55rem 0.8rem; border-radius: 8px; border: 1.5px solid #dcd3c5; font-family: inherit; font-size: 0.9rem; background: var(--cor-pergamena, #fbf7ee); color: var(--cor-inchiostro);">
               ${Profilo.renderizarOpcoesVozes ? Profilo.renderizarOpcoesVozes() : '<option value="">Padrão do Sistema</option>'}
             </select>
             <div style="font-size: 0.75rem; color: #7f6e5d; margin-top: 0.3rem;">
@@ -109,7 +109,7 @@ const Profilo = {
             <div id="card-voz-neural-status" style="margin-top:0.75rem;padding:0.75rem;border-radius:8px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.3)">
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.35rem">
                 <span style="font-size:0.82rem;font-weight:700;color:#5c3a18">🎙️ Voz Neural Offline (WASM)</span>
-                <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '#2A9D8F' : '#888'};color:#fff">
+                <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '#1E7E44' : '#5A4535'};color:#fff">
                   ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? 'Ativa' : 'Disponível'}
                 </span>
               </div>
@@ -133,14 +133,14 @@ const Profilo = {
             </div>
           </div>
 
-          <label style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
+          <label for="audio-speed-slider" style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
             ⚡ Velocidade de Reprodução
           </label>
           <div style="display:flex; align-items:center; gap:10px; margin-top:5px;">
-            <span style="font-size:1.5rem">🐢</span>
-            <input type="range" id="audio-speed-slider" min="0.5" max="1.5" step="0.05" value="${currentSpeed}" 
+            <span style="font-size:1.5rem" aria-hidden="true">🐢</span>
+            <input type="range" id="audio-speed-slider" aria-label="Velocidade de Reprodução do Áudio" min="0.5" max="1.5" step="0.05" value="${currentSpeed}" 
                    onchange="Profilo.salvarAudioSpeed(this.value)" oninput="document.getElementById('audio-speed-display').textContent = this.value + 'x'" style="flex:1;">
-            <span style="font-size:1.5rem">🐇</span>
+            <span style="font-size:1.5rem" aria-hidden="true">🐇</span>
           </div>
           <div style="text-align:center; margin-top:5px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
           
@@ -172,7 +172,7 @@ const Profilo = {
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
             <button class="btn-secondario" onclick="Profilo.exportarDados()">${I18n.t('prof_exp_backup')}</button>
             <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
-            <button style="margin-left:auto; background:#E74C3C; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:600;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
+            <button style="margin-left:auto; background:#C0392B; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:700;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
           </div>
           <!-- Tour & Diagnóstico -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.4rem">
@@ -186,7 +186,7 @@ const Profilo = {
           <!-- Conteúdo Criado por Mim -->
           <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
             <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.3rem">${I18n.t('prof_conteudo_criado')}</div>
-            <div style="font-size:0.75rem;color:#888;margin-bottom:0.5rem">
+            <div style="font-size:0.75rem;color:var(--cor-inchiostro-claro,#5A4535);margin-bottom:0.5rem">
               ${I18n.idioma==='it'
                 ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti manualmente o via IA.'
                 : 'Músicas, diálogos, histórias, imitações e vocabulário adicionados manualmente ou via IA.'}

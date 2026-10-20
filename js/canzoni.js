@@ -215,7 +215,7 @@ const Canzoni = {
         ${_oPill('', I18n.t('can_filtro_todas'), todas.length)}
         ${nC?_oPill('custom', I18n.t('can_filtro_adicionadas'), nC):''}
         ${nN?_oPill('nativo', I18n.t('can_filtro_classicos'), nN):''}
-        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+        <select class="nivel-select${this._filtroNivel?' ativo':''}" aria-label="Filtrar músicas por nível"
           onchange="Canzoni._filtroNivel=this.value;Canzoni.renderizarSeletor()">
           <option value="">${I18n.t('can_filtro_nivel')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
@@ -236,7 +236,7 @@ const Canzoni = {
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${canIdEsc}')">
         <div class="dialogo-icone">${canIconeEsc}</div>
         <div class="dialogo-titulo">${canTituloEsc}${badgeCustom}</div>
-        <div style="font-size:0.75rem;color:#888;margin:0.2rem 0">${canArtistaEsc}</div>
+        <div style="font-size:0.75rem;color:var(--cor-inchiostro-claro,#5A4535);margin:0.2rem 0">${canArtistaEsc}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
           <span class="dialogo-nivel">${canNivelEsc}</span>
           <span style="font-size:0.68rem;color:#9B2335;background:rgba(155,35,53,0.08);padding:0.1rem 0.42rem;border-radius:8px;font-weight:600">${qtdVersos} ${I18n.t('can_versos_count')}</span>
@@ -250,7 +250,7 @@ const Canzoni = {
     }
 
     if (filtradas.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;grid-column:1/-1">${this._filtroTexto ? I18n.t('can_sem_resultado') : I18n.t('can_sem_musica')}</p>`;
+      html += `<p style="text-align:center;color:var(--cor-inchiostro-claro,#5A4535);grid-column:1/-1">${this._filtroTexto ? I18n.t('can_sem_resultado') : I18n.t('can_sem_musica')}</p>`;
     }
 
     html += '</div>';

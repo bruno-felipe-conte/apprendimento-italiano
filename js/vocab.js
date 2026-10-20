@@ -19,15 +19,15 @@ const Vocab = {
 
     const todos = App.estado.vocabCache;
     if (!todos || todos.length === 0) {
-      listEl.innerHTML = '<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">Nenhuma palavra carregada ainda.</p>';
+      listEl.innerHTML = '<p style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;text-align:center;padding:1.5rem;">Nenhuma palavra carregada ainda.</p>';
       if (statsEl) statsEl.textContent = '';
       return;
     }
 
     // Update origin pills active state
     const pillStyle = (active) => active
-      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
-      : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600';
+      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #543D75;background:#543D75;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
+      : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600';
     const pT = document.getElementById('vocab-pill-todos');
     const pC = document.getElementById('vocab-pill-custom');
     const pN = document.getElementById('vocab-pill-nativo');
@@ -119,7 +119,7 @@ const Vocab = {
     const visivel = filtrados.slice(0, 100);
 
     if (visivel.length === 0) {
-      listEl.innerHTML = `<p style="color:#aaa;font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma')}</p>`;
+      listEl.innerHTML = `<p style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma')}</p>`;
       return;
     }
 
@@ -182,7 +182,7 @@ const Vocab = {
     // Show "more results" hint if truncated
     if (filtrados.length > 100) {
       const more = document.createElement('p');
-      more.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.8rem;font-size:0.83rem;';
+      more.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;padding:0.8rem;font-size:0.83rem;';
       more.textContent = I18n.t('vocab_e_mais').replace('{n}', filtrados.length - 100);
       listEl.appendChild(more);
     }

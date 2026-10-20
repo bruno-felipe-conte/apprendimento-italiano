@@ -219,13 +219,13 @@ const Conquistas = {
     const bloqueadas    = this.LISTA.filter(c => !conquistadas.includes(c.id));
 
     const renderBadge = (c, ganhou) => `
-      <div class="ach-item${ganhou ? ' ach-ganhou' : ' ach-bloqueada'}" title="${c.descricao}">
-        <span class="ach-emoji">${ganhou ? c.emoji : '🔒'}</span>
+      <div class="ach-item${ganhou ? ' ach-ganhou' : ' ach-bloqueada'}" ${!ganhou ? 'aria-disabled="true"' : ''} title="${c.descricao}">
+        <span class="ach-emoji" aria-hidden="true">${ganhou ? c.emoji : '🔒'}</span>
         <div class="ach-info">
           <div class="ach-nome">${c.nome}</div>
           <div class="ach-desc">${c.descricao}</div>
         </div>
-        ${ganhou ? '<span class="ach-check">✅</span>' : ''}
+        ${ganhou ? '<span class="ach-check" aria-hidden="true">✅</span>' : ''}
       </div>`;
 
     return `
@@ -235,7 +235,7 @@ const Conquistas = {
         </div>
         <span class="ach-progresso-label">${ganhas} / ${total}</span>
       </div>
-      <div class="ach-scroll-container">
+      <div class="ach-scroll-container" role="region" tabindex="0" aria-label="Lista de conquistas">
         ${ganhas > 0 ? `
           <div class="ach-secao-titulo">✅ Conquistados</div>
           <div class="ach-lista">${desbloqueadas.map(c => renderBadge(c, true)).join('')}</div>

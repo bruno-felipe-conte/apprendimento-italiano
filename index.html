@@ -44,16 +44,16 @@
       <div class="header-logo-row">
         <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
         <div class="header-icons">
-          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano">
+          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano" aria-label="PT | IT: alternar idioma">
             <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
             <span class="lang-pill-div">|</span>
             <span id="lang-pill-it" class="lang-pill-seg">IT</span>
           </button>
-          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
-          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
+          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema" aria-label="Tema: alternar claro e escuro"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
+          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: desativados" aria-label="Som: ativar ou desativar efeitos sonoros"><span id="btn-som-ico" class="hdr-btn-ico">🔕</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
           <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
+          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório" aria-label="Ajuda: ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
+          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo" aria-label="Perfil: acessar meu perfil"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
         </div>
       </div>
       <div class="stats-bar" id="stats-bar">
@@ -92,7 +92,7 @@
       </span>
     </button>
 
-    <nav class="nav-tabs">
+    <nav class="nav-tabs" aria-label="Navegação principal">
       <button class="nav-tab ativa" data-section="templi" onclick="App.navegar('templi')" title="Templi"><span class="nav-tab-icon">🏛️</span><span class="nav-tab-label" data-i18n="top_nav_templi">Templi</span></button>
       <button class="nav-tab" data-section="dialoghi" onclick="App.navegar('dialoghi')" title="Dialoghi"><span class="nav-tab-icon">💬</span><span class="nav-tab-label" data-i18n="top_nav_dialoghi">Dialoghi</span></button>
       <button class="nav-tab" data-section="canzoni" onclick="App.navegar('canzoni')" title="Canzoni"><span class="nav-tab-icon">🎵</span><span class="nav-tab-label" data-i18n="top_nav_canzoni">Canzoni</span></button>
@@ -112,13 +112,13 @@
       <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
       <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
       <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
-      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
+      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária" aria-label="Meta: configurar meta diária de XP">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
     </div>
 
     <!-- Meta settings modal -->
-    <div class="meta-settings-modal" id="meta-settings-modal" onclick="if(event.target===this)App.fecharMetaSettings()">
+    <div class="meta-settings-modal" id="meta-settings-modal" role="dialog" aria-modal="true" aria-labelledby="meta-modal-titulo" onclick="if(event.target===this)App.fecharMetaSettings()">
       <div class="meta-modal-card">
-        <p class="meta-modal-titulo" data-i18n="meta_diaria_xp">Meta Diária de XP</p>
+        <p class="meta-modal-titulo" id="meta-modal-titulo" data-i18n="meta_diaria_xp">Meta Diária de XP</p>
         <p class="meta-modal-sub" data-i18n="quantos_xp">Quantos XP quer ganhar por dia?</p>
         <div class="meta-opcoes">
           <button class="meta-op-btn" data-val="50"  onclick="App.setMeta(50)">50<br><small>XP</small></button>
@@ -126,7 +126,7 @@
           <button class="meta-op-btn" data-val="200" onclick="App.setMeta(200)">200<br><small>XP</small></button>
           <button class="meta-op-btn" data-val="500" onclick="App.setMeta(500)">500<br><small>XP</small></button>
         </div>
-        <button class="btn-primario" onclick="App.fecharMetaSettings()" data-i18n="btn_fechar">Fechar</button>
+        <button class="btn-primario" onclick="App.fecharMetaSettings()" data-i18n="btn_fechar" aria-label="Fechar configurações de meta">Fechar</button>
       </div>
     </div>
 
@@ -233,7 +233,7 @@
           </aside>
 
           <!-- Coluna 2: Palco do Flashcard (Deck 3D, Ferramentas e FSRS) -->
-          <main class="fc-studio-stage">
+          <div class="fc-studio-stage" role="region" aria-label="Estúdio de flashcards">
             <!-- Deck Stack Wrapper (Tactile 3D Depth) -->
             <div class="flashcard-deck-stack" id="flashcard-deck-stack">
               <div class="deck-layer deck-layer-2" id="deck-layer-2"></div>
@@ -331,7 +331,7 @@
               </div>
             </div>
             <div id="flashcard-resumo" style="display:none"></div>
-          </main>
+          </div>
         </div>
       </div>
     </section>
@@ -397,18 +397,21 @@
     <section id="sec-vocabolario" class="section">
       <h2 class="section-titulo" data-i18n="vocab_sec_titulo">Il Vocabolario</h2>
       <div class="vocab-filtros">
-        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." data-i18n-placeholder="vocab_busca_placeholder" oninput="Vocab.buscar(this.value)">
-        <select id="vocab-templo-filtro" onchange="Vocab.filtrarTemplo(this.value)">
+        <label for="vocab-busca" class="sr-only">Buscar vocabulário</label>
+        <input type="text" id="vocab-busca" class="vocab-search" placeholder="Cerca in italiano o portoghese..." data-i18n-placeholder="vocab_busca_placeholder" aria-label="Buscar vocabulário em italiano ou português" oninput="Vocab.buscar(this.value)">
+        <label for="vocab-templo-filtro" class="sr-only">Filtrar por templo</label>
+        <select id="vocab-templo-filtro" aria-label="Filtrar vocabulário por templo" onchange="Vocab.filtrarTemplo(this.value)">
           <option value="" data-i18n="vocab_todos_templos">Tutti i templi</option>
         </select>
-        <select id="vocab-categoria-filtro" onchange="Vocab.filtrarCategoria(this.value)">
+        <label for="vocab-categoria-filtro" class="sr-only">Filtrar por categoria</label>
+        <select id="vocab-categoria-filtro" aria-label="Filtrar vocabulário por categoria gramatical" onchange="Vocab.filtrarCategoria(this.value)">
           <option value="" data-i18n="vocab_todas_categorias">Tutte le categorie</option>
         </select>
       </div>
       <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
-        <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #7B68A0;background:#7B68A0;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
-        <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
-        <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #ddd;background:transparent;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
+        <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #543D75;background:#543D75;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
+        <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
+        <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
       </div>
       <div class="vocab-filtros-row2">
         <button id="vocab-btn-dificeis"   class="vocab-btn-dificeis"   onclick="Vocab.toggleDificeis()" data-i18n="vocab_dificeis">⚠️ Difíceis</button>
@@ -444,23 +447,23 @@
   <div class="toast-container" id="toast-container"></div>
 
   <!-- Templo detail modal -->
-  <div id="templo-modal" class="templo-modal" onclick="if(event.target===this)App.fecharModalTemplo()">
+  <div id="templo-modal" class="templo-modal" role="dialog" aria-modal="true" aria-label="Detalhes do Templo" onclick="if(event.target===this)App.fecharModalTemplo()">
     <div class="tm-card" id="templo-modal-body"></div>
   </div>
 
   <!-- Conquista unlock modal -->
-  <div id="conquista-modal" class="conquista-modal" onclick="if(event.target===this)Conquistas.fecharModal()">
+  <div id="conquista-modal" class="conquista-modal" role="dialog" aria-modal="true" aria-labelledby="conquista-nome" onclick="if(event.target===this)Conquistas.fecharModal()">
     <div class="conquista-card">
       <div class="conquista-card-label">🏆 Conquista desbloqueada!</div>
       <span id="conquista-emoji" class="conquista-card-emoji">🌱</span>
       <div id="conquista-nome" class="conquista-card-nome">Primo Passo</div>
       <div id="conquista-desc" class="conquista-card-desc">Complete seu primeiro flashcard</div>
-      <button class="conquista-card-btn" onclick="Conquistas.fecharModal()">Continua →</button>
+      <button class="conquista-card-btn" onclick="Conquistas.fecharModal()" aria-label="Continuar">Continua →</button>
     </div>
   </div>
 
   <!-- Level-Up modal -->
-  <div id="levelup-modal" class="levelup-modal" onclick="if(event.target===this)LevelUp.fechar()">
+  <div id="levelup-modal" class="levelup-modal" role="dialog" aria-modal="true" aria-labelledby="levelup-nome" onclick="if(event.target===this)LevelUp.fechar()">
     <div class="levelup-card" id="levelup-card">
       <div class="levelup-shimmer"></div>
       <div class="levelup-stars">✦ ✦ ✦</div>
@@ -468,12 +471,12 @@
       <div class="levelup-num" id="levelup-num">2</div>
       <div class="levelup-nome" id="levelup-nome">Esploratore</div>
       <div class="levelup-desbloqueios" id="levelup-desbloqueios"></div>
-      <button class="levelup-btn" onclick="LevelUp.fechar()">Forza! →</button>
+      <button class="levelup-btn" onclick="LevelUp.fechar()" aria-label="Continuar após subir de nível">Forza! →</button>
     </div>
   </div>
 
   <!-- Onboarding modal -->
-  <div id="onboarding-modal" class="onboarding-modal" style="display:none;">
+  <div id="onboarding-modal" class="onboarding-modal" role="dialog" aria-modal="true" aria-label="Boas-vindas e introdução ao aplicativo" style="display:none;">
     <div class="onb-card">
       <button class="onb-btn-skip" onclick="Onboarding.pularTudo()" title="Pular introdução">
         Pular Tudo ✕
@@ -531,7 +534,7 @@
   </div>
 
   <!-- Bottom navigation for mobile -->
-  <nav class="bottom-nav" id="bottom-nav">
+  <nav class="bottom-nav" id="bottom-nav" aria-label="Navegação móvel">
     <button class="nav-tab-btn ativa" data-section="templi" onclick="App.navegar('templi')" data-i18n="nav_inicio">🏛️<span>Início</span></button>
     <button class="nav-tab-btn" data-section="dialoghi" onclick="App.navegar('dialoghi')" data-i18n="nav_dialogos">💬<span>Diálogos</span></button>
     <button class="nav-tab-btn" data-section="canzoni" onclick="App.navegar('canzoni')" data-i18n="nav_canzoni">🎵<span>Músicas</span></button>
@@ -615,18 +618,18 @@
       });
     }
   </script>
-  <div id="modal-meta-prazo" class="modal" style="display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem;">
+  <div id="modal-meta-prazo" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-meta-prazo-titulo" style="display:none; position:fixed; inset:0; z-index:2200; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; padding:1rem;">
     <div class="modal-conteudo" style="background:#fff; border-radius:18px; padding:2rem; max-width:400px; width:100%; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,0.2);">
-      <h3 style="font-family:'Cinzel',serif;color:#9B2335;margin-bottom:1rem;font-size:1.3rem;" data-i18n="meta_minha">🎯 Minha Meta</h3>
-      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_nivel">Quero atingir o nível:</label>
-      <select id="meta-nivel-alvo" style="width:100%;margin-bottom:1rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
+      <h3 id="modal-meta-prazo-titulo" style="font-family:'Cinzel',serif;color:#9B2335;margin-bottom:1rem;font-size:1.3rem;" data-i18n="meta_minha">🎯 Minha Meta</h3>
+      <label for="meta-nivel-alvo" style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_nivel">Quero atingir o nível:</label>
+      <select id="meta-nivel-alvo" aria-label="Quero atingir o nível" style="width:100%;margin-bottom:1rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
         <option value="5" data-i18n="nivel_5">Nível 5 — Principiante (A1)</option>
         <option value="10" data-i18n="nivel_10">Nível 10 — Intermediário (A2)</option>
         <option value="15" data-i18n="nivel_15">Nível 15 — Avançado (B1)</option>
         <option value="20" data-i18n="nivel_20">Nível 20 — Maestro (B2)</option>
       </select>
-      <label style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_data">Até a data:</label>
-      <input type="date" id="meta-data-alvo" style="width:100%;margin-bottom:1.5rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
+      <label for="meta-data-alvo" style="display:block;text-align:left;font-size:0.85rem;color:#666;margin-bottom:0.3rem;" data-i18n="meta_data">Até a data:</label>
+      <input type="date" id="meta-data-alvo" aria-label="Até a data" style="width:100%;margin-bottom:1.5rem;padding:0.6rem;border:2px solid #ddd;border-radius:8px;font-family:inherit;color:#333;background:#fff;">
       <div style="display:flex;gap:0.5rem;">
         <button class="btn-primario" style="flex:1" onclick="App.confirmarMetaPrazo()" data-i18n="meta_definir">Definir Meta</button>
         <button class="btn-secondario" style="flex:1" onclick="App.fecharModalMetaPrazo()" data-i18n="btn_cancelar">Cancelar</button>
@@ -639,7 +642,7 @@
   <input type="file" id="custom-input" accept=".json" style="display:none" onchange="Profilo.importarConteudoCustom(event)">
 
   <!-- IA Import Modal -->
-  <div id="ia-import-modal" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);">
+  <div id="ia-import-modal" role="dialog" aria-modal="true" aria-labelledby="ia-import-titulo" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);">
     <div class="ia-import-box">
       <button class="ia-modal-close" onclick="IAImport.fechar()" aria-label="Fechar">×</button>
       <h2 id="ia-import-titulo" class="ia-import-titulo">🤖 Adicionar via IA</h2>
@@ -661,8 +664,8 @@
         </div>
 
         <div class="ia-step">
-          <p class="ia-step-label">2. Cole aqui a resposta JSON gerada pela IA:</p>
-          <textarea id="ia-paste-area" class="ia-paste-area" placeholder="Cole o JSON gerado pela IA aqui..."></textarea>
+          <label for="ia-paste-area" class="ia-step-label" style="display:block">2. Cole aqui a resposta JSON gerada pela IA:</label>
+          <textarea id="ia-paste-area" class="ia-paste-area" placeholder="Cole o JSON gerado pela IA aqui..." aria-label="Resposta JSON da IA"></textarea>
         </div>
 
         <div class="ia-actions" style="margin-top:1rem">
@@ -676,9 +679,9 @@
         <p class="ia-step-label" style="margin-bottom:0.6rem">Cole livros inteiros, contos ou capítulos em italiano. O sistema diagramará automaticamente em páginas de livro clássico sem rolagem com tradução sob demanda!</p>
         
         <div style="display:flex;gap:0.5rem;margin-bottom:0.6rem;flex-wrap:wrap">
-          <input type="text" id="ia-livro-titulo" placeholder="Título do Livro (ex: Le Avventure di Pinocchio)" style="flex:2;min-width:180px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
-          <input type="text" id="ia-livro-autor" placeholder="Autor (ex: Carlo Collodi)" style="flex:1;min-width:130px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
-          <select id="ia-livro-nivel" style="padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+          <input type="text" id="ia-livro-titulo" placeholder="Título do Livro (ex: Le Avventure di Pinocchio)" aria-label="Título do Livro" style="flex:2;min-width:180px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+          <input type="text" id="ia-livro-autor" placeholder="Autor (ex: Carlo Collodi)" aria-label="Autor do Livro" style="flex:1;min-width:130px;padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
+          <select id="ia-livro-nivel" aria-label="Nível CEFR" style="padding:0.45rem 0.65rem;border-radius:6px;border:1px solid rgba(212,168,67,0.3);background:var(--cor-marmore,#faf6ee);color:var(--cor-inchiostro,#2C2418)">
             <option value="A1">Nível A1</option>
             <option value="A2">Nível A2</option>
             <option value="B1" selected>Nível B1</option>
@@ -688,7 +691,7 @@
           </select>
         </div>
 
-        <textarea id="ia-livro-texto" class="ia-paste-area" style="min-height:160px;height:180px" placeholder="Cole aqui o texto em italiano do livro ou dos capítulos (quebras de linha separam parágrafos; 'Capitolo 1', 'Capitolo 2' etc. criam novos capítulos automaticamente)..."></textarea>
+        <textarea id="ia-livro-texto" class="ia-paste-area" style="min-height:160px;height:180px" placeholder="Cole aqui o texto em italiano do livro ou dos capítulos (quebras de linha separam parágrafos; 'Capitolo 1', 'Capitolo 2' etc. criam novos capítulos automaticamente)..." aria-label="Texto em italiano do livro ou capítulos"></textarea>
 
         <div class="ia-actions" style="margin-top:1rem">
           <button class="btn-secondario" onclick="IAImport.fechar()">Cancelar</button>

@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -33,6 +33,9 @@ function copyLegacyAssets() {
 export default defineConfig({
   plugins: [copyLegacyAssets()],
   base: './',
+  test: {
+    exclude: ['**/node_modules/**', '**/dist/**', 'tests/a11y/**']
+  },
   server: {
     port: 5173,
     open: false,

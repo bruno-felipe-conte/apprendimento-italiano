@@ -435,7 +435,7 @@ const Quiz = {
     const gramData = App.estado.grammarData || { moduli: [] };
     if (gramData.moduli.length === 0) {
       const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+      msg.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
       msg.textContent = I18n.t('quiz_gram_nao_carregado');
       seletor.appendChild(msg);
     } else {
@@ -457,7 +457,7 @@ const Quiz = {
     const verbosDisponiveis = (App.estado.conjugacoesData || []);
     if (verbosDisponiveis.length === 0) {
       const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:#aaa;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+      msg.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
       msg.textContent = I18n.t('quiz_verbi_nao_carregado');
       seletor.appendChild(msg);
     } else {

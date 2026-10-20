@@ -190,8 +190,8 @@ const Storie = {
       ? { tut: 'Tutte', cerca: '🔍 Titolo o autore...', nenhuma: 'Nessuna storia ancora.', risultato: 'Nessun risultato.' }
       : { tut: 'Todas', cerca: '🔍 Título ou autor...', nenhuma: 'Nenhuma história ainda.', risultato: 'Nenhum resultado.' };
 
-    // Cores para cada nível CEFR
-    const corNivel = { A1:'#27AE60', A2:'#1ABC9C', B1:'#2980B9', B2:'#8E44AD', C1:'#E67E22', C2:'#C0392B' };
+    // Cores para cada nível CEFR (WCAG AA compliant: contrast >= 4.5:1 against white and parchment)
+    const corNivel = { A1:'#145A32', A2:'#0A5C55', B1:'#1A5276', B2:'#6C3483', C1:'#9C3D00', C2:'#922B21' };
 
     let html = `
       <!-- Linha 1: busca + ação -->
@@ -204,10 +204,10 @@ const Storie = {
       <!-- Linha 2: filtros -->
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
-          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ccc'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
+          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#543D75':'#8F7E6D'};background:${_o===v?'#543D75':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
           return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
         })()}
-        <select class="nivel-select${this._filtroNivel?' ativo':''}"
+        <select class="nivel-select${this._filtroNivel?' ativo':''}" aria-label="Filtrar histórias por nível"
           onchange="Storie._filtroNivel=this.value;Storie.renderizarSeletor()">
           <option value="">🎯 Nível</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
@@ -237,7 +237,7 @@ const Storie = {
             ${sTituloEsc}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
           ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${sIdEsc}')">🗑️ Remover</button>`:''}
-          <div style="font-size:0.72rem;color:var(--cor-pietra);font-style:italic">${sAutorEsc}</div>
+          <div style="font-size:0.72rem;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic">${sAutorEsc}</div>
           <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
             <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
             <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
@@ -246,7 +246,7 @@ const Storie = {
     }
 
     if (filtrate.length === 0) {
-      html += `<p style="text-align:center;color:#aaa;font-style:italic;grid-column:1/-1;padding:2rem 0">${this._filtroTexto?labels.risultato:labels.nenhuma}</p>`;
+      html += `<p style="text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;grid-column:1/-1;padding:2rem 0">${this._filtroTexto?labels.risultato:labels.nenhuma}</p>`;
     }
 
     html += '</div>';
