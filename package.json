@@ -15,6 +15,8 @@
     "lint": "eslint js/ tests/",
     "lint:fix": "eslint js/ tests/ --fix",
     "typecheck": "tsc --noEmit",
+    "content:validate": "tsx scripts/validate_content.ts",
+    "content:ingest": "tsx scripts/ingest_content.ts",
     "format": "prettier --write \"js/**/*.{js,ts}\" \"css/**/*.css\" \"types/**/*.ts\"",
     "format:check": "prettier --check \"js/**/*.{js,ts}\" \"css/**/*.css\" \"types/**/*.ts\""
   },
@@ -40,9 +42,13 @@
     "globals": "^17.13.0",
     "happy-dom": "^21.0.4",
     "prettier": "^3.5.2",
+    "tsx": "^4.23.15",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.72.0",
     "vite": "^8.3.4",
     "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
   }
 }

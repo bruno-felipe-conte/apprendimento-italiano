@@ -1,0 +1,45 @@
+name: Content Pipeline & Sync (EV-03)
+
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'content/**'
+      - 'scripts/schemas.ts'
+      - 'scripts/validate_content.ts'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'content/**'
+      - 'scripts/schemas.ts'
+      - 'scripts/validate_content.ts'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Motivo da sincronização manual ou acionamento via CMS webhook'
+        required: false
+        default: 'Manual CMS / Contentful Sync'
+
+jobs:
+  validate-and-test-content:
+    name: Validar Dados Mestres e Integridade
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Validar Dados com Zod Schemas
+        run: npm run content:validate
+
+      - name: Executar Testes Automatizados de Pipeline
+        run: npm test tests/content_pipeline.test.ts
