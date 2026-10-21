@@ -6,4 +6,18 @@ Thumbs.db
 dist/
 test-results/
 playwright-report/
+coverage/
 
+# Environment files
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE & planning
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+.planning/

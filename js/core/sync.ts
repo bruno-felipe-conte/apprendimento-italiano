@@ -21,7 +21,7 @@ const MAX_ATTEMPTS = 5;
 // ADAPTER MOCK (Para Testes e Modo Local)
 // ==========================================
 export class MockBackendAdapter implements IBackendAdapter {
-  provider: 'mock' = 'mock';
+  provider = 'mock' as const;
   public memoryStore: Map<string, Map<string, any>> = new Map();
   public shouldFail: boolean = false;
   public networkDelayMs: number = 0;
@@ -77,7 +77,7 @@ export class MockBackendAdapter implements IBackendAdapter {
 // ADAPTER SUPABASE (REST / PostgREST)
 // ==========================================
 export class SupabaseAdapter implements IBackendAdapter {
-  provider: 'supabase' = 'supabase';
+  provider = 'supabase' as const;
   private config: BackendConfig = { provider: 'supabase', endpoint: '' };
 
   init(config: BackendConfig): void {
@@ -165,7 +165,7 @@ export class SupabaseAdapter implements IBackendAdapter {
 // ADAPTER POCKETBASE (REST)
 // ==========================================
 export class PocketBaseAdapter implements IBackendAdapter {
-  provider: 'pocketbase' = 'pocketbase';
+  provider = 'pocketbase' as const;
   private config: BackendConfig = { provider: 'pocketbase', endpoint: '' };
 
   init(config: BackendConfig): void {

@@ -23,7 +23,11 @@ test.describe('HAR-05: Auditoria de Acessibilidade com @axe-core (WCAG 2.1 AA)',
             transition: none !important;
           }
         `;
-        document.head ? document.head.appendChild(style) : document.documentElement.appendChild(style);
+        if (document.head) {
+          document.head.appendChild(style);
+        } else {
+          document.documentElement.appendChild(style);
+        }
       };
       injectStyle();
       document.addEventListener('DOMContentLoaded', injectStyle);
