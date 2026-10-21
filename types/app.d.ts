@@ -189,6 +189,30 @@ export interface IBackendAdapter {
   authWithPassword?(email: string, password: string): Promise<{ token: string; user: any }>;
 }
 
+export interface AnalyticsEvent {
+  id: string;
+  name: string;
+  properties: Record<string, any>;
+  timestamp: number;
+  userId?: string;
+  sessionId?: string;
+}
+
+export interface FeatureFlag {
+  key: string;
+  variants: string[];
+  weights?: number[];
+  defaultValue: string;
+  enabled?: boolean;
+}
+
+export interface IAnalyticsProvider {
+  name: string;
+  init?(config?: any): void | Promise<void>;
+  track(event: AnalyticsEvent): void | Promise<void>;
+  identify?(userId: string, traits?: Record<string, any>): void | Promise<void>;
+}
+
 declare global {
   interface Window {
     App: any;
@@ -196,6 +220,8 @@ declare global {
     AppNavigation: any;
     AppPluginManager: any;
     AppSyncManager: any;
+    AppAnalytics: any;
+    AppFeatureFlags: any;
     AppXP: any;
     AppStats: any;
     AppMeta: any;
@@ -232,4 +258,5 @@ declare global {
     _activeVoiceUtterance: SpeechSynthesisUtterance | null;
   }
 }
+
 

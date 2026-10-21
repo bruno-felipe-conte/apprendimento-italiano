@@ -69,6 +69,12 @@ const AppNavigation = {
       pluginMgr.notifySectionChange(secao, secaoAnterior);
     }
 
+    // Registra telemetria de visualização de seção (EV-04)
+    const analytics = (typeof window !== 'undefined' && window.AppAnalytics) || (typeof globalThis !== 'undefined' && globalThis.AppAnalytics);
+    if (analytics && typeof analytics.page === 'function') {
+      analytics.page(secao, { de: secaoAnterior });
+    }
+
     if (typeof document !== 'undefined') {
       // Update tab buttons
       document.querySelectorAll('.nav-tab').forEach(btn => {

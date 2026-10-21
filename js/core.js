@@ -88,9 +88,18 @@ const App = {
   sincronizar: () => _g('AppSyncManager')?.flush(),
   obterStatusSync: () => _g('AppSyncManager')?.getStatus(),
 
+  // ── Analytics & A/B Testing (js/core/analytics.ts) ────────
+  get analytics() { return _g('AppAnalytics'); },
+  get features() { return _g('AppFeatureFlags'); },
+  track: (name, props) => _g('AppAnalytics')?.track(name, props),
+  getFlag: (key) => _g('AppFeatureFlags')?.getVariant(key),
+
   // ── Bootstrap & Lifecycle ──────────────────────────────────
   async init() {
     this.initGlobalErrorHandler();
+    if (_g('AppAnalytics')) {
+      _g('AppAnalytics').track('app_initialized', { timestamp: Date.now() });
+    }
     if (_g('AppPluginManager')) {
       await _g('AppPluginManager').initAll(this);
     }
