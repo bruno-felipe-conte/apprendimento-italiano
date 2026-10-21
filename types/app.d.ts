@@ -139,12 +139,63 @@ export interface IPlugin {
   onSectionChange?(novaSecao: string, secaoAnterior: string): void;
 }
 
+export type SyncEntity = 'users' | 'progress' | 'flashcards' | 'quiz_history' | 'stories_read' | 'custom_content';
+export type SyncAction = 'create' | 'update' | 'delete';
+
+export interface SyncItem {
+  id: string;
+  entity: SyncEntity;
+  action: SyncAction;
+  entityId: string;
+  payload: Record<string, any>;
+  timestamp: number;
+  attempts: number;
+  lastAttempt?: number;
+  lastError?: string;
+}
+
+export interface SyncBatchResult {
+  sucesso: boolean;
+  processados: string[];
+  falhas: { id: string; erro: string }[];
+}
+
+export interface SyncStatus {
+  isOnline: boolean;
+  isSyncing: boolean;
+  pendingCount: number;
+  lastSyncSuccess: number | null;
+  lastSyncError: string | null;
+  provider: 'supabase' | 'pocketbase' | 'mock' | 'none';
+  userId: string | null;
+}
+
+export interface BackendConfig {
+  provider: 'supabase' | 'pocketbase' | 'mock' | 'none';
+  endpoint: string;
+  apiKey?: string;
+  authToken?: string;
+  userId?: string;
+  autoSync?: boolean;
+  syncIntervalMs?: number;
+}
+
+export interface IBackendAdapter {
+  provider: 'supabase' | 'pocketbase' | 'mock' | 'none';
+  init(config: BackendConfig): Promise<void> | void;
+  syncBatch(items: SyncItem[]): Promise<SyncBatchResult>;
+  pullLatest?(entity: SyncEntity, sinceTimestamp: number): Promise<any[]>;
+  authMagicLink?(email: string): Promise<boolean>;
+  authWithPassword?(email: string, password: string): Promise<{ token: string; user: any }>;
+}
+
 declare global {
   interface Window {
     App: any;
     AppState: any;
     AppNavigation: any;
     AppPluginManager: any;
+    AppSyncManager: any;
     AppXP: any;
     AppStats: any;
     AppMeta: any;
@@ -181,3 +232,4 @@ declare global {
     _activeVoiceUtterance: SpeechSynthesisUtterance | null;
   }
 }
+

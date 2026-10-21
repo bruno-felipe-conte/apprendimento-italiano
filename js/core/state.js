@@ -146,6 +146,12 @@ const AppState = {
         try { localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso)); } catch (_) {}
       }
     }
+    try {
+      const sync = (typeof window !== 'undefined' && window.AppSyncManager) || (typeof globalThis !== 'undefined' && globalThis.AppSyncManager);
+      if (sync && this.estado.progresso) {
+        sync.enfileirar('progress', 'update', 'current_progress', this.estado.progresso);
+      }
+    } catch (_) {}
   },
 
   carregarFlashcards() {
@@ -165,6 +171,12 @@ const AppState = {
         try { localStorage.setItem('it_flashcards', JSON.stringify(this.estado.flashcardData)); } catch (_) {}
       }
     }
+    try {
+      const sync = (typeof window !== 'undefined' && window.AppSyncManager) || (typeof globalThis !== 'undefined' && globalThis.AppSyncManager);
+      if (sync && this.estado.flashcardData) {
+        sync.enfileirar('flashcards', 'update', 'current_deck', this.estado.flashcardData);
+      }
+    } catch (_) {}
   },
 
   _gcFlashcards() {

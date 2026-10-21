@@ -83,6 +83,11 @@ const App = {
   getPlugin: (id) => _g('AppPluginManager')?.get(id),
   getPlugins: () => _g('AppPluginManager')?.getAll() || [],
 
+  // ── Backend Lite & Sync (js/core/sync.ts) ──────────────────
+  get sync() { return _g('AppSyncManager'); },
+  sincronizar: () => _g('AppSyncManager')?.flush(),
+  obterStatusSync: () => _g('AppSyncManager')?.getStatus(),
+
   // ── Bootstrap & Lifecycle ──────────────────────────────────
   async init() {
     this.initGlobalErrorHandler();
@@ -92,6 +97,10 @@ const App = {
     this.estado.progresso = this.carregarProgresso();
     this.estado.flashcardData = this.carregarFlashcards();
     if (typeof I18n !== 'undefined') I18n.inicializar();
+
+    if (_g('AppSyncManager') && typeof navigator !== 'undefined' && navigator.onLine) {
+      _g('AppSyncManager').flush().catch(() => {});
+    }
 
     if (this._hidratarCacheLocal()) {
       this.atualizarStats();

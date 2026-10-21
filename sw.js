@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v137';
+const CACHE = 'italiano-v138';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -26,6 +26,9 @@ const STATIC = [
   './js/voice_engine.ts',
   './js/modal_manager.ts',
   './js/progression.ts',
+  './js/core/plugins.ts',
+  './js/plugins/index.ts',
+  './js/core/sync.ts',
   './js/audio.js?v=91',
   './js/conquistas.js?v=88',
   './js/core/state.js',
@@ -196,4 +199,18 @@ self.addEventListener('notificationclick', event => {
     })
   );
 });
+
+// ── Background Sync (EV-02) ───────────────────────────────
+self.addEventListener('sync', event => {
+  if (event.tag === 'app-sync-queue') {
+    event.waitUntil(
+      clients.matchAll({ type: 'window', includeUncontrolled: true }).then(lista => {
+        for (const client of lista) {
+          client.postMessage({ type: 'EXECUTE_SYNC_QUEUE' });
+        }
+      })
+    );
+  }
+});
+
 
