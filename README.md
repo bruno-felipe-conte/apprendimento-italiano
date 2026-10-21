@@ -28,7 +28,7 @@ O sistema funciona inteiramente no navegador, armazena todo o progresso no apare
 
 ```mermaid
 flowchart LR
-    A["🏛️ Templos & Vocabulário<br>5.396 termos (IPA)"] --> D["🧠 Memória & Fala<br>Flashcards (SM-2) & Shadowing"]
+    A["🏛️ Templos & Vocabulário<br>5.396 termos (IPA)"] --> D["🧠 Memória & Fala<br>Flashcards (FSRS-4.5) & Shadowing"]
     B["📚 Gramática NMA<br>82 Lições (A1 a C2)"] --> D
     C["🎭 Imersão Cultural<br>Diálogos, Músicas & Contos"] --> D
     D --> E["🏆 Fluência & Domínio<br>Ofensivas, XP e Autonomia"]
@@ -54,7 +54,7 @@ flowchart LR
 | **🗣️ Treino de Imitação** | **200** exercícios | A1 – C1 | Técnica de *Shadowing* com foco em cadência e fonética real |
 | **🎵 Canções Italianas** | **100** músicas | A1 – B2 | Treino de escuta com preenchimento contextual de lacunas (*Cloze*) |
 | **📜 Histórias & Filosofia** | **38** textos | B1 – C2 | Tradução por parágrafo, vocabulário assistido e leitura reflexiva |
-| **🃏 Sistema de Flashcards** | Algoritmo **SM-2** | Todos | Agendamento de revisões espaçadas para retenção de longo prazo |
+| **🃏 Sistema de Flashcards** | Algoritmo **FSRS-4.5** | Todos | Agendamento de repetição espaçada contínua para retenção de longo prazo |
 | **❓ Quizzes Morfológicos** | Múltiplas etapas | A1 – B2 | Fixação de flexões verbais, artigos e regências |
 
 </div>
@@ -73,7 +73,7 @@ graph TD
     end
 
     subgraph S2 ["2. Retenção Ativa"]
-        F["🃏 Flashcards SM-2<br>Revisão intervalada com foco em evocação ativa"]
+        F["🃏 Flashcards FSRS-4.5<br>Revisão intervalada com foco em evocação ativa"]
         Q["❓ Quizzes Morfológicos<br>Validação de padrões, conjugações e artigos"]
     end
 
@@ -158,13 +158,19 @@ npm run dev
 # 3. Executar suíte de testes unitários (Vitest)
 npm run test
 
-# 4. Executar auditoria de acessibilidade WCAG 2.1 AA (@axe-core)
+# 4. Validar acervo de conteúdos mestres (Zod)
+npm run content:validate
+
+# 5. Validar integridade e mitigação de edge-cases FSRS-4.5
+npm run fsrs:validate
+
+# 6. Executar auditoria de acessibilidade WCAG 2.1 AA (@axe-core)
 npm run test:a11y
 
-# 5. Verificação de tipos estritos
+# 7. Verificação de tipos estritos
 npm run typecheck
 
-# 6. Compilação de produção
+# 8. Compilação de produção
 npm run build
 ```
 
@@ -183,12 +189,16 @@ apprendimento-italiano/
 ├── types/
 │   └── app.d.ts            # Contratos e tipos canônicos da aplicação
 ├── js/
-│   ├── core/               # Módulos desacoplados de estado, navegação, XP e diagnósticos
+│   ├── core/               # Módulos desacoplados de arquitetura, dados e sincronização
 │   │   ├── state.js        # Estado reativo e persistência
 │   │   ├── navigation.js   # Controle de navegação e sidebar
 │   │   ├── xp.js           # Gamificação, cálculo de XP e ofensivas
 │   │   ├── stats.js        # Estatísticas de estudo e Health Check
-│   │   └── ...
+│   │   ├── plugins.ts      # Arquitetura de micro-plugins desacoplados (EV-01)
+│   │   ├── sync.ts         # Fila offline-first e adaptadores Supabase/PocketBase (EV-02)
+│   │   ├── analytics.ts    # Telemetria offline-first e testes A/B determinísticos (EV-04)
+│   │   └── collaboration.ts# Reconciliação CRDT/LWW, shared decks e leaderboard (EV-05)
+│   ├── plugins/            # Plugins modulares carregados sob demanda
 │   ├── core.js             # Facade global retrocompatível (App.*)
 │   ├── modal_manager.ts    # Gerenciador unificado de modais (focus trap, ARIA)
 │   ├── progression.ts      # Motor de progressão e FSRS
@@ -200,16 +210,27 @@ apprendimento-italiano/
 │   ├── canzoni.js          # Exercícios com músicas e cloze test
 │   ├── imitazione.js       # Treinos de shadowing fonético
 │   └── storie.js           # Visualizador de histórias bilíngues
+├── scripts/
+│   ├── schemas.ts          # Schemas Zod canônicos para templos, gramática e histórias
+│   ├── validate_content.ts # Pipeline de validação estrita de acervo de dados mestres
+│   ├── validate-fsrs.js    # Verificador de integridade e edge cases de cartões FSRS
+│   ├── ingest_content.ts   # Ingestão segura de novos módulos com deduplicação
+│   └── stress-storage.js   # Benchmark e teste de estresse de localStorage
 ├── tests/
 │   ├── a11y/               # Testes automatizados de acessibilidade (WCAG 2.1 AA)
+│   ├── content_pipeline.test.ts # Testes do pipeline automatizado de conteúdo
+│   ├── sync.test.ts        # Testes de sincronização offline-first e fila
+│   ├── analytics.test.ts   # Testes de eventos e amostragem A/B
+│   ├── collaboration.test.ts # Testes de reconciliação CRDT e decks compartilhados
+│   ├── plugins.test.ts     # Testes do lifecycle de plugins
 │   ├── progression.test.ts # Testes de progressão e FSRS
 │   ├── voice_engine.test.ts# Testes do motor de áudio
 │   ├── security.test.js    # Testes de sanitização XSS e segurança
 │   └── navigation.test.js  # Testes de rotas e navegação
 ├── docs/
 │   └── adr/                # Registros de Decisões Arquiteturais (ADRs 001 a 004)
-├── data/                   # Acervo JSON (Templos, Gramática, Diálogos, Canções)
-├── sw.js                   # Service Worker (estratégia cache-first offline)
+├── data/                   # Acervo JSON (54 arquivos mestres validados com Zod)
+├── sw.js                   # Service Worker (estratégia cache-first offline v140)
 └── manifest.webmanifest    # Manifesto para instalação PWA
 ```
 
