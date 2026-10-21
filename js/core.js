@@ -94,6 +94,13 @@ const App = {
   track: (name, props) => _g('AppAnalytics')?.track(name, props),
   getFlag: (key) => _g('AppFeatureFlags')?.getVariant(key),
 
+  // ── Multi-Device Sync & Collaboration (js/core/collaboration.ts) ──
+  get collaboration() { return _g('AppCollaboration'); },
+  reconciliarDados: (remoto) => _g('AppCollaboration')?.reconciliar(
+    { progresso: _g('AppState')?.estado?.progresso, flashcards: _g('AppState')?.estado?.flashcardData },
+    remoto
+  ),
+
   // ── Bootstrap & Lifecycle ──────────────────────────────────
   async init() {
     this.initGlobalErrorHandler();

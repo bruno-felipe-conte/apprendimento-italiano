@@ -49,6 +49,7 @@ export interface ProgressoUsuario {
   templos_concluidos: number[];
   total_palavras: number;
   streak: number;
+  streak_recorde?: number;
   ultimo_estudo: number | null;
   grammatica_completadas: string[];
   meta_diaria: number;
@@ -213,6 +214,49 @@ export interface IAnalyticsProvider {
   identify?(userId: string, traits?: Record<string, any>): void | Promise<void>;
 }
 
+export interface SyncConflict<T = any> {
+  entityId: string;
+  localVersion: T;
+  remoteVersion: T;
+  resolvedVersion: T;
+  strategy: 'last-write-wins' | 'crdt-merge' | 'manual';
+  timestamp: number;
+}
+
+export interface ReconciliationResult {
+  conflictsDetected: number;
+  conflictsResolved: number;
+  updatedLocal: boolean;
+  mergedProgress?: ProgressoUsuario;
+  mergedFlashcards?: Record<string, FlashcardFSRS>;
+}
+
+export interface SharedDeck {
+  id: string;
+  title: string;
+  description: string;
+  author: string;
+  version: string;
+  createdAt: number;
+  cards: Array<{
+    palavra: string;
+    traducao: string;
+    exemplo?: string;
+    categoria?: string;
+    ipa?: string;
+  }>;
+  checksum: string;
+}
+
+export interface LeaderboardEntry {
+  userId: string;
+  nome: string;
+  avatar: string;
+  xpSemanal: number;
+  streak: number;
+  isCurrentUser?: boolean;
+}
+
 declare global {
   interface Window {
     App: any;
@@ -222,6 +266,7 @@ declare global {
     AppSyncManager: any;
     AppAnalytics: any;
     AppFeatureFlags: any;
+    AppCollaboration: any;
     AppXP: any;
     AppStats: any;
     AppMeta: any;
@@ -258,5 +303,6 @@ declare global {
     _activeVoiceUtterance: SpeechSynthesisUtterance | null;
   }
 }
+
 
 
