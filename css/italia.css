@@ -6895,3 +6895,135 @@ body.dark-mode .nivel-select option {
     body.dark-mode .app-tour-theme .driver-popover-arrow-side-top::before {
       border-bottom-color: #1E1912 !important;
     }
+
+    /* ── 25. POPUP DE LEMBRETE DE BACKUP (A CADA 3 DIAS / 20S) ── */
+    .backup-popup-container {
+      position: fixed;
+      top: calc(var(--app-header-h, 72px) + 12px);
+      right: 16px;
+      z-index: 9980;
+      max-width: min(390px, calc(100vw - 32px));
+      pointer-events: auto;
+      animation: backupPopupIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .backup-popup-container.saindo {
+      animation: backupPopupOut 0.3s ease forwards;
+    }
+    .backup-popup-card {
+      position: relative;
+      background: var(--cor-pergamena, #FFFDF8);
+      color: var(--cor-inchiostro, #2B1810);
+      border: 1px solid var(--cor-toscano, #C59B27);
+      border-radius: 14px;
+      padding: 1rem 1.15rem 1.15rem;
+      box-shadow: 0 12px 32px rgba(43, 24, 16, 0.18), 0 2px 6px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    body.dark-mode .backup-popup-card {
+      background: #231E18;
+      color: #EDE5DA;
+      border-color: rgba(212, 168, 67, 0.45);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+    .backup-popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.45rem;
+    }
+    .backup-popup-title {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--cor-vermelho-roma, #8B1E2F);
+    }
+    body.dark-mode .backup-popup-title {
+      color: #E8B84B;
+    }
+    .backup-popup-close {
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      color: #8C7B6E;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .backup-popup-close:hover {
+      background: rgba(0,0,0,0.06);
+      color: #2B1810;
+    }
+    body.dark-mode .backup-popup-close:hover {
+      background: rgba(255,255,255,0.1);
+      color: #FFFFFF;
+    }
+    .backup-popup-desc {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin: 0 0 0.85rem 0;
+      opacity: 0.92;
+    }
+    .backup-popup-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .backup-popup-btn {
+      background: linear-gradient(135deg, #8B1E2F, #B83248);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.55rem 1rem;
+      border-radius: 9px;
+      border: 1px solid rgba(212, 168, 67, 0.5);
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(139, 30, 47, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .backup-popup-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(139, 30, 47, 0.35);
+      background: linear-gradient(135deg, #9E2235, #C43850);
+    }
+    .backup-popup-btn:active {
+      transform: translateY(0);
+    }
+    .backup-popup-progress-track {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(0, 0, 0, 0.08);
+    }
+    body.dark-mode .backup-popup-progress-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .backup-popup-progress {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #C59B27, #8B1E2F);
+      transform-origin: left center;
+      animation: backupProgressCountdown 20s linear forwards;
+    }
+    body.dark-mode .backup-popup-progress {
+      background: linear-gradient(90deg, #E8B84B, #C4304A);
+    }
+    @keyframes backupPopupIn {
+      from { opacity: 0; transform: translateY(-12px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes backupPopupOut {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to   { opacity: 0; transform: translateY(-10px) scale(0.97); }
+    }
+    @keyframes backupProgressCountdown {
+      from { transform: scaleX(1); }
+      to   { transform: scaleX(0); }
+    }

@@ -153,6 +153,7 @@ const App = {
     }
 
     if (typeof Onboarding !== 'undefined' && Onboarding.deveExibir()) Onboarding.mostrar();
+    if (typeof BackupReminder !== 'undefined') BackupReminder.verificarLembrete();
 
     if (typeof document !== 'undefined') {
       document.addEventListener('keydown', (e) => {

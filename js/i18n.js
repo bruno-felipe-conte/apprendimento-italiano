@@ -289,6 +289,22 @@ const I18n = {
         "pt": "O Italiano Autentico guarda seu progresso localmente no seu dispositivo. Faça backup regularmente para não perder seus dados caso limpe o histórico do navegador.",
         "it": "Italiano Autentico salva i tuoi progressi localmente sul tuo dispositivo. Fai regolarmente un backup per non perdere i tuoi dati se cancelli la cronologia del browser."
     },
+    "backup_popup_titulo": {
+        "pt": "⚠️ Salve seu Progresso!",
+        "it": "⚠️ Salva i tuoi Progressi!"
+    },
+    "backup_popup_desc": {
+        "pt": "Se o cache ou dados do navegador forem limpos, sua evolução nos estudos (XP, flashcards e templos) será perdida. Faça um backup regular!",
+        "it": "Se la cache o i dati del browser vengono cancellati, perderai i tuoi progressi (XP, flashcard e templi). Fai un backup regolare!"
+    },
+    "backup_popup_btn": {
+        "pt": "💾 Fazer Backup Agora",
+        "it": "💾 Fai il Backup Ora"
+    },
+    "backup_popup_fechar": {
+        "pt": "Fechar",
+        "it": "Chiudi"
+    },
     "prof_exp_backup": {
         "pt": "⬇️ Exportar Backup",
         "it": "⬇️ Esporta Backup"

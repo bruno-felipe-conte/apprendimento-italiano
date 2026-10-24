@@ -466,18 +466,28 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
           if (!item.titulo || typeof item.titulo !== 'string') {
             throw new Error(`Diálogo #${i + 1} sem campo "titulo".`);
           }
-          if (!Array.isArray(item.turnos) || item.turnos.length === 0) {
-            throw new Error(`Diálogo "${item.titulo}" deve conter lista de "turnos".`);
+          // Aceita polimorficamente "turni" (padrão do prompt) ou "turnos"
+          const turnos = item.turni || item.turnos;
+          if (!Array.isArray(turnos) || turnos.length === 0) {
+            throw new Error(`Diálogo "${item.titulo}" deve conter lista de "turni" ou "turnos".`);
           }
+          item.turni = turnos;
+          item.turnos = turnos; // compatibilidade dupla
           item.titulo = this._sanitizarString(item.titulo);
           item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
-          item.turnos.forEach((t, idx) => {
+          if (item.contexto) item.contexto = this._sanitizarString(item.contexto);
+
+          turnos.forEach((t, idx) => {
             if (!t.frase && !t.alternativas) {
               throw new Error(`Turno ${idx + 1} sem frase ou alternativas.`);
             }
             if (t.frase) t.frase = this._sanitizarString(t.frase);
+            if (t.personaggio) t.personaggio = this._sanitizarString(t.personaggio);
             if (t.falante) t.falante = this._sanitizarString(t.falante);
             if (t.traducao) t.traducao = this._sanitizarString(t.traducao);
+            if (Array.isArray(t.alternativas)) {
+              t.alternativas = t.alternativas.map(alt => this._sanitizarString(alt));
+            }
           });
         }
         return arr;
@@ -509,17 +519,50 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
           if (!item.titulo || typeof item.titulo !== 'string') {
             throw new Error(`História #${i + 1} sem campo "titulo".`);
           }
-          if (!Array.isArray(item.paragrafos) || item.paragrafos.length === 0) {
-            throw new Error(`História "${item.titulo}" deve conter lista de "paragrafos".`);
+          // Aceita polimorficamente "testo" (padrão do prompt) ou "paragrafos" / "paragrafi"
+          const paragrafos = item.testo || item.paragrafos || item.paragrafi;
+          if (!Array.isArray(paragrafos) || paragrafos.length === 0) {
+            throw new Error(`História "${item.titulo}" deve conter lista de "testo" ou "paragrafos".`);
           }
+          item.testo = paragrafos;
+          item.paragrafos = paragrafos; // compatibilidade dupla
           item.titulo = this._sanitizarString(item.titulo);
           item.autor = this._sanitizarString(item.autor || 'IA');
           item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+          if (item.descricao) item.descricao = this._sanitizarString(item.descricao);
+
+          paragrafos.forEach((p) => {
+            if (typeof p === 'object' && p !== null) {
+              if (p.italiano) p.italiano = this._sanitizarString(p.italiano);
+              if (p.portugues) p.portugues = this._sanitizarString(p.portugues);
+              if (Array.isArray(p.parole)) {
+                p.parole.forEach(tok => {
+                  if (tok.parola) tok.parola = this._sanitizarString(tok.parola);
+                  if (tok.traduzione) tok.traduzione = this._sanitizarString(tok.traduzione);
+                  if (tok.ipa) tok.ipa = this._sanitizarString(tok.ipa);
+                });
+              }
+            }
+          });
         }
         return arr;
       }
 
       case 'imitazione': {
+        // Suporta tanto lista direta de frases [ { frase_italiano, ... } ] quanto { titulo, frases: [...] }
+        if (Array.isArray(data) && data.length > 0 && (data[0].frase_italiano || data[0].italiano)) {
+          data.forEach((item, idx) => {
+            const it = item.frase_italiano || item.italiano;
+            const pt = item.frase_portugues || item.portugues || '';
+            if (!it) throw new Error(`Frase #${idx + 1} de imitação sem texto em italiano.`);
+            item.frase_italiano = this._sanitizarString(it);
+            item.frase_portugues = this._sanitizarString(pt);
+            if (item.contexto) item.contexto = this._sanitizarString(item.contexto);
+            item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+          });
+          return data;
+        }
+
         const arr = Array.isArray(data) ? data : [data];
         if (arr.length === 0) throw new Error('Nenhuma lição de imitação encontrada.');
         for (let i = 0; i < arr.length; i++) {
@@ -527,11 +570,19 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
           if (!item.titulo || typeof item.titulo !== 'string') {
             throw new Error(`Imitação #${i + 1} sem campo "titulo".`);
           }
-          if (!Array.isArray(item.frases) || item.frases.length === 0) {
+          const frases = item.frases || item.frasi;
+          if (!Array.isArray(frases) || frases.length === 0) {
             throw new Error(`Imitação "${item.titulo}" deve conter lista de "frases".`);
           }
+          item.frases = frases;
           item.titulo = this._sanitizarString(item.titulo);
           item.nivel = this._sanitizarString(item.nivel || 'A1').toUpperCase();
+          frases.forEach(f => {
+            const it = f.frase_italiano || f.italiano || f.frase;
+            const pt = f.frase_portugues || f.portugues || f.traducao;
+            if (it) f.frase_italiano = this._sanitizarString(it);
+            if (pt) f.frase_portugues = this._sanitizarString(pt);
+          });
         }
         return arr;
       }
@@ -777,3 +828,13 @@ TEMA DO VOCABULÁRIO: [SUBSTITUA AQUI — ex: "viagem de trem e bilheteria", "co
     renders[tipo]?.();
   },
 };
+
+if (typeof window !== 'undefined') {
+  window.IAImport = IAImport;
+}
+if (typeof globalThis !== 'undefined') {
+  globalThis.IAImport = IAImport;
+}
+
+export default IAImport;
+

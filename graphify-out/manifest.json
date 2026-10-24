@@ -480,9 +480,9 @@
     "semantic_hash": ""
   },
   "js/core.js": {
-    "mtime": 1792587315.9494848,
-    "seen": 1792587358.6060538,
-    "ast_hash": "17ede81d197d5b59c7a0240a91629c9b",
+    "mtime": 1792855743.1149483,
+    "seen": 1792856034.5681844,
+    "ast_hash": "1b7ca4c135888b6c59f9c0cf8b4f6c66",
     "semantic_hash": ""
   },
   "js/dialoghi.js": {
@@ -510,15 +510,15 @@
     "semantic_hash": "298353f117592ec93e113a191af9aa06"
   },
   "js/i18n.js": {
-    "mtime": 1792319222.2510962,
-    "seen": 1792319481.6842577,
-    "ast_hash": "018d8f5fd0f76368d08ed5644b448a6b",
+    "mtime": 1792855726.9723012,
+    "seen": 1792856034.701893,
+    "ast_hash": "97edbfae2c9eefe56038e33542c9ba02",
     "semantic_hash": ""
   },
   "js/ia-import.js": {
-    "mtime": 1792521929.546519,
-    "seen": 1792522132.8239357,
-    "ast_hash": "a810958a6c0417aebc8d7bbad01928dc",
+    "mtime": 1792855939.2386048,
+    "seen": 1792856034.7018955,
+    "ast_hash": "62a354a4dabf4f6686b4dfd05f3653ed",
     "semantic_hash": ""
   },
   "js/imitazione.js": {
@@ -540,9 +540,9 @@
     "semantic_hash": ""
   },
   "js/profilo.js": {
-    "mtime": 1792587316.7338495,
-    "seen": 1792587358.6879947,
-    "ast_hash": "2105125b58633477f8cedb55cfc9459d",
+    "mtime": 1792855657.943154,
+    "seen": 1792856034.7216766,
+    "ast_hash": "0404067bb11b47c9c390a962ca70d078",
     "semantic_hash": ""
   },
   "js/quiz.js": {
@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792574513.5936258,
-    "seen": 1792587358.9123526,
-    "ast_hash": "6fc623b2e95ce58e852d87d53ae67231",
+    "mtime": 1792855779.1828997,
+    "seen": 1792856034.8011677,
+    "ast_hash": "325d1ca491a5f769c85715893dd61238",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792574513.5916283,
-    "seen": 1792587359.214514,
-    "ast_hash": "0a6046f56322893a4728ce83c5363bbb",
+    "mtime": 1792855758.5168276,
+    "seen": 1792856034.9583817,
+    "ast_hash": "3a161cedd4cfe1e9b5f645f020d293ca",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -912,9 +912,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1792587316.8850615,
-    "seen": 1792587358.7590923,
-    "ast_hash": "2754fcfda0c234c19f366027c10138da",
+    "mtime": 1792856325.844264,
+    "seen": 1792856462.6578217,
+    "ast_hash": "03296eca6edea6cc332d836c0be47842",
     "semantic_hash": ""
   },
   "playwright.config.ts": {
@@ -1077,6 +1077,18 @@
     "mtime": 1792587314.1124773,
     "seen": 1792587359.2145104,
     "ast_hash": "39987f218a983b8893c30f83d86c016d",
+    "semantic_hash": ""
+  },
+  "js/core/backup_reminder.js": {
+    "mtime": 1792855922.1931825,
+    "seen": 1792856034.5732675,
+    "ast_hash": "c310cb9351cecb7827848562695d02e1",
+    "semantic_hash": ""
+  },
+  "tests/backup_reminder.test.js": {
+    "mtime": 1792855799.811648,
+    "seen": 1792856034.8097622,
+    "ast_hash": "13b70dccc07e6cc658c25643a5f205f6",
     "semantic_hash": ""
   }
 }

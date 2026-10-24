@@ -13,9 +13,8 @@
   "12": "collaboration.ts",
   "13": "scripts",
   "14": "compilerOptions",
-  "15": "devDependencies",
+  "15": "modal_manager.ts",
   "17": "security.test.js",
-  "19": "PluginManager",
   "21": "ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada",
   "22": "ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida",
   "25": "ADR 003: Estratégia de Arquitetura Offline-First (PWA & Cache)",
@@ -26,5 +25,6 @@
   "30": "templo_modal.js",
   "31": "templos.js",
   "32": "tts.js",
-  "70": "core.js"
+  "70": "core.js",
+  "75": "ia-import.js"
 }

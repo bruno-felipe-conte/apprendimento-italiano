@@ -1,17 +1,17 @@
-# Graph Report - apprendimento-italiano  (2026-10-21)
+# Graph Report - apprendimento-italiano  (2026-10-24)
 
 ## Corpus Check
-- 173 files · ~1,085,014 words
+- 175 files · ~1,086,416 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 525 nodes · 627 edges · 56 communities (26 shown, 30 thin omitted)
+- 530 nodes · 633 edges · 55 communities (27 shown, 28 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.9)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5a22b609`
+- Built from commit: `2a3dde6c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -31,11 +31,10 @@
 - collaboration.ts
 - scripts
 - compilerOptions
-- devDependencies
+- modal_manager.ts
 - Grammar Curriculum Docs
 - security.test.js
 - Philosophical Stories Docs
-- PluginManager
 - NMA Grammar Card Upgrader
 - ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada
 - ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida
@@ -61,7 +60,7 @@
 - Grammatica Frontend Module
 - Study Heatmap Module
 - Internationalization (i18n) Module
-- AI Content Import Module
+- ia-import.js
 - Shadowing Imitazione Module
 - Notifications Module
 - User Onboarding Module
@@ -77,8 +76,8 @@
 1. `SyncManager` - 21 edges
 2. `scripts` - 16 edges
 3. `AnalyticsManager` - 15 edges
-4. `compilerOptions` - 14 edges
-5. `vitest` - 13 edges
+4. `vitest` - 14 edges
+5. `compilerOptions` - 14 edges
 6. `FeatureFlagManager` - 12 edges
 7. `PluginManager` - 12 edges
 8. `Guia Canônico de Prompts para Geração de Conteúdo` - 9 edges
@@ -106,7 +105,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (56 total, 30 thin omitted)
+## Communities (55 total, 28 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -117,8 +116,8 @@ Cohesion: 0.09
 Nodes (7): main(), traduzir(), main(), make_est(), translate_hint_to_pt(), main(), translate_it_explanation_to_pt()
 
 ### Community 2 - "index.ts"
-Cohesion: 0.08
-Nodes (18): AppPluginManager, AppSyncManager, MockBackendAdapter, SupabaseAdapter, CanzoniPlugin, CorePlugins, DialoghiPlugin, FlashcardsPlugin (+10 more)
+Cohesion: 0.10
+Nodes (13): AppPluginManager, PluginManager, CanzoniPlugin, CorePlugins, DialoghiPlugin, FlashcardsPlugin, GrammaticaPlugin, ImitazionePlugin (+5 more)
 
 ### Community 3 - "Guia Canônico de Prompts para Geração de Conteúdo"
 Cohesion: 0.08
@@ -129,8 +128,8 @@ Cohesion: 0.11
 Nodes (17): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, PWA Offline-First Architecture QA Audit Checklist, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Service Worker Registration & ControllerChange Auto-Reload, Main Single-Page Application HTML Shell (index.html) (+9 more)
 
 ### Community 5 - "schemas.ts"
-Cohesion: 0.09
-Nodes (26): ModalAcao, ModalItem, ModalManager, ModalOpcoes, vitest, zod, ingerirConteudo(), IngestOptions (+18 more)
+Cohesion: 0.08
+Nodes (26): BackupReminder, LexicoItem, VoiceEngine, WorkerMessageData, vitest, zod, ingerirConteudo(), IngestOptions (+18 more)
 
 ### Community 6 - "tts_worker.js"
 Cohesion: 0.43
@@ -141,12 +140,16 @@ Cohesion: 0.09
 Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, hashStringToInt(), MockAnalyticsProvider, PlausibleAnalyticsProvider
 
 ### Community 9 - "package.json"
-Cohesion: 0.08
-Nodes (25): author, dependencies, zod, description, keywords, license, main, name (+17 more)
+Cohesion: 0.05
+Nodes (41): author, dependencies, zod, description, devDependencies, @axe-core/playwright, eslint, @eslint/js (+33 more)
 
 ### Community 10 - "stress-storage.js"
 Cohesion: 0.08
 Nodes (18): agora, flashcardData, fsrsJson, LocalStorageMock, readFsrs, storage, t0, t1 (+10 more)
+
+### Community 11 - "SyncManager"
+Cohesion: 0.11
+Nodes (5): AppSyncManager, MockBackendAdapter, PocketBaseAdapter, SupabaseAdapter, SyncManager
 
 ### Community 12 - "collaboration.ts"
 Cohesion: 0.21
@@ -160,9 +163,9 @@ Nodes (16): scripts, build, content:ingest, content:validate, dev, format, forma
 Cohesion: 0.12
 Nodes (15): compilerOptions, allowJs, checkJs, forceConsistentCasingInFileNames, lib, module, moduleResolution, noEmit (+7 more)
 
-### Community 15 - "devDependencies"
-Cohesion: 0.14
-Nodes (14): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+6 more)
+### Community 15 - "modal_manager.ts"
+Cohesion: 0.40
+Nodes (4): ModalAcao, ModalItem, ModalManager, ModalOpcoes
 
 ### Community 16 - "Grammar Curriculum Docs"
 Cohesion: 0.40
@@ -213,24 +216,24 @@ Cohesion: 0.20
 Nodes (4): App, AppNavigation, AppState, AppXP
 
 ## Knowledge Gaps
-- **20 isolated node(s):** `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier`, `tsx` (+15 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 311 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 313 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `core.js`, `AnalyticsManager`, `package.json`, `collaboration.ts`, `security.test.js`, `Progression and Leveling System`?**
-  _High betweenness centrality (0.145) - this node is a cross-community bridge._
-- **What connects `@types/dom-speech-recognition`, `eslint`, `happy-dom` to the rest of the system?**
-  _20 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `core.js`, `AnalyticsManager`, `package.json`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `Progression and Leveling System`?**
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
+- **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
+  _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
-- **Why does `SyncManager` connect `SyncManager` to `index.ts`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
-- **Should `json` be split into smaller, more focused modules?**
-  _Cohesion score 0.09425287356321839 - nodes in this community are weakly interconnected._
 - **Why does `scripts` connect `scripts` to `package.json`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Should `json` be split into smaller, more focused modules?**
+  _Cohesion score 0.09425287356321839 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.08021390374331551 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09686609686609686 - nodes in this community are weakly interconnected._
+- **Should `Guia Canônico de Prompts para Geração de Conteúdo` be split into smaller, more focused modules?**
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._

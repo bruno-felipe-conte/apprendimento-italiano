@@ -422,27 +422,35 @@ const Profilo = {
     }
 
     const backup = {
-      versao: 3,
+      versao: 4,
       data: new Date().toISOString(),
-      progresso:         JSON.parse(localStorage.getItem('it_progresso')        || 'null'),
-      flashcards:        JSON.parse(localStorage.getItem('it_flashcards')       || '{}'),
-      diario:            JSON.parse(localStorage.getItem('it_diario')           || '{}'),
-      quiz_historico:    JSON.parse(localStorage.getItem('it_quiz_historico')   || '[]'),
-      storie_lidas:      JSON.parse(localStorage.getItem('it_storie_lidas')     || '[]'),
-      onboarding:        localStorage.getItem('it_onboarding_done'),
-      tema:              localStorage.getItem('it_tema'),
-      idioma:            localStorage.getItem('it_idioma') || 'pt',
-      audio_speed:       localStorage.getItem('it_audio_speed') || '0.85',
-      voz_preferida:     localStorage.getItem('it_voz_preferida') || null,
-      bookmarks:         bookmarks,
+      progresso:              JSON.parse(localStorage.getItem('it_progresso')        || 'null'),
+      flashcards:             JSON.parse(localStorage.getItem('it_flashcards')       || '{}'),
+      diario:                 JSON.parse(localStorage.getItem('it_diario')           || '{}'),
+      quiz_historico:         JSON.parse(localStorage.getItem('it_quiz_historico')   || '[]'),
+      storie_lidas:           JSON.parse(localStorage.getItem('it_storie_lidas')     || '[]'),
+      onboarding:             localStorage.getItem('it_onboarding_done'),
+      tema:                   localStorage.getItem('it_tema'),
+      idioma:                 localStorage.getItem('it_idioma') || 'pt',
+      som:                    localStorage.getItem('it_som'),
+      sidebar_pinned:         localStorage.getItem('it_sidebar_pinned'),
+      audio_speed:            localStorage.getItem('it_audio_speed') || '0.85',
+      voz_preferida:          localStorage.getItem('it_voz_preferida') || null,
+      usar_voz_neural:        localStorage.getItem('it_usar_voz_neural'),
+      voz_neural_instalada:   localStorage.getItem('it_voz_neural_instalada'),
+      imersao_usada:          localStorage.getItem('it_imersao_usada'),
+      palavra_dia:            localStorage.getItem('it_palavra_dia'),
+      tour_done:              localStorage.getItem('it_tour_done'),
+      ultimo_aviso_backup:    localStorage.getItem('it_ultimo_aviso_backup'),
+      bookmarks:              bookmarks,
       // conteúdo customizado
-      canzoni_custom:    JSON.parse(localStorage.getItem('it_canzoni_custom')   || '[]'),
-      dialoghi_custom:   JSON.parse(localStorage.getItem('it_dialoghi_custom')  || '[]'),
-      storie_custom:     JSON.parse(localStorage.getItem('it_storie_custom')    || '[]'),
-      imitazioni_custom: JSON.parse(localStorage.getItem('it_imitazioni_custom')|| '[]'),
-      vocab_custom:      JSON.parse(localStorage.getItem('it_vocab_custom')     || '[]'),
+      canzoni_custom:         JSON.parse(localStorage.getItem('it_canzoni_custom')   || '[]'),
+      dialoghi_custom:        JSON.parse(localStorage.getItem('it_dialoghi_custom')  || '[]'),
+      storie_custom:          JSON.parse(localStorage.getItem('it_storie_custom')    || '[]'),
+      imitazioni_custom:      JSON.parse(localStorage.getItem('it_imitazioni_custom')|| '[]'),
+      vocab_custom:           JSON.parse(localStorage.getItem('it_vocab_custom')     || '[]'),
       // preferências de ocultação
-      canzoni_ocultas:   JSON.parse(localStorage.getItem('it_canzoni_ocultas')  || '[]'),
+      canzoni_ocultas:        JSON.parse(localStorage.getItem('it_canzoni_ocultas')  || '[]'),
     };
     const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
     const url  = URL.createObjectURL(blob);
@@ -472,8 +480,16 @@ const Profilo = {
         if (backup.onboarding)        localStorage.setItem('it_onboarding_done',   backup.onboarding);
         if (backup.tema)              localStorage.setItem('it_tema',              backup.tema);
         if (backup.idioma)            localStorage.setItem('it_idioma',            backup.idioma);
+        if (backup.som !== undefined && backup.som !== null) localStorage.setItem('it_som', backup.som);
+        if (backup.sidebar_pinned !== undefined && backup.sidebar_pinned !== null) localStorage.setItem('it_sidebar_pinned', backup.sidebar_pinned);
         if (backup.audio_speed)       localStorage.setItem('it_audio_speed',       backup.audio_speed);
         if (backup.voz_preferida)     localStorage.setItem('it_voz_preferida',     backup.voz_preferida);
+        if (backup.usar_voz_neural !== undefined && backup.usar_voz_neural !== null) localStorage.setItem('it_usar_voz_neural', backup.usar_voz_neural);
+        if (backup.voz_neural_instalada !== undefined && backup.voz_neural_instalada !== null) localStorage.setItem('it_voz_neural_instalada', backup.voz_neural_instalada);
+        if (backup.imersao_usada !== undefined && backup.imersao_usada !== null) localStorage.setItem('it_imersao_usada', backup.imersao_usada);
+        if (backup.palavra_dia !== undefined && backup.palavra_dia !== null) localStorage.setItem('it_palavra_dia', backup.palavra_dia);
+        if (backup.tour_done !== undefined && backup.tour_done !== null) localStorage.setItem('it_tour_done', backup.tour_done);
+        if (backup.ultimo_aviso_backup !== undefined && backup.ultimo_aviso_backup !== null) localStorage.setItem('it_ultimo_aviso_backup', backup.ultimo_aviso_backup);
 
         if (backup.bookmarks && typeof backup.bookmarks === 'object') {
           for (const [k, v] of Object.entries(backup.bookmarks)) {
@@ -507,7 +523,8 @@ const Profilo = {
       'it_progresso', 'it_flashcards', 'it_diario', 'it_onboarding_done', 'it_palavra_dia',
       'it_quiz_historico', 'it_storie_lidas', 'it_tour_done', 'it_audio_speed', 'it_voz_preferida',
       'it_canzoni_custom', 'it_dialoghi_custom', 'it_storie_custom', 'it_imitazioni_custom',
-      'it_vocab_custom', 'it_canzoni_ocultas'
+      'it_vocab_custom', 'it_canzoni_ocultas', 'it_som', 'it_sidebar_pinned', 'it_usar_voz_neural',
+      'it_ultimo_aviso_backup'
     ];
     chavesFixas.forEach(k => localStorage.removeItem(k));
 
