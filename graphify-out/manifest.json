@@ -570,9 +570,9 @@
     "semantic_hash": "a4f3fec9e00f7c3760ac1e4910092e09"
   },
   "js/vocab.js": {
-    "mtime": 1792536922.4080203,
-    "seen": 1792587358.759079,
-    "ast_hash": "21e126a1123c1a81c69452cfedbeba27",
+    "mtime": 1792950004.8944643,
+    "seen": 1792950336.5761662,
+    "ast_hash": "e4c041af0a2476de7e2c2d21b66cb8fb",
     "semantic_hash": ""
   },
   "scripts/genera_storie_filosofia.py": {
@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792949242.1502447,
-    "seen": 1792949712.0068817,
-    "ast_hash": "7aeebd17f9b87675cfa064af9c4c89a1",
+    "mtime": 1792950054.523338,
+    "seen": 1792950336.964667,
+    "ast_hash": "4892d12ed31d51a0b15b2349f206a532",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792949198.4007318,
-    "seen": 1792949713.118103,
-    "ast_hash": "6f9b722dd499ad55379285f0a6f58dfc",
+    "mtime": 1792950054.512264,
+    "seen": 1792950337.8679268,
+    "ast_hash": "a162e971549d0c9b0f3517abf7ed1336",
     "semantic_hash": ""
   },
   "icons/icon.svg": {

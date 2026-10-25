@@ -4153,14 +4153,153 @@ body.dark-mode .nivel-select option {
     .vocab-filtros-row2 { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.6rem; justify-content: center; }
     .vocab-stats { font-size: 0.82rem; color: #5A4535; font-weight: 500; margin-bottom: 0.7rem; }
     .vocab-list { display: flex; flex-direction: column; gap: 0.35rem; }
-    .vocab-item { display: flex; align-items: center; gap: 0.6rem; background: var(--cor-marmore); padding: 0.55rem 0.85rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); flex-wrap: wrap; }
-    .vocab-it { font-family: 'Cinzel', serif; font-weight: 600; color: var(--cor-veneziano-escuro); min-width: 110px; font-size: 0.92rem; }
-    .vocab-seta { color: var(--cor-toscano); font-weight: 700; }
-    .vocab-pt { color: var(--cor-inchiostro); flex: 1; min-width: 100px; font-size: 0.88rem; }
-    .vocab-cat-badge { font-size: 0.68rem; background: var(--cor-pergaminho); color: var(--cor-veneziano-escuro); padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
-    .vocab-nivel-badge { font-size: 0.68rem; background: #2C2C2C; color: white; padding: 0.12rem 0.45rem; border-radius: 10px; white-space: nowrap; }
-    .vocab-sm2-badge { font-size: 0.78rem; }
+    /* Card principal de Vocabulário Enriquecido */
+    .vocab-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--cor-superficie, #ffffff);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      padding: 0.55rem 0.85rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap; /* Permite a frase de exemplo pular para a linha seguinte */
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .vocab-item:hover {
+      transform: translateX(3px);
+      border-color: #d4a843;
+      background: rgba(212, 168, 67, 0.03);
+    }
+    /* Palavra em italiano */
+    .vocab-it {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1a5276;
+      min-width: 90px;
+    }
+    /* Seta separadora */
+    .vocab-seta {
+      color: #8a94a6;
+      font-size: 0.85rem;
+    }
+    /* Palavra em português */
+    .vocab-pt {
+      font-size: 0.92rem;
+      color: var(--cor-texto, #2c3e50);
+      flex: 1;
+    }
+    /* Badge de Categoria */
+    .vocab-cat-badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #555;
+      background: rgba(0, 0, 0, 0.04);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    /* Badge de Nível (A1-C2) */
+    .vocab-nivel-badge {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #003e8a;
+      background: rgba(0, 62, 138, 0.08);
+      border: 1px solid rgba(0, 62, 138, 0.2);
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+    /* Badge de Progresso SM-2 / FSRS */
+    .vocab-sm2-badge {
+      font-size: 0.85rem;
+      line-height: 1;
+    }
     .vocab-dif-badge { font-size: 0.68rem; background: rgba(230,126,34,0.15); color: #c0560a; padding: 0.12rem 0.4rem; border-radius: 10px; font-weight: 700; white-space: nowrap; }
+    /* Container da Frase de Exemplo */
+    .vocab-exemplo {
+      flex-basis: 100%; /* Ocupa 100% da largura na segunda linha */
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.78rem;
+      color: #555;
+      font-style: italic;
+      margin-top: 0.25rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(0, 62, 138, 0.04);
+      border: 1px dashed rgba(0, 62, 138, 0.22);
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: all 0.18s ease;
+    }
+    .vocab-exemplo:hover {
+      background: rgba(0, 62, 138, 0.08);
+      border-color: rgba(0, 62, 138, 0.45);
+      color: #111;
+      transform: translateY(-1px);
+    }
+    /* Botão 🔊 do exemplo */
+    .vocab-exemplo-audio-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 62, 138, 0.09);
+      border: 1px solid rgba(0, 62, 138, 0.25);
+      color: #003e8a;
+      border-radius: 999px;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.72rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .vocab-exemplo-audio-btn:hover {
+      background: #003e8a;
+      color: #fff;
+      transform: scale(1.1);
+    }
+    /* Efeito visual enquanto o áudio da frase toca */
+    .vocab-exemplo.vocab-exemplo-tocando {
+      background: rgba(0, 62, 138, 0.14) !important;
+      border-color: #003e8a !important;
+      color: #003e8a !important;
+      box-shadow: 0 0 8px rgba(0, 62, 138, 0.25);
+    }
+    /* Suporte a Dark Mode para Vocabulário Enriquecido */
+    body.dark-mode .vocab-item {
+      background: #1c1816;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    body.dark-mode .vocab-pt {
+      color: #e0e0e0;
+    }
+    body.dark-mode .vocab-it {
+      color: #79B5E8;
+    }
+    body.dark-mode .vocab-exemplo {
+      background: rgba(212, 168, 67, 0.06);
+      border-color: rgba(212, 168, 67, 0.25);
+      color: #c9bba8;
+    }
+    body.dark-mode .vocab-exemplo:hover {
+      background: rgba(212, 168, 67, 0.12);
+      border-color: rgba(212, 168, 67, 0.5);
+      color: #f5efeb;
+    }
+    body.dark-mode .vocab-exemplo-audio-btn {
+      background: rgba(212, 168, 67, 0.12);
+      border-color: rgba(212, 168, 67, 0.35);
+      color: #d4a843;
+    }
+    body.dark-mode .vocab-exemplo-audio-btn:hover {
+      background: #d4a843;
+      color: #1c1816;
+    }
     .vocab-btn-dificeis { padding: 0.38rem 0.7rem; border: 2px solid #873C05; border-radius: 8px; background: transparent; color: #873C05; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; flex: 1; justify-content: center; }
     .vocab-btn-dificeis:hover { background: rgba(230,126,34,0.1); }
     .vocab-btn-dificeis.ativo { background: #E67E22; color: white; border-color: #E67E22; }

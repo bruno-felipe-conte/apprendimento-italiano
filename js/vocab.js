@@ -125,49 +125,7 @@ const Vocab = {
 
     listEl.innerHTML = '';
     visivel.forEach(p => {
-      const item = document.createElement('div');
-      item.className = 'vocab-item';
-
-      // Determine FSRS status
-      const sm = App.estado.flashcardData[p.id];
-      let sm2Icon = '🌱'; // new
-      if (sm) {
-        if ((sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7)) sm2Icon = '⭐'; // mastered
-        else sm2Icon = '📚'; // learning
-      }
-      const erros = sm ? (sm.erros || 0) : 0;
-
-      // Temple data for level badge
-      const temploData = App.estado.templosData[p.templo_num];
-      const nivel = temploData ? temploData.nivel : '';
-
-      item.innerHTML = `
-        <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
-        <span class="vocab-seta">→</span>
-        <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
-        ${p.categoria ? `<span class="vocab-cat-badge">${this._escapar(p.categoria)}</span>` : ''}
-        ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
-        ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
-        ${App.ehFavorito(p.id) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
-        <span class="vocab-sm2-badge" title="${sm2Icon === '⭐' ? 'Dominata' : sm2Icon === '📚' ? 'In apprendimento' : 'Nuova'}">${sm2Icon}</span>
-        ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remover palavra">🗑️</button>` : ''}
-      `;
-
-      // Click: pronounce normally; in blur mode clicking blurred cell reveals it
-      item.style.cursor = 'pointer';
-      item.title = this.blurColuna ? I18n.t('fc_dica_revelar') : `${I18n.idioma === 'it' ? 'Clicca per ascoltare' : 'Clique para ouvir'} "${p.italiano}"`;
-      if (this.blurColuna) {
-        item.onclick = (e) => {
-          const target = e.target.closest('.vocab-pt, .vocab-it');
-          const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
-                        || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
-          if (isBluCol || !target) item.classList.toggle('revelada');
-        };
-      } else {
-        item.onclick = () => App.pronunciar(p.italiano);
-      }
-
-      listEl.appendChild(item);
+      this._renderizarItem(p, listEl);
     });
 
     // Reapply blur class after re-render
@@ -318,11 +276,163 @@ const Vocab = {
     }
   },
 
-  // ── Escape HTML helper ────────────────────────────────────
+  // ============================================================
+  // Métodos para renderizar itens de vocabulário enriquecidos
+  // ============================================================
+  // 1. Paleta de cores para categorias
+  _coresCategorias: {},
+  _coresDisponiveis: ['#1a5276', '#117a65', '#7d3c98', '#c0392b', '#d4a017', '#2e86c1', '#28b463', '#8e44ad', '#e67e22', '#2c3e50'],
+  _corCatIdx: 0,
+  _corParaCategoria(cat) {
+    if (!cat) return '';
+    const key = cat.toLowerCase();
+    if (!this._coresCategorias[key]) {
+      this._coresCategorias[key] = this._coresDisponiveis[this._corCatIdx % this._coresDisponiveis.length];
+      this._corCatIdx++;
+    }
+    return this._coresCategorias[key];
+  },
+
+  // 2. Escape seguro de caracteres HTML
   _escapar(str) {
-    const d = document.createElement('div');
-    d.textContent = str;
-    return d.innerHTML;
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  },
+
+  // 3. Renderizador individual do item
+  _renderizarItem(p, container) {
+    const item = document.createElement('div');
+    item.className = 'vocab-item';
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'listitem');
+    item.setAttribute('aria-label', `${p.italiano || ''} — ${p.portugues || ''}`);
+    item.style.cursor = 'pointer';
+    item.title = this.blurColuna
+      ? (typeof I18n !== 'undefined' ? I18n.t('fc_dica_revelar') : 'Revelar')
+      : `Clique para ouvir "${p.italiano || ''}"`;
+
+    // Status FSRS / SM-2
+    const sm = (typeof App !== 'undefined' && App.estado?.flashcardData) ? App.estado.flashcardData[p.id] : null;
+    let sm2Icon = '🌱'; // nova
+    let sm2Titulo = 'Nova palavra';
+    let sm2Pct = 0;
+    if (sm) {
+      const reps = sm.reps || sm.repeticoes || 0;
+      const stability = sm.stability || 0;
+      if (reps >= 3 || stability > 7) {
+        sm2Icon = '⭐';
+        sm2Titulo = 'Dominada';
+        sm2Pct = 100;
+      } else if (reps > 0) {
+        sm2Icon = '📚';
+        sm2Titulo = 'Em aprendizado';
+        sm2Pct = Math.min(99, Math.round((reps / 3) * 100));
+      }
+    }
+    const erros = sm ? (sm.erros || 0) : 0;
+
+    // Nível CEFR pelo Templo (se existir)
+    const temploData = (typeof App !== 'undefined' && App.estado?.templosData) ? App.estado.templosData[p.templo_num] : null;
+    const nivel = temploData ? temploData.nivel : (p.nivel || 'A1');
+
+    // Cor lateral da categoria
+    const catCor = this._corParaCategoria(p.categoria);
+
+    // Bloco da Frase de Exemplo
+    const safeExemplo = p.exemplo ? this._escapar(p.exemplo) : '';
+    const safeExemploPt = p.exemplo_pt ? this._escapar(p.exemplo_pt) : '';
+    const exemploHtml = p.exemplo
+      ? `<div class="vocab-exemplo"
+              role="button"
+              tabindex="0"
+              data-exemplo="${safeExemplo}"
+              title="🔊 Ouvir frase de exemplo: &quot;${safeExemplo}&quot;${safeExemploPt ? ' — ' + safeExemploPt : ''}"
+              aria-label="Ouvir frase de exemplo: ${safeExemplo}"
+              onclick="event.stopPropagation();Vocab.pronunciarExemplo(this.getAttribute('data-exemplo')||'',event,this)"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();event.stopPropagation();Vocab.pronunciarExemplo(this.getAttribute('data-exemplo')||'',event,this)}">
+          <button type="button" class="vocab-exemplo-audio-btn" aria-label="Ouvir frase de exemplo" title="Ouvir frase de exemplo" onclick="event.stopPropagation();Vocab.pronunciarExemplo(this.closest('.vocab-exemplo')?.getAttribute('data-exemplo')||'',event,this.closest('.vocab-exemplo'))">🔊</button>
+          <span class="vocab-exemplo-texto">"${safeExemplo}"</span>
+          ${safeExemploPt ? `<span class="vocab-exemplo-pt" style="opacity:0.75;font-style:normal;margin-left:0.35rem">(${safeExemploPt})</span>` : ''}
+        </div>`
+      : '';
+
+    // Barra de progresso FSRS
+    const progressoHtml = `
+      <div class="vocab-progresso" style="width:40px;height:4px;background:#e0e0e0;border-radius:2px;margin-top:0.2rem;overflow:hidden">
+        <div style="width:${sm2Pct}%;height:100%;background:${sm2Pct >= 100 ? '#27AE60' : sm2Pct > 0 ? '#F39C12' : '#ccc'};border-radius:2px;transition:width 0.3s"></div>
+      </div>
+    `;
+
+    item.innerHTML = `
+      <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
+      <span class="vocab-seta">→</span>
+      <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
+      ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
+      ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
+      ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
+      ${(typeof App !== 'undefined' && App.ehFavorito && App.ehFavorito(p.id)) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
+      <span class="vocab-sm2-badge" title="${sm2Titulo}">${sm2Icon}</span>
+      ${progressoHtml}
+      ${p._custom ? `<button onclick="event.stopPropagation();IAImport.excluir('vocab','${p.id}')" class="ia-del-btn" title="Remover palavra">🗑️</button>` : ''}
+      ${exemploHtml}
+    `;
+
+    // Clique no card
+    if (this.blurColuna) {
+      item.onclick = (e) => {
+        if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn')) return;
+        const target = e.target.closest('.vocab-pt, .vocab-it');
+        const isBluCol = (this.blurColuna === 'pt' && target?.classList.contains('vocab-pt'))
+                      || (this.blurColuna === 'it' && target?.classList.contains('vocab-it'));
+        if (isBluCol || !target) item.classList.toggle('revelada');
+      };
+    } else {
+      item.onclick = (e) => {
+        if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn')) return;
+        if (typeof App !== 'undefined' && App.pronunciar) {
+          App.pronunciar(p.italiano);
+        }
+      };
+    }
+
+    item.onkeydown = (e) => {
+      if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn')) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.click();
+      }
+    };
+
+    container.appendChild(item);
+  },
+
+  // 4. Reprodução autônoma do áudio do exemplo
+  pronunciarExemplo(texto, event, el) {
+    if (event) {
+      if (typeof event.stopPropagation === 'function') event.stopPropagation();
+      if (typeof event.preventDefault === 'function') event.preventDefault();
+    }
+    if (!texto) return;
+    const targetEl = el || (event && event.currentTarget ? event.currentTarget.closest('.vocab-exemplo') : null);
+    if (targetEl && targetEl.classList) {
+      targetEl.classList.add('vocab-exemplo-tocando');
+      setTimeout(() => {
+        try { targetEl.classList.remove('vocab-exemplo-tocando'); } catch (_) {}
+      }, 1600);
+    }
+    if (typeof App !== 'undefined' && App.pronunciar) {
+      App.pronunciar(texto);
+    } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+      const u = new SpeechSynthesisUtterance(texto);
+      u.lang = 'it-IT';
+      window.speechSynthesis.speak(u);
+    }
   },
 
   // ── Inicia flashcards com as palavras do filtro atual ───────
