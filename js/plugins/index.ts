@@ -4,7 +4,7 @@
 // ============================================================
 
 import type { IPlugin } from '../../types/app';
-import { AppPluginManager } from '../core/plugins';
+import { AppPluginManager } from '../core/plugins.js';
 
 const _precisaRender = (containerId: string): boolean => {
   if (typeof document === 'undefined') return false;
@@ -25,7 +25,7 @@ export const FlashcardsPlugin: IPlugin = {
       path: 'flashcard',
       title: 'Flashcards',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Flashcards?.atualizarSelectTemplo) {
           win.Flashcards.atualizarSelectTemplo();
         }
@@ -44,7 +44,7 @@ export const QuizPlugin: IPlugin = {
       path: 'quiz',
       title: 'Quiz',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Quiz && _precisaRender('quiz-seletor')) {
           win.Quiz.renderizarSeletor();
         }
@@ -63,7 +63,7 @@ export const VocabPlugin: IPlugin = {
       path: 'vocabolario',
       title: 'Vocabolario',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Vocab && _precisaRender('vocab-list')) {
           win.Vocab.renderizar();
         }
@@ -82,7 +82,7 @@ export const GrammaticaPlugin: IPlugin = {
       path: 'grammatica',
       title: 'Grammatica',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Grammatica && _precisaRender('grammatica-container')) {
           win.Grammatica.renderizarSeletor();
         }
@@ -101,7 +101,7 @@ export const StoriePlugin: IPlugin = {
       path: 'storie',
       title: 'Storie',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Storie && _precisaRender('storie-container')) {
           win.Storie.renderizarSeletor();
         }
@@ -120,7 +120,7 @@ export const DialoghiPlugin: IPlugin = {
       path: 'dialoghi',
       title: 'Dialoghi',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Dialoghi && _precisaRender('dialoghi-container') && !win.Dialoghi.dialogoAtual) {
           win.Dialoghi.renderizarSeletor();
         }
@@ -139,7 +139,7 @@ export const CanzoniPlugin: IPlugin = {
       path: 'canzoni',
       title: 'Canzoni',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Canzoni && _precisaRender('canzoni-container')) {
           win.Canzoni.renderizarSeletor();
         }
@@ -147,13 +147,13 @@ export const CanzoniPlugin: IPlugin = {
     }
   ],
   onSectionChange: (novaSecao) => {
-    const win = typeof window !== 'undefined' ? (window as any) : null;
+    const win = typeof window !== 'undefined' ? window : null;
     if (novaSecao !== 'canzoni' && win?.Canzoni?.tocandoKaraoke) {
       win.Canzoni.pararAudio();
     }
   },
   destroy: () => {
-    const win = typeof window !== 'undefined' ? (window as any) : null;
+    const win = typeof window !== 'undefined' ? window : null;
     if (win?.Canzoni?.pararAudio) {
       win.Canzoni.pararAudio();
     }
@@ -170,7 +170,7 @@ export const ImitazionePlugin: IPlugin = {
       path: 'imitazione',
       title: 'Imitazione',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Imitazione && _precisaRender('imitazione-container')) {
           win.Imitazione.renderizar();
         }
@@ -189,7 +189,7 @@ export const ProfiloPlugin: IPlugin = {
       path: 'profilo',
       title: 'Profilo',
       handler: () => {
-        const win = typeof window !== 'undefined' ? (window as any) : null;
+        const win = typeof window !== 'undefined' ? window : null;
         if (win?.Profilo) {
           win.Profilo.renderizar();
         }

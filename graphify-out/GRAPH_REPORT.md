@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-25)
 
 ## Corpus Check
-- 183 files · ~1,094,800 words
+- 183 files · ~1,095,355 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 656 nodes · 808 edges · 62 communities (31 shown, 31 thin omitted)
+- 656 nodes · 808 edges · 61 communities (30 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0530714a`
+- Built from commit: `4949b6aa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -53,7 +53,6 @@
 - App Visual Identity (Icon)
 - devDependencies
 - PluginManager
-- voice_engine.ts
 - progression.js
 - modal_manager.js
 - voice_engine.js
@@ -112,7 +111,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (62 total, 31 thin omitted)
+## Communities (61 total, 31 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -124,7 +123,7 @@ Nodes (7): main(), traduzir(), main(), make_est(), translate_hint_to_pt(), main(
 
 ### Community 2 - "index.ts"
 Cohesion: 0.06
-Nodes (23): AppPluginManager, PluginManager, CanzoniPlugin, CorePlugins, DialoghiPlugin, FlashcardsPlugin, GrammaticaPlugin, ImitazionePlugin (+15 more)
+Nodes (24): AppPluginManager, AppPluginManager, PluginManager, CanzoniPlugin, CorePlugins, DialoghiPlugin, FlashcardsPlugin, GrammaticaPlugin (+16 more)
 
 ### Community 3 - "Guia Canônico de Prompts para Geração de Conteúdo"
 Cohesion: 0.08
@@ -135,8 +134,8 @@ Cohesion: 0.11
 Nodes (17): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, PWA Offline-First Architecture QA Audit Checklist, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Service Worker Registration & ControllerChange Auto-Reload, Main Single-Page Application HTML Shell (index.html) (+9 more)
 
 ### Community 5 - "schemas.ts"
-Cohesion: 0.07
-Nodes (27): App, BackupReminder, AppNavigation, AppState, AppXP, vitest, zod, ingerirConteudo() (+19 more)
+Cohesion: 0.06
+Nodes (30): App, BackupReminder, AppNavigation, AppState, AppXP, LexicoItem, VoiceEngine, WorkerMessageData (+22 more)
 
 ### Community 6 - "tts_worker.js"
 Cohesion: 0.43
@@ -226,10 +225,6 @@ Nodes (3): Apprendimento Italiano App Icon, IT Language Monogram, Roman Arch Emb
 Cohesion: 0.13
 Nodes (15): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+7 more)
 
-### Community 37 - "voice_engine.ts"
-Cohesion: 0.33
-Nodes (3): LexicoItem, VoiceEngine, WorkerMessageData
-
 ### Community 38 - "progression.js"
 Cohesion: 0.40
 Nodes (3): _LEVEL_NOMES, LevelUp, Progressao
@@ -246,8 +241,8 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `progression.ts`?**
-  _High betweenness centrality (0.109) - this node is a cross-community bridge._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `AnalyticsManager`, `package.json`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `progression.ts`?**
+  _High betweenness centrality (0.117) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
@@ -255,7 +250,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.09425287356321839 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.06153846153846154 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.056910569105691054 - nodes in this community are weakly interconnected._
 - **Should `Guia Canônico de Prompts para Geração de Conteúdo` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Core App Specs and Docs` be split into smaller, more focused modules?**

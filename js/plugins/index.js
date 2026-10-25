@@ -2,7 +2,7 @@
 // js/plugins/index.ts — Built-in Feature Plugins (EV-01)
 // Converte as seções de estudo em plugins com rotas e ciclo de vida.
 // ============================================================
-import { AppPluginManager } from '../core/plugins';
+import { AppPluginManager } from '../core/plugins.js';
 const _precisaRender = (containerId) => {
     if (typeof document === 'undefined')
         return false;

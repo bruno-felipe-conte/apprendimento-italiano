@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792950858.0658715,
-    "seen": 1792951091.308285,
-    "ast_hash": "e818cb6da7152fce2d45669f2dee5c46",
+    "mtime": 1792951869.5842438,
+    "seen": 1792952050.4509027,
+    "ast_hash": "ac8cd69cbce789e744b1f3ffd1091d18",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792950831.3000798,
-    "seen": 1792951091.9235697,
-    "ast_hash": "7c4cddadcbfe68c6e9a820cb2fe01d46",
+    "mtime": 1792951861.719734,
+    "seen": 1792952051.6983426,
+    "ast_hash": "6666d9f84952321c1654ef780527e791",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -894,9 +894,9 @@
     "semantic_hash": ""
   },
   "js/plugins/index.ts": {
-    "mtime": 1792587316.702849,
-    "seen": 1792587358.6879835,
-    "ast_hash": "86349482bf3730c1a4d55fee64d35802",
+    "mtime": 1792951836.485806,
+    "seen": 1792952049.713746,
+    "ast_hash": "63fac3f3715191aa61edcca3319e6cc5",
     "semantic_hash": ""
   },
   "js/progression.ts": {
@@ -1122,9 +1122,9 @@
     "semantic_hash": ""
   },
   "js/plugins/index.js": {
-    "mtime": 1792949146.1610384,
-    "seen": 1792949711.8191323,
-    "ast_hash": "a48fe4bbdcc645060dc1217b115a3138",
+    "mtime": 1792951844.4332302,
+    "seen": 1792952049.7137387,
+    "ast_hash": "4e7ad03b4887334173126004f795330a",
     "semantic_hash": ""
   },
   "js/progression.js": {
