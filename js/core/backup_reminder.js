@@ -37,12 +37,12 @@ const BackupReminder = {
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
     if (!this.deveExibir()) return;
 
-    // Aguarda um pequeno intervalo (2.5s) para não colidir com renderizações iniciais
+    // Aguarda 1.5s para esperar o cabeçalho e a tela inicial carregarem suavemente
     setTimeout(() => {
       if (this.deveExibir() && !document.getElementById('backup-reminder-popup')) {
         this.exibir();
       }
-    }, 2500);
+    }, 1500);
   },
 
   /**
@@ -55,21 +55,19 @@ const BackupReminder = {
     // Remove qualquer container anterior
     this.fechar(false);
 
-    const titulo = (typeof I18n !== 'undefined' && I18n.t)
-      ? I18n.t('backup_popup_titulo')
-      : '⚠️ Salve seu Progresso!';
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
 
-    const desc = (typeof I18n !== 'undefined' && I18n.t)
-      ? I18n.t('backup_popup_desc')
-      : 'Se o cache ou histórico do navegador forem limpos, você perderá sua evolução nos estudos (XP, flashcards e templos). Faça um backup regular!';
+    const titulo = (typeof I18n !== 'undefined' && typeof I18n.t === 'function' && I18n.t('backup_popup_titulo'))
+      || (isIt ? '⚠️ Salva i tuoi Progressi!' : '⚠️ Salve seu Progresso!');
 
-    const btnTexto = (typeof I18n !== 'undefined' && I18n.t)
-      ? I18n.t('backup_popup_btn')
-      : '💾 Fazer Backup Agora';
+    const desc = (typeof I18n !== 'undefined' && typeof I18n.t === 'function' && I18n.t('backup_popup_desc'))
+      || (isIt ? 'Se la cache o la cronologia del browser vengono cancellate, perderai i tuoi progressi di studio (XP, flashcard e templi). Fai un backup regolare!' : 'Se o cache ou histórico do navegador forem limpos, você perderá sua evolução nos estudos (XP, flashcards e templos). Faça um backup regular!');
 
-    const fecharTexto = (typeof I18n !== 'undefined' && I18n.t)
-      ? I18n.t('backup_popup_fechar')
-      : 'Fechar';
+    const btnTexto = (typeof I18n !== 'undefined' && typeof I18n.t === 'function' && I18n.t('backup_popup_btn'))
+      || (isIt ? '💾 Salva Backup Adesso' : '💾 Fazer Backup Agora');
+
+    const fecharTexto = (typeof I18n !== 'undefined' && typeof I18n.t === 'function' && I18n.t('backup_popup_fechar'))
+      || (isIt ? 'Chiudi' : 'Fechar');
 
     const container = document.createElement('div');
     container.id = 'backup-reminder-popup';

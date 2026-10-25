@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1792950054.523338,
-    "seen": 1792950336.964667,
-    "ast_hash": "4892d12ed31d51a0b15b2349f206a532",
+    "mtime": 1792950858.0658715,
+    "seen": 1792951091.308285,
+    "ast_hash": "e818cb6da7152fce2d45669f2dee5c46",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1792950054.512264,
-    "seen": 1792950337.8679268,
-    "ast_hash": "a162e971549d0c9b0f3517abf7ed1336",
+    "mtime": 1792950831.3000798,
+    "seen": 1792951091.9235697,
+    "ast_hash": "7c4cddadcbfe68c6e9a820cb2fe01d46",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -744,15 +744,15 @@
     "semantic_hash": ""
   },
   "data/locales/it-IT.json": {
-    "mtime": 1792334420.0619383,
-    "seen": 1792344457.1664052,
-    "ast_hash": "4deacc5710388f93fc45a9ce985a5f3d",
+    "mtime": 1792950710.34354,
+    "seen": 1792951088.95932,
+    "ast_hash": "e91f8959b005e1736a0c7abc1555f177",
     "semantic_hash": ""
   },
   "data/locales/pt-BR.json": {
-    "mtime": 1792334420.1086485,
-    "seen": 1792344457.1664083,
-    "ast_hash": "973bc610460a4747202b7ca5267b5580",
+    "mtime": 1792950720.1310978,
+    "seen": 1792951088.959326,
+    "ast_hash": "ee4d74251041b90083ae13d0e0c7fff9",
     "semantic_hash": ""
   },
   "scripts/narrativizar_grammar.py": {
@@ -1080,9 +1080,9 @@
     "semantic_hash": ""
   },
   "js/core/backup_reminder.js": {
-    "mtime": 1792949072.4210937,
-    "seen": 1792949711.5909078,
-    "ast_hash": "dc2be6fcfcd2c1e93c3b72b08565e999",
+    "mtime": 1792950738.8178751,
+    "seen": 1792951090.245912,
+    "ast_hash": "34bcbd5cb5210f8f856b94c9ad87ccbd",
     "semantic_hash": ""
   },
   "tests/backup_reminder.test.js": {

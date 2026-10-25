@@ -7038,7 +7038,7 @@ body.dark-mode .nivel-select option {
     /* ── 25. POPUP DE LEMBRETE DE BACKUP (A CADA 3 DIAS / 20S) ── */
     .backup-popup-container {
       position: fixed;
-      top: calc(var(--app-header-h, 72px) + 12px);
+      top: 82px;
       right: 16px;
       z-index: 9980;
       max-width: min(390px, calc(100vw - 32px));

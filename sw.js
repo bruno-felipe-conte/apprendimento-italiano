@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v143';
+const CACHE = 'italiano-v144';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -14,7 +14,7 @@ const STATIC = [
   './favicon.ico',
   './index.html',
   './css/italia.css',
-  './css/italia.css?v=96',
+  './css/italia.css?v=97',
   // Dicionários desacoplados i18n
   './data/locales/pt-BR.json',
   './data/locales/it-IT.json',
@@ -62,7 +62,7 @@ const STATIC = [
   './js/core/tts.js',
   './js/core/tts.js?v=93',
   './js/core/backup_reminder.js',
-  './js/core/backup_reminder.js?v=94',
+  './js/core/backup_reminder.js?v=97',
   './js/core.js',
   './js/core.js?v=93',
   './js/dialoghi.js?v=91',
