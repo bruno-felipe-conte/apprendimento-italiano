@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build:ts": "tsc js/progression.ts js/voice_engine.ts js/modal_manager.ts js/core/plugins.ts js/plugins/index.ts js/core/sync.ts js/core/analytics.ts js/core/collaboration.ts --target ES2022 --module ESNext --skipLibCheck",
+    "build": "npm run build:ts && tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",

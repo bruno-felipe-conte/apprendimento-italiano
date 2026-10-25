@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v141';
+const CACHE = 'italiano-v142';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -23,14 +23,22 @@ const STATIC = [
   './js/audio_cache.js?v=91',
   './js/tts_worker.js',
   './js/tts_worker.js?v=89',
-  './js/voice_engine.ts',
-  './js/modal_manager.ts',
-  './js/progression.ts',
-  './js/core/plugins.ts',
-  './js/plugins/index.ts',
-  './js/core/sync.ts',
-  './js/core/analytics.ts',
-  './js/core/collaboration.ts',
+  './js/voice_engine.js',
+  './js/voice_engine.js?v=95',
+  './js/modal_manager.js',
+  './js/modal_manager.js?v=95',
+  './js/progression.js',
+  './js/progression.js?v=95',
+  './js/core/plugins.js',
+  './js/core/plugins.js?v=95',
+  './js/plugins/index.js',
+  './js/plugins/index.js?v=95',
+  './js/core/sync.js',
+  './js/core/sync.js?v=95',
+  './js/core/analytics.js',
+  './js/core/analytics.js?v=95',
+  './js/core/collaboration.js',
+  './js/core/collaboration.js?v=95',
   './js/audio.js?v=91',
   './js/conquistas.js?v=88',
   './js/core/state.js',
@@ -129,7 +137,9 @@ self.addEventListener('fetch', event => {
       caches.open(CACHE).then(cache =>
         cache.match(req).then(cached => {
           const network = fetch(req).then(res => {
-            cache.put(req, res.clone());
+            if (res && (res.status === 200 || res.type === 'opaque')) {
+              cache.put(req, res.clone());
+            }
             return res;
           }).catch(() => cached);
           return cached || network;

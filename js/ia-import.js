@@ -835,6 +835,7 @@ if (typeof window !== 'undefined') {
 if (typeof globalThis !== 'undefined') {
   globalThis.IAImport = IAImport;
 }
-
-export default IAImport;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = IAImport;
+}
 

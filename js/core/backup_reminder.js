@@ -221,13 +221,14 @@ const BackupReminder = {
   }
 };
 
-// Exporta globalmente para o navegador e como ES Module / CommonJS para testes
+// Exporta globalmente para o navegador e ambientes de teste
 if (typeof window !== 'undefined') {
   window.BackupReminder = BackupReminder;
 }
 if (typeof globalThis !== 'undefined') {
   globalThis.BackupReminder = BackupReminder;
 }
-
-export default BackupReminder;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = BackupReminder;
+}
 

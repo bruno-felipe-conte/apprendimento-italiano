@@ -1,6 +1,8 @@
 // @vitest-environment happy-dom
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import BackupReminder from '../js/core/backup_reminder.js';
+import '../js/core/backup_reminder.js';
+
+const BackupReminder = globalThis.BackupReminder;
 
 describe('BackupReminder: Lembrete Periódico e Configurações de Backup', () => {
   beforeEach(() => {
