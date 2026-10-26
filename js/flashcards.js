@@ -264,6 +264,8 @@ const Flashcards = {
       listaPalavras = data?.palavras || [];
     }
 
+    this.totalNoDeck = listaPalavras.length;
+
     if (!listaPalavras.length) { this.cartasDisponiveis = []; return; }
 
     const agora   = Date.now();
@@ -1018,7 +1020,11 @@ const Flashcards = {
   // ── Practice all cards regardless of schedule ─────────────
   praticaTodas() {
     let palavrasTemplo = [];
-    if (this.temploAtual === 'custom') {
+    if (typeof this.temploAtual === 'string' && this.temploAtual.startsWith('deck_')) {
+      const deckKey = this.temploAtual.replace('deck_', '');
+      const allCards = App.estado.topFlashcards || this.topFlashcardsCache || [];
+      palavrasTemplo = deckKey === 'all' ? allCards : allCards.filter(c => c.deck === deckKey);
+    } else if (this.temploAtual === 'custom') {
       palavrasTemplo = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
     } else {
       const data = App.estado.templosData[this.temploAtual];
