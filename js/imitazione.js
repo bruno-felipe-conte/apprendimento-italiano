@@ -484,3 +484,9 @@ const Imitazione = {
     `;
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Imitazione = Imitazione;
+if (typeof globalThis !== 'undefined') globalThis.Imitazione = Imitazione;
+if (typeof module !== 'undefined' && module.exports) module.exports = Imitazione;

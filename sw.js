@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v145';
+const CACHE = 'italiano-v146';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -32,7 +32,7 @@ const STATIC = [
   './js/core/plugins.js',
   './js/core/plugins.js?v=98',
   './js/plugins/index.js',
-  './js/plugins/index.js?v=98',
+  './js/plugins/index.js?v=99',
   './js/core/sync.js',
   './js/core/sync.js?v=95',
   './js/core/analytics.js',
@@ -65,23 +65,23 @@ const STATIC = [
   './js/core/backup_reminder.js?v=97',
   './js/core.js',
   './js/core.js?v=93',
-  './js/dialoghi.js?v=91',
-  './js/canzoni.js?v=91',
-  './js/imitazione.js?v=84',
-  './js/flashcards.js?v=84',
-  './js/grammar.js?v=91',
-  './js/heatmap.js?v=84',
-  './js/onboarding.js?v=79',
-  './js/profilo.js?v=89',
+  './js/dialoghi.js?v=99',
+  './js/canzoni.js?v=99',
+  './js/imitazione.js?v=99',
+  './js/flashcards.js?v=99',
+  './js/grammar.js?v=99',
+  './js/heatmap.js?v=99',
+  './js/onboarding.js?v=99',
+  './js/profilo.js?v=99',
   './js/progression.js?v=86',
-  './js/quiz.js?v=84',
+  './js/quiz.js?v=99',
   './js/quiz_data.js',
-  './js/vocab.js?v=96',
-  './js/i18n.js?v=79',
+  './js/vocab.js?v=99',
+  './js/i18n.js?v=99',
   './js/notificacoes.js',
   './js/tour.js',
   './js/storie.js',
-  './js/storie.js?v=91',
+  './js/storie.js?v=99',
   './js/ia-import.js',
   './js/ia-import.js?v=91',
   // WASM Config

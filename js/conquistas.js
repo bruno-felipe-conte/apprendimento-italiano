@@ -246,3 +246,9 @@ const Conquistas = {
     `;
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Conquistas = Conquistas;
+if (typeof globalThis !== 'undefined') globalThis.Conquistas = Conquistas;
+if (typeof module !== 'undefined' && module.exports) module.exports = Conquistas;

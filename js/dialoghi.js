@@ -536,3 +536,9 @@ const Dialoghi = {
 document.addEventListener('i18n:changed', () => {
   if (document.getElementById('dialoghi-container')) Dialoghi.renderizarSeletor();
 });
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Dialoghi = Dialoghi;
+if (typeof globalThis !== 'undefined') globalThis.Dialoghi = Dialoghi;
+if (typeof module !== 'undefined' && module.exports) module.exports = Dialoghi;

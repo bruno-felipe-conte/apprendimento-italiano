@@ -88,3 +88,9 @@ const Onboarding = {
     }
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Onboarding = Onboarding;
+if (typeof globalThis !== 'undefined') globalThis.Onboarding = Onboarding;
+if (typeof module !== 'undefined' && module.exports) module.exports = Onboarding;

@@ -129,7 +129,7 @@ const AppNavigation = {
       if (_precisaRender('vocab-list')) Vocab.renderizar();
     }
     if (secao === 'quiz' && typeof Quiz !== 'undefined') {
-      if (_precisaRender('quiz-seletor')) Quiz.renderizarSeletor();
+      if (_precisaRender('quiz-templo-selector')) Quiz.renderizarSeletor();
     }
     if (secao === 'flashcard' && typeof Flashcards !== 'undefined') {
       Flashcards.atualizarSelectTemplo();

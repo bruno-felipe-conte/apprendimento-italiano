@@ -1853,3 +1853,9 @@ const I18n = {
     }
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.I18n = I18n;
+if (typeof globalThis !== 'undefined') globalThis.I18n = I18n;
+if (typeof module !== 'undefined' && module.exports) module.exports = I18n;

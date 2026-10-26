@@ -45,7 +45,7 @@ export const QuizPlugin: IPlugin = {
       title: 'Quiz',
       handler: () => {
         const win = typeof window !== 'undefined' ? window : null;
-        if (win?.Quiz && _precisaRender('quiz-seletor')) {
+        if (win?.Quiz && _precisaRender('quiz-templo-selector')) {
           win.Quiz.renderizarSeletor();
         }
       }

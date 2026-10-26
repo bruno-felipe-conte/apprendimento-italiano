@@ -87,3 +87,9 @@ const SomFeedback = {
     this._tocar(440, 40, 'sine', 0.1);
   },
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.SomFeedback = SomFeedback;
+if (typeof globalThis !== 'undefined') globalThis.SomFeedback = SomFeedback;
+if (typeof module !== 'undefined' && module.exports) module.exports = SomFeedback;

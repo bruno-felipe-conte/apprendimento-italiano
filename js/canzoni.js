@@ -2318,3 +2318,9 @@ Ogni elemento della lista deve essere un oggetto contenente:
 document.addEventListener('i18n:changed', () => {
   if (document.getElementById('canzoni-container')) Canzoni.renderizarSeletor();
 });
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Canzoni = Canzoni;
+if (typeof globalThis !== 'undefined') globalThis.Canzoni = Canzoni;
+if (typeof module !== 'undefined' && module.exports) module.exports = Canzoni;

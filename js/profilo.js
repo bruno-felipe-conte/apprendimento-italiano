@@ -638,3 +638,9 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   });
 }
 
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Profilo = Profilo;
+if (typeof globalThis !== 'undefined') globalThis.Profilo = Profilo;
+if (typeof module !== 'undefined' && module.exports) module.exports = Profilo;

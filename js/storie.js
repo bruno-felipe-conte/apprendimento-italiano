@@ -1745,3 +1745,9 @@ const Storie = {
     this.renderizarSeletor();
   },
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Storie = Storie;
+if (typeof globalThis !== 'undefined') globalThis.Storie = Storie;
+if (typeof module !== 'undefined' && module.exports) module.exports = Storie;

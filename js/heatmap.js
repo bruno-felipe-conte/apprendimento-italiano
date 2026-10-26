@@ -185,3 +185,9 @@ const Calor = {
     }
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') { window.Calor = Calor; window.Heatmap = Calor; }
+if (typeof globalThis !== 'undefined') { globalThis.Calor = Calor; globalThis.Heatmap = Calor; }
+if (typeof module !== 'undefined' && module.exports) module.exports = Calor;

@@ -756,3 +756,9 @@ document.addEventListener('i18n:changed', () => {
     Quiz.renderizarSeletor();
   }
 });
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Quiz = Quiz;
+if (typeof globalThis !== 'undefined') globalThis.Quiz = Quiz;
+if (typeof module !== 'undefined' && module.exports) module.exports = Quiz;

@@ -1178,3 +1178,9 @@ window.addEventListener('keydown', (e) => {
     return;
   }
 });
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Flashcards = Flashcards;
+if (typeof globalThis !== 'undefined') globalThis.Flashcards = Flashcards;
+if (typeof module !== 'undefined' && module.exports) module.exports = Flashcards;

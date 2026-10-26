@@ -1077,3 +1077,9 @@ const Grammatica = {
     return `<div class="gram-coda">💡 ${this._formatarPergunta(u.coda)}</div>`;
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Grammatica = Grammatica;
+if (typeof globalThis !== 'undefined') globalThis.Grammatica = Grammatica;
+if (typeof module !== 'undefined' && module.exports) module.exports = Grammatica;

@@ -497,3 +497,9 @@ const Vocab = {
 document.addEventListener('i18n:changed', () => {
   if (document.getElementById('vocab-list')) Vocab.renderizar();
 });
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Vocab = Vocab;
+if (typeof globalThis !== 'undefined') globalThis.Vocab = Vocab;
+if (typeof module !== 'undefined' && module.exports) module.exports = Vocab;

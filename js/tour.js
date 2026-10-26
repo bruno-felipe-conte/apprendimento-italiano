@@ -266,3 +266,9 @@ const Tour = {
     navegar(0, () => driverObj.drive());
   }
 };
+
+
+// Exposição global segura para navegadores e testes
+if (typeof window !== 'undefined') window.Tour = Tour;
+if (typeof globalThis !== 'undefined') globalThis.Tour = Tour;
+if (typeof module !== 'undefined' && module.exports) module.exports = Tour;
