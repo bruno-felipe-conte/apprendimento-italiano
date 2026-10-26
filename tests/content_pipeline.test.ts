@@ -5,7 +5,8 @@ import {
   TemploSchema,
   StoriaItemSchema,
   DialogoItemSchema,
-  CanzoneItemSchema
+  TopVocabFileSchema,
+  TopFlashcardsFileSchema
 } from '../scripts/schemas';
 import { validarTodosConteudos } from '../scripts/validate_content';
 import { ingerirConteudo } from '../scripts/ingest_content';
@@ -153,6 +154,38 @@ describe('EV-03: Content Pipeline Automatizado', () => {
       expect(relatorio.totalArquivos).toBeGreaterThanOrEqual(51);
       expect(relatorio.totalPalavras).toBeGreaterThan(5000);
       expect(relatorio.erros).toHaveLength(0);
+    });
+
+    it('deve validar o arquivo mestre top1000_vocabulario.json com 1000 palavras enriquecidas', () => {
+      const top1000Path = path.resolve(process.cwd(), 'data', 'top1000_vocabulario.json');
+      const raw = fs.readFileSync(top1000Path, 'utf-8');
+      const json = JSON.parse(raw);
+      const resultado = TopVocabFileSchema.safeParse(json);
+      expect(resultado.success).toBe(true);
+      if (resultado.success) {
+        expect(resultado.data.total).toBe(1000);
+        expect(resultado.data.palavras).toHaveLength(1000);
+        expect(resultado.data.palavras[0].rank).toBe(1);
+        expect(resultado.data.palavras[999].rank).toBe(1000);
+      }
+    });
+
+    it('deve validar o arquivo mestre top500_flashcards.json com 500 cards e 5 baralhos de 100', () => {
+      const top500Path = path.resolve(process.cwd(), 'data', 'top500_flashcards.json');
+      const raw = fs.readFileSync(top500Path, 'utf-8');
+      const json = JSON.parse(raw);
+      const resultado = TopFlashcardsFileSchema.safeParse(json);
+      expect(resultado.success).toBe(true);
+      if (resultado.success) {
+        expect(resultado.data.total).toBe(500);
+        expect(resultado.data.cards).toHaveLength(500);
+        expect(Object.keys(resultado.data.decks)).toHaveLength(5);
+        expect(resultado.data.decks['colocacoes'].total).toBe(100);
+        expect(resultado.data.decks['falsi_amici'].total).toBe(100);
+        expect(resultado.data.decks['preposizioni'].total).toBe(100);
+        expect(resultado.data.decks['verbi_irregolari'].total).toBe(100);
+        expect(resultado.data.decks['situazioni_reali'].total).toBe(100);
+      }
     });
   });
 });

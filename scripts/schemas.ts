@@ -7,9 +7,9 @@ import { z } from 'zod';
 export const NivelCEFRSchema = z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 
 export const PalavraTemploSchema = z.preprocess(
-  (val: any) => {
+  (val: unknown) => {
     if (val && typeof val === 'object') {
-      const copy = { ...val };
+      const copy = { ...(val as Record<string, unknown>) };
       if (!copy.exemplo && copy.esempio) copy.exemplo = copy.esempio;
       if (!copy.exemplo_pt && copy.esempio_pt) copy.exemplo_pt = copy.esempio_pt;
       return copy;
@@ -127,3 +127,63 @@ export const ImitazioneItemSchema = z.object({
 export const ImitazioniFileSchema = z.object({
   imitazioni: z.array(ImitazioneItemSchema).min(1)
 }).or(z.array(ImitazioneItemSchema));
+
+// ==========================================
+// SCHEMAS TOP 1.000 VOCABULÁRIO & TOP 500 FLASHCARDS
+// ==========================================
+
+export const TopVocabItemSchema = z.object({
+  rank: z.number().int().positive(),
+  id: z.string().min(1),
+  italiano: z.string().min(1),
+  portugues: z.string().min(1),
+  categoria: z.string().min(1),
+  genere: z.string().nullable().optional(),
+  plurale: z.string().nullable().optional(),
+  livello: z.string().min(1),
+  audio_ipa: z.string().optional(),
+  exemplo: z.string().min(1),
+  exemplo_pt: z.string().min(1),
+  collocazioni: z.array(z.string()).optional().default([])
+});
+
+export const TopVocabFileSchema = z.object({
+  total: z.number().int().positive(),
+  fonte: z.string().optional(),
+  niveis: z.record(z.string(), z.number()).optional(),
+  palavras: z.array(TopVocabItemSchema).length(1000, 'Top 1000 deve conter exatamente 1000 palavras')
+});
+
+export const TopFlashcardDeckInfoSchema = z.object({
+  id: z.string().min(1),
+  nome: z.string().min(1),
+  icone: z.string().optional(),
+  total: z.number().int().positive(),
+  descricao: z.string().optional()
+});
+
+export const TopFlashcardItemSchema = z.object({
+  id: z.string().min(1),
+  deck: z.string().min(1),
+  deck_nome: z.string().min(1),
+  nivel: z.string().min(1),
+  italiano: z.string().min(1),
+  portugues: z.string().min(1),
+  categoria: z.string().min(1),
+  frente: z.string().min(1),
+  verso: z.string().min(1),
+  traducao_frase: z.string().min(1),
+  dica: z.string().optional(),
+  exemplo: z.string().min(1),
+  exemplo_pt: z.string().min(1),
+  audio_palavra: z.string().min(1),
+  audio_frase: z.string().min(1),
+  audio_ipa: z.string().optional(),
+  explicacao: z.string().optional()
+});
+
+export const TopFlashcardsFileSchema = z.object({
+  total: z.number().int().positive(),
+  decks: z.record(z.string(), TopFlashcardDeckInfoSchema),
+  cards: z.array(TopFlashcardItemSchema).length(500, 'Top 500 deve conter exatamente 500 cards')
+});

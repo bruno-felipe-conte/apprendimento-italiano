@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793044045.3787134,
-    "seen": 1793044570.0499034,
-    "ast_hash": "6fb5bf664c352ed80fdb4693cdefbf84",
+    "mtime": 1793048668.3375962,
+    "seen": 1793049056.9489968,
+    "ast_hash": "e908066e05a9a3e9ba7d0af88c6b0044",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -570,9 +570,9 @@
     "semantic_hash": ""
   },
   "js/vocab.js": {
-    "mtime": 1793044045.4089053,
-    "seen": 1793044570.082131,
-    "ast_hash": "414396f8ba823be6a06a879867d9e51b",
+    "mtime": 1793048737.954676,
+    "seen": 1793049057.0206637,
+    "ast_hash": "7fbdc5693c8ab92143572628c3622f6e",
     "semantic_hash": ""
   },
   "scripts/genera_storie_filosofia.py": {
@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1793044334.620008,
-    "seen": 1793044570.1601424,
-    "ast_hash": "621f8b4abd010ab3923a5c5da5cdc1bb",
+    "mtime": 1793048772.3176265,
+    "seen": 1793049057.075441,
+    "ast_hash": "17eb05f64474d6665354e7cf84a8d731",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793044334.5784545,
-    "seen": 1793044570.3346598,
-    "ast_hash": "fe7426ccd4df6d324fbac104d05b6f4f",
+    "mtime": 1793048692.1802955,
+    "seen": 1793049057.2293122,
+    "ast_hash": "afbae1ce08a6cf2936a27952887ea305",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -930,9 +930,9 @@
     "semantic_hash": ""
   },
   "scripts/schemas.ts": {
-    "mtime": 1792587317.0177484,
-    "seen": 1792587358.8115911,
-    "ast_hash": "c92c7d8fd4b3494aa1a5434c891cfb5d",
+    "mtime": 1793048417.947589,
+    "seen": 1793049057.0461075,
+    "ast_hash": "ed1065286444310034461ac8fa4a6050",
     "semantic_hash": ""
   },
   "scripts/stress-storage.js": {
@@ -948,9 +948,9 @@
     "semantic_hash": ""
   },
   "scripts/validate_content.ts": {
-    "mtime": 1792587317.1074443,
-    "seen": 1792587358.890574,
-    "ast_hash": "1018992632f2a6c0304f3155c7552d6f",
+    "mtime": 1793048471.348477,
+    "seen": 1793049057.0721147,
+    "ast_hash": "8d04b88a40b9729955d447b1f534ed8d",
     "semantic_hash": ""
   },
   "tests/a11y/a11y.spec.ts": {
@@ -972,9 +972,9 @@
     "semantic_hash": ""
   },
   "tests/content_pipeline.test.ts": {
-    "mtime": 1792587317.2488942,
-    "seen": 1792587358.9123716,
-    "ast_hash": "d8d216b8a4b280a80e8d524471c14e01",
+    "mtime": 1793048911.184448,
+    "seen": 1793049057.092035,
+    "ast_hash": "909919f419fb1151096b7455a0369acc",
     "semantic_hash": ""
   },
   "tests/modal_manager.test.js": {
@@ -1140,9 +1140,69 @@
     "semantic_hash": ""
   },
   "scripts/computer_use_battery.ts": {
-    "mtime": 1793045793.8073597,
-    "seen": 1793046000.7563446,
-    "ast_hash": "ce402b1704758c1a2943ee55ddfab13d",
+    "mtime": 1793046140.8784125,
+    "seen": 1793049057.0352037,
+    "ast_hash": "23749c1551e243694e4f2b84d2e7441c",
+    "semantic_hash": ""
+  },
+  "data/top1000_vocabulario.json": {
+    "mtime": 1793048395.8504517,
+    "seen": 1793049056.7418048,
+    "ast_hash": "e466885b28e7ca995e784574ece20810",
+    "semantic_hash": ""
+  },
+  "data/top500_flashcards.json": {
+    "mtime": 1793048337.0685713,
+    "seen": 1793049056.741808,
+    "ast_hash": "842142b796f5f2a6028a990cf5c97d91",
+    "semantic_hash": ""
+  },
+  "scripts/compile_top1000_vocab.py": {
+    "mtime": 1793048383.3269174,
+    "seen": 1793049057.0351977,
+    "ast_hash": "3b4a0b9f5274562f5275c7a482938af3",
+    "semantic_hash": ""
+  },
+  "scripts/compile_top500_flashcards.py": {
+    "mtime": 1793048331.1038125,
+    "seen": 1793049057.0352006,
+    "ast_hash": "c1892be971a5d199612f163f8fe18eb1",
+    "semantic_hash": ""
+  },
+  "scripts/deck2_falsi_amici.py": {
+    "mtime": 1793048009.9843357,
+    "seen": 1793049057.0352056,
+    "ast_hash": "2a04d4e3d1b9ee2801b451aa3b212539",
+    "semantic_hash": ""
+  },
+  "scripts/deck3_preposizioni.py": {
+    "mtime": 1793048098.2337584,
+    "seen": 1793049057.0352068,
+    "ast_hash": "85ad0bbf204c78407ce280d537cfb6c7",
+    "semantic_hash": ""
+  },
+  "scripts/deck4_verbi_irregolari.py": {
+    "mtime": 1793048194.4661021,
+    "seen": 1793049057.0352087,
+    "ast_hash": "20d5bf36d3d06cc0063642c690ded559",
+    "semantic_hash": ""
+  },
+  "scripts/deck5_situazioni_reali.py": {
+    "mtime": 1793048283.3286889,
+    "seen": 1793049057.03521,
+    "ast_hash": "ff4f6e2073a791821835c4e36b9644c5",
+    "semantic_hash": ""
+  },
+  "scripts/generate_top500_cards.py": {
+    "mtime": 1793047651.5172863,
+    "seen": 1793049057.039523,
+    "ast_hash": "8b06b060d009902f60efca6d28f33abf",
+    "semantic_hash": ""
+  },
+  "DOCUMENTACAO/PLANO_EXPANSAO_1000_PALAVRAS_500_CARDS.md": {
+    "mtime": 1793046401.960825,
+    "seen": 1793049057.1497571,
+    "ast_hash": "e49d0a599ab87a94e58b50ef83d67cc6",
     "semantic_hash": ""
   }
 }

@@ -1,17 +1,17 @@
-# Graph Report - apprendimento-italiano  (2026-10-25)
+# Graph Report - apprendimento-italiano  (2026-10-26)
 
 ## Corpus Check
-- 183 files · ~1,095,355 words
+- 184 files · ~1,097,773 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 656 nodes · 808 edges · 61 communities (30 shown, 31 thin omitted)
+- 663 nodes · 816 edges · 62 communities (31 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4949b6aa`
+- Built from commit: `15286b25`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -51,8 +51,9 @@
 - tts.js
 - collaboration.js
 - App Visual Identity (Icon)
-- devDependencies
+- scripts
 - PluginManager
+- voice_engine.ts
 - progression.js
 - modal_manager.js
 - voice_engine.js
@@ -111,7 +112,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (61 total, 31 thin omitted)
+## Communities (62 total, 31 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -134,8 +135,8 @@ Cohesion: 0.11
 Nodes (17): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, PWA Offline-First Architecture QA Audit Checklist, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Service Worker Registration & ControllerChange Auto-Reload, Main Single-Page Application HTML Shell (index.html) (+9 more)
 
 ### Community 5 - "schemas.ts"
-Cohesion: 0.06
-Nodes (30): App, BackupReminder, AppNavigation, AppState, AppXP, LexicoItem, VoiceEngine, WorkerMessageData (+22 more)
+Cohesion: 0.07
+Nodes (26): App, BackupReminder, AppNavigation, AppState, AppXP, vitest, ingerirConteudo(), IngestOptions (+18 more)
 
 ### Community 6 - "tts_worker.js"
 Cohesion: 0.43
@@ -147,7 +148,7 @@ Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, 
 
 ### Community 9 - "package.json"
 Cohesion: 0.05
-Nodes (43): author, dependencies, zod, description, keywords, license, main, name (+35 more)
+Nodes (42): author, dependencies, zod, description, devDependencies, @axe-core/playwright, eslint, @eslint/js (+34 more)
 
 ### Community 10 - "stress-storage.js"
 Cohesion: 0.08
@@ -190,8 +191,8 @@ Cohesion: 0.08
 Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, hashStringToInt(), MockAnalyticsProvider, PlausibleAnalyticsProvider
 
 ### Community 20 - "NMA Grammar Card Upgrader"
-Cohesion: 0.18
-Nodes (4): fs, grammar, fs, g
+Cohesion: 0.12
+Nodes (8): fecharModais(), OUTPUT_DIR, runBattery(), TabResult, fs, grammar, fs, g
 
 ### Community 21 - "ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada"
 Cohesion: 0.40
@@ -221,9 +222,13 @@ Nodes (6): AppCollaboration, calcularChecksumSimples(), CollaborationManager, Co
 Cohesion: 0.67
 Nodes (3): Apprendimento Italiano App Icon, IT Language Monogram, Roman Arch Emblem
 
-### Community 35 - "devDependencies"
-Cohesion: 0.13
-Nodes (15): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+7 more)
+### Community 35 - "scripts"
+Cohesion: 0.12
+Nodes (17): scripts, build, build:ts, content:ingest, content:validate, dev, format, format:check (+9 more)
+
+### Community 37 - "voice_engine.ts"
+Cohesion: 0.33
+Nodes (3): LexicoItem, VoiceEngine, WorkerMessageData
 
 ### Community 38 - "progression.js"
 Cohesion: 0.40
@@ -235,23 +240,23 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 371 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 375 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `AnalyticsManager`, `package.json`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `progression.ts`?**
-  _High betweenness centrality (0.117) - this node is a cross-community bridge._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `progression.ts`?**
+  _High betweenness centrality (0.114) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
+- **Why does `scripts` connect `scripts` to `package.json`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.09425287356321839 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.056910569105691054 - nodes in this community are weakly interconnected._
 - **Should `Guia Canônico de Prompts para Geração de Conteúdo` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
-- **Should `Core App Specs and Docs` be split into smaller, more focused modules?**
-  _Cohesion score 0.1067193675889328 - nodes in this community are weakly interconnected._

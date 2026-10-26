@@ -5,7 +5,9 @@ import {
   TemploSchema,
   StorieFileSchema,
   DialoghiFileSchema,
-  CanzoniFileSchema
+  CanzoniFileSchema,
+  TopVocabFileSchema,
+  TopFlashcardsFileSchema
 } from './schemas';
 
 export interface RelatorioValidacao {
@@ -64,9 +66,9 @@ export function validarTodosConteudos(dataDir?: string): RelatorioValidacao {
           wordIdSet.add(p.id);
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       relatorio.sucesso = false;
-      relatorio.erros.push({ arquivo: filename, mensagem: `JSON malformado: ${err.message}` });
+      relatorio.erros.push({ arquivo: filename, mensagem: `JSON malformado: ${(err as Error).message}` });
     }
   }
 
@@ -87,9 +89,9 @@ export function validarTodosConteudos(dataDir?: string): RelatorioValidacao {
           });
         });
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       relatorio.sucesso = false;
-      relatorio.erros.push({ arquivo: 'storie.json', mensagem: `Erro de parsing: ${err.message}` });
+      relatorio.erros.push({ arquivo: 'storie.json', mensagem: `Erro de parsing: ${(err as Error).message}` });
     }
   }
 
@@ -110,9 +112,9 @@ export function validarTodosConteudos(dataDir?: string): RelatorioValidacao {
           });
         });
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       relatorio.sucesso = false;
-      relatorio.erros.push({ arquivo: 'dialogi.json', mensagem: `Erro de parsing: ${err.message}` });
+      relatorio.erros.push({ arquivo: 'dialogi.json', mensagem: `Erro de parsing: ${(err as Error).message}` });
     }
   }
 
@@ -133,9 +135,55 @@ export function validarTodosConteudos(dataDir?: string): RelatorioValidacao {
           });
         });
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       relatorio.sucesso = false;
-      relatorio.erros.push({ arquivo: 'canzoni.json', mensagem: `Erro de parsing: ${err.message}` });
+      relatorio.erros.push({ arquivo: 'canzoni.json', mensagem: `Erro de parsing: ${(err as Error).message}` });
+    }
+  }
+
+  // 5. Validar top1000_vocabulario.json
+  const top1000Path = path.join(dir, 'top1000_vocabulario.json');
+  if (fs.existsSync(top1000Path)) {
+    relatorio.totalArquivos++;
+    try {
+      const raw = fs.readFileSync(top1000Path, 'utf-8');
+      const json = JSON.parse(raw);
+      const parsed = TopVocabFileSchema.safeParse(json);
+      if (!parsed.success) {
+        relatorio.sucesso = false;
+        parsed.error.issues.slice(0, 10).forEach((err) => {
+          relatorio.erros.push({
+            arquivo: 'top1000_vocabulario.json',
+            mensagem: `[${err.path.join('.')}] ${err.message}`
+          });
+        });
+      }
+    } catch (err: unknown) {
+      relatorio.sucesso = false;
+      relatorio.erros.push({ arquivo: 'top1000_vocabulario.json', mensagem: `Erro de parsing: ${(err as Error).message}` });
+    }
+  }
+
+  // 6. Validar top500_flashcards.json
+  const top500Path = path.join(dir, 'top500_flashcards.json');
+  if (fs.existsSync(top500Path)) {
+    relatorio.totalArquivos++;
+    try {
+      const raw = fs.readFileSync(top500Path, 'utf-8');
+      const json = JSON.parse(raw);
+      const parsed = TopFlashcardsFileSchema.safeParse(json);
+      if (!parsed.success) {
+        relatorio.sucesso = false;
+        parsed.error.issues.slice(0, 10).forEach((err) => {
+          relatorio.erros.push({
+            arquivo: 'top500_flashcards.json',
+            mensagem: `[${err.path.join('.')}] ${err.message}`
+          });
+        });
+      }
+    } catch (err: unknown) {
+      relatorio.sucesso = false;
+      relatorio.erros.push({ arquivo: 'top500_flashcards.json', mensagem: `Erro de parsing: ${(err as Error).message}` });
     }
   }
 

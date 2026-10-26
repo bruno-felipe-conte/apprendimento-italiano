@@ -178,11 +178,21 @@ const Flashcards = {
   _swipeStartX:      0,
   _swipeStartY:      0,
 
-  // ── Initialize for a specific temple ──────────────────────
-  init(templo) {
+  // ── Initialize for a specific temple or special deck ─────
+  selecionarTemplo(val) {
+    if (!val) return;
+    if (val === 'custom' || (typeof val === 'string' && val.startsWith('deck_'))) {
+      this.init(val);
+    } else {
+      this.init(parseInt(val, 10));
+    }
+  },
+
+  async init(templo) {
     if (!templo) return;
     const ehCustom = templo === 'custom';
-    if (!ehCustom) {
+    const ehDeckEspecial = typeof templo === 'string' && templo.startsWith('deck_');
+    if (!ehCustom && !ehDeckEspecial) {
       if (isNaN(templo)) return;
       if (!Progressao.temploDesbloqueado(templo)) {
         App.notificar('notif_fc_bloqueado', 'erro');
@@ -193,6 +203,18 @@ const Flashcards = {
         return;
       }
     }
+
+    if (ehDeckEspecial && (!App.estado.topFlashcards || !App.estado.topFlashcards.length)) {
+      try {
+        const resp = await fetch('data/top500_flashcards.json');
+        const data = await resp.json();
+        App.estado.topFlashcards = data.cards || [];
+        this.topFlashcardsCache = data.cards || [];
+      } catch (err) {
+        console.error('Erro ao carregar top500_flashcards.json:', err);
+      }
+    }
+
     this.temploAtual     = templo;
     this.praticandoTodas = false;
     this.sessaoStats     = { again: 0, hard: 0, good: 0, easy: 0, xp: 0, novas: [] };
@@ -226,7 +248,15 @@ const Flashcards = {
   carregarCartas() {
     let listaPalavras = [];
 
-    if (this.temploAtual === 'custom') {
+    if (typeof this.temploAtual === 'string' && this.temploAtual.startsWith('deck_')) {
+      const deckKey = this.temploAtual.replace('deck_', '');
+      const allCards = App.estado.topFlashcards || this.topFlashcardsCache || [];
+      if (deckKey === 'all') {
+        listaPalavras = allCards;
+      } else {
+        listaPalavras = allCards.filter(c => c.deck === deckKey);
+      }
+    } else if (this.temploAtual === 'custom') {
       const todos = App.estado?.vocabCache || [];
       listaPalavras = todos.filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
     } else {
@@ -1030,6 +1060,29 @@ const Flashcards = {
     if (!sel) return;
     const anterior = sel.value;
     sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
+
+    // 1. Grupo de Baralhos Especiais (Top 500 Flashcards)
+    const optGroupTop = document.createElement('optgroup');
+    optGroupTop.label = '⭐ Baralhos Especiais (Top 500)';
+    const decksEspeciais = [
+      { val: 'deck_all', label: '⭐ Todos os 500 Cards' },
+      { val: 'deck_colocacoes', label: '🧩 Colocações & Chunks (100)' },
+      { val: 'deck_falsi_amici', label: '⚠️ Falsos Amigos / Falsi Amici (100)' },
+      { val: 'deck_preposizioni', label: '📍 Preposições & Regências (100)' },
+      { val: 'deck_verbi_irregolari', label: '⚡ Verbos Irregulares em Contexto (100)' },
+      { val: 'deck_situazioni_reali', label: '🎭 Situações da Vida Real (100)' }
+    ];
+    decksEspeciais.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d.val;
+      opt.textContent = d.label;
+      optGroupTop.appendChild(opt);
+    });
+    sel.appendChild(optGroupTop);
+
+    // 2. Grupo dos Templos do Conhecimento
+    const optGroupTemplos = document.createElement('optgroup');
+    optGroupTemplos.label = '🏛️ Templos do Conhecimento';
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
       const data = App.estado.templosData[num];
@@ -1038,9 +1091,11 @@ const Flashcards = {
       opt.value        = num;
       const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
       opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
-      sel.appendChild(opt);
+      optGroupTemplos.appendChild(opt);
     });
-    // Adiciona opção de deck customizado se houver palavras adicionadas via IA
+    sel.appendChild(optGroupTemplos);
+
+    // 3. Adiciona opção de deck customizado se houver palavras adicionadas via IA
     const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
     if (customVocab.length > 0) {
       const optCustom = document.createElement('option');

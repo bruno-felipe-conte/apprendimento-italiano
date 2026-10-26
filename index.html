@@ -195,7 +195,7 @@
           <aside class="fc-studio-sidebar">
             <div class="card-selecao-templo">
               <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Estudando:</label>
-              <select id="flashcard-templo-select" onchange="Flashcards.init(this.value === 'custom' ? 'custom' : parseInt(this.value))">
+              <select id="flashcard-templo-select" onchange="Flashcards.selecionarTemplo(this.value)">
                 <option value="">-- Seleziona tempio --</option>
               </select>
               <button class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="margin-left:auto;white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
@@ -410,6 +410,7 @@
       </div>
       <div id="vocab-origem-pills" style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.5rem;align-items:center">
         <button id="vocab-pill-todos" data-i18n="vocab_pill_todas" onclick="Vocab.filtroOrigem='';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #543D75;background:#543D75;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">Todas</button>
+        <button id="vocab-pill-top1000" onclick="Vocab.filtrarTop1000()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">⭐ Top 1000</button>
         <button id="vocab-pill-custom" data-i18n="vocab_pill_adicionadas" onclick="Vocab.filtroOrigem='custom';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">🤖 Adicionadas</button>
         <button id="vocab-pill-nativo" data-i18n="vocab_pill_nativas" onclick="Vocab.filtroOrigem='nativo';Vocab.renderizar()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">📚 Nativas</button>
       </div>

@@ -6,10 +6,25 @@ const Vocab = {
   filtroTexto: '',
   filtroTemplo: '',
   filtroCategoria: '',
-  filtroOrigem: '',   // '' | 'custom' | 'nativo'
+  filtroOrigem: '',   // '' | 'custom' | 'nativo' | 'top1000'
   filtroDificeis:   false,
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
+  top1000Data: null,
+
+  async filtrarTop1000() {
+    this.filtroOrigem = 'top1000';
+    if (!this.top1000Data) {
+      try {
+        const res = await fetch('data/top1000_vocabulario.json');
+        const data = await res.json();
+        this.top1000Data = data.palavras || [];
+      } catch (e) {
+        console.error('Erro ao carregar top1000_vocabulario.json:', e);
+      }
+    }
+    this.renderizar();
+  },
 
   // ── Render filtered word list ─────────────────────────────
   renderizar() {
@@ -17,7 +32,10 @@ const Vocab = {
     const statsEl = document.getElementById('vocab-stats');
     if (!listEl) return;
 
-    const todos = App.estado.vocabCache;
+    const todos = (this.filtroOrigem === 'top1000' && this.top1000Data)
+      ? this.top1000Data
+      : App.estado.vocabCache;
+
     if (!todos || todos.length === 0) {
       listEl.innerHTML = '<p style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;text-align:center;padding:1.5rem;">Nenhuma palavra carregada ainda.</p>';
       if (statsEl) statsEl.textContent = '';
@@ -29,9 +47,11 @@ const Vocab = {
       ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #543D75;background:#543D75;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
       : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600';
     const pT = document.getElementById('vocab-pill-todos');
+    const pTop = document.getElementById('vocab-pill-top1000');
     const pC = document.getElementById('vocab-pill-custom');
     const pN = document.getElementById('vocab-pill-nativo');
     if (pT) pT.style.cssText = pillStyle(this.filtroOrigem === '');
+    if (pTop) pTop.style.cssText = pillStyle(this.filtroOrigem === 'top1000');
     if (pC) pC.style.cssText = pillStyle(this.filtroOrigem === 'custom');
     if (pN) pN.style.cssText = pillStyle(this.filtroOrigem === 'nativo');
 
@@ -369,6 +389,7 @@ const Vocab = {
     `;
 
     item.innerHTML = `
+      ${p.rank ? `<span class="vocab-cat-badge" style="background:#543D75;color:#fff;font-weight:700" title="Posição no ranking Top 1000">#${p.rank}</span>` : ''}
       <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
       <span class="vocab-seta">→</span>
       <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>

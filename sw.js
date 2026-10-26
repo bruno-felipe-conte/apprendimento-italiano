@@ -6,7 +6,7 @@
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v146';
+const CACHE = 'italiano-v147';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -94,6 +94,8 @@ const STATIC = [
   './data/canzoni.json',
   './data/imitazioni.json',
   './data/storie.json',
+  './data/top1000_vocabulario.json',
+  './data/top500_flashcards.json',
   // Templos 1-51 (gerados dinamicamente)
   ...Array.from({length: 51}, (_, i) => `./data/templo-${i+1}.json`),
   // Manifesto e ícone
