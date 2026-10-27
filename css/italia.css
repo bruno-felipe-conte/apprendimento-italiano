@@ -7286,3 +7286,73 @@ body.dark-mode .nivel-select option {
       from { transform: scaleX(1); }
       to   { transform: scaleX(0); }
     }
+
+/* ── Handwriting Canvas (Scrittura a Mano nei Flashcard) ── */
+.fc-handwriting-wrap {
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  z-index: 20;
+  position: relative;
+}
+
+.fc-canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cor-testo-secundario, #555);
+}
+
+.fc-canvas-clear-btn {
+  background: var(--cor-fundo, #f1f5f9);
+  border: 1px solid var(--cor-borda, #cbd5e1);
+  color: var(--cor-testo, #334155);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.fc-canvas-clear-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
+
+.fc-canvas-box {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px dashed var(--cor-borda, #cbd5e1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+[data-tema="dark"] .fc-canvas-box {
+  background: #0f172a;
+  border-color: #475569;
+}
+
+#fc-canvas {
+  width: 100%;
+  height: 95px;
+  display: block;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.fc-canvas-baseline {
+  position: absolute;
+  bottom: 22px;
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  border-bottom: 1px dashed rgba(212, 168, 67, 0.45);
+  pointer-events: none;
+}

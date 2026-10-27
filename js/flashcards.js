@@ -167,6 +167,7 @@ const Flashcards = {
   virada:           false,
   praticandoTodas:  false,
   modoReverso:       false,
+  modoEscrita:       false,
   modoContexto:      false,
   modoEscuta:        false,
   nivelDica:         0,      // 0=none, 1=first letter, 2=more letters, 3=flipped
@@ -395,6 +396,83 @@ const Flashcards = {
     this.cartasDisponiveis = [...novas, ...devidas].slice(0, 20);
   },
 
+  _limparEscritaCanvas() {
+    const wrap = document.getElementById('fc-handwriting-wrap');
+    if (wrap) wrap.remove();
+  },
+
+  limparEscrita() {
+    const canvas = document.getElementById('fc-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  },
+
+  _iniciarCanvasEscrita() {
+    const canvas = document.getElementById('fc-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(rect.width * dpr);
+    canvas.height = Math.round(rect.height * dpr);
+    ctx.scale(dpr, dpr);
+
+    const isDark = document.body.classList.contains('dark-mode') || document.documentElement.getAttribute('data-tema') === 'dark';
+    ctx.lineWidth = 3;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = isDark ? '#D4A843' : '#8B1E0F';
+
+    let desenhando = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    const getPos = (e) => {
+      const r = canvas.getBoundingClientRect();
+      const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+      const clientY = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+      return { x: clientX - r.left, y: clientY - r.top };
+    };
+
+    canvas.onpointerdown = (e) => {
+      e.stopPropagation();
+      try { canvas.setPointerCapture(e.pointerId); } catch (_) {}
+      desenhando = true;
+      const pos = getPos(e);
+      lastX = pos.x;
+      lastY = pos.y;
+      ctx.beginPath();
+      ctx.arc(lastX, lastY, ctx.lineWidth / 2, 0, Math.PI * 2);
+      ctx.fill();
+    };
+
+    canvas.onpointermove = (e) => {
+      if (!desenhando) return;
+      e.stopPropagation();
+      const pos = getPos(e);
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      lastX = pos.x;
+      lastY = pos.y;
+    };
+
+    const stopDrawing = (e) => {
+      if (desenhando && e) {
+        try { canvas.releasePointerCapture(e.pointerId); } catch (_) {}
+      }
+      desenhando = false;
+    };
+
+    canvas.onpointerup = stopDrawing;
+    canvas.onpointercancel = stopDrawing;
+  },
+
   // ── Render current card ────────────────────────────────────
   mostrarCarta() {
     if (this.indiceAtual >= this.cartasDisponiveis.length) {
@@ -448,6 +526,38 @@ const Flashcards = {
       if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+    } else if (this.modoEscrita) {
+      if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elDica) elDica.textContent = '✍️ Scrivi la parola in italiano e tocca per controllare';
+      if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
+
+      // Injeta o canvas de caligrafia / escrita à mão na frente
+      this._limparEscritaCanvas();
+      const front = document.querySelector('.card-frente');
+      if (front) {
+        const wrap = document.createElement('div');
+        wrap.id = 'fc-handwriting-wrap';
+        wrap.className = 'fc-handwriting-wrap';
+        wrap.setAttribute('onclick', 'event.stopPropagation()');
+        wrap.innerHTML = `
+          <div class="fc-canvas-header">
+            <span class="fc-canvas-label">✍️ Scrittura a mano:</span>
+            <button type="button" class="fc-canvas-clear-btn" onclick="event.stopPropagation();Flashcards.limparEscrita()">🧹 Pulisci</button>
+          </div>
+          <div class="fc-canvas-box">
+            <canvas id="fc-canvas"></canvas>
+            <div class="fc-canvas-baseline"></div>
+          </div>
+        `;
+        const tapPrompt = front.querySelector('.card-tap-prompt');
+        if (tapPrompt) {
+          front.insertBefore(wrap, tapPrompt);
+        } else {
+          front.appendChild(wrap);
+        }
+        setTimeout(() => this._iniciarCanvasEscrita(), 50);
+      }
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
@@ -902,7 +1012,8 @@ const Flashcards = {
     this.modoReverso  = false;
     this.modoContexto = false;
     this.modoEscuta   = false;
-    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta'].forEach(id => {
+    this.modoEscrita  = false;
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita'].forEach(id => {
       const b = document.getElementById(id);
       if (b) b.classList.remove('ativo');
     });
@@ -925,6 +1036,17 @@ const Flashcards = {
     this.modoContexto = novoValor;
     const btn = document.getElementById('btn-contexto');
     if (btn) btn.classList.toggle('ativo', this.modoContexto);
+    if (this.cartaAtual) this.mostrarCarta();
+  },
+
+  toggleEscrita() {
+    const novoValor = !this.modoEscrita;
+    this._limparModos();
+    this.modoEscrita = novoValor;
+    const btn = document.getElementById('btn-escrita');
+    if (btn) btn.classList.toggle('ativo', this.modoEscrita);
+    const btnNormal = document.getElementById('btn-modo-normal');
+    if (btnNormal && this.modoEscrita) btnNormal.classList.remove('ativo');
     if (this.cartaAtual) this.mostrarCarta();
   },
 
