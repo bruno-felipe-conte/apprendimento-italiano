@@ -177,11 +177,86 @@ const Flashcards = {
   _swipeInitialized: false,
   _swipeStartX:      0,
   _swipeStartY:      0,
+  abaOrigem:         'templos', // 'templos' | 'especiais'
+
+  // ── Switch between Templos and Baralhos Especiais ───────────
+  trocarAbaOrigem(origem, autoLoad = true) {
+    this.abaOrigem = origem;
+    const tabTemplos = document.getElementById('fc-tab-templos');
+    const tabEspeciais = document.getElementById('fc-tab-especiais');
+    const painelTemplos = document.getElementById('fc-painel-templos');
+    const painelEspeciais = document.getElementById('fc-painel-especiais');
+
+    if (origem === 'especiais') {
+      if (tabTemplos) {
+        tabTemplos.classList.remove('ativo');
+        tabTemplos.setAttribute('aria-selected', 'false');
+      }
+      if (tabEspeciais) {
+        tabEspeciais.classList.add('ativo');
+        tabEspeciais.setAttribute('aria-selected', 'true');
+      }
+      if (painelTemplos) painelTemplos.style.display = 'none';
+      if (painelEspeciais) painelEspeciais.style.display = '';
+
+      if (autoLoad) {
+        const selDeck = document.getElementById('flashcard-deck-select');
+        const deckVal = (selDeck && selDeck.value) ? selDeck.value : 'deck_all';
+        this.selecionarDeckEspecial(deckVal);
+      }
+    } else {
+      if (tabEspeciais) {
+        tabEspeciais.classList.remove('ativo');
+        tabEspeciais.setAttribute('aria-selected', 'false');
+      }
+      if (tabTemplos) {
+        tabTemplos.classList.add('ativo');
+        tabTemplos.setAttribute('aria-selected', 'true');
+      }
+      if (painelEspeciais) painelEspeciais.style.display = 'none';
+      if (painelTemplos) painelTemplos.style.display = '';
+
+      if (autoLoad) {
+        const selTemplo = document.getElementById('flashcard-templo-select');
+        let temploVal = selTemplo ? selTemplo.value : null;
+        if (!temploVal || (typeof temploVal === 'string' && temploVal.startsWith('deck_'))) {
+          const desbloqueados = App.estado?.progresso?.templos_desbloqueados || [1];
+          temploVal = desbloqueados[0] || 1;
+          if (selTemplo) selTemplo.value = String(temploVal);
+        }
+        this.selecionarTemplo(temploVal);
+      }
+    }
+  },
+
+  // ── Select a special deck (Top 500) ────────────────────────
+  selecionarDeckEspecial(deckVal) {
+    if (!deckVal) return;
+    const selDeck = document.getElementById('flashcard-deck-select');
+    if (selDeck && selDeck.value !== deckVal) {
+      selDeck.value = deckVal;
+    }
+    const chips = document.querySelectorAll('.fc-deck-chip');
+    chips.forEach(chip => {
+      if (chip.getAttribute('data-deck') === deckVal) {
+        chip.classList.add('ativo');
+      } else {
+        chip.classList.remove('ativo');
+      }
+    });
+
+    if (this.abaOrigem !== 'especiais') {
+      this.trocarAbaOrigem('especiais', false);
+    }
+    this.init(deckVal);
+  },
 
   // ── Initialize for a specific temple or special deck ─────
   selecionarTemplo(val) {
     if (!val) return;
-    if (val === 'custom' || (typeof val === 'string' && val.startsWith('deck_'))) {
+    if (typeof val === 'string' && val.startsWith('deck_')) {
+      this.selecionarDeckEspecial(val);
+    } else if (val === 'custom') {
       this.init(val);
     } else {
       this.init(parseInt(val, 10));
@@ -192,6 +267,34 @@ const Flashcards = {
     if (!templo) return;
     const ehCustom = templo === 'custom';
     const ehDeckEspecial = typeof templo === 'string' && templo.startsWith('deck_');
+
+    // Sincronizar painéis, botões de aba e seletores
+    if (ehDeckEspecial) {
+      if (this.abaOrigem !== 'especiais') {
+        this.trocarAbaOrigem('especiais', false);
+      }
+      const selDeck = document.getElementById('flashcard-deck-select');
+      if (selDeck && selDeck.value !== templo) {
+        selDeck.value = templo;
+      }
+      const chips = document.querySelectorAll('.fc-deck-chip');
+      chips.forEach(chip => {
+        if (chip.getAttribute('data-deck') === templo) {
+          chip.classList.add('ativo');
+        } else {
+          chip.classList.remove('ativo');
+        }
+      });
+    } else {
+      if (this.abaOrigem !== 'templos') {
+        this.trocarAbaOrigem('templos', false);
+      }
+      const selTemplo = document.getElementById('flashcard-templo-select');
+      if (selTemplo && selTemplo.value !== String(templo)) {
+        selTemplo.value = String(templo);
+      }
+    }
+
     if (!ehCustom && !ehDeckEspecial) {
       if (isNaN(templo)) return;
       if (!Progressao.temploDesbloqueado(templo)) {
@@ -1060,60 +1163,59 @@ const Flashcards = {
     }
   },
 
-  // ── Populate temple selector ──────────────────────────────
+  // ── Populate temple and special deck selectors ────────────
   atualizarSelectTemplo() {
     const sel = document.getElementById('flashcard-templo-select');
-    if (!sel) return;
-    const anterior = sel.value;
-    sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
+    if (sel) {
+      const anterior = sel.value;
+      sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
 
-    // 1. Grupo de Baralhos Especiais (Top 500 Flashcards)
-    const optGroupTop = document.createElement('optgroup');
-    optGroupTop.label = '⭐ Baralhos Especiais (Top 500)';
-    const decksEspeciais = [
-      { val: 'deck_all', label: '⭐ Todos os 500 Cards' },
-      { val: 'deck_colocacoes', label: '🧩 Colocações & Chunks (100)' },
-      { val: 'deck_falsi_amici', label: '⚠️ Falsos Amigos / Falsi Amici (100)' },
-      { val: 'deck_preposizioni', label: '📍 Preposições & Regências (100)' },
-      { val: 'deck_verbi_irregolari', label: '⚡ Verbos Irregulares em Contexto (100)' },
-      { val: 'deck_situazioni_reali', label: '🎭 Situações da Vida Real (100)' }
-    ];
-    decksEspeciais.forEach(d => {
-      const opt = document.createElement('option');
-      opt.value = d.val;
-      opt.textContent = d.label;
-      optGroupTop.appendChild(opt);
-    });
-    sel.appendChild(optGroupTop);
+      // Grupo dos Templos do Conhecimento (apenas templos desbloqueados)
+      const optGroupTemplos = document.createElement('optgroup');
+      optGroupTemplos.label = '🏛️ Templos do Conhecimento';
+      const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
+      desbloqueados.forEach(num => {
+        const data = App.estado.templosData[num];
+        if (!data) return;
+        const opt        = document.createElement('option');
+        opt.value        = num;
+        const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
+        opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
+        optGroupTemplos.appendChild(opt);
+      });
+      sel.appendChild(optGroupTemplos);
 
-    // 2. Grupo dos Templos do Conhecimento
-    const optGroupTemplos = document.createElement('optgroup');
-    optGroupTemplos.label = '🏛️ Templos do Conhecimento';
-    const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
-    desbloqueados.forEach(num => {
-      const data = App.estado.templosData[num];
-      if (!data) return;
-      const opt        = document.createElement('option');
-      opt.value        = num;
-      const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
-      opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
-      optGroupTemplos.appendChild(opt);
-    });
-    sel.appendChild(optGroupTemplos);
+      // Opção de deck customizado se houver palavras adicionadas via IA
+      const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
+      if (customVocab.length > 0) {
+        const optCustom = document.createElement('option');
+        optCustom.value = 'custom';
+        optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
+        optCustom.style.fontWeight = 'bold';
+        optCustom.style.color = '#7B68A0';
+        sel.appendChild(optCustom);
+      }
 
-    // 3. Adiciona opção de deck customizado se houver palavras adicionadas via IA
-    const customVocab = (App.estado?.vocabCache || []).filter(p => p._custom || p.templo_num === 0 || p.id?.startsWith('w_custom_') || p.id?.startsWith('vocab_custom_'));
-    if (customVocab.length > 0) {
-      const optCustom = document.createElement('option');
-      optCustom.value = 'custom';
-      optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
-      optCustom.style.fontWeight = 'bold';
-      optCustom.style.color = '#7B68A0';
-      sel.appendChild(optCustom);
+      if (anterior && sel.querySelector(`option[value="${anterior}"]`)) {
+        sel.value = anterior;
+      }
     }
 
-    if (anterior && sel.querySelector(`option[value="${anterior}"]`)) {
-      sel.value = anterior;
+    // Seletor exclusivo para Baralhos Especiais (Top 500)
+    const selDeck = document.getElementById('flashcard-deck-select');
+    if (selDeck) {
+      const deckAnterior = selDeck.value || 'deck_all';
+      selDeck.innerHTML = `
+        <option value="deck_all">⭐ Todos os 500 Cards</option>
+        <option value="deck_colocacoes">🧩 Colocações & Chunks (100)</option>
+        <option value="deck_falsi_amici">⚠️ Falsos Amigos / Falsi Amici (100)</option>
+        <option value="deck_preposizioni">📍 Preposições & Regências (100)</option>
+        <option value="deck_verbi_irregolari">⚡ Verbos Irregulares em Contexto (100)</option>
+        <option value="deck_situazioni_reali">🎭 Situações da Vida Real (100)</option>
+      `;
+      if (selDeck.querySelector(`option[value="${deckAnterior}"]`)) {
+        selDeck.value = deckAnterior;
+      }
     }
   },
 

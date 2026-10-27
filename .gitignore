@@ -21,3 +21,4 @@ coverage/
 *.ntvs*
 *.njsproj
 .planning/
+graphify-out/20*/

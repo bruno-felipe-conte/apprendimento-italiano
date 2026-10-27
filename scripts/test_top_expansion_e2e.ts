@@ -178,9 +178,34 @@ async function main(): Promise<void> {
   await page.waitForTimeout(800);
   await fecharModais(page);
 
-  const selectTemplo = page.locator('#flashcard-templo-select');
-  const optgroups = await selectTemplo.locator('optgroup').all();
-  console.log(`  Grupos encontrados no seletor: ${optgroups.length}`);
+  const tabTemplos = page.locator('#fc-tab-templos');
+  const tabEspeciais = page.locator('#fc-tab-especiais');
+  const painelTemplos = page.locator('#fc-painel-templos');
+  const painelEspeciais = page.locator('#fc-painel-especiais');
+
+  console.log(`  Verificando botões de aba de origem:`);
+  console.log(`    Aba Templos visível: ${await tabTemplos.isVisible()}`);
+  console.log(`    Aba Baralhos Especiais visível: ${await tabEspeciais.isVisible()}`);
+
+  if (!await tabEspeciais.isVisible()) {
+    throw new Error('Botão #fc-tab-especiais não encontrado ou não visível!');
+  }
+
+  // 1. Clicar em "Baralhos Especiais (Top 500)"
+  console.log('\n  ▶ Clicando na aba "⭐ Baralhos Especiais (Top 500)"...');
+  await tabEspeciais.click();
+  await page.waitForTimeout(400);
+
+  const painelEspVisivel = await painelEspeciais.isVisible();
+  const painelTmpOculto = !(await painelTemplos.isVisible());
+  console.log(`    Painel Especial exibido: ${painelEspVisivel} | Painel Templos oculto: ${painelTmpOculto}`);
+  if (!painelEspVisivel || !painelTmpOculto) {
+    throw new Error('Falha na alternância de abas: o painel especial deveria estar visível e o de templos oculto.');
+  }
+
+  const selectDeck = page.locator('#flashcard-deck-select');
+  const optionsDeck = await selectDeck.locator('option').all();
+  console.log(`    Opções no seletor de categorias especiais: ${optionsDeck.length}`);
 
   const decksParaTestar = [
     { id: 'deck_colocacoes', nome: 'Colocações & Chunks', esperado: 100 },
@@ -192,10 +217,15 @@ async function main(): Promise<void> {
   ];
 
   for (const d of decksParaTestar) {
-    console.log(`\n  ▶ Testando baralho: "${d.nome}" (${d.id})...`);
+    console.log(`\n  ▶ Testando baralho especial: "${d.nome}" (${d.id})...`);
     
-    // Selecionar o deck
-    await selectTemplo.selectOption(d.id);
+    // Selecionar o deck especial via chip ou dropdown
+    const chip = page.locator(`.fc-deck-chip[data-deck="${d.id}"]`);
+    if (await chip.isVisible()) {
+      await chip.click();
+    } else {
+      await selectDeck.selectOption(d.id);
+    }
     await page.waitForTimeout(600);
 
     const info = await page.evaluate(() => {
@@ -276,6 +306,30 @@ async function main(): Promise<void> {
     await page.waitForTimeout(300);
     const frenteTexto = await page.locator('#card-italiano').textContent();
     console.log(`    Modo Escuta ativado: "${frenteTexto}"`);
+  }
+
+  // Testar alternar de volta para a aba "🏛️ Templos"
+  console.log('\n  ▶ Testando retorno à aba "🏛️ Templos"...');
+  await tabTemplos.click();
+  await page.waitForTimeout(400);
+
+  const painelTmpVisivel = await painelTemplos.isVisible();
+  const painelEspOculto = !(await painelEspeciais.isVisible());
+  console.log(`    Painel Templos exibido: ${painelTmpVisivel} | Painel Especial oculto: ${painelEspOculto}`);
+  if (!painelTmpVisivel || !painelEspOculto) {
+    throw new Error('Falha ao retornar para a aba Templos.');
+  }
+
+  // Verificar que o select de templos não contém opções de deck_
+  const optionsTemplo = await page.evaluate(() => {
+    const sel = document.getElementById('flashcard-templo-select') as HTMLSelectElement | null;
+    if (!sel) return [];
+    return Array.from(sel.querySelectorAll('option')).map(o => o.value);
+  });
+  const contemDeckEspecial = optionsTemplo.some(val => val.startsWith('deck_'));
+  console.log(`    Opções no select de templos: ${optionsTemplo.length} | Contém decks especiais misturados: ${contemDeckEspecial}`);
+  if (contemDeckEspecial) {
+    throw new Error('O select de templos não deve conter opções de baralhos especiais misturadas!');
   }
 
   // ─────────────────────────────────────────────────────────────
