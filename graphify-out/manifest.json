@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793113505.4400032,
-    "seen": 1793114053.9098217,
-    "ast_hash": "263399eeac64806f3ace02caed74d443",
+    "mtime": 1793220130.466856,
+    "seen": 1793221977.7798452,
+    "ast_hash": "1169a7b72adf02d4905587a36b14f774",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -522,9 +522,9 @@
     "semantic_hash": ""
   },
   "js/imitazione.js": {
-    "mtime": 1793044045.2019234,
-    "seen": 1793044570.0552933,
-    "ast_hash": "baaba701d27c7bf4c856474c96feb0d7",
+    "mtime": 1793221456.0027306,
+    "seen": 1793221977.841468,
+    "ast_hash": "507ecda0741f1f107c2b7d9fcec8f612",
     "semantic_hash": ""
   },
   "js/notificacoes.js": {
@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1793113670.505601,
-    "seen": 1793114054.4151618,
-    "ast_hash": "66bfce6bf3b51973e9d3c342f8ec062a",
+    "mtime": 1793220140.7201278,
+    "seen": 1793221978.618214,
+    "ast_hash": "0f3e44dc0f5afee4d948a5e030df676e",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793113442.9384952,
-    "seen": 1793114055.1140444,
-    "ast_hash": "55c7c23f12f687bb602d216d1950ac35",
+    "mtime": 1793134020.63385,
+    "seen": 1793221979.8273282,
+    "ast_hash": "9ad528b7f547a44090eb23e0511f6daf",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -972,9 +972,9 @@
     "semantic_hash": ""
   },
   "tests/content_pipeline.test.ts": {
-    "mtime": 1793048911.184448,
-    "seen": 1793049057.092035,
-    "ast_hash": "909919f419fb1151096b7455a0369acc",
+    "mtime": 1793220388.6467764,
+    "seen": 1793221978.7089586,
+    "ast_hash": "aa9b4c6a63eb883913bf1cc5cf0c6989",
     "semantic_hash": ""
   },
   "tests/modal_manager.test.js": {
@@ -1209,6 +1209,12 @@
     "mtime": 1793113656.126572,
     "seen": 1793114054.3276343,
     "ast_hash": "24461c302b6108023486f73d18b9c8f6",
+    "semantic_hash": ""
+  },
+  "scripts/test_microphone_mobile.ts": {
+    "mtime": 1793221702.0377502,
+    "seen": 1793221978.4200635,
+    "ast_hash": "2c80c2cdb12caf9ae878b870d7ed49ba",
     "semantic_hash": ""
   }
 }

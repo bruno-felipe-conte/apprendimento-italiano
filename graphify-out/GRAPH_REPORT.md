@@ -1,17 +1,17 @@
-# Graph Report - apprendimento-italiano  (2026-10-27)
+# Graph Report - apprendimento-italiano  (2026-10-28)
 
 ## Corpus Check
-- 195 files · ~1,221,674 words
+- 196 files · ~1,223,753 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 725 nodes · 911 edges · 69 communities (36 shown, 33 thin omitted)
+- 731 nodes · 920 edges · 69 communities (36 shown, 33 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `43cc32d8`
+- Built from commit: `a1641f21`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -58,7 +58,7 @@
 - modal_manager.js
 - voice_engine.js
 - 🏗️ 5. Cronograma e Fases de Implementação
-- core.js
+- progression.ts
 - test_top_expansion_e2e.ts
 - eslint.config.js
 - @playwright/test
@@ -142,8 +142,8 @@ Cohesion: 0.11
 Nodes (17): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Scrivi Book Source (data/parla_e_scrivi.txt), Parla e Scrivi 30-Chapter Grammar JSON Spec, PWA Offline-First Architecture QA Audit Checklist, SPA Modals & File Importers (Templo, Conquista, LevelUp, Onboarding, MetaPrazo, IAImport), SPA Navigation Sections (templi, dialoghi, canzoni, imitazione, flashcard, quiz, vocabolario, grammatica, storie, profilo), Service Worker Registration & ControllerChange Auto-Reload, Main Single-Page Application HTML Shell (index.html) (+9 more)
 
 ### Community 5 - "schemas.ts"
-Cohesion: 0.07
-Nodes (31): BackupReminder, _LEVEL_NOMES, LevelUp, Progressao, vitest, zod, ingerirConteudo(), IngestOptions (+23 more)
+Cohesion: 0.06
+Nodes (32): App, BackupReminder, AppNavigation, AppState, AppXP, vitest, zod, ingerirConteudo() (+24 more)
 
 ### Community 6 - "tts_worker.js"
 Cohesion: 0.43
@@ -198,8 +198,8 @@ Cohesion: 0.08
 Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, hashStringToInt(), MockAnalyticsProvider, PlausibleAnalyticsProvider
 
 ### Community 20 - "NMA Grammar Card Upgrader"
-Cohesion: 0.12
-Nodes (9): fecharModais(), OUTPUT_DIR, runBattery(), TabResult, WindowWithModules, fs, grammar, fs (+1 more)
+Cohesion: 0.10
+Nodes (12): fecharModais(), OUTPUT_DIR, runBattery(), TabResult, WindowWithModules, criarServidorEstatico(), fecharModais(), main() (+4 more)
 
 ### Community 21 - "ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada"
 Cohesion: 0.40
@@ -245,9 +245,9 @@ Nodes (3): _LEVEL_NOMES, LevelUp, Progressao
 Cohesion: 0.11
 Nodes (17): 🎯 1. Objetivos e Cobertura Pedagógica, 📚 2. Estrutura das 1.000 Palavras (Top 1.000 NVdB), 🎴 3. Taxonomia dos 500 Flashcards, 4.1. Esquema do Vocabulário (`data/top1000_vocabulario.json`), 4.2. Esquema dos Cards de Flashcard (`data/top500_flashcards.json`), 💾 4. Estrutura dos Arquivos de Dados (JSON), 🏗️ 5. Cronograma e Fases de Implementação, Bloco 1: Rank 1 a 250 — Fundamentos Estruturais (A1) (+9 more)
 
-### Community 42 - "core.js"
-Cohesion: 0.20
-Nodes (4): App, AppNavigation, AppState, AppXP
+### Community 42 - "progression.ts"
+Cohesion: 0.33
+Nodes (3): _LEVEL_NOMES, LevelUp, Progressao
 
 ### Community 43 - "test_top_expansion_e2e.ts"
 Cohesion: 0.32
@@ -267,20 +267,20 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 409 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `core.js`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`?**
-  _High betweenness centrality (0.118) - this node is a cross-community bridge._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`?**
+  _High betweenness centrality (0.120) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Why does `@playwright/test` connect `@playwright/test` to `package.json`, `test_top_expansion_e2e.ts`, `NMA Grammar Card Upgrader`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.053551912568306013 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**

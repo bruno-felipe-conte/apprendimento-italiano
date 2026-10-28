@@ -35,7 +35,7 @@
   "39": "modal_manager.js",
   "40": "voice_engine.js",
   "41": "🏗️ 5. Cronograma e Fases de Implementação",
-  "42": "core.js",
+  "42": "progression.ts",
   "43": "test_top_expansion_e2e.ts",
   "44": "eslint.config.js",
   "45": "@playwright/test",
