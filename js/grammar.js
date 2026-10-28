@@ -79,38 +79,8 @@ const Grammatica = {
 
     const nivel = App.estado.progresso?.nivel || 1;
     const completadas = App.estado.progresso?.grammatica_completadas || [];
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
 
     let html = '<div class="gram-seletor">';
-
-    // Card "Continuar de onde parou" apontando para a próxima lição não concluída
-    let proximaMod = null;
-    let proximaUnid = null;
-    for (const mod of this.dados.moduli) {
-      const bloqueado = nivel < mod.nivel_minimo && !this._adminMods.has(mod.id);
-      if (bloqueado || !mod.lezioni?.length) continue;
-      const pendente = mod.lezioni.find(u => !completadas.includes(u.id));
-      if (pendente) {
-        proximaMod = mod;
-        proximaUnid = pendente;
-        break;
-      }
-    }
-    if (proximaMod && proximaUnid) {
-      html += `
-        <div class="card-continuar" role="button" tabindex="0"
-             style="margin-bottom:1rem;cursor:pointer"
-             onclick="Grammatica.abrirUnidade('${proximaMod.id}','${proximaUnid.id}')"
-             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();Grammatica.abrirUnidade('${proximaMod.id}','${proximaUnid.id}')}">
-          <span class="card-continuar-icone">📘</span>
-          <div class="card-continuar-corpo">
-            <span class="card-continuar-label">${isIt ? 'Continua da dove eri rimasto' : 'Continuar de onde parou'} · ${proximaMod.id}</span>
-            <strong class="card-continuar-titulo">${proximaUnid.num ? proximaUnid.num + ' — ' : ''}${proximaUnid.titulo}</strong>
-          </div>
-          <span class="card-continuar-seta">→</span>
-        </div>
-      `;
-    }
 
     for (const mod of this.dados.moduli) {
       const bloqueado = nivel < mod.nivel_minimo && !this._adminMods.has(mod.id);
@@ -121,14 +91,13 @@ const Grammatica = {
       const completas = mod.lezioni.filter(u => completadas.includes(u.id)).length;
       const pct       = totalUnid > 0 ? Math.round((completas / totalUnid) * 100) : 0;
 
-      // Module banner (clicável para colapsar/expandir) — A1 usa verde-oliva da paleta
+      // Module banner (clicável para colapsar/expandir)
       const adminDesbloqueado = this._adminMods.has(mod.id);
-      const corBanner = mod.id === 'A1' ? 'var(--cor-oliva, #4A6741)' : (mod.cor || 'var(--cor-veneziano, #9B2335)');
       const infoTxt = I18n.t('gram_concluidas_info')
         .replace('{c}', completas)
         .replace('{t}', totalUnid)
         .replace('{e}', totalEx);
-      html += `<div class="gram-nivel-banner" data-nivel="${mod.id}" style="background:${corBanner};cursor:pointer;user-select:none" onclick="Grammatica.toggleNivel('${mod.id}')">`;
+      html += `<div class="gram-nivel-banner" data-nivel="${mod.id}" style="background:${mod.cor};cursor:pointer;user-select:none" onclick="Grammatica.toggleNivel('${mod.id}')">`;
       html += `<div style="display:flex;align-items:center;justify-content:space-between">`;
       html += `<div class="gram-nivel-badge-txt">${mod.id}${adminDesbloqueado ? ' &nbsp;🔓 Admin' : ''}</div>`;
       html += `<span class="gram-nivel-toggle-icone" style="font-size:1.1rem;opacity:0.8;transition:transform 0.2s">▾</span>`;

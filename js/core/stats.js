@@ -36,21 +36,16 @@ const AppStats = {
         : ((typeof App !== 'undefined' && App.TEMPLO_NIVEL_MINIMO) ? App.TEMPLO_NIVEL_MINIMO : {}));
 
     const totalTemplos = Object.entries(nivelMinimoMap)
-      .filter(([, lvl]) => lvl < 90).length || 51;
+      .filter(([, lvl]) => lvl < 90).length || 50;
 
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    if (elNivel)   elNivel.textContent   = `${isIt ? 'Livello' : 'Nível'} ${p.nivel}`;
+    if (elNivel)   elNivel.textContent   = `Livello ${p.nivel}`;
     if (elXp)      elXp.textContent      = `XP: ${p.xp}/${xpFim}`;
-    if (elTempli)  elTempli.textContent  = `${isIt ? 'Templi' : 'Templos'}: ${p.templos_desbloqueados.length}/${totalTemplos}`;
-    if (elParole)  elParole.textContent  = `${isIt ? 'Parole' : 'Palavras'}: ${p.total_palavras}`;
+    if (elTempli)  elTempli.textContent  = `Templi: ${p.templos_desbloqueados.length}/${totalTemplos}`;
+    if (elParole)  elParole.textContent  = `Parole: ${p.total_palavras}`;
     if (elBarFill) elBarFill.style.width = percent + '%';
     const s = p.streak || 0;
     if (elStreak && typeof I18n !== 'undefined') {
-      if (s === 0) {
-        elStreak.textContent = I18n.t('streak_zero') || (isIt ? '🔥 Inizia oggi il tuo viaggio' : '🔥 Inicie hoje sua jornada');
-      } else {
-        elStreak.textContent = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', String(s));
-      }
+      elStreak.textContent = I18n.t(s !== 1 ? 'streak_dias' : 'streak_dia').replace('{n}', String(s));
     }
 
     // Atualiza badge do botão Revisão Geral com total de cartas vencidas
@@ -92,89 +87,35 @@ const AppStats = {
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
   },
 
-  iniciarSessao15Min() {
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    if (typeof App !== 'undefined' && typeof App.notificar === 'function') {
-      App.notificar(
-        isIt
-          ? '⏱️ Sessione di 15 min avviata: 1. Flashcard → 2. Imitazione → 3. Grammatica'
-          : '⏱️ Sessão de 15 min iniciada: 1. Revisão FSRS → 2. Imitação → 3. Gramática',
-        'sucesso'
-      );
-    }
-    try {
-      sessionStorage.setItem('it_sessao_15min_etapa', '1');
-    } catch (_) {}
-    if (typeof App !== 'undefined' && typeof App.navegar === 'function') {
-      App.navegar('flashcard');
-    }
-    setTimeout(() => {
-      if (typeof Flashcards !== 'undefined') {
-        if (typeof Flashcards.initRevisaoGeral === 'function') {
-          Flashcards.initRevisaoGeral();
-        } else {
-          Flashcards.selecionarTemplo('1');
-        }
-      }
-    }, 120);
-  },
-
   renderizarCardContinuar() {
     const estado = (typeof AppState !== 'undefined' && AppState.estado)
       ? AppState.estado
       : (typeof App !== 'undefined' && App.estado ? App.estado : null);
 
     const p = estado ? estado.progresso : null;
-    if (!p || typeof I18n === 'undefined') return '';
+    if (!p || !p.ultimo_estudo || typeof I18n === 'undefined') return ''; // primeiro acesso
 
-    const isIt = I18n.idioma === 'it';
-    let cardContinuarHtml = '';
+    const diffHoras = (Date.now() - p.ultimo_estudo) / 3600000;
+    const quando = diffHoras < 0.1 ? I18n.t('cc_agora_mesmo')
+                 : diffHoras < 1   ? I18n.t('cc_ha_minutos')
+                 : diffHoras < 24  ? I18n.t('cc_ha_horas').replace('{n}', String(Math.round(diffHoras)))
+                 :                   I18n.t('cc_ha_dias').replace('{n}', String(Math.round(diffHoras/24)));
 
-    if (p.ultimo_estudo) {
-      const diffHoras = (Date.now() - p.ultimo_estudo) / 3600000;
-      const quando = diffHoras < 0.1 ? I18n.t('cc_agora_mesmo')
-                   : diffHoras < 1   ? I18n.t('cc_ha_minutos')
-                   : diffHoras < 24  ? I18n.t('cc_ha_horas').replace('{n}', String(Math.round(diffHoras)))
-                   :                   I18n.t('cc_ha_dias').replace('{n}', String(Math.round(diffHoras/24)));
+    const ultimaSecao = p.ultima_secao || 'flashcard';
+    let secaoNome = 'Flashcard';
+    if (ultimaSecao === 'templi')      secaoNome = I18n.t('cc_secao_inicio');
+    if (ultimaSecao === 'quiz')        secaoNome = 'Quiz';
+    if (ultimaSecao === 'vocabolario') secaoNome = I18n.t('cc_secao_vocab');
+    if (ultimaSecao === 'grammatica')  secaoNome = I18n.t('cc_secao_gram');
+    if (ultimaSecao === 'profilo')     secaoNome = I18n.t('cc_secao_perfil');
 
-      const ultimaSecao = p.ultima_secao || 'flashcard';
-      let secaoNome = 'Flashcards';
-      if (ultimaSecao === 'templi')      secaoNome = I18n.t('cc_secao_inicio');
-      if (ultimaSecao === 'quiz')        secaoNome = 'Quiz';
-      if (ultimaSecao === 'vocabolario') secaoNome = I18n.t('cc_secao_vocab');
-      if (ultimaSecao === 'grammatica')  secaoNome = I18n.t('cc_secao_gram');
-      if (ultimaSecao === 'profilo')     secaoNome = I18n.t('cc_secao_perfil');
-      if (ultimaSecao === 'dialoghi')    secaoNome = isIt ? 'Dialoghi' : 'Diálogos';
-      if (ultimaSecao === 'canzoni')     secaoNome = isIt ? 'Canzoni' : 'Músicas';
-      if (ultimaSecao === 'imitazione')  secaoNome = isIt ? 'Imitazione' : 'Imitação';
-      if (ultimaSecao === 'storie')      secaoNome = isIt ? 'Storie' : 'Histórias';
-
-      cardContinuarHtml = `<div class="card-continuar" onclick="App.navegar('${ultimaSecao}')">
-        <div>
-          <div class="cc-label">${I18n.t('cc_continuar_label')}</div>
-          <div class="cc-info">${I18n.t('cc_ultima_sessao')} <strong>${quando}</strong> (${secaoNome})</div>
-        </div>
-        <div class="cc-cta">${I18n.t('cc_retomar')}</div>
-      </div>`;
-    } else {
-      cardContinuarHtml = `<div class="card-continuar" onclick="AppTemplos.estudarTemplo(1)">
-        <div>
-          <div class="cc-label">${isIt ? '▶️ Inizia Subito (1 Clic)' : '▶️ Começar de Onde Parou (1 Clique)'}</div>
-          <div class="cc-info">${isIt ? 'Inizia il <strong>Tempio 1 — Le Fondamenta (Roma)</strong>' : 'Comece pelo <strong>Templo 1 — Le Fondamenta (Roma)</strong>'}</div>
-        </div>
-        <div class="cc-cta">${isIt ? 'Inizia →' : 'Começar →'}</div>
-      </div>`;
-    }
-
-    const cardSessao15Html = `<div class="card-sessao-15min" onclick="AppStats.iniciarSessao15Min()">
+    return `<div class="card-continuar" onclick="App.navegar('${ultimaSecao}')">
       <div>
-        <div class="cc-label">${isIt ? '⏱️ Sessione di Oggi (15 min)' : '⏱️ Sessão de Hoje (15 min)'}</div>
-        <div class="cc-info">${isIt ? 'Ripasso FSRS + 1 Frase di Imitazione + 1 Lezione di Grammatica' : 'Revisão FSRS + 1 Frase de Imitação + 1 Lição de Gramática'}</div>
+        <div class="cc-label">${I18n.t('cc_continuar_label')}</div>
+        <div class="cc-info">${I18n.t('cc_ultima_sessao')} <strong>${quando}</strong> (${secaoNome})</div>
       </div>
-      <div class="cc-cta">${isIt ? 'Avvia →' : 'Iniciar →'}</div>
+      <div class="cc-cta">${I18n.t('cc_retomar')}</div>
     </div>`;
-
-    return `<div class="home-top-actions-grid">${cardContinuarHtml}${cardSessao15Html}</div>`;
   },
 
   // ── Health Check PWA (HAR-02) ──────────────────────────────

@@ -470,13 +470,6 @@ const Imitazione = {
     resContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   },
 
-  voltar() {
-    if (this.itemAtual > 0) {
-      this.itemAtual--;
-      this.mostrarDesafio();
-    }
-  },
-
   avancar() {
     this.itemAtual++;
     const lista = this._listaAtual || this.dados?.imitazioni || [];
@@ -497,7 +490,6 @@ const Imitazione = {
     const frase = item.frase_italiano || item.frase;
     const traducao = item.frase_portugues || item.traducao;
     const contexto = item.contexto || 'Frase di uso comune in conversazione.';
-    const dicaFonetica = item.dica_fonetica || 'Pronuncie com abertura vocal clara e ritmo cadenciado.';
 
     c.innerHTML = `
       <div class="imitazione-dojo">
@@ -506,17 +498,29 @@ const Imitazione = {
           <span style="background:rgba(155,35,53,0.1);color:#9B2335;padding:0.15rem 0.6rem;border-radius:999px;font-weight:700">${item.nivel || 'A1'}</span>
         </div>
 
-        <div class="dojo-hero-card" style="padding:1.25rem 1.5rem">
+        <div class="dojo-hero-card">
           <div class="dojo-hero-badge">
             <span>🎙️ Studio di Pronuncia</span>
             ${item._custom ? ` · <button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.75rem;font-weight:700">🗑️ Excluir</button>` : ''}
           </div>
 
-          <div class="dojo-hero-frase" style="margin:0.4rem 0 0.25rem">"${frase}"</div>
-          <div class="dojo-hero-traducao" style="margin-bottom:0.85rem">"${traducao}"</div>
+          <div class="dojo-hero-frase">"${frase}"</div>
+          <div class="dojo-hero-traducao">"${traducao}"</div>
 
-          <!-- Estúdio de Áudio do Modelo Nativo (acima da dobra) -->
-          <div class="dojo-audio-station" style="margin-bottom:0.85rem">
+          <div class="dojo-info-grid">
+            <div class="dojo-info-box contexto">
+              <div class="dojo-info-title">🏛️ Contexto & Origem Cultural</div>
+              <div class="dojo-info-content">${contexto}</div>
+            </div>
+
+            <div class="dojo-info-box fonetica">
+              <div class="dojo-info-title">🎵 Dica de Ritmo & Entonação</div>
+              <div class="dojo-info-content">${item.dica_fonetica || 'Pronuncie com abertura vocal clara e ritmo cadenciado.'}</div>
+            </div>
+          </div>
+
+          <!-- Estúdio de Áudio do Modelo Nativo -->
+          <div class="dojo-audio-station">
             <button class="btn-dojo-audio normal" onclick="Imitazione.tocarModelo(1.0)">
               <span>🔊</span> Ouvir Modelo (1.0x)
             </button>
@@ -528,8 +532,8 @@ const Imitazione = {
             </div>
           </div>
 
-          <!-- Estúdio de Gravação do Aluno (compactado e centralizado) -->
-          <div class="dojo-mic-studio" style="padding:1rem 1.25rem;margin-bottom:0.85rem">
+          <!-- Estúdio de Gravação do Aluno -->
+          <div class="dojo-mic-studio">
             <div class="dojo-mic-btn-wrapper">
               <button id="dojo-btn-mic" class="dojo-mic-btn" onclick="Imitazione.toggleGravacao()" title="Clique para falar">
                 🎙️
@@ -540,35 +544,9 @@ const Imitazione = {
             </div>
           </div>
 
-          <!-- Accordions compactos para Contexto e Dica Fonética -->
-          <div class="dojo-accordions-row">
-            <details class="dojo-accordion">
-              <summary>🏛️ Contexto & Origem Cultural</summary>
-              <div class="dojo-accordion-content dojo-info-box contexto">${contexto}</div>
-            </details>
-
-            <details class="dojo-accordion">
-              <summary>🎵 Dica de Ritmo & Entonação</summary>
-              <div class="dojo-accordion-content dojo-info-box fonetica">${dicaFonetica}</div>
-            </details>
-          </div>
-
           <!-- Painel Dinâmico de Diagnóstico e Feedback -->
-          <div id="imitazione-resultado" class="dojo-feedback-panel" style="display:none;margin-top:1.1rem">
+          <div id="imitazione-resultado" class="dojo-feedback-panel" style="display:none;margin-top:1.5rem">
           </div>
-        </div>
-
-        <!-- Barra inferior fixa de navegação entre frases -->
-        <div class="dojo-sticky-nav">
-          <button type="button" class="btn-secondario" onclick="Imitazione.voltar()" ${this.itemAtual <= 0 ? 'disabled style="opacity:0.45;cursor:not-allowed"' : ''}>
-            ← Frase Anterior
-          </button>
-          <span style="font-size:0.82rem;font-weight:700;color:var(--cor-inchiostro-claro,#5A4535)">
-            ${this.itemAtual + 1} / ${lista.length}
-          </span>
-          <button type="button" class="btn-primario" onclick="Imitazione.avancar()">
-            Próxima Frase →
-          </button>
         </div>
       </div>
     `;

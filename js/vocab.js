@@ -10,124 +10,10 @@ const Vocab = {
   filtroDificeis:   false,
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
-  modoCompacto: false,
-  _limiteRender: 80,
   top1000Data: null,
-
-  CATEGORIA_LABEL_MAP: {
-    saudacoes: 'Saudações',
-    familia: 'Família',
-    profissoes: 'Profissões',
-    expressoes: 'Expressões',
-    numeros: 'Números',
-    musica: 'Música',
-    ciencia: 'Ciência',
-    historia: 'História',
-    religiao: 'Religião',
-    logica: 'Lógica',
-    politica: 'Política',
-    economia: 'Economia',
-    direito: 'Direito',
-    filosofia: 'Filosofia',
-    anatomia: 'Anatomia',
-    natureza: 'Natureza',
-    alimentacao: 'Alimentação',
-    comercio: 'Comércio',
-    educacao: 'Educação',
-    emocoes: 'Emoções',
-    esportes: 'Esportes',
-    midia: 'Mídia',
-    saude: 'Saúde',
-    tecnologia: 'Tecnologia',
-    transporte: 'Transporte',
-    viagem: 'Viagem',
-    cotidiano: 'Cotidiano',
-    cultura: 'Cultura',
-    adjetivos: 'Adjetivos',
-    verbos: 'Verbos',
-    substantivos: 'Substantivos',
-    adverbios: 'Advérbios',
-    preposicoes: 'Preposições',
-    conjuncoes: 'Conjunções',
-    pronomes: 'Pronomes',
-    tempo: 'Tempo',
-    clima: 'Clima',
-    casa: 'Casa',
-    roupas: 'Roupas',
-    cores: 'Cores',
-    animais: 'Animais',
-    arte: 'Arte',
-    literatura: 'Literatura',
-    cinema: 'Cinema',
-    gastronomia: 'Gastronomia',
-    cidade: 'Cidade',
-    trabalho: 'Trabalho',
-    sentimentos: 'Sentimentos',
-    relacoes: 'Relações',
-    geografia: 'Geografia',
-    matematica: 'Matemática',
-    fisica: 'Física',
-    quimica: 'Química',
-    biologia: 'Biologia',
-    medicina: 'Medicina',
-    psicologia: 'Psicologia',
-    sociologia: 'Sociologia',
-    arquitetura: 'Arquitetura',
-    engenharia: 'Engenharia',
-    informatica: 'Informática',
-    internet: 'Internet',
-    redes_sociais: 'Redes Sociais',
-    financas: 'Finanças',
-    negocios: 'Negócios',
-    turismo: 'Turismo',
-    hotelaria: 'Hotelaria',
-    restaurante: 'Restaurante',
-    compras: 'Compras',
-    lazer: 'Lazer',
-    festas: 'Festas',
-    tradicoes: 'Tradições',
-    mitologia: 'Mitologia',
-    espiritualidade: 'Espiritualidade',
-    etica: 'Ética',
-    estetica: 'Estética',
-    metafisica: 'Metafísica',
-    epistemologia: 'Epistemologia',
-    retorica: 'Retórica',
-    gramatica: 'Gramática'
-  },
-
-  formatarCategoria(cat) {
-    if (!cat) return '';
-    const key = String(cat).trim().toLowerCase();
-    if (this.CATEGORIA_LABEL_MAP[key]) return this.CATEGORIA_LABEL_MAP[key];
-    const limpo = key.replace(/_/g, ' ');
-    return limpo.charAt(0).toUpperCase() + limpo.slice(1);
-  },
-
-  toggleModoCompacto() {
-    this.modoCompacto = !this.modoCompacto;
-    const listEl = document.getElementById('vocab-list');
-    if (listEl) {
-      listEl.classList.toggle('vocab-compact', this.modoCompacto);
-    }
-    const btn = document.getElementById('vocab-btn-densidade');
-    if (btn) {
-      const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-      btn.textContent = this.modoCompacto
-        ? (isIt ? '⊞ Confortevole' : '⊞ Confortável')
-        : (isIt ? '☰ Compatto' : '☰ Compacto');
-      btn.classList.toggle('ativo', this.modoCompacto);
-    }
-  },
-
-  carregarMais() {
-    this._limiteRender = (this._limiteRender || 80) + 100;
-    this.renderizar(true);
-  },
 
   async filtrarTop1000() {
     this.filtroOrigem = 'top1000';
-    this._limiteRender = 80;
     if (!this.top1000Data) {
       try {
         const res = await fetch('data/top1000_vocabulario.json');
@@ -141,12 +27,10 @@ const Vocab = {
   },
 
   // ── Render filtered word list ─────────────────────────────
-  renderizar(manterLimite = false) {
-    if (!manterLimite) this._limiteRender = 80;
+  renderizar() {
     const listEl = document.getElementById('vocab-list');
     const statsEl = document.getElementById('vocab-stats');
     if (!listEl) return;
-    listEl.classList.toggle('vocab-compact', !!this.modoCompacto);
 
     const todos = (this.filtroOrigem === 'top1000' && this.top1000Data)
       ? this.top1000Data
@@ -160,7 +44,7 @@ const Vocab = {
 
     // Update origin pills active state
     const pillStyle = (active) => active
-      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #9B2335;background:#9B2335;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
+      ? 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #543D75;background:#543D75;color:#fff;cursor:pointer;font-size:0.75rem;font-weight:600'
       : 'padding:0.22rem 0.65rem;border-radius:999px;border:1.5px solid #8F7E6D;background:transparent;color:var(--cor-inchiostro,#2C2416);cursor:pointer;font-size:0.75rem;font-weight:600';
     const pT = document.getElementById('vocab-pill-todos');
     const pTop = document.getElementById('vocab-pill-top1000');
@@ -234,10 +118,9 @@ const Vocab = {
     }
 
     // Stats line + botão estudar filtro
-    const limiteAtual = this._limiteRender || 80;
     if (statsEl) {
       const total = todos.length;
-      const mostrando = Math.min(filtrados.length, limiteAtual);
+      const mostrando = Math.min(filtrados.length, 100);
       const textoStats = this.filtroDificeis
         ? I18n.t(filtrados.length !== 1 ? 'vocab_palavras_dificeis' : 'vocab_palavra_dificil').replace('{n}', filtrados.length)
         : filtrados.length === total
@@ -252,17 +135,17 @@ const Vocab = {
       statsEl.innerHTML = `<span>${textoStats}</span>${btnEstudar}`;
     }
 
-    // Incremental display
-    const visivel = filtrados.slice(0, limiteAtual);
+    // Limit display to 100
+    const visivel = filtrados.slice(0, 100);
 
     if (visivel.length === 0) {
-      listEl.innerHTML = `<p style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;text-align:center;padding:1.5rem;grid-column:1/-1;">${I18n.t('vocab_nenhuma')}</p>`;
+      listEl.innerHTML = `<p style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;text-align:center;padding:1.5rem;">${I18n.t('vocab_nenhuma')}</p>`;
       return;
     }
 
     listEl.innerHTML = '';
-    visivel.forEach((p, idx) => {
-      this._renderizarItem(p, listEl, idx);
+    visivel.forEach(p => {
+      this._renderizarItem(p, listEl);
     });
 
     // Reapply blur class after re-render
@@ -274,19 +157,12 @@ const Vocab = {
       if (btnIt) btnIt.classList.toggle('ativo', this.blurColuna === 'it');
     }
 
-    // Show "Load more" button if truncated
-    if (filtrados.length > limiteAtual) {
-      const restantes = filtrados.length - limiteAtual;
-      const moreWrap = document.createElement('div');
-      moreWrap.style.cssText = 'grid-column:1/-1;text-align:center;padding:0.85rem 0.5rem;display:flex;flex-direction:column;align-items:center;gap:0.4rem;';
-      const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-      moreWrap.innerHTML = `
-        <span style="color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;font-size:0.82rem;">${I18n.t('vocab_e_mais').replace('{n}', restantes)}</span>
-        <button type="button" onclick="Vocab.carregarMais()" style="padding:0.45rem 1.2rem;border-radius:999px;border:1.5px solid var(--cor-veneziano,#9B2335);background:transparent;color:var(--cor-veneziano,#9B2335);font-weight:700;font-size:0.82rem;cursor:pointer;">
-          ➕ ${isIt ? `Carica altre parole (+${Math.min(100, restantes)})` : `Carregar mais palavras (+${Math.min(100, restantes)})`}
-        </button>
-      `;
-      listEl.appendChild(moreWrap);
+    // Show "more results" hint if truncated
+    if (filtrados.length > 100) {
+      const more = document.createElement('p');
+      more.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic;padding:0.8rem;font-size:0.83rem;';
+      more.textContent = I18n.t('vocab_e_mais').replace('{n}', filtrados.length - 100);
+      listEl.appendChild(more);
     }
   },
 
@@ -347,8 +223,8 @@ const Vocab = {
     const sel = document.getElementById('vocab-templo-filtro');
     if (!sel) return;
 
-    const lblTodos = typeof I18n !== 'undefined' ? I18n.t('vocab_todos_templos') : '-- Todos os templos --';
-    sel.innerHTML = `<option value="">${lblTodos}</option>`;
+    // Keep "Tutti i templi" option
+    sel.innerHTML = '<option value="">Tutti i templi</option>';
 
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
     desbloqueados.forEach(num => {
@@ -356,7 +232,7 @@ const Vocab = {
       if (!data) return;
       const opt = document.createElement('option');
       opt.value = num;
-      const nome = (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || data.nome || data.cidade || `Templo ${num}`;
+      const nome = (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || data.nome || data.cidade || `Tempio ${num}`;
       opt.textContent = `${num}. ${nome}`;
       sel.appendChild(opt);
     });
@@ -366,8 +242,7 @@ const Vocab = {
     const sel = document.getElementById('vocab-categoria-filtro');
     if (!sel) return;
 
-    const lblTodas = typeof I18n !== 'undefined' ? I18n.t('vocab_todas_cats') : '-- Todas as categorias --';
-    sel.innerHTML = `<option value="">${lblTodas}</option>`;
+    sel.innerHTML = '<option value="">Tutte le categorie</option>';
 
     // Collect unique categories from vocab cache
     const categorias = new Set();
@@ -375,15 +250,13 @@ const Vocab = {
       if (p.categoria) categorias.add(p.categoria);
     });
 
-    // Sort alphabetically by formatted display label and add to dropdown
-    [...categorias]
-      .sort((a, b) => this.formatarCategoria(a).localeCompare(this.formatarCategoria(b), 'pt-BR'))
-      .forEach(cat => {
-        const opt = document.createElement('option');
-        opt.value = cat;
-        opt.textContent = this.formatarCategoria(cat);
-        sel.appendChild(opt);
-      });
+    // Sort alphabetically and add to dropdown
+    [...categorias].sort().forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat;
+      opt.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+      sel.appendChild(opt);
+    });
   },
 
   // ── Blur column toggle (self-test mode) ──────────────────
@@ -452,9 +325,9 @@ const Vocab = {
   },
 
   // 3. Renderizador individual do item
-  _renderizarItem(p, container, idx = 0) {
+  _renderizarItem(p, container) {
     const item = document.createElement('div');
-    item.className = idx >= 16 ? 'vocab-item vocab-item-deferred' : 'vocab-item';
+    item.className = 'vocab-item';
     item.setAttribute('tabindex', '0');
     item.setAttribute('role', 'listitem');
     item.setAttribute('aria-label', `${p.italiano || ''} — ${p.portugues || ''}`);
@@ -516,11 +389,11 @@ const Vocab = {
     `;
 
     item.innerHTML = `
-      ${p.rank ? `<span class="vocab-cat-badge" style="background:#9B2335;color:#fff;font-weight:700" title="Posição no ranking Top 1000">#${p.rank}</span>` : ''}
+      ${p.rank ? `<span class="vocab-cat-badge" style="background:#543D75;color:#fff;font-weight:700" title="Posição no ranking Top 1000">#${p.rank}</span>` : ''}
       <span class="vocab-it">${this._escapar(p.italiano || '—')}</span>
       <span class="vocab-seta">→</span>
       <span class="vocab-pt">${this._escapar(p.portugues || '—')}</span>
-      ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(this.formatarCategoria(p.categoria))}</span>` : ''}
+      ${p.categoria ? `<span class="vocab-cat-badge" style="${catCor ? 'border-left:3px solid ' + catCor + ';padding-left:4px' : ''}">${this._escapar(p.categoria)}</span>` : ''}
       ${nivel ? `<span class="vocab-nivel-badge">${this._escapar(nivel)}</span>` : ''}
       ${erros >= 3 ? `<span class="vocab-dif-badge" title="${erros} erros">⚠️ ${erros}</span>` : ''}
       ${(typeof App !== 'undefined' && App.ehFavorito && App.ehFavorito(p.id)) ? `<span class="vocab-fav-badge">❤️</span>` : ''}
@@ -542,9 +415,6 @@ const Vocab = {
     } else {
       item.onclick = (e) => {
         if (e.target.closest('.vocab-exemplo, .vocab-exemplo-audio-btn')) return;
-        if (this.modoCompacto) {
-          item.classList.toggle('vocab-expanded');
-        }
         if (typeof App !== 'undefined' && App.pronunciar) {
           App.pronunciar(p.italiano);
         }

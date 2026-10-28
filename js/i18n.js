@@ -330,28 +330,8 @@ const I18n = {
         "it": "⬆️ Importa Contenuto"
     },
     "templi_titulo": {
-        "pt": "Os Templos do Italiano",
-        "it": "I Templi dell'Italiano"
-    },
-    "fc_opt_selecione_templo": {
-        "pt": "-- Selecione um templo --",
-        "it": "-- Seleziona tempio --"
-    },
-    "fc_modo_escrita": {
-        "pt": "✍️ Escrita",
-        "it": "✍️ Scrittura"
-    },
-    "fc_atalhos_titulo": {
-        "pt": "Atalhos de Teclado",
-        "it": "Scorciatoie da Tastiera"
-    },
-    "vocab_mais_opcoes": {
-        "pt": "Mais",
-        "it": "Altro"
-    },
-    "streak_zero": {
-        "pt": "🔥 Inicie hoje sua jornada",
-        "it": "🔥 Inizia oggi il tuo viaggio"
+        "pt": "Os Dez Templos do Italiano",
+        "it": "I Dieci Templi dell'Italiano"
     },
     "templi_sub": {
         "pt": "Explore os templos e domine o vocabulário.",

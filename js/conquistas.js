@@ -228,10 +228,6 @@ const Conquistas = {
         ${ganhou ? '<span class="ach-check" aria-hidden="true">✅</span>' : ''}
       </div>`;
 
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    const visiveis = [...desbloqueadas, ...bloqueadas].slice(0, 6);
-    const restantes = [...desbloqueadas, ...bloqueadas].slice(6);
-
     return `
       <div class="ach-progresso-bar-wrap">
         <div class="ach-progresso-bar">
@@ -239,20 +235,13 @@ const Conquistas = {
         </div>
         <span class="ach-progresso-label">${ganhas} / ${total}</span>
       </div>
-      <div role="region" aria-label="Lista de conquistas">
-        <div class="profilo-conquistas-2col">
-          ${visiveis.map(c => renderBadge(c, conquistadas.includes(c.id))).join('')}
-        </div>
-        ${restantes.length > 0 ? `
-          <details style="margin-top:0.65rem">
-            <summary style="cursor:pointer;font-size:0.78rem;font-weight:700;color:var(--cor-veneziano);padding:0.25rem 0;user-select:none">
-              ${isIt ? `▾ Mostra tutti i traguardi (+${restantes.length})` : `▾ Ver todas as conquistas (+${restantes.length})`}
-            </summary>
-            <div class="profilo-conquistas-2col" style="margin-top:0.5rem">
-              ${restantes.map(c => renderBadge(c, conquistadas.includes(c.id))).join('')}
-            </div>
-          </details>
+      <div class="ach-scroll-container" role="region" tabindex="0" aria-label="Lista de conquistas">
+        ${ganhas > 0 ? `
+          <div class="ach-secao-titulo">✅ Conquistados</div>
+          <div class="ach-lista">${desbloqueadas.map(c => renderBadge(c, true)).join('')}</div>
         ` : ''}
+        <div class="ach-secao-titulo" style="margin-top:${ganhas > 0 ? '1rem' : '0'}">🔒 Em progresso</div>
+        <div class="ach-lista">${bloqueadas.map(c => renderBadge(c, false)).join('')}</div>
       </div>
     `;
   }

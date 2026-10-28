@@ -16,13 +16,6 @@ const AppTemplos = {
     return (typeof AppTemploData !== 'undefined') ? AppTemploData.TEMPLO_DESC : [];
   },
 
-  _filtroGrupo: 'todos', // 'todos' | 'classicos' | 'a2' | 'b1_b2' | 'c1_c2'
-
-  filtrarGrupo(grupo) {
-    this._filtroGrupo = grupo || 'todos';
-    this.renderizarTemplos();
-  },
-
   // ── Temple grid rendering ──────────────────────────────────
   renderizarTemplos() {
     if (typeof document === 'undefined') return;
@@ -57,40 +50,17 @@ const AppTemplos = {
 
     if (!estado) return;
 
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    const filterBar = document.getElementById('templos-filter-bar');
-    if (filterBar) {
-      const g = this._filtroGrupo || 'todos';
-      const mkBtn = (id, ptLbl, itLbl) =>
-        `<button type="button" class="templo-filter-pill${g === id ? ' ativo' : ''}" onclick="AppTemplos.filtrarGrupo('${id}')">${isIt ? itLbl : ptLbl}</button>`;
-      filterBar.innerHTML = [
-        mkBtn('todos', '🏛️ Todos (51)', '🏛️ Tutti (51)'),
-        mkBtn('classicos', '⭐ Trilha Clássica (1–10)', '⭐ Percorso Classico (1–10)'),
-        mkBtn('a2', '🌿 Temáticos A1–A2 (15)', '🌿 Tematici A1–A2 (15)'),
-        mkBtn('b1_b2', '🏺 Temáticos B1–B2 (16)', '🏺 Tematici B1–B2 (16)'),
-        mkBtn('c1_c2', '🦅 Temáticos C1–C2 (10)', '🦅 Tematici C1–C2 (10)')
-      ].join('');
-    }
-
-    const temploPrefix = isIt ? 'Tempio' : 'Templo';
-
     for (let i = 1; i <= 51; i++) {
       if (!estado.templosData[i] && !this.TEMPLO_NIVEL_MINIMO[i]) continue;
       const data = estado.templosData[i];
-      const nivel = data ? data.nivel : '—';
-
-      if (this._filtroGrupo === 'classicos' && i > 10) continue;
-      if (this._filtroGrupo === 'a2' && (i <= 10 || !['A1', 'A2', 'A1→A2'].includes(nivel))) continue;
-      if (this._filtroGrupo === 'b1_b2' && (i <= 10 || !['B1', 'B2', 'A2→B1', 'B1→B2'].includes(nivel))) continue;
-      if (this._filtroGrupo === 'c1_c2' && (i <= 10 || !['C1', 'C2', 'B2→C1', 'C1→C2'].includes(nivel))) continue;
-
       const desbloqueado = estado.progresso?.templos_desbloqueados?.includes(i) ?? false;
       const concluido = estado.progresso?.templos_concluidos?.includes(i) ?? false;
       const nivelMinimo = this.TEMPLO_NIVEL_MINIMO[i] || i;
       const cor = this.TEMPLO_CORES[i] || this.TEMPLO_CORES[1];
 
-      const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `${temploPrefix} ${i}`);
+      const nome = (data && data.nome) ? data.nome : (this.TEMPLO_NOMES[i] || `Tempio ${i}`);
       const cidade = data ? data.cidade : '—';
+      const nivel = data ? data.nivel : '—';
       const totalPalavras = data && data.palavras ? data.palavras.length : 0;
 
       let dominadas = 0;
@@ -104,25 +74,21 @@ const AppTemplos = {
 
       const progPercent = totalPalavras > 0 ? Math.round((dominadas / totalPalavras) * 100) : 0;
       const txtDominadas = typeof I18n !== 'undefined'
-        ? I18n.t('templo_palavras_dom')
-            .replace('{a}', String(dominadas))
-            .replace('{b}', String(totalPalavras))
-            .replace('{dom}', String(dominadas))
-            .replace('{tot}', String(totalPalavras))
+        ? I18n.t('templo_palavras_dom').replace('{dom}', String(dominadas)).replace('{tot}', String(totalPalavras))
         : `${dominadas}/${totalPalavras} parole dominate`;
       const badgeCompleto = concluido
         ? `<span class="nivel-badge">${typeof I18n !== 'undefined' ? I18n.t('templo_completo_badge') : 'Completato'}</span>`
         : '';
 
       const card = document.createElement('div');
-      card.className = `templo-card${desbloqueado ? ' desbloqueado' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
+      card.className = `templo-card${desbloqueado ? '' : ' bloqueado'}${concluido ? ' concluido' : ''}`;
 
       if (desbloqueado) {
         card.style.cursor = 'pointer';
         card.onclick = () => this.estudarTemplo(i);
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}">
-            <div class="templo-num">${temploPrefix} ${i}</div>
+            <div class="templo-num">Tempio ${i}</div>
             <div class="templo-nome">${nome}</div>
             <div class="templo-meta">
               <span class="templo-cidade">📍 ${cidade}</span>
@@ -145,7 +111,7 @@ const AppTemplos = {
           : `Richiede Livello ${nivelMinimo}`;
         card.innerHTML = `
           <div class="templo-header" style="background:${cor}; filter:grayscale(0.6)">
-            <div class="templo-num">${temploPrefix} ${i}</div>
+            <div class="templo-num">Tempio ${i}</div>
             <div class="templo-nome">🔒 ${nome}</div>
             <div class="templo-meta">
               <span class="templo-cidade">📍 ${cidade}</span>

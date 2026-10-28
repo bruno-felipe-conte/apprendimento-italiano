@@ -77,7 +77,7 @@ const AppTemploData = {
   // Minimum level to unlock each temple (matches Progressao.TEMPLO_NIVEL)
   TEMPLO_NIVEL_MINIMO: {
     1:1,  2:2,  3:4,  4:6,  5:8,  6:10, 7:13, 8:15, 9:17, 10:20,
-    36:2, // T36 I Social Media e Internet (A1/A2)
+    36:99, // T36 desativado
     11:2, 12:2, 13:2, 14:2, 15:2, 17:2, 18:2, 19:2,
     22:2, 23:2, 25:2, 28:2, 33:2, 34:2,
     16:4, 20:4, 21:4, 24:4, 29:4, 32:4, 35:4, 51:4,

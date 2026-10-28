@@ -109,43 +109,32 @@ const AppFavorites = {
     const ipa = palavra.audio_ipa
       ? (palavra.audio_ipa.startsWith('/') ? palavra.audio_ipa : `/${palavra.audio_ipa}/`)
       : '';
-    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
-    const rawData = now.toLocaleDateString(isIt ? 'it-IT' : 'pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
-    const data = rawData.toLowerCase();
+    const data = now.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long' });
 
     const isFav = estado.progresso && estado.progresso.favoritos && estado.progresso.favoritos.includes(palavra.id);
     const favEmoji = isFav ? '❤️' : '🤍';
-    const lblTitulo = isIt ? '🇮🇹 Parola del Giorno' : '🇮🇹 Palavra do Dia';
-    const lblOuvir = isIt ? '🔊 Ascolta' : '🔊 Ouvir';
-    const lblEstudar = isIt ? '📚 Studiare' : '📚 Estudar';
 
     container.innerHTML = `
       <div class="pdd-header">
-        <span class="pdd-label">${lblTitulo}</span>
+        <span class="pdd-label">🇮🇹 Parola del Giorno</span>
         <span class="pdd-data">${data}</span>
       </div>
-      <div class="pdd-horizontal-grid">
-        <div class="pdd-col-left">
-          <div class="pdd-palavra">${palavra.italiano}</div>
-          ${ipa ? `<div class="pdd-ipa">${ipa}</div>` : ''}
-          <div class="pdd-traducao">${palavra.portugues}</div>
-          ${palavra.categoria ? `<span class="pdd-cat">${palavra.categoria}</span>` : ''}
-        </div>
-        <div class="pdd-col-center">
-          ${palavra.exemplo
-            ? `<div class="pdd-exemplo">"${palavra.exemplo}"${palavra.exemplo_pt ? `<br><span style="opacity:0.82;font-style:normal;font-size:0.78rem">— ${palavra.exemplo_pt}</span>` : ''}</div>`
-            : `<div class="pdd-exemplo">${isIt ? 'Ascolta e pratica questa parola nel suo tempio.' : 'Ouça e pratique esta palavra em seu templo.'}</div>`}
-        </div>
-        <div class="pdd-acoes">
-          <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">${lblOuvir}</button>
-          <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">${lblEstudar}</button>
-          <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="this.classList.remove('optimistic-pop'); void this.offsetWidth; this.classList.add('optimistic-pop'); App.toggleFavorito('${palavra.id}', this); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
-            ${favEmoji} Fav
-          </button>
-        </div>
+      <div class="pdd-body">
+        <div class="pdd-palavra">${palavra.italiano}</div>
+        ${ipa ? `<div class="pdd-ipa">${ipa}</div>` : ''}
+        <div class="pdd-traducao">${palavra.portugues}</div>
+        ${palavra.categoria ? `<span class="pdd-cat">${palavra.categoria}</span>` : ''}
+        ${palavra.exemplo ? `<div class="pdd-exemplo">"${palavra.exemplo}"${palavra.exemplo_pt ? ` — ${palavra.exemplo_pt}` : ''}</div>` : ''}
+      </div>
+      <div class="pdd-acoes">
+        <button class="pdd-btn" onclick="App.pronunciar('${palavra.italiano.replace(/'/g, "\\'")}')">🔊 Ascolta</button>
+        <button class="pdd-btn pdd-btn-study" onclick="App.estudarPalavra('${palavra.id}',${palavra._templo})">📚 Studiare</button>
+        <button class="pdd-btn" style="color: ${isFav ? '#e74c3c' : 'inherit'}" onclick="this.classList.remove('optimistic-pop'); void this.offsetWidth; this.classList.add('optimistic-pop'); App.toggleFavorito('${palavra.id}', this); const fav = (App.estado.progresso?.favoritos || []).includes('${palavra.id}'); this.innerHTML = (fav ? '❤️' : '🤍') + ' Fav'; this.style.color = fav ? '#e74c3c' : 'inherit';">
+          ${favEmoji} Fav
+        </button>
       </div>
     `;
-    container.style.display = 'flex';
+    container.style.display = 'block';
   }
 };
 

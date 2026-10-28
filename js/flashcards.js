@@ -511,10 +511,6 @@ const Flashcards = {
       cardEl2.classList.toggle('modo-escuta',   this.modoEscuta);
     }
 
-    const catFormatada = (typeof Vocab !== 'undefined' && Vocab.formatarCategoria)
-      ? Vocab.formatarCategoria(this.cartaAtual.categoria || '')
-      : (this.cartaAtual.categoria || '');
-
     if (this.modoEscuta) {
       // 👂 Listening: hide word on front, click card reveals it normally
       if (elIt)  elIt.textContent  = '🎧';
@@ -526,13 +522,13 @@ const Flashcards = {
       const ex = this.cartaAtual.exemplo || '';
       const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
       if (elIt) elIt.textContent = mascarada || `${this.cartaAtual.italiano} → ?`;
-      if (elCat) elCat.textContent = catFormatada;
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else if (this.modoEscrita) {
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
-      if (elCat) elCat.textContent = catFormatada;
-      if (elDica) elDica.textContent = '✍️ Escreva a palavra em italiano e toque para conferir';
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elDica) elDica.textContent = '✍️ Scrivi la parola in italiano e tocca per controllare';
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
 
       // Injeta o canvas de caligrafia / escrita à mão na frente
@@ -545,8 +541,8 @@ const Flashcards = {
         wrap.setAttribute('onclick', 'event.stopPropagation()');
         wrap.innerHTML = `
           <div class="fc-canvas-header">
-            <span class="fc-canvas-label">✍️ Escrita à mão:</span>
-            <button type="button" class="fc-canvas-clear-btn" onclick="event.stopPropagation();Flashcards.limparEscrita()">🧹 Limpar</button>
+            <span class="fc-canvas-label">✍️ Scrittura a mano:</span>
+            <button type="button" class="fc-canvas-clear-btn" onclick="event.stopPropagation();Flashcards.limparEscrita()">🧹 Pulisci</button>
           </div>
           <div class="fc-canvas-box">
             <canvas id="fc-canvas"></canvas>
@@ -564,13 +560,13 @@ const Flashcards = {
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
-      if (elCat) elCat.textContent = catFormatada;
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else {
       // Normal: IT front, PT back
       if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
-      if (elCat) elCat.textContent = catFormatada;
+      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
     }
@@ -620,8 +616,6 @@ const Flashcards = {
 
     const vazio = document.getElementById('flashcard-vazio');
     if (vazio) vazio.style.display = 'none';
-    const emptyQuick = document.getElementById('fc-empty-quick-actions');
-    if (emptyQuick) emptyQuick.style.display = 'none';
   },
 
   // ── Update progress counter with retrievability ───────────
@@ -1295,8 +1289,7 @@ const Flashcards = {
     const sel = document.getElementById('flashcard-templo-select');
     if (sel) {
       const anterior = sel.value;
-      const lblSel = typeof I18n !== 'undefined' ? I18n.t('fc_opt_selecione_templo') : '-- Selecione um templo --';
-      sel.innerHTML  = `<option value="">${lblSel}</option>`;
+      sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
 
       // Grupo dos Templos do Conhecimento (apenas templos desbloqueados)
       const optGroupTemplos = document.createElement('optgroup');
@@ -1307,7 +1300,7 @@ const Flashcards = {
         if (!data) return;
         const opt        = document.createElement('option');
         opt.value        = num;
-        const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Templo ${num}`;
+        const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
         opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
         optGroupTemplos.appendChild(opt);
       });
@@ -1320,7 +1313,7 @@ const Flashcards = {
         optCustom.value = 'custom';
         optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
         optCustom.style.fontWeight = 'bold';
-        optCustom.style.color = '#9B2335';
+        optCustom.style.color = '#7B68A0';
         sel.appendChild(optCustom);
       }
 
