@@ -18,7 +18,6 @@
   "19": "AnalyticsManager",
   "21": "ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada",
   "22": "ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida",
-  "23": "devDependencies",
   "25": "ADR 003: Estratégia de Arquitetura Offline-First (PWA & Cache)",
   "26": "favorites.js",
   "27": "meta.js",
@@ -36,10 +35,5 @@
   "40": "voice_engine.js",
   "41": "🏗️ 5. Cronograma e Fases de Implementação",
   "42": "progression.ts",
-  "43": "test_top_expansion_e2e.ts",
-  "44": "eslint.config.js",
-  "45": "@playwright/test",
-  "46": "repository",
-  "47": "dependencies",
   "75": "ia-import.js"
 }

@@ -616,6 +616,8 @@ const Flashcards = {
 
     const vazio = document.getElementById('flashcard-vazio');
     if (vazio) vazio.style.display = 'none';
+    const emptyQuick = document.getElementById('fc-empty-quick-actions');
+    if (emptyQuick) emptyQuick.style.display = 'none';
   },
 
   // ── Update progress counter with retrievability ───────────
@@ -1289,7 +1291,8 @@ const Flashcards = {
     const sel = document.getElementById('flashcard-templo-select');
     if (sel) {
       const anterior = sel.value;
-      sel.innerHTML  = '<option value="">-- Seleziona tempio --</option>';
+      const lblSel = typeof I18n !== 'undefined' ? I18n.t('fc_opt_selecione_templo') : '-- Selecione um templo --';
+      sel.innerHTML  = `<option value="">${lblSel}</option>`;
 
       // Grupo dos Templos do Conhecimento (apenas templos desbloqueados)
       const optGroupTemplos = document.createElement('optgroup');
@@ -1300,7 +1303,7 @@ const Flashcards = {
         if (!data) return;
         const opt        = document.createElement('option');
         opt.value        = num;
-        const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Tempio ${num}`;
+        const nomeTemplo = data.nome || (App.TEMPLO_NOMES && App.TEMPLO_NOMES[num]) || `Templo ${num}`;
         opt.textContent  = `${num}. ${nomeTemplo} (${data.cidade})`;
         optGroupTemplos.appendChild(opt);
       });
@@ -1313,7 +1316,7 @@ const Flashcards = {
         optCustom.value = 'custom';
         optCustom.textContent = `🤖 Palavras Adicionadas (${customVocab.length})`;
         optCustom.style.fontWeight = 'bold';
-        optCustom.style.color = '#7B68A0';
+        optCustom.style.color = '#9B2335';
         sel.appendChild(optCustom);
       }
 

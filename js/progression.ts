@@ -100,10 +100,10 @@ export const Progressao = {
     82000,  // L22
   ] as number[],
 
-  // Nível mínimo para desbloquear cada templo (inclui templos 11-50)
+  // Nível mínimo para desbloquear cada templo (inclui templos 11-51)
   TEMPLO_NIVEL: {
     1: 1,  2: 2,  3: 4,  4: 6,  5: 8,  6: 10, 7: 13, 8: 15, 9: 17, 10: 20,
-    36: 99, // T36 desativado
+    36: 2, // T36 I Social Media e Internet (A1/A2)
     // A2
     11: 2, 12: 2, 13: 2, 14: 2, 15: 2, 17: 2, 18: 2, 19: 2,
     22: 2, 23: 2, 25: 2, 28: 2, 33: 2, 34: 2,
@@ -244,7 +244,7 @@ export const Progressao = {
     const data = app?.estado?.templosData?.[temploNum];
     if (!data || !data.palavras) return 0;
     const flashData = app?.estado?.flashcardData || {};
-    return data.palavras.filter((p: any) => {
+    return data.palavras.filter((p: { id: string }) => {
       const sm = flashData[p.id];
       if (!sm) return false;
       return (sm.reps >= 3) || (sm.repeticoes >= 3) || (sm.stability > 7);
@@ -346,8 +346,9 @@ if (typeof window !== 'undefined') {
   window.LevelUp = LevelUp;
 }
 if (typeof globalThis !== 'undefined') {
-  (globalThis as any).Progressao = Progressao;
-  (globalThis as any).LevelUp = LevelUp;
+  const g = globalThis as Record<string, unknown>;
+  g.Progressao = Progressao;
+  g.LevelUp = LevelUp;
 }
 
 export default Progressao;

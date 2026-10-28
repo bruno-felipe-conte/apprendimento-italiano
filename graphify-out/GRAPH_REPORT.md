@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-28)
 
 ## Corpus Check
-- 196 files · ~1,223,753 words
+- 196 files · ~1,226,562 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 731 nodes · 920 edges · 69 communities (36 shown, 33 thin omitted)
+- 731 nodes · 921 edges · 63 communities (32 shown, 31 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1641f21`
+- Built from commit: `f778492e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,7 +39,6 @@
 - NMA Grammar Card Upgrader
 - ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada
 - ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida
-- devDependencies
 - Quiz Dataset Definitions
 - ADR 003: Estratégia de Arquitetura Offline-First (PWA & Cache)
 - favorites.js
@@ -59,11 +58,6 @@
 - voice_engine.js
 - 🏗️ 5. Cronograma e Fases de Implementação
 - progression.ts
-- test_top_expansion_e2e.ts
-- eslint.config.js
-- @playwright/test
-- repository
-- dependencies
 - Italian Localization and Testing
 - Web Audio Feedback Engine
 - FSRS Spaced Repetition Flashcards
@@ -119,7 +113,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (69 total, 33 thin omitted)
+## Communities (63 total, 31 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -154,8 +148,8 @@ Cohesion: 0.09
 Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, hashStringToInt(), MockAnalyticsProvider, PlausibleAnalyticsProvider
 
 ### Community 9 - "package.json"
-Cohesion: 0.12
-Nodes (16): author, description, keywords, license, main, name, type, version (+8 more)
+Cohesion: 0.05
+Nodes (39): author, dependencies, zod, description, devDependencies, @axe-core/playwright, eslint, @eslint/js (+31 more)
 
 ### Community 10 - "stress-storage.js"
 Cohesion: 0.08
@@ -198,8 +192,8 @@ Cohesion: 0.08
 Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, hashStringToInt(), MockAnalyticsProvider, PlausibleAnalyticsProvider
 
 ### Community 20 - "NMA Grammar Card Upgrader"
-Cohesion: 0.10
-Nodes (12): fecharModais(), OUTPUT_DIR, runBattery(), TabResult, WindowWithModules, criarServidorEstatico(), fecharModais(), main() (+4 more)
+Cohesion: 0.07
+Nodes (21): @axe-core/playwright, @playwright/test, fecharModais(), OUTPUT_DIR, runBattery(), TabResult, WindowWithModules, criarServidorEstatico() (+13 more)
 
 ### Community 21 - "ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada"
 Cohesion: 0.40
@@ -208,10 +202,6 @@ Nodes (4): ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada, C
 ### Community 22 - "ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida"
 Cohesion: 0.40
 Nodes (4): ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida, Consequências, Contexto, Decisão
-
-### Community 23 - "devDependencies"
-Cohesion: 0.13
-Nodes (15): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+7 more)
 
 ### Community 24 - "Quiz Dataset Definitions"
 Cohesion: 0.40
@@ -249,18 +239,6 @@ Nodes (17): 🎯 1. Objetivos e Cobertura Pedagógica, 📚 2. Estrutura das 1.0
 Cohesion: 0.33
 Nodes (3): _LEVEL_NOMES, LevelUp, Progressao
 
-### Community 43 - "test_top_expansion_e2e.ts"
-Cohesion: 0.32
-Nodes (6): ConsoleIssue, criarServidorEstatico(), fecharModais(), main(), RequestFailure, WindowWithModules
-
-### Community 44 - "eslint.config.js"
-Cohesion: 0.50
-Nodes (3): @eslint/js, globals, typescript-eslint
-
-### Community 46 - "repository"
-Cohesion: 0.67
-Nodes (3): repository, type, url
-
 ### Community 49 - "Italian Localization and Testing"
 Cohesion: 0.67
 Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples Localization Mapping (Templi I-X), Testing Protocol (Unit, Integration, Performance per Temple)
@@ -268,7 +246,7 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -279,7 +257,7 @@ _Questions this graph is uniquely positioned to answer:_
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
-- **Why does `@playwright/test` connect `@playwright/test` to `package.json`, `test_top_expansion_e2e.ts`, `NMA Grammar Card Upgrader`?**
+- **Why does `@playwright/test` connect `NMA Grammar Card Upgrader` to `package.json`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.053551912568306013 - nodes in this community are weakly interconnected._

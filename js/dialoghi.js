@@ -50,6 +50,42 @@ const Dialoghi = {
   
   _filtroNivel: '',
   _filtroTexto: '',
+  _filtroTema: '',
+  _limiteRender: 48,
+
+  _obterConcluidos() {
+    try {
+      return JSON.parse(localStorage.getItem('it_dialoghi_concluidos') || '[]');
+    } catch (_) {
+      return [];
+    }
+  },
+
+  _marcarConcluido(id) {
+    if (!id) return;
+    try {
+      const lista = this._obterConcluidos();
+      if (!lista.includes(id)) {
+        lista.push(id);
+        localStorage.setItem('it_dialoghi_concluidos', JSON.stringify(lista));
+      }
+    } catch (_) {}
+  },
+
+  _detectarTema(d) {
+    const txt = `${d.titulo || ''} ${d.contexto || ''} ${d.icone || ''}`.toLowerCase();
+    if (/bar|caff|ristorante|pizza|gelat|cena|pranzo|osteria|trattoria|vino|cibo|menu|conto|tavolo|☕|🍕|🍝|🍷|🍦|🍽/.test(txt)) return 'restaurante';
+    if (/treno|stazione|aeroporto|volo|albergo|hotel|biglietto|viaggi|valigia|dogana|taxi|autobus|metro|indicazion|strada|mappa|✈️|🚂|🏨|🧳|🚕|🗺/.test(txt)) return 'viagem';
+    if (/lavoro|ufficio|colloquio|riunione|universit|scuola|esame|prof|studio|azienda|contratto|💼|🎓|🏢|💻/.test(txt)) return 'trabalho';
+    if (/medico|farmacia|ospedale|dottor|salute|mal|sintom|emergenza|polizia|banca|posta|🏥|💊|🩺|🏦/.test(txt)) return 'saude';
+    if (/cinema|teatro|museo|arte|musica|libro|festa|concerto|storia|filosof|cultura|🎭|🎨|🎬|🏛|📚/.test(txt)) return 'cultura';
+    return 'cotidiano';
+  },
+
+  carregarMais() {
+    this._limiteRender = (this._limiteRender || 48) + 48;
+    this.renderizarSeletor(true);
+  },
 
   _esc(str) {
     return String(str || '')
@@ -60,13 +96,16 @@ const Dialoghi = {
       .replace(/'/g, '&#39;');
   },
 
-  async renderizarSeletor() {
+  async renderizarSeletor(manterLimite = false) {
+    if (!manterLimite) this._limiteRender = 48;
     await this.carregar();
     const c = document.getElementById('dialoghi-container');
     if (!c) return;
 
     const todos = this.todosDialoghi();
+    const concluidos = new Set(this._obterConcluidos());
     const niveis = ['A1','A2','B1','B2','C1'];
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
 
     // Conta por nível
     const counts = {};
@@ -77,9 +116,10 @@ const Dialoghi = {
     if (this._filtroOrigem === 'custom')  filtrados = filtrados.filter(d => d.custom || d._custom);
     if (this._filtroOrigem === 'nativo')  filtrados = filtrados.filter(d => !d.custom && !d._custom);
     if (this._filtroNivel) filtrados = filtrados.filter(d => d.nivel === this._filtroNivel);
+    if (this._filtroTema)  filtrados = filtrados.filter(d => this._detectarTema(d) === this._filtroTema);
     if (this._filtroTexto) {
       const q = this._filtroTexto.toLowerCase();
-      filtrados = filtrados.filter(d => d.titulo.toLowerCase().includes(q));
+      filtrados = filtrados.filter(d => (d.titulo || '').toLowerCase().includes(q) || (d.contexto || '').toLowerCase().includes(q));
     }
 
     const nCustom = todos.filter(d => d.custom || d._custom).length;
@@ -87,8 +127,20 @@ const Dialoghi = {
     const _o = this._filtroOrigem;
     const _origemPill = (val, label, count) =>
       `<button onclick="Dialoghi._filtroOrigem='${val}';Dialoghi.renderizarSeletor()"
-        style="padding:0.22rem 0.7rem;border-radius:999px;border:1.5px solid ${_o===val?'#7B68A0':'#ddd'};background:${_o===val?'#7B68A0':'transparent'};color:${_o===val?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">
+        style="padding:0.22rem 0.7rem;border-radius:999px;border:1.5px solid ${_o===val?'#9B2335':'#ddd'};background:${_o===val?'#9B2335':'transparent'};color:${_o===val?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600">
         ${label} (${count})</button>`;
+
+    const temas = [
+      { id: 'restaurante', label: isIt ? '🍝 Ristorante & Bar' : '🍝 Restaurante & Café' },
+      { id: 'viagem',      label: isIt ? '✈️ Viaggio & Hotel' : '✈️ Viagem & Hotel' },
+      { id: 'cotidiano',   label: isIt ? '🛍️ Quotidiano & Acquisti' : '🛍️ Cotidiano & Compras' },
+      { id: 'trabalho',    label: isIt ? '💼 Lavoro & Studio' : '💼 Trabalho & Estudo' },
+      { id: 'saude',       label: isIt ? '🏥 Salute & Servizi' : '🏥 Saúde & Serviços' },
+      { id: 'cultura',     label: isIt ? '🎭 Cultura & Società' : '🎭 Cultura & Sociedade' }
+    ];
+
+    const limite = this._limiteRender || 48;
+    const visiveis = filtrados.slice(0, limite);
 
     let html = `
       <div style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.55rem">
@@ -106,19 +158,26 @@ const Dialoghi = {
           <option value="">${I18n.t('dial_filtro_nivel')}</option>
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
+        <select class="nivel-select${this._filtroTema?' ativo':''}" aria-label="Filtrar diálogos por tema"
+          onchange="Dialoghi._filtroTema=this.value;Dialoghi.renderizarSeletor()">
+          <option value="">${isIt ? 'Tutti i temi' : 'Todos os temas'}</option>
+          ${temas.map(t=>`<option value="${t.id}" ${this._filtroTema===t.id?'selected':''}>${t.label}</option>`).join('')}
+        </select>
       </div>
       <div class="dialogo-grid">`;
 
-    for (const dial of filtrados) {
+    for (const dial of visiveis) {
       const ehCustom = dial.custom || dial._custom;
-      const badge = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('dial_badge_meu')}</span>` : '';
+      const ehConcluido = concluidos.has(dial.id);
+      const badge = ehCustom ? `<span style="font-size:0.65rem;background:#9B2335;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('dial_badge_meu')}</span>` : '';
+      const badgeDone = ehConcluido ? `<span style="font-size:0.68rem;background:rgba(74,103,65,0.14);color:var(--cor-oliva,#4A6741);border:1px solid rgba(74,103,65,0.35);padding:0.08rem 0.4rem;border-radius:999px;font-weight:700;margin-left:0.25rem;" title="${isIt ? 'Completato' : 'Concluído'}">✓</span>` : '';
       const dIdEsc = this._esc(dial.id);
       const dTituloEsc = this._esc(dial.titulo);
       const dIconeEsc = this._esc(dial.icone || '💬');
       const dNivelEsc = this._esc(dial.nivel);
       html += `<div class="dialogo-card" onclick="Dialoghi.abrirDialogo('${dIdEsc}','leitura')">
         <div class="dialogo-icone">${dIconeEsc}</div>
-        <div class="dialogo-titulo">${dTituloEsc}${badge}</div>
+        <div class="dialogo-titulo">${dTituloEsc}${badge}${badgeDone}</div>
         <div class="dialogo-nivel">${dNivelEsc}</div>
         ${ehCustom ? `<div style="margin-top:0.4rem;display:flex;gap:0.3rem;justify-content:center">
           ${dial.custom ? `<button onclick="event.stopPropagation();Dialoghi.editarDialogo('${dIdEsc}')" style="background:none;border:none;cursor:pointer;font-size:0.9rem" title="Editar">✏️</button>` : ''}
@@ -132,6 +191,18 @@ const Dialoghi = {
     }
 
     html += '</div>';
+
+    if (filtrados.length > limite) {
+      const restantes = filtrados.length - limite;
+      html += `
+        <div style="text-align:center;margin-top:1rem;">
+          <button type="button" onclick="Dialoghi.carregarMais()" style="padding:0.48rem 1.25rem;border-radius:999px;border:1.5px solid var(--cor-veneziano,#9B2335);background:transparent;color:var(--cor-veneziano,#9B2335);font-weight:700;font-size:0.82rem;cursor:pointer;">
+            ➕ ${isIt ? `Carica altri dialoghi (+${Math.min(48, restantes)})` : `Carregar mais diálogos (+${Math.min(48, restantes)})`}
+          </button>
+        </div>
+      `;
+    }
+
     c.innerHTML = html;
   },
   
@@ -507,6 +578,7 @@ const Dialoghi = {
     if (this.modo === 'pratica' && pct >= 60) {
       Progressao.ganhar(d.xp_recompensa);
       ganhouXp = true;
+      this._marcarConcluido(d.id);
     }
     
     const c = document.getElementById('dialoghi-container');

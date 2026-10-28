@@ -75,6 +75,20 @@ const Storie = {
     } catch { this.completate = []; }
   },
 
+  _ICONES_DISTINTOS: [
+    '🕯️', '⚖️', '🏛️', '⏳', '🌌', '🪞', '🧭', '🔥', '🌿', '📜',
+    '🎭', '🗝️', '💎', '🏺', '🌊', '⛰️', '🕊️', '⚔️', '🔮', '✒️', '🦉', '📐'
+  ],
+
+  _estimarMinutosLeitura(s) {
+    if (!s || !Array.isArray(s.testo)) return 3;
+    const totalPalavras = s.testo.reduce((acc, p) => {
+      const txt = (p && p.italiano) ? p.italiano : '';
+      return acc + (txt ? txt.trim().split(/\s+/).length : 0);
+    }, 0);
+    return Math.max(2, Math.round(totalPalavras / 135));
+  },
+
   // Normaliza histórias com schema alternativo (titolo/livello/testo-string/capitoli/paragrafi)
   _normalizar(s) {
     if (!s) return s;
@@ -84,7 +98,15 @@ const Storie = {
     if (!out.nivel && out.livello) out.nivel = out.livello;
     if (!out.descricao) out.descricao = out.tema || out.sinossi || '';
     if (!out.descricao_pt) out.descricao_pt = out.descricao;
-    if (!out.icone) out.icone = '📜';
+    if (!out.icone || out.icone === '📐' || out.icone === '🦉') {
+      // Gera ícone temático distinto determinístico a partir do id/título para evitar repetição
+      const seedStr = String(out.id || out.titulo || '');
+      let hash = 0;
+      for (let i = 0; i < seedStr.length; i++) {
+        hash = ((hash << 5) - hash + seedStr.charCodeAt(i)) | 0;
+      }
+      out.icone = this._ICONES_DISTINTOS[Math.abs(hash) % this._ICONES_DISTINTOS.length];
+    }
     if (!out.xp_recompensa) out.xp_recompensa = 60;
 
     // Normaliza capítulos aninhados se vier em out.capitoli
@@ -204,7 +226,7 @@ const Storie = {
       <!-- Linha 2: filtros -->
       <div style="display:flex;gap:0.35rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
         ${(()=>{const nC=todas.filter(s=>s._custom||s.custom).length;const nN=todas.length-nC;const _o=this._filtroOrigem;
-          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#543D75':'#8F7E6D'};background:${_o===v?'#543D75':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
+          const oP=(v,l,ct)=>`<button onclick="Storie._filtroOrigem='${v}';Storie.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#9B2335':'#8F7E6D'};background:${_o===v?'#9B2335':'transparent'};color:${_o===v?'#fff':'var(--cor-inchiostro)'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap;font-family:inherit">${l} (${ct})</button>`;
           return oP('','Todas',todas.length)+(nC?oP('custom','🤖 Adicionadas',nC):'')+oP('nativo','📚 Nativas',nN);
         })()}
         <select class="nivel-select${this._filtroNivel?' ativo':''}" aria-label="Filtrar histórias por nível"
@@ -214,34 +236,46 @@ const Storie = {
         </select>
       </div>
       <!-- Grid de histórias -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem">`;
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:1rem">`;
 
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);
+      let temBookmark = false;
+      try { temBookmark = !!localStorage.getItem('it_book_bm_' + s.id); } catch (_) {}
+      const isAndamento = !isLida && temBookmark;
+      const minLeitura = this._estimarMinutosLeitura(s);
+      const statusBadge = isLida
+        ? `<span class="storie-status-badge lida">✓ ${isIt ? 'Letta' : 'Concluída'}</span>`
+        : isAndamento
+          ? `<span class="storie-status-badge andamento">📖 ${isIt ? 'In corso' : 'Em andamento'}</span>`
+          : `<span class="storie-status-badge">${isIt ? 'Non letta' : 'Não lida'}</span>`;
+
       const corN = corNivel[s.nivel] || '#9B2335';
       const sIdEsc = this._escAttr(s.id);
       const sTituloEsc = this._escape(s.titulo);
       const sAutorEsc = this._escape(s.autor || '');
       const sIconeEsc = this._escape(s.icone || '📜');
-      const sNivelEsc = this._escape(s.nivel);
       html += `
         <div onclick="Storie.abrirStoria('${sIdEsc}')"
-          style="background:var(--cor-marmore);border-radius:14px;padding:1.2rem 1rem;text-align:center;
+          style="background:var(--cor-marmore);border-radius:14px;padding:1.1rem 0.95rem;text-align:center;
                  box-shadow:0 3px 12px rgba(0,0,0,0.09);cursor:pointer;border:2px solid transparent;
                  transition:transform 0.18s,box-shadow 0.18s,border-color 0.18s;
                  display:flex;flex-direction:column;align-items:center;gap:0.35rem"
           onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 22px rgba(0,0,0,0.14)';this.style.borderColor='${corN}'"
           onmouseout="this.style.transform='';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.09)';this.style.borderColor='transparent'">
-          <div style="font-size:2.4rem;line-height:1.1">${sIconeEsc}</div>
-          <div style="font-family:'Cinzel',serif;font-size:0.88rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
-            ${sTituloEsc}${isLida?'<span style="font-size:0.6rem;background:#2A9D8F;color:#fff;padding:0.08rem 0.35rem;border-radius:4px;margin-left:0.3rem;vertical-align:middle">✓</span>':''}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
+          <div style="font-size:2.2rem;line-height:1.1">${sIconeEsc}</div>
+          <div style="font-family:'Cinzel',serif;font-size:0.86rem;font-weight:700;color:var(--cor-veneziano-escuro);line-height:1.3">
+            ${sTituloEsc}${s._custom?'<span class="ia-custom-badge">IA</span>':''}
           </div>
           ${s._custom?`<button class="ia-del-btn" onclick="event.stopPropagation();IAImport.excluir('storia','${sIdEsc}')">🗑️ Remover</button>`:''}
           <div style="font-size:0.72rem;color:var(--cor-inchiostro-claro,#5A4535);font-style:italic">${sAutorEsc}</div>
-          <div style="display:flex;gap:0.4rem;align-items:center;margin-top:0.2rem">
-            <span style="font-size:0.7rem;font-weight:800;padding:0.1rem 0.5rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
-            <span style="font-size:0.72rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
+          <div style="display:flex;gap:0.35rem;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:0.15rem">
+            <span style="font-size:0.68rem;font-weight:800;padding:0.1rem 0.45rem;border-radius:6px;background:${corN};color:#fff">${s.nivel}</span>
+            <span style="font-size:0.7rem;color:var(--cor-inchiostro-claro,#5A4535);font-weight:600">⏱️ ~${minLeitura} min</span>
+            <span style="font-size:0.7rem;color:${corN};font-weight:700">+${s.xp_recompensa||50} XP</span>
           </div>
+          <div style="margin-top:0.15rem">${statusBadge}</div>
         </div>`;
     }
 
@@ -502,6 +536,9 @@ const Storie = {
 
     // Restaura marcador de página salvo ou inicia na 1
     const bookmarkSalvo = localStorage.getItem('it_book_bm_' + id);
+    if (!bookmarkSalvo) {
+      try { localStorage.setItem('it_book_bm_' + id, '1'); } catch (_) {}
+    }
     let pagInicial = bookmarkSalvo ? parseInt(bookmarkSalvo, 10) : 1;
     if (isNaN(pagInicial) || pagInicial < 1) pagInicial = 1;
     if (pagInicial > this._paginas.length) pagInicial = this._paginas.length;

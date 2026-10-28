@@ -61,6 +61,8 @@ const Profilo = {
 
     // ── Build HTML ─────────────────────────────────────────
     const currentSpeed = (p.audio_rate !== undefined) ? p.audio_rate : 0.85;
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+    const catsEmpty = !topCats || topCats === '—' || topCats.trim() === '—';
 
     container.innerHTML = `
       <!-- Stats grid -->
@@ -69,6 +71,7 @@ const Profilo = {
         <!-- General stats -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_stats_gerais')}</div>
+          ${totalRevisoes === 0 ? `<div class="profilo-empty-state" style="padding:0.5rem 0.65rem;margin-bottom:0.45rem"><span>✨ ${isIt ? 'Studia oggi per vedere i tuoi progressi' : 'Estude hoje para ver seu progresso'}</span></div>` : ''}
           ${this._row(I18n.t('prof_nivel_atual'), `${p.nivel || 1}`)}
           ${this._row(I18n.t('prof_xp_total'), `${(p.xp || 0).toLocaleString()} XP`)}
           ${this._row(I18n.t('prof_streak_atual'), `${p.streak || 0} 🔥 ${I18n.t('hm_dias')}`)}
@@ -76,14 +79,19 @@ const Profilo = {
           ${this._row(I18n.t('prof_palavras_dom'), `${totalDominadas}`)}
           ${this._row(I18n.t('prof_palavras_dif'), totalDificeis > 0 ? `<span style="color:#C0392B">⚠️ ${totalDificeis}</span>` : '0')}
           ${this._row(I18n.t('prof_tempo_est'), `${tempoEstimadoMin} min`)}
-          ${this._row(I18n.t('prof_templos_desb'), `${(p.templos_desbloqueados||[]).length} / 50`)}
+          ${this._row(I18n.t('prof_templos_desb'), `${(p.templos_desbloqueados||[]).length} / 51`)}
           ${this._row(I18n.t('prof_acc_quiz'), quizAcuracia)}
         </div>
 
         <!-- Weekly report -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_esta_semana')}</div>
-          ${this._renderGrafico(semana)}
+          ${(semana.totalCards === 0 && semana.totalXP === 0)
+            ? `<div class="profilo-empty-state">
+                 <span>📊 ${isIt ? 'Studia oggi per vedere il grafico settimanale' : 'Estude hoje para ver seu progresso semanal'}</span>
+                 <button type="button" class="templo-filter-pill" onclick="App.navegar('flashcard')">${isIt ? 'Vai alle Flashcard →' : 'Ir para Flashcards →'}</button>
+               </div>`
+            : this._renderGrafico(semana)}
           ${this._row(I18n.t('prof_tot_sessoes'), `${semana.totalSessoes}`)}
           ${this._row(I18n.t('prof_cards_est'), `${semana.totalCards}`)}
           ${this._row(I18n.t('prof_xp_ganho'), `${semana.totalXP} XP`)}
@@ -92,71 +100,75 @@ const Profilo = {
 
         <!-- Configuração de Áudio & Voz Italiana -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">🎧 ${I18n.t('prof_velocidade_audio') || 'Configuração de Áudio & Voz'}</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_velocidade_audio') || '🎧 Configuração de Áudio & Voz'}</div>
           
-          <div style="margin-bottom: 1rem;">
-            <label for="select-voz-italiana" style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.35rem;">
-              🗣️ Voz Italiana (Sintetizador)
+          <div style="margin-bottom: 0.85rem;">
+            <label for="select-voz-italiana" style="font-size: 0.82rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.3rem;">
+              🗣️ ${isIt ? 'Voce Italiana (Sintetizzatore)' : 'Voz Italiana (Sintetizador)'}
             </label>
-            <select id="select-voz-italiana" aria-label="Voz Italiana (Sintetizador)" onchange="Profilo.salvarVozItaliana(this.value)" style="width: 100%; padding: 0.55rem 0.8rem; border-radius: 8px; border: 1.5px solid #dcd3c5; font-family: inherit; font-size: 0.9rem; background: var(--cor-pergamena, #fbf7ee); color: var(--cor-inchiostro);">
+            <select id="select-voz-italiana" aria-label="Voz Italiana (Sintetizador)" title="Melhor Voz Humana do Dispositivo (Italiano Recomendado)" onchange="Profilo.salvarVozItaliana(this.value)" style="width: 100%; max-width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 0.48rem 0.65rem; border-radius: 8px; border: 1.5px solid #dcd3c5; font-family: inherit; font-size: 0.84rem; background: var(--cor-pergamena, #fbf7ee); color: var(--cor-inchiostro);">
               ${Profilo.renderizarOpcoesVozes ? Profilo.renderizarOpcoesVozes() : '<option value="">Padrão do Sistema</option>'}
             </select>
-            <div style="font-size: 0.75rem; color: #7f6e5d; margin-top: 0.3rem;">
-              ✨ Vozes <em>Natural/Online/Neural</em> proporcionam pronúncia autêntica humana.
+            <div style="font-size: 0.75rem; color: #7f6e5d; margin-top: 0.25rem;">
+              ✨ ${isIt ? 'Voci <em>Natural/Online/Neural</em> offrono pronuncia umana autentica.' : 'Vozes <em>Natural/Online/Neural</em> proporcionam pronúncia autêntica humana.'}
             </div>
 
             <!-- Banner Voz Neural Offline WebAssembly -->
-            <div id="card-voz-neural-status" style="margin-top:0.75rem;padding:0.75rem;border-radius:8px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.3)">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.35rem">
-                <span style="font-size:0.82rem;font-weight:700;color:#5c3a18">🎙️ Voz Neural Offline (WASM)</span>
+            <div id="card-voz-neural-status" style="margin-top:0.65rem;padding:0.65rem;border-radius:8px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.3)">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.3rem">
+                <span style="font-size:0.8rem;font-weight:700;color:#5c3a18">🎙️ Voz Neural Offline (WASM)</span>
                 <span id="badge-voz-neural" style="font-size:0.7rem;font-weight:700;padding:0.15rem 0.45rem;border-radius:999px;background:${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '#1E7E44' : '#5A4535'};color:#fff">
                   ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? 'Ativa' : 'Disponível'}
                 </span>
               </div>
-              <div style="font-size:0.75rem;color:#7a6245;line-height:1.4;margin-bottom:0.5rem">
+              <div style="font-size:0.75rem;color:#7a6245;line-height:1.35;margin-bottom:0.45rem">
                 Sintetiza áudios com qualidade neural direto no seu aparelho, sem servidores e sem internet.
               </div>
-              <div id="progresso-voz-neural-wrap" style="display:none;margin-bottom:0.5rem">
+              <div id="progresso-voz-neural-wrap" style="display:none;margin-bottom:0.45rem">
                 <div style="height:6px;width:100%;background:#e0d6c4;border-radius:3px;overflow:hidden">
                   <div id="barra-voz-neural" style="height:100%;width:0%;background:#2A9D8F;transition:width 0.2s"></div>
                 </div>
                 <div id="texto-progresso-voz" style="font-size:0.7rem;color:#666;text-align:right;margin-top:2px">0%</div>
               </div>
               <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
-                <button type="button" id="btn-gerenciar-voz-neural" class="btn-secondario" onclick="Profilo.gerenciarVozNeural()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
+                <button type="button" id="btn-gerenciar-voz-neural" class="btn-secondario" onclick="Profilo.gerenciarVozNeural()" style="font-size:0.76rem;padding:0.28rem 0.55rem">
                   ${(typeof VoiceEngine !== 'undefined' && VoiceEngine.statusVozNeural().instalada) ? '🔄 Reinstalar Voz' : '⬇️ Baixar Pacote (~28 MB)'}
                 </button>
-                <button type="button" class="btn-secondario" onclick="Profilo.limparCacheAudio()" style="font-size:0.76rem;padding:0.3rem 0.6rem">
+                <button type="button" class="btn-secondario" onclick="Profilo.limparCacheAudio()" style="font-size:0.76rem;padding:0.28rem 0.55rem">
                   🗑️ Limpar Cache Áudio
                 </button>
               </div>
             </div>
           </div>
 
-          <label for="audio-speed-slider" style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
-            ⚡ Velocidade de Reprodução
+          <label for="audio-speed-slider" style="font-size: 0.82rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.2rem;">
+            ⚡ ${isIt ? 'Velocità di Riproduzione' : 'Velocidade de Reprodução'}
           </label>
-          <div style="display:flex; align-items:center; gap:10px; margin-top:5px;">
-            <span style="font-size:1.5rem" aria-hidden="true">🐢</span>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:4px;">
+            <span style="font-size:1.35rem" aria-hidden="true">🐢</span>
             <input type="range" id="audio-speed-slider" aria-label="Velocidade de Reprodução do Áudio" min="0.5" max="1.5" step="0.05" value="${currentSpeed}" 
                    onchange="Profilo.salvarAudioSpeed(this.value)" oninput="document.getElementById('audio-speed-display').textContent = this.value + 'x'" style="flex:1;">
-            <span style="font-size:1.5rem" aria-hidden="true">🐇</span>
+            <span style="font-size:1.35rem" aria-hidden="true">🐇</span>
           </div>
-          <div style="text-align:center; margin-top:5px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
+          <div style="text-align:center; margin-top:3px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
           
-          <button class="btn-secondario" onclick="App.pronunciar('Buongiorno! Questo è un test della voce italiana.')" style="margin-top:12px; width:100%;">
-            🔊 ${I18n.t('prof_testar_audio') || 'Testar Áudio'}
+          <button class="btn-secondario" onclick="App.pronunciar('Buongiorno! Questo è un test della voce italiana.')" style="margin-top:8px; width:100%;">
+            ${I18n.t('prof_testar_audio') || '🔊 Testar Áudio'}
           </button>
         </div>
 
         <!-- Categories -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_cats_est')}</div>
-          <div style="font-size:0.87rem;color:#666;line-height:1.8;">${topCats}</div>
+          ${catsEmpty
+            ? `<div class="profilo-empty-state">
+                 <span>📚 ${isIt ? 'Studia oggi per vedere le tue categorie più praticate' : 'Estude hoje para ver seu progresso por categoria'}</span>
+               </div>`
+            : `<div style="font-size:0.86rem;color:#666;line-height:1.7;">${topCats}</div>`}
         </div>
 
-                <!-- Conquistas -->
-        <div class="profilo-card">
+        <!-- Conquistas (2 colunas sem scroll interno) -->
+        <div class="profilo-card" style="grid-column: span 2">
           <div class="profilo-card-titulo">${I18n.t('prof_traguardi')}</div>
           ${typeof Conquistas !== 'undefined' ? Conquistas.renderizarPainelCompleto() : ''}
         </div>
@@ -166,38 +178,69 @@ const Profilo = {
           ? `<div class="profilo-card" style="margin-top:0">${Notificacoes.renderizarCard()}</div>`
           : ''}
 
-        <div class="profilo-card" style="margin-top:1.5rem">
-          <div class="profilo-card-titulo">${I18n.t('prof_gestao_dati')}</div>
-          <p style="font-size:0.85rem; color:#666; margin-bottom:1rem;">${I18n.t('prof_backup_desc')}</p>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button class="btn-secondario" onclick="Profilo.exportarDados()">${I18n.t('prof_exp_backup')}</button>
-            <button class="btn-secondario" onclick="document.getElementById('backup-input').click()">${I18n.t('prof_imp_backup')}</button>
-            <button style="margin-left:auto; background:#C0392B; color:white; border:none; padding:0.4rem 1rem; border-radius:12px; cursor:pointer; font-weight:700;" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
-          </div>
-          <!-- Tour & Diagnóstico -->
-          <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.4rem">
-            <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),200)">
-              🗺️ Ver tour introdutório novamente
-            </button>
-            <button class="btn-secondario" style="width:100%;font-size:0.85rem" onclick="App.abrirHealthCheck()">
-              🩺 Diagnóstico PWA (Health Check)
-            </button>
-          </div>
-          <!-- Conteúdo Criado por Mim -->
-          <div style="border-top:1px solid #f0e8d8;padding-top:0.8rem;margin-top:0.8rem">
-            <div style="font-size:0.78rem;font-weight:700;color:#9B2335;margin-bottom:0.3rem">${I18n.t('prof_conteudo_criado')}</div>
-            <div style="font-size:0.75rem;color:var(--cor-inchiostro-claro,#5A4535);margin-bottom:0.5rem">
-              ${I18n.idioma==='it'
-                ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti manualmente o via IA.'
-                : 'Músicas, diálogos, histórias, imitações e vocabulário adicionados manualmente ou via IA.'}
+        <!-- Gestão de Dados em Linha de Largura Total com Grupos Horizontais -->
+        <div class="profilo-gestao-full">
+          <div class="profilo-card-titulo" style="margin-bottom:0.4rem">${I18n.t('prof_gestao_dati')}</div>
+          <p style="font-size:0.82rem; color:var(--cor-inchiostro-claro,#666); margin-bottom:0.85rem;">${I18n.t('prof_backup_desc')}</p>
+          <div class="profilo-gestao-groups">
+            <!-- Grupo 1: Backup -->
+            <div class="profilo-gestao-group">
+              <div>
+                <div class="profilo-gestao-group-title">📦 Backup</div>
+                <div style="font-size:0.76rem;color:var(--cor-pietra);margin-top:0.2rem">${isIt ? 'Salva o ripristina tutti i tuoi progressi FSRS e XP.' : 'Salve ou restaure todo o seu progresso FSRS e XP.'}</div>
+              </div>
+              <div style="display:flex; gap:0.45rem; flex-wrap:wrap;">
+                <button class="btn-secondario" onclick="Profilo.exportarDados()" style="flex:1;font-size:0.8rem">${I18n.t('prof_exp_backup')}</button>
+                <button class="btn-secondario" onclick="document.getElementById('backup-input').click()" style="flex:1;font-size:0.8rem">${I18n.t('prof_imp_backup')}</button>
+              </div>
             </div>
-            <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
-              <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="font-size:0.82rem">
-                ⬇️ ${I18n.idioma==='it' ? 'Esporta Contenuto' : 'Exportar Conteúdo'}
-              </button>
-              <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="font-size:0.82rem">
-                ⬆️ ${I18n.idioma==='it' ? 'Importa Contenuto' : 'Importar Conteúdo'}
-              </button>
+
+            <!-- Grupo 2: Conteúdo -->
+            <div class="profilo-gestao-group">
+              <div>
+                <div class="profilo-gestao-group-title">🎨 ${I18n.t('prof_conteudo_criado')}</div>
+                <div style="font-size:0.76rem;color:var(--cor-pietra);margin-top:0.2rem">
+                  ${isIt
+                    ? 'Canzoni, dialoghi, storie, imitazioni e vocabolario aggiunti.'
+                    : 'Músicas, diálogos, histórias, imitações e vocabulário adicionados.'}
+                </div>
+              </div>
+              <div style="display:flex;gap:0.45rem;flex-wrap:wrap">
+                <button class="btn-secondario" onclick="Profilo.exportarConteudoCustom()" style="flex:1;font-size:0.8rem">
+                  ⬇️ ${isIt ? 'Esporta Contenuto' : 'Exportar Conteúdo'}
+                </button>
+                <button class="btn-secondario" onclick="document.getElementById('custom-input').click()" style="flex:1;font-size:0.8rem">
+                  ⬆️ ${isIt ? 'Importa Contenuto' : 'Importar Conteúdo'}
+                </button>
+              </div>
+            </div>
+
+            <!-- Grupo 3: Utilitários -->
+            <div class="profilo-gestao-group">
+              <div>
+                <div class="profilo-gestao-group-title">🛠️ ${isIt ? 'Utilità & Diagnostica' : 'Utilitários'}</div>
+                <div style="font-size:0.76rem;color:var(--cor-pietra);margin-top:0.2rem">${isIt ? 'Rivedi il tour guidato o controlla lo stato offline PWA.' : 'Reveja o tour introdutório ou verifique a saúde offline do PWA.'}</div>
+              </div>
+              <div style="display:flex;gap:0.45rem;flex-wrap:wrap">
+                <button class="btn-secondario" style="flex:1;font-size:0.8rem" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),200)">
+                  🗺️ ${isIt ? 'Tour introduttivo' : 'Tour introdutório'}
+                </button>
+                <button class="btn-secondario" style="flex:1;font-size:0.8rem" onclick="App.abrirHealthCheck()">
+                  🩺 ${isIt ? 'Diagnostica PWA' : 'Diagnóstico PWA'}
+                </button>
+              </div>
+            </div>
+
+            <!-- Grupo 4: Zona de Perigo -->
+            <div class="profilo-gestao-group danger-zone">
+              <div>
+                <div class="profilo-gestao-group-title">⚠️ ${isIt ? 'Zona Pericolosa' : 'Zona de Perigo'}</div>
+                <div style="font-size:0.76rem;color:#922B21;margin-top:0.2rem">${isIt ? 'Consiglio: esporta un backup prima di cancellare tutto.' : 'Recomendação: exporte um backup antes de apagar tudo.'}</div>
+              </div>
+              <div style="display:flex;gap:0.45rem;align-items:center;justify-content:space-between">
+                <button type="button" class="btn-secondario" onclick="Profilo.exportarDados()" style="font-size:0.75rem;padding:0.3rem 0.55rem">⬇️ Backup</button>
+                <button style="background:#C0392B; color:white; border:none; padding:0.38rem 0.85rem; border-radius:10px; cursor:pointer; font-weight:700; font-size:0.8rem" onclick="Profilo.resetProgresso()">${I18n.t('prof_azzera')}</button>
+              </div>
             </div>
           </div>
         </div>
@@ -281,7 +324,8 @@ const Profilo = {
   // ── Seletor de Vozes Italianas (VoiceEngine) ───────────
   renderizarOpcoesVozes() {
     const selecionada = localStorage.getItem('it_voz_preferida') || 'auto';
-    const autoOpcao = `<option value="auto" ${(selecionada === 'auto' || selecionada === 'wasm_neural') ? 'selected' : ''}>⭐ Melhor Voz Humana do Dispositivo (Recomendado)</option>`;
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
+    const autoOpcao = `<option value="auto" title="Melhor Voz Humana do Dispositivo (Italiano Recomendado)" ${(selecionada === 'auto' || selecionada === 'wasm_neural') ? 'selected' : ''}>⭐ ${isIt ? 'Migliore Voce Umana (Consigliata)' : 'Melhor Voz Humana (Recomendado)'}</option>`;
 
     if (typeof VoiceEngine === 'undefined') {
       return autoOpcao + '<option value="">Padrão do Sistema</option>';

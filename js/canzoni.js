@@ -176,6 +176,23 @@ const Canzoni = {
   _filtroNivel: '',
   _filtroTexto: '',
 
+  _obterProgressoMap() {
+    try {
+      return JSON.parse(localStorage.getItem('it_canzoni_progresso') || '{}');
+    } catch (_) {
+      return {};
+    }
+  },
+
+  _salvarProgressoCanzone(id, pct) {
+    if (!id) return;
+    try {
+      const map = this._obterProgressoMap();
+      map[id] = Math.max(map[id] || 0, Math.min(100, Math.round(pct)));
+      localStorage.setItem('it_canzoni_progresso', JSON.stringify(map));
+    } catch (_) {}
+  },
+
   async renderizarSeletor() {
     this.pararAudio();
     const c = document.getElementById('canzoni-container');
@@ -184,6 +201,8 @@ const Canzoni = {
     await this.carregar();
 
     const todas = this.todasCanzoni();
+    const progressoMap = this._obterProgressoMap();
+    const isIt = typeof I18n !== 'undefined' && I18n.idioma === 'it';
     const niveis = ['A1','A2','B1','B2','C1','C2'];
     const counts = {};
     todas.forEach(s => { counts[s.nivel] = (counts[s.nivel]||0)+1; });
@@ -199,7 +218,7 @@ const Canzoni = {
 
     const nC=todas.filter(s=>s.custom||s._custom).length, nN=todas.length-nC, _o=this._filtroOrigem;
     const nOcultas = this._ocultas.length;
-    const _oPill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#7B68A0':'#ddd'};background:${_o===v?'#7B68A0':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
+    const _oPill=(v,l,ct)=>`<button onclick="Canzoni._filtroOrigem='${v}';Canzoni.renderizarSeletor()" style="padding:0.22rem 0.6rem;border-radius:999px;border:1.5px solid ${_o===v?'#9B2335':'#ddd'};background:${_o===v?'#9B2335':'transparent'};color:${_o===v?'#fff':'inherit'};cursor:pointer;font-size:0.75rem;font-weight:600;white-space:nowrap">${l} (${ct})</button>`;
 
     let html = `
       <!-- Linha 1: busca + ações -->
@@ -224,10 +243,12 @@ const Canzoni = {
       </div>
       <div class="dialogo-grid">`;
 
+    const prefixoTrecho = isIt ? 'Estratto · ' : 'Trecho · ';
     for (const can of filtradas) {
       const ehCustom = can.custom || can._custom;
-      const badgeCustom = ehCustom ? `<span style="font-size:0.65rem;background:#7B68A0;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('can_badge_minha')}</span>` : '';
+      const badgeCustom = ehCustom ? `<span style="font-size:0.65rem;background:#9B2335;color:white;padding:0.1rem 0.4rem;border-radius:6px;margin-left:0.3rem;">${I18n.t('can_badge_minha')}</span>` : '';
       const qtdVersos = (can.estrofes || []).length;
+      const pctCan = progressoMap[can.id] || 0;
       const canIdEsc = this._esc(can.id);
       const canTituloEsc = this._esc(can.titulo);
       const canArtistaEsc = this._esc(can.artista || '');
@@ -235,17 +256,18 @@ const Canzoni = {
       const canNivelEsc = this._esc(can.nivel);
       html += `<div class="dialogo-card" onclick="Canzoni.abrirCanzone('${canIdEsc}')">
         <div class="dialogo-icone">${canIconeEsc}</div>
-        <div class="dialogo-titulo">${canTituloEsc}${badgeCustom}</div>
+        <div class="dialogo-titulo">${canTituloEsc}${badgeCustom}${pctCan >= 100 ? ' <span style="color:var(--cor-oliva,#4A6741);font-size:0.75rem" title="Concluída">✓</span>' : ''}</div>
         <div style="font-size:0.75rem;color:var(--cor-inchiostro-claro,#5A4535);margin:0.2rem 0">${canArtistaEsc}</div>
         <div style="display:flex;gap:0.3rem;justify-content:center;flex-wrap:wrap;margin-top:0.3rem;align-items:center;">
           <span class="dialogo-nivel">${canNivelEsc}</span>
-          <span style="font-size:0.68rem;color:#9B2335;background:rgba(155,35,53,0.08);padding:0.1rem 0.42rem;border-radius:8px;font-weight:600">${qtdVersos} ${I18n.t('can_versos_count')}</span>
+          <span style="font-size:0.68rem;color:#9B2335;background:rgba(155,35,53,0.08);padding:0.1rem 0.42rem;border-radius:8px;font-weight:600" title="${isIt ? 'Estratto didattico curato' : 'Trecho didático selecionado'}">${prefixoTrecho}${qtdVersos} ${I18n.t('can_versos_count')}</span>
           <button onclick="event.stopPropagation();Canzoni.iniciarCloze('${canIdEsc}')" style="background:rgba(201,149,42,0.18);border:1px solid rgba(201,149,42,0.5);color:#6b1a2a;padding:0.1rem 0.45rem;border-radius:6px;font-size:0.68rem;font-weight:700;cursor:pointer" title="Treino Cloze Sincronizado">🎧 Cloze</button>
           ${ehCustom ? `
           ${can.custom ? `<button onclick="event.stopPropagation();Canzoni.editarCanzone('${canIdEsc}')" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Editar">✏️</button>` : ''}
-          <button onclick="event.stopPropagation();Canzoni.excluirCanzone('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
-          : `<button onclick="event.stopPropagation();Canzoni.ocultarNativa('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;opacity:0.4;transition:opacity 0.15s" onmouseenter="this.style.opacity=1" onmouseleave="this.style.opacity=0.4" title="Ocultar esta música">🗑️</button>`}
+          <button class="canzone-card-trash" onclick="event.stopPropagation();Canzoni.excluirCanzone('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Excluir">🗑️</button>`
+          : `<button class="canzone-card-trash" onclick="event.stopPropagation();Canzoni.ocultarNativa('${canIdEsc}', this.closest('.dialogo-card'))" style="background:none;border:none;cursor:pointer;font-size:0.85rem;" title="Ocultar esta música">🗑️</button>`}
         </div>
+        <div class="canzone-progress-track" title="${pctCan}%"><div class="canzone-progress-fill" style="width:${pctCan}%"></div></div>
       </div>`;
     }
 
@@ -985,6 +1007,7 @@ const Canzoni = {
     const can = this.canzonAtual;
     const total = can.estrofes.filter(e => e.palavra_oculta).length;
     const pct = total > 0 ? Math.round(this.acertos / total * 100) : 100;
+    this._salvarProgressoCanzone(can.id, Math.max(pct, 100));
     if (typeof Progressao !== 'undefined' && Progressao.ganhar) Progressao.ganhar(can.xp_recompensa);
     const c = document.getElementById('canzoni-container');
     const emoji = pct >= 80 ? '🎤' : pct >= 50 ? '🎵' : '🎼';
