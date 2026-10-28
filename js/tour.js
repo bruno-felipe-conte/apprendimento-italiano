@@ -25,48 +25,52 @@ const Tour = {
 
     // Seção e preparação necessária para cada passo (indexed)
     const passos = [
-      // 0 — header
+      // 0 — header & controles rápidos (som, idioma, tema, voz)
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
-      // 1 — stats bar
+      // 1 — stats bar & meta diária
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
-      // 2 — templo 1 (só o primeiro card)
+      // 2 — continuar de onde parou + sessão de 15 min
+      { sec: 'templi',    prep: () => window.scrollTo(0,0) },
+      // 3 — 51 templos + filtros de trilha
       { sec: 'templi',    prep: null },
-      // 3 — meta prazo
+      // 4 — meta prazo
       { sec: 'templi',    prep: () => window.scrollTo(0,0) },
-      // 4 — flashcard selector
+      // 5 — flashcard selector (Templos vs Baralhos Especiais Top 500)
       { sec: 'flashcard', prep: null },
-      // 5 — três modos de estudo (wrapper)
+      // 6 — 5 modos de estudo (Normal, Reverso, Contexto, Escuta, Escrita)
       { sec: 'flashcard', prep: null },
-      // 6 — botões avaliação
+      // 7 — botões avaliação FSRS-4.5
       { sec: 'flashcard', prep: () => {
           const a = document.getElementById('card-actions');
           if (a) a.style.display = 'grid';
       }},
-      // 7 — quiz → botão Le Fondamenta
+      // 8 — quiz → abas de modalidade + templos agrupados
       { sec: 'quiz', prep: () => {
           if (typeof Quiz !== 'undefined') Quiz.renderizarSeletor();
       }},
-      // 8 — gramática → banner A1
+      // 9 — gramática → continuar de onde parou + módulos A1-C2
       { sec: 'grammatica', prep: () => {
           if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
       }},
-      // 9 — vocabulário → botões Ocultar PT/IT
+      // 10 — vocabulário → Top 1000, Modo Compacto e Menu Mais
       { sec: 'vocabolario', prep: () => {
           if (typeof Vocab !== 'undefined') Vocab.renderizar();
       }},
-      // 10 — storie
-      { sec: 'storie', prep: null },
-      // 11 — dialoghi
-      { sec: 'dialoghi', prep: null },
-      // 12 — canzoni
-      { sec: 'canzoni', prep: null },
-      // 13 — imitazione
-      { sec: 'imitazione', prep: () => {
-          if (typeof Imitazione !== 'undefined') Imitazione.renderizar?.();
-      }},
-      // 14 — botão 🤖 via IA (storie)
+      // 11 — storie
       { sec: 'storie', prep: () => {
           if (typeof Storie !== 'undefined') Storie.renderizarSeletor?.();
+      }},
+      // 12 — dialoghi
+      { sec: 'dialoghi', prep: () => {
+          if (typeof Dialoghi !== 'undefined') Dialoghi.renderizarSeletor?.();
+      }},
+      // 13 — canzoni
+      { sec: 'canzoni', prep: () => {
+          if (typeof Canzoni !== 'undefined') Canzoni.renderizarSeletor?.();
+      }},
+      // 14 — imitazione + criação via IA
+      { sec: 'imitazione', prep: () => {
+          if (typeof Imitazione !== 'undefined') Imitazione.renderizar?.();
       }},
     ];
 
@@ -74,19 +78,19 @@ const Tour = {
     const stepSelectors = [
       '.app-header',
       '.stats-bar',
-      '#templos-grid .templo-card:first-child',   // só o Templo 1
+      '#continuar-container',
+      '#templos-filter-bar',
       '#meta-prazo-container',
       '.card-selecao-templo',
-      '#btn-modos-wrapper',                         // todos os 3 botões de modo
+      '#btn-modos-wrapper',
       '.card-actions',
-      '.quiz-templo-btn:not(.bloqueado)',           // Le Fondamenta
-      '.gram-nivel-banner',                         // bloco A1
-      '#vocab-blur-btns',                           // Ocultar PT / Ocultar IT
-      '#storie-lista',                              // lista de histórias
-      '.dialogo-card',                              // card de diálogo
-      '.canzone-card',                              // card de canção
-      '#imitazione-container',                      // container imitazione
-      '.btn-ia-add',                                // botão 🤖 via IA
+      '#quiz-templo-selector',
+      '#grammatica-container',
+      '.vocab-controles',
+      '#storie-container',
+      '#dialoghi-container',
+      '#canzoni-container',
+      '#imitazione-container',
     ];
 
     const navegar = (idx, cb) => {
@@ -142,121 +146,121 @@ const Tour = {
         {
           element: '.app-header',
           popover: {
-            title: '👋 Bem-vindo ao Italiano Autentico!',
-            description: 'Este tour de 15 passos apresenta as principais funções do app. Leva menos de 2 minutos — vamos lá!',
+            title: '👋 Bem-vindo ao Italiano Autêntico!',
+            description: 'Este tour rápido de 15 passos apresenta todas as ferramentas do app. No topo você alterna o idioma da interface (PT | IT), o tema (☀️/🌙), os efeitos sonoros (🔔 já ativados por padrão), a velocidade da voz (.85x / 1x) e seu Perfil (👤).',
             side: 'bottom', align: 'center'
           }
         },
         {
           element: '.stats-bar',
           popover: {
-            title: '🏅 Nível, XP e Sequência',
-            description: 'Aqui você acompanha seu progresso. Cada atividade rende XP. Ao atingir XP suficiente, seu nível sobe e novos templos são desbloqueados. A barra dourada mostra o quanto falta para o próximo nível.',
+            title: '🏅 Nível, XP, Ofensiva e Meta Diária',
+            description: 'Acompanhe seu Nível, XP, dias seguidos de estudo (🔥), Templos desbloqueados (1 a 51) e Palavras dominadas. Logo abaixo do topo fica a barra fina da sua Meta Diária de XP.',
             side: 'bottom', align: 'center'
           }
         },
         {
-          element: '#templos-grid .templo-card:first-child',
+          element: '#continuar-container',
           popover: {
-            title: '🏛️ Templo 1 — Por Aqui Você Começa!',
-            description: 'Cada templo é um pacote de vocabulário de uma cidade italiana. Comece aqui, pelo Templo 1 (Roma). Os demais se desbloqueiam conforme você evolui de nível.',
+            title: '⚡ Retomada Rápida e Sessão de 15 Minutos',
+            description: 'Sem tempo a perder: clique em "Continuar de onde parou" para retomar seu último estudo ou em "Sessão de Hoje (15 min)" para um treino guiado (5 min de revisão + 5 min de palavras novas + 5 min de escuta/quiz).',
+            side: 'bottom', align: 'center'
+          }
+        },
+        {
+          element: '#templos-filter-bar',
+          popover: {
+            title: '🏛️ Os 51 Templos e Filtros por Trilha',
+            description: 'O app conta com 51 templos (mais de 5.000 palavras): a Trilha Clássica (1–10, de Roma a Milão) e os Templos Temáticos (11–51, do A1 ao C2). Use estes filtros para navegar rapidamente e confira a Palavra do Dia ao lado do Calendário de Ofensiva.',
             side: 'bottom', align: 'center'
           }
         },
         {
           element: '#meta-prazo-container',
           popover: {
-            title: '🎯 Defina uma Meta com Prazo',
-            description: 'Escolha um nível alvo e uma data limite. O app calcula quantos XP por dia você precisa para chegar lá a tempo — seu GPS de aprendizado!',
+            title: '🎯 Meta com Prazo (Seu GPS)',
+            description: 'Escolha um nível-alvo e uma data limite. O app calcula automaticamente quantos XP por dia você precisa conquistar para atingir sua meta no prazo!',
             side: 'bottom', align: 'center'
           }
         },
         {
           element: '.card-selecao-templo',
           popover: {
-            title: '🃏 Flashcards com Repetição Espaçada',
-            description: 'Selecione um templo e estude as palavras. O algoritmo FSRS-4.5 decide quando cada palavra precisa ser revisada — você vê a carta exatamente quando está prestes a esquecer.',
-            side: 'bottom', align: 'center'
+            title: '🃏 Flashcards: Templos & Baralhos Especiais (Top 500)',
+            description: 'Alterne entre "🏛️ Templos" (vocabulário das cidades desbloqueadas) e "⭐ Baralhos Especiais (Top 500)" — com 5 categorias exclusivas: Colocações & Chunks, Falsos Amigos, Preposições, Verbos Irregulares e Situações da Vida Real.',
+            side: 'right', align: 'start'
           }
         },
         {
           element: '#btn-modos-wrapper',
           popover: {
-            title: '🔄 Três Modos de Estudo',
-            description: '🔄 Reverso (PT→IT) · 📖 Contexto (complete a frase) · 🎧 Escuta (adivinhe pelo áudio). Use os três modos para domínio completo!',
-            side: 'bottom', align: 'center'
+            title: '✍️ 5 Modos de Estudo nos Flashcards',
+            description: '🎴 Normal (IT→PT) · 🔄 Reverso (PT→IT) · 📖 Contexto (frase com lacuna) · 🎧 Escuta (áudio) · ✍️ Escrita (desenhe a palavra à mão na lousa digital). Use também o botão "🌍 Revisão Geral" para revisar todas as cartas vencidas!',
+            side: 'right', align: 'start'
           }
         },
         {
           element: '.card-actions',
           popover: {
-            title: '⭐ Como Avaliar as Cartas',
-            description: '❌ Esqueci → revisão amanhã · ⚡ Difícil → 1 dia · ✅ Bom → 3 dias · ⭐ Fácil → 2 semanas. Seja honesto — o sistema aprende com você!',
+            title: '⭐ Avaliação FSRS-4.5 & Imitação por Voz',
+            description: 'O algoritmo FSRS-4.5 agenda a revisão no momento ideal: ❌ Esqueci · ⚡ Difícil · ✅ Bom · ⭐ Fácil. Use também "🔊 Pronunciar", "🐢 Lento" e "🎤 Imitar" para testar sua fala pelo microfone!',
             side: 'top', align: 'center'
           }
         },
         {
-          element: '.quiz-templo-btn:not(.bloqueado)',
+          element: '#quiz-templo-selector',
           popover: {
-            title: '❓ Quiz — 4 Tipos de Exercício',
-            description: 'Comece pelo Templo 1. Vocabulário · Morfologia (gênero & plural) · Listening (reconheça pelo áudio) · Conjugação verbal. Cada acerto rende XP!',
+            title: '❓ Quiz Organizado por Modalidade',
+            description: 'Escolha entre o "🌍 Quiz Geral" (todos os templos mistos) ou navegue pelas abas: 🏛️ Vocabulário, 🔤 Morfologia (gênero e plural), 🎧 Escuta (Listening) e 📚 Gramática & Verbos, com templos agrupados em gavetas retráteis.',
             side: 'top', align: 'center'
           }
         },
         {
-          element: '.gram-nivel-banner',
+          element: '#grammatica-container',
           popover: {
-            title: '📚 Gramática — Do A1 ao C2',
-            description: '82 lições em 6 níveis. Clique no banner do nível para expandir ou recolher as lições. Ative o Modo Imersão 🇮🇹 para ver tudo em italiano!',
+            title: '📚 Gramática Interativa — Do A1 ao C2',
+            description: 'Lições completas em 3 etapas: 1. Aprender a Regra, 2. Exemplos & Armadilhas e 3. Praticar. O card no topo leva você direto para a próxima lição pendente!',
+            side: 'top', align: 'center'
+          }
+        },
+        {
+          element: '.vocab-controles',
+          popover: {
+            title: '📖 Vocabulário & Top 1000 Palavras',
+            description: 'Explore todas as palavras ou filtre pelo ranking "🔥 Top 1000" mais usadas no italiano! Alterne a visualização em "☰ Compacto" e use o menu "⋯ Mais" para ocultar colunas (PT/IT) ou adicionar palavras via IA.',
             side: 'bottom', align: 'center'
           }
         },
         {
-          element: '#vocab-blur-btns',
+          element: '#storie-container',
           popover: {
-            title: '📖 Vocabulário — Treine a Memória',
-            description: 'Use "Ocultar PT" ou "Ocultar IT" para esconder uma coluna e testar se você lembra a tradução. Pesquise, filtre por templo ou favoritos e clique para ouvir a pronúncia!',
-            side: 'bottom', align: 'center'
+            title: '📚 Histórias e Ensaios Filosóficos',
+            description: 'Leia contos e reflexões do A1 ao C2 em formato de livro clássico paginado, com estimativa de tempo de leitura (⏱️), marcador de página automático, narração em voz alta e tradução ao tocar em qualquer palavra.',
+            side: 'top', align: 'center'
           }
         },
         {
-          element: '#storie-lista',
+          element: '#dialoghi-container',
           popover: {
-            title: '📖 Storie — Leitura Autêntica',
-            description: 'Leia textos italianos reais com dificuldade A1–C2. Ative o Modo Imersão para esconder a tradução e testar sua compreensão!',
-            side: 'bottom', align: 'center'
+            title: '💬 Diálogos da Vida Real',
+            description: '200 diálogos interativos com filtro por nível e por tema (🍝 Restaurante, ✈️ Viagem, 🛍️ Cotidiano, 💼 Trabalho, 🏥 Saúde, 🎭 Cultura). Conclua no Modo Prática para ganhar XP e o selo ✓!',
+            side: 'top', align: 'center'
           }
         },
         {
-          element: '.dialogo-card',
+          element: '#canzoni-container',
           popover: {
-            title: '💬 Dialoghi — Conversação Real',
-            description: 'Pratique diálogos do cotidiano italiano. Ouça, leia e repita — ideal para treinar ouvido e fala!',
-            side: 'bottom', align: 'center'
-          }
-        },
-        {
-          element: '.canzone-card',
-          popover: {
-            title: '🎵 Canzoni — Aprenda com Música',
-            description: '200 músicas italianas com letra completa. Ouça e acompanhe a letra — aprender italiano nunca foi tão divertido!',
-            side: 'bottom', align: 'center'
+            title: '🎵 Músicas com Karaokê & Cloze Studio',
+            description: '100 trechos musicais didáticos com barra de progresso por música, destaque sincronizado palavra por palavra (Karaokê), treino de lacunas e o "🎧 Cloze Studio" para importar suas próprias faixas!',
+            side: 'top', align: 'center'
           }
         },
         {
           element: '#imitazione-container',
           popover: {
-            title: '🎤 Imitazione — Treine sua Pronúncia',
-            description: 'Ouça frases italianas nativas e repita em voz alta. O app usa reconhecimento de voz para avaliar sua pronúncia em tempo real. Ideal para soar como um italiano de verdade!',
+            title: '🎙️ Dojo de Imitação & Criação com IA',
+            description: 'Ouça o modelo nativo (1.0x ou 0.75x), grave sua voz pelo microfone (no celular ou computador) e receba diagnóstico palavra por palavra! E em qualquer tela, use o botão "🤖 + IA" para gerar novos conteúdos personalizados.',
             side: 'top', align: 'center'
-          }
-        },
-        {
-          element: '.btn-ia-add',
-          popover: {
-            title: '🤖 Crie Conteúdo com IA',
-            description: 'Clique em "🤖 via IA" em qualquer seção para gerar diálogos, histórias, músicas, frases ou vocabulário personalizados. O app inclui automaticamente as palavras que você está errando no flashcard — o LLM é forçado a usá-las no texto gerado!',
-            side: 'bottom', align: 'center'
           }
         },
       ]

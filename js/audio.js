@@ -4,13 +4,20 @@
 // ============================================================
 
 const SomFeedback = {
-  ativo: false,
+  ativo: true,
   // NOTE: backing store for the AudioContext is this.__ctx (double underscore).
   // _ctx is a method (lazy getter) defined below — do NOT add a _ctx: null
   // property here as it would be silently overwritten by the method definition.
 
   init() {
-    this.ativo = localStorage.getItem('it_som') === '1';
+    if (localStorage.getItem('it_som_default_on') !== '1') {
+      try {
+        localStorage.setItem('it_som', '1');
+        localStorage.setItem('it_som_default_on', '1');
+      } catch (_) {}
+    }
+    const salvo = localStorage.getItem('it_som');
+    this.ativo = salvo === null ? true : salvo !== '0';
     this._atualizarBotao();
   },
 

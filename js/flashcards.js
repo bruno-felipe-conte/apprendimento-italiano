@@ -511,6 +511,10 @@ const Flashcards = {
       cardEl2.classList.toggle('modo-escuta',   this.modoEscuta);
     }
 
+    const catFormatada = (typeof Vocab !== 'undefined' && Vocab.formatarCategoria)
+      ? Vocab.formatarCategoria(this.cartaAtual.categoria || '')
+      : (this.cartaAtual.categoria || '');
+
     if (this.modoEscuta) {
       // 👂 Listening: hide word on front, click card reveals it normally
       if (elIt)  elIt.textContent  = '🎧';
@@ -522,13 +526,13 @@ const Flashcards = {
       const ex = this.cartaAtual.exemplo || '';
       const mascarada = ex ? this._mascarar(this.cartaAtual.italiano, ex) : null;
       if (elIt) elIt.textContent = mascarada || `${this.cartaAtual.italiano} → ?`;
-      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elCat) elCat.textContent = catFormatada;
       if (elDica) elDica.textContent = I18n.t('fc_dica_palavra_falta');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else if (this.modoEscrita) {
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
-      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
-      if (elDica) elDica.textContent = '✍️ Scrivi la parola in italiano e tocca per controllare';
+      if (elCat) elCat.textContent = catFormatada;
+      if (elDica) elDica.textContent = '✍️ Escreva a palavra em italiano e toque para conferir';
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
 
       // Injeta o canvas de caligrafia / escrita à mão na frente
@@ -541,8 +545,8 @@ const Flashcards = {
         wrap.setAttribute('onclick', 'event.stopPropagation()');
         wrap.innerHTML = `
           <div class="fc-canvas-header">
-            <span class="fc-canvas-label">✍️ Scrittura a mano:</span>
-            <button type="button" class="fc-canvas-clear-btn" onclick="event.stopPropagation();Flashcards.limparEscrita()">🧹 Pulisci</button>
+            <span class="fc-canvas-label">✍️ Escrita à mão:</span>
+            <button type="button" class="fc-canvas-clear-btn" onclick="event.stopPropagation();Flashcards.limparEscrita()">🧹 Limpar</button>
           </div>
           <div class="fc-canvas-box">
             <canvas id="fc-canvas"></canvas>
@@ -560,13 +564,13 @@ const Flashcards = {
     } else if (this.modoReverso) {
       // 🔄 Reverse: PT front, IT back
       if (elIt)  elIt.textContent  = this.cartaAtual.portugues || '—';
-      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elCat) elCat.textContent = catFormatada;
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.italiano || '—';
     } else {
       // Normal: IT front, PT back
       if (elIt)  elIt.textContent  = this.cartaAtual.italiano || '—';
-      if (elCat) elCat.textContent = this.cartaAtual.categoria || '';
+      if (elCat) elCat.textContent = catFormatada;
       if (elDica) elDica.textContent = I18n.t('fc_dica_revelar');
       if (elTrad) elTrad.textContent = this.cartaAtual.portugues || '—';
     }
