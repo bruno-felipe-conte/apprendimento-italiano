@@ -143,32 +143,77 @@ const Imitazione = {
     }, Math.max(1200, frase.length * 75 * (1 / taxa)));
   },
 
-  // Inicializa o reconhecimento e o gravador local de áudio
+  // Inicializa o gravador local de áudio (fallback para browsers sem SpeechRecognition)
   async _iniciarGravacaoMidia() {
     this._audioChunks = [];
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        this._mediaStream = stream;
-        this._mediaRecorder = new MediaRecorder(stream);
-        this._mediaRecorder.ondataavailable = (e) => {
-          if (e.data && e.data.size > 0) this._audioChunks.push(e.data);
-        };
-        this._mediaRecorder.onstop = () => {
-          if (this._audioChunks.length > 0) {
-            const blob = new Blob(this._audioChunks, { type: 'audio/webm' });
-            if (this._userAudioUrl) URL.revokeObjectURL(this._userAudioUrl);
-            this._userAudioUrl = URL.createObjectURL(blob);
-          }
-          if (this._mediaStream) {
-            this._mediaStream.getTracks().forEach(t => t.stop());
-            this._mediaStream = null;
-          }
-        };
-        this._mediaRecorder.start();
-      } catch (err) {
-        console.warn('MediaRecorder não disponível ou permissão negada:', err);
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      alert("Seu navegador não possui suporte a gravação de áudio.");
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      this._mediaStream = stream;
+      
+      // Detecção de formato suportado (WebM para Chrome/Android, MP4 para iOS/Safari)
+      let mimeType = '';
+      if (typeof MediaRecorder !== 'undefined' && typeof MediaRecorder.isTypeSupported === 'function') {
+        if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) mimeType = 'audio/webm;codecs=opus';
+        else if (MediaRecorder.isTypeSupported('audio/webm')) mimeType = 'audio/webm';
+        else if (MediaRecorder.isTypeSupported('audio/mp4')) mimeType = 'audio/mp4';
+        else if (MediaRecorder.isTypeSupported('audio/aac')) mimeType = 'audio/aac';
       }
+
+      this._mediaRecorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+      this._mediaRecorder.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) this._audioChunks.push(e.data);
+      };
+      this._mediaRecorder.onstop = () => {
+        if (this._audioChunks.length > 0) {
+          const tipoFinal = mimeType || 'audio/webm';
+          const blob = new Blob(this._audioChunks, { type: tipoFinal });
+          if (this._userAudioUrl) URL.revokeObjectURL(this._userAudioUrl);
+          this._userAudioUrl = URL.createObjectURL(blob);
+          
+          const st = document.getElementById('dojo-mic-status');
+          if (st) {
+            st.innerHTML = '🎙️ Gravação concluída! Use <strong>🎧 Ouvir Minha Gravação</strong> para comparar com o áudio nativo.';
+          }
+          const resContainer = document.getElementById('imitazione-resultado');
+          if (resContainer) {
+            resContainer.style.display = 'block';
+            resContainer.innerHTML = `
+              <div style="font-size:1.3rem;font-weight:700;color:#2E86C1;margin-bottom:0.6rem;font-family:'Cinzel',serif">
+                🎙️ Áudio Gravado com Sucesso!
+              </div>
+              <div style="font-size:0.95rem;color:var(--cor-inchiostro);margin-bottom:1rem">
+                O reconhecimento automático requer Google Chrome (Android) ou Safari (iOS). Sua gravação está pronta para você se autoavaliar!
+              </div>
+              <div class="dojo-replay-toolbar">
+                <button class="btn-dojo-replay" onclick="Imitazione.tocarMinhaGravacao()">
+                  <span>🎧</span> Ouvir Minha Gravação
+                </button>
+                <button class="btn-dojo-replay" onclick="Imitazione.tocarModelo(1.0)">
+                  <span>🔊</span> Ouvir Modelo Nativo
+                </button>
+              </div>
+            `;
+          }
+        }
+        if (this._mediaStream) {
+          this._mediaStream.getTracks().forEach(t => t.stop());
+          this._mediaStream = null;
+        }
+      };
+      this._mediaRecorder.start();
+      this.isRecording = true;
+      const btn = document.getElementById('dojo-btn-mic');
+      if (btn) btn.classList.add('recording');
+      const st = document.getElementById('dojo-mic-status');
+      if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Gravando sua voz... Fale com confiança!';
+    } catch (err) {
+      console.warn('[Imitazione] Erro ao acessar microfone via getUserMedia:', err);
+      const st = document.getElementById('dojo-mic-status');
+      if (st) st.innerText = 'Permissão de microfone negada ou indisponível.';
     }
   },
 
@@ -176,6 +221,9 @@ const Imitazione = {
     if (this._mediaRecorder && this._mediaRecorder.state !== 'inactive') {
       try { this._mediaRecorder.stop(); } catch (_) {}
     }
+    this.isRecording = false;
+    const btn = document.getElementById('dojo-btn-mic');
+    if (btn) btn.classList.remove('recording');
   },
 
   tocarMinhaGravacao() {
@@ -188,71 +236,116 @@ const Imitazione = {
     this._userAudioPlayer.play();
   },
 
-  initSpeechRecognition() {
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) {
-      alert("Seu navegador não suporta reconhecimento de voz (recomendamos Google Chrome ou Edge).");
-      return false;
+  // ── Parar qualquer gravação ativa ───────────────────────────
+  pararGravacao() {
+    if (this.recognition) {
+      try { this.recognition.stop(); } catch (_) {}
+      this.recognition = null;
     }
-
-    this.recognition = new SR();
-    this.recognition.lang = 'it-IT';
-    this.recognition.interimResults = false;
-    this.recognition.maxAlternatives = 1;
-
-    this.recognition.onstart = () => {
-      this.isRecording = true;
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.add('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Ouvindo... Fale com confiança!';
-    };
-
-    this.recognition.onresult = (event) => {
-      const speechResult = event.results[0][0].transcript;
-      this.avaliarPronuncia(speechResult);
-    };
-
-    this.recognition.onerror = (event) => {
-      console.error('Erro de reconhecimento: ', event.error);
-      this.isRecording = false;
-      this._pararGravacaoMidia();
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.remove('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st) st.innerText = I18n.t('imit_erro_ouvir');
-    };
-
-    this.recognition.onend = () => {
-      this.isRecording = false;
-      this._pararGravacaoMidia();
-      const btn = document.getElementById('dojo-btn-mic');
-      if (btn) btn.classList.remove('recording');
-      const st = document.getElementById('dojo-mic-status');
-      if (st && st.innerText.includes('Ouvindo')) {
-        st.innerText = 'Processando dicção...';
-      }
-    };
-
-    return true;
+    this._pararGravacaoMidia();
+    this.isRecording = false;
+    const btn = document.getElementById('dojo-btn-mic');
+    if (btn) btn.classList.remove('recording');
+    const st = document.getElementById('dojo-mic-status');
+    if (st && st.innerText.includes('Ouvindo')) {
+      st.innerText = 'Processando dicção...';
+    }
   },
 
-  async toggleGravacao() {
-    if (!this.recognition) {
-      if (!this.initSpeechRecognition()) return;
+  // ── Iniciar ou alternar gravação no Modo Imitação ────────────
+  toggleGravacao() {
+    // 1. Pausa e cancela qualquer reprodução de áudio / síntese TTS em andamento
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+    }
+    if (typeof VoiceEngine !== 'undefined' && VoiceEngine.parar) {
+      try { VoiceEngine.parar(); } catch (_) {}
+    }
+    if (this._userAudioPlayer) {
+      try { this._userAudioPlayer.pause(); this._userAudioPlayer.currentTime = 0; } catch (_) {}
     }
 
+    // 2. Se já estiver gravando, para imediatamente
     if (this.isRecording) {
-      this.recognition.stop();
-      this._pararGravacaoMidia();
-    } else {
-      await this._iniciarGravacaoMidia();
-      try {
-        this.recognition.start();
-      } catch (e) {
-        console.warn('Erro ao iniciar reconhecimento:', e);
-      }
+      this.pararGravacao();
+      return;
     }
+
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    // 3. Se o browser suporta Web Speech API (Chrome no Android, Safari no iOS, Edge, Desktop)
+    if (SR) {
+      // Cria UMA NOVA instância por sessão (evita o bug de InvalidStateError no iOS Safari)
+      const rec = new SR();
+      rec.lang = 'it-IT';
+      rec.continuous = false;
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+
+      rec.onstart = () => {
+        this.isRecording = true;
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.add('recording');
+        const st = document.getElementById('dojo-mic-status');
+        if (st) st.innerHTML = '<span style="color:#E74C3C">●</span> Ouvindo... Fale com confiança!';
+      };
+
+      rec.onresult = (event) => {
+        const speechResult = event.results[0][0].transcript;
+        this.avaliarPronuncia(speechResult);
+      };
+
+      rec.onerror = (event) => {
+        console.warn('[Imitazione] Erro no reconhecimento de voz:', event?.error);
+        this.isRecording = false;
+        this.recognition = null;
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.remove('recording');
+        const st = document.getElementById('dojo-mic-status');
+        
+        if (st) {
+          if (event?.error === 'not-allowed') {
+            st.innerHTML = '⚠️ Permissão negada. Toque no cadeado da barra de endereços e permita o microfone.';
+          } else if (event?.error === 'no-speech') {
+            st.innerText = 'Nenhuma fala detectada. Fale mais próximo do microfone e tente novamente.';
+          } else if (event?.error === 'audio-capture') {
+            st.innerText = '⚠️ Microfone ocupado por outro app ou indisponível.';
+          } else if (event?.error === 'network') {
+            st.innerText = '⚠️ Erro de rede no serviço de voz. Verifique sua conexão à internet.';
+          } else if (event?.error !== 'aborted') {
+            st.innerText = I18n.t('imit_erro_ouvir');
+          }
+        }
+      };
+
+      rec.onend = () => {
+        this.isRecording = false;
+        this.recognition = null;
+        const btn = document.getElementById('dojo-btn-mic');
+        if (btn) btn.classList.remove('recording');
+        const st = document.getElementById('dojo-mic-status');
+        if (st && st.innerText.includes('Ouvindo')) {
+          st.innerText = 'Processando dicção...';
+        }
+      };
+
+      this.recognition = rec;
+
+      // Disparo SÍNCRONO direto no evento de toque/clique para preservar ativação do usuário
+      try {
+        rec.start();
+      } catch (err) {
+        console.warn('[Imitazione] Falha ao disparar SpeechRecognition.start():', err);
+        this.isRecording = false;
+        this.recognition = null;
+        // Fallback para gravação direta via MediaRecorder se start() falhar
+        this._iniciarGravacaoMidia();
+      }
+      return;
+    }
+
+    // 4. Fallback resiliente para browsers sem SpeechRecognition (ex: Firefox Android, navegadores embutidos)
+    this._iniciarGravacaoMidia();
   },
 
   normalizeText(text) {

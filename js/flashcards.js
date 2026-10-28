@@ -340,11 +340,10 @@ const Flashcards = {
       this.mostrarCarta();
     }
     
-    // Check speech API support
+    // Suporte ao botão de imitar por voz
     const btnGravar = document.getElementById('btn-gravar');
     if (btnGravar) {
-      const suporta = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
-      btnGravar.style.display = suporta ? '' : 'none';
+      btnGravar.style.display = '';
     }
   },
 
@@ -1354,24 +1353,53 @@ const Flashcards = {
 
   toggleGravar() {
     if (!this.cartaAtual) return;
+
+    // Cancela qualquer reprodução de TTS / sintetizador de áudio em andamento
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (_) {}
+    }
+    if (typeof VoiceEngine !== 'undefined' && VoiceEngine.parar) {
+      try { VoiceEngine.parar(); } catch (_) {}
+    }
+
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { App.notificar('notif_fc_sem_voz', 'alerta'); return; }
+    if (!SR) {
+      App.notificar('Reconhecimento de voz não suportado neste navegador. Recomendamos Google Chrome (Android) ou Safari (iOS).', 'alerta');
+      return;
+    }
     
     if (this.gravando) {
-      if (this._recognition) this._recognition.stop();
+      if (this._recognition) {
+        try { this._recognition.stop(); } catch (_) {}
+        this._recognition = null;
+      }
       this.gravando = false;
+      const btnGravar = document.getElementById('btn-gravar');
+      if (btnGravar) {
+        btnGravar.textContent = I18n.t('fc_gravar_imitar');
+        btnGravar.style.background = '';
+        btnGravar.style.color = '';
+      }
       return;
     }
     
     this.gravando = true;
     const btnGravar = document.getElementById('btn-gravar');
-    if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_parar'); btnGravar.style.background = '#C0392B'; btnGravar.style.color = '#fff'; }
+    if (btnGravar) {
+      btnGravar.textContent = I18n.t('fc_gravar_parar');
+      btnGravar.style.background = '#C0392B';
+      btnGravar.style.color = '#fff';
+    }
     
-    this._recognition = this._iniciarReconhecimento();
-    if (!this._recognition) return;
+    // Instância fresca por sessão para suporte pleno no Chrome Android e Safari iOS
+    const rec = new SR();
+    rec.lang = 'it-IT';
+    rec.continuous = false;
+    rec.interimResults = false;
+    rec.maxAlternatives = 1;
     
-    this._recognition.onresult = (e) => {
-      const texto = e.results[0][0].transcript.toLowerCase();
+    rec.onresult = (e) => {
+      const texto = (e.results[0][0].transcript || '').toLowerCase();
       const alvo = (this.cartaAtual.italiano || '').toLowerCase();
       
       const textoNormalize = texto.replace(/[.,!?;:]/g, '').trim();
@@ -1380,12 +1408,52 @@ const Flashcards = {
       const reconheceu = textoNormalize.includes(alvoNormalize) || alvoNormalize.includes(textoNormalize.split(' ')[0]);
       this._mostrarFeedbackPronuncia(texto, reconheceu);
     };
-    this._recognition.onerror = () => { App.notificar('notif_fc_nao_ouviu', 'alerta'); };
-    this._recognition.onend = () => {
+
+    rec.onerror = (event) => {
+      console.warn('[Flashcards] Erro no reconhecimento:', event?.error);
       this.gravando = false;
-      if (btnGravar) { btnGravar.textContent = I18n.t('fc_gravar_imitar'); btnGravar.style.background = ''; btnGravar.style.color = ''; }
+      this._recognition = null;
+      if (btnGravar) {
+        btnGravar.textContent = I18n.t('fc_gravar_imitar');
+        btnGravar.style.background = '';
+        btnGravar.style.color = '';
+      }
+      if (event?.error === 'not-allowed') {
+        App.notificar('Permissão de microfone negada. Verifique as permissões do navegador.', 'erro');
+      } else if (event?.error === 'no-speech') {
+        App.notificar('Nenhuma fala detectada. Fale mais perto do microfone.', 'alerta');
+      } else if (event?.error === 'audio-capture') {
+        App.notificar('Microfone ocupado por outro app.', 'alerta');
+      } else if (event?.error === 'network') {
+        App.notificar('Erro de rede no serviço de voz. Verifique sua conexão.', 'alerta');
+      } else if (event?.error !== 'aborted') {
+        App.notificar('notif_fc_nao_ouviu', 'alerta');
+      }
     };
-    this._recognition.start();
+
+    rec.onend = () => {
+      this.gravando = false;
+      this._recognition = null;
+      if (btnGravar) {
+        btnGravar.textContent = I18n.t('fc_gravar_imitar');
+        btnGravar.style.background = '';
+        btnGravar.style.color = '';
+      }
+    };
+
+    this._recognition = rec;
+    try {
+      rec.start();
+    } catch (err) {
+      console.warn('[Flashcards] Falha ao iniciar reconhecimento:', err);
+      this.gravando = false;
+      this._recognition = null;
+      if (btnGravar) {
+        btnGravar.textContent = I18n.t('fc_gravar_imitar');
+        btnGravar.style.background = '';
+        btnGravar.style.color = '';
+      }
+    }
   },
 
   _mostrarFeedbackPronuncia(texto, reconheceu) {

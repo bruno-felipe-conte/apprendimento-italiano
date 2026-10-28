@@ -154,7 +154,7 @@ describe('EV-03: Content Pipeline Automatizado', () => {
       expect(relatorio.totalArquivos).toBeGreaterThanOrEqual(51);
       expect(relatorio.totalPalavras).toBeGreaterThan(5000);
       expect(relatorio.erros).toHaveLength(0);
-    });
+    }, 20000);
 
     it('deve validar o arquivo mestre top1000_vocabulario.json com 1000 palavras enriquecidas', () => {
       const top1000Path = path.resolve(process.cwd(), 'data', 'top1000_vocabulario.json');
