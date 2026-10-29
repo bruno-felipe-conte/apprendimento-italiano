@@ -546,9 +546,9 @@
     "semantic_hash": ""
   },
   "js/quiz.js": {
-    "mtime": 1793243482.381038,
-    "seen": 1793243794.4479377,
-    "ast_hash": "f47b63822f8d813c4c8501321115aed2",
+    "mtime": 1793310601.2223673,
+    "seen": 1793310768.0813541,
+    "ast_hash": "52638c84025fc130a22b5dc0a7bf3b8c",
     "semantic_hash": ""
   },
   "js/quiz_data.js": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793307580.8087847,
-    "seen": 1793308105.3745413,
-    "ast_hash": "62b0d3fa39b466a92e3627e6d6287692",
+    "mtime": 1793310406.1243942,
+    "seen": 1793310768.3961568,
+    "ast_hash": "dfe161c76dbc4ac7a887623c58de8969",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -1092,50 +1092,50 @@
     "semantic_hash": ""
   },
   "js/core/analytics.js": {
-    "mtime": 1793308120.8144166,
-    "seen": 1793308213.2212532,
+    "mtime": 1793310663.887746,
+    "seen": 1793310767.9566758,
     "ast_hash": "b913d4c9a28c203ec9a210e19155254b",
     "semantic_hash": ""
   },
   "js/core/collaboration.js": {
-    "mtime": 1793308120.8338633,
-    "seen": 1793308213.247891,
+    "mtime": 1793310663.9074328,
+    "seen": 1793310767.9668536,
     "ast_hash": "2f3c5f17dada8195aad0bda7a6b3888d",
     "semantic_hash": ""
   },
   "js/core/plugins.js": {
-    "mtime": 1793308120.754133,
-    "seen": 1793308213.3512595,
+    "mtime": 1793310663.8163483,
+    "seen": 1793310767.9868474,
     "ast_hash": "94f8831dae955f86162b1c4185259481",
     "semantic_hash": ""
   },
   "js/core/sync.js": {
-    "mtime": 1793308120.7987442,
-    "seen": 1793308213.394991,
+    "mtime": 1793310663.870554,
+    "seen": 1793310768.0019612,
     "ast_hash": "993f85f60a7b122eff24e3347ed36063",
     "semantic_hash": ""
   },
   "js/modal_manager.js": {
-    "mtime": 1793308120.7322412,
-    "seen": 1793308213.5250082,
+    "mtime": 1793310663.791356,
+    "seen": 1793310768.0600107,
     "ast_hash": "125ea751f18b179d2166144abf1d0860",
     "semantic_hash": ""
   },
   "js/plugins/index.js": {
-    "mtime": 1793308120.7726715,
-    "seen": 1793308213.5388107,
+    "mtime": 1793310663.8346953,
+    "seen": 1793310768.0687852,
     "ast_hash": "b3aec9799e7637e2c111c0e4552646a2",
     "semantic_hash": ""
   },
   "js/progression.js": {
-    "mtime": 1793308120.681314,
-    "seen": 1793308213.5506632,
+    "mtime": 1793310663.725088,
+    "seen": 1793310768.0779684,
     "ast_hash": "439b5d79e17026220a3b14fa9f035f92",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1793308120.7146952,
-    "seen": 1793308213.5840688,
+    "mtime": 1793310663.7649548,
+    "seen": 1793310768.0998566,
     "ast_hash": "d8e0560741a9cb3e61420c90b0012d2e",
     "semantic_hash": ""
   },

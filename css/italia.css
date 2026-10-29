@@ -696,18 +696,58 @@ body.dark-mode .ach-desc { color:#D4C9BC; }
 
 /* 8. QUIZ */
 .quiz-templo-selector {
-  display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:var(--esp-sm);
-  margin-bottom:var(--esp-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
 }
 .quiz-templo-btn {
-  font-family:var(--fonte-ui); font-size:.8rem; font-weight:500;
-  color:var(--cor-inchiostro); background-color:var(--cor-marmore);
-  border:1px solid var(--cor-pietra); border-radius:var(--raio-sm);
-  padding:var(--esp-sm) var(--esp-md); text-align:center; cursor:pointer;
-  transition:background-color var(--trans-rapida),border-color var(--trans-rapida),transform var(--trans-rapida),color var(--trans-rapida);
+  font-family: var(--fonte-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cor-veneziano-escuro, #5c1824);
+  background-color: var(--cor-marmore);
+  border: 2px solid var(--cor-veneziano, #9B2335);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  min-height: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1.3;
+  box-sizing: border-box;
+  transition: all 0.2s;
 }
-.quiz-templo-btn:hover { background-color:var(--cor-marmore-escuro); border-color:var(--cor-veneziano); color:var(--cor-veneziano); transform:translateY(-2px); }
-.quiz-templo-btn.bloqueado { opacity:.45; cursor:not-allowed; pointer-events:none; }
+.quiz-templo-btn:hover {
+  background-color: var(--cor-veneziano, #9B2335);
+  color: #FFF8F0;
+  transform: translateY(-2px);
+}
+.quiz-templo-btn.bloqueado {
+  border-color: #ccc;
+  color: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+  background: #f5f5f5;
+  opacity: 0.65;
+}
+body.dark-mode .quiz-templo-btn {
+  background: #251e18;
+  border-color: #5c3830;
+  color: #e6dfd5;
+}
+body.dark-mode .quiz-templo-btn:hover:not(.bloqueado) {
+  background-color: var(--cor-veneziano, #9B2335);
+  color: #FFF8F0;
+}
+body.dark-mode .quiz-templo-btn.bloqueado {
+  background: #1a1614;
+  border-color: #38302c;
+  color: #665b54;
+}
 
 .quiz-container { max-width:700px; margin:0 auto; display:flex; flex-direction:column; gap:var(--esp-lg); }
 .quiz-progresso-info { display:flex; justify-content:space-between; align-items:center; }
@@ -3324,14 +3364,27 @@ body.dark-mode .dojo-progress-hud {
   100% { height: 18px; }
 }
 
-/* Mic Recording Studio */
+/* Mic Recording Studio — Fixado na parte inferior ("colada ao chão") */
 .dojo-mic-studio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
-  border-radius: 18px;
-  padding: 1.5rem 1.2rem;
+  border-radius: 20px 20px 0 0;
+  border-bottom: none;
+  padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom, 0px));
   text-align: center;
   color: #FFF8F0;
-  box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 -6px 25px rgba(0,0,0,0.45);
+  z-index: 90;
+}
+
+#sec-imitazione {
+  padding-bottom: 160px;
 }
 
 .dojo-mic-btn-wrapper {
@@ -4923,9 +4976,9 @@ body.dark-mode .nivel-select option {
 
     /* ── Quiz ── */
     .quiz-templo-selector { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.7rem; margin-bottom: 1.5rem; }
-    .quiz-templo-btn { padding: 0.65rem 0.9rem; border: 2px solid #9B2335; border-radius: 8px; background: var(--cor-marmore); color: var(--cor-veneziano-escuro); cursor: pointer; font-weight: 700; font-size: 0.82rem; transition: all 0.2s; text-align: center; line-height: 1.3; }
+    .quiz-templo-btn { padding: 0.65rem 0.9rem; border: 2px solid #9B2335; border-radius: 8px; background: var(--cor-marmore); color: var(--cor-veneziano-escuro); cursor: pointer; font-weight: 700; font-size: 0.82rem; min-height: 62px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-sizing: border-box; transition: all 0.2s; text-align: center; line-height: 1.3; }
     .quiz-templo-btn:hover { background: #9B2335; color: #FFF8F0; }
-    .quiz-templo-btn.bloqueado { border-color: #ccc; color: #aaa; cursor: not-allowed; background: #f5f5f5; }
+    .quiz-templo-btn.bloqueado { border-color: #ccc; color: #aaa; cursor: not-allowed; background: #f5f5f5; pointer-events: none; opacity: 0.65; }
     .quiz-container { background: var(--cor-marmore); border-radius: 12px; padding: 1.4rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .quiz-progresso { margin-bottom: 1rem; }
     .quiz-progresso span { font-size: 0.82rem; color: var(--cor-pietra); display: block; margin-bottom: 0.35rem; }
@@ -8072,15 +8125,18 @@ body.dark-mode {
 }
 
 .fc-ebbinghaus-wrapper {
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .it-ebbinghaus-card {
   background: var(--it-eb-surface);
   border: 1px solid var(--it-eb-border);
-  border-radius: var(--raio-lg, 12px);
-  padding: var(--esp-md, 1rem);
+  border-radius: var(--raio-md, 10px);
+  padding: 0.65rem 0.85rem;
   box-shadow: var(--sombra-sm, 0 1px 3px rgba(46, 27, 14, 0.12));
   font-family: var(--fonte-ui, 'EB Garamond', serif);
   box-sizing: border-box;
@@ -8089,32 +8145,32 @@ body.dark-mode {
 .it-ebbinghaus-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.45rem;
   gap: 0.5rem;
 }
 
 .it-ebbinghaus-title {
   font-family: var(--fonte-titulo, 'Cinzel', serif);
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: var(--it-eb-bright);
-  margin: 0 0 0.15rem 0;
+  margin: 0 0 0.1rem 0;
   letter-spacing: 0.3px;
 }
 
 .it-ebbinghaus-subtitle {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--it-eb-dim);
   margin: 0;
 }
 
 .it-ebbinghaus-badge {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
-  padding: 2px 8px;
+  padding: 1px 7px;
   border-radius: 999px;
   background: var(--it-eb-depth);
   color: var(--it-eb-bright);
@@ -8124,11 +8180,13 @@ body.dark-mode {
 
 .it-ebbinghaus-canvas {
   width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .it-ebbinghaus-svg {
   width: 100%;
-  height: auto;
+  max-height: 145px;
   display: block;
   overflow: visible;
 }
@@ -8137,11 +8195,11 @@ body.dark-mode {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+  padding-top: 0.35rem;
   border-top: 1px dashed var(--it-eb-border);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--it-eb-dim);
 }
 

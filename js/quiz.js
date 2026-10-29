@@ -453,6 +453,20 @@ const Quiz = {
     const todosTemplos = Object.keys(App.estado.templosData)
       .map(Number).sort((a, b) => a - b);
 
+    // Calcular histórico por templo para estatísticas de acerto
+    let historico = [];
+    try { historico = JSON.parse(localStorage.getItem('it_quiz_historico') || '[]'); } catch (_) {}
+
+    const temploStats = {};
+    historico.forEach(h => {
+      const key = String(h.templo);
+      if (!temploStats[key]) temploStats[key] = { total: 0, acertos: 0, totalPerguntas: 0, lastScore: 0 };
+      temploStats[key].total++;
+      temploStats[key].acertos += h.acertos || 0;
+      temploStats[key].totalPerguntas += h.total || 10;
+      temploStats[key].lastScore = h.pontuacao || 0;
+    });
+
     // ── Aba Templos ───────────────────────────────────────
     if (this.abaSeletor === 'templos') {
       if (Progressao.temploDesbloqueado(1)) {
@@ -471,11 +485,20 @@ const Quiz = {
         const data = App.estado.templosData[i];
         const nome = (data && data.nome) || `Tempio ${i}`;
         const nivel = data ? data.nivel : '—';
+        const stats = temploStats[String(i)];
 
         const btn = document.createElement('button');
         btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
+
+        let statusHtml = '';
+        if (desbloqueado && stats) {
+          const avgPct = stats.totalPerguntas > 0 ? Math.round((stats.acertos / stats.totalPerguntas) * 100) : 0;
+          const stars = avgPct >= 90 ? '⭐⭐⭐' : avgPct >= 70 ? '⭐⭐' : avgPct >= 50 ? '⭐' : '☆';
+          statusHtml = `<div style="font-size:0.7rem;color:#27AE60;margin-top:0.2rem">${stars} ${avgPct}% avg</div>`;
+        }
+
         btn.innerHTML = desbloqueado
-          ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
+          ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>${statusHtml}`
           : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
 
         if (desbloqueado) btn.onclick = () => this.iniciar(i);
