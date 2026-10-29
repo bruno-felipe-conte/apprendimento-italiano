@@ -179,6 +179,86 @@ const Flashcards = {
   _swipeStartX:      0,
   _swipeStartY:      0,
   abaOrigem:         'templos', // 'templos' | 'especiais'
+  seletorRecolhido:  false,
+
+  // ── Smart Retractable Selector Bar ─────────────────────────
+  toggleSeletor(forcarEstado) {
+    if (typeof forcarEstado === 'boolean') {
+      this.seletorRecolhido = forcarEstado;
+    } else {
+      this.seletorRecolhido = !this.seletorRecolhido;
+    }
+    this._sincronizarBarraCompacta();
+  },
+
+  _sincronizarBarraCompacta() {
+    const layout  = document.getElementById('fc-studio-layout');
+    const sidebar = document.getElementById('fc-studio-sidebar') || document.querySelector('.fc-studio-sidebar');
+    const bar     = document.getElementById('fc-compact-bar');
+    if (!bar || !sidebar) return;
+
+    const temSessaoAtiva = this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length;
+
+    if (!temSessaoAtiva) {
+      bar.style.display = 'none';
+      sidebar.classList.remove('recolhido');
+      if (layout) layout.classList.remove('seletor-recolhido');
+      return;
+    }
+
+    bar.style.display = 'flex';
+    sidebar.classList.toggle('recolhido', !!this.seletorRecolhido);
+    if (layout) layout.classList.toggle('seletor-recolhido', !!this.seletorRecolhido);
+
+    // Label de origem (Templo ou Baralho Especial)
+    const elOrigem = document.getElementById('fc-compact-origem');
+    if (elOrigem) {
+      let labelOrigem = '🌍 Revisão Geral';
+      if (typeof this.temploAtual === 'string' && this.temploAtual.startsWith('deck_')) {
+        const mapDecks = {
+          deck_all: '⭐ Top 500',
+          deck_colocacoes: '🧩 Chunks',
+          deck_falsi_amici: '⚠️ Falsi Amici',
+          deck_preposizioni: '📍 Preposições',
+          deck_verbi_irregolari: '⚡ Verbos',
+          deck_situazioni_reali: '🎭 Vida Real',
+        };
+        labelOrigem = mapDecks[this.temploAtual] || '⭐ Top 500';
+      } else if (this.temploAtual === 'custom') {
+        labelOrigem = '🤖 Minhas Palavras';
+      } else if (this.temploAtual) {
+        const tData = App.estado?.templosData?.[this.temploAtual];
+        const tNome = tData?.nome || `Tempio ${this.temploAtual}`;
+        labelOrigem = `🏛️ T${this.temploAtual} · ${tNome}`;
+      }
+      elOrigem.textContent = labelOrigem;
+    }
+
+    // Label de modo ativo
+    const elModo = document.getElementById('fc-compact-modo');
+    if (elModo) {
+      let modoTxt = '🎴 Normal';
+      if (this.modoReverso)  modoTxt = '🔄 Reverso';
+      if (this.modoContexto) modoTxt = '📖 Contexto';
+      if (this.modoEscuta)   modoTxt = '🎧 Escuta';
+      if (this.modoEscrita)  modoTxt = '✍️ Scrittura';
+      elModo.textContent = modoTxt;
+    }
+
+    // Contador 1/20
+    const elCount = document.getElementById('fc-compact-count');
+    if (elCount) {
+      elCount.textContent = `${this.indiceAtual + 1}/${this.cartasDisponiveis.length}`;
+    }
+
+    // Botão Trocar
+    const btnToggle = document.getElementById('fc-compact-toggle-btn');
+    if (btnToggle) {
+      btnToggle.innerHTML = this.seletorRecolhido
+        ? '<span>⚙️ Trocar</span><span class="fc-compact-chevron">▾</span>'
+        : '<span>✕ Ocultar</span><span class="fc-compact-chevron">▴</span>';
+    }
+  },
 
   // ── Switch between Templos and Baralhos Especiais ───────────
   trocarAbaOrigem(origem, autoLoad = true) {
@@ -335,8 +415,10 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     if (this.cartasDisponiveis.length === 0) {
+      this.seletorRecolhido = false;
       this.mostrarVazio();
     } else {
+      this.seletorRecolhido = true;
       this.mostrarCarta();
     }
     
@@ -490,6 +572,8 @@ const Flashcards = {
 
     const cardEl = document.getElementById('flashcard');
     if (cardEl) { cardEl.classList.remove('virado'); cardEl.style.display = ''; }
+    const stageEl = document.querySelector('.fc-studio-stage');
+    if (stageEl) stageEl.classList.remove('fc-stage-virado');
 
     const actions = document.getElementById('card-actions');
     if (actions) actions.style.display = 'none';
@@ -610,6 +694,7 @@ const Flashcards = {
     if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
 
     this.atualizarContador();
+    this._sincronizarBarraCompacta();
     // Update favorite button state
     const btnFav = document.getElementById('btn-favorito');
     if (btnFav) btnFav.textContent = App.ehFavorito(this.cartaAtual.id) ? '❤️' : '🤍';
@@ -654,8 +739,10 @@ const Flashcards = {
 
     const cardEl = document.getElementById('flashcard');
     if (cardEl) cardEl.classList.add('virado');
+    const stageEl = document.querySelector('.fc-studio-stage');
+    if (stageEl) stageEl.classList.add('fc-stage-virado');
 
-    // Show action buttons with interval previews
+    // Show action buttons with interval previews (In-Place replacement of front toolbelt emphasis)
     const actions = document.getElementById('card-actions');
     if (actions) {
       actions.style.display = 'grid';
@@ -820,11 +907,15 @@ const Flashcards = {
 
   // ── Empty / all-done state ────────────────────────────────
   mostrarVazio() {
+    this.seletorRecolhido = false;
+    this._sincronizarBarraCompacta();
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     const vazio   = document.getElementById('flashcard-vazio');
     const resumo  = document.getElementById('flashcard-resumo');
     const info    = document.getElementById('card-info');
+    const stageEl = document.querySelector('.fc-studio-stage');
+    if (stageEl) stageEl.classList.remove('fc-stage-virado');
 
     if (cardEl)  cardEl.style.display  = 'none';
     if (actions) actions.style.display = 'none';
@@ -956,6 +1047,7 @@ const Flashcards = {
     if (cardEl)  cardEl.style.display = '';
     if (actions) actions.style.display = 'none';
     App.navegar('flashcard');
+    this.seletorRecolhido = true;
     App.notificar(I18n.t('notif_fc_favoritos_revisar').replace('{n}', favPalavras.length), 'alerta');
     this.mostrarCarta();
   },
@@ -1002,6 +1094,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     App.navegar('flashcard');
+    this.seletorRecolhido = true;
     App.notificar(I18n.t('notif_fc_dificeis_revisar').replace('{n}', dificeis.length), 'alerta');
     this.mostrarCarta();
   },
@@ -1018,6 +1111,7 @@ const Flashcards = {
     });
     const btnNormal = document.getElementById('btn-modo-normal');
     if (btnNormal) btnNormal.classList.add('ativo');
+    this.seletorRecolhido = true;
   },
 
   toggleReverso() {
@@ -1026,6 +1120,7 @@ const Flashcards = {
     this.modoReverso = novoValor;
     const btn = document.getElementById('btn-reverso');
     if (btn) btn.classList.toggle('ativo', this.modoReverso);
+    this.seletorRecolhido = true;
     if (this.cartaAtual) this.mostrarCarta();
   },
 
@@ -1035,6 +1130,7 @@ const Flashcards = {
     this.modoContexto = novoValor;
     const btn = document.getElementById('btn-contexto');
     if (btn) btn.classList.toggle('ativo', this.modoContexto);
+    this.seletorRecolhido = true;
     if (this.cartaAtual) this.mostrarCarta();
   },
 
@@ -1046,6 +1142,7 @@ const Flashcards = {
     if (btn) btn.classList.toggle('ativo', this.modoEscrita);
     const btnNormal = document.getElementById('btn-modo-normal');
     if (btnNormal && this.modoEscrita) btnNormal.classList.remove('ativo');
+    this.seletorRecolhido = true;
     if (this.cartaAtual) this.mostrarCarta();
   },
 
@@ -1055,6 +1152,7 @@ const Flashcards = {
     this.modoEscuta = novoValor;
     const btn = document.getElementById('btn-escuta');
     if (btn) btn.classList.toggle('ativo', this.modoEscuta);
+    this.seletorRecolhido = true;
     if (this.cartaAtual) {
       this.mostrarCarta();
       // Pronunciar imediatamente dentro do gesto do usuário (evita bloqueio mobile)
@@ -1237,6 +1335,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     const total_devidas = devidas.length;
+    this.seletorRecolhido = true;
     App.notificar(`🌍 ${total_devidas} carta${total_devidas !== 1 ? 's' : ''} em revisão + ${novasLimitadas.length} novas`, 'alerta');
     this.mostrarCarta();
   },
@@ -1260,11 +1359,14 @@ const Flashcards = {
     this.cartasDisponiveis = [...palavrasTemplo];
     this.indiceAtual      = 0;
     this.virada           = false;
+    this.seletorRecolhido = true;
 
     const vazio   = document.getElementById('flashcard-vazio');
+    const resumo  = document.getElementById('flashcard-resumo');
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     if (vazio)   vazio.style.display   = 'none';
+    if (resumo)  resumo.style.display  = 'none';
     if (cardEl)  cardEl.style.display  = '';
     if (actions) actions.style.display = 'none';
 

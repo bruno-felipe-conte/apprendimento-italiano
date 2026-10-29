@@ -11,6 +11,48 @@ const Vocab = {
   filtroFavoritos:  false,
   blurColuna: null,   // null | 'pt' | 'it'
   top1000Data: null,
+  filtrosDrawerAberto: false,
+
+  // ── Retractable Filters Drawer Toggle ──────────────────────
+  toggleFiltrosDrawer(forcarEstado) {
+    if (typeof forcarEstado === 'boolean') {
+      this.filtrosDrawerAberto = forcarEstado;
+    } else {
+      this.filtrosDrawerAberto = !this.filtrosDrawerAberto;
+    }
+    const drawer = document.getElementById('vocab-filtros-drawer');
+    const btn = document.getElementById('vocab-btn-toggle-filtros');
+    const chevron = document.getElementById('vocab-filtros-chevron');
+    if (drawer) {
+      drawer.classList.toggle('recolhido', !this.filtrosDrawerAberto);
+    }
+    if (btn) {
+      btn.setAttribute('aria-expanded', String(this.filtrosDrawerAberto));
+    }
+    if (chevron) {
+      chevron.textContent = this.filtrosDrawerAberto ? '▴' : '▾';
+    }
+  },
+
+  _atualizarBadgeFiltros() {
+    let ativos = 0;
+    if (this.filtroTemplo) ativos++;
+    if (this.filtroCategoria) ativos++;
+    if (this.filtroOrigem) ativos++;
+    if (this.filtroDificeis) ativos++;
+    if (this.filtroFavoritos) ativos++;
+    if (this.blurColuna) ativos++;
+
+    const badge = document.getElementById('vocab-filtros-badge');
+    const btn = document.getElementById('vocab-btn-toggle-filtros');
+    if (badge) {
+      badge.textContent = String(ativos);
+      badge.style.display = ativos > 0 ? 'inline-flex' : 'none';
+    }
+    if (btn) {
+      btn.classList.toggle('tem-filtros-ativos', ativos > 0);
+    }
+  },
 
   async filtrarTop1000() {
     this.filtroOrigem = 'top1000';
@@ -95,6 +137,7 @@ const Vocab = {
     }
 
     // Count difficult words (for badge)
+    this._atualizarBadgeFiltros();
     const numDificeis = todos.filter(p => {
       const fsrs = App.estado.flashcardData[p.id];
       return fsrs && (fsrs.erros || 0) >= 3;

@@ -3551,6 +3551,262 @@ body.dark-mode .dojo-progress-hud {
   transform: translateY(-1px);
 }
 
+/* ============================================================
+   ZERO-SCROLL UX: SELETOR RETRÁTIL & TRANSIÇÃO IN-PLACE
+   ============================================================ */
+
+/* 1. Flashcard Retractable Studio & In-Place Stage */
+.fc-compact-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  background: var(--cor-pergaminho, #FBF8F1);
+  border: 1.5px solid rgba(139, 30, 15, 0.2);
+  border-radius: 12px;
+  padding: 0.45rem 0.85rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.fc-compact-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.fc-compact-badge {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fc-compact-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(123, 104, 160, 0.15);
+  color: #5C4A80;
+  white-space: nowrap;
+}
+
+.fc-compact-counter {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--cor-inchiostro-claro, #5A4535);
+  margin-left: auto;
+  padding-left: 0.35rem;
+  white-space: nowrap;
+}
+
+.fc-compact-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--cor-marmore-escuro, #D4C4B5);
+  border-radius: 8px;
+  padding: 0.28rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-inchiostro, #2C2416);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.fc-compact-toggle-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.fc-compact-chevron {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Sidebar recolhida */
+.fc-studio-sidebar.recolhido {
+  display: none !important;
+}
+
+/* No desktop, quando sidebar recolhida, o stage ocupa largura total */
+.fc-studio-layout.seletor-recolhido {
+  display: block;
+}
+
+.fc-studio-layout.seletor-recolhido .fc-studio-stage {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Stage virado: dock de ações FSRS vira protagonista */
+.fc-stage-virado .fc-toolbelt {
+  padding: 0.35rem;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.fc-stage-virado .fc-toolbelt .fc-tool-btn {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.fc-stage-virado .fc-toolbelt .btn-tool-label {
+  display: none;
+}
+
+/* 2. Quiz Retractable Bar & In-Place Options Collapse */
+.quiz-compact-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  background: var(--cor-pergaminho, #FBF8F1);
+  border: 1.5px solid rgba(155, 35, 53, 0.22);
+  border-radius: 12px;
+  padding: 0.45rem 0.85rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.quiz-compact-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.quiz-compact-badge {
+  font-weight: 700;
+  font-size: 0.84rem;
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quiz-compact-counter {
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(155, 35, 53, 0.12);
+  color: var(--cor-veneziano, #9B2335);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.quiz-compact-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: 1px solid var(--cor-marmore-escuro, #D4C4B5);
+  border-radius: 8px;
+  padding: 0.28rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-inchiostro, #2C2416);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Transição In-Place para opções de quiz, gramática e diálogos */
+.opcao-recolhida {
+  display: none !important;
+}
+
+/* 3. Vocabulário Top Bar & Drawer Retrátil */
+.vocab-top-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.vocab-top-bar .vocab-search {
+  flex: 1;
+  min-width: 0;
+}
+
+.vocab-toggle-filtros-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  border: 1.5px solid var(--cor-marmore-escuro, #D4C4B5);
+  background: var(--cor-pergaminho, #FBF8F1);
+  color: var(--cor-inchiostro, #2C2416);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.vocab-toggle-filtros-btn.tem-filtros-ativos {
+  border-color: #543D75;
+  background: rgba(84, 61, 117, 0.08);
+  color: #543D75;
+}
+
+.vocab-filtros-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #543D75;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.vocab-filtros-chevron {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.vocab-filtros-drawer {
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.25s ease, margin-bottom 0.25s ease;
+  max-height: 400px;
+  opacity: 1;
+  margin-bottom: 0.75rem;
+}
+
+.vocab-filtros-drawer.recolhido {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+body.dark-mode .fc-compact-bar,
+body.dark-mode .quiz-compact-bar,
+body.dark-mode .vocab-toggle-filtros-btn {
+  background: #1C1816;
+  border-color: rgba(212,168,67,0.25);
+  color: #E6DFD3;
+}
+
+body.dark-mode .fc-compact-badge,
+body.dark-mode .quiz-compact-badge {
+  color: #E6DFD3;
+}
+
 /* Dark mode tweaks */
 body.dark-mode .fc-studio-sidebar,
 body.dark-mode .fc-atelier-topbar,

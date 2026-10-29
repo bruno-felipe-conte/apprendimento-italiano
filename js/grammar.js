@@ -656,11 +656,14 @@ const Grammatica = {
       const btn = document.getElementById(`gram-op-${i}`);
       if (!btn) continue;
       btn.disabled = true;
-      btn.className = i === ex.resposta
-        ? 'gram-option-correct'
-        : i === indice && !correto
-          ? 'gram-option-wrong'
-          : 'gram-option-disabled';
+      if (i === ex.resposta) {
+        btn.className = 'gram-option-correct';
+      } else if (i === indice && !correto) {
+        btn.className = 'gram-option-wrong';
+      } else {
+        // Opção irrelevante: recolhe para caber in-place sem rolagem
+        btn.className = 'gram-option-disabled opcao-recolhida';
+      }
     }
 
     const fb = document.getElementById('gram-feedback');

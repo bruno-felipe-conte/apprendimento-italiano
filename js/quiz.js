@@ -10,6 +10,66 @@ const Quiz = {
   xpTotal: 0,
   respondido: false,
   combo: 0,
+  abaSeletor: 'templos', // 'templos' | 'morfologia' | 'listening' | 'gramatica' | 'verbi'
+
+  // ── Smart Retractable Quiz Bar ─────────────────────────────
+  toggleSeletor() {
+    const seletor = document.getElementById('quiz-templo-selector');
+    if (!seletor) return;
+    const visivel = seletor.style.display !== 'none';
+    if (visivel) {
+      seletor.style.display = 'none';
+    } else {
+      this.renderizarSeletor();
+      seletor.style.display = 'grid';
+    }
+    this._sincronizarBarraCompacta();
+  },
+
+  _sincronizarBarraCompacta() {
+    const bar       = document.getElementById('quiz-compact-bar');
+    const container = document.getElementById('quiz-container');
+    const seletor   = document.getElementById('quiz-templo-selector');
+    if (!bar) return;
+
+    const quizAtivo = container && container.style.display !== 'none' && this.perguntas && this.perguntas.length > 0;
+    if (!quizAtivo) {
+      bar.style.display = 'none';
+      return;
+    }
+
+    bar.style.display = 'flex';
+    const elNome = document.getElementById('quiz-compact-nome');
+    if (elNome) {
+      let nomeQuiz = '🏛️ Quiz';
+      if (this.temploAtual === 'misto') {
+        nomeQuiz = '🌍 Quiz Generale';
+      } else if (this.temploAtual === 0) {
+        nomeQuiz = '⏱️ Conjugação';
+      } else if (typeof this.temploAtual === 'string' && this.temploAtual.startsWith('gramatica_')) {
+        nomeQuiz = `📚 Gramática ${this.temploAtual.replace('gramatica_', '')}`;
+      } else if (this.temploAtual) {
+        const d = App.estado?.templosData?.[this.temploAtual];
+        nomeQuiz = `🏛️ T${this.temploAtual} · ${d?.nome || 'Tempio ' + this.temploAtual}`;
+      }
+      elNome.textContent = nomeQuiz;
+    }
+
+    const elProg = document.getElementById('quiz-compact-progresso');
+    if (elProg) {
+      const total = this.perguntas.length || 10;
+      const atual = Math.min(this.perguntaAtual + 1, total);
+      elProg.textContent = `${atual}/${total}`;
+    }
+
+    const btn = bar.querySelector('.quiz-compact-toggle-btn');
+    const seletorVisivel = seletor && seletor.style.display !== 'none';
+    if (btn) {
+      btn.innerHTML = seletorVisivel
+        ? '<span>✕ Ocultar</span><span class="quiz-compact-chevron">▴</span>'
+        : '<span>⚙️ Trocar Quiz</span><span class="quiz-compact-chevron">▾</span>';
+    }
+  },
 
   // ── Start quiz for a temple ────────────────────────────────
   iniciar(temploNum) {
@@ -63,6 +123,7 @@ const Quiz = {
     if (container) container.style.display = 'block';
     if (resultado) resultado.style.display = 'none';
     if (seletor) seletor.style.display = 'none';
+    this._sincronizarBarraCompacta();
 
     this.mostrarPergunta();
   },
@@ -144,6 +205,7 @@ const Quiz = {
     const p = this.perguntas[this.perguntaAtual];
     this.respondido = false;
     this._atualizarCombo();
+    this._sincronizarBarraCompacta();
 
     // Update progress bar
     const total = this.perguntas.length;
@@ -204,15 +266,21 @@ const Quiz = {
     const p = this.perguntas[this.perguntaAtual];
     const correto = escolha === p.resposta_correta;
 
-    // Mark all buttons
+    // Mark all buttons and collapse non-relevant options (In-Place Transition)
     const grid = document.getElementById('opcoes-grid');
     if (grid) {
       grid.querySelectorAll('.opcao-btn').forEach(btn => {
         btn.disabled = true;
-        if (btn.textContent === p.resposta_correta) {
+        const ehCorreta = btn.textContent === p.resposta_correta;
+        const foiEscolhida = btn.textContent === escolha;
+
+        if (ehCorreta) {
           btn.classList.add('correta');
-        } else if (btn.textContent === escolha && !correto) {
+        } else if (foiEscolhida && !correto) {
           btn.classList.add('errada');
+        } else {
+          // Opção irrelevante: recolhe para dar espaço in-place à explicação
+          btn.classList.add('opcao-recolhida');
         }
       });
     }
@@ -280,6 +348,7 @@ const Quiz = {
     const container = document.getElementById('quiz-container');
     const resultado = document.getElementById('quiz-resultado');
     if (container) container.style.display = 'none';
+    this._sincronizarBarraCompacta();
 
     // Log quiz completion to heatmap diary (count actual questions answered)
     if (typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
@@ -342,6 +411,7 @@ const Quiz = {
     const seletor = document.getElementById('quiz-templo-selector');
     if (resultado) resultado.style.display = 'none';
     if (seletor) seletor.style.display = 'grid';
+    this._sincronizarBarraCompacta();
     this.renderizarSeletor();
   },
 
@@ -352,124 +422,146 @@ const Quiz = {
     seletor.innerHTML = '';
     seletor.style.display = 'grid';
 
-    // ── Misto Button ───────────────────────────────────────
-    if (Progressao.temploDesbloqueado(1)) {
-      const btnMisto = document.createElement('button');
-      btnMisto.className = 'quiz-templo-btn';
-      btnMisto.innerHTML = '🌍 Quiz Generale<br><small>Tutti i templi misti</small>';
-      btnMisto.style.gridColumn = '1 / -1'; // span full width
-      btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
-      btnMisto.style.color = 'white';
-      btnMisto.onclick = () => this.iniciarMisto();
-      seletor.appendChild(btnMisto);
-    }
+    // Barra de categorias (Tabs inteligentes)
+    const tabs = [
+      { id: 'templos', label: '🏛️ Templos' },
+      { id: 'morfologia', label: '🔤 Morfologia' },
+      { id: 'listening', label: '🎧 Listening' },
+      { id: 'gramatica', label: '📚 Gramática' },
+      { id: 'verbi', label: '⏱️ Conjugação' }
+    ];
+
+    const tabNav = document.createElement('div');
+    tabNav.className = 'quiz-tabs-nav';
+    tabNav.style.cssText = 'grid-column: 1 / -1; display: flex; gap: 0.35rem; overflow-x: auto; padding-bottom: 0.5rem; margin-bottom: 0.5rem; -webkit-overflow-scrolling: touch; scrollbar-width: none;';
+    
+    tabs.forEach(t => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      const ativa = this.abaSeletor === t.id;
+      btn.style.cssText = `padding: 0.35rem 0.75rem; border-radius: 999px; border: 1.5px solid ${ativa ? 'var(--cor-veneziano,#9B2335)' : 'var(--cor-marmore-escuro,#D4C4B5)'}; background: ${ativa ? 'var(--cor-veneziano,#9B2335)' : 'transparent'}; color: ${ativa ? '#fff' : 'inherit'}; font-size: 0.8rem; font-weight: 600; white-space: nowrap; cursor: pointer; transition: all 0.2s;`;
+      btn.textContent = t.label;
+      btn.onclick = () => {
+        this.abaSeletor = t.id;
+        this.renderizarSeletor();
+      };
+      tabNav.appendChild(btn);
+    });
+    seletor.appendChild(tabNav);
 
     // Usa a lista de templos carregados (1-50), ordenados
     const todosTemplos = Object.keys(App.estado.templosData)
       .map(Number).sort((a, b) => a - b);
 
-    todosTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
-      const nivel = data ? data.nivel : '—';
+    // ── Aba Templos ───────────────────────────────────────
+    if (this.abaSeletor === 'templos') {
+      if (Progressao.temploDesbloqueado(1)) {
+        const btnMisto = document.createElement('button');
+        btnMisto.className = 'quiz-templo-btn';
+        btnMisto.innerHTML = '🌍 Quiz Generale<br><small>Tutti i templi misti</small>';
+        btnMisto.style.gridColumn = '1 / -1';
+        btnMisto.style.background = 'linear-gradient(135deg, #2C3E50, #3498DB)';
+        btnMisto.style.color = 'white';
+        btnMisto.onclick = () => this.iniciarMisto();
+        seletor.appendChild(btnMisto);
+      }
 
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
-      btn.innerHTML = desbloqueado
-        ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
-        : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Tempio ${i}`;
+        const nivel = data ? data.nivel : '—';
 
-      if (desbloqueado) btn.onclick = () => this.iniciar(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── Morphology section ────────────────────────────────
-    const sep = document.createElement('div');
-    sep.className = 'quiz-secao-titulo';
-    sep.textContent = I18n.t('quiz_morf_titulo');
-    seletor.appendChild(sep);
-
-    todosTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
-      const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
-
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
-      btn.innerHTML = `🔤 ${i}. ${nome}`;
-
-      if (desbloqueado && temMorf) btn.onclick = () => this.iniciarMorfologia(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── Listening section ────────────────────────────────
-    const sepList = document.createElement('div');
-    sepList.className = 'quiz-secao-titulo';
-    sepList.textContent = I18n.t('quiz_list_titulo');
-    seletor.appendChild(sepList);
-
-    todosTemplos.forEach(i => {
-      const desbloqueado = Progressao.temploDesbloqueado(i);
-      const data = App.estado.templosData[i];
-      const nome = (data && data.nome) || `Tempio ${i}`;
-
-      const btn = document.createElement('button');
-      btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;
-      btn.innerHTML = `🎧 ${i}. ${nome}`;
-
-      if (desbloqueado) btn.onclick = () => this.iniciarListening(i);
-      else btn.disabled = true;
-      seletor.appendChild(btn);
-    });
-
-    // ── Gramática section ────────────────────────────────
-    const sepGram = document.createElement('div');
-    sepGram.className = 'quiz-secao-titulo';
-    sepGram.textContent = I18n.t('quiz_gram_titulo');
-    seletor.appendChild(sepGram);
-
-    const gramData = App.estado.grammarData || { moduli: [] };
-    if (gramData.moduli.length === 0) {
-      const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = I18n.t('quiz_gram_nao_carregado');
-      seletor.appendChild(msg);
-    } else {
-      gramData.moduli.forEach(mod => {
         const btn = document.createElement('button');
-        btn.className = 'quiz-templo-btn quiz-gram-btn';
-        btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.livello);
-        btn.onclick = () => this.iniciarGramatica(mod.livello);
+        btn.className = `quiz-templo-btn${desbloqueado ? '' : ' bloqueado'}`;
+        btn.innerHTML = desbloqueado
+          ? `🏛️ ${i}. ${nome}<br><small>${nivel}</small>`
+          : `🔒 ${i}. ${nome}<br><small>Livello ${Progressao.TEMPLO_NIVEL[i] || i}</small>`;
+
+        if (desbloqueado) btn.onclick = () => this.iniciar(i);
+        else btn.disabled = true;
         seletor.appendChild(btn);
       });
+      return;
     }
 
-    // ── Conjugação section ────────────────────────────────
-    const sepVerbi = document.createElement('div');
-    sepVerbi.className = 'quiz-secao-titulo';
-    sepVerbi.textContent = I18n.t('quiz_verbi_titulo');
-    seletor.appendChild(sepVerbi);
+    // ── Aba Morfologia ────────────────────────────────────
+    if (this.abaSeletor === 'morfologia') {
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Tempio ${i}`;
+        const temMorf = data && data.palavras && data.palavras.some(p => p.genero || p.plural);
 
-    const verbosDisponiveis = (App.estado.conjugacoesData || []);
-    if (verbosDisponiveis.length === 0) {
-      const msg = document.createElement('p');
-      msg.style.cssText = 'text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-      msg.textContent = I18n.t('quiz_verbi_nao_carregado');
-      seletor.appendChild(msg);
-    } else {
-      const tempos = ['Presente', 'Imperfetto', 'Futuro'];
-      tempos.forEach(tempo => {
         const btn = document.createElement('button');
-        btn.className = 'quiz-templo-btn quiz-verbi-btn';
-        const emoji = tempo === 'Presente' ? '⏱️' : tempo === 'Imperfetto' ? '⏪' : '⏩';
-        btn.innerHTML = `${emoji} ${tempo}`;
-        btn.onclick = () => this.iniciarConjugacao(tempo);
+        btn.className = `quiz-templo-btn quiz-morf-btn${desbloqueado && temMorf ? '' : ' bloqueado'}`;
+        btn.innerHTML = `🔤 ${i}. ${nome}`;
+
+        if (desbloqueado && temMorf) btn.onclick = () => this.iniciarMorfologia(i);
+        else btn.disabled = true;
         seletor.appendChild(btn);
       });
+      return;
+    }
+
+    // ── Aba Listening ─────────────────────────────────────
+    if (this.abaSeletor === 'listening') {
+      todosTemplos.forEach(i => {
+        const desbloqueado = Progressao.temploDesbloqueado(i);
+        const data = App.estado.templosData[i];
+        const nome = (data && data.nome) || `Tempio ${i}`;
+
+        const btn = document.createElement('button');
+        btn.className = `quiz-templo-btn quiz-list-btn${desbloqueado ? '' : ' bloqueado'}`;
+        btn.innerHTML = `🎧 ${i}. ${nome}`;
+
+        if (desbloqueado) btn.onclick = () => this.iniciarListening(i);
+        else btn.disabled = true;
+        seletor.appendChild(btn);
+      });
+      return;
+    }
+
+    // ── Aba Gramática ─────────────────────────────────────
+    if (this.abaSeletor === 'gramatica') {
+      const gramData = App.estado.grammarData || { moduli: [] };
+      if (gramData.moduli.length === 0) {
+        const msg = document.createElement('p');
+        msg.style.cssText = 'grid-column: 1 / -1; text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+        msg.textContent = I18n.t('quiz_gram_nao_carregado');
+        seletor.appendChild(msg);
+      } else {
+        gramData.moduli.forEach(mod => {
+          const btn = document.createElement('button');
+          btn.className = 'quiz-templo-btn quiz-gram-btn';
+          btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.livello);
+          btn.onclick = () => this.iniciarGramatica(mod.livello);
+          seletor.appendChild(btn);
+        });
+      }
+      return;
+    }
+
+    // ── Aba Conjugação ────────────────────────────────────
+    if (this.abaSeletor === 'verbi') {
+      const verbosDisponiveis = (App.estado.conjugacoesData || []);
+      if (verbosDisponiveis.length === 0) {
+        const msg = document.createElement('p');
+        msg.style.cssText = 'grid-column: 1 / -1; text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
+        msg.textContent = I18n.t('quiz_verbi_nao_carregado');
+        seletor.appendChild(msg);
+      } else {
+        const tempos = ['Presente', 'Imperfetto', 'Futuro'];
+        tempos.forEach(tempo => {
+          const btn = document.createElement('button');
+          btn.className = 'quiz-templo-btn quiz-verbi-btn';
+          const emoji = tempo === 'Presente' ? '⏱️' : tempo === 'Imperfetto' ? '⏪' : '⏩';
+          btn.innerHTML = `${emoji} ${tempo}`;
+          btn.onclick = () => this.iniciarConjugacao(tempo);
+          seletor.appendChild(btn);
+        });
+      }
+      return;
     }
   },
 

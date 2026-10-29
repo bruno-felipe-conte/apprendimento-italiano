@@ -364,22 +364,32 @@ const Dialoghi = {
   renderizarDialogo() {
     const c = document.getElementById('dialoghi-container');
     const d = this.dialogoAtual;
+    const ehPratica = this.modo === 'pratica';
     
     let html = `
-      <div style="margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between">
-        <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()" style="padding:0.4rem 0.8rem">‹ Voltar</button>
-        <div style="display:flex;gap:0.5rem">
+      <div class="dial-compact-bar" style="margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;flex-wrap:nowrap">
+        <button class="btn-secondario" onclick="Dialoghi.renderizarSeletor()" style="padding:0.35rem 0.75rem;font-size:0.82rem;white-space:nowrap">‹ Voltar</button>
+        <div style="font-size:0.85rem;font-weight:700;color:var(--cor-veneziano-escuro,#6B1A2A);text-overflow:ellipsis;overflow:hidden;white-space:nowrap;flex:1;text-align:center">
+          ${d.icone} ${d.titulo} ${ehPratica ? `<span style="opacity:0.7;font-weight:400">· Turno ${this.turnoAtual + 1}/${d.turni.length}</span>` : ''}
+        </div>
+        <div style="display:flex;gap:0.35rem;flex-shrink:0">
           <button class="btn-modo-toggle ${this.modo === 'leitura' ? 'ativo' : ''}" onclick="Dialoghi.modo='leitura';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo Leitura">📖</button>
           <button class="btn-modo-toggle ${this.modo === 'pratica' ? 'ativo' : ''}" onclick="Dialoghi.modo='pratica';Dialoghi.turnoAtual=0;Dialoghi.renderizarDialogo()" title="Modo Prática">✍️</button>
         </div>
       </div>
-      <div style="text-align:center;margin-bottom:1rem">
-        <div style="font-size:2rem">${d.icone}</div>
-        <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);margin:0.2rem 0">${d.titulo}</h3>
-        <p style="font-size:0.85rem;color:var(--cor-pietra);font-style:italic">${d.contexto}</p>
-      </div>
-      <div class="dialogo-conversa">
     `;
+
+    if (!ehPratica) {
+      html += `
+        <div style="text-align:center;margin-bottom:1rem">
+          <div style="font-size:2rem">${d.icone}</div>
+          <h3 style="font-family:'Cinzel',serif;color:var(--cor-veneziano-escuro);margin:0.2rem 0">${d.titulo}</h3>
+          <p style="font-size:0.85rem;color:var(--cor-pietra);font-style:italic">${d.contexto}</p>
+        </div>
+      `;
+    }
+    
+    html += `<div class="dialogo-conversa">`;
     
     if (this.modo === 'leitura') {
       for (const t of d.turni) {
@@ -404,16 +414,17 @@ const Dialoghi = {
         </div>
       `;
     } else {
-      // Modo prática: renderiza apenas o turno atual e os anteriores
-      for (let i = 0; i <= this.turnoAtual; i++) {
+      // Modo prática In-Place: renderiza a fala de contexto imediatamente anterior (se houver) + o turno ativo
+      const idxInicio = Math.max(0, this.turnoAtual - 1);
+      for (let i = idxInicio; i <= this.turnoAtual; i++) {
         const t = d.turni[i];
         const isUtente = t.personaggio && (t.personaggio.trim().toLowerCase() === 'tu' || t.personaggio.trim().toLowerCase() === 'you');
         const cssClass = isUtente ? 'utente' : 'personaggio';
         
         if (i < this.turnoAtual) {
-          // Histórico (já respondido)
+          // Contexto imediatamente anterior
           html += `
-            <div class="dialogo-turno ${cssClass}">
+            <div class="dialogo-turno ${cssClass}" style="opacity:0.85">
               <div class="dialogo-bubble">
                 <div class="dialogo-nome">${t.personaggio}</div>
                 <div>${t.frase}</div>
@@ -433,14 +444,14 @@ const Dialoghi = {
                 </div>
               </div>
               <div style="text-align:center;margin-top:1rem">
-                <button class="btn-primario" onclick="Dialoghi.avancarTurno()">Continuar</button>
+                <button class="btn-primario" onclick="Dialoghi.avancarTurno()">Continuar →</button>
               </div>
             `;
 
           } else {
             // Escolha do usuário
             html += `
-              <div style="margin-top:1rem;animation:fadeIn 0.3s ease">
+              <div style="margin-top:0.75rem;animation:fadeIn 0.3s ease">
                 <div class="dialogo-pratica-frase">Sua vez de falar. Escolha a melhor resposta:</div>
                 <div class="dialogo-opcoes">
             `;
@@ -473,11 +484,14 @@ const Dialoghi = {
     const turno = this.dialogoAtual.turni[this.turnoAtual];
     const correto = indice === turno.resposta_correta;
     
-    // Desabilita botões
+    // Desabilita botões e recolhe alternativas não escolhidas (In-Place)
     const container = btn.parentElement;
-    container.querySelectorAll('button').forEach(b => {
+    container.querySelectorAll('button').forEach((b, i) => {
       b.disabled = true;
       b.style.cursor = 'default';
+      if (i !== indice && i !== turno.resposta_correta) {
+        b.classList.add('opcao-recolhida');
+      }
     });
     
     if (correto) {
