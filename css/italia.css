@@ -3632,19 +3632,122 @@ body.dark-mode .dojo-progress-hud {
   opacity: 0.8;
 }
 
-/* Sidebar recolhida */
-.fc-studio-sidebar.recolhido {
-  display: none !important;
+/* Gaveta Retrátil de Templos, Baralhos e Adição IA nos Flashcards */
+.fc-seletor-drawer {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, margin-bottom 0.25s ease, padding 0.25s ease;
+  max-height: 600px;
+  opacity: 1;
+  width: 100%;
+  margin-bottom: 0.85rem;
+  background: var(--cor-marmore, #FAF6EE);
+  border: 1.5px solid rgba(212, 168, 67, 0.35);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
-/* No desktop, quando sidebar recolhida, o stage ocupa largura total */
-.fc-studio-layout.seletor-recolhido {
-  display: block;
+.fc-seletor-drawer.recolhido {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+  pointer-events: none;
 }
 
-.fc-studio-layout.seletor-recolhido .fc-studio-stage {
-  max-width: 640px;
-  margin: 0 auto;
+.fc-seletor-drawer .card-selecao-templo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.fc-seletor-drawer .fc-select-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.fc-seletor-drawer .fc-select-row label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  white-space: nowrap;
+}
+
+.fc-seletor-drawer .fc-select-row select {
+  flex: 1;
+  font-family: 'Cinzel', serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  background-color: #fff;
+  border: 1.5px solid #d4a843;
+  border-radius: 10px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
+.fc-seletor-drawer .selector-helper {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #5A4535;
+}
+
+body.dark-mode .fc-seletor-drawer {
+  background: #1C1816;
+  border-color: rgba(212, 168, 67, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .fc-seletor-drawer .fc-select-row select {
+  background-color: #25201D;
+  color: #E6DFD3;
+}
+
+body.dark-mode .fc-seletor-drawer .selector-helper {
+  color: #A89B8C;
+}
+
+@media (max-width: 1023px) {
+  .fc-studio-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .fc-studio-sidebar {
+    display: contents;
+  }
+
+  .fc-mode-pills {
+    order: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .btn-revisao-geral-atelier {
+    order: 2;
+    margin-bottom: 0.4rem;
+  }
+
+  .fc-studio-stage {
+    order: 3;
+  }
+
+  .fc-status-hud {
+    order: 4;
+  }
+
+  .fc-ebbinghaus-wrapper {
+    order: 5;
+    margin-top: 0.85rem;
+  }
 }
 
 /* Stage virado: dock de ações FSRS vira protagonista */

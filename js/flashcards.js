@@ -179,38 +179,60 @@ const Flashcards = {
   _swipeStartX:      0,
   _swipeStartY:      0,
   abaOrigem:         'templos', // 'templos' | 'especiais'
-  seletorRecolhido:  false,
+  gavetaAberta:      false,
+  seletorRecolhido:  true,
 
-  // ── Smart Retractable Selector Bar ─────────────────────────
+  // ── Smart Retractable Drawer & Selector Bar ─────────────────
+  toggleGaveta(forcarEstado) {
+    if (typeof forcarEstado === 'boolean') {
+      this.gavetaAberta = forcarEstado;
+    } else {
+      this.gavetaAberta = !this.gavetaAberta;
+    }
+    this.seletorRecolhido = !this.gavetaAberta;
+    this._sincronizarGaveta();
+  },
+
+  recolherGaveta() {
+    this.toggleGaveta(false);
+  },
+
+  abrirGaveta() {
+    this.toggleGaveta(true);
+  },
+
+  // Alias para retrocompatibilidade
   toggleSeletor(forcarEstado) {
     if (typeof forcarEstado === 'boolean') {
-      this.seletorRecolhido = forcarEstado;
+      this.toggleGaveta(!forcarEstado);
     } else {
-      this.seletorRecolhido = !this.seletorRecolhido;
+      this.toggleGaveta();
+    }
+  },
+
+  _sincronizarGaveta() {
+    const drawer = document.getElementById('fc-seletor-drawer');
+    const btnToggle = document.getElementById('fc-compact-toggle-btn');
+    if (drawer) {
+      drawer.classList.toggle('recolhido', !this.gavetaAberta);
+    }
+    if (btnToggle) {
+      btnToggle.setAttribute('aria-expanded', String(this.gavetaAberta));
+      btnToggle.innerHTML = this.gavetaAberta
+        ? '<span>✕ Fechar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▴</span>'
+        : '<span>⚙️ Trocar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>';
     }
     this._sincronizarBarraCompacta();
   },
 
   _sincronizarBarraCompacta() {
-    const layout  = document.getElementById('fc-studio-layout');
-    const sidebar = document.getElementById('fc-studio-sidebar') || document.querySelector('.fc-studio-sidebar');
-    const bar     = document.getElementById('fc-compact-bar');
-    if (!bar || !sidebar) return;
+    const bar = document.getElementById('fc-compact-bar');
+    if (!bar) return;
 
-    const temSessaoAtiva = this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length;
-
-    if (!temSessaoAtiva) {
-      bar.style.display = 'none';
-      sidebar.classList.remove('recolhido');
-      if (layout) layout.classList.remove('seletor-recolhido');
-      return;
-    }
-
+    // A barra compacta fica sempre disponível no topo
     bar.style.display = 'flex';
-    sidebar.classList.toggle('recolhido', !!this.seletorRecolhido);
-    if (layout) layout.classList.toggle('seletor-recolhido', !!this.seletorRecolhido);
 
-    // Label de origem (Templo ou Baralho Especial)
+    // Label de origem (Templo, Baralho Especial ou Revisão Geral)
     const elOrigem = document.getElementById('fc-compact-origem');
     if (elOrigem) {
       let labelOrigem = '🌍 Revisão Geral';
@@ -230,6 +252,8 @@ const Flashcards = {
         const tData = App.estado?.templosData?.[this.temploAtual];
         const tNome = tData?.nome || `Tempio ${this.temploAtual}`;
         labelOrigem = `🏛️ T${this.temploAtual} · ${tNome}`;
+      } else {
+        labelOrigem = '🏛️ Selecione um Tempio';
       }
       elOrigem.textContent = labelOrigem;
     }
@@ -248,15 +272,19 @@ const Flashcards = {
     // Contador 1/20
     const elCount = document.getElementById('fc-compact-count');
     if (elCount) {
-      elCount.textContent = `${this.indiceAtual + 1}/${this.cartasDisponiveis.length}`;
+      if (this.cartasDisponiveis && this.cartasDisponiveis.length > 0 && this.indiceAtual < this.cartasDisponiveis.length) {
+        elCount.textContent = `${this.indiceAtual + 1}/${this.cartasDisponiveis.length}`;
+      } else if (this.cartasDisponiveis && this.cartasDisponiveis.length > 0) {
+        elCount.textContent = `${this.cartasDisponiveis.length}/${this.cartasDisponiveis.length}`;
+      } else {
+        elCount.textContent = '0 cartas';
+      }
     }
 
-    // Botão Trocar
+    // Atualiza estado do botão se não sincronizado
     const btnToggle = document.getElementById('fc-compact-toggle-btn');
-    if (btnToggle) {
-      btnToggle.innerHTML = this.seletorRecolhido
-        ? '<span>⚙️ Trocar</span><span class="fc-compact-chevron">▾</span>'
-        : '<span>✕ Ocultar</span><span class="fc-compact-chevron">▴</span>';
+    if (btnToggle && !btnToggle.hasAttribute('aria-expanded')) {
+      btnToggle.setAttribute('aria-expanded', String(this.gavetaAberta));
     }
   },
 
@@ -313,6 +341,7 @@ const Flashcards = {
   // ── Select a special deck (Top 500) ────────────────────────
   selecionarDeckEspecial(deckVal) {
     if (!deckVal) return;
+    this.recolherGaveta(); // Recolhe a gaveta ao selecionar baralho especial
     const selDeck = document.getElementById('flashcard-deck-select');
     if (selDeck && selDeck.value !== deckVal) {
       selDeck.value = deckVal;
@@ -335,6 +364,7 @@ const Flashcards = {
   // ── Initialize for a specific temple or special deck ─────
   selecionarTemplo(val) {
     if (!val) return;
+    this.recolherGaveta(); // Recolhe a gaveta ao selecionar templo
     if (typeof val === 'string' && val.startsWith('deck_')) {
       this.selecionarDeckEspecial(val);
     } else if (val === 'custom') {
@@ -415,10 +445,10 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     if (this.cartasDisponiveis.length === 0) {
-      this.seletorRecolhido = false;
+      this.abrirGaveta();
       this.mostrarVazio();
     } else {
-      this.seletorRecolhido = true;
+      this.recolherGaveta();
       this.mostrarCarta();
     }
     
@@ -923,8 +953,7 @@ const Flashcards = {
 
   // ── Empty / all-done state ────────────────────────────────
   mostrarVazio() {
-    this.seletorRecolhido = false;
-    this._sincronizarBarraCompacta();
+    this.abrirGaveta();
     const cardEl  = document.getElementById('flashcard');
     const actions = document.getElementById('card-actions');
     const vazio   = document.getElementById('flashcard-vazio');
@@ -1064,7 +1093,7 @@ const Flashcards = {
     if (cardEl)  cardEl.style.display = '';
     if (actions) actions.style.display = 'none';
     App.navegar('flashcard');
-    this.seletorRecolhido = true;
+    this.recolherGaveta();
     App.notificar(I18n.t('notif_fc_favoritos_revisar').replace('{n}', favPalavras.length), 'alerta');
     this.mostrarCarta();
   },
@@ -1111,7 +1140,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     App.navegar('flashcard');
-    this.seletorRecolhido = true;
+    this.recolherGaveta();
     App.notificar(I18n.t('notif_fc_dificeis_revisar').replace('{n}', dificeis.length), 'alerta');
     this.mostrarCarta();
   },
@@ -1352,7 +1381,7 @@ const Flashcards = {
     if (actions) actions.style.display = 'none';
 
     const total_devidas = devidas.length;
-    this.seletorRecolhido = true;
+    this.recolherGaveta();
     App.notificar(`🌍 ${total_devidas} carta${total_devidas !== 1 ? 's' : ''} em revisão + ${novasLimitadas.length} novas`, 'alerta');
     this.mostrarCarta();
   },
@@ -1376,7 +1405,7 @@ const Flashcards = {
     this.cartasDisponiveis = [...palavrasTemplo];
     this.indiceAtual      = 0;
     this.virada           = false;
-    this.seletorRecolhido = true;
+    this.recolherGaveta();
 
     const vazio   = document.getElementById('flashcard-vazio');
     const resumo  = document.getElementById('flashcard-resumo');
@@ -1457,6 +1486,7 @@ const Flashcards = {
         selDeck.value = deckAnterior;
       }
     }
+    this._sincronizarGaveta();
   },
 
   // ── Speech Recognition (Modo Imitação) ──────────────────────

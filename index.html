@@ -190,69 +190,72 @@
     <!-- SECTION: Flashcard -->
     <section id="sec-flashcard" class="section">
       <div class="flashcard-arena atelier-memoria">
-        <div class="fc-studio-layout" id="fc-studio-layout">
-          <!-- Barra Compacta Retrátil (Seletor Inteligente) -->
-          <div class="fc-compact-bar" id="fc-compact-bar" style="display:none">
-            <div class="fc-compact-summary" onclick="Flashcards.toggleSeletor()">
-              <span class="fc-compact-badge" id="fc-compact-origem">🏛️ Tempio 1</span>
-              <span class="fc-compact-pill" id="fc-compact-modo">🎴 Normal</span>
-              <span class="fc-compact-counter" id="fc-compact-count">1/20</span>
-            </div>
-            <button type="button" class="fc-compact-toggle-btn" id="fc-compact-toggle-btn" onclick="Flashcards.toggleSeletor()" aria-label="Abrir ou fechar seletor de baralho e modos">
-              <span>⚙️ Trocar</span>
-              <span class="fc-compact-chevron">▾</span>
-            </button>
+        <!-- Barra Superior Compacta (Status & Acionador da Gaveta) -->
+        <div class="fc-compact-bar" id="fc-compact-bar">
+          <div class="fc-compact-summary" onclick="Flashcards.toggleGaveta()" title="Clique para trocar templo ou baralho">
+            <span class="fc-compact-badge" id="fc-compact-origem">🏛️ Tempio 1</span>
+            <span class="fc-compact-pill" id="fc-compact-modo">🎴 Normal</span>
+            <span class="fc-compact-counter" id="fc-compact-count">1/20</span>
           </div>
+          <button type="button" class="fc-compact-toggle-btn" id="fc-compact-toggle-btn" onclick="Flashcards.toggleGaveta()" aria-expanded="false" aria-label="Abrir ou fechar gaveta de templos e baralhos">
+            <span>⚙️ Baralhos</span>
+            <span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>
+          </button>
+        </div>
+
+        <!-- Gaveta Retrátil: Seleção de Templos, Baralhos e Adição IA -->
+        <div class="fc-seletor-drawer recolhido" id="fc-seletor-drawer">
+          <div class="card-selecao-templo">
+            <!-- Switch de Origem: Templos vs Baralhos Especiais -->
+            <div class="fc-origem-switch" role="tablist" aria-label="Origem dos Flashcards">
+              <button type="button" id="fc-tab-templos" class="fc-origem-tab ativo" role="tab" aria-selected="true" onclick="Flashcards.trocarAbaOrigem('templos')">
+                🏛️ Templos
+              </button>
+              <button type="button" id="fc-tab-especiais" class="fc-origem-tab" role="tab" aria-selected="false" onclick="Flashcards.trocarAbaOrigem('especiais')">
+                ⭐ Baralhos Especiais (Top 500)
+              </button>
+            </div>
+
+            <!-- Painel 1: Templos do Conhecimento (Desbloqueados) -->
+            <div id="fc-painel-templos" class="fc-painel-origem">
+              <div class="fc-select-row">
+                <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Templo:</label>
+                <select id="flashcard-templo-select" onchange="Flashcards.selecionarTemplo(this.value)">
+                  <option value="">-- Seleziona tempio --</option>
+                </select>
+                <button type="button" class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
+              </div>
+            </div>
+
+            <!-- Painel 2: Baralhos Especiais (Top 500) com subcategorias -->
+            <div id="fc-painel-especiais" class="fc-painel-origem" style="display: none;">
+              <div class="fc-select-row">
+                <label for="flashcard-deck-select">Categoria Especial:</label>
+                <select id="flashcard-deck-select" onchange="Flashcards.selecionarDeckEspecial(this.value)">
+                  <option value="deck_all">⭐ Todos os 500 Cards</option>
+                  <option value="deck_colocacoes">🧩 Colocações & Chunks (100)</option>
+                  <option value="deck_falsi_amici">⚠️ Falsos Amigos / Falsi Amici (100)</option>
+                  <option value="deck_preposizioni">📍 Preposições & Regências (100)</option>
+                  <option value="deck_verbi_irregolari">⚡ Verbos Irregulares em Contexto (100)</option>
+                  <option value="deck_situazioni_reali">🎭 Situações da Vida Real (100)</option>
+                </select>
+              </div>
+              <div class="fc-deck-chips" id="fc-deck-chips">
+                <button type="button" class="fc-deck-chip ativo" data-deck="deck_all" onclick="Flashcards.selecionarDeckEspecial('deck_all')">⭐ Todos (500)</button>
+                <button type="button" class="fc-deck-chip" data-deck="deck_colocacoes" onclick="Flashcards.selecionarDeckEspecial('deck_colocacoes')">🧩 Chunks (100)</button>
+                <button type="button" class="fc-deck-chip" data-deck="deck_falsi_amici" onclick="Flashcards.selecionarDeckEspecial('deck_falsi_amici')">⚠️ Falsos Amigos (100)</button>
+                <button type="button" class="fc-deck-chip" data-deck="deck_preposizioni" onclick="Flashcards.selecionarDeckEspecial('deck_preposizioni')">📍 Preposições (100)</button>
+                <button type="button" class="fc-deck-chip" data-deck="deck_verbi_irregolari" onclick="Flashcards.selecionarDeckEspecial('deck_verbi_irregolari')">⚡ Verbos (100)</button>
+                <button type="button" class="fc-deck-chip" data-deck="deck_situazioni_reali" onclick="Flashcards.selecionarDeckEspecial('deck_situazioni_reali')">🎭 Vida Real (100)</button>
+              </div>
+            </div>
+            <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
+          </div>
+        </div>
+
+        <div class="fc-studio-layout" id="fc-studio-layout">
           <!-- Coluna 1: Estúdio Lateral (Controles, Modos e Progresso) -->
           <aside class="fc-studio-sidebar" id="fc-studio-sidebar">
-            <div class="card-selecao-templo">
-              <!-- Switch de Origem: Templos vs Baralhos Especiais -->
-              <div class="fc-origem-switch" role="tablist" aria-label="Origem dos Flashcards">
-                <button type="button" id="fc-tab-templos" class="fc-origem-tab ativo" role="tab" aria-selected="true" onclick="Flashcards.trocarAbaOrigem('templos')">
-                  🏛️ Templos
-                </button>
-                <button type="button" id="fc-tab-especiais" class="fc-origem-tab" role="tab" aria-selected="false" onclick="Flashcards.trocarAbaOrigem('especiais')">
-                  ⭐ Baralhos Especiais (Top 500)
-                </button>
-              </div>
-
-              <!-- Painel 1: Templos do Conhecimento (Desbloqueados) -->
-              <div id="fc-painel-templos" class="fc-painel-origem">
-                <div class="fc-select-row">
-                  <label for="flashcard-templo-select" data-i18n="fc_estudando_label">Templo:</label>
-                  <select id="flashcard-templo-select" onchange="Flashcards.selecionarTemplo(this.value)">
-                    <option value="">-- Seleziona tempio --</option>
-                  </select>
-                  <button type="button" class="btn-ia-add" onclick="IAImport.abrir('vocab', 'flashcard')" title="Criar novos Flashcards com IA" style="white-space:nowrap;padding:0.35rem 0.65rem;font-size:0.78rem">🤖 via IA</button>
-                </div>
-              </div>
-
-              <!-- Painel 2: Baralhos Especiais (Top 500) com subcategorias -->
-              <div id="fc-painel-especiais" class="fc-painel-origem" style="display: none;">
-                <div class="fc-select-row">
-                  <label for="flashcard-deck-select">Categoria Especial:</label>
-                  <select id="flashcard-deck-select" onchange="Flashcards.selecionarDeckEspecial(this.value)">
-                    <option value="deck_all">⭐ Todos os 500 Cards</option>
-                    <option value="deck_colocacoes">🧩 Colocações & Chunks (100)</option>
-                    <option value="deck_falsi_amici">⚠️ Falsos Amigos / Falsi Amici (100)</option>
-                    <option value="deck_preposizioni">📍 Preposições & Regências (100)</option>
-                    <option value="deck_verbi_irregolari">⚡ Verbos Irregulares em Contexto (100)</option>
-                    <option value="deck_situazioni_reali">🎭 Situações da Vida Real (100)</option>
-                  </select>
-                </div>
-                <div class="fc-deck-chips" id="fc-deck-chips">
-                  <button type="button" class="fc-deck-chip ativo" data-deck="deck_all" onclick="Flashcards.selecionarDeckEspecial('deck_all')">⭐ Todos (500)</button>
-                  <button type="button" class="fc-deck-chip" data-deck="deck_colocacoes" onclick="Flashcards.selecionarDeckEspecial('deck_colocacoes')">🧩 Chunks (100)</button>
-                  <button type="button" class="fc-deck-chip" data-deck="deck_falsi_amici" onclick="Flashcards.selecionarDeckEspecial('deck_falsi_amici')">⚠️ Falsos Amigos (100)</button>
-                  <button type="button" class="fc-deck-chip" data-deck="deck_preposizioni" onclick="Flashcards.selecionarDeckEspecial('deck_preposizioni')">📍 Preposições (100)</button>
-                  <button type="button" class="fc-deck-chip" data-deck="deck_verbi_irregolari" onclick="Flashcards.selecionarDeckEspecial('deck_verbi_irregolari')">⚡ Verbos (100)</button>
-                  <button type="button" class="fc-deck-chip" data-deck="deck_situazioni_reali" onclick="Flashcards.selecionarDeckEspecial('deck_situazioni_reali')">🎭 Vida Real (100)</button>
-                </div>
-              </div>
-            </div>
-
-            <p class="selector-helper" id="selector-helper" data-i18n="fc_escolha_vocab">Escolha um conjunto de vocabulário para estudar</p>
-
             <div class="fc-mode-pills" id="btn-modos-wrapper">
               <button id="btn-modo-normal" class="fc-mode-pill ativo" onclick="Flashcards._limparModos();Flashcards.mostrarCarta();">
                 <span>🎴 Normal</span>

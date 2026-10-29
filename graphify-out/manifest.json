@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793269477.2895777,
-    "seen": 1793269759.303968,
-    "ast_hash": "d80a3caa06946cc05b0064084b59acb5",
+    "mtime": 1793307804.7392707,
+    "seen": 1793308103.8067966,
+    "ast_hash": "062ee809c2e0c19aa43b5cd9495fb873",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793269422.5665092,
-    "seen": 1793269760.3442023,
-    "ast_hash": "13fc24f66069a56409f6d6da529a2fc2",
+    "mtime": 1793307580.8087847,
+    "seen": 1793308105.3745413,
+    "ast_hash": "62b0d3fa39b466a92e3627e6d6287692",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -1092,50 +1092,50 @@
     "semantic_hash": ""
   },
   "js/core/analytics.js": {
-    "mtime": 1793304480.9671946,
-    "seen": 1793304574.3706455,
+    "mtime": 1793308012.6894522,
+    "seen": 1793308103.3433733,
     "ast_hash": "b913d4c9a28c203ec9a210e19155254b",
     "semantic_hash": ""
   },
   "js/core/collaboration.js": {
-    "mtime": 1793304480.9962935,
-    "seen": 1793304574.4100966,
+    "mtime": 1793308012.7658713,
+    "seen": 1793308103.3843617,
     "ast_hash": "2f3c5f17dada8195aad0bda7a6b3888d",
     "semantic_hash": ""
   },
   "js/core/plugins.js": {
-    "mtime": 1793304480.8916805,
-    "seen": 1793304574.4799244,
+    "mtime": 1793308012.5546668,
+    "seen": 1793308103.4679914,
     "ast_hash": "94f8831dae955f86162b1c4185259481",
     "semantic_hash": ""
   },
   "js/core/sync.js": {
-    "mtime": 1793304480.9425654,
-    "seen": 1793304574.579542,
+    "mtime": 1793308012.627911,
+    "seen": 1793308103.5041006,
     "ast_hash": "993f85f60a7b122eff24e3347ed36063",
     "semantic_hash": ""
   },
   "js/modal_manager.js": {
-    "mtime": 1793304480.8704863,
-    "seen": 1793304574.8119574,
+    "mtime": 1793308012.520024,
+    "seen": 1793308103.904781,
     "ast_hash": "125ea751f18b179d2166144abf1d0860",
     "semantic_hash": ""
   },
   "js/plugins/index.js": {
-    "mtime": 1793304480.9102306,
-    "seen": 1793304574.854444,
+    "mtime": 1793308012.5826964,
+    "seen": 1793308103.9412737,
     "ast_hash": "b3aec9799e7637e2c111c0e4552646a2",
     "semantic_hash": ""
   },
   "js/progression.js": {
-    "mtime": 1793304480.8224337,
-    "seen": 1793304574.9054585,
+    "mtime": 1793308012.4381707,
+    "seen": 1793308103.9718678,
     "ast_hash": "439b5d79e17026220a3b14fa9f035f92",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1793304480.8534906,
-    "seen": 1793304575.0197651,
+    "mtime": 1793308012.491984,
+    "seen": 1793308104.0679224,
     "ast_hash": "d8e0560741a9cb3e61420c90b0012d2e",
     "semantic_hash": ""
   },
@@ -1239,6 +1239,12 @@
     "mtime": 1793304433.281849,
     "seen": 1793304575.568486,
     "ast_hash": "f235dac5321feb571d6f1d901c4d3ff8",
+    "semantic_hash": ""
+  },
+  "tests/flashcards_drawer.test.js": {
+    "mtime": 1793307907.6621644,
+    "seen": 1793308104.7387028,
+    "ast_hash": "10df6ac7d309d526bcfe0fc7ff53bacd",
     "semantic_hash": ""
   }
 }

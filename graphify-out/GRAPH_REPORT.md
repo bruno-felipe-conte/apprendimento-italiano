@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-29)
 
 ## Corpus Check
-- 200 files · ~1,230,437 words
+- 201 files · ~1,230,926 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 762 nodes · 976 edges · 64 communities (33 shown, 31 thin omitted)
+- 763 nodes · 978 edges · 63 communities (33 shown, 30 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `87d5911b`
+- Built from commit: `9aac23c8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -61,7 +61,6 @@
 - progression.ts
 - Italian Localization and Testing
 - Web Audio Feedback Engine
-- FSRS Spaced Repetition Flashcards
 - 5000 Words Schema Guide
 - Canzoni Frontend Module
 - Achievements Frontend Module
@@ -85,7 +84,7 @@
 1. `SyncManager` - 21 edges
 2. `SyncManager` - 20 edges
 3. `scripts` - 17 edges
-4. `vitest` - 16 edges
+4. `vitest` - 17 edges
 5. `AnalyticsManager` - 15 edges
 6. `AnalyticsManager` - 14 edges
 7. `compilerOptions` - 14 edges
@@ -114,7 +113,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (64 total, 31 thin omitted)
+## Communities (63 total, 30 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -138,7 +137,7 @@ Nodes (17): Grammar JSON Schema (moduli, unidades, escolha, revelar), Parla e Sc
 
 ### Community 5 - "schemas.ts"
 Cohesion: 0.06
-Nodes (32): App, BackupReminder, AppNavigation, AppState, AppXP, vitest, zod, ingerirConteudo() (+24 more)
+Nodes (34): App, BackupReminder, AppNavigation, AppState, AppXP, Flashcards, FSRS, vitest (+26 more)
 
 ### Community 6 - "tts_worker.js"
 Cohesion: 0.43
@@ -251,13 +250,13 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 421 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `vitest` connect `schemas.ts` to `index.ts`, `ebbinghaus.js`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `ebbinghausCurve.ts`?**
-  _High betweenness centrality (0.146) - this node is a cross-community bridge._
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
