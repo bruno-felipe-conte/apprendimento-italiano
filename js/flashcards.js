@@ -1351,6 +1351,22 @@ const Flashcards = {
     return r;
   },
 
+  _atualizarBotaoGravar(gravando) {
+    const btn = document.getElementById('btn-gravar');
+    if (!btn) return;
+    if (gravando) {
+      const pararTxt = (typeof I18n !== 'undefined' && I18n.t('fc_gravar_parar') ? I18n.t('fc_gravar_parar').replace(/^[^\w\s]+\s*/, '') : 'Parar');
+      btn.innerHTML = `<span class="btn-tool-icon">⏹️</span><span class="btn-tool-label">${pararTxt}</span>`;
+      btn.style.background = '#C0392B';
+      btn.style.color = '#fff';
+    } else {
+      const imitarTxt = (typeof I18n !== 'undefined' && I18n.t('fc_btn_imitar') ? I18n.t('fc_btn_imitar') : 'Imitar');
+      btn.innerHTML = `<span class="btn-tool-icon">🎤</span><span class="btn-tool-label">${imitarTxt}</span>`;
+      btn.style.background = '';
+      btn.style.color = '';
+    }
+  },
+
   toggleGravar() {
     if (!this.cartaAtual) return;
 
@@ -1374,22 +1390,12 @@ const Flashcards = {
         this._recognition = null;
       }
       this.gravando = false;
-      const btnGravar = document.getElementById('btn-gravar');
-      if (btnGravar) {
-        btnGravar.textContent = I18n.t('fc_gravar_imitar');
-        btnGravar.style.background = '';
-        btnGravar.style.color = '';
-      }
+      this._atualizarBotaoGravar(false);
       return;
     }
     
     this.gravando = true;
-    const btnGravar = document.getElementById('btn-gravar');
-    if (btnGravar) {
-      btnGravar.textContent = I18n.t('fc_gravar_parar');
-      btnGravar.style.background = '#C0392B';
-      btnGravar.style.color = '#fff';
-    }
+    this._atualizarBotaoGravar(true);
     
     // Instância fresca por sessão para suporte pleno no Chrome Android e Safari iOS
     const rec = new SR();
@@ -1413,11 +1419,7 @@ const Flashcards = {
       console.warn('[Flashcards] Erro no reconhecimento:', event?.error);
       this.gravando = false;
       this._recognition = null;
-      if (btnGravar) {
-        btnGravar.textContent = I18n.t('fc_gravar_imitar');
-        btnGravar.style.background = '';
-        btnGravar.style.color = '';
-      }
+      this._atualizarBotaoGravar(false);
       if (event?.error === 'not-allowed') {
         App.notificar('Permissão de microfone negada. Verifique as permissões do navegador.', 'erro');
       } else if (event?.error === 'no-speech') {
@@ -1434,11 +1436,7 @@ const Flashcards = {
     rec.onend = () => {
       this.gravando = false;
       this._recognition = null;
-      if (btnGravar) {
-        btnGravar.textContent = I18n.t('fc_gravar_imitar');
-        btnGravar.style.background = '';
-        btnGravar.style.color = '';
-      }
+      this._atualizarBotaoGravar(false);
     };
 
     this._recognition = rec;
@@ -1448,11 +1446,7 @@ const Flashcards = {
       console.warn('[Flashcards] Falha ao iniciar reconhecimento:', err);
       this.gravando = false;
       this._recognition = null;
-      if (btnGravar) {
-        btnGravar.textContent = I18n.t('fc_gravar_imitar');
-        btnGravar.style.background = '';
-        btnGravar.style.color = '';
-      }
+      this._atualizarBotaoGravar(false);
     }
   },
 

@@ -1815,8 +1815,15 @@ const I18n = {
       const texto = this.dict[chave][this.idioma] || this.dict[chave]['pt'];
       if (el.tagName.toLowerCase() === 'input' && el.type === 'button') {
         el.value = texto;
-      } else if (el.tagName.toLowerCase() === 'button' && el.querySelector('span')) {
-        el.querySelector('span').textContent = texto;
+      } else if (el.tagName.toLowerCase() === 'button') {
+        const labelSpan = el.querySelector('.btn-tool-label, .btn-label, .nav-tab-label, span:last-of-type');
+        if (labelSpan && el.querySelectorAll('span').length > 1) {
+          labelSpan.textContent = texto;
+        } else if (el.querySelector('span')) {
+          el.querySelector('span').textContent = texto;
+        } else {
+          el.textContent = texto;
+        }
       } else {
         el.textContent = texto;
       }

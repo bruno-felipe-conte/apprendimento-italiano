@@ -92,7 +92,7 @@ const Profilo = {
 
         <!-- Configuração de Áudio & Voz Italiana -->
         <div class="profilo-card">
-          <div class="profilo-card-titulo">🎧 ${I18n.t('prof_velocidade_audio') || 'Configuração de Áudio & Voz'}</div>
+          <div class="profilo-card-titulo">${I18n.t('prof_velocidade_audio') || '🎧 Configuração de Áudio & Voz'}</div>
           
           <div style="margin-bottom: 1rem;">
             <label for="select-voz-italiana" style="font-size: 0.85rem; font-weight: 700; color: var(--cor-inchiostro); display: block; margin-bottom: 0.35rem;">
@@ -145,7 +145,7 @@ const Profilo = {
           <div style="text-align:center; margin-top:5px; font-weight:bold; color: #9B2335;" id="audio-speed-display">${currentSpeed}x</div>
           
           <button class="btn-secondario" onclick="App.pronunciar('Buongiorno! Questo è un test della voce italiana.')" style="margin-top:12px; width:100%;">
-            🔊 ${I18n.t('prof_testar_audio') || 'Testar Áudio'}
+            ${I18n.t('prof_testar_audio') || '🔊 Testar Áudio'}
           </button>
         </div>
 
