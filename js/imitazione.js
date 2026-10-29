@@ -11,6 +11,9 @@ const Imitazione = {
   isRecording: false,
   _filtroNivel: '',
   _filtroOrigem: '',
+  _filtroExpandido: false,
+  _faseAtual: 'pratica',
+  _mostrarDetalhes: false,
   _listaAtual: null,
 
   // Gravação de áudio do usuário (MediaRecorder para auto-escuta comparativa)
@@ -61,17 +64,42 @@ const Imitazione = {
 
   async renderizar() {
     await this.carregar();
-    this._aplicarFiltro();
+    this._aplicarFiltro(false);
   },
 
-  _aplicarFiltro() {
+  toggleFiltros(forcar) {
+    this._filtroExpandido = typeof forcar === 'boolean' ? forcar : !this._filtroExpandido;
+    this._renderizarFiltros();
+  },
+
+  toggleDetalhes() {
+    this._mostrarDetalhes = !this._mostrarDetalhes;
+    const grid = document.getElementById('dojo-info-grid');
+    const btn = document.getElementById('btn-dojo-details-toggle');
+    if (grid) grid.style.display = this._mostrarDetalhes ? 'grid' : 'none';
+    if (btn) btn.innerHTML = `<span>${this._mostrarDetalhes ? '▾ Ocultar Dicas' : '▸ Dica & Contexto'}</span>`;
+  },
+
+  selecionarOrigem(origem) {
+    this._filtroOrigem = origem;
+    this._filtroExpandido = false;
+    this._aplicarFiltro(true);
+  },
+
+  selecionarNivel(lvl) {
+    this._filtroNivel = (this._filtroNivel === lvl) ? '' : lvl;
+    this._filtroExpandido = false;
+    this._aplicarFiltro(true);
+  },
+
+  _aplicarFiltro(redefinirItem = true) {
     let todas = this.dados?.imitazioni || [];
     if (this._filtroOrigem === 'custom') todas = todas.filter(f => f._custom || f.custom);
     if (this._filtroOrigem === 'nativo') todas = todas.filter(f => !f._custom && !f.custom);
     this._listaAtual = this._filtroNivel
       ? todas.filter(f => f.nivel === this._filtroNivel)
       : todas;
-    this.itemAtual = 0;
+    if (redefinirItem) this.itemAtual = 0;
     this._renderizarFiltros();
     this.mostrarDesafio();
   },
@@ -93,32 +121,61 @@ const Imitazione = {
     if (!bar) {
       bar = document.createElement('div');
       bar.id = 'imit-filtro-bar';
-      bar.className = 'dojo-filtro-bar';
       c.parentElement?.insertBefore(bar, c);
     }
 
+    const lista = this._listaAtual || todasRaw;
+    const totalLista = lista.length;
+    const origemNome = _o === 'custom' ? '🤖 Adicionadas' : (_o === 'nativo' ? '📚 Nativas' : 'Todas');
+    const nivelNome = _n ? `Nível ${_n}` : 'Todos os Níveis';
+
+    if (!this._filtroExpandido) {
+      bar.className = 'dojo-filtro-bar-compacta';
+      bar.innerHTML = `
+        <div class="dojo-filtro-compacto-wrap" onclick="Imitazione.toggleFiltros()">
+          <div class="dojo-filtro-badge-group">
+            <span class="dojo-filtro-chip">🏷️ ${nivelNome} · ${origemNome}</span>
+            <span class="dojo-filtro-count">${this.itemAtual + 1} de ${totalLista}</span>
+          </div>
+          <button type="button" class="btn-dojo-toggle-filtro" aria-label="Abrir filtros de nível e origem">
+            Filtros ▾
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    bar.className = 'dojo-filtro-bar';
     const pillOrigem = (v, label, count) => `
-      <button class="dojo-level-pill ${_o === v ? 'ativo' : ''}"
-              onclick="Imitazione._filtroOrigem='${v}';Imitazione._aplicarFiltro()">
+      <button type="button" class="dojo-level-pill ${_o === v ? 'ativo' : ''}"
+              onclick="Imitazione.selecionarOrigem('${v}')">
         ${label} (${count})
       </button>
     `;
 
     const pillNivel = (lvl) => `
-      <button class="dojo-level-pill ${_n === lvl ? 'ativo' : ''}"
-              onclick="Imitazione._filtroNivel='${_n === lvl ? '' : lvl}';Imitazione._aplicarFiltro()">
+      <button type="button" class="dojo-level-pill ${_n === lvl ? 'ativo' : ''}"
+              onclick="Imitazione.selecionarNivel('${lvl}')">
         ${lvl} (${counts[lvl] || 0})
       </button>
     `;
 
     bar.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:0.35rem">
+        <span style="font-size:0.78rem;font-weight:700;color:var(--cor-veneziano-escuro,#6B1A2A);text-transform:uppercase;letter-spacing:0.04em">
+          Seletor de Nível e Origem
+        </span>
+        <button type="button" class="btn-dojo-fechar-filtro" onclick="Imitazione.toggleFiltros(false)" style="background:none;border:none;cursor:pointer;font-size:0.76rem;color:#7a6245;font-weight:700">
+          Recolher ▴
+        </button>
+      </div>
       <div class="dojo-level-pills">
-        <button class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.3rem">🤖 + IA</button>
+        <button type="button" class="btn-ia-add" onclick="IAImport.abrir('imitazione')" style="margin-right:0.3rem">🤖 + IA</button>
         ${pillOrigem('', 'Todas', todasRaw.length)}
         ${nC ? pillOrigem('custom', '🤖 Adicionadas', nC) : ''}
         ${nN ? pillOrigem('nativo', '📚 Nativas', nN) : ''}
       </div>
-      <div class="dojo-level-pills">
+      <div class="dojo-level-pills" style="margin-top:0.35rem">
         <span style="font-size:0.75rem;font-weight:700;color:var(--cor-inchiostro-claro, #5A4535);margin-right:0.2rem">NÍVEL:</span>
         ${niveis.map(lvl => pillNivel(lvl)).join('')}
       </div>
@@ -178,26 +235,7 @@ const Imitazione = {
           if (st) {
             st.innerHTML = '🎙️ Gravação concluída! Use <strong>🎧 Ouvir Minha Gravação</strong> para comparar com o áudio nativo.';
           }
-          const resContainer = document.getElementById('imitazione-resultado');
-          if (resContainer) {
-            resContainer.style.display = 'block';
-            resContainer.innerHTML = `
-              <div style="font-size:1.3rem;font-weight:700;color:#2E86C1;margin-bottom:0.6rem;font-family:'Cinzel',serif">
-                🎙️ Áudio Gravado com Sucesso!
-              </div>
-              <div style="font-size:0.95rem;color:var(--cor-inchiostro);margin-bottom:1rem">
-                O reconhecimento automático requer Google Chrome (Android) ou Safari (iOS). Sua gravação está pronta para você se autoavaliar!
-              </div>
-              <div class="dojo-replay-toolbar">
-                <button class="btn-dojo-replay" onclick="Imitazione.tocarMinhaGravacao()">
-                  <span>🎧</span> Ouvir Minha Gravação
-                </button>
-                <button class="btn-dojo-replay" onclick="Imitazione.tocarModelo(1.0)">
-                  <span>🔊</span> Ouvir Modelo Nativo
-                </button>
-              </div>
-            `;
-          }
+          this._mostrarFeedbackMediaRecorder();
         }
         if (this._mediaStream) {
           this._mediaStream.getTracks().forEach(t => t.stop());
@@ -234,6 +272,48 @@ const Imitazione = {
     }
     this._userAudioPlayer = new Audio(this._userAudioUrl);
     this._userAudioPlayer.play();
+  },
+
+  _mostrarFeedbackMediaRecorder() {
+    const viewport = document.getElementById('dojo-card-viewport');
+    if (!viewport) return;
+    const lista = this._listaAtual || this.dados?.imitazioni || [];
+    const item = lista[this.itemAtual];
+    this._faseAtual = 'feedback';
+
+    viewport.innerHTML = `
+      <div class="dojo-hero-card fase-feedback">
+        <div class="dojo-progress-hud">
+          <span>Frase <strong>${this.itemAtual + 1}</strong> de ${lista.length}</span>
+          <span class="dojo-badge-nivel">${item?.nivel || 'A1'}</span>
+        </div>
+
+        <div class="dojo-fb-header">
+          <div class="dojo-fb-title" style="color:#2E86C1">🎙️ Áudio Gravado!</div>
+          <div class="dojo-fb-score" style="font-size:0.92rem;color:var(--cor-inchiostro);margin-top:0.3rem">
+            Sua gravação está pronta para comparação com a pronúncia nativa:
+          </div>
+        </div>
+
+        <div class="dojo-replay-toolbar" style="margin:1.4rem 0">
+          <button type="button" class="btn-dojo-replay" onclick="Imitazione.tocarMinhaGravacao()">
+            <span>🎧</span> Minha Gravação
+          </button>
+          <button type="button" class="btn-dojo-replay" onclick="Imitazione.tocarModelo(1.0)">
+            <span>🔊</span> Modelo Nativo
+          </button>
+        </div>
+
+        <div class="dojo-action-buttons">
+          <button type="button" class="btn-secondario btn-dojo-action" onclick="Imitazione.mostrarDesafio()">
+            🔄 Gravar Novamente
+          </button>
+          <button type="button" class="btn-primario btn-dojo-action" onclick="Imitazione.avancar()">
+            ➡️ Próxima Frase
+          </button>
+        </div>
+      </div>
+    `;
   },
 
   // ── Parar qualquer gravação ativa ───────────────────────────
@@ -352,10 +432,11 @@ const Imitazione = {
     return (text || '').toLowerCase().replace(/[.,!?;:«»""'’]/g, '').trim();
   },
 
-  // Avaliação analítica palavra por palavra
+  // Avaliação analítica palavra por palavra com transição in-place
   avaliarPronuncia(textoOuvido) {
     const lista = this._listaAtual || this.dados.imitazioni;
     const item = lista[this.itemAtual];
+    if (!item) return;
     const esperadoFrase = item.frase_italiano || item.frase;
 
     const palavrasEsperadas = esperadoFrase.split(/\s+/);
@@ -393,10 +474,6 @@ const Imitazione = {
 
     const precisao = Math.min(100, Math.round((acertos / palavrasEsperadas.length) * 100));
 
-    const resContainer = document.getElementById('imitazione-resultado');
-    if (!resContainer) return;
-    resContainer.style.display = 'block';
-
     let titulo = '';
     let cor = '';
     let xpGanho = 0;
@@ -417,57 +494,67 @@ const Imitazione = {
       cor = '#C0392B';
     }
 
-    resContainer.innerHTML = `
-      <div style="font-size:2rem;font-weight:700;color:${cor};margin-bottom:0.4rem;font-family:'Cinzel',serif">
-        ${titulo}
-      </div>
-      <div style="font-size:1.1rem;color:var(--cor-inchiostro);margin-bottom:1rem">
-        Precisão de Dicção: <strong>${precisao}%</strong>
-        ${xpGanho > 0 ? ` <span style="background:rgba(212,168,67,0.2);color:#9B2335;padding:0.15rem 0.6rem;border-radius:999px;font-weight:800;font-size:0.82rem;margin-left:0.5rem">+${xpGanho} XP</span>` : ''}
-      </div>
+    this._faseAtual = 'feedback';
+    const viewport = document.getElementById('dojo-card-viewport');
+    if (!viewport) return;
 
-      <div style="font-size:0.85rem;color:var(--cor-pietra);margin-bottom:0.5rem">
-        Diagnóstico Palavra por Palavra (toque em qualquer palavra para ouvir o som isolado):
-      </div>
+    viewport.innerHTML = `
+      <div class="dojo-hero-card fase-feedback">
+        <div class="dojo-progress-hud">
+          <span>Frase <strong>${this.itemAtual + 1}</strong> de ${lista.length}</span>
+          <span class="dojo-badge-nivel">${item.nivel || 'A1'}</span>
+        </div>
 
-      <div class="dojo-words-breakdown">
-        ${tokensDiagnostico.map(t => `
-          <button class="dojo-word-pill ${t.status}"
-                  onclick="App.pronunciar('${t.palavra.replace(/'/g, "\\'")}')"
-                  title="Ouvir pronúncia de '${t.palavra}'">
-            <span>${t.status === 'correta' ? '✓' : (t.status === 'proxima' ? '≈' : '•')}</span>
-            <span>${t.palavra}</span>
+        <div class="dojo-fb-header">
+          <div class="dojo-fb-title" style="color:${cor}">${titulo}</div>
+          <div class="dojo-fb-score">
+            Precisão de Dicção: <strong>${precisao}%</strong>
+            ${xpGanho > 0 ? `<span class="dojo-xp-badge">+${xpGanho} XP</span>` : ''}
+          </div>
+        </div>
+
+        <div class="dojo-fb-prompt-reminder">
+          "${item.frase_italiano || item.frase}"
+        </div>
+
+        <div class="dojo-words-breakdown">
+          ${tokensDiagnostico.map(t => `
+            <button type="button" class="dojo-word-pill ${t.status}"
+                    onclick="App.pronunciar('${t.palavra.replace(/'/g, "\\'")}')"
+                    title="Ouvir som de '${t.palavra}'">
+              <span class="word-pill-status">${t.status === 'correta' ? '✓' : (t.status === 'proxima' ? '≈' : '•')}</span>
+              <span class="word-pill-txt">${t.palavra}</span>
+            </button>
+          `).join('')}
+        </div>
+
+        <div class="dojo-ouviu-texto">
+          Ouvimos: <em>"${this.normalizeText(textoOuvido) ? textoOuvido : '...'}"</em>
+        </div>
+
+        <!-- Barra de comparação de áudio -->
+        <div class="dojo-replay-toolbar">
+          ${this._userAudioUrl ? `
+            <button type="button" class="btn-dojo-replay" onclick="Imitazione.tocarMinhaGravacao()">
+              <span>🎧</span> Minha Gravação
+            </button>
+          ` : ''}
+          <button type="button" class="btn-dojo-replay" onclick="Imitazione.tocarModelo(1.0)">
+            <span>🔊</span> Modelo Nativo
           </button>
-        `).join('')}
-      </div>
+        </div>
 
-      <div style="font-size:0.9rem;color:#666;font-style:italic;margin-top:0.6rem">
-        Ouvimos: "${textoOuvido}"
-      </div>
-
-      <!-- Barra de comparação de áudio -->
-      <div class="dojo-replay-toolbar">
-        ${this._userAudioUrl ? `
-          <button class="btn-dojo-replay" onclick="Imitazione.tocarMinhaGravacao()">
-            <span>🎧</span> Ouvir Minha Gravação
+        <!-- Botões de Ação In-Place -->
+        <div class="dojo-action-buttons">
+          <button type="button" class="btn-secondario btn-dojo-action" onclick="Imitazione.mostrarDesafio()">
+            🔄 Tentar Novamente
           </button>
-        ` : ''}
-        <button class="btn-dojo-replay" onclick="Imitazione.tocarModelo(1.0)">
-          <span>🔊</span> Ouvir Modelo Nativo
-        </button>
-      </div>
-
-      <div style="display:flex;gap:0.8rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap">
-        <button class="btn-secondario" onclick="Imitazione.mostrarDesafio()">
-          🔄 Tentar Novamente
-        </button>
-        <button class="btn-primario" onclick="Imitazione.avancar()">
-          ➡️ Próxima Frase
-        </button>
+          <button type="button" class="btn-primario btn-dojo-action" onclick="Imitazione.avancar()">
+            ➡️ Próxima Frase
+          </button>
+        </div>
       </div>
     `;
-
-    resContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   },
 
   avancar() {
@@ -487,90 +574,111 @@ const Imitazione = {
     const item = lista[this.itemAtual];
     if (!item) { this.mostrarFinal(); return; }
 
+    this._faseAtual = 'pratica';
     const frase = item.frase_italiano || item.frase;
     const traducao = item.frase_portugues || item.traducao;
     const contexto = item.contexto || 'Frase di uso comune in conversazione.';
 
-    c.innerHTML = `
-      <div class="imitazione-dojo">
+    // Se o container ainda não possui o viewport estrutural, cria o esqueleto
+    let viewport = document.getElementById('dojo-card-viewport');
+    if (!viewport) {
+      c.innerHTML = `
+        <div class="imitazione-dojo">
+          <div class="dojo-card-viewport" id="dojo-card-viewport"></div>
+        </div>
+      `;
+      viewport = document.getElementById('dojo-card-viewport');
+    }
+
+    viewport.innerHTML = `
+      <div class="dojo-hero-card fase-pratica">
         <div class="dojo-progress-hud">
           <span>Frase <strong>${this.itemAtual + 1}</strong> de ${lista.length}</span>
-          <span style="background:rgba(155,35,53,0.1);color:#9B2335;padding:0.15rem 0.6rem;border-radius:999px;font-weight:700">${item.nivel || 'A1'}</span>
+          <span class="dojo-badge-nivel">${item.nivel || 'A1'}</span>
         </div>
 
-        <div class="dojo-hero-card">
-          <div class="dojo-hero-badge">
-            <span>🎙️ Studio di Pronuncia</span>
-            ${item._custom ? ` · <button onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.75rem;font-weight:700">🗑️ Excluir</button>` : ''}
+        <div class="dojo-hero-badge">
+          <span>🎙️ Studio di Pronuncia</span>
+          ${item._custom ? ` · <button type="button" onclick="IAImport.excluir('imitazione','${item.id}')" style="background:none;border:none;color:#C0392B;cursor:pointer;font-size:0.75rem;font-weight:700">🗑️ Excluir</button>` : ''}
+        </div>
+
+        <div class="dojo-hero-frase">"${frase}"</div>
+        <div class="dojo-hero-traducao">"${traducao}"</div>
+
+        <!-- Toggle sutil para Contexto & Dica de Ritmo -->
+        <div class="dojo-details-toggle">
+          <button type="button" id="btn-dojo-details-toggle" class="btn-dojo-toggle-details" onclick="Imitazione.toggleDetalhes()">
+            <span>${this._mostrarDetalhes ? '▾ Ocultar Dicas' : '▸ Dica & Contexto'}</span>
+          </button>
+        </div>
+
+        <div id="dojo-info-grid" class="dojo-info-grid" style="display:${this._mostrarDetalhes ? 'grid' : 'none'}">
+          <div class="dojo-info-box contexto">
+            <div class="dojo-info-title">🏛️ Contexto</div>
+            <div class="dojo-info-content">${contexto}</div>
           </div>
-
-          <div class="dojo-hero-frase">"${frase}"</div>
-          <div class="dojo-hero-traducao">"${traducao}"</div>
-
-          <div class="dojo-info-grid">
-            <div class="dojo-info-box contexto">
-              <div class="dojo-info-title">🏛️ Contexto & Origem Cultural</div>
-              <div class="dojo-info-content">${contexto}</div>
-            </div>
-
-            <div class="dojo-info-box fonetica">
-              <div class="dojo-info-title">🎵 Dica de Ritmo & Entonação</div>
-              <div class="dojo-info-content">${item.dica_fonetica || 'Pronuncie com abertura vocal clara e ritmo cadenciado.'}</div>
-            </div>
+          <div class="dojo-info-box fonetica">
+            <div class="dojo-info-title">🎵 Dica de Ritmo</div>
+            <div class="dojo-info-content">${item.dica_fonetica || 'Pronuncie com abertura vocal clara e ritmo cadenciado.'}</div>
           </div>
+        </div>
 
-          <!-- Estúdio de Áudio do Modelo Nativo -->
-          <div class="dojo-audio-station">
-            <button class="btn-dojo-audio normal" onclick="Imitazione.tocarModelo(1.0)">
-              <span>🔊</span> Ouvir Modelo (1.0x)
+        <!-- Estúdio de Áudio do Modelo Nativo -->
+        <div class="dojo-audio-station">
+          <button type="button" class="btn-dojo-audio normal" onclick="Imitazione.tocarModelo(1.0)">
+            <span>🔊</span> Ouvir Modelo (1.0x)
+          </button>
+          <button type="button" class="btn-dojo-audio slow" onclick="Imitazione.tocarModelo(0.75)">
+            <span>🐢</span> Lento (0.75x)
+          </button>
+          <div class="dojo-soundwave" id="dojo-wave">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Estúdio de Gravação do Aluno -->
+        <div class="dojo-mic-studio">
+          <div class="dojo-mic-btn-wrapper">
+            <button type="button" id="dojo-btn-mic" class="dojo-mic-btn" onclick="Imitazione.toggleGravacao()" title="Clique para falar">
+              🎙️
             </button>
-            <button class="btn-dojo-audio slow" onclick="Imitazione.tocarModelo(0.75)">
-              <span>🐢</span> Didático Lento (0.75x)
-            </button>
-            <div class="dojo-soundwave" id="dojo-wave">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
           </div>
-
-          <!-- Estúdio de Gravação do Aluno -->
-          <div class="dojo-mic-studio">
-            <div class="dojo-mic-btn-wrapper">
-              <button id="dojo-btn-mic" class="dojo-mic-btn" onclick="Imitazione.toggleGravacao()" title="Clique para falar">
-                🎙️
-              </button>
-            </div>
-            <div id="dojo-mic-status" class="dojo-mic-status">
-              Clique no microfone e fale a frase acima
-            </div>
-          </div>
-
-          <!-- Painel Dinâmico de Diagnóstico e Feedback -->
-          <div id="imitazione-resultado" class="dojo-feedback-panel" style="display:none;margin-top:1.5rem">
+          <div id="dojo-mic-status" class="dojo-mic-status">
+            Toque no microfone e pronuncie a frase
           </div>
         </div>
       </div>
     `;
+
+    // Atualiza o contador na barra compacta de filtro se ela estiver recolhida
+    const countEl = document.querySelector('.dojo-filtro-count');
+    if (countEl) countEl.textContent = `${this.itemAtual + 1} de ${lista.length}`;
   },
 
   mostrarFinal() {
     const c = document.getElementById('imitazione-container');
     if (!c) return;
     const lista = this._listaAtual || this.dados?.imitazioni || [];
+    this._filtroExpandido = true;
+    this._renderizarFiltros();
+
     c.innerHTML = `
       <div class="imitazione-dojo">
-        <div class="dojo-hero-card" style="padding:3.5rem 1.5rem">
-          <div style="font-size:4.5rem;margin-bottom:1rem">🏆</div>
-          <h3 style="font-family:'Cinzel',serif;color:#9B2335;font-size:2.2rem;margin-bottom:0.8rem">Bravissimo!</h3>
-          <p style="font-size:1.15rem;color:var(--cor-inchiostro);margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto">
-            Você completou com sucesso todas as ${lista.length} frases do treinamento auditivo e fonético!
-          </p>
-          <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
-            <button class="btn-secondario" onclick="Imitazione._aplicarFiltro()">
-              🔄 Repetir Lições
-            </button>
-            <button class="btn-primario" onclick="App.navegar('templi')">
-              🏛️ Voltar aos Templos
-            </button>
+        <div class="dojo-card-viewport">
+          <div class="dojo-hero-card" style="padding:2.5rem 1.2rem">
+            <div style="font-size:3.5rem;margin-bottom:0.8rem">🏆</div>
+            <h3 style="font-family:'Cinzel',serif;color:#9B2335;font-size:1.8rem;margin-bottom:0.6rem">Bravissimo!</h3>
+            <p style="font-size:1.05rem;color:var(--cor-inchiostro);margin-bottom:1.4rem;max-width:480px;margin-left:auto;margin-right:auto">
+              Você completou com sucesso todas as ${lista.length} frases do treinamento de pronúncia!
+            </p>
+            <div class="dojo-action-buttons">
+              <button type="button" class="btn-secondario btn-dojo-action" onclick="Imitazione._aplicarFiltro(true)">
+                🔄 Repetir Lições
+              </button>
+              <button type="button" class="btn-primario btn-dojo-action" onclick="App.navegar('templi')">
+                🏛️ Voltar aos Templos
+              </button>
+            </div>
           </div>
         </div>
       </div>

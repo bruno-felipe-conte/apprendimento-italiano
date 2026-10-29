@@ -2961,19 +2961,89 @@ body.dark-mode .cloze-studio-box {
   padding: 0.5rem 0 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
-/* Dojo Filter & Progress Bar */
+/* Dojo Filter: Compact state (default when studying) */
+.dojo-filtro-bar-compacta {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto 0.4rem;
+  background: var(--cor-marmore, #fbf7ee);
+  border: 1px solid rgba(212,168,67,0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dojo-filtro-bar-compacta:hover {
+  border-color: var(--cor-veneziano, #9B2335);
+  box-shadow: 0 4px 12px rgba(155,35,53,0.12);
+}
+
+.dojo-filtro-compacto-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.dojo-filtro-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cor-inchiostro, #2C2418);
+}
+
+.dojo-filtro-chip {
+  background: rgba(155,35,53,0.1);
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.dojo-filtro-count {
+  font-size: 0.78rem;
+  color: var(--cor-pietra, #7F7366);
+  font-weight: 600;
+}
+
+.btn-dojo-toggle-filtro {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+
+.btn-dojo-toggle-filtro:hover {
+  background: rgba(155,35,53,0.08);
+}
+
+/* Dojo Filter: Expanded state */
 .dojo-filtro-bar {
-  max-width: 1100px;
-  margin: 0 auto 1rem;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto 0.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.6rem;
-  background: var(--cor-marmore);
+  background: var(--cor-marmore, #fbf7ee);
   padding: 0.75rem 1rem;
   border-radius: 14px;
   border: 1px solid rgba(212,168,67,0.3);
@@ -2992,7 +3062,7 @@ body.dark-mode .cloze-studio-box {
   border-radius: 999px;
   border: 1.5px solid #ddd;
   background: transparent;
-  color: var(--cor-inchiostro);
+  color: var(--cor-inchiostro, #2C2418);
   cursor: pointer;
   font-size: 0.76rem;
   font-weight: 700;
@@ -3019,6 +3089,7 @@ body.dark-mode .cloze-studio-box {
   color: #5A4535;
   font-weight: 500;
   padding: 0 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 body.dark-mode .dojo-progress-hud {
@@ -3026,19 +3097,44 @@ body.dark-mode .dojo-progress-hud {
 }
 
 .dojo-progress-hud strong {
-  color: var(--cor-veneziano-escuro);
+  color: var(--cor-veneziano-escuro, #6B1A2A);
+}
+
+.dojo-badge-nivel {
+  background: rgba(155,35,53,0.1);
+  color: #9B2335;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Card Viewport: In-Place Morphing between Practice and Feedback */
+.dojo-card-viewport {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 /* Hero Challenge Card */
 .dojo-hero-card {
   background: #FFFDF8;
   border-radius: 20px;
-  padding: 2rem 1.6rem;
+  padding: 1.6rem 1.4rem;
   border: 1.5px solid rgba(212,168,67,0.4);
   box-shadow: 0 12px 35px rgba(61,13,24,0.1);
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.dojo-hero-card.fase-pratica,
+.dojo-hero-card.fase-feedback {
+  animation: dojoFadeIn 0.2s ease-out;
+}
+
+@keyframes dojoFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .dojo-hero-badge {
@@ -3050,11 +3146,11 @@ body.dark-mode .dojo-progress-hud {
   color: var(--cor-veneziano-escuro);
   font-size: 0.74rem;
   font-weight: 800;
-  padding: 0.25rem 0.8rem;
+  padding: 0.22rem 0.75rem;
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .dojo-hero-frase {
@@ -3063,31 +3159,55 @@ body.dark-mode .dojo-progress-hud {
   font-weight: 700;
   color: var(--cor-veneziano-escuro);
   line-height: 1.25;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 @media (min-width: 640px) {
   .dojo-hero-frase {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 }
 
 .dojo-hero-traducao {
   font-family: 'EB Garamond', Georgia, serif;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--cor-inchiostro);
   opacity: 0.88;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Toggleable Dica & Contexto */
+.dojo-details-toggle {
+  margin-bottom: 0.75rem;
+}
+
+.btn-dojo-toggle-details {
+  background: transparent;
+  border: 1px dashed rgba(212,168,67,0.55);
+  border-radius: 999px;
+  padding: 0.18rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #7A5F35;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: inherit;
+}
+
+.btn-dojo-toggle-details:hover {
+  background: rgba(212,168,67,0.12);
+  border-color: #D4A843;
 }
 
 /* Info grid: Contexto + Fonética */
 .dojo-info-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.8rem;
-  margin-bottom: 1.6rem;
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
   text-align: left;
+  animation: dojoFadeIn 0.2s ease;
 }
 
 @media (min-width: 600px) {
@@ -3100,33 +3220,33 @@ body.dark-mode .dojo-progress-hud {
   background: rgba(245,237,216,0.5);
   border: 1px solid rgba(212,168,67,0.3);
   border-radius: 12px;
-  padding: 0.85rem 1rem;
+  padding: 0.75rem 0.9rem;
 }
 
 .dojo-info-title {
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--cor-veneziano-escuro);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
 }
 
 .dojo-info-content {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: var(--cor-inchiostro);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .dojo-info-box.fonetica .dojo-info-content {
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
 }
 
 /* Audio Player Station */
@@ -3134,19 +3254,19 @@ body.dark-mode .dojo-progress-hud {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
 }
 
 .btn-dojo-audio {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.25rem;
+  gap: 0.45rem;
+  padding: 0.5rem 1.15rem;
   border-radius: 999px;
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -3208,7 +3328,7 @@ body.dark-mode .dojo-progress-hud {
 .dojo-mic-studio {
   background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
   border-radius: 18px;
-  padding: 2.2rem 1.5rem;
+  padding: 1.5rem 1.2rem;
   text-align: center;
   color: #FFF8F0;
   box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
@@ -3216,9 +3336,9 @@ body.dark-mode .dojo-progress-hud {
 
 .dojo-mic-btn-wrapper {
   position: relative;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 1rem;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 0.75rem;
 }
 
 .dojo-mic-btn {
@@ -3227,7 +3347,7 @@ body.dark-mode .dojo-progress-hud {
   border-radius: 50%;
   border: 3px solid #D4A843;
   background: linear-gradient(135deg, #FFFDF8, #EEDCC4);
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3271,13 +3391,72 @@ body.dark-mode .dojo-progress-hud {
 }
 
 .dojo-mic-status {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #E6DFD3;
   letter-spacing: 0.02em;
 }
 
-/* Feedback panel */
+/* Feedback in-place elements */
+.dojo-fb-header {
+  margin-bottom: 0.6rem;
+}
+
+.dojo-fb-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  font-family: 'Cinzel', serif;
+  line-height: 1.2;
+}
+
+.dojo-fb-score {
+  font-size: 1.02rem;
+  color: var(--cor-inchiostro);
+  margin-top: 0.25rem;
+}
+
+.dojo-xp-badge {
+  background: rgba(212,168,67,0.22);
+  color: #9B2335;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  margin-left: 0.4rem;
+}
+
+.dojo-fb-prompt-reminder {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--cor-veneziano-escuro);
+  opacity: 0.9;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.dojo-ouviu-texto {
+  font-size: 0.86rem;
+  color: var(--cor-pietra);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+.dojo-action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn-dojo-action {
+  min-width: 140px;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* Feedback panel legacy & container */
 .dojo-feedback-panel {
   background: #FFFDF8;
   border-radius: 18px;
@@ -3299,20 +3478,21 @@ body.dark-mode .dojo-progress-hud {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin: 1.25rem 0;
+  gap: 0.45rem;
+  margin: 0.95rem 0;
 }
 
 .dojo-word-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.4rem 0.85rem;
+  padding: 0.35rem 0.75rem;
   border-radius: 10px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   cursor: pointer;
   transition: all 0.18s;
+  font-family: inherit;
 }
 
 .dojo-word-pill:hover {
@@ -3344,8 +3524,8 @@ body.dark-mode .dojo-progress-hud {
   justify-content: center;
   gap: 0.6rem;
   flex-wrap: wrap;
-  margin: 1.2rem 0;
-  padding: 0.8rem;
+  margin: 0.95rem 0;
+  padding: 0.65rem;
   background: rgba(0,0,0,0.03);
   border-radius: 12px;
 }
@@ -3434,6 +3614,141 @@ body.dark-mode .dojo-info-box {
 
 body.dark-mode .dojo-info-content {
   color: #E6DFD3;
+}
+
+body.dark-mode .dojo-filtro-bar-compacta {
+  background: #1C1816;
+  border-color: rgba(212,168,67,0.3);
+}
+
+body.dark-mode .dojo-filtro-badge-group {
+  color: #E6DFD3;
+}
+
+body.dark-mode .btn-dojo-toggle-filtro {
+  color: #D4A843;
+}
+
+body.dark-mode .btn-dojo-toggle-details {
+  border-color: rgba(212,168,67,0.4);
+  color: #D4A843;
+}
+
+body.dark-mode .dojo-fb-score {
+  color: #E6DFD3;
+}
+
+body.dark-mode .btn-dojo-replay {
+  background: #25201D;
+  color: #D4C9BC;
+  border-color: #7B68A0;
+}
+
+/* Modo Imitação Zero-Scroll Mobile Calibrations */
+@media (max-width: 768px) {
+  #sec-imitazione .section-titulo {
+    display: none; /* Reclaims 45px on mobile, HUD in card already displays status */
+  }
+
+  .imitazione-dojo {
+    padding: 0.2rem 0 4.5rem;
+    gap: 0.5rem;
+  }
+
+  .dojo-hero-card {
+    padding: 1.15rem 0.95rem;
+    border-radius: 16px;
+  }
+
+  .dojo-hero-frase {
+    font-size: 1.45rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+
+  .dojo-hero-traducao {
+    font-size: 0.98rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.25;
+  }
+
+  .dojo-details-toggle {
+    margin-bottom: 0.65rem;
+  }
+
+  .dojo-audio-station {
+    margin-bottom: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .btn-dojo-audio {
+    padding: 0.42rem 0.9rem;
+    font-size: 0.78rem;
+  }
+
+  .dojo-mic-studio {
+    padding: 1.1rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .dojo-mic-btn-wrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 0.55rem;
+  }
+
+  .dojo-mic-btn {
+    font-size: 2rem;
+  }
+
+  .dojo-mic-status {
+    font-size: 0.82rem;
+  }
+
+  .dojo-fb-title {
+    font-size: 1.5rem;
+  }
+
+  .dojo-fb-score {
+    font-size: 0.92rem;
+  }
+
+  .dojo-fb-prompt-reminder {
+    font-size: 0.98rem;
+    margin: 0.3rem 0 0.55rem;
+  }
+
+  .dojo-words-breakdown {
+    gap: 0.35rem;
+    margin: 0.75rem 0;
+  }
+
+  .dojo-word-pill {
+    font-size: 0.84rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  .dojo-replay-toolbar {
+    margin: 0.75rem 0;
+    padding: 0.45rem;
+  }
+
+  .btn-dojo-replay {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.76rem;
+  }
+
+  .dojo-action-buttons {
+    margin-top: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .btn-dojo-action {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.52rem 0.8rem;
+    font-size: 0.84rem;
+  }
 }
 
 /* ===============================================================
