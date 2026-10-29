@@ -1026,9 +1026,9 @@
     "semantic_hash": ""
   },
   "tsconfig.json": {
-    "mtime": 1792587317.565947,
-    "seen": 1792587358.9124062,
-    "ast_hash": "46ee9126a24ac9917431f0f97eb549c9",
+    "mtime": 1793304144.427569,
+    "seen": 1793304575.6901193,
+    "ast_hash": "a7d7da55624e87305273ffa085040a2d",
     "semantic_hash": ""
   },
   "types/app.d.ts": {
@@ -1092,50 +1092,50 @@
     "semantic_hash": ""
   },
   "js/core/analytics.js": {
-    "mtime": 1793243728.3671608,
-    "seen": 1793243794.3293645,
+    "mtime": 1793304480.9671946,
+    "seen": 1793304574.3706455,
     "ast_hash": "b913d4c9a28c203ec9a210e19155254b",
     "semantic_hash": ""
   },
   "js/core/collaboration.js": {
-    "mtime": 1793243728.384205,
-    "seen": 1793243794.34004,
+    "mtime": 1793304480.9962935,
+    "seen": 1793304574.4100966,
     "ast_hash": "2f3c5f17dada8195aad0bda7a6b3888d",
     "semantic_hash": ""
   },
   "js/core/plugins.js": {
-    "mtime": 1793243728.2972791,
-    "seen": 1793243794.3621264,
+    "mtime": 1793304480.8916805,
+    "seen": 1793304574.4799244,
     "ast_hash": "94f8831dae955f86162b1c4185259481",
     "semantic_hash": ""
   },
   "js/core/sync.js": {
-    "mtime": 1793243728.3443348,
-    "seen": 1793243794.3778183,
+    "mtime": 1793304480.9425654,
+    "seen": 1793304574.579542,
     "ast_hash": "993f85f60a7b122eff24e3347ed36063",
     "semantic_hash": ""
   },
   "js/modal_manager.js": {
-    "mtime": 1793243728.268817,
-    "seen": 1793243794.4231205,
+    "mtime": 1793304480.8704863,
+    "seen": 1793304574.8119574,
     "ast_hash": "125ea751f18b179d2166144abf1d0860",
     "semantic_hash": ""
   },
   "js/plugins/index.js": {
-    "mtime": 1793243728.3218653,
-    "seen": 1793243794.4347908,
+    "mtime": 1793304480.9102306,
+    "seen": 1793304574.854444,
     "ast_hash": "b3aec9799e7637e2c111c0e4552646a2",
     "semantic_hash": ""
   },
   "js/progression.js": {
-    "mtime": 1793243728.193619,
-    "seen": 1793243794.4445207,
+    "mtime": 1793304480.8224337,
+    "seen": 1793304574.9054585,
     "ast_hash": "439b5d79e17026220a3b14fa9f035f92",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1793243728.2391927,
-    "seen": 1793243794.4621012,
+    "mtime": 1793304480.8534906,
+    "seen": 1793304575.0197651,
     "ast_hash": "d8e0560741a9cb3e61420c90b0012d2e",
     "semantic_hash": ""
   },
@@ -1218,15 +1218,27 @@
     "semantic_hash": ""
   },
   "js/ebbinghaus.js": {
-    "mtime": 1793269367.1904438,
-    "seen": 1793269759.303959,
-    "ast_hash": "b31fca12e2065ce957bc04d4b258fea1",
+    "mtime": 1793304559.8458884,
+    "seen": 1793304574.7343972,
+    "ast_hash": "85344787ea88d3bb5296a91857324b27",
     "semantic_hash": ""
   },
   "tests/ebbinghaus.test.ts": {
-    "mtime": 1793269554.2088284,
-    "seen": 1793269759.9136858,
-    "ast_hash": "0e4dd3eb49a999f1a66ca96ddf10569f",
+    "mtime": 1793269972.824965,
+    "seen": 1793304575.5684774,
+    "ast_hash": "d5b7ac68d633ecd2b5456994cb7b9adf",
+    "semantic_hash": ""
+  },
+  "src/analytics/ebbinghausCurve.ts": {
+    "mtime": 1793304290.8256817,
+    "seen": 1793304575.4741333,
+    "ast_hash": "00dd519fbbe1e72fba6665fa09b3f1d3",
+    "semantic_hash": ""
+  },
+  "tests/ebbinghausCurve.test.ts": {
+    "mtime": 1793304433.281849,
+    "seen": 1793304575.568486,
+    "ast_hash": "f235dac5321feb571d6f1d901c4d3ff8",
     "semantic_hash": ""
   }
 }

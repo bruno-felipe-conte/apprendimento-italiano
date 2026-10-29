@@ -2,12 +2,10 @@
  * js/ebbinghaus.js
  * Proiezione matematica della Curva dell'Oblio (Ebbinghaus) basata su FSRS-4.5 / FSRS-5.
  * Compatibile con architettura Offline-First PWA (zero dipendenze esterne).
+ * Pienamente allineato alle specifiche WCAG 2.1 AA / Axe-core.
  */
 
-const FSRS_DECAY = -0.5;
-const FSRS_FACTOR = 19 / 81; // ~0.2345679 (garantisce R(S, S) = 0.90)
-
-// Pesi ufficiali FSRS-4.5 per incremento di stabilità in revisione 'Buono' (Rating = 3)
+// Pesi ufficiali FSRS per incremento di stabilità in revisione 'Buono' (Rating = 3)
 const W8 = 1.54575;
 const W9 = 0.1192;
 const W10 = 1.01925;
@@ -61,20 +59,39 @@ const EBBINGHAUS_I18N = {
 };
 
 /**
+ * Funzione di ritenzione R(t, S)
+ */
+function calculateRetention(t, s, factor, decay, curveMode = 'fsrs-power', retentionTarget = 0.9) {
+  const safeS = Math.max(0.2, s);
+  if (curveMode === 'exponential') {
+    return Math.pow(retentionTarget, t / safeS);
+  }
+  return Math.pow(1 + factor * (t / safeS), decay);
+}
+
+/**
+ * Tempo t necessario affinché R(t, S) == retentionTarget
+ */
+function calculateTimeToTarget(s, factor, decay, curveMode = 'fsrs-power', retentionTarget = 0.9) {
+  const safeS = Math.max(0.2, s);
+  if (curveMode === 'exponential') return safeS;
+  return (safeS / factor) * (Math.pow(retentionTarget, 1 / decay) - 1);
+}
+
+/**
  * Stima la prossima stabilità S' dopo una revisione con voto "Buono" (Rating = 3)
  */
-function predictNextStabilityGood(card, currentS) {
+function predictNextStabilityGood(card, currentS, currentR = 0.9) {
   if (!card) return Number(Math.max(currentS + 1, currentS * 2.5).toFixed(1));
   const dRaw = Number(card.difficulty);
   if (Number.isFinite(dRaw) && dRaw >= 1 && dRaw <= 10) {
-    // Formula ufficiale di incremento stabilità FSRS-4.5 (a R ≈ 0.90)
-    const r = 0.9;
+    const safeR = Math.max(0.1, Math.min(0.99, Number(currentR) || 0.9));
     const gain =
       1 +
       Math.exp(W8) *
         (11 - dRaw) *
         Math.pow(Math.max(0.5, currentS), -W9) *
-        (Math.exp(W10 * (1 - r)) - 1);
+        (Math.exp(W10 * (1 - safeR)) - 1);
     const nextS = currentS * Math.max(1.5, gain);
     return Number(Math.max(currentS + 1, nextS).toFixed(1));
   }
@@ -87,6 +104,20 @@ function formatDaysLabel(d) {
   return Number.isInteger(rounded) ? `${rounded}d` : `${rounded.toFixed(1)}d`;
 }
 
+function getElapsedDays(card) {
+  if (!card || card.last_review == null) return null;
+  const lr = card.last_review;
+  let timeMs;
+  if (typeof lr === 'number') timeMs = lr;
+  else if (lr instanceof Date) timeMs = lr.getTime();
+  else if (typeof lr === 'string') timeMs = new Date(lr).getTime();
+  else return null;
+
+  if (Number.isNaN(timeMs) || timeMs <= 0) return null;
+  const diffMs = Date.now() - timeMs;
+  return Math.max(0, diffMs / 86400000);
+}
+
 /**
  * Calcola tutti i dati matematici e i vettori SVG della Curva dell'Oblio
  */
@@ -97,6 +128,12 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
   );
   const targetPct = Math.round(retentionTarget * 100);
   const curveMode = options.curveMode ?? 'fsrs-power';
+
+  // 1. Decadimento parametrico FSRS-5 (w20 / decay)
+  const rawW20 = options.w20 ?? options.fsrsDecay ?? 0.5;
+  const clampedW20 = Math.max(0.1, Math.min(0.8, Number(rawW20) || 0.5));
+  const decay = -clampedW20;
+  const factor = Math.pow(0.9, 1 / decay) - 1;
 
   const yFromRetention = (r) => {
     const clamped = Math.max(0.58, Math.min(1.0, r));
@@ -116,6 +153,8 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
       tTargetBom: 0,
       sAtualLabel: '0d',
       sBomLabel: '0d',
+      tTargetAtualLabel: '0d',
+      tTargetBomLabel: '0d',
       pathAtual: '',
       pathBom: '',
       pointAtual: null,
@@ -129,36 +168,36 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
     return raw > 0 ? raw : 1;
   };
 
+  const retentionAt = (t, s) =>
+    calculateRetention(t, s, factor, decay, curveMode, retentionTarget);
+
+  const timeToTarget = (s) =>
+    calculateTimeToTarget(s, factor, decay, curveMode, retentionTarget);
+
   let sAtual = 1;
   let sBom = 2.5;
   let sourceKey = 'deck_average';
 
+  // 2. Calcolo reale di R per predictNextStabilityGood
   if (activeCard) {
     sAtual = Number(extractS(activeCard).toFixed(1));
-    sBom = predictNextStabilityGood(activeCard, sAtual);
+    const elapsed = getElapsedDays(activeCard);
+    const cardR = elapsed !== null ? retentionAt(elapsed, sAtual) : retentionTarget;
+    sBom = predictNextStabilityGood(activeCard, sAtual, cardR);
     sourceKey = 'focused';
   } else {
     const sumS = cards.reduce((acc, c) => acc + extractS(c), 0);
     sAtual = Number((sumS / cards.length).toFixed(1));
-    const sumNext = cards.reduce((acc, c) => acc + predictNextStabilityGood(c, extractS(c)), 0);
+
+    const sumNext = cards.reduce((acc, c) => {
+      const cS = extractS(c);
+      const elapsed = getElapsedDays(c);
+      const cardR = elapsed !== null ? retentionAt(elapsed, cS) : retentionTarget;
+      return acc + predictNextStabilityGood(c, cS, cardR);
+    }, 0);
+
     sBom = Number(Math.max(sAtual + 1, sumNext / cards.length).toFixed(1));
   }
-
-  // Funzione di ritenzione R(t, S) e tempo esatto t in cui R(t, S) == retentionTarget
-  const retentionAt = (t, s) => {
-    const safeS = Math.max(0.2, s);
-    if (curveMode === 'exponential') {
-      return Math.pow(retentionTarget, t / safeS);
-    }
-    // Legge di potenza FSRS-4.5/5 calibrata affinché a t = tTarget(s), R = retentionTarget
-    return Math.pow(1 + FSRS_FACTOR * (t / safeS), FSRS_DECAY);
-  };
-
-  const timeToTarget = (s) => {
-    const safeS = Math.max(0.2, s);
-    if (curveMode === 'exponential') return safeS;
-    return (safeS / FSRS_FACTOR) * (Math.pow(retentionTarget, 1 / FSRS_DECAY) - 1);
-  };
 
   const tTargetAtual = Number(timeToTarget(sAtual).toFixed(2));
   const tTargetBom = Number(timeToTarget(sBom).toFixed(2));
@@ -193,6 +232,8 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
     tTargetBom,
     sAtualLabel: formatDaysLabel(sAtual),
     sBomLabel: formatDaysLabel(sBom),
+    tTargetAtualLabel: formatDaysLabel(tTargetAtual),
+    tTargetBomLabel: formatDaysLabel(tTargetBom),
     pathAtual: buildPath(sAtual),
     pathBom: buildPath(sBom),
     pointAtual: { x: xFromT(tTargetAtual), y: targetY },
@@ -219,8 +260,25 @@ function renderEbbinghausCurve(container, cards = [], activeCard = null, options
         : dict.sourceEmpty;
 
   const uid = `eb-${Math.random().toString(36).slice(2, 8)}`;
-  const xLabelAtual = Math.max(75, Math.min(200, (data.pointAtual?.x ?? 135) - 24));
-  const xLabelBom = Math.max(205, Math.min(285, (data.pointBom?.x ?? 260) - 25));
+
+  // 4. Prevenzione dinamica delle collisioni sull'asse X
+  let xLabelAtual = data.pointAtual?.x ?? 120;
+  let xLabelBom = data.pointBom?.x ?? 250;
+
+  xLabelAtual = Math.max(82, Math.min(340, xLabelAtual));
+  xLabelBom = Math.max(82, Math.min(340, xLabelBom));
+
+  const minGap = 68;
+  if (xLabelBom - xLabelAtual < minGap) {
+    const overlap = minGap - (xLabelBom - xLabelAtual);
+    const shift = overlap / 2;
+    xLabelAtual = Math.max(82, xLabelAtual - shift);
+    xLabelBom = Math.min(345, xLabelBom + shift);
+
+    if (xLabelBom - xLabelAtual < minGap) {
+      xLabelAtual = Math.max(82, xLabelBom - minGap);
+    }
+  }
 
   container.innerHTML = `
     <section class="it-ebbinghaus-card" aria-labelledby="${uid}-title">
@@ -267,8 +325,8 @@ function renderEbbinghausCurve(container, cards = [], activeCard = null, options
             <circle cx="${data.pointAtual.x}" cy="${data.pointAtual.y}" r="3.5" fill="var(--it-eb-crimson)" />
             <circle cx="${data.pointBom.x}" cy="${data.pointBom.y}" r="4.5" fill="var(--it-eb-gold)" />
             <text x="36" y="164" fill="var(--it-eb-dim)" font-size="9" font-family="monospace">${dict.today}</text>
-            <text x="${xLabelAtual}" y="164" fill="var(--it-eb-dim)" font-size="9" font-family="monospace">+${data.sAtualLabel} (${dict.currentS})</text>
-            <text x="${xLabelBom}" y="164" fill="var(--it-eb-cypress)" font-size="9" font-family="monospace">+${data.sBomLabel} (${dict.goodS})</text>
+            <text x="${xLabelAtual}" y="164" text-anchor="middle" fill="var(--it-eb-dim)" font-size="9" font-family="monospace">+${data.tTargetAtualLabel} (${dict.currentS})</text>
+            <text x="${xLabelBom}" y="164" text-anchor="middle" fill="var(--it-eb-cypress)" font-size="9" font-family="monospace">+${data.tTargetBomLabel} (${dict.goodS})</text>
           `
               : `
             <text x="198" y="92" text-anchor="middle" fill="var(--it-eb-dim)" font-size="10" font-family="monospace">
@@ -295,11 +353,16 @@ function renderEbbinghausCurve(container, cards = [], activeCard = null, options
 
 // Esposizione per Browser, Node.js e moduli
 const Ebbinghaus = {
+  W8,
+  W9,
+  W10,
   EBBINGHAUS_I18N,
+  calculateRetention,
+  calculateTimeToTarget,
   predictNextStabilityGood,
   formatDaysLabel,
   computeEbbinghausCurve,
-  renderEbbinghausCurve
+  renderEbbinghausCurve,
 };
 
 if (typeof window !== 'undefined') {

@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-29)
 
 ## Corpus Check
-- 198 files · ~1,227,111 words
+- 200 files · ~1,230,443 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 739 nodes · 936 edges · 64 communities (33 shown, 31 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.88)
+- 762 nodes · 976 edges · 64 communities (33 shown, 31 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3934bd90`
+- Built from commit: `fbb4f0e1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,7 +39,7 @@
 - NMA Grammar Card Upgrader
 - ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada
 - ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida
-- devDependencies
+- ebbinghausCurve.ts
 - Quiz Dataset Definitions
 - ADR 003: Estratégia de Arquitetura Offline-First (PWA & Cache)
 - favorites.js
@@ -53,7 +53,7 @@
 - App Visual Identity (Icon)
 - ebbinghaus.js
 - PluginManager
-- voice_engine.ts
+- scripts
 - progression.js
 - modal_manager.js
 - voice_engine.js
@@ -85,8 +85,8 @@
 1. `SyncManager` - 21 edges
 2. `SyncManager` - 20 edges
 3. `scripts` - 17 edges
-4. `AnalyticsManager` - 15 edges
-5. `vitest` - 15 edges
+4. `vitest` - 16 edges
+5. `AnalyticsManager` - 15 edges
 6. `AnalyticsManager` - 14 edges
 7. `compilerOptions` - 14 edges
 8. `FeatureFlagManager` - 12 edges
@@ -150,15 +150,15 @@ Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, 
 
 ### Community 9 - "package.json"
 Cohesion: 0.05
-Nodes (41): author, dependencies, zod, description, keywords, license, main, name (+33 more)
+Nodes (39): author, dependencies, zod, description, devDependencies, @axe-core/playwright, eslint, @eslint/js (+31 more)
 
 ### Community 10 - "stress-storage.js"
 Cohesion: 0.08
 Nodes (18): agora, flashcardData, fsrsJson, LocalStorageMock, readFsrs, storage, t0, t1 (+10 more)
 
 ### Community 11 - "SyncManager"
-Cohesion: 0.11
-Nodes (5): AppSyncManager, MockBackendAdapter, PocketBaseAdapter, SupabaseAdapter, SyncManager
+Cohesion: 0.08
+Nodes (8): AppSyncManager, MockBackendAdapter, PocketBaseAdapter, SupabaseAdapter, SyncManager, LexicoItem, VoiceEngine, WorkerMessageData
 
 ### Community 12 - "collaboration.ts"
 Cohesion: 0.21
@@ -204,9 +204,9 @@ Nodes (4): ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada, C
 Cohesion: 0.40
 Nodes (4): ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida, Consequências, Contexto, Decisão
 
-### Community 23 - "devDependencies"
-Cohesion: 0.13
-Nodes (15): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+7 more)
+### Community 23 - "ebbinghausCurve.ts"
+Cohesion: 0.20
+Nodes (16): calculateRetention(), calculateTimeToTarget(), computeEbbinghausCurve(), Ebbinghaus, EBBINGHAUS_I18N, EbbinghausOptions, EbbinghausPoint, EbbinghausResult (+8 more)
 
 ### Community 24 - "Quiz Dataset Definitions"
 Cohesion: 0.40
@@ -225,12 +225,12 @@ Cohesion: 0.67
 Nodes (3): Apprendimento Italiano App Icon, IT Language Monogram, Roman Arch Emblem
 
 ### Community 35 - "ebbinghaus.js"
-Cohesion: 0.50
-Nodes (6): computeEbbinghausCurve(), Ebbinghaus, EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve()
+Cohesion: 0.28
+Nodes (11): calculateRetention(), calculateTimeToTarget(), computeEbbinghausCurve(), Ebbinghaus, EBBINGHAUS_I18N, formatDaysLabel(), getElapsedDays(), predictNextStabilityGood() (+3 more)
 
-### Community 37 - "voice_engine.ts"
-Cohesion: 0.33
-Nodes (3): LexicoItem, VoiceEngine, WorkerMessageData
+### Community 37 - "scripts"
+Cohesion: 0.12
+Nodes (17): scripts, build, build:ts, content:ingest, content:validate, dev, format, format:check (+9 more)
 
 ### Community 38 - "progression.js"
 Cohesion: 0.40
@@ -250,20 +250,20 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 412 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 421 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `ebbinghaus.js`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`?**
-  _High betweenness centrality (0.127) - this node is a cross-community bridge._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `ebbinghaus.js`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`, `ebbinghausCurve.ts`?**
+  _High betweenness centrality (0.146) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.04878048780487805 - nodes in this community are weakly interconnected._
 - **Why does `@playwright/test` connect `NMA Grammar Card Upgrader` to `package.json`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **Should `json` be split into smaller, more focused modules?**
   _Cohesion score 0.053551912568306013 - nodes in this community are weakly interconnected._
 - **Should `index.ts` be split into smaller, more focused modules?**

@@ -14,5 +14,5 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true
   },
-  "include": ["types/**/*", "js/**/*", "tests/**/*", "vite.config.ts", "playwright.config.ts"]
+  "include": ["types/**/*", "js/**/*", "src/**/*", "tests/**/*", "vite.config.ts", "playwright.config.ts"]
 }
