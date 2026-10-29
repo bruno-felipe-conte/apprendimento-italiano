@@ -7935,3 +7935,131 @@ body.dark-mode .nivel-select option {
   border-bottom: 1px dashed rgba(212, 168, 67, 0.45);
   pointer-events: none;
 }
+
+/* ==========================================================================
+   CURVA DELL'OBLIO (EBBINGHAUS) — PROIEZIONE FSRS-4.5 / FSRS-5
+   Estetica Classica Rinascimentale / Veneziana (Chiaro & Notturno)
+   ========================================================================== */
+:root,
+[data-theme="light"],
+[data-tema="light"] {
+  --it-eb-surface:      var(--cor-marmore, #FAF7F2);
+  --it-eb-depth:        var(--cor-pergaminho, #F5EDD8);
+  --it-eb-border:       var(--cor-marmore-escuro, #EDE5D8);
+  --it-eb-bright:       var(--cor-inchiostro, #2E1B0E);
+  --it-eb-dim:          var(--cor-inchiostro-claro, #6B4C3B);
+  --it-eb-crimson:      var(--cor-veneziano, #9B2335);       /* Rosso Veneziano */
+  --it-eb-cypress:      var(--cor-verde-certo, #3D7A4A);     /* Verde Cipresso */
+  --it-eb-gold:         var(--cor-toscano, #C9952A);         /* Oro Toscano */
+  --it-eb-amber:        #8C6338;
+}
+
+[data-theme="dark"],
+[data-tema="dark"],
+body.dark-mode {
+  --it-eb-surface:      var(--cor-marmore, #221C16);
+  --it-eb-depth:        var(--cor-pergaminho, #1A1510);
+  --it-eb-border:       var(--cor-marmore-escuro, #2E261D);
+  --it-eb-bright:       var(--cor-inchiostro, #EDE5D8);
+  --it-eb-dim:          var(--cor-inchiostro-claro, #C4A98A);
+  --it-eb-crimson:      var(--cor-veneziano, #C4304A);       /* Notturno Rosso */
+  --it-eb-cypress:      #5E8053;
+  --it-eb-gold:         var(--cor-toscano, #D4A030);
+  --it-eb-amber:        #BFA175;
+}
+
+.fc-ebbinghaus-wrapper {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.it-ebbinghaus-card {
+  background: var(--it-eb-surface);
+  border: 1px solid var(--it-eb-border);
+  border-radius: var(--raio-lg, 12px);
+  padding: var(--esp-md, 1rem);
+  box-shadow: var(--sombra-sm, 0 1px 3px rgba(46, 27, 14, 0.12));
+  font-family: var(--fonte-ui, 'EB Garamond', serif);
+  box-sizing: border-box;
+}
+
+.it-ebbinghaus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+}
+
+.it-ebbinghaus-title {
+  font-family: var(--fonte-titulo, 'Cinzel', serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--it-eb-bright);
+  margin: 0 0 0.15rem 0;
+  letter-spacing: 0.3px;
+}
+
+.it-ebbinghaus-subtitle {
+  font-size: 0.72rem;
+  color: var(--it-eb-dim);
+  margin: 0;
+}
+
+.it-ebbinghaus-badge {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--it-eb-depth);
+  color: var(--it-eb-bright);
+  border: 1px solid var(--it-eb-border);
+  white-space: nowrap;
+}
+
+.it-ebbinghaus-canvas {
+  width: 100%;
+}
+
+.it-ebbinghaus-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.it-ebbinghaus-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--it-eb-border);
+  font-size: 0.72rem;
+  color: var(--it-eb-dim);
+}
+
+.it-ebbinghaus-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.it-ebbinghaus-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.it-ebbinghaus-dot--current {
+  background-color: var(--it-eb-crimson);
+}
+
+.it-ebbinghaus-dot--good {
+  background-color: var(--it-eb-cypress);
+}
+

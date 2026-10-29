@@ -1,12 +1,12 @@
 // ============================================================
-// sw.js — Service Worker  |  Cache v157  |  Offline-first PWA
+// sw.js — Service Worker  |  Cache v158  |  Offline-first PWA
 // Estratégia:
 //   • Static assets  → cache-first  (JS, CSS, HTML, ícones)
 //   • /data/*.json   → network-first com fallback de cache
 //   • Google Fonts   → stale-while-revalidate (cache após 1ª carga)
 // ============================================================
 
-const CACHE = 'italiano-v157';
+const CACHE = 'italiano-v158';
  
 // Todos os arquivos necessários para rodar 100% offline
 const STATIC = [
@@ -68,6 +68,8 @@ const STATIC = [
   './js/dialoghi.js?v=99',
   './js/canzoni.js?v=99',
   './js/imitazione.js?v=99',
+  './js/ebbinghaus.js',
+  './js/ebbinghaus.js?v=158',
   './js/flashcards.js?v=99',
   './js/grammar.js?v=99',
   './js/heatmap.js?v=99',

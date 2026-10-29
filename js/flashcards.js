@@ -694,6 +694,7 @@ const Flashcards = {
     if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
 
     this.atualizarContador();
+    this.atualizarEbbinghaus();
     this._sincronizarBarraCompacta();
     // Update favorite button state
     const btnFav = document.getElementById('btn-favorito');
@@ -729,6 +730,21 @@ const Flashcards = {
     if (revisaoCount > 0) partes.push(`${revisaoCount} ${I18n.t('fc_revisao')}`);
 
     elInfo.innerHTML = `<span>Carta <strong>${atual}</strong> de ${total}${partes.length ? ' &nbsp;·&nbsp; ' + partes.join(', ') : ''}</span>${rStr}`;
+  },
+
+  // ── Atualiza a Curva de Esquecimento de Ebbinghaus (FSRS) ──
+  atualizarEbbinghaus() {
+    if (typeof renderEbbinghausCurve !== 'function') return;
+    const container = document.getElementById('ebbinghaus-container');
+    if (!container) return;
+    const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
+    const fsrsCard = this.cartaAtual ? cardDataMap[this.cartaAtual.id] : null;
+    const allCards = Object.values(cardDataMap);
+    renderEbbinghausCurve(container, allCards, fsrsCard || null, {
+      desiredRetention: 0.90,
+      locale: (typeof I18n !== 'undefined' ? I18n.currentLang : 'it') || 'it',
+      curveMode: 'fsrs-power'
+    });
   },
 
   // ── Flip card to reveal answer ─────────────────────────────
@@ -932,6 +948,7 @@ const Flashcards = {
       if (resumo) resumo.style.display = 'none';
       if (vazio)  vazio.style.display  = 'block';
     }
+    this.atualizarEbbinghaus();
   },
 
   // ── Session summary screen ─────────────────────────────────
@@ -1579,6 +1596,7 @@ document.addEventListener('i18n:changed', () => {
   } else if (Flashcards.cartaAtual) {
     Flashcards.mostrarCarta();
   }
+  Flashcards.atualizarEbbinghaus();
 });
 
 

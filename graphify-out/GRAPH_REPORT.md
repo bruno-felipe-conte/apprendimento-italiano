@@ -1,17 +1,17 @@
-# Graph Report - apprendimento-italiano  (2026-10-28)
+# Graph Report - apprendimento-italiano  (2026-10-29)
 
 ## Corpus Check
-- 196 files · ~1,226,562 words
+- 198 files · ~1,227,111 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 731 nodes · 921 edges · 63 communities (32 shown, 31 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.89)
+- 739 nodes · 936 edges · 64 communities (33 shown, 31 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 18 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f778492e`
+- Built from commit: `3934bd90`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,6 +39,7 @@
 - NMA Grammar Card Upgrader
 - ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada
 - ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida
+- devDependencies
 - Quiz Dataset Definitions
 - ADR 003: Estratégia de Arquitetura Offline-First (PWA & Cache)
 - favorites.js
@@ -50,7 +51,7 @@
 - tts.js
 - collaboration.js
 - App Visual Identity (Icon)
-- scripts
+- ebbinghaus.js
 - PluginManager
 - voice_engine.ts
 - progression.js
@@ -85,8 +86,8 @@
 2. `SyncManager` - 20 edges
 3. `scripts` - 17 edges
 4. `AnalyticsManager` - 15 edges
-5. `AnalyticsManager` - 14 edges
-6. `vitest` - 14 edges
+5. `vitest` - 15 edges
+6. `AnalyticsManager` - 14 edges
 7. `compilerOptions` - 14 edges
 8. `FeatureFlagManager` - 12 edges
 9. `PluginManager` - 12 edges
@@ -113,7 +114,7 @@
 - **App Visual Identity Elements** — icons_icon_app_icon, icons_icon_roman_arch, icons_icon_it_monogram, icons_icon_crimson_gold_palette [EXTRACTED 1.00]
 - **Pipeline de Gramática e Exercícios Baseados em Parla e Scrivi** — data_parla_e_scrivi_libro_parla_e_scrivi, data_parla_e_scrivi_source_libro_parla_e_scrivi_source, data_instrucoes_adicionar_exercicios_grammar_json, data_instrucoes_adicionar_exercicios_adicionar_30_exercicios, data_instrucoes_melhorar_explicacoes_melhorar_explicacoes_grammar [INFERRED 0.95]
 
-## Communities (63 total, 31 thin omitted)
+## Communities (64 total, 31 thin omitted)
 
 ### Community 0 - "app.d.ts"
 Cohesion: 0.05
@@ -149,7 +150,7 @@ Nodes (7): AnalyticsManager, AppAnalytics, AppFeatureFlags, FeatureFlagManager, 
 
 ### Community 9 - "package.json"
 Cohesion: 0.05
-Nodes (39): author, dependencies, zod, description, devDependencies, @axe-core/playwright, eslint, @eslint/js (+31 more)
+Nodes (41): author, dependencies, zod, description, keywords, license, main, name (+33 more)
 
 ### Community 10 - "stress-storage.js"
 Cohesion: 0.08
@@ -203,6 +204,10 @@ Nodes (4): ADR 001: Adoção do Algoritmo FSRS-4.5 para Repetição Espaçada, C
 Cohesion: 0.40
 Nodes (4): ADR 002: Arquitetura do VoiceEngine e Síntese de Voz Híbrida, Consequências, Contexto, Decisão
 
+### Community 23 - "devDependencies"
+Cohesion: 0.13
+Nodes (15): devDependencies, @axe-core/playwright, eslint, @eslint/js, globals, happy-dom, @playwright/test, prettier (+7 more)
+
 ### Community 24 - "Quiz Dataset Definitions"
 Cohesion: 0.40
 Nodes (4): QUIZ_FAMILIA, QUIZ_NUMEROS, QUIZ_SAUDACOES, QUIZ_VERBOS
@@ -219,9 +224,9 @@ Nodes (6): AppCollaboration, calcularChecksumSimples(), CollaborationManager, Co
 Cohesion: 0.67
 Nodes (3): Apprendimento Italiano App Icon, IT Language Monogram, Roman Arch Emblem
 
-### Community 35 - "scripts"
-Cohesion: 0.12
-Nodes (17): scripts, build, build:ts, content:ingest, content:validate, dev, format, format:check (+9 more)
+### Community 35 - "ebbinghaus.js"
+Cohesion: 0.50
+Nodes (6): computeEbbinghausCurve(), Ebbinghaus, EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve()
 
 ### Community 37 - "voice_engine.ts"
 Cohesion: 0.33
@@ -245,14 +250,14 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 410 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 412 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `vitest` connect `schemas.ts` to `index.ts`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`?**
-  _High betweenness centrality (0.120) - this node is a cross-community bridge._
+- **Why does `vitest` connect `schemas.ts` to `index.ts`, `ebbinghaus.js`, `voice_engine.ts`, `AnalyticsManager`, `package.json`, `progression.ts`, `SyncManager`, `collaboration.ts`, `modal_manager.ts`, `security.test.js`?**
+  _High betweenness centrality (0.127) - this node is a cross-community bridge._
 - **What connects `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint` to the rest of the system?**
   _21 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `app.d.ts` be split into smaller, more focused modules?**

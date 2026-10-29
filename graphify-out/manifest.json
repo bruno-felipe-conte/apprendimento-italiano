@@ -492,9 +492,9 @@
     "semantic_hash": ""
   },
   "js/flashcards.js": {
-    "mtime": 1793240535.6228733,
-    "seen": 1793243794.409708,
-    "ast_hash": "e12b88fc7c6bb9afa57955c572434a53",
+    "mtime": 1793269477.2895777,
+    "seen": 1793269759.303968,
+    "ast_hash": "d80a3caa06946cc05b0064084b59acb5",
     "semantic_hash": ""
   },
   "js/grammar.js": {
@@ -564,9 +564,9 @@
     "semantic_hash": ""
   },
   "js/tour.js": {
-    "mtime": 1793226695.1535563,
-    "seen": 1793226857.830021,
-    "ast_hash": "5958d4737f0ebf6fd1c124ab22256f00",
+    "mtime": 1793269503.3213255,
+    "seen": 1793269759.4995632,
+    "ast_hash": "8769b8d72bb3d1c39c6af7395d4e6b89",
     "semantic_hash": ""
   },
   "js/vocab.js": {
@@ -606,9 +606,9 @@
     "semantic_hash": "26b5d0ea99833323f6162ab95f0d2fae"
   },
   "sw.js": {
-    "mtime": 1793243688.3788521,
-    "seen": 1793243794.559706,
-    "ast_hash": "00cac5f2b0318ad71a0ce912e1a6f0d2",
+    "mtime": 1793269535.359696,
+    "seen": 1793269759.8571644,
+    "ast_hash": "7cd5048a97c058de971913dceecab943",
     "semantic_hash": ""
   },
   "DOCUMENTACAO/INSTRUCOES_GRAMMAR_JSON.md": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793243718.1515882,
-    "seen": 1793243794.728097,
-    "ast_hash": "a22b93be046eb10c09459405e65be690",
+    "mtime": 1793269422.5665092,
+    "seen": 1793269760.3442023,
+    "ast_hash": "13fc24f66069a56409f6d6da529a2fc2",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -828,9 +828,9 @@
     "semantic_hash": ""
   },
   "js/core/navigation.js": {
-    "mtime": 1793044073.1982396,
-    "seen": 1793044569.9849286,
-    "ast_hash": "c0576689e590a7f0c74346421419073e",
+    "mtime": 1793269489.6312912,
+    "seen": 1793269759.103154,
+    "ast_hash": "0cc88a1c564948387ab02954ab1a4c5a",
     "semantic_hash": ""
   },
   "js/core/plugins.ts": {
@@ -1215,6 +1215,18 @@
     "mtime": 1793222085.4792633,
     "seen": 1793225548.1269214,
     "ast_hash": "592c0d2a02ea6d1e1c6961fc3dac9ca1",
+    "semantic_hash": ""
+  },
+  "js/ebbinghaus.js": {
+    "mtime": 1793269367.1904438,
+    "seen": 1793269759.303959,
+    "ast_hash": "b31fca12e2065ce957bc04d4b258fea1",
+    "semantic_hash": ""
+  },
+  "tests/ebbinghaus.test.ts": {
+    "mtime": 1793269554.2088284,
+    "seen": 1793269759.9136858,
+    "ast_hash": "0e4dd3eb49a999f1a66ca96ddf10569f",
     "semantic_hash": ""
   }
 }

@@ -22,3 +22,4 @@ coverage/
 *.njsproj
 .planning/
 graphify-out/20*/
+.harness_state.json

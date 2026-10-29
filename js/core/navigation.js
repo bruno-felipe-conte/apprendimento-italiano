@@ -133,6 +133,7 @@ const AppNavigation = {
     }
     if (secao === 'flashcard' && typeof Flashcards !== 'undefined') {
       Flashcards.atualizarSelectTemplo();
+      if (typeof Flashcards.atualizarEbbinghaus === 'function') Flashcards.atualizarEbbinghaus();
     }
     if (secao === 'grammatica' && typeof Grammatica !== 'undefined') {
       if (_precisaRender('grammatica-container')) Grammatica.renderizarSeletor();

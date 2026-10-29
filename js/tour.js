@@ -125,16 +125,22 @@ const Tour = {
       progressText: '{{current}} de {{total}}',
       popoverClass: 'app-tour-theme',
 
-      // Intercepta "próximo" — navega primeiro, depois move
+      // Intercepta "próximo" — navega primeiro, depois move diretamente para o índice
       onNextClick: () => {
         const cur = driverObj.getActiveIndex() ?? 0;
-        navegar(cur + 1, () => driverObj.moveNext());
+        if (cur >= passos.length - 1) {
+          driverObj.destroy();
+          try { localStorage.setItem(Tour.STORAGE_KEY, '1'); } catch(e) {}
+          return;
+        }
+        navegar(cur + 1, () => driverObj.moveTo(cur + 1));
       },
 
-      // Intercepta "anterior" — navega primeiro, depois move
+      // Intercepta "anterior" — navega primeiro, depois move diretamente para o índice
       onPrevClick: () => {
         const cur = driverObj.getActiveIndex() ?? 0;
-        navegar(cur - 1, () => driverObj.movePrevious());
+        if (cur <= 0) return;
+        navegar(cur - 1, () => driverObj.moveTo(cur - 1));
       },
 
       onDestroyStarted: () => {
