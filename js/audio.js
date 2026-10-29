@@ -10,14 +10,11 @@ const SomFeedback = {
   // property here as it would be silently overwritten by the method definition.
 
   init() {
-    if (localStorage.getItem('it_som_default_on') !== '1') {
-      try {
-        localStorage.setItem('it_som', '1');
-        localStorage.setItem('it_som_default_on', '1');
-      } catch (_) {}
-    }
-    const salvo = localStorage.getItem('it_som');
-    this.ativo = salvo === null ? true : salvo !== '0';
+    this.ativo = true;
+    try {
+      localStorage.setItem('it_som', '1');
+      localStorage.setItem('it_som_default_on', '1');
+    } catch (_) {}
     this._atualizarBotao();
   },
 
@@ -58,6 +55,9 @@ const SomFeedback = {
     if (!this.ativo) return;
     const ctx = this._ctx();
     if (!ctx) return;
+    if (ctx.state === 'suspended') {
+      try { ctx.resume().catch(() => {}); } catch (_) {}
+    }
     try {
       const osc  = ctx.createOscillator();
       const gain = ctx.createGain();
