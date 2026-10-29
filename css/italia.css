@@ -3364,27 +3364,14 @@ body.dark-mode .dojo-progress-hud {
   100% { height: 18px; }
 }
 
-/* Mic Recording Studio — Fixado na parte inferior ("colada ao chão") */
+/* Mic Recording Studio */
 .dojo-mic-studio {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   background: radial-gradient(circle at 50% 50%, #2A201E 0%, #171210 100%);
-  border-radius: 20px 20px 0 0;
-  border-bottom: none;
-  padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  border-radius: 18px;
+  padding: 1.5rem 1.2rem;
   text-align: center;
   color: #FFF8F0;
-  box-shadow: 0 -6px 25px rgba(0,0,0,0.45);
-  z-index: 90;
-}
-
-#sec-imitazione {
-  padding-bottom: 160px;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .dojo-mic-btn-wrapper {
@@ -5219,8 +5206,7 @@ body.dark-mode .nivel-select option {
     .btn-dica:hover { background: rgba(212,168,67,0.12); transform: scale(1.1); border-color: var(--cor-toscano); }
     .btn-dica.ativo { background: rgba(212,168,67,0.2); border-color: var(--cor-toscano); }
     /* Penalized rating buttons (Good/Easy disabled when hint was used) */
-    .btn-rating.dica-penalizado { opacity: 0.35; pointer-events: none; position: relative; }
-    .btn-rating.dica-penalizado::after { content: '🔒'; position: absolute; top: 2px; right: 4px; font-size: 0.6rem; }
+    .btn-rating.dica-penalizado { opacity: 0.35; pointer-events: none; filter: grayscale(0.5); }
     /* Quiz morphology section */
     .quiz-secao-titulo { grid-column: 1 / -1; text-align: center; font-family: 'Cinzel', serif; font-size: 0.82rem; font-weight: 700; color: var(--cor-veneziano-escuro); letter-spacing: 0.05em; padding: 0.8rem 0 0.3rem; border-top: 1px solid rgba(155,35,53,0.15); margin-top: 0.4rem; }
     .quiz-morf-btn  { font-size: 0.78rem !important; padding: 0.55rem 0.5rem !important; }

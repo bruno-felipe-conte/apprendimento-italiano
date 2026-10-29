@@ -12,7 +12,7 @@ describe('Gaveta Retrátil nos Flashcards (Zero-Scroll UX)', () => {
           <span class="fc-compact-counter" id="fc-compact-count">1/20</span>
         </div>
         <button type="button" class="fc-compact-toggle-btn" id="fc-compact-toggle-btn" aria-expanded="false">
-          <span>⚙️ Baralhos</span>
+          <span>Baralhos</span>
           <span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>
         </button>
       </div>
@@ -83,14 +83,14 @@ describe('Gaveta Retrátil nos Flashcards (Zero-Scroll UX)', () => {
     expect(Flashcards.gavetaAberta).toBe(true);
     expect(drawer?.classList.contains('recolhido')).toBe(false);
     expect(btn?.getAttribute('aria-expanded')).toBe('true');
-    expect(btn?.innerHTML).toContain('✕ Fechar');
+    expect(btn?.innerHTML).toContain('Fechar');
 
     // Fecha
     Flashcards.toggleGaveta();
     expect(Flashcards.gavetaAberta).toBe(false);
     expect(drawer?.classList.contains('recolhido')).toBe(true);
     expect(btn?.getAttribute('aria-expanded')).toBe('false');
-    expect(btn?.innerHTML).toContain('⚙️ Trocar');
+    expect(btn?.innerHTML).toContain('Baralhos');
   });
 
   it('3. Deve recolher a gaveta automaticamente após selecionar um templo', () => {
@@ -138,5 +138,33 @@ describe('Gaveta Retrátil nos Flashcards (Zero-Scroll UX)', () => {
     Flashcards.toggleSeletor(true); // forcar recolhido
     expect(Flashcards.gavetaAberta).toBe(false);
     expect(drawer?.classList.contains('recolhido')).toBe(true);
+  });
+
+  it('6. O botão toggle da barra compacta deve conter apenas 1 ícone/chevron (sem emojis duplicados)', () => {
+    const btn = document.getElementById('fc-compact-toggle-btn');
+    Flashcards.recolherGaveta();
+    expect(btn?.textContent?.trim()).toMatch(/^Baralhos\s*▾$/);
+    expect(btn?.textContent).not.toContain('⚙️');
+
+    Flashcards.abrirGaveta();
+    expect(btn?.textContent?.trim()).toMatch(/^Fechar\s*▴$/);
+    expect(btn?.textContent).not.toContain('✕');
+  });
+
+  it('7. A curva de esquecimento deve se ocultar durante o estudo ativo dos cards', () => {
+    const ebb = document.createElement('div');
+    ebb.id = 'ebbinghaus-container';
+    ebb.style.display = 'block';
+    document.body.appendChild(ebb);
+
+    Flashcards.cartaAtual = { id: 'p1', italiano: 'ciao', portugues: 'olá' };
+    Flashcards.atualizarEbbinghaus();
+    expect(ebb.style.display).toBe('none');
+
+    // Ao chamar mostrarVazio(), a curva é reexibida
+    Flashcards.sessaoStats = { again: 0, hard: 0, good: 0, easy: 0 };
+    Flashcards.cartaAtual = null;
+    Flashcards.mostrarVazio();
+    expect(ebb.style.display).toBe('block');
   });
 });

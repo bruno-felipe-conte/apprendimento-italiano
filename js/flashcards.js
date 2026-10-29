@@ -219,8 +219,8 @@ const Flashcards = {
     if (btnToggle) {
       btnToggle.setAttribute('aria-expanded', String(this.gavetaAberta));
       btnToggle.innerHTML = this.gavetaAberta
-        ? '<span>✕ Fechar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▴</span>'
-        : '<span>⚙️ Trocar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>';
+        ? '<span>Fechar</span><span class="fc-compact-chevron" id="fc-compact-chevron">▴</span>'
+        : '<span>Baralhos</span><span class="fc-compact-chevron" id="fc-compact-chevron">▾</span>';
     }
     this._sincronizarBarraCompacta();
   },
@@ -724,7 +724,9 @@ const Flashcards = {
     if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
 
     this.atualizarContador();
-    this.atualizarEbbinghaus();
+    // Oculta a curva de esquecimento durante o estudo ativo dos cards
+    const ebbContainer = document.getElementById('ebbinghaus-container');
+    if (ebbContainer) ebbContainer.style.display = 'none';
     this._sincronizarBarraCompacta();
     // Update favorite button state
     const btnFav = document.getElementById('btn-favorito');
@@ -764,9 +766,20 @@ const Flashcards = {
 
   // ── Atualiza a Curva de Esquecimento de Ebbinghaus (FSRS) ──
   atualizarEbbinghaus() {
-    if (typeof renderEbbinghausCurve !== 'function') return;
     const container = document.getElementById('ebbinghaus-container');
     if (!container) return;
+
+    // Se estiver estudando ativamente os cards (carta visível e sem tela de resumo/vazio), mantém oculto
+    const resumo = document.getElementById('flashcard-resumo');
+    const vazio  = document.getElementById('flashcard-vazio');
+    const emEstudo = !!this.cartaAtual && (!resumo || resumo.style.display === 'none') && (!vazio || vazio.style.display === 'none');
+    if (emEstudo) {
+      container.style.display = 'none';
+      return;
+    }
+
+    container.style.display = 'block';
+    if (typeof renderEbbinghausCurve !== 'function') return;
     const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
     const fsrsCard = this.cartaAtual ? cardDataMap[this.cartaAtual.id] : null;
     const allCards = Object.values(cardDataMap);
@@ -827,13 +840,13 @@ const Flashcards = {
       // Level 2: first third of letters revealed
       const revealed = Math.max(2, Math.ceil(alvo.length / 3));
       const hint = alvo.substring(0, revealed) + '_'.repeat(Math.max(1, alvo.length - revealed));
-      if (elDica) elDica.textContent = `💡💡 ${hint}`;
+      if (elDica) elDica.textContent = `💡 ${hint}`;
       if (btnDica) btnDica.title = 'Ver dica (revelar)';
     } else {
       // Level 3: just flip the card.
       // virar() will call _aplicarPenalidadeDica() because dicaUsada===true,
       // so we must NOT call it again here to avoid double application.
-      if (elDica) elDica.textContent = `💡💡💡 Revelado`;
+      if (elDica) elDica.textContent = '💡 Revelado';
       this.virar();
     }
   },
