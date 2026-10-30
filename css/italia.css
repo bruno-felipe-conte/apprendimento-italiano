@@ -1117,6 +1117,39 @@ body.dark-mode .dialogo-card {
   .profilo-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) !important; gap: 1.25rem; }
 }
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   18. STORIE GRID (4 Colunas Desktop)
+   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.storie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+}
+@media (max-width: 1024px) {
+  .storie-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+  }
+}
+@media (max-width: 768px) {
+  .storie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .storie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+}
+@media (max-width: 340px) {
+  .storie-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
 /* ===============================================================
    19. GRAMMATICA - Design Premium (migrado do inline HTML)
    =============================================================== */
@@ -1129,7 +1162,7 @@ body.dark-mode .dialogo-card {
 .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
 .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
 .gram-nivel-toggle-icone { cursor: pointer; float: right; font-size: 1rem; opacity: 0.7; }
-.gram-lezioni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
+.gram-lezioni-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
 .gram-lezioni-grid.recolhido { display: none; }
 .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
 .gram-lez-card:hover { transform: translateY(-2px); box-shadow: 0 5px 18px rgba(155,35,53,0.14); border-left-color: #6B1525; border-left-width: 5px; }
@@ -1144,7 +1177,7 @@ body.dark-mode .dialogo-card {
 .gram-lez-arrow { color: #d4c4a8; font-size: 1.1rem; flex-shrink: 0; transition: color 0.15s; }
 .gram-lez-card:hover .gram-lez-arrow { color: var(--cor-veneziano-escuro); }
 .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
-.gram-locked-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-top: 0.5rem; }
+.gram-locked-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin-top: 0.5rem; }
 .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #A59686; padding: 0.75rem 1rem; opacity: 1; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
 .gram-locked-pill-icon { font-size: 1rem; }
 .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
@@ -1173,8 +1206,9 @@ body.dark-mode .dialogo-card {
 @keyframes gramSlideUp { from { transform: translateY(18px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
 @keyframes gramShake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
 .gram-admin-shake { animation: gramShake 0.45s ease; }
-@media (max-width: 640px) { .gram-lezioni-grid { grid-template-columns: repeat(2, 1fr); } .gram-locked-row { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 390px) { .gram-lezioni-grid { grid-template-columns: 1fr; } .gram-locked-row { grid-template-columns: 1fr; } }
+@media (max-width: 1024px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 390px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: 1fr; } }
 .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }
 .gram-tabela-visual { border: 2px solid #D4A843; border-radius: 14px; margin-bottom: 1.1rem; background: #FFFDF5; overflow: hidden; }
 .gram-tabela-visual summary { padding: 0.8rem 1.2rem; font-weight: 700; cursor: pointer; color: var(--cor-veneziano-escuro); font-size: 0.92rem; user-select: none; list-style: none; display: flex; align-items: center; gap: 0.5rem; }
@@ -5329,6 +5363,37 @@ body.dark-mode .nivel-select option {
        ------------------------------------------------------- */
     #storie-container { width: 100%; max-width: 100%; margin: 0 auto; padding: 0 0 2rem; }
 
+    /* Grid de histórias (4 colunas no desktop) */
+    .storie-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.1rem;
+    }
+    @media (max-width: 1024px) {
+      .storie-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.85rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .storie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .storie-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+      }
+    }
+    @media (max-width: 340px) {
+      .storie-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+
     /* Seletor: cards das histórias */
     .storie-selector-card {
       background: var(--cor-marmore, #faf6ee);
@@ -6099,8 +6164,8 @@ body.dark-mode .nivel-select option {
     .gram-nivel-info { font-size: 0.73rem; opacity: 0.88; margin-bottom: 0.45rem; }
     .gram-nivel-barra { background: rgba(255,255,255,0.28); border-radius: 10px; height: 5px; }
     .gram-nivel-barra div { height: 100%; background: rgba(255,255,255,0.85); border-radius: 10px; transition: width 0.5s; }
-    /* Grid de lezioni */
-    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
+    /* Grid de lezioni (4 colunas) */
+    .gram-lezioni-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin-bottom: 2rem; transition: none; }
     .gram-lezioni-grid.recolhido { display: none; }
     /* Card de cada lezione */
     .gram-lez-card { background: var(--cor-marmore); border-radius: 11px; border: 1.5px solid #ede5d5; border-left: 4px solid #9B2335; padding: 0.78rem 0.9rem 0.78rem 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.65rem; box-shadow: 0 2px 7px rgba(0,0,0,0.05); transition: all 0.18s; text-align: left; width: 100%; font-family: 'EB Garamond', Georgia, serif; }
@@ -6117,7 +6182,7 @@ body.dark-mode .nivel-select option {
     .gram-lez-card:hover .gram-lez-arrow { color: var(--cor-veneziano-escuro); }
     .gram-lez-card.feita:hover .gram-lez-arrow { color: #27AE60; }
     /* Módulos bloqueados — linha inferior compacta */
-    .gram-locked-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.85rem; margin-top: 0.5rem; }
+    .gram-locked-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.85rem; margin-top: 0.5rem; }
     .gram-locked-pill { background: var(--cor-marmore-escuro); border-radius: 10px; border: 1.5px dashed #A59686; padding: 0.75rem 1rem; opacity: 1; display: flex; align-items: center; gap: 0.6rem; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; text-align: left; width: 100%; transition: opacity 0.18s, border-color 0.18s, box-shadow 0.18s; }
     .gram-locked-pill-icon { font-size: 1rem; }
     .gram-locked-pill-info { display: flex; flex-direction: column; gap: 0.1rem; }
@@ -6150,8 +6215,9 @@ body.dark-mode .nivel-select option {
     .gram-admin-shake { animation: gramShake 0.45s ease; }
 
     /* Responsive */
-    @media (max-width: 640px) { .gram-lezioni-grid { grid-template-columns: repeat(2, 1fr); } .gram-locked-row { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 390px) { .gram-lezioni-grid { grid-template-columns: 1fr; } .gram-locked-row { grid-template-columns: 1fr; } }
+    @media (max-width: 1024px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 390px) { .gram-lezioni-grid, .gram-locked-row { grid-template-columns: 1fr; } }
 
     /* ── Lição ── */
     .gram-lesson-layout { display: flex; flex-direction: column; gap: 1.8rem; }

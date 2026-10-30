@@ -213,8 +213,8 @@ const Storie = {
           ${niveis.filter(n=>counts[n]).map(n=>`<option value="${n}" ${this._filtroNivel===n?'selected':''}>${n} (${counts[n]})</option>`).join('')}
         </select>
       </div>
-      <!-- Grid de histórias -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem">`;
+      <!-- Grid de histórias (4 colunas) -->
+      <div class="storie-grid">`;
 
     for (const s of filtrate) {
       const isLida = this.completate.includes(s.id);

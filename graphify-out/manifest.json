@@ -558,9 +558,9 @@
     "semantic_hash": "9e3058f8d744968d07a307bf777d2c3f"
   },
   "js/storie.js": {
-    "mtime": 1793226564.12814,
-    "seen": 1793226857.830018,
-    "ast_hash": "249c7e50f6d2f3093c1840a32f80ea88",
+    "mtime": 1793375876.4798532,
+    "seen": 1793376161.0816433,
+    "ast_hash": "7c1560da8a2bddc1f571c5d5df417596",
     "semantic_hash": ""
   },
   "js/tour.js": {
@@ -720,9 +720,9 @@
     "semantic_hash": "ad5cd509de94ec49caac1c9a6f068859"
   },
   "index.html": {
-    "mtime": 1793373955.8287797,
-    "seen": 1793374396.0984316,
-    "ast_hash": "5b5dc3c9a8d6ba4956264a223bd8736b",
+    "mtime": 1793375867.33093,
+    "seen": 1793376161.3971372,
+    "ast_hash": "764bfe72ad29363e052d6899bfd7a1fe",
     "semantic_hash": ""
   },
   "icons/icon.svg": {
@@ -1092,50 +1092,50 @@
     "semantic_hash": ""
   },
   "js/core/analytics.js": {
-    "mtime": 1793375493.9187193,
-    "seen": 1793375551.6054034,
+    "mtime": 1793376109.4310186,
+    "seen": 1793376160.9577153,
     "ast_hash": "b913d4c9a28c203ec9a210e19155254b",
     "semantic_hash": ""
   },
   "js/core/collaboration.js": {
-    "mtime": 1793375493.9436376,
-    "seen": 1793375551.6168187,
+    "mtime": 1793376109.450009,
+    "seen": 1793376160.966109,
     "ast_hash": "2f3c5f17dada8195aad0bda7a6b3888d",
     "semantic_hash": ""
   },
   "js/core/plugins.js": {
-    "mtime": 1793375493.856647,
-    "seen": 1793375551.6380193,
+    "mtime": 1793376109.3535304,
+    "seen": 1793376160.9876225,
     "ast_hash": "94f8831dae955f86162b1c4185259481",
     "semantic_hash": ""
   },
   "js/core/sync.js": {
-    "mtime": 1793375493.9028778,
-    "seen": 1793375551.6557758,
+    "mtime": 1793376109.3889968,
+    "seen": 1793376161.00037,
     "ast_hash": "993f85f60a7b122eff24e3347ed36063",
     "semantic_hash": ""
   },
   "js/modal_manager.js": {
-    "mtime": 1793375493.8350322,
-    "seen": 1793375551.717622,
+    "mtime": 1793376109.332541,
+    "seen": 1793376161.0548398,
     "ast_hash": "125ea751f18b179d2166144abf1d0860",
     "semantic_hash": ""
   },
   "js/plugins/index.js": {
-    "mtime": 1793375493.8753893,
-    "seen": 1793375551.7279928,
+    "mtime": 1793376109.363762,
+    "seen": 1793376161.0645247,
     "ast_hash": "b3aec9799e7637e2c111c0e4552646a2",
     "semantic_hash": ""
   },
   "js/progression.js": {
-    "mtime": 1793375493.782351,
-    "seen": 1793375551.736042,
+    "mtime": 1793376109.2285714,
+    "seen": 1793376161.0721116,
     "ast_hash": "d304947a6c0720909b2f6f4be9fcb485",
     "semantic_hash": ""
   },
   "js/voice_engine.js": {
-    "mtime": 1793375493.8142192,
-    "seen": 1793375551.7697291,
+    "mtime": 1793376109.273036,
+    "seen": 1793376161.0902429,
     "ast_hash": "d8e0560741a9cb3e61420c90b0012d2e",
     "semantic_hash": ""
   },
