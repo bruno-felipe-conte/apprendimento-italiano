@@ -85,6 +85,17 @@ const AppStats = {
     if (elMetaFill)  elMetaFill.style.width   = metaPct + '%';
     if (elMetaLabel && typeof I18n !== 'undefined') elMetaLabel.textContent  = I18n.t('meta_do_dia_label');
     if (elMetaXp)    elMetaXp.textContent     = `${ganhoHj}/${meta} XP${ganhoHj >= meta ? ' ✅' : ''}`;
+
+    // Atualiza o card de meta prazo embutido
+    const metaContainer = document.getElementById('meta-prazo-container');
+    if (metaContainer) {
+      const renderMetaPrazoFn = (typeof AppMeta !== 'undefined' && AppMeta._renderizarMetaPrazo)
+        ? AppMeta._renderizarMetaPrazo.bind(AppMeta)
+        : ((typeof App !== 'undefined' && App._renderizarMetaPrazo) ? App._renderizarMetaPrazo.bind(App) : null);
+      if (renderMetaPrazoFn) {
+        metaContainer.innerHTML = renderMetaPrazoFn();
+      }
+    }
   },
 
   renderizarCardContinuar() {

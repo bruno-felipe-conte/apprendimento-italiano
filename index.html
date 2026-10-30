@@ -108,13 +108,6 @@
 
   <!-- 3. Área Principal Responsiva (Nunca fica embaixo da barra) -->
   <div class="app-main-wrapper" id="app-main-wrapper">
-    <!-- Barra de Meta Diária Horizontal -->
-    <div class="daily-goal-bar" id="daily-goal-bar">
-      <span class="meta-bar-label" id="meta-bar-label" data-i18n="meta_do_dia_label">🎯 Meta do dia</span>
-      <div class="meta-bar-track"><div class="meta-bar-fill" id="meta-bar-fill" style="width:0%"></div></div>
-      <span class="meta-bar-xp" id="meta-bar-xp">0/100 XP</span>
-      <button class="meta-settings-btn" onclick="App.abrirMetaSettings()" title="Configurar meta diária" aria-label="Meta: configurar meta diária de XP">⚙️ <span data-i18n="hdr_lbl_meta">Meta</span></button>
-    </div>
 
     <!-- Meta settings modal -->
     <div class="meta-settings-modal" id="meta-settings-modal" role="dialog" aria-modal="true" aria-labelledby="meta-modal-titulo" onclick="if(event.target===this)App.fecharMetaSettings()">

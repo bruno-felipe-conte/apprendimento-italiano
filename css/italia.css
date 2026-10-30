@@ -4256,20 +4256,6 @@ body.dark-mode .sidebar-pin-btn.ativo {
     max-width: calc(100vw - 220px);
   }
 
-  .app-main-wrapper .daily-goal-bar {
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    position: sticky;
-    top: var(--app-header-h, 70px);
-    z-index: 900;
-    background: var(--cor-marmore);
-  }
-
-  body.dark-mode .app-main-wrapper .daily-goal-bar {
-    background: #1C1816;
-  }
-
   .app-main-wrapper .app-container {
     width: 100%;
     max-width: 1200px;
@@ -4403,10 +4389,6 @@ body.dark-mode .sidebar-pin-btn.ativo {
     min-height: calc(100dvh - var(--app-header-h, 70px));
     display: flex;
     flex-direction: column;
-  }
-  .app-main-wrapper .daily-goal-bar {
-    width: 100% !important;
-    margin: 0 !important;
   }
   .app-main-wrapper .app-container {
     margin: 0 auto !important;
@@ -7243,17 +7225,29 @@ body.dark-mode .nivel-select option {
     }
     
     /* ── Meta Prazo ── */
-    .card-meta-prazo { background: var(--cor-marmore); border-radius: 12px; padding: 0.9rem 1.1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1rem; cursor: pointer; border-left: 4px solid #9B2335; transition: box-shadow 0.2s; }
+    .card-meta-prazo { background: var(--cor-marmore); border-radius: 12px; padding: 0.85rem 1.1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1rem; cursor: pointer; border-left: 4px solid #9B2335; transition: box-shadow 0.2s; }
     .card-meta-prazo:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.13); }
-    .card-meta-vazia { display: flex; align-items: center; gap: 0.6rem; color: #5A4535; font-weight: 500; font-size: 0.88rem; border-left-color: #C8BAA0; }
-    .card-meta-vazia .cc-cta { margin-left: auto; font-size: 1rem; color: var(--cor-toscano); }
-    .meta-prazo-titulo { font-weight: 700; font-size: 0.9rem; color: var(--cor-inchiostro); margin-bottom: 0.3rem; }
-    .meta-prazo-info { font-size: 0.83rem; display: flex; gap: 0.5rem; margin-bottom: 0.2rem; }
-    .meta-prazo-previsao { font-size: 0.78rem; color: var(--cor-pietra); font-style: italic; }
+    .card-meta-vazia { border-left-color: #C8BAA0; }
+    .meta-prazo-header { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.2rem; }
+    .meta-prazo-titulo { font-weight: 700; font-size: 0.88rem; color: var(--cor-inchiostro); line-height: 1.3; }
+    .meta-prazo-gear { background: none; border: none; font-size: 0.92rem; cursor: pointer; opacity: 0.7; transition: opacity 0.15s, transform 0.2s; line-height: 1; padding: 0.1rem 0.2rem; }
+    .meta-prazo-gear:hover { opacity: 1; transform: rotate(45deg); }
+    .card-meta-vazia .cc-cta { margin-left: auto; font-size: 0.82rem; color: var(--cor-toscano); font-weight: 700; white-space: nowrap; }
+    .meta-prazo-mini-row { display: flex; align-items: center; gap: 0.65rem; margin: 0.4rem 0 0.25rem; flex-wrap: wrap; }
+    .mini-meta-track { flex: 1; min-width: 120px; background: rgba(155,35,53,0.12); border-radius: 999px; height: 8px; overflow: hidden; }
+    .mini-meta-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 999px; transition: width 0.45s ease; }
+    .mini-meta-xp { font-size: 0.78rem; font-weight: 700; color: var(--cor-inchiostro); white-space: nowrap; font-variant-numeric: tabular-nums; }
+    .mini-meta-dias { font-size: 0.78rem; color: var(--cor-pietra); font-weight: 500; white-space: nowrap; }
+    .meta-prazo-previsao { font-size: 0.76rem; color: var(--cor-pietra); font-style: italic; margin-top: 0.2rem; }
     body.dark-mode .card-meta-prazo { background: #1C1816; box-shadow: 0 4px 15px rgba(0,0,0,0.25); border-left-color: #C4304A; }
     body.dark-mode .card-meta-prazo:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
-    body.dark-mode .card-meta-vazia { border-left-color: #3D3530; color: #D4C9BC; }
+    body.dark-mode .card-meta-vazia { border-left-color: #3D3530; }
     body.dark-mode .meta-prazo-titulo { color: #E6DFD3; }
+    body.dark-mode .meta-prazo-gear { color: #E6DFD3; }
+    body.dark-mode .mini-meta-track { background: rgba(196,48,74,0.18); }
+    body.dark-mode .mini-meta-xp { color: #E6DFD3; }
+    body.dark-mode .mini-meta-dias { color: #D4C9BC; }
+    body.dark-mode .meta-prazo-previsao { color: #A59686; }
 
     /* ── Fase 2: Flip Cards (Observação) ── */
     .gram-observacao-grid {

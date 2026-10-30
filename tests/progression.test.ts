@@ -79,6 +79,8 @@ describe('ARC-03: Módulo de Progressão e XP em TypeScript (Progressao & LevelU
     expect(calc?.nivel_alvo).toBe(5);
     expect(calc?.diasRestantes).toBeGreaterThanOrEqual(9);
     expect(calc?.xpFaltante).toBeGreaterThan(0);
+    // Sincronização automática da meta diária com o cálculo de xpPorDia
+    expect(window.App.estado.progresso.meta_diaria).toBe(calc?.xpPorDia);
   });
 
   it('deve exportar LevelUp com métodos de inicialização e exibição', () => {

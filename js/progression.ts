@@ -327,6 +327,10 @@ export const Progressao = {
       xp_na_criacao: p.xp,
       criado_em: Date.now()
     } as MetaPrazoData;
+    const calc = this.calcularMetaPrazo();
+    if (calc && calc.xpPorDia > 0) {
+      p.meta_diaria = calc.xpPorDia;
+    }
     app?.salvarProgresso?.();
     app?.notificar?.('notif_meta_def_ok', 'sucesso');
   },
