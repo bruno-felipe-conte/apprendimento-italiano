@@ -41,35 +41,37 @@
   <!-- 1. Topo Horizontal Vermelho Clássico -->
   <header class="app-header">
     <div class="header-top">
-      <div class="header-logo-row">
+      <div class="header-left header-logo-row">
         <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
-        <div class="header-icons">
-          <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano" aria-label="PT | IT: alternar idioma">
-            <span id="lang-pill-pt" class="lang-pill-seg ativo">PT</span>
-            <span class="lang-pill-div">|</span>
-            <span id="lang-pill-it" class="lang-pill-seg">IT</span>
-          </button>
-          <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema" aria-label="Tema: alternar claro e escuro"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
-          <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: ativados (clique para desligar)" aria-label="Som: ativar ou desativar efeitos sonoros"><span id="btn-som-ico" class="hdr-btn-ico">🔔</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
-          <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade de Áudio"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Ver tour introdutório" aria-label="Ajuda: ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
-          <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo" aria-label="Perfil: acessar meu perfil"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
-        </div>
+        <button id="lang-toggle" class="lang-pill-btn" onclick="I18n.toggleIdioma()" title="Mudar para Italiano" aria-label="PT | IT: alternar idioma">
+          <span id="lang-pill-pt" class="lang-pill-seg ativo active">PT</span>
+          <span class="lang-pill-div">|</span>
+          <span id="lang-pill-it" class="lang-pill-seg">IT</span>
+        </button>
       </div>
-      <div class="stats-bar" id="stats-bar">
+
+      <div class="header-center header-icons">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema claro/escuro" aria-label="Tema: alternar claro e escuro"><span id="theme-toggle-ico" class="hdr-btn-ico">☀️</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_tema">Tema</span></button>
+        <button id="btn-som" class="theme-toggle-btn" onclick="SomFeedback.toggle()" title="Sons: ativados (clique para desligar)" aria-label="Som: ativar ou desativar efeitos sonoros"><span id="btn-som-ico" class="hdr-btn-ico">🔔</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_som">Som</span></button>
+        <button id="btn-audio-speed" class="theme-toggle-btn" onclick="App.toggleAudioSpeed()" title="Velocidade da voz de pronúncia" aria-label="Alterar velocidade de reprodução de voz"><span id="btn-audio-speed-ico" class="hdr-btn-ico" style="font-family: monospace; font-size: 0.72rem; font-weight: bold;">.85x</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_voz">Voz</span></button>
+        <button class="theme-toggle-btn" onclick="App.navegar('templi');setTimeout(()=>Tour.reiniciar(),150)" title="Tour introdutório e ajuda" aria-label="Ajuda: ver tour introdutório"><span class="hdr-btn-ico">❓</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_ajuda">Ajuda</span></button>
+        <button class="theme-toggle-btn" onclick="App.navegar('profilo')" title="Il mio profilo" aria-label="Perfil: acessar meu perfil"><span class="hdr-btn-ico">👤</span><span class="hdr-btn-lbl" data-i18n="hdr_lbl_perfil">Perfil</span></button>
+      </div>
+
+      <div class="header-right stats-bar" id="stats-bar">
         <div class="stats-primary-row">
-          <span class="stat-item" id="stat-nivel">Livello 1</span>
-          <span class="stat-item" id="stat-xp">XP: 0/500</span>
-          <span class="stat-item" id="stat-streak">🔥 0 dias</span>
+          <span class="stat-item" id="stat-nivel" title="Livello attuale">Livello 1</span>
+          <span class="stat-item" id="stat-xp" title="Esperienza accumulata">XP: 0/500</span>
+          <span class="stat-item" id="stat-streak" title="Serie di giorni consecutivi">🔥 0 dias</span>
         </div>
         <div class="stats-secondary-row">
-          <span class="stat-item secondary" id="stat-templi">Templi: 1/10</span>
-          <span class="stat-item secondary" id="stat-parole">Parole: 0</span>
+          <span class="stat-item secondary" id="stat-templi" title="Templi sbloccati">Templi: 1/10</span>
+          <span class="stat-item secondary" id="stat-parole" title="Parole apprese">Parole: 0</span>
         </div>
       </div>
     </div>
-    <div class="xp-bar-container">
-      <div class="xp-bar-fill" id="xp-bar-fill"></div>
+    <div class="xp-bar-container" title="Progresso per il prossimo livello">
+      <div class="xp-bar-fill" id="xp-bar-fill" style="width: 0%;"></div>
     </div>
   </header>
   <script>
