@@ -276,10 +276,8 @@
             <!-- Status & Retrievability HUD -->
             <div class="fc-status-hud" id="card-info"></div>
 
-            <!-- Desktop Keyboard HUD -->
-            <div class="fc-keyboard-hud">
-              <span>⌨️ <strong>Atalhos:</strong><br>[Espaço] Virar<br>[1] Esqueci · [2] Difícil<br>[3] Bom · [4] Fácil<br>[R] Áudio · [D] Dica · [F] Favorito</span>
-            </div>
+            <!-- Gráfico da Curva de Esquecimento (Ebbinghaus / FSRS) em Miniatura -->
+            <div id="ebbinghaus-container" class="fc-ebbinghaus-wrapper"></div>
           </aside>
 
           <!-- Coluna 2: Palco do Flashcard (Deck 3D, Ferramentas e FSRS) -->
@@ -381,9 +379,6 @@
               </div>
             </div>
             <div id="flashcard-resumo" style="display:none"></div>
-
-            <!-- Curva de Esquecimento (Ebbinghaus) FSRS - Abaixo dos Cards -->
-            <div id="ebbinghaus-container" class="fc-ebbinghaus-wrapper"></div>
           </div>
         </div>
       </div>

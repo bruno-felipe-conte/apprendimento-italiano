@@ -142,7 +142,11 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
 
   const targetY = yFromRetention(retentionTarget);
 
-  if (!Array.isArray(cards) || cards.length === 0) {
+  const effectiveCards = (Array.isArray(cards) && cards.length > 0)
+    ? cards
+    : (activeCard ? [activeCard] : []);
+
+  if (effectiveCards.length === 0) {
     return {
       hasData: false,
       targetPct,
@@ -186,17 +190,17 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
     sBom = predictNextStabilityGood(activeCard, sAtual, cardR);
     sourceKey = 'focused';
   } else {
-    const sumS = cards.reduce((acc, c) => acc + extractS(c), 0);
-    sAtual = Number((sumS / cards.length).toFixed(1));
+    const sumS = effectiveCards.reduce((acc, c) => acc + extractS(c), 0);
+    sAtual = Number((sumS / effectiveCards.length).toFixed(1));
 
-    const sumNext = cards.reduce((acc, c) => {
+    const sumNext = effectiveCards.reduce((acc, c) => {
       const cS = extractS(c);
       const elapsed = getElapsedDays(c);
       const cardR = elapsed !== null ? retentionAt(elapsed, cS) : retentionTarget;
       return acc + predictNextStabilityGood(c, cS, cardR);
     }, 0);
 
-    sBom = Number(Math.max(sAtual + 1, sumNext / cards.length).toFixed(1));
+    sBom = Number(Math.max(sAtual + 1, sumNext / effectiveCards.length).toFixed(1));
   }
 
   const tTargetAtual = Number(timeToTarget(sAtual).toFixed(2));

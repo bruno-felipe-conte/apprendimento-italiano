@@ -770,8 +770,13 @@ const Flashcards = {
     container.style.display = 'block';
     if (typeof renderEbbinghausCurve !== 'function') return;
     const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
-    const fsrsCard = this.cartaAtual ? cardDataMap[this.cartaAtual.id] : null;
+    const fsrsCard = (this.cartaAtual && cardDataMap[this.cartaAtual.id])
+      ? cardDataMap[this.cartaAtual.id]
+      : (this.cartaAtual ? { id: this.cartaAtual.id, stability: 1.0, difficulty: 5.0, state: 'new' } : null);
     const allCards = Object.values(cardDataMap);
+    if (allCards.length === 0 && fsrsCard) {
+      allCards.push(fsrsCard);
+    }
     renderEbbinghausCurve(container, allCards, fsrsCard || null, {
       desiredRetention: 0.90,
       locale: (typeof I18n !== 'undefined' ? I18n.currentLang : 'it') || 'it',
