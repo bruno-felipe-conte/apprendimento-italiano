@@ -1008,9 +1008,9 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 /* 15. RESPONSIVE */
 @media (max-width:400px) { .card-actions{flex-direction:column;} .opcoes-grid{grid-template-columns:1fr;} }
 @media (min-width:600px) { .tab-icone{display:none;} .tab-texto{display:block;} }
-@media (min-width:768px) { .templos-grid{grid-template-columns:repeat(2,1fr);} .flashcard{height:340px;} .section-titulo{font-size:2rem;} }
-@media (min-width:1100px) { .templos-grid{grid-template-columns:repeat(3,1fr);} .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
-@media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(290px, 1fr)) !important; gap: 1.25rem;} }
+@media (min-width:768px) { .flashcard{height:340px;} .section-titulo{font-size:var(--h1-size, 1.8rem);} }
+@media (min-width:1100px) { .app-container{padding:0 var(--esp-xl);} .flashcard{height:360px;max-width:560px;} }
+@media (min-width:1400px) { .templos-grid{grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 1.25rem;} }
 
 /* 16. UTILITIES */
 .oculto { display:none !important; }
@@ -1095,75 +1095,9 @@ body.dark-mode { background-image:repeating-linear-gradient(0deg,transparent,tra
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   18. CARD CONTINUAR + META PRAZO (Dashboard)
-   Mesmo DNA visual --- marmore + sombra + raio-lg
+   18. DIALOGO CARDS (Dashboard)
    --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-.card-continuar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--cor-marmore);
-  border-radius: var(--raio-lg);
-  box-shadow: var(--sombra-md);
-  border: 1px solid var(--cor-pietra);
-  padding: var(--esp-md) var(--esp-lg);
-  margin-bottom: var(--esp-md);
-  cursor: pointer;
-  transition: transform var(--trans-media), box-shadow var(--trans-media);
-  gap: var(--esp-md);
-  animation: entrada-sezione .3s ease both;
-}
-.card-continuar:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--sombra-lg);
-}
-.cc-label {
-  font-family: var(--fonte-titulo);
-  font-weight: 600;
-  font-size: .9rem;
-  color: var(--cor-inchiostro);
-  margin-bottom: 2px;
-}
-.cc-info  { font-size: .82rem; color: var(--cor-pietra); }
-.cc-info strong { color: var(--cor-veneziano); font-weight: 600; }
-.cc-cta {
-  font-size: .82rem;
-  font-weight: 700;
-  color: var(--cor-veneziano);
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: transform var(--trans-rapida);
-}
-.card-continuar:hover .cc-cta { transform: translateX(3px); }
-
-.card-meta-prazo {
-  display: flex;
-  align-items: center;
-  gap: var(--esp-md);
-  background-color: var(--cor-marmore);
-  border-radius: var(--raio-lg);
-  box-shadow: var(--sombra-sm);
-  border: 1px dashed var(--cor-pietra);
-  padding: var(--esp-sm) var(--esp-lg);
-  margin-bottom: var(--esp-md);
-  cursor: pointer;
-  font-size: .85rem;
-  color: #5A4535;
-  font-weight: 500;
-  transition: transform var(--trans-media), box-shadow var(--trans-media), border-color var(--trans-media);
-}
-.card-meta-prazo:hover {
-  transform: translateY(-1px);
-  box-shadow: var(--sombra-md);
-  border-style: solid;
-  border-color: var(--cor-toscano);
-}
-.card-meta-vazia { opacity: .85; }
-
-/* dark mode */
-body.dark-mode .dialogo-card,
-body.dark-mode .card-continuar,
-body.dark-mode .card-meta-prazo {
+body.dark-mode .dialogo-card {
   background-color: var(--cor-marmore);
   border-color: var(--cor-pietra);
 }
@@ -4340,7 +4274,7 @@ body.dark-mode .sidebar-pin-btn.ativo {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto !important;
-    padding: 1rem 1.5rem;
+    padding: 0.6rem 1.25rem;
     box-sizing: border-box;
   }
 
@@ -4875,28 +4809,53 @@ body.dark-mode .nivel-select option {
     /* section.active: padding gerenciado pelo italia.css */
     /* section-titulo: estilo gerenciado pelo italia.css */
 
-    /* ── Templos Grid ── */
-    .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
-    .templo-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; }
-    .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-    .templo-card.bloqueado .templo-header { filter: grayscale(0.7); }
-    .templo-header { padding: 1.1rem 1rem; color: #FFF8F0; min-height: 90px; display: flex; flex-direction: column; justify-content: space-between; }
-    .templo-num { font-family: 'Cinzel', serif; font-size: 0.7rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.1em; }
-    .templo-nome { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600; line-height: 1.25; }
-    .templo-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
-    .templo-cidade { font-size: 0.78rem; opacity: 0.85; }
-    .nivel-badge { display: inline-block; padding: 0.1rem 0.45rem; background: rgba(255,255,255,0.25); border-radius: 10px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; }
-    .templo-body { padding: 0.85rem; background: var(--cor-marmore); }
-    .progresso-bar-container { background: var(--cor-marmore-escuro); border-radius: 10px; height: 5px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
-    .progresso-bar-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 10px; transition: width 0.5s ease; }
-    .progresso-label { font-size: 0.73rem; color: #5A4535; font-weight: 500; margin-bottom: 0.65rem; }
-    body.dark-mode .progresso-label { color: #D4C9BC; }
-    .templo-card:not(.bloqueado) { transition: transform 0.15s, box-shadow 0.15s; }
-    .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
-    .templo-card.bloqueado { transition: transform 0.15s, box-shadow 0.15s; }
-    .templo-card.bloqueado:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
-    .lock-info { text-align: center; color: #5A4535; font-weight: 500; font-size: 0.78rem; padding: 0.3rem 0 0; }
-    body.dark-mode .lock-info { color: #D4C9BC; }
+    /* ── Templos Grid (Padrão Oficial Italiano Autêntico) ── */
+    .templos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .temple-card, .templo-card {
+      background-color: var(--cor-marmore);
+      border-radius: var(--raio-md, 12px);
+      overflow: hidden;
+      box-shadow: var(--sombra-md, 0 4px 12px rgba(0,0,0,0.15));
+      border: 1px solid var(--cor-pietra, rgba(165,150,134,0.3));
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .temple-card:not(.bloqueado):hover, .templo-card:not(.bloqueado):hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .temple-card.bloqueado, .templo-card.bloqueado { opacity: 0.6; }
+    .temple-header, .templo-header {
+      position: relative;
+      padding: 1.25rem 1.25rem 0.9rem;
+      color: #FFF8F0;
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+    .temple-header::before, .templo-header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 10%;
+      right: 10%;
+      height: 80%;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      pointer-events: none;
+    }
+    .temple-num, .templo-num { font-family: 'Cinzel', serif; font-size: 0.72rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.1em; }
+    .temple-name, .templo-nome { font-family: 'Cinzel', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.25; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.45); }
+    .temple-meta, .templo-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.25rem; }
+    .temple-city, .templo-cidade { font-size: 0.9rem; color: rgba(255,255,255,0.85); font-style: italic; }
+    .nivel-badge { display: inline-block; padding: 0.12rem 0.5rem; background: rgba(255,255,255,0.25); border-radius: 10px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; }
+    .temple-body, .templo-body { padding: 0.9rem 1.1rem; background: var(--cor-marmore); flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .progresso-bar-container, .templo-progresso { background: var(--cor-marmore-escuro); border: 1px solid var(--cor-pietra); border-radius: 5px; height: 10px; margin: 0.4rem 0 0.3rem; overflow: hidden; }
+    .progresso-bar-fill, .templo-progresso-fill { height: 100%; background: linear-gradient(90deg, #9B2335, #D4A843); border-radius: 5px; transition: width 0.5s ease; }
+    .progresso-label { font-size: 0.75rem; color: var(--cor-inchiostro-claro, #777); margin-bottom: 0.5rem; font-weight: 500; }
+    .temple-card:not(.bloqueado), .templo-card:not(.bloqueado) { transition: transform 0.15s, box-shadow 0.15s; }
+    .temple-card.bloqueado:hover, .templo-card.bloqueado:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .lock-info { text-align: center; color: #999; font-size: 0.78rem; padding: 0.3rem 0 0; }
 
     /* ── Templo Modal ── */
     .templo-modal { display:none; position:fixed; inset:0; z-index:2500; background:rgba(0,0,0,0.62); align-items:center; justify-content:center; padding:1rem; backdrop-filter:blur(5px); }
@@ -7287,6 +7246,7 @@ body.dark-mode .nivel-select option {
     .card-meta-prazo { background: var(--cor-marmore); border-radius: 12px; padding: 0.9rem 1.1rem; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 1rem; cursor: pointer; border-left: 4px solid #9B2335; transition: box-shadow 0.2s; }
     .card-meta-prazo:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.13); }
     .card-meta-vazia { display: flex; align-items: center; gap: 0.6rem; color: #5A4535; font-weight: 500; font-size: 0.88rem; border-left-color: #C8BAA0; }
+    .card-meta-vazia .cc-cta { margin-left: auto; font-size: 1rem; color: var(--cor-toscano); }
     .meta-prazo-titulo { font-weight: 700; font-size: 0.9rem; color: var(--cor-inchiostro); margin-bottom: 0.3rem; }
     .meta-prazo-info { font-size: 0.83rem; display: flex; gap: 0.5rem; margin-bottom: 0.2rem; }
     .meta-prazo-previsao { font-size: 0.78rem; color: var(--cor-pietra); font-style: italic; }
