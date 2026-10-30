@@ -92,12 +92,33 @@ input,textarea,select { font-family:inherit; }
 }
 
 /* 4. LAYOUT */
+.app-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--app-header-h, 70px));
+  min-height: calc(100dvh - var(--app-header-h, 70px));
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.app-main-wrapper .app-container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .app-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--esp-md);
   transition: max-width 0.2s ease;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header {
@@ -160,9 +181,11 @@ body.dark-mode .nav-tab.ativa { color: #C4304A; border-bottom-color: #C4304A; }
 
 .section { display:none; animation:entrada-sezione .35s ease both; }
 .section.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
   padding-top: var(--esp-md);      /* 1rem — compacto */
-  padding-bottom: calc(var(--esp-xl) + var(--nav-height, 56px) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: var(--esp-lg);
 }
 @media (min-width: 641px) {
   .section.active {
@@ -926,10 +949,18 @@ body.dark-mode .quiz-templo-btn.bloqueado {
 }
 .divisor::before,.divisor::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--cor-pietra),transparent); }
 .app-footer {
-  text-align:center; padding:var(--esp-xl) var(--esp-md) var(--esp-2xl);
-  font-family:var(--fonte-italiano); font-style:italic;
-  font-size:.9rem; color:var(--cor-pietra); border-top:1px solid var(--cor-marmore-escuro);
-  margin-top:var(--esp-2xl);
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-family: var(--fonte-italiano);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: #D4C9BC;
+  background: #2C2C2C;
+  border-top: 1px solid rgba(212, 168, 67, 0.25);
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /* 13. ANIMATIONS */
@@ -4411,6 +4442,11 @@ body.dark-mode .sidebar-pin-btn.ativo {
     border-color: rgba(212, 168, 67, 0.4);
     color: #FFF8F0;
   }
+
+  /* No desktop sem barra inferior, o footer encosta normalmente na base */
+  .app-footer {
+    margin-bottom: 0;
+  }
 }
 
 /* Mobile & Tablet Fallback (< 1024px) */
@@ -4422,6 +4458,10 @@ body.dark-mode .sidebar-pin-btn.ativo {
     margin-left: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
+    min-height: calc(100vh - var(--app-header-h, 70px));
+    min-height: calc(100dvh - var(--app-header-h, 70px));
+    display: flex;
+    flex-direction: column;
   }
   .app-main-wrapper .daily-goal-bar {
     width: 100% !important;
@@ -4430,6 +4470,9 @@ body.dark-mode .sidebar-pin-btn.ativo {
   .app-main-wrapper .app-container {
     margin: 0 auto !important;
     max-width: 100% !important;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 }
 
