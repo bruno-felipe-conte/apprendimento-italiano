@@ -1,17 +1,17 @@
 # Graph Report - apprendimento-italiano  (2026-10-30)
 
 ## Corpus Check
-- 201 files · ~1,231,464 words
+- 201 files · ~1,232,952 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 6 file(s) not represented in the graph (top: (none) 2, .example 1, .css 1)
 
 ## Summary
-- 763 nodes · 978 edges · 63 communities (33 shown, 30 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.87)
+- 763 nodes · 975 edges · 63 communities (33 shown, 30 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.87)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `21952486`
+- Built from commit: `3b907d0f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -224,8 +224,8 @@ Cohesion: 0.67
 Nodes (3): Apprendimento Italiano App Icon, IT Language Monogram, Roman Arch Emblem
 
 ### Community 35 - "ebbinghaus.js"
-Cohesion: 0.28
-Nodes (11): calculateRetention(), calculateTimeToTarget(), computeEbbinghausCurve(), Ebbinghaus, EBBINGHAUS_I18N, formatDaysLabel(), getElapsedDays(), predictNextStabilityGood() (+3 more)
+Cohesion: 0.24
+Nodes (7): computeEbbinghausCurve(), EBBINGHAUS_I18N, formatDaysLabel(), predictNextStabilityGood(), renderEbbinghausCurve(), IEbbinghausCard, IEbbinghausModule
 
 ### Community 37 - "scripts"
 Cohesion: 0.12
@@ -249,7 +249,7 @@ Nodes (3): Italian Localization Guide (UI, Temples, Formats, GDPR), Ten Temples 
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `@rolldown/binding-linux-x64-gnu`, `@types/dom-speech-recognition`, `eslint`, `happy-dom`, `prettier` (+16 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 421 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 424 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **30 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
