@@ -957,17 +957,20 @@ body.dark-mode .quiz-templo-btn.bloqueado {
 .divisor::before,.divisor::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--cor-pietra),transparent); }
 .app-footer {
   text-align: center;
-  padding: 0.75rem 1rem;
+  padding: 1.25rem 1rem;
   font-family: var(--fonte-italiano);
   font-style: italic;
-  font-size: 0.78rem;
-  color: #D4C9BC;
-  background: #2C2C2C;
-  border-top: 1px solid rgba(212, 168, 67, 0.25);
+  font-size: 0.85rem;
+  color: var(--cor-pietra, #8A7968);
+  background: transparent;
+  border-top: 1px solid var(--cor-marmore-escuro, rgba(165,150,134,0.3));
   margin-top: auto;
   width: 100%;
   box-sizing: border-box;
   flex-shrink: 0;
+}
+.app-footer em {
+  color: var(--cor-toscano, #C9952A);
 }
 
 /* 13. ANIMATIONS */
@@ -4819,7 +4822,7 @@ body.dark-mode .nivel-select option {
 
 
     /* ── Main container ── */
-    .app-container { flex: 1; width: 100%; margin: 0 auto; padding: 0.75rem 1rem; }
+    .app-container { flex: 1; width: 100%; margin: 0 auto; padding: 0.75rem 1rem; display: flex; flex-direction: column; }
     @media (min-width: 641px) { .app-container { padding: 1rem 1.5rem; } }
     .section { display: none; }
     /* section.active: padding gerenciado pelo italia.css */
@@ -5309,8 +5312,8 @@ body.dark-mode .nivel-select option {
     .toast.saindo { animation: toastOut 0.3s ease forwards; }
 
     /* ── Footer ── */
-    .app-footer { background: #2C2C2C; color: #D4C9BC; text-align: center; padding: 0.75rem; font-size: 0.78rem; margin-top: auto; }
-    .app-footer em { color: var(--cor-toscano); }
+    .app-footer { background: transparent; color: var(--cor-pietra, #8A7968); text-align: center; padding: 1.25rem 1rem; font-size: 0.85rem; margin-top: auto; }
+    .app-footer em { color: var(--cor-toscano, #C9952A); }
 
     /* ── Responsive ── */
     @media (max-width: 500px) {
@@ -6893,7 +6896,7 @@ body.dark-mode .nivel-select option {
     body.dark-mode .resultado-titulo { color: #FF8F9E; }
     body.dark-mode .resultado-score { color: #E6DFD3; }
     body.dark-mode .resultado-msg { color: #aaa; }
-    body.dark-mode .app-footer { background: #0D0B09; color: #D4C9BC; }
+    body.dark-mode .app-footer { background: transparent; color: #A89B8C; border-top-color: rgba(212, 168, 67, 0.2); }
     body.dark-mode .gram-admin-box { background: #1C1816; }
     body.dark-mode .gram-admin-titulo { color: #E6DFD3; }
     body.dark-mode .gram-admin-input { background: #25201D; border-color: #3D3530; color: #E6DFD3; }
