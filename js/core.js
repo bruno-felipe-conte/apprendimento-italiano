@@ -130,7 +130,10 @@ const App = {
     if (typeof Progressao !== 'undefined') Progressao.verificarDesbloqueioTemplos();
     if (typeof Quiz !== 'undefined') Quiz.renderizarSeletor();
     if (typeof Vocab !== 'undefined') { Vocab.popularCategorias(); Vocab.renderizar(); }
-    if (typeof Flashcards !== 'undefined') Flashcards.atualizarSelectTemplo();
+    if (typeof Flashcards !== 'undefined') {
+      Flashcards.atualizarSelectTemplo();
+      if (typeof Flashcards.atualizarEbbinghaus === 'function') Flashcards.atualizarEbbinghaus();
+    }
     if (typeof Calor !== 'undefined') Calor.renderizar();
     if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
     if (typeof SomFeedback !== 'undefined') SomFeedback.init();

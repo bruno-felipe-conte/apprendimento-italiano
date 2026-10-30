@@ -191,6 +191,7 @@ const Flashcards = {
     }
     this.seletorRecolhido = !this.gavetaAberta;
     this._sincronizarGaveta();
+    this.atualizarEbbinghaus();
   },
 
   recolherGaveta() {
@@ -768,16 +769,35 @@ const Flashcards = {
     if (!container) return;
 
     container.style.display = 'block';
-    if (typeof renderEbbinghausCurve !== 'function') return;
+    const renderFn = (typeof renderEbbinghausCurve === 'function')
+      ? renderEbbinghausCurve
+      : (typeof window !== 'undefined' && typeof window.renderEbbinghausCurve === 'function')
+        ? window.renderEbbinghausCurve
+        : (typeof window !== 'undefined' && window.Ebbinghaus && typeof window.Ebbinghaus.renderEbbinghausCurve === 'function')
+          ? window.Ebbinghaus.renderEbbinghausCurve
+          : (typeof globalThis !== 'undefined' && globalThis.Ebbinghaus && typeof globalThis.Ebbinghaus.renderEbbinghausCurve === 'function')
+            ? globalThis.Ebbinghaus.renderEbbinghausCurve
+            : null;
+
+    if (!renderFn) {
+      console.warn('[Flashcards] renderEbbinghausCurve não encontrado');
+      return;
+    }
+
     const cardDataMap = (typeof App !== 'undefined' && App.estado && App.estado.flashcardData) ? App.estado.flashcardData : {};
-    const fsrsCard = (this.cartaAtual && cardDataMap[this.cartaAtual.id])
+    let fsrsCard = (this.cartaAtual && cardDataMap[this.cartaAtual.id])
       ? cardDataMap[this.cartaAtual.id]
       : (this.cartaAtual ? { id: this.cartaAtual.id, stability: 1.0, difficulty: 5.0, state: 'new' } : null);
-    const allCards = Object.values(cardDataMap);
-    if (allCards.length === 0 && fsrsCard) {
-      allCards.push(fsrsCard);
+    let allCards = Object.values(cardDataMap);
+
+    // Se ainda não houver revisões salvas ou carta em foco, gera projeção referencial FSRS padrão
+    if (allCards.length === 0) {
+      const baselineCard = fsrsCard || { id: 'baseline', stability: 1.5, difficulty: 5.0, state: 'new' };
+      allCards = [baselineCard];
+      if (!fsrsCard) fsrsCard = baselineCard;
     }
-    renderEbbinghausCurve(container, allCards, fsrsCard || null, {
+
+    renderFn(container, allCards, fsrsCard || null, {
       desiredRetention: 0.90,
       locale: (typeof I18n !== 'undefined' ? I18n.currentLang : 'it') || 'it',
       curveMode: 'fsrs-power'
@@ -1494,6 +1514,7 @@ const Flashcards = {
       }
     }
     this._sincronizarGaveta();
+    this.atualizarEbbinghaus();
   },
 
   // ── Speech Recognition (Modo Imitação) ──────────────────────
@@ -1688,3 +1709,19 @@ window.addEventListener('keydown', (e) => {
 if (typeof window !== 'undefined') window.Flashcards = Flashcards;
 if (typeof globalThis !== 'undefined') globalThis.Flashcards = Flashcards;
 if (typeof module !== 'undefined' && module.exports) module.exports = Flashcards;
+
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof Flashcards !== 'undefined' && typeof Flashcards.atualizarEbbinghaus === 'function') {
+        Flashcards.atualizarEbbinghaus();
+      }
+    });
+  } else {
+    setTimeout(() => {
+      if (typeof Flashcards !== 'undefined' && typeof Flashcards.atualizarEbbinghaus === 'function') {
+        Flashcards.atualizarEbbinghaus();
+      }
+    }, 50);
+  }
+}
