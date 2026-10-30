@@ -47,7 +47,8 @@ const Quiz = {
       } else if (this.temploAtual === 0) {
         nomeQuiz = '⏱️ Conjugação';
       } else if (typeof this.temploAtual === 'string' && this.temploAtual.startsWith('gramatica_')) {
-        nomeQuiz = `📚 Gramática ${this.temploAtual.replace('gramatica_', '')}`;
+        const nivel = this.temploAtual.replace('gramatica_', '');
+        nomeQuiz = nivel === 'misto' ? '🌍 Gramática Geral' : `📚 Gramática ${nivel}`;
       } else if (this.temploAtual) {
         const d = App.estado?.templosData?.[this.temploAtual];
         nomeQuiz = `🏛️ T${this.temploAtual} · ${d?.nome || 'Tempio ' + this.temploAtual}`;
@@ -547,21 +548,47 @@ const Quiz = {
 
     // ── Aba Gramática ─────────────────────────────────────
     if (this.abaSeletor === 'gramatica') {
-      const gramData = App.estado.grammarData || { moduli: [] };
-      if (gramData.moduli.length === 0) {
+      const gramData = this._obterDadosGramatica();
+      if (!gramData || !Array.isArray(gramData.moduli) || gramData.moduli.length === 0) {
+        fetch('data/grammar.json')
+          .then(r => r.ok ? r.json() : { moduli: [] })
+          .then(fresh => {
+            if (fresh && Array.isArray(fresh.moduli) && fresh.moduli.length > 0) {
+              if (App.estado) App.estado.grammarData = fresh;
+              if (typeof Grammar !== 'undefined' && !Grammar.dados) Grammar.dados = fresh;
+              try { localStorage.setItem('it_swr_grammar', JSON.stringify(fresh)); } catch (_) {}
+              this.renderizarSeletor();
+            }
+          })
+          .catch(() => {});
+
         const msg = document.createElement('p');
         msg.style.cssText = 'grid-column: 1 / -1; text-align:center;color:var(--cor-inchiostro-claro,#5A4535);font-weight:500;font-style:italic;padding:0.5rem;font-size:0.85rem;';
-        msg.textContent = I18n.t('quiz_gram_nao_carregado');
+        msg.textContent = I18n.t('quiz_gram_nao_carregado') || 'Carregando exercícios de gramática...';
         seletor.appendChild(msg);
-      } else {
-        gramData.moduli.forEach(mod => {
-          const btn = document.createElement('button');
-          btn.className = 'quiz-templo-btn quiz-gram-btn';
-          btn.innerHTML = I18n.t('quiz_gram_nivel').replace('{n}', mod.livello);
-          btn.onclick = () => this.iniciarGramatica(mod.livello);
-          seletor.appendChild(btn);
-        });
+        return;
       }
+
+      // Botão Misto Geral (Misto A1-C2)
+      const totalGeral = this._contarExerciciosGramatica();
+      const btnMisto = document.createElement('button');
+      btnMisto.className = 'quiz-templo-btn';
+      btnMisto.innerHTML = `🌍 Quiz Grammatica Generale<br><small>Tutti i livelli misti (${totalGeral} quizzes)</small>`;
+      btnMisto.style.gridColumn = '1 / -1';
+      btnMisto.style.background = 'linear-gradient(135deg, #1B4D3E, #27AE60)';
+      btnMisto.style.color = 'white';
+      btnMisto.onclick = () => this.iniciarGramatica('misto');
+      seletor.appendChild(btnMisto);
+
+      gramData.moduli.forEach(mod => {
+        const nivel = mod.id;
+        const qtd = this._contarExerciciosGramatica(nivel);
+        const btn = document.createElement('button');
+        btn.className = 'quiz-templo-btn quiz-gram-btn';
+        btn.innerHTML = `📚 ${mod.nome || ('Livello ' + nivel)}<br><small style="opacity:0.85">${qtd} quizzes disponíveis</small>`;
+        btn.onclick = () => this.iniciarGramatica(nivel);
+        seletor.appendChild(btn);
+      });
       return;
     }
 
@@ -785,52 +812,90 @@ const Quiz = {
     this.respondido = false;
     this.combo = 0;
 
-    this.perguntas = this._embaralhar(this._gerarGramatica(livello)).slice(0, 10);
+    const pool = this._gerarGramatica(livello);
+    this.perguntas = this._embaralhar(pool).slice(0, 10);
     if (this.perguntas.length === 0) {
       App.notificar('notif_quiz_gram_insuf', 'alerta');
       return;
     }
     
-    document.getElementById('quiz-container').style.display = 'block';
-    document.getElementById('quiz-resultado').style.display = 'none';
-    document.getElementById('quiz-templo-selector').style.display = 'none';
+    const container = document.getElementById('quiz-container');
+    const resultado = document.getElementById('quiz-resultado');
+    const seletor = document.getElementById('quiz-templo-selector');
+    if (container) container.style.display = 'block';
+    if (resultado) resultado.style.display = 'none';
+    if (seletor) seletor.style.display = 'none';
+    this._sincronizarBarraCompacta();
+
     this.mostrarPergunta();
   },
 
-  _gerarGramatica(livello) {
-    const data = App.estado.grammarData || { moduli: [] };
-    const modulo = data.moduli.find(m => m.livello === livello);
-    if (!modulo || !modulo.lezioni) return [];
+  _obterDadosGramatica() {
+    if (App.estado && App.estado.grammarData && Array.isArray(App.estado.grammarData.moduli) && App.estado.grammarData.moduli.length > 0) {
+      return App.estado.grammarData;
+    }
+    if (typeof Grammar !== 'undefined' && Grammar.dados && Array.isArray(Grammar.dados.moduli) && Grammar.dados.moduli.length > 0) {
+      App.estado.grammarData = Grammar.dados;
+      return Grammar.dados;
+    }
+    try {
+      const cached = localStorage.getItem('it_swr_grammar');
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (parsed && Array.isArray(parsed.moduli) && parsed.moduli.length > 0) {
+          App.estado.grammarData = parsed;
+          return parsed;
+        }
+      }
+    } catch (_) {}
+    return null;
+  },
 
-    const perguntas = [];
-    
-    modulo.lezioni.forEach(lez => {
-      (lez.esempi || []).forEach(ex => {
-        if (!ex.it || !ex.pt) return;
-        
-        const palavras = ex.it.split(' ').map(w => w.replace(/[.,?!]/g, ''));
-        const candidatas = palavras.filter(w => w.length > 2);
-        if (candidatas.length === 0) return;
-        
-        const oculta = candidatas[Math.floor(Math.random() * candidatas.length)];
-        const regex = new RegExp(`\\b${oculta}\\b`, 'i');
-        const perguntaTexto = ex.it.replace(regex, '___');
-        
-        const poolErradas = ["di", "a", "da", "in", "con", "su", "per", "tra", "fra", "il", "lo", "la", "i", "gli", "le", "un", "una", "e", "sono", "ho", "hai", "ha", "abbiamo", "avete", "hanno"].filter(w => w !== oculta.toLowerCase());
-        const erradas = this._embaralhar(poolErradas).slice(0, 3);
-        
-        perguntas.push({
-          id: `gram_${Math.random().toString(36).substr(2, 9)}`,
-          tipo: 'gramática',
-          nivel: livello,
-          pergunta: `${perguntaTexto} (${ex.pt})`,
-          resposta_correta: oculta.toLowerCase(),
-          alternativas: this._embaralhar([oculta.toLowerCase(), ...erradas]),
-          explicacao: `A frase completa é: "${ex.it}"`,
-          xp_recompensa: 30
+  _contarExerciciosGramatica(nivel = null) {
+    const data = this._obterDadosGramatica();
+    if (!data || !Array.isArray(data.moduli)) return 0;
+    let count = 0;
+    data.moduli.forEach(mod => {
+      if (nivel && nivel !== 'misto' && mod.id !== nivel) return;
+      (mod.lezioni || []).forEach(lez => {
+        (lez.exercicios || []).forEach(ex => {
+          if (ex.tipo === 'escolha' && Array.isArray(ex.opcoes) && ex.resposta !== undefined && ex.opcoes[ex.resposta]) {
+            count++;
+          }
         });
       });
     });
+    return count;
+  },
+
+  _gerarGramatica(livello) {
+    const data = this._obterDadosGramatica();
+    if (!data || !Array.isArray(data.moduli)) return [];
+
+    const perguntas = [];
+    data.moduli.forEach(mod => {
+      if (livello && livello !== 'misto' && mod.id !== livello) return;
+
+      (mod.lezioni || []).forEach((lez, lIdx) => {
+        (lez.exercicios || []).forEach((ex, eIdx) => {
+          if (ex.tipo === 'escolha' && Array.isArray(ex.opcoes) && ex.resposta !== undefined && ex.opcoes[ex.resposta]) {
+            const respostaCorreta = ex.opcoes[ex.resposta];
+            perguntas.push({
+              id: `gram_${mod.id}_${lIdx}_${eIdx}`,
+              templo: `gramatica_${mod.id}`,
+              tipo: 'gramática',
+              nivel: mod.id,
+              pergunta: ex.pergunta,
+              resposta_correta: respostaCorreta,
+              alternativas: [...ex.opcoes],
+              explicacao: ex.explicacao || `A resposta correta é: "${respostaCorreta}"`,
+              xp_recompensa: 25
+            });
+          }
+        });
+      });
+    });
+
     return perguntas;
   },
 

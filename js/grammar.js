@@ -25,12 +25,14 @@ const Grammatica = {
       const cached = localStorage.getItem('it_swr_grammar');
       if (cached) {
         this.dados = JSON.parse(cached);
+        if (typeof App !== 'undefined' && App.estado) App.estado.grammarData = this.dados;
         // Revalida em background sem bloquear a UI
         fetch('data/grammar.json')
           .then(r => r.ok ? r.json() : null)
           .then(fresh => {
             if (fresh && Array.isArray(fresh.moduli)) {
               this.dados = fresh;
+              if (typeof App !== 'undefined' && App.estado) App.estado.grammarData = fresh;
               try { localStorage.setItem('it_swr_grammar', JSON.stringify(fresh)); } catch (_) {}
             }
           })
@@ -43,6 +45,7 @@ const Grammatica = {
       const r = await fetch('data/grammar.json');
       if (!r.ok) throw new Error('grammar.json não encontrado');
       this.dados = await r.json();
+      if (typeof App !== 'undefined' && App.estado) App.estado.grammarData = this.dados;
       try { localStorage.setItem('it_swr_grammar', JSON.stringify(this.dados)); } catch (_) {}
     } catch (e) {
       console.error('Grammatica: erro ao carregar dados', e);

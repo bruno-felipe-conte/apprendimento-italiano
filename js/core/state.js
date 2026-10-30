@@ -10,6 +10,7 @@ const AppState = {
     quizData: [],          // flat array of all quiz questions
     vocabCache: [],        // flat array of all words (with templo_num attached)
     conjugacoesData: [],   // verb conjugation data
+    grammarData: null,     // grammar modules and exercises
     progresso: null,       // persisted in localStorage
     flashcardData: {}      // persisted in localStorage
   },
@@ -246,6 +247,28 @@ const AppState = {
         .catch(err => {
           console.warn('[App] Falha ao carregar conjugacoes.json:', err);
           this.estado.conjugacoesData = [];
+        })
+    );
+
+    // Load grammar modules & exercises
+    promises.push(
+      fetch('data/grammar.json')
+        .then(r => r.ok ? r.json() : { moduli: [] })
+        .then(data => {
+          this.estado.grammarData = data;
+          if (typeof Grammar !== 'undefined' && !Grammar.dados) {
+            Grammar.dados = data;
+          }
+          try { localStorage.setItem('it_swr_grammar', JSON.stringify(data)); } catch (_) {}
+        })
+        .catch(err => {
+          console.warn('[App] Falha ao carregar grammar.json:', err);
+          try {
+            const cached = localStorage.getItem('it_swr_grammar');
+            this.estado.grammarData = cached ? JSON.parse(cached) : { moduli: [] };
+          } catch (_) {
+            this.estado.grammarData = { moduli: [] };
+          }
         })
     );
 
