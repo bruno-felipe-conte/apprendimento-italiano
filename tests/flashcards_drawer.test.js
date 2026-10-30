@@ -151,17 +151,20 @@ describe('Gaveta Retrátil nos Flashcards (Zero-Scroll UX)', () => {
     expect(btn?.textContent).not.toContain('✕');
   });
 
-  it('7. A curva de esquecimento deve se ocultar durante o estudo ativo dos cards', () => {
+  it('7. A curva de esquecimento deve ser exibida e atualizada no container dos flashcards', () => {
     const ebb = document.createElement('div');
     ebb.id = 'ebbinghaus-container';
-    ebb.style.display = 'block';
+    ebb.style.display = 'none';
     document.body.appendChild(ebb);
+
+    globalThis.renderEbbinghausCurve = vi.fn();
 
     Flashcards.cartaAtual = { id: 'p1', italiano: 'ciao', portugues: 'olá' };
     Flashcards.atualizarEbbinghaus();
-    expect(ebb.style.display).toBe('none');
+    expect(ebb.style.display).toBe('block');
+    expect(globalThis.renderEbbinghausCurve).toHaveBeenCalled();
 
-    // Ao chamar mostrarVazio(), a curva é reexibida
+    // Ao chamar mostrarVazio(), a curva continua visível com as estatísticas do baralho
     Flashcards.sessaoStats = { again: 0, hard: 0, good: 0, easy: 0 };
     Flashcards.cartaAtual = null;
     Flashcards.mostrarVazio();

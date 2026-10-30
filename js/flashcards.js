@@ -724,9 +724,7 @@ const Flashcards = {
     if (btnEsc) btnEsc.classList.toggle('ativo', !!this.modoEscuta);
 
     this.atualizarContador();
-    // Oculta a curva de esquecimento durante o estudo ativo dos cards
-    const ebbContainer = document.getElementById('ebbinghaus-container');
-    if (ebbContainer) ebbContainer.style.display = 'none';
+    this.atualizarEbbinghaus();
     this._sincronizarBarraCompacta();
     // Update favorite button state
     const btnFav = document.getElementById('btn-favorito');
@@ -768,15 +766,6 @@ const Flashcards = {
   atualizarEbbinghaus() {
     const container = document.getElementById('ebbinghaus-container');
     if (!container) return;
-
-    // Se estiver estudando ativamente os cards (carta visível e sem tela de resumo/vazio), mantém oculto
-    const resumo = document.getElementById('flashcard-resumo');
-    const vazio  = document.getElementById('flashcard-vazio');
-    const emEstudo = !!this.cartaAtual && (!resumo || resumo.style.display === 'none') && (!vazio || vazio.style.display === 'none');
-    if (emEstudo) {
-      container.style.display = 'none';
-      return;
-    }
 
     container.style.display = 'block';
     if (typeof renderEbbinghausCurve !== 'function') return;
