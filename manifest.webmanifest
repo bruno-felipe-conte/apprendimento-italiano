@@ -9,7 +9,7 @@
   "theme_color": "#9B2335",
   "lang": "it",
   "dir": "ltr",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "categories": ["education", "lifestyle"],
   "prefer_related_applications": false,
   "icons": [

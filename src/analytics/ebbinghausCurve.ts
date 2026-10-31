@@ -19,6 +19,7 @@ export interface FSRSCardInput {
   scheduled_days?: number;
   ease_factor?: number;
   ef?: number;
+  lastReview?: string | number | Date | null;
   last_review?: string | number | Date | null;
   [key: string]: unknown;
 }
@@ -198,9 +199,10 @@ export function formatDaysLabel(d: number): string {
 /**
  * Extrai os dias decorridos desde a última revisão do card, caso disponível.
  */
-function getElapsedDays(card: FSRSCardInput | null | undefined): number | null {
-  if (!card || card.last_review == null) return null;
-  const lr = card.last_review;
+export function getElapsedDays(card: FSRSCardInput | null | undefined): number | null {
+  if (!card) return null;
+  const lr = card.lastReview ?? card.last_review;
+  if (lr == null) return null;
   let timeMs: number;
   if (typeof lr === 'number') {
     timeMs = lr;
@@ -481,6 +483,7 @@ export const Ebbinghaus = {
   calculateTimeToTarget,
   predictNextStabilityGood,
   formatDaysLabel,
+  getElapsedDays,
   computeEbbinghausCurve,
   renderEbbinghausCurve,
 };

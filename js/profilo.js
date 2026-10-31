@@ -410,56 +410,130 @@ const Profilo = {
 
 
 
-  // ── Exportar backup ───────────────────────────────────────
-  exportarDados() {
-    // Coleta todos os marcadores de página de livros
-    const bookmarks = {};
-    for (let i = 0; i < localStorage.length; i++) {
-      const k = localStorage.key(i);
-      if (k && k.startsWith('it_book_bm_')) {
-        bookmarks[k] = localStorage.getItem(k);
-      }
+  _safeParseStorage(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (raw === null || raw === undefined || raw === '') return fallback;
+      return JSON.parse(raw);
+    } catch (err) {
+      console.warn(`[Profilo] Chave '${key}' corrompida no localStorage, usando fallback:`, err);
+      return fallback;
+    }
+  },
+
+  _validarPayloadBackup(backup) {
+    if (!backup || typeof backup !== 'object' || Array.isArray(backup)) {
+      throw new Error('Arquivo de backup inválido (conteúdo não é um objeto JSON)');
+    }
+    if (!backup.versao || typeof backup.versao !== 'number' || backup.versao < 1) {
+      throw new Error('Versão de backup ausente ou inválida');
+    }
+    if (!backup.progresso || typeof backup.progresso !== 'object' || Array.isArray(backup.progresso)) {
+      throw new Error('Dados de progresso ausentes ou corrompidos no backup');
+    }
+    // Verifica subcampos vitais
+    if (typeof backup.progresso.nivel !== 'number' || backup.progresso.nivel < 1) {
+      throw new Error('Campo "nivel" inválido no progresso do backup');
+    }
+    if (typeof backup.progresso.xp !== 'number' || backup.progresso.xp < 0) {
+      throw new Error('Campo "xp" inválido no progresso do backup');
+    }
+    if (!Array.isArray(backup.progresso.templos_desbloqueados) || backup.progresso.templos_desbloqueados.length === 0) {
+      throw new Error('Campo "templos_desbloqueados" inválido no backup (deve ser lista com ao menos 1 templo)');
     }
 
-    const backup = {
-      versao: 4,
-      data: new Date().toISOString(),
-      progresso:              JSON.parse(localStorage.getItem('it_progresso')        || 'null'),
-      flashcards:             JSON.parse(localStorage.getItem('it_flashcards')       || '{}'),
-      diario:                 JSON.parse(localStorage.getItem('it_diario')           || '{}'),
-      quiz_historico:         JSON.parse(localStorage.getItem('it_quiz_historico')   || '[]'),
-      storie_lidas:           JSON.parse(localStorage.getItem('it_storie_lidas')     || '[]'),
-      onboarding:             localStorage.getItem('it_onboarding_done'),
-      tema:                   localStorage.getItem('it_tema'),
-      idioma:                 localStorage.getItem('it_idioma') || 'pt',
-      som:                    localStorage.getItem('it_som'),
-      sidebar_pinned:         localStorage.getItem('it_sidebar_pinned'),
-      audio_speed:            localStorage.getItem('it_audio_speed') || '0.85',
-      voz_preferida:          localStorage.getItem('it_voz_preferida') || null,
-      usar_voz_neural:        localStorage.getItem('it_usar_voz_neural'),
-      voz_neural_instalada:   localStorage.getItem('it_voz_neural_instalada'),
-      imersao_usada:          localStorage.getItem('it_imersao_usada'),
-      palavra_dia:            localStorage.getItem('it_palavra_dia'),
-      tour_done:              localStorage.getItem('it_tour_done'),
-      ultimo_aviso_backup:    localStorage.getItem('it_ultimo_aviso_backup'),
-      bookmarks:              bookmarks,
-      // conteúdo customizado
-      canzoni_custom:         JSON.parse(localStorage.getItem('it_canzoni_custom')   || '[]'),
-      dialoghi_custom:        JSON.parse(localStorage.getItem('it_dialoghi_custom')  || '[]'),
-      storie_custom:          JSON.parse(localStorage.getItem('it_storie_custom')    || '[]'),
-      imitazioni_custom:      JSON.parse(localStorage.getItem('it_imitazioni_custom')|| '[]'),
-      vocab_custom:           JSON.parse(localStorage.getItem('it_vocab_custom')     || '[]'),
-      // preferências de ocultação
-      canzoni_ocultas:        JSON.parse(localStorage.getItem('it_canzoni_ocultas')  || '[]'),
-    };
-    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
-    const url  = URL.createObjectURL(blob);
-    const a    = document.createElement('a');
-    a.href     = url;
-    a.download = `italiano_backup_${new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-    App.notificar('notif_backup_exp', 'sucesso');
+    if (backup.flashcards && (typeof backup.flashcards !== 'object' || Array.isArray(backup.flashcards))) {
+      throw new Error('Coleção de flashcards malformada no backup');
+    }
+    if (backup.diario && (typeof backup.diario !== 'object' || Array.isArray(backup.diario))) {
+      throw new Error('Registro de diário malformado no backup');
+    }
+    if (backup.quiz_historico && !Array.isArray(backup.quiz_historico)) {
+      throw new Error('Histórico de quiz malformado no backup (deve ser lista)');
+    }
+    if (backup.storie_lidas && !Array.isArray(backup.storie_lidas)) {
+      throw new Error('Histórico de histórias lidas malformado no backup');
+    }
+    return true;
+  },
+
+  _sanitizarBookmarks(bookmarksObj) {
+    if (!bookmarksObj || typeof bookmarksObj !== 'object' || Array.isArray(bookmarksObj)) {
+      return Object.create(null);
+    }
+    const clean = Object.create(null);
+    const BM_REGEX = /^it_book_bm_[a-zA-Z0-9_-]+$/;
+    let count = 0;
+    const MAX_BOOKMARKS = 100;
+
+    for (const [k, v] of Object.entries(bookmarksObj)) {
+      if (count >= MAX_BOOKMARKS) break;
+      if (typeof k === 'string' && k.length <= 64 && BM_REGEX.test(k)) {
+        if (typeof v === 'string' || typeof v === 'number') {
+          clean[k] = String(v).slice(0, 1024);
+          count++;
+        }
+      }
+    }
+    return clean;
+  },
+
+  // ── Exportar backup ───────────────────────────────────────
+  exportarDados() {
+    try {
+      // Coleta todos os marcadores de página de livros válidos
+      const bookmarks = {};
+      const BM_REGEX = /^it_book_bm_[a-zA-Z0-9_-]+$/;
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && BM_REGEX.test(k)) {
+          bookmarks[k] = localStorage.getItem(k);
+        }
+      }
+
+      const backup = {
+        versao: 4,
+        data: new Date().toISOString(),
+        progresso:              this._safeParseStorage('it_progresso', null),
+        flashcards:             this._safeParseStorage('it_flashcards', {}),
+        diario:                 this._safeParseStorage('it_diario', {}),
+        quiz_historico:         this._safeParseStorage('it_quiz_historico', []),
+        storie_lidas:           this._safeParseStorage('it_storie_lidas', []),
+        onboarding:             localStorage.getItem('it_onboarding_done'),
+        tema:                   localStorage.getItem('it_tema'),
+        idioma:                 localStorage.getItem('it_idioma') || 'pt',
+        som:                    localStorage.getItem('it_som'),
+        sidebar_pinned:         localStorage.getItem('it_sidebar_pinned'),
+        audio_speed:            localStorage.getItem('it_audio_speed') || '0.85',
+        voz_preferida:          localStorage.getItem('it_voz_preferida') || null,
+        usar_voz_neural:        localStorage.getItem('it_usar_voz_neural'),
+        voz_neural_instalada:   localStorage.getItem('it_voz_neural_instalada'),
+        imersao_usada:          localStorage.getItem('it_imersao_usada'),
+        palavra_dia:            localStorage.getItem('it_palavra_dia'),
+        tour_done:              localStorage.getItem('it_tour_done'),
+        ultimo_aviso_backup:    localStorage.getItem('it_ultimo_aviso_backup'),
+        bookmarks:              bookmarks,
+        // conteúdo customizado
+        canzoni_custom:         this._safeParseStorage('it_canzoni_custom', []),
+        dialoghi_custom:        this._safeParseStorage('it_dialoghi_custom', []),
+        storie_custom:          this._safeParseStorage('it_storie_custom', []),
+        imitazioni_custom:      this._safeParseStorage('it_imitazioni_custom', []),
+        vocab_custom:           this._safeParseStorage('it_vocab_custom', []),
+        // preferências de ocultação
+        canzoni_ocultas:        this._safeParseStorage('it_canzoni_ocultas', []),
+      };
+      const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = `italiano_backup_${new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      App.notificar('notif_backup_exp', 'sucesso');
+    } catch (err) {
+      console.error('[Profilo.exportarDados] Falha na exportação:', err);
+      App.notificar('Erro ao gerar exportação: ' + err.message, 'erro');
+    }
   },
 
   // ── Importar backup ───────────────────────────────────────
@@ -470,39 +544,110 @@ const Profilo = {
     reader.onload = (e) => {
       try {
         const backup = JSON.parse(e.target.result);
-        if (!backup.versao || !backup.progresso) throw new Error(I18n.t('prof_erro_formato'));
-        if (!confirm(I18n.t('prof_confirm_importar'))) return;
-        if (backup.progresso)         localStorage.setItem('it_progresso',         JSON.stringify(backup.progresso));
-        if (backup.flashcards)        localStorage.setItem('it_flashcards',        JSON.stringify(backup.flashcards));
-        if (backup.diario)            localStorage.setItem('it_diario',            JSON.stringify(backup.diario));
-        if (backup.quiz_historico)    localStorage.setItem('it_quiz_historico',    JSON.stringify(backup.quiz_historico));
-        if (backup.storie_lidas)      localStorage.setItem('it_storie_lidas',      JSON.stringify(backup.storie_lidas));
-        if (backup.onboarding)        localStorage.setItem('it_onboarding_done',   backup.onboarding);
-        if (backup.tema)              localStorage.setItem('it_tema',              backup.tema);
-        if (backup.idioma)            localStorage.setItem('it_idioma',            backup.idioma);
-        if (backup.som !== undefined && backup.som !== null) localStorage.setItem('it_som', backup.som);
-        if (backup.sidebar_pinned !== undefined && backup.sidebar_pinned !== null) localStorage.setItem('it_sidebar_pinned', backup.sidebar_pinned);
-        if (backup.audio_speed)       localStorage.setItem('it_audio_speed',       backup.audio_speed);
-        if (backup.voz_preferida)     localStorage.setItem('it_voz_preferida',     backup.voz_preferida);
-        if (backup.usar_voz_neural !== undefined && backup.usar_voz_neural !== null) localStorage.setItem('it_usar_voz_neural', backup.usar_voz_neural);
-        if (backup.voz_neural_instalada !== undefined && backup.voz_neural_instalada !== null) localStorage.setItem('it_voz_neural_instalada', backup.voz_neural_instalada);
-        if (backup.imersao_usada !== undefined && backup.imersao_usada !== null) localStorage.setItem('it_imersao_usada', backup.imersao_usada);
-        if (backup.palavra_dia !== undefined && backup.palavra_dia !== null) localStorage.setItem('it_palavra_dia', backup.palavra_dia);
-        if (backup.tour_done !== undefined && backup.tour_done !== null) localStorage.setItem('it_tour_done', backup.tour_done);
-        if (backup.ultimo_aviso_backup !== undefined && backup.ultimo_aviso_backup !== null) localStorage.setItem('it_ultimo_aviso_backup', backup.ultimo_aviso_backup);
+        this._validarPayloadBackup(backup);
 
-        if (backup.bookmarks && typeof backup.bookmarks === 'object') {
-          for (const [k, v] of Object.entries(backup.bookmarks)) {
-            if (k.startsWith('it_book_bm_')) localStorage.setItem(k, v);
-          }
+        if (!confirm(I18n.t('prof_confirm_importar'))) return;
+
+        // Sanitiza dados de progresso e flashcards via AppState
+        const progressoSanitizado = (typeof AppState !== 'undefined' && AppState._sanitizeProgresso)
+          ? AppState._sanitizeProgresso(backup.progresso)
+          : backup.progresso;
+
+        const flashcardsSanitizados = (backup.flashcards && typeof AppState !== 'undefined' && AppState._sanitizeFlashcards)
+          ? AppState._sanitizeFlashcards(backup.flashcards)
+          : (backup.flashcards || {});
+
+        const bookmarksSanitizados = this._sanitizarBookmarks(backup.bookmarks);
+
+        // Mapeia todas as operações pretendidas
+        const operacoes = new Map();
+        operacoes.set('it_progresso', JSON.stringify(progressoSanitizado));
+        operacoes.set('it_flashcards', JSON.stringify(flashcardsSanitizados));
+        if (backup.diario) operacoes.set('it_diario', JSON.stringify(backup.diario));
+        if (backup.quiz_historico) operacoes.set('it_quiz_historico', JSON.stringify(backup.quiz_historico));
+        if (backup.storie_lidas) operacoes.set('it_storie_lidas', JSON.stringify(backup.storie_lidas));
+
+        if (backup.onboarding != null) operacoes.set('it_onboarding_done', String(backup.onboarding));
+        if (backup.tema != null) operacoes.set('it_tema', String(backup.tema));
+        if (backup.idioma != null) operacoes.set('it_idioma', String(backup.idioma));
+        if (backup.som !== undefined && backup.som !== null) operacoes.set('it_som', String(backup.som));
+        if (backup.sidebar_pinned !== undefined && backup.sidebar_pinned !== null) operacoes.set('it_sidebar_pinned', String(backup.sidebar_pinned));
+        if (backup.audio_speed != null) operacoes.set('it_audio_speed', String(backup.audio_speed));
+        if (backup.voz_preferida != null) operacoes.set('it_voz_preferida', String(backup.voz_preferida));
+        if (backup.usar_voz_neural !== undefined && backup.usar_voz_neural !== null) operacoes.set('it_usar_voz_neural', String(backup.usar_voz_neural));
+        if (backup.voz_neural_instalada !== undefined && backup.voz_neural_instalada !== null) operacoes.set('it_voz_neural_instalada', String(backup.voz_neural_instalada));
+        if (backup.imersao_usada !== undefined && backup.imersao_usada !== null) operacoes.set('it_imersao_usada', String(backup.imersao_usada));
+        if (backup.palavra_dia !== undefined && backup.palavra_dia !== null) operacoes.set('it_palavra_dia', String(backup.palavra_dia));
+        if (backup.tour_done !== undefined && backup.tour_done !== null) operacoes.set('it_tour_done', String(backup.tour_done));
+        if (backup.ultimo_aviso_backup !== undefined && backup.ultimo_aviso_backup !== null) operacoes.set('it_ultimo_aviso_backup', String(backup.ultimo_aviso_backup));
+
+        for (const [k, v] of Object.entries(bookmarksSanitizados)) {
+          operacoes.set(k, v);
         }
 
-        if (backup.canzoni_custom?.length)    localStorage.setItem('it_canzoni_custom',    JSON.stringify(backup.canzoni_custom));
-        if (backup.dialoghi_custom?.length)   localStorage.setItem('it_dialoghi_custom',   JSON.stringify(backup.dialoghi_custom));
-        if (backup.storie_custom?.length)     localStorage.setItem('it_storie_custom',     JSON.stringify(backup.storie_custom));
-        if (backup.imitazioni_custom?.length) localStorage.setItem('it_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
-        if (backup.vocab_custom?.length)      localStorage.setItem('it_vocab_custom',      JSON.stringify(backup.vocab_custom));
-        if (backup.canzoni_ocultas?.length)   localStorage.setItem('it_canzoni_ocultas',   JSON.stringify(backup.canzoni_ocultas));
+        // Sanitização de coleções custom
+        if (Array.isArray(backup.canzoni_custom) && typeof Canzoni !== 'undefined' && Canzoni._sanitizarCanzone) {
+          operacoes.set('it_canzoni_custom', JSON.stringify(backup.canzoni_custom.map(Canzoni._sanitizarCanzone).filter(Boolean)));
+        } else if (Array.isArray(backup.canzoni_custom)) {
+          operacoes.set('it_canzoni_custom', JSON.stringify(backup.canzoni_custom));
+        }
+
+        if (Array.isArray(backup.dialoghi_custom) && typeof Dialoghi !== 'undefined' && Dialoghi._sanitizarDialogo) {
+          operacoes.set('it_dialoghi_custom', JSON.stringify(backup.dialoghi_custom.map(Dialoghi._sanitizarDialogo).filter(Boolean)));
+        } else if (Array.isArray(backup.dialoghi_custom)) {
+          operacoes.set('it_dialoghi_custom', JSON.stringify(backup.dialoghi_custom));
+        }
+
+        if (Array.isArray(backup.storie_custom) && typeof Storie !== 'undefined' && Storie._sanitizarStoria) {
+          operacoes.set('it_storie_custom', JSON.stringify(backup.storie_custom.map(Storie._sanitizarStoria).filter(Boolean)));
+        } else if (Array.isArray(backup.storie_custom)) {
+          operacoes.set('it_storie_custom', JSON.stringify(backup.storie_custom));
+        }
+
+        if (Array.isArray(backup.imitazioni_custom)) operacoes.set('it_imitazioni_custom', JSON.stringify(backup.imitazioni_custom));
+        if (Array.isArray(backup.vocab_custom)) operacoes.set('it_vocab_custom', JSON.stringify(backup.vocab_custom));
+        if (Array.isArray(backup.canzoni_ocultas)) operacoes.set('it_canzoni_ocultas', JSON.stringify(backup.canzoni_ocultas));
+
+        // SNAPSHOT DE SEGURANÇA
+        const snapshot = new Map();
+        for (const key of operacoes.keys()) {
+          snapshot.set(key, localStorage.getItem(key));
+        }
+
+        // FASE 1: GRAVAÇÃO EM STAGING (it_stage_*)
+        const stagingKeysEscritas = [];
+        try {
+          for (const [key, val] of operacoes.entries()) {
+            const stagingKey = `it_stage_${key}`;
+            localStorage.setItem(stagingKey, val);
+            stagingKeysEscritas.push(stagingKey);
+          }
+        } catch (errStaging) {
+          stagingKeysEscritas.forEach(k => { try { localStorage.removeItem(k); } catch (_) {} });
+          throw new Error(`Falha no armazenamento durante preparação do backup: ${errStaging.message || 'Cota excedida'}. Nenhum dado foi alterado.`);
+        }
+
+        // FASE 2: COMMIT TRANSACIONAL PARA AS CHAVES OFICIAIS
+        try {
+          for (const [key] of operacoes.entries()) {
+            const stagingKey = `it_stage_${key}`;
+            const stagingVal = localStorage.getItem(stagingKey);
+            localStorage.setItem(key, stagingVal);
+            localStorage.removeItem(stagingKey);
+          }
+        } catch (errCommit) {
+          // ROLLBACK TOTAL DO SNAPSHOT
+          console.error('[Profilo.importarDados] Erro durante commit, executando rollback completo:', errCommit);
+          for (const [snapKey, snapVal] of snapshot.entries()) {
+            try {
+              if (snapVal === null) localStorage.removeItem(snapKey);
+              else localStorage.setItem(snapKey, snapVal);
+            } catch (_) {}
+          }
+          stagingKeysEscritas.forEach(k => { try { localStorage.removeItem(k); } catch (_) {} });
+          throw new Error(`Erro ao aplicar dados do backup. Estado anterior restaurado com sucesso: ${errCommit.message}`);
+        }
+
         App.notificar('notif_backup_imp', 'sucesso');
         setTimeout(() => location.reload(), 1200);
       } catch(err) {

@@ -12,6 +12,7 @@ const Vocab = {
   blurColuna: null,   // null | 'pt' | 'it'
   top1000Data: null,
   filtrosDrawerAberto: false,
+  _activeUtterance: null,
 
   // ── Retractable Filters Drawer Toggle ──────────────────────
   toggleFiltrosDrawer(forcarEstado) {
@@ -491,10 +492,32 @@ const Vocab = {
     }
     if (typeof App !== 'undefined' && App.pronunciar) {
       App.pronunciar(texto);
+    } else if (typeof VoiceEngine !== 'undefined' && typeof VoiceEngine.falar === 'function') {
+      VoiceEngine.falar(texto);
     } else if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       try { window.speechSynthesis.cancel(); } catch (_) {}
       const u = new SpeechSynthesisUtterance(texto);
       u.lang = 'it-IT';
+
+      // Fix Crítico do Chromium/WebKit: Ancorar no Vocab e na janela global para evitar coleta precoce pelo GC
+      Vocab._activeUtterance = u;
+      if (typeof window !== 'undefined') {
+        window._vocabActiveUtterance = u;
+      }
+
+      u.onend = () => {
+        if (Vocab._activeUtterance === u) Vocab._activeUtterance = null;
+        if (typeof window !== 'undefined' && window._vocabActiveUtterance === u) {
+          window._vocabActiveUtterance = null;
+        }
+      };
+      u.onerror = () => {
+        if (Vocab._activeUtterance === u) Vocab._activeUtterance = null;
+        if (typeof window !== 'undefined' && window._vocabActiveUtterance === u) {
+          window._vocabActiveUtterance = null;
+        }
+      };
+
       window.speechSynthesis.speak(u);
     }
   },

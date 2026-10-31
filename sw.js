@@ -139,7 +139,7 @@ self.addEventListener('fetch', event => {
   if (url.hostname === 'fonts.googleapis.com' || url.hostname === 'fonts.gstatic.com') {
     event.respondWith(
       caches.open(CACHE).then(cache =>
-        cache.match(req).then(cached => {
+        cache.match(req, { ignoreSearch: true }).then(cached => {
           const network = fetch(req).then(res => {
             if (res && (res.status === 200 || res.type === 'opaque')) {
               cache.put(req, res.clone());
@@ -160,7 +160,7 @@ self.addEventListener('fetch', event => {
   if (url.pathname.includes('/data/')) {
     event.respondWith(
       caches.open(CACHE).then(cache =>
-        cache.match(req).then(cached => {
+        cache.match(req, { ignoreSearch: true }).then(cached => {
           const networkFetch = fetch(req).then(res => {
             if (res.ok) cache.put(req, res.clone());
             return res;
@@ -172,9 +172,9 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // 3. Tudo o mais — cache-first
+  // 3. Tudo o mais — cache-first com ignoreSearch para resiliência de cache-busting
   event.respondWith(
-    caches.match(req).then(cached => cached || fetch(req).then(res => {
+    caches.match(req, { ignoreSearch: true }).then(cached => cached || fetch(req).then(res => {
       if (res.ok) {
         const clone = res.clone();
         caches.open(CACHE).then(c => c.put(req, clone));

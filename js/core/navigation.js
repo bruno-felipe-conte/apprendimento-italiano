@@ -58,10 +58,8 @@ const AppNavigation = {
       estado.secaoAtiva = secao;
     }
 
-    // Pausa karaokê se sair da aba de músicas
-    if (secao !== 'canzoni' && typeof Canzoni !== 'undefined' && Canzoni.tocandoKaraoke) {
-      Canzoni.pararAudio();
-    }
+    // Interrompe áudios, TTS e gravações de microfone ativas ao trocar de seção (F11)
+    this.teardownAudio(secao);
 
     // Notifica plugins de mudança de seção
     const pluginMgr = (typeof window !== 'undefined' && window.AppPluginManager) || (typeof globalThis !== 'undefined' && globalThis.AppPluginManager);
@@ -143,6 +141,91 @@ const AppNavigation = {
     }
     if (secao === 'profilo' && typeof Profilo !== 'undefined') {
       Profilo.renderizar();
+    }
+  },
+
+  // ── Centralized Audio, TTS & Recording Teardown (F11 / M2) ──
+  teardownAudio(novaSecao) {
+    // 1. Cancela qualquer síntese em voo do Web Speech API nativo e limpa âncoras de GC
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch (_) {}
+      window._activeUtterance = null;
+      window._activeVoiceUtterance = null;
+      window._storyActiveUtterance = null;
+      window._vocabActiveUtterance = null;
+    }
+
+    // 2. Interrompe o motor de voz (Web Audio buffers, TTS e worker neural)
+    const ve = (typeof window !== 'undefined' && window.VoiceEngine) ||
+               (typeof globalThis !== 'undefined' && globalThis.VoiceEngine) ||
+               (typeof VoiceEngine !== 'undefined' ? VoiceEngine : null);
+    if (ve && typeof ve.parar === 'function') {
+      try { ve.parar(); } catch (_) {}
+    }
+
+    // 3. Interrompe leitura de capítulos/páginas de Storie
+    if (novaSecao !== 'storie') {
+      const st = (typeof window !== 'undefined' && window.Storie) ||
+                 (typeof globalThis !== 'undefined' && globalThis.Storie) ||
+                 (typeof Storie !== 'undefined' ? Storie : null);
+      if (st && typeof st._pararAudioPagina === 'function') {
+        try { st._pararAudioPagina(); } catch (_) {}
+      }
+    }
+
+    // 4. Interrompe gravação de microfone e player no Dojo (Imitazione)
+    if (novaSecao !== 'imitazione') {
+      const im = (typeof window !== 'undefined' && window.Imitazione) ||
+                 (typeof globalThis !== 'undefined' && globalThis.Imitazione) ||
+                 (typeof Imitazione !== 'undefined' ? Imitazione : null);
+      if (im) {
+        if (typeof im.pararGravacao === 'function') {
+          try { im.pararGravacao(); } catch (_) {}
+        }
+        if (im._userAudioPlayer) {
+          try {
+            im._userAudioPlayer.pause();
+            im._userAudioPlayer.currentTime = 0;
+          } catch (_) {}
+        }
+        if (im._mediaStream) {
+          try {
+            im._mediaStream.getTracks().forEach(t => t.stop());
+            im._mediaStream = null;
+          } catch (_) {}
+        }
+      }
+    }
+
+    // 5. Interrompe gravação de voz ativa em Flashcards
+    if (novaSecao !== 'flashcard') {
+      const fc = (typeof window !== 'undefined' && window.Flashcards) ||
+                 (typeof globalThis !== 'undefined' && globalThis.Flashcards) ||
+                 (typeof Flashcards !== 'undefined' ? Flashcards : null);
+      if (fc && fc.gravando) {
+        if (typeof fc.pararGravacao === 'function') {
+          try { fc.pararGravacao(); } catch (_) {}
+        } else if (fc._recognition) {
+          try { fc._recognition.stop(); } catch (_) {}
+          fc._recognition = null;
+          fc.gravando = false;
+          if (typeof fc._atualizarBotaoGravar === 'function') {
+            fc._atualizarBotaoGravar(false);
+          }
+        }
+      }
+    }
+
+    // 6. Interrompe reprodução e karaokê de músicas (Canzoni)
+    if (novaSecao !== 'canzoni') {
+      const cz = (typeof window !== 'undefined' && window.Canzoni) ||
+                 (typeof globalThis !== 'undefined' && globalThis.Canzoni) ||
+                 (typeof Canzoni !== 'undefined' ? Canzoni : null);
+      if (cz && typeof cz.pararAudio === 'function') {
+        try { cz.pararAudio(); } catch (_) {}
+      }
     }
   }
 };

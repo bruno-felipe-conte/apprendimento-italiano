@@ -277,6 +277,7 @@ export const VoiceEngine = {
         catch (_) { }
     },
     // ── 8. Motor Neural WebAssembly & Cache IndexedDB ──────────
+    _sessionEpoch: 0,
     _worker: null,
     _pendingSyntheses: new Map(),
     _currentAudioSource: null,
@@ -396,6 +397,7 @@ export const VoiceEngine = {
         return true;
     },
     parar() {
+        this._sessionEpoch++;
         if (typeof window !== 'undefined') {
             window._activeVoiceUtterance = null;
         }
@@ -413,14 +415,33 @@ export const VoiceEngine = {
             catch (_) { }
             this._currentAudioSource = null;
         }
+        // Invalida e cancela todas as sínteses de Web Worker em voo
+        if (this._pendingSyntheses.size > 0) {
+            for (const [, resolver] of this._pendingSyntheses.entries()) {
+                try {
+                    const abortErr = typeof DOMException !== 'undefined'
+                        ? new DOMException('Síntese neural cancelada', 'AbortError')
+                        : new Error('AbortError: Síntese neural cancelada');
+                    resolver.reject(abortErr);
+                }
+                catch (_) { }
+            }
+            this._pendingSyntheses.clear();
+        }
     },
-    async _tocarBuffer(wavBuffer, opcoes = {}) {
+    async _tocarBuffer(wavBuffer, opcoes = {}, epoch) {
+        const currentEpoch = epoch !== undefined ? epoch : this._sessionEpoch;
+        if (currentEpoch !== this._sessionEpoch)
+            return false;
         this.parar();
+        const playEpoch = this._sessionEpoch;
         const ctx = this.obterAudioContext();
         if (!ctx)
             return false;
         try {
             const audioBuffer = await ctx.decodeAudioData(wavBuffer.slice(0));
+            if (playEpoch !== this._sessionEpoch)
+                return false;
             const source = ctx.createBufferSource();
             source.buffer = audioBuffer;
             let rate = opcoes.rate;
@@ -437,17 +458,20 @@ export const VoiceEngine = {
             source.onended = () => {
                 if (this._currentAudioSource === source) {
                     this._currentAudioSource = null;
+                    if (playEpoch === this._sessionEpoch && opcoes.onend) {
+                        opcoes.onend();
+                    }
                 }
-                if (opcoes.onend)
-                    opcoes.onend();
             };
             source.start();
             return true;
         }
         catch (err) {
-            console.warn('[VoiceEngine] Falha ao decodificar/tocar buffer:', err);
-            if (opcoes.onerror)
-                opcoes.onerror(err);
+            if (playEpoch === this._sessionEpoch) {
+                console.warn('[VoiceEngine] Falha ao decodificar/tocar buffer:', err);
+                if (opcoes.onerror)
+                    opcoes.onerror(err);
+            }
             return false;
         }
     },
@@ -458,13 +482,18 @@ export const VoiceEngine = {
         if (!textoNorm)
             return false;
         this.parar();
+        const epoch = this._sessionEpoch;
         if (typeof window !== 'undefined' && window.AudioCache) {
             try {
                 const blobCache = await window.AudioCache.obter(textoNorm, 'neural_it');
+                if (epoch !== this._sessionEpoch)
+                    return false;
                 if (blobCache && blobCache.size > 4096) {
                     const buffer = await blobCache.arrayBuffer();
+                    if (epoch !== this._sessionEpoch)
+                        return false;
                     if (buffer.byteLength > 4096) {
-                        return await this._tocarBuffer(buffer, opcoes);
+                        return await this._tocarBuffer(buffer, opcoes, epoch);
                     }
                 }
             }
@@ -494,15 +523,24 @@ export const VoiceEngine = {
                     }
                 });
                 const wavBuffer = await pBuffer;
+                if (epoch !== this._sessionEpoch)
+                    return false;
                 if (wavBuffer && wavBuffer.byteLength > 4096) {
                     if (typeof window !== 'undefined' && window.AudioCache) {
                         window.AudioCache.salvar(textoNorm, wavBuffer, 'neural_it').catch(() => { });
                     }
-                    return await this._tocarBuffer(wavBuffer, opcoes);
+                    return await this._tocarBuffer(wavBuffer, opcoes, epoch);
                 }
             }
-            catch (_) { }
+            catch (err) {
+                // Se cancelado intencionalmente ou abortado, não faz fallback para TTS nativo
+                if (epoch !== this._sessionEpoch || (err && (err.name === 'AbortError' || String(err).includes('AbortError')))) {
+                    return false;
+                }
+            }
         }
+        if (epoch !== this._sessionEpoch)
+            return false;
         return this.falar(textoNorm, opcoes);
     },
     falar(texto, opcoes = {}) {
@@ -559,12 +597,17 @@ export const VoiceEngine = {
                 if (typeof window !== 'undefined' && window._activeVoiceUtterance === u) {
                     window._activeVoiceUtterance = null;
                 }
-                console.warn('[VoiceEngine] Falha na síntese nativa de fala:', err);
-                if (opcoes.onend) {
-                    setTimeout(opcoes.onend, 800);
+                const erroTipo = err && (err.error || err.type);
+                if (erroTipo === 'canceled' || erroTipo === 'interrupted') {
+                    // Cancelamento intencional via speechSynthesis.cancel(): suprime log e NUNCA dispara onend
+                    return;
                 }
-                else if (opcoes.onerror) {
+                console.warn('[VoiceEngine] Falha na síntese nativa de fala:', err);
+                if (opcoes.onerror) {
                     opcoes.onerror(err);
+                }
+                else if (opcoes.onend) {
+                    setTimeout(opcoes.onend, 800);
                 }
             };
             speechSynthesis.speak(u);

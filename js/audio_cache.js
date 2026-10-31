@@ -36,14 +36,50 @@ const AudioCache = {
         }
       };
 
-      req.onsuccess = (e) => resolve(e.target.result);
+      req.onsuccess = (e) => {
+        const db = e.target.result;
+
+        // PREVENÇÃO DE DEADLOCK EM MULTI-ABA (F3):
+        // Quando uma nova versão do banco é aberta por outra aba ou SW, o navegador
+        // dispara 'versionchange' em todas as conexões abertas existentes.
+        // O fechamento imediato permite que o req.onupgradeneeded da outra aba prossiga.
+        db.onversionchange = () => {
+          console.warn('[AudioCache] Mudança de versão detectada em outra aba. Fechando conexão para permitir upgrade.');
+          try { db.close(); } catch (_) {}
+          AudioCache._dbPromise = null;
+        };
+
+        db.onclose = () => {
+          AudioCache._dbPromise = null;
+        };
+
+        resolve(db);
+      };
+
+      req.onblocked = () => {
+        console.warn('[AudioCache] Abertura do IndexedDB bloqueada por conexão ativa em outra aba.');
+      };
+
       req.onerror = (e) => {
         console.warn('[AudioCache] Erro ao abrir IndexedDB:', e);
+        AudioCache._dbPromise = null;
         resolve(null);
       };
     });
 
     return this._dbPromise;
+  },
+
+  // Fecha explicitamente a conexão com o IndexedDB (útil para testes e teardown)
+  fechar() {
+    if (this._dbPromise) {
+      this._dbPromise.then(db => {
+        if (db) {
+          try { db.close(); } catch (_) {}
+        }
+      }).catch(() => {});
+      this._dbPromise = null;
+    }
   },
 
   // Gera uma hash SHA-256 ou FNV-1a rápida e estável para a chave do texto

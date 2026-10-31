@@ -13,6 +13,22 @@ import type {
   IBackendAdapter
 } from '../../types/app';
 
+declare global {
+  var AppState: any;
+  var AppNavigation: any;
+  var AppXP: any;
+  var AppStats: any;
+  var AppMeta: any;
+  var AppFavorites: any;
+  var AppTTS: any;
+  var App: any;
+  var ModalManager: any;
+  var I18n: any;
+  var SomFeedback: any;
+  var SafeStorage: any;
+  var Progressao: any;
+}
+
 const STORAGE_QUEUE_KEY = 'apprendimento_sync_queue';
 const STORAGE_CONFIG_KEY = 'apprendimento_backend_config';
 const MAX_ATTEMPTS = 5;
@@ -262,11 +278,16 @@ export class SyncManager {
   private lastSyncSuccess: number | null = null;
   private lastSyncError: string | null = null;
 
+  // Multi-tab coordination
+  private tabId: string = `sync_tab_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
+  private syncChannel: BroadcastChannel | null = null;
+
   constructor(adapter?: IBackendAdapter) {
     this.config = this.carregarConfig();
     this.adapter = adapter || this.criarAdapter(this.config.provider);
     this.carregarFila();
     this.configurarListenersOnline();
+    this.configurarCrossTabSync();
 
     if (this.config.autoSync) {
       this.iniciarSyncPeriodico();
@@ -356,6 +377,85 @@ export class SyncManager {
     } catch (e) {
       console.error('[SyncManager] Falha ao persistir fila no localStorage:', e);
     }
+    this.broadcastQueueChange();
+  }
+
+  private configurarCrossTabSync(): void {
+    if (typeof window === 'undefined') return;
+
+    if (typeof BroadcastChannel !== 'undefined') {
+      try {
+        this.syncChannel = new BroadcastChannel('apprendimento_channel');
+        this.syncChannel.onmessage = (event) => {
+          const msg = event?.data;
+          if (!msg || msg.senderId === this.tabId) return;
+          if (msg.type === 'SYNC_UPDATE' && msg.key === STORAGE_QUEUE_KEY) {
+            this.recarregarFila();
+          }
+        };
+      } catch (_) {
+        this.syncChannel = null;
+      }
+    }
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === STORAGE_QUEUE_KEY) {
+        this.recarregarFila();
+      }
+    });
+  }
+
+  private broadcastQueueChange(): void {
+    if (this.syncChannel) {
+      try {
+        this.syncChannel.postMessage({
+          type: 'SYNC_UPDATE',
+          key: STORAGE_QUEUE_KEY,
+          senderId: this.tabId,
+          timestamp: Date.now()
+        });
+      } catch (_) {}
+    }
+  }
+
+  public recarregarFila(): void {
+    const contagemAnterior = this.queue.length;
+    this.carregarFila();
+    if (this.queue.length !== contagemAnterior) {
+      this.notificarStatus();
+    }
+  }
+
+  private tentarAdquirirLockFlush(): boolean {
+    if (typeof localStorage === 'undefined') return true;
+    try {
+      const agora = Date.now();
+      const raw = localStorage.getItem('apprendimento_sync_lock');
+      if (raw) {
+        const lock = JSON.parse(raw);
+        // Lock ativo de outra aba com expiração de 15 segundos
+        if (lock && lock.tabId !== this.tabId && (agora - lock.timestamp < 15000)) {
+          return false;
+        }
+      }
+      localStorage.setItem('apprendimento_sync_lock', JSON.stringify({ tabId: this.tabId, timestamp: agora }));
+      return true;
+    } catch (_) {
+      return true;
+    }
+  }
+
+  private liberarLockFlush(): void {
+    if (typeof localStorage === 'undefined') return;
+    try {
+      const raw = localStorage.getItem('apprendimento_sync_lock');
+      if (raw) {
+        const lock = JSON.parse(raw);
+        if (lock && lock.tabId === this.tabId) {
+          localStorage.removeItem('apprendimento_sync_lock');
+        }
+      }
+    } catch (_) {}
   }
 
   private configurarListenersOnline(): void {
@@ -411,6 +511,9 @@ export class SyncManager {
     entityId: string,
     payload: Record<string, any>
   ): SyncItem {
+    // Sincroniza com o estado em disco antes de mutar a fila
+    this.recarregarFila();
+
     const timestamp = Date.now();
     const id = `sync_${timestamp}_${Math.random().toString(36).substring(2, 9)}`;
 
@@ -477,8 +580,16 @@ export class SyncManager {
    * Esvazia e processa a fila de sincronização enviando as operações pendentes.
    */
   public async flush(): Promise<SyncBatchResult> {
-    if (this.isSyncing || this.queue.length === 0) {
+    if (this.isSyncing) {
       return { sucesso: true, processados: [], falhas: [] };
+    }
+
+    if (this.queue.length === 0) {
+      // Recarrega do disco caso outra aba tenha enfileirado itens
+      this.recarregarFila();
+      if (this.queue.length === 0) {
+        return { sucesso: true, processados: [], falhas: [] };
+      }
     }
 
     if (!this.isOnline()) {
@@ -489,6 +600,11 @@ export class SyncManager {
       };
     }
 
+    // Mutual-exclusion guard entre abas (15s lease lock)
+    if (!this.tentarAdquirirLockFlush()) {
+      return { sucesso: true, processados: [], falhas: [] };
+    }
+
     this.isSyncing = true;
     this.notificarStatus();
 
@@ -497,11 +613,27 @@ export class SyncManager {
       const batch = this.queue.slice(0, 25);
       const resultado = await this.adapter.syncBatch(batch);
 
+      // Recarrega a fila atual do disco para evitar sobrescrever itens gravados concorrentemente por outras abas
+      let currentDisk: SyncItem[] = [];
+      try {
+        const raw = (typeof localStorage !== 'undefined') ? localStorage.getItem(STORAGE_QUEUE_KEY) : null;
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          currentDisk = Array.isArray(parsed) ? parsed : this.queue;
+        } else {
+          currentDisk = this.queue;
+        }
+      } catch (_) {
+        currentDisk = this.queue;
+      }
+
       if (resultado.processados.length > 0) {
         const setSucesso = new Set(resultado.processados);
-        this.queue = this.queue.filter((item) => !setSucesso.has(item.id));
+        this.queue = currentDisk.filter((item) => !setSucesso.has(item.id));
         this.lastSyncSuccess = Date.now();
         this.lastSyncError = null;
+      } else {
+        this.queue = currentDisk;
       }
 
       if (resultado.falhas.length > 0) {
@@ -536,6 +668,7 @@ export class SyncManager {
       };
     } finally {
       this.isSyncing = false;
+      this.liberarLockFlush();
       this.notificarStatus();
     }
   }

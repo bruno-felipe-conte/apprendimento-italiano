@@ -259,6 +259,12 @@ const Imitazione = {
     if (this._mediaRecorder && this._mediaRecorder.state !== 'inactive') {
       try { this._mediaRecorder.stop(); } catch (_) {}
     }
+    if (this._mediaStream) {
+      try {
+        this._mediaStream.getTracks().forEach(t => t.stop());
+      } catch (_) {}
+      this._mediaStream = null;
+    }
     this.isRecording = false;
     const btn = document.getElementById('dojo-btn-mic');
     if (btn) btn.classList.remove('recording');
@@ -267,11 +273,25 @@ const Imitazione = {
   tocarMinhaGravacao() {
     if (!this._userAudioUrl) return;
     if (this._userAudioPlayer) {
-      this._userAudioPlayer.pause();
-      this._userAudioPlayer.currentTime = 0;
+      try {
+        this._userAudioPlayer.pause();
+        this._userAudioPlayer.currentTime = 0;
+      } catch (_) {}
     }
-    this._userAudioPlayer = new Audio(this._userAudioUrl);
-    this._userAudioPlayer.play();
+    try {
+      this._userAudioPlayer = new Audio(this._userAudioUrl);
+      const playPromise = this._userAudioPlayer.play();
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(err => {
+          // AbortError e NotAllowedError são comuns em transições rápidas de áudio no browser
+          if (err && err.name !== 'AbortError') {
+            console.warn('[Imitazione] Falha ao reproduzir gravação do usuário:', err);
+          }
+        });
+      }
+    } catch (err) {
+      console.warn('[Imitazione] Exceção ao instanciar ou tocar áudio:', err);
+    }
   },
 
   _mostrarFeedbackMediaRecorder() {

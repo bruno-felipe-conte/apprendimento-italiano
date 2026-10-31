@@ -232,11 +232,15 @@ export class SyncManager {
     statusListeners = [];
     lastSyncSuccess = null;
     lastSyncError = null;
+    // Multi-tab coordination
+    tabId = `sync_tab_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
+    syncChannel = null;
     constructor(adapter) {
         this.config = this.carregarConfig();
         this.adapter = adapter || this.criarAdapter(this.config.provider);
         this.carregarFila();
         this.configurarListenersOnline();
+        this.configurarCrossTabSync();
         if (this.config.autoSync) {
             this.iniciarSyncPeriodico();
         }
@@ -321,6 +325,86 @@ export class SyncManager {
         catch (e) {
             console.error('[SyncManager] Falha ao persistir fila no localStorage:', e);
         }
+        this.broadcastQueueChange();
+    }
+    configurarCrossTabSync() {
+        if (typeof window === 'undefined')
+            return;
+        if (typeof BroadcastChannel !== 'undefined') {
+            try {
+                this.syncChannel = new BroadcastChannel('apprendimento_channel');
+                this.syncChannel.onmessage = (event) => {
+                    const msg = event?.data;
+                    if (!msg || msg.senderId === this.tabId)
+                        return;
+                    if (msg.type === 'SYNC_UPDATE' && msg.key === STORAGE_QUEUE_KEY) {
+                        this.recarregarFila();
+                    }
+                };
+            }
+            catch (_) {
+                this.syncChannel = null;
+            }
+        }
+        window.addEventListener('storage', (e) => {
+            if (e.key === STORAGE_QUEUE_KEY) {
+                this.recarregarFila();
+            }
+        });
+    }
+    broadcastQueueChange() {
+        if (this.syncChannel) {
+            try {
+                this.syncChannel.postMessage({
+                    type: 'SYNC_UPDATE',
+                    key: STORAGE_QUEUE_KEY,
+                    senderId: this.tabId,
+                    timestamp: Date.now()
+                });
+            }
+            catch (_) { }
+        }
+    }
+    recarregarFila() {
+        const contagemAnterior = this.queue.length;
+        this.carregarFila();
+        if (this.queue.length !== contagemAnterior) {
+            this.notificarStatus();
+        }
+    }
+    tentarAdquirirLockFlush() {
+        if (typeof localStorage === 'undefined')
+            return true;
+        try {
+            const agora = Date.now();
+            const raw = localStorage.getItem('apprendimento_sync_lock');
+            if (raw) {
+                const lock = JSON.parse(raw);
+                // Lock ativo de outra aba com expiração de 15 segundos
+                if (lock && lock.tabId !== this.tabId && (agora - lock.timestamp < 15000)) {
+                    return false;
+                }
+            }
+            localStorage.setItem('apprendimento_sync_lock', JSON.stringify({ tabId: this.tabId, timestamp: agora }));
+            return true;
+        }
+        catch (_) {
+            return true;
+        }
+    }
+    liberarLockFlush() {
+        if (typeof localStorage === 'undefined')
+            return;
+        try {
+            const raw = localStorage.getItem('apprendimento_sync_lock');
+            if (raw) {
+                const lock = JSON.parse(raw);
+                if (lock && lock.tabId === this.tabId) {
+                    localStorage.removeItem('apprendimento_sync_lock');
+                }
+            }
+        }
+        catch (_) { }
     }
     configurarListenersOnline() {
         if (typeof window !== 'undefined') {
@@ -365,6 +449,8 @@ export class SyncManager {
      * Enfileira uma ação de sincronização com deduplicação inteligente LWW (Last-Write-Wins).
      */
     enfileirar(entity, action, entityId, payload) {
+        // Sincroniza com o estado em disco antes de mutar a fila
+        this.recarregarFila();
         const timestamp = Date.now();
         const id = `sync_${timestamp}_${Math.random().toString(36).substring(2, 9)}`;
         // Deduplicação: verifica se já existe uma operação pendente para a mesma entidade
@@ -424,8 +510,15 @@ export class SyncManager {
      * Esvazia e processa a fila de sincronização enviando as operações pendentes.
      */
     async flush() {
-        if (this.isSyncing || this.queue.length === 0) {
+        if (this.isSyncing) {
             return { sucesso: true, processados: [], falhas: [] };
+        }
+        if (this.queue.length === 0) {
+            // Recarrega do disco caso outra aba tenha enfileirado itens
+            this.recarregarFila();
+            if (this.queue.length === 0) {
+                return { sucesso: true, processados: [], falhas: [] };
+            }
         }
         if (!this.isOnline()) {
             return {
@@ -434,17 +527,39 @@ export class SyncManager {
                 falhas: [{ id: 'network', erro: 'Dispositivo offline' }]
             };
         }
+        // Mutual-exclusion guard entre abas (15s lease lock)
+        if (!this.tentarAdquirirLockFlush()) {
+            return { sucesso: true, processados: [], falhas: [] };
+        }
         this.isSyncing = true;
         this.notificarStatus();
         try {
             // Pega os primeiros 25 itens da fila para processar em lote
             const batch = this.queue.slice(0, 25);
             const resultado = await this.adapter.syncBatch(batch);
+            // Recarrega a fila atual do disco para evitar sobrescrever itens gravados concorrentemente por outras abas
+            let currentDisk = [];
+            try {
+                const raw = (typeof localStorage !== 'undefined') ? localStorage.getItem(STORAGE_QUEUE_KEY) : null;
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    currentDisk = Array.isArray(parsed) ? parsed : this.queue;
+                }
+                else {
+                    currentDisk = this.queue;
+                }
+            }
+            catch (_) {
+                currentDisk = this.queue;
+            }
             if (resultado.processados.length > 0) {
                 const setSucesso = new Set(resultado.processados);
-                this.queue = this.queue.filter((item) => !setSucesso.has(item.id));
+                this.queue = currentDisk.filter((item) => !setSucesso.has(item.id));
                 this.lastSyncSuccess = Date.now();
                 this.lastSyncError = null;
+            }
+            else {
+                this.queue = currentDisk;
             }
             if (resultado.falhas.length > 0) {
                 const mapaFalhas = new Map(resultado.falhas.map((f) => [f.id, f.erro]));
@@ -477,6 +592,7 @@ export class SyncManager {
         }
         finally {
             this.isSyncing = false;
+            this.liberarLockFlush();
             this.notificarStatus();
         }
     }

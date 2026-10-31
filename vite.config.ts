@@ -34,7 +34,8 @@ export default defineConfig({
   plugins: [copyLegacyAssets()],
   base: './',
   test: {
-    exclude: ['**/node_modules/**', '**/dist/**', 'tests/a11y/**']
+    include: ['tests/**/*.{test,spec}.{js,ts}'],
+    exclude: ['**/node_modules/**', '**/dist/**', '**/.agents/**', 'tests/a11y/**']
   },
   server: {
     port: 5173,

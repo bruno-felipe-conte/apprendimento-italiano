@@ -160,7 +160,36 @@ const App = {
 
     if (typeof document !== 'undefined') {
       document.addEventListener('keydown', (e) => {
-        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        if (e.defaultPrevented) return;
+        const tag = (e.target?.tagName || '').toUpperCase();
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(tag) || e.target?.isContentEditable) return;
+
+        // Don't hijack keys when modals or dialogs are active (F13)
+        if (typeof ModalManager !== 'undefined' && (ModalManager.stack?.length > 0 || ModalManager.getOpenStaticModal?.())) {
+          return;
+        }
+        const modais = document.querySelectorAll(
+          '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open], [role="dialog"]:not([hidden])'
+        );
+        for (const m of modais) {
+          if (m.classList.contains('ativo') || m.classList.contains('show') || m.tagName === 'DIALOG') return;
+          if (m.style.display && m.style.display !== 'none') return;
+          try {
+            if (getComputedStyle(m).display !== 'none' && getComputedStyle(m).visibility !== 'hidden') return;
+          } catch (_) {}
+        }
+
+        // Don't hijack keys when in flashcard or quiz sections (numbers are used for rating/answers) (F13)
+        const secaoAtiva = (typeof AppNavigation !== 'undefined' && AppNavigation.secaoAtiva) ||
+                           (typeof AppState !== 'undefined' && AppState.estado?.secaoAtiva) ||
+                           (typeof App !== 'undefined' && App.estado?.secaoAtiva) || '';
+        const secFlashcard = document.getElementById('sec-flashcard');
+        const secQuiz = document.getElementById('sec-quiz');
+        if (secaoAtiva === 'flashcard' || secaoAtiva === 'quiz' ||
+            secFlashcard?.classList.contains('active') || secQuiz?.classList.contains('active')) {
+          return;
+        }
+
         const mapa = { '1': 'templi', '2': 'flashcard', '3': 'quiz', '4': 'vocabolario', '5': 'grammatica' };
         if (mapa[e.key]) this.navegar(mapa[e.key]);
       });

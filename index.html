@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#9B2335">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https:; media-src 'self' data: blob:; connect-src 'self' https://translate.googleapis.com https://api.mymemory.translated.net https://fonts.googleapis.com https://fonts.gstatic.com https://huggingface.co https://raw.githubusercontent.com https://cdn-lfs.huggingface.co; worker-src 'self' blob:;">
   <title>Italiano Autentico</title>
@@ -287,7 +287,7 @@
               <div class="deck-layer deck-layer-2" id="deck-layer-2"></div>
               <div class="deck-layer deck-layer-1" id="deck-layer-1"></div>
 
-              <div class="flashcard" id="flashcard" onclick="Flashcards.virar()">
+              <div class="flashcard" id="flashcard" role="button" tabindex="0" aria-expanded="false" aria-label="Card de memorização. Pressione Enter ou Espaço para virar" onclick="Flashcards.virar()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();Flashcards.virar();}">
                 <div id="swipe-hint-left" class="swipe-hint"></div>
                 <div id="swipe-hint-right" class="swipe-hint"></div>
                 <div class="card-inner">
@@ -413,7 +413,7 @@
           <span id="quiz-combo-badge" class="quiz-combo-badge" style="display:none"></span>
         </div>
         <div class="opcoes-grid" id="opcoes-grid"></div>
-        <div class="explicacao-container" id="explicacao-container" style="display:none">
+        <div class="explicacao-container" id="explicacao-container" role="status" aria-live="polite" style="display:none">
           <p id="quiz-explicacao"></p>
           <button class="btn-primario" onclick="Quiz.proximaPergunta()" data-i18n="quiz_continuar">Continuar →</button>
         </div>
@@ -632,6 +632,7 @@
   <script type="module" src="js/core/sync.js?v=156"></script>
   <script type="module" src="js/core/analytics.js?v=156"></script>
   <script type="module" src="js/core/collaboration.js?v=156"></script>
+  <script src="js/core/storage.js?v=162"></script>
   <script src="js/core/state.js?v=159"></script>
   <script src="js/core/navigation.js?v=160"></script>
   <script src="js/core/xp.js?v=156"></script>
@@ -690,9 +691,21 @@
         // Verifica atualizações sem travar caso haja oscilação de rede
         try { reg.update().catch(() => {}); } catch (_) {}
       }).catch(err => console.warn('[SW] Registro falhou:', err));
-      // Quando novo SW ativa e assume o controle → recarrega para servir arquivos novos
+      // Quando novo SW ativa e assume o controle → notificação não-disruptiva (F15)
       navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
+        const secaoAtiva = (typeof AppNavigation !== 'undefined' && AppNavigation.secaoAtiva) ||
+                           (typeof AppState !== 'undefined' && AppState.estado?.secaoAtiva) ||
+                           (typeof App !== 'undefined' && App.estado?.secaoAtiva) || '';
+        const emEstudo = (typeof Flashcards !== 'undefined' && Flashcards.cartasDisponiveis && Flashcards.cartasDisponiveis.length > 0) ||
+                         (typeof Quiz !== 'undefined' && Quiz.perguntas && Quiz.perguntas.length > 0) ||
+                         secaoAtiva === 'flashcard' || secaoAtiva === 'quiz' || secaoAtiva === 'imitazione';
+        if (typeof App !== 'undefined' && App.notificar) {
+          if (emEstudo) {
+            App.notificar('Atualização disponível! Será aplicada na próxima inicialização.', 'info');
+          } else {
+            App.notificar('Nova versão disponível! Recarregue a página quando desejar.', 'info');
+          }
+        }
       });
     }
   </script>

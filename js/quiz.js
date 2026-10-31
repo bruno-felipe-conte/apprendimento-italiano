@@ -3,6 +3,8 @@
 // ============================================================
 
 const Quiz = {
+  _bloqueioAvanco: false,
+  _resultadoMostrado: false,
   temploAtual: null,
   perguntas: [],       // 10 questions for this session
   perguntaAtual: 0,
@@ -100,6 +102,8 @@ const Quiz = {
     this.xpTotal = 0;
     this.respondido = false;
     this.combo = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     // Try to get quiz questions for this temple from the JSON data
     let pool = App.estado.quizData.filter(q => q.templo === temploNum);
@@ -137,6 +141,8 @@ const Quiz = {
     this.xpTotal = 0;
     this.respondido = false;
     this.combo = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     let pool = [];
     const desbloqueados = App.estado.progresso ? App.estado.progresso.templos_desbloqueados : [1];
@@ -205,6 +211,8 @@ const Quiz = {
 
     const p = this.perguntas[this.perguntaAtual];
     this.respondido = false;
+    this._resultadoMostrado = false;
+    this._bloqueioAvanco = false;
     this._atualizarCombo();
     this._sincronizarBarraCompacta();
 
@@ -263,6 +271,7 @@ const Quiz = {
   checarResposta(escolha) {
     if (this.respondido) return;
     this.respondido = true;
+    this._bloqueioAvanco = false;
 
     const p = this.perguntas[this.perguntaAtual];
     const correto = escolha === p.resposta_correta;
@@ -303,18 +312,43 @@ const Quiz = {
     // Show explanation
     const explicacaoContainer = document.getElementById('explicacao-container');
     const explicacaoEl = document.getElementById('quiz-explicacao');
-    if (explicacaoContainer) explicacaoContainer.style.display = 'block';
+    if (explicacaoContainer) {
+      explicacaoContainer.style.display = 'block';
+      explicacaoContainer.setAttribute('role', 'status');
+      explicacaoContainer.setAttribute('aria-live', 'polite');
+      const btnContinuar = explicacaoContainer.querySelector('button');
+      if (btnContinuar) {
+        setTimeout(() => btnContinuar.focus?.(), 50);
+      }
+    }
     if (explicacaoEl) explicacaoEl.textContent = p.explicacao || (correto ? I18n.t('quiz_correto') : `${I18n.t('quiz_resposta_correta_era')} ${p.resposta_correta}`);
   },
 
   // ── Advance to next question ───────────────────────────────
   proximaPergunta() {
-    this.perguntaAtual++;
-    if (this.perguntaAtual >= this.perguntas.length) {
-      this.mostrarResultado();
-    } else {
-      this._salvarSessao(); // persiste progresso parcial
-      this.mostrarPergunta();
+    if (this._bloqueioAvanco) return;
+    this._bloqueioAvanco = true;
+
+    // Immediately disable "Continuar" button to absorb double-clicks
+    const btnContinuar = document.querySelector(
+      '#explicacao-container .btn-primario, button[data-i18n="quiz_continuar"]'
+    );
+    if (btnContinuar) btnContinuar.disabled = true;
+
+    try {
+      this.perguntaAtual++;
+      if (this.perguntaAtual >= this.perguntas.length) {
+        this.mostrarResultado();
+      } else {
+        this._salvarSessao(); // persiste progresso parcial
+        this.mostrarPergunta();
+      }
+    } finally {
+      // Fallback debounce window (300ms) to re-enable button and clear lock
+      setTimeout(() => {
+        this._bloqueioAvanco = false;
+        if (btnContinuar) btnContinuar.disabled = false;
+      }, 300);
     }
   },
 
@@ -345,14 +379,14 @@ const Quiz = {
   },
 
   mostrarResultado() {
+    this._bloqueioAvanco = true;
+
     this._limparSessao(); // sessão concluída — limpa
     const container = document.getElementById('quiz-container');
     const resultado = document.getElementById('quiz-resultado');
     if (container) container.style.display = 'none';
     this._sincronizarBarraCompacta();
 
-    // Log quiz completion to heatmap diary (count actual questions answered)
-    if (typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
     if (!resultado) return;
     resultado.style.display = 'block';
 
@@ -363,7 +397,7 @@ const Quiz = {
     let msg = '';
     if (pct >= 90) msg = '🏆 Perfetto! Sei un maestro dell\'italiano!';
     else if (pct >= 70) msg = '👏 Molto bene! Continua così!';
-    else if (pct >= 50) msg = '📚 Bene! Ma puoi fare di meglio!';
+    else if (pct >= 50) msg = '📚 Bene! Ma puoi fare di melhor!';
     else msg = '💪 Non mollare! Continua a studiare!';
 
     const scoreEl = document.getElementById('resultado-score');
@@ -373,9 +407,18 @@ const Quiz = {
     if (xpEl) xpEl.textContent = I18n.t('quiz_xp_ganhos').replace('{n}', this.xpTotal);
     if (msgEl) msgEl.textContent = msg;
 
-    // Give XP (without XP toast — resultado screen is enough feedback)
-    if (this.xpTotal > 0) {
-      Progressao.ganhar(this.xpTotal);
+    // Idempotency: if already processed rewards and history for this completion, return
+    if (this._resultadoMostrado) return;
+    this._resultadoMostrado = true;
+
+    // Log quiz completion to heatmap diary (count actual questions answered)
+    if (typeof Calor !== 'undefined') Calor.registrar(this.perguntas.length || 1);
+
+    // Give XP and atomically reset to prevent duplicate awards
+    const xpParaConceder = this.xpTotal;
+    this.xpTotal = 0;
+    if (xpParaConceder > 0) {
+      Progressao.ganhar(xpParaConceder);
     }
 
     // Check achievements
@@ -396,7 +439,7 @@ const Quiz = {
       historico.unshift({
         templo: this.temploAtual,
         pontuacao: pct,
-        xp_ganho: this.xpTotal,
+        xp_ganho: xpParaConceder,
         acertos: this.pontuacao,
         total: total,
         data: Date.now()
@@ -627,6 +670,8 @@ const Quiz = {
     this.xpTotal       = 0;
     this.respondido    = false;
     this.combo         = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     this.perguntas = this._embaralhar(this._gerarMorfologia(temploNum)).slice(0, 10);
     if (this.perguntas.length === 0) {
@@ -693,6 +738,8 @@ const Quiz = {
     this.xpTotal       = 0;
     this.respondido    = false;
     this.combo         = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     this.perguntas = this._embaralhar(this._gerarConjugacao(tempo)).slice(0, 10);
     if (this.perguntas.length === 0) {
@@ -764,6 +811,8 @@ const Quiz = {
     this.xpTotal = 0;
     this.respondido = false;
     this.combo = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     this.perguntas = this._embaralhar(this._gerarListening(temploNum)).slice(0, 10);
     if (this.perguntas.length === 0) {
@@ -811,6 +860,8 @@ const Quiz = {
     this.xpTotal = 0;
     this.respondido = false;
     this.combo = 0;
+    this._bloqueioAvanco = false;
+    this._resultadoMostrado = false;
 
     const pool = this._gerarGramatica(livello);
     this.perguntas = this._embaralhar(pool).slice(0, 10);
@@ -937,6 +988,60 @@ document.addEventListener('i18n:changed', () => {
   }
 });
 
+
+// Atalhos de teclado para o Quiz (1-4 para responder, Espaço/Enter para avançar) (F14)
+if (typeof window !== 'undefined') {
+  window.addEventListener('keydown', (e) => {
+    if (e.defaultPrevented) return;
+    const tag = (e.target?.tagName || '').toUpperCase();
+    if (['INPUT', 'SELECT', 'TEXTAREA'].includes(tag) || e.target?.isContentEditable) return;
+
+    const secaoAtiva = (typeof AppNavigation !== 'undefined' && AppNavigation.secaoAtiva) ||
+                       (typeof AppState !== 'undefined' && AppState.estado?.secaoAtiva) ||
+                       (typeof App !== 'undefined' && App.estado?.secaoAtiva) || '';
+    const secQuiz = document.getElementById('sec-quiz');
+    const isQuizAtivo = secaoAtiva === 'quiz' || (secQuiz && secQuiz.classList.contains('active'));
+    if (!isQuizAtivo) return;
+
+    // Don't hijack keys when modals or dialogs are active
+    if (typeof ModalManager !== 'undefined' && (ModalManager.stack?.length > 0 || ModalManager.getOpenStaticModal?.())) {
+      return;
+    }
+    const modais = document.querySelectorAll(
+      '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open], [role="dialog"]:not([hidden])'
+    );
+    for (const m of modais) {
+      if (m.classList.contains('ativo') || m.classList.contains('show') || m.tagName === 'DIALOG') return;
+      if (m.style.display && m.style.display !== 'none') return;
+      try {
+        if (getComputedStyle(m).display !== 'none' && getComputedStyle(m).visibility !== 'hidden') return;
+      } catch (_) {}
+    }
+
+    if (!Quiz.perguntas || Quiz.perguntas.length === 0 || Quiz._resultadoMostrado) return;
+
+    const explicacaoContainer = document.getElementById('explicacao-container');
+    const isExplicacaoVisivel = (explicacaoContainer && explicacaoContainer.style.display !== 'none') || Quiz.respondido;
+
+    if (isExplicacaoVisivel) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        Quiz.proximaPergunta();
+      }
+    } else {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        const opcoes = document.querySelectorAll('#opcoes-grid .opcao-btn, .opcoes-grid .opcao-btn');
+        if (opcoes && opcoes[idx] && !opcoes[idx].disabled) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          opcoes[idx].click();
+        }
+      }
+    }
+  });
+}
 
 // Exposição global segura para navegadores e testes
 if (typeof window !== 'undefined') window.Quiz = Quiz;

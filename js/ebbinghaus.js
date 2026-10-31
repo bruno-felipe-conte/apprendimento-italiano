@@ -123,8 +123,9 @@ function formatDaysLabel(d) {
 }
 
 function getElapsedDays(card) {
-  if (!card || card.last_review == null) return null;
-  const lr = card.last_review;
+  if (!card) return null;
+  const lr = (card.lastReview != null) ? card.lastReview : card.last_review;
+  if (lr == null) return null;
   let timeMs;
   if (typeof lr === 'number') timeMs = lr;
   else if (lr instanceof Date) timeMs = lr.getTime();
@@ -181,19 +182,7 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
     const raw = Number(c.stability ?? c.intervalo ?? c.scheduled_days ?? 0);
     return raw > 0 ? raw : 1;
   };
-  let sAtual = 1;
-  let sBom = 2.5;
-  let sourceKey = 'deck_average';
-  if (activeCard) {
-    sAtual = Number(extractS(activeCard).toFixed(1));
-    sBom = predictNextStabilityGood(activeCard, sAtual);
-    sourceKey = 'focused';
-  } else {
-    const sumS = effectiveCards.reduce((acc, c) => acc + extractS(c), 0);
-    sAtual = Number((sumS / effectiveCards.length).toFixed(1));
-    const sumNext = effectiveCards.reduce((acc, c) => acc + predictNextStabilityGood(c, extractS(c)), 0);
-    sBom = Number(Math.max(sAtual + 1, sumNext / effectiveCards.length).toFixed(1));
-  }
+
   const rawW20 = options.w20 ?? options.fsrsDecay ?? 0.5;
   const clampedW20 = Math.max(0.1, Math.min(0.8, Number(rawW20) || 0.5));
   const decay = -clampedW20;
@@ -206,6 +195,27 @@ function computeEbbinghausCurve(cards = [], activeCard = null, options = {}) {
     }
     return Math.pow(1 + factor * (t / safeS), decay);
   };
+
+  let sAtual = 1;
+  let sBom = 2.5;
+  let sourceKey = 'deck_average';
+  if (activeCard) {
+    sAtual = Number(extractS(activeCard).toFixed(1));
+    const elapsed = getElapsedDays(activeCard);
+    const cardR = elapsed !== null ? retentionAt(elapsed, sAtual) : retentionTarget;
+    sBom = predictNextStabilityGood(activeCard, sAtual, cardR);
+    sourceKey = 'focused';
+  } else {
+    const sumS = effectiveCards.reduce((acc, c) => acc + extractS(c), 0);
+    sAtual = Number((sumS / effectiveCards.length).toFixed(1));
+    const sumNext = effectiveCards.reduce((acc, c) => {
+      const cS = extractS(c);
+      const elapsed = getElapsedDays(c);
+      const cardR = elapsed !== null ? retentionAt(elapsed, cS) : retentionTarget;
+      return acc + predictNextStabilityGood(c, cS, cardR);
+    }, 0);
+    sBom = Number(Math.max(sAtual + 1, sumNext / effectiveCards.length).toFixed(1));
+  }
   const timeToTarget = (s) => {
     const safeS = Math.max(0.2, s);
     if (curveMode === 'exponential') return safeS;
@@ -556,6 +566,7 @@ if (typeof window !== 'undefined') {
     EBBINGHAUS_I18N,
     predictNextStabilityGood,
     formatDaysLabel,
+    getElapsedDays,
     computeEbbinghausCurve,
     renderEbbinghausCurve,
     toggleMode
@@ -569,6 +580,7 @@ if (typeof globalThis !== 'undefined') {
     EBBINGHAUS_I18N,
     predictNextStabilityGood,
     formatDaysLabel,
+    getElapsedDays,
     computeEbbinghausCurve,
     renderEbbinghausCurve,
     toggleMode
@@ -582,6 +594,7 @@ if (typeof module !== 'undefined' && module.exports) {
     EBBINGHAUS_I18N,
     predictNextStabilityGood,
     formatDaysLabel,
+    getElapsedDays,
     computeEbbinghausCurve,
     renderEbbinghausCurve,
     toggleMode
