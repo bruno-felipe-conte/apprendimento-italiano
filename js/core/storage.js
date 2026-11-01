@@ -79,7 +79,12 @@ const SafeStorage = {
    * @param {Function} handler - Function returning boolean (true if space was freed)
    */
   registerEvictionHandler(priority, name, handler) {
-    this._evictionHandlers.push({ priority, name, handler });
+    const existingIndex = this._evictionHandlers.findIndex(h => h.name === name);
+    if (existingIndex >= 0) {
+      this._evictionHandlers[existingIndex] = { priority, name, handler };
+    } else {
+      this._evictionHandlers.push({ priority, name, handler });
+    }
     this._evictionHandlers.sort((a, b) => a.priority - b.priority);
   },
 

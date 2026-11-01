@@ -227,6 +227,16 @@ const AppNavigation = {
         try { cz.pararAudio(); } catch (_) {}
       }
     }
+
+    // 7. Interrompe timers do Modo Sobrevivência (Flashcards Alta Tensão)
+    if (novaSecao !== 'flashcard') {
+      const fc = (typeof window !== 'undefined' && window.Flashcards) ||
+                 (typeof globalThis !== 'undefined' && globalThis.Flashcards) ||
+                 (typeof Flashcards !== 'undefined' ? Flashcards : null);
+      if (fc && typeof fc.encerrarSobrevivencia === 'function') {
+        try { fc.encerrarSobrevivencia(); } catch (_) {}
+      }
+    }
   }
 };
 

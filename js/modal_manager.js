@@ -15,12 +15,19 @@ export const ModalManager = {
             close: (el) => {
                 const app = (typeof window !== 'undefined' ? window.App : null) || (typeof globalThis !== 'undefined' ? globalThis.App : null);
                 const appTemploModal = (typeof window !== 'undefined' ? window.AppTemploModal : null) || (typeof globalThis !== 'undefined' ? globalThis.AppTemploModal : null);
-                if (app && typeof app.fecharModalTemplo === 'function')
-                    app.fecharModalTemplo();
-                else if (appTemploModal && typeof appTemploModal.fecharModalTemplo === 'function')
-                    appTemploModal.fecharModalTemplo();
-                else
-                    el.classList.remove('ativo', 'show');
+                if (app && typeof app.fecharModalTemplo === 'function') {
+                    try {
+                        app.fecharModalTemplo();
+                    }
+                    catch (_) { }
+                }
+                else if (appTemploModal && typeof appTemploModal.fecharModalTemplo === 'function') {
+                    try {
+                        appTemploModal.fecharModalTemplo();
+                    }
+                    catch (_) { }
+                }
+                el.classList.remove('ativo', 'show');
             }
         },
         {
@@ -28,10 +35,13 @@ export const ModalManager = {
             isOpen: (el) => el.classList.contains('ativo') || el.classList.contains('show'),
             close: (el) => {
                 const conquistas = (typeof window !== 'undefined' ? window.Conquistas : null) || (typeof globalThis !== 'undefined' ? globalThis.Conquistas : null);
-                if (conquistas && typeof conquistas.fecharModal === 'function')
-                    conquistas.fecharModal();
-                else
-                    el.classList.remove('ativo', 'show');
+                if (conquistas && typeof conquistas.fecharModal === 'function') {
+                    try {
+                        conquistas.fecharModal();
+                    }
+                    catch (_) { }
+                }
+                el.classList.remove('ativo', 'show');
             }
         },
         {
@@ -40,12 +50,19 @@ export const ModalManager = {
             close: (el) => {
                 const levelUp = (typeof window !== 'undefined' ? window.LevelUp : null) || (typeof globalThis !== 'undefined' ? globalThis.LevelUp : null);
                 const appProg = (typeof window !== 'undefined' ? window.AppProgression : null) || (typeof globalThis !== 'undefined' ? globalThis.AppProgression : null);
-                if (levelUp && typeof levelUp.fechar === 'function')
-                    levelUp.fechar();
-                else if (appProg && typeof appProg.fecharLevelUpModal === 'function')
-                    appProg.fecharLevelUpModal();
-                else
-                    el.classList.remove('ativo', 'show');
+                if (levelUp && typeof levelUp.fechar === 'function') {
+                    try {
+                        levelUp.fechar();
+                    }
+                    catch (_) { }
+                }
+                else if (appProg && typeof appProg.fecharLevelUpModal === 'function') {
+                    try {
+                        appProg.fecharLevelUpModal();
+                    }
+                    catch (_) { }
+                }
+                el.classList.remove('ativo', 'show');
             }
         },
         {

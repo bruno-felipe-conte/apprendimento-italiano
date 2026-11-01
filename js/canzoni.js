@@ -900,6 +900,20 @@ const Canzoni = {
     const ytUrl = `https://www.youtube.com/results?search_query=${ytQuery}`;
     const speedLabel = this.velocidadeAudio === 0.7 ? '🐢 0.7x' : this.velocidadeAudio === 0.85 ? '🎧 0.85x' : '🐇 1.0x';
 
+    let coverageBadgeHtml = '';
+    if (typeof CoverageMeter !== 'undefined' && typeof TextNormalizer !== 'undefined' && Array.isArray(can.estrofes)) {
+      const fullSongText = can.estrofes.map(e => e.texto_completo || '').join(' ');
+      const tokens = TextNormalizer.tokenize(fullSongText);
+      const known = CoverageMeter.getUserKnownLemmas();
+      const covRes = CoverageMeter.calculate(tokens, known);
+      coverageBadgeHtml = `
+        <div style="padding: 0 1rem; margin-top: 0.25rem;">
+          ${CoverageMeter.renderBadgeHTML(covRes)}
+          ${covRes.coveragePct < 95 ? CoverageMeter.renderUnlockKeysHTML(covRes.unlockKeys) : ''}
+        </div>
+      `;
+    }
+
     c.innerHTML =
       '<div class="can-player">' +
         '<div class="can-player-header">' +
@@ -927,6 +941,7 @@ const Canzoni = {
             `<a href="${ytUrl}" target="_blank" rel="noopener noreferrer" class="can-ctrl-btn yt" title="YouTube">${I18n.t('can_btn_yt')}</a>` +
           '</div>' +
         '</div>' +
+        coverageBadgeHtml +
         '<div class="can-subbar">' +
           '<div class="can-progress-wrap"><div class="can-progress-fill" style="width:' + pct + '%"></div></div>' +
           '<div class="can-toggle-row">' +

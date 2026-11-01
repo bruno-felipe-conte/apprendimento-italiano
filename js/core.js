@@ -136,8 +136,8 @@ const App = {
     }
     if (typeof Calor !== 'undefined') Calor.renderizar();
     if (typeof Grammatica !== 'undefined') Grammatica.renderizarSeletor();
-    if (typeof SomFeedback !== 'undefined') SomFeedback.init();
-    if (typeof Notificacoes !== 'undefined') Notificacoes.init();
+    if (typeof SomFeedback !== 'undefined' && typeof SomFeedback.init === 'function') SomFeedback.init();
+    if (typeof Notificacoes !== 'undefined' && typeof Notificacoes.init === 'function') Notificacoes.init();
 
     if (typeof navigator !== 'undefined' && navigator.storage?.estimate) {
       navigator.storage.estimate().then(est => {
@@ -161,6 +161,7 @@ const App = {
     if (typeof document !== 'undefined') {
       document.addEventListener('keydown', (e) => {
         if (e.defaultPrevented) return;
+        if (e.ctrlKey || e.altKey || e.metaKey) return;
         const tag = (e.target?.tagName || '').toUpperCase();
         if (['INPUT', 'SELECT', 'TEXTAREA'].includes(tag) || e.target?.isContentEditable) return;
 
@@ -169,14 +170,11 @@ const App = {
           return;
         }
         const modais = document.querySelectorAll(
-          '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open], [role="dialog"]:not([hidden])'
+          '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open]'
         );
         for (const m of modais) {
-          if (m.classList.contains('ativo') || m.classList.contains('show') || m.tagName === 'DIALOG') return;
+          if (m.classList.contains('ativo') || m.classList.contains('show') || (m.tagName === 'DIALOG' && m.open)) return;
           if (m.style.display && m.style.display !== 'none') return;
-          try {
-            if (getComputedStyle(m).display !== 'none' && getComputedStyle(m).visibility !== 'hidden') return;
-          } catch (_) {}
         }
 
         // Don't hijack keys when in flashcard or quiz sections (numbers are used for rating/answers) (F13)
@@ -191,7 +189,13 @@ const App = {
         }
 
         const mapa = { '1': 'templi', '2': 'flashcard', '3': 'quiz', '4': 'vocabolario', '5': 'grammatica' };
-        if (mapa[e.key]) this.navegar(mapa[e.key]);
+        if (mapa[e.key]) {
+          if (typeof App !== 'undefined' && typeof App.navegar === 'function') {
+            App.navegar(mapa[e.key]);
+          } else if (typeof AppNavigation !== 'undefined' && typeof AppNavigation.navegar === 'function') {
+            AppNavigation.navegar(mapa[e.key]);
+          }
+        }
       });
     }
   }
@@ -202,7 +206,11 @@ if (typeof globalThis !== 'undefined') globalThis.App = App;
 if (typeof module !== 'undefined' && module.exports) module.exports = App;
 
 if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', () => App.init());
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => App.init());
+  } else {
+    App.init();
+  }
 }
 
 if (typeof window !== 'undefined') {

@@ -155,6 +155,43 @@ const Profilo = {
           <div style="font-size:0.87rem;color:#666;line-height:1.8;">${topCats}</div>
         </div>
 
+        <!-- O Espelho / Diagnóstico de Vocabulário -->
+        <div class="profilo-card" id="profilo-card-espelho">
+          <div class="profilo-card-titulo">🔬 O Espelho • Nível CEFR & Vocabulário Real</div>
+          ${(() => {
+            const diag = (typeof AppState !== 'undefined' && AppState.estado?.progresso?.vocab_diagnostico);
+            if (diag && diag.confiavel && diag.estimativa_passiva) {
+              return `
+                <div style="display:flex;align-items:center;gap:1.25rem;margin:0.75rem 0;">
+                  <div style="font-size:1.8rem;font-weight:900;color:#FFF;background:linear-gradient(135deg, #9B2335, #7B1B2A);width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(155,35,53,0.3);flex-shrink:0;">
+                    ${diag.nivel_cefr || 'A1'}
+                  </div>
+                  <div>
+                    <div style="font-weight:700;font-size:1.05rem;color:var(--cor-inchiostro, #2C1810);">
+                      ${diag.estimativa_passiva.toLocaleString()} palavras reconhecidas
+                    </div>
+                    <div style="font-size:0.82rem;color:#666;margin-top:2px;">
+                      Produção ativa: ~${diag.estimativa_ativa.toLocaleString()} lemas • ${Math.round((diag.estimativa_passiva / 3000) * 100)}% da autonomia (Laufer 95%)
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn-secondario" style="width:100%;font-size:0.85rem;margin-top:0.5rem;" onclick="VocabDiagnostic.iniciar()">
+                  🔄 Refazer Diagnóstico Lexical (&lt; 3 min)
+                </button>
+              `;
+            } else {
+              return `
+                <p style="font-size:0.85rem;color:#666;margin:0.5rem 0 0.75rem 0;line-height:1.5;">
+                  Você ainda não mediu seu vocabulário objetivo. Faça o teste adaptativo de 3 minutos para descobrir seu nível (A1→C2) e distância até a fluência autônoma!
+                </p>
+                <button type="button" class="btn-primario" style="width:100%;font-size:0.88rem;" onclick="VocabDiagnostic.iniciar()">
+                  ⚡ Fazer Diagnóstico Rápido (&lt; 3 min)
+                </button>
+              `;
+            }
+          })()}
+        </div>
+
                 <!-- Conquistas -->
         <div class="profilo-card">
           <div class="profilo-card-titulo">${I18n.t('prof_traguardi')}</div>

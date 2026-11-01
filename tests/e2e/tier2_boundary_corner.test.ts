@@ -39,7 +39,10 @@ describe('Tier 2: Boundary & Corner Cases (Extreme Limits, Malformed Payloads & 
       const quotaErr = new DOMException('The quota has been exceeded.', 'QuotaExceededError');
       const spyGC = vi.spyOn(AppState, '_gcFlashcards');
 
-      const spySet = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+      const spySet = vi.spyOn(localStorage, 'setItem').mockImplementation(() => {
+        throw quotaErr;
+      });
+      const spyProto = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
         throw quotaErr;
       });
 
@@ -47,6 +50,7 @@ describe('Tier 2: Boundary & Corner Cases (Extreme Limits, Malformed Payloads & 
         AppState.salvarProgresso();
       } finally {
         spySet.mockRestore();
+        spyProto.mockRestore();
       }
 
       expect(spyGC).toHaveBeenCalled();

@@ -303,9 +303,89 @@ const AppState = {
       uniaoTemplosDesbloqueados.unshift(1);
     }
 
-    return {
-      ...local,
-      ...remoto,
+    // F1: Reconciliação CRDT - palavras_conhecidas (Set Union comutativa ordenada)
+    const uniaoPalavras = (a = [], b = []) =>
+      Array.from(new Set(
+        [...(Array.isArray(a) ? a : []), ...(Array.isArray(b) ? b : [])]
+          .filter(s => typeof s === 'string' && s.trim().length > 0)
+          .map(s => s.trim().toLowerCase())
+      )).slice(0, 10000).sort();
+    const palavras_conhecidas = uniaoPalavras(local.palavras_conhecidas, remoto.palavras_conhecidas);
+
+    // F1: Reconciliação CRDT - survival_recordes (Monotônica Max)
+    const localSurv = (local.survival_recordes && typeof local.survival_recordes === 'object') ? local.survival_recordes : {};
+    const remotoSurv = (remoto.survival_recordes && typeof remoto.survival_recordes === 'object') ? remoto.survival_recordes : {};
+    const maior_sequencia = Math.max(
+      Math.floor(Number(localSurv.maior_sequencia) || 0),
+      Math.floor(Number(remotoSurv.maior_sequencia) || 0)
+    );
+    const cartas_sobrevividas = Math.max(
+      Math.floor(Number(localSurv.cartas_sobrevividas) || 0),
+      Math.floor(Number(remotoSurv.cartas_sobrevividas) || 0)
+    );
+    const survival_recordes = { maior_sequencia, cartas_sobrevividas };
+    const tempoLocal = Number(localSurv.tempo_recorde_ms) || 0;
+    const tempoRemoto = Number(remotoSurv.tempo_recorde_ms) || 0;
+    if (tempoLocal > 0 || tempoRemoto > 0) {
+      survival_recordes.tempo_recorde_ms = Math.max(tempoLocal, tempoRemoto);
+    }
+
+    // F1: Reconciliação CRDT - vocab_diagnostico (LWW com desempate determinístico)
+    let vocab_diagnostico = null;
+    const diagLocal = (local.vocab_diagnostico && typeof local.vocab_diagnostico === 'object') ? local.vocab_diagnostico : null;
+    const diagRemoto = (remoto.vocab_diagnostico && typeof remoto.vocab_diagnostico === 'object') ? remoto.vocab_diagnostico : null;
+
+    if (!diagLocal && !diagRemoto) {
+      vocab_diagnostico = null;
+    } else if (!diagLocal) {
+      vocab_diagnostico = { ...diagRemoto };
+    } else if (!diagRemoto) {
+      vocab_diagnostico = { ...diagLocal };
+    } else {
+      const tLocal = Number(diagLocal.ultimo_teste) || 0;
+      const tRemoto = Number(diagRemoto.ultimo_teste) || 0;
+      if (tRemoto > tLocal) {
+        vocab_diagnostico = { ...diagRemoto };
+      } else if (tLocal > tRemoto) {
+        vocab_diagnostico = { ...diagLocal };
+      } else {
+        const testadoLocal = Number(diagLocal.total_testado) || 0;
+        const testadoRemoto = Number(diagRemoto.total_testado) || 0;
+        if (testadoRemoto > testadoLocal) {
+          vocab_diagnostico = { ...diagRemoto };
+        } else if (testadoLocal > testadoRemoto) {
+          vocab_diagnostico = { ...diagLocal };
+        } else {
+          const passivoLocal = Number(diagLocal.estimativa_passiva) || 0;
+          const passivoRemoto = Number(diagRemoto.estimativa_passiva) || 0;
+          if (passivoRemoto > passivoLocal) {
+            vocab_diagnostico = { ...diagRemoto };
+          } else if (passivoLocal > passivoRemoto) {
+            vocab_diagnostico = { ...diagLocal };
+          } else {
+            const ativaLocal = Number(diagLocal.estimativa_ativa) || 0;
+            const ativaRemoto = Number(diagRemoto.estimativa_ativa) || 0;
+            if (ativaRemoto > ativaLocal) {
+              vocab_diagnostico = { ...diagRemoto };
+            } else if (ativaLocal > ativaRemoto) {
+              vocab_diagnostico = { ...diagLocal };
+            } else {
+              const cefrCmp = String(diagLocal.nivel_cefr || '').localeCompare(String(diagRemoto.nivel_cefr || ''));
+              if (cefrCmp !== 0) {
+                vocab_diagnostico = cefrCmp > 0 ? { ...diagLocal } : { ...diagRemoto };
+              } else {
+                // Strict symmetric tie-breaker
+                vocab_diagnostico = JSON.stringify(diagLocal) <= JSON.stringify(diagRemoto)
+                  ? { ...diagLocal }
+                  : { ...diagRemoto };
+              }
+            }
+          }
+        }
+      }
+    }
+
+    return this._sanitizeProgresso({
       nivel,
       xp,
       xp_proximo_nivel: Math.max(Number(local.xp_proximo_nivel) || 500, Number(remoto.xp_proximo_nivel) || 500),
@@ -316,17 +396,25 @@ const AppState = {
       streak_recorde: streakRecorde,
       ultimo_estudo: Math.max(Number(local.ultimo_estudo) || 0, Number(remoto.ultimo_estudo) || 0) || null,
       grammatica_completadas: uniaoStrings(local.grammatica_completadas, remoto.grammatica_completadas),
-      meta_diaria: local.meta_diaria || remoto.meta_diaria || 100,
+      meta_diaria: Math.max(Number(local.meta_diaria) || 100, Number(remoto.meta_diaria) || 100),
       xp_hoje,
       data_xp_hoje,
       favoritos: uniaoStrings(local.favoritos, remoto.favoritos),
       conquistas: uniaoStrings(local.conquistas, remoto.conquistas),
       data_inicio: Math.min(Number(local.data_inicio) || Date.now(), Number(remoto.data_inicio) || Date.now()),
-      meta_prazo: remoto.meta_prazo || local.meta_prazo || null,
-      audio_rate: (typeof remoto.audio_rate === 'number' && !isNaN(remoto.audio_rate))
-        ? remoto.audio_rate
-        : (typeof local.audio_rate === 'number' && !isNaN(local.audio_rate) ? local.audio_rate : 0.85)
-    };
+      meta_prazo: local.meta_prazo && remoto.meta_prazo
+        ? (JSON.stringify(local.meta_prazo) <= JSON.stringify(remoto.meta_prazo) ? local.meta_prazo : remoto.meta_prazo)
+        : (local.meta_prazo || remoto.meta_prazo || null),
+      audio_rate: (typeof remoto.audio_rate === 'number' && !isNaN(remoto.audio_rate) && typeof local.audio_rate === 'number' && !isNaN(local.audio_rate))
+        ? Math.max(local.audio_rate, remoto.audio_rate)
+        : ((typeof remoto.audio_rate === 'number' && !isNaN(remoto.audio_rate)) ? remoto.audio_rate : (typeof local.audio_rate === 'number' && !isNaN(local.audio_rate) ? local.audio_rate : 0.85)),
+      vocab_diagnostico,
+      palavras_conhecidas,
+      survival_recordes,
+      ultima_secao: local.ultima_secao && remoto.ultima_secao
+        ? (String(local.ultima_secao) <= String(remoto.ultima_secao) ? local.ultima_secao : remoto.ultima_secao)
+        : (local.ultima_secao || remoto.ultima_secao || undefined)
+    });
   },
 
   reconciliarFlashcards(local = {}, remoto = {}) {
@@ -370,6 +458,7 @@ const AppState = {
       templos_concluidos: [],
       total_palavras: 0,
       streak: 0,
+      streak_recorde: 0,
       ultimo_estudo: null,
       grammatica_completadas: [],
       meta_diaria: 100,
@@ -379,7 +468,10 @@ const AppState = {
       conquistas: [],
       data_inicio: Date.now(),
       meta_prazo: null,
-      audio_rate: 0.85
+      audio_rate: 0.85,
+      vocab_diagnostico: null,
+      palavras_conhecidas: [],
+      survival_recordes: { maior_sequencia: 0, cartas_sobrevividas: 0 }
     };
 
     if (!p || typeof p !== 'object' || Array.isArray(p)) {
@@ -410,6 +502,10 @@ const AppState = {
     const streak = (typeof p.streak === 'number' && Number.isFinite(p.streak) && p.streak >= 0)
       ? Math.floor(p.streak)
       : 0;
+
+    const streak_recorde = (typeof p.streak_recorde === 'number' && Number.isFinite(p.streak_recorde) && p.streak_recorde >= 0)
+      ? Math.floor(p.streak_recorde)
+      : streak;
 
     const ultimo_estudo = (typeof p.ultimo_estudo === 'number' && Number.isFinite(p.ultimo_estudo))
       ? p.ultimo_estudo
@@ -455,7 +551,60 @@ const AppState = {
       ? p.audio_rate
       : 0.85;
 
-    return {
+    // ── F1: Validação de Vocabulário Diagnóstico ──────────────
+    let vocab_diagnostico = null;
+    if (p.vocab_diagnostico && typeof p.vocab_diagnostico === 'object' && !Array.isArray(p.vocab_diagnostico)) {
+      const ultimo_teste = (typeof p.vocab_diagnostico.ultimo_teste === 'number' && Number.isFinite(p.vocab_diagnostico.ultimo_teste))
+        ? Math.floor(p.vocab_diagnostico.ultimo_teste)
+        : Date.now();
+      const estimativa_passiva = (typeof p.vocab_diagnostico.estimativa_passiva === 'number' && Number.isFinite(p.vocab_diagnostico.estimativa_passiva) && p.vocab_diagnostico.estimativa_passiva >= 0)
+        ? Math.floor(p.vocab_diagnostico.estimativa_passiva)
+        : 0;
+      const estimativa_ativa = (typeof p.vocab_diagnostico.estimativa_ativa === 'number' && Number.isFinite(p.vocab_diagnostico.estimativa_ativa) && p.vocab_diagnostico.estimativa_ativa >= 0)
+        ? Math.floor(p.vocab_diagnostico.estimativa_ativa)
+        : 0;
+      const niveisValidos = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      const nivel_cefr = (typeof p.vocab_diagnostico.nivel_cefr === 'string' && niveisValidos.includes(p.vocab_diagnostico.nivel_cefr))
+        ? p.vocab_diagnostico.nivel_cefr
+        : 'A1';
+      const total_testado = (typeof p.vocab_diagnostico.total_testado === 'number' && Number.isFinite(p.vocab_diagnostico.total_testado) && p.vocab_diagnostico.total_testado >= 0)
+        ? Math.floor(p.vocab_diagnostico.total_testado)
+        : 0;
+
+      vocab_diagnostico = {
+        ultimo_teste,
+        estimativa_passiva,
+        estimativa_ativa,
+        nivel_cefr,
+        total_testado
+      };
+    }
+
+    // ── F1: Validação de Palavras Conhecidas ───────────────────
+    const palavras_conhecidas = Array.isArray(p.palavras_conhecidas)
+      ? Array.from(new Set(
+          p.palavras_conhecidas
+            .filter(w => typeof w === 'string' && w.trim().length > 0)
+            .map(w => w.trim().toLowerCase())
+        )).slice(0, 10000).sort()
+      : [];
+
+    // ── F1: Validação de Survival Recordes ─────────────────────
+    let survival_recordes = { maior_sequencia: 0, cartas_sobrevividas: 0 };
+    if (p.survival_recordes && typeof p.survival_recordes === 'object' && !Array.isArray(p.survival_recordes)) {
+      const maior_sequencia = (typeof p.survival_recordes.maior_sequencia === 'number' && Number.isFinite(p.survival_recordes.maior_sequencia) && p.survival_recordes.maior_sequencia >= 0)
+        ? Math.floor(p.survival_recordes.maior_sequencia)
+        : 0;
+      const cartas_sobrevividas = (typeof p.survival_recordes.cartas_sobrevividas === 'number' && Number.isFinite(p.survival_recordes.cartas_sobrevividas) && p.survival_recordes.cartas_sobrevividas >= 0)
+        ? Math.floor(p.survival_recordes.cartas_sobrevividas)
+        : 0;
+      survival_recordes = { maior_sequencia, cartas_sobrevividas };
+      if (typeof p.survival_recordes.tempo_recorde_ms === 'number' && Number.isFinite(p.survival_recordes.tempo_recorde_ms) && p.survival_recordes.tempo_recorde_ms > 0) {
+        survival_recordes.tempo_recorde_ms = Math.floor(p.survival_recordes.tempo_recorde_ms);
+      }
+    }
+
+    const result = {
       nivel,
       xp,
       xp_proximo_nivel,
@@ -463,6 +612,7 @@ const AppState = {
       templos_concluidos,
       total_palavras,
       streak,
+      streak_recorde,
       ultimo_estudo,
       grammatica_completadas,
       meta_diaria,
@@ -472,8 +622,15 @@ const AppState = {
       conquistas,
       data_inicio,
       meta_prazo,
-      audio_rate
+      audio_rate,
+      vocab_diagnostico,
+      palavras_conhecidas,
+      survival_recordes
     };
+    if (typeof p.ultima_secao === 'string') {
+      result.ultima_secao = p.ultima_secao;
+    }
+    return result;
   },
 
   /**
@@ -547,19 +704,32 @@ const AppState = {
   salvarProgresso() {
     if (!this.estado.progresso) return false;
     let sucesso = false;
+    const storage = (typeof SafeStorage !== 'undefined' ? SafeStorage : null) || (typeof window !== 'undefined' ? window.SafeStorage : null) || (typeof globalThis !== 'undefined' ? globalThis.SafeStorage : null);
+    if (storage && typeof storage.registerEvictionHandler === 'function') {
+      if (!storage._evictionHandlers || !storage._evictionHandlers.some(h => h.name === 'flashcards_gc')) {
+        storage.registerEvictionHandler(3, 'flashcards_gc', () => {
+          const freed = this._gcFlashcards(true);
+          return freed > 0;
+        });
+      }
+    }
+
     try {
-      if (typeof SafeStorage !== 'undefined') {
-        sucesso = SafeStorage.setItem('it_progresso', this.estado.progresso);
+      if (storage) {
+        sucesso = storage.setItem('it_progresso', this.estado.progresso);
+        if (!sucesso) {
+          this._gcFlashcards(true);
+        }
       } else {
         localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso));
         sucesso = true;
       }
     } catch (e) {
-      if ((typeof SafeStorage !== 'undefined' && SafeStorage.isQuotaExceeded(e)) || e.name === 'QuotaExceededError') {
+      if ((storage && storage.isQuotaExceeded(e)) || e.name === 'QuotaExceededError') {
         this._gcFlashcards(true);
         try {
-          if (typeof SafeStorage !== 'undefined') {
-            sucesso = SafeStorage.setItem('it_progresso', this.estado.progresso);
+          if (storage) {
+            sucesso = storage.setItem('it_progresso', this.estado.progresso);
           } else {
             localStorage.setItem('it_progresso', JSON.stringify(this.estado.progresso));
             sucesso = true;
@@ -693,6 +863,97 @@ const AppState = {
       }
     }
     return removidos + historyTruncated;
+  },
+
+  _gcDiagnostico(persistir = true) {
+    let itemsPruned = 0;
+    const diagnosticKeys = [
+      'it_vocab_diagnostic_history',
+      'it_diagnostico_historico',
+      'it_vocab_diagnostic'
+    ];
+
+    for (const key of diagnosticKeys) {
+      try {
+        let raw = null;
+        if (typeof SafeStorage !== 'undefined') {
+          raw = SafeStorage.getItem(key, null);
+        } else if (typeof window !== 'undefined' && window.localStorage) {
+          raw = JSON.parse(window.localStorage.getItem(key) || 'null');
+        } else if (typeof localStorage !== 'undefined') {
+          raw = JSON.parse(localStorage.getItem(key) || 'null');
+        }
+
+        if (!raw) continue;
+
+        let modified = false;
+
+        if (Array.isArray(raw)) {
+          if (raw.length > 3) {
+            itemsPruned += (raw.length - 3);
+            raw = raw.slice(-3);
+            modified = true;
+          }
+          for (let i = 0; i < raw.length - 1; i++) {
+            if (raw[i] && typeof raw[i] === 'object') {
+              let itemMod = false;
+              if (raw[i].respostas) {
+                delete raw[i].respostas;
+                itemMod = true;
+              }
+              if (raw[i].detalhe_bandas) {
+                delete raw[i].detalhe_bandas;
+                itemMod = true;
+              }
+              if (itemMod) {
+                itemsPruned++;
+                modified = true;
+              }
+            }
+          }
+        } else if (typeof raw === 'object' && raw.historico && Array.isArray(raw.historico)) {
+          if (raw.historico.length > 3) {
+            itemsPruned += (raw.historico.length - 3);
+            raw.historico = raw.historico.slice(-3);
+            modified = true;
+          }
+          for (let i = 0; i < raw.historico.length - 1; i++) {
+            if (raw.historico[i] && typeof raw.historico[i] === 'object') {
+              let itemMod = false;
+              if (raw.historico[i].respostas) {
+                delete raw.historico[i].respostas;
+                itemMod = true;
+              }
+              if (raw.historico[i].detalhe_bandas) {
+                delete raw.historico[i].detalhe_bandas;
+                itemMod = true;
+              }
+              if (itemMod) {
+                itemsPruned++;
+                modified = true;
+              }
+            }
+          }
+        }
+
+        if (modified && persistir) {
+          if (typeof SafeStorage !== 'undefined') {
+            SafeStorage.setItem(key, raw);
+          } else if (typeof window !== 'undefined' && window.localStorage) {
+            window.localStorage.setItem(key, JSON.stringify(raw));
+          } else if (typeof localStorage !== 'undefined') {
+            localStorage.setItem(key, JSON.stringify(raw));
+          }
+        }
+      } catch (err) {
+        console.warn(`[AppState] Erro no _gcDiagnostico para chave '${key}':`, err);
+      }
+    }
+
+    if (itemsPruned > 0) {
+      console.info(`[GC] Diagnóstico otimizado: ${itemsPruned} registros/detalhes podados.`);
+    }
+    return itemsPruned;
   },
 
   _ultimoAlertaArmazenamento: 0,
@@ -853,6 +1114,10 @@ const AppState = {
 
 // Registro de handlers no Eviction Priority Ladder do SafeStorage
 if (typeof SafeStorage !== 'undefined') {
+  SafeStorage.registerEvictionHandler(3, 'diagnostic_gc', () => {
+    const freed = AppState._gcDiagnostico(true);
+    return freed > 0;
+  });
   SafeStorage.registerEvictionHandler(3, 'flashcards_gc', () => {
     const freed = AppState._gcFlashcards(true);
     return freed > 0;

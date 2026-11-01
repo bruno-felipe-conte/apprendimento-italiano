@@ -46,9 +46,12 @@ export const ModalManager = {
       close: (el: HTMLElement) => {
         const app = (typeof window !== 'undefined' ? (window as any).App : null) || (typeof globalThis !== 'undefined' ? (globalThis as any).App : null);
         const appTemploModal = (typeof window !== 'undefined' ? (window as any).AppTemploModal : null) || (typeof globalThis !== 'undefined' ? (globalThis as any).AppTemploModal : null);
-        if (app && typeof app.fecharModalTemplo === 'function') app.fecharModalTemplo();
-        else if (appTemploModal && typeof appTemploModal.fecharModalTemplo === 'function') appTemploModal.fecharModalTemplo();
-        else el.classList.remove('ativo', 'show');
+        if (app && typeof app.fecharModalTemplo === 'function') {
+          try { app.fecharModalTemplo(); } catch (_) {}
+        } else if (appTemploModal && typeof appTemploModal.fecharModalTemplo === 'function') {
+          try { appTemploModal.fecharModalTemplo(); } catch (_) {}
+        }
+        el.classList.remove('ativo', 'show');
       }
     },
     {
@@ -56,8 +59,10 @@ export const ModalManager = {
       isOpen: (el: HTMLElement) => el.classList.contains('ativo') || el.classList.contains('show'),
       close: (el: HTMLElement) => {
         const conquistas = (typeof window !== 'undefined' ? (window as any).Conquistas : null) || (typeof globalThis !== 'undefined' ? (globalThis as any).Conquistas : null);
-        if (conquistas && typeof conquistas.fecharModal === 'function') conquistas.fecharModal();
-        else el.classList.remove('ativo', 'show');
+        if (conquistas && typeof conquistas.fecharModal === 'function') {
+          try { conquistas.fecharModal(); } catch (_) {}
+        }
+        el.classList.remove('ativo', 'show');
       }
     },
     {
@@ -66,9 +71,12 @@ export const ModalManager = {
       close: (el: HTMLElement) => {
         const levelUp = (typeof window !== 'undefined' ? (window as any).LevelUp : null) || (typeof globalThis !== 'undefined' ? (globalThis as any).LevelUp : null);
         const appProg = (typeof window !== 'undefined' ? (window as any).AppProgression : null) || (typeof globalThis !== 'undefined' ? (globalThis as any).AppProgression : null);
-        if (levelUp && typeof levelUp.fechar === 'function') levelUp.fechar();
-        else if (appProg && typeof appProg.fecharLevelUpModal === 'function') appProg.fecharLevelUpModal();
-        else el.classList.remove('ativo', 'show');
+        if (levelUp && typeof levelUp.fechar === 'function') {
+          try { levelUp.fechar(); } catch (_) {}
+        } else if (appProg && typeof appProg.fecharLevelUpModal === 'function') {
+          try { appProg.fecharLevelUpModal(); } catch (_) {}
+        }
+        el.classList.remove('ativo', 'show');
       }
     },
     {

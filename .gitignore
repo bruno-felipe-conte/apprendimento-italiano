@@ -21,5 +21,10 @@ coverage/
 *.ntvs*
 *.njsproj
 .planning/
+.agents/
+__pycache__/
+*.pyc
+TEST_READY.md
 graphify-out/20*/
+graphify-out/cache/
 .harness_state.json

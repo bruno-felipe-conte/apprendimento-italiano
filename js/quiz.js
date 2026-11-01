@@ -5,6 +5,8 @@
 const Quiz = {
   _bloqueioAvanco: false,
   _resultadoMostrado: false,
+  modoDireto: false,            // true = Digitação Direta ("Sem Rede"), false = Múltipla Escolha
+  _submetendoDigitacao: false,  // Debounce guard para Enter / Clique
   temploAtual: null,
   perguntas: [],       // 10 questions for this session
   perguntaAtual: 0,
@@ -13,6 +15,277 @@ const Quiz = {
   respondido: false,
   combo: 0,
   abaSeletor: 'templos', // 'templos' | 'morfologia' | 'listening' | 'gramatica' | 'verbi'
+
+  // ── Smart Retractable Quiz Bar ─────────────────────────────
+  inicializarModoDireto() {
+    try {
+      this.modoDireto = localStorage.getItem('it_quiz_modo_direto') === 'true';
+    } catch (_) {
+      this.modoDireto = false;
+    }
+  },
+
+  alternarModo(novoModo) {
+    if (typeof novoModo === 'boolean') {
+      this.modoDireto = novoModo;
+    } else {
+      this.modoDireto = !this.modoDireto;
+    }
+    try {
+      localStorage.setItem('it_quiz_modo_direto', this.modoDireto ? 'true' : 'false');
+    } catch (_) {}
+
+    this._atualizarBotaoModo();
+    this._aplicarModoVisual();
+  },
+
+  _atualizarBotaoModo() {
+    const btn = document.getElementById('btn-toggle-modo-quiz');
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', this.modoDireto ? 'true' : 'false');
+    btn.classList.toggle('ativo', this.modoDireto);
+    const txt = btn.querySelector('.modo-quiz-txt');
+    if (txt) {
+      txt.textContent = this.modoDireto ? 'Modo Sem Rede (Ativo)' : 'Modo Sem Rede';
+    }
+  },
+
+  _aplicarModoVisual() {
+    const grid = document.getElementById('opcoes-grid');
+    let directTyping = document.getElementById('quiz-direct-typing');
+    const input = document.getElementById('quiz-input-resposta');
+
+    if (!directTyping && this.modoDireto) {
+      this._injetarDirectTypingDOM();
+      directTyping = document.getElementById('quiz-direct-typing');
+    }
+
+    if (this.modoDireto) {
+      if (grid) grid.style.display = 'none';
+      if (directTyping) directTyping.style.display = 'flex';
+      this._vincularEventosDirectTyping();
+      if (input && !this.respondido) {
+        input.disabled = false;
+        setTimeout(() => input.focus(), 60);
+      }
+    } else {
+      if (grid) grid.style.display = 'grid';
+      if (directTyping) directTyping.style.display = 'none';
+    }
+  },
+
+  _injetarDirectTypingDOM() {
+    let directTyping = document.getElementById('quiz-direct-typing');
+    const container = document.getElementById('quiz-container');
+    if (directTyping || !container) return;
+
+    directTyping = document.createElement('div');
+    directTyping.id = 'quiz-direct-typing';
+    directTyping.className = 'quiz-direct-typing';
+    directTyping.innerHTML = `
+      <div class="quiz-input-wrapper">
+        <label for="quiz-input-resposta" class="sr-only">Digite em italiano</label>
+        <input type="text" id="quiz-input-resposta" class="quiz-input-resposta" placeholder="Digite em italiano..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-describedby="quiz-feedback" />
+      </div>
+      <div id="quiz-accent-toolbar" class="quiz-accent-toolbar" role="toolbar" aria-label="Acentos italianos">
+        <button type="button" class="btn-accent" data-char="à" aria-label="Inserir à">à</button>
+        <button type="button" class="btn-accent" data-char="è" aria-label="Inserir è">è</button>
+        <button type="button" class="btn-accent" data-char="é" aria-label="Inserir é">é</button>
+        <button type="button" class="btn-accent" data-char="ì" aria-label="Inserir ì">ì</button>
+        <button type="button" class="btn-accent" data-char="ò" aria-label="Inserir ò">ò</button>
+        <button type="button" class="btn-accent" data-char="ù" aria-label="Inserir ù">ù</button>
+      </div>
+      <button type="button" id="btn-quiz-enviar" class="btn-primario btn-quiz-enviar" onclick="Quiz.verificarDigitacao()">Verificar (Enter)</button>
+    `;
+
+    const feedback = document.getElementById('quiz-feedback');
+    if (feedback) {
+      container.insertBefore(directTyping, feedback);
+    } else {
+      const expContainer = document.getElementById('explicacao-container');
+      container.insertBefore(directTyping, expContainer || null);
+    }
+
+    this._vincularEventosDirectTyping();
+  },
+
+  _vincularEventosDirectTyping() {
+    const input = document.getElementById('quiz-input-resposta');
+    const toolbar = document.getElementById('quiz-accent-toolbar');
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+
+    if (toolbar && !toolbar._bound) {
+      toolbar._bound = true;
+      toolbar.querySelectorAll('.btn-accent').forEach(btn => {
+        btn.addEventListener('mousedown', (e) => e.preventDefault());
+        btn.onclick = (e) => {
+          e.preventDefault();
+          const char = btn.getAttribute('data-char') || btn.textContent.trim();
+          this.inserirAcento(char);
+        };
+      });
+    }
+
+    if (input && !input._bound) {
+      input._bound = true;
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          e.stopPropagation();
+          if (!this.respondido) {
+            this.verificarDigitacao();
+          } else {
+            this.proximaPergunta();
+          }
+        }
+      });
+    }
+
+    if (btnEnviar && !btnEnviar._bound) {
+      btnEnviar._bound = true;
+      btnEnviar.onclick = (e) => {
+        e.preventDefault();
+        if (!this.respondido) {
+          this.verificarDigitacao();
+        } else {
+          this.proximaPergunta();
+        }
+      };
+    }
+  },
+
+  inserirAcento(char) {
+    const input = document.getElementById('quiz-input-resposta');
+    if (!input) return;
+
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? input.value.length;
+    const val = input.value;
+
+    input.value = val.substring(0, start) + char + val.substring(end);
+    const newPos = start + char.length;
+    input.selectionStart = newPos;
+    input.selectionEnd = newPos;
+
+    // Preserva o foco no input sem dispensar o teclado virtual
+    input.focus();
+  },
+
+  verificarDigitacao() {
+    if (this.respondido) return;
+
+    // Debounce guard contra acionamentos múltiplos rápidos (F7-2.8)
+    if (this._submetendoDigitacao) return;
+    this._submetendoDigitacao = true;
+    setTimeout(() => { this._submetendoDigitacao = false; }, 250);
+
+    const input = document.getElementById('quiz-input-resposta');
+    const feedback = document.getElementById('quiz-feedback');
+    if (!input) return;
+
+    const valorDigitado = input.value.trim();
+
+    // Rejeita input vazio ou em branco sem penalizar (F7-2.7 & F6-2.1)
+    if (!valorDigitado) {
+      input.classList.add('shake');
+      setTimeout(() => input.classList.remove('shake'), 400);
+      if (feedback) {
+        feedback.className = 'quiz-feedback alerta';
+        feedback.setAttribute('role', 'status');
+        feedback.textContent = 'Digite sua resposta antes de verificar.';
+      }
+      return;
+    }
+
+    const p = this.perguntas[this.perguntaAtual];
+    if (!p) return;
+
+    this.respondido = true;
+    this._bloqueioAvanco = false;
+    input.disabled = true;
+
+    // Resolve ProductionValidator de forma defensiva
+    const validator = (typeof ProductionValidator !== 'undefined' ? ProductionValidator : null) ||
+                      (typeof globalThis !== 'undefined' && globalThis.ProductionValidator) ||
+                      (typeof window !== 'undefined' && window.ProductionValidator);
+
+    const esperado = p.resposta_correta || p.italiano || '';
+    const variantes = (p.variantes || []).slice();
+    if (p.italiano && p.italiano !== esperado && !variantes.includes(p.italiano)) {
+      variantes.push(p.italiano);
+    }
+
+    let check;
+    if (validator && typeof validator.validate === 'function') {
+      check = validator.validate(valorDigitado, esperado, variantes);
+    } else {
+      const normInput = valorDigitado.toLowerCase().replace(/['’]/g, "'");
+      const normExp = esperado.toLowerCase().replace(/['’]/g, "'");
+      const correto = normInput === normExp;
+      check = {
+        isCorrect: correto,
+        isFuzzy: false,
+        distance: correto ? 0 : 1,
+        diagnostic: correto ? null : `Resposta correta: ${esperado}`
+      };
+    }
+
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+    if (btnEnviar) {
+      btnEnviar.textContent = 'Continuar (Enter) →';
+    }
+
+    if (check.isCorrect) {
+      this.pontuacao++;
+      this.combo++;
+      const mult = this.combo >= 5 ? 3 : this.combo >= 3 ? 2 : 1;
+      const xpBase = p.xp_recompensa || 20;
+      this.xpTotal += xpBase * mult;
+
+      if (typeof SomFeedback !== 'undefined') SomFeedback.correto();
+
+      if (feedback) {
+        feedback.setAttribute('role', 'status');
+        feedback.className = 'quiz-feedback correto';
+        if (check.isFuzzy) {
+          feedback.innerHTML = `<span class="acerto-icon">🎉</span> Bravissimo! Resposta correta 🎉<br><small class="quiz-fuzzy-aviso">Atenção à grafia: esperado "<strong>${esperado}</strong>", você digitou "${valorDigitado}".</small>`;
+        } else {
+          feedback.textContent = 'Bravissimo! Resposta correta 🎉';
+        }
+      }
+    } else {
+      this.combo = 0;
+      if (typeof SomFeedback !== 'undefined') SomFeedback.errado();
+
+      if (feedback) {
+        feedback.setAttribute('role', 'status');
+        feedback.className = 'quiz-feedback incorreto';
+        let diagHtml = '';
+        if (check.diagnostic) {
+          diagHtml = `<div class="quiz-diag-detalhe">${check.diagnostic}</div>`;
+        }
+        feedback.innerHTML = `<span class="erro-icon">❌</span> Errado. Resposta correta: <strong>${esperado}</strong>.${diagHtml}`;
+      }
+    }
+
+    this._atualizarCombo();
+
+    const explicacaoContainer = document.getElementById('explicacao-container');
+    const explicacaoEl = document.getElementById('quiz-explicacao');
+    if (explicacaoContainer) {
+      explicacaoContainer.style.display = 'block';
+      explicacaoContainer.setAttribute('role', 'status');
+      explicacaoContainer.setAttribute('aria-live', 'polite');
+    }
+    if (explicacaoEl) {
+      explicacaoEl.textContent = p.explicacao || '';
+    }
+
+    const btnContinuar = explicacaoContainer?.querySelector('button');
+    if (btnContinuar) {
+      setTimeout(() => btnContinuar.focus(), 80);
+    }
+  },
 
   // ── Smart Retractable Quiz Bar ─────────────────────────────
   toggleSeletor() {
@@ -209,12 +482,36 @@ const Quiz = {
       return;
     }
 
+    this.inicializarModoDireto();
+
     const p = this.perguntas[this.perguntaAtual];
     this.respondido = false;
     this._resultadoMostrado = false;
     this._bloqueioAvanco = false;
     this._atualizarCombo();
     this._sincronizarBarraCompacta();
+
+    // Reset feedback
+    const feedback = document.getElementById('quiz-feedback');
+    if (feedback) {
+      feedback.className = 'quiz-feedback';
+      feedback.textContent = '';
+      feedback.innerHTML = '';
+    }
+
+    // Reset input se em modo direto
+    const input = document.getElementById('quiz-input-resposta');
+    if (input) {
+      input.value = '';
+      input.disabled = false;
+    }
+    const btnEnviar = document.getElementById('btn-quiz-enviar');
+    if (btnEnviar) {
+      btnEnviar.textContent = 'Verificar (Enter)';
+    }
+
+    this._atualizarBotaoModo();
+    this._aplicarModoVisual();
 
     // Update progress bar
     const total = this.perguntas.length;
@@ -1008,14 +1305,11 @@ if (typeof window !== 'undefined') {
       return;
     }
     const modais = document.querySelectorAll(
-      '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open], [role="dialog"]:not([hidden])'
+      '.modal.ativo, .modal.show, .templo-modal.ativo, .conquista-modal.ativo, .levelup-modal.ativo, .meta-settings-modal.ativo, .modal-manager-overlay, .tm-overlay:not([style*="display: none"]), dialog[open]'
     );
     for (const m of modais) {
-      if (m.classList.contains('ativo') || m.classList.contains('show') || m.tagName === 'DIALOG') return;
+      if (m.classList.contains('ativo') || m.classList.contains('show') || (m.tagName === 'DIALOG' && m.open)) return;
       if (m.style.display && m.style.display !== 'none') return;
-      try {
-        if (getComputedStyle(m).display !== 'none' && getComputedStyle(m).visibility !== 'hidden') return;
-      } catch (_) {}
     }
 
     if (!Quiz.perguntas || Quiz.perguntas.length === 0 || Quiz._resultadoMostrado) return;

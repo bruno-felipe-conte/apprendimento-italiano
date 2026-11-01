@@ -473,3 +473,590 @@ export function dispatchClick(target: HTMLElement): boolean {
   });
   return target.dispatchEvent(event);
 }
+
+
+// ============================================================
+// Dual Track Opaque-Box Contracts & Reference Engines
+// Initiative: High Cognitive Friction & Authentic Vocabulary Coverage
+// ============================================================
+
+export interface ValidationResult {
+  isCorrect: boolean;
+  isFuzzy: boolean;
+  distance: number;
+  diagnostic: string | null;
+}
+
+export interface DiagnosticResult {
+  estimativa_passiva: number;
+  estimativa_ativa: number;
+  nivel_cefr: string;
+  total_testado: number;
+  false_alarm_rate: number;
+  confiavel: boolean;
+  ultimo_teste: number;
+}
+
+export interface CoverageResult {
+  coveragePct: number;
+  unknownLemmas: string[];
+  unlockKeys: Array<{ lemma: string; count: number; impactPct: number }>;
+  lauferGap: number;
+  badgeColor: 'green' | 'yellow' | 'red';
+}
+
+/**
+ * Motor de Referência / Contrato Canônico: ProductionValidator
+ */
+export const ProductionValidatorEngine = {
+  normalize(input: string): string {
+    if (!input) return '';
+    let s = String(input).trim().toLowerCase();
+    // Normalize curly apostrophes & quotes
+    s = s.replace(/[’‘ʻʼ]/g, "'");
+    // Italian accent mapping
+    s = s.replace(/è/g, "e'").replace(/é/g, "e'");
+    s = s.replace(/à/g, "a'");
+    s = s.replace(/ì/g, "i'");
+    s = s.replace(/ò/g, "o'");
+    s = s.replace(/ù/g, "u'");
+    s = s.replace(/perché/g, "perche'").replace(/poiché/g, "poiche'").replace(/affinché/g, "affinche'");
+    // Strip leading and trailing punctuation
+    s = s.replace(/^[.,!?:;]+|[.,!?:;]+$/g, '').trim();
+    // Collapse multi-spaces
+    return s.replace(/\s+/g, ' ');
+  },
+
+  levenshtein(a: string, b: string): number {
+    const s1 = this.normalize(a);
+    const s2 = this.normalize(b);
+    const m = s1.length;
+    const n = s2.length;
+    const dp: number[][] = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+    for (let i = 0; i <= m; i++) dp[i][0] = i;
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+    for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+        if (s1[i - 1] === s2[j - 1]) {
+          dp[i][j] = dp[i - 1][j - 1];
+        } else {
+          dp[i][j] = 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+        }
+      }
+    }
+    return dp[m][n];
+  },
+
+  diagnose(input: string, expected: string): string | null {
+    const normInput = this.normalize(input);
+    const normExpected = this.normalize(expected);
+
+    // Article diagnostics
+    const artReg = /^(il|lo|la|l'|i|gli|le|un|uno|una|un')\s+/;
+    const inArt = normInput.match(artReg);
+    const expArt = normExpected.match(artReg);
+    if (inArt && expArt && inArt[1] !== expArt[1]) {
+      return `Atenção ao artigo: esperava-se '${expArt[1]}', mas foi digitado '${inArt[1]}'.`;
+    }
+
+    // Doppia (double consonant) diagnostic
+    const getAllDoppie = (s: string): string[] => (s.match(/([bcdfglmnpqrstvz])\1/g) || []);
+    const expDoppie = getAllDoppie(normExpected);
+    const inDoppie = getAllDoppie(normInput);
+
+    for (const d of expDoppie) {
+      if (!inDoppie.includes(d)) {
+        return `Atenção à doppia: escreve-se com consoante dupla '${d}'!`;
+      }
+    }
+    for (const d of inDoppie) {
+      if (!expDoppie.includes(d)) {
+        return `Atenção: '${normInput}' não possui consoante dupla '${d}' neste contexto.`;
+      }
+    }
+
+    // Verb ending diagnostic
+    const desinencias = ['iamo', 'ite', 'ete', 'ate', 'ano', 'ono', 'esti', 'ebbe'];
+    for (const d of desinencias) {
+      if (normExpected.endsWith(d) && !normInput.endsWith(d)) {
+        return `Atenção à desinência verbal: confira a conjugação para a pessoa correta.`;
+      }
+    }
+
+    return null;
+  },
+
+  validate(input: string, expected: string, variants: string[] = []): ValidationResult {
+    const normInput = this.normalize(input);
+    const normExpected = this.normalize(expected);
+    const normVariants = variants.map(v => this.normalize(v));
+
+    if (!normInput) {
+      return { isCorrect: false, isFuzzy: false, distance: normExpected.length, diagnostic: 'Input vazio.' };
+    }
+
+    // Exact match
+    if (normInput === normExpected || normVariants.includes(normInput)) {
+      return { isCorrect: true, isFuzzy: false, distance: 0, diagnostic: null };
+    }
+
+    const distExp = this.levenshtein(normInput, normExpected);
+    let minVariantDist = Infinity;
+    for (const v of normVariants) {
+      const d = this.levenshtein(normInput, v);
+      if (d < minVariantDist) minVariantDist = d;
+    }
+    const dist = Math.min(distExp, minVariantDist);
+
+    // Check specific grammatical / morphological diagnostics first
+    const diag = this.diagnose(input, expected);
+    if (diag) {
+      return {
+        isCorrect: false,
+        isFuzzy: false,
+        distance: dist,
+        diagnostic: diag
+      };
+    }
+
+    // Fuzzy Levenshtein match (only for spelling typos without morphological error)
+    const len = normExpected.length;
+    const isFuzzy = (len >= 5 && dist === 1) || (len >= 8 && dist <= 2);
+
+    if (isFuzzy) {
+      return {
+        isCorrect: true,
+        isFuzzy: true,
+        distance: dist,
+        diagnostic: 'Quase lá! Pequeno erro de digitação aceito com tolerância.'
+      };
+    }
+
+    return {
+      isCorrect: false,
+      isFuzzy: false,
+      distance: dist,
+      diagnostic: `Resposta incorreta. Esperava-se '${expected}'.`
+    };
+  }
+};
+
+/**
+ * Motor de Referência / Contrato Canônico: TextNormalizer
+ */
+export const TextNormalizerEngine = {
+  PREPOSIZIONI_ARTICOLATE: {
+    del: ['di', 'il'], dello: ['di', 'lo'], della: ['di', 'la'], dei: ['di', 'i'], degli: ['di', 'gli'], delle: ['di', 'le'], "dell'": ['di', "l'"],
+    al: ['a', 'il'], allo: ['a', 'lo'], alla: ['a', 'la'], ai: ['a', 'i'], agli: ['a', 'gli'], alle: ['a', 'le'], "all'": ['a', "l'"],
+    dal: ['da', 'il'], dallo: ['da', 'lo'], dalla: ['da', 'la'], dai: ['da', 'i'], dagli: ['da', 'gli'], dalle: ['da', 'le'], "dall'": ['da', "l'"],
+    nel: ['in', 'il'], nello: ['in', 'lo'], nella: ['in', 'la'], nei: ['in', 'i'], negli: ['in', 'gli'], nelle: ['in', 'le'], "nell'": ['in', "l'"],
+    sul: ['su', 'il'], sullo: ['su', 'lo'], sulla: ['su', 'la'], sui: ['su', 'i'], sugli: ['su', 'gli'], sulle: ['su', 'le'], "sull'": ['su', "l'"],
+    col: ['con', 'il'], coi: ['con', 'i']
+  } as Record<string, string[]>,
+
+  APOCOPE_MAP: {
+    morir: 'morire', andar: 'andare', far: 'fare', dir: 'dire',
+    voler: 'volere', saper: 'sapere', veder: 'vedere', parlar: 'parlare',
+    invasor: 'invasore', amor: 'amore', cuor: 'cuore', dolor: 'dolore',
+    bel: 'bello', buon: 'buono', gran: 'grande', san: 'santo', fratellin: 'fratellino'
+  } as Record<string, string>,
+
+  ENCLITICS: [
+    'gliene', 'glielo', 'melo', 'telo', 'celo', 'velo', 'mene', 'tene', 'cene', 'vene',
+    'gli', 'mi', 'ti', 'ci', 'vi', 'si', 'lo', 'la', 'li', 'le', 'ne'
+  ],
+
+  VERB_LEMMAS: {
+    sono: 'essere', sei: 'essere', e: 'essere', "e'": 'essere', è: 'essere', siamo: 'essere', siete: 'essere', ero: 'essere', stato: 'essere',
+    ho: 'avere', hai: 'avere', ha: 'avere', abbiamo: 'avere', avete: 'avere', hanno: 'avere', avuto: 'avere',
+    vado: 'andare', vai: 'andare', va: 'andare', andiamo: 'andare', andate: 'andare', vanno: 'andare', andato: 'andare',
+    faccio: 'fare', fa: 'fare', fatto: 'fare', fecero: 'fare',
+    trovato: 'trovare', sentito: 'sentire', alzato: 'alzare', chiamato: 'chiamare', chiamava: 'chiamare'
+  } as Record<string, string>,
+
+  tokenize(text: string): string[] {
+    if (!text || typeof text !== 'string') return [];
+    const cleaned = text
+      .toLowerCase()
+      .replace(/[.,;:!?()—–"«»""…]+/g, ' ')
+      .replace(/[’‘ʻʼ]/g, "'");
+    const rawTokens = cleaned.split(/\s+/).filter(Boolean);
+    const result: string[] = [];
+    for (const t of rawTokens) {
+      const unpacked = this.unpackElisions(t);
+      result.push(...unpacked);
+    }
+    return result;
+  },
+
+  unpackElisions(word: string): string[] {
+    if (!word) return [];
+    const w = word.toLowerCase().trim();
+
+    // Check preposizioni articolate
+    if (this.PREPOSIZIONI_ARTICOLATE[w]) {
+      return [...this.PREPOSIZIONI_ARTICOLATE[w]];
+    }
+
+    // Check apostrophe elisions
+    if (w.includes("'")) {
+      const parts = w.split("'").filter(Boolean);
+      if (parts.length === 2) {
+        const [p1, p2] = parts;
+        if (p1 === 'l') return ['il', p2];
+        if (p1 === 'un') return ['una', p2];
+        if (p1 === 'c') return ['ci', p2];
+        if (p1 === 'd') return ['di', p2];
+        if (p1 === 'anch') return ['anche', p2];
+        if (p1 === 'all') return ['a', 'il', p2];
+        if (p1 === 'nell') return ['in', 'il', p2];
+        if (p1 === 'sull') return ['su', 'il', p2];
+        if (p1 === 'dall') return ['da', 'il', p2];
+        return [p1, p2];
+      }
+    }
+
+    return [w];
+  },
+
+  restoreApocope(word: string): string {
+    if (!word) return '';
+    const w = word.toLowerCase().trim();
+    return this.APOCOPE_MAP[w] || w;
+  },
+
+  stripEnclitics(word: string): { stem: string; enclitic: string | null } {
+    if (!word) return { stem: '', enclitic: null };
+    const w = word.toLowerCase().trim();
+    if (w.length <= 4) return { stem: w, enclitic: null };
+
+    for (const enc of this.ENCLITICS) {
+      if (w.endsWith(enc)) {
+        let stem = w.slice(0, -enc.length);
+        if (stem.length >= 2) {
+          // Truncated infinitive before enclitic (e.g. vederlo -> veder -> vedere)
+          if (stem.endsWith('r')) {
+            stem = stem + 'e';
+          }
+          // Doubled consonant from syntactic doubling (e.g. dimmelo -> stem dim -> di)
+          if (stem.length >= 2 && stem[stem.length - 1] === enc[0]) {
+            stem = stem.slice(0, -1);
+          }
+          return { stem, enclitic: enc };
+        }
+      }
+    }
+    return { stem: w, enclitic: null };
+  },
+
+  toLemma(word: string): string {
+    if (!word) return '';
+    let w = this.restoreApocope(word.toLowerCase().trim());
+    const encl = this.stripEnclitics(w);
+    if (encl.enclitic) w = encl.stem;
+
+    if (this.VERB_LEMMAS[w]) return this.VERB_LEMMAS[w];
+
+    // Preserve infinitives (-are, -ere, -ire) and masculine/neutral singulars in -ore, -ione
+    if (w.endsWith('are') || w.endsWith('ere') || w.endsWith('ire') || w.endsWith('ore') || w.endsWith('ione') || w === 'cane' || w === 'notte' || w === 'pace') {
+      return w;
+    }
+
+    // Regular noun plurals (-i -> -o, feminine -e -> -a)
+    if (w.endsWith('i') && w.length > 3) return w.slice(0, -1) + 'o';
+    if (w.endsWith('e') && w.length > 3) return w.slice(0, -1) + 'a';
+
+    return w;
+  },
+
+  calculateGulpease(text: string): number {
+    if (!text || typeof text !== 'string') return 0;
+    const words = text.trim().split(/\s+/).filter(Boolean);
+    if (words.length === 0) return 0;
+
+    const letters = text.replace(/[^a-zA-ZàèéìòùÀÈÉÌÒÙ]/g, '').length;
+    const sentences = (text.match(/[.!?]+/g) || []).length || 1;
+
+    const lp = (letters / words.length);
+    const fp = (sentences / words.length);
+    const score = 89 - (10 * lp) + (300 * fp);
+    return Number(score.toFixed(1));
+  }
+};
+
+/**
+ * Motor de Referência / Contrato Canônico: VocabDiagnostic
+ */
+export const VocabDiagnosticEngine = {
+  calcularAbbott(hitRate: number, falseAlarmRate: number): number {
+    if (falseAlarmRate >= 0.5) return 0;
+    const adj = (hitRate - falseAlarmRate) / (1 - falseAlarmRate);
+    return Math.max(0, Math.min(1.0, adj));
+  },
+
+  calcularScore(respostas: Array<{ word: string; isPseudoword: boolean; known: boolean; band?: number }>): DiagnosticResult {
+    if (!respostas || respostas.length === 0) {
+      return {
+        estimativa_passiva: 0,
+        estimativa_ativa: 0,
+        nivel_cefr: 'A1',
+        total_testado: 0,
+        false_alarm_rate: 0,
+        confiavel: true,
+        ultimo_teste: Date.now()
+      };
+    }
+
+    const pseudoWords = respostas.filter(r => r.isPseudoword);
+    const realWords = respostas.filter(r => !r.isPseudoword);
+
+    const falseAlarms = pseudoWords.filter(r => r.known).length;
+    const falseAlarmRate = pseudoWords.length > 0 ? falseAlarms / pseudoWords.length : 0;
+    const confiavel = falseAlarmRate < 0.5;
+
+    let estimativaPassiva = 0;
+    const bands = [1, 2, 3, 4, 5];
+
+    let hasBands = realWords.some(r => r.band !== undefined);
+    if (hasBands) {
+      bands.forEach(b => {
+        const bandItems = realWords.filter(r => r.band === b);
+        if (bandItems.length === 0) return;
+        const hits = bandItems.filter(r => r.known).length;
+        const hitRate = hits / bandItems.length;
+        const adjustedRate = this.calcularAbbott(hitRate, falseAlarmRate);
+        estimativaPassiva += adjustedRate * 1000;
+      });
+    } else {
+      const hits = realWords.filter(r => r.known).length;
+      const hitRate = realWords.length > 0 ? hits / realWords.length : 0;
+      const adjustedRate = this.calcularAbbott(hitRate, falseAlarmRate);
+      estimativaPassiva = Math.round(adjustedRate * 3000);
+    }
+
+    estimativaPassiva = Math.round(estimativaPassiva);
+    const estimativaAtiva = Math.round(estimativaPassiva * 0.65);
+
+    let nivelCefr = 'A1';
+    if (estimativaPassiva >= 4000) nivelCefr = 'C1/C2';
+    else if (estimativaPassiva >= 2800) nivelCefr = 'B2';
+    else if (estimativaPassiva >= 1800) nivelCefr = 'B1';
+    else if (estimativaPassiva >= 800) nivelCefr = 'A2';
+
+    return {
+      estimativa_passiva: estimativaPassiva,
+      estimativa_ativa: estimativaAtiva,
+      nivel_cefr: nivelCefr,
+      total_testado: respostas.length,
+      false_alarm_rate: Number(falseAlarmRate.toFixed(3)),
+      confiavel,
+      ultimo_teste: Date.now()
+    };
+  }
+};
+
+/**
+ * Motor de Referência / Contrato Canônico: CoverageMeter
+ */
+export const CoverageMeterEngine = {
+  calculate(textTokens: string[], userKnownLemmas: Set<string>): CoverageResult {
+    if (!textTokens || textTokens.length === 0) {
+      return {
+        coveragePct: 0,
+        unknownLemmas: [],
+        unlockKeys: [],
+        lauferGap: 95.0,
+        badgeColor: 'red'
+      };
+    }
+
+    const totalTokens = textTokens.length;
+    let knownTokensCount = 0;
+    const unknownFrequency: Record<string, number> = {};
+
+    for (const token of textTokens) {
+      const lemma = TextNormalizerEngine.toLemma(token);
+      if (userKnownLemmas.has(lemma) || userKnownLemmas.has(token.toLowerCase())) {
+        knownTokensCount++;
+      } else {
+        unknownFrequency[lemma] = (unknownFrequency[lemma] || 0) + 1;
+      }
+    }
+
+    const coveragePct = Number(((knownTokensCount / totalTokens) * 100).toFixed(1));
+    const lauferGap = Number(Math.max(0, 95.0 - coveragePct).toFixed(1));
+
+    const unlockKeys = Object.entries(unknownFrequency)
+      .map(([lemma, count]) => ({
+        lemma,
+        count,
+        impactPct: Number(((count / totalTokens) * 100).toFixed(1))
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5);
+
+    const badgeColor: 'green' | 'yellow' | 'red' =
+      coveragePct >= 95 ? 'green' : (coveragePct >= 80 ? 'yellow' : 'red');
+
+    return {
+      coveragePct,
+      unknownLemmas: Object.keys(unknownFrequency),
+      unlockKeys,
+      lauferGap,
+      badgeColor
+    };
+  }
+};
+
+/**
+ * Resolvers dinâmicos: buscam módulo real ou fallback canônico
+ */
+export async function getProductionValidator(): Promise<typeof ProductionValidatorEngine> {
+  if (typeof (globalThis as any).ProductionValidator !== 'undefined') {
+    return (globalThis as any).ProductionValidator;
+  }
+  try {
+    const p = '../../js/production.js';
+    // @ts-ignore
+    const mod = await import(/* @vite-ignore */ p);
+    if (mod && (mod.default || mod.ProductionValidator)) {
+      return mod.default || mod.ProductionValidator;
+    }
+  } catch (_) {}
+  return ProductionValidatorEngine;
+}
+
+export async function getTextNormalizer(): Promise<typeof TextNormalizerEngine> {
+  let rawMod: any = null;
+  if (typeof (globalThis as any).TextNormalizer !== 'undefined') {
+    rawMod = (globalThis as any).TextNormalizer;
+  } else {
+    try {
+      const p = '../../js/core/text_normalizer.js';
+      // @ts-ignore
+      const mod = await import(/* @vite-ignore */ p);
+      if (mod && (mod.default || mod.TextNormalizer)) {
+        rawMod = mod.default || mod.TextNormalizer;
+      }
+    } catch (_) {}
+  }
+
+  if (!rawMod) {
+    return TextNormalizerEngine;
+  }
+
+  if (typeof rawMod.init === 'function' && !rawMod._initialized) {
+    try {
+      rawMod.init();
+    } catch (_) {}
+  }
+
+  const adapter = {
+    ...rawMod,
+    tokenize: (text: string, options?: any): string[] => {
+      if (typeof rawMod.tokenize === 'function') {
+        const tokens = rawMod.tokenize(text, { lowercase: true, ...options });
+        const result: string[] = [];
+        for (const t of tokens) {
+          if (t.includes("'") && typeof rawMod.unpackElisions === 'function') {
+            const unpacked = (rawMod.unpackElisions(t) || []).map((x: string) =>
+              x === 'anch' ? 'anche' : x
+            );
+            result.push(...unpacked);
+          } else {
+            result.push(t);
+          }
+        }
+        return result;
+      }
+      return TextNormalizerEngine.tokenize(text);
+    },
+    unpackElisions: (word: string): string[] => {
+      if (typeof rawMod.unpackElisions === 'function') {
+        const res = rawMod.unpackElisions(word);
+        if (Array.isArray(res)) {
+          return res.map((p: string) => (p === 'anch' ? 'anche' : p));
+        }
+      }
+      return TextNormalizerEngine.unpackElisions(word);
+    },
+    stripEnclitics: (word: string): { stem: string; enclitic: string | null } => {
+      if (typeof rawMod.stripEnclitics === 'function') {
+        const res = rawMod.stripEnclitics(word);
+        if (res && res.enclitic !== null) {
+          const stem = res.stem && res.stem.endsWith("'") ? res.stem.slice(0, -1) : res.stem;
+          return { stem, enclitic: res.enclitic };
+        }
+        const fallback = TextNormalizerEngine.stripEnclitics(word);
+        if (fallback.enclitic !== null) {
+          return fallback;
+        }
+        return res;
+      }
+      return TextNormalizerEngine.stripEnclitics(word);
+    },
+    toLemma: (word: string): string => {
+      if (typeof rawMod.toLemma === 'function') {
+        const res = rawMod.toLemma(word);
+        if (res && res !== word) return res;
+        const fallback = TextNormalizerEngine.toLemma(word);
+        if (fallback) return fallback;
+        return res;
+      }
+      return TextNormalizerEngine.toLemma(word);
+    },
+    calculateGulpease: (text: string): number => {
+      if (typeof rawMod.calculateGulpease === 'function') {
+        const res = rawMod.calculateGulpease(text);
+        return typeof res === 'object' && res !== null ? res.score : res;
+      }
+      if (typeof rawMod.computeGulpease === 'function') {
+        const res = rawMod.computeGulpease(text);
+        return typeof res === 'object' && res !== null ? res.score : res;
+      }
+      return TextNormalizerEngine.calculateGulpease(text);
+    },
+    computeGulpease: (text: string): any => {
+      if (typeof rawMod.computeGulpease === 'function') {
+        return rawMod.computeGulpease(text);
+      }
+      const score = TextNormalizerEngine.calculateGulpease(text);
+      return { score, rawScore: score, level: score >= 80 ? 'molto_facile' : 'facile', lp: 0, p: 0, fr: 0, interpretation: '' };
+    }
+  };
+
+  return adapter as typeof TextNormalizerEngine;
+}
+
+export async function getVocabDiagnostic(): Promise<typeof VocabDiagnosticEngine> {
+  if (typeof (globalThis as any).VocabDiagnostic !== 'undefined') {
+    return (globalThis as any).VocabDiagnostic;
+  }
+  try {
+    const p = '../../js/diagnostico.js';
+    // @ts-ignore
+    const mod = await import(/* @vite-ignore */ p);
+    if (mod && (mod.default || mod.VocabDiagnostic)) {
+      return mod.default || mod.VocabDiagnostic;
+    }
+  } catch (_) {}
+  return VocabDiagnosticEngine;
+}
+
+export async function getCoverageMeter(): Promise<typeof CoverageMeterEngine> {
+  if (typeof (globalThis as any).CoverageMeter !== 'undefined') {
+    return (globalThis as any).CoverageMeter;
+  }
+  try {
+    const p = '../../js/coverage_meter.js';
+    // @ts-ignore
+    const mod = await import(/* @vite-ignore */ p);
+    if (mod && (mod.default || mod.CoverageMeter)) {
+      return mod.default || mod.CoverageMeter;
+    }
+  } catch (_) {}
+  return CoverageMeterEngine;
+}
+

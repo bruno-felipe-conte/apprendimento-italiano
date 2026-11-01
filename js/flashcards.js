@@ -382,6 +382,24 @@ const Flashcards = {
   modoEscrita:       false,
   modoContexto:      false,
   modoEscuta:        false,
+  modoSobrevivencia: false,
+  sobrevivencia: {
+    ativo: false,
+    vidas: 3,
+    maxVidas: 3,
+    tempoLimiteMs: 5000,
+    tempoRestanteMs: 5000,
+    timerInterval: null,
+    cartas: [],
+    indiceAtual: 0,
+    cartaAtual: null,
+    pontos: 0,
+    combo: 0,
+    maiorCombo: 0,
+    cartasSobrevividas: 0,
+    inicioPerguntaTimestamp: 0,
+    lapsosPressao: []
+  },
   nivelDica:         0,      // 0=none, 1=first letter, 2=more letters, 3=flipped
   dicaUsada:         false,  // penalises Good/Easy when true
   sessaoStats:       null,
@@ -1430,11 +1448,12 @@ const Flashcards = {
 
   // ── Mode toggles (mutually exclusive) ────────────────────
   _limparModos() {
+    this.encerrarSobrevivencia();
     this.modoReverso  = false;
     this.modoContexto = false;
     this.modoEscuta   = false;
     this.modoEscrita  = false;
-    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita'].forEach(id => {
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita', 'btn-modo-sobrevivencia'].forEach(id => {
       const b = document.getElementById(id);
       if (b) b.classList.remove('ativo');
     });
@@ -1895,6 +1914,335 @@ const Flashcards = {
     }
     fb.style.display = 'block';
     setTimeout(() => { if(fb) fb.style.display = 'none'; }, 4000);
+  },
+
+  // ── F9: High-Tension Survival Challenge Mode ────────────────
+  iniciarSobrevivencia() {
+    const flashData = (typeof AppState !== 'undefined' && AppState.estado && AppState.estado.flashcardData)
+      ? AppState.estado.flashcardData
+      : {};
+    
+    // 1. Filtragem estrita de cartas dominadas (reps >= 3 ou estabilidade > 7)
+    const dominadasIds = Object.entries(flashData)
+      .filter(([_, sm]) => sm && (sm.reps >= 3 || sm.repeticoes >= 3 || sm.stability > 7))
+      .map(([id]) => id);
+
+    const appStatePool = (typeof AppState !== 'undefined' && AppState.estado) ? [
+      ...(AppState.estado.vocabCache || []),
+      ...Object.values(AppState.estado.templosData || {}).flatMap(t => (t && t.palavras) || [])
+    ] : [];
+
+    const appPool = (typeof App !== 'undefined' && App.estado) ? [
+      ...(App.estado.topFlashcards || []),
+      ...(App.estado.vocabCache || [])
+    ] : [];
+
+    const templosPool = (typeof TEMPLOS !== 'undefined' && Array.isArray(TEMPLOS))
+      ? TEMPLOS.flatMap(t => (t && t.palavras) || [])
+      : [];
+
+    const top500Pool = (typeof TOP500_CARDS !== 'undefined' && Array.isArray(TOP500_CARDS))
+      ? TOP500_CARDS
+      : [];
+
+    const poolGeral = [...appStatePool, ...appPool, ...templosPool, ...top500Pool];
+
+    let cartasElegiveis = poolGeral.filter(p => p && p.id && dominadasIds.includes(p.id));
+    let cartasUnicas = Array.from(new Map(cartasElegiveis.map(c => [c.id, c])).values());
+
+    if (cartasUnicas.length < 3) {
+      if (typeof App !== 'undefined' && App.notificar) {
+        App.notificar('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!', 'aviso');
+      } else if (typeof alert === 'function') {
+        alert('Você precisa de pelo menos 3 cartas dominadas (reps ≥ 3 ou estabilidade > 7) para o Modo Sobrevivência. Continue revisando!');
+      }
+      return;
+    }
+
+    const embaralhadas = [...cartasUnicas].sort(() => Math.random() - 0.5);
+
+    this.limparTimersSobrevivencia();
+    this.modoSobrevivencia = true;
+    this.sobrevivencia = {
+      ativo: true,
+      vidas: 3,
+      maxVidas: 3,
+      tempoLimiteMs: 5000,
+      tempoRestanteMs: 5000,
+      timerInterval: null,
+      cartas: embaralhadas,
+      indiceAtual: 0,
+      cartaAtual: null,
+      pontos: 0,
+      combo: 0,
+      maiorCombo: 0,
+      cartasSobrevividas: 0,
+      inicioPerguntaTimestamp: Date.now(),
+      lapsosPressao: []
+    };
+
+    // Atualiza pills de modo
+    ['btn-modo-normal', 'btn-reverso', 'btn-contexto', 'btn-escuta', 'btn-escrita'].forEach(id => {
+      const b = document.getElementById(id);
+      if (b) b.classList.remove('ativo');
+    });
+    const btnSob = document.getElementById('btn-modo-sobrevivencia');
+    if (btnSob) btnSob.classList.add('ativo');
+
+    this._renderizarArenaSobrevivencia();
+    this._apresentarCartaSobrevivencia();
+  },
+
+  _renderizarArenaSobrevivencia() {
+    const palco = document.getElementById('sec-flashcard');
+    if (!palco) return;
+
+    const layoutPadrao = document.getElementById('fc-studio-layout');
+    const barraCompacta = document.getElementById('fc-compact-bar');
+    const drawer = document.getElementById('fc-seletor-drawer');
+    if (layoutPadrao) layoutPadrao.style.display = 'none';
+    if (barraCompacta) barraCompacta.style.display = 'none';
+    if (drawer) drawer.style.display = 'none';
+
+    const arenaAntiga = document.getElementById('fc-survival-arena');
+    if (arenaAntiga) arenaAntiga.remove();
+
+    const arena = document.createElement('div');
+    arena.id = 'fc-survival-arena';
+    arena.className = 'fc-survival-arena';
+    arena.setAttribute('role', 'region');
+    arena.setAttribute('aria-label', 'Modo Sobrevivência de Alta Tensão');
+    arena.innerHTML = `
+      <div class="fc-survival-topbar">
+        <div class="fc-survival-vidas" id="fc-survival-vidas" aria-label="Vidas restantes">❤️❤️❤️</div>
+        <div class="fc-survival-combo-badge" id="fc-survival-combo">Combo: 0</div>
+        <div class="fc-survival-score" id="fc-survival-score">Score: 0</div>
+        <button type="button" class="fc-survival-sair-btn" onclick="Flashcards.encerrarSobrevivencia()">✖ Sair</button>
+      </div>
+
+      <div class="fc-survival-timer-track" aria-hidden="true">
+        <div class="fc-survival-timer-bar" id="fc-survival-timer-bar" style="width: 100%;"></div>
+      </div>
+
+      <div class="fc-survival-card-box">
+        <div class="fc-survival-termo" id="fc-survival-termo">—</div>
+        <div class="fc-survival-prompt">Qual a tradução correta? (5 segundos!)</div>
+        <div class="fc-survival-opcoes-grid" id="fc-survival-opcoes-grid"></div>
+      </div>
+    `;
+
+    palco.appendChild(arena);
+  },
+
+  _apresentarCartaSobrevivencia() {
+    if (!this.sobrevivencia.ativo) return;
+
+    const s = this.sobrevivencia;
+    if (s.indiceAtual >= s.cartas.length) {
+      s.cartas.sort(() => Math.random() - 0.5);
+      s.indiceAtual = 0;
+    }
+
+    const carta = s.cartas[s.indiceAtual];
+    s.cartaAtual = carta;
+    s.tempoRestanteMs = s.tempoLimiteMs;
+    s.inicioPerguntaTimestamp = Date.now();
+
+    const elVidas = document.getElementById('fc-survival-vidas');
+    const elCombo = document.getElementById('fc-survival-combo');
+    const elScore = document.getElementById('fc-survival-score');
+    const elTermo = document.getElementById('fc-survival-termo');
+    const elBar = document.getElementById('fc-survival-timer-bar');
+
+    if (elVidas) elVidas.innerHTML = '❤️'.repeat(Math.max(0, s.vidas)) + '🖤'.repeat(Math.max(0, 3 - s.vidas));
+    if (elCombo) {
+      elCombo.textContent = `Combo: ${s.combo}x`;
+      elCombo.classList.toggle('combo-fogo', s.combo >= 3);
+    }
+    if (elScore) elScore.textContent = `Score: ${s.pontos}`;
+    if (elTermo) elTermo.textContent = carta.italiano || '—';
+    if (elBar) {
+      elBar.style.width = '100%';
+      elBar.classList.remove('urgencia-tempo');
+    }
+
+    const distratores = s.cartas
+      .filter(c => c.id !== carta.id && c.portugues !== carta.portugues)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3)
+      .map(c => c.portugues);
+
+    const opcoes = [carta.portugues, ...distratores].sort(() => Math.random() - 0.5);
+
+    const grid = document.getElementById('fc-survival-opcoes-grid');
+    if (grid) {
+      grid.innerHTML = '';
+      opcoes.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'fc-survival-opcao';
+        btn.setAttribute('data-idx', String(idx + 1));
+        btn.innerHTML = `<span class="fc-opt-badge">${idx + 1}</span><span class="fc-opt-text">${opt}</span>`;
+        btn.onclick = () => Flashcards.responderSobrevivencia(opt);
+        grid.appendChild(btn);
+      });
+    }
+
+    this.limparTimersSobrevivencia();
+    s.timerInterval = setInterval(() => {
+      s.tempoRestanteMs -= 50;
+      const pct = Math.max(0, (s.tempoRestanteMs / s.tempoLimiteMs) * 100);
+      if (elBar) {
+        elBar.style.width = `${pct}%`;
+        if (s.tempoRestanteMs <= 2000) {
+          elBar.classList.add('urgencia-tempo');
+        }
+      }
+
+      if (s.tempoRestanteMs <= 0) {
+        clearInterval(s.timerInterval);
+        Flashcards._processarTimeoutSobrevivencia();
+      }
+    }, 50);
+  },
+
+  responderSobrevivencia(opcaoEscolhida) {
+    if (!this.sobrevivencia.ativo) return;
+    this.limparTimersSobrevivencia();
+
+    const s = this.sobrevivencia;
+    const carta = s.cartaAtual;
+    const deltaMs = Date.now() - s.inicioPerguntaTimestamp;
+    const acertou = carta && (opcaoEscolhida === carta.portugues);
+
+    if (acertou) {
+      s.combo++;
+      if (s.combo > s.maiorCombo) s.maiorCombo = s.combo;
+      s.cartasSobrevividas++;
+
+      const multiplicador = s.combo >= 3 ? 2.0 : 1.0;
+      const bonusLatencia = deltaMs < 800 ? 5 : 0;
+      s.pontos += Math.round((10 * multiplicador) + bonusLatencia);
+
+      s.indiceAtual++;
+      this._apresentarCartaSobrevivencia();
+    } else {
+      this._processarFalhaSobrevivencia(carta);
+    }
+  },
+
+  _processarTimeoutSobrevivencia() {
+    const carta = this.sobrevivencia.cartaAtual;
+    this._processarFalhaSobrevivencia(carta);
+  },
+
+  _processarFalhaSobrevivencia(carta) {
+    const s = this.sobrevivencia;
+    s.vidas--;
+    s.combo = 0;
+
+    if (carta && carta.id && typeof AppState !== 'undefined' && AppState.estado && AppState.estado.flashcardData) {
+      s.lapsosPressao.push(carta);
+      let fsrs = AppState.estado.flashcardData[carta.id];
+      if (fsrs) {
+        fsrs.lapses = (fsrs.lapses || 0) + 1;
+        fsrs.stability = Math.max(0.1, Number(((fsrs.stability || 2.0) * 0.7).toFixed(1)));
+        fsrs.nextReview = Date.now();
+        AppState.estado.flashcardData[carta.id] = fsrs;
+      }
+    }
+
+    if (s.vidas <= 0) {
+      this.finalizarSobrevivencia();
+    } else {
+      s.indiceAtual++;
+      setTimeout(() => {
+        this._apresentarCartaSobrevivencia();
+      }, 400);
+    }
+  },
+
+  finalizarSobrevivencia() {
+    this.limparTimersSobrevivencia();
+    const s = this.sobrevivencia;
+    s.ativo = false;
+
+    if (typeof AppState !== 'undefined' && AppState.estado && AppState.estado.progresso) {
+      const recordes = AppState.estado.progresso.survival_recordes || { maior_sequencia: 0, cartas_sobrevividas: 0 };
+      const novoRecorde = {
+        maior_sequencia: Math.max(recordes.maior_sequencia || 0, s.maiorCombo),
+        cartas_sobrevividas: Math.max(recordes.cartas_sobrevividas || 0, s.cartasSobrevividas)
+      };
+      AppState.estado.progresso.survival_recordes = novoRecorde;
+      if (typeof AppState.salvarProgresso === 'function') AppState.salvarProgresso();
+      if (typeof AppState.salvarFlashcards === 'function') AppState.salvarFlashcards();
+    }
+
+    if (s.pontos > 0) {
+      if (typeof AppXP !== 'undefined' && typeof AppXP.ganharXP === 'function') {
+        AppXP.ganharXP(Math.round(s.pontos / 2));
+      } else if (typeof App !== 'undefined' && typeof App.ganharXP === 'function') {
+        App.ganharXP(Math.round(s.pontos / 2));
+      }
+    }
+
+    const arena = document.getElementById('fc-survival-arena');
+    if (arena) {
+      let htmlLapsos = '';
+      if (s.lapsosPressao.length > 0) {
+        htmlLapsos = `
+          <div class="fc-survival-lapsos">
+            <h4>⚠️ Lapsos sob Pressão (${s.lapsosPressao.length}):</h4>
+            <p class="fc-lapsos-desc">Termos que você conhecia, mas falhou sob o limite de 5s:</p>
+            <ul>
+              ${s.lapsosPressao.map(c => `<li><strong>${c.italiano || ''}</strong>: ${c.portugues || ''}</li>`).join('')}
+            </ul>
+          </div>`;
+      }
+
+      arena.innerHTML = `
+        <div class="fc-survival-gameover-card">
+          <div class="fc-gameover-icon">🏁</div>
+          <h3 class="fc-gameover-title">Partida Encerrada!</h3>
+          <div class="fc-gameover-stats">
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.cartasSobrevividas}</span><span class="fc-stat-lbl">Cartas</span></div>
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.maiorCombo}x</span><span class="fc-stat-lbl">Maior Combo</span></div>
+            <div class="fc-stat-col"><span class="fc-stat-val">${s.pontos}</span><span class="fc-stat-lbl">Pontuação</span></div>
+          </div>
+          ${htmlLapsos}
+          <div class="fc-gameover-actions">
+            <button type="button" class="btn-primario" onclick="Flashcards.iniciarSobrevivencia()">🔁 Jogar Novamente</button>
+            <button type="button" class="btn-secondario" onclick="Flashcards.encerrarSobrevivencia()">‹ Voltar ao Estúdio</button>
+          </div>
+        </div>
+      `;
+    }
+  },
+
+  limparTimersSobrevivencia() {
+    if (this.sobrevivencia && this.sobrevivencia.timerInterval) {
+      clearInterval(this.sobrevivencia.timerInterval);
+      this.sobrevivencia.timerInterval = null;
+    }
+  },
+
+  encerrarSobrevivencia() {
+    this.limparTimersSobrevivencia();
+    this.modoSobrevivencia = false;
+    if (this.sobrevivencia) this.sobrevivencia.ativo = false;
+
+    const arena = document.getElementById('fc-survival-arena');
+    if (arena) arena.remove();
+
+    const layoutPadrao = document.getElementById('fc-studio-layout');
+    const barraCompacta = document.getElementById('fc-compact-bar');
+    const drawer = document.getElementById('fc-seletor-drawer');
+    if (layoutPadrao) layoutPadrao.style.display = '';
+    if (barraCompacta) barraCompacta.style.display = '';
+    if (drawer) drawer.style.display = '';
+
+    const btnSob = document.getElementById('btn-modo-sobrevivencia');
+    if (btnSob) btnSob.classList.remove('ativo');
   }
 };
 
@@ -1925,9 +2273,31 @@ if (typeof window !== 'undefined') {
     if (typeof document === 'undefined') return;
     const sec = document.getElementById('sec-flashcard');
     if (!sec || !sec.classList.contains('active')) return;
-    if (!Flashcards.cartaAtual || !Flashcards.cartasDisponiveis || Flashcards.cartasDisponiveis.length === 0) return;
 
-  const key = e.key;
+    const key = e.key;
+
+    // Atalhos específicos para o Modo Sobrevivência
+    if (typeof Flashcards !== 'undefined' && Flashcards.modoSobrevivencia && Flashcards.sobrevivencia && Flashcards.sobrevivencia.ativo) {
+      if (['1', '2', '3', '4'].includes(key)) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        const btns = document.querySelectorAll('.fc-survival-opcao');
+        const idx = parseInt(key, 10) - 1;
+        if (btns[idx]) {
+          if (typeof btns[idx].click === 'function') btns[idx].click();
+          else if (typeof btns[idx].onclick === 'function') btns[idx].onclick();
+        }
+        return;
+      }
+      if (key === 'Escape') {
+        e.preventDefault();
+        Flashcards.encerrarSobrevivencia();
+        return;
+      }
+      return;
+    }
+
+    if (!Flashcards.cartaAtual || !Flashcards.cartasDisponiveis || Flashcards.cartasDisponiveis.length === 0) return;
 
   // Espaço ou Enter: virar a carta
   if (key === ' ' || key === 'Enter') {

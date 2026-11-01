@@ -47,3 +47,51 @@ Criar testes de estresse automatizados (fuzzing de payloads, testes de borda tem
 - [ ] 100% dos testes existentes e novos passam com sucesso (`npm test`).
 - [ ] O comando `npm run build` executa e conclui com código 0 gerando todos os assets estáticos sem warnings críticos.
 - [ ] Relatório detalhado gerado catalogando: anomalias encontradas, correções aplicadas e propostas priorizadas de melhoria contínua de UX.
+
+
+## 2026-11-01T09:16:11Z
+
+Use a large team of agents. Transformar o Italiano Autêntico de uma biblioteca passiva em um ambiente de alto atrito intelectual, provocação cognitiva e medição real de competência, priorizando produção ativa sobre reconhecimento e expondo a lacuna real de domínio do italiano autêntico.
+
+Working directory: /mnt/c/Users/bruno/Documents/apprendimento-italiano
+Integrity mode: development
+
+## Requirements
+
+### R1. "A Provocação": Fricção Cognitiva & Produção Ativa
+Implementar dinâmicas de esforço ativo que eliminem a passividade e o tédio:
+- **Indução por erro prévio**: Nas lições de gramática e templos, apresentar casos reais/frases em italiano para dedução intuitiva ("Qual é a regra aqui?") antes de abrir a explicação teórica formal.
+- **Exercícios de Produção Direta (Sem Rede)**: Permitir modos onde o estudante é obrigado a digitar artigos, terminações verbais ou palavras inteiras com validação imediata (em vez de apenas clicar em 4 opções de múltipla escolha).
+- **Desafios Rápidos de Alta Tensão**: Desafios curtos cronometrados ou modo "sobrevivência/sem erros" para cartas e termos que o algoritmo FSRS já classificou como dominados, testando a retenção sob pressão.
+
+### R2. "O Espelho": Diagnóstico e Medidor de Cobertura de Vocabulário Autêntico
+Tornar visível a "miséria" e a verdadeira distância até a fluência autônoma:
+- **Diagnóstico Rápido de Nivelamento**: Teste dinâmico baseado nas palavras mais frequentes do italiano (1k, 2k, 3k) estimando o vocabulário passivo e ativo em menos de 3 minutos.
+- **Medidor de Cobertura de Textos Autênticos**: Visualizador que projeta a porcentagem real de compreensão do usuário sobre as canções e histórias do acervo (ex: "Você compreende 34% deste texto autêntico — nível de conforto para leitura autônoma: 95%").
+
+### R3. Preservação de Integridade, UX e Arquitetura Offline-First
+Garantir que todas as adições respeitem rigorosamente o ecossistema existente:
+- Zero dependências de runtime externas (Vanilla JS/TS, CSS e HTML nativos).
+- 100% offline-first sem perda ou corrupção do progresso acumulado (XP, decks, estatísticas) via SafeStorage.
+- Compatibilidade e acessibilidade total (WCAG 2.1 AA, touch targets >= 44px, suporte a teclado).
+
+## Verification Resources
+- Suíte de testes automatizados existente (`npm test` rodando via Vitest).
+- Typecheck estrito (`npx tsc --noEmit`).
+- Pipeline de compilação de produção (`npm run build`).
+
+## Acceptance Criteria
+
+### Fricção Cognitiva & Produção Ativa
+- [ ] Pelo menos uma modalidade de exercício exige digitação ativa e produção textual com tolerância a acentuação e feedback gramatical imediato.
+- [ ] Mecânica de provocação indutiva integrada ao fluxo de estudo pré-teoria nas lições.
+- [ ] Modalidade de desafio com tempo ou sem dicas para validação de retenção rápida.
+
+### Espelho & Diagnóstico de Cobertura
+- [ ] Módulo de diagnóstico de vocabulário funcional estimando o vocabulário ativo/passivo e posicionando o estudante na escala de proficiência.
+- [ ] Indicador numérico e visual de cobertura léxica real (%) calculável sobre pelo menos uma história ou canção autêntica.
+
+### Qualidade e Confiabilidade Técnica
+- [ ] 100% dos testes unitários e de integração (`npm test`) passando com sucesso.
+- [ ] Verificação de tipos TypeScript (`npx tsc --noEmit`) sem nenhum erro.
+- [ ] Build de produção (`npm run build`) concluído com código de saída 0.

@@ -41,6 +41,20 @@ export interface MetaPrazoCalculada {
   data_alvo: string;
 }
 
+export interface DiagnosticoVocabulario {
+  ultimo_teste: number;
+  estimativa_passiva: number;
+  estimativa_ativa: number;
+  nivel_cefr: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+  total_testado: number;
+}
+
+export interface SurvivalRecordes {
+  maior_sequencia: number;
+  cartas_sobrevividas: number;
+  tempo_recorde_ms?: number;
+}
+
 export interface ProgressoUsuario {
   nivel: number;
   xp: number;
@@ -61,6 +75,9 @@ export interface ProgressoUsuario {
   meta_prazo: MetaPrazoData | null;
   audio_rate: number;
   ultima_secao?: string;
+  vocab_diagnostico?: DiagnosticoVocabulario | null;
+  palavras_conhecidas?: string[];
+  survival_recordes?: SurvivalRecordes;
 }
 
 export interface FlashcardFSRS {
@@ -299,6 +316,8 @@ declare global {
     Notificacoes: any;
     Tour: any;
     Calor: any;
+    TextNormalizer: any;
+    AppFrequency: any;
     _activeUtterance: SpeechSynthesisUtterance | null;
     _activeVoiceUtterance: SpeechSynthesisUtterance | null;
   }
