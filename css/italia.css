@@ -9190,6 +9190,257 @@ body.dark-mode .quiz-input-resposta {
   margin-top: 0.5rem;
 }
 
+/* ── Estilos das 25 Frases & Transição de Fase (F10 Avançado) ── */
+.diag-fase-indicator {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--cor-veneziano, #9B2335);
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}
+
+.diag-badge-nivel-item {
+  display: inline-block;
+  background: rgba(197, 160, 89, 0.2);
+  color: #8A6D3B;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.diag-transicao-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diag-transicao-icon {
+  font-size: 3rem;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+.diag-transicao-card h3 {
+  font-size: 1.5rem;
+  color: var(--cor-veneziano, #9B2335);
+  margin: 0;
+  font-family: var(--fonte-titulos, serif);
+}
+
+.diag-transicao-card p {
+  font-size: 0.95rem;
+  color: var(--cor-inchiostro, #2C1810);
+  line-height: 1.6;
+  max-width: 440px;
+  margin: 0;
+}
+
+.btn-comecar-frases {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 1.8rem;
+  border-radius: 24px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.diag-frase-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.diag-frase-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diag-nivel-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  color: #FFF;
+  background: var(--cor-veneziano, #9B2335);
+  letter-spacing: 0.05em;
+}
+
+.diag-nivel-pill.nivel-a1 { background: #27AE60; }
+.diag-nivel-pill.nivel-a2 { background: #2ECC71; }
+.diag-nivel-pill.nivel-b1 { background: #3498DB; }
+.diag-nivel-pill.nivel-b2 { background: #E67E22; }
+.diag-nivel-pill.nivel-c1 { background: #9B2335; }
+
+.diag-frase-texto-card {
+  background: #FFF;
+  border: 1.5px solid rgba(197, 160, 89, 0.4);
+  border-left: 5px solid var(--cor-veneziano, #9B2335);
+  border-radius: var(--raio-md, 10px);
+  padding: 1.25rem 1.4rem;
+  font-family: var(--fonte-italiano, serif);
+  font-size: 1.3rem;
+  color: var(--cor-inchiostro, #2C1810);
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.diag-lacuna-destaque {
+  font-weight: 800;
+  color: var(--cor-veneziano, #9B2335);
+  border-bottom: 2px dashed var(--cor-veneziano, #9B2335);
+  padding: 0 0.35rem;
+}
+
+.diag-frase-pergunta {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cor-inchiostro-claro, #555);
+  margin: 0;
+}
+
+.diag-opcoes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.btn-diag-opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: #FFF;
+  border: 1.5px solid #DDD0BF;
+  border-radius: var(--raio-md, 10px);
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  color: var(--cor-inchiostro, #2C1810);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  min-height: 48px;
+}
+
+.btn-diag-opcao:hover {
+  background: #FFFBF3;
+  border-color: var(--cor-veneziano, #9B2335);
+  transform: translateX(4px);
+}
+
+.btn-diag-opcao:focus-visible {
+  outline: 2px solid var(--cor-veneziano, #9B2335);
+  outline-offset: 2px;
+}
+
+.diag-opcao-letra {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--cor-marmore-escuro, #EAE5D9);
+  color: var(--cor-inchiostro, #2C1810);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.diag-opcao-texto {
+  flex: 1;
+  font-weight: 600;
+}
+
+.diag-res-titulo {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--cor-inchiostro, #2C1810);
+}
+
+.diag-res-sub {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.diag-breakdown-card {
+  width: 100%;
+  background: #FFF;
+  border: 1.5px solid rgba(197, 160, 89, 0.35);
+  border-radius: var(--raio-md, 10px);
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.diag-breakdown-card h4 {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  color: var(--cor-inchiostro, #2C1810);
+}
+
+.diag-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.diag-breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.diag-lvl-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  width: 26px;
+  color: var(--cor-inchiostro, #2C1810);
+}
+
+.diag-lvl-bar-track {
+  flex: 1;
+  height: 8px;
+  background: #EAE5D9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.diag-lvl-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.diag-lvl-bar-fill.lvl-a1 { background: #27AE60; }
+.diag-lvl-bar-fill.lvl-a2 { background: #2ECC71; }
+.diag-lvl-bar-fill.lvl-b1 { background: #3498DB; }
+.diag-lvl-bar-fill.lvl-b2 { background: #E67E22; }
+.diag-lvl-bar-fill.lvl-c1 { background: #9B2335; }
+
+.diag-lvl-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #555;
+  min-width: 85px;
+  text-align: right;
+}
+
+.diag-total-frases-acertos {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(197, 160, 89, 0.3);
+  font-size: 0.88rem;
+  color: var(--cor-inchiostro, #2C1810);
+  text-align: right;
+}
+
 /* Badges de Cobertura Léxica */
 .espelho-cobertura-badge {
   display: inline-flex;
