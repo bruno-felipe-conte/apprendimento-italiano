@@ -38,8 +38,14 @@
     })();
   </script>
 
-  <!-- 1. Topo Horizontal Vermelho Clássico -->
-  <header class="app-header">
+  <!-- Ambient Mesh Light Canvas (Apple Liquid Glass Dynamic Refraction) -->
+  <div class="ambient-mesh-canvas" aria-hidden="true">
+    <div class="mesh-orb mesh-orb-top"></div>
+    <div class="mesh-orb mesh-orb-bottom"></div>
+  </div>
+
+  <!-- 1. Topo Translucido Apple Liquid Glass -->
+  <header class="app-header glass-specular" id="app-header">
     <div class="header-top">
       <div class="header-logo-row">
         <div class="app-logo">🇮🇹 <span class="logo-txt-full">Italiano Autentico</span></div>
@@ -79,9 +85,14 @@
         const hdr = document.querySelector('.app-header');
         if (hdr) document.documentElement.style.setProperty('--app-header-h', hdr.offsetHeight + 'px');
       };
+      const handleScroll = () => {
+        const hdr = document.querySelector('.app-header');
+        if (hdr) hdr.classList.toggle('scrolled', window.scrollY > 8);
+      };
       updateHeaderH();
       window.addEventListener('resize', updateHeaderH);
       window.addEventListener('DOMContentLoaded', updateHeaderH);
+      window.addEventListener('scroll', handleScroll, { passive: true });
     })();
   </script>
 

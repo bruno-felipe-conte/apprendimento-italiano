@@ -81,7 +81,13 @@ const AppNavigation = {
 
       // Update bottom nav buttons
       document.querySelectorAll('#bottom-nav button').forEach(btn => {
-        btn.classList.toggle('ativa', btn.dataset.section === secao);
+        const isAtiva = btn.dataset.section === secao;
+        btn.classList.toggle('ativa', isAtiva);
+        if (isAtiva && typeof btn.scrollIntoView === 'function') {
+          try {
+            btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          } catch (_) {}
+        }
       });
 
       // Show/hide sections
